@@ -24,6 +24,9 @@ class CloudArmor extends \Google\Model
   protected $attackType = Attack::class;
   protected $attackDataType = '';
   /**
+   * Duration of attack from the start until the current moment (updated every 5
+   * minutes).
+   *
    * @var string
    */
   public $duration;
@@ -32,12 +35,21 @@ class CloudArmor extends \Google\Model
   protected $securityPolicyType = SecurityPolicy::class;
   protected $securityPolicyDataType = '';
   /**
+   * Distinguish between volumetric & protocol DDoS attack and application layer
+   * attacks. For example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7"
+   * for Layer 7 DDoS attacks.
+   *
    * @var string
    */
   public $threatVector;
 
   /**
-   * @param AdaptiveProtection
+   * Information about potential Layer 7 DDoS attacks identified by [Google
+   * Cloud Armor Adaptive
+   * Protection](https://cloud.google.com/armor/docs/adaptive-protection-
+   * overview).
+   *
+   * @param AdaptiveProtection $adaptiveProtection
    */
   public function setAdaptiveProtection(AdaptiveProtection $adaptiveProtection)
   {
@@ -51,7 +63,9 @@ class CloudArmor extends \Google\Model
     return $this->adaptiveProtection;
   }
   /**
-   * @param Attack
+   * Information about DDoS attack volume and classification.
+   *
+   * @param Attack $attack
    */
   public function setAttack(Attack $attack)
   {
@@ -65,7 +79,10 @@ class CloudArmor extends \Google\Model
     return $this->attack;
   }
   /**
-   * @param string
+   * Duration of attack from the start until the current moment (updated every 5
+   * minutes).
+   *
+   * @param string $duration
    */
   public function setDuration($duration)
   {
@@ -79,7 +96,11 @@ class CloudArmor extends \Google\Model
     return $this->duration;
   }
   /**
-   * @param Requests
+   * Information about incoming requests evaluated by [Google Cloud Armor
+   * security policies](https://cloud.google.com/armor/docs/security-policy-
+   * overview).
+   *
+   * @param Requests $requests
    */
   public function setRequests(Requests $requests)
   {
@@ -93,7 +114,11 @@ class CloudArmor extends \Google\Model
     return $this->requests;
   }
   /**
-   * @param SecurityPolicy
+   * Information about the [Google Cloud Armor security
+   * policy](https://cloud.google.com/armor/docs/security-policy-overview)
+   * relevant to the finding.
+   *
+   * @param SecurityPolicy $securityPolicy
    */
   public function setSecurityPolicy(SecurityPolicy $securityPolicy)
   {
@@ -107,7 +132,11 @@ class CloudArmor extends \Google\Model
     return $this->securityPolicy;
   }
   /**
-   * @param string
+   * Distinguish between volumetric & protocol DDoS attack and application layer
+   * attacks. For example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7"
+   * for Layer 7 DDoS attacks.
+   *
+   * @param string $threatVector
    */
   public function setThreatVector($threatVector)
   {

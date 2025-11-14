@@ -24,7 +24,9 @@ class TextList extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param Text[]
+   * Text values.
+   *
+   * @param Text[] $values
    */
   public function setValues($values)
   {

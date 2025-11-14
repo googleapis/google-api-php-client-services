@@ -23,6 +23,10 @@ class Trace extends \Google\Collection
   protected $endpointInfoType = EndpointInfo::class;
   protected $endpointInfoDataType = '';
   /**
+   * ID of trace. For forward traces, this ID is unique for each trace. For
+   * return traces, it matches ID of associated forward trace. A single forward
+   * trace can be associated with none, one or more than one return trace.
+   *
    * @var int
    */
   public $forwardTraceId;
@@ -30,7 +34,12 @@ class Trace extends \Google\Collection
   protected $stepsDataType = 'array';
 
   /**
-   * @param EndpointInfo
+   * Derived from the source and destination endpoints definition specified by
+   * user request, and validated by the data plane model. If there are multiple
+   * traces starting from different source locations, then the endpoint_info may
+   * be different between traces.
+   *
+   * @param EndpointInfo $endpointInfo
    */
   public function setEndpointInfo(EndpointInfo $endpointInfo)
   {
@@ -44,7 +53,11 @@ class Trace extends \Google\Collection
     return $this->endpointInfo;
   }
   /**
-   * @param int
+   * ID of trace. For forward traces, this ID is unique for each trace. For
+   * return traces, it matches ID of associated forward trace. A single forward
+   * trace can be associated with none, one or more than one return trace.
+   *
+   * @param int $forwardTraceId
    */
   public function setForwardTraceId($forwardTraceId)
   {
@@ -58,7 +71,13 @@ class Trace extends \Google\Collection
     return $this->forwardTraceId;
   }
   /**
-   * @param Step[]
+   * A trace of a test contains multiple steps from the initial state to the
+   * final state (delivered, dropped, forwarded, or aborted). The steps are
+   * ordered by the processing sequence within the simulated network state
+   * machine. It is critical to preserve the order of the steps and avoid
+   * reordering or sorting them.
+   *
+   * @param Step[] $steps
    */
   public function setSteps($steps)
   {

@@ -22,6 +22,8 @@ class GoogleCloudContactcenterinsightsV1alpha1SampleConversationsRequest extends
   protected $destinationDatasetType = GoogleCloudContactcenterinsightsV1alpha1Dataset::class;
   protected $destinationDatasetDataType = '';
   /**
+   * Required. The parent resource of the dataset.
+   *
    * @var string
    */
   public $parent;
@@ -29,7 +31,9 @@ class GoogleCloudContactcenterinsightsV1alpha1SampleConversationsRequest extends
   protected $sampleRuleDataType = '';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1Dataset
+   * The dataset resource to copy the sampled conversations to.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1Dataset $destinationDataset
    */
   public function setDestinationDataset(GoogleCloudContactcenterinsightsV1alpha1Dataset $destinationDataset)
   {
@@ -43,7 +47,9 @@ class GoogleCloudContactcenterinsightsV1alpha1SampleConversationsRequest extends
     return $this->destinationDataset;
   }
   /**
-   * @param string
+   * Required. The parent resource of the dataset.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -57,7 +63,9 @@ class GoogleCloudContactcenterinsightsV1alpha1SampleConversationsRequest extends
     return $this->parent;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1SampleRule
+   * Optional. The sample rule used for sampling conversations.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1SampleRule $sampleRule
    */
   public function setSampleRule(GoogleCloudContactcenterinsightsV1alpha1SampleRule $sampleRule)
   {

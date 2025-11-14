@@ -21,16 +21,22 @@ class SasPortalTestPermissionsRequest extends \Google\Collection
 {
   protected $collection_key = 'permissions';
   /**
+   * The set of permissions to check for the `resource`.
+   *
    * @var string[]
    */
   public $permissions;
   /**
+   * Required. The resource for which the permissions are being requested.
+   *
    * @var string
    */
   public $resource;
 
   /**
-   * @param string[]
+   * The set of permissions to check for the `resource`.
+   *
+   * @param string[] $permissions
    */
   public function setPermissions($permissions)
   {
@@ -44,7 +50,9 @@ class SasPortalTestPermissionsRequest extends \Google\Collection
     return $this->permissions;
   }
   /**
-   * @param string
+   * Required. The resource for which the permissions are being requested.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {

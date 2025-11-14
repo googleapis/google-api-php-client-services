@@ -25,7 +25,9 @@ class SqlServerToPostgresConfig extends \Google\Model
   protected $sqlserverSourceConfigDataType = '';
 
   /**
-   * @param PostgresDestinationConfig
+   * Optional. Configuration for Postgres destination.
+   *
+   * @param PostgresDestinationConfig $postgresDestinationConfig
    */
   public function setPostgresDestinationConfig(PostgresDestinationConfig $postgresDestinationConfig)
   {
@@ -39,7 +41,9 @@ class SqlServerToPostgresConfig extends \Google\Model
     return $this->postgresDestinationConfig;
   }
   /**
-   * @param SqlServerSourceConfig
+   * Optional. Configuration for SQL Server source.
+   *
+   * @param SqlServerSourceConfig $sqlserverSourceConfig
    */
   public function setSqlserverSourceConfig(SqlServerSourceConfig $sqlserverSourceConfig)
   {

@@ -20,10 +20,14 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ImportIssueModelMetadata extends \Google\Model
 {
   /**
+   * The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
@@ -31,7 +35,9 @@ class GoogleCloudContactcenterinsightsV1ImportIssueModelMetadata extends \Google
   protected $requestDataType = '';
 
   /**
-   * @param string
+   * The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -45,7 +51,9 @@ class GoogleCloudContactcenterinsightsV1ImportIssueModelMetadata extends \Google
     return $this->createTime;
   }
   /**
-   * @param string
+   * The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -59,7 +67,9 @@ class GoogleCloudContactcenterinsightsV1ImportIssueModelMetadata extends \Google
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1ImportIssueModelRequest
+   * The original import request.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ImportIssueModelRequest $request
    */
   public function setRequest(GoogleCloudContactcenterinsightsV1ImportIssueModelRequest $request)
   {

@@ -20,24 +20,36 @@ namespace Google\Service\Bigquery;
 class ErrorProto extends \Google\Model
 {
   /**
+   * Debugging information. This property is internal to Google and should not
+   * be used.
+   *
    * @var string
    */
   public $debugInfo;
   /**
+   * Specifies where the error occurred, if present.
+   *
    * @var string
    */
   public $location;
   /**
+   * A human-readable description of the error.
+   *
    * @var string
    */
   public $message;
   /**
+   * A short error code that summarizes the error.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * Debugging information. This property is internal to Google and should not
+   * be used.
+   *
+   * @param string $debugInfo
    */
   public function setDebugInfo($debugInfo)
   {
@@ -51,7 +63,9 @@ class ErrorProto extends \Google\Model
     return $this->debugInfo;
   }
   /**
-   * @param string
+   * Specifies where the error occurred, if present.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -65,7 +79,9 @@ class ErrorProto extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * A human-readable description of the error.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -79,7 +95,9 @@ class ErrorProto extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * A short error code that summarizes the error.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

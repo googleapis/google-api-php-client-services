@@ -19,12 +19,58 @@ namespace Google\Service\Bigquery;
 
 class BiEngineStatistics extends \Google\Collection
 {
+  /**
+   * BiEngineMode type not specified.
+   */
+  public const ACCELERATION_MODE_BI_ENGINE_ACCELERATION_MODE_UNSPECIFIED = 'BI_ENGINE_ACCELERATION_MODE_UNSPECIFIED';
+  /**
+   * BI Engine acceleration was attempted but disabled. bi_engine_reasons
+   * specifies a more detailed reason.
+   */
+  public const ACCELERATION_MODE_BI_ENGINE_DISABLED = 'BI_ENGINE_DISABLED';
+  /**
+   * Some inputs were accelerated using BI Engine. See bi_engine_reasons for why
+   * parts of the query were not accelerated.
+   */
+  public const ACCELERATION_MODE_PARTIAL_INPUT = 'PARTIAL_INPUT';
+  /**
+   * All of the query inputs were accelerated using BI Engine.
+   */
+  public const ACCELERATION_MODE_FULL_INPUT = 'FULL_INPUT';
+  /**
+   * All of the query was accelerated using BI Engine.
+   */
+  public const ACCELERATION_MODE_FULL_QUERY = 'FULL_QUERY';
+  /**
+   * BiEngineMode type not specified.
+   */
+  public const BI_ENGINE_MODE_ACCELERATION_MODE_UNSPECIFIED = 'ACCELERATION_MODE_UNSPECIFIED';
+  /**
+   * BI Engine disabled the acceleration. bi_engine_reasons specifies a more
+   * detailed reason.
+   */
+  public const BI_ENGINE_MODE_DISABLED = 'DISABLED';
+  /**
+   * Part of the query was accelerated using BI Engine. See bi_engine_reasons
+   * for why parts of the query were not accelerated.
+   */
+  public const BI_ENGINE_MODE_PARTIAL = 'PARTIAL';
+  /**
+   * All of the query was accelerated using BI Engine.
+   */
+  public const BI_ENGINE_MODE_FULL = 'FULL';
   protected $collection_key = 'biEngineReasons';
   /**
+   * Output only. Specifies which mode of BI Engine acceleration was performed
+   * (if any).
+   *
    * @var string
    */
   public $accelerationMode;
   /**
+   * Output only. Specifies which mode of BI Engine acceleration was performed
+   * (if any).
+   *
    * @var string
    */
   public $biEngineMode;
@@ -32,35 +78,50 @@ class BiEngineStatistics extends \Google\Collection
   protected $biEngineReasonsDataType = 'array';
 
   /**
-   * @param string
+   * Output only. Specifies which mode of BI Engine acceleration was performed
+   * (if any).
+   *
+   * Accepted values: BI_ENGINE_ACCELERATION_MODE_UNSPECIFIED,
+   * BI_ENGINE_DISABLED, PARTIAL_INPUT, FULL_INPUT, FULL_QUERY
+   *
+   * @param self::ACCELERATION_MODE_* $accelerationMode
    */
   public function setAccelerationMode($accelerationMode)
   {
     $this->accelerationMode = $accelerationMode;
   }
   /**
-   * @return string
+   * @return self::ACCELERATION_MODE_*
    */
   public function getAccelerationMode()
   {
     return $this->accelerationMode;
   }
   /**
-   * @param string
+   * Output only. Specifies which mode of BI Engine acceleration was performed
+   * (if any).
+   *
+   * Accepted values: ACCELERATION_MODE_UNSPECIFIED, DISABLED, PARTIAL, FULL
+   *
+   * @param self::BI_ENGINE_MODE_* $biEngineMode
    */
   public function setBiEngineMode($biEngineMode)
   {
     $this->biEngineMode = $biEngineMode;
   }
   /**
-   * @return string
+   * @return self::BI_ENGINE_MODE_*
    */
   public function getBiEngineMode()
   {
     return $this->biEngineMode;
   }
   /**
-   * @param BiEngineReason[]
+   * In case of DISABLED or PARTIAL bi_engine_mode, these contain the
+   * explanatory reasons as to why BI Engine could not accelerate. In case the
+   * full query was accelerated, this field is not populated.
+   *
+   * @param BiEngineReason[] $biEngineReasons
    */
   public function setBiEngineReasons($biEngineReasons)
   {

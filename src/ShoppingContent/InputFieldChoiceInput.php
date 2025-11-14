@@ -24,7 +24,9 @@ class InputFieldChoiceInput extends \Google\Collection
   protected $optionsDataType = 'array';
 
   /**
-   * @param InputFieldChoiceInputChoiceInputOption[]
+   * A list of choices. Only one option can be selected.
+   *
+   * @param InputFieldChoiceInputChoiceInputOption[] $options
    */
   public function setOptions($options)
   {

@@ -23,16 +23,23 @@ class DirectorySitesListResponse extends \Google\Collection
   protected $directorySitesType = DirectorySite::class;
   protected $directorySitesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#directorySitesListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DirectorySite[]
+   * Directory site collection.
+   *
+   * @param DirectorySite[] $directorySites
    */
   public function setDirectorySites($directorySites)
   {
@@ -46,7 +53,10 @@ class DirectorySitesListResponse extends \Google\Collection
     return $this->directorySites;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#directorySitesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class DirectorySitesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

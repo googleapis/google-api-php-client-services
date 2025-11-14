@@ -22,22 +22,30 @@ class DiffChecksumsResponse extends \Google\Model
   protected $checksumsLocationType = CompositeMedia::class;
   protected $checksumsLocationDataType = '';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $chunkSizeBytes;
   protected $objectLocationType = CompositeMedia::class;
   protected $objectLocationDataType = '';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $objectSizeBytes;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $objectVersion;
 
   /**
-   * @param CompositeMedia
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param CompositeMedia $checksumsLocation
    */
   public function setChecksumsLocation(CompositeMedia $checksumsLocation)
   {
@@ -51,7 +59,9 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->checksumsLocation;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $chunkSizeBytes
    */
   public function setChunkSizeBytes($chunkSizeBytes)
   {
@@ -65,7 +75,9 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->chunkSizeBytes;
   }
   /**
-   * @param CompositeMedia
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param CompositeMedia $objectLocation
    */
   public function setObjectLocation(CompositeMedia $objectLocation)
   {
@@ -79,7 +91,9 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->objectLocation;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $objectSizeBytes
    */
   public function setObjectSizeBytes($objectSizeBytes)
   {
@@ -93,7 +107,9 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->objectSizeBytes;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $objectVersion
    */
   public function setObjectVersion($objectVersion)
   {

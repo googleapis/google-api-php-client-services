@@ -20,16 +20,30 @@ namespace Google\Service\Monitoring;
 class GetNotificationChannelVerificationCodeResponse extends \Google\Model
 {
   /**
+   * The verification code, which may be used to verify other channels that have
+   * an equivalent identity (i.e. other channels of the same type with the same
+   * fingerprint such as other email channels with the same email address or
+   * other sms channels with the same number).
+   *
    * @var string
    */
   public $code;
   /**
+   * The expiration time associated with the code that was returned. If an
+   * expiration was provided in the request, this is the minimum of the
+   * requested expiration in the request and the max permitted expiration.
+   *
    * @var string
    */
   public $expireTime;
 
   /**
-   * @param string
+   * The verification code, which may be used to verify other channels that have
+   * an equivalent identity (i.e. other channels of the same type with the same
+   * fingerprint such as other email channels with the same email address or
+   * other sms channels with the same number).
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -43,7 +57,11 @@ class GetNotificationChannelVerificationCodeResponse extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * The expiration time associated with the code that was returned. If an
+   * expiration was provided in the request, this is the minimum of the
+   * requested expiration in the request and the max permitted expiration.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {

@@ -23,7 +23,9 @@ class StartEnvironmentResponse extends \Google\Model
   protected $environmentDataType = '';
 
   /**
-   * @param Environment
+   * Environment that was started.
+   *
+   * @param Environment $environment
    */
   public function setEnvironment(Environment $environment)
   {

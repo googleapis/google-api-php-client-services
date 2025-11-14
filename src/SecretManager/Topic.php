@@ -20,12 +20,24 @@ namespace Google\Service\SecretManager;
 class Topic extends \Google\Model
 {
   /**
+   * Identifier. The resource name of the Pub/Sub topic that will be published
+   * to, in the following format: `projects/topics`. For publication to succeed,
+   * the Secret Manager service agent must have the `pubsub.topic.publish`
+   * permission on the topic. The Pub/Sub Publisher role
+   * (`roles/pubsub.publisher`) includes this permission.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Identifier. The resource name of the Pub/Sub topic that will be published
+   * to, in the following format: `projects/topics`. For publication to succeed,
+   * the Secret Manager service agent must have the `pubsub.topic.publish`
+   * permission on the topic. The Pub/Sub Publisher role
+   * (`roles/pubsub.publisher`) includes this permission.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

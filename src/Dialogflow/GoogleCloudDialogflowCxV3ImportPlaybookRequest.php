@@ -22,16 +22,25 @@ class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends \Google\Model
   protected $importStrategyType = GoogleCloudDialogflowCxV3PlaybookImportStrategy::class;
   protected $importStrategyDataType = '';
   /**
+   * Uncompressed raw byte content for playbook.
+   *
    * @var string
    */
   public $playbookContent;
   /**
+   * [Dialogflow access control]
+   * (https://cloud.google.com/dialogflow/cx/docs/concept/access-
+   * control#storage).
+   *
    * @var string
    */
   public $playbookUri;
 
   /**
-   * @param GoogleCloudDialogflowCxV3PlaybookImportStrategy
+   * Optional. Specifies the import strategy used when resolving resource
+   * conflicts.
+   *
+   * @param GoogleCloudDialogflowCxV3PlaybookImportStrategy $importStrategy
    */
   public function setImportStrategy(GoogleCloudDialogflowCxV3PlaybookImportStrategy $importStrategy)
   {
@@ -45,7 +54,9 @@ class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends \Google\Model
     return $this->importStrategy;
   }
   /**
-   * @param string
+   * Uncompressed raw byte content for playbook.
+   *
+   * @param string $playbookContent
    */
   public function setPlaybookContent($playbookContent)
   {
@@ -59,7 +70,11 @@ class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends \Google\Model
     return $this->playbookContent;
   }
   /**
-   * @param string
+   * [Dialogflow access control]
+   * (https://cloud.google.com/dialogflow/cx/docs/concept/access-
+   * control#storage).
+   *
+   * @param string $playbookUri
    */
   public function setPlaybookUri($playbookUri)
   {

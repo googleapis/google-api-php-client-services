@@ -23,7 +23,9 @@ class NodePoolLoggingConfig extends \Google\Model
   protected $variantConfigDataType = '';
 
   /**
-   * @param LoggingVariantConfig
+   * Logging variant configuration.
+   *
+   * @param LoggingVariantConfig $variantConfig
    */
   public function setVariantConfig(LoggingVariantConfig $variantConfig)
   {

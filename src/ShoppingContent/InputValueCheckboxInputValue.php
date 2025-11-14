@@ -20,12 +20,16 @@ namespace Google\Service\ShoppingContent;
 class InputValueCheckboxInputValue extends \Google\Model
 {
   /**
+   * Required. True if the merchant checked the box field. False otherwise.
+   *
    * @var bool
    */
   public $value;
 
   /**
-   * @param bool
+   * Required. True if the merchant checked the box field. False otherwise.
+   *
+   * @param bool $value
    */
   public function setValue($value)
   {

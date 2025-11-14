@@ -26,7 +26,11 @@ class GoogleCloudDiscoveryengineV1ChunkChunkMetadata extends \Google\Collection
   protected $previousChunksDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1Chunk[]
+   * The next chunks of the current chunk. The number is controlled by
+   * SearchRequest.ContentSearchSpec.ChunkSpec.num_next_chunks. This field is
+   * only populated on SearchService.Search API.
+   *
+   * @param GoogleCloudDiscoveryengineV1Chunk[] $nextChunks
    */
   public function setNextChunks($nextChunks)
   {
@@ -40,7 +44,11 @@ class GoogleCloudDiscoveryengineV1ChunkChunkMetadata extends \Google\Collection
     return $this->nextChunks;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1Chunk[]
+   * The previous chunks of the current chunk. The number is controlled by
+   * SearchRequest.ContentSearchSpec.ChunkSpec.num_previous_chunks. This field
+   * is only populated on SearchService.Search API.
+   *
+   * @param GoogleCloudDiscoveryengineV1Chunk[] $previousChunks
    */
   public function setPreviousChunks($previousChunks)
   {

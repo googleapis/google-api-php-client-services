@@ -21,12 +21,16 @@ class EnumValues extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * The maximum allowable length for string values is 32 characters.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * The maximum allowable length for string values is 32 characters.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

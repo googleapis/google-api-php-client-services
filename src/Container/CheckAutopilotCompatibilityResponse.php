@@ -23,12 +23,16 @@ class CheckAutopilotCompatibilityResponse extends \Google\Collection
   protected $issuesType = AutopilotCompatibilityIssue::class;
   protected $issuesDataType = 'array';
   /**
+   * The summary of the autopilot compatibility response.
+   *
    * @var string
    */
   public $summary;
 
   /**
-   * @param AutopilotCompatibilityIssue[]
+   * The list of issues for the given operation.
+   *
+   * @param AutopilotCompatibilityIssue[] $issues
    */
   public function setIssues($issues)
   {
@@ -42,7 +46,9 @@ class CheckAutopilotCompatibilityResponse extends \Google\Collection
     return $this->issues;
   }
   /**
-   * @param string
+   * The summary of the autopilot compatibility response.
+   *
+   * @param string $summary
    */
   public function setSummary($summary)
   {

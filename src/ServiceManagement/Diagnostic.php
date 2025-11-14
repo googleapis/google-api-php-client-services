@@ -20,34 +20,54 @@ namespace Google\Service\ServiceManagement;
 class Diagnostic extends \Google\Model
 {
   /**
+   * Warnings and errors
+   */
+  public const KIND_WARNING = 'WARNING';
+  /**
+   * Only errors
+   */
+  public const KIND_ERROR = 'ERROR';
+  /**
+   * The kind of diagnostic information provided.
+   *
    * @var string
    */
   public $kind;
   /**
+   * File name and line number of the error or warning.
+   *
    * @var string
    */
   public $location;
   /**
+   * Message describing the error or warning.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * The kind of diagnostic information provided.
+   *
+   * Accepted values: WARNING, ERROR
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * File name and line number of the error or warning.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -61,7 +81,9 @@ class Diagnostic extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Message describing the error or warning.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

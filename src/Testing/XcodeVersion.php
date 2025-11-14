@@ -21,16 +21,22 @@ class XcodeVersion extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * Tags for this Xcode version. Example: "default".
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * The id for this version. Example: "9.2".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string[]
+   * Tags for this Xcode version. Example: "default".
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -44,7 +50,9 @@ class XcodeVersion extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param string
+   * The id for this version. Example: "9.2".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

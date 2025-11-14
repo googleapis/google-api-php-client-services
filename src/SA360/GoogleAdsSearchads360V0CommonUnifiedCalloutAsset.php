@@ -23,24 +23,40 @@ class GoogleAdsSearchads360V0CommonUnifiedCalloutAsset extends \Google\Collectio
   protected $adScheduleTargetsType = GoogleAdsSearchads360V0CommonAdScheduleInfo::class;
   protected $adScheduleTargetsDataType = 'array';
   /**
+   * The callout text. The length of this string should be between 1 and 25,
+   * inclusive.
+   *
    * @var string
    */
   public $calloutText;
   /**
+   * Last date of when this asset is effective and still serving, in yyyy-MM-dd
+   * format.
+   *
    * @var string
    */
   public $endDate;
   /**
+   * Start date of when this asset is effective and can begin serving, in yyyy-
+   * MM-dd format.
+   *
    * @var string
    */
   public $startDate;
   /**
+   * Whether to show the asset in search user's time zone. Applies to Microsoft
+   * Ads.
+   *
    * @var bool
    */
   public $useSearcherTimeZone;
 
   /**
-   * @param GoogleAdsSearchads360V0CommonAdScheduleInfo[]
+   * List of non-overlapping schedules specifying all time intervals for which
+   * the asset may serve. There can be a maximum of 6 schedules per day, 42 in
+   * total.
+   *
+   * @param GoogleAdsSearchads360V0CommonAdScheduleInfo[] $adScheduleTargets
    */
   public function setAdScheduleTargets($adScheduleTargets)
   {
@@ -54,7 +70,10 @@ class GoogleAdsSearchads360V0CommonUnifiedCalloutAsset extends \Google\Collectio
     return $this->adScheduleTargets;
   }
   /**
-   * @param string
+   * The callout text. The length of this string should be between 1 and 25,
+   * inclusive.
+   *
+   * @param string $calloutText
    */
   public function setCalloutText($calloutText)
   {
@@ -68,7 +87,10 @@ class GoogleAdsSearchads360V0CommonUnifiedCalloutAsset extends \Google\Collectio
     return $this->calloutText;
   }
   /**
-   * @param string
+   * Last date of when this asset is effective and still serving, in yyyy-MM-dd
+   * format.
+   *
+   * @param string $endDate
    */
   public function setEndDate($endDate)
   {
@@ -82,7 +104,10 @@ class GoogleAdsSearchads360V0CommonUnifiedCalloutAsset extends \Google\Collectio
     return $this->endDate;
   }
   /**
-   * @param string
+   * Start date of when this asset is effective and can begin serving, in yyyy-
+   * MM-dd format.
+   *
+   * @param string $startDate
    */
   public function setStartDate($startDate)
   {
@@ -96,7 +121,10 @@ class GoogleAdsSearchads360V0CommonUnifiedCalloutAsset extends \Google\Collectio
     return $this->startDate;
   }
   /**
-   * @param bool
+   * Whether to show the asset in search user's time zone. Applies to Microsoft
+   * Ads.
+   *
+   * @param bool $useSearcherTimeZone
    */
   public function setUseSearcherTimeZone($useSearcherTimeZone)
   {

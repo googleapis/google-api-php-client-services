@@ -20,16 +20,25 @@ namespace Google\Service\Dataform;
 class Interval extends \Google\Model
 {
   /**
+   * Optional. Exclusive end of the interval. If specified, a Timestamp matching
+   * this interval will have to be before the end.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Optional. Inclusive start of the interval. If specified, a Timestamp
+   * matching this interval will have to be the same or after the start.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Optional. Exclusive end of the interval. If specified, a Timestamp matching
+   * this interval will have to be before the end.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +52,10 @@ class Interval extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Optional. Inclusive start of the interval. If specified, a Timestamp
+   * matching this interval will have to be the same or after the start.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

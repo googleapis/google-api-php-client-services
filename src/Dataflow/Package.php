@@ -20,16 +20,26 @@ namespace Google\Service\Dataflow;
 class Package extends \Google\Model
 {
   /**
+   * The resource to read the package from. The supported resource type is:
+   * Google Cloud Storage: storage.googleapis.com/{bucket}
+   * bucket.storage.googleapis.com/
+   *
    * @var string
    */
   public $location;
   /**
+   * The name of the package.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The resource to read the package from. The supported resource type is:
+   * Google Cloud Storage: storage.googleapis.com/{bucket}
+   * bucket.storage.googleapis.com/
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -43,7 +53,9 @@ class Package extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The name of the package.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

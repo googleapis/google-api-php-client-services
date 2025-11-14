@@ -20,16 +20,24 @@ namespace Google\Service\Baremetalsolution;
 class SSHKey extends \Google\Model
 {
   /**
+   * Output only. The name of this SSH key. Currently, the only valid value for
+   * the location is "global".
+   *
    * @var string
    */
   public $name;
   /**
+   * The public SSH key. This must be in OpenSSH .authorized_keys format.
+   *
    * @var string
    */
   public $publicKey;
 
   /**
-   * @param string
+   * Output only. The name of this SSH key. Currently, the only valid value for
+   * the location is "global".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,9 @@ class SSHKey extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The public SSH key. This must be in OpenSSH .authorized_keys format.
+   *
+   * @param string $publicKey
    */
   public function setPublicKey($publicKey)
   {

@@ -22,18 +22,27 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig extends \Go
   protected $imageConfigType = GoogleCloudBeyondcorpAppconnectorsV1ImageConfig::class;
   protected $imageConfigDataType = '';
   /**
+   * The SLM instance agent configuration.
+   *
    * @var array[]
    */
   public $instanceConfig;
   protected $notificationConfigType = GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig::class;
   protected $notificationConfigDataType = '';
   /**
+   * Required. A monotonically increasing number generated and maintained by the
+   * API provider. Every time a config changes in the backend, the
+   * sequenceNumber should be bumped up to reflect the change.
+   *
    * @var string
    */
   public $sequenceNumber;
 
   /**
-   * @param GoogleCloudBeyondcorpAppconnectorsV1ImageConfig
+   * ImageConfig defines the GCR images to run for the remote agent's control
+   * plane.
+   *
+   * @param GoogleCloudBeyondcorpAppconnectorsV1ImageConfig $imageConfig
    */
   public function setImageConfig(GoogleCloudBeyondcorpAppconnectorsV1ImageConfig $imageConfig)
   {
@@ -47,7 +56,9 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig extends \Go
     return $this->imageConfig;
   }
   /**
-   * @param array[]
+   * The SLM instance agent configuration.
+   *
+   * @param array[] $instanceConfig
    */
   public function setInstanceConfig($instanceConfig)
   {
@@ -61,7 +72,10 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig extends \Go
     return $this->instanceConfig;
   }
   /**
-   * @param GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig
+   * NotificationConfig defines the notification mechanism that the remote
+   * instance should subscribe to in order to receive notification.
+   *
+   * @param GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig $notificationConfig
    */
   public function setNotificationConfig(GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig $notificationConfig)
   {
@@ -75,7 +89,11 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig extends \Go
     return $this->notificationConfig;
   }
   /**
-   * @param string
+   * Required. A monotonically increasing number generated and maintained by the
+   * API provider. Every time a config changes in the backend, the
+   * sequenceNumber should be bumped up to reflect the change.
+   *
+   * @param string $sequenceNumber
    */
   public function setSequenceNumber($sequenceNumber)
   {

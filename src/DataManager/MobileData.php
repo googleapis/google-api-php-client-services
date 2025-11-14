@@ -21,12 +21,18 @@ class MobileData extends \Google\Collection
 {
   protected $collection_key = 'mobileIds';
   /**
+   * Required. The list of mobile device IDs (advertising ID/IDFA). At most 10
+   * `mobileIds` can be provided in a single AudienceMember.
+   *
    * @var string[]
    */
   public $mobileIds;
 
   /**
-   * @param string[]
+   * Required. The list of mobile device IDs (advertising ID/IDFA). At most 10
+   * `mobileIds` can be provided in a single AudienceMember.
+   *
+   * @param string[] $mobileIds
    */
   public function setMobileIds($mobileIds)
   {

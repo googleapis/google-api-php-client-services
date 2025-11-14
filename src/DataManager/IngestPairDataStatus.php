@@ -20,16 +20,28 @@ namespace Google\Service\DataManager;
 class IngestPairDataStatus extends \Google\Model
 {
   /**
+   * The total count of pair ids sent in the upload request for the destination.
+   * Includes all pair ids in the request, regardless of whether they were
+   * successfully ingested or not.
+   *
    * @var string
    */
   public $pairIdCount;
   /**
+   * The total count of audience members sent in the upload request for the
+   * destination. Includes all audience members in the request, regardless of
+   * whether they were successfully ingested or not.
+   *
    * @var string
    */
   public $recordCount;
 
   /**
-   * @param string
+   * The total count of pair ids sent in the upload request for the destination.
+   * Includes all pair ids in the request, regardless of whether they were
+   * successfully ingested or not.
+   *
+   * @param string $pairIdCount
    */
   public function setPairIdCount($pairIdCount)
   {
@@ -43,7 +55,11 @@ class IngestPairDataStatus extends \Google\Model
     return $this->pairIdCount;
   }
   /**
-   * @param string
+   * The total count of audience members sent in the upload request for the
+   * destination. Includes all audience members in the request, regardless of
+   * whether they were successfully ingested or not.
+   *
+   * @param string $recordCount
    */
   public function setRecordCount($recordCount)
   {

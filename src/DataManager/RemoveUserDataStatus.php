@@ -20,16 +20,28 @@ namespace Google\Service\DataManager;
 class RemoveUserDataStatus extends \Google\Model
 {
   /**
+   * The total count of audience members sent in the removal request. Includes
+   * all audience members in the request, regardless of whether they were
+   * successfully removed or not.
+   *
    * @var string
    */
   public $recordCount;
   /**
+   * The total count of user identifiers sent in the removal request. Includes
+   * all user identifiers in the request, regardless of whether they were
+   * successfully removed or not.
+   *
    * @var string
    */
   public $userIdentifierCount;
 
   /**
-   * @param string
+   * The total count of audience members sent in the removal request. Includes
+   * all audience members in the request, regardless of whether they were
+   * successfully removed or not.
+   *
+   * @param string $recordCount
    */
   public function setRecordCount($recordCount)
   {
@@ -43,7 +55,11 @@ class RemoveUserDataStatus extends \Google\Model
     return $this->recordCount;
   }
   /**
-   * @param string
+   * The total count of user identifiers sent in the removal request. Includes
+   * all user identifiers in the request, regardless of whether they were
+   * successfully removed or not.
+   *
+   * @param string $userIdentifierCount
    */
   public function setUserIdentifierCount($userIdentifierCount)
   {

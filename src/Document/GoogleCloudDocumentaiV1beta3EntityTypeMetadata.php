@@ -20,12 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends \Google\Model
 {
   /**
+   * Whether the entity type should be considered inactive.
+   *
    * @var bool
    */
   public $inactive;
 
   /**
-   * @param bool
+   * Whether the entity type should be considered inactive.
+   *
+   * @param bool $inactive
    */
   public function setInactive($inactive)
   {

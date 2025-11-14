@@ -19,15 +19,37 @@ namespace Google\Service\Dfareporting;
 
 class DynamicFeed extends \Google\Model
 {
+  /**
+   * The status is unknown.
+   */
+  public const STATUS_STATUS_UNKNOWN = 'STATUS_UNKNOWN';
+  /**
+   * The feedstatus is active.
+   */
+  public const STATUS_ACTIVE = 'ACTIVE';
+  /**
+   * The feed status is inactive.
+   */
+  public const STATUS_INACTIVE = 'INACTIVE';
+  /**
+   * The feed status is deleted.
+   */
+  public const STATUS_DELETED = 'DELETED';
   protected $contentSourceType = ContentSource::class;
   protected $contentSourceDataType = '';
   protected $createInfoType = LastModifiedInfo::class;
   protected $createInfoDataType = '';
   /**
+   * Output only. Unique ID of this dynamic feed. This is a read-only, auto-
+   * generated field.
+   *
    * @var string
    */
   public $dynamicFeedId;
   /**
+   * Optional. Name of this dynamic feed. It is defaulted to content source file
+   * name if not provided.
+   *
    * @var string
    */
   public $dynamicFeedName;
@@ -38,22 +60,33 @@ class DynamicFeed extends \Google\Model
   protected $feedScheduleType = FeedSchedule::class;
   protected $feedScheduleDataType = '';
   /**
+   * Output only. Indicates whether the dynamic feed has a published version.
+   * This is a read-only field.
+   *
    * @var bool
    */
   public $hasPublished;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**
+   * Output only. The status of the feed. It is a read-only field that depends
+   * on the the feed ingestion status. The default value is INACTIVE, and it
+   * will be updated to ACTIVE once the feed is ingested successfully.
+   *
    * @var string
    */
   public $status;
   /**
+   * Required. Advertiser ID of this dynamic feed. This is a required field.
+   *
    * @var string
    */
   public $studioAdvertiserId;
 
   /**
-   * @param ContentSource
+   * Required. The content source of the dynamic feed. This is a required field.
+   *
+   * @param ContentSource $contentSource
    */
   public function setContentSource(ContentSource $contentSource)
   {
@@ -67,7 +100,10 @@ class DynamicFeed extends \Google\Model
     return $this->contentSource;
   }
   /**
-   * @param LastModifiedInfo
+   * Output only. The creation timestamp of the dynamic feed. This is a read-
+   * only field.
+   *
+   * @param LastModifiedInfo $createInfo
    */
   public function setCreateInfo(LastModifiedInfo $createInfo)
   {
@@ -81,7 +117,10 @@ class DynamicFeed extends \Google\Model
     return $this->createInfo;
   }
   /**
-   * @param string
+   * Output only. Unique ID of this dynamic feed. This is a read-only, auto-
+   * generated field.
+   *
+   * @param string $dynamicFeedId
    */
   public function setDynamicFeedId($dynamicFeedId)
   {
@@ -95,7 +134,10 @@ class DynamicFeed extends \Google\Model
     return $this->dynamicFeedId;
   }
   /**
-   * @param string
+   * Optional. Name of this dynamic feed. It is defaulted to content source file
+   * name if not provided.
+   *
+   * @param string $dynamicFeedName
    */
   public function setDynamicFeedName($dynamicFeedName)
   {
@@ -109,7 +151,10 @@ class DynamicFeed extends \Google\Model
     return $this->dynamicFeedName;
   }
   /**
-   * @param Element
+   * Required. The element of the dynamic feed that is to specify the schema of
+   * the feed. This is a required field.
+   *
+   * @param Element $element
    */
   public function setElement(Element $element)
   {
@@ -123,7 +168,10 @@ class DynamicFeed extends \Google\Model
     return $this->element;
   }
   /**
-   * @param FeedIngestionStatus
+   * Output only. The ingestion status of the dynamic feed. This is a read-only
+   * field.
+   *
+   * @param FeedIngestionStatus $feedIngestionStatus
    */
   public function setFeedIngestionStatus(FeedIngestionStatus $feedIngestionStatus)
   {
@@ -137,7 +185,10 @@ class DynamicFeed extends \Google\Model
     return $this->feedIngestionStatus;
   }
   /**
-   * @param FeedSchedule
+   * Optional. The schedule of the dynamic feed. It can be set if the feed is
+   * published.
+   *
+   * @param FeedSchedule $feedSchedule
    */
   public function setFeedSchedule(FeedSchedule $feedSchedule)
   {
@@ -151,7 +202,10 @@ class DynamicFeed extends \Google\Model
     return $this->feedSchedule;
   }
   /**
-   * @param bool
+   * Output only. Indicates whether the dynamic feed has a published version.
+   * This is a read-only field.
+   *
+   * @param bool $hasPublished
    */
   public function setHasPublished($hasPublished)
   {
@@ -165,7 +219,10 @@ class DynamicFeed extends \Google\Model
     return $this->hasPublished;
   }
   /**
-   * @param LastModifiedInfo
+   * Output only. The last modified timestamp of the dynamic feed. This is a
+   * read-only field.
+   *
+   * @param LastModifiedInfo $lastModifiedInfo
    */
   public function setLastModifiedInfo(LastModifiedInfo $lastModifiedInfo)
   {
@@ -179,21 +236,29 @@ class DynamicFeed extends \Google\Model
     return $this->lastModifiedInfo;
   }
   /**
-   * @param string
+   * Output only. The status of the feed. It is a read-only field that depends
+   * on the the feed ingestion status. The default value is INACTIVE, and it
+   * will be updated to ACTIVE once the feed is ingested successfully.
+   *
+   * Accepted values: STATUS_UNKNOWN, ACTIVE, INACTIVE, DELETED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * Required. Advertiser ID of this dynamic feed. This is a required field.
+   *
+   * @param string $studioAdvertiserId
    */
   public function setStudioAdvertiserId($studioAdvertiserId)
   {

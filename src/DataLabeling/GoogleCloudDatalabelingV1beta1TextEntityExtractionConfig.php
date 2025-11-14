@@ -20,12 +20,16 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig extends \Google\Model
 {
   /**
+   * Required. Annotation spec set resource name.
+   *
    * @var string
    */
   public $annotationSpecSet;
 
   /**
-   * @param string
+   * Required. Annotation spec set resource name.
+   *
+   * @param string $annotationSpecSet
    */
   public function setAnnotationSpecSet($annotationSpecSet)
   {

@@ -20,6 +20,9 @@ namespace Google\Service\DatabaseMigrationService;
 class SqlServerDatabaseBackup extends \Google\Model
 {
   /**
+   * Required. Name of a SQL Server database for which to define backup
+   * configuration.
+   *
    * @var string
    */
   public $database;
@@ -27,7 +30,10 @@ class SqlServerDatabaseBackup extends \Google\Model
   protected $encryptionOptionsDataType = '';
 
   /**
-   * @param string
+   * Required. Name of a SQL Server database for which to define backup
+   * configuration.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -41,7 +47,11 @@ class SqlServerDatabaseBackup extends \Google\Model
     return $this->database;
   }
   /**
-   * @param SqlServerEncryptionOptions
+   * Optional. Encryption settings for the database. Required if provided
+   * database backups are encrypted. Encryption settings include path to
+   * certificate, path to certificate private key, and key password.
+   *
+   * @param SqlServerEncryptionOptions $encryptionOptions
    */
   public function setEncryptionOptions(SqlServerEncryptionOptions $encryptionOptions)
   {

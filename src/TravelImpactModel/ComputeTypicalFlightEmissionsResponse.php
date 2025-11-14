@@ -26,7 +26,10 @@ class ComputeTypicalFlightEmissionsResponse extends \Google\Collection
   protected $typicalFlightEmissionsDataType = 'array';
 
   /**
-   * @param ModelVersion
+   * The model version under which typical flight emission estimates for all
+   * flights in this response were computed.
+   *
+   * @param ModelVersion $modelVersion
    */
   public function setModelVersion(ModelVersion $modelVersion)
   {
@@ -40,7 +43,9 @@ class ComputeTypicalFlightEmissionsResponse extends \Google\Collection
     return $this->modelVersion;
   }
   /**
-   * @param TypicalFlightEmissions[]
+   * Market's Typical Flight Emissions requested.
+   *
+   * @param TypicalFlightEmissions[] $typicalFlightEmissions
    */
   public function setTypicalFlightEmissions($typicalFlightEmissions)
   {

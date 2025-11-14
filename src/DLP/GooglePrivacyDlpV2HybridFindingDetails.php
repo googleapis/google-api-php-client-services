@@ -22,14 +22,32 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
   protected $containerDetailsType = GooglePrivacyDlpV2Container::class;
   protected $containerDetailsDataType = '';
   /**
+   * Offset in bytes of the line, from the beginning of the file, where the
+   * finding is located. Populate if the item being scanned is only part of a
+   * bigger item, such as a shard of a file and you want to track the absolute
+   * position of the finding.
+   *
    * @var string
    */
   public $fileOffset;
   /**
+   * Labels to represent user provided metadata about the data being inspected.
+   * If configured by the job, some key values may be required. The labels
+   * associated with `Finding`'s produced by hybrid inspection. Label keys must
+   * be between 1 and 63 characters long and must conform to the following
+   * regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be
+   * between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated
+   * with a given finding. Examples: * `"environment" : "production"` *
+   * `"pipeline" : "etl"`
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Offset of the row for tables. Populate if the row(s) being scanned are part
+   * of a bigger dataset and you want to keep track of their absolute position.
+   *
    * @var string
    */
   public $rowOffset;
@@ -37,7 +55,9 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
   protected $tableOptionsDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2Container
+   * Details about the container where the content being inspected is from.
+   *
+   * @param GooglePrivacyDlpV2Container $containerDetails
    */
   public function setContainerDetails(GooglePrivacyDlpV2Container $containerDetails)
   {
@@ -51,7 +71,12 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
     return $this->containerDetails;
   }
   /**
-   * @param string
+   * Offset in bytes of the line, from the beginning of the file, where the
+   * finding is located. Populate if the item being scanned is only part of a
+   * bigger item, such as a shard of a file and you want to track the absolute
+   * position of the finding.
+   *
+   * @param string $fileOffset
    */
   public function setFileOffset($fileOffset)
   {
@@ -65,7 +90,17 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
     return $this->fileOffset;
   }
   /**
-   * @param string[]
+   * Labels to represent user provided metadata about the data being inspected.
+   * If configured by the job, some key values may be required. The labels
+   * associated with `Finding`'s produced by hybrid inspection. Label keys must
+   * be between 1 and 63 characters long and must conform to the following
+   * regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be
+   * between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated
+   * with a given finding. Examples: * `"environment" : "production"` *
+   * `"pipeline" : "etl"`
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -79,7 +114,10 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Offset of the row for tables. Populate if the row(s) being scanned are part
+   * of a bigger dataset and you want to keep track of their absolute position.
+   *
+   * @param string $rowOffset
    */
   public function setRowOffset($rowOffset)
   {
@@ -93,7 +131,13 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
     return $this->rowOffset;
   }
   /**
-   * @param GooglePrivacyDlpV2TableOptions
+   * If the container is a table, additional information to make findings
+   * meaningful such as the columns that are primary keys. If not known ahead of
+   * time, can also be set within each inspect hybrid call and the two will be
+   * merged. Note that identifying_fields will only be stored to BigQuery, and
+   * only if the BigQuery action has been included.
+   *
+   * @param GooglePrivacyDlpV2TableOptions $tableOptions
    */
   public function setTableOptions(GooglePrivacyDlpV2TableOptions $tableOptions)
   {

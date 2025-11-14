@@ -20,16 +20,23 @@ namespace Google\Service\Bigquery;
 class Entry extends \Google\Model
 {
   /**
+   * Number of items being predicted as this label.
+   *
    * @var string
    */
   public $itemCount;
   /**
+   * The predicted label. For confidence_threshold > 0, we will also add an
+   * entry indicating the number of items under the confidence threshold.
+   *
    * @var string
    */
   public $predictedLabel;
 
   /**
-   * @param string
+   * Number of items being predicted as this label.
+   *
+   * @param string $itemCount
    */
   public function setItemCount($itemCount)
   {
@@ -43,7 +50,10 @@ class Entry extends \Google\Model
     return $this->itemCount;
   }
   /**
-   * @param string
+   * The predicted label. For confidence_threshold > 0, we will also add an
+   * entry indicating the number of items under the confidence threshold.
+   *
+   * @param string $predictedLabel
    */
   public function setPredictedLabel($predictedLabel)
   {

@@ -26,7 +26,9 @@ class GooglePrivacyDlpV2InspectionRuleSet extends \Google\Collection
   protected $rulesDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2InfoType[]
+   * List of infoTypes this rule set is applied to.
+   *
+   * @param GooglePrivacyDlpV2InfoType[] $infoTypes
    */
   public function setInfoTypes($infoTypes)
   {
@@ -40,7 +42,9 @@ class GooglePrivacyDlpV2InspectionRuleSet extends \Google\Collection
     return $this->infoTypes;
   }
   /**
-   * @param GooglePrivacyDlpV2InspectionRule[]
+   * Set of rules to be applied to infoTypes. The rules are applied in order.
+   *
+   * @param GooglePrivacyDlpV2InspectionRule[] $rules
    */
   public function setRules($rules)
   {

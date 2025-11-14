@@ -20,52 +20,79 @@ namespace Google\Service\NetworkManagement;
 class ProxyConnectionInfo extends \Google\Model
 {
   /**
+   * URI of the network where connection is proxied.
+   *
    * @var string
    */
   public $networkUri;
   /**
+   * Destination IP address of a new connection.
+   *
    * @var string
    */
   public $newDestinationIp;
   /**
+   * Destination port of a new connection. Only valid when protocol is TCP or
+   * UDP.
+   *
    * @var int
    */
   public $newDestinationPort;
   /**
+   * Source IP address of a new connection.
+   *
    * @var string
    */
   public $newSourceIp;
   /**
+   * Source port of a new connection. Only valid when protocol is TCP or UDP.
+   *
    * @var int
    */
   public $newSourcePort;
   /**
+   * Destination IP address of an original connection
+   *
    * @var string
    */
   public $oldDestinationIp;
   /**
+   * Destination port of an original connection. Only valid when protocol is TCP
+   * or UDP.
+   *
    * @var int
    */
   public $oldDestinationPort;
   /**
+   * Source IP address of an original connection.
+   *
    * @var string
    */
   public $oldSourceIp;
   /**
+   * Source port of an original connection. Only valid when protocol is TCP or
+   * UDP.
+   *
    * @var int
    */
   public $oldSourcePort;
   /**
+   * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
+   *
    * @var string
    */
   public $protocol;
   /**
+   * Uri of proxy subnet.
+   *
    * @var string
    */
   public $subnetUri;
 
   /**
-   * @param string
+   * URI of the network where connection is proxied.
+   *
+   * @param string $networkUri
    */
   public function setNetworkUri($networkUri)
   {
@@ -79,7 +106,9 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->networkUri;
   }
   /**
-   * @param string
+   * Destination IP address of a new connection.
+   *
+   * @param string $newDestinationIp
    */
   public function setNewDestinationIp($newDestinationIp)
   {
@@ -93,7 +122,10 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->newDestinationIp;
   }
   /**
-   * @param int
+   * Destination port of a new connection. Only valid when protocol is TCP or
+   * UDP.
+   *
+   * @param int $newDestinationPort
    */
   public function setNewDestinationPort($newDestinationPort)
   {
@@ -107,7 +139,9 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->newDestinationPort;
   }
   /**
-   * @param string
+   * Source IP address of a new connection.
+   *
+   * @param string $newSourceIp
    */
   public function setNewSourceIp($newSourceIp)
   {
@@ -121,7 +155,9 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->newSourceIp;
   }
   /**
-   * @param int
+   * Source port of a new connection. Only valid when protocol is TCP or UDP.
+   *
+   * @param int $newSourcePort
    */
   public function setNewSourcePort($newSourcePort)
   {
@@ -135,7 +171,9 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->newSourcePort;
   }
   /**
-   * @param string
+   * Destination IP address of an original connection
+   *
+   * @param string $oldDestinationIp
    */
   public function setOldDestinationIp($oldDestinationIp)
   {
@@ -149,7 +187,10 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->oldDestinationIp;
   }
   /**
-   * @param int
+   * Destination port of an original connection. Only valid when protocol is TCP
+   * or UDP.
+   *
+   * @param int $oldDestinationPort
    */
   public function setOldDestinationPort($oldDestinationPort)
   {
@@ -163,7 +204,9 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->oldDestinationPort;
   }
   /**
-   * @param string
+   * Source IP address of an original connection.
+   *
+   * @param string $oldSourceIp
    */
   public function setOldSourceIp($oldSourceIp)
   {
@@ -177,7 +220,10 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->oldSourceIp;
   }
   /**
-   * @param int
+   * Source port of an original connection. Only valid when protocol is TCP or
+   * UDP.
+   *
+   * @param int $oldSourcePort
    */
   public function setOldSourcePort($oldSourcePort)
   {
@@ -191,7 +237,9 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->oldSourcePort;
   }
   /**
-   * @param string
+   * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
+   *
+   * @param string $protocol
    */
   public function setProtocol($protocol)
   {
@@ -205,7 +253,9 @@ class ProxyConnectionInfo extends \Google\Model
     return $this->protocol;
   }
   /**
-   * @param string
+   * Uri of proxy subnet.
+   *
+   * @param string $subnetUri
    */
   public function setSubnetUri($subnetUri)
   {

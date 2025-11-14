@@ -20,24 +20,56 @@ namespace Google\Service\DisplayVideo;
 class VideoAdSequenceStep extends \Google\Model
 {
   /**
+   * Unspecified or unknown
+   */
+  public const INTERACTION_TYPE_INTERACTION_TYPE_UNSPECIFIED = 'INTERACTION_TYPE_UNSPECIFIED';
+  /**
+   * A paid view.
+   */
+  public const INTERACTION_TYPE_INTERACTION_TYPE_PAID_VIEW = 'INTERACTION_TYPE_PAID_VIEW';
+  /**
+   * Skipped by the viewer.
+   */
+  public const INTERACTION_TYPE_INTERACTION_TYPE_SKIP = 'INTERACTION_TYPE_SKIP';
+  /**
+   * A (viewed) ad impression.
+   */
+  public const INTERACTION_TYPE_INTERACTION_TYPE_IMPRESSION = 'INTERACTION_TYPE_IMPRESSION';
+  /**
+   * An ad impression that was not immediately skipped by the viewer, but didn't
+   * reach the billable event either.
+   */
+  public const INTERACTION_TYPE_INTERACTION_TYPE_ENGAGED_IMPRESSION = 'INTERACTION_TYPE_ENGAGED_IMPRESSION';
+  /**
+   * The ID of the corresponding ad group of the step.
+   *
    * @var string
    */
   public $adGroupId;
   /**
+   * The interaction on the previous step that will lead the viewer to this
+   * step. The first step does not have interaction_type.
+   *
    * @var string
    */
   public $interactionType;
   /**
+   * The ID of the previous step. The first step does not have previous step.
+   *
    * @var string
    */
   public $previousStepId;
   /**
+   * The ID of the step.
+   *
    * @var string
    */
   public $stepId;
 
   /**
-   * @param string
+   * The ID of the corresponding ad group of the step.
+   *
+   * @param string $adGroupId
    */
   public function setAdGroupId($adGroupId)
   {
@@ -51,21 +83,30 @@ class VideoAdSequenceStep extends \Google\Model
     return $this->adGroupId;
   }
   /**
-   * @param string
+   * The interaction on the previous step that will lead the viewer to this
+   * step. The first step does not have interaction_type.
+   *
+   * Accepted values: INTERACTION_TYPE_UNSPECIFIED, INTERACTION_TYPE_PAID_VIEW,
+   * INTERACTION_TYPE_SKIP, INTERACTION_TYPE_IMPRESSION,
+   * INTERACTION_TYPE_ENGAGED_IMPRESSION
+   *
+   * @param self::INTERACTION_TYPE_* $interactionType
    */
   public function setInteractionType($interactionType)
   {
     $this->interactionType = $interactionType;
   }
   /**
-   * @return string
+   * @return self::INTERACTION_TYPE_*
    */
   public function getInteractionType()
   {
     return $this->interactionType;
   }
   /**
-   * @param string
+   * The ID of the previous step. The first step does not have previous step.
+   *
+   * @param string $previousStepId
    */
   public function setPreviousStepId($previousStepId)
   {
@@ -79,7 +120,9 @@ class VideoAdSequenceStep extends \Google\Model
     return $this->previousStepId;
   }
   /**
-   * @param string
+   * The ID of the step.
+   *
+   * @param string $stepId
    */
   public function setStepId($stepId)
   {

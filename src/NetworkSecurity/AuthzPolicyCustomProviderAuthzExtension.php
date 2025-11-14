@@ -21,12 +21,18 @@ class AuthzPolicyCustomProviderAuthzExtension extends \Google\Collection
 {
   protected $collection_key = 'resources';
   /**
+   * Required. A list of references to authorization extensions that will be
+   * invoked for requests matching this policy. Limited to 1 custom provider.
+   *
    * @var string[]
    */
   public $resources;
 
   /**
-   * @param string[]
+   * Required. A list of references to authorization extensions that will be
+   * invoked for requests matching this policy. Limited to 1 custom provider.
+   *
+   * @param string[] $resources
    */
   public function setResources($resources)
   {

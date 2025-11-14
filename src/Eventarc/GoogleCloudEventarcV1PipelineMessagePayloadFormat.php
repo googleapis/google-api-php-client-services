@@ -27,7 +27,9 @@ class GoogleCloudEventarcV1PipelineMessagePayloadFormat extends \Google\Model
   protected $protobufDataType = '';
 
   /**
-   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormatAvroFormat
+   * Optional. Avro format.
+   *
+   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormatAvroFormat $avro
    */
   public function setAvro(GoogleCloudEventarcV1PipelineMessagePayloadFormatAvroFormat $avro)
   {
@@ -41,7 +43,9 @@ class GoogleCloudEventarcV1PipelineMessagePayloadFormat extends \Google\Model
     return $this->avro;
   }
   /**
-   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormatJsonFormat
+   * Optional. JSON format.
+   *
+   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormatJsonFormat $json
    */
   public function setJson(GoogleCloudEventarcV1PipelineMessagePayloadFormatJsonFormat $json)
   {
@@ -55,7 +59,9 @@ class GoogleCloudEventarcV1PipelineMessagePayloadFormat extends \Google\Model
     return $this->json;
   }
   /**
-   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormatProtobufFormat
+   * Optional. Protobuf format.
+   *
+   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormatProtobufFormat $protobuf
    */
   public function setProtobuf(GoogleCloudEventarcV1PipelineMessagePayloadFormatProtobufFormat $protobuf)
   {

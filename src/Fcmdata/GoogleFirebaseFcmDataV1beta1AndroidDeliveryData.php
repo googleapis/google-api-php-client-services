@@ -20,10 +20,15 @@ namespace Google\Service\Fcmdata;
 class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData extends \Google\Model
 {
   /**
+   * The analytics label associated with the messages sent. All messages sent
+   * without an analytics label will be grouped together in a single entry.
+   *
    * @var string
    */
   public $analyticsLabel;
   /**
+   * The app ID to which the messages were sent.
+   *
    * @var string
    */
   public $appId;
@@ -33,7 +38,10 @@ class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData extends \Google\Model
   protected $dateDataType = '';
 
   /**
-   * @param string
+   * The analytics label associated with the messages sent. All messages sent
+   * without an analytics label will be grouped together in a single entry.
+   *
+   * @param string $analyticsLabel
    */
   public function setAnalyticsLabel($analyticsLabel)
   {
@@ -47,7 +55,9 @@ class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData extends \Google\Model
     return $this->analyticsLabel;
   }
   /**
-   * @param string
+   * The app ID to which the messages were sent.
+   *
+   * @param string $appId
    */
   public function setAppId($appId)
   {
@@ -61,7 +71,9 @@ class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData extends \Google\Model
     return $this->appId;
   }
   /**
-   * @param GoogleFirebaseFcmDataV1beta1Data
+   * The data for the specified appId, date, and analyticsLabel.
+   *
+   * @param GoogleFirebaseFcmDataV1beta1Data $data
    */
   public function setData(GoogleFirebaseFcmDataV1beta1Data $data)
   {
@@ -75,7 +87,9 @@ class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData extends \Google\Model
     return $this->data;
   }
   /**
-   * @param GoogleTypeDate
+   * The date represented by this entry.
+   *
+   * @param GoogleTypeDate $date
    */
   public function setDate(GoogleTypeDate $date)
   {

@@ -21,18 +21,26 @@ class AdvertiserLandingPagesListResponse extends \Google\Collection
 {
   protected $collection_key = 'landingPages';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#advertiserLandingPagesListResponse".
+   *
    * @var string
    */
   public $kind;
   protected $landingPagesType = LandingPage::class;
   protected $landingPagesDataType = 'array';
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#advertiserLandingPagesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +54,9 @@ class AdvertiserLandingPagesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param LandingPage[]
+   * Landing page collection
+   *
+   * @param LandingPage[] $landingPages
    */
   public function setLandingPages($landingPages)
   {
@@ -60,7 +70,9 @@ class AdvertiserLandingPagesListResponse extends \Google\Collection
     return $this->landingPages;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -25,7 +25,10 @@ class PositionedObjectPropertiesSuggestionState extends \Google\Model
   protected $positioningSuggestionStateDataType = '';
 
   /**
-   * @param EmbeddedObjectSuggestionState
+   * A mask that indicates which of the fields in embedded_object have been
+   * changed in this suggestion.
+   *
+   * @param EmbeddedObjectSuggestionState $embeddedObjectSuggestionState
    */
   public function setEmbeddedObjectSuggestionState(EmbeddedObjectSuggestionState $embeddedObjectSuggestionState)
   {
@@ -39,7 +42,10 @@ class PositionedObjectPropertiesSuggestionState extends \Google\Model
     return $this->embeddedObjectSuggestionState;
   }
   /**
-   * @param PositionedObjectPositioningSuggestionState
+   * A mask that indicates which of the fields in positioning have been changed
+   * in this suggestion.
+   *
+   * @param PositionedObjectPositioningSuggestionState $positioningSuggestionState
    */
   public function setPositioningSuggestionState(PositionedObjectPositioningSuggestionState $positioningSuggestionState)
   {

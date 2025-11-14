@@ -20,24 +20,36 @@ namespace Google\Service\DatabaseMigrationService;
 class SqlServerSourceConfig extends \Google\Model
 {
   /**
+   * Optional. The log sequence number (LSN) to start CDC data migration from.
+   *
    * @var string
    */
   public $cdcStartPosition;
   /**
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for CDC phase.
+   *
    * @var int
    */
   public $maxConcurrentCdcConnections;
   /**
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for full dump phase.
+   *
    * @var int
    */
   public $maxConcurrentFullDumpConnections;
   /**
+   * Optional. Whether to skip full dump or not.
+   *
    * @var bool
    */
   public $skipFullDump;
 
   /**
-   * @param string
+   * Optional. The log sequence number (LSN) to start CDC data migration from.
+   *
+   * @param string $cdcStartPosition
    */
   public function setCdcStartPosition($cdcStartPosition)
   {
@@ -51,7 +63,10 @@ class SqlServerSourceConfig extends \Google\Model
     return $this->cdcStartPosition;
   }
   /**
-   * @param int
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for CDC phase.
+   *
+   * @param int $maxConcurrentCdcConnections
    */
   public function setMaxConcurrentCdcConnections($maxConcurrentCdcConnections)
   {
@@ -65,7 +80,10 @@ class SqlServerSourceConfig extends \Google\Model
     return $this->maxConcurrentCdcConnections;
   }
   /**
-   * @param int
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for full dump phase.
+   *
+   * @param int $maxConcurrentFullDumpConnections
    */
   public function setMaxConcurrentFullDumpConnections($maxConcurrentFullDumpConnections)
   {
@@ -79,7 +97,9 @@ class SqlServerSourceConfig extends \Google\Model
     return $this->maxConcurrentFullDumpConnections;
   }
   /**
-   * @param bool
+   * Optional. Whether to skip full dump or not.
+   *
+   * @param bool $skipFullDump
    */
   public function setSkipFullDump($skipFullDump)
   {

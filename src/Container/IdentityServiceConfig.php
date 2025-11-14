@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class IdentityServiceConfig extends \Google\Model
 {
   /**
+   * Whether to enable the Identity Service component
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether to enable the Identity Service component
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

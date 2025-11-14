@@ -20,16 +20,37 @@ namespace Google\Service\Monitoring;
 class ResourceGroup extends \Google\Model
 {
   /**
+   * Default value (not valid).
+   */
+  public const RESOURCE_TYPE_RESOURCE_TYPE_UNSPECIFIED = 'RESOURCE_TYPE_UNSPECIFIED';
+  /**
+   * A group of instances from Google Cloud Platform (GCP) or Amazon Web
+   * Services (AWS).
+   */
+  public const RESOURCE_TYPE_INSTANCE = 'INSTANCE';
+  /**
+   * A group of Amazon ELB load balancers.
+   */
+  public const RESOURCE_TYPE_AWS_ELB_LOAD_BALANCER = 'AWS_ELB_LOAD_BALANCER';
+  /**
+   * The group of resources being monitored. Should be only the [GROUP_ID], and
+   * not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
+   *
    * @var string
    */
   public $groupId;
   /**
+   * The resource type of the group members.
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param string
+   * The group of resources being monitored. Should be only the [GROUP_ID], and
+   * not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
+   *
+   * @param string $groupId
    */
   public function setGroupId($groupId)
   {
@@ -43,14 +64,18 @@ class ResourceGroup extends \Google\Model
     return $this->groupId;
   }
   /**
-   * @param string
+   * The resource type of the group members.
+   *
+   * Accepted values: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER
+   *
+   * @param self::RESOURCE_TYPE_* $resourceType
    */
   public function setResourceType($resourceType)
   {
     $this->resourceType = $resourceType;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_TYPE_*
    */
   public function getResourceType()
   {

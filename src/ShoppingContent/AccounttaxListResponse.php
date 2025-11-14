@@ -21,10 +21,15 @@ class AccounttaxListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accounttaxListResponse`".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The token for the retrieval of the next page of account tax settings.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +37,10 @@ class AccounttaxListResponse extends \Google\Collection
   protected $resourcesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accounttaxListResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +54,9 @@ class AccounttaxListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The token for the retrieval of the next page of account tax settings.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,7 @@ class AccounttaxListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param AccountTax[]
+   * @param AccountTax[] $resources
    */
   public function setResources($resources)
   {

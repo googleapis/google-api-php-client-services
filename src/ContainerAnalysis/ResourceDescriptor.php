@@ -49,7 +49,7 @@ class ResourceDescriptor extends \Google\Model
   public $uri;
 
   /**
-   * @param array[]
+   * @param array[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -63,7 +63,7 @@ class ResourceDescriptor extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -77,7 +77,7 @@ class ResourceDescriptor extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string[]
+   * @param string[] $digest
    */
   public function setDigest($digest)
   {
@@ -91,7 +91,7 @@ class ResourceDescriptor extends \Google\Model
     return $this->digest;
   }
   /**
-   * @param string
+   * @param string $downloadLocation
    */
   public function setDownloadLocation($downloadLocation)
   {
@@ -105,7 +105,7 @@ class ResourceDescriptor extends \Google\Model
     return $this->downloadLocation;
   }
   /**
-   * @param string
+   * @param string $mediaType
    */
   public function setMediaType($mediaType)
   {
@@ -119,7 +119,7 @@ class ResourceDescriptor extends \Google\Model
     return $this->mediaType;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -133,7 +133,7 @@ class ResourceDescriptor extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * @param string $uri
    */
   public function setUri($uri)
   {

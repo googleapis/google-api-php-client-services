@@ -20,24 +20,38 @@ namespace Google\Service\Css;
 class MethodDetails extends \Google\Model
 {
   /**
+   * Output only. The name of the method for example
+   * `cssproductsservice.listcssproducts`.
+   *
    * @var string
    */
   public $method;
   /**
+   * Output only. The path for the method such as
+   * `v1/cssproductsservice.listcssproducts`.
+   *
    * @var string
    */
   public $path;
   /**
+   * Output only. The sub-API that the method belongs to. In the CSS API, this
+   * is always `css`.
+   *
    * @var string
    */
   public $subapi;
   /**
+   * Output only. The API version that the method belongs to.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Output only. The name of the method for example
+   * `cssproductsservice.listcssproducts`.
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -51,7 +65,10 @@ class MethodDetails extends \Google\Model
     return $this->method;
   }
   /**
-   * @param string
+   * Output only. The path for the method such as
+   * `v1/cssproductsservice.listcssproducts`.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -65,7 +82,10 @@ class MethodDetails extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Output only. The sub-API that the method belongs to. In the CSS API, this
+   * is always `css`.
+   *
+   * @param string $subapi
    */
   public function setSubapi($subapi)
   {
@@ -79,7 +99,9 @@ class MethodDetails extends \Google\Model
     return $this->subapi;
   }
   /**
-   * @param string
+   * Output only. The API version that the method belongs to.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

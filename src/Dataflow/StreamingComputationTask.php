@@ -19,18 +19,34 @@ namespace Google\Service\Dataflow;
 
 class StreamingComputationTask extends \Google\Collection
 {
+  /**
+   * The streaming computation task is unknown, or unspecified.
+   */
+  public const TASK_TYPE_STREAMING_COMPUTATION_TASK_UNKNOWN = 'STREAMING_COMPUTATION_TASK_UNKNOWN';
+  /**
+   * Stop processing specified streaming computation range(s).
+   */
+  public const TASK_TYPE_STREAMING_COMPUTATION_TASK_STOP = 'STREAMING_COMPUTATION_TASK_STOP';
+  /**
+   * Start processing specified streaming computation range(s).
+   */
+  public const TASK_TYPE_STREAMING_COMPUTATION_TASK_START = 'STREAMING_COMPUTATION_TASK_START';
   protected $collection_key = 'dataDisks';
   protected $computationRangesType = StreamingComputationRanges::class;
   protected $computationRangesDataType = 'array';
   protected $dataDisksType = MountedDataDisk::class;
   protected $dataDisksDataType = 'array';
   /**
+   * A type of streaming computation task.
+   *
    * @var string
    */
   public $taskType;
 
   /**
-   * @param StreamingComputationRanges[]
+   * Contains ranges of a streaming computation this task should apply to.
+   *
+   * @param StreamingComputationRanges[] $computationRanges
    */
   public function setComputationRanges($computationRanges)
   {
@@ -44,7 +60,9 @@ class StreamingComputationTask extends \Google\Collection
     return $this->computationRanges;
   }
   /**
-   * @param MountedDataDisk[]
+   * Describes the set of data disks this task should apply to.
+   *
+   * @param MountedDataDisk[] $dataDisks
    */
   public function setDataDisks($dataDisks)
   {
@@ -58,14 +76,19 @@ class StreamingComputationTask extends \Google\Collection
     return $this->dataDisks;
   }
   /**
-   * @param string
+   * A type of streaming computation task.
+   *
+   * Accepted values: STREAMING_COMPUTATION_TASK_UNKNOWN,
+   * STREAMING_COMPUTATION_TASK_STOP, STREAMING_COMPUTATION_TASK_START
+   *
+   * @param self::TASK_TYPE_* $taskType
    */
   public function setTaskType($taskType)
   {
     $this->taskType = $taskType;
   }
   /**
-   * @return string
+   * @return self::TASK_TYPE_*
    */
   public function getTaskType()
   {

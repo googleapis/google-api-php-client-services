@@ -21,16 +21,25 @@ class AccessUrls extends \Google\Collection
 {
   protected $collection_key = 'crlAccessUrls';
   /**
+   * The URL where this CertificateAuthority's CA certificate is published. This
+   * will only be set for CAs that have been activated.
+   *
    * @var string
    */
   public $caCertificateAccessUrl;
   /**
+   * The URLs where this CertificateAuthority's CRLs are published. This will
+   * only be set for CAs that have been activated.
+   *
    * @var string[]
    */
   public $crlAccessUrls;
 
   /**
-   * @param string
+   * The URL where this CertificateAuthority's CA certificate is published. This
+   * will only be set for CAs that have been activated.
+   *
+   * @param string $caCertificateAccessUrl
    */
   public function setCaCertificateAccessUrl($caCertificateAccessUrl)
   {
@@ -44,7 +53,10 @@ class AccessUrls extends \Google\Collection
     return $this->caCertificateAccessUrl;
   }
   /**
-   * @param string[]
+   * The URLs where this CertificateAuthority's CRLs are published. This will
+   * only be set for CAs that have been activated.
+   *
+   * @param string[] $crlAccessUrls
    */
   public function setCrlAccessUrls($crlAccessUrls)
   {

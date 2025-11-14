@@ -20,12 +20,22 @@ namespace Google\Service\RealTimeBidding;
 class GetRemarketingTagResponse extends \Google\Model
 {
   /**
+   * An HTML tag that can be placed on the advertiser's page to add users to a
+   * user list. For more information and code samples on using snippets on your
+   * website, refer to [Tag your site for
+   * remarketing](https://support.google.com/google-ads/answer/2476688).
+   *
    * @var string
    */
   public $snippet;
 
   /**
-   * @param string
+   * An HTML tag that can be placed on the advertiser's page to add users to a
+   * user list. For more information and code samples on using snippets on your
+   * website, refer to [Tag your site for
+   * remarketing](https://support.google.com/google-ads/answer/2476688).
+   *
+   * @param string $snippet
    */
   public function setSnippet($snippet)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\TrafficDirectorService;
 class PathSegment extends \Google\Model
 {
   /**
+   * If specified, use the key to retrieve the value in a Struct.
+   *
    * @var string
    */
   public $key;
 
   /**
-   * @param string
+   * If specified, use the key to retrieve the value in a Struct.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {

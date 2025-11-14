@@ -20,20 +20,32 @@ namespace Google\Service\DeveloperConnect;
 class AppHubService extends \Google\Model
 {
   /**
+   * Required. Output only. Immutable. The name of the App Hub Service. Format: 
+   * `projects/{project}/locations/{location}/applications/{application}/service
+   * s/{service}`.
+   *
    * @var string
    */
   public $apphubService;
   /**
+   * Output only. The criticality of the App Hub Service.
+   *
    * @var string
    */
   public $criticality;
   /**
+   * Output only. The environment of the App Hub Service.
+   *
    * @var string
    */
   public $environment;
 
   /**
-   * @param string
+   * Required. Output only. Immutable. The name of the App Hub Service. Format: 
+   * `projects/{project}/locations/{location}/applications/{application}/service
+   * s/{service}`.
+   *
+   * @param string $apphubService
    */
   public function setApphubService($apphubService)
   {
@@ -47,7 +59,9 @@ class AppHubService extends \Google\Model
     return $this->apphubService;
   }
   /**
-   * @param string
+   * Output only. The criticality of the App Hub Service.
+   *
+   * @param string $criticality
    */
   public function setCriticality($criticality)
   {
@@ -61,7 +75,9 @@ class AppHubService extends \Google\Model
     return $this->criticality;
   }
   /**
-   * @param string
+   * Output only. The environment of the App Hub Service.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {

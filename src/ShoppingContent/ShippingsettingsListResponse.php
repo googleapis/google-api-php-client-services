@@ -21,10 +21,15 @@ class ShippingsettingsListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsListResponse`".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The token for the retrieval of the next page of shipping settings.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +37,10 @@ class ShippingsettingsListResponse extends \Google\Collection
   protected $resourcesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsListResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +54,9 @@ class ShippingsettingsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The token for the retrieval of the next page of shipping settings.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,7 @@ class ShippingsettingsListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ShippingSettings[]
+   * @param ShippingSettings[] $resources
    */
   public function setResources($resources)
   {

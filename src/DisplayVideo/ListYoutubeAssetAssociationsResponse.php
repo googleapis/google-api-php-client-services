@@ -21,6 +21,10 @@ class ListYoutubeAssetAssociationsResponse extends \Google\Collection
 {
   protected $collection_key = 'youtubeAssetAssociations';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListYoutubeAssetAssociations`
+   * method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListYoutubeAssetAssociationsResponse extends \Google\Collection
   protected $youtubeAssetAssociationsDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListYoutubeAssetAssociations`
+   * method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListYoutubeAssetAssociationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param YoutubeAssetAssociation[]
+   * The list of asset associations. This list will be absent if empty.
+   *
+   * @param YoutubeAssetAssociation[] $youtubeAssetAssociations
    */
   public function setYoutubeAssetAssociations($youtubeAssetAssociations)
   {

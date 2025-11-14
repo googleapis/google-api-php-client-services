@@ -20,12 +20,16 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1ColumnSchemaFieldElementType extends \Google\Model
 {
   /**
+   * Required. The type of a field element. See ColumnSchema.type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Required. The type of a field element. See ColumnSchema.type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

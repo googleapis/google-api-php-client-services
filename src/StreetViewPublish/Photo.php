@@ -19,18 +19,73 @@ namespace Google\Service\StreetViewPublish;
 
 class Photo extends \Google\Collection
 {
+  /**
+   * The status of the photo is unknown.
+   */
+  public const MAPS_PUBLISH_STATUS_UNSPECIFIED_MAPS_PUBLISH_STATUS = 'UNSPECIFIED_MAPS_PUBLISH_STATUS';
+  /**
+   * The photo is published to the public through Google Maps.
+   */
+  public const MAPS_PUBLISH_STATUS_PUBLISHED = 'PUBLISHED';
+  /**
+   * The photo has been rejected for an unknown reason.
+   */
+  public const MAPS_PUBLISH_STATUS_REJECTED_UNKNOWN = 'REJECTED_UNKNOWN';
+  /**
+   * The status of this transfer is unspecified.
+   */
+  public const TRANSFER_STATUS_TRANSFER_STATUS_UNKNOWN = 'TRANSFER_STATUS_UNKNOWN';
+  /**
+   * This photo has never been in a transfer.
+   */
+  public const TRANSFER_STATUS_NEVER_TRANSFERRED = 'NEVER_TRANSFERRED';
+  /**
+   * This photo transfer has been initiated, but the receiver has not yet
+   * responded.
+   */
+  public const TRANSFER_STATUS_PENDING = 'PENDING';
+  /**
+   * The photo transfer has been completed, and this photo has been transferred
+   * to the recipient.
+   */
+  public const TRANSFER_STATUS_COMPLETED = 'COMPLETED';
+  /**
+   * The recipient rejected this photo transfer.
+   */
+  public const TRANSFER_STATUS_REJECTED = 'REJECTED';
+  /**
+   * The photo transfer expired before the recipient took any action.
+   */
+  public const TRANSFER_STATUS_EXPIRED = 'EXPIRED';
+  /**
+   * The sender cancelled this photo transfer.
+   */
+  public const TRANSFER_STATUS_CANCELLED = 'CANCELLED';
+  /**
+   * The recipient owns this photo due to a rights transfer.
+   */
+  public const TRANSFER_STATUS_RECEIVED_VIA_TRANSFER = 'RECEIVED_VIA_TRANSFER';
   protected $collection_key = 'places';
   /**
+   * Optional. Absolute time when the photo was captured. When the photo has no
+   * exif timestamp, this is used to set a timestamp in the photo metadata.
+   *
    * @var string
    */
   public $captureTime;
   protected $connectionsType = Connection::class;
   protected $connectionsDataType = 'array';
   /**
+   * Output only. The download URL for the photo bytes. This field is set only
+   * when GetPhotoRequest.view is set to PhotoView.INCLUDE_DOWNLOAD_URL.
+   *
    * @var string
    */
   public $downloadUrl;
   /**
+   * Output only. Status in Google Maps, whether this photo was published or
+   * rejected.
+   *
    * @var string
    */
   public $mapsPublishStatus;
@@ -41,30 +96,43 @@ class Photo extends \Google\Collection
   protected $poseType = Pose::class;
   protected $poseDataType = '';
   /**
+   * Output only. The share link for the photo.
+   *
    * @var string
    */
   public $shareLink;
   /**
+   * Output only. The thumbnail URL for showing a preview of the given photo.
+   *
    * @var string
    */
   public $thumbnailUrl;
   /**
+   * Output only. Status of rights transfer on this photo.
+   *
    * @var string
    */
   public $transferStatus;
   protected $uploadReferenceType = UploadRef::class;
   protected $uploadReferenceDataType = '';
   /**
+   * Output only. Time when the image was uploaded.
+   *
    * @var string
    */
   public $uploadTime;
   /**
+   * Output only. View count of the photo.
+   *
    * @var string
    */
   public $viewCount;
 
   /**
-   * @param string
+   * Optional. Absolute time when the photo was captured. When the photo has no
+   * exif timestamp, this is used to set a timestamp in the photo metadata.
+   *
+   * @param string $captureTime
    */
   public function setCaptureTime($captureTime)
   {
@@ -78,7 +146,10 @@ class Photo extends \Google\Collection
     return $this->captureTime;
   }
   /**
-   * @param Connection[]
+   * Optional. Connections to other photos. A connection represents the link
+   * from this photo to another photo.
+   *
+   * @param Connection[] $connections
    */
   public function setConnections($connections)
   {
@@ -92,7 +163,10 @@ class Photo extends \Google\Collection
     return $this->connections;
   }
   /**
-   * @param string
+   * Output only. The download URL for the photo bytes. This field is set only
+   * when GetPhotoRequest.view is set to PhotoView.INCLUDE_DOWNLOAD_URL.
+   *
+   * @param string $downloadUrl
    */
   public function setDownloadUrl($downloadUrl)
   {
@@ -106,21 +180,31 @@ class Photo extends \Google\Collection
     return $this->downloadUrl;
   }
   /**
-   * @param string
+   * Output only. Status in Google Maps, whether this photo was published or
+   * rejected.
+   *
+   * Accepted values: UNSPECIFIED_MAPS_PUBLISH_STATUS, PUBLISHED,
+   * REJECTED_UNKNOWN
+   *
+   * @param self::MAPS_PUBLISH_STATUS_* $mapsPublishStatus
    */
   public function setMapsPublishStatus($mapsPublishStatus)
   {
     $this->mapsPublishStatus = $mapsPublishStatus;
   }
   /**
-   * @return string
+   * @return self::MAPS_PUBLISH_STATUS_*
    */
   public function getMapsPublishStatus()
   {
     return $this->mapsPublishStatus;
   }
   /**
-   * @param PhotoId
+   * Required. Output only. Required when updating a photo. Output only when
+   * creating a photo. Identifier for the photo, which is unique among all
+   * photos in Google.
+   *
+   * @param PhotoId $photoId
    */
   public function setPhotoId(PhotoId $photoId)
   {
@@ -134,7 +218,9 @@ class Photo extends \Google\Collection
     return $this->photoId;
   }
   /**
-   * @param Place[]
+   * Optional. Places where this photo belongs.
+   *
+   * @param Place[] $places
    */
   public function setPlaces($places)
   {
@@ -148,7 +234,9 @@ class Photo extends \Google\Collection
     return $this->places;
   }
   /**
-   * @param Pose
+   * Optional. Pose of the photo.
+   *
+   * @param Pose $pose
    */
   public function setPose(Pose $pose)
   {
@@ -162,7 +250,9 @@ class Photo extends \Google\Collection
     return $this->pose;
   }
   /**
-   * @param string
+   * Output only. The share link for the photo.
+   *
+   * @param string $shareLink
    */
   public function setShareLink($shareLink)
   {
@@ -176,7 +266,9 @@ class Photo extends \Google\Collection
     return $this->shareLink;
   }
   /**
-   * @param string
+   * Output only. The thumbnail URL for showing a preview of the given photo.
+   *
+   * @param string $thumbnailUrl
    */
   public function setThumbnailUrl($thumbnailUrl)
   {
@@ -190,21 +282,29 @@ class Photo extends \Google\Collection
     return $this->thumbnailUrl;
   }
   /**
-   * @param string
+   * Output only. Status of rights transfer on this photo.
+   *
+   * Accepted values: TRANSFER_STATUS_UNKNOWN, NEVER_TRANSFERRED, PENDING,
+   * COMPLETED, REJECTED, EXPIRED, CANCELLED, RECEIVED_VIA_TRANSFER
+   *
+   * @param self::TRANSFER_STATUS_* $transferStatus
    */
   public function setTransferStatus($transferStatus)
   {
     $this->transferStatus = $transferStatus;
   }
   /**
-   * @return string
+   * @return self::TRANSFER_STATUS_*
    */
   public function getTransferStatus()
   {
     return $this->transferStatus;
   }
   /**
-   * @param UploadRef
+   * Input only. Required when creating a photo. Input only. The resource URL
+   * where the photo bytes are uploaded to.
+   *
+   * @param UploadRef $uploadReference
    */
   public function setUploadReference(UploadRef $uploadReference)
   {
@@ -218,7 +318,9 @@ class Photo extends \Google\Collection
     return $this->uploadReference;
   }
   /**
-   * @param string
+   * Output only. Time when the image was uploaded.
+   *
+   * @param string $uploadTime
    */
   public function setUploadTime($uploadTime)
   {
@@ -232,7 +334,9 @@ class Photo extends \Google\Collection
     return $this->uploadTime;
   }
   /**
-   * @param string
+   * Output only. View count of the photo.
+   *
+   * @param string $viewCount
    */
   public function setViewCount($viewCount)
   {

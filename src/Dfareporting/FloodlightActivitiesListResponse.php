@@ -23,16 +23,23 @@ class FloodlightActivitiesListResponse extends \Google\Collection
   protected $floodlightActivitiesType = FloodlightActivity::class;
   protected $floodlightActivitiesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#floodlightActivitiesListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param FloodlightActivity[]
+   * Floodlight activity collection.
+   *
+   * @param FloodlightActivity[] $floodlightActivities
    */
   public function setFloodlightActivities($floodlightActivities)
   {
@@ -46,7 +53,10 @@ class FloodlightActivitiesListResponse extends \Google\Collection
     return $this->floodlightActivities;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#floodlightActivitiesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class FloodlightActivitiesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -21,6 +21,11 @@ class AttachedResource extends \Google\Collection
 {
   protected $collection_key = 'versionedResources';
   /**
+   * The type of this attached resource. Example:
+   * `osconfig.googleapis.com/Inventory` You can find the supported attached
+   * asset types of each resource in this table:
+   * `https://cloud.google.com/asset-inventory/docs/supported-asset-types`
+   *
    * @var string
    */
   public $assetType;
@@ -28,7 +33,12 @@ class AttachedResource extends \Google\Collection
   protected $versionedResourcesDataType = 'array';
 
   /**
-   * @param string
+   * The type of this attached resource. Example:
+   * `osconfig.googleapis.com/Inventory` You can find the supported attached
+   * asset types of each resource in this table:
+   * `https://cloud.google.com/asset-inventory/docs/supported-asset-types`
+   *
+   * @param string $assetType
    */
   public function setAssetType($assetType)
   {
@@ -42,7 +52,11 @@ class AttachedResource extends \Google\Collection
     return $this->assetType;
   }
   /**
-   * @param VersionedResource[]
+   * Versioned resource representations of this attached resource. This is
+   * repeated because there could be multiple versions of the attached resource
+   * representations during version migration.
+   *
+   * @param VersionedResource[] $versionedResources
    */
   public function setVersionedResources($versionedResources)
   {

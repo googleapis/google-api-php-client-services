@@ -21,12 +21,19 @@ class AlertStrategy extends \Google\Collection
 {
   protected $collection_key = 'notificationPrompts';
   /**
+   * If an alerting policy that was active has no data for this long, any open
+   * incidents will close
+   *
    * @var string
    */
   public $autoClose;
   protected $notificationChannelStrategyType = NotificationChannelStrategy::class;
   protected $notificationChannelStrategyDataType = 'array';
   /**
+   * For log-based alert policies, the notification prompts is always OPENED.
+   * For non log-based alert policies, the notification prompts can be OPENED or
+   * OPENED, CLOSED.
+   *
    * @var string[]
    */
   public $notificationPrompts;
@@ -34,7 +41,10 @@ class AlertStrategy extends \Google\Collection
   protected $notificationRateLimitDataType = '';
 
   /**
-   * @param string
+   * If an alerting policy that was active has no data for this long, any open
+   * incidents will close
+   *
+   * @param string $autoClose
    */
   public function setAutoClose($autoClose)
   {
@@ -48,7 +58,9 @@ class AlertStrategy extends \Google\Collection
     return $this->autoClose;
   }
   /**
-   * @param NotificationChannelStrategy[]
+   * Control how notifications will be sent out, on a per-channel basis.
+   *
+   * @param NotificationChannelStrategy[] $notificationChannelStrategy
    */
   public function setNotificationChannelStrategy($notificationChannelStrategy)
   {
@@ -62,7 +74,11 @@ class AlertStrategy extends \Google\Collection
     return $this->notificationChannelStrategy;
   }
   /**
-   * @param string[]
+   * For log-based alert policies, the notification prompts is always OPENED.
+   * For non log-based alert policies, the notification prompts can be OPENED or
+   * OPENED, CLOSED.
+   *
+   * @param string[] $notificationPrompts
    */
   public function setNotificationPrompts($notificationPrompts)
   {
@@ -76,7 +92,11 @@ class AlertStrategy extends \Google\Collection
     return $this->notificationPrompts;
   }
   /**
-   * @param NotificationRateLimit
+   * Required for log-based alerting policies, i.e. policies with a LogMatch
+   * condition.This limit is not implemented for alerting policies that do not
+   * have a LogMatch condition.
+   *
+   * @param NotificationRateLimit $notificationRateLimit
    */
   public function setNotificationRateLimit(NotificationRateLimit $notificationRateLimit)
   {

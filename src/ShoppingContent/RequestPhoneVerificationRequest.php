@@ -20,24 +20,53 @@ namespace Google\Service\ShoppingContent;
 class RequestPhoneVerificationRequest extends \Google\Model
 {
   /**
+   * Unknown method.
+   */
+  public const PHONE_VERIFICATION_METHOD_PHONE_VERIFICATION_METHOD_UNSPECIFIED = 'PHONE_VERIFICATION_METHOD_UNSPECIFIED';
+  /**
+   * Receive verification code by SMS.
+   */
+  public const PHONE_VERIFICATION_METHOD_SMS = 'SMS';
+  /**
+   * Receive verification code by phone call.
+   */
+  public const PHONE_VERIFICATION_METHOD_PHONE_CALL = 'PHONE_CALL';
+  /**
+   * Language code [IETF BCP 47 syntax](https://tools.ietf.org/html/bcp47) (for
+   * example, en-US). Language code is used to provide localized `SMS` and
+   * `PHONE_CALL`. Default language used is en-US if not provided.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Phone number to be verified.
+   *
    * @var string
    */
   public $phoneNumber;
   /**
+   * Required. Two letter country code for the phone number, for example `CA`
+   * for Canadian numbers. See the [ISO 3166-1 alpha-
+   * 2](https://wikipedia.org/wiki/ISO_3166-1_alpha-
+   * 2#Officially_assigned_code_elements) officially assigned codes.
+   *
    * @var string
    */
   public $phoneRegionCode;
   /**
+   * Verification method to receive verification code.
+   *
    * @var string
    */
   public $phoneVerificationMethod;
 
   /**
-   * @param string
+   * Language code [IETF BCP 47 syntax](https://tools.ietf.org/html/bcp47) (for
+   * example, en-US). Language code is used to provide localized `SMS` and
+   * `PHONE_CALL`. Default language used is en-US if not provided.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -51,7 +80,9 @@ class RequestPhoneVerificationRequest extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Phone number to be verified.
+   *
+   * @param string $phoneNumber
    */
   public function setPhoneNumber($phoneNumber)
   {
@@ -65,7 +96,12 @@ class RequestPhoneVerificationRequest extends \Google\Model
     return $this->phoneNumber;
   }
   /**
-   * @param string
+   * Required. Two letter country code for the phone number, for example `CA`
+   * for Canadian numbers. See the [ISO 3166-1 alpha-
+   * 2](https://wikipedia.org/wiki/ISO_3166-1_alpha-
+   * 2#Officially_assigned_code_elements) officially assigned codes.
+   *
+   * @param string $phoneRegionCode
    */
   public function setPhoneRegionCode($phoneRegionCode)
   {
@@ -79,14 +115,18 @@ class RequestPhoneVerificationRequest extends \Google\Model
     return $this->phoneRegionCode;
   }
   /**
-   * @param string
+   * Verification method to receive verification code.
+   *
+   * Accepted values: PHONE_VERIFICATION_METHOD_UNSPECIFIED, SMS, PHONE_CALL
+   *
+   * @param self::PHONE_VERIFICATION_METHOD_* $phoneVerificationMethod
    */
   public function setPhoneVerificationMethod($phoneVerificationMethod)
   {
     $this->phoneVerificationMethod = $phoneVerificationMethod;
   }
   /**
-   * @return string
+   * @return self::PHONE_VERIFICATION_METHOD_*
    */
   public function getPhoneVerificationMethod()
   {

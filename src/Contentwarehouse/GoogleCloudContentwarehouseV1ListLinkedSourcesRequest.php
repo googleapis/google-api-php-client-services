@@ -20,10 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1ListLinkedSourcesRequest extends \Google\Model
 {
   /**
+   * The maximum number of document-links to return. The service may return
+   * fewer than this value. If unspecified, at most 50 document-links will be
+   * returned. The maximum value is 1000; values above 1000 will be coerced to
+   * 1000.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * A page token, received from a previous `ListLinkedSources` call. Provide
+   * this to retrieve the subsequent page. When paginating, all other parameters
+   * provided to `ListLinkedSources` must match the call that provided the page
+   * token.
+   *
    * @var string
    */
   public $pageToken;
@@ -31,7 +41,12 @@ class GoogleCloudContentwarehouseV1ListLinkedSourcesRequest extends \Google\Mode
   protected $requestMetadataDataType = '';
 
   /**
-   * @param int
+   * The maximum number of document-links to return. The service may return
+   * fewer than this value. If unspecified, at most 50 document-links will be
+   * returned. The maximum value is 1000; values above 1000 will be coerced to
+   * 1000.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -45,7 +60,12 @@ class GoogleCloudContentwarehouseV1ListLinkedSourcesRequest extends \Google\Mode
     return $this->pageSize;
   }
   /**
-   * @param string
+   * A page token, received from a previous `ListLinkedSources` call. Provide
+   * this to retrieve the subsequent page. When paginating, all other parameters
+   * provided to `ListLinkedSources` must match the call that provided the page
+   * token.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -59,7 +79,10 @@ class GoogleCloudContentwarehouseV1ListLinkedSourcesRequest extends \Google\Mode
     return $this->pageToken;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1RequestMetadata
+   * The meta information collected about the document creator, used to enforce
+   * access control for the service.
+   *
+   * @param GoogleCloudContentwarehouseV1RequestMetadata $requestMetadata
    */
   public function setRequestMetadata(GoogleCloudContentwarehouseV1RequestMetadata $requestMetadata)
   {

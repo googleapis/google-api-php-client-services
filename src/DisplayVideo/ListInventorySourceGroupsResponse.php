@@ -23,12 +23,18 @@ class ListInventorySourceGroupsResponse extends \Google\Collection
   protected $inventorySourceGroupsType = InventorySourceGroup::class;
   protected $inventorySourceGroupsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListInventorySourceGroups`
+   * method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param InventorySourceGroup[]
+   * The list of inventory source groups. This list will be absent if empty.
+   *
+   * @param InventorySourceGroup[] $inventorySourceGroups
    */
   public function setInventorySourceGroups($inventorySourceGroups)
   {
@@ -42,7 +48,11 @@ class ListInventorySourceGroupsResponse extends \Google\Collection
     return $this->inventorySourceGroups;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListInventorySourceGroups`
+   * method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

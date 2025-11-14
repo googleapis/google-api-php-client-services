@@ -23,7 +23,9 @@ class GoogleCloudDocumentaiV1UndeployProcessorVersionMetadata extends \Google\Mo
   protected $commonMetadataDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1CommonOperationMetadata
+   * The basic metadata of the long-running operation.
+   *
+   * @param GoogleCloudDocumentaiV1CommonOperationMetadata $commonMetadata
    */
   public function setCommonMetadata(GoogleCloudDocumentaiV1CommonOperationMetadata $commonMetadata)
   {

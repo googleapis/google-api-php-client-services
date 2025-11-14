@@ -19,8 +19,35 @@ namespace Google\Service\CloudSearch;
 
 class ItemStatus extends \Google\Collection
 {
+  /**
+   * Input-only value. Used with Items.list to list all items in the queue,
+   * regardless of status.
+   */
+  public const CODE_CODE_UNSPECIFIED = 'CODE_UNSPECIFIED';
+  /**
+   * Error encountered by Cloud Search while processing this item. Details of
+   * the error are in repositoryError.
+   */
+  public const CODE_ERROR = 'ERROR';
+  /**
+   * Item has been modified in the repository, and is out of date with the
+   * version previously accepted into Cloud Search.
+   */
+  public const CODE_MODIFIED = 'MODIFIED';
+  /**
+   * Item is known to exist in the repository, but is not yet accepted by Cloud
+   * Search. An item can be in this state when Items.push has been called for an
+   * item of this name that did not exist previously.
+   */
+  public const CODE_NEW_ITEM = 'NEW_ITEM';
+  /**
+   * API has accepted the up-to-date data of this item.
+   */
+  public const CODE_ACCEPTED = 'ACCEPTED';
   protected $collection_key = 'repositoryErrors';
   /**
+   * Status code.
+   *
    * @var string
    */
   public $code;
@@ -30,21 +57,27 @@ class ItemStatus extends \Google\Collection
   protected $repositoryErrorsDataType = 'array';
 
   /**
-   * @param string
+   * Status code.
+   *
+   * Accepted values: CODE_UNSPECIFIED, ERROR, MODIFIED, NEW_ITEM, ACCEPTED
+   *
+   * @param self::CODE_* $code
    */
   public function setCode($code)
   {
     $this->code = $code;
   }
   /**
-   * @return string
+   * @return self::CODE_*
    */
   public function getCode()
   {
     return $this->code;
   }
   /**
-   * @param ProcessingError[]
+   * Error details in case the item is in ERROR state.
+   *
+   * @param ProcessingError[] $processingErrors
    */
   public function setProcessingErrors($processingErrors)
   {
@@ -58,7 +91,9 @@ class ItemStatus extends \Google\Collection
     return $this->processingErrors;
   }
   /**
-   * @param RepositoryError[]
+   * Repository error reported by connector.
+   *
+   * @param RepositoryError[] $repositoryErrors
    */
   public function setRepositoryErrors($repositoryErrors)
   {

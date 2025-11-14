@@ -21,22 +21,34 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrP
 {
   protected $collection_key = 'enhancedDocumentElements';
   /**
+   * [DEPRECATED] This field is deprecated. To use the additional enhanced
+   * document elements processing, please switch to `layout_parsing_config`.
+   *
+   * @deprecated
    * @var string[]
    */
   public $enhancedDocumentElements;
   /**
+   * If true, will use native text instead of OCR text on pages containing
+   * native text.
+   *
    * @var bool
    */
   public $useNativeText;
 
   /**
-   * @param string[]
+   * [DEPRECATED] This field is deprecated. To use the additional enhanced
+   * document elements processing, please switch to `layout_parsing_config`.
+   *
+   * @deprecated
+   * @param string[] $enhancedDocumentElements
    */
   public function setEnhancedDocumentElements($enhancedDocumentElements)
   {
     $this->enhancedDocumentElements = $enhancedDocumentElements;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getEnhancedDocumentElements()
@@ -44,7 +56,10 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrP
     return $this->enhancedDocumentElements;
   }
   /**
-   * @param bool
+   * If true, will use native text instead of OCR text on pages containing
+   * native text.
+   *
+   * @param bool $useNativeText
    */
   public function setUseNativeText($useNativeText)
   {

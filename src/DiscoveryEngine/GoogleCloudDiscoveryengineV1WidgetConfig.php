@@ -19,14 +19,94 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
 {
+  /**
+   * Unspecified data store type.
+   */
+  public const DATA_STORE_TYPE_DATA_STORE_TYPE_UNSPECIFIED = 'DATA_STORE_TYPE_UNSPECIFIED';
+  /**
+   * The parent data store contains a site search engine.
+   */
+  public const DATA_STORE_TYPE_SITE_SEARCH = 'SITE_SEARCH';
+  /**
+   * The parent data store contains a search engine for structured data.
+   */
+  public const DATA_STORE_TYPE_STRUCTURED = 'STRUCTURED';
+  /**
+   * The parent data store contains a search engine for unstructured data.
+   */
+  public const DATA_STORE_TYPE_UNSTRUCTURED = 'UNSTRUCTURED';
+  /**
+   * The parent data store is served for blended search with multiple data
+   * stores.
+   */
+  public const DATA_STORE_TYPE_BLENDED = 'BLENDED';
+  /**
+   * Value used when unset.
+   */
+  public const INDUSTRY_VERTICAL_INDUSTRY_VERTICAL_UNSPECIFIED = 'INDUSTRY_VERTICAL_UNSPECIFIED';
+  /**
+   * The generic vertical for documents that are not specific to any industry
+   * vertical.
+   */
+  public const INDUSTRY_VERTICAL_GENERIC = 'GENERIC';
+  /**
+   * The media industry vertical.
+   */
+  public const INDUSTRY_VERTICAL_MEDIA = 'MEDIA';
+  /**
+   * The healthcare FHIR vertical.
+   */
+  public const INDUSTRY_VERTICAL_HEALTHCARE_FHIR = 'HEALTHCARE_FHIR';
+  /**
+   * Unspecified display type (default to showing snippet).
+   */
+  public const RESULT_DISPLAY_TYPE_RESULT_DISPLAY_TYPE_UNSPECIFIED = 'RESULT_DISPLAY_TYPE_UNSPECIFIED';
+  /**
+   * Display results from the snippet field.
+   */
+  public const RESULT_DISPLAY_TYPE_SNIPPET = 'SNIPPET';
+  /**
+   * Display results from extractive answers field.
+   */
+  public const RESULT_DISPLAY_TYPE_EXTRACTIVE_ANSWER = 'EXTRACTIVE_ANSWER';
+  /**
+   * Default value.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_UNSPECIFIED = 'SOLUTION_TYPE_UNSPECIFIED';
+  /**
+   * Used for Recommendations AI.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_RECOMMENDATION = 'SOLUTION_TYPE_RECOMMENDATION';
+  /**
+   * Used for Discovery Search.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_SEARCH = 'SOLUTION_TYPE_SEARCH';
+  /**
+   * Used for use cases related to the Generative AI agent.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_CHAT = 'SOLUTION_TYPE_CHAT';
+  /**
+   * Used for use cases related to the Generative Chat agent. It's used for
+   * Generative chat engine only, the associated data stores must enrolled with
+   * `SOLUTION_TYPE_CHAT` solution.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_GENERATIVE_CHAT = 'SOLUTION_TYPE_GENERATIVE_CHAT';
   protected $collection_key = 'facetField';
   protected $accessSettingsType = GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings::class;
   protected $accessSettingsDataType = '';
   /**
+   * Whether allow no-auth integration with widget. If set true, public access
+   * to search or other solutions from widget is allowed without authenication
+   * token provided by customer hosted backend server.
+   *
+   * @deprecated
    * @var bool
    */
   public $allowPublicAccess;
   /**
+   * Allowlisted domains that can load this widget.
+   *
+   * @deprecated
    * @var string[]
    */
   public $allowlistedDomains;
@@ -35,68 +115,114 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
   protected $collectionComponentsType = GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent::class;
   protected $collectionComponentsDataType = 'array';
   /**
+   * Output only. Unique obfuscated identifier of a WidgetConfig.
+   *
    * @var string
    */
   public $configId;
   protected $contentSearchSpecType = GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec::class;
   protected $contentSearchSpecDataType = '';
   /**
+   * Output only. Timestamp the WidgetConfig was created.
+   *
    * @var string
    */
   public $createTime;
   protected $customerProvidedConfigType = GoogleCloudDiscoveryengineV1WidgetConfigCustomerProvidedConfig::class;
   protected $customerProvidedConfigDataType = '';
   /**
+   * Output only. The type of the parent data store.
+   *
    * @var string
    */
   public $dataStoreType;
   protected $dataStoreUiConfigsType = GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig::class;
   protected $dataStoreUiConfigsDataType = 'array';
   /**
+   * The default ordering for search results if specified. Used to set
+   * SearchRequest#order_by on applicable requests.
+   * https://cloud.google.com/generative-ai-app-builder/docs/reference/rest/v1al
+   * pha/projects.locations.dataStores.servingConfigs/search#request-body
+   *
+   * @deprecated
    * @var string
    */
   public $defaultSearchRequestOrderBy;
   /**
+   * Required. The human readable widget config display name. Used in Discovery
+   * UI. This field must be a UTF-8 encoded string with a length limit of 128
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Whether or not to enable autocomplete.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableAutocomplete;
   /**
+   * Whether to allow conversational search (LLM, multi-turn) or not (non-LLM,
+   * single-turn).
+   *
+   * @deprecated
    * @var bool
    */
   public $enableConversationalSearch;
   /**
+   * Optional. Output only. Whether to enable private knowledge graph.
+   *
    * @var bool
    */
   public $enablePrivateKnowledgeGraph;
   /**
+   * Turn on or off collecting the search result quality feedback from end
+   * users.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableQualityFeedback;
   /**
+   * Whether to show the result score.
+   *
    * @var bool
    */
   public $enableResultScore;
   /**
+   * Whether to enable safe search.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableSafeSearch;
   /**
+   * Whether to enable search-as-you-type behavior for the search widget
+   *
+   * @deprecated
    * @var bool
    */
   public $enableSearchAsYouType;
   /**
+   * Turn on or off summary for each snippets result.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableSnippetResultSummary;
   /**
+   * Turn on or off summarization for the search response.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableSummarization;
   /**
+   * Whether to enable standalone web app.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableWebApp;
@@ -105,32 +231,55 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
   protected $fieldsUiComponentsMapType = GoogleCloudDiscoveryengineV1WidgetConfigUIComponentField::class;
   protected $fieldsUiComponentsMapDataType = 'map';
   /**
+   * Output only. Whether the subscription is gemini bundle or not.
+   *
    * @var bool
    */
   public $geminiBundle;
   protected $homepageSettingType = GoogleCloudDiscoveryengineV1WidgetConfigHomepageSetting::class;
   protected $homepageSettingDataType = '';
   /**
+   * Output only. The industry vertical that the WidgetConfig registers. The
+   * WidgetConfig industry vertical is based on the associated Engine.
+   *
    * @var string
    */
   public $industryVertical;
   /**
+   * Output only. Whether LLM is enabled in the corresponding data store.
+   *
    * @var bool
    */
   public $llmEnabled;
   /**
+   * Output only. Whether the customer accepted data use terms.
+   *
    * @var bool
    */
   public $minimumDataTermAccepted;
   /**
+   * Immutable. The full resource name of the widget config. Format: `projects/{
+   * project}/locations/{location}/collections/{collection_id}/dataStores/{data_
+   * store_id}/widgetConfigs/{widget_config_id}`. This field must be a UTF-8
+   * encoded string with a length limit of 1024 characters.
+   *
    * @var string
    */
   public $name;
   /**
+   * The type of snippet to display in UCS widget. -
+   * RESULT_DISPLAY_TYPE_UNSPECIFIED for existing users. - SNIPPET for new non-
+   * enterprise search users. - EXTRACTIVE_ANSWER for new enterprise search
+   * users.
+   *
+   * @deprecated
    * @var string
    */
   public $resultDisplayType;
   /**
+   * Required. Immutable. Specifies the solution type that this WidgetConfig can
+   * be used for.
+   *
    * @var string
    */
   public $solutionType;
@@ -139,12 +288,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
   protected $uiSettingsType = GoogleCloudDiscoveryengineV1WidgetConfigUiSettings::class;
   protected $uiSettingsDataType = '';
   /**
+   * Output only. Timestamp the WidgetConfig was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings
+   * Will be used for all widget access settings seen in cloud console
+   * integration page. Replaces top deprecated top level properties.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings $accessSettings
    */
   public function setAccessSettings(GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings $accessSettings)
   {
@@ -158,13 +312,19 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->accessSettings;
   }
   /**
-   * @param bool
+   * Whether allow no-auth integration with widget. If set true, public access
+   * to search or other solutions from widget is allowed without authenication
+   * token provided by customer hosted backend server.
+   *
+   * @deprecated
+   * @param bool $allowPublicAccess
    */
   public function setAllowPublicAccess($allowPublicAccess)
   {
     $this->allowPublicAccess = $allowPublicAccess;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getAllowPublicAccess()
@@ -172,13 +332,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->allowPublicAccess;
   }
   /**
-   * @param string[]
+   * Allowlisted domains that can load this widget.
+   *
+   * @deprecated
+   * @param string[] $allowlistedDomains
    */
   public function setAllowlistedDomains($allowlistedDomains)
   {
     $this->allowlistedDomains = $allowlistedDomains;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getAllowlistedDomains()
@@ -186,7 +350,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->allowlistedDomains;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigAssistantSettings
+   * Optional. Output only. Describes the assistant settings of the widget.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigAssistantSettings $assistantSettings
    */
   public function setAssistantSettings(GoogleCloudDiscoveryengineV1WidgetConfigAssistantSettings $assistantSettings)
   {
@@ -200,7 +366,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->assistantSettings;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent[]
+   * Output only. Collection components that lists all collections and child
+   * data stores associated with the widget config, those data sources can be
+   * used for filtering in widget service APIs, users can return results that
+   * from selected data sources.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent[] $collectionComponents
    */
   public function setCollectionComponents($collectionComponents)
   {
@@ -214,7 +385,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->collectionComponents;
   }
   /**
-   * @param string
+   * Output only. Unique obfuscated identifier of a WidgetConfig.
+   *
+   * @param string $configId
    */
   public function setConfigId($configId)
   {
@@ -228,13 +401,18 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->configId;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec
+   * The content search spec that configs the desired behavior of content
+   * search.
+   *
+   * @deprecated
+   * @param GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec $contentSearchSpec
    */
   public function setContentSearchSpec(GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec $contentSearchSpec)
   {
     $this->contentSearchSpec = $contentSearchSpec;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec
    */
   public function getContentSearchSpec()
@@ -242,7 +420,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->contentSearchSpec;
   }
   /**
-   * @param string
+   * Output only. Timestamp the WidgetConfig was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -256,7 +436,11 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigCustomerProvidedConfig
+   * Optional. Output only. Describes the customer related configurations,
+   * currently only used for government customers. This field cannot be modified
+   * after project onboarding.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigCustomerProvidedConfig $customerProvidedConfig
    */
   public function setCustomerProvidedConfig(GoogleCloudDiscoveryengineV1WidgetConfigCustomerProvidedConfig $customerProvidedConfig)
   {
@@ -270,27 +454,36 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->customerProvidedConfig;
   }
   /**
-   * @param string
+   * Output only. The type of the parent data store.
+   *
+   * Accepted values: DATA_STORE_TYPE_UNSPECIFIED, SITE_SEARCH, STRUCTURED,
+   * UNSTRUCTURED, BLENDED
+   *
+   * @param self::DATA_STORE_TYPE_* $dataStoreType
    */
   public function setDataStoreType($dataStoreType)
   {
     $this->dataStoreType = $dataStoreType;
   }
   /**
-   * @return string
+   * @return self::DATA_STORE_TYPE_*
    */
   public function getDataStoreType()
   {
     return $this->dataStoreType;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig[]
+   * Configurable UI configurations per data store.
+   *
+   * @deprecated
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig[] $dataStoreUiConfigs
    */
   public function setDataStoreUiConfigs($dataStoreUiConfigs)
   {
     $this->dataStoreUiConfigs = $dataStoreUiConfigs;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig[]
    */
   public function getDataStoreUiConfigs()
@@ -298,13 +491,20 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->dataStoreUiConfigs;
   }
   /**
-   * @param string
+   * The default ordering for search results if specified. Used to set
+   * SearchRequest#order_by on applicable requests.
+   * https://cloud.google.com/generative-ai-app-builder/docs/reference/rest/v1al
+   * pha/projects.locations.dataStores.servingConfigs/search#request-body
+   *
+   * @deprecated
+   * @param string $defaultSearchRequestOrderBy
    */
   public function setDefaultSearchRequestOrderBy($defaultSearchRequestOrderBy)
   {
     $this->defaultSearchRequestOrderBy = $defaultSearchRequestOrderBy;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getDefaultSearchRequestOrderBy()
@@ -312,7 +512,11 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->defaultSearchRequestOrderBy;
   }
   /**
-   * @param string
+   * Required. The human readable widget config display name. Used in Discovery
+   * UI. This field must be a UTF-8 encoded string with a length limit of 128
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -326,13 +530,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Whether or not to enable autocomplete.
+   *
+   * @deprecated
+   * @param bool $enableAutocomplete
    */
   public function setEnableAutocomplete($enableAutocomplete)
   {
     $this->enableAutocomplete = $enableAutocomplete;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableAutocomplete()
@@ -340,13 +548,18 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableAutocomplete;
   }
   /**
-   * @param bool
+   * Whether to allow conversational search (LLM, multi-turn) or not (non-LLM,
+   * single-turn).
+   *
+   * @deprecated
+   * @param bool $enableConversationalSearch
    */
   public function setEnableConversationalSearch($enableConversationalSearch)
   {
     $this->enableConversationalSearch = $enableConversationalSearch;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableConversationalSearch()
@@ -354,7 +567,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableConversationalSearch;
   }
   /**
-   * @param bool
+   * Optional. Output only. Whether to enable private knowledge graph.
+   *
+   * @param bool $enablePrivateKnowledgeGraph
    */
   public function setEnablePrivateKnowledgeGraph($enablePrivateKnowledgeGraph)
   {
@@ -368,13 +583,18 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enablePrivateKnowledgeGraph;
   }
   /**
-   * @param bool
+   * Turn on or off collecting the search result quality feedback from end
+   * users.
+   *
+   * @deprecated
+   * @param bool $enableQualityFeedback
    */
   public function setEnableQualityFeedback($enableQualityFeedback)
   {
     $this->enableQualityFeedback = $enableQualityFeedback;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableQualityFeedback()
@@ -382,7 +602,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableQualityFeedback;
   }
   /**
-   * @param bool
+   * Whether to show the result score.
+   *
+   * @param bool $enableResultScore
    */
   public function setEnableResultScore($enableResultScore)
   {
@@ -396,13 +618,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableResultScore;
   }
   /**
-   * @param bool
+   * Whether to enable safe search.
+   *
+   * @deprecated
+   * @param bool $enableSafeSearch
    */
   public function setEnableSafeSearch($enableSafeSearch)
   {
     $this->enableSafeSearch = $enableSafeSearch;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableSafeSearch()
@@ -410,13 +636,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableSafeSearch;
   }
   /**
-   * @param bool
+   * Whether to enable search-as-you-type behavior for the search widget
+   *
+   * @deprecated
+   * @param bool $enableSearchAsYouType
    */
   public function setEnableSearchAsYouType($enableSearchAsYouType)
   {
     $this->enableSearchAsYouType = $enableSearchAsYouType;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableSearchAsYouType()
@@ -424,13 +654,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableSearchAsYouType;
   }
   /**
-   * @param bool
+   * Turn on or off summary for each snippets result.
+   *
+   * @deprecated
+   * @param bool $enableSnippetResultSummary
    */
   public function setEnableSnippetResultSummary($enableSnippetResultSummary)
   {
     $this->enableSnippetResultSummary = $enableSnippetResultSummary;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableSnippetResultSummary()
@@ -438,13 +672,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableSnippetResultSummary;
   }
   /**
-   * @param bool
+   * Turn on or off summarization for the search response.
+   *
+   * @deprecated
+   * @param bool $enableSummarization
    */
   public function setEnableSummarization($enableSummarization)
   {
     $this->enableSummarization = $enableSummarization;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableSummarization()
@@ -452,13 +690,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableSummarization;
   }
   /**
-   * @param bool
+   * Whether to enable standalone web app.
+   *
+   * @deprecated
+   * @param bool $enableWebApp
    */
   public function setEnableWebApp($enableWebApp)
   {
     $this->enableWebApp = $enableWebApp;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableWebApp()
@@ -466,13 +708,17 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->enableWebApp;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigFacetField[]
+   * The configuration and appearance of facets in the end user view.
+   *
+   * @deprecated
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigFacetField[] $facetField
    */
   public function setFacetField($facetField)
   {
     $this->facetField = $facetField;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDiscoveryengineV1WidgetConfigFacetField[]
    */
   public function getFacetField()
@@ -480,13 +726,21 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->facetField;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigUIComponentField[]
+   * The key is the UI component. Mock. Currently supported `title`,
+   * `thumbnail`, `url`, `custom1`, `custom2`, `custom3`. The value is the name
+   * of the field along with its device visibility. The 3 custom fields are
+   * optional and can be added or removed. `title`, `thumbnail`, `url` are
+   * required UI components that cannot be removed.
+   *
+   * @deprecated
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigUIComponentField[] $fieldsUiComponentsMap
    */
   public function setFieldsUiComponentsMap($fieldsUiComponentsMap)
   {
     $this->fieldsUiComponentsMap = $fieldsUiComponentsMap;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDiscoveryengineV1WidgetConfigUIComponentField[]
    */
   public function getFieldsUiComponentsMap()
@@ -494,7 +748,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->fieldsUiComponentsMap;
   }
   /**
-   * @param bool
+   * Output only. Whether the subscription is gemini bundle or not.
+   *
+   * @param bool $geminiBundle
    */
   public function setGeminiBundle($geminiBundle)
   {
@@ -508,7 +764,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->geminiBundle;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigHomepageSetting
+   * Optional. Describes the homepage settings of the widget.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigHomepageSetting $homepageSetting
    */
   public function setHomepageSetting(GoogleCloudDiscoveryengineV1WidgetConfigHomepageSetting $homepageSetting)
   {
@@ -522,21 +780,29 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->homepageSetting;
   }
   /**
-   * @param string
+   * Output only. The industry vertical that the WidgetConfig registers. The
+   * WidgetConfig industry vertical is based on the associated Engine.
+   *
+   * Accepted values: INDUSTRY_VERTICAL_UNSPECIFIED, GENERIC, MEDIA,
+   * HEALTHCARE_FHIR
+   *
+   * @param self::INDUSTRY_VERTICAL_* $industryVertical
    */
   public function setIndustryVertical($industryVertical)
   {
     $this->industryVertical = $industryVertical;
   }
   /**
-   * @return string
+   * @return self::INDUSTRY_VERTICAL_*
    */
   public function getIndustryVertical()
   {
     return $this->industryVertical;
   }
   /**
-   * @param bool
+   * Output only. Whether LLM is enabled in the corresponding data store.
+   *
+   * @param bool $llmEnabled
    */
   public function setLlmEnabled($llmEnabled)
   {
@@ -550,7 +816,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->llmEnabled;
   }
   /**
-   * @param bool
+   * Output only. Whether the customer accepted data use terms.
+   *
+   * @param bool $minimumDataTermAccepted
    */
   public function setMinimumDataTermAccepted($minimumDataTermAccepted)
   {
@@ -564,7 +832,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->minimumDataTermAccepted;
   }
   /**
-   * @param string
+   * Immutable. The full resource name of the widget config. Format: `projects/{
+   * project}/locations/{location}/collections/{collection_id}/dataStores/{data_
+   * store_id}/widgetConfigs/{widget_config_id}`. This field must be a UTF-8
+   * encoded string with a length limit of 1024 characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -578,35 +851,54 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The type of snippet to display in UCS widget. -
+   * RESULT_DISPLAY_TYPE_UNSPECIFIED for existing users. - SNIPPET for new non-
+   * enterprise search users. - EXTRACTIVE_ANSWER for new enterprise search
+   * users.
+   *
+   * Accepted values: RESULT_DISPLAY_TYPE_UNSPECIFIED, SNIPPET,
+   * EXTRACTIVE_ANSWER
+   *
+   * @deprecated
+   * @param self::RESULT_DISPLAY_TYPE_* $resultDisplayType
    */
   public function setResultDisplayType($resultDisplayType)
   {
     $this->resultDisplayType = $resultDisplayType;
   }
   /**
-   * @return string
+   * @deprecated
+   * @return self::RESULT_DISPLAY_TYPE_*
    */
   public function getResultDisplayType()
   {
     return $this->resultDisplayType;
   }
   /**
-   * @param string
+   * Required. Immutable. Specifies the solution type that this WidgetConfig can
+   * be used for.
+   *
+   * Accepted values: SOLUTION_TYPE_UNSPECIFIED, SOLUTION_TYPE_RECOMMENDATION,
+   * SOLUTION_TYPE_SEARCH, SOLUTION_TYPE_CHAT, SOLUTION_TYPE_GENERATIVE_CHAT
+   *
+   * @param self::SOLUTION_TYPE_* $solutionType
    */
   public function setSolutionType($solutionType)
   {
     $this->solutionType = $solutionType;
   }
   /**
-   * @return string
+   * @return self::SOLUTION_TYPE_*
    */
   public function getSolutionType()
   {
     return $this->solutionType;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiBrandingSettings
+   * Describes search widget UI branding settings, such as the widget title,
+   * logo, favicons, and colors.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiBrandingSettings $uiBranding
    */
   public function setUiBranding(GoogleCloudDiscoveryengineV1WidgetConfigUiBrandingSettings $uiBranding)
   {
@@ -620,7 +912,10 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->uiBranding;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiSettings
+   * Describes general widget search settings as seen in cloud console widget
+   * configuration page. Replaces top deprecated top level properties.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiSettings $uiSettings
    */
   public function setUiSettings(GoogleCloudDiscoveryengineV1WidgetConfigUiSettings $uiSettings)
   {
@@ -634,7 +929,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->uiSettings;
   }
   /**
-   * @param string
+   * Output only. Timestamp the WidgetConfig was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

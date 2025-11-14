@@ -21,6 +21,9 @@ class MobileCarriersListResponse extends \Google\Collection
 {
   protected $collection_key = 'mobileCarriers';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#mobileCarriersListResponse".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class MobileCarriersListResponse extends \Google\Collection
   protected $mobileCarriersDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#mobileCarriersListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class MobileCarriersListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param MobileCarrier[]
+   * Mobile carrier collection.
+   *
+   * @param MobileCarrier[] $mobileCarriers
    */
   public function setMobileCarriers($mobileCarriers)
   {

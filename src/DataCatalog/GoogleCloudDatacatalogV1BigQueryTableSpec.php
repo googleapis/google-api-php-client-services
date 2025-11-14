@@ -20,6 +20,24 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1BigQueryTableSpec extends \Google\Model
 {
   /**
+   * Default unknown type.
+   */
+  public const TABLE_SOURCE_TYPE_TABLE_SOURCE_TYPE_UNSPECIFIED = 'TABLE_SOURCE_TYPE_UNSPECIFIED';
+  /**
+   * Table view.
+   */
+  public const TABLE_SOURCE_TYPE_BIGQUERY_VIEW = 'BIGQUERY_VIEW';
+  /**
+   * BigQuery native table.
+   */
+  public const TABLE_SOURCE_TYPE_BIGQUERY_TABLE = 'BIGQUERY_TABLE';
+  /**
+   * BigQuery materialized view.
+   */
+  public const TABLE_SOURCE_TYPE_BIGQUERY_MATERIALIZED_VIEW = 'BIGQUERY_MATERIALIZED_VIEW';
+  /**
+   * Output only. The table source type.
+   *
    * @var string
    */
   public $tableSourceType;
@@ -29,21 +47,29 @@ class GoogleCloudDatacatalogV1BigQueryTableSpec extends \Google\Model
   protected $viewSpecDataType = '';
 
   /**
-   * @param string
+   * Output only. The table source type.
+   *
+   * Accepted values: TABLE_SOURCE_TYPE_UNSPECIFIED, BIGQUERY_VIEW,
+   * BIGQUERY_TABLE, BIGQUERY_MATERIALIZED_VIEW
+   *
+   * @param self::TABLE_SOURCE_TYPE_* $tableSourceType
    */
   public function setTableSourceType($tableSourceType)
   {
     $this->tableSourceType = $tableSourceType;
   }
   /**
-   * @return string
+   * @return self::TABLE_SOURCE_TYPE_*
    */
   public function getTableSourceType()
   {
     return $this->tableSourceType;
   }
   /**
-   * @param GoogleCloudDatacatalogV1TableSpec
+   * Specification of a BigQuery table. Populated only if the
+   * `table_source_type` is `BIGQUERY_TABLE`.
+   *
+   * @param GoogleCloudDatacatalogV1TableSpec $tableSpec
    */
   public function setTableSpec(GoogleCloudDatacatalogV1TableSpec $tableSpec)
   {
@@ -57,7 +83,10 @@ class GoogleCloudDatacatalogV1BigQueryTableSpec extends \Google\Model
     return $this->tableSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1ViewSpec
+   * Table view specification. Populated only if the `table_source_type` is
+   * `BIGQUERY_VIEW`.
+   *
+   * @param GoogleCloudDatacatalogV1ViewSpec $viewSpec
    */
   public function setViewSpec(GoogleCloudDatacatalogV1ViewSpec $viewSpec)
   {

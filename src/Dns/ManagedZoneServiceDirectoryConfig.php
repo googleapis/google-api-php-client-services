@@ -27,7 +27,7 @@ class ManagedZoneServiceDirectoryConfig extends \Google\Model
   protected $namespaceDataType = '';
 
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -41,7 +41,9 @@ class ManagedZoneServiceDirectoryConfig extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param ManagedZoneServiceDirectoryConfigNamespace
+   * Contains information about the namespace associated with the zone.
+   *
+   * @param ManagedZoneServiceDirectoryConfigNamespace $namespace
    */
   public function setNamespace(ManagedZoneServiceDirectoryConfigNamespace $namespace)
   {

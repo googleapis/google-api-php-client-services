@@ -25,7 +25,9 @@ class GoogleCloudDocumentaiUiv1beta3FieldExtractionMetadata extends \Google\Mode
   protected $summaryOptionsDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3FieldExtractionMetadataEntityQuery
+   * Entity query config.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3FieldExtractionMetadataEntityQuery $entityQuery
    */
   public function setEntityQuery(GoogleCloudDocumentaiUiv1beta3FieldExtractionMetadataEntityQuery $entityQuery)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDocumentaiUiv1beta3FieldExtractionMetadata extends \Google\Mode
     return $this->entityQuery;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3SummaryOptions
+   * Summary options config.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3SummaryOptions $summaryOptions
    */
   public function setSummaryOptions(GoogleCloudDocumentaiUiv1beta3SummaryOptions $summaryOptions)
   {

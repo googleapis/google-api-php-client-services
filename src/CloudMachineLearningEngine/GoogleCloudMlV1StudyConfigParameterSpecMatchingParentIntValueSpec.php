@@ -21,12 +21,18 @@ class GoogleCloudMlV1StudyConfigParameterSpecMatchingParentIntValueSpec extends 
 {
   protected $collection_key = 'values';
   /**
+   * Matches values of the parent parameter with type 'INTEGER'. All values must
+   * lie in `integer_value_spec` of parent parameter.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Matches values of the parent parameter with type 'INTEGER'. All values must
+   * lie in `integer_value_spec` of parent parameter.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

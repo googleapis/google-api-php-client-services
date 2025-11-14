@@ -20,30 +20,62 @@ namespace Google\Service\DriveActivity;
 class QueryDriveActivityRequest extends \Google\Model
 {
   /**
+   * Return activities for this Drive folder, plus all children and descendants.
+   * The format is `items/ITEM_ID`.
+   *
    * @var string
    */
   public $ancestorName;
   protected $consolidationStrategyType = ConsolidationStrategy::class;
   protected $consolidationStrategyDataType = '';
   /**
+   * The filtering for items returned from this query request. The format of the
+   * filter string is a sequence of expressions, joined by an optional "AND",
+   * where each expression is of the form "field operator value". Supported
+   * fields: - `time`: Uses numerical operators on date values either in terms
+   * of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time
+   * > 1452409200000 AND time <= 1492812924310` - `time >=
+   * "2016-01-10T01:02:03-05:00"` - `detail.action_detail_case`: Uses the "has"
+   * operator (:) and either a singular value or a list of allowed action types
+   * enclosed in parentheses, separated by a space. To exclude a result from the
+   * response, prepend a hyphen (`-`) to the beginning of the filter string.
+   * Examples: - `detail.action_detail_case:RENAME` -
+   * `detail.action_detail_case:(CREATE RESTORE)` -
+   * `-detail.action_detail_case:MOVE`
+   *
    * @var string
    */
   public $filter;
   /**
+   * Return activities for this Drive item. The format is `items/ITEM_ID`.
+   *
    * @var string
    */
   public $itemName;
   /**
+   * The minimum number of activities desired in the response; the server
+   * attempts to return at least this quantity. The server may also return fewer
+   * activities if it has a partial response ready before the request times out.
+   * If not set, a default value is used.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * The token identifies which page of results to return. Set this to the
+   * next_page_token value returned from a previous query to obtain the
+   * following page of results. If not set, the first page of results is
+   * returned.
+   *
    * @var string
    */
   public $pageToken;
 
   /**
-   * @param string
+   * Return activities for this Drive folder, plus all children and descendants.
+   * The format is `items/ITEM_ID`.
+   *
+   * @param string $ancestorName
    */
   public function setAncestorName($ancestorName)
   {
@@ -57,7 +89,10 @@ class QueryDriveActivityRequest extends \Google\Model
     return $this->ancestorName;
   }
   /**
-   * @param ConsolidationStrategy
+   * Details on how to consolidate related actions that make up the activity. If
+   * not set, then related actions aren't consolidated.
+   *
+   * @param ConsolidationStrategy $consolidationStrategy
    */
   public function setConsolidationStrategy(ConsolidationStrategy $consolidationStrategy)
   {
@@ -71,7 +106,21 @@ class QueryDriveActivityRequest extends \Google\Model
     return $this->consolidationStrategy;
   }
   /**
-   * @param string
+   * The filtering for items returned from this query request. The format of the
+   * filter string is a sequence of expressions, joined by an optional "AND",
+   * where each expression is of the form "field operator value". Supported
+   * fields: - `time`: Uses numerical operators on date values either in terms
+   * of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time
+   * > 1452409200000 AND time <= 1492812924310` - `time >=
+   * "2016-01-10T01:02:03-05:00"` - `detail.action_detail_case`: Uses the "has"
+   * operator (:) and either a singular value or a list of allowed action types
+   * enclosed in parentheses, separated by a space. To exclude a result from the
+   * response, prepend a hyphen (`-`) to the beginning of the filter string.
+   * Examples: - `detail.action_detail_case:RENAME` -
+   * `detail.action_detail_case:(CREATE RESTORE)` -
+   * `-detail.action_detail_case:MOVE`
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -85,7 +134,9 @@ class QueryDriveActivityRequest extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param string
+   * Return activities for this Drive item. The format is `items/ITEM_ID`.
+   *
+   * @param string $itemName
    */
   public function setItemName($itemName)
   {
@@ -99,7 +150,12 @@ class QueryDriveActivityRequest extends \Google\Model
     return $this->itemName;
   }
   /**
-   * @param int
+   * The minimum number of activities desired in the response; the server
+   * attempts to return at least this quantity. The server may also return fewer
+   * activities if it has a partial response ready before the request times out.
+   * If not set, a default value is used.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -113,7 +169,12 @@ class QueryDriveActivityRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * The token identifies which page of results to return. Set this to the
+   * next_page_token value returned from a previous query to obtain the
+   * following page of results. If not set, the first page of results is
+   * returned.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {

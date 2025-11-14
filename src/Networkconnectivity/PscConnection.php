@@ -20,14 +20,80 @@ namespace Google\Service\Networkconnectivity;
 class PscConnection extends \Google\Model
 {
   /**
+   * An invalid error type as the default case.
+   */
+  public const ERROR_TYPE_CONNECTION_ERROR_TYPE_UNSPECIFIED = 'CONNECTION_ERROR_TYPE_UNSPECIFIED';
+  /**
+   * The error is due to Service Automation system internal.
+   */
+  public const ERROR_TYPE_ERROR_INTERNAL = 'ERROR_INTERNAL';
+  /**
+   * The error is due to the setup on consumer side.
+   */
+  public const ERROR_TYPE_ERROR_CONSUMER_SIDE = 'ERROR_CONSUMER_SIDE';
+  /**
+   * The error is due to the setup on producer side.
+   */
+  public const ERROR_TYPE_ERROR_PRODUCER_SIDE = 'ERROR_PRODUCER_SIDE';
+  /**
+   * Default value. We will use IPv4 or IPv6 depending on the IP version of
+   * first available subnetwork.
+   */
+  public const IP_VERSION_IP_VERSION_UNSPECIFIED = 'IP_VERSION_UNSPECIFIED';
+  /**
+   * Will use IPv4 only.
+   */
+  public const IP_VERSION_IPV4 = 'IPV4';
+  /**
+   * Will use IPv6 only.
+   */
+  public const IP_VERSION_IPV6 = 'IPV6';
+  /**
+   * An invalid state as the default case.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The connection has been created successfully. However, for the up-to-date
+   * connection status, please use the created forwarding rule's
+   * "PscConnectionStatus" as the source of truth.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The connection is not functional since some resources on the connection
+   * fail to be created.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The connection is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The connection is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The connection is being repaired to complete creation.
+   */
+  public const STATE_CREATE_REPAIRING = 'CREATE_REPAIRING';
+  /**
+   * The connection is being repaired to complete deletion.
+   */
+  public const STATE_DELETE_REPAIRING = 'DELETE_REPAIRING';
+  /**
+   * The resource reference of the consumer address.
+   *
    * @var string
    */
   public $consumerAddress;
   /**
+   * The resource reference of the PSC Forwarding Rule within the consumer VPC.
+   *
    * @var string
    */
   public $consumerForwardingRule;
   /**
+   * The project where the PSC connection is created.
+   *
    * @var string
    */
   public $consumerTargetProject;
@@ -35,44 +101,71 @@ class PscConnection extends \Google\Model
   protected $errorInfoType = GoogleRpcErrorInfo::class;
   protected $errorInfoDataType = '';
   /**
+   * The error type indicates whether the error is consumer facing, producer
+   * facing or system internal.
+   *
+   * @deprecated
    * @var string
    */
   public $errorType;
   /**
+   * The last Compute Engine operation to setup PSC connection.
+   *
    * @var string
    */
   public $gceOperation;
   /**
+   * The requested IP version for the PSC connection.
+   *
    * @var string
    */
   public $ipVersion;
   /**
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable
+   * identifier for the producer instance.
+   *
+   * @deprecated
    * @var string
    */
   public $producerInstanceId;
   /**
+   * Immutable. An immutable map for the producer instance metadata.
+   *
    * @var string[]
    */
   public $producerInstanceMetadata;
   /**
+   * The PSC connection id of the PSC forwarding rule.
+   *
    * @var string
    */
   public $pscConnectionId;
   /**
+   * Output only. The URI of the subnetwork selected to allocate IP address for
+   * this connection.
+   *
    * @var string
    */
   public $selectedSubnetwork;
   /**
+   * Output only. [Output only] The service class associated with this PSC
+   * Connection. The value is derived from the SCPolicy and matches the service
+   * class name provided by the customer.
+   *
    * @var string
    */
   public $serviceClass;
   /**
+   * State of the PSC Connection
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The resource reference of the consumer address.
+   *
+   * @param string $consumerAddress
    */
   public function setConsumerAddress($consumerAddress)
   {
@@ -86,7 +179,9 @@ class PscConnection extends \Google\Model
     return $this->consumerAddress;
   }
   /**
-   * @param string
+   * The resource reference of the PSC Forwarding Rule within the consumer VPC.
+   *
+   * @param string $consumerForwardingRule
    */
   public function setConsumerForwardingRule($consumerForwardingRule)
   {
@@ -100,7 +195,9 @@ class PscConnection extends \Google\Model
     return $this->consumerForwardingRule;
   }
   /**
-   * @param string
+   * The project where the PSC connection is created.
+   *
+   * @param string $consumerTargetProject
    */
   public function setConsumerTargetProject($consumerTargetProject)
   {
@@ -114,13 +211,18 @@ class PscConnection extends \Google\Model
     return $this->consumerTargetProject;
   }
   /**
-   * @param GoogleRpcStatus
+   * The most recent error during operating this connection. Deprecated, please
+   * use error_info instead.
+   *
+   * @deprecated
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
     $this->error = $error;
   }
   /**
+   * @deprecated
    * @return GoogleRpcStatus
    */
   public function getError()
@@ -128,7 +230,10 @@ class PscConnection extends \Google\Model
     return $this->error;
   }
   /**
-   * @param GoogleRpcErrorInfo
+   * Output only. The error info for the latest error during operating this
+   * connection.
+   *
+   * @param GoogleRpcErrorInfo $errorInfo
    */
   public function setErrorInfo(GoogleRpcErrorInfo $errorInfo)
   {
@@ -142,21 +247,31 @@ class PscConnection extends \Google\Model
     return $this->errorInfo;
   }
   /**
-   * @param string
+   * The error type indicates whether the error is consumer facing, producer
+   * facing or system internal.
+   *
+   * Accepted values: CONNECTION_ERROR_TYPE_UNSPECIFIED, ERROR_INTERNAL,
+   * ERROR_CONSUMER_SIDE, ERROR_PRODUCER_SIDE
+   *
+   * @deprecated
+   * @param self::ERROR_TYPE_* $errorType
    */
   public function setErrorType($errorType)
   {
     $this->errorType = $errorType;
   }
   /**
-   * @return string
+   * @deprecated
+   * @return self::ERROR_TYPE_*
    */
   public function getErrorType()
   {
     return $this->errorType;
   }
   /**
-   * @param string
+   * The last Compute Engine operation to setup PSC connection.
+   *
+   * @param string $gceOperation
    */
   public function setGceOperation($gceOperation)
   {
@@ -170,27 +285,36 @@ class PscConnection extends \Google\Model
     return $this->gceOperation;
   }
   /**
-   * @param string
+   * The requested IP version for the PSC connection.
+   *
+   * Accepted values: IP_VERSION_UNSPECIFIED, IPV4, IPV6
+   *
+   * @param self::IP_VERSION_* $ipVersion
    */
   public function setIpVersion($ipVersion)
   {
     $this->ipVersion = $ipVersion;
   }
   /**
-   * @return string
+   * @return self::IP_VERSION_*
    */
   public function getIpVersion()
   {
     return $this->ipVersion;
   }
   /**
-   * @param string
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable
+   * identifier for the producer instance.
+   *
+   * @deprecated
+   * @param string $producerInstanceId
    */
   public function setProducerInstanceId($producerInstanceId)
   {
     $this->producerInstanceId = $producerInstanceId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProducerInstanceId()
@@ -198,7 +322,9 @@ class PscConnection extends \Google\Model
     return $this->producerInstanceId;
   }
   /**
-   * @param string[]
+   * Immutable. An immutable map for the producer instance metadata.
+   *
+   * @param string[] $producerInstanceMetadata
    */
   public function setProducerInstanceMetadata($producerInstanceMetadata)
   {
@@ -212,7 +338,9 @@ class PscConnection extends \Google\Model
     return $this->producerInstanceMetadata;
   }
   /**
-   * @param string
+   * The PSC connection id of the PSC forwarding rule.
+   *
+   * @param string $pscConnectionId
    */
   public function setPscConnectionId($pscConnectionId)
   {
@@ -226,7 +354,10 @@ class PscConnection extends \Google\Model
     return $this->pscConnectionId;
   }
   /**
-   * @param string
+   * Output only. The URI of the subnetwork selected to allocate IP address for
+   * this connection.
+   *
+   * @param string $selectedSubnetwork
    */
   public function setSelectedSubnetwork($selectedSubnetwork)
   {
@@ -240,7 +371,11 @@ class PscConnection extends \Google\Model
     return $this->selectedSubnetwork;
   }
   /**
-   * @param string
+   * Output only. [Output only] The service class associated with this PSC
+   * Connection. The value is derived from the SCPolicy and matches the service
+   * class name provided by the customer.
+   *
+   * @param string $serviceClass
    */
   public function setServiceClass($serviceClass)
   {
@@ -254,14 +389,19 @@ class PscConnection extends \Google\Model
     return $this->serviceClass;
   }
   /**
-   * @param string
+   * State of the PSC Connection
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, FAILED, CREATING, DELETING,
+   * CREATE_REPAIRING, DELETE_REPAIRING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

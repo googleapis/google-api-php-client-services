@@ -19,38 +19,93 @@ namespace Google\Service\Backupdr;
 
 class Scheduling extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const INSTANCE_TERMINATION_ACTION_INSTANCE_TERMINATION_ACTION_UNSPECIFIED = 'INSTANCE_TERMINATION_ACTION_UNSPECIFIED';
+  /**
+   * Delete the VM.
+   */
+  public const INSTANCE_TERMINATION_ACTION_DELETE = 'DELETE';
+  /**
+   * Stop the VM without storing in-memory content. default action.
+   */
+  public const INSTANCE_TERMINATION_ACTION_STOP = 'STOP';
+  /**
+   * Default value. This value is unused.
+   */
+  public const ON_HOST_MAINTENANCE_ON_HOST_MAINTENANCE_UNSPECIFIED = 'ON_HOST_MAINTENANCE_UNSPECIFIED';
+  /**
+   * Tells Compute Engine to terminate and (optionally) restart the instance
+   * away from the maintenance activity.
+   */
+  public const ON_HOST_MAINTENANCE_TERMINATE = 'TERMINATE';
+  /**
+   * Default, Allows Compute Engine to automatically migrate instances out of
+   * the way of maintenance events.
+   */
+  public const ON_HOST_MAINTENANCE_MIGRATE = 'MIGRATE';
+  /**
+   * Default value. This value is not used.
+   */
+  public const PROVISIONING_MODEL_PROVISIONING_MODEL_UNSPECIFIED = 'PROVISIONING_MODEL_UNSPECIFIED';
+  /**
+   * Standard provisioning with user controlled runtime, no discounts.
+   */
+  public const PROVISIONING_MODEL_STANDARD = 'STANDARD';
+  /**
+   * Heavily discounted, no guaranteed runtime.
+   */
+  public const PROVISIONING_MODEL_SPOT = 'SPOT';
   protected $collection_key = 'nodeAffinities';
   /**
+   * Optional. Specifies whether the instance should be automatically restarted
+   * if it is terminated by Compute Engine (not terminated by a user).
+   *
    * @var bool
    */
   public $automaticRestart;
   /**
+   * Optional. Specifies the termination action for the instance.
+   *
    * @var string
    */
   public $instanceTerminationAction;
   protected $localSsdRecoveryTimeoutType = SchedulingDuration::class;
   protected $localSsdRecoveryTimeoutDataType = '';
   /**
+   * Optional. The minimum number of virtual CPUs this instance will consume
+   * when running on a sole-tenant node.
+   *
    * @var int
    */
   public $minNodeCpus;
   protected $nodeAffinitiesType = NodeAffinity::class;
   protected $nodeAffinitiesDataType = 'array';
   /**
+   * Optional. Defines the maintenance behavior for this instance.
+   *
    * @var string
    */
   public $onHostMaintenance;
   /**
+   * Optional. Defines whether the instance is preemptible.
+   *
    * @var bool
    */
   public $preemptible;
   /**
+   * Optional. Specifies the provisioning model of the instance.
+   *
    * @var string
    */
   public $provisioningModel;
 
   /**
-   * @param bool
+   * Optional. Specifies whether the instance should be automatically restarted
+   * if it is terminated by Compute Engine (not terminated by a user).
+   *
+   * @param bool $automaticRestart
    */
   public function setAutomaticRestart($automaticRestart)
   {
@@ -64,21 +119,30 @@ class Scheduling extends \Google\Collection
     return $this->automaticRestart;
   }
   /**
-   * @param string
+   * Optional. Specifies the termination action for the instance.
+   *
+   * Accepted values: INSTANCE_TERMINATION_ACTION_UNSPECIFIED, DELETE, STOP
+   *
+   * @param self::INSTANCE_TERMINATION_ACTION_* $instanceTerminationAction
    */
   public function setInstanceTerminationAction($instanceTerminationAction)
   {
     $this->instanceTerminationAction = $instanceTerminationAction;
   }
   /**
-   * @return string
+   * @return self::INSTANCE_TERMINATION_ACTION_*
    */
   public function getInstanceTerminationAction()
   {
     return $this->instanceTerminationAction;
   }
   /**
-   * @param SchedulingDuration
+   * Optional. Specifies the maximum amount of time a Local Ssd Vm should wait
+   * while recovery of the Local Ssd state is attempted. Its value should be in
+   * between 0 and 168 hours with hour granularity and the default value being 1
+   * hour.
+   *
+   * @param SchedulingDuration $localSsdRecoveryTimeout
    */
   public function setLocalSsdRecoveryTimeout(SchedulingDuration $localSsdRecoveryTimeout)
   {
@@ -92,7 +156,10 @@ class Scheduling extends \Google\Collection
     return $this->localSsdRecoveryTimeout;
   }
   /**
-   * @param int
+   * Optional. The minimum number of virtual CPUs this instance will consume
+   * when running on a sole-tenant node.
+   *
+   * @param int $minNodeCpus
    */
   public function setMinNodeCpus($minNodeCpus)
   {
@@ -106,7 +173,10 @@ class Scheduling extends \Google\Collection
     return $this->minNodeCpus;
   }
   /**
-   * @param NodeAffinity[]
+   * Optional. A set of node affinity and anti-affinity configurations.
+   * Overrides reservationAffinity.
+   *
+   * @param NodeAffinity[] $nodeAffinities
    */
   public function setNodeAffinities($nodeAffinities)
   {
@@ -120,21 +190,27 @@ class Scheduling extends \Google\Collection
     return $this->nodeAffinities;
   }
   /**
-   * @param string
+   * Optional. Defines the maintenance behavior for this instance.
+   *
+   * Accepted values: ON_HOST_MAINTENANCE_UNSPECIFIED, TERMINATE, MIGRATE
+   *
+   * @param self::ON_HOST_MAINTENANCE_* $onHostMaintenance
    */
   public function setOnHostMaintenance($onHostMaintenance)
   {
     $this->onHostMaintenance = $onHostMaintenance;
   }
   /**
-   * @return string
+   * @return self::ON_HOST_MAINTENANCE_*
    */
   public function getOnHostMaintenance()
   {
     return $this->onHostMaintenance;
   }
   /**
-   * @param bool
+   * Optional. Defines whether the instance is preemptible.
+   *
+   * @param bool $preemptible
    */
   public function setPreemptible($preemptible)
   {
@@ -148,14 +224,18 @@ class Scheduling extends \Google\Collection
     return $this->preemptible;
   }
   /**
-   * @param string
+   * Optional. Specifies the provisioning model of the instance.
+   *
+   * Accepted values: PROVISIONING_MODEL_UNSPECIFIED, STANDARD, SPOT
+   *
+   * @param self::PROVISIONING_MODEL_* $provisioningModel
    */
   public function setProvisioningModel($provisioningModel)
   {
     $this->provisioningModel = $provisioningModel;
   }
   /**
-   * @return string
+   * @return self::PROVISIONING_MODEL_*
    */
   public function getProvisioningModel()
   {

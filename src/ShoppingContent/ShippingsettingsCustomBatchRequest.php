@@ -24,7 +24,9 @@ class ShippingsettingsCustomBatchRequest extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param ShippingsettingsCustomBatchRequestEntry[]
+   * The request entries to be processed in the batch.
+   *
+   * @param ShippingsettingsCustomBatchRequestEntry[] $entries
    */
   public function setEntries($entries)
   {

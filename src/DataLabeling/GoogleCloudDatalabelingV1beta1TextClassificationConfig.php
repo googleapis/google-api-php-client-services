@@ -20,10 +20,15 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1TextClassificationConfig extends \Google\Model
 {
   /**
+   * Optional. If allow_multi_label is true, contributors are able to choose
+   * multiple labels for one text segment.
+   *
    * @var bool
    */
   public $allowMultiLabel;
   /**
+   * Required. Annotation spec set resource name.
+   *
    * @var string
    */
   public $annotationSpecSet;
@@ -31,7 +36,10 @@ class GoogleCloudDatalabelingV1beta1TextClassificationConfig extends \Google\Mod
   protected $sentimentConfigDataType = '';
 
   /**
-   * @param bool
+   * Optional. If allow_multi_label is true, contributors are able to choose
+   * multiple labels for one text segment.
+   *
+   * @param bool $allowMultiLabel
    */
   public function setAllowMultiLabel($allowMultiLabel)
   {
@@ -45,7 +53,9 @@ class GoogleCloudDatalabelingV1beta1TextClassificationConfig extends \Google\Mod
     return $this->allowMultiLabel;
   }
   /**
-   * @param string
+   * Required. Annotation spec set resource name.
+   *
+   * @param string $annotationSpecSet
    */
   public function setAnnotationSpecSet($annotationSpecSet)
   {
@@ -59,13 +69,18 @@ class GoogleCloudDatalabelingV1beta1TextClassificationConfig extends \Google\Mod
     return $this->annotationSpecSet;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1SentimentConfig
+   * Optional. Configs for sentiment selection. We deprecate sentiment analysis
+   * in data labeling side as it is incompatible with uCAIP.
+   *
+   * @deprecated
+   * @param GoogleCloudDatalabelingV1beta1SentimentConfig $sentimentConfig
    */
   public function setSentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfig $sentimentConfig)
   {
     $this->sentimentConfig = $sentimentConfig;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDatalabelingV1beta1SentimentConfig
    */
   public function getSentimentConfig()

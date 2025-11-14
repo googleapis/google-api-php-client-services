@@ -25,12 +25,16 @@ class GoogleCloudDatacatalogV1DataplexTableSpec extends \Google\Collection
   protected $externalTablesType = GoogleCloudDatacatalogV1DataplexExternalTable::class;
   protected $externalTablesDataType = 'array';
   /**
+   * Indicates if the table schema is managed by the user or not.
+   *
    * @var bool
    */
   public $userManaged;
 
   /**
-   * @param GoogleCloudDatacatalogV1DataplexSpec
+   * Common Dataplex Universal Catalog fields.
+   *
+   * @param GoogleCloudDatacatalogV1DataplexSpec $dataplexSpec
    */
   public function setDataplexSpec(GoogleCloudDatacatalogV1DataplexSpec $dataplexSpec)
   {
@@ -44,7 +48,11 @@ class GoogleCloudDatacatalogV1DataplexTableSpec extends \Google\Collection
     return $this->dataplexSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1DataplexExternalTable[]
+   * List of external tables registered by Dataplex Universal Catalog in other
+   * systems based on the same underlying data. External tables allow to query
+   * this data in those systems.
+   *
+   * @param GoogleCloudDatacatalogV1DataplexExternalTable[] $externalTables
    */
   public function setExternalTables($externalTables)
   {
@@ -58,7 +66,9 @@ class GoogleCloudDatacatalogV1DataplexTableSpec extends \Google\Collection
     return $this->externalTables;
   }
   /**
-   * @param bool
+   * Indicates if the table schema is managed by the user or not.
+   *
+   * @param bool $userManaged
    */
   public function setUserManaged($userManaged)
   {

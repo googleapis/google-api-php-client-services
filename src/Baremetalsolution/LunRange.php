@@ -20,16 +20,22 @@ namespace Google\Service\Baremetalsolution;
 class LunRange extends \Google\Model
 {
   /**
+   * Number of LUNs to create.
+   *
    * @var int
    */
   public $quantity;
   /**
+   * The requested size of each LUN, in GB.
+   *
    * @var int
    */
   public $sizeGb;
 
   /**
-   * @param int
+   * Number of LUNs to create.
+   *
+   * @param int $quantity
    */
   public function setQuantity($quantity)
   {
@@ -43,7 +49,9 @@ class LunRange extends \Google\Model
     return $this->quantity;
   }
   /**
-   * @param int
+   * The requested size of each LUN, in GB.
+   *
+   * @param int $sizeGb
    */
   public function setSizeGb($sizeGb)
   {

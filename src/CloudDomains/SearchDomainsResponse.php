@@ -24,7 +24,9 @@ class SearchDomainsResponse extends \Google\Collection
   protected $registerParametersDataType = 'array';
 
   /**
-   * @param RegisterParameters[]
+   * Results of the domain name search.
+   *
+   * @param RegisterParameters[] $registerParameters
    */
   public function setRegisterParameters($registerParameters)
   {

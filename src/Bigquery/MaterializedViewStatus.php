@@ -22,12 +22,18 @@ class MaterializedViewStatus extends \Google\Model
   protected $lastRefreshStatusType = ErrorProto::class;
   protected $lastRefreshStatusDataType = '';
   /**
+   * Output only. Refresh watermark of materialized view. The base tables' data
+   * were collected into the materialized view cache until this time.
+   *
    * @var string
    */
   public $refreshWatermark;
 
   /**
-   * @param ErrorProto
+   * Output only. Error result of the last automatic refresh. If present,
+   * indicates that the last automatic refresh was unsuccessful.
+   *
+   * @param ErrorProto $lastRefreshStatus
    */
   public function setLastRefreshStatus(ErrorProto $lastRefreshStatus)
   {
@@ -41,7 +47,10 @@ class MaterializedViewStatus extends \Google\Model
     return $this->lastRefreshStatus;
   }
   /**
-   * @param string
+   * Output only. Refresh watermark of materialized view. The base tables' data
+   * were collected into the materialized view cache until this time.
+   *
+   * @param string $refreshWatermark
    */
   public function setRefreshWatermark($refreshWatermark)
   {

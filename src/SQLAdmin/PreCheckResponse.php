@@ -19,22 +19,46 @@ namespace Google\Service\SQLAdmin;
 
 class PreCheckResponse extends \Google\Collection
 {
+  /**
+   * Default unspecified value to prevent unintended behavior changes.
+   */
+  public const MESSAGE_TYPE_MESSAGE_TYPE_UNSPECIFIED = 'MESSAGE_TYPE_UNSPECIFIED';
+  /**
+   * General informational messages that don't require action.
+   */
+  public const MESSAGE_TYPE_INFO = 'INFO';
+  /**
+   * Warnings that might impact the upgrade but don't block it.
+   */
+  public const MESSAGE_TYPE_WARNING = 'WARNING';
+  /**
+   * Errors that a user must resolve before proceeding with the upgrade.
+   */
+  public const MESSAGE_TYPE_ERROR = 'ERROR';
   protected $collection_key = 'actionsRequired';
   /**
+   * The actions that the user needs to take. Use repeated for multiple actions.
+   *
    * @var string[]
    */
   public $actionsRequired;
   /**
+   * The message to be displayed to the user.
+   *
    * @var string
    */
   public $message;
   /**
+   * The type of message whether it is an info, warning, or error.
+   *
    * @var string
    */
   public $messageType;
 
   /**
-   * @param string[]
+   * The actions that the user needs to take. Use repeated for multiple actions.
+   *
+   * @param string[] $actionsRequired
    */
   public function setActionsRequired($actionsRequired)
   {
@@ -48,7 +72,9 @@ class PreCheckResponse extends \Google\Collection
     return $this->actionsRequired;
   }
   /**
-   * @param string
+   * The message to be displayed to the user.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -62,14 +88,18 @@ class PreCheckResponse extends \Google\Collection
     return $this->message;
   }
   /**
-   * @param string
+   * The type of message whether it is an info, warning, or error.
+   *
+   * Accepted values: MESSAGE_TYPE_UNSPECIFIED, INFO, WARNING, ERROR
+   *
+   * @param self::MESSAGE_TYPE_* $messageType
    */
   public function setMessageType($messageType)
   {
     $this->messageType = $messageType;
   }
   /**
-   * @return string
+   * @return self::MESSAGE_TYPE_*
    */
   public function getMessageType()
   {

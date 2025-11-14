@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class AppCategoryTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The name of the app collection.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * Output only. The name of the app collection.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

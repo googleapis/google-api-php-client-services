@@ -20,19 +20,63 @@ namespace Google\Service\DisplayVideo;
 class HouseholdIncomeTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Default value when household income is not specified in this version. This
+   * enum is a placeholder for default value and does not represent a real
+   * household income option.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_UNSPECIFIED = 'HOUSEHOLD_INCOME_UNSPECIFIED';
+  /**
+   * The household income of the audience is unknown.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_UNKNOWN = 'HOUSEHOLD_INCOME_UNKNOWN';
+  /**
+   * The audience is in the lower 50% of U.S. household incomes.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_LOWER_50_PERCENT = 'HOUSEHOLD_INCOME_LOWER_50_PERCENT';
+  /**
+   * The audience is in the top 41-50% of U.S. household incomes.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_TOP_41_TO_50_PERCENT = 'HOUSEHOLD_INCOME_TOP_41_TO_50_PERCENT';
+  /**
+   * The audience is in the top 31-40% of U.S. household incomes.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_TOP_31_TO_40_PERCENT = 'HOUSEHOLD_INCOME_TOP_31_TO_40_PERCENT';
+  /**
+   * The audience is in the top 21-30% of U.S. household incomes.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_TOP_21_TO_30_PERCENT = 'HOUSEHOLD_INCOME_TOP_21_TO_30_PERCENT';
+  /**
+   * The audience is in the top 11-20% of U.S. household incomes.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_TOP_11_TO_20_PERCENT = 'HOUSEHOLD_INCOME_TOP_11_TO_20_PERCENT';
+  /**
+   * The audience is in the top 10% of U.S. household incomes.
+   */
+  public const HOUSEHOLD_INCOME_HOUSEHOLD_INCOME_TOP_10_PERCENT = 'HOUSEHOLD_INCOME_TOP_10_PERCENT';
+  /**
+   * Output only. The household income of an audience.
+   *
    * @var string
    */
   public $householdIncome;
 
   /**
-   * @param string
+   * Output only. The household income of an audience.
+   *
+   * Accepted values: HOUSEHOLD_INCOME_UNSPECIFIED, HOUSEHOLD_INCOME_UNKNOWN,
+   * HOUSEHOLD_INCOME_LOWER_50_PERCENT, HOUSEHOLD_INCOME_TOP_41_TO_50_PERCENT,
+   * HOUSEHOLD_INCOME_TOP_31_TO_40_PERCENT,
+   * HOUSEHOLD_INCOME_TOP_21_TO_30_PERCENT,
+   * HOUSEHOLD_INCOME_TOP_11_TO_20_PERCENT, HOUSEHOLD_INCOME_TOP_10_PERCENT
+   *
+   * @param self::HOUSEHOLD_INCOME_* $householdIncome
    */
   public function setHouseholdIncome($householdIncome)
   {
     $this->householdIncome = $householdIncome;
   }
   /**
-   * @return string
+   * @return self::HOUSEHOLD_INCOME_*
    */
   public function getHouseholdIncome()
   {

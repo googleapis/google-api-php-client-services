@@ -23,12 +23,16 @@ class GoogleCloudDiscoveryengineV1ListConversationsResponse extends \Google\Coll
   protected $conversationsType = GoogleCloudDiscoveryengineV1Conversation::class;
   protected $conversationsDataType = 'array';
   /**
+   * Pagination token, if not returned indicates the last page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1Conversation[]
+   * All the Conversations for a given data store.
+   *
+   * @param GoogleCloudDiscoveryengineV1Conversation[] $conversations
    */
   public function setConversations($conversations)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDiscoveryengineV1ListConversationsResponse extends \Google\Coll
     return $this->conversations;
   }
   /**
-   * @param string
+   * Pagination token, if not returned indicates the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest extends \Google\Model
 {
   /**
+   * Required. The resource name of child ProcessorVersion to use as default.
+   * Format: `projects/{project}/locations/{location}/processors/{processor}/pro
+   * cessorVersions/{version}`
+   *
    * @var string
    */
   public $defaultProcessorVersion;
 
   /**
-   * @param string
+   * Required. The resource name of child ProcessorVersion to use as default.
+   * Format: `projects/{project}/locations/{location}/processors/{processor}/pro
+   * cessorVersions/{version}`
+   *
+   * @param string $defaultProcessorVersion
    */
   public function setDefaultProcessorVersion($defaultProcessorVersion)
   {

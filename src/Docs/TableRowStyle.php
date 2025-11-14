@@ -22,16 +22,24 @@ class TableRowStyle extends \Google\Model
   protected $minRowHeightType = Dimension::class;
   protected $minRowHeightDataType = '';
   /**
+   * Whether the row cannot overflow across page or column boundaries.
+   *
    * @var bool
    */
   public $preventOverflow;
   /**
+   * Whether the row is a table header.
+   *
    * @var bool
    */
   public $tableHeader;
 
   /**
-   * @param Dimension
+   * The minimum height of the row. The row will be rendered in the Docs editor
+   * at a height equal to or greater than this value in order to show all the
+   * content in the row's cells.
+   *
+   * @param Dimension $minRowHeight
    */
   public function setMinRowHeight(Dimension $minRowHeight)
   {
@@ -45,7 +53,9 @@ class TableRowStyle extends \Google\Model
     return $this->minRowHeight;
   }
   /**
-   * @param bool
+   * Whether the row cannot overflow across page or column boundaries.
+   *
+   * @param bool $preventOverflow
    */
   public function setPreventOverflow($preventOverflow)
   {
@@ -59,7 +69,9 @@ class TableRowStyle extends \Google\Model
     return $this->preventOverflow;
   }
   /**
-   * @param bool
+   * Whether the row is a table header.
+   *
+   * @param bool $tableHeader
    */
   public function setTableHeader($tableHeader)
   {

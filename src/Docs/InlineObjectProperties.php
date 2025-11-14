@@ -23,7 +23,9 @@ class InlineObjectProperties extends \Google\Model
   protected $embeddedObjectDataType = '';
 
   /**
-   * @param EmbeddedObject
+   * The embedded object of this inline object.
+   *
+   * @param EmbeddedObject $embeddedObject
    */
   public function setEmbeddedObject(EmbeddedObject $embeddedObject)
   {

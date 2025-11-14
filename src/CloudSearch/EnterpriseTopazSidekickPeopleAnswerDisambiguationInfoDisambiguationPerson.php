@@ -22,12 +22,17 @@ class EnterpriseTopazSidekickPeopleAnswerDisambiguationInfoDisambiguationPerson 
   protected $personType = EnterpriseTopazSidekickCommonPerson::class;
   protected $personDataType = '';
   /**
+   * The query that can be used to produce an answer card with the same
+   * attribute, but for this person.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param EnterpriseTopazSidekickCommonPerson
+   * The profile of this person.
+   *
+   * @param EnterpriseTopazSidekickCommonPerson $person
    */
   public function setPerson(EnterpriseTopazSidekickCommonPerson $person)
   {
@@ -41,7 +46,10 @@ class EnterpriseTopazSidekickPeopleAnswerDisambiguationInfoDisambiguationPerson 
     return $this->person;
   }
   /**
-   * @param string
+   * The query that can be used to produce an answer card with the same
+   * attribute, but for this person.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

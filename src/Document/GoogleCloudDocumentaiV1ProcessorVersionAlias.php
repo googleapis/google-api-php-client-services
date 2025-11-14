@@ -20,16 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1ProcessorVersionAlias extends \Google\Model
 {
   /**
+   * The alias in the form of `processor_version` resource name.
+   *
    * @var string
    */
   public $alias;
   /**
+   * The resource name of aliased processor version.
+   *
    * @var string
    */
   public $processorVersion;
 
   /**
-   * @param string
+   * The alias in the form of `processor_version` resource name.
+   *
+   * @param string $alias
    */
   public function setAlias($alias)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDocumentaiV1ProcessorVersionAlias extends \Google\Model
     return $this->alias;
   }
   /**
-   * @param string
+   * The resource name of aliased processor version.
+   *
+   * @param string $processorVersion
    */
   public function setProcessorVersion($processorVersion)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1SpeechConfig extends \Google\Model
 {
   /**
+   * The fully-qualified Speech Recognizer resource name. Format:
+   * `projects/{project_id}/locations/{location}/recognizer/{recognizer}`
+   *
    * @var string
    */
   public $speechRecognizer;
 
   /**
-   * @param string
+   * The fully-qualified Speech Recognizer resource name. Format:
+   * `projects/{project_id}/locations/{location}/recognizer/{recognizer}`
+   *
+   * @param string $speechRecognizer
    */
   public function setSpeechRecognizer($speechRecognizer)
   {

@@ -23,7 +23,9 @@ class GoogleCloudDatalabelingV1beta1ImageClassificationAnnotation extends \Googl
   protected $annotationSpecDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec
+   * Label of image.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec
    */
   public function setAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec)
   {

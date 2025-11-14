@@ -21,6 +21,9 @@ class TvCampaignSummariesListResponse extends \Google\Collection
 {
   protected $collection_key = 'tvCampaignSummaries';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#tvCampaignSummariesListResponse".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class TvCampaignSummariesListResponse extends \Google\Collection
   protected $tvCampaignSummariesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#tvCampaignSummariesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class TvCampaignSummariesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param TvCampaignSummary[]
+   * List of TV campaign summaries.
+   *
+   * @param TvCampaignSummary[] $tvCampaignSummaries
    */
   public function setTvCampaignSummaries($tvCampaignSummaries)
   {

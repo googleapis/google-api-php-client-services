@@ -22,16 +22,20 @@ class GoogleCloudMlV1GetConfigResponse extends \Google\Model
   protected $configType = GoogleCloudMlV1Config::class;
   protected $configDataType = '';
   /**
+   * The service account Cloud ML uses to access resources in the project.
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * The project number for `service_account`.
+   *
    * @var string
    */
   public $serviceAccountProject;
 
   /**
-   * @param GoogleCloudMlV1Config
+   * @param GoogleCloudMlV1Config $config
    */
   public function setConfig(GoogleCloudMlV1Config $config)
   {
@@ -45,7 +49,9 @@ class GoogleCloudMlV1GetConfigResponse extends \Google\Model
     return $this->config;
   }
   /**
-   * @param string
+   * The service account Cloud ML uses to access resources in the project.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -59,7 +65,9 @@ class GoogleCloudMlV1GetConfigResponse extends \Google\Model
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * The project number for `service_account`.
+   *
+   * @param string $serviceAccountProject
    */
   public function setServiceAccountProject($serviceAccountProject)
   {

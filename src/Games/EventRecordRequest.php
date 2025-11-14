@@ -21,14 +21,22 @@ class EventRecordRequest extends \Google\Collection
 {
   protected $collection_key = 'timePeriods';
   /**
+   * The current time when this update was sent, in milliseconds, since 1970 UTC
+   * (Unix Epoch).
+   *
    * @var string
    */
   public $currentTimeMillis;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventRecordRequest`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The request ID used to identify this attempt to record events.
+   *
    * @var string
    */
   public $requestId;
@@ -36,7 +44,10 @@ class EventRecordRequest extends \Google\Collection
   protected $timePeriodsDataType = 'array';
 
   /**
-   * @param string
+   * The current time when this update was sent, in milliseconds, since 1970 UTC
+   * (Unix Epoch).
+   *
+   * @param string $currentTimeMillis
    */
   public function setCurrentTimeMillis($currentTimeMillis)
   {
@@ -50,7 +61,10 @@ class EventRecordRequest extends \Google\Collection
     return $this->currentTimeMillis;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventRecordRequest`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -64,7 +78,9 @@ class EventRecordRequest extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The request ID used to identify this attempt to record events.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -78,7 +94,9 @@ class EventRecordRequest extends \Google\Collection
     return $this->requestId;
   }
   /**
-   * @param EventPeriodUpdate[]
+   * A list of the time period updates being made in this request.
+   *
+   * @param EventPeriodUpdate[] $timePeriods
    */
   public function setTimePeriods($timePeriods)
   {

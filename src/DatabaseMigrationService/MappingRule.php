@@ -19,11 +19,93 @@ namespace Google\Service\DatabaseMigrationService;
 
 class MappingRule extends \Google\Model
 {
+  /**
+   * Unspecified database entity type.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_UNSPECIFIED = 'DATABASE_ENTITY_TYPE_UNSPECIFIED';
+  /**
+   * Schema.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_SCHEMA = 'DATABASE_ENTITY_TYPE_SCHEMA';
+  /**
+   * Table.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_TABLE = 'DATABASE_ENTITY_TYPE_TABLE';
+  /**
+   * Column.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_COLUMN = 'DATABASE_ENTITY_TYPE_COLUMN';
+  /**
+   * Constraint.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_CONSTRAINT = 'DATABASE_ENTITY_TYPE_CONSTRAINT';
+  /**
+   * Index.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_INDEX = 'DATABASE_ENTITY_TYPE_INDEX';
+  /**
+   * Trigger.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_TRIGGER = 'DATABASE_ENTITY_TYPE_TRIGGER';
+  /**
+   * View.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_VIEW = 'DATABASE_ENTITY_TYPE_VIEW';
+  /**
+   * Sequence.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_SEQUENCE = 'DATABASE_ENTITY_TYPE_SEQUENCE';
+  /**
+   * Stored Procedure.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_STORED_PROCEDURE = 'DATABASE_ENTITY_TYPE_STORED_PROCEDURE';
+  /**
+   * Function.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_FUNCTION = 'DATABASE_ENTITY_TYPE_FUNCTION';
+  /**
+   * Synonym.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_SYNONYM = 'DATABASE_ENTITY_TYPE_SYNONYM';
+  /**
+   * Package.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_DATABASE_PACKAGE = 'DATABASE_ENTITY_TYPE_DATABASE_PACKAGE';
+  /**
+   * UDT.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_UDT = 'DATABASE_ENTITY_TYPE_UDT';
+  /**
+   * Materialized View.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW = 'DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW';
+  /**
+   * Database.
+   */
+  public const RULE_SCOPE_DATABASE_ENTITY_TYPE_DATABASE = 'DATABASE_ENTITY_TYPE_DATABASE';
+  /**
+   * The state of the mapping rule is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The rule is enabled.
+   */
+  public const STATE_ENABLED = 'ENABLED';
+  /**
+   * The rule is disabled.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * The rule is logically deleted.
+   */
+  public const STATE_DELETED = 'DELETED';
   protected $conditionalColumnSetValueType = ConditionalColumnSetValue::class;
   protected $conditionalColumnSetValueDataType = '';
   protected $convertRowidColumnType = ConvertRowIdToColumn::class;
   protected $convertRowidColumnDataType = '';
   /**
+   * Optional. A human readable name
+   *
    * @var string
    */
   public $displayName;
@@ -38,22 +120,36 @@ class MappingRule extends \Google\Model
   protected $multiEntityRenameType = MultiEntityRename::class;
   protected $multiEntityRenameDataType = '';
   /**
+   * Full name of the mapping rule resource, in the form of: projects/{project}/
+   * locations/{location}/conversionWorkspaces/{set}/mappingRule/{rule}.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The timestamp that the revision was created.
+   *
    * @var string
    */
   public $revisionCreateTime;
   /**
+   * Output only. The revision ID of the mapping rule. A new revision is
+   * committed whenever the mapping rule is changed in any way. The format is an
+   * 8-character hexadecimal string.
+   *
    * @var string
    */
   public $revisionId;
   /**
+   * Required. The order in which the rule is applied. Lower order rules are
+   * applied before higher value rules so they may end up being overridden.
+   *
    * @var string
    */
   public $ruleOrder;
   /**
+   * Required. The rule scope
+   *
    * @var string
    */
   public $ruleScope;
@@ -68,12 +164,18 @@ class MappingRule extends \Google\Model
   protected $sourceSqlChangeType = SourceSqlChange::class;
   protected $sourceSqlChangeDataType = '';
   /**
+   * Optional. The mapping rule state
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param ConditionalColumnSetValue
+   * Optional. Rule to specify how the data contained in a column should be
+   * transformed (such as trimmed, rounded, etc) provided that the data meets
+   * certain criteria.
+   *
+   * @param ConditionalColumnSetValue $conditionalColumnSetValue
    */
   public function setConditionalColumnSetValue(ConditionalColumnSetValue $conditionalColumnSetValue)
   {
@@ -87,7 +189,10 @@ class MappingRule extends \Google\Model
     return $this->conditionalColumnSetValue;
   }
   /**
-   * @param ConvertRowIdToColumn
+   * Optional. Rule to specify how multiple tables should be converted with an
+   * additional rowid column.
+   *
+   * @param ConvertRowIdToColumn $convertRowidColumn
    */
   public function setConvertRowidColumn(ConvertRowIdToColumn $convertRowidColumn)
   {
@@ -101,7 +206,9 @@ class MappingRule extends \Google\Model
     return $this->convertRowidColumn;
   }
   /**
-   * @param string
+   * Optional. A human readable name
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -115,7 +222,10 @@ class MappingRule extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param EntityMove
+   * Optional. Rule to specify how multiple entities should be relocated into a
+   * different schema.
+   *
+   * @param EntityMove $entityMove
    */
   public function setEntityMove(EntityMove $entityMove)
   {
@@ -129,7 +239,9 @@ class MappingRule extends \Google\Model
     return $this->entityMove;
   }
   /**
-   * @param MappingRuleFilter
+   * Required. The rule filter
+   *
+   * @param MappingRuleFilter $filter
    */
   public function setFilter(MappingRuleFilter $filter)
   {
@@ -143,7 +255,10 @@ class MappingRule extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param FilterTableColumns
+   * Optional. Rule to specify the list of columns to include or exclude from a
+   * table.
+   *
+   * @param FilterTableColumns $filterTableColumns
    */
   public function setFilterTableColumns(FilterTableColumns $filterTableColumns)
   {
@@ -157,7 +272,10 @@ class MappingRule extends \Google\Model
     return $this->filterTableColumns;
   }
   /**
-   * @param MultiColumnDatatypeChange
+   * Optional. Rule to specify how multiple columns should be converted to a
+   * different data type.
+   *
+   * @param MultiColumnDatatypeChange $multiColumnDataTypeChange
    */
   public function setMultiColumnDataTypeChange(MultiColumnDatatypeChange $multiColumnDataTypeChange)
   {
@@ -171,7 +289,9 @@ class MappingRule extends \Google\Model
     return $this->multiColumnDataTypeChange;
   }
   /**
-   * @param MultiEntityRename
+   * Optional. Rule to specify how multiple entities should be renamed.
+   *
+   * @param MultiEntityRename $multiEntityRename
    */
   public function setMultiEntityRename(MultiEntityRename $multiEntityRename)
   {
@@ -185,7 +305,10 @@ class MappingRule extends \Google\Model
     return $this->multiEntityRename;
   }
   /**
-   * @param string
+   * Full name of the mapping rule resource, in the form of: projects/{project}/
+   * locations/{location}/conversionWorkspaces/{set}/mappingRule/{rule}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -199,7 +322,9 @@ class MappingRule extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The timestamp that the revision was created.
+   *
+   * @param string $revisionCreateTime
    */
   public function setRevisionCreateTime($revisionCreateTime)
   {
@@ -213,7 +338,11 @@ class MappingRule extends \Google\Model
     return $this->revisionCreateTime;
   }
   /**
-   * @param string
+   * Output only. The revision ID of the mapping rule. A new revision is
+   * committed whenever the mapping rule is changed in any way. The format is an
+   * 8-character hexadecimal string.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -227,7 +356,10 @@ class MappingRule extends \Google\Model
     return $this->revisionId;
   }
   /**
-   * @param string
+   * Required. The order in which the rule is applied. Lower order rules are
+   * applied before higher value rules so they may end up being overridden.
+   *
+   * @param string $ruleOrder
    */
   public function setRuleOrder($ruleOrder)
   {
@@ -241,21 +373,35 @@ class MappingRule extends \Google\Model
     return $this->ruleOrder;
   }
   /**
-   * @param string
+   * Required. The rule scope
+   *
+   * Accepted values: DATABASE_ENTITY_TYPE_UNSPECIFIED,
+   * DATABASE_ENTITY_TYPE_SCHEMA, DATABASE_ENTITY_TYPE_TABLE,
+   * DATABASE_ENTITY_TYPE_COLUMN, DATABASE_ENTITY_TYPE_CONSTRAINT,
+   * DATABASE_ENTITY_TYPE_INDEX, DATABASE_ENTITY_TYPE_TRIGGER,
+   * DATABASE_ENTITY_TYPE_VIEW, DATABASE_ENTITY_TYPE_SEQUENCE,
+   * DATABASE_ENTITY_TYPE_STORED_PROCEDURE, DATABASE_ENTITY_TYPE_FUNCTION,
+   * DATABASE_ENTITY_TYPE_SYNONYM, DATABASE_ENTITY_TYPE_DATABASE_PACKAGE,
+   * DATABASE_ENTITY_TYPE_UDT, DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW,
+   * DATABASE_ENTITY_TYPE_DATABASE
+   *
+   * @param self::RULE_SCOPE_* $ruleScope
    */
   public function setRuleScope($ruleScope)
   {
     $this->ruleScope = $ruleScope;
   }
   /**
-   * @return string
+   * @return self::RULE_SCOPE_*
    */
   public function getRuleScope()
   {
     return $this->ruleScope;
   }
   /**
-   * @param SetTablePrimaryKey
+   * Optional. Rule to specify the primary key for a table
+   *
+   * @param SetTablePrimaryKey $setTablePrimaryKey
    */
   public function setSetTablePrimaryKey(SetTablePrimaryKey $setTablePrimaryKey)
   {
@@ -269,7 +415,9 @@ class MappingRule extends \Google\Model
     return $this->setTablePrimaryKey;
   }
   /**
-   * @param SingleColumnChange
+   * Optional. Rule to specify how a single column is converted.
+   *
+   * @param SingleColumnChange $singleColumnChange
    */
   public function setSingleColumnChange(SingleColumnChange $singleColumnChange)
   {
@@ -283,7 +431,9 @@ class MappingRule extends \Google\Model
     return $this->singleColumnChange;
   }
   /**
-   * @param SingleEntityRename
+   * Optional. Rule to specify how a single entity should be renamed.
+   *
+   * @param SingleEntityRename $singleEntityRename
    */
   public function setSingleEntityRename(SingleEntityRename $singleEntityRename)
   {
@@ -297,7 +447,9 @@ class MappingRule extends \Google\Model
     return $this->singleEntityRename;
   }
   /**
-   * @param SinglePackageChange
+   * Optional. Rule to specify how a single package is converted.
+   *
+   * @param SinglePackageChange $singlePackageChange
    */
   public function setSinglePackageChange(SinglePackageChange $singlePackageChange)
   {
@@ -311,7 +463,10 @@ class MappingRule extends \Google\Model
     return $this->singlePackageChange;
   }
   /**
-   * @param SourceSqlChange
+   * Optional. Rule to change the sql code for an entity, for example, function,
+   * procedure.
+   *
+   * @param SourceSqlChange $sourceSqlChange
    */
   public function setSourceSqlChange(SourceSqlChange $sourceSqlChange)
   {
@@ -325,14 +480,18 @@ class MappingRule extends \Google\Model
     return $this->sourceSqlChange;
   }
   /**
-   * @param string
+   * Optional. The mapping rule state
+   *
+   * Accepted values: STATE_UNSPECIFIED, ENABLED, DISABLED, DELETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

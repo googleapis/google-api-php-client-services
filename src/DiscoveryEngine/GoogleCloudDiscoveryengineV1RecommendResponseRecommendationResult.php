@@ -22,16 +22,24 @@ class GoogleCloudDiscoveryengineV1RecommendResponseRecommendationResult extends 
   protected $documentType = GoogleCloudDiscoveryengineV1Document::class;
   protected $documentDataType = '';
   /**
+   * Resource ID of the recommended Document.
+   *
    * @var string
    */
   public $id;
   /**
+   * Additional Document metadata or annotations. Possible values: * `score`:
+   * Recommendation score in double value. Is set if `returnScore` is set to
+   * true in RecommendRequest.params.
+   *
    * @var array[]
    */
   public $metadata;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1Document
+   * Set if `returnDocument` is set to true in RecommendRequest.params.
+   *
+   * @param GoogleCloudDiscoveryengineV1Document $document
    */
   public function setDocument(GoogleCloudDiscoveryengineV1Document $document)
   {
@@ -45,7 +53,9 @@ class GoogleCloudDiscoveryengineV1RecommendResponseRecommendationResult extends 
     return $this->document;
   }
   /**
-   * @param string
+   * Resource ID of the recommended Document.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -59,7 +69,11 @@ class GoogleCloudDiscoveryengineV1RecommendResponseRecommendationResult extends 
     return $this->id;
   }
   /**
-   * @param array[]
+   * Additional Document metadata or annotations. Possible values: * `score`:
+   * Recommendation score in double value. Is set if `returnScore` is set to
+   * true in RecommendRequest.params.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {

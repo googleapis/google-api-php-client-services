@@ -23,7 +23,10 @@ class AdvertiserDataAccessConfig extends \Google\Model
   protected $sdfConfigDataType = '';
 
   /**
-   * @param AdvertiserSdfConfig
+   * Structured Data Files (SDF) settings for the advertiser. If not specified,
+   * the SDF settings of the parent partner are used.
+   *
+   * @param AdvertiserSdfConfig $sdfConfig
    */
   public function setSdfConfig(AdvertiserSdfConfig $sdfConfig)
   {

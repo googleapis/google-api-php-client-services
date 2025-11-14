@@ -20,24 +20,68 @@ namespace Google\Service\CloudKMS;
 class AutokeyConfig extends \Google\Model
 {
   /**
+   * The state of the AutokeyConfig is unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The AutokeyConfig is currently active.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * A previously configured key project has been deleted and the current
+   * AutokeyConfig is unusable.
+   */
+  public const STATE_KEY_PROJECT_DELETED = 'KEY_PROJECT_DELETED';
+  /**
+   * The AutokeyConfig is not yet initialized or has been reset to its default
+   * uninitialized state.
+   */
+  public const STATE_UNINITIALIZED = 'UNINITIALIZED';
+  /**
+   * Optional. A checksum computed by the server based on the value of other
+   * fields. This may be sent on update requests to ensure that the client has
+   * an up-to-date value before proceeding. The request will be rejected with an
+   * ABORTED error on a mismatched etag.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or
+   * `projects/{PROJECT_NUMBER}`, where Cloud KMS Autokey will provision a new
+   * CryptoKey when a KeyHandle is created. On UpdateAutokeyConfig, the caller
+   * will require `cloudkms.cryptoKeys.setIamPolicy` permission on this key
+   * project. Once configured, for Cloud KMS Autokey to function properly, this
+   * key project must have the Cloud KMS API activated and the Cloud KMS Service
+   * Agent for this key project must be granted the `cloudkms.admin` role (or
+   * pertinent permissions). A request with an empty key project field will
+   * clear the configuration.
+   *
    * @var string
    */
   public $keyProject;
   /**
+   * Identifier. Name of the AutokeyConfig resource, e.g.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The state for the AutokeyConfig.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Optional. A checksum computed by the server based on the value of other
+   * fields. This may be sent on update requests to ensure that the client has
+   * an up-to-date value before proceeding. The request will be rejected with an
+   * ABORTED error on a mismatched etag.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -51,7 +95,17 @@ class AutokeyConfig extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or
+   * `projects/{PROJECT_NUMBER}`, where Cloud KMS Autokey will provision a new
+   * CryptoKey when a KeyHandle is created. On UpdateAutokeyConfig, the caller
+   * will require `cloudkms.cryptoKeys.setIamPolicy` permission on this key
+   * project. Once configured, for Cloud KMS Autokey to function properly, this
+   * key project must have the Cloud KMS API activated and the Cloud KMS Service
+   * Agent for this key project must be granted the `cloudkms.admin` role (or
+   * pertinent permissions). A request with an empty key project field will
+   * clear the configuration.
+   *
+   * @param string $keyProject
    */
   public function setKeyProject($keyProject)
   {
@@ -65,7 +119,11 @@ class AutokeyConfig extends \Google\Model
     return $this->keyProject;
   }
   /**
-   * @param string
+   * Identifier. Name of the AutokeyConfig resource, e.g.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,14 +137,19 @@ class AutokeyConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The state for the AutokeyConfig.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, KEY_PROJECT_DELETED,
+   * UNINITIALIZED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class VerticalPodAutoscaling extends \Google\Model
 {
   /**
+   * Enables vertical pod autoscaling.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Enables vertical pod autoscaling.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

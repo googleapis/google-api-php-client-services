@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class TriggerActionPayload extends \Google\Model
 {
   /**
+   * Required. The context from the selected action. The value is obtained from
+   * rendered issues and needs to be sent back to identify the action that is
+   * being triggered.
+   *
    * @var string
    */
   public $actionContext;
@@ -27,7 +31,11 @@ class TriggerActionPayload extends \Google\Model
   protected $actionInputDataType = '';
 
   /**
-   * @param string
+   * Required. The context from the selected action. The value is obtained from
+   * rendered issues and needs to be sent back to identify the action that is
+   * being triggered.
+   *
+   * @param string $actionContext
    */
   public function setActionContext($actionContext)
   {
@@ -41,7 +49,9 @@ class TriggerActionPayload extends \Google\Model
     return $this->actionContext;
   }
   /**
-   * @param ActionInput
+   * Required. Input provided by the merchant.
+   *
+   * @param ActionInput $actionInput
    */
   public function setActionInput(ActionInput $actionInput)
   {

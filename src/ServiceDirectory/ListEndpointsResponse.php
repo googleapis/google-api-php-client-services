@@ -23,12 +23,17 @@ class ListEndpointsResponse extends \Google\Collection
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Endpoint[]
+   * The list of endpoints.
+   *
+   * @param Endpoint[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -42,7 +47,10 @@ class ListEndpointsResponse extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

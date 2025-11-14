@@ -20,20 +20,33 @@ namespace Google\Service\Dfareporting;
 class ReportFloodlightCriteriaReportProperties extends \Google\Model
 {
   /**
+   * Include conversions that have no cookie, but do have an exposure path.
+   *
    * @var bool
    */
   public $includeAttributedIPConversions;
   /**
+   * Include conversions of users with a DoubleClick cookie but without an
+   * exposure. That means the user did not click or see an ad from the
+   * advertiser within the Floodlight group, or that the interaction happened
+   * outside the lookback window.
+   *
    * @var bool
    */
   public $includeUnattributedCookieConversions;
   /**
+   * Include conversions that have no associated cookies and no exposures. It’s
+   * therefore impossible to know how the user was exposed to your ads during
+   * the lookback window prior to a conversion.
+   *
    * @var bool
    */
   public $includeUnattributedIPConversions;
 
   /**
-   * @param bool
+   * Include conversions that have no cookie, but do have an exposure path.
+   *
+   * @param bool $includeAttributedIPConversions
    */
   public function setIncludeAttributedIPConversions($includeAttributedIPConversions)
   {
@@ -47,7 +60,12 @@ class ReportFloodlightCriteriaReportProperties extends \Google\Model
     return $this->includeAttributedIPConversions;
   }
   /**
-   * @param bool
+   * Include conversions of users with a DoubleClick cookie but without an
+   * exposure. That means the user did not click or see an ad from the
+   * advertiser within the Floodlight group, or that the interaction happened
+   * outside the lookback window.
+   *
+   * @param bool $includeUnattributedCookieConversions
    */
   public function setIncludeUnattributedCookieConversions($includeUnattributedCookieConversions)
   {
@@ -61,7 +79,11 @@ class ReportFloodlightCriteriaReportProperties extends \Google\Model
     return $this->includeUnattributedCookieConversions;
   }
   /**
-   * @param bool
+   * Include conversions that have no associated cookies and no exposures. It’s
+   * therefore impossible to know how the user was exposed to your ads during
+   * the lookback window prior to a conversion.
+   *
+   * @param bool $includeUnattributedIPConversions
    */
   public function setIncludeUnattributedIPConversions($includeUnattributedIPConversions)
   {

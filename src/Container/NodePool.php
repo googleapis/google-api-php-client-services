@@ -19,6 +19,41 @@ namespace Google\Service\Container;
 
 class NodePool extends \Google\Collection
 {
+  /**
+   * Not set.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The PROVISIONING state indicates the node pool is being created.
+   */
+  public const STATUS_PROVISIONING = 'PROVISIONING';
+  /**
+   * The RUNNING state indicates the node pool has been created and is fully
+   * usable.
+   */
+  public const STATUS_RUNNING = 'RUNNING';
+  /**
+   * The RUNNING_WITH_ERROR state indicates the node pool has been created and
+   * is partially usable. Some error state has occurred and some functionality
+   * may be impaired. Customer may need to reissue a request or trigger a new
+   * update.
+   */
+  public const STATUS_RUNNING_WITH_ERROR = 'RUNNING_WITH_ERROR';
+  /**
+   * The RECONCILING state indicates that some work is actively being done on
+   * the node pool, such as upgrading node software. Details can be found in the
+   * `statusMessage` field.
+   */
+  public const STATUS_RECONCILING = 'RECONCILING';
+  /**
+   * The STOPPING state indicates the node pool is being deleted.
+   */
+  public const STATUS_STOPPING = 'STOPPING';
+  /**
+   * The ERROR state indicates the node pool may be unusable. Details can be
+   * found in the `statusMessage` field.
+   */
+  public const STATUS_ERROR = 'ERROR';
   protected $collection_key = 'locations';
   protected $autopilotConfigType = AutopilotConfig::class;
   protected $autopilotConfigDataType = '';
@@ -31,18 +66,42 @@ class NodePool extends \Google\Collection
   protected $configType = NodeConfig::class;
   protected $configDataType = '';
   /**
+   * This checksum is computed by the server based on the value of node pool
+   * fields, and may be sent on update requests to ensure the client has an up-
+   * to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The initial node count for the pool. You must ensure that your Compute
+   * Engine [resource quota](https://cloud.google.com/compute/quotas) is
+   * sufficient for this number of instances. You must also have available
+   * firewall and routes quota.
+   *
    * @var int
    */
   public $initialNodeCount;
   /**
+   * Output only. The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-
+   * groups-of-managed-instances) associated with this node pool. During the
+   * node pool blue-green upgrade operation, the URLs contain both blue and
+   * green resources.
+   *
    * @var string[]
    */
   public $instanceGroupUrls;
   /**
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located. If this value is unspecified during
+   * node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/referen
+   * ce/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in
+   * nodes being added and/or removed.
+   *
    * @var string[]
    */
   public $locations;
@@ -51,6 +110,8 @@ class NodePool extends \Google\Collection
   protected $maxPodsConstraintType = MaxPodsConstraint::class;
   protected $maxPodsConstraintDataType = '';
   /**
+   * The name of the node pool.
+   *
    * @var string
    */
   public $name;
@@ -59,20 +120,30 @@ class NodePool extends \Google\Collection
   protected $placementPolicyType = PlacementPolicy::class;
   protected $placementPolicyDataType = '';
   /**
+   * Output only. The pod CIDR block size per node in this node pool.
+   *
    * @var int
    */
   public $podIpv4CidrSize;
   protected $queuedProvisioningType = QueuedProvisioning::class;
   protected $queuedProvisioningDataType = '';
   /**
+   * Output only. Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * Output only. The status of the nodes in this pool instance.
+   *
    * @var string
    */
   public $status;
   /**
+   * Output only. Deprecated. Use conditions instead. Additional information
+   * about the current status of this node pool instance, if available.
+   *
+   * @deprecated
    * @var string
    */
   public $statusMessage;
@@ -81,12 +152,19 @@ class NodePool extends \Google\Collection
   protected $upgradeSettingsType = UpgradeSettings::class;
   protected $upgradeSettingsDataType = '';
   /**
+   * The version of Kubernetes running on this NodePool's nodes. If unspecified,
+   * it defaults as described [here](https://cloud.google.com/kubernetes-
+   * engine/versioning#specifying_node_version).
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param AutopilotConfig
+   * Specifies the autopilot configuration for this node pool. This field is
+   * exclusively reserved for Cluster Autoscaler.
+   *
+   * @param AutopilotConfig $autopilotConfig
    */
   public function setAutopilotConfig(AutopilotConfig $autopilotConfig)
   {
@@ -100,7 +178,10 @@ class NodePool extends \Google\Collection
     return $this->autopilotConfig;
   }
   /**
-   * @param NodePoolAutoscaling
+   * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a
+   * valid configuration is present.
+   *
+   * @param NodePoolAutoscaling $autoscaling
    */
   public function setAutoscaling(NodePoolAutoscaling $autoscaling)
   {
@@ -114,7 +195,9 @@ class NodePool extends \Google\Collection
     return $this->autoscaling;
   }
   /**
-   * @param BestEffortProvisioning
+   * Enable best effort provisioning for nodes
+   *
+   * @param BestEffortProvisioning $bestEffortProvisioning
    */
   public function setBestEffortProvisioning(BestEffortProvisioning $bestEffortProvisioning)
   {
@@ -128,7 +211,9 @@ class NodePool extends \Google\Collection
     return $this->bestEffortProvisioning;
   }
   /**
-   * @param StatusCondition[]
+   * Which conditions caused the current node pool state.
+   *
+   * @param StatusCondition[] $conditions
    */
   public function setConditions($conditions)
   {
@@ -142,7 +227,9 @@ class NodePool extends \Google\Collection
     return $this->conditions;
   }
   /**
-   * @param NodeConfig
+   * The node configuration of the pool.
+   *
+   * @param NodeConfig $config
    */
   public function setConfig(NodeConfig $config)
   {
@@ -156,7 +243,11 @@ class NodePool extends \Google\Collection
     return $this->config;
   }
   /**
-   * @param string
+   * This checksum is computed by the server based on the value of node pool
+   * fields, and may be sent on update requests to ensure the client has an up-
+   * to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -170,7 +261,12 @@ class NodePool extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param int
+   * The initial node count for the pool. You must ensure that your Compute
+   * Engine [resource quota](https://cloud.google.com/compute/quotas) is
+   * sufficient for this number of instances. You must also have available
+   * firewall and routes quota.
+   *
+   * @param int $initialNodeCount
    */
   public function setInitialNodeCount($initialNodeCount)
   {
@@ -184,7 +280,13 @@ class NodePool extends \Google\Collection
     return $this->initialNodeCount;
   }
   /**
-   * @param string[]
+   * Output only. The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-
+   * groups-of-managed-instances) associated with this node pool. During the
+   * node pool blue-green upgrade operation, the URLs contain both blue and
+   * green resources.
+   *
+   * @param string[] $instanceGroupUrls
    */
   public function setInstanceGroupUrls($instanceGroupUrls)
   {
@@ -198,7 +300,16 @@ class NodePool extends \Google\Collection
     return $this->instanceGroupUrls;
   }
   /**
-   * @param string[]
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located. If this value is unspecified during
+   * node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/referen
+   * ce/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in
+   * nodes being added and/or removed.
+   *
+   * @param string[] $locations
    */
   public function setLocations($locations)
   {
@@ -212,7 +323,9 @@ class NodePool extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param NodeManagement
+   * NodeManagement configuration for this NodePool.
+   *
+   * @param NodeManagement $management
    */
   public function setManagement(NodeManagement $management)
   {
@@ -226,7 +339,10 @@ class NodePool extends \Google\Collection
     return $this->management;
   }
   /**
-   * @param MaxPodsConstraint
+   * The constraint on the maximum number of pods that can be run simultaneously
+   * on a node in the node pool.
+   *
+   * @param MaxPodsConstraint $maxPodsConstraint
    */
   public function setMaxPodsConstraint(MaxPodsConstraint $maxPodsConstraint)
   {
@@ -240,7 +356,9 @@ class NodePool extends \Google\Collection
     return $this->maxPodsConstraint;
   }
   /**
-   * @param string
+   * The name of the node pool.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -254,7 +372,10 @@ class NodePool extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param NodeNetworkConfig
+   * Networking configuration for this NodePool. If specified, it overrides the
+   * cluster-level defaults.
+   *
+   * @param NodeNetworkConfig $networkConfig
    */
   public function setNetworkConfig(NodeNetworkConfig $networkConfig)
   {
@@ -268,7 +389,9 @@ class NodePool extends \Google\Collection
     return $this->networkConfig;
   }
   /**
-   * @param PlacementPolicy
+   * Specifies the node placement policy.
+   *
+   * @param PlacementPolicy $placementPolicy
    */
   public function setPlacementPolicy(PlacementPolicy $placementPolicy)
   {
@@ -282,7 +405,9 @@ class NodePool extends \Google\Collection
     return $this->placementPolicy;
   }
   /**
-   * @param int
+   * Output only. The pod CIDR block size per node in this node pool.
+   *
+   * @param int $podIpv4CidrSize
    */
   public function setPodIpv4CidrSize($podIpv4CidrSize)
   {
@@ -296,7 +421,9 @@ class NodePool extends \Google\Collection
     return $this->podIpv4CidrSize;
   }
   /**
-   * @param QueuedProvisioning
+   * Specifies the configuration of queued provisioning.
+   *
+   * @param QueuedProvisioning $queuedProvisioning
    */
   public function setQueuedProvisioning(QueuedProvisioning $queuedProvisioning)
   {
@@ -310,7 +437,9 @@ class NodePool extends \Google\Collection
     return $this->queuedProvisioning;
   }
   /**
-   * @param string
+   * Output only. Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -324,27 +453,37 @@ class NodePool extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string
+   * Output only. The status of the nodes in this pool instance.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, PROVISIONING, RUNNING,
+   * RUNNING_WITH_ERROR, RECONCILING, STOPPING, ERROR
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * Output only. Deprecated. Use conditions instead. Additional information
+   * about the current status of this node pool instance, if available.
+   *
+   * @deprecated
+   * @param string $statusMessage
    */
   public function setStatusMessage($statusMessage)
   {
     $this->statusMessage = $statusMessage;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getStatusMessage()
@@ -352,7 +491,10 @@ class NodePool extends \Google\Collection
     return $this->statusMessage;
   }
   /**
-   * @param UpdateInfo
+   * Output only. Update info contains relevant information during a node pool
+   * update.
+   *
+   * @param UpdateInfo $updateInfo
    */
   public function setUpdateInfo(UpdateInfo $updateInfo)
   {
@@ -366,7 +508,9 @@ class NodePool extends \Google\Collection
     return $this->updateInfo;
   }
   /**
-   * @param UpgradeSettings
+   * Upgrade settings control disruption and speed of the upgrade.
+   *
+   * @param UpgradeSettings $upgradeSettings
    */
   public function setUpgradeSettings(UpgradeSettings $upgradeSettings)
   {
@@ -380,7 +524,11 @@ class NodePool extends \Google\Collection
     return $this->upgradeSettings;
   }
   /**
-   * @param string
+   * The version of Kubernetes running on this NodePool's nodes. If unspecified,
+   * it defaults as described [here](https://cloud.google.com/kubernetes-
+   * engine/versioning#specifying_node_version).
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\CloudSearch;
 class Photo extends \Google\Model
 {
   /**
+   * The URL of the photo.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The URL of the photo.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

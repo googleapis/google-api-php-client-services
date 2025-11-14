@@ -23,6 +23,9 @@ class ListBackupsResponse extends \Google\Collection
   protected $backupsType = Backup::class;
   protected $backupsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, then there aren't subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -30,7 +33,9 @@ class ListBackupsResponse extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * @param Backup[]
+   * A list of backups.
+   *
+   * @param Backup[] $backups
    */
   public function setBackups($backups)
   {
@@ -44,7 +49,10 @@ class ListBackupsResponse extends \Google\Collection
     return $this->backups;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, then there aren't subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -58,7 +66,10 @@ class ListBackupsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ApiWarning[]
+   * If a region isn't unavailable or if an unknown error occurs, then a warning
+   * message is returned.
+   *
+   * @param ApiWarning[] $warnings
    */
   public function setWarnings($warnings)
   {

@@ -24,7 +24,9 @@ class AndroidDeviceList extends \Google\Collection
   protected $androidDevicesDataType = 'array';
 
   /**
-   * @param AndroidDevice[]
+   * Required. A list of Android devices.
+   *
+   * @param AndroidDevice[] $androidDevices
    */
   public function setAndroidDevices($androidDevices)
   {

@@ -21,12 +21,20 @@ class PrefixList extends \Google\Collection
 {
   protected $collection_key = 'includedObjectPrefixes';
   /**
+   * Optional. Include prefixes of the objects to be transformed. * Supports
+   * full object name * Supports prefix of the object name * Wildcards are not
+   * supported * Supports empty string for all objects in a bucket.
+   *
    * @var string[]
    */
   public $includedObjectPrefixes;
 
   /**
-   * @param string[]
+   * Optional. Include prefixes of the objects to be transformed. * Supports
+   * full object name * Supports prefix of the object name * Wildcards are not
+   * supported * Supports empty string for all objects in a bucket.
+   *
+   * @param string[] $includedObjectPrefixes
    */
   public function setIncludedObjectPrefixes($includedObjectPrefixes)
   {

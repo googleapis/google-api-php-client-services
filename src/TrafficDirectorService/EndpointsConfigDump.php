@@ -26,7 +26,9 @@ class EndpointsConfigDump extends \Google\Collection
   protected $staticEndpointConfigsDataType = 'array';
 
   /**
-   * @param DynamicEndpointConfig[]
+   * The dynamically loaded endpoint configs.
+   *
+   * @param DynamicEndpointConfig[] $dynamicEndpointConfigs
    */
   public function setDynamicEndpointConfigs($dynamicEndpointConfigs)
   {
@@ -40,7 +42,9 @@ class EndpointsConfigDump extends \Google\Collection
     return $this->dynamicEndpointConfigs;
   }
   /**
-   * @param StaticEndpointConfig[]
+   * The statically loaded endpoint configs.
+   *
+   * @param StaticEndpointConfig[] $staticEndpointConfigs
    */
   public function setStaticEndpointConfigs($staticEndpointConfigs)
   {

@@ -21,6 +21,10 @@ class GlobalExplanation extends \Google\Collection
 {
   protected $collection_key = 'explanations';
   /**
+   * Class label for this set of global explanations. Will be empty/null for
+   * binary logistic and linear regression models. Sorted alphabetically in
+   * descending order.
+   *
    * @var string
    */
   public $classLabel;
@@ -28,7 +32,11 @@ class GlobalExplanation extends \Google\Collection
   protected $explanationsDataType = 'array';
 
   /**
-   * @param string
+   * Class label for this set of global explanations. Will be empty/null for
+   * binary logistic and linear regression models. Sorted alphabetically in
+   * descending order.
+   *
+   * @param string $classLabel
    */
   public function setClassLabel($classLabel)
   {
@@ -42,7 +50,10 @@ class GlobalExplanation extends \Google\Collection
     return $this->classLabel;
   }
   /**
-   * @param Explanation[]
+   * A list of the top global explanations. Sorted by absolute value of
+   * attribution in descending order.
+   *
+   * @param Explanation[] $explanations
    */
   public function setExplanations($explanations)
   {

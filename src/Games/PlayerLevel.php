@@ -20,24 +20,36 @@ namespace Google\Service\Games;
 class PlayerLevel extends \Google\Model
 {
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerLevel`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The level for the user.
+   *
    * @var int
    */
   public $level;
   /**
+   * The maximum experience points for this level.
+   *
    * @var string
    */
   public $maxExperiencePoints;
   /**
+   * The minimum experience points for this level.
+   *
    * @var string
    */
   public $minExperiencePoints;
 
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerLevel`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -51,7 +63,9 @@ class PlayerLevel extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param int
+   * The level for the user.
+   *
+   * @param int $level
    */
   public function setLevel($level)
   {
@@ -65,7 +79,9 @@ class PlayerLevel extends \Google\Model
     return $this->level;
   }
   /**
-   * @param string
+   * The maximum experience points for this level.
+   *
+   * @param string $maxExperiencePoints
    */
   public function setMaxExperiencePoints($maxExperiencePoints)
   {
@@ -79,7 +95,9 @@ class PlayerLevel extends \Google\Model
     return $this->maxExperiencePoints;
   }
   /**
-   * @param string
+   * The minimum experience points for this level.
+   *
+   * @param string $minExperiencePoints
    */
   public function setMinExperiencePoints($minExperiencePoints)
   {

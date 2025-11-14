@@ -20,20 +20,36 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig extends \Google\Model
 {
   /**
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note
+   * that this must be set for conversations to be properly displayed and
+   * analyzed.
+   *
    * @var int
    */
   public $agentChannel;
   /**
+   * Optional. An opaque, user-specified string representing a human agent who
+   * handled all conversations in the import. Note that this will be overridden
+   * if per-conversation metadata is provided through the `metadata_bucket_uri`.
+   *
    * @var string
    */
   public $agentId;
   /**
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note
+   * that this must be set for conversations to be properly displayed and
+   * analyzed.
+   *
    * @var int
    */
   public $customerChannel;
 
   /**
-   * @param int
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note
+   * that this must be set for conversations to be properly displayed and
+   * analyzed.
+   *
+   * @param int $agentChannel
    */
   public function setAgentChannel($agentChannel)
   {
@@ -47,7 +63,11 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversa
     return $this->agentChannel;
   }
   /**
-   * @param string
+   * Optional. An opaque, user-specified string representing a human agent who
+   * handled all conversations in the import. Note that this will be overridden
+   * if per-conversation metadata is provided through the `metadata_bucket_uri`.
+   *
+   * @param string $agentId
    */
   public function setAgentId($agentId)
   {
@@ -61,7 +81,11 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversa
     return $this->agentId;
   }
   /**
-   * @param int
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note
+   * that this must be set for conversations to be properly displayed and
+   * analyzed.
+   *
+   * @param int $customerChannel
    */
   public function setCustomerChannel($customerChannel)
   {

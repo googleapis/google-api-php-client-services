@@ -22,12 +22,16 @@ class Occupation extends \Google\Model
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The occupation; for example, `carpenter`.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param FieldMetadata
+   * Metadata about the occupation.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -41,7 +45,9 @@ class Occupation extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The occupation; for example, `carpenter`.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

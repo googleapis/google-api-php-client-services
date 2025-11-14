@@ -25,7 +25,9 @@ class IntHparamSearchSpace extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param IntCandidates
+   * Candidates of the int hyperparameter.
+   *
+   * @param IntCandidates $candidates
    */
   public function setCandidates(IntCandidates $candidates)
   {
@@ -39,7 +41,9 @@ class IntHparamSearchSpace extends \Google\Model
     return $this->candidates;
   }
   /**
-   * @param IntRange
+   * Range of the int hyperparameter.
+   *
+   * @param IntRange $range
    */
   public function setRange(IntRange $range)
   {

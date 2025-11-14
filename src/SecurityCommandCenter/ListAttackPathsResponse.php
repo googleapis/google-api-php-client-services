@@ -23,12 +23,17 @@ class ListAttackPathsResponse extends \Google\Collection
   protected $attackPathsType = AttackPath::class;
   protected $attackPathsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AttackPath[]
+   * The attack paths that the attack path simulation identified.
+   *
+   * @param AttackPath[] $attackPaths
    */
   public function setAttackPaths($attackPaths)
   {
@@ -42,7 +47,10 @@ class ListAttackPathsResponse extends \Google\Collection
     return $this->attackPaths;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

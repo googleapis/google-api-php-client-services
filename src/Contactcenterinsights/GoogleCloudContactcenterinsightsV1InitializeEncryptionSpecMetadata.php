@@ -21,10 +21,14 @@ class GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecMetadata extends
 {
   protected $collection_key = 'partialErrors';
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
@@ -34,7 +38,9 @@ class GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecMetadata extends
   protected $requestDataType = '';
 
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -48,7 +54,9 @@ class GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecMetadata extends
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -62,7 +70,10 @@ class GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecMetadata extends
     return $this->endTime;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Partial errors during initializing operation that might cause the operation
+   * output to be incomplete.
+   *
+   * @param GoogleRpcStatus[] $partialErrors
    */
   public function setPartialErrors($partialErrors)
   {
@@ -76,7 +87,9 @@ class GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecMetadata extends
     return $this->partialErrors;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecRequest
+   * Output only. The original request for initialization.
+   *
+   * @param GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecRequest $request
    */
   public function setRequest(GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecRequest $request)
   {

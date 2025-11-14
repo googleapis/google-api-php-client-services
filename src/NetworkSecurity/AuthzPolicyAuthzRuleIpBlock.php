@@ -20,16 +20,22 @@ namespace Google\Service\NetworkSecurity;
 class AuthzPolicyAuthzRuleIpBlock extends \Google\Model
 {
   /**
+   * Required. The length of the address range.
+   *
    * @var int
    */
   public $length;
   /**
+   * Required. The address prefix.
+   *
    * @var string
    */
   public $prefix;
 
   /**
-   * @param int
+   * Required. The length of the address range.
+   *
+   * @param int $length
    */
   public function setLength($length)
   {
@@ -43,7 +49,9 @@ class AuthzPolicyAuthzRuleIpBlock extends \Google\Model
     return $this->length;
   }
   /**
-   * @param string
+   * Required. The address prefix.
+   *
+   * @param string $prefix
    */
   public function setPrefix($prefix)
   {

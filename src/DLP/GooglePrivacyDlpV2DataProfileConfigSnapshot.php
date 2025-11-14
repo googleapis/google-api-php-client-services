@@ -26,22 +26,34 @@ class GooglePrivacyDlpV2DataProfileConfigSnapshot extends \Google\Model
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   /**
+   * Timestamp when the template was modified
+   *
    * @var string
    */
   public $inspectTemplateModifiedTime;
   /**
+   * Name of the inspection template used to generate this profile
+   *
    * @var string
    */
   public $inspectTemplateName;
 
   /**
-   * @param GooglePrivacyDlpV2DataProfileJobConfig
+   * A copy of the configuration used to generate this profile. This is
+   * deprecated, and the DiscoveryConfig field is preferred moving forward.
+   * DataProfileJobConfig will still be written here for Discovery in BigQuery
+   * for backwards compatibility, but will not be updated with new fields, while
+   * DiscoveryConfig will.
+   *
+   * @deprecated
+   * @param GooglePrivacyDlpV2DataProfileJobConfig $dataProfileJob
    */
   public function setDataProfileJob(GooglePrivacyDlpV2DataProfileJobConfig $dataProfileJob)
   {
     $this->dataProfileJob = $dataProfileJob;
   }
   /**
+   * @deprecated
    * @return GooglePrivacyDlpV2DataProfileJobConfig
    */
   public function getDataProfileJob()
@@ -49,7 +61,9 @@ class GooglePrivacyDlpV2DataProfileConfigSnapshot extends \Google\Model
     return $this->dataProfileJob;
   }
   /**
-   * @param GooglePrivacyDlpV2DiscoveryConfig
+   * A copy of the configuration used to generate this profile.
+   *
+   * @param GooglePrivacyDlpV2DiscoveryConfig $discoveryConfig
    */
   public function setDiscoveryConfig(GooglePrivacyDlpV2DiscoveryConfig $discoveryConfig)
   {
@@ -63,7 +77,10 @@ class GooglePrivacyDlpV2DataProfileConfigSnapshot extends \Google\Model
     return $this->discoveryConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2InspectConfig
+   * A copy of the inspection config used to generate this profile. This is a
+   * copy of the inspect_template specified in `DataProfileJobConfig`.
+   *
+   * @param GooglePrivacyDlpV2InspectConfig $inspectConfig
    */
   public function setInspectConfig(GooglePrivacyDlpV2InspectConfig $inspectConfig)
   {
@@ -77,7 +94,9 @@ class GooglePrivacyDlpV2DataProfileConfigSnapshot extends \Google\Model
     return $this->inspectConfig;
   }
   /**
-   * @param string
+   * Timestamp when the template was modified
+   *
+   * @param string $inspectTemplateModifiedTime
    */
   public function setInspectTemplateModifiedTime($inspectTemplateModifiedTime)
   {
@@ -91,7 +110,9 @@ class GooglePrivacyDlpV2DataProfileConfigSnapshot extends \Google\Model
     return $this->inspectTemplateModifiedTime;
   }
   /**
-   * @param string
+   * Name of the inspection template used to generate this profile
+   *
+   * @param string $inspectTemplateName
    */
   public function setInspectTemplateName($inspectTemplateName)
   {

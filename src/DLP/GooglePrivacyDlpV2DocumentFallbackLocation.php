@@ -25,7 +25,9 @@ class GooglePrivacyDlpV2DocumentFallbackLocation extends \Google\Model
   protected $multiRegionProcessingDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2GlobalProcessing
+   * Processing occurs in the global region.
+   *
+   * @param GooglePrivacyDlpV2GlobalProcessing $globalProcessing
    */
   public function setGlobalProcessing(GooglePrivacyDlpV2GlobalProcessing $globalProcessing)
   {
@@ -39,7 +41,10 @@ class GooglePrivacyDlpV2DocumentFallbackLocation extends \Google\Model
     return $this->globalProcessing;
   }
   /**
-   * @param GooglePrivacyDlpV2MultiRegionProcessing
+   * Processing occurs in a multi-region that contains the current region if
+   * available.
+   *
+   * @param GooglePrivacyDlpV2MultiRegionProcessing $multiRegionProcessing
    */
   public function setMultiRegionProcessing(GooglePrivacyDlpV2MultiRegionProcessing $multiRegionProcessing)
   {

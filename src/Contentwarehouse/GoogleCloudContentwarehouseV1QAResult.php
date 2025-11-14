@@ -21,6 +21,10 @@ class GoogleCloudContentwarehouseV1QAResult extends \Google\Collection
 {
   protected $collection_key = 'highlights';
   /**
+   * The calibrated confidence score for this document, in the range [0., 1.].
+   * This represents the confidence level for whether the returned document and
+   * snippet answers the user's query.
+   *
    * @var float
    */
   public $confidenceScore;
@@ -28,7 +32,11 @@ class GoogleCloudContentwarehouseV1QAResult extends \Google\Collection
   protected $highlightsDataType = 'array';
 
   /**
-   * @param float
+   * The calibrated confidence score for this document, in the range [0., 1.].
+   * This represents the confidence level for whether the returned document and
+   * snippet answers the user's query.
+   *
+   * @param float $confidenceScore
    */
   public function setConfidenceScore($confidenceScore)
   {
@@ -42,7 +50,9 @@ class GoogleCloudContentwarehouseV1QAResult extends \Google\Collection
     return $this->confidenceScore;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1QAResultHighlight[]
+   * Highlighted sections in the snippet.
+   *
+   * @param GoogleCloudContentwarehouseV1QAResultHighlight[] $highlights
    */
   public function setHighlights($highlights)
   {

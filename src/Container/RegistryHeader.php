@@ -21,16 +21,22 @@ class RegistryHeader extends \Google\Collection
 {
   protected $collection_key = 'value';
   /**
+   * Key configures the header key.
+   *
    * @var string
    */
   public $key;
   /**
+   * Value configures the header value.
+   *
    * @var string[]
    */
   public $value;
 
   /**
-   * @param string
+   * Key configures the header key.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -44,7 +50,9 @@ class RegistryHeader extends \Google\Collection
     return $this->key;
   }
   /**
-   * @param string[]
+   * Value configures the header value.
+   *
+   * @param string[] $value
    */
   public function setValue($value)
   {

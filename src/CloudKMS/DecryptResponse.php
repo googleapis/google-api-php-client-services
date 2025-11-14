@@ -20,24 +20,65 @@ namespace Google\Service\CloudKMS;
 class DecryptResponse extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const PROTECTION_LEVEL_PROTECTION_LEVEL_UNSPECIFIED = 'PROTECTION_LEVEL_UNSPECIFIED';
+  /**
+   * Crypto operations are performed in software.
+   */
+  public const PROTECTION_LEVEL_SOFTWARE = 'SOFTWARE';
+  /**
+   * Crypto operations are performed in a Hardware Security Module.
+   */
+  public const PROTECTION_LEVEL_HSM = 'HSM';
+  /**
+   * Crypto operations are performed by an external key manager.
+   */
+  public const PROTECTION_LEVEL_EXTERNAL = 'EXTERNAL';
+  /**
+   * Crypto operations are performed in an EKM-over-VPC backend.
+   */
+  public const PROTECTION_LEVEL_EXTERNAL_VPC = 'EXTERNAL_VPC';
+  /**
+   * The decrypted data originally supplied in EncryptRequest.plaintext.
+   *
    * @var string
    */
   public $plaintext;
   /**
+   * Integrity verification field. A CRC32C checksum of the returned
+   * DecryptResponse.plaintext. An integrity check of DecryptResponse.plaintext
+   * can be performed by computing the CRC32C checksum of
+   * DecryptResponse.plaintext and comparing your results to this field. Discard
+   * the response in case of non-matching checksum values, and perform a limited
+   * number of retries. A persistent mismatch may indicate an issue in your
+   * computation of the CRC32C checksum. Note: receiving this response message
+   * indicates that KeyManagementService is able to successfully decrypt the
+   * ciphertext. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
    * @var string
    */
   public $plaintextCrc32c;
   /**
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   *
    * @var string
    */
   public $protectionLevel;
   /**
+   * Whether the Decryption was performed using the primary key version.
+   *
    * @var bool
    */
   public $usedPrimary;
 
   /**
-   * @param string
+   * The decrypted data originally supplied in EncryptRequest.plaintext.
+   *
+   * @param string $plaintext
    */
   public function setPlaintext($plaintext)
   {
@@ -51,7 +92,20 @@ class DecryptResponse extends \Google\Model
     return $this->plaintext;
   }
   /**
-   * @param string
+   * Integrity verification field. A CRC32C checksum of the returned
+   * DecryptResponse.plaintext. An integrity check of DecryptResponse.plaintext
+   * can be performed by computing the CRC32C checksum of
+   * DecryptResponse.plaintext and comparing your results to this field. Discard
+   * the response in case of non-matching checksum values, and perform a limited
+   * number of retries. A persistent mismatch may indicate an issue in your
+   * computation of the CRC32C checksum. Note: receiving this response message
+   * indicates that KeyManagementService is able to successfully decrypt the
+   * ciphertext. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
+   * @param string $plaintextCrc32c
    */
   public function setPlaintextCrc32c($plaintextCrc32c)
   {
@@ -65,21 +119,28 @@ class DecryptResponse extends \Google\Model
     return $this->plaintextCrc32c;
   }
   /**
-   * @param string
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   *
+   * Accepted values: PROTECTION_LEVEL_UNSPECIFIED, SOFTWARE, HSM, EXTERNAL,
+   * EXTERNAL_VPC
+   *
+   * @param self::PROTECTION_LEVEL_* $protectionLevel
    */
   public function setProtectionLevel($protectionLevel)
   {
     $this->protectionLevel = $protectionLevel;
   }
   /**
-   * @return string
+   * @return self::PROTECTION_LEVEL_*
    */
   public function getProtectionLevel()
   {
     return $this->protectionLevel;
   }
   /**
-   * @param bool
+   * Whether the Decryption was performed using the primary key version.
+   *
+   * @param bool $usedPrimary
    */
   public function setUsedPrimary($usedPrimary)
   {

@@ -21,14 +21,24 @@ class TextRun extends \Google\Collection
 {
   protected $collection_key = 'suggestedInsertionIds';
   /**
+   * The text of this run. Any non-text elements in the run are replaced with
+   * the Unicode character U+E907.
+   *
    * @var string
    */
   public $content;
   /**
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
    * @var string[]
    */
   public $suggestedDeletionIds;
   /**
+   * The suggested insertion IDs. A TextRun may have multiple insertion IDs if
+   * it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
    * @var string[]
    */
   public $suggestedInsertionIds;
@@ -38,7 +48,10 @@ class TextRun extends \Google\Collection
   protected $textStyleDataType = '';
 
   /**
-   * @param string
+   * The text of this run. Any non-text elements in the run are replaced with
+   * the Unicode character U+E907.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -52,7 +65,10 @@ class TextRun extends \Google\Collection
     return $this->content;
   }
   /**
-   * @param string[]
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
+   * @param string[] $suggestedDeletionIds
    */
   public function setSuggestedDeletionIds($suggestedDeletionIds)
   {
@@ -66,7 +82,11 @@ class TextRun extends \Google\Collection
     return $this->suggestedDeletionIds;
   }
   /**
-   * @param string[]
+   * The suggested insertion IDs. A TextRun may have multiple insertion IDs if
+   * it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
+   * @param string[] $suggestedInsertionIds
    */
   public function setSuggestedInsertionIds($suggestedInsertionIds)
   {
@@ -80,7 +100,9 @@ class TextRun extends \Google\Collection
     return $this->suggestedInsertionIds;
   }
   /**
-   * @param SuggestedTextStyle[]
+   * The suggested text style changes to this run, keyed by suggestion ID.
+   *
+   * @param SuggestedTextStyle[] $suggestedTextStyleChanges
    */
   public function setSuggestedTextStyleChanges($suggestedTextStyleChanges)
   {
@@ -94,7 +116,9 @@ class TextRun extends \Google\Collection
     return $this->suggestedTextStyleChanges;
   }
   /**
-   * @param TextStyle
+   * The text style of this run.
+   *
+   * @param TextStyle $textStyle
    */
   public function setTextStyle(TextStyle $textStyle)
   {

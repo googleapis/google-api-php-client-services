@@ -19,9 +19,28 @@ namespace Google\Service\TagManager;
 
 class Entity extends \Google\Model
 {
+  public const CHANGE_STATUS_changeStatusUnspecified = 'changeStatusUnspecified';
+  /**
+   * The entity has never been changed.
+   */
+  public const CHANGE_STATUS_none = 'none';
+  /**
+   * The entity is added to the workspace.
+   */
+  public const CHANGE_STATUS_added = 'added';
+  /**
+   * The entity is deleted from the workspace.
+   */
+  public const CHANGE_STATUS_deleted = 'deleted';
+  /**
+   * The entity has been updated in the workspace.
+   */
+  public const CHANGE_STATUS_updated = 'updated';
   protected $builtInVariableType = BuiltInVariable::class;
   protected $builtInVariableDataType = '';
   /**
+   * Represents how the entity has been changed in the workspace.
+   *
    * @var string
    */
   public $changeStatus;
@@ -45,7 +64,9 @@ class Entity extends \Google\Model
   protected $zoneDataType = '';
 
   /**
-   * @param BuiltInVariable
+   * The built in variable being represented by the entity.
+   *
+   * @param BuiltInVariable $builtInVariable
    */
   public function setBuiltInVariable(BuiltInVariable $builtInVariable)
   {
@@ -59,21 +80,27 @@ class Entity extends \Google\Model
     return $this->builtInVariable;
   }
   /**
-   * @param string
+   * Represents how the entity has been changed in the workspace.
+   *
+   * Accepted values: changeStatusUnspecified, none, added, deleted, updated
+   *
+   * @param self::CHANGE_STATUS_* $changeStatus
    */
   public function setChangeStatus($changeStatus)
   {
     $this->changeStatus = $changeStatus;
   }
   /**
-   * @return string
+   * @return self::CHANGE_STATUS_*
    */
   public function getChangeStatus()
   {
     return $this->changeStatus;
   }
   /**
-   * @param Client
+   * The client being represented by the entity.
+   *
+   * @param Client $client
    */
   public function setClient(Client $client)
   {
@@ -87,7 +114,9 @@ class Entity extends \Google\Model
     return $this->client;
   }
   /**
-   * @param CustomTemplate
+   * The custom template being represented by the entity.
+   *
+   * @param CustomTemplate $customTemplate
    */
   public function setCustomTemplate(CustomTemplate $customTemplate)
   {
@@ -101,7 +130,9 @@ class Entity extends \Google\Model
     return $this->customTemplate;
   }
   /**
-   * @param Folder
+   * The folder being represented by the entity.
+   *
+   * @param Folder $folder
    */
   public function setFolder(Folder $folder)
   {
@@ -115,7 +146,9 @@ class Entity extends \Google\Model
     return $this->folder;
   }
   /**
-   * @param GtagConfig
+   * The gtag config being represented by the entity.
+   *
+   * @param GtagConfig $gtagConfig
    */
   public function setGtagConfig(GtagConfig $gtagConfig)
   {
@@ -129,7 +162,9 @@ class Entity extends \Google\Model
     return $this->gtagConfig;
   }
   /**
-   * @param Tag
+   * The tag being represented by the entity.
+   *
+   * @param Tag $tag
    */
   public function setTag(Tag $tag)
   {
@@ -143,7 +178,9 @@ class Entity extends \Google\Model
     return $this->tag;
   }
   /**
-   * @param Transformation
+   * The transformation being represented by the entity.
+   *
+   * @param Transformation $transformation
    */
   public function setTransformation(Transformation $transformation)
   {
@@ -157,7 +194,9 @@ class Entity extends \Google\Model
     return $this->transformation;
   }
   /**
-   * @param Trigger
+   * The trigger being represented by the entity.
+   *
+   * @param Trigger $trigger
    */
   public function setTrigger(Trigger $trigger)
   {
@@ -171,7 +210,9 @@ class Entity extends \Google\Model
     return $this->trigger;
   }
   /**
-   * @param Variable
+   * The variable being represented by the entity.
+   *
+   * @param Variable $variable
    */
   public function setVariable(Variable $variable)
   {
@@ -185,7 +226,9 @@ class Entity extends \Google\Model
     return $this->variable;
   }
   /**
-   * @param Zone
+   * The zone being represented by the entity.
+   *
+   * @param Zone $zone
    */
   public function setZone(Zone $zone)
   {

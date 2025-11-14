@@ -24,7 +24,11 @@ class Row extends \Google\Collection
   protected $cellsDataType = 'array';
 
   /**
-   * @param Value[]
+   * The list of cells that constitute the row. Must have the same length as
+   * `columnHeaders` for two-dimensional tables, a length of 1 for one-
+   * dimensional tables. Required.
+   *
+   * @param Value[] $cells
    */
   public function setCells($cells)
   {

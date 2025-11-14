@@ -21,24 +21,43 @@ class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collectio
 {
   protected $collection_key = 'documents';
   /**
+   * Optional. The CDW dataset resource name. This field is optional. If not
+   * set, the documents will be exported to Cloud Storage only. Format:
+   * projects/{project}/locations/{location}/processors/{processor}/dataset
+   *
    * @var string
    */
   public $docAiDataset;
   /**
+   * The list of all the resource names of the documents to be processed.
+   * Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
    * @var string[]
    */
   public $documents;
   /**
+   * The Cloud Storage folder path used to store the exported documents before
+   * being sent to CDW. Format: `gs:`.
+   *
    * @var string
    */
   public $exportFolderPath;
   /**
+   * Ratio of training dataset split. When importing into Document AI Workbench,
+   * documents will be automatically split into training and test split category
+   * with the specified ratio. This field is required if doc_ai_dataset is set.
+   *
    * @var float
    */
   public $trainingSplitRatio;
 
   /**
-   * @param string
+   * Optional. The CDW dataset resource name. This field is optional. If not
+   * set, the documents will be exported to Cloud Storage only. Format:
+   * projects/{project}/locations/{location}/processors/{processor}/dataset
+   *
+   * @param string $docAiDataset
    */
   public function setDocAiDataset($docAiDataset)
   {
@@ -52,7 +71,11 @@ class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collectio
     return $this->docAiDataset;
   }
   /**
-   * @param string[]
+   * The list of all the resource names of the documents to be processed.
+   * Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
+   * @param string[] $documents
    */
   public function setDocuments($documents)
   {
@@ -66,7 +89,10 @@ class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collectio
     return $this->documents;
   }
   /**
-   * @param string
+   * The Cloud Storage folder path used to store the exported documents before
+   * being sent to CDW. Format: `gs:`.
+   *
+   * @param string $exportFolderPath
    */
   public function setExportFolderPath($exportFolderPath)
   {
@@ -80,7 +106,11 @@ class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collectio
     return $this->exportFolderPath;
   }
   /**
-   * @param float
+   * Ratio of training dataset split. When importing into Document AI Workbench,
+   * documents will be automatically split into training and test split category
+   * with the specified ratio. This field is required if doc_ai_dataset is set.
+   *
+   * @param float $trainingSplitRatio
    */
   public function setTrainingSplitRatio($trainingSplitRatio)
   {

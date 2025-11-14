@@ -23,22 +23,31 @@ class DataPreparation extends \Google\Collection
   protected $contentsSqlType = SqlDefinition::class;
   protected $contentsSqlDataType = '';
   /**
+   * The data preparation definition, stored as a YAML string.
+   *
    * @var string
    */
   public $contentsYaml;
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
+   * Whether this action is disabled (i.e. should not be run).
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * Arbitrary, user-defined tags on this action.
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param SqlDefinition
+   * SQL definition for a Data Preparation. Contains a SQL query and additional
+   * context information.
+   *
+   * @param SqlDefinition $contentsSql
    */
   public function setContentsSql(SqlDefinition $contentsSql)
   {
@@ -52,7 +61,9 @@ class DataPreparation extends \Google\Collection
     return $this->contentsSql;
   }
   /**
-   * @param string
+   * The data preparation definition, stored as a YAML string.
+   *
+   * @param string $contentsYaml
    */
   public function setContentsYaml($contentsYaml)
   {
@@ -66,7 +77,9 @@ class DataPreparation extends \Google\Collection
     return $this->contentsYaml;
   }
   /**
-   * @param Target[]
+   * A list of actions that this action depends on.
+   *
+   * @param Target[] $dependencyTargets
    */
   public function setDependencyTargets($dependencyTargets)
   {
@@ -80,7 +93,9 @@ class DataPreparation extends \Google\Collection
     return $this->dependencyTargets;
   }
   /**
-   * @param bool
+   * Whether this action is disabled (i.e. should not be run).
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -94,7 +109,9 @@ class DataPreparation extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * @param string[]
+   * Arbitrary, user-defined tags on this action.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

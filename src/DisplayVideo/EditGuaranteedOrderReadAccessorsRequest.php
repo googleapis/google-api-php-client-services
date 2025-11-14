@@ -21,24 +21,36 @@ class EditGuaranteedOrderReadAccessorsRequest extends \Google\Collection
 {
   protected $collection_key = 'removedAdvertisers';
   /**
+   * The advertisers to add as read accessors to the guaranteed order.
+   *
    * @var string[]
    */
   public $addedAdvertisers;
   /**
+   * Required. The partner context in which the change is being made.
+   *
    * @var string
    */
   public $partnerId;
   /**
+   * Whether to give all advertisers of the read/write accessor partner read
+   * access to the guaranteed order. Only applicable if read_write_partner_id is
+   * set in the guaranteed order.
+   *
    * @var bool
    */
   public $readAccessInherited;
   /**
+   * The advertisers to remove as read accessors to the guaranteed order.
+   *
    * @var string[]
    */
   public $removedAdvertisers;
 
   /**
-   * @param string[]
+   * The advertisers to add as read accessors to the guaranteed order.
+   *
+   * @param string[] $addedAdvertisers
    */
   public function setAddedAdvertisers($addedAdvertisers)
   {
@@ -52,7 +64,9 @@ class EditGuaranteedOrderReadAccessorsRequest extends \Google\Collection
     return $this->addedAdvertisers;
   }
   /**
-   * @param string
+   * Required. The partner context in which the change is being made.
+   *
+   * @param string $partnerId
    */
   public function setPartnerId($partnerId)
   {
@@ -66,7 +80,11 @@ class EditGuaranteedOrderReadAccessorsRequest extends \Google\Collection
     return $this->partnerId;
   }
   /**
-   * @param bool
+   * Whether to give all advertisers of the read/write accessor partner read
+   * access to the guaranteed order. Only applicable if read_write_partner_id is
+   * set in the guaranteed order.
+   *
+   * @param bool $readAccessInherited
    */
   public function setReadAccessInherited($readAccessInherited)
   {
@@ -80,7 +98,9 @@ class EditGuaranteedOrderReadAccessorsRequest extends \Google\Collection
     return $this->readAccessInherited;
   }
   /**
-   * @param string[]
+   * The advertisers to remove as read accessors to the guaranteed order.
+   *
+   * @param string[] $removedAdvertisers
    */
   public function setRemovedAdvertisers($removedAdvertisers)
   {

@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2OtherCloudResourceRegex extends \Google\Model
   protected $amazonS3BucketRegexDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2AmazonS3BucketRegex
+   * Regex for Amazon S3 buckets.
+   *
+   * @param GooglePrivacyDlpV2AmazonS3BucketRegex $amazonS3BucketRegex
    */
   public function setAmazonS3BucketRegex(GooglePrivacyDlpV2AmazonS3BucketRegex $amazonS3BucketRegex)
   {

@@ -23,12 +23,16 @@ class ListEnabledBuiltInVariablesResponse extends \Google\Collection
   protected $builtInVariableType = BuiltInVariable::class;
   protected $builtInVariableDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param BuiltInVariable[]
+   * All GTM BuiltInVariables of a GTM container.
+   *
+   * @param BuiltInVariable[] $builtInVariable
    */
   public function setBuiltInVariable($builtInVariable)
   {
@@ -42,7 +46,9 @@ class ListEnabledBuiltInVariablesResponse extends \Google\Collection
     return $this->builtInVariable;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

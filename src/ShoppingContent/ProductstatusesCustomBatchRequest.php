@@ -24,7 +24,9 @@ class ProductstatusesCustomBatchRequest extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param ProductstatusesCustomBatchRequestEntry[]
+   * The request entries to be processed in the batch.
+   *
+   * @param ProductstatusesCustomBatchRequestEntry[] $entries
    */
   public function setEntries($entries)
   {

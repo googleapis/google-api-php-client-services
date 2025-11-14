@@ -23,12 +23,20 @@ class ListLineItemAssignedTargetingOptionsResponse extends \Google\Collection
   protected $assignedTargetingOptionsType = AssignedTargetingOption::class;
   protected $assignedTargetingOptionsDataType = 'array';
   /**
+   * A token identifying the next page of results. This value should be
+   * specified as the pageToken in a subsequent
+   * ListLineItemAssignedTargetingOptionsRequest to fetch the next page of
+   * results. This token will be absent if there are no more
+   * assigned_targeting_options to return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AssignedTargetingOption[]
+   * The list of assigned targeting options. This list will be absent if empty.
+   *
+   * @param AssignedTargetingOption[] $assignedTargetingOptions
    */
   public function setAssignedTargetingOptions($assignedTargetingOptions)
   {
@@ -42,7 +50,13 @@ class ListLineItemAssignedTargetingOptionsResponse extends \Google\Collection
     return $this->assignedTargetingOptions;
   }
   /**
-   * @param string
+   * A token identifying the next page of results. This value should be
+   * specified as the pageToken in a subsequent
+   * ListLineItemAssignedTargetingOptionsRequest to fetch the next page of
+   * results. This token will be absent if there are no more
+   * assigned_targeting_options to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

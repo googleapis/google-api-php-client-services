@@ -21,6 +21,11 @@ class ListVerificationsResponse extends \Google\Collection
 {
   protected $collection_key = 'verifications';
   /**
+   * If the number of verifications exceeded the requested page size, this field
+   * will be populated with a token to fetch the next page of verification on a
+   * subsequent call. If there are no more attributes, this field will not be
+   * present in the response.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +33,12 @@ class ListVerificationsResponse extends \Google\Collection
   protected $verificationsDataType = 'array';
 
   /**
-   * @param string
+   * If the number of verifications exceeded the requested page size, this field
+   * will be populated with a token to fetch the next page of verification on a
+   * subsequent call. If there are no more attributes, this field will not be
+   * present in the response.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +52,9 @@ class ListVerificationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Verification[]
+   * List of the verifications.
+   *
+   * @param Verification[] $verifications
    */
   public function setVerifications($verifications)
   {

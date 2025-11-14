@@ -26,7 +26,9 @@ class IosRuntimeConfiguration extends \Google\Collection
   protected $orientationsDataType = 'array';
 
   /**
-   * @param Locale[]
+   * The set of available locales.
+   *
+   * @param Locale[] $locales
    */
   public function setLocales($locales)
   {
@@ -40,7 +42,9 @@ class IosRuntimeConfiguration extends \Google\Collection
     return $this->locales;
   }
   /**
-   * @param Orientation[]
+   * The set of available orientations.
+   *
+   * @param Orientation[] $orientations
    */
   public function setOrientations($orientations)
   {

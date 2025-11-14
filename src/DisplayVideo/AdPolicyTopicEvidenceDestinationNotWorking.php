@@ -20,56 +20,108 @@ namespace Google\Service\DisplayVideo;
 class AdPolicyTopicEvidenceDestinationNotWorking extends \Google\Model
 {
   /**
+   * Not specified or unknown.
+   */
+  public const DEVICE_AD_POLICY_TOPIC_EVIDENCE_DESTINATION_NOT_WORKING_DEVICE_TYPE_UNKNOWN = 'AD_POLICY_TOPIC_EVIDENCE_DESTINATION_NOT_WORKING_DEVICE_TYPE_UNKNOWN';
+  /**
+   * Desktop device.
+   */
+  public const DEVICE_DESKTOP = 'DESKTOP';
+  /**
+   * Android device.
+   */
+  public const DEVICE_ANDROID = 'ANDROID';
+  /**
+   * iOS device.
+   */
+  public const DEVICE_IOS = 'IOS';
+  /**
+   * Not specified or unknown.
+   */
+  public const DNS_ERROR_TYPE_AD_POLICY_TOPIC_EVIDENCE_DESTINATION_NOT_WORKING_DNS_ERROR_TYPE_UNKNOWN = 'AD_POLICY_TOPIC_EVIDENCE_DESTINATION_NOT_WORKING_DNS_ERROR_TYPE_UNKNOWN';
+  /**
+   * Host name not found in DNS when fetching landing page.
+   */
+  public const DNS_ERROR_TYPE_HOSTNAME_NOT_FOUND = 'HOSTNAME_NOT_FOUND';
+  /**
+   * Google could not crawl the landing page when communicating with DNS.
+   */
+  public const DNS_ERROR_TYPE_GOOGLE_CRAWLER_DNS_ISSUE = 'GOOGLE_CRAWLER_DNS_ISSUE';
+  /**
+   * The device where visiting the URL resulted in the error.
+   *
    * @var string
    */
   public $device;
   /**
+   * The type of DNS error.
+   *
    * @var string
    */
   public $dnsErrorType;
   /**
+   * The full URL that didn't work.
+   *
    * @var string
    */
   public $expandedUri;
   /**
+   * The HTTP error code.
+   *
    * @var string
    */
   public $httpErrorCode;
   /**
+   * The last time the error was seen when navigating to URL.
+   *
    * @var string
    */
   public $lastCheckedTime;
 
   /**
-   * @param string
+   * The device where visiting the URL resulted in the error.
+   *
+   * Accepted values:
+   * AD_POLICY_TOPIC_EVIDENCE_DESTINATION_NOT_WORKING_DEVICE_TYPE_UNKNOWN,
+   * DESKTOP, ANDROID, IOS
+   *
+   * @param self::DEVICE_* $device
    */
   public function setDevice($device)
   {
     $this->device = $device;
   }
   /**
-   * @return string
+   * @return self::DEVICE_*
    */
   public function getDevice()
   {
     return $this->device;
   }
   /**
-   * @param string
+   * The type of DNS error.
+   *
+   * Accepted values:
+   * AD_POLICY_TOPIC_EVIDENCE_DESTINATION_NOT_WORKING_DNS_ERROR_TYPE_UNKNOWN,
+   * HOSTNAME_NOT_FOUND, GOOGLE_CRAWLER_DNS_ISSUE
+   *
+   * @param self::DNS_ERROR_TYPE_* $dnsErrorType
    */
   public function setDnsErrorType($dnsErrorType)
   {
     $this->dnsErrorType = $dnsErrorType;
   }
   /**
-   * @return string
+   * @return self::DNS_ERROR_TYPE_*
    */
   public function getDnsErrorType()
   {
     return $this->dnsErrorType;
   }
   /**
-   * @param string
+   * The full URL that didn't work.
+   *
+   * @param string $expandedUri
    */
   public function setExpandedUri($expandedUri)
   {
@@ -83,7 +135,9 @@ class AdPolicyTopicEvidenceDestinationNotWorking extends \Google\Model
     return $this->expandedUri;
   }
   /**
-   * @param string
+   * The HTTP error code.
+   *
+   * @param string $httpErrorCode
    */
   public function setHttpErrorCode($httpErrorCode)
   {
@@ -97,7 +151,9 @@ class AdPolicyTopicEvidenceDestinationNotWorking extends \Google\Model
     return $this->httpErrorCode;
   }
   /**
-   * @param string
+   * The last time the error was seen when navigating to URL.
+   *
+   * @param string $lastCheckedTime
    */
   public function setLastCheckedTime($lastCheckedTime)
   {

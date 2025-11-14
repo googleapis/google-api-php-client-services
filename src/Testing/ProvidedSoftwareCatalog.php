@@ -20,16 +20,30 @@ namespace Google\Service\Testing;
 class ProvidedSoftwareCatalog extends \Google\Model
 {
   /**
+   * A string representing the current version of AndroidX Test Orchestrator
+   * that is used in the environment. The package is available at
+   * https://maven.google.com/web/index.html#androidx.test:orchestrator.
+   *
    * @var string
    */
   public $androidxOrchestratorVersion;
   /**
+   * Deprecated: Use AndroidX Test Orchestrator going forward. A string
+   * representing the current version of Android Test Orchestrator that is used
+   * in the environment. The package is available at https://maven.google.com/we
+   * b/index.html#com.android.support.test:orchestrator.
+   *
+   * @deprecated
    * @var string
    */
   public $orchestratorVersion;
 
   /**
-   * @param string
+   * A string representing the current version of AndroidX Test Orchestrator
+   * that is used in the environment. The package is available at
+   * https://maven.google.com/web/index.html#androidx.test:orchestrator.
+   *
+   * @param string $androidxOrchestratorVersion
    */
   public function setAndroidxOrchestratorVersion($androidxOrchestratorVersion)
   {
@@ -43,13 +57,20 @@ class ProvidedSoftwareCatalog extends \Google\Model
     return $this->androidxOrchestratorVersion;
   }
   /**
-   * @param string
+   * Deprecated: Use AndroidX Test Orchestrator going forward. A string
+   * representing the current version of Android Test Orchestrator that is used
+   * in the environment. The package is available at https://maven.google.com/we
+   * b/index.html#com.android.support.test:orchestrator.
+   *
+   * @deprecated
+   * @param string $orchestratorVersion
    */
   public function setOrchestratorVersion($orchestratorVersion)
   {
     $this->orchestratorVersion = $orchestratorVersion;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getOrchestratorVersion()

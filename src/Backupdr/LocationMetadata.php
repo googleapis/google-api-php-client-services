@@ -26,7 +26,7 @@ class LocationMetadata extends \Google\Collection
   public $unsupportedFeatures;
 
   /**
-   * @param string[]
+   * @param string[] $unsupportedFeatures
    */
   public function setUnsupportedFeatures($unsupportedFeatures)
   {

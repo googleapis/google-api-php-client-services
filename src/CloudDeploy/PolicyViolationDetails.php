@@ -20,20 +20,31 @@ namespace Google\Service\CloudDeploy;
 class PolicyViolationDetails extends \Google\Model
 {
   /**
+   * User readable message about why the request violated a policy. This is not
+   * intended for machine parsing.
+   *
    * @var string
    */
   public $failureMessage;
   /**
+   * Name of the policy that was violated. Policy resource will be in the format
+   * of `projects/{project}/locations/{location}/policies/{policy}`.
+   *
    * @var string
    */
   public $policy;
   /**
+   * Id of the rule that triggered the policy violation.
+   *
    * @var string
    */
   public $ruleId;
 
   /**
-   * @param string
+   * User readable message about why the request violated a policy. This is not
+   * intended for machine parsing.
+   *
+   * @param string $failureMessage
    */
   public function setFailureMessage($failureMessage)
   {
@@ -47,7 +58,10 @@ class PolicyViolationDetails extends \Google\Model
     return $this->failureMessage;
   }
   /**
-   * @param string
+   * Name of the policy that was violated. Policy resource will be in the format
+   * of `projects/{project}/locations/{location}/policies/{policy}`.
+   *
+   * @param string $policy
    */
   public function setPolicy($policy)
   {
@@ -61,7 +75,9 @@ class PolicyViolationDetails extends \Google\Model
     return $this->policy;
   }
   /**
-   * @param string
+   * Id of the rule that triggered the policy violation.
+   *
+   * @param string $ruleId
    */
   public function setRuleId($ruleId)
   {

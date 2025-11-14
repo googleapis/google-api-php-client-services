@@ -21,12 +21,24 @@ class AddGranteesRequest extends \Google\Collection
 {
   protected $collection_key = 'grantees';
   /**
+   * Required. IAM principal that should be granted Fine Grained Access to the
+   * underlying data goverened by the data policy. The target data policy is
+   * determined by the `data_policy` field. Uses the [IAM V2 principal
+   * syntax](https://cloud.google.com/iam/docs/principal-identifiers#v2).
+   * Supported principal types: * User * Group * Service account
+   *
    * @var string[]
    */
   public $grantees;
 
   /**
-   * @param string[]
+   * Required. IAM principal that should be granted Fine Grained Access to the
+   * underlying data goverened by the data policy. The target data policy is
+   * determined by the `data_policy` field. Uses the [IAM V2 principal
+   * syntax](https://cloud.google.com/iam/docs/principal-identifiers#v2).
+   * Supported principal types: * User * Group * Service account
+   *
+   * @param string[] $grantees
    */
   public function setGrantees($grantees)
   {

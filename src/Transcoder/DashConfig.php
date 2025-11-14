@@ -20,19 +20,44 @@ namespace Google\Service\Transcoder;
 class DashConfig extends \Google\Model
 {
   /**
+   * The segment reference scheme is not specified.
+   */
+  public const SEGMENT_REFERENCE_SCHEME_SEGMENT_REFERENCE_SCHEME_UNSPECIFIED = 'SEGMENT_REFERENCE_SCHEME_UNSPECIFIED';
+  /**
+   * Explicitly lists the URLs of media files for each segment. For example, if
+   * SegmentSettings.individual_segments is `true`, then the manifest contains
+   * fields similar to the following: ```xml ... ```
+   */
+  public const SEGMENT_REFERENCE_SCHEME_SEGMENT_LIST = 'SEGMENT_LIST';
+  /**
+   * SegmentSettings.individual_segments must be set to `true` to use this
+   * segment reference scheme. Uses the DASH specification `` tag to determine
+   * the URLs of media files for each segment. For example: ```xml ... ```
+   */
+  public const SEGMENT_REFERENCE_SCHEME_SEGMENT_TEMPLATE_NUMBER = 'SEGMENT_TEMPLATE_NUMBER';
+  /**
+   * The segment reference scheme for a `DASH` manifest. The default is
+   * `SEGMENT_LIST`.
+   *
    * @var string
    */
   public $segmentReferenceScheme;
 
   /**
-   * @param string
+   * The segment reference scheme for a `DASH` manifest. The default is
+   * `SEGMENT_LIST`.
+   *
+   * Accepted values: SEGMENT_REFERENCE_SCHEME_UNSPECIFIED, SEGMENT_LIST,
+   * SEGMENT_TEMPLATE_NUMBER
+   *
+   * @param self::SEGMENT_REFERENCE_SCHEME_* $segmentReferenceScheme
    */
   public function setSegmentReferenceScheme($segmentReferenceScheme)
   {
     $this->segmentReferenceScheme = $segmentReferenceScheme;
   }
   /**
-   * @return string
+   * @return self::SEGMENT_REFERENCE_SCHEME_*
    */
   public function getSegmentReferenceScheme()
   {

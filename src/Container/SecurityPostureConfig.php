@@ -20,37 +20,83 @@ namespace Google\Service\Container;
 class SecurityPostureConfig extends \Google\Model
 {
   /**
+   * Default value not specified.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * Disables Security Posture features on the cluster.
+   */
+  public const MODE_DISABLED = 'DISABLED';
+  /**
+   * Applies Security Posture features on the cluster.
+   */
+  public const MODE_BASIC = 'BASIC';
+  /**
+   * Applies the Security Posture off cluster Enterprise level features.
+   */
+  public const MODE_ENTERPRISE = 'ENTERPRISE';
+  /**
+   * Default value not specified.
+   */
+  public const VULNERABILITY_MODE_VULNERABILITY_MODE_UNSPECIFIED = 'VULNERABILITY_MODE_UNSPECIFIED';
+  /**
+   * Disables vulnerability scanning on the cluster.
+   */
+  public const VULNERABILITY_MODE_VULNERABILITY_DISABLED = 'VULNERABILITY_DISABLED';
+  /**
+   * Applies basic vulnerability scanning on the cluster.
+   */
+  public const VULNERABILITY_MODE_VULNERABILITY_BASIC = 'VULNERABILITY_BASIC';
+  /**
+   * Applies the Security Posture's vulnerability on cluster Enterprise level
+   * features.
+   */
+  public const VULNERABILITY_MODE_VULNERABILITY_ENTERPRISE = 'VULNERABILITY_ENTERPRISE';
+  /**
+   * Sets which mode to use for Security Posture features.
+   *
    * @var string
    */
   public $mode;
   /**
+   * Sets which mode to use for vulnerability scanning.
+   *
    * @var string
    */
   public $vulnerabilityMode;
 
   /**
-   * @param string
+   * Sets which mode to use for Security Posture features.
+   *
+   * Accepted values: MODE_UNSPECIFIED, DISABLED, BASIC, ENTERPRISE
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {
     return $this->mode;
   }
   /**
-   * @param string
+   * Sets which mode to use for vulnerability scanning.
+   *
+   * Accepted values: VULNERABILITY_MODE_UNSPECIFIED, VULNERABILITY_DISABLED,
+   * VULNERABILITY_BASIC, VULNERABILITY_ENTERPRISE
+   *
+   * @param self::VULNERABILITY_MODE_* $vulnerabilityMode
    */
   public function setVulnerabilityMode($vulnerabilityMode)
   {
     $this->vulnerabilityMode = $vulnerabilityMode;
   }
   /**
-   * @return string
+   * @return self::VULNERABILITY_MODE_*
    */
   public function getVulnerabilityMode()
   {

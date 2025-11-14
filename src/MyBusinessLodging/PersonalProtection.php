@@ -20,40 +20,127 @@ namespace Google\Service\MyBusinessLodging;
 class PersonalProtection extends \Google\Model
 {
   /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const COMMON_AREAS_OFFER_SANITIZING_ITEMS_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const COMMON_AREAS_OFFER_SANITIZING_ITEMS_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const COMMON_AREAS_OFFER_SANITIZING_ITEMS_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const COMMON_AREAS_OFFER_SANITIZING_ITEMS_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const FACE_MASK_REQUIRED_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const FACE_MASK_REQUIRED_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const FACE_MASK_REQUIRED_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const FACE_MASK_REQUIRED_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const GUEST_ROOM_HYGIENE_KITS_AVAILABLE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const GUEST_ROOM_HYGIENE_KITS_AVAILABLE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const GUEST_ROOM_HYGIENE_KITS_AVAILABLE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const GUEST_ROOM_HYGIENE_KITS_AVAILABLE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const PROTECTIVE_EQUIPMENT_AVAILABLE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const PROTECTIVE_EQUIPMENT_AVAILABLE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const PROTECTIVE_EQUIPMENT_AVAILABLE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const PROTECTIVE_EQUIPMENT_AVAILABLE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Hand-sanitizer and/or sanitizing wipes are offered in common areas.
+   *
    * @var bool
    */
   public $commonAreasOfferSanitizingItems;
   /**
+   * Common areas offer sanitizing items exception.
+   *
    * @var string
    */
   public $commonAreasOfferSanitizingItemsException;
   /**
+   * Masks required on the property.
+   *
    * @var bool
    */
   public $faceMaskRequired;
   /**
+   * Face mask required exception.
+   *
    * @var string
    */
   public $faceMaskRequiredException;
   /**
+   * In-room hygiene kits with masks, hand sanitizer, and/or antibacterial
+   * wipes.
+   *
    * @var bool
    */
   public $guestRoomHygieneKitsAvailable;
   /**
+   * Guest room hygiene kits available exception.
+   *
    * @var string
    */
   public $guestRoomHygieneKitsAvailableException;
   /**
+   * Masks and/or gloves available for guests.
+   *
    * @var bool
    */
   public $protectiveEquipmentAvailable;
   /**
+   * Protective equipment available exception.
+   *
    * @var string
    */
   public $protectiveEquipmentAvailableException;
 
   /**
-   * @param bool
+   * Hand-sanitizer and/or sanitizing wipes are offered in common areas.
+   *
+   * @param bool $commonAreasOfferSanitizingItems
    */
   public function setCommonAreasOfferSanitizingItems($commonAreasOfferSanitizingItems)
   {
@@ -67,21 +154,28 @@ class PersonalProtection extends \Google\Model
     return $this->commonAreasOfferSanitizingItems;
   }
   /**
-   * @param string
+   * Common areas offer sanitizing items exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::COMMON_AREAS_OFFER_SANITIZING_ITEMS_EXCEPTION_* $commonAreasOfferSanitizingItemsException
    */
   public function setCommonAreasOfferSanitizingItemsException($commonAreasOfferSanitizingItemsException)
   {
     $this->commonAreasOfferSanitizingItemsException = $commonAreasOfferSanitizingItemsException;
   }
   /**
-   * @return string
+   * @return self::COMMON_AREAS_OFFER_SANITIZING_ITEMS_EXCEPTION_*
    */
   public function getCommonAreasOfferSanitizingItemsException()
   {
     return $this->commonAreasOfferSanitizingItemsException;
   }
   /**
-   * @param bool
+   * Masks required on the property.
+   *
+   * @param bool $faceMaskRequired
    */
   public function setFaceMaskRequired($faceMaskRequired)
   {
@@ -95,21 +189,29 @@ class PersonalProtection extends \Google\Model
     return $this->faceMaskRequired;
   }
   /**
-   * @param string
+   * Face mask required exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::FACE_MASK_REQUIRED_EXCEPTION_* $faceMaskRequiredException
    */
   public function setFaceMaskRequiredException($faceMaskRequiredException)
   {
     $this->faceMaskRequiredException = $faceMaskRequiredException;
   }
   /**
-   * @return string
+   * @return self::FACE_MASK_REQUIRED_EXCEPTION_*
    */
   public function getFaceMaskRequiredException()
   {
     return $this->faceMaskRequiredException;
   }
   /**
-   * @param bool
+   * In-room hygiene kits with masks, hand sanitizer, and/or antibacterial
+   * wipes.
+   *
+   * @param bool $guestRoomHygieneKitsAvailable
    */
   public function setGuestRoomHygieneKitsAvailable($guestRoomHygieneKitsAvailable)
   {
@@ -123,21 +225,28 @@ class PersonalProtection extends \Google\Model
     return $this->guestRoomHygieneKitsAvailable;
   }
   /**
-   * @param string
+   * Guest room hygiene kits available exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::GUEST_ROOM_HYGIENE_KITS_AVAILABLE_EXCEPTION_* $guestRoomHygieneKitsAvailableException
    */
   public function setGuestRoomHygieneKitsAvailableException($guestRoomHygieneKitsAvailableException)
   {
     $this->guestRoomHygieneKitsAvailableException = $guestRoomHygieneKitsAvailableException;
   }
   /**
-   * @return string
+   * @return self::GUEST_ROOM_HYGIENE_KITS_AVAILABLE_EXCEPTION_*
    */
   public function getGuestRoomHygieneKitsAvailableException()
   {
     return $this->guestRoomHygieneKitsAvailableException;
   }
   /**
-   * @param bool
+   * Masks and/or gloves available for guests.
+   *
+   * @param bool $protectiveEquipmentAvailable
    */
   public function setProtectiveEquipmentAvailable($protectiveEquipmentAvailable)
   {
@@ -151,14 +260,19 @@ class PersonalProtection extends \Google\Model
     return $this->protectiveEquipmentAvailable;
   }
   /**
-   * @param string
+   * Protective equipment available exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::PROTECTIVE_EQUIPMENT_AVAILABLE_EXCEPTION_* $protectiveEquipmentAvailableException
    */
   public function setProtectiveEquipmentAvailableException($protectiveEquipmentAvailableException)
   {
     $this->protectiveEquipmentAvailableException = $protectiveEquipmentAvailableException;
   }
   /**
-   * @return string
+   * @return self::PROTECTIVE_EQUIPMENT_AVAILABLE_EXCEPTION_*
    */
   public function getProtectiveEquipmentAvailableException()
   {

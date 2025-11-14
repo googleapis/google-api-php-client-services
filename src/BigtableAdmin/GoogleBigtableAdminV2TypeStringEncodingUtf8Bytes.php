@@ -20,12 +20,26 @@ namespace Google\Service\BigtableAdmin;
 class GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes extends \Google\Model
 {
   /**
+   * Single-character escape sequence used to support NULL values. If set,
+   * allows NULL values to be encoded as the empty string "". The actual empty
+   * string, or any value where every character equals `null_escape_char`, has
+   * one more `null_escape_char` appended. If `null_escape_char` is set and does
+   * not equal the ASCII null character `0x00`, then the encoding will not
+   * support sorted mode. .
+   *
    * @var string
    */
   public $nullEscapeChar;
 
   /**
-   * @param string
+   * Single-character escape sequence used to support NULL values. If set,
+   * allows NULL values to be encoded as the empty string "". The actual empty
+   * string, or any value where every character equals `null_escape_char`, has
+   * one more `null_escape_char` appended. If `null_escape_char` is set and does
+   * not equal the ASCII null character `0x00`, then the encoding will not
+   * support sorted mode. .
+   *
+   * @param string $nullEscapeChar
    */
   public function setNullEscapeChar($nullEscapeChar)
   {

@@ -28,7 +28,10 @@ class GoogleCloudContentwarehouseV1RuleEvaluatorOutput extends \Google\Collectio
   protected $triggeredRulesDataType = 'array';
 
   /**
-   * @param GoogleCloudContentwarehouseV1InvalidRule[]
+   * A subset of triggered rules that failed the validation check(s) after
+   * parsing.
+   *
+   * @param GoogleCloudContentwarehouseV1InvalidRule[] $invalidRules
    */
   public function setInvalidRules($invalidRules)
   {
@@ -42,7 +45,9 @@ class GoogleCloudContentwarehouseV1RuleEvaluatorOutput extends \Google\Collectio
     return $this->invalidRules;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1Rule[]
+   * A subset of triggered rules that are evaluated true for a given request.
+   *
+   * @param GoogleCloudContentwarehouseV1Rule[] $matchedRules
    */
   public function setMatchedRules($matchedRules)
   {
@@ -56,7 +61,9 @@ class GoogleCloudContentwarehouseV1RuleEvaluatorOutput extends \Google\Collectio
     return $this->matchedRules;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1Rule[]
+   * List of rules fetched from database for the given request trigger type.
+   *
+   * @param GoogleCloudContentwarehouseV1Rule[] $triggeredRules
    */
   public function setTriggeredRules($triggeredRules)
   {

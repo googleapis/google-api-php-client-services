@@ -28,7 +28,9 @@ class GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponse extends \Google\Coll
   protected $selectedDocumentsDataType = 'array';
 
   /**
-   * @param GoogleRpcStatus
+   * The status of sampling documents in test split.
+   *
+   * @param GoogleRpcStatus $sampleTestStatus
    */
   public function setSampleTestStatus(GoogleRpcStatus $sampleTestStatus)
   {
@@ -42,7 +44,9 @@ class GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponse extends \Google\Coll
     return $this->sampleTestStatus;
   }
   /**
-   * @param GoogleRpcStatus
+   * The status of sampling documents in training split.
+   *
+   * @param GoogleRpcStatus $sampleTrainingStatus
    */
   public function setSampleTrainingStatus(GoogleRpcStatus $sampleTrainingStatus)
   {
@@ -56,7 +60,9 @@ class GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponse extends \Google\Coll
     return $this->sampleTrainingStatus;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponseSelectedDocument[]
+   * The result of the sampling process.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponseSelectedDocument[] $selectedDocuments
    */
   public function setSelectedDocuments($selectedDocuments)
   {

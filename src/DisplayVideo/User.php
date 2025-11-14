@@ -23,28 +23,42 @@ class User extends \Google\Collection
   protected $assignedUserRolesType = AssignedUserRole::class;
   protected $assignedUserRolesDataType = 'array';
   /**
+   * Required. The display name of the user. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. Immutable. The email address used to identify the user.
+   *
    * @var string
    */
   public $email;
   /**
+   * Output only. The timestamp when the user last logged in DV360 UI.
+   *
    * @var string
    */
   public $lastLoginTime;
   /**
+   * Output only. The resource name of the user.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The unique ID of the user. Assigned by the system.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param AssignedUserRole[]
+   * The assigned user roles. Required in CreateUser. Output only in UpdateUser.
+   * Can only be updated through BulkEditAssignedUserRoles.
+   *
+   * @param AssignedUserRole[] $assignedUserRoles
    */
   public function setAssignedUserRoles($assignedUserRoles)
   {
@@ -58,7 +72,10 @@ class User extends \Google\Collection
     return $this->assignedUserRoles;
   }
   /**
-   * @param string
+   * Required. The display name of the user. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -72,7 +89,9 @@ class User extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. Immutable. The email address used to identify the user.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -86,7 +105,9 @@ class User extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the user last logged in DV360 UI.
+   *
+   * @param string $lastLoginTime
    */
   public function setLastLoginTime($lastLoginTime)
   {
@@ -100,7 +121,9 @@ class User extends \Google\Collection
     return $this->lastLoginTime;
   }
   /**
-   * @param string
+   * Output only. The resource name of the user.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -114,7 +137,9 @@ class User extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the user. Assigned by the system.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

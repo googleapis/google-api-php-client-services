@@ -19,16 +19,32 @@ namespace Google\Service\Container;
 
 class CompliancePostureConfig extends \Google\Collection
 {
+  /**
+   * Default value not specified.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * Disables Compliance Posture features on the cluster.
+   */
+  public const MODE_DISABLED = 'DISABLED';
+  /**
+   * Enables Compliance Posture features on the cluster.
+   */
+  public const MODE_ENABLED = 'ENABLED';
   protected $collection_key = 'complianceStandards';
   protected $complianceStandardsType = ComplianceStandard::class;
   protected $complianceStandardsDataType = 'array';
   /**
+   * Defines the enablement mode for Compliance Posture.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param ComplianceStandard[]
+   * List of enabled compliance standards.
+   *
+   * @param ComplianceStandard[] $complianceStandards
    */
   public function setComplianceStandards($complianceStandards)
   {
@@ -42,14 +58,18 @@ class CompliancePostureConfig extends \Google\Collection
     return $this->complianceStandards;
   }
   /**
-   * @param string
+   * Defines the enablement mode for Compliance Posture.
+   *
+   * Accepted values: MODE_UNSPECIFIED, DISABLED, ENABLED
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {

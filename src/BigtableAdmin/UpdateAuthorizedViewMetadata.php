@@ -20,18 +20,24 @@ namespace Google\Service\BigtableAdmin;
 class UpdateAuthorizedViewMetadata extends \Google\Model
 {
   /**
+   * The time at which the operation failed or was completed successfully.
+   *
    * @var string
    */
   public $finishTime;
   protected $originalRequestType = UpdateAuthorizedViewRequest::class;
   protected $originalRequestDataType = '';
   /**
+   * The time at which the original request was received.
+   *
    * @var string
    */
   public $requestTime;
 
   /**
-   * @param string
+   * The time at which the operation failed or was completed successfully.
+   *
+   * @param string $finishTime
    */
   public function setFinishTime($finishTime)
   {
@@ -45,7 +51,10 @@ class UpdateAuthorizedViewMetadata extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * @param UpdateAuthorizedViewRequest
+   * The request that prompted the initiation of this UpdateAuthorizedView
+   * operation.
+   *
+   * @param UpdateAuthorizedViewRequest $originalRequest
    */
   public function setOriginalRequest(UpdateAuthorizedViewRequest $originalRequest)
   {
@@ -59,7 +68,9 @@ class UpdateAuthorizedViewMetadata extends \Google\Model
     return $this->originalRequest;
   }
   /**
-   * @param string
+   * The time at which the original request was received.
+   *
+   * @param string $requestTime
    */
   public function setRequestTime($requestTime)
   {

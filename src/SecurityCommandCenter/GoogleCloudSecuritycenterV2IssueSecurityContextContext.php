@@ -21,16 +21,22 @@ class GoogleCloudSecuritycenterV2IssueSecurityContextContext extends \Google\Col
 {
   protected $collection_key = 'values';
   /**
+   * Context type.
+   *
    * @var string
    */
   public $type;
   /**
+   * Context values.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * Context type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -44,7 +50,9 @@ class GoogleCloudSecuritycenterV2IssueSecurityContextContext extends \Google\Col
     return $this->type;
   }
   /**
-   * @param string[]
+   * Context values.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

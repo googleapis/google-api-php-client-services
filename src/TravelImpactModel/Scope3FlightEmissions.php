@@ -19,27 +19,59 @@ namespace Google\Service\TravelImpactModel;
 
 class Scope3FlightEmissions extends \Google\Model
 {
+  /**
+   * Unspecified data type.
+   */
+  public const SOURCE_SCOPE3_DATA_TYPE_UNSPECIFIED = 'SCOPE3_DATA_TYPE_UNSPECIFIED';
+  /**
+   * TIM-based emissions given origin, destination, carrier, flight number,
+   * departure date, and year.
+   */
+  public const SOURCE_TIM_EMISSIONS = 'TIM_EMISSIONS';
+  /**
+   * Typical flight emissions given origin, destination, and year.
+   */
+  public const SOURCE_TYPICAL_FLIGHT_EMISSIONS = 'TYPICAL_FLIGHT_EMISSIONS';
+  /**
+   * Distance-based emissions based on the distance traveled and year.
+   */
+  public const SOURCE_DISTANCE_BASED_EMISSIONS = 'DISTANCE_BASED_EMISSIONS';
   protected $flightType = Scope3FlightSegment::class;
   protected $flightDataType = '';
   /**
+   * Optional. The source of the emissions data.
+   *
    * @var string
    */
   public $source;
   /**
+   * Optional. Tank-to-wake flight emissions per passenger based on the
+   * requested info.
+   *
    * @var string
    */
   public $ttwEmissionsGramsPerPax;
   /**
+   * Optional. Well-to-tank flight emissions per passenger based on the
+   * requested info.
+   *
    * @var string
    */
   public $wttEmissionsGramsPerPax;
   /**
+   * Optional. Total flight emissions (sum of well-to-tank and tank-to-wake) per
+   * passenger based on the requested info. This is the total emissions and
+   * unless you have specific reasons for using TTW or WTT emissions, you should
+   * use this number.
+   *
    * @var string
    */
   public $wtwEmissionsGramsPerPax;
 
   /**
-   * @param Scope3FlightSegment
+   * Required. Matches the flight identifiers in the request.
+   *
+   * @param Scope3FlightSegment $flight
    */
   public function setFlight(Scope3FlightSegment $flight)
   {
@@ -53,21 +85,29 @@ class Scope3FlightEmissions extends \Google\Model
     return $this->flight;
   }
   /**
-   * @param string
+   * Optional. The source of the emissions data.
+   *
+   * Accepted values: SCOPE3_DATA_TYPE_UNSPECIFIED, TIM_EMISSIONS,
+   * TYPICAL_FLIGHT_EMISSIONS, DISTANCE_BASED_EMISSIONS
+   *
+   * @param self::SOURCE_* $source
    */
   public function setSource($source)
   {
     $this->source = $source;
   }
   /**
-   * @return string
+   * @return self::SOURCE_*
    */
   public function getSource()
   {
     return $this->source;
   }
   /**
-   * @param string
+   * Optional. Tank-to-wake flight emissions per passenger based on the
+   * requested info.
+   *
+   * @param string $ttwEmissionsGramsPerPax
    */
   public function setTtwEmissionsGramsPerPax($ttwEmissionsGramsPerPax)
   {
@@ -81,7 +121,10 @@ class Scope3FlightEmissions extends \Google\Model
     return $this->ttwEmissionsGramsPerPax;
   }
   /**
-   * @param string
+   * Optional. Well-to-tank flight emissions per passenger based on the
+   * requested info.
+   *
+   * @param string $wttEmissionsGramsPerPax
    */
   public function setWttEmissionsGramsPerPax($wttEmissionsGramsPerPax)
   {
@@ -95,7 +138,12 @@ class Scope3FlightEmissions extends \Google\Model
     return $this->wttEmissionsGramsPerPax;
   }
   /**
-   * @param string
+   * Optional. Total flight emissions (sum of well-to-tank and tank-to-wake) per
+   * passenger based on the requested info. This is the total emissions and
+   * unless you have specific reasons for using TTW or WTT emissions, you should
+   * use this number.
+   *
+   * @param string $wtwEmissionsGramsPerPax
    */
   public function setWtwEmissionsGramsPerPax($wtwEmissionsGramsPerPax)
   {

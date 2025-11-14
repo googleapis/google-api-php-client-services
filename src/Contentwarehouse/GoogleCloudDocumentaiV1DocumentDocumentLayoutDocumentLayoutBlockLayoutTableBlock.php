@@ -23,6 +23,8 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTabl
   protected $bodyRowsType = GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTableRow::class;
   protected $bodyRowsDataType = 'array';
   /**
+   * Table caption/title.
+   *
    * @var string
    */
   public $caption;
@@ -30,7 +32,9 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTabl
   protected $headerRowsDataType = 'array';
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTableRow[]
+   * Body rows containing main table content.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTableRow[] $bodyRows
    */
   public function setBodyRows($bodyRows)
   {
@@ -44,7 +48,9 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTabl
     return $this->bodyRows;
   }
   /**
-   * @param string
+   * Table caption/title.
+   *
+   * @param string $caption
    */
   public function setCaption($caption)
   {
@@ -58,7 +64,9 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTabl
     return $this->caption;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTableRow[]
+   * Header rows at the top of the table.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutTableRow[] $headerRows
    */
   public function setHeaderRows($headerRows)
   {

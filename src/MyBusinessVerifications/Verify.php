@@ -20,12 +20,18 @@ namespace Google\Service\MyBusinessVerifications;
 class Verify extends \Google\Model
 {
   /**
+   * Indicates whether a verification process has already started, and can be
+   * completed by the location.
+   *
    * @var bool
    */
   public $hasPendingVerification;
 
   /**
-   * @param bool
+   * Indicates whether a verification process has already started, and can be
+   * completed by the location.
+   *
+   * @param bool $hasPendingVerification
    */
   public function setHasPendingVerification($hasPendingVerification)
   {

@@ -21,26 +21,36 @@ class GooglePrivacyDlpV2KMapEstimationHistogramBucket extends \Google\Collection
 {
   protected $collection_key = 'bucketValues';
   /**
+   * Number of records within these anonymity bounds.
+   *
    * @var string
    */
   public $bucketSize;
   /**
+   * Total number of distinct quasi-identifier tuple values in this bucket.
+   *
    * @var string
    */
   public $bucketValueCount;
   protected $bucketValuesType = GooglePrivacyDlpV2KMapEstimationQuasiIdValues::class;
   protected $bucketValuesDataType = 'array';
   /**
+   * Always greater than or equal to min_anonymity.
+   *
    * @var string
    */
   public $maxAnonymity;
   /**
+   * Always positive.
+   *
    * @var string
    */
   public $minAnonymity;
 
   /**
-   * @param string
+   * Number of records within these anonymity bounds.
+   *
+   * @param string $bucketSize
    */
   public function setBucketSize($bucketSize)
   {
@@ -54,7 +64,9 @@ class GooglePrivacyDlpV2KMapEstimationHistogramBucket extends \Google\Collection
     return $this->bucketSize;
   }
   /**
-   * @param string
+   * Total number of distinct quasi-identifier tuple values in this bucket.
+   *
+   * @param string $bucketValueCount
    */
   public function setBucketValueCount($bucketValueCount)
   {
@@ -68,7 +80,10 @@ class GooglePrivacyDlpV2KMapEstimationHistogramBucket extends \Google\Collection
     return $this->bucketValueCount;
   }
   /**
-   * @param GooglePrivacyDlpV2KMapEstimationQuasiIdValues[]
+   * Sample of quasi-identifier tuple values in this bucket. The total number of
+   * classes returned per bucket is capped at 20.
+   *
+   * @param GooglePrivacyDlpV2KMapEstimationQuasiIdValues[] $bucketValues
    */
   public function setBucketValues($bucketValues)
   {
@@ -82,7 +97,9 @@ class GooglePrivacyDlpV2KMapEstimationHistogramBucket extends \Google\Collection
     return $this->bucketValues;
   }
   /**
-   * @param string
+   * Always greater than or equal to min_anonymity.
+   *
+   * @param string $maxAnonymity
    */
   public function setMaxAnonymity($maxAnonymity)
   {
@@ -96,7 +113,9 @@ class GooglePrivacyDlpV2KMapEstimationHistogramBucket extends \Google\Collection
     return $this->maxAnonymity;
   }
   /**
-   * @param string
+   * Always positive.
+   *
+   * @param string $minAnonymity
    */
   public function setMinAnonymity($minAnonymity)
   {

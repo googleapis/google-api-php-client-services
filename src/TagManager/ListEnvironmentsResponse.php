@@ -23,12 +23,16 @@ class ListEnvironmentsResponse extends \Google\Collection
   protected $environmentType = Environment::class;
   protected $environmentDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Environment[]
+   * All Environments of a GTM Container.
+   *
+   * @param Environment[] $environment
    */
   public function setEnvironment($environment)
   {
@@ -42,7 +46,9 @@ class ListEnvironmentsResponse extends \Google\Collection
     return $this->environment;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

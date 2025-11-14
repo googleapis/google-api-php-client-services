@@ -20,12 +20,18 @@ namespace Google\Service\DisplayVideo;
 class InventorySourceVideoCreativeConfig extends \Google\Model
 {
   /**
+   * The duration requirements for the video creatives that can be assigned to
+   * the inventory source.
+   *
    * @var string
    */
   public $duration;
 
   /**
-   * @param string
+   * The duration requirements for the video creatives that can be assigned to
+   * the inventory source.
+   *
+   * @param string $duration
    */
   public function setDuration($duration)
   {

@@ -20,24 +20,38 @@ namespace Google\Service\Cloudbilling;
 class Category extends \Google\Model
 {
   /**
+   * The type of product the SKU refers to. Example: "Compute", "Storage",
+   * "Network", "ApplicationServices" etc.
+   *
    * @var string
    */
   public $resourceFamily;
   /**
+   * A group classification for related SKUs. Example: "RAM", "GPU",
+   * "Prediction", "Ops", "GoogleEgress" etc.
+   *
    * @var string
    */
   public $resourceGroup;
   /**
+   * The display name of the service this SKU belongs to.
+   *
    * @var string
    */
   public $serviceDisplayName;
   /**
+   * Represents how the SKU is consumed. Example: "OnDemand", "Preemptible",
+   * "Commit1Mo", "Commit1Yr" etc.
+   *
    * @var string
    */
   public $usageType;
 
   /**
-   * @param string
+   * The type of product the SKU refers to. Example: "Compute", "Storage",
+   * "Network", "ApplicationServices" etc.
+   *
+   * @param string $resourceFamily
    */
   public function setResourceFamily($resourceFamily)
   {
@@ -51,7 +65,10 @@ class Category extends \Google\Model
     return $this->resourceFamily;
   }
   /**
-   * @param string
+   * A group classification for related SKUs. Example: "RAM", "GPU",
+   * "Prediction", "Ops", "GoogleEgress" etc.
+   *
+   * @param string $resourceGroup
    */
   public function setResourceGroup($resourceGroup)
   {
@@ -65,7 +82,9 @@ class Category extends \Google\Model
     return $this->resourceGroup;
   }
   /**
-   * @param string
+   * The display name of the service this SKU belongs to.
+   *
+   * @param string $serviceDisplayName
    */
   public function setServiceDisplayName($serviceDisplayName)
   {
@@ -79,7 +98,10 @@ class Category extends \Google\Model
     return $this->serviceDisplayName;
   }
   /**
-   * @param string
+   * Represents how the SKU is consumed. Example: "OnDemand", "Preemptible",
+   * "Commit1Mo", "Commit1Yr" etc.
+   *
+   * @param string $usageType
    */
   public function setUsageType($usageType)
   {

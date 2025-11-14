@@ -20,19 +20,33 @@ namespace Google\Service\Bigquery;
 class ForeignTypeInfo extends \Google\Model
 {
   /**
+   * TypeSystem not specified.
+   */
+  public const TYPE_SYSTEM_TYPE_SYSTEM_UNSPECIFIED = 'TYPE_SYSTEM_UNSPECIFIED';
+  /**
+   * Represents Hive data types.
+   */
+  public const TYPE_SYSTEM_HIVE = 'HIVE';
+  /**
+   * Required. Specifies the system which defines the foreign data type.
+   *
    * @var string
    */
   public $typeSystem;
 
   /**
-   * @param string
+   * Required. Specifies the system which defines the foreign data type.
+   *
+   * Accepted values: TYPE_SYSTEM_UNSPECIFIED, HIVE
+   *
+   * @param self::TYPE_SYSTEM_* $typeSystem
    */
   public function setTypeSystem($typeSystem)
   {
     $this->typeSystem = $typeSystem;
   }
   /**
-   * @return string
+   * @return self::TYPE_SYSTEM_*
    */
   public function getTypeSystem()
   {

@@ -21,42 +21,60 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
 {
   protected $collection_key = 'customSignals';
   /**
+   * Optional. Combined custom boosts for a doc.
+   *
    * @var float
    */
   public $boostingFactor;
   protected $customSignalsType = GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignalsCustomSignal::class;
   protected $customSignalsDataType = 'array';
   /**
+   * Optional. The default rank of the result.
+   *
    * @var float
    */
   public $defaultRank;
   /**
+   * Optional. Age of the document in hours.
+   *
    * @var float
    */
   public $documentAge;
   /**
+   * Optional. Keyword matching adjustment.
+   *
    * @var float
    */
   public $keywordSimilarityScore;
   /**
+   * Optional. Predicted conversion rate adjustment as a rank.
+   *
    * @var float
    */
   public $pctrRank;
   /**
+   * Optional. Semantic relevance adjustment.
+   *
    * @var float
    */
   public $relevanceScore;
   /**
+   * Optional. Semantic similarity adjustment.
+   *
    * @var float
    */
   public $semanticSimilarityScore;
   /**
+   * Optional. Topicality adjustment as a rank.
+   *
    * @var float
    */
   public $topicalityRank;
 
   /**
-   * @param float
+   * Optional. Combined custom boosts for a doc.
+   *
+   * @param float $boostingFactor
    */
   public function setBoostingFactor($boostingFactor)
   {
@@ -70,7 +88,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->boostingFactor;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignalsCustomSignal[]
+   * Optional. A list of custom clearbox signals.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignalsCustomSignal[] $customSignals
    */
   public function setCustomSignals($customSignals)
   {
@@ -84,7 +104,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->customSignals;
   }
   /**
-   * @param float
+   * Optional. The default rank of the result.
+   *
+   * @param float $defaultRank
    */
   public function setDefaultRank($defaultRank)
   {
@@ -98,7 +120,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->defaultRank;
   }
   /**
-   * @param float
+   * Optional. Age of the document in hours.
+   *
+   * @param float $documentAge
    */
   public function setDocumentAge($documentAge)
   {
@@ -112,7 +136,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->documentAge;
   }
   /**
-   * @param float
+   * Optional. Keyword matching adjustment.
+   *
+   * @param float $keywordSimilarityScore
    */
   public function setKeywordSimilarityScore($keywordSimilarityScore)
   {
@@ -126,7 +152,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->keywordSimilarityScore;
   }
   /**
-   * @param float
+   * Optional. Predicted conversion rate adjustment as a rank.
+   *
+   * @param float $pctrRank
    */
   public function setPctrRank($pctrRank)
   {
@@ -140,7 +168,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->pctrRank;
   }
   /**
-   * @param float
+   * Optional. Semantic relevance adjustment.
+   *
+   * @param float $relevanceScore
    */
   public function setRelevanceScore($relevanceScore)
   {
@@ -154,7 +184,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->relevanceScore;
   }
   /**
-   * @param float
+   * Optional. Semantic similarity adjustment.
+   *
+   * @param float $semanticSimilarityScore
    */
   public function setSemanticSimilarityScore($semanticSimilarityScore)
   {
@@ -168,7 +200,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
     return $this->semanticSimilarityScore;
   }
   /**
-   * @param float
+   * Optional. Topicality adjustment as a rank.
+   *
+   * @param float $topicalityRank
    */
   public function setTopicalityRank($topicalityRank)
   {

@@ -22,12 +22,18 @@ class TcpCheck extends \Google\Model
   protected $pingConfigType = PingConfig::class;
   protected $pingConfigDataType = '';
   /**
+   * The TCP port on the server against which to run the check. Will be combined
+   * with host (specified within the monitored_resource) to construct the full
+   * URL. Required.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param PingConfig
+   * Contains information needed to add pings to a TCP check.
+   *
+   * @param PingConfig $pingConfig
    */
   public function setPingConfig(PingConfig $pingConfig)
   {
@@ -41,7 +47,11 @@ class TcpCheck extends \Google\Model
     return $this->pingConfig;
   }
   /**
-   * @param int
+   * The TCP port on the server against which to run the check. Will be combined
+   * with host (specified within the monitored_resource) to construct the full
+   * URL. Required.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {

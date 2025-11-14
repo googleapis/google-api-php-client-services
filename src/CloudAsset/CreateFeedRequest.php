@@ -22,12 +22,20 @@ class CreateFeedRequest extends \Google\Model
   protected $feedType = Feed::class;
   protected $feedDataType = '';
   /**
+   * Required. This is the client-assigned asset feed identifier and it needs to
+   * be unique under a specific parent project/folder/organization.
+   *
    * @var string
    */
   public $feedId;
 
   /**
-   * @param Feed
+   * Required. The feed details. The field `name` must be empty and it will be
+   * generated in the format of: projects/project_number/feeds/feed_id
+   * folders/folder_number/feeds/feed_id
+   * organizations/organization_number/feeds/feed_id
+   *
+   * @param Feed $feed
    */
   public function setFeed(Feed $feed)
   {
@@ -41,7 +49,10 @@ class CreateFeedRequest extends \Google\Model
     return $this->feed;
   }
   /**
-   * @param string
+   * Required. This is the client-assigned asset feed identifier and it needs to
+   * be unique under a specific parent project/folder/organization.
+   *
+   * @param string $feedId
    */
   public function setFeedId($feedId)
   {

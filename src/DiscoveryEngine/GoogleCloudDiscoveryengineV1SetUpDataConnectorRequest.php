@@ -20,10 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest extends \Google\Model
 {
   /**
+   * Required. The display name of the Collection. Should be human readable,
+   * used to display collections in the Console Dashboard. UTF-8 encoded string
+   * with limit of 1024 characters.
+   *
    * @var string
    */
   public $collectionDisplayName;
   /**
+   * Required. The ID to use for the Collection, which will become the final
+   * component of the Collection's resource name. A new Collection is created as
+   * part of the DataConnector setup. DataConnector is a singleton resource
+   * under Collection, managing all DataStores of the Collection. This field
+   * must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard
+   * with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error
+   * is returned.
+   *
    * @var string
    */
   public $collectionId;
@@ -31,7 +43,11 @@ class GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest extends \Google\Mode
   protected $dataConnectorDataType = '';
 
   /**
-   * @param string
+   * Required. The display name of the Collection. Should be human readable,
+   * used to display collections in the Console Dashboard. UTF-8 encoded string
+   * with limit of 1024 characters.
+   *
+   * @param string $collectionDisplayName
    */
   public function setCollectionDisplayName($collectionDisplayName)
   {
@@ -45,7 +61,15 @@ class GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest extends \Google\Mode
     return $this->collectionDisplayName;
   }
   /**
-   * @param string
+   * Required. The ID to use for the Collection, which will become the final
+   * component of the Collection's resource name. A new Collection is created as
+   * part of the DataConnector setup. DataConnector is a singleton resource
+   * under Collection, managing all DataStores of the Collection. This field
+   * must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard
+   * with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error
+   * is returned.
+   *
+   * @param string $collectionId
    */
   public function setCollectionId($collectionId)
   {
@@ -59,7 +83,9 @@ class GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest extends \Google\Mode
     return $this->collectionId;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1DataConnector
+   * Required. The DataConnector to initialize in the newly created Collection.
+   *
+   * @param GoogleCloudDiscoveryengineV1DataConnector $dataConnector
    */
   public function setDataConnector(GoogleCloudDiscoveryengineV1DataConnector $dataConnector)
   {

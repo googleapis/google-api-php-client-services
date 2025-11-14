@@ -21,6 +21,9 @@ class ListTablesResponse extends \Google\Collection
 {
   protected $collection_key = 'tables';
   /**
+   * Set if not all tables could be returned in a single response. Pass this
+   * value to `page_token` in another request to get the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListTablesResponse extends \Google\Collection
   protected $tablesDataType = 'array';
 
   /**
-   * @param string
+   * Set if not all tables could be returned in a single response. Pass this
+   * value to `page_token` in another request to get the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListTablesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Table[]
+   * The tables present in the requested instance.
+   *
+   * @param Table[] $tables
    */
   public function setTables($tables)
   {

@@ -28,7 +28,9 @@ class GoogleCloudDocumentaiV1DocumentPageLine extends \Google\Collection
   protected $provenanceDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[]
+   * A list of detected languages together with confidence.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] $detectedLanguages
    */
   public function setDetectedLanguages($detectedLanguages)
   {
@@ -42,7 +44,9 @@ class GoogleCloudDocumentaiV1DocumentPageLine extends \Google\Collection
     return $this->detectedLanguages;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageLayout
+   * Layout for Line.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageLayout $layout
    */
   public function setLayout(GoogleCloudDocumentaiV1DocumentPageLayout $layout)
   {
@@ -56,13 +60,17 @@ class GoogleCloudDocumentaiV1DocumentPageLine extends \Google\Collection
     return $this->layout;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentProvenance
+   * The history of this annotation.
+   *
+   * @deprecated
+   * @param GoogleCloudDocumentaiV1DocumentProvenance $provenance
    */
   public function setProvenance(GoogleCloudDocumentaiV1DocumentProvenance $provenance)
   {
     $this->provenance = $provenance;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDocumentaiV1DocumentProvenance
    */
   public function getProvenance()

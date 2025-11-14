@@ -20,12 +20,16 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNotificationConfig extends \Google\Model
 {
   /**
+   * The Pub/Sub subscription the AppConnector uses to receive notifications.
+   *
    * @var string
    */
   public $pubsubSubscription;
 
   /**
-   * @param string
+   * The Pub/Sub subscription the AppConnector uses to receive notifications.
+   *
+   * @param string $pubsubSubscription
    */
   public function setPubsubSubscription($pubsubSubscription)
   {

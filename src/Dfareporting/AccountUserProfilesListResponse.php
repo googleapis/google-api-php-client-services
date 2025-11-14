@@ -23,16 +23,23 @@ class AccountUserProfilesListResponse extends \Google\Collection
   protected $accountUserProfilesType = AccountUserProfile::class;
   protected $accountUserProfilesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountUserProfilesListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AccountUserProfile[]
+   * Account user profile collection.
+   *
+   * @param AccountUserProfile[] $accountUserProfiles
    */
   public function setAccountUserProfiles($accountUserProfiles)
   {
@@ -46,7 +53,10 @@ class AccountUserProfilesListResponse extends \Google\Collection
     return $this->accountUserProfiles;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountUserProfilesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class AccountUserProfilesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

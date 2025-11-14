@@ -20,10 +20,21 @@ namespace Google\Service\Batch;
 class AgentTaskRunnable extends \Google\Model
 {
   /**
+   * By default, after a Runnable fails, no further Runnable are executed. This
+   * flag indicates that this Runnable must be run even if the Task has already
+   * failed. This is useful for Runnables that copy output files off of the VM
+   * or for debugging. The always_run flag does not override the Task's overall
+   * max_run_duration. If the max_run_duration has expired then no further
+   * Runnables will execute, not even always_run Runnables.
+   *
    * @var bool
    */
   public $alwaysRun;
   /**
+   * This flag allows a Runnable to continue running in the background while the
+   * Task executes subsequent Runnables. This is useful to provide services to
+   * other Runnables (or to provide debugging support tools like SSH servers).
+   *
    * @var bool
    */
   public $background;
@@ -32,18 +43,30 @@ class AgentTaskRunnable extends \Google\Model
   protected $environmentType = AgentEnvironment::class;
   protected $environmentDataType = '';
   /**
+   * Normally, a non-zero exit status causes the Task to fail. This flag allows
+   * execution of other Runnables to continue instead.
+   *
    * @var bool
    */
   public $ignoreExitStatus;
   protected $scriptType = AgentScript::class;
   protected $scriptDataType = '';
   /**
+   * Timeout for this Runnable.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param bool
+   * By default, after a Runnable fails, no further Runnable are executed. This
+   * flag indicates that this Runnable must be run even if the Task has already
+   * failed. This is useful for Runnables that copy output files off of the VM
+   * or for debugging. The always_run flag does not override the Task's overall
+   * max_run_duration. If the max_run_duration has expired then no further
+   * Runnables will execute, not even always_run Runnables.
+   *
+   * @param bool $alwaysRun
    */
   public function setAlwaysRun($alwaysRun)
   {
@@ -57,7 +80,11 @@ class AgentTaskRunnable extends \Google\Model
     return $this->alwaysRun;
   }
   /**
-   * @param bool
+   * This flag allows a Runnable to continue running in the background while the
+   * Task executes subsequent Runnables. This is useful to provide services to
+   * other Runnables (or to provide debugging support tools like SSH servers).
+   *
+   * @param bool $background
    */
   public function setBackground($background)
   {
@@ -71,7 +98,9 @@ class AgentTaskRunnable extends \Google\Model
     return $this->background;
   }
   /**
-   * @param AgentContainer
+   * Container runnable.
+   *
+   * @param AgentContainer $container
    */
   public function setContainer(AgentContainer $container)
   {
@@ -85,7 +114,10 @@ class AgentTaskRunnable extends \Google\Model
     return $this->container;
   }
   /**
-   * @param AgentEnvironment
+   * Environment variables for this Runnable (overrides variables set for the
+   * whole Task or TaskGroup).
+   *
+   * @param AgentEnvironment $environment
    */
   public function setEnvironment(AgentEnvironment $environment)
   {
@@ -99,7 +131,10 @@ class AgentTaskRunnable extends \Google\Model
     return $this->environment;
   }
   /**
-   * @param bool
+   * Normally, a non-zero exit status causes the Task to fail. This flag allows
+   * execution of other Runnables to continue instead.
+   *
+   * @param bool $ignoreExitStatus
    */
   public function setIgnoreExitStatus($ignoreExitStatus)
   {
@@ -113,7 +148,9 @@ class AgentTaskRunnable extends \Google\Model
     return $this->ignoreExitStatus;
   }
   /**
-   * @param AgentScript
+   * Script runnable.
+   *
+   * @param AgentScript $script
    */
   public function setScript(AgentScript $script)
   {
@@ -127,7 +164,9 @@ class AgentTaskRunnable extends \Google\Model
     return $this->script;
   }
   /**
-   * @param string
+   * Timeout for this Runnable.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {

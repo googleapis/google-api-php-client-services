@@ -20,19 +20,45 @@ namespace Google\Service\Container;
 class GatewayAPIConfig extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const CHANNEL_CHANNEL_UNSPECIFIED = 'CHANNEL_UNSPECIFIED';
+  /**
+   * Gateway API support is disabled
+   */
+  public const CHANNEL_CHANNEL_DISABLED = 'CHANNEL_DISABLED';
+  /**
+   * Deprecated: use CHANNEL_STANDARD instead. Gateway API support is enabled,
+   * experimental CRDs are installed
+   *
+   * @deprecated
+   */
+  public const CHANNEL_CHANNEL_EXPERIMENTAL = 'CHANNEL_EXPERIMENTAL';
+  /**
+   * Gateway API support is enabled, standard CRDs are installed
+   */
+  public const CHANNEL_CHANNEL_STANDARD = 'CHANNEL_STANDARD';
+  /**
+   * The Gateway API release channel to use for Gateway API.
+   *
    * @var string
    */
   public $channel;
 
   /**
-   * @param string
+   * The Gateway API release channel to use for Gateway API.
+   *
+   * Accepted values: CHANNEL_UNSPECIFIED, CHANNEL_DISABLED,
+   * CHANNEL_EXPERIMENTAL, CHANNEL_STANDARD
+   *
+   * @param self::CHANNEL_* $channel
    */
   public function setChannel($channel)
   {
     $this->channel = $channel;
   }
   /**
-   * @return string
+   * @return self::CHANNEL_*
    */
   public function getChannel()
   {

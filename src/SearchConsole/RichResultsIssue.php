@@ -20,16 +20,35 @@ namespace Google\Service\SearchConsole;
 class RichResultsIssue extends \Google\Model
 {
   /**
+   * Unknown severity.
+   */
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * Warning.
+   */
+  public const SEVERITY_WARNING = 'WARNING';
+  /**
+   * Error.
+   */
+  public const SEVERITY_ERROR = 'ERROR';
+  /**
+   * Rich Results issue type.
+   *
    * @var string
    */
   public $issueMessage;
   /**
+   * Severity of this issue: WARNING, or ERROR. Items with an issue of status
+   * ERROR cannot appear with rich result features in Google Search results.
+   *
    * @var string
    */
   public $severity;
 
   /**
-   * @param string
+   * Rich Results issue type.
+   *
+   * @param string $issueMessage
    */
   public function setIssueMessage($issueMessage)
   {
@@ -43,14 +62,19 @@ class RichResultsIssue extends \Google\Model
     return $this->issueMessage;
   }
   /**
-   * @param string
+   * Severity of this issue: WARNING, or ERROR. Items with an issue of status
+   * ERROR cannot appear with rich result features in Google Search results.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, WARNING, ERROR
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {

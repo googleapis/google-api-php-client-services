@@ -23,12 +23,17 @@ class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse extends \Google\
   protected $effectiveSecurityHealthAnalyticsCustomModulesType = GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule::class;
   protected $effectiveSecurityHealthAnalyticsCustomModulesDataType = 'array';
   /**
+   * If not empty, indicates that there may be more effective custom modules to
+   * be returned.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule[]
+   * Effective custom modules belonging to the requested parent.
+   *
+   * @param GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule[] $effectiveSecurityHealthAnalyticsCustomModules
    */
   public function setEffectiveSecurityHealthAnalyticsCustomModules($effectiveSecurityHealthAnalyticsCustomModules)
   {
@@ -42,7 +47,10 @@ class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse extends \Google\
     return $this->effectiveSecurityHealthAnalyticsCustomModules;
   }
   /**
-   * @param string
+   * If not empty, indicates that there may be more effective custom modules to
+   * be returned.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

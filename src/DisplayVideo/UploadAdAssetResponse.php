@@ -23,7 +23,9 @@ class UploadAdAssetResponse extends \Google\Model
   protected $adAssetDataType = '';
 
   /**
-   * @param AdAsset
+   * The created ad asset.
+   *
+   * @param AdAsset $adAsset
    */
   public function setAdAsset(AdAsset $adAsset)
   {

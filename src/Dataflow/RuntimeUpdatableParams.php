@@ -20,17 +20,36 @@ namespace Google\Service\Dataflow;
 class RuntimeUpdatableParams extends \Google\Model
 {
   /**
+   * The maximum number of workers to cap autoscaling at. This field is
+   * currently only supported for Streaming Engine jobs.
+   *
    * @var int
    */
   public $maxNumWorkers;
   /**
+   * The minimum number of workers to scale down to. This field is currently
+   * only supported for Streaming Engine jobs.
+   *
    * @var int
    */
   public $minNumWorkers;
+  /**
+   * Target worker utilization, compared against the aggregate utilization of
+   * the worker pool by autoscaler, to determine upscaling and downscaling when
+   * absent other constraints such as backlog. For more information, see [Update
+   * an existing
+   * pipeline](https://cloud.google.com/dataflow/docs/guides/updating-a-
+   * pipeline).
+   *
+   * @var 
+   */
   public $workerUtilizationHint;
 
   /**
-   * @param int
+   * The maximum number of workers to cap autoscaling at. This field is
+   * currently only supported for Streaming Engine jobs.
+   *
+   * @param int $maxNumWorkers
    */
   public function setMaxNumWorkers($maxNumWorkers)
   {
@@ -44,7 +63,10 @@ class RuntimeUpdatableParams extends \Google\Model
     return $this->maxNumWorkers;
   }
   /**
-   * @param int
+   * The minimum number of workers to scale down to. This field is currently
+   * only supported for Streaming Engine jobs.
+   *
+   * @param int $minNumWorkers
    */
   public function setMinNumWorkers($minNumWorkers)
   {

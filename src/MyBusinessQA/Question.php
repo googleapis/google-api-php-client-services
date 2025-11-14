@@ -23,34 +23,51 @@ class Question extends \Google\Collection
   protected $authorType = Author::class;
   protected $authorDataType = '';
   /**
+   * Output only. The timestamp for when the question was written.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Immutable. The unique name for the question. locations/questions This field
+   * will be ignored if set during question creation.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The text of the question. It should contain at least three words
+   * and the total length should be greater than or equal to 10 characters. The
+   * maximum length is 4096 characters.
+   *
    * @var string
    */
   public $text;
   protected $topAnswersType = Answer::class;
   protected $topAnswersDataType = 'array';
   /**
+   * Output only. The total number of answers posted for this question.
+   *
    * @var int
    */
   public $totalAnswerCount;
   /**
+   * Output only. The timestamp for when the question was last modified.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. The number of upvotes for the question.
+   *
    * @var int
    */
   public $upvoteCount;
 
   /**
-   * @param Author
+   * Output only. The author of the question.
+   *
+   * @param Author $author
    */
   public function setAuthor(Author $author)
   {
@@ -64,7 +81,9 @@ class Question extends \Google\Collection
     return $this->author;
   }
   /**
-   * @param string
+   * Output only. The timestamp for when the question was written.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -78,7 +97,10 @@ class Question extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Immutable. The unique name for the question. locations/questions This field
+   * will be ignored if set during question creation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -92,7 +114,11 @@ class Question extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The text of the question. It should contain at least three words
+   * and the total length should be greater than or equal to 10 characters. The
+   * maximum length is 4096 characters.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
@@ -106,7 +132,11 @@ class Question extends \Google\Collection
     return $this->text;
   }
   /**
-   * @param Answer[]
+   * Output only. A list of answers to the question, sorted by upvotes. This may
+   * not be a complete list of answers depending on the request parameters
+   * (answers_per_question)
+   *
+   * @param Answer[] $topAnswers
    */
   public function setTopAnswers($topAnswers)
   {
@@ -120,7 +150,9 @@ class Question extends \Google\Collection
     return $this->topAnswers;
   }
   /**
-   * @param int
+   * Output only. The total number of answers posted for this question.
+   *
+   * @param int $totalAnswerCount
    */
   public function setTotalAnswerCount($totalAnswerCount)
   {
@@ -134,7 +166,9 @@ class Question extends \Google\Collection
     return $this->totalAnswerCount;
   }
   /**
-   * @param string
+   * Output only. The timestamp for when the question was last modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -148,7 +182,9 @@ class Question extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param int
+   * Output only. The number of upvotes for the question.
+   *
+   * @param int $upvoteCount
    */
   public function setUpvoteCount($upvoteCount)
   {

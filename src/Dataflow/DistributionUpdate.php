@@ -29,10 +29,17 @@ class DistributionUpdate extends \Google\Model
   protected $minDataType = '';
   protected $sumType = SplitInt64::class;
   protected $sumDataType = '';
+  /**
+   * Use a double since the sum of squares is likely to overflow int64.
+   *
+   * @var 
+   */
   public $sumOfSquares;
 
   /**
-   * @param SplitInt64
+   * The count of the number of elements present in the distribution.
+   *
+   * @param SplitInt64 $count
    */
   public function setCount(SplitInt64 $count)
   {
@@ -46,7 +53,9 @@ class DistributionUpdate extends \Google\Model
     return $this->count;
   }
   /**
-   * @param Histogram
+   * (Optional) Histogram of value counts for the distribution.
+   *
+   * @param Histogram $histogram
    */
   public function setHistogram(Histogram $histogram)
   {
@@ -60,7 +69,9 @@ class DistributionUpdate extends \Google\Model
     return $this->histogram;
   }
   /**
-   * @param SplitInt64
+   * The maximum value present in the distribution.
+   *
+   * @param SplitInt64 $max
    */
   public function setMax(SplitInt64 $max)
   {
@@ -74,7 +85,9 @@ class DistributionUpdate extends \Google\Model
     return $this->max;
   }
   /**
-   * @param SplitInt64
+   * The minimum value present in the distribution.
+   *
+   * @param SplitInt64 $min
    */
   public function setMin(SplitInt64 $min)
   {
@@ -88,7 +101,10 @@ class DistributionUpdate extends \Google\Model
     return $this->min;
   }
   /**
-   * @param SplitInt64
+   * Use an int64 since we'd prefer the added precision. If overflow is a common
+   * problem we can detect it and use an additional int64 or a double.
+   *
+   * @param SplitInt64 $sum
    */
   public function setSum(SplitInt64 $sum)
   {

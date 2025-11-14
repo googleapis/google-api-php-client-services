@@ -24,7 +24,7 @@ class PlacementConversionDomainOverride extends \Google\Collection
   protected $conversionDomainsDataType = 'array';
 
   /**
-   * @param PlacementSingleConversionDomain[]
+   * @param PlacementSingleConversionDomain[] $conversionDomains
    */
   public function setConversionDomains($conversionDomains)
   {

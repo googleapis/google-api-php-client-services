@@ -20,30 +20,49 @@ namespace Google\Service\DatabaseMigrationService;
 class MultiColumnDatatypeChange extends \Google\Model
 {
   /**
+   * Optional. Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
   /**
+   * Required. New data type.
+   *
    * @var string
    */
   public $newDataType;
   /**
+   * Optional. Column fractional seconds precision - used only for timestamp
+   * based datatypes - if not specified and relevant uses the source column
+   * fractional seconds precision.
+   *
    * @var int
    */
   public $overrideFractionalSecondsPrecision;
   /**
+   * Optional. Column length - e.g. varchar (50) - if not specified and relevant
+   * uses the source column length.
+   *
    * @var string
    */
   public $overrideLength;
   /**
+   * Optional. Column precision - when relevant - if not specified and relevant
+   * uses the source column precision.
+   *
    * @var int
    */
   public $overridePrecision;
   /**
+   * Optional. Column scale - when relevant - if not specified and relevant uses
+   * the source column scale.
+   *
    * @var int
    */
   public $overrideScale;
   /**
+   * Required. Filter on source data type.
+   *
    * @var string
    */
   public $sourceDataTypeFilter;
@@ -53,7 +72,9 @@ class MultiColumnDatatypeChange extends \Google\Model
   protected $sourceTextFilterDataType = '';
 
   /**
-   * @param array[]
+   * Optional. Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {
@@ -67,7 +88,9 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->customFeatures;
   }
   /**
-   * @param string
+   * Required. New data type.
+   *
+   * @param string $newDataType
    */
   public function setNewDataType($newDataType)
   {
@@ -81,7 +104,11 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->newDataType;
   }
   /**
-   * @param int
+   * Optional. Column fractional seconds precision - used only for timestamp
+   * based datatypes - if not specified and relevant uses the source column
+   * fractional seconds precision.
+   *
+   * @param int $overrideFractionalSecondsPrecision
    */
   public function setOverrideFractionalSecondsPrecision($overrideFractionalSecondsPrecision)
   {
@@ -95,7 +122,10 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->overrideFractionalSecondsPrecision;
   }
   /**
-   * @param string
+   * Optional. Column length - e.g. varchar (50) - if not specified and relevant
+   * uses the source column length.
+   *
+   * @param string $overrideLength
    */
   public function setOverrideLength($overrideLength)
   {
@@ -109,7 +139,10 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->overrideLength;
   }
   /**
-   * @param int
+   * Optional. Column precision - when relevant - if not specified and relevant
+   * uses the source column precision.
+   *
+   * @param int $overridePrecision
    */
   public function setOverridePrecision($overridePrecision)
   {
@@ -123,7 +156,10 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->overridePrecision;
   }
   /**
-   * @param int
+   * Optional. Column scale - when relevant - if not specified and relevant uses
+   * the source column scale.
+   *
+   * @param int $overrideScale
    */
   public function setOverrideScale($overrideScale)
   {
@@ -137,7 +173,9 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->overrideScale;
   }
   /**
-   * @param string
+   * Required. Filter on source data type.
+   *
+   * @param string $sourceDataTypeFilter
    */
   public function setSourceDataTypeFilter($sourceDataTypeFilter)
   {
@@ -151,7 +189,9 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->sourceDataTypeFilter;
   }
   /**
-   * @param SourceNumericFilter
+   * Optional. Filter for fixed point number data types such as NUMERIC/NUMBER.
+   *
+   * @param SourceNumericFilter $sourceNumericFilter
    */
   public function setSourceNumericFilter(SourceNumericFilter $sourceNumericFilter)
   {
@@ -165,7 +205,9 @@ class MultiColumnDatatypeChange extends \Google\Model
     return $this->sourceNumericFilter;
   }
   /**
-   * @param SourceTextFilter
+   * Optional. Filter for text-based data types like varchar.
+   *
+   * @param SourceTextFilter $sourceTextFilter
    */
   public function setSourceTextFilter(SourceTextFilter $sourceTextFilter)
   {

@@ -19,15 +19,44 @@ namespace Google\Service\Vault;
 
 class AccountCountError extends \Google\Model
 {
+  /**
+   * Default.
+   */
+  public const ERROR_TYPE_ERROR_TYPE_UNSPECIFIED = 'ERROR_TYPE_UNSPECIFIED';
+  /**
+   * Permanent - prefix terms expanded to too many query terms.
+   */
+  public const ERROR_TYPE_WILDCARD_TOO_BROAD = 'WILDCARD_TOO_BROAD';
+  /**
+   * Permanent - query contains too many terms.
+   */
+  public const ERROR_TYPE_TOO_MANY_TERMS = 'TOO_MANY_TERMS';
+  /**
+   * Transient - data in transit between storage replicas, temporarily
+   * unavailable.
+   */
+  public const ERROR_TYPE_LOCATION_UNAVAILABLE = 'LOCATION_UNAVAILABLE';
+  /**
+   * Unrecognized error.
+   */
+  public const ERROR_TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Deadline exceeded when querying the account.
+   */
+  public const ERROR_TYPE_DEADLINE_EXCEEDED = 'DEADLINE_EXCEEDED';
   protected $accountType = UserInfo::class;
   protected $accountDataType = '';
   /**
+   * Account query error.
+   *
    * @var string
    */
   public $errorType;
 
   /**
-   * @param UserInfo
+   * Account owner.
+   *
+   * @param UserInfo $account
    */
   public function setAccount(UserInfo $account)
   {
@@ -41,14 +70,19 @@ class AccountCountError extends \Google\Model
     return $this->account;
   }
   /**
-   * @param string
+   * Account query error.
+   *
+   * Accepted values: ERROR_TYPE_UNSPECIFIED, WILDCARD_TOO_BROAD,
+   * TOO_MANY_TERMS, LOCATION_UNAVAILABLE, UNKNOWN, DEADLINE_EXCEEDED
+   *
+   * @param self::ERROR_TYPE_* $errorType
    */
   public function setErrorType($errorType)
   {
     $this->errorType = $errorType;
   }
   /**
-   * @return string
+   * @return self::ERROR_TYPE_*
    */
   public function getErrorType()
   {

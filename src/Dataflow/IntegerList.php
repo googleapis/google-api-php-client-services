@@ -24,7 +24,9 @@ class IntegerList extends \Google\Collection
   protected $elementsDataType = 'array';
 
   /**
-   * @param SplitInt64[]
+   * Elements of the list.
+   *
+   * @param SplitInt64[] $elements
    */
   public function setElements($elements)
   {

@@ -20,38 +20,55 @@ namespace Google\Service\PeopleService;
 class Location extends \Google\Model
 {
   /**
+   * The building identifier.
+   *
    * @var string
    */
   public $buildingId;
   /**
+   * Whether the location is the current location.
+   *
    * @var bool
    */
   public $current;
   /**
+   * The individual desk location.
+   *
    * @var string
    */
   public $deskCode;
   /**
+   * The floor name or number.
+   *
    * @var string
    */
   public $floor;
   /**
+   * The floor section in `floor_name`.
+   *
    * @var string
    */
   public $floorSection;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The type of the location. The type can be custom or one of these predefined
+   * values: * `desk` * `grewUp`
+   *
    * @var string
    */
   public $type;
   /**
+   * The free-form value of the location.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The building identifier.
+   *
+   * @param string $buildingId
    */
   public function setBuildingId($buildingId)
   {
@@ -65,7 +82,9 @@ class Location extends \Google\Model
     return $this->buildingId;
   }
   /**
-   * @param bool
+   * Whether the location is the current location.
+   *
+   * @param bool $current
    */
   public function setCurrent($current)
   {
@@ -79,7 +98,9 @@ class Location extends \Google\Model
     return $this->current;
   }
   /**
-   * @param string
+   * The individual desk location.
+   *
+   * @param string $deskCode
    */
   public function setDeskCode($deskCode)
   {
@@ -93,7 +114,9 @@ class Location extends \Google\Model
     return $this->deskCode;
   }
   /**
-   * @param string
+   * The floor name or number.
+   *
+   * @param string $floor
    */
   public function setFloor($floor)
   {
@@ -107,7 +130,9 @@ class Location extends \Google\Model
     return $this->floor;
   }
   /**
-   * @param string
+   * The floor section in `floor_name`.
+   *
+   * @param string $floorSection
    */
   public function setFloorSection($floorSection)
   {
@@ -121,7 +146,9 @@ class Location extends \Google\Model
     return $this->floorSection;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the location.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -135,7 +162,10 @@ class Location extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The type of the location. The type can be custom or one of these predefined
+   * values: * `desk` * `grewUp`
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -149,7 +179,9 @@ class Location extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The free-form value of the location.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

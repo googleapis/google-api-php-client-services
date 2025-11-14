@@ -23,16 +23,22 @@ class ListLbEdgeExtensionsResponse extends \Google\Collection
   protected $lbEdgeExtensionsType = LbEdgeExtension::class;
   protected $lbEdgeExtensionsDataType = 'array';
   /**
+   * A token identifying a page of results that the server returns.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param LbEdgeExtension[]
+   * The list of `LbEdgeExtension` resources.
+   *
+   * @param LbEdgeExtension[] $lbEdgeExtensions
    */
   public function setLbEdgeExtensions($lbEdgeExtensions)
   {
@@ -46,7 +52,9 @@ class ListLbEdgeExtensionsResponse extends \Google\Collection
     return $this->lbEdgeExtensions;
   }
   /**
-   * @param string
+   * A token identifying a page of results that the server returns.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListLbEdgeExtensionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

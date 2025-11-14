@@ -21,22 +21,33 @@ class MapTask extends \Google\Collection
 {
   protected $collection_key = 'instructions';
   /**
+   * Counter prefix that can be used to prefix counters. Not currently used in
+   * Dataflow.
+   *
    * @var string
    */
   public $counterPrefix;
   protected $instructionsType = ParallelInstruction::class;
   protected $instructionsDataType = 'array';
   /**
+   * System-defined name of the stage containing this MapTask. Unique across the
+   * workflow.
+   *
    * @var string
    */
   public $stageName;
   /**
+   * System-defined name of this MapTask. Unique across the workflow.
+   *
    * @var string
    */
   public $systemName;
 
   /**
-   * @param string
+   * Counter prefix that can be used to prefix counters. Not currently used in
+   * Dataflow.
+   *
+   * @param string $counterPrefix
    */
   public function setCounterPrefix($counterPrefix)
   {
@@ -50,7 +61,9 @@ class MapTask extends \Google\Collection
     return $this->counterPrefix;
   }
   /**
-   * @param ParallelInstruction[]
+   * The instructions in the MapTask.
+   *
+   * @param ParallelInstruction[] $instructions
    */
   public function setInstructions($instructions)
   {
@@ -64,7 +77,10 @@ class MapTask extends \Google\Collection
     return $this->instructions;
   }
   /**
-   * @param string
+   * System-defined name of the stage containing this MapTask. Unique across the
+   * workflow.
+   *
+   * @param string $stageName
    */
   public function setStageName($stageName)
   {
@@ -78,7 +94,9 @@ class MapTask extends \Google\Collection
     return $this->stageName;
   }
   /**
-   * @param string
+   * System-defined name of this MapTask. Unique across the workflow.
+   *
+   * @param string $systemName
    */
   public function setSystemName($systemName)
   {

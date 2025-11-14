@@ -34,30 +34,72 @@ class PropertyDefinition extends \Google\Model
   protected $integerPropertyOptionsType = IntegerPropertyOptions::class;
   protected $integerPropertyOptionsDataType = '';
   /**
+   * Indicates that the property can be used for generating facets. Cannot be
+   * true for properties whose type is object. IsReturnable must be true to set
+   * this option. Only supported for boolean, enum, integer, and text
+   * properties.
+   *
    * @var bool
    */
   public $isFacetable;
   /**
+   * Indicates that multiple values are allowed for the property. For example, a
+   * document only has one description but can have multiple comments. Cannot be
+   * true for properties whose type is a boolean. If set to false, properties
+   * that contain more than one value cause the indexing request for that item
+   * to be rejected.
+   *
    * @var bool
    */
   public $isRepeatable;
   /**
+   * Indicates that the property identifies data that should be returned in
+   * search results via the Query API. If set to *true*, indicates that Query
+   * API users can use matching property fields in results. However, storing
+   * fields requires more space allocation and uses more bandwidth for search
+   * queries, which impacts performance over large datasets. Set to *true* here
+   * only if the field is needed for search results. Cannot be true for
+   * properties whose type is an object.
+   *
    * @var bool
    */
   public $isReturnable;
   /**
+   * Indicates that the property can be used for sorting. Cannot be true for
+   * properties that are repeatable. Cannot be true for properties whose type is
+   * object. IsReturnable must be true to set this option. Only supported for
+   * boolean, date, double, integer, and timestamp properties.
+   *
    * @var bool
    */
   public $isSortable;
   /**
+   * Indicates that the property can be used for generating query suggestions.
+   *
    * @var bool
    */
   public $isSuggestable;
   /**
+   * Indicates that users can perform wildcard search for this property. Only
+   * supported for Text properties. IsReturnable must be true to set this
+   * option. In a given datasource maximum of 5 properties can be marked as
+   * is_wildcard_searchable. For more details, see [Define object
+   * properties](https://developers.google.com/cloud-search/docs/guides/schema-
+   * guide#properties)
+   *
    * @var bool
    */
   public $isWildcardSearchable;
   /**
+   * The name of the property. Item indexing requests sent to the Indexing API
+   * should set the property name equal to this value. For example, if name is
+   * *subject_line*, then indexing requests for document items with subject
+   * fields should set the name for that field equal to *subject_line*. Use the
+   * name as the identifier for the object property. Once registered as a
+   * property for an object, you cannot re-use this name for another property
+   * within that object. The name must start with a letter and can only contain
+   * letters (A-Z, a-z) or numbers (0-9). The maximum length is 256 characters.
+   *
    * @var string
    */
   public $name;
@@ -69,7 +111,7 @@ class PropertyDefinition extends \Google\Model
   protected $timestampPropertyOptionsDataType = '';
 
   /**
-   * @param BooleanPropertyOptions
+   * @param BooleanPropertyOptions $booleanPropertyOptions
    */
   public function setBooleanPropertyOptions(BooleanPropertyOptions $booleanPropertyOptions)
   {
@@ -83,7 +125,7 @@ class PropertyDefinition extends \Google\Model
     return $this->booleanPropertyOptions;
   }
   /**
-   * @param DatePropertyOptions
+   * @param DatePropertyOptions $datePropertyOptions
    */
   public function setDatePropertyOptions(DatePropertyOptions $datePropertyOptions)
   {
@@ -97,7 +139,11 @@ class PropertyDefinition extends \Google\Model
     return $this->datePropertyOptions;
   }
   /**
-   * @param PropertyDisplayOptions
+   * The options that determine how the property is displayed in the Cloud
+   * Search results page if it's specified to be displayed in the object's
+   * display options.
+   *
+   * @param PropertyDisplayOptions $displayOptions
    */
   public function setDisplayOptions(PropertyDisplayOptions $displayOptions)
   {
@@ -111,7 +157,7 @@ class PropertyDefinition extends \Google\Model
     return $this->displayOptions;
   }
   /**
-   * @param DoublePropertyOptions
+   * @param DoublePropertyOptions $doublePropertyOptions
    */
   public function setDoublePropertyOptions(DoublePropertyOptions $doublePropertyOptions)
   {
@@ -125,7 +171,7 @@ class PropertyDefinition extends \Google\Model
     return $this->doublePropertyOptions;
   }
   /**
-   * @param EnumPropertyOptions
+   * @param EnumPropertyOptions $enumPropertyOptions
    */
   public function setEnumPropertyOptions(EnumPropertyOptions $enumPropertyOptions)
   {
@@ -139,7 +185,7 @@ class PropertyDefinition extends \Google\Model
     return $this->enumPropertyOptions;
   }
   /**
-   * @param HtmlPropertyOptions
+   * @param HtmlPropertyOptions $htmlPropertyOptions
    */
   public function setHtmlPropertyOptions(HtmlPropertyOptions $htmlPropertyOptions)
   {
@@ -153,7 +199,7 @@ class PropertyDefinition extends \Google\Model
     return $this->htmlPropertyOptions;
   }
   /**
-   * @param IntegerPropertyOptions
+   * @param IntegerPropertyOptions $integerPropertyOptions
    */
   public function setIntegerPropertyOptions(IntegerPropertyOptions $integerPropertyOptions)
   {
@@ -167,7 +213,12 @@ class PropertyDefinition extends \Google\Model
     return $this->integerPropertyOptions;
   }
   /**
-   * @param bool
+   * Indicates that the property can be used for generating facets. Cannot be
+   * true for properties whose type is object. IsReturnable must be true to set
+   * this option. Only supported for boolean, enum, integer, and text
+   * properties.
+   *
+   * @param bool $isFacetable
    */
   public function setIsFacetable($isFacetable)
   {
@@ -181,7 +232,13 @@ class PropertyDefinition extends \Google\Model
     return $this->isFacetable;
   }
   /**
-   * @param bool
+   * Indicates that multiple values are allowed for the property. For example, a
+   * document only has one description but can have multiple comments. Cannot be
+   * true for properties whose type is a boolean. If set to false, properties
+   * that contain more than one value cause the indexing request for that item
+   * to be rejected.
+   *
+   * @param bool $isRepeatable
    */
   public function setIsRepeatable($isRepeatable)
   {
@@ -195,7 +252,15 @@ class PropertyDefinition extends \Google\Model
     return $this->isRepeatable;
   }
   /**
-   * @param bool
+   * Indicates that the property identifies data that should be returned in
+   * search results via the Query API. If set to *true*, indicates that Query
+   * API users can use matching property fields in results. However, storing
+   * fields requires more space allocation and uses more bandwidth for search
+   * queries, which impacts performance over large datasets. Set to *true* here
+   * only if the field is needed for search results. Cannot be true for
+   * properties whose type is an object.
+   *
+   * @param bool $isReturnable
    */
   public function setIsReturnable($isReturnable)
   {
@@ -209,7 +274,12 @@ class PropertyDefinition extends \Google\Model
     return $this->isReturnable;
   }
   /**
-   * @param bool
+   * Indicates that the property can be used for sorting. Cannot be true for
+   * properties that are repeatable. Cannot be true for properties whose type is
+   * object. IsReturnable must be true to set this option. Only supported for
+   * boolean, date, double, integer, and timestamp properties.
+   *
+   * @param bool $isSortable
    */
   public function setIsSortable($isSortable)
   {
@@ -223,7 +293,9 @@ class PropertyDefinition extends \Google\Model
     return $this->isSortable;
   }
   /**
-   * @param bool
+   * Indicates that the property can be used for generating query suggestions.
+   *
+   * @param bool $isSuggestable
    */
   public function setIsSuggestable($isSuggestable)
   {
@@ -237,7 +309,14 @@ class PropertyDefinition extends \Google\Model
     return $this->isSuggestable;
   }
   /**
-   * @param bool
+   * Indicates that users can perform wildcard search for this property. Only
+   * supported for Text properties. IsReturnable must be true to set this
+   * option. In a given datasource maximum of 5 properties can be marked as
+   * is_wildcard_searchable. For more details, see [Define object
+   * properties](https://developers.google.com/cloud-search/docs/guides/schema-
+   * guide#properties)
+   *
+   * @param bool $isWildcardSearchable
    */
   public function setIsWildcardSearchable($isWildcardSearchable)
   {
@@ -251,7 +330,16 @@ class PropertyDefinition extends \Google\Model
     return $this->isWildcardSearchable;
   }
   /**
-   * @param string
+   * The name of the property. Item indexing requests sent to the Indexing API
+   * should set the property name equal to this value. For example, if name is
+   * *subject_line*, then indexing requests for document items with subject
+   * fields should set the name for that field equal to *subject_line*. Use the
+   * name as the identifier for the object property. Once registered as a
+   * property for an object, you cannot re-use this name for another property
+   * within that object. The name must start with a letter and can only contain
+   * letters (A-Z, a-z) or numbers (0-9). The maximum length is 256 characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -265,7 +353,7 @@ class PropertyDefinition extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ObjectPropertyOptions
+   * @param ObjectPropertyOptions $objectPropertyOptions
    */
   public function setObjectPropertyOptions(ObjectPropertyOptions $objectPropertyOptions)
   {
@@ -279,7 +367,7 @@ class PropertyDefinition extends \Google\Model
     return $this->objectPropertyOptions;
   }
   /**
-   * @param TextPropertyOptions
+   * @param TextPropertyOptions $textPropertyOptions
    */
   public function setTextPropertyOptions(TextPropertyOptions $textPropertyOptions)
   {
@@ -293,7 +381,7 @@ class PropertyDefinition extends \Google\Model
     return $this->textPropertyOptions;
   }
   /**
-   * @param TimestampPropertyOptions
+   * @param TimestampPropertyOptions $timestampPropertyOptions
    */
   public function setTimestampPropertyOptions(TimestampPropertyOptions $timestampPropertyOptions)
   {

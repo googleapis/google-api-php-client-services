@@ -23,12 +23,19 @@ class DynamicProfileVersion extends \Google\Collection
   protected $dynamicProfileFeedSettingsType = DynamicProfileFeedSettings::class;
   protected $dynamicProfileFeedSettingsDataType = 'array';
   /**
+   * Output only. Version ID of this dynamic profile version. This is a read-
+   * only, auto-generated field. -1 for draft version, 0+ for published
+   * versions.
+   *
    * @var string
    */
   public $versionId;
 
   /**
-   * @param DynamicProfileFeedSettings[]
+   * Optional. Associated dynamic feeds and their settings (including dynamic
+   * rules) for this dynamic profile version.
+   *
+   * @param DynamicProfileFeedSettings[] $dynamicProfileFeedSettings
    */
   public function setDynamicProfileFeedSettings($dynamicProfileFeedSettings)
   {
@@ -42,7 +49,11 @@ class DynamicProfileVersion extends \Google\Collection
     return $this->dynamicProfileFeedSettings;
   }
   /**
-   * @param string
+   * Output only. Version ID of this dynamic profile version. This is a read-
+   * only, auto-generated field. -1 for draft version, 0+ for published
+   * versions.
+   *
+   * @param string $versionId
    */
   public function setVersionId($versionId)
   {

@@ -23,7 +23,10 @@ class FailedData extends \Google\Model
   protected $errorDataType = '';
 
   /**
-   * @param Status
+   * Output only. The error that caused the queued resource to enter the FAILED
+   * state.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {

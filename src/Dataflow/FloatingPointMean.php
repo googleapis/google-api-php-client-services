@@ -21,10 +21,17 @@ class FloatingPointMean extends \Google\Model
 {
   protected $countType = SplitInt64::class;
   protected $countDataType = '';
+  /**
+   * The sum of all values being aggregated.
+   *
+   * @var 
+   */
   public $sum;
 
   /**
-   * @param SplitInt64
+   * The number of values being aggregated.
+   *
+   * @param SplitInt64 $count
    */
   public function setCount(SplitInt64 $count)
   {

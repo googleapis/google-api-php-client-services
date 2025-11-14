@@ -23,20 +23,31 @@ class GroupFindingsResponse extends \Google\Collection
   protected $groupByResultsType = GroupResult::class;
   protected $groupByResultsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Time used for executing the groupBy request.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * The total number of results matching the query.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param GroupResult[]
+   * Group results. There exists an element for each existing unique combination
+   * of property/values. The element contains a count for the number of times
+   * those specific property/values appear.
+   *
+   * @param GroupResult[] $groupByResults
    */
   public function setGroupByResults($groupByResults)
   {
@@ -50,7 +61,10 @@ class GroupFindingsResponse extends \Google\Collection
     return $this->groupByResults;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -64,7 +78,9 @@ class GroupFindingsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * Time used for executing the groupBy request.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -78,7 +94,9 @@ class GroupFindingsResponse extends \Google\Collection
     return $this->readTime;
   }
   /**
-   * @param int
+   * The total number of results matching the query.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

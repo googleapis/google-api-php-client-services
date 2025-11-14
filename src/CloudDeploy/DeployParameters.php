@@ -20,16 +20,26 @@ namespace Google\Service\CloudDeploy;
 class DeployParameters extends \Google\Model
 {
   /**
+   * Optional. Deploy parameters are applied to targets with match labels. If
+   * unspecified, deploy parameters are applied to all targets (including child
+   * targets of a multi-target).
+   *
    * @var string[]
    */
   public $matchTargetLabels;
   /**
+   * Required. Values are deploy parameters in key-value pairs.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Optional. Deploy parameters are applied to targets with match labels. If
+   * unspecified, deploy parameters are applied to all targets (including child
+   * targets of a multi-target).
+   *
+   * @param string[] $matchTargetLabels
    */
   public function setMatchTargetLabels($matchTargetLabels)
   {
@@ -43,7 +53,9 @@ class DeployParameters extends \Google\Model
     return $this->matchTargetLabels;
   }
   /**
-   * @param string[]
+   * Required. Values are deploy parameters in key-value pairs.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

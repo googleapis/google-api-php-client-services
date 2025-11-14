@@ -20,16 +20,23 @@ namespace Google\Service\SQLAdmin;
 class SyncFlags extends \Google\Model
 {
   /**
+   * The name of the flag.
+   *
    * @var string
    */
   public $name;
   /**
+   * The value of the flag. This field must be omitted if the flag doesn't take
+   * a value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The name of the flag.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +50,10 @@ class SyncFlags extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The value of the flag. This field must be omitted if the flag doesn't take
+   * a value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

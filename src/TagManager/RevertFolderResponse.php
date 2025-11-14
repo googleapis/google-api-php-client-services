@@ -23,7 +23,11 @@ class RevertFolderResponse extends \Google\Model
   protected $folderDataType = '';
 
   /**
-   * @param Folder
+   * Folder as it appears in the latest container version since the last
+   * workspace synchronization operation. If no folder is present, that means
+   * the folder was deleted in the latest container version.
+   *
+   * @param Folder $folder
    */
   public function setFolder(Folder $folder)
   {

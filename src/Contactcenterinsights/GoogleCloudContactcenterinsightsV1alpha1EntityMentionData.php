@@ -20,18 +20,38 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1EntityMentionData extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const TYPE_MENTION_TYPE_UNSPECIFIED = 'MENTION_TYPE_UNSPECIFIED';
+  /**
+   * Proper noun.
+   */
+  public const TYPE_PROPER = 'PROPER';
+  /**
+   * Common noun (or noun compound).
+   */
+  public const TYPE_COMMON = 'COMMON';
+  /**
+   * The key of this entity in conversation entities. Can be used to retrieve
+   * the exact `Entity` this mention is attached to.
+   *
    * @var string
    */
   public $entityUniqueId;
   protected $sentimentType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
   protected $sentimentDataType = '';
   /**
+   * The type of the entity mention.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The key of this entity in conversation entities. Can be used to retrieve
+   * the exact `Entity` this mention is attached to.
+   *
+   * @param string $entityUniqueId
    */
   public function setEntityUniqueId($entityUniqueId)
   {
@@ -45,7 +65,9 @@ class GoogleCloudContactcenterinsightsV1alpha1EntityMentionData extends \Google\
     return $this->entityUniqueId;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1SentimentData
+   * Sentiment expressed for this mention of the entity.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1SentimentData $sentiment
    */
   public function setSentiment(GoogleCloudContactcenterinsightsV1alpha1SentimentData $sentiment)
   {
@@ -59,14 +81,18 @@ class GoogleCloudContactcenterinsightsV1alpha1EntityMentionData extends \Google\
     return $this->sentiment;
   }
   /**
-   * @param string
+   * The type of the entity mention.
+   *
+   * Accepted values: MENTION_TYPE_UNSPECIFIED, PROPER, COMMON
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

@@ -23,12 +23,16 @@ class ListMulticloudDataTransferSupportedServicesResponse extends \Google\Collec
   protected $multicloudDataTransferSupportedServicesType = MulticloudDataTransferSupportedService::class;
   protected $multicloudDataTransferSupportedServicesDataType = 'array';
   /**
+   * The next page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param MulticloudDataTransferSupportedService[]
+   * The list of supported services.
+   *
+   * @param MulticloudDataTransferSupportedService[] $multicloudDataTransferSupportedServices
    */
   public function setMulticloudDataTransferSupportedServices($multicloudDataTransferSupportedServices)
   {
@@ -42,7 +46,9 @@ class ListMulticloudDataTransferSupportedServicesResponse extends \Google\Collec
     return $this->multicloudDataTransferSupportedServices;
   }
   /**
-   * @param string
+   * The next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

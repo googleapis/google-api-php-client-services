@@ -20,16 +20,23 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ExportFlowResponse extends \Google\Model
 {
   /**
+   * Uncompressed raw byte content for flow.
+   *
    * @var string
    */
   public $flowContent;
   /**
+   * The URI to a file containing the exported flow. This field is populated
+   * only if `flow_uri` is specified in ExportFlowRequest.
+   *
    * @var string
    */
   public $flowUri;
 
   /**
-   * @param string
+   * Uncompressed raw byte content for flow.
+   *
+   * @param string $flowContent
    */
   public function setFlowContent($flowContent)
   {
@@ -43,7 +50,10 @@ class GoogleCloudDialogflowCxV3ExportFlowResponse extends \Google\Model
     return $this->flowContent;
   }
   /**
-   * @param string
+   * The URI to a file containing the exported flow. This field is populated
+   * only if `flow_uri` is specified in ExportFlowRequest.
+   *
+   * @param string $flowUri
    */
   public function setFlowUri($flowUri)
   {

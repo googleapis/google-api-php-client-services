@@ -23,12 +23,16 @@ class ListEntitlementsResponse extends \Google\Collection
   protected $entitlementsType = Entitlement::class;
   protected $entitlementsDataType = 'array';
   /**
+   * The token for fetching the next page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Entitlement[]
+   * The list of entitlements in this response.
+   *
+   * @param Entitlement[] $entitlements
    */
   public function setEntitlements($entitlements)
   {
@@ -42,7 +46,9 @@ class ListEntitlementsResponse extends \Google\Collection
     return $this->entitlements;
   }
   /**
-   * @param string
+   * The token for fetching the next page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

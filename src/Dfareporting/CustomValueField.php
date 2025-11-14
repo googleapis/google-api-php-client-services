@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class CustomValueField extends \Google\Model
 {
   /**
+   * Optional. Field ID in the element.
+   *
    * @var int
    */
   public $fieldId;
   /**
+   * Optional. Custom key used to match for auto filtering.
+   *
    * @var string
    */
   public $requestKey;
 
   /**
-   * @param int
+   * Optional. Field ID in the element.
+   *
+   * @param int $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -43,7 +49,9 @@ class CustomValueField extends \Google\Model
     return $this->fieldId;
   }
   /**
-   * @param string
+   * Optional. Custom key used to match for auto filtering.
+   *
+   * @param string $requestKey
    */
   public function setRequestKey($requestKey)
   {

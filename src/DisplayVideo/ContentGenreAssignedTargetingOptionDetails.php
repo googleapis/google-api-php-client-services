@@ -20,20 +20,29 @@ namespace Google\Service\DisplayVideo;
 class ContentGenreAssignedTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The display name of the content genre.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Indicates if this option is being negatively targeted.
+   *
    * @var bool
    */
   public $negative;
   /**
+   * Required. The targeting_option_id field when targeting_type is
+   * `TARGETING_TYPE_CONTENT_GENRE`.
+   *
    * @var string
    */
   public $targetingOptionId;
 
   /**
-   * @param string
+   * Output only. The display name of the content genre.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +56,9 @@ class ContentGenreAssignedTargetingOptionDetails extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Indicates if this option is being negatively targeted.
+   *
+   * @param bool $negative
    */
   public function setNegative($negative)
   {
@@ -61,7 +72,10 @@ class ContentGenreAssignedTargetingOptionDetails extends \Google\Model
     return $this->negative;
   }
   /**
-   * @param string
+   * Required. The targeting_option_id field when targeting_type is
+   * `TARGETING_TYPE_CONTENT_GENRE`.
+   *
+   * @param string $targetingOptionId
    */
   public function setTargetingOptionId($targetingOptionId)
   {

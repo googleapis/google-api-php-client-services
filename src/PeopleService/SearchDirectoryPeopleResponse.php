@@ -21,18 +21,26 @@ class SearchDirectoryPeopleResponse extends \Google\Collection
 {
   protected $collection_key = 'people';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $peopleType = Person::class;
   protected $peopleDataType = 'array';
   /**
+   * The total number of items in the list without pagination.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class SearchDirectoryPeopleResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Person[]
+   * The list of people in the domain directory that match the query.
+   *
+   * @param Person[] $people
    */
   public function setPeople($people)
   {
@@ -60,7 +70,9 @@ class SearchDirectoryPeopleResponse extends \Google\Collection
     return $this->people;
   }
   /**
-   * @param int
+   * The total number of items in the list without pagination.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

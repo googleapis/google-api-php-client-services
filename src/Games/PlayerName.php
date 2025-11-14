@@ -20,16 +20,25 @@ namespace Google\Service\Games;
 class PlayerName extends \Google\Model
 {
   /**
+   * The family name of this player. In some places, this is known as the last
+   * name.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * The given name of this player. In some places, this is known as the first
+   * name.
+   *
    * @var string
    */
   public $givenName;
 
   /**
-   * @param string
+   * The family name of this player. In some places, this is known as the last
+   * name.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -43,7 +52,10 @@ class PlayerName extends \Google\Model
     return $this->familyName;
   }
   /**
-   * @param string
+   * The given name of this player. In some places, this is known as the first
+   * name.
+   *
+   * @param string $givenName
    */
   public function setGivenName($givenName)
   {

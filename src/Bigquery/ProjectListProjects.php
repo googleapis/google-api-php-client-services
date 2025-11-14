@@ -20,18 +20,27 @@ namespace Google\Service\Bigquery;
 class ProjectListProjects extends \Google\Model
 {
   /**
+   * A descriptive name for this project. A wrapper is used here because
+   * friendlyName can be set to the empty string.
+   *
    * @var string
    */
   public $friendlyName;
   /**
+   * An opaque ID of this project.
+   *
    * @var string
    */
   public $id;
   /**
+   * The resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The numeric ID of this project.
+   *
    * @var string
    */
   public $numericId;
@@ -39,7 +48,10 @@ class ProjectListProjects extends \Google\Model
   protected $projectReferenceDataType = '';
 
   /**
-   * @param string
+   * A descriptive name for this project. A wrapper is used here because
+   * friendlyName can be set to the empty string.
+   *
+   * @param string $friendlyName
    */
   public function setFriendlyName($friendlyName)
   {
@@ -53,7 +65,9 @@ class ProjectListProjects extends \Google\Model
     return $this->friendlyName;
   }
   /**
-   * @param string
+   * An opaque ID of this project.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -67,7 +81,9 @@ class ProjectListProjects extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -81,7 +97,9 @@ class ProjectListProjects extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The numeric ID of this project.
+   *
+   * @param string $numericId
    */
   public function setNumericId($numericId)
   {
@@ -95,7 +113,9 @@ class ProjectListProjects extends \Google\Model
     return $this->numericId;
   }
   /**
-   * @param ProjectReference
+   * A unique reference to this project.
+   *
+   * @param ProjectReference $projectReference
    */
   public function setProjectReference(ProjectReference $projectReference)
   {

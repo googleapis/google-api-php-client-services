@@ -22,24 +22,35 @@ class GoogleCloudDocumentaiV1ProcessOptionsLayoutConfig extends \Google\Model
   protected $chunkingConfigType = GoogleCloudDocumentaiV1ProcessOptionsLayoutConfigChunkingConfig::class;
   protected $chunkingConfigDataType = '';
   /**
+   * Optional. Whether to include image annotations in layout parser response.
+   *
    * @var bool
    */
   public $enableImageAnnotation;
   /**
+   * Optional. Whether to include table annotations in layout parser response.
+   *
    * @var bool
    */
   public $enableTableAnnotation;
   /**
+   * Optional. Whether to include bounding boxes in layout parser processor
+   * response.
+   *
    * @var bool
    */
   public $returnBoundingBoxes;
   /**
+   * Optional. Whether to include images in layout parser processor response.
+   *
    * @var bool
    */
   public $returnImages;
 
   /**
-   * @param GoogleCloudDocumentaiV1ProcessOptionsLayoutConfigChunkingConfig
+   * Optional. Config for chunking in layout parser processor.
+   *
+   * @param GoogleCloudDocumentaiV1ProcessOptionsLayoutConfigChunkingConfig $chunkingConfig
    */
   public function setChunkingConfig(GoogleCloudDocumentaiV1ProcessOptionsLayoutConfigChunkingConfig $chunkingConfig)
   {
@@ -53,7 +64,9 @@ class GoogleCloudDocumentaiV1ProcessOptionsLayoutConfig extends \Google\Model
     return $this->chunkingConfig;
   }
   /**
-   * @param bool
+   * Optional. Whether to include image annotations in layout parser response.
+   *
+   * @param bool $enableImageAnnotation
    */
   public function setEnableImageAnnotation($enableImageAnnotation)
   {
@@ -67,7 +80,9 @@ class GoogleCloudDocumentaiV1ProcessOptionsLayoutConfig extends \Google\Model
     return $this->enableImageAnnotation;
   }
   /**
-   * @param bool
+   * Optional. Whether to include table annotations in layout parser response.
+   *
+   * @param bool $enableTableAnnotation
    */
   public function setEnableTableAnnotation($enableTableAnnotation)
   {
@@ -81,7 +96,10 @@ class GoogleCloudDocumentaiV1ProcessOptionsLayoutConfig extends \Google\Model
     return $this->enableTableAnnotation;
   }
   /**
-   * @param bool
+   * Optional. Whether to include bounding boxes in layout parser processor
+   * response.
+   *
+   * @param bool $returnBoundingBoxes
    */
   public function setReturnBoundingBoxes($returnBoundingBoxes)
   {
@@ -95,7 +113,9 @@ class GoogleCloudDocumentaiV1ProcessOptionsLayoutConfig extends \Google\Model
     return $this->returnBoundingBoxes;
   }
   /**
-   * @param bool
+   * Optional. Whether to include images in layout parser processor response.
+   *
+   * @param bool $returnImages
    */
   public function setReturnImages($returnImages)
   {

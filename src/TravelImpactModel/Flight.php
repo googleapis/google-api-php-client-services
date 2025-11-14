@@ -22,24 +22,35 @@ class Flight extends \Google\Model
   protected $departureDateType = Date::class;
   protected $departureDateDataType = '';
   /**
+   * Required. IATA airport code for flight destination, e.g. "JFK".
+   *
    * @var string
    */
   public $destination;
   /**
+   * Required. Flight number, e.g. 324.
+   *
    * @var int
    */
   public $flightNumber;
   /**
+   * Required. IATA carrier code, e.g. "AA".
+   *
    * @var string
    */
   public $operatingCarrierCode;
   /**
+   * Required. IATA airport code for flight origin, e.g. "LHR".
+   *
    * @var string
    */
   public $origin;
 
   /**
-   * @param Date
+   * Required. Date of the flight in the time zone of the origin airport. Must
+   * be a date in the present or future.
+   *
+   * @param Date $departureDate
    */
   public function setDepartureDate(Date $departureDate)
   {
@@ -53,7 +64,9 @@ class Flight extends \Google\Model
     return $this->departureDate;
   }
   /**
-   * @param string
+   * Required. IATA airport code for flight destination, e.g. "JFK".
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -67,7 +80,9 @@ class Flight extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param int
+   * Required. Flight number, e.g. 324.
+   *
+   * @param int $flightNumber
    */
   public function setFlightNumber($flightNumber)
   {
@@ -81,7 +96,9 @@ class Flight extends \Google\Model
     return $this->flightNumber;
   }
   /**
-   * @param string
+   * Required. IATA carrier code, e.g. "AA".
+   *
+   * @param string $operatingCarrierCode
    */
   public function setOperatingCarrierCode($operatingCarrierCode)
   {
@@ -95,7 +112,9 @@ class Flight extends \Google\Model
     return $this->operatingCarrierCode;
   }
   /**
-   * @param string
+   * Required. IATA airport code for flight origin, e.g. "LHR".
+   *
+   * @param string $origin
    */
   public function setOrigin($origin)
   {

@@ -20,30 +20,52 @@ namespace Google\Service\Container;
 class GPUSharingConfig extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const GPU_SHARING_STRATEGY_GPU_SHARING_STRATEGY_UNSPECIFIED = 'GPU_SHARING_STRATEGY_UNSPECIFIED';
+  /**
+   * GPUs are time-shared between containers.
+   */
+  public const GPU_SHARING_STRATEGY_TIME_SHARING = 'TIME_SHARING';
+  /**
+   * GPUs are shared between containers with NVIDIA MPS.
+   */
+  public const GPU_SHARING_STRATEGY_MPS = 'MPS';
+  /**
+   * The type of GPU sharing strategy to enable on the GPU node.
+   *
    * @var string
    */
   public $gpuSharingStrategy;
   /**
+   * The max number of containers that can share a physical GPU.
+   *
    * @var string
    */
   public $maxSharedClientsPerGpu;
 
   /**
-   * @param string
+   * The type of GPU sharing strategy to enable on the GPU node.
+   *
+   * Accepted values: GPU_SHARING_STRATEGY_UNSPECIFIED, TIME_SHARING, MPS
+   *
+   * @param self::GPU_SHARING_STRATEGY_* $gpuSharingStrategy
    */
   public function setGpuSharingStrategy($gpuSharingStrategy)
   {
     $this->gpuSharingStrategy = $gpuSharingStrategy;
   }
   /**
-   * @return string
+   * @return self::GPU_SHARING_STRATEGY_*
    */
   public function getGpuSharingStrategy()
   {
     return $this->gpuSharingStrategy;
   }
   /**
-   * @param string
+   * The max number of containers that can share a physical GPU.
+   *
+   * @param string $maxSharedClientsPerGpu
    */
   public function setMaxSharedClientsPerGpu($maxSharedClientsPerGpu)
   {

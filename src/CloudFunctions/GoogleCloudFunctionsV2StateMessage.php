@@ -20,20 +20,44 @@ namespace Google\Service\CloudFunctions;
 class GoogleCloudFunctionsV2StateMessage extends \Google\Model
 {
   /**
+   * Not specified. Invalid severity.
+   */
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * ERROR-level severity.
+   */
+  public const SEVERITY_ERROR = 'ERROR';
+  /**
+   * WARNING-level severity.
+   */
+  public const SEVERITY_WARNING = 'WARNING';
+  /**
+   * INFO-level severity.
+   */
+  public const SEVERITY_INFO = 'INFO';
+  /**
+   * The message.
+   *
    * @var string
    */
   public $message;
   /**
+   * Severity of the state message.
+   *
    * @var string
    */
   public $severity;
   /**
+   * One-word CamelCase type of the state message.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -47,21 +71,27 @@ class GoogleCloudFunctionsV2StateMessage extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Severity of the state message.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, ERROR, WARNING, INFO
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
     return $this->severity;
   }
   /**
-   * @param string
+   * One-word CamelCase type of the state message.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

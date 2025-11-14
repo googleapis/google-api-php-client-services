@@ -21,10 +21,20 @@ class RevisionList extends \Google\Collection
 {
   protected $collection_key = 'revisions';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#revisionList"`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The page token for the next page of revisions. This will be absent if the
+   * end of the revisions list has been reached. If the token is rejected for
+   * any reason, it should be discarded, and pagination should be restarted from
+   * the first page of results. The page token is typically valid for several
+   * hours. However, if new items are added or removed, your expected results
+   * might differ.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +42,10 @@ class RevisionList extends \Google\Collection
   protected $revisionsDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#revisionList"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +59,14 @@ class RevisionList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The page token for the next page of revisions. This will be absent if the
+   * end of the revisions list has been reached. If the token is rejected for
+   * any reason, it should be discarded, and pagination should be restarted from
+   * the first page of results. The page token is typically valid for several
+   * hours. However, if new items are added or removed, your expected results
+   * might differ.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +80,10 @@ class RevisionList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Revision[]
+   * The list of revisions. If nextPageToken is populated, then this list may be
+   * incomplete and an additional page of results should be fetched.
+   *
+   * @param Revision[] $revisions
    */
   public function setRevisions($revisions)
   {

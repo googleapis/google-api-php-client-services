@@ -22,12 +22,18 @@ class CreateContactGroupRequest extends \Google\Model
   protected $contactGroupType = ContactGroup::class;
   protected $contactGroupDataType = '';
   /**
+   * Optional. A field mask to restrict which fields on the group are returned.
+   * Defaults to `metadata`, `groupType`, and `name` if not set or set to empty.
+   * Valid fields are: * clientData * groupType * metadata * name
+   *
    * @var string
    */
   public $readGroupFields;
 
   /**
-   * @param ContactGroup
+   * Required. The contact group to create.
+   *
+   * @param ContactGroup $contactGroup
    */
   public function setContactGroup(ContactGroup $contactGroup)
   {
@@ -41,7 +47,11 @@ class CreateContactGroupRequest extends \Google\Model
     return $this->contactGroup;
   }
   /**
-   * @param string
+   * Optional. A field mask to restrict which fields on the group are returned.
+   * Defaults to `metadata`, `groupType`, and `name` if not set or set to empty.
+   * Valid fields are: * clientData * groupType * metadata * name
+   *
+   * @param string $readGroupFields
    */
   public function setReadGroupFields($readGroupFields)
   {

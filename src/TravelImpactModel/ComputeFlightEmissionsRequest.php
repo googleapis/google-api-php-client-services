@@ -24,7 +24,9 @@ class ComputeFlightEmissionsRequest extends \Google\Collection
   protected $flightsDataType = 'array';
 
   /**
-   * @param Flight[]
+   * Required. Direct flights to return emission estimates for.
+   *
+   * @param Flight[] $flights
    */
   public function setFlights($flights)
   {

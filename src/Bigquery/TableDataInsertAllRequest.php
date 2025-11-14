@@ -21,30 +21,57 @@ class TableDataInsertAllRequest extends \Google\Collection
 {
   protected $collection_key = 'rows';
   /**
+   * Optional. Accept rows that contain values that do not match the schema. The
+   * unknown values are ignored. Default is false, which treats unknown values
+   * as errors.
+   *
    * @var bool
    */
   public $ignoreUnknownValues;
   /**
+   * Optional. The resource type of the response. The value is not checked at
+   * the backend. Historically, it has been set to
+   * "bigquery#tableDataInsertAllRequest" but you are not required to set it.
+   *
    * @var string
    */
   public $kind;
   protected $rowsType = TableDataInsertAllRequestRows::class;
   protected $rowsDataType = 'array';
   /**
+   * Optional. Insert all valid rows of a request, even if invalid rows exist.
+   * The default value is false, which causes the entire request to fail if any
+   * invalid rows exist.
+   *
    * @var bool
    */
   public $skipInvalidRows;
   /**
+   * Optional. If specified, treats the destination table as a base template,
+   * and inserts the rows into an instance table named
+   * "{destination}{templateSuffix}". BigQuery will manage creation of the
+   * instance table, using the schema of the base template table. See
+   * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-
+   * tables for considerations when working with templates tables.
+   *
    * @var string
    */
   public $templateSuffix;
   /**
+   * Optional. Unique request trace id. Used for debugging purposes only. It is
+   * case-sensitive, limited to up to 36 ASCII characters. A UUID is
+   * recommended.
+   *
    * @var string
    */
   public $traceId;
 
   /**
-   * @param bool
+   * Optional. Accept rows that contain values that do not match the schema. The
+   * unknown values are ignored. Default is false, which treats unknown values
+   * as errors.
+   *
+   * @param bool $ignoreUnknownValues
    */
   public function setIgnoreUnknownValues($ignoreUnknownValues)
   {
@@ -58,7 +85,11 @@ class TableDataInsertAllRequest extends \Google\Collection
     return $this->ignoreUnknownValues;
   }
   /**
-   * @param string
+   * Optional. The resource type of the response. The value is not checked at
+   * the backend. Historically, it has been set to
+   * "bigquery#tableDataInsertAllRequest" but you are not required to set it.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -72,7 +103,7 @@ class TableDataInsertAllRequest extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param TableDataInsertAllRequestRows[]
+   * @param TableDataInsertAllRequestRows[] $rows
    */
   public function setRows($rows)
   {
@@ -86,7 +117,11 @@ class TableDataInsertAllRequest extends \Google\Collection
     return $this->rows;
   }
   /**
-   * @param bool
+   * Optional. Insert all valid rows of a request, even if invalid rows exist.
+   * The default value is false, which causes the entire request to fail if any
+   * invalid rows exist.
+   *
+   * @param bool $skipInvalidRows
    */
   public function setSkipInvalidRows($skipInvalidRows)
   {
@@ -100,7 +135,14 @@ class TableDataInsertAllRequest extends \Google\Collection
     return $this->skipInvalidRows;
   }
   /**
-   * @param string
+   * Optional. If specified, treats the destination table as a base template,
+   * and inserts the rows into an instance table named
+   * "{destination}{templateSuffix}". BigQuery will manage creation of the
+   * instance table, using the schema of the base template table. See
+   * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-
+   * tables for considerations when working with templates tables.
+   *
+   * @param string $templateSuffix
    */
   public function setTemplateSuffix($templateSuffix)
   {
@@ -114,7 +156,11 @@ class TableDataInsertAllRequest extends \Google\Collection
     return $this->templateSuffix;
   }
   /**
-   * @param string
+   * Optional. Unique request trace id. Used for debugging purposes only. It is
+   * case-sensitive, limited to up to 36 ASCII characters. A UUID is
+   * recommended.
+   *
+   * @param string $traceId
    */
   public function setTraceId($traceId)
   {

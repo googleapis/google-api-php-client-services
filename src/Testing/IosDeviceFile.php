@@ -20,18 +20,26 @@ namespace Google\Service\Testing;
 class IosDeviceFile extends \Google\Model
 {
   /**
+   * The bundle id of the app where this file lives. iOS apps sandbox their own
+   * filesystem, so app files must specify which app installed on the device.
+   *
    * @var string
    */
   public $bundleId;
   protected $contentType = FileReference::class;
   protected $contentDataType = '';
   /**
+   * Location of the file on the device, inside the app's sandboxed filesystem
+   *
    * @var string
    */
   public $devicePath;
 
   /**
-   * @param string
+   * The bundle id of the app where this file lives. iOS apps sandbox their own
+   * filesystem, so app files must specify which app installed on the device.
+   *
+   * @param string $bundleId
    */
   public function setBundleId($bundleId)
   {
@@ -45,7 +53,9 @@ class IosDeviceFile extends \Google\Model
     return $this->bundleId;
   }
   /**
-   * @param FileReference
+   * The source file
+   *
+   * @param FileReference $content
    */
   public function setContent(FileReference $content)
   {
@@ -59,7 +69,9 @@ class IosDeviceFile extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Location of the file on the device, inside the app's sandboxed filesystem
+   *
+   * @param string $devicePath
    */
   public function setDevicePath($devicePath)
   {

@@ -19,17 +19,37 @@ namespace Google\Service\Docs;
 
 class InsertSectionBreakRequest extends \Google\Model
 {
+  /**
+   * The section type is unspecified.
+   */
+  public const SECTION_TYPE_SECTION_TYPE_UNSPECIFIED = 'SECTION_TYPE_UNSPECIFIED';
+  /**
+   * The section starts immediately after the last paragraph of the previous
+   * section.
+   */
+  public const SECTION_TYPE_CONTINUOUS = 'CONTINUOUS';
+  /**
+   * The section starts on the next page.
+   */
+  public const SECTION_TYPE_NEXT_PAGE = 'NEXT_PAGE';
   protected $endOfSegmentLocationType = EndOfSegmentLocation::class;
   protected $endOfSegmentLocationDataType = '';
   protected $locationType = Location::class;
   protected $locationDataType = '';
   /**
+   * The type of section to insert.
+   *
    * @var string
    */
   public $sectionType;
 
   /**
-   * @param EndOfSegmentLocation
+   * Inserts a newline and a section break at the end of the document body.
+   * Section breaks cannot be inserted inside a footnote, header or footer.
+   * Because section breaks can only be inserted inside the body, the segment ID
+   * field must be empty.
+   *
+   * @param EndOfSegmentLocation $endOfSegmentLocation
    */
   public function setEndOfSegmentLocation(EndOfSegmentLocation $endOfSegmentLocation)
   {
@@ -43,7 +63,15 @@ class InsertSectionBreakRequest extends \Google\Model
     return $this->endOfSegmentLocation;
   }
   /**
-   * @param Location
+   * Inserts a newline and a section break at a specific index in the document.
+   * The section break must be inserted inside the bounds of an existing
+   * Paragraph. For instance, it cannot be inserted at a table's start index
+   * (i.e. between the table and its preceding paragraph). Section breaks cannot
+   * be inserted inside a table, equation, footnote, header, or footer. Since
+   * section breaks can only be inserted inside the body, the segment ID field
+   * must be empty.
+   *
+   * @param Location $location
    */
   public function setLocation(Location $location)
   {
@@ -57,14 +85,18 @@ class InsertSectionBreakRequest extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The type of section to insert.
+   *
+   * Accepted values: SECTION_TYPE_UNSPECIFIED, CONTINUOUS, NEXT_PAGE
+   *
+   * @param self::SECTION_TYPE_* $sectionType
    */
   public function setSectionType($sectionType)
   {
     $this->sectionType = $sectionType;
   }
   /**
-   * @return string
+   * @return self::SECTION_TYPE_*
    */
   public function getSectionType()
   {

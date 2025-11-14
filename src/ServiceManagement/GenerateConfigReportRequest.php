@@ -20,16 +20,31 @@ namespace Google\Service\ServiceManagement;
 class GenerateConfigReportRequest extends \Google\Model
 {
   /**
+   * Required. Service configuration for which we want to generate the report.
+   * For this version of API, the supported types are
+   * google.api.servicemanagement.v1.ConfigRef,
+   * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
+   *
    * @var array[]
    */
   public $newConfig;
   /**
+   * Optional. Service configuration against which the comparison will be done.
+   * For this version of API, the supported types are
+   * google.api.servicemanagement.v1.ConfigRef,
+   * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
+   *
    * @var array[]
    */
   public $oldConfig;
 
   /**
-   * @param array[]
+   * Required. Service configuration for which we want to generate the report.
+   * For this version of API, the supported types are
+   * google.api.servicemanagement.v1.ConfigRef,
+   * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
+   *
+   * @param array[] $newConfig
    */
   public function setNewConfig($newConfig)
   {
@@ -43,7 +58,12 @@ class GenerateConfigReportRequest extends \Google\Model
     return $this->newConfig;
   }
   /**
-   * @param array[]
+   * Optional. Service configuration against which the comparison will be done.
+   * For this version of API, the supported types are
+   * google.api.servicemanagement.v1.ConfigRef,
+   * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
+   *
+   * @param array[] $oldConfig
    */
   public function setOldConfig($oldConfig)
   {

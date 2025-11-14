@@ -21,18 +21,26 @@ class ListSnapshotsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * The token you can use to retrieve the next page of results. Not returned if
+   * there are no more results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $snapshotsType = Snapshot::class;
   protected $snapshotsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * The token you can use to retrieve the next page of results. Not returned if
+   * there are no more results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListSnapshotsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Snapshot[]
+   * A list of snapshots in the project for the specified volume.
+   *
+   * @param Snapshot[] $snapshots
    */
   public function setSnapshots($snapshots)
   {
@@ -60,7 +70,9 @@ class ListSnapshotsResponse extends \Google\Collection
     return $this->snapshots;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Monitoring;
 class Telemetry extends \Google\Model
 {
   /**
+   * The full name of the resource that defines this service. Formatted as
+   * described in https://cloud.google.com/apis/design/resource_names.
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * The full name of the resource that defines this service. Formatted as
+   * described in https://cloud.google.com/apis/design/resource_names.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

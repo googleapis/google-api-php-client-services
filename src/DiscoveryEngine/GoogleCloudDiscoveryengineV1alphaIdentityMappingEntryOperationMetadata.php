@@ -20,20 +20,28 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaIdentityMappingEntryOperationMetadata extends \Google\Model
 {
   /**
+   * The number of IdentityMappingEntries that failed to be processed.
+   *
    * @var string
    */
   public $failureCount;
   /**
+   * The number of IdentityMappingEntries that were successfully processed.
+   *
    * @var string
    */
   public $successCount;
   /**
+   * The total number of IdentityMappingEntries that were processed.
+   *
    * @var string
    */
   public $totalCount;
 
   /**
-   * @param string
+   * The number of IdentityMappingEntries that failed to be processed.
+   *
+   * @param string $failureCount
    */
   public function setFailureCount($failureCount)
   {
@@ -47,7 +55,9 @@ class GoogleCloudDiscoveryengineV1alphaIdentityMappingEntryOperationMetadata ext
     return $this->failureCount;
   }
   /**
-   * @param string
+   * The number of IdentityMappingEntries that were successfully processed.
+   *
+   * @param string $successCount
    */
   public function setSuccessCount($successCount)
   {
@@ -61,7 +71,9 @@ class GoogleCloudDiscoveryengineV1alphaIdentityMappingEntryOperationMetadata ext
     return $this->successCount;
   }
   /**
-   * @param string
+   * The total number of IdentityMappingEntries that were processed.
+   *
+   * @param string $totalCount
    */
   public function setTotalCount($totalCount)
   {

@@ -24,7 +24,9 @@ class GoogleCloudDocumentaiV1DocumentPageTableTableRow extends \Google\Collectio
   protected $cellsDataType = 'array';
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageTableTableCell[]
+   * Cells that make up this row.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageTableTableCell[] $cells
    */
   public function setCells($cells)
   {

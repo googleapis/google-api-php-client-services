@@ -21,44 +21,79 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
 {
   protected $collection_key = 'contributorEmails';
   /**
+   * Optional. A human-readable description for AnnotatedDataset. The
+   * description can be up to 10000 characters long.
+   *
    * @var string
    */
   public $annotatedDatasetDescription;
   /**
+   * Required. A human-readable name for AnnotatedDataset defined by users.
+   * Maximum of 64 characters .
+   *
    * @var string
    */
   public $annotatedDatasetDisplayName;
   /**
+   * Optional. If you want your own labeling contributors to manage and work on
+   * this labeling request, you can set these contributors here. We will give
+   * them access to the question types in crowdcompute. Note that these emails
+   * must be registered in crowdcompute worker UI: https://crowd-
+   * compute.appspot.com/
+   *
    * @var string[]
    */
   public $contributorEmails;
   /**
+   * Required. Instruction resource name.
+   *
    * @var string
    */
   public $instruction;
   /**
+   * Optional. A human-readable label used to logically group labeling tasks.
+   * This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
+   *
    * @var string
    */
   public $labelGroup;
   /**
+   * Optional. The Language of this question, as a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set
+   * this when task is language related. For example, French text
+   * classification.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Optional. Maximum duration for contributors to answer a question. Maximum
+   * is 3600 seconds. Default is 3600 seconds.
+   *
    * @var string
    */
   public $questionDuration;
   /**
+   * Optional. Replication of questions. Each question will be sent to up to
+   * this number of contributors to label. Aggregated answers will be returned.
+   * Default is set to 1. For image related labeling, valid values are 1, 3, 5.
+   *
    * @var int
    */
   public $replicaCount;
   /**
+   * Email of the user who started the labeling task and should be notified by
+   * email. If empty no notification will be sent.
+   *
    * @var string
    */
   public $userEmailAddress;
 
   /**
-   * @param string
+   * Optional. A human-readable description for AnnotatedDataset. The
+   * description can be up to 10000 characters long.
+   *
+   * @param string $annotatedDatasetDescription
    */
   public function setAnnotatedDatasetDescription($annotatedDatasetDescription)
   {
@@ -72,7 +107,10 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->annotatedDatasetDescription;
   }
   /**
-   * @param string
+   * Required. A human-readable name for AnnotatedDataset defined by users.
+   * Maximum of 64 characters .
+   *
+   * @param string $annotatedDatasetDisplayName
    */
   public function setAnnotatedDatasetDisplayName($annotatedDatasetDisplayName)
   {
@@ -86,7 +124,13 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->annotatedDatasetDisplayName;
   }
   /**
-   * @param string[]
+   * Optional. If you want your own labeling contributors to manage and work on
+   * this labeling request, you can set these contributors here. We will give
+   * them access to the question types in crowdcompute. Note that these emails
+   * must be registered in crowdcompute worker UI: https://crowd-
+   * compute.appspot.com/
+   *
+   * @param string[] $contributorEmails
    */
   public function setContributorEmails($contributorEmails)
   {
@@ -100,7 +144,9 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->contributorEmails;
   }
   /**
-   * @param string
+   * Required. Instruction resource name.
+   *
+   * @param string $instruction
    */
   public function setInstruction($instruction)
   {
@@ -114,7 +160,10 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->instruction;
   }
   /**
-   * @param string
+   * Optional. A human-readable label used to logically group labeling tasks.
+   * This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
+   *
+   * @param string $labelGroup
    */
   public function setLabelGroup($labelGroup)
   {
@@ -128,7 +177,12 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->labelGroup;
   }
   /**
-   * @param string
+   * Optional. The Language of this question, as a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set
+   * this when task is language related. For example, French text
+   * classification.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -142,7 +196,10 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Optional. Maximum duration for contributors to answer a question. Maximum
+   * is 3600 seconds. Default is 3600 seconds.
+   *
+   * @param string $questionDuration
    */
   public function setQuestionDuration($questionDuration)
   {
@@ -156,7 +213,11 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->questionDuration;
   }
   /**
-   * @param int
+   * Optional. Replication of questions. Each question will be sent to up to
+   * this number of contributors to label. Aggregated answers will be returned.
+   * Default is set to 1. For image related labeling, valid values are 1, 3, 5.
+   *
+   * @param int $replicaCount
    */
   public function setReplicaCount($replicaCount)
   {
@@ -170,7 +231,10 @@ class GoogleCloudDatalabelingV1p1alpha1HumanAnnotationConfig extends \Google\Col
     return $this->replicaCount;
   }
   /**
-   * @param string
+   * Email of the user who started the labeling task and should be notified by
+   * email. If empty no notification will be sent.
+   *
+   * @param string $userEmailAddress
    */
   public function setUserEmailAddress($userEmailAddress)
   {

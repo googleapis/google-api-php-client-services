@@ -20,12 +20,26 @@ namespace Google\Service\CloudSearch;
 class FacetBucket extends \Google\Model
 {
   /**
+   * Number of results that match the bucket value. Counts are only returned for
+   * searches when count accuracy is ensured. Cloud Search does not guarantee
+   * facet counts for any query and facet counts might be present only
+   * intermittently, even for identical queries. Do not build dependencies on
+   * facet count existence; instead use facet ount percentages which are always
+   * returned.
+   *
    * @var int
    */
   public $count;
   protected $filterType = Filter::class;
   protected $filterDataType = '';
   /**
+   * Percent of results that match the bucket value. The returned value is
+   * between (0-100], and is rounded down to an integer if fractional. If the
+   * value is not explicitly returned, it represents a percentage value that
+   * rounds to 0. Percentages are returned for all searches, but are an
+   * estimate. Because percentages are always returned, you should render
+   * percentages instead of counts.
+   *
    * @var int
    */
   public $percentage;
@@ -33,7 +47,14 @@ class FacetBucket extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param int
+   * Number of results that match the bucket value. Counts are only returned for
+   * searches when count accuracy is ensured. Cloud Search does not guarantee
+   * facet counts for any query and facet counts might be present only
+   * intermittently, even for identical queries. Do not build dependencies on
+   * facet count existence; instead use facet ount percentages which are always
+   * returned.
+   *
+   * @param int $count
    */
   public function setCount($count)
   {
@@ -47,7 +68,10 @@ class FacetBucket extends \Google\Model
     return $this->count;
   }
   /**
-   * @param Filter
+   * Filter to be passed in the search request if the corresponding bucket is
+   * selected.
+   *
+   * @param Filter $filter
    */
   public function setFilter(Filter $filter)
   {
@@ -61,7 +85,14 @@ class FacetBucket extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param int
+   * Percent of results that match the bucket value. The returned value is
+   * between (0-100], and is rounded down to an integer if fractional. If the
+   * value is not explicitly returned, it represents a percentage value that
+   * rounds to 0. Percentages are returned for all searches, but are an
+   * estimate. Because percentages are always returned, you should render
+   * percentages instead of counts.
+   *
+   * @param int $percentage
    */
   public function setPercentage($percentage)
   {
@@ -75,7 +106,7 @@ class FacetBucket extends \Google\Model
     return $this->percentage;
   }
   /**
-   * @param Value
+   * @param Value $value
    */
   public function setValue(Value $value)
   {

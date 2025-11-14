@@ -21,26 +21,37 @@ class ProjectList extends \Google\Collection
 {
   protected $collection_key = 'projects';
   /**
+   * A hash of the page of results.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The resource type of the response.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Use this token to request the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $projectsType = ProjectListProjects::class;
   protected $projectsDataType = 'array';
   /**
+   * The total number of projects in the page. A wrapper is used here because
+   * the field should still be in the response when the value is 0.
+   *
    * @var int
    */
   public $totalItems;
 
   /**
-   * @param string
+   * A hash of the page of results.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -54,7 +65,9 @@ class ProjectList extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * The resource type of the response.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -68,7 +81,9 @@ class ProjectList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Use this token to request the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -82,7 +97,9 @@ class ProjectList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ProjectListProjects[]
+   * Projects to which the user has at least READ access.
+   *
+   * @param ProjectListProjects[] $projects
    */
   public function setProjects($projects)
   {
@@ -96,7 +113,10 @@ class ProjectList extends \Google\Collection
     return $this->projects;
   }
   /**
-   * @param int
+   * The total number of projects in the page. A wrapper is used here because
+   * the field should still be in the response when the value is 0.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {

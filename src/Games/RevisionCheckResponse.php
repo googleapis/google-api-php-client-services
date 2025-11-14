@@ -20,20 +20,44 @@ namespace Google\Service\Games;
 class RevisionCheckResponse extends \Google\Model
 {
   /**
+   * The revision being used is current.
+   */
+  public const REVISION_STATUS_OK = 'OK';
+  /**
+   * There is currently a newer version available, but the revision being used
+   * still works.
+   */
+  public const REVISION_STATUS_DEPRECATED = 'DEPRECATED';
+  /**
+   * The revision being used is not supported in any released version.
+   */
+  public const REVISION_STATUS_INVALID = 'INVALID';
+  /**
+   * The version of the API this client revision should use when calling API
+   * methods.
+   *
    * @var string
    */
   public $apiVersion;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#revisionCheckResponse`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The result of the revision check.
+   *
    * @var string
    */
   public $revisionStatus;
 
   /**
-   * @param string
+   * The version of the API this client revision should use when calling API
+   * methods.
+   *
+   * @param string $apiVersion
    */
   public function setApiVersion($apiVersion)
   {
@@ -47,7 +71,10 @@ class RevisionCheckResponse extends \Google\Model
     return $this->apiVersion;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#revisionCheckResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,14 +88,18 @@ class RevisionCheckResponse extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The result of the revision check.
+   *
+   * Accepted values: OK, DEPRECATED, INVALID
+   *
+   * @param self::REVISION_STATUS_* $revisionStatus
    */
   public function setRevisionStatus($revisionStatus)
   {
     $this->revisionStatus = $revisionStatus;
   }
   /**
-   * @return string
+   * @return self::REVISION_STATUS_*
    */
   public function getRevisionStatus()
   {

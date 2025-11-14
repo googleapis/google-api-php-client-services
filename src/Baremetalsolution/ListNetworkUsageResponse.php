@@ -24,7 +24,9 @@ class ListNetworkUsageResponse extends \Google\Collection
   protected $networksDataType = 'array';
 
   /**
-   * @param NetworkUsage[]
+   * Networks with IPs.
+   *
+   * @param NetworkUsage[] $networks
    */
   public function setNetworks($networks)
   {

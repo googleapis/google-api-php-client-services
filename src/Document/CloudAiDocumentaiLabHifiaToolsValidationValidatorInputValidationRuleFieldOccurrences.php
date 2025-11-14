@@ -26,12 +26,15 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldO
    */
   public $maxOccurrences;
   /**
+   * Min and max occurrences of the field. If not set, there is limit set. The
+   * defined interval is a closed-closed interval, i.e. [min, max].
+   *
    * @var string
    */
   public $minOccurrences;
 
   /**
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField $field
    */
   public function setField(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField $field)
   {
@@ -45,7 +48,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldO
     return $this->field;
   }
   /**
-   * @param string
+   * @param string $maxOccurrences
    */
   public function setMaxOccurrences($maxOccurrences)
   {
@@ -59,7 +62,10 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldO
     return $this->maxOccurrences;
   }
   /**
-   * @param string
+   * Min and max occurrences of the field. If not set, there is limit set. The
+   * defined interval is a closed-closed interval, i.e. [min, max].
+   *
+   * @param string $minOccurrences
    */
   public function setMinOccurrences($minOccurrences)
   {

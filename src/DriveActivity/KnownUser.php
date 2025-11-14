@@ -20,16 +20,24 @@ namespace Google\Service\DriveActivity;
 class KnownUser extends \Google\Model
 {
   /**
+   * True if this is the user making the request.
+   *
    * @var bool
    */
   public $isCurrentUser;
   /**
+   * The identifier for this user that can be used with the People API to get
+   * more information. The format is `people/ACCOUNT_ID`. See
+   * https://developers.google.com/people/.
+   *
    * @var string
    */
   public $personName;
 
   /**
-   * @param bool
+   * True if this is the user making the request.
+   *
+   * @param bool $isCurrentUser
    */
   public function setIsCurrentUser($isCurrentUser)
   {
@@ -43,7 +51,11 @@ class KnownUser extends \Google\Model
     return $this->isCurrentUser;
   }
   /**
-   * @param string
+   * The identifier for this user that can be used with the People API to get
+   * more information. The format is `people/ACCOUNT_ID`. See
+   * https://developers.google.com/people/.
+   *
+   * @param string $personName
    */
   public function setPersonName($personName)
   {

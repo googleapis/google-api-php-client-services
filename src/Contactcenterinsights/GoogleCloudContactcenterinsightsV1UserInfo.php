@@ -20,12 +20,16 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1UserInfo extends \Google\Model
 {
   /**
+   * The user's username.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * The user's username.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

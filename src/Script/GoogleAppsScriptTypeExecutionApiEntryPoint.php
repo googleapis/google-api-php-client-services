@@ -23,7 +23,9 @@ class GoogleAppsScriptTypeExecutionApiEntryPoint extends \Google\Model
   protected $entryPointConfigDataType = '';
 
   /**
-   * @param GoogleAppsScriptTypeExecutionApiConfig
+   * The entry point's configuration.
+   *
+   * @param GoogleAppsScriptTypeExecutionApiConfig $entryPointConfig
    */
   public function setEntryPointConfig(GoogleAppsScriptTypeExecutionApiConfig $entryPointConfig)
   {

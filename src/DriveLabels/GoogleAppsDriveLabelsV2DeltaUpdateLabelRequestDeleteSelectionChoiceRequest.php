@@ -20,16 +20,22 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest extends \Google\Model
 {
   /**
+   * Required. The selection field from which a choice will be deleted.
+   *
    * @var string
    */
   public $fieldId;
   /**
+   * Required. Choice to delete.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Required. The selection field from which a choice will be deleted.
+   *
+   * @param string $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -43,7 +49,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest
     return $this->fieldId;
   }
   /**
-   * @param string
+   * Required. Choice to delete.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

@@ -23,12 +23,17 @@ class GoogleFirebaseAppdistroV1ListFeedbackReportsResponse extends \Google\Colle
   protected $feedbackReportsType = GoogleFirebaseAppdistroV1FeedbackReport::class;
   protected $feedbackReportsDataType = 'array';
   /**
+   * A short-lived token, which can be sent as `pageToken` to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleFirebaseAppdistroV1FeedbackReport[]
+   * The feedback reports
+   *
+   * @param GoogleFirebaseAppdistroV1FeedbackReport[] $feedbackReports
    */
   public function setFeedbackReports($feedbackReports)
   {
@@ -42,7 +47,10 @@ class GoogleFirebaseAppdistroV1ListFeedbackReportsResponse extends \Google\Colle
     return $this->feedbackReports;
   }
   /**
-   * @param string
+   * A short-lived token, which can be sent as `pageToken` to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

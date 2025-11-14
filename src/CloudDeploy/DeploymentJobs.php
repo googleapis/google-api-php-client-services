@@ -29,7 +29,9 @@ class DeploymentJobs extends \Google\Model
   protected $verifyJobDataType = '';
 
   /**
-   * @param Job
+   * Output only. The deploy Job. This is the deploy job in the phase.
+   *
+   * @param Job $deployJob
    */
   public function setDeployJob(Job $deployJob)
   {
@@ -43,7 +45,9 @@ class DeploymentJobs extends \Google\Model
     return $this->deployJob;
   }
   /**
-   * @param Job
+   * Output only. The postdeploy Job, which is the last job on the phase.
+   *
+   * @param Job $postdeployJob
    */
   public function setPostdeployJob(Job $postdeployJob)
   {
@@ -57,7 +61,9 @@ class DeploymentJobs extends \Google\Model
     return $this->postdeployJob;
   }
   /**
-   * @param Job
+   * Output only. The predeploy Job, which is the first job on the phase.
+   *
+   * @param Job $predeployJob
    */
   public function setPredeployJob(Job $predeployJob)
   {
@@ -71,7 +77,9 @@ class DeploymentJobs extends \Google\Model
     return $this->predeployJob;
   }
   /**
-   * @param Job
+   * Output only. The verify Job. Runs after a deploy if the deploy succeeds.
+   *
+   * @param Job $verifyJob
    */
   public function setVerifyJob(Job $verifyJob)
   {

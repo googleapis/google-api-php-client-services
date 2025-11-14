@@ -20,12 +20,20 @@ namespace Google\Service\BigQueryConnectionService;
 class SparkHistoryServerConfig extends \Google\Model
 {
   /**
+   * Optional. Resource name of an existing Dataproc Cluster to act as a Spark
+   * History Server for the connection. Example: *
+   * `projects/[project_id]/regions/[region]/clusters/[cluster_name]`
+   *
    * @var string
    */
   public $dataprocCluster;
 
   /**
-   * @param string
+   * Optional. Resource name of an existing Dataproc Cluster to act as a Spark
+   * History Server for the connection. Example: *
+   * `projects/[project_id]/regions/[region]/clusters/[cluster_name]`
+   *
+   * @param string $dataprocCluster
    */
   public function setDataprocCluster($dataprocCluster)
   {

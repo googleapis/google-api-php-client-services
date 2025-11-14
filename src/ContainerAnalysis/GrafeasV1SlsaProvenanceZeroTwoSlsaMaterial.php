@@ -29,7 +29,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial extends \Google\Model
   public $uri;
 
   /**
-   * @param string[]
+   * @param string[] $digest
    */
   public function setDigest($digest)
   {
@@ -43,7 +43,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial extends \Google\Model
     return $this->digest;
   }
   /**
-   * @param string
+   * @param string $uri
    */
   public function setUri($uri)
   {

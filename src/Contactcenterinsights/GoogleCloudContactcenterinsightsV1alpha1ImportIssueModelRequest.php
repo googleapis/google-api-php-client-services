@@ -20,18 +20,28 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelRequest extends \Google\Model
 {
   /**
+   * Optional. If set to true, will create an issue model from the imported file
+   * with randomly generated IDs for the issue model and corresponding issues.
+   * Otherwise, replaces an existing model with the same ID as the file.
+   *
    * @var bool
    */
   public $createNewModel;
   protected $gcsSourceType = GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelRequestGcsSource::class;
   protected $gcsSourceDataType = '';
   /**
+   * Required. The parent resource of the issue model.
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param bool
+   * Optional. If set to true, will create an issue model from the imported file
+   * with randomly generated IDs for the issue model and corresponding issues.
+   * Otherwise, replaces an existing model with the same ID as the file.
+   *
+   * @param bool $createNewModel
    */
   public function setCreateNewModel($createNewModel)
   {
@@ -45,7 +55,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelRequest extends \G
     return $this->createNewModel;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelRequestGcsSource
+   * Google Cloud Storage source message.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelRequestGcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelRequestGcsSource $gcsSource)
   {
@@ -59,7 +71,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelRequest extends \G
     return $this->gcsSource;
   }
   /**
-   * @param string
+   * Required. The parent resource of the issue model.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1DeleteDocumentAction extends \Google\Model
 {
   /**
+   * Boolean field to select between hard vs soft delete options. Set 'true' for
+   * 'hard delete' and 'false' for 'soft delete'.
+   *
    * @var bool
    */
   public $enableHardDelete;
 
   /**
-   * @param bool
+   * Boolean field to select between hard vs soft delete options. Set 'true' for
+   * 'hard delete' and 'false' for 'soft delete'.
+   *
+   * @param bool $enableHardDelete
    */
   public function setEnableHardDelete($enableHardDelete)
   {

@@ -23,7 +23,9 @@ class DatasetOutputConfig extends \Google\Model
   protected $gcsDestinationDataType = '';
 
   /**
-   * @param GcsOutputDestination
+   * Google Cloud Storage destination to write the output.
+   *
+   * @param GcsOutputDestination $gcsDestination
    */
   public function setGcsDestination(GcsOutputDestination $gcsDestination)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1FreeFormSuggestion extends \Google\Model
 {
   /**
+   * Required. Free form suggestion.
+   *
    * @var string
    */
   public $response;
 
   /**
-   * @param string
+   * Required. Free form suggestion.
+   *
+   * @param string $response
    */
   public function setResponse($response)
   {

@@ -23,7 +23,9 @@ class GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionMetadata extends \Goog
   protected $commonMetadataDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   * The common metadata about the operation.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata $commonMetadata
    */
   public function setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata $commonMetadata)
   {

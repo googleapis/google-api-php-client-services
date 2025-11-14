@@ -20,24 +20,42 @@ namespace Google\Service\ServiceControl;
 class Api extends \Google\Model
 {
   /**
+   * The API operation name. For gRPC requests, it is the fully qualified API
+   * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
+   * requests, it is the `operationId`, such as "getPet".
+   *
    * @var string
    */
   public $operation;
   /**
+   * The API protocol used for sending the request, such as "http", "https",
+   * "grpc", or "internal".
+   *
    * @var string
    */
   public $protocol;
   /**
+   * The API service name. It is a logical identifier for a networked API, such
+   * as "pubsub.googleapis.com". The naming syntax depends on the API management
+   * system being used for handling the request.
+   *
    * @var string
    */
   public $service;
   /**
+   * The API version associated with the API operation above, such as "v1" or
+   * "v1alpha1".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The API operation name. For gRPC requests, it is the fully qualified API
+   * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
+   * requests, it is the `operationId`, such as "getPet".
+   *
+   * @param string $operation
    */
   public function setOperation($operation)
   {
@@ -51,7 +69,10 @@ class Api extends \Google\Model
     return $this->operation;
   }
   /**
-   * @param string
+   * The API protocol used for sending the request, such as "http", "https",
+   * "grpc", or "internal".
+   *
+   * @param string $protocol
    */
   public function setProtocol($protocol)
   {
@@ -65,7 +86,11 @@ class Api extends \Google\Model
     return $this->protocol;
   }
   /**
-   * @param string
+   * The API service name. It is a logical identifier for a networked API, such
+   * as "pubsub.googleapis.com". The naming syntax depends on the API management
+   * system being used for handling the request.
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -79,7 +104,10 @@ class Api extends \Google\Model
     return $this->service;
   }
   /**
-   * @param string
+   * The API version associated with the API operation above, such as "v1" or
+   * "v1alpha1".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

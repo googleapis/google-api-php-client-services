@@ -23,12 +23,17 @@ class FloodlightConfigurationsListResponse extends \Google\Collection
   protected $floodlightConfigurationsType = FloodlightConfiguration::class;
   protected $floodlightConfigurationsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#floodlightConfigurationsListResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param FloodlightConfiguration[]
+   * Floodlight configuration collection.
+   *
+   * @param FloodlightConfiguration[] $floodlightConfigurations
    */
   public function setFloodlightConfigurations($floodlightConfigurations)
   {
@@ -42,7 +47,10 @@ class FloodlightConfigurationsListResponse extends \Google\Collection
     return $this->floodlightConfigurations;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#floodlightConfigurationsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

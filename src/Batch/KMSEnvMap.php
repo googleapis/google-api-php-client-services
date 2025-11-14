@@ -20,16 +20,22 @@ namespace Google\Service\Batch;
 class KMSEnvMap extends \Google\Model
 {
   /**
+   * The value of the cipherText response from the `encrypt` method.
+   *
    * @var string
    */
   public $cipherText;
   /**
+   * The name of the KMS key that will be used to decrypt the cipher text.
+   *
    * @var string
    */
   public $keyName;
 
   /**
-   * @param string
+   * The value of the cipherText response from the `encrypt` method.
+   *
+   * @param string $cipherText
    */
   public function setCipherText($cipherText)
   {
@@ -43,7 +49,9 @@ class KMSEnvMap extends \Google\Model
     return $this->cipherText;
   }
   /**
-   * @param string
+   * The name of the KMS key that will be used to decrypt the cipher text.
+   *
+   * @param string $keyName
    */
   public function setKeyName($keyName)
   {

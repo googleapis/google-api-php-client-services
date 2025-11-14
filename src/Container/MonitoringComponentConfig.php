@@ -21,12 +21,18 @@ class MonitoringComponentConfig extends \Google\Collection
 {
   protected $collection_key = 'enableComponents';
   /**
+   * Select components to collect metrics. An empty set would disable all
+   * monitoring.
+   *
    * @var string[]
    */
   public $enableComponents;
 
   /**
-   * @param string[]
+   * Select components to collect metrics. An empty set would disable all
+   * monitoring.
+   *
+   * @param string[] $enableComponents
    */
   public function setEnableComponents($enableComponents)
   {

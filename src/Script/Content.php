@@ -23,12 +23,18 @@ class Content extends \Google\Collection
   protected $filesType = ScriptFile::class;
   protected $filesDataType = 'array';
   /**
+   * The script project's Drive ID.
+   *
    * @var string
    */
   public $scriptId;
 
   /**
-   * @param ScriptFile[]
+   * The list of script project files. One of the files is a script manifest; it
+   * must be named "appsscript", must have type of JSON, and include the
+   * manifest configurations for the project.
+   *
+   * @param ScriptFile[] $files
    */
   public function setFiles($files)
   {
@@ -42,7 +48,9 @@ class Content extends \Google\Collection
     return $this->files;
   }
   /**
-   * @param string
+   * The script project's Drive ID.
+   *
+   * @param string $scriptId
    */
   public function setScriptId($scriptId)
   {

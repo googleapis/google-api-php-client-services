@@ -20,12 +20,20 @@ namespace Google\Service\Storage;
 class ComposeRequestSourceObjectsObjectPreconditions extends \Google\Model
 {
   /**
+   * Only perform the composition if the generation of the source object that
+   * would be used matches this value. If this value and a generation are both
+   * specified, they must be the same value or the call will fail.
+   *
    * @var string
    */
   public $ifGenerationMatch;
 
   /**
-   * @param string
+   * Only perform the composition if the generation of the source object that
+   * would be used matches this value. If this value and a generation are both
+   * specified, they must be the same value or the call will fail.
+   *
+   * @param string $ifGenerationMatch
    */
   public function setIfGenerationMatch($ifGenerationMatch)
   {

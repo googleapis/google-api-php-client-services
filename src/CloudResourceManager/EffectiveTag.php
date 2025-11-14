@@ -20,32 +20,60 @@ namespace Google\Service\CloudResourceManager;
 class EffectiveTag extends \Google\Model
 {
   /**
+   * Indicates the inheritance status of a tag value attached to the given
+   * resource. If the tag value is inherited from one of the resource's
+   * ancestors, inherited will be true. If false, then the tag value is directly
+   * attached to the resource, inherited will be false.
+   *
    * @var bool
    */
   public $inherited;
   /**
+   * The namespaced name of the TagKey. Can be in the form
+   * `{organization_id}/{tag_key_short_name}` or
+   * `{project_id}/{tag_key_short_name}` or
+   * `{project_number}/{tag_key_short_name}`.
+   *
    * @var string
    */
   public $namespacedTagKey;
   /**
+   * The namespaced name of the TagValue. Can be in the form
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
+   *
    * @var string
    */
   public $namespacedTagValue;
   /**
+   * The name of the TagKey, in the format `tagKeys/{id}`, such as
+   * `tagKeys/123`.
+   *
    * @var string
    */
   public $tagKey;
   /**
+   * The parent name of the tag key. Must be in the format
+   * `organizations/{organization_id}` or `projects/{project_number}`
+   *
    * @var string
    */
   public $tagKeyParentName;
   /**
+   * Resource name for TagValue in the format `tagValues/456`.
+   *
    * @var string
    */
   public $tagValue;
 
   /**
-   * @param bool
+   * Indicates the inheritance status of a tag value attached to the given
+   * resource. If the tag value is inherited from one of the resource's
+   * ancestors, inherited will be true. If false, then the tag value is directly
+   * attached to the resource, inherited will be false.
+   *
+   * @param bool $inherited
    */
   public function setInherited($inherited)
   {
@@ -59,7 +87,12 @@ class EffectiveTag extends \Google\Model
     return $this->inherited;
   }
   /**
-   * @param string
+   * The namespaced name of the TagKey. Can be in the form
+   * `{organization_id}/{tag_key_short_name}` or
+   * `{project_id}/{tag_key_short_name}` or
+   * `{project_number}/{tag_key_short_name}`.
+   *
+   * @param string $namespacedTagKey
    */
   public function setNamespacedTagKey($namespacedTagKey)
   {
@@ -73,7 +106,12 @@ class EffectiveTag extends \Google\Model
     return $this->namespacedTagKey;
   }
   /**
-   * @param string
+   * The namespaced name of the TagValue. Can be in the form
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
+   *
+   * @param string $namespacedTagValue
    */
   public function setNamespacedTagValue($namespacedTagValue)
   {
@@ -87,7 +125,10 @@ class EffectiveTag extends \Google\Model
     return $this->namespacedTagValue;
   }
   /**
-   * @param string
+   * The name of the TagKey, in the format `tagKeys/{id}`, such as
+   * `tagKeys/123`.
+   *
+   * @param string $tagKey
    */
   public function setTagKey($tagKey)
   {
@@ -101,7 +142,10 @@ class EffectiveTag extends \Google\Model
     return $this->tagKey;
   }
   /**
-   * @param string
+   * The parent name of the tag key. Must be in the format
+   * `organizations/{organization_id}` or `projects/{project_number}`
+   *
+   * @param string $tagKeyParentName
    */
   public function setTagKeyParentName($tagKeyParentName)
   {
@@ -115,7 +159,9 @@ class EffectiveTag extends \Google\Model
     return $this->tagKeyParentName;
   }
   /**
-   * @param string
+   * Resource name for TagValue in the format `tagValues/456`.
+   *
+   * @param string $tagValue
    */
   public function setTagValue($tagValue)
   {

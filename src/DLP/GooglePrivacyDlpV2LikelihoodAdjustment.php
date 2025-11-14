@@ -20,30 +20,77 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2LikelihoodAdjustment extends \Google\Model
 {
   /**
+   * Default value; same as POSSIBLE.
+   */
+  public const FIXED_LIKELIHOOD_LIKELIHOOD_UNSPECIFIED = 'LIKELIHOOD_UNSPECIFIED';
+  /**
+   * Highest chance of a false positive.
+   */
+  public const FIXED_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * High chance of a false positive.
+   */
+  public const FIXED_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * Some matching signals. The default value.
+   */
+  public const FIXED_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * Low chance of a false positive.
+   */
+  public const FIXED_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * Confidence level is high. Lowest chance of a false positive.
+   */
+  public const FIXED_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
+  /**
+   * Set the likelihood of a finding to a fixed value.
+   *
    * @var string
    */
   public $fixedLikelihood;
   /**
+   * Increase or decrease the likelihood by the specified number of levels. For
+   * example, if a finding would be `POSSIBLE` without the detection rule and
+   * `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value
+   * of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below
+   * `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1
+   * followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will
+   * result in a final likelihood of `LIKELY`.
+   *
    * @var int
    */
   public $relativeLikelihood;
 
   /**
-   * @param string
+   * Set the likelihood of a finding to a fixed value.
+   *
+   * Accepted values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE,
+   * LIKELY, VERY_LIKELY
+   *
+   * @param self::FIXED_LIKELIHOOD_* $fixedLikelihood
    */
   public function setFixedLikelihood($fixedLikelihood)
   {
     $this->fixedLikelihood = $fixedLikelihood;
   }
   /**
-   * @return string
+   * @return self::FIXED_LIKELIHOOD_*
    */
   public function getFixedLikelihood()
   {
     return $this->fixedLikelihood;
   }
   /**
-   * @param int
+   * Increase or decrease the likelihood by the specified number of levels. For
+   * example, if a finding would be `POSSIBLE` without the detection rule and
+   * `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value
+   * of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below
+   * `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1
+   * followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will
+   * result in a final likelihood of `LIKELY`.
+   *
+   * @param int $relativeLikelihood
    */
   public function setRelativeLikelihood($relativeLikelihood)
   {

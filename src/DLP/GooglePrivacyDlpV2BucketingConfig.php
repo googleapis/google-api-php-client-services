@@ -24,7 +24,9 @@ class GooglePrivacyDlpV2BucketingConfig extends \Google\Collection
   protected $bucketsDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2Bucket[]
+   * Set of buckets. Ranges must be non-overlapping.
+   *
+   * @param GooglePrivacyDlpV2Bucket[] $buckets
    */
   public function setBuckets($buckets)
   {

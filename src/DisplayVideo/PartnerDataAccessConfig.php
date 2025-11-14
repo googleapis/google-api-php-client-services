@@ -23,7 +23,10 @@ class PartnerDataAccessConfig extends \Google\Model
   protected $sdfConfigDataType = '';
 
   /**
-   * @param SdfConfig
+   * Structured Data Files (SDF) settings for the partner. The SDF configuration
+   * for the partner.
+   *
+   * @param SdfConfig $sdfConfig
    */
   public function setSdfConfig(SdfConfig $sdfConfig)
   {

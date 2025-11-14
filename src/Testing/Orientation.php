@@ -21,20 +21,28 @@ class Orientation extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * The id for this orientation. Example: "portrait".
+   *
    * @var string
    */
   public $id;
   /**
+   * A human-friendly name for this orientation. Example: "portrait".
+   *
    * @var string
    */
   public $name;
   /**
+   * Tags for this dimension. Example: "default".
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string
+   * The id for this orientation. Example: "portrait".
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -48,7 +56,9 @@ class Orientation extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * A human-friendly name for this orientation. Example: "portrait".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -62,7 +72,9 @@ class Orientation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Tags for this dimension. Example: "default".
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

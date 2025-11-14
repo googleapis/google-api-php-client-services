@@ -22,12 +22,16 @@ class PartitionCursor extends \Google\Model
   protected $cursorType = Cursor::class;
   protected $cursorDataType = '';
   /**
+   * The partition this is for.
+   *
    * @var string
    */
   public $partition;
 
   /**
-   * @param Cursor
+   * The value of the cursor.
+   *
+   * @param Cursor $cursor
    */
   public function setCursor(Cursor $cursor)
   {
@@ -41,7 +45,9 @@ class PartitionCursor extends \Google\Model
     return $this->cursor;
   }
   /**
-   * @param string
+   * The partition this is for.
+   *
+   * @param string $partition
    */
   public function setPartition($partition)
   {

@@ -20,40 +20,62 @@ namespace Google\Service\SecurityPosture;
 class OperationMetadata extends \Google\Model
 {
   /**
+   * Output only. The API version used to start the operation.
+   *
    * @var string
    */
   public $apiVersion;
   /**
+   * Output only. The time at which the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time at which the operation finished running.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. An error message. Returned when a PostureDeployment enters a
+   * failure state like UPDATE_FAILED.
+   *
    * @var string
    */
   public $errorMessage;
   /**
+   * Output only. Whether a request to cancel the operation has been received.
+   * For operations that have been cancelled successfully, the Operation.error
+   * field contains the error code CANCELLED.
+   *
    * @var bool
    */
   public $requestedCancellation;
   /**
+   * Output only. The status of the operation, if any.
+   *
    * @var string
    */
   public $statusMessage;
   /**
+   * Output only. The server-defined resource path for the target of the
+   * operation.
+   *
    * @var string
    */
   public $target;
   /**
+   * Output only. The name of the action executed by the operation.
+   *
    * @var string
    */
   public $verb;
 
   /**
-   * @param string
+   * Output only. The API version used to start the operation.
+   *
+   * @param string $apiVersion
    */
   public function setApiVersion($apiVersion)
   {
@@ -67,7 +89,9 @@ class OperationMetadata extends \Google\Model
     return $this->apiVersion;
   }
   /**
-   * @param string
+   * Output only. The time at which the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -81,7 +105,9 @@ class OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time at which the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -95,7 +121,10 @@ class OperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. An error message. Returned when a PostureDeployment enters a
+   * failure state like UPDATE_FAILED.
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -109,7 +138,11 @@ class OperationMetadata extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * @param bool
+   * Output only. Whether a request to cancel the operation has been received.
+   * For operations that have been cancelled successfully, the Operation.error
+   * field contains the error code CANCELLED.
+   *
+   * @param bool $requestedCancellation
    */
   public function setRequestedCancellation($requestedCancellation)
   {
@@ -123,7 +156,9 @@ class OperationMetadata extends \Google\Model
     return $this->requestedCancellation;
   }
   /**
-   * @param string
+   * Output only. The status of the operation, if any.
+   *
+   * @param string $statusMessage
    */
   public function setStatusMessage($statusMessage)
   {
@@ -137,7 +172,10 @@ class OperationMetadata extends \Google\Model
     return $this->statusMessage;
   }
   /**
-   * @param string
+   * Output only. The server-defined resource path for the target of the
+   * operation.
+   *
+   * @param string $target
    */
   public function setTarget($target)
   {
@@ -151,7 +189,9 @@ class OperationMetadata extends \Google\Model
     return $this->target;
   }
   /**
-   * @param string
+   * Output only. The name of the action executed by the operation.
+   *
+   * @param string $verb
    */
   public function setVerb($verb)
   {

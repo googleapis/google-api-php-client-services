@@ -21,24 +21,39 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
 {
   protected $collection_key = 'testCaseConversationTurns';
   /**
+   * Output only. When the test was created.
+   *
    * @var string
    */
   public $creationTime;
   /**
+   * Required. The human-readable name of the test case, unique within the
+   * agent. Limit of 200 characters.
+   *
    * @var string
    */
   public $displayName;
   protected $lastTestResultType = GoogleCloudDialogflowCxV3TestCaseResult::class;
   protected $lastTestResultDataType = '';
   /**
+   * The unique identifier of the test case. TestCases.CreateTestCase will
+   * populate the name automatically. Otherwise use format:
+   * `projects//locations//agents//testCases/`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Additional freeform notes about the test case. Limit of 400 characters.
+   *
    * @var string
    */
   public $notes;
   /**
+   * Tags are short descriptions that users may apply to test cases for
+   * organizational and filtering purposes. Each tag should start with "#" and
+   * has a limit of 30 characters.
+   *
    * @var string[]
    */
   public $tags;
@@ -48,7 +63,9 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
   protected $testConfigDataType = '';
 
   /**
-   * @param string
+   * Output only. When the test was created.
+   *
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
@@ -62,7 +79,10 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
     return $this->creationTime;
   }
   /**
-   * @param string
+   * Required. The human-readable name of the test case, unique within the
+   * agent. Limit of 200 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -76,7 +96,9 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3TestCaseResult
+   * The latest test result.
+   *
+   * @param GoogleCloudDialogflowCxV3TestCaseResult $lastTestResult
    */
   public function setLastTestResult(GoogleCloudDialogflowCxV3TestCaseResult $lastTestResult)
   {
@@ -90,7 +112,11 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
     return $this->lastTestResult;
   }
   /**
-   * @param string
+   * The unique identifier of the test case. TestCases.CreateTestCase will
+   * populate the name automatically. Otherwise use format:
+   * `projects//locations//agents//testCases/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -104,7 +130,9 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Additional freeform notes about the test case. Limit of 400 characters.
+   *
+   * @param string $notes
    */
   public function setNotes($notes)
   {
@@ -118,7 +146,11 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
     return $this->notes;
   }
   /**
-   * @param string[]
+   * Tags are short descriptions that users may apply to test cases for
+   * organizational and filtering purposes. Each tag should start with "#" and
+   * has a limit of 30 characters.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -132,7 +164,11 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ConversationTurn[]
+   * The conversation turns uttered when the test case was created, in
+   * chronological order. These include the canonical set of agent utterances
+   * that should occur when the agent is working properly.
+   *
+   * @param GoogleCloudDialogflowCxV3ConversationTurn[] $testCaseConversationTurns
    */
   public function setTestCaseConversationTurns($testCaseConversationTurns)
   {
@@ -146,7 +182,9 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
     return $this->testCaseConversationTurns;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3TestConfig
+   * Config for the test case.
+   *
+   * @param GoogleCloudDialogflowCxV3TestConfig $testConfig
    */
   public function setTestConfig(GoogleCloudDialogflowCxV3TestConfig $testConfig)
   {

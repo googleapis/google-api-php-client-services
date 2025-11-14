@@ -20,42 +20,111 @@ namespace Google\Service\CloudKMS;
 class CryptoKey extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const PURPOSE_CRYPTO_KEY_PURPOSE_UNSPECIFIED = 'CRYPTO_KEY_PURPOSE_UNSPECIFIED';
+  /**
+   * CryptoKeys with this purpose may be used with Encrypt and Decrypt.
+   */
+  public const PURPOSE_ENCRYPT_DECRYPT = 'ENCRYPT_DECRYPT';
+  /**
+   * CryptoKeys with this purpose may be used with AsymmetricSign and
+   * GetPublicKey.
+   */
+  public const PURPOSE_ASYMMETRIC_SIGN = 'ASYMMETRIC_SIGN';
+  /**
+   * CryptoKeys with this purpose may be used with AsymmetricDecrypt and
+   * GetPublicKey.
+   */
+  public const PURPOSE_ASYMMETRIC_DECRYPT = 'ASYMMETRIC_DECRYPT';
+  /**
+   * CryptoKeys with this purpose may be used with RawEncrypt and RawDecrypt.
+   * This purpose is meant to be used for interoperable symmetric encryption and
+   * does not support automatic CryptoKey rotation.
+   */
+  public const PURPOSE_RAW_ENCRYPT_DECRYPT = 'RAW_ENCRYPT_DECRYPT';
+  /**
+   * CryptoKeys with this purpose may be used with MacSign.
+   */
+  public const PURPOSE_MAC = 'MAC';
+  /**
+   * CryptoKeys with this purpose may be used with GetPublicKey and Decapsulate.
+   */
+  public const PURPOSE_KEY_ENCAPSULATION = 'KEY_ENCAPSULATION';
+  /**
+   * Output only. The time at which this CryptoKey was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Immutable. The resource name of the backend environment where the key
+   * material for all CryptoKeyVersions associated with this CryptoKey reside
+   * and where all related cryptographic operations are performed. Only
+   * applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC,
+   * with the resource name in the format `projects/locations/ekmConnections`.
+   * Note, this list is non-exhaustive and may apply to additional
+   * ProtectionLevels in the future.
+   *
    * @var string
    */
   public $cryptoKeyBackend;
   /**
+   * Immutable. The period of time that versions of this key spend in the
+   * DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified
+   * at creation time, the default duration is 30 days.
+   *
    * @var string
    */
   public $destroyScheduledDuration;
   /**
+   * Immutable. Whether this key may contain imported versions only.
+   *
    * @var bool
    */
   public $importOnly;
   protected $keyAccessJustificationsPolicyType = KeyAccessJustificationsPolicy::class;
   protected $keyAccessJustificationsPolicyDataType = '';
   /**
+   * Labels with user-defined metadata. For more information, see [Labeling
+   * Keys](https://cloud.google.com/kms/docs/labeling-keys).
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The resource name for this CryptoKey in the format
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
    * @var string
    */
   public $name;
   /**
+   * At next_rotation_time, the Key Management Service will automatically: 1.
+   * Create a new version of this CryptoKey. 2. Mark the new version as primary.
+   * Key rotations performed manually via CreateCryptoKeyVersion and
+   * UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with
+   * purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this
+   * field must be omitted.
+   *
    * @var string
    */
   public $nextRotationTime;
   protected $primaryType = CryptoKeyVersion::class;
   protected $primaryDataType = '';
   /**
+   * Immutable. The immutable purpose of this CryptoKey.
+   *
    * @var string
    */
   public $purpose;
   /**
+   * next_rotation_time will be advanced by this period when the service
+   * automatically rotates a key. Must be at least 24 hours and at most 876,000
+   * hours. If rotation_period is set, next_rotation_time must also be set. Keys
+   * with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys,
+   * this field must be omitted.
+   *
    * @var string
    */
   public $rotationPeriod;
@@ -63,7 +132,9 @@ class CryptoKey extends \Google\Model
   protected $versionTemplateDataType = '';
 
   /**
-   * @param string
+   * Output only. The time at which this CryptoKey was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -77,7 +148,15 @@ class CryptoKey extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the backend environment where the key
+   * material for all CryptoKeyVersions associated with this CryptoKey reside
+   * and where all related cryptographic operations are performed. Only
+   * applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC,
+   * with the resource name in the format `projects/locations/ekmConnections`.
+   * Note, this list is non-exhaustive and may apply to additional
+   * ProtectionLevels in the future.
+   *
+   * @param string $cryptoKeyBackend
    */
   public function setCryptoKeyBackend($cryptoKeyBackend)
   {
@@ -91,7 +170,11 @@ class CryptoKey extends \Google\Model
     return $this->cryptoKeyBackend;
   }
   /**
-   * @param string
+   * Immutable. The period of time that versions of this key spend in the
+   * DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified
+   * at creation time, the default duration is 30 days.
+   *
+   * @param string $destroyScheduledDuration
    */
   public function setDestroyScheduledDuration($destroyScheduledDuration)
   {
@@ -105,7 +188,9 @@ class CryptoKey extends \Google\Model
     return $this->destroyScheduledDuration;
   }
   /**
-   * @param bool
+   * Immutable. Whether this key may contain imported versions only.
+   *
+   * @param bool $importOnly
    */
   public function setImportOnly($importOnly)
   {
@@ -119,7 +204,16 @@ class CryptoKey extends \Google\Model
     return $this->importOnly;
   }
   /**
-   * @param KeyAccessJustificationsPolicy
+   * Optional. The policy used for Key Access Justifications Policy Enforcement.
+   * If this field is present and this key is enrolled in Key Access
+   * Justifications Policy Enforcement, the policy will be evaluated in encrypt,
+   * decrypt, and sign operations, and the operation will fail if rejected by
+   * the policy. The policy is defined by specifying zero or more allowed
+   * justification codes. https://cloud.google.com/assured-workloads/key-access-
+   * justifications/docs/justification-codes By default, this field is absent,
+   * and all justification codes are allowed.
+   *
+   * @param KeyAccessJustificationsPolicy $keyAccessJustificationsPolicy
    */
   public function setKeyAccessJustificationsPolicy(KeyAccessJustificationsPolicy $keyAccessJustificationsPolicy)
   {
@@ -133,7 +227,10 @@ class CryptoKey extends \Google\Model
     return $this->keyAccessJustificationsPolicy;
   }
   /**
-   * @param string[]
+   * Labels with user-defined metadata. For more information, see [Labeling
+   * Keys](https://cloud.google.com/kms/docs/labeling-keys).
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -147,7 +244,10 @@ class CryptoKey extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The resource name for this CryptoKey in the format
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -161,7 +261,14 @@ class CryptoKey extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * At next_rotation_time, the Key Management Service will automatically: 1.
+   * Create a new version of this CryptoKey. 2. Mark the new version as primary.
+   * Key rotations performed manually via CreateCryptoKeyVersion and
+   * UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with
+   * purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this
+   * field must be omitted.
+   *
+   * @param string $nextRotationTime
    */
   public function setNextRotationTime($nextRotationTime)
   {
@@ -175,7 +282,13 @@ class CryptoKey extends \Google\Model
     return $this->nextRotationTime;
   }
   /**
-   * @param CryptoKeyVersion
+   * Output only. A copy of the "primary" CryptoKeyVersion that will be used by
+   * Encrypt when this CryptoKey is given in EncryptRequest.name. The
+   * CryptoKey's primary version can be updated via
+   * UpdateCryptoKeyPrimaryVersion. Keys with purpose ENCRYPT_DECRYPT may have a
+   * primary. For other keys, this field will be omitted.
+   *
+   * @param CryptoKeyVersion $primary
    */
   public function setPrimary(CryptoKeyVersion $primary)
   {
@@ -189,21 +302,33 @@ class CryptoKey extends \Google\Model
     return $this->primary;
   }
   /**
-   * @param string
+   * Immutable. The immutable purpose of this CryptoKey.
+   *
+   * Accepted values: CRYPTO_KEY_PURPOSE_UNSPECIFIED, ENCRYPT_DECRYPT,
+   * ASYMMETRIC_SIGN, ASYMMETRIC_DECRYPT, RAW_ENCRYPT_DECRYPT, MAC,
+   * KEY_ENCAPSULATION
+   *
+   * @param self::PURPOSE_* $purpose
    */
   public function setPurpose($purpose)
   {
     $this->purpose = $purpose;
   }
   /**
-   * @return string
+   * @return self::PURPOSE_*
    */
   public function getPurpose()
   {
     return $this->purpose;
   }
   /**
-   * @param string
+   * next_rotation_time will be advanced by this period when the service
+   * automatically rotates a key. Must be at least 24 hours and at most 876,000
+   * hours. If rotation_period is set, next_rotation_time must also be set. Keys
+   * with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys,
+   * this field must be omitted.
+   *
+   * @param string $rotationPeriod
    */
   public function setRotationPeriod($rotationPeriod)
   {
@@ -217,7 +342,11 @@ class CryptoKey extends \Google\Model
     return $this->rotationPeriod;
   }
   /**
-   * @param CryptoKeyVersionTemplate
+   * A template describing settings for new CryptoKeyVersion instances. The
+   * properties of new CryptoKeyVersion instances created by either
+   * CreateCryptoKeyVersion or auto-rotation are controlled by this template.
+   *
+   * @param CryptoKeyVersionTemplate $versionTemplate
    */
   public function setVersionTemplate(CryptoKeyVersionTemplate $versionTemplate)
   {

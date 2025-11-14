@@ -22,12 +22,18 @@ class GooglePrivacyDlpV2UpdateStoredInfoTypeRequest extends \Google\Model
   protected $configType = GooglePrivacyDlpV2StoredInfoTypeConfig::class;
   protected $configDataType = '';
   /**
+   * Mask to control which fields get updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GooglePrivacyDlpV2StoredInfoTypeConfig
+   * Updated configuration for the storedInfoType. If not provided, a new
+   * version of the storedInfoType will be created with the existing
+   * configuration.
+   *
+   * @param GooglePrivacyDlpV2StoredInfoTypeConfig $config
    */
   public function setConfig(GooglePrivacyDlpV2StoredInfoTypeConfig $config)
   {
@@ -41,7 +47,9 @@ class GooglePrivacyDlpV2UpdateStoredInfoTypeRequest extends \Google\Model
     return $this->config;
   }
   /**
-   * @param string
+   * Mask to control which fields get updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

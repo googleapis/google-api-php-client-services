@@ -21,6 +21,10 @@ class SearchAllResourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * If there are more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class SearchAllResourcesResponse extends \Google\Collection
   protected $resultsDataType = 'array';
 
   /**
-   * @param string
+   * If there are more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,10 @@ class SearchAllResourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ResourceSearchResult[]
+   * A list of Resources that match the search query. It contains the resource
+   * standard metadata information.
+   *
+   * @param ResourceSearchResult[] $results
    */
   public function setResults($results)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\ShoppingContent;
 class Error extends \Google\Model
 {
   /**
+   * The domain of the error.
+   *
    * @var string
    */
   public $domain;
   /**
+   * A description of the error.
+   *
    * @var string
    */
   public $message;
   /**
+   * The error code.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * The domain of the error.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -47,7 +55,9 @@ class Error extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * A description of the error.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -61,7 +71,9 @@ class Error extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * The error code.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

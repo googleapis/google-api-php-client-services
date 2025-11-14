@@ -20,16 +20,24 @@ namespace Google\Service\BigQueryConnectionService;
 class ConnectorConfigurationAsset extends \Google\Model
 {
   /**
+   * Name of the database.
+   *
    * @var string
    */
   public $database;
   /**
+   * Full Google Cloud resource name -
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name.
+   * Example: `//library.googleapis.com/shelves/shelf1/books/book2`
+   *
    * @var string
    */
   public $googleCloudResource;
 
   /**
-   * @param string
+   * Name of the database.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -43,7 +51,11 @@ class ConnectorConfigurationAsset extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Full Google Cloud resource name -
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name.
+   * Example: `//library.googleapis.com/shelves/shelf1/books/book2`
+   *
+   * @param string $googleCloudResource
    */
   public function setGoogleCloudResource($googleCloudResource)
   {

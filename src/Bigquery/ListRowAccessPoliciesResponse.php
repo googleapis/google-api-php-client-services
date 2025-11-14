@@ -21,6 +21,8 @@ class ListRowAccessPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'rowAccessPolicies';
   /**
+   * A token to request the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListRowAccessPoliciesResponse extends \Google\Collection
   protected $rowAccessPoliciesDataType = 'array';
 
   /**
-   * @param string
+   * A token to request the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListRowAccessPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param RowAccessPolicy[]
+   * Row access policies on the requested table.
+   *
+   * @param RowAccessPolicy[] $rowAccessPolicies
    */
   public function setRowAccessPolicies($rowAccessPolicies)
   {

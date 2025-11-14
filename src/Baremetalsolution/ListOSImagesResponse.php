@@ -21,6 +21,9 @@ class ListOSImagesResponse extends \Google\Collection
 {
   protected $collection_key = 'osImages';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListOSImagesResponse extends \Google\Collection
   protected $osImagesDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListOSImagesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param OSImage[]
+   * The OS images available.
+   *
+   * @param OSImage[] $osImages
    */
   public function setOsImages($osImages)
   {

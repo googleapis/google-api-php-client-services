@@ -20,32 +20,83 @@ namespace Google\Service\DisplayVideo;
 class CampaignBudget extends \Google\Model
 {
   /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const BUDGET_UNIT_BUDGET_UNIT_UNSPECIFIED = 'BUDGET_UNIT_UNSPECIFIED';
+  /**
+   * Budgeting in currency amounts.
+   */
+  public const BUDGET_UNIT_BUDGET_UNIT_CURRENCY = 'BUDGET_UNIT_CURRENCY';
+  /**
+   * Budgeting in impression amounts.
+   */
+  public const BUDGET_UNIT_BUDGET_UNIT_IMPRESSIONS = 'BUDGET_UNIT_IMPRESSIONS';
+  /**
+   * External budget source value is not specified or unknown in this version.
+   */
+  public const EXTERNAL_BUDGET_SOURCE_EXTERNAL_BUDGET_SOURCE_UNSPECIFIED = 'EXTERNAL_BUDGET_SOURCE_UNSPECIFIED';
+  /**
+   * Budget has no external source.
+   */
+  public const EXTERNAL_BUDGET_SOURCE_EXTERNAL_BUDGET_SOURCE_NONE = 'EXTERNAL_BUDGET_SOURCE_NONE';
+  /**
+   * Budget source is Mediaocean.
+   */
+  public const EXTERNAL_BUDGET_SOURCE_EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN = 'EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN';
+  /**
+   * Required. The total amount the linked insertion order segments can budget.
+   * The amount is in micros. Must be greater than 0. For example, 500000000
+   * represents 500 standard units of the currency.
+   *
    * @var string
    */
   public $budgetAmountMicros;
   /**
+   * The unique ID of the campaign budget. Assigned by the system. Do not set
+   * for new budgets. Must be included when updating or adding budgets to
+   * campaign_budgets. Otherwise, a new ID will be generated and assigned.
+   *
    * @var string
    */
   public $budgetId;
   /**
+   * Required. Immutable. Specifies whether the budget is measured in currency
+   * or impressions.
+   *
    * @var string
    */
   public $budgetUnit;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
   /**
+   * Required. The display name of the budget. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Immutable. The ID identifying this budget to the external source. If this
+   * field is set and the invoice detail level of the corresponding billing
+   * profile is set to "Budget level PO", all impressions served against this
+   * budget will include this ID on the invoice. Must be unique under the
+   * campaign.
+   *
    * @var string
    */
   public $externalBudgetId;
   /**
+   * Required. The external source of the budget.
+   *
    * @var string
    */
   public $externalBudgetSource;
   /**
+   * Immutable. The ID used to group budgets to be included the same invoice. If
+   * this field is set and the invoice level of the corresponding billing
+   * profile is set to "Budget invoice grouping ID", all external_budget_id
+   * sharing the same invoice_grouping_id will be grouped in the same invoice.
+   *
    * @var string
    */
   public $invoiceGroupingId;
@@ -53,7 +104,11 @@ class CampaignBudget extends \Google\Model
   protected $prismaConfigDataType = '';
 
   /**
-   * @param string
+   * Required. The total amount the linked insertion order segments can budget.
+   * The amount is in micros. Must be greater than 0. For example, 500000000
+   * represents 500 standard units of the currency.
+   *
+   * @param string $budgetAmountMicros
    */
   public function setBudgetAmountMicros($budgetAmountMicros)
   {
@@ -67,7 +122,11 @@ class CampaignBudget extends \Google\Model
     return $this->budgetAmountMicros;
   }
   /**
-   * @param string
+   * The unique ID of the campaign budget. Assigned by the system. Do not set
+   * for new budgets. Must be included when updating or adding budgets to
+   * campaign_budgets. Otherwise, a new ID will be generated and assigned.
+   *
+   * @param string $budgetId
    */
   public function setBudgetId($budgetId)
   {
@@ -81,21 +140,32 @@ class CampaignBudget extends \Google\Model
     return $this->budgetId;
   }
   /**
-   * @param string
+   * Required. Immutable. Specifies whether the budget is measured in currency
+   * or impressions.
+   *
+   * Accepted values: BUDGET_UNIT_UNSPECIFIED, BUDGET_UNIT_CURRENCY,
+   * BUDGET_UNIT_IMPRESSIONS
+   *
+   * @param self::BUDGET_UNIT_* $budgetUnit
    */
   public function setBudgetUnit($budgetUnit)
   {
     $this->budgetUnit = $budgetUnit;
   }
   /**
-   * @return string
+   * @return self::BUDGET_UNIT_*
    */
   public function getBudgetUnit()
   {
     return $this->budgetUnit;
   }
   /**
-   * @param DateRange
+   * Required. The date range for the campaign budget. Linked budget segments
+   * may have a different date range. They are resolved relative to the parent
+   * advertiser's time zone. Both `start_date` and `end_date` must be before the
+   * year 2037.
+   *
+   * @param DateRange $dateRange
    */
   public function setDateRange(DateRange $dateRange)
   {
@@ -109,7 +179,10 @@ class CampaignBudget extends \Google\Model
     return $this->dateRange;
   }
   /**
-   * @param string
+   * Required. The display name of the budget. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -123,7 +196,13 @@ class CampaignBudget extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Immutable. The ID identifying this budget to the external source. If this
+   * field is set and the invoice detail level of the corresponding billing
+   * profile is set to "Budget level PO", all impressions served against this
+   * budget will include this ID on the invoice. Must be unique under the
+   * campaign.
+   *
+   * @param string $externalBudgetId
    */
   public function setExternalBudgetId($externalBudgetId)
   {
@@ -137,21 +216,31 @@ class CampaignBudget extends \Google\Model
     return $this->externalBudgetId;
   }
   /**
-   * @param string
+   * Required. The external source of the budget.
+   *
+   * Accepted values: EXTERNAL_BUDGET_SOURCE_UNSPECIFIED,
+   * EXTERNAL_BUDGET_SOURCE_NONE, EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN
+   *
+   * @param self::EXTERNAL_BUDGET_SOURCE_* $externalBudgetSource
    */
   public function setExternalBudgetSource($externalBudgetSource)
   {
     $this->externalBudgetSource = $externalBudgetSource;
   }
   /**
-   * @return string
+   * @return self::EXTERNAL_BUDGET_SOURCE_*
    */
   public function getExternalBudgetSource()
   {
     return $this->externalBudgetSource;
   }
   /**
-   * @param string
+   * Immutable. The ID used to group budgets to be included the same invoice. If
+   * this field is set and the invoice level of the corresponding billing
+   * profile is set to "Budget invoice grouping ID", all external_budget_id
+   * sharing the same invoice_grouping_id will be grouped in the same invoice.
+   *
+   * @param string $invoiceGroupingId
    */
   public function setInvoiceGroupingId($invoiceGroupingId)
   {
@@ -165,7 +254,10 @@ class CampaignBudget extends \Google\Model
     return $this->invoiceGroupingId;
   }
   /**
-   * @param PrismaConfig
+   * Additional metadata for use by the Mediaocean Prisma tool. Required for
+   * Mediaocean budgets. Only applicable to prisma_enabled advertisers.
+   *
+   * @param PrismaConfig $prismaConfig
    */
   public function setPrismaConfig(PrismaConfig $prismaConfig)
   {

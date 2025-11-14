@@ -358,14 +358,18 @@ class CloudResourceManager extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'update' => [
+            ],'patch' => [
               'path' => 'v3/{+name}',
-              'httpMethod' => 'PUT',
+              'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

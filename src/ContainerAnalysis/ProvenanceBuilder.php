@@ -32,7 +32,7 @@ class ProvenanceBuilder extends \Google\Collection
   public $version;
 
   /**
-   * @param ResourceDescriptor[]
+   * @param ResourceDescriptor[] $builderDependencies
    */
   public function setBuilderDependencies($builderDependencies)
   {
@@ -46,7 +46,7 @@ class ProvenanceBuilder extends \Google\Collection
     return $this->builderDependencies;
   }
   /**
-   * @param string
+   * @param string $id
    */
   public function setId($id)
   {
@@ -60,7 +60,7 @@ class ProvenanceBuilder extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string[]
+   * @param string[] $version
    */
   public function setVersion($version)
   {

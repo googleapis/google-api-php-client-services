@@ -20,16 +20,22 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpSecuritygatewaysV1Endpoint extends \Google\Model
 {
   /**
+   * Required. Hostname of the endpoint.
+   *
    * @var string
    */
   public $hostname;
   /**
+   * Required. Port of the endpoint.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param string
+   * Required. Hostname of the endpoint.
+   *
+   * @param string $hostname
    */
   public function setHostname($hostname)
   {
@@ -43,7 +49,9 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1Endpoint extends \Google\Model
     return $this->hostname;
   }
   /**
-   * @param int
+   * Required. Port of the endpoint.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {

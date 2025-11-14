@@ -23,40 +23,68 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
   protected $adScheduleTargetsType = GoogleAdsSearchads360V0CommonAdScheduleInfo::class;
   protected $adScheduleTargetsDataType = 'array';
   /**
+   * First line of the description for the sitelink. If set, the length should
+   * be between 1 and 35, inclusive, and description2 must also be set.
+   *
    * @var string
    */
   public $description1;
   /**
+   * Second line of the description for the sitelink. If set, the length should
+   * be between 1 and 35, inclusive, and description1 must also be set.
+   *
    * @var string
    */
   public $description2;
   /**
+   * Last date of when this asset is effective and still serving, in yyyy-MM-dd
+   * format.
+   *
    * @var string
    */
   public $endDate;
   /**
+   * URL display text for the sitelink. The length of this string should be
+   * between 1 and 25, inclusive.
+   *
    * @var string
    */
   public $linkText;
   /**
+   * Whether the preference is for the sitelink asset to be displayed on mobile
+   * devices. Applies to Microsoft Ads.
+   *
    * @var bool
    */
   public $mobilePreferred;
   /**
+   * Start date of when this asset is effective and can begin serving, in yyyy-
+   * MM-dd format.
+   *
    * @var string
    */
   public $startDate;
   /**
+   * ID used for tracking clicks for the sitelink asset. This is a Yahoo! Japan
+   * only field.
+   *
    * @var string
    */
   public $trackingId;
   /**
+   * Whether to show the sitelink asset in search user's time zone. Applies to
+   * Microsoft Ads.
+   *
    * @var bool
    */
   public $useSearcherTimeZone;
 
   /**
-   * @param GoogleAdsSearchads360V0CommonAdScheduleInfo[]
+   * List of non-overlapping schedules specifying all time intervals for which
+   * the asset may serve. There can be a maximum of 6 schedules per day, 42 in
+   * total.
+   *
+   * @param GoogleAdsSearchads360V0CommonAdScheduleInfo[] $adScheduleTargets
    */
   public function setAdScheduleTargets($adScheduleTargets)
   {
@@ -70,7 +98,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->adScheduleTargets;
   }
   /**
-   * @param string
+   * First line of the description for the sitelink. If set, the length should
+   * be between 1 and 35, inclusive, and description2 must also be set.
+   *
+   * @param string $description1
    */
   public function setDescription1($description1)
   {
@@ -84,7 +115,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->description1;
   }
   /**
-   * @param string
+   * Second line of the description for the sitelink. If set, the length should
+   * be between 1 and 35, inclusive, and description1 must also be set.
+   *
+   * @param string $description2
    */
   public function setDescription2($description2)
   {
@@ -98,7 +132,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->description2;
   }
   /**
-   * @param string
+   * Last date of when this asset is effective and still serving, in yyyy-MM-dd
+   * format.
+   *
+   * @param string $endDate
    */
   public function setEndDate($endDate)
   {
@@ -112,7 +149,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->endDate;
   }
   /**
-   * @param string
+   * URL display text for the sitelink. The length of this string should be
+   * between 1 and 25, inclusive.
+   *
+   * @param string $linkText
    */
   public function setLinkText($linkText)
   {
@@ -126,7 +166,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->linkText;
   }
   /**
-   * @param bool
+   * Whether the preference is for the sitelink asset to be displayed on mobile
+   * devices. Applies to Microsoft Ads.
+   *
+   * @param bool $mobilePreferred
    */
   public function setMobilePreferred($mobilePreferred)
   {
@@ -140,7 +183,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->mobilePreferred;
   }
   /**
-   * @param string
+   * Start date of when this asset is effective and can begin serving, in yyyy-
+   * MM-dd format.
+   *
+   * @param string $startDate
    */
   public function setStartDate($startDate)
   {
@@ -154,7 +200,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->startDate;
   }
   /**
-   * @param string
+   * ID used for tracking clicks for the sitelink asset. This is a Yahoo! Japan
+   * only field.
+   *
+   * @param string $trackingId
    */
   public function setTrackingId($trackingId)
   {
@@ -168,7 +217,10 @@ class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collecti
     return $this->trackingId;
   }
   /**
-   * @param bool
+   * Whether to show the sitelink asset in search user's time zone. Applies to
+   * Microsoft Ads.
+   *
+   * @param bool $useSearcherTimeZone
    */
   public function setUseSearcherTimeZone($useSearcherTimeZone)
   {

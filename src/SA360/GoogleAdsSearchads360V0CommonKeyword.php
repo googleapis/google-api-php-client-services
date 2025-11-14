@@ -20,6 +20,8 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonKeyword extends \Google\Model
 {
   /**
+   * The AdGroupCriterion resource name.
+   *
    * @var string
    */
   public $adGroupCriterion;
@@ -27,7 +29,9 @@ class GoogleAdsSearchads360V0CommonKeyword extends \Google\Model
   protected $infoDataType = '';
 
   /**
-   * @param string
+   * The AdGroupCriterion resource name.
+   *
+   * @param string $adGroupCriterion
    */
   public function setAdGroupCriterion($adGroupCriterion)
   {
@@ -41,7 +45,9 @@ class GoogleAdsSearchads360V0CommonKeyword extends \Google\Model
     return $this->adGroupCriterion;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonKeywordInfo
+   * Keyword info.
+   *
+   * @param GoogleAdsSearchads360V0CommonKeywordInfo $info
    */
   public function setInfo(GoogleAdsSearchads360V0CommonKeywordInfo $info)
   {

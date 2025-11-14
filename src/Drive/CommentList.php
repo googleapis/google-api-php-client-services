@@ -23,16 +23,29 @@ class CommentList extends \Google\Collection
   protected $commentsType = Comment::class;
   protected $commentsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#commentList"`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The page token for the next page of comments. This will be absent if the
+   * end of the comments list has been reached. If the token is rejected for any
+   * reason, it should be discarded, and pagination should be restarted from the
+   * first page of results. The page token is typically valid for several hours.
+   * However, if new items are added or removed, your expected results might
+   * differ.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Comment[]
+   * The list of comments. If nextPageToken is populated, then this list may be
+   * incomplete and an additional page of results should be fetched.
+   *
+   * @param Comment[] $comments
    */
   public function setComments($comments)
   {
@@ -46,7 +59,10 @@ class CommentList extends \Google\Collection
     return $this->comments;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#commentList"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +76,14 @@ class CommentList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The page token for the next page of comments. This will be absent if the
+   * end of the comments list has been reached. If the token is rejected for any
+   * reason, it should be discarded, and pagination should be restarted from the
+   * first page of results. The page token is typically valid for several hours.
+   * However, if new items are added or removed, your expected results might
+   * differ.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

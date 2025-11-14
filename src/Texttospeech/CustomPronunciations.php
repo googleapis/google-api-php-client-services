@@ -24,7 +24,9 @@ class CustomPronunciations extends \Google\Collection
   protected $pronunciationsDataType = 'array';
 
   /**
-   * @param CustomPronunciationParams[]
+   * The pronunciation customizations are applied.
+   *
+   * @param CustomPronunciationParams[] $pronunciations
    */
   public function setPronunciations($pronunciations)
   {

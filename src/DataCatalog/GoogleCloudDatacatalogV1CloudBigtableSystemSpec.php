@@ -20,12 +20,18 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1CloudBigtableSystemSpec extends \Google\Model
 {
   /**
+   * Display name of the Instance. This is user specified and different from the
+   * resource name.
+   *
    * @var string
    */
   public $instanceDisplayName;
 
   /**
-   * @param string
+   * Display name of the Instance. This is user specified and different from the
+   * resource name.
+   *
+   * @param string $instanceDisplayName
    */
   public function setInstanceDisplayName($instanceDisplayName)
   {

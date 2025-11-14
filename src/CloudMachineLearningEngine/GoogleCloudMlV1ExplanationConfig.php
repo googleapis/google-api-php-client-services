@@ -27,7 +27,11 @@ class GoogleCloudMlV1ExplanationConfig extends \Google\Model
   protected $xraiAttributionDataType = '';
 
   /**
-   * @param GoogleCloudMlV1IntegratedGradientsAttribution
+   * Attributes credit by computing the Aumann-Shapley value taking advantage of
+   * the model's fully differentiable structure. Refer to this paper for more
+   * details: https://arxiv.org/abs/1703.01365
+   *
+   * @param GoogleCloudMlV1IntegratedGradientsAttribution $integratedGradientsAttribution
    */
   public function setIntegratedGradientsAttribution(GoogleCloudMlV1IntegratedGradientsAttribution $integratedGradientsAttribution)
   {
@@ -41,7 +45,11 @@ class GoogleCloudMlV1ExplanationConfig extends \Google\Model
     return $this->integratedGradientsAttribution;
   }
   /**
-   * @param GoogleCloudMlV1SampledShapleyAttribution
+   * An attribution method that approximates Shapley values for features that
+   * contribute to the label being predicted. A sampling strategy is used to
+   * approximate the value rather than considering all subsets of features.
+   *
+   * @param GoogleCloudMlV1SampledShapleyAttribution $sampledShapleyAttribution
    */
   public function setSampledShapleyAttribution(GoogleCloudMlV1SampledShapleyAttribution $sampledShapleyAttribution)
   {
@@ -55,7 +63,12 @@ class GoogleCloudMlV1ExplanationConfig extends \Google\Model
     return $this->sampledShapleyAttribution;
   }
   /**
-   * @param GoogleCloudMlV1XraiAttribution
+   * Attributes credit by computing the XRAI taking advantage of the model's
+   * fully differentiable structure. Refer to this paper for more details:
+   * https://arxiv.org/abs/1906.02825 Currently only implemented for models with
+   * natural image inputs.
+   *
+   * @param GoogleCloudMlV1XraiAttribution $xraiAttribution
    */
   public function setXraiAttribution(GoogleCloudMlV1XraiAttribution $xraiAttribution)
   {

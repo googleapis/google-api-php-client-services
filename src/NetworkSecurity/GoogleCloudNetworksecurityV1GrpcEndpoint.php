@@ -20,12 +20,18 @@ namespace Google\Service\NetworkSecurity;
 class GoogleCloudNetworksecurityV1GrpcEndpoint extends \Google\Model
 {
   /**
+   * Required. The target URI of the gRPC endpoint. Only UDS path is supported,
+   * and should start with "unix:".
+   *
    * @var string
    */
   public $targetUri;
 
   /**
-   * @param string
+   * Required. The target URI of the gRPC endpoint. Only UDS path is supported,
+   * and should start with "unix:".
+   *
+   * @param string $targetUri
    */
   public function setTargetUri($targetUri)
   {

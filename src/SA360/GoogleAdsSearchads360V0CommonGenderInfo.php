@@ -20,19 +20,45 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonGenderInfo extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Male.
+   */
+  public const TYPE_MALE = 'MALE';
+  /**
+   * Female.
+   */
+  public const TYPE_FEMALE = 'FEMALE';
+  /**
+   * Undetermined gender.
+   */
+  public const TYPE_UNDETERMINED = 'UNDETERMINED';
+  /**
+   * Type of the gender.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Type of the gender.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, MALE, FEMALE, UNDETERMINED
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

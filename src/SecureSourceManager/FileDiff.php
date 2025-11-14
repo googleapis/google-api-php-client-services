@@ -20,38 +20,68 @@ namespace Google\Service\SecureSourceManager;
 class FileDiff extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const ACTION_ACTION_UNSPECIFIED = 'ACTION_UNSPECIFIED';
+  /**
+   * The file was added.
+   */
+  public const ACTION_ADDED = 'ADDED';
+  /**
+   * The file was modified.
+   */
+  public const ACTION_MODIFIED = 'MODIFIED';
+  /**
+   * The file was deleted.
+   */
+  public const ACTION_DELETED = 'DELETED';
+  /**
+   * Output only. The action taken on the file (eg. added, modified, deleted).
+   *
    * @var string
    */
   public $action;
   /**
+   * Output only. The name of the file.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The git patch containing the file changes.
+   *
    * @var string
    */
   public $patch;
   /**
+   * Output only. The commit pointing to the file changes.
+   *
    * @var string
    */
   public $sha;
 
   /**
-   * @param string
+   * Output only. The action taken on the file (eg. added, modified, deleted).
+   *
+   * Accepted values: ACTION_UNSPECIFIED, ADDED, MODIFIED, DELETED
+   *
+   * @param self::ACTION_* $action
    */
   public function setAction($action)
   {
     $this->action = $action;
   }
   /**
-   * @return string
+   * @return self::ACTION_*
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param string
+   * Output only. The name of the file.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +95,9 @@ class FileDiff extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The git patch containing the file changes.
+   *
+   * @param string $patch
    */
   public function setPatch($patch)
   {
@@ -79,7 +111,9 @@ class FileDiff extends \Google\Model
     return $this->patch;
   }
   /**
-   * @param string
+   * Output only. The commit pointing to the file changes.
+   *
+   * @param string $sha
    */
   public function setSha($sha)
   {

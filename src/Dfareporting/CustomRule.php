@@ -21,10 +21,14 @@ class CustomRule extends \Google\Collection
 {
   protected $collection_key = 'ruleBlocks';
   /**
+   * Optional. Name of this custom rule.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Priority of the custom rule.
+   *
    * @var int
    */
   public $priority;
@@ -32,7 +36,9 @@ class CustomRule extends \Google\Collection
   protected $ruleBlocksDataType = 'array';
 
   /**
-   * @param string
+   * Optional. Name of this custom rule.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -46,7 +52,9 @@ class CustomRule extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * Optional. Priority of the custom rule.
+   *
+   * @param int $priority
    */
   public function setPriority($priority)
   {
@@ -60,7 +68,9 @@ class CustomRule extends \Google\Collection
     return $this->priority;
   }
   /**
-   * @param RuleBlock[]
+   * Optional. A list of field filter, the custom rule will apply.
+   *
+   * @param RuleBlock[] $ruleBlocks
    */
   public function setRuleBlocks($ruleBlocks)
   {

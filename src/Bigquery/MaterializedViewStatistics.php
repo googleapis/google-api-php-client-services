@@ -24,7 +24,11 @@ class MaterializedViewStatistics extends \Google\Collection
   protected $materializedViewDataType = 'array';
 
   /**
-   * @param MaterializedView[]
+   * Materialized views considered for the query job. Only certain materialized
+   * views are used. For a detailed list, see the child message. If many
+   * materialized views are considered, then the list might be incomplete.
+   *
+   * @param MaterializedView[] $materializedView
    */
   public function setMaterializedView($materializedView)
   {

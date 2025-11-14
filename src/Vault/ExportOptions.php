@@ -19,6 +19,22 @@ namespace Google\Service\Vault;
 
 class ExportOptions extends \Google\Model
 {
+  /**
+   * The region is unspecified. Defaults to ANY.
+   */
+  public const REGION_EXPORT_REGION_UNSPECIFIED = 'EXPORT_REGION_UNSPECIFIED';
+  /**
+   * Any region.
+   */
+  public const REGION_ANY = 'ANY';
+  /**
+   * United States region.
+   */
+  public const REGION_US = 'US';
+  /**
+   * Europe region.
+   */
+  public const REGION_EUROPE = 'EUROPE';
   protected $calendarOptionsType = CalendarExportOptions::class;
   protected $calendarOptionsDataType = '';
   protected $driveOptionsType = DriveExportOptions::class;
@@ -32,6 +48,8 @@ class ExportOptions extends \Google\Model
   protected $mailOptionsType = MailExportOptions::class;
   protected $mailOptionsDataType = '';
   /**
+   * The requested data region for the export.
+   *
    * @var string
    */
   public $region;
@@ -39,7 +57,9 @@ class ExportOptions extends \Google\Model
   protected $voiceOptionsDataType = '';
 
   /**
-   * @param CalendarExportOptions
+   * Option available for Calendar export.
+   *
+   * @param CalendarExportOptions $calendarOptions
    */
   public function setCalendarOptions(CalendarExportOptions $calendarOptions)
   {
@@ -53,7 +73,9 @@ class ExportOptions extends \Google\Model
     return $this->calendarOptions;
   }
   /**
-   * @param DriveExportOptions
+   * Options for Drive exports.
+   *
+   * @param DriveExportOptions $driveOptions
    */
   public function setDriveOptions(DriveExportOptions $driveOptions)
   {
@@ -67,7 +89,9 @@ class ExportOptions extends \Google\Model
     return $this->driveOptions;
   }
   /**
-   * @param GeminiExportOptions
+   * Option available for Gemini export.
+   *
+   * @param GeminiExportOptions $geminiOptions
    */
   public function setGeminiOptions(GeminiExportOptions $geminiOptions)
   {
@@ -81,7 +105,9 @@ class ExportOptions extends \Google\Model
     return $this->geminiOptions;
   }
   /**
-   * @param GroupsExportOptions
+   * Options for Groups exports.
+   *
+   * @param GroupsExportOptions $groupsOptions
    */
   public function setGroupsOptions(GroupsExportOptions $groupsOptions)
   {
@@ -95,7 +121,9 @@ class ExportOptions extends \Google\Model
     return $this->groupsOptions;
   }
   /**
-   * @param HangoutsChatExportOptions
+   * Options for Chat exports.
+   *
+   * @param HangoutsChatExportOptions $hangoutsChatOptions
    */
   public function setHangoutsChatOptions(HangoutsChatExportOptions $hangoutsChatOptions)
   {
@@ -109,7 +137,9 @@ class ExportOptions extends \Google\Model
     return $this->hangoutsChatOptions;
   }
   /**
-   * @param MailExportOptions
+   * Options for Gmail exports.
+   *
+   * @param MailExportOptions $mailOptions
    */
   public function setMailOptions(MailExportOptions $mailOptions)
   {
@@ -123,21 +153,27 @@ class ExportOptions extends \Google\Model
     return $this->mailOptions;
   }
   /**
-   * @param string
+   * The requested data region for the export.
+   *
+   * Accepted values: EXPORT_REGION_UNSPECIFIED, ANY, US, EUROPE
+   *
+   * @param self::REGION_* $region
    */
   public function setRegion($region)
   {
     $this->region = $region;
   }
   /**
-   * @return string
+   * @return self::REGION_*
    */
   public function getRegion()
   {
     return $this->region;
   }
   /**
-   * @param VoiceExportOptions
+   * Options for Voice exports.
+   *
+   * @param VoiceExportOptions $voiceOptions
    */
   public function setVoiceOptions(VoiceExportOptions $voiceOptions)
   {
