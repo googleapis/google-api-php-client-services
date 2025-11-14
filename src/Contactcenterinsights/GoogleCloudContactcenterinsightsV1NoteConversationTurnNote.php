@@ -20,12 +20,16 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1NoteConversationTurnNote extends \Google\Model
 {
   /**
+   * The conversation turn index that the note is associated with.
+   *
    * @var int
    */
   public $turnIndex;
 
   /**
-   * @param int
+   * The conversation turn index that the note is associated with.
+   *
+   * @param int $turnIndex
    */
   public function setTurnIndex($turnIndex)
   {

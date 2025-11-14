@@ -23,12 +23,17 @@ class GoogleCloudContactcenterinsightsV1SearchAuthorizedViewsResponse extends \G
   protected $authorizedViewsType = GoogleCloudContactcenterinsightsV1AuthorizedView::class;
   protected $authorizedViewsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1AuthorizedView[]
+   * The AuthorizedViews under the parent.
+   *
+   * @param GoogleCloudContactcenterinsightsV1AuthorizedView[] $authorizedViews
    */
   public function setAuthorizedViews($authorizedViews)
   {
@@ -42,7 +47,10 @@ class GoogleCloudContactcenterinsightsV1SearchAuthorizedViewsResponse extends \G
     return $this->authorizedViews;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
