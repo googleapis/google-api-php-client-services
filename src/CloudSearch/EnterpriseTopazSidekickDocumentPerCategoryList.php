@@ -19,10 +19,37 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickDocumentPerCategoryList extends \Google\Collection
 {
+  public const LIST_TYPE_UNKNOWN_LIST_TYPE = 'UNKNOWN_LIST_TYPE';
+  /**
+   * All documents in the list correspond to one of the mention categories.
+   */
+  public const LIST_TYPE_MENTIONS = 'MENTIONS';
+  /**
+   * All documents in the list correspond to one of the share categories.
+   */
+  public const LIST_TYPE_SHARES = 'SHARES';
+  /**
+   * A mixture of document categories that correspond to documents that need the
+   * users attention (e.g. documents that have been explicitly shared with the
+   * user but have not been viewed and documents where the user was mentioned
+   * but has not replied).
+   */
+  public const LIST_TYPE_NEEDS_ATTENTION = 'NEEDS_ATTENTION';
+  /**
+   * All documents in the list correspond to one of the view categories.
+   */
+  public const LIST_TYPE_VIEWS = 'VIEWS';
+  /**
+   * All documents in the list correspond to one of the edit categories.
+   */
+  public const LIST_TYPE_EDITS = 'EDITS';
   protected $collection_key = 'documents';
   protected $documentsType = EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry::class;
   protected $documentsDataType = 'array';
   /**
+   * Localized message explaining how the documents were derived (e.g. from the
+   * last 30 days activity). This field is optional.
+   *
    * @var string
    */
   public $helpMessage;
@@ -31,16 +58,20 @@ class EnterpriseTopazSidekickDocumentPerCategoryList extends \Google\Collection
    */
   public $listType;
   /**
+   * Description of the types of documents present in the list.
+   *
    * @var string
    */
   public $listTypeDescription;
   /**
+   * Response message in case no documents are present in the card.
+   *
    * @var string
    */
   public $responseMessage;
 
   /**
-   * @param EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry[]
+   * @param EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry[] $documents
    */
   public function setDocuments($documents)
   {
@@ -54,7 +85,10 @@ class EnterpriseTopazSidekickDocumentPerCategoryList extends \Google\Collection
     return $this->documents;
   }
   /**
-   * @param string
+   * Localized message explaining how the documents were derived (e.g. from the
+   * last 30 days activity). This field is optional.
+   *
+   * @param string $helpMessage
    */
   public function setHelpMessage($helpMessage)
   {
@@ -68,21 +102,23 @@ class EnterpriseTopazSidekickDocumentPerCategoryList extends \Google\Collection
     return $this->helpMessage;
   }
   /**
-   * @param string
+   * @param self::LIST_TYPE_* $listType
    */
   public function setListType($listType)
   {
     $this->listType = $listType;
   }
   /**
-   * @return string
+   * @return self::LIST_TYPE_*
    */
   public function getListType()
   {
     return $this->listType;
   }
   /**
-   * @param string
+   * Description of the types of documents present in the list.
+   *
+   * @param string $listTypeDescription
    */
   public function setListTypeDescription($listTypeDescription)
   {
@@ -96,7 +132,9 @@ class EnterpriseTopazSidekickDocumentPerCategoryList extends \Google\Collection
     return $this->listTypeDescription;
   }
   /**
-   * @param string
+   * Response message in case no documents are present in the card.
+   *
+   * @param string $responseMessage
    */
   public function setResponseMessage($responseMessage)
   {
