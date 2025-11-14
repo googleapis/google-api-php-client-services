@@ -50,8 +50,8 @@ class LocationsTagBindingCollections extends \Google\Service\Resource
     return $this->call('get', [$params], TagBindingCollection::class);
   }
   /**
-   * Updates tag bindings directly attached to a GCP resource.
-   * (tagBindingCollections.update)
+   * Updates tag bindings directly attached to a GCP resource. Update_mask can be
+   * kept empty or "*". (tagBindingCollections.patch)
    *
    * @param string $name Identifier. The name of the TagBindingCollection,
    * following the convention:
@@ -61,14 +61,17 @@ class LocationsTagBindingCollections extends \Google\Service\Resource
    * s/%2f%2fcloudresourcemanager.googleapis.com%2fprojects%2f123"
    * @param TagBindingCollection $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. An update mask to selectively update
+   * fields.
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function update($name, TagBindingCollection $postBody, $optParams = [])
+  public function patch($name, TagBindingCollection $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('update', [$params], Operation::class);
+    return $this->call('patch', [$params], Operation::class);
   }
 }
 

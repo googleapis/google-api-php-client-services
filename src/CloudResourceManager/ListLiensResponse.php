@@ -23,12 +23,17 @@ class ListLiensResponse extends \Google\Collection
   protected $liensType = Lien::class;
   protected $liensDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Lien[]
+   * A list of Liens.
+   *
+   * @param Lien[] $liens
    */
   public function setLiens($liens)
   {
@@ -42,7 +47,10 @@ class ListLiensResponse extends \Google\Collection
     return $this->liens;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
