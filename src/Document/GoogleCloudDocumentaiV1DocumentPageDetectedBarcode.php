@@ -25,7 +25,9 @@ class GoogleCloudDocumentaiV1DocumentPageDetectedBarcode extends \Google\Model
   protected $layoutDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1Barcode
+   * Detailed barcode information of the DetectedBarcode.
+   *
+   * @param GoogleCloudDocumentaiV1Barcode $barcode
    */
   public function setBarcode(GoogleCloudDocumentaiV1Barcode $barcode)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDocumentaiV1DocumentPageDetectedBarcode extends \Google\Model
     return $this->barcode;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageLayout
+   * Layout for DetectedBarcode.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageLayout $layout
    */
   public function setLayout(GoogleCloudDocumentaiV1DocumentPageLayout $layout)
   {
