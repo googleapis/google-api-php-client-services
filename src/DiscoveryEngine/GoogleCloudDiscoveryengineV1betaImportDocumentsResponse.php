@@ -26,7 +26,9 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsResponse extends \Google\Co
   protected $errorSamplesDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig
+   * Echoes the destination for the complete errors in the request if set.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig)
   {
@@ -40,7 +42,9 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsResponse extends \Google\Co
     return $this->errorConfig;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {
