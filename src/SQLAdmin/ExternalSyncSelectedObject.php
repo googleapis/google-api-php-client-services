@@ -20,12 +20,16 @@ namespace Google\Service\SQLAdmin;
 class ExternalSyncSelectedObject extends \Google\Model
 {
   /**
+   * The name of the database that Cloud SQL migrates.
+   *
    * @var string
    */
   public $database;
 
   /**
-   * @param string
+   * The name of the database that Cloud SQL migrates.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {

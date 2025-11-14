@@ -21,6 +21,8 @@ class ConnectPoolNodeConfig extends \Google\Collection
 {
   protected $collection_key = 'ipAddresses';
   /**
+   * Output only. The DNS name of the read pool node.
+   *
    * @var string
    */
   public $dnsName;
@@ -29,12 +31,17 @@ class ConnectPoolNodeConfig extends \Google\Collection
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   /**
+   * Output only. The name of the read pool node. Doesn't include the project
+   * ID.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The DNS name of the read pool node.
+   *
+   * @param string $dnsName
    */
   public function setDnsName($dnsName)
   {
@@ -48,7 +55,9 @@ class ConnectPoolNodeConfig extends \Google\Collection
     return $this->dnsName;
   }
   /**
-   * @param DnsNameMapping[]
+   * Output only. The list of DNS names used by this read pool node.
+   *
+   * @param DnsNameMapping[] $dnsNames
    */
   public function setDnsNames($dnsNames)
   {
@@ -62,7 +71,10 @@ class ConnectPoolNodeConfig extends \Google\Collection
     return $this->dnsNames;
   }
   /**
-   * @param IpMapping[]
+   * Output only. Mappings containing IP addresses that can be used to connect
+   * to the read pool node.
+   *
+   * @param IpMapping[] $ipAddresses
    */
   public function setIpAddresses($ipAddresses)
   {
@@ -76,7 +88,10 @@ class ConnectPoolNodeConfig extends \Google\Collection
     return $this->ipAddresses;
   }
   /**
-   * @param string
+   * Output only. The name of the read pool node. Doesn't include the project
+   * ID.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

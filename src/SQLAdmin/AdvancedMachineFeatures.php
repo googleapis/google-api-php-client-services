@@ -20,12 +20,16 @@ namespace Google\Service\SQLAdmin;
 class AdvancedMachineFeatures extends \Google\Model
 {
   /**
+   * The number of threads per physical core.
+   *
    * @var int
    */
   public $threadsPerCore;
 
   /**
-   * @param int
+   * The number of threads per physical core.
+   *
+   * @param int $threadsPerCore
    */
   public function setThreadsPerCore($threadsPerCore)
   {

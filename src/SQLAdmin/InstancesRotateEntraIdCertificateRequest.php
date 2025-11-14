@@ -17,28 +17,28 @@
 
 namespace Google\Service\SQLAdmin;
 
-class InstancesRotateServerCertificateRequest extends \Google\Model
+class InstancesRotateEntraIdCertificateRequest extends \Google\Model
 {
-  protected $rotateServerCertificateContextType = RotateServerCertificateContext::class;
-  protected $rotateServerCertificateContextDataType = '';
+  protected $rotateEntraIdCertificateContextType = RotateEntraIdCertificateContext::class;
+  protected $rotateEntraIdCertificateContextDataType = '';
 
   /**
    * Optional. Contains details about the rotate server certificate operation.
    *
-   * @param RotateServerCertificateContext $rotateServerCertificateContext
+   * @param RotateEntraIdCertificateContext $rotateEntraIdCertificateContext
    */
-  public function setRotateServerCertificateContext(RotateServerCertificateContext $rotateServerCertificateContext)
+  public function setRotateEntraIdCertificateContext(RotateEntraIdCertificateContext $rotateEntraIdCertificateContext)
   {
-    $this->rotateServerCertificateContext = $rotateServerCertificateContext;
+    $this->rotateEntraIdCertificateContext = $rotateEntraIdCertificateContext;
   }
   /**
-   * @return RotateServerCertificateContext
+   * @return RotateEntraIdCertificateContext
    */
-  public function getRotateServerCertificateContext()
+  public function getRotateEntraIdCertificateContext()
   {
-    return $this->rotateServerCertificateContext;
+    return $this->rotateEntraIdCertificateContext;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstancesRotateServerCertificateRequest::class, 'Google_Service_SQLAdmin_InstancesRotateServerCertificateRequest');
+class_alias(InstancesRotateEntraIdCertificateRequest::class, 'Google_Service_SQLAdmin_InstancesRotateEntraIdCertificateRequest');

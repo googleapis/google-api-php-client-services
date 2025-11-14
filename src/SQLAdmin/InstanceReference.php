@@ -20,20 +20,31 @@ namespace Google\Service\SQLAdmin;
 class InstanceReference extends \Google\Model
 {
   /**
+   * The name of the Cloud SQL instance being referenced. This does not include
+   * the project ID.
+   *
    * @var string
    */
   public $name;
   /**
+   * The project ID of the Cloud SQL instance being referenced. The default is
+   * the same project ID as the instance references it.
+   *
    * @var string
    */
   public $project;
   /**
+   * The region of the Cloud SQL instance being referenced.
+   *
    * @var string
    */
   public $region;
 
   /**
-   * @param string
+   * The name of the Cloud SQL instance being referenced. This does not include
+   * the project ID.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +58,10 @@ class InstanceReference extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The project ID of the Cloud SQL instance being referenced. The default is
+   * the same project ID as the instance references it.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {
@@ -61,7 +75,9 @@ class InstanceReference extends \Google\Model
     return $this->project;
   }
   /**
-   * @param string
+   * The region of the Cloud SQL instance being referenced.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {

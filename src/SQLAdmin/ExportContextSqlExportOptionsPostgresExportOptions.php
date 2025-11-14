@@ -20,16 +20,25 @@ namespace Google\Service\SQLAdmin;
 class ExportContextSqlExportOptionsPostgresExportOptions extends \Google\Model
 {
   /**
+   * Optional. Use this option to include DROP  SQL statements. Use these
+   * statements to delete database objects before running the import operation.
+   *
    * @var bool
    */
   public $clean;
   /**
+   * Optional. Option to include an IF EXISTS SQL statement with each DROP
+   * statement produced by clean.
+   *
    * @var bool
    */
   public $ifExists;
 
   /**
-   * @param bool
+   * Optional. Use this option to include DROP  SQL statements. Use these
+   * statements to delete database objects before running the import operation.
+   *
+   * @param bool $clean
    */
   public function setClean($clean)
   {
@@ -43,7 +52,10 @@ class ExportContextSqlExportOptionsPostgresExportOptions extends \Google\Model
     return $this->clean;
   }
   /**
-   * @param bool
+   * Optional. Option to include an IF EXISTS SQL statement with each DROP
+   * statement produced by clean.
+   *
+   * @param bool $ifExists
    */
   public function setIfExists($ifExists)
   {

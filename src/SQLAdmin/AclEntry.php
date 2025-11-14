@@ -20,24 +20,38 @@ namespace Google\Service\SQLAdmin;
 class AclEntry extends \Google\Model
 {
   /**
+   * The time when this access control entry expires in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example
+   * `2012-11-15T16:19:00.094Z`.
+   *
    * @var string
    */
   public $expirationTime;
   /**
+   * This is always `sql#aclEntry`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Optional. A label to identify this entry.
+   *
    * @var string
    */
   public $name;
   /**
+   * The allowlisted value for the access control list.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The time when this access control entry expires in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example
+   * `2012-11-15T16:19:00.094Z`.
+   *
+   * @param string $expirationTime
    */
   public function setExpirationTime($expirationTime)
   {
@@ -51,7 +65,9 @@ class AclEntry extends \Google\Model
     return $this->expirationTime;
   }
   /**
-   * @param string
+   * This is always `sql#aclEntry`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -65,7 +81,9 @@ class AclEntry extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Optional. A label to identify this entry.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +97,9 @@ class AclEntry extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The allowlisted value for the access control list.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

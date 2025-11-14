@@ -17,61 +17,58 @@
 
 namespace Google\Service\SQLAdmin;
 
-class BinLogCoordinates extends \Google\Model
+class InstancesListEntraIdCertificatesResponse extends \Google\Collection
 {
+  protected $collection_key = 'certs';
   /**
-   * Name of the binary log file for a Cloud SQL instance.
+   * The `sha1_fingerprint` of the active certificate from `certs`.
    *
    * @var string
    */
-  public $binLogFileName;
+  public $activeVersion;
+  protected $certsType = SslCert::class;
+  protected $certsDataType = 'array';
   /**
-   * Position (offset) within the binary log file.
-   *
-   * @var string
-   */
-  public $binLogPosition;
-  /**
-   * This is always `sql#binLogCoordinates`.
+   * This is always `sql#instancesListEntraIdCertificates`.
    *
    * @var string
    */
   public $kind;
 
   /**
-   * Name of the binary log file for a Cloud SQL instance.
+   * The `sha1_fingerprint` of the active certificate from `certs`.
    *
-   * @param string $binLogFileName
+   * @param string $activeVersion
    */
-  public function setBinLogFileName($binLogFileName)
+  public function setActiveVersion($activeVersion)
   {
-    $this->binLogFileName = $binLogFileName;
+    $this->activeVersion = $activeVersion;
   }
   /**
    * @return string
    */
-  public function getBinLogFileName()
+  public function getActiveVersion()
   {
-    return $this->binLogFileName;
+    return $this->activeVersion;
   }
   /**
-   * Position (offset) within the binary log file.
+   * List of Entra ID certificates for the instance.
    *
-   * @param string $binLogPosition
+   * @param SslCert[] $certs
    */
-  public function setBinLogPosition($binLogPosition)
+  public function setCerts($certs)
   {
-    $this->binLogPosition = $binLogPosition;
+    $this->certs = $certs;
   }
   /**
-   * @return string
+   * @return SslCert[]
    */
-  public function getBinLogPosition()
+  public function getCerts()
   {
-    return $this->binLogPosition;
+    return $this->certs;
   }
   /**
-   * This is always `sql#binLogCoordinates`.
+   * This is always `sql#instancesListEntraIdCertificates`.
    *
    * @param string $kind
    */
@@ -89,4 +86,4 @@ class BinLogCoordinates extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BinLogCoordinates::class, 'Google_Service_SQLAdmin_BinLogCoordinates');
+class_alias(InstancesListEntraIdCertificatesResponse::class, 'Google_Service_SQLAdmin_InstancesListEntraIdCertificatesResponse');
