@@ -20,24 +20,45 @@ namespace Google\Service\DataManager;
 class AwsWrappedKeyInfo extends \Google\Model
 {
   /**
+   * Unspecified key type. Should never be used.
+   */
+  public const KEY_TYPE_KEY_TYPE_UNSPECIFIED = 'KEY_TYPE_UNSPECIFIED';
+  /**
+   * Algorithm XChaCha20-Poly1305
+   */
+  public const KEY_TYPE_XCHACHA20_POLY1305 = 'XCHACHA20_POLY1305';
+  /**
+   * Required. The base64 encoded encrypted data encryption key.
+   *
    * @var string
    */
   public $encryptedDek;
   /**
+   * Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in
+   * the format of "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+   *
    * @var string
    */
   public $kekUri;
   /**
+   * Required. The type of algorithm used to encrypt the data.
+   *
    * @var string
    */
   public $keyType;
   /**
+   * Required. The Amazon Resource Name of the IAM Role to assume for KMS
+   * decryption access. Should be in the format of
+   * "arn:{partition}:iam::{account_id}:role/{role_name}"
+   *
    * @var string
    */
   public $roleArn;
 
   /**
-   * @param string
+   * Required. The base64 encoded encrypted data encryption key.
+   *
+   * @param string $encryptedDek
    */
   public function setEncryptedDek($encryptedDek)
   {
@@ -51,7 +72,10 @@ class AwsWrappedKeyInfo extends \Google\Model
     return $this->encryptedDek;
   }
   /**
-   * @param string
+   * Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in
+   * the format of "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+   *
+   * @param string $kekUri
    */
   public function setKekUri($kekUri)
   {
@@ -65,21 +89,29 @@ class AwsWrappedKeyInfo extends \Google\Model
     return $this->kekUri;
   }
   /**
-   * @param string
+   * Required. The type of algorithm used to encrypt the data.
+   *
+   * Accepted values: KEY_TYPE_UNSPECIFIED, XCHACHA20_POLY1305
+   *
+   * @param self::KEY_TYPE_* $keyType
    */
   public function setKeyType($keyType)
   {
     $this->keyType = $keyType;
   }
   /**
-   * @return string
+   * @return self::KEY_TYPE_*
    */
   public function getKeyType()
   {
     return $this->keyType;
   }
   /**
-   * @param string
+   * Required. The Amazon Resource Name of the IAM Role to assume for KMS
+   * decryption access. Should be in the format of
+   * "arn:{partition}:iam::{account_id}:role/{role_name}"
+   *
+   * @param string $roleArn
    */
   public function setRoleArn($roleArn)
   {

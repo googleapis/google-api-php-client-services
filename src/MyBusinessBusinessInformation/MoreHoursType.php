@@ -20,20 +20,28 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class MoreHoursType extends \Google\Model
 {
   /**
+   * Output only. The human-readable English display name for the hours type.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. A stable ID provided by Google for this hours type.
+   *
    * @var string
    */
   public $hoursTypeId;
   /**
+   * Output only. The human-readable localized display name for the hours type.
+   *
    * @var string
    */
   public $localizedDisplayName;
 
   /**
-   * @param string
+   * Output only. The human-readable English display name for the hours type.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +55,9 @@ class MoreHoursType extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. A stable ID provided by Google for this hours type.
+   *
+   * @param string $hoursTypeId
    */
   public function setHoursTypeId($hoursTypeId)
   {
@@ -61,7 +71,9 @@ class MoreHoursType extends \Google\Model
     return $this->hoursTypeId;
   }
   /**
-   * @param string
+   * Output only. The human-readable localized display name for the hours type.
+   *
+   * @param string $localizedDisplayName
    */
   public function setLocalizedDisplayName($localizedDisplayName)
   {

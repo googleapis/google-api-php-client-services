@@ -20,30 +20,44 @@ namespace Google\Service\Docs;
 class NestingLevelSuggestionState extends \Google\Model
 {
   /**
+   * Indicates if there was a suggested change to bullet_alignment.
+   *
    * @var bool
    */
   public $bulletAlignmentSuggested;
   /**
+   * Indicates if there was a suggested change to glyph_format.
+   *
    * @var bool
    */
   public $glyphFormatSuggested;
   /**
+   * Indicates if there was a suggested change to glyph_symbol.
+   *
    * @var bool
    */
   public $glyphSymbolSuggested;
   /**
+   * Indicates if there was a suggested change to glyph_type.
+   *
    * @var bool
    */
   public $glyphTypeSuggested;
   /**
+   * Indicates if there was a suggested change to indent_first_line.
+   *
    * @var bool
    */
   public $indentFirstLineSuggested;
   /**
+   * Indicates if there was a suggested change to indent_start.
+   *
    * @var bool
    */
   public $indentStartSuggested;
   /**
+   * Indicates if there was a suggested change to start_number.
+   *
    * @var bool
    */
   public $startNumberSuggested;
@@ -51,7 +65,9 @@ class NestingLevelSuggestionState extends \Google\Model
   protected $textStyleSuggestionStateDataType = '';
 
   /**
-   * @param bool
+   * Indicates if there was a suggested change to bullet_alignment.
+   *
+   * @param bool $bulletAlignmentSuggested
    */
   public function setBulletAlignmentSuggested($bulletAlignmentSuggested)
   {
@@ -65,7 +81,9 @@ class NestingLevelSuggestionState extends \Google\Model
     return $this->bulletAlignmentSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to glyph_format.
+   *
+   * @param bool $glyphFormatSuggested
    */
   public function setGlyphFormatSuggested($glyphFormatSuggested)
   {
@@ -79,7 +97,9 @@ class NestingLevelSuggestionState extends \Google\Model
     return $this->glyphFormatSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to glyph_symbol.
+   *
+   * @param bool $glyphSymbolSuggested
    */
   public function setGlyphSymbolSuggested($glyphSymbolSuggested)
   {
@@ -93,7 +113,9 @@ class NestingLevelSuggestionState extends \Google\Model
     return $this->glyphSymbolSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to glyph_type.
+   *
+   * @param bool $glyphTypeSuggested
    */
   public function setGlyphTypeSuggested($glyphTypeSuggested)
   {
@@ -107,7 +129,9 @@ class NestingLevelSuggestionState extends \Google\Model
     return $this->glyphTypeSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to indent_first_line.
+   *
+   * @param bool $indentFirstLineSuggested
    */
   public function setIndentFirstLineSuggested($indentFirstLineSuggested)
   {
@@ -121,7 +145,9 @@ class NestingLevelSuggestionState extends \Google\Model
     return $this->indentFirstLineSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to indent_start.
+   *
+   * @param bool $indentStartSuggested
    */
   public function setIndentStartSuggested($indentStartSuggested)
   {
@@ -135,7 +161,9 @@ class NestingLevelSuggestionState extends \Google\Model
     return $this->indentStartSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to start_number.
+   *
+   * @param bool $startNumberSuggested
    */
   public function setStartNumberSuggested($startNumberSuggested)
   {
@@ -149,7 +177,10 @@ class NestingLevelSuggestionState extends \Google\Model
     return $this->startNumberSuggested;
   }
   /**
-   * @param TextStyleSuggestionState
+   * A mask that indicates which of the fields in text style have been changed
+   * in this suggestion.
+   *
+   * @param TextStyleSuggestionState $textStyleSuggestionState
    */
   public function setTextStyleSuggestionState(TextStyleSuggestionState $textStyleSuggestionState)
   {

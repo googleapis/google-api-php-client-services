@@ -20,16 +20,22 @@ namespace Google\Service\Monitoring;
 class MutationRecord extends \Google\Model
 {
   /**
+   * When the change occurred.
+   *
    * @var string
    */
   public $mutateTime;
   /**
+   * The email address of the user making the change.
+   *
    * @var string
    */
   public $mutatedBy;
 
   /**
-   * @param string
+   * When the change occurred.
+   *
+   * @param string $mutateTime
    */
   public function setMutateTime($mutateTime)
   {
@@ -43,7 +49,9 @@ class MutationRecord extends \Google\Model
     return $this->mutateTime;
   }
   /**
-   * @param string
+   * The email address of the user making the change.
+   *
+   * @param string $mutatedBy
    */
   public function setMutatedBy($mutatedBy)
   {

@@ -19,17 +19,43 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2CloudSqlProperties extends \Google\Model
 {
+  /**
+   * An engine that is not currently supported by Sensitive Data Protection.
+   */
+  public const DATABASE_ENGINE_DATABASE_ENGINE_UNKNOWN = 'DATABASE_ENGINE_UNKNOWN';
+  /**
+   * Cloud SQL for MySQL instance.
+   */
+  public const DATABASE_ENGINE_DATABASE_ENGINE_MYSQL = 'DATABASE_ENGINE_MYSQL';
+  /**
+   * Cloud SQL for PostgreSQL instance.
+   */
+  public const DATABASE_ENGINE_DATABASE_ENGINE_POSTGRES = 'DATABASE_ENGINE_POSTGRES';
   protected $cloudSqlIamType = GooglePrivacyDlpV2CloudSqlIamCredential::class;
   protected $cloudSqlIamDataType = '';
   /**
+   * Optional. Immutable. The Cloud SQL instance for which the connection is
+   * defined. Only one connection per instance is allowed. This can only be set
+   * at creation time, and cannot be updated. It is an error to use a
+   * connection_name from different project or region than the one that holds
+   * the connection. For example, a Connection resource for Cloud SQL
+   * connection_name `project-id:us-central1:sql-instance` must be created under
+   * the parent `projects/project-id/locations/us-central1`
+   *
    * @var string
    */
   public $connectionName;
   /**
+   * Required. The database engine used by the Cloud SQL instance that this
+   * connection configures.
+   *
    * @var string
    */
   public $databaseEngine;
   /**
+   * Required. The DLP API will limit its connections to max_connections. Must
+   * be 2 or greater.
+   *
    * @var int
    */
   public $maxConnections;
@@ -37,7 +63,9 @@ class GooglePrivacyDlpV2CloudSqlProperties extends \Google\Model
   protected $usernamePasswordDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2CloudSqlIamCredential
+   * Built-in IAM authentication (must be configured in Cloud SQL).
+   *
+   * @param GooglePrivacyDlpV2CloudSqlIamCredential $cloudSqlIam
    */
   public function setCloudSqlIam(GooglePrivacyDlpV2CloudSqlIamCredential $cloudSqlIam)
   {
@@ -51,7 +79,15 @@ class GooglePrivacyDlpV2CloudSqlProperties extends \Google\Model
     return $this->cloudSqlIam;
   }
   /**
-   * @param string
+   * Optional. Immutable. The Cloud SQL instance for which the connection is
+   * defined. Only one connection per instance is allowed. This can only be set
+   * at creation time, and cannot be updated. It is an error to use a
+   * connection_name from different project or region than the one that holds
+   * the connection. For example, a Connection resource for Cloud SQL
+   * connection_name `project-id:us-central1:sql-instance` must be created under
+   * the parent `projects/project-id/locations/us-central1`
+   *
+   * @param string $connectionName
    */
   public function setConnectionName($connectionName)
   {
@@ -65,21 +101,30 @@ class GooglePrivacyDlpV2CloudSqlProperties extends \Google\Model
     return $this->connectionName;
   }
   /**
-   * @param string
+   * Required. The database engine used by the Cloud SQL instance that this
+   * connection configures.
+   *
+   * Accepted values: DATABASE_ENGINE_UNKNOWN, DATABASE_ENGINE_MYSQL,
+   * DATABASE_ENGINE_POSTGRES
+   *
+   * @param self::DATABASE_ENGINE_* $databaseEngine
    */
   public function setDatabaseEngine($databaseEngine)
   {
     $this->databaseEngine = $databaseEngine;
   }
   /**
-   * @return string
+   * @return self::DATABASE_ENGINE_*
    */
   public function getDatabaseEngine()
   {
     return $this->databaseEngine;
   }
   /**
-   * @param int
+   * Required. The DLP API will limit its connections to max_connections. Must
+   * be 2 or greater.
+   *
+   * @param int $maxConnections
    */
   public function setMaxConnections($maxConnections)
   {
@@ -93,7 +138,9 @@ class GooglePrivacyDlpV2CloudSqlProperties extends \Google\Model
     return $this->maxConnections;
   }
   /**
-   * @param GooglePrivacyDlpV2SecretManagerCredential
+   * A username and password stored in Secret Manager.
+   *
+   * @param GooglePrivacyDlpV2SecretManagerCredential $usernamePassword
    */
   public function setUsernamePassword(GooglePrivacyDlpV2SecretManagerCredential $usernamePassword)
   {

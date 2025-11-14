@@ -20,20 +20,28 @@ namespace Google\Service\Testing;
 class ToolResultsExecution extends \Google\Model
 {
   /**
+   * Output only. A tool results execution ID.
+   *
    * @var string
    */
   public $executionId;
   /**
+   * Output only. A tool results history ID.
+   *
    * @var string
    */
   public $historyId;
   /**
+   * Output only. The cloud project that owns the tool results execution.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * Output only. A tool results execution ID.
+   *
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -47,7 +55,9 @@ class ToolResultsExecution extends \Google\Model
     return $this->executionId;
   }
   /**
-   * @param string
+   * Output only. A tool results history ID.
+   *
+   * @param string $historyId
    */
   public function setHistoryId($historyId)
   {
@@ -61,7 +71,9 @@ class ToolResultsExecution extends \Google\Model
     return $this->historyId;
   }
   /**
-   * @param string
+   * Output only. The cloud project that owns the tool results execution.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

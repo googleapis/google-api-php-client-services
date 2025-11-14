@@ -21,6 +21,10 @@ class ListSubscriptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'subscriptions';
   /**
+   * Optional. If not empty, indicates that there may be more subscriptions that
+   * match the request; this value should be passed in a new
+   * `ListSubscriptionsRequest` to get more subscriptions.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListSubscriptionsResponse extends \Google\Collection
   protected $subscriptionsDataType = 'array';
 
   /**
-   * @param string
+   * Optional. If not empty, indicates that there may be more subscriptions that
+   * match the request; this value should be passed in a new
+   * `ListSubscriptionsRequest` to get more subscriptions.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListSubscriptionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Subscription[]
+   * Optional. The subscriptions that match the request.
+   *
+   * @param Subscription[] $subscriptions
    */
   public function setSubscriptions($subscriptions)
   {

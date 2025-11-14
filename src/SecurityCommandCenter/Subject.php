@@ -20,34 +20,62 @@ namespace Google\Service\SecurityCommandCenter;
 class Subject extends \Google\Model
 {
   /**
+   * Authentication is not specified.
+   */
+  public const KIND_AUTH_TYPE_UNSPECIFIED = 'AUTH_TYPE_UNSPECIFIED';
+  /**
+   * User with valid certificate.
+   */
+  public const KIND_USER = 'USER';
+  /**
+   * Users managed by Kubernetes API with credentials stored as secrets.
+   */
+  public const KIND_SERVICEACCOUNT = 'SERVICEACCOUNT';
+  /**
+   * Collection of users.
+   */
+  public const KIND_GROUP = 'GROUP';
+  /**
+   * Authentication type for the subject.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name for the subject.
+   *
    * @var string
    */
   public $name;
   /**
+   * Namespace for the subject.
+   *
    * @var string
    */
   public $ns;
 
   /**
-   * @param string
+   * Authentication type for the subject.
+   *
+   * Accepted values: AUTH_TYPE_UNSPECIFIED, USER, SERVICEACCOUNT, GROUP
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * Name for the subject.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +89,9 @@ class Subject extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Namespace for the subject.
+   *
+   * @param string $ns
    */
   public function setNs($ns)
   {

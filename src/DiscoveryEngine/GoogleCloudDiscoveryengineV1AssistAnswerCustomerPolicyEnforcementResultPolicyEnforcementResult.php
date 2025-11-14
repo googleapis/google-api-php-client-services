@@ -25,7 +25,9 @@ class GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultPol
   protected $modelArmorEnforcementResultDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultBannedPhraseEnforcementResult
+   * The policy enforcement result for the banned phrase policy.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultBannedPhraseEnforcementResult $bannedPhraseEnforcementResult
    */
   public function setBannedPhraseEnforcementResult(GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultBannedPhraseEnforcementResult $bannedPhraseEnforcementResult)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultPol
     return $this->bannedPhraseEnforcementResult;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultModelArmorEnforcementResult
+   * The policy enforcement result for the Model Armor policy.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultModelArmorEnforcementResult $modelArmorEnforcementResult
    */
   public function setModelArmorEnforcementResult(GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultModelArmorEnforcementResult $modelArmorEnforcementResult)
   {

@@ -23,7 +23,9 @@ class Account extends \Google\Model
   protected $googleAutoDataType = '';
 
   /**
-   * @param GoogleAuto
+   * An automatic google login account.
+   *
+   * @param GoogleAuto $googleAuto
    */
   public function setGoogleAuto(GoogleAuto $googleAuto)
   {

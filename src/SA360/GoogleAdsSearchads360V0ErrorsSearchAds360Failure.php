@@ -23,12 +23,16 @@ class GoogleAdsSearchads360V0ErrorsSearchAds360Failure extends \Google\Collectio
   protected $errorsType = GoogleAdsSearchads360V0ErrorsSearchAds360Error::class;
   protected $errorsDataType = 'array';
   /**
+   * The unique ID of the request that is used for debugging purposes.
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param GoogleAdsSearchads360V0ErrorsSearchAds360Error[]
+   * The list of errors that occurred.
+   *
+   * @param GoogleAdsSearchads360V0ErrorsSearchAds360Error[] $errors
    */
   public function setErrors($errors)
   {
@@ -42,7 +46,9 @@ class GoogleAdsSearchads360V0ErrorsSearchAds360Failure extends \Google\Collectio
     return $this->errors;
   }
   /**
-   * @param string
+   * The unique ID of the request that is used for debugging purposes.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

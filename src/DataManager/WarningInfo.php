@@ -24,7 +24,9 @@ class WarningInfo extends \Google\Collection
   protected $warningCountsDataType = 'array';
 
   /**
-   * @param WarningCount[]
+   * A list of warnings and counts per warning reason.
+   *
+   * @param WarningCount[] $warningCounts
    */
   public function setWarningCounts($warningCounts)
   {

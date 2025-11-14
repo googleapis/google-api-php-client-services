@@ -24,7 +24,9 @@ class GoogleCloudDocumentaiV1SchemaGenerationHistory extends \Google\Collection
   protected $iterationsDataType = 'array';
 
   /**
-   * @param GoogleCloudDocumentaiV1SchemaGenerationIteration[]
+   * Required. Previous prompt-answers in a chronological order.
+   *
+   * @param GoogleCloudDocumentaiV1SchemaGenerationIteration[] $iterations
    */
   public function setIterations($iterations)
   {

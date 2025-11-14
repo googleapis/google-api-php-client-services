@@ -21,14 +21,27 @@ class ListResponse extends \Google\Collection
 {
   protected $collection_key = 'statements';
   /**
+   * Human-readable message containing information intended to help end users
+   * understand, reproduce and debug the result. The message will be in English
+   * and we are currently not planning to offer any translations. Please note
+   * that no guarantees are made about the contents or format of this string.
+   * Any aspect of it may be subject to change without notice. You should not
+   * attempt to programmatically parse this data. For programmatic access, use
+   * the error_code field below.
+   *
    * @var string
    */
   public $debugString;
   /**
+   * Error codes that describe the result of the List operation.
+   *
    * @var string[]
    */
   public $errorCode;
   /**
+   * From serving time, how much longer the response should be considered valid
+   * barring further updates. REQUIRED
+   *
    * @var string
    */
   public $maxAge;
@@ -36,7 +49,15 @@ class ListResponse extends \Google\Collection
   protected $statementsDataType = 'array';
 
   /**
-   * @param string
+   * Human-readable message containing information intended to help end users
+   * understand, reproduce and debug the result. The message will be in English
+   * and we are currently not planning to offer any translations. Please note
+   * that no guarantees are made about the contents or format of this string.
+   * Any aspect of it may be subject to change without notice. You should not
+   * attempt to programmatically parse this data. For programmatic access, use
+   * the error_code field below.
+   *
+   * @param string $debugString
    */
   public function setDebugString($debugString)
   {
@@ -50,7 +71,9 @@ class ListResponse extends \Google\Collection
     return $this->debugString;
   }
   /**
-   * @param string[]
+   * Error codes that describe the result of the List operation.
+   *
+   * @param string[] $errorCode
    */
   public function setErrorCode($errorCode)
   {
@@ -64,7 +87,10 @@ class ListResponse extends \Google\Collection
     return $this->errorCode;
   }
   /**
-   * @param string
+   * From serving time, how much longer the response should be considered valid
+   * barring further updates. REQUIRED
+   *
+   * @param string $maxAge
    */
   public function setMaxAge($maxAge)
   {
@@ -78,7 +104,9 @@ class ListResponse extends \Google\Collection
     return $this->maxAge;
   }
   /**
-   * @param Statement[]
+   * A list of all the matching statements that have been found.
+   *
+   * @param Statement[] $statements
    */
   public function setStatements($statements)
   {

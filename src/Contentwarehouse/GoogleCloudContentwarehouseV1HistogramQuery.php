@@ -22,16 +22,28 @@ class GoogleCloudContentwarehouseV1HistogramQuery extends \Google\Model
   protected $filtersType = GoogleCloudContentwarehouseV1HistogramQueryPropertyNameFilter::class;
   protected $filtersDataType = '';
   /**
+   * An expression specifies a histogram request against matching documents for
+   * searches. See SearchDocumentsRequest.histogram_queries for details about
+   * syntax.
+   *
    * @var string
    */
   public $histogramQuery;
   /**
+   * Controls if the histogram query requires the return of a precise count.
+   * Enable this flag may adversely impact performance. Defaults to true.
+   *
    * @var bool
    */
   public $requirePreciseResultSize;
 
   /**
-   * @param GoogleCloudContentwarehouseV1HistogramQueryPropertyNameFilter
+   * Optional. Filter the result of histogram query by the property names. It
+   * only works with histogram query count('FilterableProperties'). It is an
+   * optional. It will perform histogram on all the property names for all the
+   * document schemas. Setting this field will have a better performance.
+   *
+   * @param GoogleCloudContentwarehouseV1HistogramQueryPropertyNameFilter $filters
    */
   public function setFilters(GoogleCloudContentwarehouseV1HistogramQueryPropertyNameFilter $filters)
   {
@@ -45,7 +57,11 @@ class GoogleCloudContentwarehouseV1HistogramQuery extends \Google\Model
     return $this->filters;
   }
   /**
-   * @param string
+   * An expression specifies a histogram request against matching documents for
+   * searches. See SearchDocumentsRequest.histogram_queries for details about
+   * syntax.
+   *
+   * @param string $histogramQuery
    */
   public function setHistogramQuery($histogramQuery)
   {
@@ -59,7 +75,10 @@ class GoogleCloudContentwarehouseV1HistogramQuery extends \Google\Model
     return $this->histogramQuery;
   }
   /**
-   * @param bool
+   * Controls if the histogram query requires the return of a precise count.
+   * Enable this flag may adversely impact performance. Defaults to true.
+   *
+   * @param bool $requirePreciseResultSize
    */
   public function setRequirePreciseResultSize($requirePreciseResultSize)
   {

@@ -20,19 +20,58 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueDomain extends \Google\Model
 {
   /**
+   * Unspecified domain category.
+   */
+  public const DOMAIN_CATEGORY_DOMAIN_CATEGORY_UNSPECIFIED = 'DOMAIN_CATEGORY_UNSPECIFIED';
+  /**
+   * Issues in the AI domain.
+   */
+  public const DOMAIN_CATEGORY_AI = 'AI';
+  /**
+   * Issues in the code domain.
+   */
+  public const DOMAIN_CATEGORY_CODE = 'CODE';
+  /**
+   * Issues in the container domain.
+   */
+  public const DOMAIN_CATEGORY_CONTAINER = 'CONTAINER';
+  /**
+   * Issues in the data domain.
+   */
+  public const DOMAIN_CATEGORY_DATA = 'DATA';
+  /**
+   * Issues in the identity and access domain.
+   */
+  public const DOMAIN_CATEGORY_IDENTITY_AND_ACCESS = 'IDENTITY_AND_ACCESS';
+  /**
+   * Issues in the vulnerability domain.
+   */
+  public const DOMAIN_CATEGORY_VULNERABILITY = 'VULNERABILITY';
+  /**
+   * Issues in the threat domain.
+   */
+  public const DOMAIN_CATEGORY_THREAT = 'THREAT';
+  /**
+   * The domain category of the issue.
+   *
    * @var string
    */
   public $domainCategory;
 
   /**
-   * @param string
+   * The domain category of the issue.
+   *
+   * Accepted values: DOMAIN_CATEGORY_UNSPECIFIED, AI, CODE, CONTAINER, DATA,
+   * IDENTITY_AND_ACCESS, VULNERABILITY, THREAT
+   *
+   * @param self::DOMAIN_CATEGORY_* $domainCategory
    */
   public function setDomainCategory($domainCategory)
   {
     $this->domainCategory = $domainCategory;
   }
   /**
-   * @return string
+   * @return self::DOMAIN_CATEGORY_*
    */
   public function getDomainCategory()
   {

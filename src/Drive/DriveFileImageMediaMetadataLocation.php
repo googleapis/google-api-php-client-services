@@ -19,8 +19,23 @@ namespace Google\Service\Drive;
 
 class DriveFileImageMediaMetadataLocation extends \Google\Model
 {
+  /**
+   * Output only. The altitude stored in the image.
+   *
+   * @var 
+   */
   public $altitude;
+  /**
+   * Output only. The latitude stored in the image.
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * Output only. The longitude stored in the image.
+   *
+   * @var 
+   */
   public $longitude;
 
   public function setAltitude($altitude)

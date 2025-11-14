@@ -25,7 +25,9 @@ class GooglePrivacyDlpV2ExcludeByHotword extends \Google\Model
   protected $proximityDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2Regex
+   * Regular expression pattern defining what qualifies as a hotword.
+   *
+   * @param GooglePrivacyDlpV2Regex $hotwordRegex
    */
   public function setHotwordRegex(GooglePrivacyDlpV2Regex $hotwordRegex)
   {
@@ -39,7 +41,12 @@ class GooglePrivacyDlpV2ExcludeByHotword extends \Google\Model
     return $this->hotwordRegex;
   }
   /**
-   * @param GooglePrivacyDlpV2Proximity
+   * Range of characters within which the entire hotword must reside. The total
+   * length of the window cannot exceed 1000 characters. The windowBefore
+   * property in proximity should be set to 1 if the hotword needs to be
+   * included in a column header.
+   *
+   * @param GooglePrivacyDlpV2Proximity $proximity
    */
   public function setProximity(GooglePrivacyDlpV2Proximity $proximity)
   {

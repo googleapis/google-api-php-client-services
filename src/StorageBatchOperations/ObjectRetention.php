@@ -20,16 +20,38 @@ namespace Google\Service\StorageBatchOperations;
 class ObjectRetention extends \Google\Model
 {
   /**
+   * If set and retain_until_time is empty, clears the retention.
+   */
+  public const RETENTION_MODE_RETENTION_MODE_UNSPECIFIED = 'RETENTION_MODE_UNSPECIFIED';
+  /**
+   * Sets the retention mode to locked.
+   */
+  public const RETENTION_MODE_LOCKED = 'LOCKED';
+  /**
+   * Sets the retention mode to unlocked.
+   */
+  public const RETENTION_MODE_UNLOCKED = 'UNLOCKED';
+  /**
+   * Required. The time when the object will be retained until. UNSET will clear
+   * the retention. Must be specified in RFC 3339 format e.g. YYYY-MM-
+   * DD'T'HH:MM:SS.SS'Z' or YYYY-MM-DD'T'HH:MM:SS'Z'.
+   *
    * @var string
    */
   public $retainUntilTime;
   /**
+   * Required. The retention mode of the object.
+   *
    * @var string
    */
   public $retentionMode;
 
   /**
-   * @param string
+   * Required. The time when the object will be retained until. UNSET will clear
+   * the retention. Must be specified in RFC 3339 format e.g. YYYY-MM-
+   * DD'T'HH:MM:SS.SS'Z' or YYYY-MM-DD'T'HH:MM:SS'Z'.
+   *
+   * @param string $retainUntilTime
    */
   public function setRetainUntilTime($retainUntilTime)
   {
@@ -43,14 +65,18 @@ class ObjectRetention extends \Google\Model
     return $this->retainUntilTime;
   }
   /**
-   * @param string
+   * Required. The retention mode of the object.
+   *
+   * Accepted values: RETENTION_MODE_UNSPECIFIED, LOCKED, UNLOCKED
+   *
+   * @param self::RETENTION_MODE_* $retentionMode
    */
   public function setRetentionMode($retentionMode)
   {
     $this->retentionMode = $retentionMode;
   }
   /**
-   * @return string
+   * @return self::RETENTION_MODE_*
    */
   public function getRetentionMode()
   {

@@ -21,6 +21,11 @@ class ListUsersResponse extends \Google\Collection
 {
   protected $collection_key = 'users';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListUsers` method to retrieve
+   * the next page of results. This token will be absent if there are no more
+   * results to return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +33,12 @@ class ListUsersResponse extends \Google\Collection
   protected $usersDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListUsers` method to retrieve
+   * the next page of results. This token will be absent if there are no more
+   * results to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +52,9 @@ class ListUsersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param User[]
+   * The list of users. This list will be absent if empty.
+   *
+   * @param User[] $users
    */
   public function setUsers($users)
   {

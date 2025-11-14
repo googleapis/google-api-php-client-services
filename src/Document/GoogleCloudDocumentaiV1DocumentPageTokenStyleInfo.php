@@ -22,56 +22,92 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
   protected $backgroundColorType = GoogleTypeColor::class;
   protected $backgroundColorDataType = '';
   /**
+   * Whether the text is bold (equivalent to font_weight is at least `700`).
+   *
    * @var bool
    */
   public $bold;
   /**
+   * Font size in points (`1` point is `¹⁄₇₂` inches).
+   *
    * @var int
    */
   public $fontSize;
   /**
+   * Name or style of the font.
+   *
    * @var string
    */
   public $fontType;
   /**
+   * TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy). Normal is
+   * `400`, bold is `700`.
+   *
    * @var int
    */
   public $fontWeight;
   /**
+   * Whether the text is handwritten.
+   *
    * @var bool
    */
   public $handwritten;
   /**
+   * Whether the text is italic.
+   *
    * @var bool
    */
   public $italic;
+  /**
+   * Letter spacing in points.
+   *
+   * @var 
+   */
   public $letterSpacing;
+  /**
+   * Font size in pixels, equal to _unrounded font_size_ * _resolution_ ÷
+   * `72.0`.
+   *
+   * @var 
+   */
   public $pixelFontSize;
   /**
+   * Whether the text is in small caps. This feature is not supported yet.
+   *
    * @var bool
    */
   public $smallcaps;
   /**
+   * Whether the text is strikethrough. This feature is not supported yet.
+   *
    * @var bool
    */
   public $strikeout;
   /**
+   * Whether the text is a subscript. This feature is not supported yet.
+   *
    * @var bool
    */
   public $subscript;
   /**
+   * Whether the text is a superscript. This feature is not supported yet.
+   *
    * @var bool
    */
   public $superscript;
   protected $textColorType = GoogleTypeColor::class;
   protected $textColorDataType = '';
   /**
+   * Whether the text is underlined.
+   *
    * @var bool
    */
   public $underlined;
 
   /**
-   * @param GoogleTypeColor
+   * Color of the background.
+   *
+   * @param GoogleTypeColor $backgroundColor
    */
   public function setBackgroundColor(GoogleTypeColor $backgroundColor)
   {
@@ -85,7 +121,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->backgroundColor;
   }
   /**
-   * @param bool
+   * Whether the text is bold (equivalent to font_weight is at least `700`).
+   *
+   * @param bool $bold
    */
   public function setBold($bold)
   {
@@ -99,7 +137,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->bold;
   }
   /**
-   * @param int
+   * Font size in points (`1` point is `¹⁄₇₂` inches).
+   *
+   * @param int $fontSize
    */
   public function setFontSize($fontSize)
   {
@@ -113,7 +153,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->fontSize;
   }
   /**
-   * @param string
+   * Name or style of the font.
+   *
+   * @param string $fontType
    */
   public function setFontType($fontType)
   {
@@ -127,7 +169,10 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->fontType;
   }
   /**
-   * @param int
+   * TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy). Normal is
+   * `400`, bold is `700`.
+   *
+   * @param int $fontWeight
    */
   public function setFontWeight($fontWeight)
   {
@@ -141,7 +186,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->fontWeight;
   }
   /**
-   * @param bool
+   * Whether the text is handwritten.
+   *
+   * @param bool $handwritten
    */
   public function setHandwritten($handwritten)
   {
@@ -155,7 +202,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->handwritten;
   }
   /**
-   * @param bool
+   * Whether the text is italic.
+   *
+   * @param bool $italic
    */
   public function setItalic($italic)
   {
@@ -185,7 +234,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->pixelFontSize;
   }
   /**
-   * @param bool
+   * Whether the text is in small caps. This feature is not supported yet.
+   *
+   * @param bool $smallcaps
    */
   public function setSmallcaps($smallcaps)
   {
@@ -199,7 +250,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->smallcaps;
   }
   /**
-   * @param bool
+   * Whether the text is strikethrough. This feature is not supported yet.
+   *
+   * @param bool $strikeout
    */
   public function setStrikeout($strikeout)
   {
@@ -213,7 +266,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->strikeout;
   }
   /**
-   * @param bool
+   * Whether the text is a subscript. This feature is not supported yet.
+   *
+   * @param bool $subscript
    */
   public function setSubscript($subscript)
   {
@@ -227,7 +282,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->subscript;
   }
   /**
-   * @param bool
+   * Whether the text is a superscript. This feature is not supported yet.
+   *
+   * @param bool $superscript
    */
   public function setSuperscript($superscript)
   {
@@ -241,7 +298,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->superscript;
   }
   /**
-   * @param GoogleTypeColor
+   * Color of the text.
+   *
+   * @param GoogleTypeColor $textColor
    */
   public function setTextColor(GoogleTypeColor $textColor)
   {
@@ -255,7 +314,9 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
     return $this->textColor;
   }
   /**
-   * @param bool
+   * Whether the text is underlined.
+   *
+   * @param bool $underlined
    */
   public function setUnderlined($underlined)
   {

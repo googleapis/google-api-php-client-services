@@ -25,7 +25,7 @@ class GoogleCloudDatalabelingV1beta1EvaluationMetrics extends \Google\Model
   protected $objectDetectionMetricsDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1ClassificationMetrics
+   * @param GoogleCloudDatalabelingV1beta1ClassificationMetrics $classificationMetrics
    */
   public function setClassificationMetrics(GoogleCloudDatalabelingV1beta1ClassificationMetrics $classificationMetrics)
   {
@@ -39,7 +39,7 @@ class GoogleCloudDatalabelingV1beta1EvaluationMetrics extends \Google\Model
     return $this->classificationMetrics;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics
+   * @param GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics $objectDetectionMetrics
    */
   public function setObjectDetectionMetrics(GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics $objectDetectionMetrics)
   {

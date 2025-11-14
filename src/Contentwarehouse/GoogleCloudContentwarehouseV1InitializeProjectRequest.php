@@ -20,70 +20,146 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1InitializeProjectRequest extends \Google\Model
 {
   /**
+   * This value is required by protobuf best practices
+   */
+  public const ACCESS_CONTROL_MODE_ACL_MODE_UNKNOWN = 'ACL_MODE_UNKNOWN';
+  /**
+   * Universal Access: No document level access control.
+   */
+  public const ACCESS_CONTROL_MODE_ACL_MODE_UNIVERSAL_ACCESS = 'ACL_MODE_UNIVERSAL_ACCESS';
+  /**
+   * Document level access control with customer own Identity Service.
+   */
+  public const ACCESS_CONTROL_MODE_ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_BYOID = 'ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_BYOID';
+  /**
+   * Document level access control using Google Cloud Identity.
+   */
+  public const ACCESS_CONTROL_MODE_ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_GCI = 'ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_GCI';
+  /**
+   * This value is required by protobuf best practices
+   */
+  public const DATABASE_TYPE_DB_UNKNOWN = 'DB_UNKNOWN';
+  /**
+   * Internal Spanner
+   */
+  public const DATABASE_TYPE_DB_INFRA_SPANNER = 'DB_INFRA_SPANNER';
+  /**
+   * Cloud Sql with a Postgres Sql instance
+   *
+   * @deprecated
+   */
+  public const DATABASE_TYPE_DB_CLOUD_SQL_POSTGRES = 'DB_CLOUD_SQL_POSTGRES';
+  /**
+   * Unspecified, will be default to document admin role.
+   */
+  public const DOCUMENT_CREATOR_DEFAULT_ROLE_DOCUMENT_CREATOR_DEFAULT_ROLE_UNSPECIFIED = 'DOCUMENT_CREATOR_DEFAULT_ROLE_UNSPECIFIED';
+  /**
+   * Document Admin, same as contentwarehouse.googleapis.com/documentAdmin.
+   */
+  public const DOCUMENT_CREATOR_DEFAULT_ROLE_DOCUMENT_ADMIN = 'DOCUMENT_ADMIN';
+  /**
+   * Document Editor, same as contentwarehouse.googleapis.com/documentEditor.
+   */
+  public const DOCUMENT_CREATOR_DEFAULT_ROLE_DOCUMENT_EDITOR = 'DOCUMENT_EDITOR';
+  /**
+   * Document Viewer, same as contentwarehouse.googleapis.com/documentViewer.
+   */
+  public const DOCUMENT_CREATOR_DEFAULT_ROLE_DOCUMENT_VIEWER = 'DOCUMENT_VIEWER';
+  /**
+   * Required. The access control mode for accessing the customer data
+   *
    * @var string
    */
   public $accessControlMode;
   /**
+   * Required. The type of database used to store customer data
+   *
    * @var string
    */
   public $databaseType;
   /**
+   * Optional. The default role for the person who create a document.
+   *
    * @var string
    */
   public $documentCreatorDefaultRole;
   /**
+   * Optional. Whether to enable CAL user email logging.
+   *
    * @var bool
    */
   public $enableCalUserEmailLogging;
   /**
+   * Optional. The KMS key used for CMEK encryption. It is required that the kms
+   * key is in the same region as the endpoint. The same key will be used for
+   * all provisioned resources, if encryption is available. If the kms_key is
+   * left empty, no encryption will be enforced.
+   *
    * @var string
    */
   public $kmsKey;
 
   /**
-   * @param string
+   * Required. The access control mode for accessing the customer data
+   *
+   * Accepted values: ACL_MODE_UNKNOWN, ACL_MODE_UNIVERSAL_ACCESS,
+   * ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_BYOID,
+   * ACL_MODE_DOCUMENT_LEVEL_ACCESS_CONTROL_GCI
+   *
+   * @param self::ACCESS_CONTROL_MODE_* $accessControlMode
    */
   public function setAccessControlMode($accessControlMode)
   {
     $this->accessControlMode = $accessControlMode;
   }
   /**
-   * @return string
+   * @return self::ACCESS_CONTROL_MODE_*
    */
   public function getAccessControlMode()
   {
     return $this->accessControlMode;
   }
   /**
-   * @param string
+   * Required. The type of database used to store customer data
+   *
+   * Accepted values: DB_UNKNOWN, DB_INFRA_SPANNER, DB_CLOUD_SQL_POSTGRES
+   *
+   * @param self::DATABASE_TYPE_* $databaseType
    */
   public function setDatabaseType($databaseType)
   {
     $this->databaseType = $databaseType;
   }
   /**
-   * @return string
+   * @return self::DATABASE_TYPE_*
    */
   public function getDatabaseType()
   {
     return $this->databaseType;
   }
   /**
-   * @param string
+   * Optional. The default role for the person who create a document.
+   *
+   * Accepted values: DOCUMENT_CREATOR_DEFAULT_ROLE_UNSPECIFIED, DOCUMENT_ADMIN,
+   * DOCUMENT_EDITOR, DOCUMENT_VIEWER
+   *
+   * @param self::DOCUMENT_CREATOR_DEFAULT_ROLE_* $documentCreatorDefaultRole
    */
   public function setDocumentCreatorDefaultRole($documentCreatorDefaultRole)
   {
     $this->documentCreatorDefaultRole = $documentCreatorDefaultRole;
   }
   /**
-   * @return string
+   * @return self::DOCUMENT_CREATOR_DEFAULT_ROLE_*
    */
   public function getDocumentCreatorDefaultRole()
   {
     return $this->documentCreatorDefaultRole;
   }
   /**
-   * @param bool
+   * Optional. Whether to enable CAL user email logging.
+   *
+   * @param bool $enableCalUserEmailLogging
    */
   public function setEnableCalUserEmailLogging($enableCalUserEmailLogging)
   {
@@ -97,7 +173,12 @@ class GoogleCloudContentwarehouseV1InitializeProjectRequest extends \Google\Mode
     return $this->enableCalUserEmailLogging;
   }
   /**
-   * @param string
+   * Optional. The KMS key used for CMEK encryption. It is required that the kms
+   * key is in the same region as the endpoint. The same key will be used for
+   * all provisioned resources, if encryption is available. If the kms_key is
+   * left empty, no encryption will be enforced.
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {

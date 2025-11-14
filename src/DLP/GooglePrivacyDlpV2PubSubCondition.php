@@ -20,37 +20,73 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2PubSubCondition extends \Google\Model
 {
   /**
+   * Unused.
+   */
+  public const MINIMUM_RISK_SCORE_PROFILE_SCORE_BUCKET_UNSPECIFIED = 'PROFILE_SCORE_BUCKET_UNSPECIFIED';
+  /**
+   * High risk/sensitivity detected.
+   */
+  public const MINIMUM_RISK_SCORE_HIGH = 'HIGH';
+  /**
+   * Medium or high risk/sensitivity detected.
+   */
+  public const MINIMUM_RISK_SCORE_MEDIUM_OR_HIGH = 'MEDIUM_OR_HIGH';
+  /**
+   * Unused.
+   */
+  public const MINIMUM_SENSITIVITY_SCORE_PROFILE_SCORE_BUCKET_UNSPECIFIED = 'PROFILE_SCORE_BUCKET_UNSPECIFIED';
+  /**
+   * High risk/sensitivity detected.
+   */
+  public const MINIMUM_SENSITIVITY_SCORE_HIGH = 'HIGH';
+  /**
+   * Medium or high risk/sensitivity detected.
+   */
+  public const MINIMUM_SENSITIVITY_SCORE_MEDIUM_OR_HIGH = 'MEDIUM_OR_HIGH';
+  /**
+   * The minimum data risk score that triggers the condition.
+   *
    * @var string
    */
   public $minimumRiskScore;
   /**
+   * The minimum sensitivity level that triggers the condition.
+   *
    * @var string
    */
   public $minimumSensitivityScore;
 
   /**
-   * @param string
+   * The minimum data risk score that triggers the condition.
+   *
+   * Accepted values: PROFILE_SCORE_BUCKET_UNSPECIFIED, HIGH, MEDIUM_OR_HIGH
+   *
+   * @param self::MINIMUM_RISK_SCORE_* $minimumRiskScore
    */
   public function setMinimumRiskScore($minimumRiskScore)
   {
     $this->minimumRiskScore = $minimumRiskScore;
   }
   /**
-   * @return string
+   * @return self::MINIMUM_RISK_SCORE_*
    */
   public function getMinimumRiskScore()
   {
     return $this->minimumRiskScore;
   }
   /**
-   * @param string
+   * The minimum sensitivity level that triggers the condition.
+   *
+   * Accepted values: PROFILE_SCORE_BUCKET_UNSPECIFIED, HIGH, MEDIUM_OR_HIGH
+   *
+   * @param self::MINIMUM_SENSITIVITY_SCORE_* $minimumSensitivityScore
    */
   public function setMinimumSensitivityScore($minimumSensitivityScore)
   {
     $this->minimumSensitivityScore = $minimumSensitivityScore;
   }
   /**
-   * @return string
+   * @return self::MINIMUM_SENSITIVITY_SCORE_*
    */
   public function getMinimumSensitivityScore()
   {

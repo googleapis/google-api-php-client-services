@@ -21,22 +21,34 @@ class ConfigureContactSettingsRequest extends \Google\Collection
 {
   protected $collection_key = 'contactNotices';
   /**
+   * The list of contact notices that the caller acknowledges. The notices
+   * needed here depend on the values specified in `contact_settings`.
+   *
    * @var string[]
    */
   public $contactNotices;
   protected $contactSettingsType = ContactSettings::class;
   protected $contactSettingsDataType = '';
   /**
+   * Required. The field mask describing which fields to update as a comma-
+   * separated list. For example, if only the registrant contact is being
+   * updated, the `update_mask` is `"registrant_contact"`.
+   *
    * @var string
    */
   public $updateMask;
   /**
+   * Validate the request without actually updating the contact settings.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string[]
+   * The list of contact notices that the caller acknowledges. The notices
+   * needed here depend on the values specified in `contact_settings`.
+   *
+   * @param string[] $contactNotices
    */
   public function setContactNotices($contactNotices)
   {
@@ -50,7 +62,9 @@ class ConfigureContactSettingsRequest extends \Google\Collection
     return $this->contactNotices;
   }
   /**
-   * @param ContactSettings
+   * Fields of the `ContactSettings` to update.
+   *
+   * @param ContactSettings $contactSettings
    */
   public function setContactSettings(ContactSettings $contactSettings)
   {
@@ -64,7 +78,11 @@ class ConfigureContactSettingsRequest extends \Google\Collection
     return $this->contactSettings;
   }
   /**
-   * @param string
+   * Required. The field mask describing which fields to update as a comma-
+   * separated list. For example, if only the registrant contact is being
+   * updated, the `update_mask` is `"registrant_contact"`.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {
@@ -78,7 +96,9 @@ class ConfigureContactSettingsRequest extends \Google\Collection
     return $this->updateMask;
   }
   /**
-   * @param bool
+   * Validate the request without actually updating the contact settings.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

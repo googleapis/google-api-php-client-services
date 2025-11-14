@@ -21,6 +21,8 @@ class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo extends \G
 {
   protected $collection_key = 'headlines';
   /**
+   * The tracking id of the ad.
+   *
    * @var string
    */
   public $adTrackingId;
@@ -29,16 +31,22 @@ class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo extends \G
   protected $headlinesType = GoogleAdsSearchads360V0CommonAdTextAsset::class;
   protected $headlinesDataType = 'array';
   /**
+   * Text appended to the auto-generated visible URL with a delimiter.
+   *
    * @var string
    */
   public $path1;
   /**
+   * Text appended to path1 with a delimiter.
+   *
    * @var string
    */
   public $path2;
 
   /**
-   * @param string
+   * The tracking id of the ad.
+   *
+   * @param string $adTrackingId
    */
   public function setAdTrackingId($adTrackingId)
   {
@@ -52,7 +60,10 @@ class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo extends \G
     return $this->adTrackingId;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonAdTextAsset[]
+   * List of text assets for descriptions. When the ad serves the descriptions
+   * will be selected from this list.
+   *
+   * @param GoogleAdsSearchads360V0CommonAdTextAsset[] $descriptions
    */
   public function setDescriptions($descriptions)
   {
@@ -66,7 +77,10 @@ class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo extends \G
     return $this->descriptions;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonAdTextAsset[]
+   * List of text assets for headlines. When the ad serves the headlines will be
+   * selected from this list.
+   *
+   * @param GoogleAdsSearchads360V0CommonAdTextAsset[] $headlines
    */
   public function setHeadlines($headlines)
   {
@@ -80,7 +94,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo extends \G
     return $this->headlines;
   }
   /**
-   * @param string
+   * Text appended to the auto-generated visible URL with a delimiter.
+   *
+   * @param string $path1
    */
   public function setPath1($path1)
   {
@@ -94,7 +110,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo extends \G
     return $this->path1;
   }
   /**
-   * @param string
+   * Text appended to path1 with a delimiter.
+   *
+   * @param string $path2
    */
   public function setPath2($path2)
   {

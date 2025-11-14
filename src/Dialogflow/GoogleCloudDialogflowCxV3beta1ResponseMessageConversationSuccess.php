@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccess extends \Google\Model
 {
   /**
+   * Custom metadata. Dialogflow doesn't impose any structure on this.
+   *
    * @var array[]
    */
   public $metadata;
 
   /**
-   * @param array[]
+   * Custom metadata. Dialogflow doesn't impose any structure on this.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {

@@ -20,16 +20,23 @@ namespace Google\Service\CloudAsset;
 class RelatedResource extends \Google\Model
 {
   /**
+   * The type of the asset. Example: `compute.googleapis.com/Instance`
+   *
    * @var string
    */
   public $assetType;
   /**
+   * The full resource name of the related resource. Example:
+   * `//compute.googleapis.com/projects/my_proj_123/zones/instance/instance123`
+   *
    * @var string
    */
   public $fullResourceName;
 
   /**
-   * @param string
+   * The type of the asset. Example: `compute.googleapis.com/Instance`
+   *
+   * @param string $assetType
    */
   public function setAssetType($assetType)
   {
@@ -43,7 +50,10 @@ class RelatedResource extends \Google\Model
     return $this->assetType;
   }
   /**
-   * @param string
+   * The full resource name of the related resource. Example:
+   * `//compute.googleapis.com/projects/my_proj_123/zones/instance/instance123`
+   *
+   * @param string $fullResourceName
    */
   public function setFullResourceName($fullResourceName)
   {

@@ -20,20 +20,44 @@ namespace Google\Service\BigQueryDataTransfer;
 class TransferMessage extends \Google\Model
 {
   /**
+   * No severity specified.
+   */
+  public const SEVERITY_MESSAGE_SEVERITY_UNSPECIFIED = 'MESSAGE_SEVERITY_UNSPECIFIED';
+  /**
+   * Informational message.
+   */
+  public const SEVERITY_INFO = 'INFO';
+  /**
+   * Warning message.
+   */
+  public const SEVERITY_WARNING = 'WARNING';
+  /**
+   * Error message.
+   */
+  public const SEVERITY_ERROR = 'ERROR';
+  /**
+   * Message text.
+   *
    * @var string
    */
   public $messageText;
   /**
+   * Time when message was logged.
+   *
    * @var string
    */
   public $messageTime;
   /**
+   * Message severity.
+   *
    * @var string
    */
   public $severity;
 
   /**
-   * @param string
+   * Message text.
+   *
+   * @param string $messageText
    */
   public function setMessageText($messageText)
   {
@@ -47,7 +71,9 @@ class TransferMessage extends \Google\Model
     return $this->messageText;
   }
   /**
-   * @param string
+   * Time when message was logged.
+   *
+   * @param string $messageTime
    */
   public function setMessageTime($messageTime)
   {
@@ -61,14 +87,18 @@ class TransferMessage extends \Google\Model
     return $this->messageTime;
   }
   /**
-   * @param string
+   * Message severity.
+   *
+   * Accepted values: MESSAGE_SEVERITY_UNSPECIFIED, INFO, WARNING, ERROR
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {

@@ -21,6 +21,8 @@ class GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponse extends \Google\Colle
 {
   protected $collection_key = 'failureSamples';
   /**
+   * URIs that were not crawled before the LRO terminated.
+   *
    * @var string[]
    */
   public $failedUris;
@@ -28,7 +30,9 @@ class GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponse extends \Google\Colle
   protected $failureSamplesDataType = 'array';
 
   /**
-   * @param string[]
+   * URIs that were not crawled before the LRO terminated.
+   *
+   * @param string[] $failedUris
    */
   public function setFailedUris($failedUris)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponse extends \Google\Colle
     return $this->failedUris;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfo[]
+   * Details for a sample of up to 10 `failed_uris`.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfo[] $failureSamples
    */
   public function setFailureSamples($failureSamples)
   {

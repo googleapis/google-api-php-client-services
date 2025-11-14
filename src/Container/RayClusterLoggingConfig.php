@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class RayClusterLoggingConfig extends \Google\Model
 {
   /**
+   * Enable log collection for Ray clusters.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Enable log collection for Ray clusters.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

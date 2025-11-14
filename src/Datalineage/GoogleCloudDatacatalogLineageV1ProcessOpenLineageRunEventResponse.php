@@ -21,20 +21,32 @@ class GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse extends 
 {
   protected $collection_key = 'lineageEvents';
   /**
+   * Created lineage event names. Format: `projects/{project}/locations/{locatio
+   * n}/processes/{process}/runs/{run}/lineageEvents/{lineage_event}`.
+   *
    * @var string[]
    */
   public $lineageEvents;
   /**
+   * Created process name. Format:
+   * `projects/{project}/locations/{location}/processes/{process}`.
+   *
    * @var string
    */
   public $process;
   /**
+   * Created run name. Format:
+   * `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
+   *
    * @var string
    */
   public $run;
 
   /**
-   * @param string[]
+   * Created lineage event names. Format: `projects/{project}/locations/{locatio
+   * n}/processes/{process}/runs/{run}/lineageEvents/{lineage_event}`.
+   *
+   * @param string[] $lineageEvents
    */
   public function setLineageEvents($lineageEvents)
   {
@@ -48,7 +60,10 @@ class GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse extends 
     return $this->lineageEvents;
   }
   /**
-   * @param string
+   * Created process name. Format:
+   * `projects/{project}/locations/{location}/processes/{process}`.
+   *
+   * @param string $process
    */
   public function setProcess($process)
   {
@@ -62,7 +77,10 @@ class GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse extends 
     return $this->process;
   }
   /**
-   * @param string
+   * Created run name. Format:
+   * `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
+   *
+   * @param string $run
    */
   public function setRun($run)
   {

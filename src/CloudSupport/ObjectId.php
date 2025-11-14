@@ -20,20 +20,28 @@ namespace Google\Service\CloudSupport;
 class ObjectId extends \Google\Model
 {
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $bucketName;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $generation;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $objectName;
 
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $bucketName
    */
   public function setBucketName($bucketName)
   {
@@ -47,7 +55,9 @@ class ObjectId extends \Google\Model
     return $this->bucketName;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -61,7 +71,9 @@ class ObjectId extends \Google\Model
     return $this->generation;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $objectName
    */
   public function setObjectName($objectName)
   {

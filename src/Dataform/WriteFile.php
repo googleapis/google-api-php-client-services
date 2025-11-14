@@ -20,12 +20,16 @@ namespace Google\Service\Dataform;
 class WriteFile extends \Google\Model
 {
   /**
+   * The file's contents.
+   *
    * @var string
    */
   public $contents;
 
   /**
-   * @param string
+   * The file's contents.
+   *
+   * @param string $contents
    */
   public function setContents($contents)
   {

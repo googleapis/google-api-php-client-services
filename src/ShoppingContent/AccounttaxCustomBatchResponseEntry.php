@@ -22,18 +22,25 @@ class AccounttaxCustomBatchResponseEntry extends \Google\Model
   protected $accountTaxType = AccountTax::class;
   protected $accountTaxDataType = '';
   /**
+   * The ID of the request entry this entry responds to.
+   *
    * @var string
    */
   public $batchId;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accounttaxCustomBatchResponseEntry`"
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param AccountTax
+   * The retrieved or updated account tax settings.
+   *
+   * @param AccountTax $accountTax
    */
   public function setAccountTax(AccountTax $accountTax)
   {
@@ -47,7 +54,9 @@ class AccounttaxCustomBatchResponseEntry extends \Google\Model
     return $this->accountTax;
   }
   /**
-   * @param string
+   * The ID of the request entry this entry responds to.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -61,7 +70,10 @@ class AccounttaxCustomBatchResponseEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param Errors
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail
+   * the whole request.
+   *
+   * @param Errors $errors
    */
   public function setErrors(Errors $errors)
   {
@@ -75,7 +87,10 @@ class AccounttaxCustomBatchResponseEntry extends \Google\Model
     return $this->errors;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accounttaxCustomBatchResponseEntry`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -23,12 +23,18 @@ class ListNegativeKeywordsResponse extends \Google\Collection
   protected $negativeKeywordsType = NegativeKeyword::class;
   protected $negativeKeywordsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListNegativeKeywords` method to
+   * retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param NegativeKeyword[]
+   * The list of negative keywords. This list will be absent if empty.
+   *
+   * @param NegativeKeyword[] $negativeKeywords
    */
   public function setNegativeKeywords($negativeKeywords)
   {
@@ -42,7 +48,11 @@ class ListNegativeKeywordsResponse extends \Google\Collection
     return $this->negativeKeywords;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListNegativeKeywords` method to
+   * retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,40 +20,77 @@ namespace Google\Service\CloudResourceManager;
 class Organization extends \Google\Model
 {
   /**
+   * Unspecified state. This is only useful for distinguishing unset values.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The normal and active state.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The organization has been marked for deletion by the user.
+   */
+  public const STATE_DELETE_REQUESTED = 'DELETE_REQUESTED';
+  /**
+   * Output only. Timestamp when the Organization was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Timestamp when the Organization was requested for deletion.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * Immutable. The G Suite / Workspace customer id used in the Directory API.
+   *
    * @var string
    */
   public $directoryCustomerId;
   /**
+   * Output only. A human-readable string that refers to the organization in the
+   * Google Cloud Console. This string is set by the server and cannot be
+   * changed. The string will be set to the primary domain (for example,
+   * "google.com") of the Google Workspace customer that owns the organization.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. A checksum computed by the server based on the current value
+   * of the Organization resource. This may be sent on update and delete
+   * requests to ensure the client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. The resource name of the organization. This is the
+   * organization's relative path in the API. Its format is
+   * "organizations/[organization_id]". For example, "organizations/1234".
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The organization's current lifecycle state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Timestamp when the Organization was last modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Timestamp when the Organization was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -67,7 +104,9 @@ class Organization extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the Organization was requested for deletion.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -81,7 +120,9 @@ class Organization extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * Immutable. The G Suite / Workspace customer id used in the Directory API.
+   *
+   * @param string $directoryCustomerId
    */
   public function setDirectoryCustomerId($directoryCustomerId)
   {
@@ -95,7 +136,12 @@ class Organization extends \Google\Model
     return $this->directoryCustomerId;
   }
   /**
-   * @param string
+   * Output only. A human-readable string that refers to the organization in the
+   * Google Cloud Console. This string is set by the server and cannot be
+   * changed. The string will be set to the primary domain (for example,
+   * "google.com") of the Google Workspace customer that owns the organization.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -109,7 +155,11 @@ class Organization extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. A checksum computed by the server based on the current value
+   * of the Organization resource. This may be sent on update and delete
+   * requests to ensure the client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -123,7 +173,11 @@ class Organization extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. The resource name of the organization. This is the
+   * organization's relative path in the API. Its format is
+   * "organizations/[organization_id]". For example, "organizations/1234".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -137,21 +191,27 @@ class Organization extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The organization's current lifecycle state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the Organization was last modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

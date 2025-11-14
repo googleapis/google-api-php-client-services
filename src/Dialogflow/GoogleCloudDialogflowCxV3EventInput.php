@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3EventInput extends \Google\Model
 {
   /**
+   * Name of the event.
+   *
    * @var string
    */
   public $event;
 
   /**
-   * @param string
+   * Name of the event.
+   *
+   * @param string $event
    */
   public function setEvent($event)
   {

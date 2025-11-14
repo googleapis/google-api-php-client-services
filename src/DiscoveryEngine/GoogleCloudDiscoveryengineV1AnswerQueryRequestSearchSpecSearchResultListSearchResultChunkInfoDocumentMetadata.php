@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfoDocumentMetadata extends \Google\Model
 {
   /**
+   * Title of the document.
+   *
    * @var string
    */
   public $title;
   /**
+   * Uri of the document.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Title of the document.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
     return $this->title;
   }
   /**
-   * @param string
+   * Uri of the document.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

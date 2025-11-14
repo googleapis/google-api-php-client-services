@@ -20,16 +20,22 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2FieldTextOptions extends \Google\Model
 {
   /**
+   * Output only. The maximum valid length of values for the text field.
+   *
    * @var int
    */
   public $maxLength;
   /**
+   * Output only. The minimum valid length of values for the text field.
+   *
    * @var int
    */
   public $minLength;
 
   /**
-   * @param int
+   * Output only. The maximum valid length of values for the text field.
+   *
+   * @param int $maxLength
    */
   public function setMaxLength($maxLength)
   {
@@ -43,7 +49,9 @@ class GoogleAppsDriveLabelsV2FieldTextOptions extends \Google\Model
     return $this->maxLength;
   }
   /**
-   * @param int
+   * Output only. The minimum valid length of values for the text field.
+   *
+   * @param int $minLength
    */
   public function setMinLength($minLength)
   {

@@ -20,16 +20,32 @@ namespace Google\Service\ServiceManagement;
 class OperationInfo extends \Google\Model
 {
   /**
+   * Required. The message name of the metadata type for this long-running
+   * operation. If the response is in a different package from the rpc, a fully-
+   * qualified message name must be used (e.g. `google.protobuf.Struct`). Note:
+   * Altering this value constitutes a breaking change.
+   *
    * @var string
    */
   public $metadataType;
   /**
+   * Required. The message name of the primary return type for this long-running
+   * operation. This type will be used to deserialize the LRO's response. If the
+   * response is in a different package from the rpc, a fully-qualified message
+   * name must be used (e.g. `google.protobuf.Struct`). Note: Altering this
+   * value constitutes a breaking change.
+   *
    * @var string
    */
   public $responseType;
 
   /**
-   * @param string
+   * Required. The message name of the metadata type for this long-running
+   * operation. If the response is in a different package from the rpc, a fully-
+   * qualified message name must be used (e.g. `google.protobuf.Struct`). Note:
+   * Altering this value constitutes a breaking change.
+   *
+   * @param string $metadataType
    */
   public function setMetadataType($metadataType)
   {
@@ -43,7 +59,13 @@ class OperationInfo extends \Google\Model
     return $this->metadataType;
   }
   /**
-   * @param string
+   * Required. The message name of the primary return type for this long-running
+   * operation. This type will be used to deserialize the LRO's response. If the
+   * response is in a different package from the rpc, a fully-qualified message
+   * name must be used (e.g. `google.protobuf.Struct`). Note: Altering this
+   * value constitutes a breaking change.
+   *
+   * @param string $responseType
    */
   public function setResponseType($responseType)
   {

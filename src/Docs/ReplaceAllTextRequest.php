@@ -22,6 +22,8 @@ class ReplaceAllTextRequest extends \Google\Model
   protected $containsTextType = SubstringMatchCriteria::class;
   protected $containsTextDataType = '';
   /**
+   * The text that will replace the matched text.
+   *
    * @var string
    */
   public $replaceText;
@@ -29,7 +31,9 @@ class ReplaceAllTextRequest extends \Google\Model
   protected $tabsCriteriaDataType = '';
 
   /**
-   * @param SubstringMatchCriteria
+   * Finds text in the document matching this substring.
+   *
+   * @param SubstringMatchCriteria $containsText
    */
   public function setContainsText(SubstringMatchCriteria $containsText)
   {
@@ -43,7 +47,9 @@ class ReplaceAllTextRequest extends \Google\Model
     return $this->containsText;
   }
   /**
-   * @param string
+   * The text that will replace the matched text.
+   *
+   * @param string $replaceText
    */
   public function setReplaceText($replaceText)
   {
@@ -57,7 +63,14 @@ class ReplaceAllTextRequest extends \Google\Model
     return $this->replaceText;
   }
   /**
-   * @param TabsCriteria
+   * Optional. The criteria used to specify in which tabs the replacement
+   * occurs. When omitted, the replacement applies to all tabs. In a document
+   * containing a single tab: - If provided, must match the singular tab's ID. -
+   * If omitted, the replacement applies to the singular tab. In a document
+   * containing multiple tabs: - If provided, the replacement applies to the
+   * specified tabs. - If omitted, the replacement applies to all tabs.
+   *
+   * @param TabsCriteria $tabsCriteria
    */
   public function setTabsCriteria(TabsCriteria $tabsCriteria)
   {

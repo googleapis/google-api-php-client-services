@@ -25,7 +25,9 @@ class DeployPolicyResourceSelector extends \Google\Model
   protected $targetDataType = '';
 
   /**
-   * @param DeliveryPipelineAttribute
+   * Optional. Contains attributes about a delivery pipeline.
+   *
+   * @param DeliveryPipelineAttribute $deliveryPipeline
    */
   public function setDeliveryPipeline(DeliveryPipelineAttribute $deliveryPipeline)
   {
@@ -39,7 +41,9 @@ class DeployPolicyResourceSelector extends \Google\Model
     return $this->deliveryPipeline;
   }
   /**
-   * @param TargetAttribute
+   * Optional. Contains attributes about a target.
+   *
+   * @param TargetAttribute $target
    */
   public function setTarget(TargetAttribute $target)
   {

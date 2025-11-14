@@ -20,19 +20,48 @@ namespace Google\Service\CloudIdentity;
 class MembershipRoleRestrictionEvaluation extends \Google\Model
 {
   /**
+   * Default. Should not be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The member adheres to the parent group's restriction.
+   */
+  public const STATE_COMPLIANT = 'COMPLIANT';
+  /**
+   * The group-group membership might be currently violating some parent group's
+   * restriction but in future, it will never allow any new member in the child
+   * group which can violate parent group's restriction.
+   */
+  public const STATE_FORWARD_COMPLIANT = 'FORWARD_COMPLIANT';
+  /**
+   * The member violates the parent group's restriction.
+   */
+  public const STATE_NON_COMPLIANT = 'NON_COMPLIANT';
+  /**
+   * The state of the membership is under evaluation.
+   */
+  public const STATE_EVALUATING = 'EVALUATING';
+  /**
+   * Output only. The current state of the restriction
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The current state of the restriction
+   *
+   * Accepted values: STATE_UNSPECIFIED, COMPLIANT, FORWARD_COMPLIANT,
+   * NON_COMPLIANT, EVALUATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

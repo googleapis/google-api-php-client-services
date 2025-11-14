@@ -20,18 +20,30 @@ namespace Google\Service\CloudSearch;
 class Principal extends \Google\Model
 {
   /**
+   * This principal is a group identified using an external identity. The name
+   * field must specify the group resource name with this format:
+   * identitysources/{source_id}/groups/{ID}
+   *
    * @var string
    */
   public $groupResourceName;
   protected $gsuitePrincipalType = GSuitePrincipal::class;
   protected $gsuitePrincipalDataType = '';
   /**
+   * This principal is a user identified using an external identity. The name
+   * field must specify the user resource name with this format:
+   * identitysources/{source_id}/users/{ID}
+   *
    * @var string
    */
   public $userResourceName;
 
   /**
-   * @param string
+   * This principal is a group identified using an external identity. The name
+   * field must specify the group resource name with this format:
+   * identitysources/{source_id}/groups/{ID}
+   *
+   * @param string $groupResourceName
    */
   public function setGroupResourceName($groupResourceName)
   {
@@ -45,7 +57,9 @@ class Principal extends \Google\Model
     return $this->groupResourceName;
   }
   /**
-   * @param GSuitePrincipal
+   * This principal is a Google Workspace user, group or domain.
+   *
+   * @param GSuitePrincipal $gsuitePrincipal
    */
   public function setGsuitePrincipal(GSuitePrincipal $gsuitePrincipal)
   {
@@ -59,7 +73,11 @@ class Principal extends \Google\Model
     return $this->gsuitePrincipal;
   }
   /**
-   * @param string
+   * This principal is a user identified using an external identity. The name
+   * field must specify the user resource name with this format:
+   * identitysources/{source_id}/users/{ID}
+   *
+   * @param string $userResourceName
    */
   public function setUserResourceName($userResourceName)
   {

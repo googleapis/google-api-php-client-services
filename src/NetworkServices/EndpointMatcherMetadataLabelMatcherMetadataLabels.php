@@ -20,16 +20,23 @@ namespace Google\Service\NetworkServices;
 class EndpointMatcherMetadataLabelMatcherMetadataLabels extends \Google\Model
 {
   /**
+   * Required. Label name presented as key in xDS Node Metadata.
+   *
    * @var string
    */
   public $labelName;
   /**
+   * Required. Label value presented as value corresponding to the above key, in
+   * xDS Node Metadata.
+   *
    * @var string
    */
   public $labelValue;
 
   /**
-   * @param string
+   * Required. Label name presented as key in xDS Node Metadata.
+   *
+   * @param string $labelName
    */
   public function setLabelName($labelName)
   {
@@ -43,7 +50,10 @@ class EndpointMatcherMetadataLabelMatcherMetadataLabels extends \Google\Model
     return $this->labelName;
   }
   /**
-   * @param string
+   * Required. Label value presented as value corresponding to the above key, in
+   * xDS Node Metadata.
+   *
+   * @param string $labelValue
    */
   public function setLabelValue($labelValue)
   {

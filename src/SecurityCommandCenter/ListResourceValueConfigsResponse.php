@@ -21,6 +21,9 @@ class ListResourceValueConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'resourceValueConfigs';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is empty, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListResourceValueConfigsResponse extends \Google\Collection
   protected $resourceValueConfigsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is empty, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListResourceValueConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudSecuritycenterV1ResourceValueConfig[]
+   * The resource value configs from the specified parent.
+   *
+   * @param GoogleCloudSecuritycenterV1ResourceValueConfig[] $resourceValueConfigs
    */
   public function setResourceValueConfigs($resourceValueConfigs)
   {

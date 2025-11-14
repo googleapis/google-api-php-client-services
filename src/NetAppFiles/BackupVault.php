@@ -20,50 +20,114 @@ namespace Google\Service\NetAppFiles;
 class BackupVault extends \Google\Model
 {
   /**
+   * BackupVault type not set.
+   */
+  public const BACKUP_VAULT_TYPE_BACKUP_VAULT_TYPE_UNSPECIFIED = 'BACKUP_VAULT_TYPE_UNSPECIFIED';
+  /**
+   * BackupVault type is IN_REGION.
+   */
+  public const BACKUP_VAULT_TYPE_IN_REGION = 'IN_REGION';
+  /**
+   * BackupVault type is CROSS_REGION.
+   */
+  public const BACKUP_VAULT_TYPE_CROSS_REGION = 'CROSS_REGION';
+  /**
+   * State not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * BackupVault is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * BackupVault is available for use.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * BackupVault is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * BackupVault is not valid and cannot be used.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * BackupVault is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Optional. Region where the backups are stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   *
    * @var string
    */
   public $backupRegion;
   protected $backupRetentionPolicyType = BackupRetentionPolicy::class;
   protected $backupRetentionPolicyDataType = '';
   /**
+   * Optional. Type of backup vault to be created. Default is IN_REGION.
+   *
    * @var string
    */
   public $backupVaultType;
   /**
+   * Output only. Create time of the backup vault.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Description of the backup vault.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. Name of the Backup vault created in backup region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   *
    * @var string
    */
   public $destinationBackupVault;
   /**
+   * Resource labels to represent user provided metadata.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the backup vault. Format: `projects/{proje
+   * ct_id}/locations/{location}/backupVaults/{backup_vault_id}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Name of the Backup vault created in source region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   *
    * @var string
    */
   public $sourceBackupVault;
   /**
+   * Output only. Region in which the backup vault is created. Format:
+   * `projects/{project_id}/locations/{location}`
+   *
    * @var string
    */
   public $sourceRegion;
   /**
+   * Output only. The backup vault state.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Optional. Region where the backups are stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   *
+   * @param string $backupRegion
    */
   public function setBackupRegion($backupRegion)
   {
@@ -77,7 +141,9 @@ class BackupVault extends \Google\Model
     return $this->backupRegion;
   }
   /**
-   * @param BackupRetentionPolicy
+   * Optional. Backup retention policy defining the retenton of backups.
+   *
+   * @param BackupRetentionPolicy $backupRetentionPolicy
    */
   public function setBackupRetentionPolicy(BackupRetentionPolicy $backupRetentionPolicy)
   {
@@ -91,21 +157,27 @@ class BackupVault extends \Google\Model
     return $this->backupRetentionPolicy;
   }
   /**
-   * @param string
+   * Optional. Type of backup vault to be created. Default is IN_REGION.
+   *
+   * Accepted values: BACKUP_VAULT_TYPE_UNSPECIFIED, IN_REGION, CROSS_REGION
+   *
+   * @param self::BACKUP_VAULT_TYPE_* $backupVaultType
    */
   public function setBackupVaultType($backupVaultType)
   {
     $this->backupVaultType = $backupVaultType;
   }
   /**
-   * @return string
+   * @return self::BACKUP_VAULT_TYPE_*
    */
   public function getBackupVaultType()
   {
     return $this->backupVaultType;
   }
   /**
-   * @param string
+   * Output only. Create time of the backup vault.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -119,7 +191,9 @@ class BackupVault extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Description of the backup vault.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -133,7 +207,10 @@ class BackupVault extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. Name of the Backup vault created in backup region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   *
+   * @param string $destinationBackupVault
    */
   public function setDestinationBackupVault($destinationBackupVault)
   {
@@ -147,7 +224,9 @@ class BackupVault extends \Google\Model
     return $this->destinationBackupVault;
   }
   /**
-   * @param string[]
+   * Resource labels to represent user provided metadata.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -161,7 +240,10 @@ class BackupVault extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the backup vault. Format: `projects/{proje
+   * ct_id}/locations/{location}/backupVaults/{backup_vault_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -175,7 +257,10 @@ class BackupVault extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Name of the Backup vault created in source region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   *
+   * @param string $sourceBackupVault
    */
   public function setSourceBackupVault($sourceBackupVault)
   {
@@ -189,7 +274,10 @@ class BackupVault extends \Google\Model
     return $this->sourceBackupVault;
   }
   /**
-   * @param string
+   * Output only. Region in which the backup vault is created. Format:
+   * `projects/{project_id}/locations/{location}`
+   *
+   * @param string $sourceRegion
    */
   public function setSourceRegion($sourceRegion)
   {
@@ -203,14 +291,19 @@ class BackupVault extends \Google\Model
     return $this->sourceRegion;
   }
   /**
-   * @param string
+   * Output only. The backup vault state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, READY, DELETING, ERROR,
+   * UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -20,24 +20,71 @@ namespace Google\Service\ShoppingContent;
 class TopicTrends extends \Google\Model
 {
   /**
+   * Country trends are calculated for. Must be a two-letter country code (ISO
+   * 3166-1-alpha-2 code), for example, `“US”`.
+   *
    * @var string
    */
   public $customerCountryCode;
   protected $dateType = Date::class;
   protected $dateDataType = '';
+  /**
+   * Search interest in the last 120 days, with the same normalization as
+   * search_interest. This field is only present for a past date.
+   *
+   * @var 
+   */
   public $last120DaysSearchInterest;
+  /**
+   * Search interest in the last 30 days, with the same normalization as
+   * search_interest. This field is only present for a past date.
+   *
+   * @var 
+   */
   public $last30DaysSearchInterest;
+  /**
+   * Search interest in the last 7 days, with the same normalization as
+   * search_interest. This field is only present for a past date.
+   *
+   * @var 
+   */
   public $last7DaysSearchInterest;
+  /**
+   * Search interest in the last 90 days, with the same normalization as
+   * search_interest. This field is only present for a past date.
+   *
+   * @var 
+   */
   public $last90DaysSearchInterest;
+  /**
+   * Estimated search interest in the next 7 days, with the same normalization
+   * as search_interest. This field is only present for a future date.
+   *
+   * @var 
+   */
   public $next7DaysSearchInterest;
+  /**
+   * Daily search interest, normalized to the time and country to make
+   * comparisons easier, with 100 representing peak popularity (from 0 to 100)
+   * for the requested time period and location.
+   *
+   * @var 
+   */
   public $searchInterest;
   /**
+   * Google-provided topic trends are calculated for. Only top eight topics are
+   * returned. Topic is what shoppers are searching for on Google, grouped by
+   * the same concept.
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param string
+   * Country trends are calculated for. Must be a two-letter country code (ISO
+   * 3166-1-alpha-2 code), for example, `“US”`.
+   *
+   * @param string $customerCountryCode
    */
   public function setCustomerCountryCode($customerCountryCode)
   {
@@ -51,7 +98,9 @@ class TopicTrends extends \Google\Model
     return $this->customerCountryCode;
   }
   /**
-   * @param Date
+   * Date the trend score was retrieved.
+   *
+   * @param Date $date
    */
   public function setDate(Date $date)
   {
@@ -113,7 +162,11 @@ class TopicTrends extends \Google\Model
     return $this->searchInterest;
   }
   /**
-   * @param string
+   * Google-provided topic trends are calculated for. Only top eight topics are
+   * returned. Topic is what shoppers are searching for on Google, grouped by
+   * the same concept.
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {

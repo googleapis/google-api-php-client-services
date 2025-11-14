@@ -21,12 +21,20 @@ class KeyAccessJustificationsPolicy extends \Google\Collection
 {
   protected $collection_key = 'allowedAccessReasons';
   /**
+   * The list of allowed reasons for access to a CryptoKey. Zero allowed access
+   * reasons means all encrypt, decrypt, and sign operations for the CryptoKey
+   * associated with this policy will fail.
+   *
    * @var string[]
    */
   public $allowedAccessReasons;
 
   /**
-   * @param string[]
+   * The list of allowed reasons for access to a CryptoKey. Zero allowed access
+   * reasons means all encrypt, decrypt, and sign operations for the CryptoKey
+   * associated with this policy will fail.
+   *
+   * @param string[] $allowedAccessReasons
    */
   public function setAllowedAccessReasons($allowedAccessReasons)
   {

@@ -25,7 +25,9 @@ class RepairPhase extends \Google\Model
   protected $rollbackDataType = '';
 
   /**
-   * @param RetryPhase
+   * Output only. Records of the retry attempts for retry repair mode.
+   *
+   * @param RetryPhase $retry
    */
   public function setRetry(RetryPhase $retry)
   {
@@ -39,7 +41,9 @@ class RepairPhase extends \Google\Model
     return $this->retry;
   }
   /**
-   * @param RollbackAttempt
+   * Output only. Rollback attempt for rollback repair mode .
+   *
+   * @param RollbackAttempt $rollback
    */
   public function setRollback(RollbackAttempt $rollback)
   {

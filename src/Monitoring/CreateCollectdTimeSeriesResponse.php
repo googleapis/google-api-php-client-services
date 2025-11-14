@@ -26,7 +26,12 @@ class CreateCollectdTimeSeriesResponse extends \Google\Collection
   protected $summaryDataType = '';
 
   /**
-   * @param CollectdPayloadError[]
+   * Records the error status for points that were not written due to an error
+   * in the request.Failed requests for which nothing is written will return an
+   * error response instead. Requests where data points were rejected by the
+   * backend will set summary instead.
+   *
+   * @param CollectdPayloadError[] $payloadErrors
    */
   public function setPayloadErrors($payloadErrors)
   {
@@ -40,7 +45,12 @@ class CreateCollectdTimeSeriesResponse extends \Google\Collection
     return $this->payloadErrors;
   }
   /**
-   * @param CreateTimeSeriesSummary
+   * Aggregate statistics from writing the payloads. This field is omitted if
+   * all points were successfully written, so that the response is empty. This
+   * is for backwards compatibility with clients that log errors on any non-
+   * empty response.
+   *
+   * @param CreateTimeSeriesSummary $summary
    */
   public function setSummary(CreateTimeSeriesSummary $summary)
   {

@@ -23,6 +23,8 @@ class CollectdPayloadError extends \Google\Collection
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * The zero-based index in CreateCollectdTimeSeriesRequest.collectd_payloads.
+   *
    * @var int
    */
   public $index;
@@ -30,7 +32,10 @@ class CollectdPayloadError extends \Google\Collection
   protected $valueErrorsDataType = 'array';
 
   /**
-   * @param Status
+   * Records the error status for the payload. If this field is present, the
+   * partial errors for nested values won't be populated.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -44,7 +49,9 @@ class CollectdPayloadError extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param int
+   * The zero-based index in CreateCollectdTimeSeriesRequest.collectd_payloads.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -58,7 +65,11 @@ class CollectdPayloadError extends \Google\Collection
     return $this->index;
   }
   /**
-   * @param CollectdValueError[]
+   * Records the error status for values that were not written due to an
+   * error.Failed payloads for which nothing is written will not include partial
+   * value errors.
+   *
+   * @param CollectdValueError[] $valueErrors
    */
   public function setValueErrors($valueErrors)
   {

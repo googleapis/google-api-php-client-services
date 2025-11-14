@@ -26,7 +26,9 @@ class GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsResponse extend
   protected $errorSamplesDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig
+   * The desired location of errors incurred during the Import.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig)
   {
@@ -40,7 +42,9 @@ class GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsResponse extend
     return $this->errorConfig;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {

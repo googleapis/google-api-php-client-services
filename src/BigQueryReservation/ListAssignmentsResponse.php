@@ -23,12 +23,17 @@ class ListAssignmentsResponse extends \Google\Collection
   protected $assignmentsType = Assignment::class;
   protected $assignmentsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Assignment[]
+   * List of assignments visible to the user.
+   *
+   * @param Assignment[] $assignments
    */
   public function setAssignments($assignments)
   {
@@ -42,7 +47,10 @@ class ListAssignmentsResponse extends \Google\Collection
     return $this->assignments;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

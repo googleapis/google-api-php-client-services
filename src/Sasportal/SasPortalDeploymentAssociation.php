@@ -20,16 +20,22 @@ namespace Google\Service\Sasportal;
 class SasPortalDeploymentAssociation extends \Google\Model
 {
   /**
+   * GCP project id of the associated project.
+   *
    * @var string
    */
   public $gcpProjectId;
   /**
+   * User id of the deployment.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param string
+   * GCP project id of the associated project.
+   *
+   * @param string $gcpProjectId
    */
   public function setGcpProjectId($gcpProjectId)
   {
@@ -43,7 +49,9 @@ class SasPortalDeploymentAssociation extends \Google\Model
     return $this->gcpProjectId;
   }
   /**
-   * @param string
+   * User id of the deployment.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

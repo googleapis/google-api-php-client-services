@@ -23,12 +23,15 @@ class SearchItemsByViewUrlResponse extends \Google\Collection
   protected $itemsType = Item::class;
   protected $itemsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Item[]
+   * @param Item[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +45,10 @@ class SearchItemsByViewUrlResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

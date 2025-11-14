@@ -20,16 +20,26 @@ namespace Google\Service\Bigquery;
 class ExternalDatasetReference extends \Google\Model
 {
   /**
+   * Required. The connection id that is used to access the external_source.
+   * Format:
+   * projects/{project_id}/locations/{location_id}/connections/{connection_id}
+   *
    * @var string
    */
   public $connection;
   /**
+   * Required. External source that backs this dataset.
+   *
    * @var string
    */
   public $externalSource;
 
   /**
-   * @param string
+   * Required. The connection id that is used to access the external_source.
+   * Format:
+   * projects/{project_id}/locations/{location_id}/connections/{connection_id}
+   *
+   * @param string $connection
    */
   public function setConnection($connection)
   {
@@ -43,7 +53,9 @@ class ExternalDatasetReference extends \Google\Model
     return $this->connection;
   }
   /**
-   * @param string
+   * Required. External source that backs this dataset.
+   *
+   * @param string $externalSource
    */
   public function setExternalSource($externalSource)
   {

@@ -26,12 +26,20 @@ class TranslateDocumentResponse extends \Google\Model
   protected $glossaryDocumentTranslationType = DocumentTranslation::class;
   protected $glossaryDocumentTranslationDataType = '';
   /**
+   * Only present when 'model' is present in the request. 'model' is normalized
+   * to have a project number. For example: If the 'model' field in
+   * TranslateDocumentRequest is: `projects/{project-id}/locations/{location-
+   * id}/models/general/nmt` then `model` here would be normalized to
+   * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
+   *
    * @var string
    */
   public $model;
 
   /**
-   * @param DocumentTranslation
+   * Translated document.
+   *
+   * @param DocumentTranslation $documentTranslation
    */
   public function setDocumentTranslation(DocumentTranslation $documentTranslation)
   {
@@ -45,7 +53,9 @@ class TranslateDocumentResponse extends \Google\Model
     return $this->documentTranslation;
   }
   /**
-   * @param TranslateTextGlossaryConfig
+   * The `glossary_config` used for this translation.
+   *
+   * @param TranslateTextGlossaryConfig $glossaryConfig
    */
   public function setGlossaryConfig(TranslateTextGlossaryConfig $glossaryConfig)
   {
@@ -59,7 +69,11 @@ class TranslateDocumentResponse extends \Google\Model
     return $this->glossaryConfig;
   }
   /**
-   * @param DocumentTranslation
+   * The document's translation output if a glossary is provided in the request.
+   * This can be the same as [TranslateDocumentResponse.document_translation] if
+   * no glossary terms apply.
+   *
+   * @param DocumentTranslation $glossaryDocumentTranslation
    */
   public function setGlossaryDocumentTranslation(DocumentTranslation $glossaryDocumentTranslation)
   {
@@ -73,7 +87,13 @@ class TranslateDocumentResponse extends \Google\Model
     return $this->glossaryDocumentTranslation;
   }
   /**
-   * @param string
+   * Only present when 'model' is present in the request. 'model' is normalized
+   * to have a project number. For example: If the 'model' field in
+   * TranslateDocumentRequest is: `projects/{project-id}/locations/{location-
+   * id}/models/general/nmt` then `model` here would be normalized to
+   * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {

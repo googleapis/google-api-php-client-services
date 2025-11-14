@@ -21,6 +21,8 @@ class ContainerVersion extends \Google\Collection
 {
   protected $collection_key = 'zone';
   /**
+   * GTM Account ID.
+   *
    * @var string
    */
   public $accountId;
@@ -31,24 +33,35 @@ class ContainerVersion extends \Google\Collection
   protected $containerType = Container::class;
   protected $containerDataType = '';
   /**
+   * GTM Container ID.
+   *
    * @var string
    */
   public $containerId;
   /**
+   * The Container Version ID uniquely identifies the GTM Container Version.
+   *
    * @var string
    */
   public $containerVersionId;
   protected $customTemplateType = CustomTemplate::class;
   protected $customTemplateDataType = 'array';
   /**
+   * A value of true indicates this container version has been deleted.
+   *
    * @var bool
    */
   public $deleted;
   /**
+   * Container version description.
+   *
    * @var string
    */
   public $description;
   /**
+   * The fingerprint of the GTM Container Version as computed at storage time.
+   * This value is recomputed whenever the container version is modified.
+   *
    * @var string
    */
   public $fingerprint;
@@ -57,16 +70,22 @@ class ContainerVersion extends \Google\Collection
   protected $gtagConfigType = GtagConfig::class;
   protected $gtagConfigDataType = 'array';
   /**
+   * Container version display name.
+   *
    * @var string
    */
   public $name;
   /**
+   * GTM Container Version's API relative path.
+   *
    * @var string
    */
   public $path;
   protected $tagType = Tag::class;
   protected $tagDataType = 'array';
   /**
+   * Auto generated link to the tag manager UI
+   *
    * @var string
    */
   public $tagManagerUrl;
@@ -80,7 +99,9 @@ class ContainerVersion extends \Google\Collection
   protected $zoneDataType = 'array';
 
   /**
-   * @param string
+   * GTM Account ID.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -94,7 +115,9 @@ class ContainerVersion extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param BuiltInVariable[]
+   * The built-in variables in the container that this version was taken from.
+   *
+   * @param BuiltInVariable[] $builtInVariable
    */
   public function setBuiltInVariable($builtInVariable)
   {
@@ -108,7 +131,9 @@ class ContainerVersion extends \Google\Collection
     return $this->builtInVariable;
   }
   /**
-   * @param Client[]
+   * The clients in the container that this version was taken from.
+   *
+   * @param Client[] $client
    */
   public function setClient($client)
   {
@@ -122,7 +147,9 @@ class ContainerVersion extends \Google\Collection
     return $this->client;
   }
   /**
-   * @param Container
+   * The container that this version was taken from.
+   *
+   * @param Container $container
    */
   public function setContainer(Container $container)
   {
@@ -136,7 +163,9 @@ class ContainerVersion extends \Google\Collection
     return $this->container;
   }
   /**
-   * @param string
+   * GTM Container ID.
+   *
+   * @param string $containerId
    */
   public function setContainerId($containerId)
   {
@@ -150,7 +179,9 @@ class ContainerVersion extends \Google\Collection
     return $this->containerId;
   }
   /**
-   * @param string
+   * The Container Version ID uniquely identifies the GTM Container Version.
+   *
+   * @param string $containerVersionId
    */
   public function setContainerVersionId($containerVersionId)
   {
@@ -164,7 +195,9 @@ class ContainerVersion extends \Google\Collection
     return $this->containerVersionId;
   }
   /**
-   * @param CustomTemplate[]
+   * The custom templates in the container that this version was taken from.
+   *
+   * @param CustomTemplate[] $customTemplate
    */
   public function setCustomTemplate($customTemplate)
   {
@@ -178,7 +211,9 @@ class ContainerVersion extends \Google\Collection
     return $this->customTemplate;
   }
   /**
-   * @param bool
+   * A value of true indicates this container version has been deleted.
+   *
+   * @param bool $deleted
    */
   public function setDeleted($deleted)
   {
@@ -192,7 +227,9 @@ class ContainerVersion extends \Google\Collection
     return $this->deleted;
   }
   /**
-   * @param string
+   * Container version description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -206,7 +243,10 @@ class ContainerVersion extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The fingerprint of the GTM Container Version as computed at storage time.
+   * This value is recomputed whenever the container version is modified.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -220,7 +260,9 @@ class ContainerVersion extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * @param Folder[]
+   * The folders in the container that this version was taken from.
+   *
+   * @param Folder[] $folder
    */
   public function setFolder($folder)
   {
@@ -234,7 +276,9 @@ class ContainerVersion extends \Google\Collection
     return $this->folder;
   }
   /**
-   * @param GtagConfig[]
+   * The Google tag configs in the container that this version was taken from.
+   *
+   * @param GtagConfig[] $gtagConfig
    */
   public function setGtagConfig($gtagConfig)
   {
@@ -248,7 +292,9 @@ class ContainerVersion extends \Google\Collection
     return $this->gtagConfig;
   }
   /**
-   * @param string
+   * Container version display name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -262,7 +308,9 @@ class ContainerVersion extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * GTM Container Version's API relative path.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -276,7 +324,9 @@ class ContainerVersion extends \Google\Collection
     return $this->path;
   }
   /**
-   * @param Tag[]
+   * The tags in the container that this version was taken from.
+   *
+   * @param Tag[] $tag
    */
   public function setTag($tag)
   {
@@ -290,7 +340,9 @@ class ContainerVersion extends \Google\Collection
     return $this->tag;
   }
   /**
-   * @param string
+   * Auto generated link to the tag manager UI
+   *
+   * @param string $tagManagerUrl
    */
   public function setTagManagerUrl($tagManagerUrl)
   {
@@ -304,7 +356,9 @@ class ContainerVersion extends \Google\Collection
     return $this->tagManagerUrl;
   }
   /**
-   * @param Transformation[]
+   * The transformations in the container that this version was taken from.
+   *
+   * @param Transformation[] $transformation
    */
   public function setTransformation($transformation)
   {
@@ -318,7 +372,9 @@ class ContainerVersion extends \Google\Collection
     return $this->transformation;
   }
   /**
-   * @param Trigger[]
+   * The triggers in the container that this version was taken from.
+   *
+   * @param Trigger[] $trigger
    */
   public function setTrigger($trigger)
   {
@@ -332,7 +388,9 @@ class ContainerVersion extends \Google\Collection
     return $this->trigger;
   }
   /**
-   * @param Variable[]
+   * The variables in the container that this version was taken from.
+   *
+   * @param Variable[] $variable
    */
   public function setVariable($variable)
   {
@@ -346,7 +404,9 @@ class ContainerVersion extends \Google\Collection
     return $this->variable;
   }
   /**
-   * @param Zone[]
+   * The zones in the container that this version was taken from.
+   *
+   * @param Zone[] $zone
    */
   public function setZone($zone)
   {

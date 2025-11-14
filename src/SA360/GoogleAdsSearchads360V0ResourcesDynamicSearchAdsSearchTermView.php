@@ -20,16 +20,28 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView extends \Google\Model
 {
   /**
+   * Output only. The dynamically selected landing page URL of the impression.
+   * This field is read-only.
+   *
    * @var string
    */
   public $landingPage;
   /**
+   * Output only. The resource name of the dynamic search ads search term view.
+   * Dynamic search ads search term view resource names have the form: `customer
+   * s/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_
+   * fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fi
+   * ngerprint}`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Output only. The dynamically selected landing page URL of the impression.
+   * This field is read-only.
+   *
+   * @param string $landingPage
    */
   public function setLandingPage($landingPage)
   {
@@ -43,7 +55,13 @@ class GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView extends \Go
     return $this->landingPage;
   }
   /**
-   * @param string
+   * Output only. The resource name of the dynamic search ads search term view.
+   * Dynamic search ads search term view resource names have the form: `customer
+   * s/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_
+   * fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fi
+   * ngerprint}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

@@ -20,20 +20,31 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata extends \Google\Model
 {
   /**
+   * The resource name of the conversation model. Format:
+   * `projects//conversationModels/`
+   *
    * @var string
    */
   public $conversationModel;
   /**
+   * Timestamp when the request to undeploy conversation model was submitted.
+   * The time is measured on server side.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The time when the operation finished.
+   *
    * @var string
    */
   public $doneTime;
 
   /**
-   * @param string
+   * The resource name of the conversation model. Format:
+   * `projects//conversationModels/`
+   *
+   * @param string $conversationModel
    */
   public function setConversationModel($conversationModel)
   {
@@ -47,7 +58,10 @@ class GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata extends 
     return $this->conversationModel;
   }
   /**
-   * @param string
+   * Timestamp when the request to undeploy conversation model was submitted.
+   * The time is measured on server side.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -61,7 +75,9 @@ class GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata extends 
     return $this->createTime;
   }
   /**
-   * @param string
+   * The time when the operation finished.
+   *
+   * @param string $doneTime
    */
   public function setDoneTime($doneTime)
   {

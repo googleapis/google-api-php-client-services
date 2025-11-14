@@ -20,24 +20,66 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \Google\Model
 {
   /**
+   * Invalid.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Request is submitted, but training has not started yet. The model may
+   * remain in this state until there is enough capacity to start training.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The training has succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The training has succeeded.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The training has been cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The training is in cancelling state.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * Custom model is training.
+   */
+  public const STATE_TRAINING = 'TRAINING';
+  /**
+   * The resource name of the conversation model. Format:
+   * `projects//conversationModels/`
+   *
    * @var string
    */
   public $conversationModel;
   /**
+   * Timestamp when the request to create conversation model is submitted. The
+   * time is measured on server side.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The time when the operation finished.
+   *
    * @var string
    */
   public $doneTime;
   /**
+   * State of CreateConversationModel operation.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The resource name of the conversation model. Format:
+   * `projects//conversationModels/`
+   *
+   * @param string $conversationModel
    */
   public function setConversationModel($conversationModel)
   {
@@ -51,7 +93,10 @@ class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \G
     return $this->conversationModel;
   }
   /**
-   * @param string
+   * Timestamp when the request to create conversation model is submitted. The
+   * time is measured on server side.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -65,7 +110,9 @@ class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \G
     return $this->createTime;
   }
   /**
-   * @param string
+   * The time when the operation finished.
+   *
+   * @param string $doneTime
    */
   public function setDoneTime($doneTime)
   {
@@ -79,14 +126,19 @@ class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \G
     return $this->doneTime;
   }
   /**
-   * @param string
+   * State of CreateConversationModel operation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, SUCCEEDED, FAILED, CANCELLED,
+   * CANCELLING, TRAINING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -19,32 +19,56 @@ namespace Google\Service\DatabaseMigrationService;
 
 class ImportRulesJobDetails extends \Google\Collection
 {
+  /**
+   * Unspecified rules format.
+   */
+  public const FILE_FORMAT_IMPORT_RULES_FILE_FORMAT_UNSPECIFIED = 'IMPORT_RULES_FILE_FORMAT_UNSPECIFIED';
+  /**
+   * HarbourBridge session file.
+   */
+  public const FILE_FORMAT_IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE = 'IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE';
+  /**
+   * Ora2Pg configuration file.
+   */
+  public const FILE_FORMAT_IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE = 'IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE';
   protected $collection_key = 'files';
   /**
+   * Output only. The requested file format.
+   *
    * @var string
    */
   public $fileFormat;
   /**
+   * Output only. File names used for the import rules job.
+   *
    * @var string[]
    */
   public $files;
 
   /**
-   * @param string
+   * Output only. The requested file format.
+   *
+   * Accepted values: IMPORT_RULES_FILE_FORMAT_UNSPECIFIED,
+   * IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE,
+   * IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE
+   *
+   * @param self::FILE_FORMAT_* $fileFormat
    */
   public function setFileFormat($fileFormat)
   {
     $this->fileFormat = $fileFormat;
   }
   /**
-   * @return string
+   * @return self::FILE_FORMAT_*
    */
   public function getFileFormat()
   {
     return $this->fileFormat;
   }
   /**
-   * @param string[]
+   * Output only. File names used for the import rules job.
+   *
+   * @param string[] $files
    */
   public function setFiles($files)
   {

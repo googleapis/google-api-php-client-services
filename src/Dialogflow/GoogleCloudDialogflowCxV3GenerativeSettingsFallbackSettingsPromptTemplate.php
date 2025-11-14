@@ -20,20 +20,30 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettingsPromptTemplate extends \Google\Model
 {
   /**
+   * Prompt name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * If the flag is true, the prompt is frozen and cannot be modified by users.
+   *
    * @var bool
    */
   public $frozen;
   /**
+   * Prompt text that is sent to a LLM on no-match default, placeholders are
+   * filled downstream. For example: "Here is a conversation $conversation, a
+   * response is: "
+   *
    * @var string
    */
   public $promptText;
 
   /**
-   * @param string
+   * Prompt name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +57,9 @@ class GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettingsPromptTemplate 
     return $this->displayName;
   }
   /**
-   * @param bool
+   * If the flag is true, the prompt is frozen and cannot be modified by users.
+   *
+   * @param bool $frozen
    */
   public function setFrozen($frozen)
   {
@@ -61,7 +73,11 @@ class GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettingsPromptTemplate 
     return $this->frozen;
   }
   /**
-   * @param string
+   * Prompt text that is sent to a LLM on no-match default, placeholders are
+   * filled downstream. For example: "Here is a conversation $conversation, a
+   * response is: "
+   *
+   * @param string $promptText
    */
   public function setPromptText($promptText)
   {

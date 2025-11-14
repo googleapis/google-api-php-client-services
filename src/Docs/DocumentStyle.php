@@ -22,32 +22,70 @@ class DocumentStyle extends \Google\Model
   protected $backgroundType = Background::class;
   protected $backgroundDataType = '';
   /**
+   * The ID of the default footer. If not set, there's no default footer. If
+   * DocumentMode is PAGELESS, this property will not be rendered. This property
+   * is read-only.
+   *
    * @var string
    */
   public $defaultFooterId;
   /**
+   * The ID of the default header. If not set, there's no default header. If
+   * DocumentMode is PAGELESS, this property will not be rendered. This property
+   * is read-only.
+   *
    * @var string
    */
   public $defaultHeaderId;
   protected $documentFormatType = DocumentFormat::class;
   protected $documentFormatDataType = '';
   /**
+   * The ID of the footer used only for even pages. The value of
+   * use_even_page_header_footer determines whether to use the default_footer_id
+   * or this value for the footer on even pages. If not set, there's no even
+   * page footer. If DocumentMode is PAGELESS, this property will not be
+   * rendered. This property is read-only.
+   *
    * @var string
    */
   public $evenPageFooterId;
   /**
+   * The ID of the header used only for even pages. The value of
+   * use_even_page_header_footer determines whether to use the default_header_id
+   * or this value for the header on even pages. If not set, there's no even
+   * page header. If DocumentMode is PAGELESS, this property will not be
+   * rendered. This property is read-only.
+   *
    * @var string
    */
   public $evenPageHeaderId;
   /**
+   * The ID of the footer used only for the first page. If not set then a unique
+   * footer for the first page does not exist. The value of
+   * use_first_page_header_footer determines whether to use the
+   * default_footer_id or this value for the footer on the first page. If not
+   * set, there's no first page footer. If DocumentMode is PAGELESS, this
+   * property will not be rendered. This property is read-only.
+   *
    * @var string
    */
   public $firstPageFooterId;
   /**
+   * The ID of the header used only for the first page. If not set then a unique
+   * header for the first page does not exist. The value of
+   * use_first_page_header_footer determines whether to use the
+   * default_header_id or this value for the header on the first page. If not
+   * set, there's no first page header. If DocumentMode is PAGELESS, this
+   * property will not be rendered. This property is read-only.
+   *
    * @var string
    */
   public $firstPageHeaderId;
   /**
+   * Optional. Indicates whether to flip the dimensions of the page_size, which
+   * allows changing the page orientation between portrait and landscape. If
+   * DocumentMode is PAGELESS, this property will not be rendered.
+   *
    * @var bool
    */
   public $flipPageOrientation;
@@ -64,26 +102,44 @@ class DocumentStyle extends \Google\Model
   protected $marginTopType = Dimension::class;
   protected $marginTopDataType = '';
   /**
+   * The page number from which to start counting the number of pages. If
+   * DocumentMode is PAGELESS, this property will not be rendered.
+   *
    * @var int
    */
   public $pageNumberStart;
   protected $pageSizeType = Size::class;
   protected $pageSizeDataType = '';
   /**
+   * Indicates whether DocumentStyle margin_header, SectionStyle margin_header
+   * and DocumentStyle margin_footer, SectionStyle margin_footer are respected.
+   * When false, the default values in the Docs editor for header and footer
+   * margin is used. If DocumentMode is PAGELESS, this property will not be
+   * rendered. This property is read-only.
+   *
    * @var bool
    */
   public $useCustomHeaderFooterMargins;
   /**
+   * Indicates whether to use the even page header / footer IDs for the even
+   * pages. If DocumentMode is PAGELESS, this property will not be rendered.
+   *
    * @var bool
    */
   public $useEvenPageHeaderFooter;
   /**
+   * Indicates whether to use the first page header / footer IDs for the first
+   * page. If DocumentMode is PAGELESS, this property will not be rendered.
+   *
    * @var bool
    */
   public $useFirstPageHeaderFooter;
 
   /**
-   * @param Background
+   * The background of the document. Documents cannot have a transparent
+   * background color.
+   *
+   * @param Background $background
    */
   public function setBackground(Background $background)
   {
@@ -97,7 +153,11 @@ class DocumentStyle extends \Google\Model
     return $this->background;
   }
   /**
-   * @param string
+   * The ID of the default footer. If not set, there's no default footer. If
+   * DocumentMode is PAGELESS, this property will not be rendered. This property
+   * is read-only.
+   *
+   * @param string $defaultFooterId
    */
   public function setDefaultFooterId($defaultFooterId)
   {
@@ -111,7 +171,11 @@ class DocumentStyle extends \Google\Model
     return $this->defaultFooterId;
   }
   /**
-   * @param string
+   * The ID of the default header. If not set, there's no default header. If
+   * DocumentMode is PAGELESS, this property will not be rendered. This property
+   * is read-only.
+   *
+   * @param string $defaultHeaderId
    */
   public function setDefaultHeaderId($defaultHeaderId)
   {
@@ -125,7 +189,10 @@ class DocumentStyle extends \Google\Model
     return $this->defaultHeaderId;
   }
   /**
-   * @param DocumentFormat
+   * Specifies document-level format settings, such as the document mode (pages
+   * vs pageless).
+   *
+   * @param DocumentFormat $documentFormat
    */
   public function setDocumentFormat(DocumentFormat $documentFormat)
   {
@@ -139,7 +206,13 @@ class DocumentStyle extends \Google\Model
     return $this->documentFormat;
   }
   /**
-   * @param string
+   * The ID of the footer used only for even pages. The value of
+   * use_even_page_header_footer determines whether to use the default_footer_id
+   * or this value for the footer on even pages. If not set, there's no even
+   * page footer. If DocumentMode is PAGELESS, this property will not be
+   * rendered. This property is read-only.
+   *
+   * @param string $evenPageFooterId
    */
   public function setEvenPageFooterId($evenPageFooterId)
   {
@@ -153,7 +226,13 @@ class DocumentStyle extends \Google\Model
     return $this->evenPageFooterId;
   }
   /**
-   * @param string
+   * The ID of the header used only for even pages. The value of
+   * use_even_page_header_footer determines whether to use the default_header_id
+   * or this value for the header on even pages. If not set, there's no even
+   * page header. If DocumentMode is PAGELESS, this property will not be
+   * rendered. This property is read-only.
+   *
+   * @param string $evenPageHeaderId
    */
   public function setEvenPageHeaderId($evenPageHeaderId)
   {
@@ -167,7 +246,14 @@ class DocumentStyle extends \Google\Model
     return $this->evenPageHeaderId;
   }
   /**
-   * @param string
+   * The ID of the footer used only for the first page. If not set then a unique
+   * footer for the first page does not exist. The value of
+   * use_first_page_header_footer determines whether to use the
+   * default_footer_id or this value for the footer on the first page. If not
+   * set, there's no first page footer. If DocumentMode is PAGELESS, this
+   * property will not be rendered. This property is read-only.
+   *
+   * @param string $firstPageFooterId
    */
   public function setFirstPageFooterId($firstPageFooterId)
   {
@@ -181,7 +267,14 @@ class DocumentStyle extends \Google\Model
     return $this->firstPageFooterId;
   }
   /**
-   * @param string
+   * The ID of the header used only for the first page. If not set then a unique
+   * header for the first page does not exist. The value of
+   * use_first_page_header_footer determines whether to use the
+   * default_header_id or this value for the header on the first page. If not
+   * set, there's no first page header. If DocumentMode is PAGELESS, this
+   * property will not be rendered. This property is read-only.
+   *
+   * @param string $firstPageHeaderId
    */
   public function setFirstPageHeaderId($firstPageHeaderId)
   {
@@ -195,7 +288,11 @@ class DocumentStyle extends \Google\Model
     return $this->firstPageHeaderId;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether to flip the dimensions of the page_size, which
+   * allows changing the page orientation between portrait and landscape. If
+   * DocumentMode is PAGELESS, this property will not be rendered.
+   *
+   * @param bool $flipPageOrientation
    */
   public function setFlipPageOrientation($flipPageOrientation)
   {
@@ -209,7 +306,11 @@ class DocumentStyle extends \Google\Model
     return $this->flipPageOrientation;
   }
   /**
-   * @param Dimension
+   * The bottom page margin. Updating the bottom page margin on the document
+   * style clears the bottom page margin on all section styles. If DocumentMode
+   * is PAGELESS, this property will not be rendered.
+   *
+   * @param Dimension $marginBottom
    */
   public function setMarginBottom(Dimension $marginBottom)
   {
@@ -223,7 +324,10 @@ class DocumentStyle extends \Google\Model
     return $this->marginBottom;
   }
   /**
-   * @param Dimension
+   * The amount of space between the bottom of the page and the contents of the
+   * footer. If DocumentMode is PAGELESS, this property will not be rendered.
+   *
+   * @param Dimension $marginFooter
    */
   public function setMarginFooter(Dimension $marginFooter)
   {
@@ -237,7 +341,10 @@ class DocumentStyle extends \Google\Model
     return $this->marginFooter;
   }
   /**
-   * @param Dimension
+   * The amount of space between the top of the page and the contents of the
+   * header. If DocumentMode is PAGELESS, this property will not be rendered.
+   *
+   * @param Dimension $marginHeader
    */
   public function setMarginHeader(Dimension $marginHeader)
   {
@@ -251,7 +358,12 @@ class DocumentStyle extends \Google\Model
     return $this->marginHeader;
   }
   /**
-   * @param Dimension
+   * The left page margin. Updating the left page margin on the document style
+   * clears the left page margin on all section styles. It may also cause
+   * columns to resize in all sections. If DocumentMode is PAGELESS, this
+   * property will not be rendered.
+   *
+   * @param Dimension $marginLeft
    */
   public function setMarginLeft(Dimension $marginLeft)
   {
@@ -265,7 +377,12 @@ class DocumentStyle extends \Google\Model
     return $this->marginLeft;
   }
   /**
-   * @param Dimension
+   * The right page margin. Updating the right page margin on the document style
+   * clears the right page margin on all section styles. It may also cause
+   * columns to resize in all sections. If DocumentMode is PAGELESS, this
+   * property will not be rendered.
+   *
+   * @param Dimension $marginRight
    */
   public function setMarginRight(Dimension $marginRight)
   {
@@ -279,7 +396,11 @@ class DocumentStyle extends \Google\Model
     return $this->marginRight;
   }
   /**
-   * @param Dimension
+   * The top page margin. Updating the top page margin on the document style
+   * clears the top page margin on all section styles. If DocumentMode is
+   * PAGELESS, this property will not be rendered.
+   *
+   * @param Dimension $marginTop
    */
   public function setMarginTop(Dimension $marginTop)
   {
@@ -293,7 +414,10 @@ class DocumentStyle extends \Google\Model
     return $this->marginTop;
   }
   /**
-   * @param int
+   * The page number from which to start counting the number of pages. If
+   * DocumentMode is PAGELESS, this property will not be rendered.
+   *
+   * @param int $pageNumberStart
    */
   public function setPageNumberStart($pageNumberStart)
   {
@@ -307,7 +431,10 @@ class DocumentStyle extends \Google\Model
     return $this->pageNumberStart;
   }
   /**
-   * @param Size
+   * The size of a page in the document. If DocumentMode is PAGELESS, this
+   * property will not be rendered.
+   *
+   * @param Size $pageSize
    */
   public function setPageSize(Size $pageSize)
   {
@@ -321,7 +448,13 @@ class DocumentStyle extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param bool
+   * Indicates whether DocumentStyle margin_header, SectionStyle margin_header
+   * and DocumentStyle margin_footer, SectionStyle margin_footer are respected.
+   * When false, the default values in the Docs editor for header and footer
+   * margin is used. If DocumentMode is PAGELESS, this property will not be
+   * rendered. This property is read-only.
+   *
+   * @param bool $useCustomHeaderFooterMargins
    */
   public function setUseCustomHeaderFooterMargins($useCustomHeaderFooterMargins)
   {
@@ -335,7 +468,10 @@ class DocumentStyle extends \Google\Model
     return $this->useCustomHeaderFooterMargins;
   }
   /**
-   * @param bool
+   * Indicates whether to use the even page header / footer IDs for the even
+   * pages. If DocumentMode is PAGELESS, this property will not be rendered.
+   *
+   * @param bool $useEvenPageHeaderFooter
    */
   public function setUseEvenPageHeaderFooter($useEvenPageHeaderFooter)
   {
@@ -349,7 +485,10 @@ class DocumentStyle extends \Google\Model
     return $this->useEvenPageHeaderFooter;
   }
   /**
-   * @param bool
+   * Indicates whether to use the first page header / footer IDs for the first
+   * page. If DocumentMode is PAGELESS, this property will not be rendered.
+   *
+   * @param bool $useFirstPageHeaderFooter
    */
   public function setUseFirstPageHeaderFooter($useFirstPageHeaderFooter)
   {

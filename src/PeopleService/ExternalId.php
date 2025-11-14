@@ -20,22 +20,34 @@ namespace Google\Service\PeopleService;
 class ExternalId extends \Google\Model
 {
   /**
+   * Output only. The type of the event translated and formatted in the viewer's
+   * account locale or the `Accept-Language` HTTP header locale.
+   *
    * @var string
    */
   public $formattedType;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The type of the external ID. The type can be custom or one of these
+   * predefined values: * `account` * `customer` * `loginId` * `network` *
+   * `organization`
+   *
    * @var string
    */
   public $type;
   /**
+   * The value of the external ID.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Output only. The type of the event translated and formatted in the viewer's
+   * account locale or the `Accept-Language` HTTP header locale.
+   *
+   * @param string $formattedType
    */
   public function setFormattedType($formattedType)
   {
@@ -49,7 +61,9 @@ class ExternalId extends \Google\Model
     return $this->formattedType;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the external ID.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -63,7 +77,11 @@ class ExternalId extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The type of the external ID. The type can be custom or one of these
+   * predefined values: * `account` * `customer` * `loginId` * `network` *
+   * `organization`
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -77,7 +95,9 @@ class ExternalId extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The value of the external ID.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

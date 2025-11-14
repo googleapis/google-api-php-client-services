@@ -19,66 +19,116 @@ namespace Google\Service\SecurityCommandCenter;
 
 class SecuritycenterResource extends \Google\Collection
 {
+  /**
+   * The cloud provider is unspecified.
+   */
+  public const CLOUD_PROVIDER_CLOUD_PROVIDER_UNSPECIFIED = 'CLOUD_PROVIDER_UNSPECIFIED';
+  /**
+   * The cloud provider is Google Cloud.
+   */
+  public const CLOUD_PROVIDER_GOOGLE_CLOUD_PLATFORM = 'GOOGLE_CLOUD_PLATFORM';
+  /**
+   * The cloud provider is Amazon Web Services.
+   */
+  public const CLOUD_PROVIDER_AMAZON_WEB_SERVICES = 'AMAZON_WEB_SERVICES';
+  /**
+   * The cloud provider is Microsoft Azure.
+   */
+  public const CLOUD_PROVIDER_MICROSOFT_AZURE = 'MICROSOFT_AZURE';
   protected $collection_key = 'folders';
   protected $awsMetadataType = AwsMetadata::class;
   protected $awsMetadataDataType = '';
   protected $azureMetadataType = AzureMetadata::class;
   protected $azureMetadataDataType = '';
   /**
+   * Indicates which cloud provider the finding is from.
+   *
    * @var string
    */
   public $cloudProvider;
   /**
+   * The human readable name of the resource.
+   *
    * @var string
    */
   public $displayName;
   protected $foldersType = Folder::class;
   protected $foldersDataType = 'array';
   /**
+   * The region or location of the service (if applicable).
+   *
    * @var string
    */
   public $location;
   /**
+   * The full resource name of the resource. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   *
    * @var string
    */
   public $name;
   /**
+   * Indicates which organization / tenant the finding is for.
+   *
    * @var string
    */
   public $organization;
   /**
+   * The human readable name of resource's parent.
+   *
    * @var string
    */
   public $parentDisplayName;
   /**
+   * The full resource name of resource's parent.
+   *
    * @var string
    */
   public $parentName;
   /**
+   * The project ID that the resource belongs to.
+   *
    * @var string
    */
   public $projectDisplayName;
   /**
+   * The full resource name of project that the resource belongs to.
+   *
    * @var string
    */
   public $projectName;
   protected $resourcePathType = ResourcePath::class;
   protected $resourcePathDataType = '';
   /**
+   * A string representation of the resource path. For Google Cloud, it has the
+   * format of `org/{organization_id}/folder/{folder_id}/folder/{folder_id}/proj
+   * ect/{project_id}` where there can be any number of folders. For AWS, it has
+   * the format of `org/{organization_id}/ou/{organizational_unit_id}/ou/{organi
+   * zational_unit_id}/account/{account_id}` where there can be any number of
+   * organizational units. For Azure, it has the format of `mg/{management_group
+   * _id}/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_g
+   * roup_name}` where there can be any number of management groups.
+   *
    * @var string
    */
   public $resourcePathString;
   /**
+   * The service or resource provider associated with the resource.
+   *
    * @var string
    */
   public $service;
   /**
+   * The full resource type of the resource.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param AwsMetadata
+   * The AWS metadata associated with the finding.
+   *
+   * @param AwsMetadata $awsMetadata
    */
   public function setAwsMetadata(AwsMetadata $awsMetadata)
   {
@@ -92,7 +142,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->awsMetadata;
   }
   /**
-   * @param AzureMetadata
+   * The Azure metadata associated with the finding.
+   *
+   * @param AzureMetadata $azureMetadata
    */
   public function setAzureMetadata(AzureMetadata $azureMetadata)
   {
@@ -106,21 +158,28 @@ class SecuritycenterResource extends \Google\Collection
     return $this->azureMetadata;
   }
   /**
-   * @param string
+   * Indicates which cloud provider the finding is from.
+   *
+   * Accepted values: CLOUD_PROVIDER_UNSPECIFIED, GOOGLE_CLOUD_PLATFORM,
+   * AMAZON_WEB_SERVICES, MICROSOFT_AZURE
+   *
+   * @param self::CLOUD_PROVIDER_* $cloudProvider
    */
   public function setCloudProvider($cloudProvider)
   {
     $this->cloudProvider = $cloudProvider;
   }
   /**
-   * @return string
+   * @return self::CLOUD_PROVIDER_*
    */
   public function getCloudProvider()
   {
     return $this->cloudProvider;
   }
   /**
-   * @param string
+   * The human readable name of the resource.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -134,7 +193,11 @@ class SecuritycenterResource extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param Folder[]
+   * Contains a Folder message for each folder in the assets ancestry. The first
+   * folder is the deepest nested folder, and the last folder is the folder
+   * directly under the Organization.
+   *
+   * @param Folder[] $folders
    */
   public function setFolders($folders)
   {
@@ -148,7 +211,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->folders;
   }
   /**
-   * @param string
+   * The region or location of the service (if applicable).
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -162,7 +227,10 @@ class SecuritycenterResource extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string
+   * The full resource name of the resource. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -176,7 +244,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Indicates which organization / tenant the finding is for.
+   *
+   * @param string $organization
    */
   public function setOrganization($organization)
   {
@@ -190,7 +260,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->organization;
   }
   /**
-   * @param string
+   * The human readable name of resource's parent.
+   *
+   * @param string $parentDisplayName
    */
   public function setParentDisplayName($parentDisplayName)
   {
@@ -204,7 +276,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->parentDisplayName;
   }
   /**
-   * @param string
+   * The full resource name of resource's parent.
+   *
+   * @param string $parentName
    */
   public function setParentName($parentName)
   {
@@ -218,7 +292,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->parentName;
   }
   /**
-   * @param string
+   * The project ID that the resource belongs to.
+   *
+   * @param string $projectDisplayName
    */
   public function setProjectDisplayName($projectDisplayName)
   {
@@ -232,7 +308,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->projectDisplayName;
   }
   /**
-   * @param string
+   * The full resource name of project that the resource belongs to.
+   *
+   * @param string $projectName
    */
   public function setProjectName($projectName)
   {
@@ -246,7 +324,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->projectName;
   }
   /**
-   * @param ResourcePath
+   * Provides the path to the resource within the resource hierarchy.
+   *
+   * @param ResourcePath $resourcePath
    */
   public function setResourcePath(ResourcePath $resourcePath)
   {
@@ -260,7 +340,16 @@ class SecuritycenterResource extends \Google\Collection
     return $this->resourcePath;
   }
   /**
-   * @param string
+   * A string representation of the resource path. For Google Cloud, it has the
+   * format of `org/{organization_id}/folder/{folder_id}/folder/{folder_id}/proj
+   * ect/{project_id}` where there can be any number of folders. For AWS, it has
+   * the format of `org/{organization_id}/ou/{organizational_unit_id}/ou/{organi
+   * zational_unit_id}/account/{account_id}` where there can be any number of
+   * organizational units. For Azure, it has the format of `mg/{management_group
+   * _id}/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_g
+   * roup_name}` where there can be any number of management groups.
+   *
+   * @param string $resourcePathString
    */
   public function setResourcePathString($resourcePathString)
   {
@@ -274,7 +363,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->resourcePathString;
   }
   /**
-   * @param string
+   * The service or resource provider associated with the resource.
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -288,7 +379,9 @@ class SecuritycenterResource extends \Google\Collection
     return $this->service;
   }
   /**
-   * @param string
+   * The full resource type of the resource.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class WritableCgroups extends \Google\Model
 {
   /**
+   * Optional. Whether writable cgroups is enabled.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Optional. Whether writable cgroups is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

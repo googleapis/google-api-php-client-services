@@ -23,32 +23,48 @@ class Sku extends \Google\Collection
   protected $categoryType = Category::class;
   protected $categoryDataType = '';
   /**
+   * A human readable description of the SKU, has a maximum length of 256
+   * characters.
+   *
    * @var string
    */
   public $description;
   protected $geoTaxonomyType = GeoTaxonomy::class;
   protected $geoTaxonomyDataType = '';
   /**
+   * The resource name for the SKU. Example:
+   * "services/6F81-5844-456A/skus/D041-B8A1-6E0B"
+   *
    * @var string
    */
   public $name;
   protected $pricingInfoType = PricingInfo::class;
   protected $pricingInfoDataType = 'array';
   /**
+   * Identifies the service provider. This is 'Google' for first party services
+   * in Google Cloud Platform.
+   *
    * @var string
    */
   public $serviceProviderName;
   /**
+   * List of service regions this SKU is offered at. Example: "asia-east1"
+   * Service regions can be found at https://cloud.google.com/about/locations/
+   *
    * @var string[]
    */
   public $serviceRegions;
   /**
+   * The identifier for the SKU. Example: "D041-B8A1-6E0B"
+   *
    * @var string
    */
   public $skuId;
 
   /**
-   * @param Category
+   * The category hierarchy of this SKU, purely for organizational purpose.
+   *
+   * @param Category $category
    */
   public function setCategory(Category $category)
   {
@@ -62,7 +78,10 @@ class Sku extends \Google\Collection
     return $this->category;
   }
   /**
-   * @param string
+   * A human readable description of the SKU, has a maximum length of 256
+   * characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -76,7 +95,9 @@ class Sku extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param GeoTaxonomy
+   * The geographic taxonomy for this sku.
+   *
+   * @param GeoTaxonomy $geoTaxonomy
    */
   public function setGeoTaxonomy(GeoTaxonomy $geoTaxonomy)
   {
@@ -90,7 +111,10 @@ class Sku extends \Google\Collection
     return $this->geoTaxonomy;
   }
   /**
-   * @param string
+   * The resource name for the SKU. Example:
+   * "services/6F81-5844-456A/skus/D041-B8A1-6E0B"
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -104,7 +128,9 @@ class Sku extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PricingInfo[]
+   * A timeline of pricing info for this SKU in chronological order.
+   *
+   * @param PricingInfo[] $pricingInfo
    */
   public function setPricingInfo($pricingInfo)
   {
@@ -118,7 +144,10 @@ class Sku extends \Google\Collection
     return $this->pricingInfo;
   }
   /**
-   * @param string
+   * Identifies the service provider. This is 'Google' for first party services
+   * in Google Cloud Platform.
+   *
+   * @param string $serviceProviderName
    */
   public function setServiceProviderName($serviceProviderName)
   {
@@ -132,7 +161,10 @@ class Sku extends \Google\Collection
     return $this->serviceProviderName;
   }
   /**
-   * @param string[]
+   * List of service regions this SKU is offered at. Example: "asia-east1"
+   * Service regions can be found at https://cloud.google.com/about/locations/
+   *
+   * @param string[] $serviceRegions
    */
   public function setServiceRegions($serviceRegions)
   {
@@ -146,7 +178,9 @@ class Sku extends \Google\Collection
     return $this->serviceRegions;
   }
   /**
-   * @param string
+   * The identifier for the SKU. Example: "D041-B8A1-6E0B"
+   *
+   * @param string $skuId
    */
   public function setSkuId($skuId)
   {

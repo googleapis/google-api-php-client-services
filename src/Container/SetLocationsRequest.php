@@ -21,34 +21,64 @@ class SetLocationsRequest extends \Google\Collection
 {
   protected $collection_key = 'locations';
   /**
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $clusterId;
   /**
+   * Required. The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster's nodes should be located. Changing the locations a cluster is in
+   * will result in nodes being either created or removed from the cluster,
+   * depending on whether locations are being added or removed. This list must
+   * always include the cluster's primary zone.
+   *
    * @var string[]
    */
   public $locations;
   /**
+   * The name (project, location, cluster) of the cluster to set locations.
+   * Specified in the format `projects/locations/clusters`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $projectId;
   /**
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {
     $this->clusterId = $clusterId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getClusterId()
@@ -56,7 +86,14 @@ class SetLocationsRequest extends \Google\Collection
     return $this->clusterId;
   }
   /**
-   * @param string[]
+   * Required. The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster's nodes should be located. Changing the locations a cluster is in
+   * will result in nodes being either created or removed from the cluster,
+   * depending on whether locations are being added or removed. This list must
+   * always include the cluster's primary zone.
+   *
+   * @param string[] $locations
    */
   public function setLocations($locations)
   {
@@ -70,7 +107,10 @@ class SetLocationsRequest extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param string
+   * The name (project, location, cluster) of the cluster to set locations.
+   * Specified in the format `projects/locations/clusters`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -84,13 +124,19 @@ class SetLocationsRequest extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
     $this->projectId = $projectId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProjectId()
@@ -98,13 +144,20 @@ class SetLocationsRequest extends \Google\Collection
     return $this->projectId;
   }
   /**
-   * @param string
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
+   * @param string $zone
    */
   public function setZone($zone)
   {
     $this->zone = $zone;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getZone()

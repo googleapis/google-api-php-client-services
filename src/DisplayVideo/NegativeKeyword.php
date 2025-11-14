@@ -20,16 +20,32 @@ namespace Google\Service\DisplayVideo;
 class NegativeKeyword extends \Google\Model
 {
   /**
+   * Required. Immutable. The negatively targeted keyword, for example `car
+   * insurance`. Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum
+   * number of characters is 80. Maximum number of words is 10. Valid characters
+   * are restricted to ASCII characters only. The only URL-escaping permitted is
+   * for representing whitespace between words. Leading or trailing whitespace
+   * is ignored.
+   *
    * @var string
    */
   public $keywordValue;
   /**
+   * Output only. The resource name of the negative keyword.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. Immutable. The negatively targeted keyword, for example `car
+   * insurance`. Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum
+   * number of characters is 80. Maximum number of words is 10. Valid characters
+   * are restricted to ASCII characters only. The only URL-escaping permitted is
+   * for representing whitespace between words. Leading or trailing whitespace
+   * is ignored.
+   *
+   * @param string $keywordValue
    */
   public function setKeywordValue($keywordValue)
   {
@@ -43,7 +59,9 @@ class NegativeKeyword extends \Google\Model
     return $this->keywordValue;
   }
   /**
-   * @param string
+   * Output only. The resource name of the negative keyword.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

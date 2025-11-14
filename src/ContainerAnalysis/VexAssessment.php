@@ -19,18 +19,51 @@ namespace Google\Service\ContainerAnalysis;
 
 class VexAssessment extends \Google\Collection
 {
+  /**
+   * No state is specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * This product is known to be affected by this vulnerability.
+   */
+  public const STATE_AFFECTED = 'AFFECTED';
+  /**
+   * This product is known to be not affected by this vulnerability.
+   */
+  public const STATE_NOT_AFFECTED = 'NOT_AFFECTED';
+  /**
+   * This product contains a fix for this vulnerability.
+   */
+  public const STATE_FIXED = 'FIXED';
+  /**
+   * It is not known yet whether these versions are or are not affected by the
+   * vulnerability. However, it is still under investigation.
+   */
+  public const STATE_UNDER_INVESTIGATION = 'UNDER_INVESTIGATION';
   protected $collection_key = 'remediations';
   /**
+   * Holds the MITRE standard Common Vulnerabilities and Exposures (CVE)
+   * tracking number for the vulnerability. Deprecated: Use vulnerability_id
+   * instead to denote CVEs.
+   *
+   * @deprecated
    * @var string
    */
   public $cve;
   /**
+   * Contains information about the impact of this vulnerability, this will
+   * change with time.
+   *
    * @var string[]
    */
   public $impacts;
   protected $justificationType = Justification::class;
   protected $justificationDataType = '';
   /**
+   * The VulnerabilityAssessment note from which this VexAssessment was
+   * generated. This will be of the form:
+   * `projects/[PROJECT_ID]/notes/[NOTE_ID]`.
+   *
    * @var string
    */
   public $noteName;
@@ -39,22 +72,33 @@ class VexAssessment extends \Google\Collection
   protected $remediationsType = Remediation::class;
   protected $remediationsDataType = 'array';
   /**
+   * Provides the state of this Vulnerability assessment.
+   *
    * @var string
    */
   public $state;
   /**
+   * The vulnerability identifier for this Assessment. Will hold one of common
+   * identifiers e.g. CVE, GHSA etc.
+   *
    * @var string
    */
   public $vulnerabilityId;
 
   /**
-   * @param string
+   * Holds the MITRE standard Common Vulnerabilities and Exposures (CVE)
+   * tracking number for the vulnerability. Deprecated: Use vulnerability_id
+   * instead to denote CVEs.
+   *
+   * @deprecated
+   * @param string $cve
    */
   public function setCve($cve)
   {
     $this->cve = $cve;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getCve()
@@ -62,7 +106,10 @@ class VexAssessment extends \Google\Collection
     return $this->cve;
   }
   /**
-   * @param string[]
+   * Contains information about the impact of this vulnerability, this will
+   * change with time.
+   *
+   * @param string[] $impacts
    */
   public function setImpacts($impacts)
   {
@@ -76,7 +123,10 @@ class VexAssessment extends \Google\Collection
     return $this->impacts;
   }
   /**
-   * @param Justification
+   * Justification provides the justification when the state of the assessment
+   * if NOT_AFFECTED.
+   *
+   * @param Justification $justification
    */
   public function setJustification(Justification $justification)
   {
@@ -90,7 +140,11 @@ class VexAssessment extends \Google\Collection
     return $this->justification;
   }
   /**
-   * @param string
+   * The VulnerabilityAssessment note from which this VexAssessment was
+   * generated. This will be of the form:
+   * `projects/[PROJECT_ID]/notes/[NOTE_ID]`.
+   *
+   * @param string $noteName
    */
   public function setNoteName($noteName)
   {
@@ -104,7 +158,10 @@ class VexAssessment extends \Google\Collection
     return $this->noteName;
   }
   /**
-   * @param RelatedUrl[]
+   * Holds a list of references associated with this vulnerability item and
+   * assessment.
+   *
+   * @param RelatedUrl[] $relatedUris
    */
   public function setRelatedUris($relatedUris)
   {
@@ -118,7 +175,9 @@ class VexAssessment extends \Google\Collection
     return $this->relatedUris;
   }
   /**
-   * @param Remediation[]
+   * Specifies details on how to handle (and presumably, fix) a vulnerability.
+   *
+   * @param Remediation[] $remediations
    */
   public function setRemediations($remediations)
   {
@@ -132,21 +191,29 @@ class VexAssessment extends \Google\Collection
     return $this->remediations;
   }
   /**
-   * @param string
+   * Provides the state of this Vulnerability assessment.
+   *
+   * Accepted values: STATE_UNSPECIFIED, AFFECTED, NOT_AFFECTED, FIXED,
+   * UNDER_INVESTIGATION
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The vulnerability identifier for this Assessment. Will hold one of common
+   * identifiers e.g. CVE, GHSA etc.
+   *
+   * @param string $vulnerabilityId
    */
   public function setVulnerabilityId($vulnerabilityId)
   {

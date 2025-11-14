@@ -20,12 +20,18 @@ namespace Google\Service\CloudTasks;
 class QueryOverride extends \Google\Model
 {
   /**
+   * The query parameters (e.g., qparam1=123&qparam2=456). Default is an empty
+   * string.
+   *
    * @var string
    */
   public $queryParams;
 
   /**
-   * @param string
+   * The query parameters (e.g., qparam1=123&qparam2=456). Default is an empty
+   * string.
+   *
+   * @param string $queryParams
    */
   public function setQueryParams($queryParams)
   {

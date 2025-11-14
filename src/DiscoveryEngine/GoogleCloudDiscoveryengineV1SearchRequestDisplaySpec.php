@@ -20,19 +20,38 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1SearchRequestDisplaySpec extends \Google\Model
 {
   /**
+   * Server behavior is the same as `MATCH_HIGHLIGHTING_DISABLED`.
+   */
+  public const MATCH_HIGHLIGHTING_CONDITION_MATCH_HIGHLIGHTING_CONDITION_UNSPECIFIED = 'MATCH_HIGHLIGHTING_CONDITION_UNSPECIFIED';
+  /**
+   * Disables match highlighting on all documents.
+   */
+  public const MATCH_HIGHLIGHTING_CONDITION_MATCH_HIGHLIGHTING_DISABLED = 'MATCH_HIGHLIGHTING_DISABLED';
+  /**
+   * Enables match highlighting on all documents.
+   */
+  public const MATCH_HIGHLIGHTING_CONDITION_MATCH_HIGHLIGHTING_ENABLED = 'MATCH_HIGHLIGHTING_ENABLED';
+  /**
+   * The condition under which match highlighting should occur.
+   *
    * @var string
    */
   public $matchHighlightingCondition;
 
   /**
-   * @param string
+   * The condition under which match highlighting should occur.
+   *
+   * Accepted values: MATCH_HIGHLIGHTING_CONDITION_UNSPECIFIED,
+   * MATCH_HIGHLIGHTING_DISABLED, MATCH_HIGHLIGHTING_ENABLED
+   *
+   * @param self::MATCH_HIGHLIGHTING_CONDITION_* $matchHighlightingCondition
    */
   public function setMatchHighlightingCondition($matchHighlightingCondition)
   {
     $this->matchHighlightingCondition = $matchHighlightingCondition;
   }
   /**
-   * @return string
+   * @return self::MATCH_HIGHLIGHTING_CONDITION_*
    */
   public function getMatchHighlightingCondition()
   {

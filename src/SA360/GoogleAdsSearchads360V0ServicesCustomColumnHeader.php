@@ -20,20 +20,28 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ServicesCustomColumnHeader extends \Google\Model
 {
   /**
+   * The custom column ID.
+   *
    * @var string
    */
   public $id;
   /**
+   * The user defined name of the custom column.
+   *
    * @var string
    */
   public $name;
   /**
+   * True when the custom column references metrics.
+   *
    * @var bool
    */
   public $referencesMetrics;
 
   /**
-   * @param string
+   * The custom column ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +55,9 @@ class GoogleAdsSearchads360V0ServicesCustomColumnHeader extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The user defined name of the custom column.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +71,9 @@ class GoogleAdsSearchads360V0ServicesCustomColumnHeader extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * True when the custom column references metrics.
+   *
+   * @param bool $referencesMetrics
    */
   public function setReferencesMetrics($referencesMetrics)
   {

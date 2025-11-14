@@ -23,12 +23,16 @@ class GooglePrivacyDlpV2ListColumnDataProfilesResponse extends \Google\Collectio
   protected $columnDataProfilesType = GooglePrivacyDlpV2ColumnDataProfile::class;
   protected $columnDataProfilesDataType = 'array';
   /**
+   * The next page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GooglePrivacyDlpV2ColumnDataProfile[]
+   * List of data profiles.
+   *
+   * @param GooglePrivacyDlpV2ColumnDataProfile[] $columnDataProfiles
    */
   public function setColumnDataProfiles($columnDataProfiles)
   {
@@ -42,7 +46,9 @@ class GooglePrivacyDlpV2ListColumnDataProfilesResponse extends \Google\Collectio
     return $this->columnDataProfiles;
   }
   /**
-   * @param string
+   * The next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -19,46 +19,108 @@ namespace Google\Service\Testing;
 
 class DeviceSession extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_SESSION_STATE_UNSPECIFIED = 'SESSION_STATE_UNSPECIFIED';
+  /**
+   * Initial state of a session request. The session is being validated for
+   * correctness and a device is not yet requested.
+   */
+  public const STATE_REQUESTED = 'REQUESTED';
+  /**
+   * The session has been validated and is in the queue for a device.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The session has been granted and the device is accepting connections.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The session duration exceeded the device’s reservation time period and
+   * timed out automatically.
+   */
+  public const STATE_EXPIRED = 'EXPIRED';
+  /**
+   * The user is finished with the session and it was canceled by the user while
+   * the request was still getting allocated or after allocation and during
+   * device usage period.
+   */
+  public const STATE_FINISHED = 'FINISHED';
+  /**
+   * Unable to complete the session because the device was unavailable and it
+   * failed to allocate through the scheduler. For example, a device not in the
+   * catalog was requested or the request expired in the allocation queue.
+   */
+  public const STATE_UNAVAILABLE = 'UNAVAILABLE';
+  /**
+   * Unable to complete the session for an internal reason, such as an
+   * infrastructure failure.
+   */
+  public const STATE_ERROR = 'ERROR';
   protected $collection_key = 'stateHistories';
   /**
+   * Output only. The timestamp that the session first became ACTIVE.
+   *
    * @var string
    */
   public $activeStartTime;
   protected $androidDeviceType = AndroidDevice::class;
   protected $androidDeviceDataType = '';
   /**
+   * Output only. The time that the Session was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The title of the DeviceSession to be presented in the UI.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. If the device is still in use at this time, any connections will
+   * be ended and the SessionState will transition from ACTIVE to FINISHED.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Output only. The interval of time that this device must be interacted with
+   * before it transitions from ACTIVE to TIMEOUT_INACTIVITY.
+   *
    * @var string
    */
   public $inactivityTimeout;
   /**
+   * Optional. Name of the DeviceSession, e.g.
+   * "projects/{project_id}/deviceSessions/{session_id}"
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Current state of the DeviceSession.
+   *
    * @var string
    */
   public $state;
   protected $stateHistoriesType = SessionStateEvent::class;
   protected $stateHistoriesDataType = 'array';
   /**
+   * Optional. The amount of time that a device will be initially allocated for.
+   * This can eventually be extended with the UpdateDeviceSession RPC. Default:
+   * 15 minutes.
+   *
    * @var string
    */
   public $ttl;
 
   /**
-   * @param string
+   * Output only. The timestamp that the session first became ACTIVE.
+   *
+   * @param string $activeStartTime
    */
   public function setActiveStartTime($activeStartTime)
   {
@@ -72,7 +134,9 @@ class DeviceSession extends \Google\Collection
     return $this->activeStartTime;
   }
   /**
-   * @param AndroidDevice
+   * Required. The requested device
+   *
+   * @param AndroidDevice $androidDevice
    */
   public function setAndroidDevice(AndroidDevice $androidDevice)
   {
@@ -86,7 +150,9 @@ class DeviceSession extends \Google\Collection
     return $this->androidDevice;
   }
   /**
-   * @param string
+   * Output only. The time that the Session was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -100,7 +166,9 @@ class DeviceSession extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The title of the DeviceSession to be presented in the UI.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -114,7 +182,10 @@ class DeviceSession extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Optional. If the device is still in use at this time, any connections will
+   * be ended and the SessionState will transition from ACTIVE to FINISHED.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -128,7 +199,10 @@ class DeviceSession extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param string
+   * Output only. The interval of time that this device must be interacted with
+   * before it transitions from ACTIVE to TIMEOUT_INACTIVITY.
+   *
+   * @param string $inactivityTimeout
    */
   public function setInactivityTimeout($inactivityTimeout)
   {
@@ -142,7 +216,10 @@ class DeviceSession extends \Google\Collection
     return $this->inactivityTimeout;
   }
   /**
-   * @param string
+   * Optional. Name of the DeviceSession, e.g.
+   * "projects/{project_id}/deviceSessions/{session_id}"
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -156,21 +233,29 @@ class DeviceSession extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Current state of the DeviceSession.
+   *
+   * Accepted values: SESSION_STATE_UNSPECIFIED, REQUESTED, PENDING, ACTIVE,
+   * EXPIRED, FINISHED, UNAVAILABLE, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param SessionStateEvent[]
+   * Output only. The historical state transitions of the session_state message
+   * including the current session state.
+   *
+   * @param SessionStateEvent[] $stateHistories
    */
   public function setStateHistories($stateHistories)
   {
@@ -184,7 +269,11 @@ class DeviceSession extends \Google\Collection
     return $this->stateHistories;
   }
   /**
-   * @param string
+   * Optional. The amount of time that a device will be initially allocated for.
+   * This can eventually be extended with the UpdateDeviceSession RPC. Default:
+   * 15 minutes.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {

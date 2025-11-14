@@ -22,20 +22,30 @@ class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties extends \Goog
   protected $badgeConfigType = GoogleAppsDriveLabelsV2BadgeConfig::class;
   protected $badgeConfigDataType = '';
   /**
+   * The description of this label.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display text to show in the UI identifying this field.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Input only. Insert or move this choice before the indicated choice. If
+   * empty, the choice is placed at the end of the list.
+   *
    * @var string
    */
   public $insertBeforeChoice;
 
   /**
-   * @param GoogleAppsDriveLabelsV2BadgeConfig
+   * The badge configuration for this choice. When set, the label that owns this
+   * choice is considered a "badged label".
+   *
+   * @param GoogleAppsDriveLabelsV2BadgeConfig $badgeConfig
    */
   public function setBadgeConfig(GoogleAppsDriveLabelsV2BadgeConfig $badgeConfig)
   {
@@ -49,7 +59,9 @@ class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties extends \Goog
     return $this->badgeConfig;
   }
   /**
-   * @param string
+   * The description of this label.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -63,7 +75,9 @@ class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties extends \Goog
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display text to show in the UI identifying this field.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -77,7 +91,10 @@ class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties extends \Goog
     return $this->displayName;
   }
   /**
-   * @param string
+   * Input only. Insert or move this choice before the indicated choice. If
+   * empty, the choice is placed at the end of the list.
+   *
+   * @param string $insertBeforeChoice
    */
   public function setInsertBeforeChoice($insertBeforeChoice)
   {

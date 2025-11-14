@@ -20,20 +20,28 @@ namespace Google\Service\ToolResults;
 class TestCaseReference extends \Google\Model
 {
   /**
+   * The name of the class.
+   *
    * @var string
    */
   public $className;
   /**
+   * The name of the test case. Required.
+   *
    * @var string
    */
   public $name;
   /**
+   * The name of the test suite to which this test case belongs.
+   *
    * @var string
    */
   public $testSuiteName;
 
   /**
-   * @param string
+   * The name of the class.
+   *
+   * @param string $className
    */
   public function setClassName($className)
   {
@@ -47,7 +55,9 @@ class TestCaseReference extends \Google\Model
     return $this->className;
   }
   /**
-   * @param string
+   * The name of the test case. Required.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +71,9 @@ class TestCaseReference extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The name of the test suite to which this test case belongs.
+   *
+   * @param string $testSuiteName
    */
   public function setTestSuiteName($testSuiteName)
   {

@@ -21,26 +21,36 @@ class TableList extends \Google\Collection
 {
   protected $collection_key = 'tables';
   /**
+   * A hash of this page of results.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The type of list.
+   *
    * @var string
    */
   public $kind;
   /**
+   * A token to request the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $tablesType = TableListTables::class;
   protected $tablesDataType = 'array';
   /**
+   * The total number of tables in the dataset.
+   *
    * @var int
    */
   public $totalItems;
 
   /**
-   * @param string
+   * A hash of this page of results.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -54,7 +64,9 @@ class TableList extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * The type of list.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -68,7 +80,9 @@ class TableList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * A token to request the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -82,7 +96,9 @@ class TableList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TableListTables[]
+   * Tables in the requested dataset.
+   *
+   * @param TableListTables[] $tables
    */
   public function setTables($tables)
   {
@@ -96,7 +112,9 @@ class TableList extends \Google\Collection
     return $this->tables;
   }
   /**
-   * @param int
+   * The total number of tables in the dataset.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {

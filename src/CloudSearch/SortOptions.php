@@ -19,17 +19,27 @@ namespace Google\Service\CloudSearch;
 
 class SortOptions extends \Google\Model
 {
+  public const SORT_ORDER_ASCENDING = 'ASCENDING';
+  public const SORT_ORDER_DESCENDING = 'DESCENDING';
   /**
+   * The name of the operator corresponding to the field to sort on. The
+   * corresponding property must be marked as sortable.
+   *
    * @var string
    */
   public $operatorName;
   /**
+   * Ascending is the default sort order
+   *
    * @var string
    */
   public $sortOrder;
 
   /**
-   * @param string
+   * The name of the operator corresponding to the field to sort on. The
+   * corresponding property must be marked as sortable.
+   *
+   * @param string $operatorName
    */
   public function setOperatorName($operatorName)
   {
@@ -43,14 +53,18 @@ class SortOptions extends \Google\Model
     return $this->operatorName;
   }
   /**
-   * @param string
+   * Ascending is the default sort order
+   *
+   * Accepted values: ASCENDING, DESCENDING
+   *
+   * @param self::SORT_ORDER_* $sortOrder
    */
   public function setSortOrder($sortOrder)
   {
     $this->sortOrder = $sortOrder;
   }
   /**
-   * @return string
+   * @return self::SORT_ORDER_*
    */
   public function getSortOrder()
   {

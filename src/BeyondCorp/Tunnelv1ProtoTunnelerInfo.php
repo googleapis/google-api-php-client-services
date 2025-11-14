@@ -20,26 +20,41 @@ namespace Google\Service\BeyondCorp;
 class Tunnelv1ProtoTunnelerInfo extends \Google\Model
 {
   /**
+   * backoff_retry_count stores the number of times the tunneler has been
+   * retried by tunManager for current backoff sequence. Gets reset to 0 if time
+   * difference between 2 consecutive retries exceeds backoffRetryResetTime.
+   *
    * @var string
    */
   public $backoffRetryCount;
   /**
+   * id is the unique id of a tunneler.
+   *
    * @var string
    */
   public $id;
   protected $latestErrType = Tunnelv1ProtoTunnelerError::class;
   protected $latestErrDataType = '';
   /**
+   * latest_retry_time stores the time when the tunneler was last restarted.
+   *
    * @var string
    */
   public $latestRetryTime;
   /**
+   * total_retry_count stores the total number of times the tunneler has been
+   * retried by tunManager.
+   *
    * @var string
    */
   public $totalRetryCount;
 
   /**
-   * @param string
+   * backoff_retry_count stores the number of times the tunneler has been
+   * retried by tunManager for current backoff sequence. Gets reset to 0 if time
+   * difference between 2 consecutive retries exceeds backoffRetryResetTime.
+   *
+   * @param string $backoffRetryCount
    */
   public function setBackoffRetryCount($backoffRetryCount)
   {
@@ -53,7 +68,9 @@ class Tunnelv1ProtoTunnelerInfo extends \Google\Model
     return $this->backoffRetryCount;
   }
   /**
-   * @param string
+   * id is the unique id of a tunneler.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -67,7 +84,10 @@ class Tunnelv1ProtoTunnelerInfo extends \Google\Model
     return $this->id;
   }
   /**
-   * @param Tunnelv1ProtoTunnelerError
+   * latest_err stores the Error for the latest tunneler failure. Gets reset
+   * everytime the tunneler is retried by tunManager.
+   *
+   * @param Tunnelv1ProtoTunnelerError $latestErr
    */
   public function setLatestErr(Tunnelv1ProtoTunnelerError $latestErr)
   {
@@ -81,7 +101,9 @@ class Tunnelv1ProtoTunnelerInfo extends \Google\Model
     return $this->latestErr;
   }
   /**
-   * @param string
+   * latest_retry_time stores the time when the tunneler was last restarted.
+   *
+   * @param string $latestRetryTime
    */
   public function setLatestRetryTime($latestRetryTime)
   {
@@ -95,7 +117,10 @@ class Tunnelv1ProtoTunnelerInfo extends \Google\Model
     return $this->latestRetryTime;
   }
   /**
-   * @param string
+   * total_retry_count stores the total number of times the tunneler has been
+   * retried by tunManager.
+   *
+   * @param string $totalRetryCount
    */
   public function setTotalRetryCount($totalRetryCount)
   {

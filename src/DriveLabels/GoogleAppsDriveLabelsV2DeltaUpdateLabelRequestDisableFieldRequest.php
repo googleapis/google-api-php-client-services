@@ -22,16 +22,24 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest extends 
   protected $disabledPolicyType = GoogleAppsDriveLabelsV2LifecycleDisabledPolicy::class;
   protected $disabledPolicyDataType = '';
   /**
+   * Required. Key of the field to disable.
+   *
    * @var string
    */
   public $id;
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `disabled_policy` is implied and should not be specified. A single
+   * `*` can be used as a short-hand for updating every field.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GoogleAppsDriveLabelsV2LifecycleDisabledPolicy
+   * Required. Field disabled policy.
+   *
+   * @param GoogleAppsDriveLabelsV2LifecycleDisabledPolicy $disabledPolicy
    */
   public function setDisabledPolicy(GoogleAppsDriveLabelsV2LifecycleDisabledPolicy $disabledPolicy)
   {
@@ -45,7 +53,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest extends 
     return $this->disabledPolicy;
   }
   /**
-   * @param string
+   * Required. Key of the field to disable.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -59,7 +69,11 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest extends 
     return $this->id;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `disabled_policy` is implied and should not be specified. A single
+   * `*` can be used as a short-hand for updating every field.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

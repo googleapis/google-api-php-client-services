@@ -20,6 +20,9 @@ namespace Google\Service\Bigquery;
 class QueryParameter extends \Google\Model
 {
   /**
+   * Optional. If unset, this is a positional parameter. Otherwise, should be
+   * unique within a query.
+   *
    * @var string
    */
   public $name;
@@ -29,7 +32,10 @@ class QueryParameter extends \Google\Model
   protected $parameterValueDataType = '';
 
   /**
-   * @param string
+   * Optional. If unset, this is a positional parameter. Otherwise, should be
+   * unique within a query.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class QueryParameter extends \Google\Model
     return $this->name;
   }
   /**
-   * @param QueryParameterType
+   * Required. The type of this parameter.
+   *
+   * @param QueryParameterType $parameterType
    */
   public function setParameterType(QueryParameterType $parameterType)
   {
@@ -57,7 +65,9 @@ class QueryParameter extends \Google\Model
     return $this->parameterType;
   }
   /**
-   * @param QueryParameterValue
+   * Required. The value of this parameter.
+   *
+   * @param QueryParameterValue $parameterValue
    */
   public function setParameterValue(QueryParameterValue $parameterValue)
   {

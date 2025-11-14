@@ -25,22 +25,31 @@ class StagePerformanceStandaloneInsight extends \Google\Collection
   protected $highCardinalityJoinsType = HighCardinalityJoin::class;
   protected $highCardinalityJoinsDataType = 'array';
   /**
+   * Output only. True if the stage has insufficient shuffle quota.
+   *
    * @var bool
    */
   public $insufficientShuffleQuota;
   protected $partitionSkewType = PartitionSkew::class;
   protected $partitionSkewDataType = '';
   /**
+   * Output only. True if the stage has a slot contention issue.
+   *
    * @var bool
    */
   public $slotContention;
   /**
+   * Output only. The stage id that the insight mapped to.
+   *
    * @var string
    */
   public $stageId;
 
   /**
-   * @param BiEngineReason[]
+   * Output only. If present, the stage had the following reasons for being
+   * disqualified from BI Engine execution.
+   *
+   * @param BiEngineReason[] $biEngineReasons
    */
   public function setBiEngineReasons($biEngineReasons)
   {
@@ -54,7 +63,9 @@ class StagePerformanceStandaloneInsight extends \Google\Collection
     return $this->biEngineReasons;
   }
   /**
-   * @param HighCardinalityJoin[]
+   * Output only. High cardinality joins in the stage.
+   *
+   * @param HighCardinalityJoin[] $highCardinalityJoins
    */
   public function setHighCardinalityJoins($highCardinalityJoins)
   {
@@ -68,7 +79,9 @@ class StagePerformanceStandaloneInsight extends \Google\Collection
     return $this->highCardinalityJoins;
   }
   /**
-   * @param bool
+   * Output only. True if the stage has insufficient shuffle quota.
+   *
+   * @param bool $insufficientShuffleQuota
    */
   public function setInsufficientShuffleQuota($insufficientShuffleQuota)
   {
@@ -82,7 +95,9 @@ class StagePerformanceStandaloneInsight extends \Google\Collection
     return $this->insufficientShuffleQuota;
   }
   /**
-   * @param PartitionSkew
+   * Output only. Partition skew in the stage.
+   *
+   * @param PartitionSkew $partitionSkew
    */
   public function setPartitionSkew(PartitionSkew $partitionSkew)
   {
@@ -96,7 +111,9 @@ class StagePerformanceStandaloneInsight extends \Google\Collection
     return $this->partitionSkew;
   }
   /**
-   * @param bool
+   * Output only. True if the stage has a slot contention issue.
+   *
+   * @param bool $slotContention
    */
   public function setSlotContention($slotContention)
   {
@@ -110,7 +127,9 @@ class StagePerformanceStandaloneInsight extends \Google\Collection
     return $this->slotContention;
   }
   /**
-   * @param string
+   * Output only. The stage id that the insight mapped to.
+   *
+   * @param string $stageId
    */
   public function setStageId($stageId)
   {

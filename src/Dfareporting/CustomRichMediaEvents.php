@@ -23,12 +23,18 @@ class CustomRichMediaEvents extends \Google\Collection
   protected $filteredEventIdsType = DimensionValue::class;
   protected $filteredEventIdsDataType = 'array';
   /**
+   * The kind of resource this is, in this case
+   * dfareporting#customRichMediaEvents.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param DimensionValue[]
+   * List of custom rich media event IDs. Dimension values must be all of type
+   * dfa:richMediaEventTypeIdAndName.
+   *
+   * @param DimensionValue[] $filteredEventIds
    */
   public function setFilteredEventIds($filteredEventIds)
   {
@@ -42,7 +48,10 @@ class CustomRichMediaEvents extends \Google\Collection
     return $this->filteredEventIds;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case
+   * dfareporting#customRichMediaEvents.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

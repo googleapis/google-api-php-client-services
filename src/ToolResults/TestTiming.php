@@ -23,7 +23,10 @@ class TestTiming extends \Google\Model
   protected $testProcessDurationDataType = '';
 
   /**
-   * @param Duration
+   * How long it took to run the test process. - In response: present if
+   * previously set. - In create/update request: optional
+   *
+   * @param Duration $testProcessDuration
    */
   public function setTestProcessDuration(Duration $testProcessDuration)
   {

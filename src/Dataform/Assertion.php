@@ -23,6 +23,8 @@ class Assertion extends \Google\Collection
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
+   * Whether this action is disabled (i.e. should not be run).
+   *
    * @var bool
    */
   public $disabled;
@@ -31,16 +33,23 @@ class Assertion extends \Google\Collection
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
   /**
+   * The SELECT query which must return zero rows in order for this assertion to
+   * succeed.
+   *
    * @var string
    */
   public $selectQuery;
   /**
+   * Arbitrary, user-defined tags on this action.
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param Target[]
+   * A list of actions that this action depends on.
+   *
+   * @param Target[] $dependencyTargets
    */
   public function setDependencyTargets($dependencyTargets)
   {
@@ -54,7 +63,9 @@ class Assertion extends \Google\Collection
     return $this->dependencyTargets;
   }
   /**
-   * @param bool
+   * Whether this action is disabled (i.e. should not be run).
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -68,7 +79,10 @@ class Assertion extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * @param Target
+   * The parent action of this assertion. Only set if this assertion was
+   * automatically generated.
+   *
+   * @param Target $parentAction
    */
   public function setParentAction(Target $parentAction)
   {
@@ -82,7 +96,10 @@ class Assertion extends \Google\Collection
     return $this->parentAction;
   }
   /**
-   * @param RelationDescriptor
+   * Descriptor for the assertion's automatically-generated view and its
+   * columns.
+   *
+   * @param RelationDescriptor $relationDescriptor
    */
   public function setRelationDescriptor(RelationDescriptor $relationDescriptor)
   {
@@ -96,7 +113,10 @@ class Assertion extends \Google\Collection
     return $this->relationDescriptor;
   }
   /**
-   * @param string
+   * The SELECT query which must return zero rows in order for this assertion to
+   * succeed.
+   *
+   * @param string $selectQuery
    */
   public function setSelectQuery($selectQuery)
   {
@@ -110,7 +130,9 @@ class Assertion extends \Google\Collection
     return $this->selectQuery;
   }
   /**
-   * @param string[]
+   * Arbitrary, user-defined tags on this action.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

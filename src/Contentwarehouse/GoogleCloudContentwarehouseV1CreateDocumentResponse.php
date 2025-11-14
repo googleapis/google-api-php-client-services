@@ -30,7 +30,9 @@ class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collec
   protected $ruleEngineOutputDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1Document
+   * Document created after executing create request.
+   *
+   * @param GoogleCloudContentwarehouseV1Document $document
    */
   public function setDocument(GoogleCloudContentwarehouseV1Document $document)
   {
@@ -44,7 +46,9 @@ class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collec
     return $this->document;
   }
   /**
-   * @param GoogleLongrunningOperation[]
+   * post-processing LROs
+   *
+   * @param GoogleLongrunningOperation[] $longRunningOperations
    */
   public function setLongRunningOperations($longRunningOperations)
   {
@@ -58,7 +62,10 @@ class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collec
     return $this->longRunningOperations;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1ResponseMetadata
+   * Additional information for the API invocation, such as the request tracking
+   * id.
+   *
+   * @param GoogleCloudContentwarehouseV1ResponseMetadata $metadata
    */
   public function setMetadata(GoogleCloudContentwarehouseV1ResponseMetadata $metadata)
   {
@@ -72,7 +79,10 @@ class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collec
     return $this->metadata;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1RuleEngineOutput
+   * Output from Rule Engine recording the rule evaluator and action executor's
+   * output. Refer format in: google/cloud/contentwarehouse/v1/rule_engine.proto
+   *
+   * @param GoogleCloudContentwarehouseV1RuleEngineOutput $ruleEngineOutput
    */
   public function setRuleEngineOutput(GoogleCloudContentwarehouseV1RuleEngineOutput $ruleEngineOutput)
   {

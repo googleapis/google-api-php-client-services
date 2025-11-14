@@ -20,12 +20,16 @@ namespace Google\Service\Storagetransfer;
 class HdfsData extends \Google\Model
 {
   /**
+   * Root path to transfer files.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Root path to transfer files.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

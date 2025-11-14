@@ -25,52 +25,77 @@ class Userinfo extends \Google\Model
         "verifiedEmail" => "verified_email",
   ];
   /**
+   * The user's email address.
+   *
    * @var string
    */
   public $email;
   /**
+   * The user's last name.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * The user's gender.
+   *
    * @var string
    */
   public $gender;
   /**
+   * The user's first name.
+   *
    * @var string
    */
   public $givenName;
   /**
+   * The hosted domain e.g. example.com if the user is Google apps user.
+   *
    * @var string
    */
   public $hd;
   /**
+   * The obfuscated ID of the user.
+   *
    * @var string
    */
   public $id;
   /**
+   * URL of the profile page.
+   *
    * @var string
    */
   public $link;
   /**
+   * The user's preferred locale.
+   *
    * @var string
    */
   public $locale;
   /**
+   * The user's full name.
+   *
    * @var string
    */
   public $name;
   /**
+   * URL of the user's picture image.
+   *
    * @var string
    */
   public $picture;
   /**
+   * Boolean flag which is true if the email address is verified. Always
+   * verified because we only return the user's primary email address.
+   *
    * @var bool
    */
   public $verifiedEmail;
 
   /**
-   * @param string
+   * The user's email address.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -84,7 +109,9 @@ class Userinfo extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The user's last name.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -98,7 +125,9 @@ class Userinfo extends \Google\Model
     return $this->familyName;
   }
   /**
-   * @param string
+   * The user's gender.
+   *
+   * @param string $gender
    */
   public function setGender($gender)
   {
@@ -112,7 +141,9 @@ class Userinfo extends \Google\Model
     return $this->gender;
   }
   /**
-   * @param string
+   * The user's first name.
+   *
+   * @param string $givenName
    */
   public function setGivenName($givenName)
   {
@@ -126,7 +157,9 @@ class Userinfo extends \Google\Model
     return $this->givenName;
   }
   /**
-   * @param string
+   * The hosted domain e.g. example.com if the user is Google apps user.
+   *
+   * @param string $hd
    */
   public function setHd($hd)
   {
@@ -140,7 +173,9 @@ class Userinfo extends \Google\Model
     return $this->hd;
   }
   /**
-   * @param string
+   * The obfuscated ID of the user.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -154,7 +189,9 @@ class Userinfo extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * URL of the profile page.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {
@@ -168,7 +205,9 @@ class Userinfo extends \Google\Model
     return $this->link;
   }
   /**
-   * @param string
+   * The user's preferred locale.
+   *
+   * @param string $locale
    */
   public function setLocale($locale)
   {
@@ -182,7 +221,9 @@ class Userinfo extends \Google\Model
     return $this->locale;
   }
   /**
-   * @param string
+   * The user's full name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -196,7 +237,9 @@ class Userinfo extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * URL of the user's picture image.
+   *
+   * @param string $picture
    */
   public function setPicture($picture)
   {
@@ -210,7 +253,10 @@ class Userinfo extends \Google\Model
     return $this->picture;
   }
   /**
-   * @param bool
+   * Boolean flag which is true if the email address is verified. Always
+   * verified because we only return the user's primary email address.
+   *
+   * @param bool $verifiedEmail
    */
   public function setVerifiedEmail($verifiedEmail)
   {

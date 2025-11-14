@@ -22,20 +22,30 @@ class DataSourceGcpResourceInfo extends \Google\Model
   protected $cloudSqlInstancePropertiesType = CloudSqlInstanceDataSourceReferenceProperties::class;
   protected $cloudSqlInstancePropertiesDataType = '';
   /**
+   * Output only. The resource name of the GCP resource. Ex:
+   * projects/{project}/zones/{zone}/instances/{instance}
+   *
    * @var string
    */
   public $gcpResourcename;
   /**
+   * Output only. The location of the GCP resource. Ex: //"global"/"unspecified"
+   *
    * @var string
    */
   public $location;
   /**
+   * Output only. The type of the GCP resource. Ex:
+   * compute.googleapis.com/Instance
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param CloudSqlInstanceDataSourceReferenceProperties
+   * Output only. The properties of the Cloud SQL instance.
+   *
+   * @param CloudSqlInstanceDataSourceReferenceProperties $cloudSqlInstanceProperties
    */
   public function setCloudSqlInstanceProperties(CloudSqlInstanceDataSourceReferenceProperties $cloudSqlInstanceProperties)
   {
@@ -49,7 +59,10 @@ class DataSourceGcpResourceInfo extends \Google\Model
     return $this->cloudSqlInstanceProperties;
   }
   /**
-   * @param string
+   * Output only. The resource name of the GCP resource. Ex:
+   * projects/{project}/zones/{zone}/instances/{instance}
+   *
+   * @param string $gcpResourcename
    */
   public function setGcpResourcename($gcpResourcename)
   {
@@ -63,7 +76,9 @@ class DataSourceGcpResourceInfo extends \Google\Model
     return $this->gcpResourcename;
   }
   /**
-   * @param string
+   * Output only. The location of the GCP resource. Ex: //"global"/"unspecified"
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -77,7 +92,10 @@ class DataSourceGcpResourceInfo extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Output only. The type of the GCP resource. Ex:
+   * compute.googleapis.com/Instance
+   *
+   * @param string $type
    */
   public function setType($type)
   {

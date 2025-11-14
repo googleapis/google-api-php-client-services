@@ -26,7 +26,9 @@ class CloudAiPlatformTenantresourceTenantResource extends \Google\Collection
   protected $tenantProjectResourcesDataType = 'array';
 
   /**
-   * @param CloudAiPlatformTenantresourceServiceAccountIdentity[]
+   * A list of P4 service accounts (go/p4sa) to provision or deprovision.
+   *
+   * @param CloudAiPlatformTenantresourceServiceAccountIdentity[] $p4ServiceAccounts
    */
   public function setP4ServiceAccounts($p4ServiceAccounts)
   {
@@ -40,7 +42,9 @@ class CloudAiPlatformTenantresourceTenantResource extends \Google\Collection
     return $this->p4ServiceAccounts;
   }
   /**
-   * @param CloudAiPlatformTenantresourceTenantProjectResource[]
+   * A list of tenant projects and tenant resources to provision or deprovision.
+   *
+   * @param CloudAiPlatformTenantresourceTenantProjectResource[] $tenantProjectResources
    */
   public function setTenantProjectResources($tenantProjectResources)
   {

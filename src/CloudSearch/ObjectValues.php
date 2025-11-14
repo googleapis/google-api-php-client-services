@@ -24,7 +24,7 @@ class ObjectValues extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param StructuredDataObject[]
+   * @param StructuredDataObject[] $values
    */
   public function setValues($values)
   {

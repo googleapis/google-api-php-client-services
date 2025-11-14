@@ -20,16 +20,25 @@ namespace Google\Service\Container;
 class RBACBindingConfig extends \Google\Model
 {
   /**
+   * Setting this to true will allow any ClusterRoleBinding and RoleBinding with
+   * subjects system:authenticated.
+   *
    * @var bool
    */
   public $enableInsecureBindingSystemAuthenticated;
   /**
+   * Setting this to true will allow any ClusterRoleBinding and RoleBinding with
+   * subjets system:anonymous or system:unauthenticated.
+   *
    * @var bool
    */
   public $enableInsecureBindingSystemUnauthenticated;
 
   /**
-   * @param bool
+   * Setting this to true will allow any ClusterRoleBinding and RoleBinding with
+   * subjects system:authenticated.
+   *
+   * @param bool $enableInsecureBindingSystemAuthenticated
    */
   public function setEnableInsecureBindingSystemAuthenticated($enableInsecureBindingSystemAuthenticated)
   {
@@ -43,7 +52,10 @@ class RBACBindingConfig extends \Google\Model
     return $this->enableInsecureBindingSystemAuthenticated;
   }
   /**
-   * @param bool
+   * Setting this to true will allow any ClusterRoleBinding and RoleBinding with
+   * subjets system:anonymous or system:unauthenticated.
+   *
+   * @param bool $enableInsecureBindingSystemUnauthenticated
    */
   public function setEnableInsecureBindingSystemUnauthenticated($enableInsecureBindingSystemUnauthenticated)
   {

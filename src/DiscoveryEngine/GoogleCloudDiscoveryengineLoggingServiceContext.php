@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineLoggingServiceContext extends \Google\Model
 {
   /**
+   * An identifier of the service—for example, `discoveryengine.googleapis.com`.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * An identifier of the service—for example, `discoveryengine.googleapis.com`.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

@@ -23,12 +23,18 @@ class ListCommentsResponse extends \Google\Collection
   protected $commentsType = Comment::class;
   protected $commentsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Set this in the `page_token`
+   * field of subsequent `cases.comments.list` requests. If unspecified, there
+   * are no more results to retrieve.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Comment[]
+   * List of the comments associated with the case.
+   *
+   * @param Comment[] $comments
    */
   public function setComments($comments)
   {
@@ -42,7 +48,11 @@ class ListCommentsResponse extends \Google\Collection
     return $this->comments;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Set this in the `page_token`
+   * field of subsequent `cases.comments.list` requests. If unspecified, there
+   * are no more results to retrieve.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,24 +20,34 @@ namespace Google\Service\Transcoder;
 class Crop extends \Google\Model
 {
   /**
+   * The number of pixels to crop from the bottom. The default is 0.
+   *
    * @var int
    */
   public $bottomPixels;
   /**
+   * The number of pixels to crop from the left. The default is 0.
+   *
    * @var int
    */
   public $leftPixels;
   /**
+   * The number of pixels to crop from the right. The default is 0.
+   *
    * @var int
    */
   public $rightPixels;
   /**
+   * The number of pixels to crop from the top. The default is 0.
+   *
    * @var int
    */
   public $topPixels;
 
   /**
-   * @param int
+   * The number of pixels to crop from the bottom. The default is 0.
+   *
+   * @param int $bottomPixels
    */
   public function setBottomPixels($bottomPixels)
   {
@@ -51,7 +61,9 @@ class Crop extends \Google\Model
     return $this->bottomPixels;
   }
   /**
-   * @param int
+   * The number of pixels to crop from the left. The default is 0.
+   *
+   * @param int $leftPixels
    */
   public function setLeftPixels($leftPixels)
   {
@@ -65,7 +77,9 @@ class Crop extends \Google\Model
     return $this->leftPixels;
   }
   /**
-   * @param int
+   * The number of pixels to crop from the right. The default is 0.
+   *
+   * @param int $rightPixels
    */
   public function setRightPixels($rightPixels)
   {
@@ -79,7 +93,9 @@ class Crop extends \Google\Model
     return $this->rightPixels;
   }
   /**
-   * @param int
+   * The number of pixels to crop from the top. The default is 0.
+   *
+   * @param int $topPixels
    */
   public function setTopPixels($topPixels)
   {

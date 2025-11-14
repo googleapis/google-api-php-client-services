@@ -23,12 +23,16 @@ class Service extends \Google\Collection
   protected $intentFilterType = IntentFilter::class;
   protected $intentFilterDataType = 'array';
   /**
+   * The android:name value
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param IntentFilter[]
+   * Intent filters in the service
+   *
+   * @param IntentFilter[] $intentFilter
    */
   public function setIntentFilter($intentFilter)
   {
@@ -42,7 +46,9 @@ class Service extends \Google\Collection
     return $this->intentFilter;
   }
   /**
-   * @param string
+   * The android:name value
+   *
+   * @param string $name
    */
   public function setName($name)
   {

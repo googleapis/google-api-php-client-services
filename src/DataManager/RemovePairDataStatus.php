@@ -20,16 +20,28 @@ namespace Google\Service\DataManager;
 class RemovePairDataStatus extends \Google\Model
 {
   /**
+   * The total count of pair ids sent in the removal request. Includes all pair
+   * ids in the request, regardless of whether they were successfully removed or
+   * not.
+   *
    * @var string
    */
   public $pairIdCount;
   /**
+   * The total count of audience members sent in the removal request. Includes
+   * all audience members in the request, regardless of whether they were
+   * successfully removed or not.
+   *
    * @var string
    */
   public $recordCount;
 
   /**
-   * @param string
+   * The total count of pair ids sent in the removal request. Includes all pair
+   * ids in the request, regardless of whether they were successfully removed or
+   * not.
+   *
+   * @param string $pairIdCount
    */
   public function setPairIdCount($pairIdCount)
   {
@@ -43,7 +55,11 @@ class RemovePairDataStatus extends \Google\Model
     return $this->pairIdCount;
   }
   /**
-   * @param string
+   * The total count of audience members sent in the removal request. Includes
+   * all audience members in the request, regardless of whether they were
+   * successfully removed or not.
+   *
+   * @param string $recordCount
    */
   public function setRecordCount($recordCount)
   {

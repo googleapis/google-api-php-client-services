@@ -24,7 +24,10 @@ class FetchCaCertsResponse extends \Google\Collection
   protected $caCertsDataType = 'array';
 
   /**
-   * @param CertChain[]
+   * The PEM encoded CA certificate chains of all certificate authorities in
+   * this CaPool in the ENABLED, DISABLED, or STAGED states.
+   *
+   * @param CertChain[] $caCerts
    */
   public function setCaCerts($caCerts)
   {

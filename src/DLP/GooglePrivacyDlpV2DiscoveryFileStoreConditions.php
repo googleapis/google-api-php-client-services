@@ -22,16 +22,24 @@ class GooglePrivacyDlpV2DiscoveryFileStoreConditions extends \Google\Model
   protected $cloudStorageConditionsType = GooglePrivacyDlpV2DiscoveryCloudStorageConditions::class;
   protected $cloudStorageConditionsDataType = '';
   /**
+   * Optional. File store must have been created after this date. Used to avoid
+   * backfilling.
+   *
    * @var string
    */
   public $createdAfter;
   /**
+   * Optional. Minimum age a file store must have. If set, the value must be 1
+   * hour or greater.
+   *
    * @var string
    */
   public $minAge;
 
   /**
-   * @param GooglePrivacyDlpV2DiscoveryCloudStorageConditions
+   * Optional. Cloud Storage conditions.
+   *
+   * @param GooglePrivacyDlpV2DiscoveryCloudStorageConditions $cloudStorageConditions
    */
   public function setCloudStorageConditions(GooglePrivacyDlpV2DiscoveryCloudStorageConditions $cloudStorageConditions)
   {
@@ -45,7 +53,10 @@ class GooglePrivacyDlpV2DiscoveryFileStoreConditions extends \Google\Model
     return $this->cloudStorageConditions;
   }
   /**
-   * @param string
+   * Optional. File store must have been created after this date. Used to avoid
+   * backfilling.
+   *
+   * @param string $createdAfter
    */
   public function setCreatedAfter($createdAfter)
   {
@@ -59,7 +70,10 @@ class GooglePrivacyDlpV2DiscoveryFileStoreConditions extends \Google\Model
     return $this->createdAfter;
   }
   /**
-   * @param string
+   * Optional. Minimum age a file store must have. If set, the value must be 1
+   * hour or greater.
+   *
+   * @param string $minAge
    */
   public function setMinAge($minAge)
   {

@@ -21,22 +21,36 @@ class LogDescriptor extends \Google\Collection
 {
   protected $collection_key = 'labels';
   /**
+   * A human-readable description of this log. This information appears in the
+   * documentation and can contain details.
+   *
    * @var string
    */
   public $description;
   /**
+   * The human-readable name for this log. This information appears on the user
+   * interface and should be concise.
+   *
    * @var string
    */
   public $displayName;
   protected $labelsType = LabelDescriptor::class;
   protected $labelsDataType = 'array';
   /**
+   * The name of the log. It must be less than 512 characters long and can
+   * include the following characters: upper- and lower-case alphanumeric
+   * characters [A-Za-z0-9], and punctuation characters including slash,
+   * underscore, hyphen, period [/_-.].
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * A human-readable description of this log. This information appears in the
+   * documentation and can contain details.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -50,7 +64,10 @@ class LogDescriptor extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The human-readable name for this log. This information appears on the user
+   * interface and should be concise.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -64,7 +81,11 @@ class LogDescriptor extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param LabelDescriptor[]
+   * The set of labels that are available to describe a specific log entry.
+   * Runtime requests that contain labels not specified here are considered
+   * invalid.
+   *
+   * @param LabelDescriptor[] $labels
    */
   public function setLabels($labels)
   {
@@ -78,7 +99,12 @@ class LogDescriptor extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * The name of the log. It must be less than 512 characters long and can
+   * include the following characters: upper- and lower-case alphanumeric
+   * characters [A-Za-z0-9], and punctuation characters including slash,
+   * underscore, hyphen, period [/_-.].
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\SecurityCommandCenter;
 class IamPolicy extends \Google\Model
 {
   /**
+   * The JSON representation of the Policy associated with the asset. See
+   * https://cloud.google.com/iam/reference/rest/v1/Policy for format details.
+   *
    * @var string
    */
   public $policyBlob;
 
   /**
-   * @param string
+   * The JSON representation of the Policy associated with the asset. See
+   * https://cloud.google.com/iam/reference/rest/v1/Policy for format details.
+   *
+   * @param string $policyBlob
    */
   public function setPolicyBlob($policyBlob)
   {

@@ -24,7 +24,9 @@ class ReplaceSitesResponse extends \Google\Collection
   protected $sitesDataType = 'array';
 
   /**
-   * @param Site[]
+   * The list of sites in the channel after replacing.
+   *
+   * @param Site[] $sites
    */
   public function setSites($sites)
   {

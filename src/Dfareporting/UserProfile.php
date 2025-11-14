@@ -20,40 +20,59 @@ namespace Google\Service\Dfareporting;
 class UserProfile extends \Google\Model
 {
   /**
+   * The account ID to which this profile belongs.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * The account name this profile belongs to.
+   *
    * @var string
    */
   public $accountName;
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#userProfile".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The unique ID of the user profile.
+   *
    * @var string
    */
   public $profileId;
   /**
+   * The sub account ID this profile belongs to if applicable.
+   *
    * @var string
    */
   public $subAccountId;
   /**
+   * The sub account name this profile belongs to if applicable.
+   *
    * @var string
    */
   public $subAccountName;
   /**
+   * The user name.
+   *
    * @var string
    */
   public $userName;
 
   /**
-   * @param string
+   * The account ID to which this profile belongs.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -67,7 +86,9 @@ class UserProfile extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * The account name this profile belongs to.
+   *
+   * @param string $accountName
    */
   public function setAccountName($accountName)
   {
@@ -81,7 +102,9 @@ class UserProfile extends \Google\Model
     return $this->accountName;
   }
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -95,7 +118,10 @@ class UserProfile extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#userProfile".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -109,7 +135,9 @@ class UserProfile extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The unique ID of the user profile.
+   *
+   * @param string $profileId
    */
   public function setProfileId($profileId)
   {
@@ -123,7 +151,9 @@ class UserProfile extends \Google\Model
     return $this->profileId;
   }
   /**
-   * @param string
+   * The sub account ID this profile belongs to if applicable.
+   *
+   * @param string $subAccountId
    */
   public function setSubAccountId($subAccountId)
   {
@@ -137,7 +167,9 @@ class UserProfile extends \Google\Model
     return $this->subAccountId;
   }
   /**
-   * @param string
+   * The sub account name this profile belongs to if applicable.
+   *
+   * @param string $subAccountName
    */
   public function setSubAccountName($subAccountName)
   {
@@ -151,7 +183,9 @@ class UserProfile extends \Google\Model
     return $this->subAccountName;
   }
   /**
-   * @param string
+   * The user name.
+   *
+   * @param string $userName
    */
   public function setUserName($userName)
   {

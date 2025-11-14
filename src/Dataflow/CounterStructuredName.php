@@ -20,48 +20,97 @@ namespace Google\Service\Dataflow;
 class CounterStructuredName extends \Google\Model
 {
   /**
+   * Counter was created by the Dataflow system.
+   */
+  public const ORIGIN_SYSTEM = 'SYSTEM';
+  /**
+   * Counter was created by the user.
+   */
+  public const ORIGIN_USER = 'USER';
+  /**
+   * Counter portion has not been set.
+   */
+  public const PORTION_ALL = 'ALL';
+  /**
+   * Counter reports a key.
+   */
+  public const PORTION_KEY = 'KEY';
+  /**
+   * Counter reports a value.
+   */
+  public const PORTION_VALUE = 'VALUE';
+  /**
+   * Name of the optimized step being executed by the workers.
+   *
    * @var string
    */
   public $componentStepName;
   /**
+   * Name of the stage. An execution step contains multiple component steps.
+   *
    * @var string
    */
   public $executionStepName;
   /**
+   * Index of an input collection that's being read from/written to as a side
+   * input. The index identifies a step's side inputs starting by 1 (e.g. the
+   * first side input has input_index 1, the third has input_index 3). Side
+   * inputs are identified by a pair of (original_step_name, input_index). This
+   * field helps uniquely identify them.
+   *
    * @var int
    */
   public $inputIndex;
   /**
+   * Counter name. Not necessarily globally-unique, but unique within the
+   * context of the other fields. Required.
+   *
    * @var string
    */
   public $name;
   /**
+   * One of the standard Origins defined above.
+   *
    * @var string
    */
   public $origin;
   /**
+   * A string containing a more specific namespace of the counter's origin.
+   *
    * @var string
    */
   public $originNamespace;
   /**
+   * The step name requesting an operation, such as GBK. I.e. the ParDo causing
+   * a read/write from shuffle to occur, or a read from side inputs.
+   *
    * @var string
    */
   public $originalRequestingStepName;
   /**
+   * System generated name of the original step in the user's graph, before
+   * optimization.
+   *
    * @var string
    */
   public $originalStepName;
   /**
+   * Portion of this counter, either key or value.
+   *
    * @var string
    */
   public $portion;
   /**
+   * ID of a particular worker.
+   *
    * @var string
    */
   public $workerId;
 
   /**
-   * @param string
+   * Name of the optimized step being executed by the workers.
+   *
+   * @param string $componentStepName
    */
   public function setComponentStepName($componentStepName)
   {
@@ -75,7 +124,9 @@ class CounterStructuredName extends \Google\Model
     return $this->componentStepName;
   }
   /**
-   * @param string
+   * Name of the stage. An execution step contains multiple component steps.
+   *
+   * @param string $executionStepName
    */
   public function setExecutionStepName($executionStepName)
   {
@@ -89,7 +140,13 @@ class CounterStructuredName extends \Google\Model
     return $this->executionStepName;
   }
   /**
-   * @param int
+   * Index of an input collection that's being read from/written to as a side
+   * input. The index identifies a step's side inputs starting by 1 (e.g. the
+   * first side input has input_index 1, the third has input_index 3). Side
+   * inputs are identified by a pair of (original_step_name, input_index). This
+   * field helps uniquely identify them.
+   *
+   * @param int $inputIndex
    */
   public function setInputIndex($inputIndex)
   {
@@ -103,7 +160,10 @@ class CounterStructuredName extends \Google\Model
     return $this->inputIndex;
   }
   /**
-   * @param string
+   * Counter name. Not necessarily globally-unique, but unique within the
+   * context of the other fields. Required.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -117,21 +177,27 @@ class CounterStructuredName extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * One of the standard Origins defined above.
+   *
+   * Accepted values: SYSTEM, USER
+   *
+   * @param self::ORIGIN_* $origin
    */
   public function setOrigin($origin)
   {
     $this->origin = $origin;
   }
   /**
-   * @return string
+   * @return self::ORIGIN_*
    */
   public function getOrigin()
   {
     return $this->origin;
   }
   /**
-   * @param string
+   * A string containing a more specific namespace of the counter's origin.
+   *
+   * @param string $originNamespace
    */
   public function setOriginNamespace($originNamespace)
   {
@@ -145,7 +211,10 @@ class CounterStructuredName extends \Google\Model
     return $this->originNamespace;
   }
   /**
-   * @param string
+   * The step name requesting an operation, such as GBK. I.e. the ParDo causing
+   * a read/write from shuffle to occur, or a read from side inputs.
+   *
+   * @param string $originalRequestingStepName
    */
   public function setOriginalRequestingStepName($originalRequestingStepName)
   {
@@ -159,7 +228,10 @@ class CounterStructuredName extends \Google\Model
     return $this->originalRequestingStepName;
   }
   /**
-   * @param string
+   * System generated name of the original step in the user's graph, before
+   * optimization.
+   *
+   * @param string $originalStepName
    */
   public function setOriginalStepName($originalStepName)
   {
@@ -173,21 +245,27 @@ class CounterStructuredName extends \Google\Model
     return $this->originalStepName;
   }
   /**
-   * @param string
+   * Portion of this counter, either key or value.
+   *
+   * Accepted values: ALL, KEY, VALUE
+   *
+   * @param self::PORTION_* $portion
    */
   public function setPortion($portion)
   {
     $this->portion = $portion;
   }
   /**
-   * @return string
+   * @return self::PORTION_*
    */
   public function getPortion()
   {
     return $this->portion;
   }
   /**
-   * @param string
+   * ID of a particular worker.
+   *
+   * @param string $workerId
    */
   public function setWorkerId($workerId)
   {

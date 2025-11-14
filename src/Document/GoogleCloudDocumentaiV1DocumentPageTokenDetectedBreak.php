@@ -20,19 +20,41 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak extends \Google\Model
 {
   /**
+   * Unspecified break type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * A single whitespace.
+   */
+  public const TYPE_SPACE = 'SPACE';
+  /**
+   * A wider whitespace.
+   */
+  public const TYPE_WIDE_SPACE = 'WIDE_SPACE';
+  /**
+   * A hyphen that indicates that a token has been split across lines.
+   */
+  public const TYPE_HYPHEN = 'HYPHEN';
+  /**
+   * Detected break type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Detected break type.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, SPACE, WIDE_SPACE, HYPHEN
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

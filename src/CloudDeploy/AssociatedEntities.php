@@ -26,7 +26,9 @@ class AssociatedEntities extends \Google\Collection
   protected $gkeClustersDataType = 'array';
 
   /**
-   * @param AnthosCluster[]
+   * Optional. Information specifying Anthos clusters as associated entities.
+   *
+   * @param AnthosCluster[] $anthosClusters
    */
   public function setAnthosClusters($anthosClusters)
   {
@@ -40,7 +42,9 @@ class AssociatedEntities extends \Google\Collection
     return $this->anthosClusters;
   }
   /**
-   * @param GkeCluster[]
+   * Optional. Information specifying GKE clusters as associated entities.
+   *
+   * @param GkeCluster[] $gkeClusters
    */
   public function setGkeClusters($gkeClusters)
   {

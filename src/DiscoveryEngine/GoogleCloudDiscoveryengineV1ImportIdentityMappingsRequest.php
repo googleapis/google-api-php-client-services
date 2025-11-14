@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1ImportIdentityMappingsRequest extends \Google\
   protected $inlineSourceDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1ImportIdentityMappingsRequestInlineSource
+   * The inline source to import identity mapping entries from.
+   *
+   * @param GoogleCloudDiscoveryengineV1ImportIdentityMappingsRequestInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudDiscoveryengineV1ImportIdentityMappingsRequestInlineSource $inlineSource)
   {

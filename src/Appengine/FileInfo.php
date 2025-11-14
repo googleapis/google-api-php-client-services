@@ -20,20 +20,29 @@ namespace Google\Service\Appengine;
 class FileInfo extends \Google\Model
 {
   /**
+   * The MIME type of the file.Defaults to the value from Google Cloud Storage.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * The SHA1 hash of the file, in hex.
+   *
    * @var string
    */
   public $sha1Sum;
   /**
+   * URL source to use to fetch this file. Must be a URL to a resource in Google
+   * Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
+   *
    * @var string
    */
   public $sourceUrl;
 
   /**
-   * @param string
+   * The MIME type of the file.Defaults to the value from Google Cloud Storage.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -47,7 +56,9 @@ class FileInfo extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * The SHA1 hash of the file, in hex.
+   *
+   * @param string $sha1Sum
    */
   public function setSha1Sum($sha1Sum)
   {
@@ -61,7 +72,10 @@ class FileInfo extends \Google\Model
     return $this->sha1Sum;
   }
   /**
-   * @param string
+   * URL source to use to fetch this file. Must be a URL to a resource in Google
+   * Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
+   *
+   * @param string $sourceUrl
    */
   public function setSourceUrl($sourceUrl)
   {

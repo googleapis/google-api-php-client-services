@@ -23,12 +23,16 @@ class GoogleCloudDiscoveryengineV1betaPurgeSuggestionDenyListEntriesResponse ext
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
   /**
+   * Number of suggestion deny list entries purged.
+   *
    * @var string
    */
   public $purgeCount;
 
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDiscoveryengineV1betaPurgeSuggestionDenyListEntriesResponse ext
     return $this->errorSamples;
   }
   /**
-   * @param string
+   * Number of suggestion deny list entries purged.
+   *
+   * @param string $purgeCount
    */
   public function setPurgeCount($purgeCount)
   {

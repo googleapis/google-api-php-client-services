@@ -20,15 +20,37 @@ namespace Google\Service\NetAppFiles;
 class MonthlySchedule extends \Google\Model
 {
   /**
+   * Set the day or days of the month to make a snapshot (1-31). Accepts a comma
+   * separated number of days. Defaults to '1'.
+   *
    * @var string
    */
   public $daysOfMonth;
+  /**
+   * Set the hour to start the snapshot (0-23), defaults to midnight (0).
+   *
+   * @var 
+   */
   public $hour;
+  /**
+   * Set the minute of the hour to start the snapshot (0-59), defaults to the
+   * top of the hour (0).
+   *
+   * @var 
+   */
   public $minute;
+  /**
+   * The maximum number of Snapshots to keep for the hourly schedule
+   *
+   * @var 
+   */
   public $snapshotsToKeep;
 
   /**
-   * @param string
+   * Set the day or days of the month to make a snapshot (1-31). Accepts a comma
+   * separated number of days. Defaults to '1'.
+   *
+   * @param string $daysOfMonth
    */
   public function setDaysOfMonth($daysOfMonth)
   {

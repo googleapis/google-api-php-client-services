@@ -21,12 +21,26 @@ class Clustering extends \Google\Collection
 {
   protected $collection_key = 'fields';
   /**
+   * One or more fields on which data should be clustered. Only top-level, non-
+   * repeated, simple-type fields are supported. The ordering of the clustering
+   * fields should be prioritized from most to least important for filtering
+   * purposes. For additional information, see [Introduction to clustered
+   * tables](https://cloud.google.com/bigquery/docs/clustered-
+   * tables#limitations).
+   *
    * @var string[]
    */
   public $fields;
 
   /**
-   * @param string[]
+   * One or more fields on which data should be clustered. Only top-level, non-
+   * repeated, simple-type fields are supported. The ordering of the clustering
+   * fields should be prioritized from most to least important for filtering
+   * purposes. For additional information, see [Introduction to clustered
+   * tables](https://cloud.google.com/bigquery/docs/clustered-
+   * tables#limitations).
+   *
+   * @param string[] $fields
    */
   public function setFields($fields)
   {

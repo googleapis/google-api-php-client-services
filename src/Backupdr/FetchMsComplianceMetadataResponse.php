@@ -20,12 +20,18 @@ namespace Google\Service\Backupdr;
 class FetchMsComplianceMetadataResponse extends \Google\Model
 {
   /**
+   * The ms compliance metadata of the target project, if the project is an
+   * assured workloads project, values will be true, otherwise false.
+   *
    * @var bool
    */
   public $isAssuredWorkload;
 
   /**
-   * @param bool
+   * The ms compliance metadata of the target project, if the project is an
+   * assured workloads project, values will be true, otherwise false.
+   *
+   * @param bool $isAssuredWorkload
    */
   public function setIsAssuredWorkload($isAssuredWorkload)
   {

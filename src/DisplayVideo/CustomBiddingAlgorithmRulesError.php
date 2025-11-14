@@ -20,19 +20,42 @@ namespace Google\Service\DisplayVideo;
 class CustomBiddingAlgorithmRulesError extends \Google\Model
 {
   /**
+   * The error is not specified or is unknown in this version.
+   */
+  public const ERROR_CODE_ERROR_CODE_UNSPECIFIED = 'ERROR_CODE_UNSPECIFIED';
+  /**
+   * The rules have a syntax error.
+   */
+  public const ERROR_CODE_SYNTAX_ERROR = 'SYNTAX_ERROR';
+  /**
+   * The rules have a constraint violation error.
+   */
+  public const ERROR_CODE_CONSTRAINT_VIOLATION_ERROR = 'CONSTRAINT_VIOLATION_ERROR';
+  /**
+   * Internal errors were thrown while processing the rules.
+   */
+  public const ERROR_CODE_INTERNAL_ERROR = 'INTERNAL_ERROR';
+  /**
+   * The type of error.
+   *
    * @var string
    */
   public $errorCode;
 
   /**
-   * @param string
+   * The type of error.
+   *
+   * Accepted values: ERROR_CODE_UNSPECIFIED, SYNTAX_ERROR,
+   * CONSTRAINT_VIOLATION_ERROR, INTERNAL_ERROR
+   *
+   * @param self::ERROR_CODE_* $errorCode
    */
   public function setErrorCode($errorCode)
   {
     $this->errorCode = $errorCode;
   }
   /**
-   * @return string
+   * @return self::ERROR_CODE_*
    */
   public function getErrorCode()
   {

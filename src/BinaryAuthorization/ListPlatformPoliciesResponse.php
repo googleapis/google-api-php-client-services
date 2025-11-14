@@ -21,6 +21,10 @@ class ListPlatformPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'platformPolicies';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListPlatformPoliciesRequest.page_token field in the subsequent call to the
+   * `ListPlatformPolicies` method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListPlatformPoliciesResponse extends \Google\Collection
   protected $platformPoliciesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListPlatformPoliciesRequest.page_token field in the subsequent call to the
+   * `ListPlatformPolicies` method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListPlatformPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PlatformPolicy[]
+   * The list of platform policies.
+   *
+   * @param PlatformPolicy[] $platformPolicies
    */
   public function setPlatformPolicies($platformPolicies)
   {

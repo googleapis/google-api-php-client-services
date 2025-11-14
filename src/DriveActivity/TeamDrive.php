@@ -20,18 +20,24 @@ namespace Google\Service\DriveActivity;
 class TeamDrive extends \Google\Model
 {
   /**
+   * This field is deprecated; please see `Drive.name` instead.
+   *
    * @var string
    */
   public $name;
   protected $rootType = DriveItem::class;
   protected $rootDataType = '';
   /**
+   * This field is deprecated; please see `Drive.title` instead.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * This field is deprecated; please see `Drive.name` instead.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +51,9 @@ class TeamDrive extends \Google\Model
     return $this->name;
   }
   /**
-   * @param DriveItem
+   * This field is deprecated; please see `Drive.root` instead.
+   *
+   * @param DriveItem $root
    */
   public function setRoot(DriveItem $root)
   {
@@ -59,7 +67,9 @@ class TeamDrive extends \Google\Model
     return $this->root;
   }
   /**
-   * @param string
+   * This field is deprecated; please see `Drive.title` instead.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

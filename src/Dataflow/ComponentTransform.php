@@ -20,20 +20,29 @@ namespace Google\Service\Dataflow;
 class ComponentTransform extends \Google\Model
 {
   /**
+   * Dataflow service generated name for this source.
+   *
    * @var string
    */
   public $name;
   /**
+   * User name for the original user transform with which this transform is most
+   * closely associated.
+   *
    * @var string
    */
   public $originalTransform;
   /**
+   * Human-readable name for this transform; may be user or system generated.
+   *
    * @var string
    */
   public $userName;
 
   /**
-   * @param string
+   * Dataflow service generated name for this source.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +56,10 @@ class ComponentTransform extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * User name for the original user transform with which this transform is most
+   * closely associated.
+   *
+   * @param string $originalTransform
    */
   public function setOriginalTransform($originalTransform)
   {
@@ -61,7 +73,9 @@ class ComponentTransform extends \Google\Model
     return $this->originalTransform;
   }
   /**
-   * @param string
+   * Human-readable name for this transform; may be user or system generated.
+   *
+   * @param string $userName
    */
   public function setUserName($userName)
   {

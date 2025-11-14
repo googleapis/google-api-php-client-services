@@ -23,16 +23,24 @@ class ListGroupMembersResponse extends \Google\Collection
   protected $membersType = MonitoredResource::class;
   protected $membersDataType = 'array';
   /**
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The total number of elements matching this request.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param MonitoredResource[]
+   * A set of monitored resources in the group.
+   *
+   * @param MonitoredResource[] $members
    */
   public function setMembers($members)
   {
@@ -46,7 +54,11 @@ class ListGroupMembersResponse extends \Google\Collection
     return $this->members;
   }
   /**
-   * @param string
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListGroupMembersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * The total number of elements matching this request.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

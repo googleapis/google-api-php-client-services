@@ -25,7 +25,9 @@ class CounterStructuredNameAndMetadata extends \Google\Model
   protected $nameDataType = '';
 
   /**
-   * @param CounterMetadata
+   * Metadata associated with a counter
+   *
+   * @param CounterMetadata $metadata
    */
   public function setMetadata(CounterMetadata $metadata)
   {
@@ -39,7 +41,9 @@ class CounterStructuredNameAndMetadata extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param CounterStructuredName
+   * Structured name of the counter.
+   *
+   * @param CounterStructuredName $name
    */
   public function setName(CounterStructuredName $name)
   {

@@ -26,7 +26,9 @@ class RuntimeMetadata extends \Google\Collection
   protected $sdkInfoDataType = '';
 
   /**
-   * @param ParameterMetadata[]
+   * The parameters for the template.
+   *
+   * @param ParameterMetadata[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -40,7 +42,9 @@ class RuntimeMetadata extends \Google\Collection
     return $this->parameters;
   }
   /**
-   * @param SDKInfo
+   * SDK Info for the template.
+   *
+   * @param SDKInfo $sdkInfo
    */
   public function setSdkInfo(SDKInfo $sdkInfo)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\Baremetalsolution;
 class DetachLunRequest extends \Google\Model
 {
   /**
+   * Required. Name of the Lun to detach.
+   *
    * @var string
    */
   public $lun;
   /**
+   * If true, performs lun unmapping without instance reboot.
+   *
    * @var bool
    */
   public $skipReboot;
 
   /**
-   * @param string
+   * Required. Name of the Lun to detach.
+   *
+   * @param string $lun
    */
   public function setLun($lun)
   {
@@ -43,7 +49,9 @@ class DetachLunRequest extends \Google\Model
     return $this->lun;
   }
   /**
-   * @param bool
+   * If true, performs lun unmapping without instance reboot.
+   *
+   * @param bool $skipReboot
    */
   public function setSkipReboot($skipReboot)
   {

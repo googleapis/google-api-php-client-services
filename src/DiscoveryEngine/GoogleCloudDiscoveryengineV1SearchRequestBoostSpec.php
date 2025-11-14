@@ -24,7 +24,12 @@ class GoogleCloudDiscoveryengineV1SearchRequestBoostSpec extends \Google\Collect
   protected $conditionBoostSpecsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchRequestBoostSpecConditionBoostSpec[]
+   * Condition boost specifications. If a document matches multiple conditions
+   * in the specifications, boost scores from these specifications are all
+   * applied and combined in a non-linear way. Maximum number of specifications
+   * is 20.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchRequestBoostSpecConditionBoostSpec[] $conditionBoostSpecs
    */
   public function setConditionBoostSpecs($conditionBoostSpecs)
   {

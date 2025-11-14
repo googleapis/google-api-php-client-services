@@ -20,20 +20,32 @@ namespace Google\Service\SecurityCommandCenter;
 class PolicyDriftDetails extends \Google\Model
 {
   /**
+   * The detected value that violates the deployed posture, for example, `false`
+   * or `allowed_values={"projects/22831892"}`.
+   *
    * @var string
    */
   public $detectedValue;
   /**
+   * The value of this field that was configured in a posture, for example,
+   * `true` or `allowed_values={"projects/29831892"}`.
+   *
    * @var string
    */
   public $expectedValue;
   /**
+   * The name of the updated field, for example
+   * constraint.implementation.policy_rules[0].enforce
+   *
    * @var string
    */
   public $field;
 
   /**
-   * @param string
+   * The detected value that violates the deployed posture, for example, `false`
+   * or `allowed_values={"projects/22831892"}`.
+   *
+   * @param string $detectedValue
    */
   public function setDetectedValue($detectedValue)
   {
@@ -47,7 +59,10 @@ class PolicyDriftDetails extends \Google\Model
     return $this->detectedValue;
   }
   /**
-   * @param string
+   * The value of this field that was configured in a posture, for example,
+   * `true` or `allowed_values={"projects/29831892"}`.
+   *
+   * @param string $expectedValue
    */
   public function setExpectedValue($expectedValue)
   {
@@ -61,7 +76,10 @@ class PolicyDriftDetails extends \Google\Model
     return $this->expectedValue;
   }
   /**
-   * @param string
+   * The name of the updated field, for example
+   * constraint.implementation.policy_rules[0].enforce
+   *
+   * @param string $field
    */
   public function setField($field)
   {

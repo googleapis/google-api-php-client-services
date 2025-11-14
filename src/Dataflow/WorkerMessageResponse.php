@@ -31,7 +31,9 @@ class WorkerMessageResponse extends \Google\Model
   protected $workerThreadScalingReportResponseDataType = '';
 
   /**
-   * @param StreamingScalingReportResponse
+   * Service's streaming scaling response for workers.
+   *
+   * @param StreamingScalingReportResponse $streamingScalingReportResponse
    */
   public function setStreamingScalingReportResponse(StreamingScalingReportResponse $streamingScalingReportResponse)
   {
@@ -45,7 +47,9 @@ class WorkerMessageResponse extends \Google\Model
     return $this->streamingScalingReportResponse;
   }
   /**
-   * @param WorkerHealthReportResponse
+   * The service's response to a worker's health report.
+   *
+   * @param WorkerHealthReportResponse $workerHealthReportResponse
    */
   public function setWorkerHealthReportResponse(WorkerHealthReportResponse $workerHealthReportResponse)
   {
@@ -59,7 +63,9 @@ class WorkerMessageResponse extends \Google\Model
     return $this->workerHealthReportResponse;
   }
   /**
-   * @param ResourceUtilizationReportResponse
+   * Service's response to reporting worker metrics (currently empty).
+   *
+   * @param ResourceUtilizationReportResponse $workerMetricsResponse
    */
   public function setWorkerMetricsResponse(ResourceUtilizationReportResponse $workerMetricsResponse)
   {
@@ -73,7 +79,9 @@ class WorkerMessageResponse extends \Google\Model
     return $this->workerMetricsResponse;
   }
   /**
-   * @param WorkerShutdownNoticeResponse
+   * Service's response to shutdown notice (currently empty).
+   *
+   * @param WorkerShutdownNoticeResponse $workerShutdownNoticeResponse
    */
   public function setWorkerShutdownNoticeResponse(WorkerShutdownNoticeResponse $workerShutdownNoticeResponse)
   {
@@ -87,7 +95,9 @@ class WorkerMessageResponse extends \Google\Model
     return $this->workerShutdownNoticeResponse;
   }
   /**
-   * @param WorkerThreadScalingReportResponse
+   * Service's thread scaling recommendation for workers.
+   *
+   * @param WorkerThreadScalingReportResponse $workerThreadScalingReportResponse
    */
   public function setWorkerThreadScalingReportResponse(WorkerThreadScalingReportResponse $workerThreadScalingReportResponse)
   {

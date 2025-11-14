@@ -23,16 +23,22 @@ class ListGitRepositoryLinksResponse extends \Google\Collection
   protected $gitRepositoryLinksType = GitRepositoryLink::class;
   protected $gitRepositoryLinksDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param GitRepositoryLink[]
+   * The list of GitRepositoryLinks
+   *
+   * @param GitRepositoryLink[] $gitRepositoryLinks
    */
   public function setGitRepositoryLinks($gitRepositoryLinks)
   {
@@ -46,7 +52,9 @@ class ListGitRepositoryLinksResponse extends \Google\Collection
     return $this->gitRepositoryLinks;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListGitRepositoryLinksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -27,7 +27,9 @@ class GoogleCloudDialogflowCxV3DetectIntentRequest extends \Google\Model
   protected $queryParamsDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3OutputAudioConfig
+   * Instructs the speech synthesizer how to generate the output audio.
+   *
+   * @param GoogleCloudDialogflowCxV3OutputAudioConfig $outputAudioConfig
    */
   public function setOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig $outputAudioConfig)
   {
@@ -41,7 +43,9 @@ class GoogleCloudDialogflowCxV3DetectIntentRequest extends \Google\Model
     return $this->outputAudioConfig;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3QueryInput
+   * Required. The input specification.
+   *
+   * @param GoogleCloudDialogflowCxV3QueryInput $queryInput
    */
   public function setQueryInput(GoogleCloudDialogflowCxV3QueryInput $queryInput)
   {
@@ -55,7 +59,9 @@ class GoogleCloudDialogflowCxV3DetectIntentRequest extends \Google\Model
     return $this->queryInput;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3QueryParameters
+   * The parameters of this query.
+   *
+   * @param GoogleCloudDialogflowCxV3QueryParameters $queryParams
    */
   public function setQueryParams(GoogleCloudDialogflowCxV3QueryParameters $queryParams)
   {

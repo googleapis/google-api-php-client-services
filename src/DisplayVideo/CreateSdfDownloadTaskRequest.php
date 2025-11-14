@@ -20,6 +20,111 @@ namespace Google\Service\DisplayVideo;
 class CreateSdfDownloadTaskRequest extends \Google\Model
 {
   /**
+   * SDF version value is not specified or is unknown in this version.
+   */
+  public const VERSION_SDF_VERSION_UNSPECIFIED = 'SDF_VERSION_UNSPECIFIED';
+  /**
+   * SDF version 3.1
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_3_1 = 'SDF_VERSION_3_1';
+  /**
+   * SDF version 4
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_4 = 'SDF_VERSION_4';
+  /**
+   * SDF version 4.1
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_4_1 = 'SDF_VERSION_4_1';
+  /**
+   * SDF version 4.2
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_4_2 = 'SDF_VERSION_4_2';
+  /**
+   * SDF version 5.
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_5 = 'SDF_VERSION_5';
+  /**
+   * SDF version 5.1
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_5_1 = 'SDF_VERSION_5_1';
+  /**
+   * SDF version 5.2
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_5_2 = 'SDF_VERSION_5_2';
+  /**
+   * SDF version 5.3
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_5_3 = 'SDF_VERSION_5_3';
+  /**
+   * SDF version 5.4
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_5_4 = 'SDF_VERSION_5_4';
+  /**
+   * SDF version 5.5
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_5_5 = 'SDF_VERSION_5_5';
+  /**
+   * SDF version 6
+   *
+   * @deprecated
+   */
+  public const VERSION_SDF_VERSION_6 = 'SDF_VERSION_6';
+  /**
+   * SDF version 7. Read the [v7 migration guide](/display-video/api/structured-
+   * data-file/v7-migration-guide) before migrating to this version.
+   */
+  public const VERSION_SDF_VERSION_7 = 'SDF_VERSION_7';
+  /**
+   * SDF version 7.1. Read the [v7 migration guide](/display-
+   * video/api/structured-data-file/v7-migration-guide) before migrating to this
+   * version.
+   */
+  public const VERSION_SDF_VERSION_7_1 = 'SDF_VERSION_7_1';
+  /**
+   * SDF version 8. Read the [v8 migration guide](/display-video/api/structured-
+   * data-file/v8-migration-guide) before migrating to this version.
+   */
+  public const VERSION_SDF_VERSION_8 = 'SDF_VERSION_8';
+  /**
+   * SDF version 8.1.
+   */
+  public const VERSION_SDF_VERSION_8_1 = 'SDF_VERSION_8_1';
+  /**
+   * SDF version 9. Read the [v9 migration guide](/display-video/api/structured-
+   * data-file/v9-migration-guide) before migrating to this version.
+   */
+  public const VERSION_SDF_VERSION_9 = 'SDF_VERSION_9';
+  /**
+   * SDF version 9.1.
+   */
+  public const VERSION_SDF_VERSION_9_1 = 'SDF_VERSION_9_1';
+  /**
+   * SDF version 9.2.
+   */
+  public const VERSION_SDF_VERSION_9_2 = 'SDF_VERSION_9_2';
+  /**
+   * The ID of the advertiser to download SDF for.
+   *
    * @var string
    */
   public $advertiserId;
@@ -30,16 +135,25 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
   protected $parentEntityFilterType = ParentEntityFilter::class;
   protected $parentEntityFilterDataType = '';
   /**
+   * The ID of the partner to download SDF for.
+   *
    * @var string
    */
   public $partnerId;
   /**
+   * Required. The SDF version of the downloaded file. If set to
+   * `SDF_VERSION_UNSPECIFIED`, this will default to the version specified by
+   * the advertiser or partner identified by `root_id`. An advertiser inherits
+   * its SDF version from its partner unless configured otherwise.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The ID of the advertiser to download SDF for.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -53,7 +167,9 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
     return $this->advertiserId;
   }
   /**
-   * @param IdFilter
+   * Filters on entities by their entity IDs.
+   *
+   * @param IdFilter $idFilter
    */
   public function setIdFilter(IdFilter $idFilter)
   {
@@ -67,7 +183,9 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
     return $this->idFilter;
   }
   /**
-   * @param InventorySourceFilter
+   * Filters on Inventory Sources by their IDs.
+   *
+   * @param InventorySourceFilter $inventorySourceFilter
    */
   public function setInventorySourceFilter(InventorySourceFilter $inventorySourceFilter)
   {
@@ -81,7 +199,11 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
     return $this->inventorySourceFilter;
   }
   /**
-   * @param ParentEntityFilter
+   * Filters on selected file types. The entities in each file are filtered by a
+   * chosen set of filter entities. The filter entities must be the same type
+   * as, or a parent type of, the selected file types.
+   *
+   * @param ParentEntityFilter $parentEntityFilter
    */
   public function setParentEntityFilter(ParentEntityFilter $parentEntityFilter)
   {
@@ -95,7 +217,9 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
     return $this->parentEntityFilter;
   }
   /**
-   * @param string
+   * The ID of the partner to download SDF for.
+   *
+   * @param string $partnerId
    */
   public function setPartnerId($partnerId)
   {
@@ -109,14 +233,25 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
     return $this->partnerId;
   }
   /**
-   * @param string
+   * Required. The SDF version of the downloaded file. If set to
+   * `SDF_VERSION_UNSPECIFIED`, this will default to the version specified by
+   * the advertiser or partner identified by `root_id`. An advertiser inherits
+   * its SDF version from its partner unless configured otherwise.
+   *
+   * Accepted values: SDF_VERSION_UNSPECIFIED, SDF_VERSION_3_1, SDF_VERSION_4,
+   * SDF_VERSION_4_1, SDF_VERSION_4_2, SDF_VERSION_5, SDF_VERSION_5_1,
+   * SDF_VERSION_5_2, SDF_VERSION_5_3, SDF_VERSION_5_4, SDF_VERSION_5_5,
+   * SDF_VERSION_6, SDF_VERSION_7, SDF_VERSION_7_1, SDF_VERSION_8,
+   * SDF_VERSION_8_1, SDF_VERSION_9, SDF_VERSION_9_1, SDF_VERSION_9_2
+   *
+   * @param self::VERSION_* $version
    */
   public function setVersion($version)
   {
     $this->version = $version;
   }
   /**
-   * @return string
+   * @return self::VERSION_*
    */
   public function getVersion()
   {

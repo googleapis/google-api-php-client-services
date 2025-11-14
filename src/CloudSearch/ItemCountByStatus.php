@@ -20,20 +20,55 @@ namespace Google\Service\CloudSearch;
 class ItemCountByStatus extends \Google\Model
 {
   /**
+   * Input-only value. Used with Items.list to list all items in the queue,
+   * regardless of status.
+   */
+  public const STATUS_CODE_CODE_UNSPECIFIED = 'CODE_UNSPECIFIED';
+  /**
+   * Error encountered by Cloud Search while processing this item. Details of
+   * the error are in repositoryError.
+   */
+  public const STATUS_CODE_ERROR = 'ERROR';
+  /**
+   * Item has been modified in the repository, and is out of date with the
+   * version previously accepted into Cloud Search.
+   */
+  public const STATUS_CODE_MODIFIED = 'MODIFIED';
+  /**
+   * Item is known to exist in the repository, but is not yet accepted by Cloud
+   * Search. An item can be in this state when Items.push has been called for an
+   * item of this name that did not exist previously.
+   */
+  public const STATUS_CODE_NEW_ITEM = 'NEW_ITEM';
+  /**
+   * API has accepted the up-to-date data of this item.
+   */
+  public const STATUS_CODE_ACCEPTED = 'ACCEPTED';
+  /**
+   * Number of items matching the status code.
+   *
    * @var string
    */
   public $count;
   /**
+   * Number of items matching the status code for which billing is done. This
+   * excludes virtual container items from the total count. This count would not
+   * be applicable for items with ERROR or NEW_ITEM status code.
+   *
    * @var string
    */
   public $indexedItemsCount;
   /**
+   * Status of the items.
+   *
    * @var string
    */
   public $statusCode;
 
   /**
-   * @param string
+   * Number of items matching the status code.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -47,7 +82,11 @@ class ItemCountByStatus extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * Number of items matching the status code for which billing is done. This
+   * excludes virtual container items from the total count. This count would not
+   * be applicable for items with ERROR or NEW_ITEM status code.
+   *
+   * @param string $indexedItemsCount
    */
   public function setIndexedItemsCount($indexedItemsCount)
   {
@@ -61,14 +100,18 @@ class ItemCountByStatus extends \Google\Model
     return $this->indexedItemsCount;
   }
   /**
-   * @param string
+   * Status of the items.
+   *
+   * Accepted values: CODE_UNSPECIFIED, ERROR, MODIFIED, NEW_ITEM, ACCEPTED
+   *
+   * @param self::STATUS_CODE_* $statusCode
    */
   public function setStatusCode($statusCode)
   {
     $this->statusCode = $statusCode;
   }
   /**
-   * @return string
+   * @return self::STATUS_CODE_*
    */
   public function getStatusCode()
   {

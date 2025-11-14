@@ -19,20 +19,32 @@ namespace Google\Service\CloudSearch;
 
 class DriveTimeSpanRestrict extends \Google\Model
 {
+  public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  public const TYPE_TODAY = 'TODAY';
+  public const TYPE_YESTERDAY = 'YESTERDAY';
+  public const TYPE_LAST_7_DAYS = 'LAST_7_DAYS';
+  /**
+   * Not Enabled
+   */
+  public const TYPE_LAST_30_DAYS = 'LAST_30_DAYS';
+  /**
+   * Not Enabled
+   */
+  public const TYPE_LAST_90_DAYS = 'LAST_90_DAYS';
   /**
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

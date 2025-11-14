@@ -19,46 +19,115 @@ namespace Google\Service\Monitoring;
 
 class NotificationChannel extends \Google\Collection
 {
+  /**
+   * Sentinel value used to indicate that the state is unknown, omitted, or is
+   * not applicable (as in the case of channels that neither support nor require
+   * verification in order to function).
+   */
+  public const VERIFICATION_STATUS_VERIFICATION_STATUS_UNSPECIFIED = 'VERIFICATION_STATUS_UNSPECIFIED';
+  /**
+   * The channel has yet to be verified and requires verification to function.
+   * Note that this state also applies to the case where the verification
+   * process has been initiated by sending a verification code but where the
+   * verification code has not been submitted to complete the process.
+   */
+  public const VERIFICATION_STATUS_UNVERIFIED = 'UNVERIFIED';
+  /**
+   * It has been proven that notifications can be received on this notification
+   * channel and that someone on the project has access to messages that are
+   * delivered to that channel.
+   */
+  public const VERIFICATION_STATUS_VERIFIED = 'VERIFIED';
   protected $collection_key = 'mutationRecords';
   protected $creationRecordType = MutationRecord::class;
   protected $creationRecordDataType = '';
   /**
+   * An optional human-readable description of this notification channel. This
+   * description may provide additional details, beyond the display name, for
+   * the channel. This may not exceed 1024 Unicode characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * An optional human-readable name for this notification channel. It is
+   * recommended that you specify a non-empty and unique name in order to make
+   * it easier to identify the channels in your project, though this is not
+   * enforced. The display name is limited to 512 Unicode characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Whether notifications are forwarded to the described channel. This makes it
+   * possible to disable delivery of notifications to a particular channel
+   * without removing the channel from all alerting policies that reference the
+   * channel. This is a more convenient approach when the change is temporary
+   * and you want to receive notifications from the same set of alerting
+   * policies on the channel at some point in the future.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Configuration fields that define the channel and its behavior. The
+   * permissible and required labels are specified in the
+   * NotificationChannelDescriptor.labels of the NotificationChannelDescriptor
+   * corresponding to the type field.
+   *
    * @var string[]
    */
   public $labels;
   protected $mutationRecordsType = MutationRecord::class;
   protected $mutationRecordsDataType = 'array';
   /**
+   * Identifier. The full REST resource name for this channel. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The
+   * [CHANNEL_ID] is automatically assigned by the server on creation.
+   *
    * @var string
    */
   public $name;
   /**
+   * The type of the notification channel. This field matches the value of the
+   * NotificationChannelDescriptor.type field.
+   *
    * @var string
    */
   public $type;
   /**
+   * User-supplied key/value data that does not need to conform to the
+   * corresponding NotificationChannelDescriptor's schema, unlike the labels
+   * field. This field is intended to be used for organizing and identifying the
+   * NotificationChannel objects.The field can contain up to 64 entries. Each
+   * key and value is limited to 63 Unicode characters or 128 bytes, whichever
+   * is smaller. Labels and values can contain only lowercase letters, numerals,
+   * underscores, and dashes. Keys must begin with a letter.
+   *
    * @var string[]
    */
   public $userLabels;
   /**
+   * Indicates whether this channel has been verified or not. On a
+   * ListNotificationChannels or GetNotificationChannel operation, this field is
+   * expected to be populated.If the value is UNVERIFIED, then it indicates that
+   * the channel is non-functioning (it both requires verification and lacks
+   * verification); otherwise, it is assumed that the channel works.If the
+   * channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is
+   * of a type that does not require verification or that this specific channel
+   * has been exempted from verification because it was created prior to
+   * verification being required for channels of this type.This field cannot be
+   * modified using a standard UpdateNotificationChannel operation. To change
+   * the value of this field, you must call VerifyNotificationChannel.
+   *
    * @var string
    */
   public $verificationStatus;
 
   /**
-   * @param MutationRecord
+   * Record of the creation of this channel.
+   *
+   * @param MutationRecord $creationRecord
    */
   public function setCreationRecord(MutationRecord $creationRecord)
   {
@@ -72,7 +141,11 @@ class NotificationChannel extends \Google\Collection
     return $this->creationRecord;
   }
   /**
-   * @param string
+   * An optional human-readable description of this notification channel. This
+   * description may provide additional details, beyond the display name, for
+   * the channel. This may not exceed 1024 Unicode characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -86,7 +159,12 @@ class NotificationChannel extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * An optional human-readable name for this notification channel. It is
+   * recommended that you specify a non-empty and unique name in order to make
+   * it easier to identify the channels in your project, though this is not
+   * enforced. The display name is limited to 512 Unicode characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -100,7 +178,14 @@ class NotificationChannel extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Whether notifications are forwarded to the described channel. This makes it
+   * possible to disable delivery of notifications to a particular channel
+   * without removing the channel from all alerting policies that reference the
+   * channel. This is a more convenient approach when the change is temporary
+   * and you want to receive notifications from the same set of alerting
+   * policies on the channel at some point in the future.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -114,7 +199,12 @@ class NotificationChannel extends \Google\Collection
     return $this->enabled;
   }
   /**
-   * @param string[]
+   * Configuration fields that define the channel and its behavior. The
+   * permissible and required labels are specified in the
+   * NotificationChannelDescriptor.labels of the NotificationChannelDescriptor
+   * corresponding to the type field.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -128,7 +218,9 @@ class NotificationChannel extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param MutationRecord[]
+   * Records of the modification of this channel.
+   *
+   * @param MutationRecord[] $mutationRecords
    */
   public function setMutationRecords($mutationRecords)
   {
@@ -142,7 +234,11 @@ class NotificationChannel extends \Google\Collection
     return $this->mutationRecords;
   }
   /**
-   * @param string
+   * Identifier. The full REST resource name for this channel. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The
+   * [CHANNEL_ID] is automatically assigned by the server on creation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -156,7 +252,10 @@ class NotificationChannel extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The type of the notification channel. This field matches the value of the
+   * NotificationChannelDescriptor.type field.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -170,7 +269,15 @@ class NotificationChannel extends \Google\Collection
     return $this->type;
   }
   /**
-   * @param string[]
+   * User-supplied key/value data that does not need to conform to the
+   * corresponding NotificationChannelDescriptor's schema, unlike the labels
+   * field. This field is intended to be used for organizing and identifying the
+   * NotificationChannel objects.The field can contain up to 64 entries. Each
+   * key and value is limited to 63 Unicode characters or 128 bytes, whichever
+   * is smaller. Labels and values can contain only lowercase letters, numerals,
+   * underscores, and dashes. Keys must begin with a letter.
+   *
+   * @param string[] $userLabels
    */
   public function setUserLabels($userLabels)
   {
@@ -184,14 +291,28 @@ class NotificationChannel extends \Google\Collection
     return $this->userLabels;
   }
   /**
-   * @param string
+   * Indicates whether this channel has been verified or not. On a
+   * ListNotificationChannels or GetNotificationChannel operation, this field is
+   * expected to be populated.If the value is UNVERIFIED, then it indicates that
+   * the channel is non-functioning (it both requires verification and lacks
+   * verification); otherwise, it is assumed that the channel works.If the
+   * channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is
+   * of a type that does not require verification or that this specific channel
+   * has been exempted from verification because it was created prior to
+   * verification being required for channels of this type.This field cannot be
+   * modified using a standard UpdateNotificationChannel operation. To change
+   * the value of this field, you must call VerifyNotificationChannel.
+   *
+   * Accepted values: VERIFICATION_STATUS_UNSPECIFIED, UNVERIFIED, VERIFIED
+   *
+   * @param self::VERIFICATION_STATUS_* $verificationStatus
    */
   public function setVerificationStatus($verificationStatus)
   {
     $this->verificationStatus = $verificationStatus;
   }
   /**
-   * @return string
+   * @return self::VERIFICATION_STATUS_*
    */
   public function getVerificationStatus()
   {

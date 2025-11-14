@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class StudioCreativeDimension extends \Google\Model
 {
   /**
+   * Height of the studio creative.
+   *
    * @var int
    */
   public $height;
   /**
+   * Width of the studio creative.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * Height of the studio creative.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -43,7 +49,9 @@ class StudioCreativeDimension extends \Google\Model
     return $this->height;
   }
   /**
-   * @param int
+   * Width of the studio creative.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

@@ -20,16 +20,31 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1TuneQaScorecardRevisionRequest extends \Google\Model
 {
   /**
+   * Required. Filter for selecting the feedback labels that needs to be used
+   * for training. This filter can be used to limit the feedback labels used for
+   * tuning to a feedback labels created or updated for a specific time-window
+   * etc.
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. Run in validate only mode, no fine tuning will actually run. Data
+   * quality validations like training data distributions will run. Even when
+   * set to false, the data quality validations will still run but once the
+   * validations complete we will proceed with the fine tune, if applicable.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string
+   * Required. Filter for selecting the feedback labels that needs to be used
+   * for training. This filter can be used to limit the feedback labels used for
+   * tuning to a feedback labels created or updated for a specific time-window
+   * etc.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -43,7 +58,12 @@ class GoogleCloudContactcenterinsightsV1TuneQaScorecardRevisionRequest extends \
     return $this->filter;
   }
   /**
-   * @param bool
+   * Optional. Run in validate only mode, no fine tuning will actually run. Data
+   * quality validations like training data distributions will run. Even when
+   * set to false, the data quality validations will still run but once the
+   * validations complete we will proceed with the fine tune, if applicable.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

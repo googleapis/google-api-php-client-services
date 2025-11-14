@@ -20,16 +20,24 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1ProcessOptionsLayoutConfigChunkingConfig extends \Google\Model
 {
   /**
+   * Optional. The chunk sizes to use when splitting documents, in order of
+   * level.
+   *
    * @var int
    */
   public $chunkSize;
   /**
+   * Optional. Whether or not to include ancestor headings when splitting.
+   *
    * @var bool
    */
   public $includeAncestorHeadings;
 
   /**
-   * @param int
+   * Optional. The chunk sizes to use when splitting documents, in order of
+   * level.
+   *
+   * @param int $chunkSize
    */
   public function setChunkSize($chunkSize)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDocumentaiV1ProcessOptionsLayoutConfigChunkingConfig extends \G
     return $this->chunkSize;
   }
   /**
-   * @param bool
+   * Optional. Whether or not to include ancestor headings when splitting.
+   *
+   * @param bool $includeAncestorHeadings
    */
   public function setIncludeAncestorHeadings($includeAncestorHeadings)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\Testing;
 class ClientInfoDetail extends \Google\Model
 {
   /**
+   * Required. The key of detailed client information.
+   *
    * @var string
    */
   public $key;
   /**
+   * Required. The value of detailed client information.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The key of detailed client information.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -43,7 +49,9 @@ class ClientInfoDetail extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Required. The value of detailed client information.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

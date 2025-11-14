@@ -23,12 +23,18 @@ class ListClientTlsPoliciesResponse extends \Google\Collection
   protected $clientTlsPoliciesType = ClientTlsPolicy::class;
   protected $clientTlsPoliciesDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ClientTlsPolicy[]
+   * List of ClientTlsPolicy resources.
+   *
+   * @param ClientTlsPolicy[] $clientTlsPolicies
    */
   public function setClientTlsPolicies($clientTlsPolicies)
   {
@@ -42,7 +48,11 @@ class ListClientTlsPoliciesResponse extends \Google\Collection
     return $this->clientTlsPolicies;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

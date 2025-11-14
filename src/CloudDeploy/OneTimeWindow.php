@@ -29,7 +29,9 @@ class OneTimeWindow extends \Google\Model
   protected $startTimeDataType = '';
 
   /**
-   * @param Date
+   * Required. End date.
+   *
+   * @param Date $endDate
    */
   public function setEndDate(Date $endDate)
   {
@@ -43,7 +45,9 @@ class OneTimeWindow extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param TimeOfDay
+   * Required. End time (exclusive). You may use 24:00 for the end of the day.
+   *
+   * @param TimeOfDay $endTime
    */
   public function setEndTime(TimeOfDay $endTime)
   {
@@ -57,7 +61,9 @@ class OneTimeWindow extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param Date
+   * Required. Start date.
+   *
+   * @param Date $startDate
    */
   public function setStartDate(Date $startDate)
   {
@@ -71,7 +77,9 @@ class OneTimeWindow extends \Google\Model
     return $this->startDate;
   }
   /**
-   * @param TimeOfDay
+   * Required. Start time (inclusive). Use 00:00 for the beginning of the day.
+   *
+   * @param TimeOfDay $startTime
    */
   public function setStartTime(TimeOfDay $startTime)
   {

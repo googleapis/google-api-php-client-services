@@ -19,12 +19,61 @@ namespace Google\Service\Dfareporting;
 
 class StudioCreative extends \Google\Collection
 {
+  /**
+   * The format of the studio creative is unknown. This value is unused.
+   */
+  public const FORMAT_UNKNOWN = 'UNKNOWN';
+  /**
+   * Banner format.
+   */
+  public const FORMAT_BANNER = 'BANNER';
+  /**
+   * Expanding format.
+   */
+  public const FORMAT_EXPANDING = 'EXPANDING';
+  /**
+   * Intertitial format.
+   */
+  public const FORMAT_INTERSTITIAL = 'INTERSTITIAL';
+  /**
+   * VPAID linear video creative format.
+   */
+  public const FORMAT_VPAID_LINEAR_VIDEO = 'VPAID_LINEAR_VIDEO';
+  /**
+   * The status of the studio creative is unknown. This value is unused.
+   */
+  public const STATUS_UNKNOWN_STATUS = 'UNKNOWN_STATUS';
+  /**
+   * The creative is still being developed.
+   */
+  public const STATUS_IN_DEVELOPMENT = 'IN_DEVELOPMENT';
+  /**
+   * The creative has been published and is ready for QA.
+   */
+  public const STATUS_PUBLISHED = 'PUBLISHED';
+  /**
+   * The creative has failed QA and must be corrected.
+   */
+  public const STATUS_QA_REJECTED = 'QA_REJECTED';
+  /**
+   * The creative has passed QA and is ready to be trafficked.
+   */
+  public const STATUS_QA_APPROVED = 'QA_APPROVED';
+  /**
+   * The creative has been trafficked to an adserver.
+   */
+  public const STATUS_TRAFFICKED = 'TRAFFICKED';
   protected $collection_key = 'assetIds';
   /**
+   * List of assets associated with this studio creative. It is a required field
+   * on insertion.
+   *
    * @var string[]
    */
   public $assetIds;
   /**
+   * Backup image asset ID of this studio creative.
+   *
    * @var string
    */
   public $backupImageAssetId;
@@ -33,42 +82,66 @@ class StudioCreative extends \Google\Collection
   protected $dimensionType = StudioCreativeDimension::class;
   protected $dimensionDataType = '';
   /**
+   * Dynamic profile ID of this studio creative.
+   *
    * @var string
    */
   public $dynamicProfileId;
   /**
+   * Format of this studio creative. This is a required field on insertion.
+   *
    * @var string
    */
   public $format;
   /**
+   * Output only. Unique ID of this studio creative. This is a read-only, auto-
+   * generated field.
+   *
    * @var string
    */
   public $id;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**
+   * Identifier. Name of this studio creative. This is a required field on
+   * insertion.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Status of this studio creative. It is a read-only field.
+   *
    * @var string
    */
   public $status;
   /**
+   * Studio account ID of this creative. This field, if left unset, will be
+   * auto-populated.
+   *
    * @var string
    */
   public $studioAccountId;
   /**
+   * Studio advertiser ID of this studio creative. This is a required field on
+   * insertion.
+   *
    * @var string
    */
   public $studioAdvertiserId;
   /**
+   * Studio campaign ID of this studio creative. This is a required field on
+   * insertion.
+   *
    * @var string
    */
   public $studioCampaignId;
 
   /**
-   * @param string[]
+   * List of assets associated with this studio creative. It is a required field
+   * on insertion.
+   *
+   * @param string[] $assetIds
    */
   public function setAssetIds($assetIds)
   {
@@ -82,7 +155,9 @@ class StudioCreative extends \Google\Collection
     return $this->assetIds;
   }
   /**
-   * @param string
+   * Backup image asset ID of this studio creative.
+   *
+   * @param string $backupImageAssetId
    */
   public function setBackupImageAssetId($backupImageAssetId)
   {
@@ -96,7 +171,10 @@ class StudioCreative extends \Google\Collection
     return $this->backupImageAssetId;
   }
   /**
-   * @param LastModifiedInfo
+   * The timestamp when the studio creative was created. This is a read-only,
+   * auto-generated field.
+   *
+   * @param LastModifiedInfo $createdInfo
    */
   public function setCreatedInfo(LastModifiedInfo $createdInfo)
   {
@@ -110,7 +188,10 @@ class StudioCreative extends \Google\Collection
     return $this->createdInfo;
   }
   /**
-   * @param StudioCreativeDimension
+   * Dimension of this studio creative. This is a required field on insertion if
+   * format is BANNER or EXPANDING.
+   *
+   * @param StudioCreativeDimension $dimension
    */
   public function setDimension(StudioCreativeDimension $dimension)
   {
@@ -124,7 +205,9 @@ class StudioCreative extends \Google\Collection
     return $this->dimension;
   }
   /**
-   * @param string
+   * Dynamic profile ID of this studio creative.
+   *
+   * @param string $dynamicProfileId
    */
   public function setDynamicProfileId($dynamicProfileId)
   {
@@ -138,21 +221,29 @@ class StudioCreative extends \Google\Collection
     return $this->dynamicProfileId;
   }
   /**
-   * @param string
+   * Format of this studio creative. This is a required field on insertion.
+   *
+   * Accepted values: UNKNOWN, BANNER, EXPANDING, INTERSTITIAL,
+   * VPAID_LINEAR_VIDEO
+   *
+   * @param self::FORMAT_* $format
    */
   public function setFormat($format)
   {
     $this->format = $format;
   }
   /**
-   * @return string
+   * @return self::FORMAT_*
    */
   public function getFormat()
   {
     return $this->format;
   }
   /**
-   * @param string
+   * Output only. Unique ID of this studio creative. This is a read-only, auto-
+   * generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -166,7 +257,10 @@ class StudioCreative extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param LastModifiedInfo
+   * The timestamp when the studio creative was last modified. This is a read-
+   * only, auto-generated field.
+   *
+   * @param LastModifiedInfo $lastModifiedInfo
    */
   public function setLastModifiedInfo(LastModifiedInfo $lastModifiedInfo)
   {
@@ -180,7 +274,10 @@ class StudioCreative extends \Google\Collection
     return $this->lastModifiedInfo;
   }
   /**
-   * @param string
+   * Identifier. Name of this studio creative. This is a required field on
+   * insertion.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -194,21 +291,29 @@ class StudioCreative extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Status of this studio creative. It is a read-only field.
+   *
+   * Accepted values: UNKNOWN_STATUS, IN_DEVELOPMENT, PUBLISHED, QA_REJECTED,
+   * QA_APPROVED, TRAFFICKED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * Studio account ID of this creative. This field, if left unset, will be
+   * auto-populated.
+   *
+   * @param string $studioAccountId
    */
   public function setStudioAccountId($studioAccountId)
   {
@@ -222,7 +327,10 @@ class StudioCreative extends \Google\Collection
     return $this->studioAccountId;
   }
   /**
-   * @param string
+   * Studio advertiser ID of this studio creative. This is a required field on
+   * insertion.
+   *
+   * @param string $studioAdvertiserId
    */
   public function setStudioAdvertiserId($studioAdvertiserId)
   {
@@ -236,7 +344,10 @@ class StudioCreative extends \Google\Collection
     return $this->studioAdvertiserId;
   }
   /**
-   * @param string
+   * Studio campaign ID of this studio creative. This is a required field on
+   * insertion.
+   *
+   * @param string $studioCampaignId
    */
   public function setStudioCampaignId($studioCampaignId)
   {

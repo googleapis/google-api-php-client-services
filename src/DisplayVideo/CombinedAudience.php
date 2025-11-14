@@ -20,20 +20,30 @@ namespace Google\Service\DisplayVideo;
 class CombinedAudience extends \Google\Model
 {
   /**
+   * Output only. The unique ID of the combined audience. Assigned by the
+   * system.
+   *
    * @var string
    */
   public $combinedAudienceId;
   /**
+   * Output only. The display name of the combined audience. .
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The resource name of the combined audience.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The unique ID of the combined audience. Assigned by the
+   * system.
+   *
+   * @param string $combinedAudienceId
    */
   public function setCombinedAudienceId($combinedAudienceId)
   {
@@ -47,7 +57,9 @@ class CombinedAudience extends \Google\Model
     return $this->combinedAudienceId;
   }
   /**
-   * @param string
+   * Output only. The display name of the combined audience. .
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +73,9 @@ class CombinedAudience extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The resource name of the combined audience.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

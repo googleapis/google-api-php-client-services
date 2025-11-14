@@ -20,12 +20,20 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesShoppingPerformanceView extends \Google\Model
 {
   /**
+   * Output only. The resource name of the Shopping performance view. Shopping
+   * performance view resource names have the form:
+   * `customers/{customer_id}/shoppingPerformanceView`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Output only. The resource name of the Shopping performance view. Shopping
+   * performance view resource names have the form:
+   * `customers/{customer_id}/shoppingPerformanceView`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

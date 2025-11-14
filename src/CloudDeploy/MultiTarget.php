@@ -21,12 +21,16 @@ class MultiTarget extends \Google\Collection
 {
   protected $collection_key = 'targetIds';
   /**
+   * Required. The target_ids of this multiTarget.
+   *
    * @var string[]
    */
   public $targetIds;
 
   /**
-   * @param string[]
+   * Required. The target_ids of this multiTarget.
+   *
+   * @param string[] $targetIds
    */
   public function setTargetIds($targetIds)
   {

@@ -24,7 +24,9 @@ class ListVoicesResponse extends \Google\Collection
   protected $voicesDataType = 'array';
 
   /**
-   * @param Voice[]
+   * The list of voices.
+   *
+   * @param Voice[] $voices
    */
   public function setVoices($voices)
   {

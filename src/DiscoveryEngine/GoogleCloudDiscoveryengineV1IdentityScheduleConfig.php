@@ -22,12 +22,22 @@ class GoogleCloudDiscoveryengineV1IdentityScheduleConfig extends \Google\Model
   protected $nextSyncTimeType = GoogleTypeDateTime::class;
   protected $nextSyncTimeDataType = '';
   /**
+   * Optional. The refresh interval to sync the Access Control List information
+   * for the documents ingested by this connector. If not set, the access
+   * control list will be refreshed at the default interval of 30 minutes. The
+   * identity refresh interval can be at least 30 minutes and at most 7 days.
+   *
    * @var string
    */
   public $refreshInterval;
 
   /**
-   * @param GoogleTypeDateTime
+   * Optional. The UTC time when the next data sync is expected to start for the
+   * Data Connector. Customers are only able to specify the hour and minute to
+   * schedule the data sync. This is utilized when the data connector has a
+   * refresh interval greater than 1 day.
+   *
+   * @param GoogleTypeDateTime $nextSyncTime
    */
   public function setNextSyncTime(GoogleTypeDateTime $nextSyncTime)
   {
@@ -41,7 +51,12 @@ class GoogleCloudDiscoveryengineV1IdentityScheduleConfig extends \Google\Model
     return $this->nextSyncTime;
   }
   /**
-   * @param string
+   * Optional. The refresh interval to sync the Access Control List information
+   * for the documents ingested by this connector. If not set, the access
+   * control list will be refreshed at the default interval of 30 minutes. The
+   * identity refresh interval can be at least 30 minutes and at most 7 days.
+   *
+   * @param string $refreshInterval
    */
   public function setRefreshInterval($refreshInterval)
   {

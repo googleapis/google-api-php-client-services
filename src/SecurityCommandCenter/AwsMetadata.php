@@ -28,7 +28,9 @@ class AwsMetadata extends \Google\Collection
   protected $organizationalUnitsDataType = 'array';
 
   /**
-   * @param AwsAccount
+   * The AWS account associated with the resource.
+   *
+   * @param AwsAccount $account
    */
   public function setAccount(AwsAccount $account)
   {
@@ -42,7 +44,9 @@ class AwsMetadata extends \Google\Collection
     return $this->account;
   }
   /**
-   * @param AwsOrganization
+   * The AWS organization associated with the resource.
+   *
+   * @param AwsOrganization $organization
    */
   public function setOrganization(AwsOrganization $organization)
   {
@@ -56,7 +60,10 @@ class AwsMetadata extends \Google\Collection
     return $this->organization;
   }
   /**
-   * @param AwsOrganizationalUnit[]
+   * A list of AWS organizational units associated with the resource, ordered
+   * from lowest level (closest to the account) to highest level.
+   *
+   * @param AwsOrganizationalUnit[] $organizationalUnits
    */
   public function setOrganizationalUnits($organizationalUnits)
   {

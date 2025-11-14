@@ -20,16 +20,24 @@ namespace Google\Service\Dataflow;
 class InstructionInput extends \Google\Model
 {
   /**
+   * The output index (origin zero) within the producer.
+   *
    * @var int
    */
   public $outputNum;
   /**
+   * The index (origin zero) of the parallel instruction that produces the
+   * output to be consumed by this input. This index is relative to the list of
+   * instructions in this input's instruction's containing MapTask.
+   *
    * @var int
    */
   public $producerInstructionIndex;
 
   /**
-   * @param int
+   * The output index (origin zero) within the producer.
+   *
+   * @param int $outputNum
    */
   public function setOutputNum($outputNum)
   {
@@ -43,7 +51,11 @@ class InstructionInput extends \Google\Model
     return $this->outputNum;
   }
   /**
-   * @param int
+   * The index (origin zero) of the parallel instruction that produces the
+   * output to be consumed by this input. This index is relative to the list of
+   * instructions in this input's instruction's containing MapTask.
+   *
+   * @param int $producerInstructionIndex
    */
   public function setProducerInstructionIndex($producerInstructionIndex)
   {

@@ -20,38 +20,56 @@ namespace Google\Service\Dfareporting;
 class ObaIcon extends \Google\Model
 {
   /**
+   * URL to redirect to when an OBA icon is clicked.
+   *
    * @var string
    */
   public $iconClickThroughUrl;
   /**
+   * URL to track click when an OBA icon is clicked.
+   *
    * @var string
    */
   public $iconClickTrackingUrl;
   /**
+   * URL to track view when an OBA icon is clicked.
+   *
    * @var string
    */
   public $iconViewTrackingUrl;
   /**
+   * Identifies the industry initiative that the icon supports. For example,
+   * AdChoices.
+   *
    * @var string
    */
   public $program;
   /**
+   * OBA icon resource URL. Campaign Manager only supports image and JavaScript
+   * icons. Learn more
+   *
    * @var string
    */
   public $resourceUrl;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
   /**
+   * OBA icon x coordinate position. Accepted values are left or right.
+   *
    * @var string
    */
   public $xPosition;
   /**
+   * OBA icon y coordinate position. Accepted values are top or bottom.
+   *
    * @var string
    */
   public $yPosition;
 
   /**
-   * @param string
+   * URL to redirect to when an OBA icon is clicked.
+   *
+   * @param string $iconClickThroughUrl
    */
   public function setIconClickThroughUrl($iconClickThroughUrl)
   {
@@ -65,7 +83,9 @@ class ObaIcon extends \Google\Model
     return $this->iconClickThroughUrl;
   }
   /**
-   * @param string
+   * URL to track click when an OBA icon is clicked.
+   *
+   * @param string $iconClickTrackingUrl
    */
   public function setIconClickTrackingUrl($iconClickTrackingUrl)
   {
@@ -79,7 +99,9 @@ class ObaIcon extends \Google\Model
     return $this->iconClickTrackingUrl;
   }
   /**
-   * @param string
+   * URL to track view when an OBA icon is clicked.
+   *
+   * @param string $iconViewTrackingUrl
    */
   public function setIconViewTrackingUrl($iconViewTrackingUrl)
   {
@@ -93,7 +115,10 @@ class ObaIcon extends \Google\Model
     return $this->iconViewTrackingUrl;
   }
   /**
-   * @param string
+   * Identifies the industry initiative that the icon supports. For example,
+   * AdChoices.
+   *
+   * @param string $program
    */
   public function setProgram($program)
   {
@@ -107,7 +132,10 @@ class ObaIcon extends \Google\Model
     return $this->program;
   }
   /**
-   * @param string
+   * OBA icon resource URL. Campaign Manager only supports image and JavaScript
+   * icons. Learn more
+   *
+   * @param string $resourceUrl
    */
   public function setResourceUrl($resourceUrl)
   {
@@ -121,7 +149,9 @@ class ObaIcon extends \Google\Model
     return $this->resourceUrl;
   }
   /**
-   * @param Size
+   * OBA icon size.
+   *
+   * @param Size $size
    */
   public function setSize(Size $size)
   {
@@ -135,7 +165,9 @@ class ObaIcon extends \Google\Model
     return $this->size;
   }
   /**
-   * @param string
+   * OBA icon x coordinate position. Accepted values are left or right.
+   *
+   * @param string $xPosition
    */
   public function setXPosition($xPosition)
   {
@@ -149,7 +181,9 @@ class ObaIcon extends \Google\Model
     return $this->xPosition;
   }
   /**
-   * @param string
+   * OBA icon y coordinate position. Accepted values are top or bottom.
+   *
+   * @param string $yPosition
    */
   public function setYPosition($yPosition)
   {

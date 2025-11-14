@@ -20,12 +20,16 @@ namespace Google\Service\MyBusinessVerifications;
 class VerificationToken extends \Google\Model
 {
   /**
+   * The token string.
+   *
    * @var string
    */
   public $tokenString;
 
   /**
-   * @param string
+   * The token string.
+   *
+   * @param string $tokenString
    */
   public function setTokenString($tokenString)
   {

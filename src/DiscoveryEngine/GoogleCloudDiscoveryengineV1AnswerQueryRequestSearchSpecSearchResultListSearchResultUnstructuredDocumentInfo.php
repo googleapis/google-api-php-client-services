@@ -21,6 +21,8 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
 {
   protected $collection_key = 'extractiveSegments';
   /**
+   * Document resource name.
+   *
    * @var string
    */
   public $document;
@@ -31,16 +33,22 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
   protected $extractiveSegmentsType = GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveSegment::class;
   protected $extractiveSegmentsDataType = 'array';
   /**
+   * Title.
+   *
    * @var string
    */
   public $title;
   /**
+   * URI for the document.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Document resource name.
+   *
+   * @param string $document
    */
   public function setDocument($document)
   {
@@ -54,7 +62,11 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
     return $this->document;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoDocumentContext[]
+   * List of document contexts. The content will be used for Answer Generation.
+   * This is supposed to be the main content of the document that can be long
+   * and comprehensive.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoDocumentContext[] $documentContexts
    */
   public function setDocumentContexts($documentContexts)
   {
@@ -68,13 +80,19 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
     return $this->documentContexts;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveAnswer[]
+   * Deprecated: This field is deprecated and will have no effect on the Answer
+   * generation. Please use document_contexts and extractive_segments fields.
+   * List of extractive answers.
+   *
+   * @deprecated
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveAnswer[] $extractiveAnswers
    */
   public function setExtractiveAnswers($extractiveAnswers)
   {
     $this->extractiveAnswers = $extractiveAnswers;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveAnswer[]
    */
   public function getExtractiveAnswers()
@@ -82,7 +100,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
     return $this->extractiveAnswers;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveSegment[]
+   * List of extractive segments.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveSegment[] $extractiveSegments
    */
   public function setExtractiveSegments($extractiveSegments)
   {
@@ -96,7 +116,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
     return $this->extractiveSegments;
   }
   /**
-   * @param string
+   * Title.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -110,7 +132,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
     return $this->title;
   }
   /**
-   * @param string
+   * URI for the document.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

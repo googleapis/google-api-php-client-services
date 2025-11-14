@@ -20,12 +20,20 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesProductGroupView extends \Google\Model
 {
   /**
+   * Output only. The resource name of the product group view. Product group
+   * view resource names have the form:
+   * `customers/{customer_id}/productGroupViews/{ad_group_id}~{criterion_id}`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Output only. The resource name of the product group view. Product group
+   * view resource names have the form:
+   * `customers/{customer_id}/productGroupViews/{ad_group_id}~{criterion_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

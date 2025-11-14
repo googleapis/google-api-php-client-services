@@ -19,10 +19,29 @@ namespace Google\Service\Bigquery;
 
 class PrincipalComponentInfo extends \Google\Model
 {
+  /**
+   * The explained_variance is pre-ordered in the descending order to compute
+   * the cumulative explained variance ratio.
+   *
+   * @var 
+   */
   public $cumulativeExplainedVarianceRatio;
+  /**
+   * Explained variance by this principal component, which is simply the
+   * eigenvalue.
+   *
+   * @var 
+   */
   public $explainedVariance;
+  /**
+   * Explained_variance over the total explained variance.
+   *
+   * @var 
+   */
   public $explainedVarianceRatio;
   /**
+   * Id of the principal component.
+   *
    * @var string
    */
   public $principalComponentId;
@@ -52,7 +71,9 @@ class PrincipalComponentInfo extends \Google\Model
     return $this->explainedVarianceRatio;
   }
   /**
-   * @param string
+   * Id of the principal component.
+   *
+   * @param string $principalComponentId
    */
   public function setPrincipalComponentId($principalComponentId)
   {

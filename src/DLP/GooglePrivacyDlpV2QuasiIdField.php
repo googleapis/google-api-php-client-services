@@ -20,6 +20,8 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2QuasiIdField extends \Google\Model
 {
   /**
+   * A auxiliary field.
+   *
    * @var string
    */
   public $customTag;
@@ -27,7 +29,9 @@ class GooglePrivacyDlpV2QuasiIdField extends \Google\Model
   protected $fieldDataType = '';
 
   /**
-   * @param string
+   * A auxiliary field.
+   *
+   * @param string $customTag
    */
   public function setCustomTag($customTag)
   {
@@ -41,7 +45,9 @@ class GooglePrivacyDlpV2QuasiIdField extends \Google\Model
     return $this->customTag;
   }
   /**
-   * @param GooglePrivacyDlpV2FieldId
+   * Identifies the column.
+   *
+   * @param GooglePrivacyDlpV2FieldId $field
    */
   public function setField(GooglePrivacyDlpV2FieldId $field)
   {

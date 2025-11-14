@@ -20,16 +20,22 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Control extends \Google\Model
 {
   /**
+   * Name of the Control
+   *
    * @var string
    */
   public $controlName;
   /**
+   * Display name of the control. For example, AU-02.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * Name of the Control
+   *
+   * @param string $controlName
    */
   public function setControlName($controlName)
   {
@@ -43,7 +49,9 @@ class GoogleCloudSecuritycenterV2Control extends \Google\Model
     return $this->controlName;
   }
   /**
-   * @param string
+   * Display name of the control. For example, AU-02.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

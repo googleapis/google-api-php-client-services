@@ -24,7 +24,9 @@ class RelatedResources extends \Google\Collection
   protected $relatedResourcesDataType = 'array';
 
   /**
-   * @param RelatedResource[]
+   * The detailed related resources of the primary resource.
+   *
+   * @param RelatedResource[] $relatedResources
    */
   public function setRelatedResources($relatedResources)
   {

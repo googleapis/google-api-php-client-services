@@ -23,7 +23,9 @@ class GoogleCloudDatalabelingV1beta1CreateEvaluationJobRequest extends \Google\M
   protected $jobDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1EvaluationJob
+   * Required. The evaluation job to create.
+   *
+   * @param GoogleCloudDatalabelingV1beta1EvaluationJob $job
    */
   public function setJob(GoogleCloudDatalabelingV1beta1EvaluationJob $job)
   {

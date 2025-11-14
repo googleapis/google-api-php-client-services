@@ -20,20 +20,29 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats extends \Google\Model
 {
   /**
+   * Display name of the issue.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Issue resource. Format: projects/{project}/locations/{location}/issueModels
+   * /{issue_model}/issues/{issue}
+   *
    * @var string
    */
   public $issue;
   /**
+   * Number of conversations attached to the issue at this point in time.
+   *
    * @var string
    */
   public $labeledConversationsCount;
 
   /**
-   * @param string
+   * Display name of the issue.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +56,10 @@ class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats extends \
     return $this->displayName;
   }
   /**
-   * @param string
+   * Issue resource. Format: projects/{project}/locations/{location}/issueModels
+   * /{issue_model}/issues/{issue}
+   *
+   * @param string $issue
    */
   public function setIssue($issue)
   {
@@ -61,7 +73,9 @@ class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats extends \
     return $this->issue;
   }
   /**
-   * @param string
+   * Number of conversations attached to the issue at this point in time.
+   *
+   * @param string $labeledConversationsCount
    */
   public function setLabeledConversationsCount($labeledConversationsCount)
   {

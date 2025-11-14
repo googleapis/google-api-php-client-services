@@ -20,16 +20,28 @@ namespace Google\Service\Container;
 class DailyMaintenanceWindow extends \Google\Model
 {
   /**
+   * Output only. Duration of the time window, automatically chosen to be
+   * smallest possible in the given scenario. Duration will be in
+   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "PTnHnMnS".
+   *
    * @var string
    */
   public $duration;
   /**
+   * Time within the maintenance window to start the maintenance operations.
+   * Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Output only. Duration of the time window, automatically chosen to be
+   * smallest possible in the given scenario. Duration will be in
+   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "PTnHnMnS".
+   *
+   * @param string $duration
    */
   public function setDuration($duration)
   {
@@ -43,7 +55,11 @@ class DailyMaintenanceWindow extends \Google\Model
     return $this->duration;
   }
   /**
-   * @param string
+   * Time within the maintenance window to start the maintenance operations.
+   * Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

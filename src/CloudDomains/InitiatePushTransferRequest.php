@@ -20,12 +20,18 @@ namespace Google\Service\CloudDomains;
 class InitiatePushTransferRequest extends \Google\Model
 {
   /**
+   * Required. The Tag of the new registrar. Can be found at [List of
+   * registrars](https://nominet.uk/registrar-list/).
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * Required. The Tag of the new registrar. Can be found at [List of
+   * registrars](https://nominet.uk/registrar-list/).
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

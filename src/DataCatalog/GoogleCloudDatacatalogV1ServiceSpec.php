@@ -23,7 +23,9 @@ class GoogleCloudDatacatalogV1ServiceSpec extends \Google\Model
   protected $cloudBigtableInstanceSpecDataType = '';
 
   /**
-   * @param GoogleCloudDatacatalogV1CloudBigtableInstanceSpec
+   * Specification that applies to Instance entries of `CLOUD_BIGTABLE` system.
+   *
+   * @param GoogleCloudDatacatalogV1CloudBigtableInstanceSpec $cloudBigtableInstanceSpec
    */
   public function setCloudBigtableInstanceSpec(GoogleCloudDatacatalogV1CloudBigtableInstanceSpec $cloudBigtableInstanceSpec)
   {

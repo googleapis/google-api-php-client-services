@@ -21,24 +21,41 @@ class UpgradeDistribution extends \Google\Collection
 {
   protected $collection_key = 'cve';
   /**
+   * The operating system classification of this Upgrade, as specified by the
+   * upstream operating system upgrade feed. For Windows the classification is
+   * one of the category_ids listed at https://docs.microsoft.com/en-
+   * us/previous-versions/windows/desktop/ff357803(v=vs.85)
+   *
    * @var string
    */
   public $classification;
   /**
+   * Required - The specific operating system this metadata applies to. See
+   * https://cpe.mitre.org/specification/.
+   *
    * @var string
    */
   public $cpeUri;
   /**
+   * The cve tied to this Upgrade.
+   *
    * @var string[]
    */
   public $cve;
   /**
+   * The severity as specified by the upstream operating system.
+   *
    * @var string
    */
   public $severity;
 
   /**
-   * @param string
+   * The operating system classification of this Upgrade, as specified by the
+   * upstream operating system upgrade feed. For Windows the classification is
+   * one of the category_ids listed at https://docs.microsoft.com/en-
+   * us/previous-versions/windows/desktop/ff357803(v=vs.85)
+   *
+   * @param string $classification
    */
   public function setClassification($classification)
   {
@@ -52,7 +69,10 @@ class UpgradeDistribution extends \Google\Collection
     return $this->classification;
   }
   /**
-   * @param string
+   * Required - The specific operating system this metadata applies to. See
+   * https://cpe.mitre.org/specification/.
+   *
+   * @param string $cpeUri
    */
   public function setCpeUri($cpeUri)
   {
@@ -66,7 +86,9 @@ class UpgradeDistribution extends \Google\Collection
     return $this->cpeUri;
   }
   /**
-   * @param string[]
+   * The cve tied to this Upgrade.
+   *
+   * @param string[] $cve
    */
   public function setCve($cve)
   {
@@ -80,7 +102,9 @@ class UpgradeDistribution extends \Google\Collection
     return $this->cve;
   }
   /**
-   * @param string
+   * The severity as specified by the upstream operating system.
+   *
+   * @param string $severity
    */
   public function setSeverity($severity)
   {

@@ -29,7 +29,7 @@ class StepLabelsEntry extends \Google\Model
   public $value;
 
   /**
-   * @param string
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -43,7 +43,7 @@ class StepLabelsEntry extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * @param string $value
    */
   public function setValue($value)
   {

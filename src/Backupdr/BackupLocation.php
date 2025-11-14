@@ -20,16 +20,38 @@ namespace Google\Service\Backupdr;
 class BackupLocation extends \Google\Model
 {
   /**
+   * Location type is unspecified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Location type is zonal.
+   */
+  public const TYPE_ZONAL = 'ZONAL';
+  /**
+   * Location type is regional.
+   */
+  public const TYPE_REGIONAL = 'REGIONAL';
+  /**
+   * Location type is multi regional.
+   */
+  public const TYPE_MULTI_REGIONAL = 'MULTI_REGIONAL';
+  /**
+   * Output only. The id of the cloud location. Example: "us-central1"
+   *
    * @var string
    */
   public $locationId;
   /**
+   * Output only. The type of the location.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The id of the cloud location. Example: "us-central1"
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -43,14 +65,18 @@ class BackupLocation extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param string
+   * Output only. The type of the location.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, ZONAL, REGIONAL, MULTI_REGIONAL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

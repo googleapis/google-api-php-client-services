@@ -20,24 +20,45 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1EngineChatEngineConfigAgentCreationConfig extends \Google\Model
 {
   /**
+   * Name of the company, organization or other entity that the agent
+   * represents. Used for knowledge connector LLM prompt and for knowledge
+   * search.
+   *
    * @var string
    */
   public $business;
   /**
+   * Required. The default language of the agent as a language tag. See
+   * [Language
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a
+   * list of the currently supported language codes.
+   *
    * @var string
    */
   public $defaultLanguageCode;
   /**
+   * Agent location for Agent creation, supported values: global/us/eu. If not
+   * provided, us Engine will create Agent using us-central-1 by default; eu
+   * Engine will create Agent using eu-west-1 by default.
+   *
    * @var string
    */
   public $location;
   /**
+   * Required. The time zone of the agent from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York,
+   * Europe/Paris.
+   *
    * @var string
    */
   public $timeZone;
 
   /**
-   * @param string
+   * Name of the company, organization or other entity that the agent
+   * represents. Used for knowledge connector LLM prompt and for knowledge
+   * search.
+   *
+   * @param string $business
    */
   public function setBusiness($business)
   {
@@ -51,7 +72,12 @@ class GoogleCloudDiscoveryengineV1EngineChatEngineConfigAgentCreationConfig exte
     return $this->business;
   }
   /**
-   * @param string
+   * Required. The default language of the agent as a language tag. See
+   * [Language
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a
+   * list of the currently supported language codes.
+   *
+   * @param string $defaultLanguageCode
    */
   public function setDefaultLanguageCode($defaultLanguageCode)
   {
@@ -65,7 +91,11 @@ class GoogleCloudDiscoveryengineV1EngineChatEngineConfigAgentCreationConfig exte
     return $this->defaultLanguageCode;
   }
   /**
-   * @param string
+   * Agent location for Agent creation, supported values: global/us/eu. If not
+   * provided, us Engine will create Agent using us-central-1 by default; eu
+   * Engine will create Agent using eu-west-1 by default.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -79,7 +109,11 @@ class GoogleCloudDiscoveryengineV1EngineChatEngineConfigAgentCreationConfig exte
     return $this->location;
   }
   /**
-   * @param string
+   * Required. The time zone of the agent from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York,
+   * Europe/Paris.
+   *
+   * @param string $timeZone
    */
   public function setTimeZone($timeZone)
   {

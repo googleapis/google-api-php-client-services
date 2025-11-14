@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2FileExtensionInfo extends \Google\Model
 {
   /**
+   * The file extension if set. (aka .pdf, .jpg, .txt)
+   *
    * @var string
    */
   public $fileExtension;
 
   /**
-   * @param string
+   * The file extension if set. (aka .pdf, .jpg, .txt)
+   *
+   * @param string $fileExtension
    */
   public function setFileExtension($fileExtension)
   {

@@ -20,20 +20,29 @@ namespace Google\Service\Dfareporting;
 class ConnectionType extends \Google\Model
 {
   /**
+   * ID of this connection type.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#connectionType".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of this connection type.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * ID of this connection type.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +56,10 @@ class ConnectionType extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#connectionType".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +73,9 @@ class ConnectionType extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of this connection type.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

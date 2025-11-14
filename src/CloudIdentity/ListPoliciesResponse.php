@@ -21,6 +21,9 @@ class ListPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'policies';
   /**
+   * The pagination token to retrieve the next page of results. If this field is
+   * empty, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListPoliciesResponse extends \Google\Collection
   protected $policiesDataType = 'array';
 
   /**
-   * @param string
+   * The pagination token to retrieve the next page of results. If this field is
+   * empty, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Policy[]
+   * The results
+   *
+   * @param Policy[] $policies
    */
   public function setPolicies($policies)
   {

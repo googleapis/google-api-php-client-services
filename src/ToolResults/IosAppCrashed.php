@@ -23,7 +23,9 @@ class IosAppCrashed extends \Google\Model
   protected $stackTraceDataType = '';
 
   /**
-   * @param StackTrace
+   * The stack trace, if one is available. Optional.
+   *
+   * @param StackTrace $stackTrace
    */
   public function setStackTrace(StackTrace $stackTrace)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\ToolResults;
 class PendingGoogleUpdateInsight extends \Google\Model
 {
   /**
+   * The name of the Google-provided library with the non-SDK API dependency.
+   *
    * @var string
    */
   public $nameOfGoogleLibrary;
 
   /**
-   * @param string
+   * The name of the Google-provided library with the non-SDK API dependency.
+   *
+   * @param string $nameOfGoogleLibrary
    */
   public function setNameOfGoogleLibrary($nameOfGoogleLibrary)
   {

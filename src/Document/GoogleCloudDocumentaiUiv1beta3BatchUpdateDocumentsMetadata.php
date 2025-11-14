@@ -26,7 +26,9 @@ class GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadata extends \Google
   protected $individualBatchUpdateStatusesDataType = 'array';
 
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   * The basic metadata of the long-running operation.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata $commonMetadata
    */
   public function setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata $commonMetadata)
   {
@@ -40,7 +42,9 @@ class GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadata extends \Google
     return $this->commonMetadata;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataIndividualBatchUpdateStatus[]
+   * The list of response details of each document.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataIndividualBatchUpdateStatus[] $individualBatchUpdateStatuses
    */
   public function setIndividualBatchUpdateStatuses($individualBatchUpdateStatuses)
   {

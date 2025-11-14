@@ -19,25 +19,62 @@ namespace Google\Service\CloudDeploy;
 
 class Phase extends \Google\Model
 {
+  /**
+   * The Phase has an unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Phase is waiting for an earlier Phase(s) to complete.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The Phase is in progress.
+   */
+  public const STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * The Phase has succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The Phase has failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The Phase was aborted.
+   */
+  public const STATE_ABORTED = 'ABORTED';
+  /**
+   * The Phase was skipped.
+   */
+  public const STATE_SKIPPED = 'SKIPPED';
   protected $childRolloutJobsType = ChildRolloutJobs::class;
   protected $childRolloutJobsDataType = '';
   protected $deploymentJobsType = DeploymentJobs::class;
   protected $deploymentJobsDataType = '';
   /**
+   * Output only. The ID of the Phase.
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. Additional information on why the Phase was skipped, if
+   * available.
+   *
    * @var string
    */
   public $skipMessage;
   /**
+   * Output only. Current state of the Phase.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param ChildRolloutJobs
+   * Output only. ChildRollout job composition.
+   *
+   * @param ChildRolloutJobs $childRolloutJobs
    */
   public function setChildRolloutJobs(ChildRolloutJobs $childRolloutJobs)
   {
@@ -51,7 +88,9 @@ class Phase extends \Google\Model
     return $this->childRolloutJobs;
   }
   /**
-   * @param DeploymentJobs
+   * Output only. Deployment job composition.
+   *
+   * @param DeploymentJobs $deploymentJobs
    */
   public function setDeploymentJobs(DeploymentJobs $deploymentJobs)
   {
@@ -65,7 +104,9 @@ class Phase extends \Google\Model
     return $this->deploymentJobs;
   }
   /**
-   * @param string
+   * Output only. The ID of the Phase.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -79,7 +120,10 @@ class Phase extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Output only. Additional information on why the Phase was skipped, if
+   * available.
+   *
+   * @param string $skipMessage
    */
   public function setSkipMessage($skipMessage)
   {
@@ -93,14 +137,19 @@ class Phase extends \Google\Model
     return $this->skipMessage;
   }
   /**
-   * @param string
+   * Output only. Current state of the Phase.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, IN_PROGRESS, SUCCEEDED,
+   * FAILED, ABORTED, SKIPPED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

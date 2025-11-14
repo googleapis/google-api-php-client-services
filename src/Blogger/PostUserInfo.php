@@ -23,6 +23,8 @@ class PostUserInfo extends \Google\Model
         "postUserInfo" => "post_user_info",
   ];
   /**
+   * The kind of this entity. Always blogger#postUserInfo.
+   *
    * @var string
    */
   public $kind;
@@ -32,7 +34,9 @@ class PostUserInfo extends \Google\Model
   protected $postUserInfoDataType = '';
 
   /**
-   * @param string
+   * The kind of this entity. Always blogger#postUserInfo.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +50,9 @@ class PostUserInfo extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param Post
+   * The Post resource.
+   *
+   * @param Post $post
    */
   public function setPost(Post $post)
   {
@@ -60,7 +66,9 @@ class PostUserInfo extends \Google\Model
     return $this->post;
   }
   /**
-   * @param PostPerUserInfo
+   * Information about a User for the Post.
+   *
+   * @param PostPerUserInfo $postUserInfo
    */
   public function setPostUserInfo(PostPerUserInfo $postUserInfo)
   {

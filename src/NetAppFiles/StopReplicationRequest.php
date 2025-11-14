@@ -20,12 +20,24 @@ namespace Google\Service\NetAppFiles;
 class StopReplicationRequest extends \Google\Model
 {
   /**
+   * Indicates whether to stop replication forcefully while data transfer is in
+   * progress. Warning! if force is true, this will abort any current transfers
+   * and can lead to data loss due to partial transfer. If force is false, stop
+   * replication will fail while data transfer is in progress and you will need
+   * to retry later.
+   *
    * @var bool
    */
   public $force;
 
   /**
-   * @param bool
+   * Indicates whether to stop replication forcefully while data transfer is in
+   * progress. Warning! if force is true, this will abort any current transfers
+   * and can lead to data loss due to partial transfer. If force is false, stop
+   * replication will fail while data transfer is in progress and you will need
+   * to retry later.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {

@@ -20,24 +20,36 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2FieldDisplayHints extends \Google\Model
 {
   /**
+   * Whether the field should be shown in the UI as disabled.
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * This field should be hidden in the search menu when searching for Drive
+   * items.
+   *
    * @var bool
    */
   public $hiddenInSearch;
   /**
+   * Whether the field should be shown as required in the UI.
+   *
    * @var bool
    */
   public $required;
   /**
+   * This field should be shown in the apply menu when applying values to a
+   * Drive item.
+   *
    * @var bool
    */
   public $shownInApply;
 
   /**
-   * @param bool
+   * Whether the field should be shown in the UI as disabled.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -51,7 +63,10 @@ class GoogleAppsDriveLabelsV2FieldDisplayHints extends \Google\Model
     return $this->disabled;
   }
   /**
-   * @param bool
+   * This field should be hidden in the search menu when searching for Drive
+   * items.
+   *
+   * @param bool $hiddenInSearch
    */
   public function setHiddenInSearch($hiddenInSearch)
   {
@@ -65,7 +80,9 @@ class GoogleAppsDriveLabelsV2FieldDisplayHints extends \Google\Model
     return $this->hiddenInSearch;
   }
   /**
-   * @param bool
+   * Whether the field should be shown as required in the UI.
+   *
+   * @param bool $required
    */
   public function setRequired($required)
   {
@@ -79,7 +96,10 @@ class GoogleAppsDriveLabelsV2FieldDisplayHints extends \Google\Model
     return $this->required;
   }
   /**
-   * @param bool
+   * This field should be shown in the apply menu when applying values to a
+   * Drive item.
+   *
+   * @param bool $shownInApply
    */
   public function setShownInApply($shownInApply)
   {

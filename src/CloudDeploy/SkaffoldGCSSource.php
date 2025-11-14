@@ -20,16 +20,24 @@ namespace Google\Service\CloudDeploy;
 class SkaffoldGCSSource extends \Google\Model
 {
   /**
+   * Optional. Relative path from the source to the Skaffold file.
+   *
    * @var string
    */
   public $path;
   /**
+   * Required. Cloud Storage source paths to copy recursively. For example,
+   * providing "gs://my-bucket/dir/configs" will result in Skaffold copying all
+   * files within the "dir/configs" directory in the bucket "my-bucket".
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param string
+   * Optional. Relative path from the source to the Skaffold file.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -43,7 +51,11 @@ class SkaffoldGCSSource extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Required. Cloud Storage source paths to copy recursively. For example,
+   * providing "gs://my-bucket/dir/configs" will result in Skaffold copying all
+   * files within the "dir/configs" directory in the bucket "my-bucket".
+   *
+   * @param string $source
    */
   public function setSource($source)
   {

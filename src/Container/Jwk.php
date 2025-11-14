@@ -20,44 +20,64 @@ namespace Google\Service\Container;
 class Jwk extends \Google\Model
 {
   /**
+   * Algorithm.
+   *
    * @var string
    */
   public $alg;
   /**
+   * Used for ECDSA keys.
+   *
    * @var string
    */
   public $crv;
   /**
+   * Used for RSA keys.
+   *
    * @var string
    */
   public $e;
   /**
+   * Key ID.
+   *
    * @var string
    */
   public $kid;
   /**
+   * Key Type.
+   *
    * @var string
    */
   public $kty;
   /**
+   * Used for RSA keys.
+   *
    * @var string
    */
   public $n;
   /**
+   * Permitted uses for the public keys.
+   *
    * @var string
    */
   public $use;
   /**
+   * Used for ECDSA keys.
+   *
    * @var string
    */
   public $x;
   /**
+   * Used for ECDSA keys.
+   *
    * @var string
    */
   public $y;
 
   /**
-   * @param string
+   * Algorithm.
+   *
+   * @param string $alg
    */
   public function setAlg($alg)
   {
@@ -71,7 +91,9 @@ class Jwk extends \Google\Model
     return $this->alg;
   }
   /**
-   * @param string
+   * Used for ECDSA keys.
+   *
+   * @param string $crv
    */
   public function setCrv($crv)
   {
@@ -85,7 +107,9 @@ class Jwk extends \Google\Model
     return $this->crv;
   }
   /**
-   * @param string
+   * Used for RSA keys.
+   *
+   * @param string $e
    */
   public function setE($e)
   {
@@ -99,7 +123,9 @@ class Jwk extends \Google\Model
     return $this->e;
   }
   /**
-   * @param string
+   * Key ID.
+   *
+   * @param string $kid
    */
   public function setKid($kid)
   {
@@ -113,7 +139,9 @@ class Jwk extends \Google\Model
     return $this->kid;
   }
   /**
-   * @param string
+   * Key Type.
+   *
+   * @param string $kty
    */
   public function setKty($kty)
   {
@@ -127,7 +155,9 @@ class Jwk extends \Google\Model
     return $this->kty;
   }
   /**
-   * @param string
+   * Used for RSA keys.
+   *
+   * @param string $n
    */
   public function setN($n)
   {
@@ -141,7 +171,9 @@ class Jwk extends \Google\Model
     return $this->n;
   }
   /**
-   * @param string
+   * Permitted uses for the public keys.
+   *
+   * @param string $use
    */
   public function setUse($use)
   {
@@ -155,7 +187,9 @@ class Jwk extends \Google\Model
     return $this->use;
   }
   /**
-   * @param string
+   * Used for ECDSA keys.
+   *
+   * @param string $x
    */
   public function setX($x)
   {
@@ -169,7 +203,9 @@ class Jwk extends \Google\Model
     return $this->x;
   }
   /**
-   * @param string
+   * Used for ECDSA keys.
+   *
+   * @param string $y
    */
   public function setY($y)
   {

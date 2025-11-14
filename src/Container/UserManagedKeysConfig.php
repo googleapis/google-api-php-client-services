@@ -21,40 +21,78 @@ class UserManagedKeysConfig extends \Google\Collection
 {
   protected $collection_key = 'serviceAccountVerificationKeys';
   /**
+   * The Certificate Authority Service caPool to use for the aggregation CA in
+   * this cluster.
+   *
    * @var string
    */
   public $aggregationCa;
   /**
+   * The Certificate Authority Service caPool to use for the cluster CA in this
+   * cluster.
+   *
    * @var string
    */
   public $clusterCa;
   /**
+   * The Cloud KMS cryptoKey to use for Confidential Hyperdisk on the control
+   * plane nodes.
+   *
    * @var string
    */
   public $controlPlaneDiskEncryptionKey;
   /**
+   * Output only. All of the versions of the Cloud KMS cryptoKey that are used
+   * by Confidential Hyperdisks on the control plane nodes.
+   *
+   * @var string[]
+   */
+  public $controlPlaneDiskEncryptionKeyVersions;
+  /**
+   * Resource path of the Certificate Authority Service caPool to use for the
+   * etcd API CA in this cluster.
+   *
    * @var string
    */
   public $etcdApiCa;
   /**
+   * Resource path of the Certificate Authority Service caPool to use for the
+   * etcd peer CA in this cluster.
+   *
    * @var string
    */
   public $etcdPeerCa;
   /**
+   * Resource path of the Cloud KMS cryptoKey to use for encryption of internal
+   * etcd backups.
+   *
    * @var string
    */
   public $gkeopsEtcdBackupEncryptionKey;
   /**
+   * The Cloud KMS cryptoKeyVersions to use for signing service account JWTs
+   * issued by this cluster. Format: `projects/{project}/locations/{location}/ke
+   * yRings/{keyring}/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion
+   * }`
+   *
    * @var string[]
    */
   public $serviceAccountSigningKeys;
   /**
+   * The Cloud KMS cryptoKeyVersions to use for verifying service account JWTs
+   * issued by this cluster. Format: `projects/{project}/locations/{location}/ke
+   * yRings/{keyring}/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion
+   * }`
+   *
    * @var string[]
    */
   public $serviceAccountVerificationKeys;
 
   /**
-   * @param string
+   * The Certificate Authority Service caPool to use for the aggregation CA in
+   * this cluster.
+   *
+   * @param string $aggregationCa
    */
   public function setAggregationCa($aggregationCa)
   {
@@ -68,7 +106,10 @@ class UserManagedKeysConfig extends \Google\Collection
     return $this->aggregationCa;
   }
   /**
-   * @param string
+   * The Certificate Authority Service caPool to use for the cluster CA in this
+   * cluster.
+   *
+   * @param string $clusterCa
    */
   public function setClusterCa($clusterCa)
   {
@@ -82,7 +123,10 @@ class UserManagedKeysConfig extends \Google\Collection
     return $this->clusterCa;
   }
   /**
-   * @param string
+   * The Cloud KMS cryptoKey to use for Confidential Hyperdisk on the control
+   * plane nodes.
+   *
+   * @param string $controlPlaneDiskEncryptionKey
    */
   public function setControlPlaneDiskEncryptionKey($controlPlaneDiskEncryptionKey)
   {
@@ -96,7 +140,27 @@ class UserManagedKeysConfig extends \Google\Collection
     return $this->controlPlaneDiskEncryptionKey;
   }
   /**
-   * @param string
+   * Output only. All of the versions of the Cloud KMS cryptoKey that are used
+   * by Confidential Hyperdisks on the control plane nodes.
+   *
+   * @param string[] $controlPlaneDiskEncryptionKeyVersions
+   */
+  public function setControlPlaneDiskEncryptionKeyVersions($controlPlaneDiskEncryptionKeyVersions)
+  {
+    $this->controlPlaneDiskEncryptionKeyVersions = $controlPlaneDiskEncryptionKeyVersions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getControlPlaneDiskEncryptionKeyVersions()
+  {
+    return $this->controlPlaneDiskEncryptionKeyVersions;
+  }
+  /**
+   * Resource path of the Certificate Authority Service caPool to use for the
+   * etcd API CA in this cluster.
+   *
+   * @param string $etcdApiCa
    */
   public function setEtcdApiCa($etcdApiCa)
   {
@@ -110,7 +174,10 @@ class UserManagedKeysConfig extends \Google\Collection
     return $this->etcdApiCa;
   }
   /**
-   * @param string
+   * Resource path of the Certificate Authority Service caPool to use for the
+   * etcd peer CA in this cluster.
+   *
+   * @param string $etcdPeerCa
    */
   public function setEtcdPeerCa($etcdPeerCa)
   {
@@ -124,7 +191,10 @@ class UserManagedKeysConfig extends \Google\Collection
     return $this->etcdPeerCa;
   }
   /**
-   * @param string
+   * Resource path of the Cloud KMS cryptoKey to use for encryption of internal
+   * etcd backups.
+   *
+   * @param string $gkeopsEtcdBackupEncryptionKey
    */
   public function setGkeopsEtcdBackupEncryptionKey($gkeopsEtcdBackupEncryptionKey)
   {
@@ -138,7 +208,12 @@ class UserManagedKeysConfig extends \Google\Collection
     return $this->gkeopsEtcdBackupEncryptionKey;
   }
   /**
-   * @param string[]
+   * The Cloud KMS cryptoKeyVersions to use for signing service account JWTs
+   * issued by this cluster. Format: `projects/{project}/locations/{location}/ke
+   * yRings/{keyring}/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion
+   * }`
+   *
+   * @param string[] $serviceAccountSigningKeys
    */
   public function setServiceAccountSigningKeys($serviceAccountSigningKeys)
   {
@@ -152,7 +227,12 @@ class UserManagedKeysConfig extends \Google\Collection
     return $this->serviceAccountSigningKeys;
   }
   /**
-   * @param string[]
+   * The Cloud KMS cryptoKeyVersions to use for verifying service account JWTs
+   * issued by this cluster. Format: `projects/{project}/locations/{location}/ke
+   * yRings/{keyring}/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion
+   * }`
+   *
+   * @param string[] $serviceAccountVerificationKeys
    */
   public function setServiceAccountVerificationKeys($serviceAccountVerificationKeys)
   {

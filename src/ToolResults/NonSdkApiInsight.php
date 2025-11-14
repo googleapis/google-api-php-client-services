@@ -21,10 +21,16 @@ class NonSdkApiInsight extends \Google\Collection
 {
   protected $collection_key = 'exampleTraceMessages';
   /**
+   * Optional sample stack traces, for which this insight applies (there should
+   * be at least one).
+   *
    * @var string[]
    */
   public $exampleTraceMessages;
   /**
+   * A unique ID, to be used for determining the effectiveness of this
+   * particular insight in the context of a matcher. (required)
+   *
    * @var string
    */
   public $matcherId;
@@ -34,7 +40,10 @@ class NonSdkApiInsight extends \Google\Collection
   protected $upgradeInsightDataType = '';
 
   /**
-   * @param string[]
+   * Optional sample stack traces, for which this insight applies (there should
+   * be at least one).
+   *
+   * @param string[] $exampleTraceMessages
    */
   public function setExampleTraceMessages($exampleTraceMessages)
   {
@@ -48,7 +57,10 @@ class NonSdkApiInsight extends \Google\Collection
     return $this->exampleTraceMessages;
   }
   /**
-   * @param string
+   * A unique ID, to be used for determining the effectiveness of this
+   * particular insight in the context of a matcher. (required)
+   *
+   * @param string $matcherId
    */
   public function setMatcherId($matcherId)
   {
@@ -62,7 +74,10 @@ class NonSdkApiInsight extends \Google\Collection
     return $this->matcherId;
   }
   /**
-   * @param PendingGoogleUpdateInsight
+   * An insight indicating that the hidden API usage originates from a Google-
+   * provided library.
+   *
+   * @param PendingGoogleUpdateInsight $pendingGoogleUpdateInsight
    */
   public function setPendingGoogleUpdateInsight(PendingGoogleUpdateInsight $pendingGoogleUpdateInsight)
   {
@@ -76,7 +91,10 @@ class NonSdkApiInsight extends \Google\Collection
     return $this->pendingGoogleUpdateInsight;
   }
   /**
-   * @param UpgradeInsight
+   * An insight indicating that the hidden API usage originates from the use of
+   * a library that needs to be upgraded.
+   *
+   * @param UpgradeInsight $upgradeInsight
    */
   public function setUpgradeInsight(UpgradeInsight $upgradeInsight)
   {

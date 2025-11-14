@@ -20,16 +20,22 @@ namespace Google\Service\Backupdr;
 class ManagementURI extends \Google\Model
 {
   /**
+   * Output only. The ManagementServer AGM/RD API URL.
+   *
    * @var string
    */
   public $api;
   /**
+   * Output only. The ManagementServer AGM/RD WebUI URL.
+   *
    * @var string
    */
   public $webUi;
 
   /**
-   * @param string
+   * Output only. The ManagementServer AGM/RD API URL.
+   *
+   * @param string $api
    */
   public function setApi($api)
   {
@@ -43,7 +49,9 @@ class ManagementURI extends \Google\Model
     return $this->api;
   }
   /**
-   * @param string
+   * Output only. The ManagementServer AGM/RD WebUI URL.
+   *
+   * @param string $webUi
    */
   public function setWebUi($webUi)
   {

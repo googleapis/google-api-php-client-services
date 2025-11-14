@@ -25,7 +25,9 @@ class Size extends \Google\Model
   protected $widthDataType = '';
 
   /**
-   * @param Dimension
+   * The height of the object.
+   *
+   * @param Dimension $height
    */
   public function setHeight(Dimension $height)
   {
@@ -39,7 +41,9 @@ class Size extends \Google\Model
     return $this->height;
   }
   /**
-   * @param Dimension
+   * The width of the object.
+   *
+   * @param Dimension $width
    */
   public function setWidth(Dimension $width)
   {

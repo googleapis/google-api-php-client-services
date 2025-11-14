@@ -20,16 +20,30 @@ namespace Google\Service\CertificateAuthorityService;
 class CaOptions extends \Google\Model
 {
   /**
+   * Optional. Refers to the "CA" boolean field in the X.509 extension. When
+   * this value is missing, the basic constraints extension will be omitted from
+   * the certificate.
+   *
    * @var bool
    */
   public $isCa;
   /**
+   * Optional. Refers to the path length constraint field in the X.509
+   * extension. For a CA certificate, this value describes the depth of
+   * subordinate CA certificates that are allowed. If this value is less than 0,
+   * the request will fail. If this value is missing, the max path length will
+   * be omitted from the certificate.
+   *
    * @var int
    */
   public $maxIssuerPathLength;
 
   /**
-   * @param bool
+   * Optional. Refers to the "CA" boolean field in the X.509 extension. When
+   * this value is missing, the basic constraints extension will be omitted from
+   * the certificate.
+   *
+   * @param bool $isCa
    */
   public function setIsCa($isCa)
   {
@@ -43,7 +57,13 @@ class CaOptions extends \Google\Model
     return $this->isCa;
   }
   /**
-   * @param int
+   * Optional. Refers to the path length constraint field in the X.509
+   * extension. For a CA certificate, this value describes the depth of
+   * subordinate CA certificates that are allowed. If this value is less than 0,
+   * the request will fail. If this value is missing, the max path length will
+   * be omitted from the certificate.
+   *
+   * @param int $maxIssuerPathLength
    */
   public function setMaxIssuerPathLength($maxIssuerPathLength)
   {

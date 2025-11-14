@@ -19,6 +19,59 @@ namespace Google\Service\ServiceManagement;
 
 class ClientLibrarySettings extends \Google\Model
 {
+  /**
+   * Do not use this default value.
+   */
+  public const LAUNCH_STAGE_LAUNCH_STAGE_UNSPECIFIED = 'LAUNCH_STAGE_UNSPECIFIED';
+  /**
+   * The feature is not yet implemented. Users can not use it.
+   */
+  public const LAUNCH_STAGE_UNIMPLEMENTED = 'UNIMPLEMENTED';
+  /**
+   * Prelaunch features are hidden from users and are only visible internally.
+   */
+  public const LAUNCH_STAGE_PRELAUNCH = 'PRELAUNCH';
+  /**
+   * Early Access features are limited to a closed group of testers. To use
+   * these features, you must sign up in advance and sign a Trusted Tester
+   * agreement (which includes confidentiality provisions). These features may
+   * be unstable, changed in backward-incompatible ways, and are not guaranteed
+   * to be released.
+   */
+  public const LAUNCH_STAGE_EARLY_ACCESS = 'EARLY_ACCESS';
+  /**
+   * Alpha is a limited availability test for releases before they are cleared
+   * for widespread use. By Alpha, all significant design issues are resolved
+   * and we are in the process of verifying functionality. Alpha customers need
+   * to apply for access, agree to applicable terms, and have their projects
+   * allowlisted. Alpha releases don't have to be feature complete, no SLAs are
+   * provided, and there are no technical support obligations, but they will be
+   * far enough along that customers can actually use them in test environments
+   * or for limited-use tests -- just like they would in normal production
+   * cases.
+   */
+  public const LAUNCH_STAGE_ALPHA = 'ALPHA';
+  /**
+   * Beta is the point at which we are ready to open a release for any customer
+   * to use. There are no SLA or technical support obligations in a Beta
+   * release. Products will be complete from a feature perspective, but may have
+   * some open outstanding issues. Beta releases are suitable for limited
+   * production use cases.
+   */
+  public const LAUNCH_STAGE_BETA = 'BETA';
+  /**
+   * GA features are open to all developers and are considered stable and fully
+   * qualified for production use.
+   */
+  public const LAUNCH_STAGE_GA = 'GA';
+  /**
+   * Deprecated features are scheduled to be shut down and removed. For more
+   * information, see the "Deprecation Policy" section of our [Terms of
+   * Service](https://cloud.google.com/terms/) and the [Google Cloud Platform
+   * Subject to the Deprecation
+   * Policy](https://cloud.google.com/terms/deprecation) documentation.
+   */
+  public const LAUNCH_STAGE_DEPRECATED = 'DEPRECATED';
   protected $cppSettingsType = CppSettings::class;
   protected $cppSettingsDataType = '';
   protected $dotnetSettingsType = DotnetSettings::class;
@@ -28,6 +81,8 @@ class ClientLibrarySettings extends \Google\Model
   protected $javaSettingsType = JavaSettings::class;
   protected $javaSettingsDataType = '';
   /**
+   * Launch stage of this version of the API.
+   *
    * @var string
    */
   public $launchStage;
@@ -38,18 +93,27 @@ class ClientLibrarySettings extends \Google\Model
   protected $pythonSettingsType = PythonSettings::class;
   protected $pythonSettingsDataType = '';
   /**
+   * When using transport=rest, the client request will encode enums as numbers
+   * rather than strings.
+   *
    * @var bool
    */
   public $restNumericEnums;
   protected $rubySettingsType = RubySettings::class;
   protected $rubySettingsDataType = '';
   /**
+   * Version of the API to apply these settings to. This is the full protobuf
+   * package for the API, ending in the version element. Examples:
+   * "google.cloud.speech.v1" and "google.spanner.admin.database.v1".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param CppSettings
+   * Settings for C++ client libraries.
+   *
+   * @param CppSettings $cppSettings
    */
   public function setCppSettings(CppSettings $cppSettings)
   {
@@ -63,7 +127,9 @@ class ClientLibrarySettings extends \Google\Model
     return $this->cppSettings;
   }
   /**
-   * @param DotnetSettings
+   * Settings for .NET client libraries.
+   *
+   * @param DotnetSettings $dotnetSettings
    */
   public function setDotnetSettings(DotnetSettings $dotnetSettings)
   {
@@ -77,7 +143,9 @@ class ClientLibrarySettings extends \Google\Model
     return $this->dotnetSettings;
   }
   /**
-   * @param GoSettings
+   * Settings for Go client libraries.
+   *
+   * @param GoSettings $goSettings
    */
   public function setGoSettings(GoSettings $goSettings)
   {
@@ -91,7 +159,9 @@ class ClientLibrarySettings extends \Google\Model
     return $this->goSettings;
   }
   /**
-   * @param JavaSettings
+   * Settings for legacy Java features, supported in the Service YAML.
+   *
+   * @param JavaSettings $javaSettings
    */
   public function setJavaSettings(JavaSettings $javaSettings)
   {
@@ -105,21 +175,28 @@ class ClientLibrarySettings extends \Google\Model
     return $this->javaSettings;
   }
   /**
-   * @param string
+   * Launch stage of this version of the API.
+   *
+   * Accepted values: LAUNCH_STAGE_UNSPECIFIED, UNIMPLEMENTED, PRELAUNCH,
+   * EARLY_ACCESS, ALPHA, BETA, GA, DEPRECATED
+   *
+   * @param self::LAUNCH_STAGE_* $launchStage
    */
   public function setLaunchStage($launchStage)
   {
     $this->launchStage = $launchStage;
   }
   /**
-   * @return string
+   * @return self::LAUNCH_STAGE_*
    */
   public function getLaunchStage()
   {
     return $this->launchStage;
   }
   /**
-   * @param NodeSettings
+   * Settings for Node client libraries.
+   *
+   * @param NodeSettings $nodeSettings
    */
   public function setNodeSettings(NodeSettings $nodeSettings)
   {
@@ -133,7 +210,9 @@ class ClientLibrarySettings extends \Google\Model
     return $this->nodeSettings;
   }
   /**
-   * @param PhpSettings
+   * Settings for PHP client libraries.
+   *
+   * @param PhpSettings $phpSettings
    */
   public function setPhpSettings(PhpSettings $phpSettings)
   {
@@ -147,7 +226,9 @@ class ClientLibrarySettings extends \Google\Model
     return $this->phpSettings;
   }
   /**
-   * @param PythonSettings
+   * Settings for Python client libraries.
+   *
+   * @param PythonSettings $pythonSettings
    */
   public function setPythonSettings(PythonSettings $pythonSettings)
   {
@@ -161,7 +242,10 @@ class ClientLibrarySettings extends \Google\Model
     return $this->pythonSettings;
   }
   /**
-   * @param bool
+   * When using transport=rest, the client request will encode enums as numbers
+   * rather than strings.
+   *
+   * @param bool $restNumericEnums
    */
   public function setRestNumericEnums($restNumericEnums)
   {
@@ -175,7 +259,9 @@ class ClientLibrarySettings extends \Google\Model
     return $this->restNumericEnums;
   }
   /**
-   * @param RubySettings
+   * Settings for Ruby client libraries.
+   *
+   * @param RubySettings $rubySettings
    */
   public function setRubySettings(RubySettings $rubySettings)
   {
@@ -189,7 +275,11 @@ class ClientLibrarySettings extends \Google\Model
     return $this->rubySettings;
   }
   /**
-   * @param string
+   * Version of the API to apply these settings to. This is the full protobuf
+   * package for the API, ending in the version element. Examples:
+   * "google.cloud.speech.v1" and "google.spanner.admin.database.v1".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

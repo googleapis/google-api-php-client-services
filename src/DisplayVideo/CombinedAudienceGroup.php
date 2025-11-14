@@ -24,7 +24,12 @@ class CombinedAudienceGroup extends \Google\Collection
   protected $settingsDataType = 'array';
 
   /**
-   * @param CombinedAudienceTargetingSetting[]
+   * Required. All combined audience targeting settings in combined audience
+   * group. Repeated settings with the same id will be ignored. The number of
+   * combined audience settings should be no more than five, error will be
+   * thrown otherwise.
+   *
+   * @param CombinedAudienceTargetingSetting[] $settings
    */
   public function setSettings($settings)
   {

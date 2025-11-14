@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequestInlineSource
   protected $suggestionsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1CompletionSuggestion[]
+   * Required. A list of all denylist entries to import. Max of 1000 items.
+   *
+   * @param GoogleCloudDiscoveryengineV1CompletionSuggestion[] $suggestions
    */
   public function setSuggestions($suggestions)
   {

@@ -23,6 +23,8 @@ class UpgradeNote extends \Google\Collection
   protected $distributionsType = UpgradeDistribution::class;
   protected $distributionsDataType = 'array';
   /**
+   * Required for non-Windows OS. The package this Upgrade is for.
+   *
    * @var string
    */
   public $package;
@@ -32,7 +34,9 @@ class UpgradeNote extends \Google\Collection
   protected $windowsUpdateDataType = '';
 
   /**
-   * @param UpgradeDistribution[]
+   * Metadata about the upgrade for each specific operating system.
+   *
+   * @param UpgradeDistribution[] $distributions
    */
   public function setDistributions($distributions)
   {
@@ -46,7 +50,9 @@ class UpgradeNote extends \Google\Collection
     return $this->distributions;
   }
   /**
-   * @param string
+   * Required for non-Windows OS. The package this Upgrade is for.
+   *
+   * @param string $package
    */
   public function setPackage($package)
   {
@@ -60,7 +66,10 @@ class UpgradeNote extends \Google\Collection
     return $this->package;
   }
   /**
-   * @param Version
+   * Required for non-Windows OS. The version of the package in machine + human
+   * readable form.
+   *
+   * @param Version $version
    */
   public function setVersion(Version $version)
   {
@@ -74,7 +83,9 @@ class UpgradeNote extends \Google\Collection
     return $this->version;
   }
   /**
-   * @param WindowsUpdate
+   * Required for Windows OS. Represents the metadata about the Windows update.
+   *
+   * @param WindowsUpdate $windowsUpdate
    */
   public function setWindowsUpdate(WindowsUpdate $windowsUpdate)
   {

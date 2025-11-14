@@ -23,12 +23,17 @@ class ZoneBoundary extends \Google\Collection
   protected $conditionType = Condition::class;
   protected $conditionDataType = 'array';
   /**
+   * Custom evaluation trigger IDs. A zone will evaluate its boundary conditions
+   * when any of the listed triggers are true.
+   *
    * @var string[]
    */
   public $customEvaluationTriggerId;
 
   /**
-   * @param Condition[]
+   * The conditions that, when conjoined, make up the boundary.
+   *
+   * @param Condition[] $condition
    */
   public function setCondition($condition)
   {
@@ -42,7 +47,10 @@ class ZoneBoundary extends \Google\Collection
     return $this->condition;
   }
   /**
-   * @param string[]
+   * Custom evaluation trigger IDs. A zone will evaluate its boundary conditions
+   * when any of the listed triggers are true.
+   *
+   * @param string[] $customEvaluationTriggerId
    */
   public function setCustomEvaluationTriggerId($customEvaluationTriggerId)
   {

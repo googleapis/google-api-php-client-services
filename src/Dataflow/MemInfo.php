@@ -20,28 +20,41 @@ namespace Google\Service\Dataflow;
 class MemInfo extends \Google\Model
 {
   /**
+   * Instantenous memory limit in bytes.
+   *
    * @var string
    */
   public $currentLimitBytes;
   /**
+   * Number of Out of Memory (OOM) events recorded since the previous
+   * measurement.
+   *
    * @var string
    */
   public $currentOoms;
   /**
+   * Instantenous memory (RSS) size in bytes.
+   *
    * @var string
    */
   public $currentRssBytes;
   /**
+   * Timestamp of the measurement.
+   *
    * @var string
    */
   public $timestamp;
   /**
+   * Total memory (RSS) usage since start up in GB * ms.
+   *
    * @var string
    */
   public $totalGbMs;
 
   /**
-   * @param string
+   * Instantenous memory limit in bytes.
+   *
+   * @param string $currentLimitBytes
    */
   public function setCurrentLimitBytes($currentLimitBytes)
   {
@@ -55,7 +68,10 @@ class MemInfo extends \Google\Model
     return $this->currentLimitBytes;
   }
   /**
-   * @param string
+   * Number of Out of Memory (OOM) events recorded since the previous
+   * measurement.
+   *
+   * @param string $currentOoms
    */
   public function setCurrentOoms($currentOoms)
   {
@@ -69,7 +85,9 @@ class MemInfo extends \Google\Model
     return $this->currentOoms;
   }
   /**
-   * @param string
+   * Instantenous memory (RSS) size in bytes.
+   *
+   * @param string $currentRssBytes
    */
   public function setCurrentRssBytes($currentRssBytes)
   {
@@ -83,7 +101,9 @@ class MemInfo extends \Google\Model
     return $this->currentRssBytes;
   }
   /**
-   * @param string
+   * Timestamp of the measurement.
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {
@@ -97,7 +117,9 @@ class MemInfo extends \Google\Model
     return $this->timestamp;
   }
   /**
-   * @param string
+   * Total memory (RSS) usage since start up in GB * ms.
+   *
+   * @param string $totalGbMs
    */
   public function setTotalGbMs($totalGbMs)
   {

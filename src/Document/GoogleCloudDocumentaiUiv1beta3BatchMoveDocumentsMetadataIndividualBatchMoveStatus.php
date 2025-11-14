@@ -25,7 +25,9 @@ class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMov
   protected $statusDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3DocumentId
+   * The document id of the document.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3DocumentId $documentId
    */
   public function setDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId $documentId)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMov
     return $this->documentId;
   }
   /**
-   * @param GoogleRpcStatus
+   * The status of moving the document.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {

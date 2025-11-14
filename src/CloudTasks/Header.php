@@ -20,16 +20,22 @@ namespace Google\Service\CloudTasks;
 class Header extends \Google\Model
 {
   /**
+   * The Key of the header.
+   *
    * @var string
    */
   public $key;
   /**
+   * The Value of the header.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The Key of the header.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -43,7 +49,9 @@ class Header extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * The Value of the header.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

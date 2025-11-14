@@ -21,42 +21,63 @@ class Hook extends \Google\Collection
 {
   protected $collection_key = 'events';
   /**
+   * Output only. Create timestamp.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Determines if the hook disabled or not. Set to true to stop
+   * sending traffic.
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * Optional. The events that trigger hook on.
+   *
    * @var string[]
    */
   public $events;
   /**
+   * Identifier. A unique identifier for a Hook. The name should be of the
+   * format: `projects/{project}/locations/{location_id}/repositories/{repositor
+   * y_id}/hooks/{hook_id}`
+   *
    * @var string
    */
   public $name;
   protected $pushOptionType = PushOption::class;
   protected $pushOptionDataType = '';
   /**
+   * Optional. The sensitive query string to be appended to the target URI.
+   *
    * @var string
    */
   public $sensitiveQueryString;
   /**
+   * Required. The target URI to which the payloads will be delivered.
+   *
    * @var string
    */
   public $targetUri;
   /**
+   * Output only. Unique identifier of the hook.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Update timestamp.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Create timestamp.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -70,7 +91,10 @@ class Hook extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param bool
+   * Optional. Determines if the hook disabled or not. Set to true to stop
+   * sending traffic.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -84,7 +108,9 @@ class Hook extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * @param string[]
+   * Optional. The events that trigger hook on.
+   *
+   * @param string[] $events
    */
   public function setEvents($events)
   {
@@ -98,7 +124,11 @@ class Hook extends \Google\Collection
     return $this->events;
   }
   /**
-   * @param string
+   * Identifier. A unique identifier for a Hook. The name should be of the
+   * format: `projects/{project}/locations/{location_id}/repositories/{repositor
+   * y_id}/hooks/{hook_id}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -112,7 +142,9 @@ class Hook extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PushOption
+   * Optional. The trigger option for push events.
+   *
+   * @param PushOption $pushOption
    */
   public function setPushOption(PushOption $pushOption)
   {
@@ -126,7 +158,9 @@ class Hook extends \Google\Collection
     return $this->pushOption;
   }
   /**
-   * @param string
+   * Optional. The sensitive query string to be appended to the target URI.
+   *
+   * @param string $sensitiveQueryString
    */
   public function setSensitiveQueryString($sensitiveQueryString)
   {
@@ -140,7 +174,9 @@ class Hook extends \Google\Collection
     return $this->sensitiveQueryString;
   }
   /**
-   * @param string
+   * Required. The target URI to which the payloads will be delivered.
+   *
+   * @param string $targetUri
    */
   public function setTargetUri($targetUri)
   {
@@ -154,7 +190,9 @@ class Hook extends \Google\Collection
     return $this->targetUri;
   }
   /**
-   * @param string
+   * Output only. Unique identifier of the hook.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -168,7 +206,9 @@ class Hook extends \Google\Collection
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Update timestamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

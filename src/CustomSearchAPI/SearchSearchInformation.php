@@ -20,21 +20,36 @@ namespace Google\Service\CustomSearchAPI;
 class SearchSearchInformation extends \Google\Model
 {
   /**
+   * The time taken for the server to return search results, formatted according
+   * to locale style.
+   *
    * @var string
    */
   public $formattedSearchTime;
   /**
+   * The total number of search results, formatted according to locale style.
+   *
    * @var string
    */
   public $formattedTotalResults;
+  /**
+   * The time taken for the server to return search results.
+   *
+   * @var 
+   */
   public $searchTime;
   /**
+   * The total number of search results returned by the query.
+   *
    * @var string
    */
   public $totalResults;
 
   /**
-   * @param string
+   * The time taken for the server to return search results, formatted according
+   * to locale style.
+   *
+   * @param string $formattedSearchTime
    */
   public function setFormattedSearchTime($formattedSearchTime)
   {
@@ -48,7 +63,9 @@ class SearchSearchInformation extends \Google\Model
     return $this->formattedSearchTime;
   }
   /**
-   * @param string
+   * The total number of search results, formatted according to locale style.
+   *
+   * @param string $formattedTotalResults
    */
   public function setFormattedTotalResults($formattedTotalResults)
   {
@@ -70,7 +87,9 @@ class SearchSearchInformation extends \Google\Model
     return $this->searchTime;
   }
   /**
-   * @param string
+   * The total number of search results returned by the query.
+   *
+   * @param string $totalResults
    */
   public function setTotalResults($totalResults)
   {

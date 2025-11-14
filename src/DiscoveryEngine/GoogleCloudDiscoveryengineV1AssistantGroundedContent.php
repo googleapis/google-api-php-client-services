@@ -27,7 +27,11 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContent extends \Google\Model
   protected $textGroundingMetadataDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1CitationMetadata
+   * Source attribution of the generated content. See also
+   * https://cloud.google.com/vertex-ai/generative-
+   * ai/docs/learn/overview#citation_check
+   *
+   * @param GoogleCloudDiscoveryengineV1CitationMetadata $citationMetadata
    */
   public function setCitationMetadata(GoogleCloudDiscoveryengineV1CitationMetadata $citationMetadata)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContent extends \Google\Model
     return $this->citationMetadata;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantContent
+   * The content.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantContent $content
    */
   public function setContent(GoogleCloudDiscoveryengineV1AssistantContent $content)
   {
@@ -55,7 +61,9 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContent extends \Google\Model
     return $this->content;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadata
+   * Metadata for grounding based on text sources.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadata $textGroundingMetadata
    */
   public function setTextGroundingMetadata(GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadata $textGroundingMetadata)
   {

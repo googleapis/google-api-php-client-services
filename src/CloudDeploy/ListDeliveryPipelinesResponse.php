@@ -23,16 +23,23 @@ class ListDeliveryPipelinesResponse extends \Google\Collection
   protected $deliveryPipelinesType = DeliveryPipeline::class;
   protected $deliveryPipelinesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param DeliveryPipeline[]
+   * The `DeliveryPipeline` objects.
+   *
+   * @param DeliveryPipeline[] $deliveryPipelines
    */
   public function setDeliveryPipelines($deliveryPipelines)
   {
@@ -46,7 +53,10 @@ class ListDeliveryPipelinesResponse extends \Google\Collection
     return $this->deliveryPipelines;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListDeliveryPipelinesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

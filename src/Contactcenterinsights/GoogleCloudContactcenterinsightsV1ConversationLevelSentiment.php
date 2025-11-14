@@ -20,6 +20,8 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ConversationLevelSentiment extends \Google\Model
 {
   /**
+   * The channel of the audio that the data applies to.
+   *
    * @var int
    */
   public $channelTag;
@@ -27,7 +29,9 @@ class GoogleCloudContactcenterinsightsV1ConversationLevelSentiment extends \Goog
   protected $sentimentDataDataType = '';
 
   /**
-   * @param int
+   * The channel of the audio that the data applies to.
+   *
+   * @param int $channelTag
    */
   public function setChannelTag($channelTag)
   {
@@ -41,7 +45,9 @@ class GoogleCloudContactcenterinsightsV1ConversationLevelSentiment extends \Goog
     return $this->channelTag;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1SentimentData
+   * Data specifying sentiment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1SentimentData $sentimentData
    */
   public function setSentimentData(GoogleCloudContactcenterinsightsV1SentimentData $sentimentData)
   {

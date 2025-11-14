@@ -23,12 +23,17 @@ class ListMethodQuotasResponse extends \Google\Collection
   protected $methodQuotasType = MethodQuota::class;
   protected $methodQuotasDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param MethodQuota[]
+   * The current quota usage and limits per each method.
+   *
+   * @param MethodQuota[] $methodQuotas
    */
   public function setMethodQuotas($methodQuotas)
   {
@@ -42,7 +47,10 @@ class ListMethodQuotasResponse extends \Google\Collection
     return $this->methodQuotas;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

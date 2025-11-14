@@ -22,24 +22,41 @@ class FacetOptions extends \Google\Model
   protected $integerFacetingOptionsType = IntegerFacetingOptions::class;
   protected $integerFacetingOptionsDataType = '';
   /**
+   * Maximum number of facet buckets that should be returned for this facet.
+   * Defaults to 10. Maximum value is 100.
+   *
    * @var int
    */
   public $numFacetBuckets;
   /**
+   * If object_type is set, only those objects of that type will be used to
+   * compute facets. If empty, then all objects will be used to compute facets.
+   *
    * @var string
    */
   public $objectType;
   /**
+   * The name of the operator chosen for faceting. @see
+   * cloudsearch.SchemaPropertyOptions
+   *
    * @var string
    */
   public $operatorName;
   /**
+   * Source name to facet on. Format: datasources/{source_id} If empty, all data
+   * sources will be used.
+   *
    * @var string
    */
   public $sourceName;
 
   /**
-   * @param IntegerFacetingOptions
+   * If set, describes integer faceting options for the given integer property.
+   * The corresponding integer property in the schema should be marked
+   * isFacetable. The number of buckets returned would be minimum of this and
+   * num_facet_buckets.
+   *
+   * @param IntegerFacetingOptions $integerFacetingOptions
    */
   public function setIntegerFacetingOptions(IntegerFacetingOptions $integerFacetingOptions)
   {
@@ -53,7 +70,10 @@ class FacetOptions extends \Google\Model
     return $this->integerFacetingOptions;
   }
   /**
-   * @param int
+   * Maximum number of facet buckets that should be returned for this facet.
+   * Defaults to 10. Maximum value is 100.
+   *
+   * @param int $numFacetBuckets
    */
   public function setNumFacetBuckets($numFacetBuckets)
   {
@@ -67,7 +87,10 @@ class FacetOptions extends \Google\Model
     return $this->numFacetBuckets;
   }
   /**
-   * @param string
+   * If object_type is set, only those objects of that type will be used to
+   * compute facets. If empty, then all objects will be used to compute facets.
+   *
+   * @param string $objectType
    */
   public function setObjectType($objectType)
   {
@@ -81,7 +104,10 @@ class FacetOptions extends \Google\Model
     return $this->objectType;
   }
   /**
-   * @param string
+   * The name of the operator chosen for faceting. @see
+   * cloudsearch.SchemaPropertyOptions
+   *
+   * @param string $operatorName
    */
   public function setOperatorName($operatorName)
   {
@@ -95,7 +121,10 @@ class FacetOptions extends \Google\Model
     return $this->operatorName;
   }
   /**
-   * @param string
+   * Source name to facet on. Format: datasources/{source_id} If empty, all data
+   * sources will be used.
+   *
+   * @param string $sourceName
    */
   public function setSourceName($sourceName)
   {

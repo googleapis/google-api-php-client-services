@@ -30,7 +30,9 @@ class ManagedZonePrivateVisibilityConfig extends \Google\Collection
   protected $networksDataType = 'array';
 
   /**
-   * @param ManagedZonePrivateVisibilityConfigGKECluster[]
+   * The list of Google Kubernetes Engine clusters that can see this zone.
+   *
+   * @param ManagedZonePrivateVisibilityConfigGKECluster[] $gkeClusters
    */
   public function setGkeClusters($gkeClusters)
   {
@@ -44,7 +46,7 @@ class ManagedZonePrivateVisibilityConfig extends \Google\Collection
     return $this->gkeClusters;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -58,7 +60,9 @@ class ManagedZonePrivateVisibilityConfig extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param ManagedZonePrivateVisibilityConfigNetwork[]
+   * The list of VPC networks that can see this zone.
+   *
+   * @param ManagedZonePrivateVisibilityConfigNetwork[] $networks
    */
   public function setNetworks($networks)
   {

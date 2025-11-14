@@ -20,16 +20,25 @@ namespace Google\Service\DatabaseMigrationService;
 class SourceTextFilter extends \Google\Model
 {
   /**
+   * Optional. The filter will match columns with length smaller than or equal
+   * to this number.
+   *
    * @var string
    */
   public $sourceMaxLengthFilter;
   /**
+   * Optional. The filter will match columns with length greater than or equal
+   * to this number.
+   *
    * @var string
    */
   public $sourceMinLengthFilter;
 
   /**
-   * @param string
+   * Optional. The filter will match columns with length smaller than or equal
+   * to this number.
+   *
+   * @param string $sourceMaxLengthFilter
    */
   public function setSourceMaxLengthFilter($sourceMaxLengthFilter)
   {
@@ -43,7 +52,10 @@ class SourceTextFilter extends \Google\Model
     return $this->sourceMaxLengthFilter;
   }
   /**
-   * @param string
+   * Optional. The filter will match columns with length greater than or equal
+   * to this number.
+   *
+   * @param string $sourceMinLengthFilter
    */
   public function setSourceMinLengthFilter($sourceMinLengthFilter)
   {

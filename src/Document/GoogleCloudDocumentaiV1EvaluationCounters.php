@@ -20,24 +20,36 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1EvaluationCounters extends \Google\Model
 {
   /**
+   * How many documents were used in the evaluation.
+   *
    * @var int
    */
   public $evaluatedDocumentsCount;
   /**
+   * How many documents were not included in the evaluation as Document AI
+   * failed to process them.
+   *
    * @var int
    */
   public $failedDocumentsCount;
   /**
+   * How many documents were sent for evaluation.
+   *
    * @var int
    */
   public $inputDocumentsCount;
   /**
+   * How many documents were not included in the evaluation as they didn't pass
+   * validation.
+   *
    * @var int
    */
   public $invalidDocumentsCount;
 
   /**
-   * @param int
+   * How many documents were used in the evaluation.
+   *
+   * @param int $evaluatedDocumentsCount
    */
   public function setEvaluatedDocumentsCount($evaluatedDocumentsCount)
   {
@@ -51,7 +63,10 @@ class GoogleCloudDocumentaiV1EvaluationCounters extends \Google\Model
     return $this->evaluatedDocumentsCount;
   }
   /**
-   * @param int
+   * How many documents were not included in the evaluation as Document AI
+   * failed to process them.
+   *
+   * @param int $failedDocumentsCount
    */
   public function setFailedDocumentsCount($failedDocumentsCount)
   {
@@ -65,7 +80,9 @@ class GoogleCloudDocumentaiV1EvaluationCounters extends \Google\Model
     return $this->failedDocumentsCount;
   }
   /**
-   * @param int
+   * How many documents were sent for evaluation.
+   *
+   * @param int $inputDocumentsCount
    */
   public function setInputDocumentsCount($inputDocumentsCount)
   {
@@ -79,7 +96,10 @@ class GoogleCloudDocumentaiV1EvaluationCounters extends \Google\Model
     return $this->inputDocumentsCount;
   }
   /**
-   * @param int
+   * How many documents were not included in the evaluation as they didn't pass
+   * validation.
+   *
+   * @param int $invalidDocumentsCount
    */
   public function setInvalidDocumentsCount($invalidDocumentsCount)
   {

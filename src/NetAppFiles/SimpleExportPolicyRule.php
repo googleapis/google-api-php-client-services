@@ -20,74 +20,157 @@ namespace Google\Service\NetAppFiles;
 class SimpleExportPolicyRule extends \Google\Model
 {
   /**
+   * Unspecified Access Type
+   */
+  public const ACCESS_TYPE_ACCESS_TYPE_UNSPECIFIED = 'ACCESS_TYPE_UNSPECIFIED';
+  /**
+   * Read Only
+   */
+  public const ACCESS_TYPE_READ_ONLY = 'READ_ONLY';
+  /**
+   * Read Write
+   */
+  public const ACCESS_TYPE_READ_WRITE = 'READ_WRITE';
+  /**
+   * None
+   */
+  public const ACCESS_TYPE_READ_NONE = 'READ_NONE';
+  /**
+   * Defaults to NO_ROOT_SQUASH.
+   */
+  public const SQUASH_MODE_SQUASH_MODE_UNSPECIFIED = 'SQUASH_MODE_UNSPECIFIED';
+  /**
+   * The root user (UID 0) retains full access. Other users are unaffected.
+   */
+  public const SQUASH_MODE_NO_ROOT_SQUASH = 'NO_ROOT_SQUASH';
+  /**
+   * The root user (UID 0) is squashed to anonymous user ID. Other users are
+   * unaffected.
+   */
+  public const SQUASH_MODE_ROOT_SQUASH = 'ROOT_SQUASH';
+  /**
+   * All users are squashed to anonymous user ID.
+   */
+  public const SQUASH_MODE_ALL_SQUASH = 'ALL_SQUASH';
+  /**
+   * Access type (ReadWrite, ReadOnly, None)
+   *
    * @var string
    */
   public $accessType;
   /**
+   * Comma separated list of allowed clients IP addresses
+   *
    * @var string
    */
   public $allowedClients;
   /**
+   * Optional. An integer representing the anonymous user ID. Range is 0 to
+   * 4294967295. Required when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+   *
    * @var string
    */
   public $anonUid;
   /**
+   * Whether Unix root access will be granted.
+   *
    * @var string
    */
   public $hasRootAccess;
   /**
+   * If enabled (true) the rule defines a read only access for clients matching
+   * the 'allowedClients' specification. It enables nfs clients to mount using
+   * 'authentication' kerberos security mode.
+   *
    * @var bool
    */
   public $kerberos5ReadOnly;
   /**
+   * If enabled (true) the rule defines read and write access for clients
+   * matching the 'allowedClients' specification. It enables nfs clients to
+   * mount using 'authentication' kerberos security mode. The
+   * 'kerberos5ReadOnly' value be ignored if this is enabled.
+   *
    * @var bool
    */
   public $kerberos5ReadWrite;
   /**
+   * If enabled (true) the rule defines a read only access for clients matching
+   * the 'allowedClients' specification. It enables nfs clients to mount using
+   * 'integrity' kerberos security mode.
+   *
    * @var bool
    */
   public $kerberos5iReadOnly;
   /**
+   * If enabled (true) the rule defines read and write access for clients
+   * matching the 'allowedClients' specification. It enables nfs clients to
+   * mount using 'integrity' kerberos security mode. The 'kerberos5iReadOnly'
+   * value be ignored if this is enabled.
+   *
    * @var bool
    */
   public $kerberos5iReadWrite;
   /**
+   * If enabled (true) the rule defines a read only access for clients matching
+   * the 'allowedClients' specification. It enables nfs clients to mount using
+   * 'privacy' kerberos security mode.
+   *
    * @var bool
    */
   public $kerberos5pReadOnly;
   /**
+   * If enabled (true) the rule defines read and write access for clients
+   * matching the 'allowedClients' specification. It enables nfs clients to
+   * mount using 'privacy' kerberos security mode. The 'kerberos5pReadOnly'
+   * value be ignored if this is enabled.
+   *
    * @var bool
    */
   public $kerberos5pReadWrite;
   /**
+   * NFS V3 protocol.
+   *
    * @var bool
    */
   public $nfsv3;
   /**
+   * NFS V4 protocol.
+   *
    * @var bool
    */
   public $nfsv4;
   /**
+   * Optional. Defines how user identity squashing is applied for this export
+   * rule. This field is the preferred way to configure squashing behavior and
+   * takes precedence over `has_root_access` if both are provided.
+   *
    * @var string
    */
   public $squashMode;
 
   /**
-   * @param string
+   * Access type (ReadWrite, ReadOnly, None)
+   *
+   * Accepted values: ACCESS_TYPE_UNSPECIFIED, READ_ONLY, READ_WRITE, READ_NONE
+   *
+   * @param self::ACCESS_TYPE_* $accessType
    */
   public function setAccessType($accessType)
   {
     $this->accessType = $accessType;
   }
   /**
-   * @return string
+   * @return self::ACCESS_TYPE_*
    */
   public function getAccessType()
   {
     return $this->accessType;
   }
   /**
-   * @param string
+   * Comma separated list of allowed clients IP addresses
+   *
+   * @param string $allowedClients
    */
   public function setAllowedClients($allowedClients)
   {
@@ -101,7 +184,10 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->allowedClients;
   }
   /**
-   * @param string
+   * Optional. An integer representing the anonymous user ID. Range is 0 to
+   * 4294967295. Required when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+   *
+   * @param string $anonUid
    */
   public function setAnonUid($anonUid)
   {
@@ -115,7 +201,9 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->anonUid;
   }
   /**
-   * @param string
+   * Whether Unix root access will be granted.
+   *
+   * @param string $hasRootAccess
    */
   public function setHasRootAccess($hasRootAccess)
   {
@@ -129,7 +217,11 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->hasRootAccess;
   }
   /**
-   * @param bool
+   * If enabled (true) the rule defines a read only access for clients matching
+   * the 'allowedClients' specification. It enables nfs clients to mount using
+   * 'authentication' kerberos security mode.
+   *
+   * @param bool $kerberos5ReadOnly
    */
   public function setKerberos5ReadOnly($kerberos5ReadOnly)
   {
@@ -143,7 +235,12 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->kerberos5ReadOnly;
   }
   /**
-   * @param bool
+   * If enabled (true) the rule defines read and write access for clients
+   * matching the 'allowedClients' specification. It enables nfs clients to
+   * mount using 'authentication' kerberos security mode. The
+   * 'kerberos5ReadOnly' value be ignored if this is enabled.
+   *
+   * @param bool $kerberos5ReadWrite
    */
   public function setKerberos5ReadWrite($kerberos5ReadWrite)
   {
@@ -157,7 +254,11 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->kerberos5ReadWrite;
   }
   /**
-   * @param bool
+   * If enabled (true) the rule defines a read only access for clients matching
+   * the 'allowedClients' specification. It enables nfs clients to mount using
+   * 'integrity' kerberos security mode.
+   *
+   * @param bool $kerberos5iReadOnly
    */
   public function setKerberos5iReadOnly($kerberos5iReadOnly)
   {
@@ -171,7 +272,12 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->kerberos5iReadOnly;
   }
   /**
-   * @param bool
+   * If enabled (true) the rule defines read and write access for clients
+   * matching the 'allowedClients' specification. It enables nfs clients to
+   * mount using 'integrity' kerberos security mode. The 'kerberos5iReadOnly'
+   * value be ignored if this is enabled.
+   *
+   * @param bool $kerberos5iReadWrite
    */
   public function setKerberos5iReadWrite($kerberos5iReadWrite)
   {
@@ -185,7 +291,11 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->kerberos5iReadWrite;
   }
   /**
-   * @param bool
+   * If enabled (true) the rule defines a read only access for clients matching
+   * the 'allowedClients' specification. It enables nfs clients to mount using
+   * 'privacy' kerberos security mode.
+   *
+   * @param bool $kerberos5pReadOnly
    */
   public function setKerberos5pReadOnly($kerberos5pReadOnly)
   {
@@ -199,7 +309,12 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->kerberos5pReadOnly;
   }
   /**
-   * @param bool
+   * If enabled (true) the rule defines read and write access for clients
+   * matching the 'allowedClients' specification. It enables nfs clients to
+   * mount using 'privacy' kerberos security mode. The 'kerberos5pReadOnly'
+   * value be ignored if this is enabled.
+   *
+   * @param bool $kerberos5pReadWrite
    */
   public function setKerberos5pReadWrite($kerberos5pReadWrite)
   {
@@ -213,7 +328,9 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->kerberos5pReadWrite;
   }
   /**
-   * @param bool
+   * NFS V3 protocol.
+   *
+   * @param bool $nfsv3
    */
   public function setNfsv3($nfsv3)
   {
@@ -227,7 +344,9 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->nfsv3;
   }
   /**
-   * @param bool
+   * NFS V4 protocol.
+   *
+   * @param bool $nfsv4
    */
   public function setNfsv4($nfsv4)
   {
@@ -241,14 +360,21 @@ class SimpleExportPolicyRule extends \Google\Model
     return $this->nfsv4;
   }
   /**
-   * @param string
+   * Optional. Defines how user identity squashing is applied for this export
+   * rule. This field is the preferred way to configure squashing behavior and
+   * takes precedence over `has_root_access` if both are provided.
+   *
+   * Accepted values: SQUASH_MODE_UNSPECIFIED, NO_ROOT_SQUASH, ROOT_SQUASH,
+   * ALL_SQUASH
+   *
+   * @param self::SQUASH_MODE_* $squashMode
    */
   public function setSquashMode($squashMode)
   {
     $this->squashMode = $squashMode;
   }
   /**
-   * @return string
+   * @return self::SQUASH_MODE_*
    */
   public function getSquashMode()
   {

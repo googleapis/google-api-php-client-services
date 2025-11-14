@@ -20,20 +20,28 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends \Google\Model
 {
   /**
+   * Whether the user can apply this label to items.
+   *
    * @var bool
    */
   public $canApply;
   /**
+   * Whether the user can read applied metadata related to this label.
+   *
    * @var bool
    */
   public $canRead;
   /**
+   * Whether the user can remove this label from items.
+   *
    * @var bool
    */
   public $canRemove;
 
   /**
-   * @param bool
+   * Whether the user can apply this label to items.
+   *
+   * @param bool $canApply
    */
   public function setCanApply($canApply)
   {
@@ -47,7 +55,9 @@ class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends \Google\Model
     return $this->canApply;
   }
   /**
-   * @param bool
+   * Whether the user can read applied metadata related to this label.
+   *
+   * @param bool $canRead
    */
   public function setCanRead($canRead)
   {
@@ -61,7 +71,9 @@ class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends \Google\Model
     return $this->canRead;
   }
   /**
-   * @param bool
+   * Whether the user can remove this label from items.
+   *
+   * @param bool $canRemove
    */
   public function setCanRemove($canRemove)
   {

@@ -20,19 +20,33 @@ namespace Google\Service\Container;
 class ClusterNetworkPerformanceConfig extends \Google\Model
 {
   /**
+   * Default value
+   */
+  public const TOTAL_EGRESS_BANDWIDTH_TIER_TIER_UNSPECIFIED = 'TIER_UNSPECIFIED';
+  /**
+   * Higher bandwidth, actual values based on VM size.
+   */
+  public const TOTAL_EGRESS_BANDWIDTH_TIER_TIER_1 = 'TIER_1';
+  /**
+   * Specifies the total network bandwidth tier for NodePools in the cluster.
+   *
    * @var string
    */
   public $totalEgressBandwidthTier;
 
   /**
-   * @param string
+   * Specifies the total network bandwidth tier for NodePools in the cluster.
+   *
+   * Accepted values: TIER_UNSPECIFIED, TIER_1
+   *
+   * @param self::TOTAL_EGRESS_BANDWIDTH_TIER_* $totalEgressBandwidthTier
    */
   public function setTotalEgressBandwidthTier($totalEgressBandwidthTier)
   {
     $this->totalEgressBandwidthTier = $totalEgressBandwidthTier;
   }
   /**
-   * @return string
+   * @return self::TOTAL_EGRESS_BANDWIDTH_TIER_*
    */
   public function getTotalEgressBandwidthTier()
   {

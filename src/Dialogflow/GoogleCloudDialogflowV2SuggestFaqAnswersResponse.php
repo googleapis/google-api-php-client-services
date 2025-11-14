@@ -21,18 +21,31 @@ class GoogleCloudDialogflowV2SuggestFaqAnswersResponse extends \Google\Collectio
 {
   protected $collection_key = 'faqAnswers';
   /**
+   * Number of messages prior to and including latest_message to compile the
+   * suggestion. It may be smaller than the
+   * SuggestFaqAnswersRequest.context_size field in the request if there aren't
+   * that many messages in the conversation.
+   *
    * @var int
    */
   public $contextSize;
   protected $faqAnswersType = GoogleCloudDialogflowV2FaqAnswer::class;
   protected $faqAnswersDataType = 'array';
   /**
+   * The name of the latest conversation message used to compile suggestion for.
+   * Format: `projects//locations//conversations//messages/`.
+   *
    * @var string
    */
   public $latestMessage;
 
   /**
-   * @param int
+   * Number of messages prior to and including latest_message to compile the
+   * suggestion. It may be smaller than the
+   * SuggestFaqAnswersRequest.context_size field in the request if there aren't
+   * that many messages in the conversation.
+   *
+   * @param int $contextSize
    */
   public function setContextSize($contextSize)
   {
@@ -46,7 +59,9 @@ class GoogleCloudDialogflowV2SuggestFaqAnswersResponse extends \Google\Collectio
     return $this->contextSize;
   }
   /**
-   * @param GoogleCloudDialogflowV2FaqAnswer[]
+   * Answers extracted from FAQ documents.
+   *
+   * @param GoogleCloudDialogflowV2FaqAnswer[] $faqAnswers
    */
   public function setFaqAnswers($faqAnswers)
   {
@@ -60,7 +75,10 @@ class GoogleCloudDialogflowV2SuggestFaqAnswersResponse extends \Google\Collectio
     return $this->faqAnswers;
   }
   /**
-   * @param string
+   * The name of the latest conversation message used to compile suggestion for.
+   * Format: `projects//locations//conversations//messages/`.
+   *
+   * @param string $latestMessage
    */
   public function setLatestMessage($latestMessage)
   {

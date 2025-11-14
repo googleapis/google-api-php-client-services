@@ -20,10 +20,14 @@ namespace Google\Service\Dfareporting;
 class ChangeLog extends \Google\Model
 {
   /**
+   * Account ID of the modified object.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * Action which caused the change.
+   *
    * @var string
    */
   public $action;
@@ -32,52 +36,80 @@ class ChangeLog extends \Google\Model
    */
   public $changeTime;
   /**
+   * Field name of the object which changed.
+   *
    * @var string
    */
   public $fieldName;
   /**
+   * ID of this change log.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#changeLog".
+   *
    * @var string
    */
   public $kind;
   /**
+   * New value of the object field.
+   *
    * @var string
    */
   public $newValue;
   /**
+   * ID of the object of this change log. The object could be a campaign,
+   * placement, ad, or other type.
+   *
    * @var string
    */
   public $objectId;
   /**
+   * Object type of the change log.
+   *
    * @var string
    */
   public $objectType;
   /**
+   * Old value of the object field.
+   *
    * @var string
    */
   public $oldValue;
   /**
+   * Subaccount ID of the modified object.
+   *
    * @var string
    */
   public $subaccountId;
   /**
+   * Transaction ID of this change log. When a single API call results in many
+   * changes, each change will have a separate ID in the change log but will
+   * share the same transactionId.
+   *
    * @var string
    */
   public $transactionId;
   /**
+   * ID of the user who modified the object.
+   *
    * @var string
    */
   public $userProfileId;
   /**
+   * User profile name of the user who modified the object.
+   *
    * @var string
    */
   public $userProfileName;
 
   /**
-   * @param string
+   * Account ID of the modified object.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -91,7 +123,9 @@ class ChangeLog extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * Action which caused the change.
+   *
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -105,7 +139,7 @@ class ChangeLog extends \Google\Model
     return $this->action;
   }
   /**
-   * @param string
+   * @param string $changeTime
    */
   public function setChangeTime($changeTime)
   {
@@ -119,7 +153,9 @@ class ChangeLog extends \Google\Model
     return $this->changeTime;
   }
   /**
-   * @param string
+   * Field name of the object which changed.
+   *
+   * @param string $fieldName
    */
   public function setFieldName($fieldName)
   {
@@ -133,7 +169,9 @@ class ChangeLog extends \Google\Model
     return $this->fieldName;
   }
   /**
-   * @param string
+   * ID of this change log.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -147,7 +185,10 @@ class ChangeLog extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#changeLog".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -161,7 +202,9 @@ class ChangeLog extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * New value of the object field.
+   *
+   * @param string $newValue
    */
   public function setNewValue($newValue)
   {
@@ -175,7 +218,10 @@ class ChangeLog extends \Google\Model
     return $this->newValue;
   }
   /**
-   * @param string
+   * ID of the object of this change log. The object could be a campaign,
+   * placement, ad, or other type.
+   *
+   * @param string $objectId
    */
   public function setObjectId($objectId)
   {
@@ -189,7 +235,9 @@ class ChangeLog extends \Google\Model
     return $this->objectId;
   }
   /**
-   * @param string
+   * Object type of the change log.
+   *
+   * @param string $objectType
    */
   public function setObjectType($objectType)
   {
@@ -203,7 +251,9 @@ class ChangeLog extends \Google\Model
     return $this->objectType;
   }
   /**
-   * @param string
+   * Old value of the object field.
+   *
+   * @param string $oldValue
    */
   public function setOldValue($oldValue)
   {
@@ -217,7 +267,9 @@ class ChangeLog extends \Google\Model
     return $this->oldValue;
   }
   /**
-   * @param string
+   * Subaccount ID of the modified object.
+   *
+   * @param string $subaccountId
    */
   public function setSubaccountId($subaccountId)
   {
@@ -231,7 +283,11 @@ class ChangeLog extends \Google\Model
     return $this->subaccountId;
   }
   /**
-   * @param string
+   * Transaction ID of this change log. When a single API call results in many
+   * changes, each change will have a separate ID in the change log but will
+   * share the same transactionId.
+   *
+   * @param string $transactionId
    */
   public function setTransactionId($transactionId)
   {
@@ -245,7 +301,9 @@ class ChangeLog extends \Google\Model
     return $this->transactionId;
   }
   /**
-   * @param string
+   * ID of the user who modified the object.
+   *
+   * @param string $userProfileId
    */
   public function setUserProfileId($userProfileId)
   {
@@ -259,7 +317,9 @@ class ChangeLog extends \Google\Model
     return $this->userProfileId;
   }
   /**
-   * @param string
+   * User profile name of the user who modified the object.
+   *
+   * @param string $userProfileName
    */
   public function setUserProfileName($userProfileName)
   {

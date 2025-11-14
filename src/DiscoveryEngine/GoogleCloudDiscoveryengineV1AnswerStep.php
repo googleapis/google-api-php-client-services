@@ -19,24 +19,48 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1AnswerStep extends \Google\Collection
 {
+  /**
+   * Unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Step is currently in progress.
+   */
+  public const STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * Step currently failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Step has succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
   protected $collection_key = 'actions';
   protected $actionsType = GoogleCloudDiscoveryengineV1AnswerStepAction::class;
   protected $actionsDataType = 'array';
   /**
+   * The description of the step.
+   *
    * @var string
    */
   public $description;
   /**
+   * The state of the step.
+   *
    * @var string
    */
   public $state;
   /**
+   * The thought of the step.
+   *
    * @var string
    */
   public $thought;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerStepAction[]
+   * Actions.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerStepAction[] $actions
    */
   public function setActions($actions)
   {
@@ -50,7 +74,9 @@ class GoogleCloudDiscoveryengineV1AnswerStep extends \Google\Collection
     return $this->actions;
   }
   /**
-   * @param string
+   * The description of the step.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -64,21 +90,27 @@ class GoogleCloudDiscoveryengineV1AnswerStep extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The state of the step.
+   *
+   * Accepted values: STATE_UNSPECIFIED, IN_PROGRESS, FAILED, SUCCEEDED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The thought of the step.
+   *
+   * @param string $thought
    */
   public function setThought($thought)
   {

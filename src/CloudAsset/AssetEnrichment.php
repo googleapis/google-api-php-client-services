@@ -23,7 +23,10 @@ class AssetEnrichment extends \Google\Model
   protected $resourceOwnersDataType = '';
 
   /**
-   * @param ResourceOwners
+   * The resource owners for a resource. Note that this field only contains the
+   * members that have "roles/owner" role in the resource's IAM Policy.
+   *
+   * @param ResourceOwners $resourceOwners
    */
   public function setResourceOwners(ResourceOwners $resourceOwners)
   {

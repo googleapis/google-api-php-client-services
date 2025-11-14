@@ -20,38 +20,69 @@ namespace Google\Service\BigLakeService;
 class Table extends \Google\Model
 {
   /**
+   * The type is not specified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Represents a table compatible with Hive Metastore tables.
+   */
+  public const TYPE_HIVE = 'HIVE';
+  /**
+   * Output only. The creation time of the table.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The deletion time of the table. Only set after the table is
+   * deleted.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * The checksum of a table object computed by the server based on the value of
+   * other fields. It may be sent on update requests to ensure the client has an
+   * up-to-date value before proceeding. It is only checked for update table
+   * operations.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. The time when this table is considered expired. Only set after
+   * the table is deleted.
+   *
    * @var string
    */
   public $expireTime;
   protected $hiveOptionsType = HiveTableOptions::class;
   protected $hiveOptionsDataType = '';
   /**
+   * Output only. The resource name. Format: projects/{project_id_or_number}/loc
+   * ations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{
+   * table_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * The table type.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. The last modification time of the table.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The creation time of the table.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -65,7 +96,10 @@ class Table extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The deletion time of the table. Only set after the table is
+   * deleted.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -79,7 +113,12 @@ class Table extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * The checksum of a table object computed by the server based on the value of
+   * other fields. It may be sent on update requests to ensure the client has an
+   * up-to-date value before proceeding. It is only checked for update table
+   * operations.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -93,7 +132,10 @@ class Table extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. The time when this table is considered expired. Only set after
+   * the table is deleted.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -107,7 +149,9 @@ class Table extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param HiveTableOptions
+   * Options of a Hive table.
+   *
+   * @param HiveTableOptions $hiveOptions
    */
   public function setHiveOptions(HiveTableOptions $hiveOptions)
   {
@@ -121,7 +165,11 @@ class Table extends \Google\Model
     return $this->hiveOptions;
   }
   /**
-   * @param string
+   * Output only. The resource name. Format: projects/{project_id_or_number}/loc
+   * ations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{
+   * table_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -135,21 +183,27 @@ class Table extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The table type.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, HIVE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. The last modification time of the table.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

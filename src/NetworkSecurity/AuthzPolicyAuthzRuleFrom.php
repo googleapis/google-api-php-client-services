@@ -26,7 +26,11 @@ class AuthzPolicyAuthzRuleFrom extends \Google\Collection
   protected $sourcesDataType = 'array';
 
   /**
-   * @param AuthzPolicyAuthzRuleFromRequestSource[]
+   * Optional. Describes the negated properties of request sources. Matches
+   * requests from sources that do not match the criteria specified in this
+   * field. At least one of sources or notSources must be specified.
+   *
+   * @param AuthzPolicyAuthzRuleFromRequestSource[] $notSources
    */
   public function setNotSources($notSources)
   {
@@ -40,7 +44,14 @@ class AuthzPolicyAuthzRuleFrom extends \Google\Collection
     return $this->notSources;
   }
   /**
-   * @param AuthzPolicyAuthzRuleFromRequestSource[]
+   * Optional. Describes the properties of a request's sources. At least one of
+   * sources or notSources must be specified. Limited to 1 source. A match
+   * occurs when ANY source (in sources or notSources) matches the request.
+   * Within a single source, the match follows AND semantics across fields and
+   * OR semantics within a single field, i.e. a match occurs when ANY principal
+   * matches AND ANY ipBlocks match.
+   *
+   * @param AuthzPolicyAuthzRuleFromRequestSource[] $sources
    */
   public function setSources($sources)
   {

@@ -20,16 +20,30 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategyTargetSpend extends \Google\Model
 {
   /**
+   * Output only. Maximum bid limit that can be set by the bid strategy. The
+   * limit applies to all keywords managed by the strategy.
+   *
    * @var string
    */
   public $cpcBidCeilingMicros;
   /**
+   * Output only. The spend target under which to maximize clicks. A TargetSpend
+   * bidder will attempt to spend the smaller of this value or the natural
+   * throttling spend amount. If not specified, the budget is used as the spend
+   * target. This field is deprecated and should no longer be used. See
+   * https://ads-developers.googleblog.com/2020/05/reminder-about-sunset-
+   * creation-of.html for details.
+   *
+   * @deprecated
    * @var string
    */
   public $targetSpendMicros;
 
   /**
-   * @param string
+   * Output only. Maximum bid limit that can be set by the bid strategy. The
+   * limit applies to all keywords managed by the strategy.
+   *
+   * @param string $cpcBidCeilingMicros
    */
   public function setCpcBidCeilingMicros($cpcBidCeilingMicros)
   {
@@ -43,13 +57,22 @@ class GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategyTargetSpend exten
     return $this->cpcBidCeilingMicros;
   }
   /**
-   * @param string
+   * Output only. The spend target under which to maximize clicks. A TargetSpend
+   * bidder will attempt to spend the smaller of this value or the natural
+   * throttling spend amount. If not specified, the budget is used as the spend
+   * target. This field is deprecated and should no longer be used. See
+   * https://ads-developers.googleblog.com/2020/05/reminder-about-sunset-
+   * creation-of.html for details.
+   *
+   * @deprecated
+   * @param string $targetSpendMicros
    */
   public function setTargetSpendMicros($targetSpendMicros)
   {
     $this->targetSpendMicros = $targetSpendMicros;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTargetSpendMicros()

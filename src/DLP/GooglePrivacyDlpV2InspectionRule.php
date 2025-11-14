@@ -25,7 +25,9 @@ class GooglePrivacyDlpV2InspectionRule extends \Google\Model
   protected $hotwordRuleDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2ExclusionRule
+   * Exclusion rule.
+   *
+   * @param GooglePrivacyDlpV2ExclusionRule $exclusionRule
    */
   public function setExclusionRule(GooglePrivacyDlpV2ExclusionRule $exclusionRule)
   {
@@ -39,7 +41,9 @@ class GooglePrivacyDlpV2InspectionRule extends \Google\Model
     return $this->exclusionRule;
   }
   /**
-   * @param GooglePrivacyDlpV2HotwordRule
+   * Hotword-based detection rule.
+   *
+   * @param GooglePrivacyDlpV2HotwordRule $hotwordRule
    */
   public function setHotwordRule(GooglePrivacyDlpV2HotwordRule $hotwordRule)
   {

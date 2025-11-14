@@ -24,7 +24,9 @@ class IosDeviceList extends \Google\Collection
   protected $iosDevicesDataType = 'array';
 
   /**
-   * @param IosDevice[]
+   * Required. A list of iOS devices.
+   *
+   * @param IosDevice[] $iosDevices
    */
   public function setIosDevices($iosDevices)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\DeveloperConnect;
 class GitProxyConfig extends \Google\Model
 {
   /**
+   * Optional. Setting this to true allows the git proxy to be used for
+   * performing git operations on the repositories linked in the connection.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Optional. Setting this to true allows the git proxy to be used for
+   * performing git operations on the repositories linked in the connection.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

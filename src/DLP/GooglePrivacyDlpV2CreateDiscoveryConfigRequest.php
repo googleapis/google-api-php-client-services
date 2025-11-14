@@ -20,6 +20,11 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2CreateDiscoveryConfigRequest extends \Google\Model
 {
   /**
+   * The config ID can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
    * @var string
    */
   public $configId;
@@ -27,7 +32,12 @@ class GooglePrivacyDlpV2CreateDiscoveryConfigRequest extends \Google\Model
   protected $discoveryConfigDataType = '';
 
   /**
-   * @param string
+   * The config ID can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
+   * @param string $configId
    */
   public function setConfigId($configId)
   {
@@ -41,7 +51,9 @@ class GooglePrivacyDlpV2CreateDiscoveryConfigRequest extends \Google\Model
     return $this->configId;
   }
   /**
-   * @param GooglePrivacyDlpV2DiscoveryConfig
+   * Required. The DiscoveryConfig to create.
+   *
+   * @param GooglePrivacyDlpV2DiscoveryConfig $discoveryConfig
    */
   public function setDiscoveryConfig(GooglePrivacyDlpV2DiscoveryConfig $discoveryConfig)
   {

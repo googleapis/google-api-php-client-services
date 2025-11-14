@@ -19,8 +19,15 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointConversationMeasureQaTagScore extends \Google\Model
 {
+  /**
+   * Average tag normalized score per tag.
+   *
+   * @var 
+   */
   public $averageTagNormalizedScore;
   /**
+   * Tag name.
+   *
    * @var string
    */
   public $tag;
@@ -34,7 +41,9 @@ class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointConver
     return $this->averageTagNormalizedScore;
   }
   /**
-   * @param string
+   * Tag name.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

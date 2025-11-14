@@ -19,23 +19,44 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest extends \Google\Model
 {
+  /**
+   * Implies the field mask: `name,id,revision_id,label_type,properties.*`
+   */
+  public const VIEW_LABEL_VIEW_BASIC = 'LABEL_VIEW_BASIC';
+  /**
+   * All possible fields.
+   */
+  public const VIEW_LABEL_VIEW_FULL = 'LABEL_VIEW_FULL';
   protected $enabledAppSettingsType = GoogleAppsDriveLabelsV2LabelEnabledAppSettings::class;
   protected $enabledAppSettingsDataType = '';
   /**
+   * Optional. The BCP-47 language code to use for evaluating localized field
+   * labels. When not specified, values in the default configured language will
+   * be used.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Optional. Set to `true` in order to use the user's admin credentials. The
+   * server will verify the user is an admin for the label before allowing
+   * access.
+   *
    * @var bool
    */
   public $useAdminAccess;
   /**
+   * Optional. When specified, only certain fields belonging to the indicated
+   * view will be returned.
+   *
    * @var string
    */
   public $view;
 
   /**
-   * @param GoogleAppsDriveLabelsV2LabelEnabledAppSettings
+   * Required. The new `EnabledAppSettings` value for the label.
+   *
+   * @param GoogleAppsDriveLabelsV2LabelEnabledAppSettings $enabledAppSettings
    */
   public function setEnabledAppSettings(GoogleAppsDriveLabelsV2LabelEnabledAppSettings $enabledAppSettings)
   {
@@ -49,7 +70,11 @@ class GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest extends \Googl
     return $this->enabledAppSettings;
   }
   /**
-   * @param string
+   * Optional. The BCP-47 language code to use for evaluating localized field
+   * labels. When not specified, values in the default configured language will
+   * be used.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -63,7 +88,11 @@ class GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest extends \Googl
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Optional. Set to `true` in order to use the user's admin credentials. The
+   * server will verify the user is an admin for the label before allowing
+   * access.
+   *
+   * @param bool $useAdminAccess
    */
   public function setUseAdminAccess($useAdminAccess)
   {
@@ -77,14 +106,19 @@ class GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest extends \Googl
     return $this->useAdminAccess;
   }
   /**
-   * @param string
+   * Optional. When specified, only certain fields belonging to the indicated
+   * view will be returned.
+   *
+   * Accepted values: LABEL_VIEW_BASIC, LABEL_VIEW_FULL
+   *
+   * @param self::VIEW_* $view
    */
   public function setView($view)
   {
     $this->view = $view;
   }
   /**
-   * @return string
+   * @return self::VIEW_*
    */
   public function getView()
   {

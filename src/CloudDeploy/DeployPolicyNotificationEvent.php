@@ -20,24 +20,73 @@ namespace Google\Service\CloudDeploy;
 class DeployPolicyNotificationEvent extends \Google\Model
 {
   /**
+   * Type is unspecified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * A Pub/Sub notification failed to be sent.
+   */
+  public const TYPE_TYPE_PUBSUB_NOTIFICATION_FAILURE = 'TYPE_PUBSUB_NOTIFICATION_FAILURE';
+  /**
+   * Resource state changed.
+   */
+  public const TYPE_TYPE_RESOURCE_STATE_CHANGE = 'TYPE_RESOURCE_STATE_CHANGE';
+  /**
+   * A process aborted.
+   */
+  public const TYPE_TYPE_PROCESS_ABORTED = 'TYPE_PROCESS_ABORTED';
+  /**
+   * Restriction check failed.
+   */
+  public const TYPE_TYPE_RESTRICTION_VIOLATED = 'TYPE_RESTRICTION_VIOLATED';
+  /**
+   * Resource deleted.
+   */
+  public const TYPE_TYPE_RESOURCE_DELETED = 'TYPE_RESOURCE_DELETED';
+  /**
+   * Rollout updated.
+   */
+  public const TYPE_TYPE_ROLLOUT_UPDATE = 'TYPE_ROLLOUT_UPDATE';
+  /**
+   * Deploy Policy evaluation.
+   */
+  public const TYPE_TYPE_DEPLOY_POLICY_EVALUATION = 'TYPE_DEPLOY_POLICY_EVALUATION';
+  /**
+   * Deprecated: This field is never used. Use release_render log type instead.
+   *
+   * @deprecated
+   */
+  public const TYPE_TYPE_RENDER_STATUES_CHANGE = 'TYPE_RENDER_STATUES_CHANGE';
+  /**
+   * The name of the `DeployPolicy`.
+   *
    * @var string
    */
   public $deployPolicy;
   /**
+   * Unique identifier of the deploy policy.
+   *
    * @var string
    */
   public $deployPolicyUid;
   /**
+   * Debug message for when a deploy policy fails to send a pub/sub
+   * notification.
+   *
    * @var string
    */
   public $message;
   /**
+   * Type of this notification, e.g. for a Pub/Sub failure.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The name of the `DeployPolicy`.
+   *
+   * @param string $deployPolicy
    */
   public function setDeployPolicy($deployPolicy)
   {
@@ -51,7 +100,9 @@ class DeployPolicyNotificationEvent extends \Google\Model
     return $this->deployPolicy;
   }
   /**
-   * @param string
+   * Unique identifier of the deploy policy.
+   *
+   * @param string $deployPolicyUid
    */
   public function setDeployPolicyUid($deployPolicyUid)
   {
@@ -65,7 +116,10 @@ class DeployPolicyNotificationEvent extends \Google\Model
     return $this->deployPolicyUid;
   }
   /**
-   * @param string
+   * Debug message for when a deploy policy fails to send a pub/sub
+   * notification.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -79,14 +133,21 @@ class DeployPolicyNotificationEvent extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Type of this notification, e.g. for a Pub/Sub failure.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, TYPE_PUBSUB_NOTIFICATION_FAILURE,
+   * TYPE_RESOURCE_STATE_CHANGE, TYPE_PROCESS_ABORTED,
+   * TYPE_RESTRICTION_VIOLATED, TYPE_RESOURCE_DELETED, TYPE_ROLLOUT_UPDATE,
+   * TYPE_DEPLOY_POLICY_EVALUATION, TYPE_RENDER_STATUES_CHANGE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

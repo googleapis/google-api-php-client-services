@@ -20,6 +20,8 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ControlPromoteAction extends \Google\Model
 {
   /**
+   * Required. Data store with which this promotion is attached to.
+   *
    * @var string
    */
   public $dataStore;
@@ -27,7 +29,9 @@ class GoogleCloudDiscoveryengineV1ControlPromoteAction extends \Google\Model
   protected $searchLinkPromotionDataType = '';
 
   /**
-   * @param string
+   * Required. Data store with which this promotion is attached to.
+   *
+   * @param string $dataStore
    */
   public function setDataStore($dataStore)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDiscoveryengineV1ControlPromoteAction extends \Google\Model
     return $this->dataStore;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchLinkPromotion
+   * Required. Promotion attached to this action.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchLinkPromotion $searchLinkPromotion
    */
   public function setSearchLinkPromotion(GoogleCloudDiscoveryengineV1SearchLinkPromotion $searchLinkPromotion)
   {

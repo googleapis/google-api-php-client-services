@@ -20,34 +20,65 @@ namespace Google\Service\Container;
 class UpdateMasterRequest extends \Google\Model
 {
   /**
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $clusterId;
   /**
+   * Required. The Kubernetes version to change the master to. Users may specify
+   * either explicit versions offered by Kubernetes Engine or version aliases,
+   * which have the following behavior: - "latest": picks the highest valid
+   * Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in
+   * the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y
+   * version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks
+   * the default Kubernetes version
+   *
    * @var string
    */
   public $masterVersion;
   /**
+   * The name (project, location, cluster) of the cluster to update. Specified
+   * in the format `projects/locations/clusters`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $projectId;
   /**
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {
     $this->clusterId = $clusterId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getClusterId()
@@ -55,7 +86,15 @@ class UpdateMasterRequest extends \Google\Model
     return $this->clusterId;
   }
   /**
-   * @param string
+   * Required. The Kubernetes version to change the master to. Users may specify
+   * either explicit versions offered by Kubernetes Engine or version aliases,
+   * which have the following behavior: - "latest": picks the highest valid
+   * Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in
+   * the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y
+   * version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks
+   * the default Kubernetes version
+   *
+   * @param string $masterVersion
    */
   public function setMasterVersion($masterVersion)
   {
@@ -69,7 +108,10 @@ class UpdateMasterRequest extends \Google\Model
     return $this->masterVersion;
   }
   /**
-   * @param string
+   * The name (project, location, cluster) of the cluster to update. Specified
+   * in the format `projects/locations/clusters`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,13 +125,19 @@ class UpdateMasterRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
     $this->projectId = $projectId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProjectId()
@@ -97,13 +145,20 @@ class UpdateMasterRequest extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
+   * @param string $zone
    */
   public function setZone($zone)
   {
     $this->zone = $zone;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getZone()

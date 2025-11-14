@@ -22,18 +22,26 @@ class IdpCredential extends \Google\Model
   protected $dsaKeyInfoType = DsaPublicKeyInfo::class;
   protected $dsaKeyInfoDataType = '';
   /**
+   * Output only. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the
+   * credential.
+   *
    * @var string
    */
   public $name;
   protected $rsaKeyInfoType = RsaPublicKeyInfo::class;
   protected $rsaKeyInfoDataType = '';
   /**
+   * Output only. Time when the `IdpCredential` was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param DsaPublicKeyInfo
+   * Output only. Information of a DSA public key.
+   *
+   * @param DsaPublicKeyInfo $dsaKeyInfo
    */
   public function setDsaKeyInfo(DsaPublicKeyInfo $dsaKeyInfo)
   {
@@ -47,7 +55,11 @@ class IdpCredential extends \Google\Model
     return $this->dsaKeyInfo;
   }
   /**
-   * @param string
+   * Output only. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the
+   * credential.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +73,9 @@ class IdpCredential extends \Google\Model
     return $this->name;
   }
   /**
-   * @param RsaPublicKeyInfo
+   * Output only. Information of a RSA public key.
+   *
+   * @param RsaPublicKeyInfo $rsaKeyInfo
    */
   public function setRsaKeyInfo(RsaPublicKeyInfo $rsaKeyInfo)
   {
@@ -75,7 +89,9 @@ class IdpCredential extends \Google\Model
     return $this->rsaKeyInfo;
   }
   /**
-   * @param string
+   * Output only. Time when the `IdpCredential` was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

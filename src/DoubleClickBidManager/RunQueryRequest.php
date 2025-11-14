@@ -23,7 +23,10 @@ class RunQueryRequest extends \Google\Model
   protected $dataRangeDataType = '';
 
   /**
-   * @param DataRange
+   * The date range used by the query to generate the report. If unspecified,
+   * the query's original data_range is used.
+   *
+   * @param DataRange $dataRange
    */
   public function setDataRange(DataRange $dataRange)
   {

@@ -23,7 +23,9 @@ class PolicyViolationInfo extends \Google\Model
   protected $orgPolicyViolationInfoDataType = '';
 
   /**
-   * @param OrgPolicyViolationInfo
+   * Indicates the orgpolicy violations for this resource.
+   *
+   * @param OrgPolicyViolationInfo $orgPolicyViolationInfo
    */
   public function setOrgPolicyViolationInfo(OrgPolicyViolationInfo $orgPolicyViolationInfo)
   {

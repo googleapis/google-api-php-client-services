@@ -20,40 +20,132 @@ namespace Google\Service\MyBusinessLodging;
 class Connectivity extends \Google\Model
 {
   /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const FREE_WIFI_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const FREE_WIFI_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const FREE_WIFI_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const FREE_WIFI_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const PUBLIC_AREA_WIFI_AVAILABLE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const PUBLIC_AREA_WIFI_AVAILABLE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const PUBLIC_AREA_WIFI_AVAILABLE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const PUBLIC_AREA_WIFI_AVAILABLE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const PUBLIC_INTERNET_TERMINAL_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const PUBLIC_INTERNET_TERMINAL_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const PUBLIC_INTERNET_TERMINAL_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const PUBLIC_INTERNET_TERMINAL_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const WIFI_AVAILABLE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const WIFI_AVAILABLE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const WIFI_AVAILABLE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const WIFI_AVAILABLE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Free wifi. The hotel offers guests wifi for free.
+   *
    * @var bool
    */
   public $freeWifi;
   /**
+   * Free wifi exception.
+   *
    * @var string
    */
   public $freeWifiException;
   /**
+   * Public area wifi available. Guests have the ability to wirelessly connect
+   * to the internet in the areas of the hotel accessible to anyone. Can be free
+   * or for a fee.
+   *
    * @var bool
    */
   public $publicAreaWifiAvailable;
   /**
+   * Public area wifi available exception.
+   *
    * @var string
    */
   public $publicAreaWifiAvailableException;
   /**
+   * Public internet terminal. An area of the hotel supplied with computers and
+   * designated for the purpose of providing guests with the ability to access
+   * the internet.
+   *
    * @var bool
    */
   public $publicInternetTerminal;
   /**
+   * Public internet terminal exception.
+   *
    * @var string
    */
   public $publicInternetTerminalException;
   /**
+   * Wifi available. The hotel provides the ability for guests to wirelessly
+   * connect to the internet. Can be in the public areas of the hotel and/or in
+   * the guest rooms. Can be free or for a fee.
+   *
    * @var bool
    */
   public $wifiAvailable;
   /**
+   * Wifi available exception.
+   *
    * @var string
    */
   public $wifiAvailableException;
 
   /**
-   * @param bool
+   * Free wifi. The hotel offers guests wifi for free.
+   *
+   * @param bool $freeWifi
    */
   public function setFreeWifi($freeWifi)
   {
@@ -67,21 +159,30 @@ class Connectivity extends \Google\Model
     return $this->freeWifi;
   }
   /**
-   * @param string
+   * Free wifi exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::FREE_WIFI_EXCEPTION_* $freeWifiException
    */
   public function setFreeWifiException($freeWifiException)
   {
     $this->freeWifiException = $freeWifiException;
   }
   /**
-   * @return string
+   * @return self::FREE_WIFI_EXCEPTION_*
    */
   public function getFreeWifiException()
   {
     return $this->freeWifiException;
   }
   /**
-   * @param bool
+   * Public area wifi available. Guests have the ability to wirelessly connect
+   * to the internet in the areas of the hotel accessible to anyone. Can be free
+   * or for a fee.
+   *
+   * @param bool $publicAreaWifiAvailable
    */
   public function setPublicAreaWifiAvailable($publicAreaWifiAvailable)
   {
@@ -95,21 +196,30 @@ class Connectivity extends \Google\Model
     return $this->publicAreaWifiAvailable;
   }
   /**
-   * @param string
+   * Public area wifi available exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::PUBLIC_AREA_WIFI_AVAILABLE_EXCEPTION_* $publicAreaWifiAvailableException
    */
   public function setPublicAreaWifiAvailableException($publicAreaWifiAvailableException)
   {
     $this->publicAreaWifiAvailableException = $publicAreaWifiAvailableException;
   }
   /**
-   * @return string
+   * @return self::PUBLIC_AREA_WIFI_AVAILABLE_EXCEPTION_*
    */
   public function getPublicAreaWifiAvailableException()
   {
     return $this->publicAreaWifiAvailableException;
   }
   /**
-   * @param bool
+   * Public internet terminal. An area of the hotel supplied with computers and
+   * designated for the purpose of providing guests with the ability to access
+   * the internet.
+   *
+   * @param bool $publicInternetTerminal
    */
   public function setPublicInternetTerminal($publicInternetTerminal)
   {
@@ -123,21 +233,30 @@ class Connectivity extends \Google\Model
     return $this->publicInternetTerminal;
   }
   /**
-   * @param string
+   * Public internet terminal exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::PUBLIC_INTERNET_TERMINAL_EXCEPTION_* $publicInternetTerminalException
    */
   public function setPublicInternetTerminalException($publicInternetTerminalException)
   {
     $this->publicInternetTerminalException = $publicInternetTerminalException;
   }
   /**
-   * @return string
+   * @return self::PUBLIC_INTERNET_TERMINAL_EXCEPTION_*
    */
   public function getPublicInternetTerminalException()
   {
     return $this->publicInternetTerminalException;
   }
   /**
-   * @param bool
+   * Wifi available. The hotel provides the ability for guests to wirelessly
+   * connect to the internet. Can be in the public areas of the hotel and/or in
+   * the guest rooms. Can be free or for a fee.
+   *
+   * @param bool $wifiAvailable
    */
   public function setWifiAvailable($wifiAvailable)
   {
@@ -151,14 +270,19 @@ class Connectivity extends \Google\Model
     return $this->wifiAvailable;
   }
   /**
-   * @param string
+   * Wifi available exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::WIFI_AVAILABLE_EXCEPTION_* $wifiAvailableException
    */
   public function setWifiAvailableException($wifiAvailableException)
   {
     $this->wifiAvailableException = $wifiAvailableException;
   }
   /**
-   * @return string
+   * @return self::WIFI_AVAILABLE_EXCEPTION_*
    */
   public function getWifiAvailableException()
   {

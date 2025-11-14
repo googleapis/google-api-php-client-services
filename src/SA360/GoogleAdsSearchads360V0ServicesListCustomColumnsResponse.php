@@ -24,7 +24,9 @@ class GoogleAdsSearchads360V0ServicesListCustomColumnsResponse extends \Google\C
   protected $customColumnsDataType = 'array';
 
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   * The CustomColumns owned by the provided customer.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCustomColumn[] $customColumns
    */
   public function setCustomColumns($customColumns)
   {

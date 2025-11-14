@@ -23,7 +23,10 @@ class ListMatcher extends \Google\Model
   protected $oneOfDataType = '';
 
   /**
-   * @param ValueMatcher
+   * If specified, at least one of the values in the list must match the value
+   * specified.
+   *
+   * @param ValueMatcher $oneOf
    */
   public function setOneOf(ValueMatcher $oneOf)
   {

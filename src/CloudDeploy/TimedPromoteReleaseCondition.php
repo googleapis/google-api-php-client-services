@@ -21,6 +21,8 @@ class TimedPromoteReleaseCondition extends \Google\Collection
 {
   protected $collection_key = 'targetsList';
   /**
+   * Output only. When the next scheduled promotion(s) will occur.
+   *
    * @var string
    */
   public $nextPromotionTime;
@@ -28,7 +30,9 @@ class TimedPromoteReleaseCondition extends \Google\Collection
   protected $targetsListDataType = 'array';
 
   /**
-   * @param string
+   * Output only. When the next scheduled promotion(s) will occur.
+   *
+   * @param string $nextPromotionTime
    */
   public function setNextPromotionTime($nextPromotionTime)
   {
@@ -42,7 +46,9 @@ class TimedPromoteReleaseCondition extends \Google\Collection
     return $this->nextPromotionTime;
   }
   /**
-   * @param Targets[]
+   * Output only. A list of targets involved in the upcoming timed promotion(s).
+   *
+   * @param Targets[] $targetsList
    */
   public function setTargetsList($targetsList)
   {

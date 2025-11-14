@@ -22,6 +22,14 @@ class SparkProperties extends \Google\Model
   protected $metastoreServiceConfigType = MetastoreServiceConfig::class;
   protected $metastoreServiceConfigDataType = '';
   /**
+   * Output only. The account ID of the service created for the purpose of this
+   * connection. The service account does not have any permissions associated
+   * with it when it is created. After creation, customers delegate permissions
+   * to the service account. When the connection is used in the context of a
+   * stored procedure for Apache Spark in BigQuery, the service account is used
+   * to connect to the desired resources in Google Cloud. The account ID is in
+   * the form of: bqcx--@gcp-sa-bigquery-consp.iam.gserviceaccount.com
+   *
    * @var string
    */
   public $serviceAccountId;
@@ -29,7 +37,9 @@ class SparkProperties extends \Google\Model
   protected $sparkHistoryServerConfigDataType = '';
 
   /**
-   * @param MetastoreServiceConfig
+   * Optional. Dataproc Metastore Service configuration for the connection.
+   *
+   * @param MetastoreServiceConfig $metastoreServiceConfig
    */
   public function setMetastoreServiceConfig(MetastoreServiceConfig $metastoreServiceConfig)
   {
@@ -43,7 +53,15 @@ class SparkProperties extends \Google\Model
     return $this->metastoreServiceConfig;
   }
   /**
-   * @param string
+   * Output only. The account ID of the service created for the purpose of this
+   * connection. The service account does not have any permissions associated
+   * with it when it is created. After creation, customers delegate permissions
+   * to the service account. When the connection is used in the context of a
+   * stored procedure for Apache Spark in BigQuery, the service account is used
+   * to connect to the desired resources in Google Cloud. The account ID is in
+   * the form of: bqcx--@gcp-sa-bigquery-consp.iam.gserviceaccount.com
+   *
+   * @param string $serviceAccountId
    */
   public function setServiceAccountId($serviceAccountId)
   {
@@ -57,7 +75,9 @@ class SparkProperties extends \Google\Model
     return $this->serviceAccountId;
   }
   /**
-   * @param SparkHistoryServerConfig
+   * Optional. Spark History Server configuration for the connection.
+   *
+   * @param SparkHistoryServerConfig $sparkHistoryServerConfig
    */
   public function setSparkHistoryServerConfig(SparkHistoryServerConfig $sparkHistoryServerConfig)
   {

@@ -20,10 +20,18 @@ namespace Google\Service\Fcmdata;
 class GoogleFirebaseFcmDataV1beta1Data extends \Google\Model
 {
   /**
+   * Count of messages accepted by FCM intended for Android devices. The
+   * targeted device must have opted in to the collection of usage and
+   * diagnostic information.
+   *
    * @var string
    */
   public $countMessagesAccepted;
   /**
+   * Count of notifications accepted by FCM intended for Android devices. The
+   * targeted device must have opted in to the collection of usage and
+   * diagnostic information.
+   *
    * @var string
    */
   public $countNotificationsAccepted;
@@ -37,7 +45,11 @@ class GoogleFirebaseFcmDataV1beta1Data extends \Google\Model
   protected $proxyNotificationInsightPercentsDataType = '';
 
   /**
-   * @param string
+   * Count of messages accepted by FCM intended for Android devices. The
+   * targeted device must have opted in to the collection of usage and
+   * diagnostic information.
+   *
+   * @param string $countMessagesAccepted
    */
   public function setCountMessagesAccepted($countMessagesAccepted)
   {
@@ -51,7 +63,11 @@ class GoogleFirebaseFcmDataV1beta1Data extends \Google\Model
     return $this->countMessagesAccepted;
   }
   /**
-   * @param string
+   * Count of notifications accepted by FCM intended for Android devices. The
+   * targeted device must have opted in to the collection of usage and
+   * diagnostic information.
+   *
+   * @param string $countNotificationsAccepted
    */
   public function setCountNotificationsAccepted($countNotificationsAccepted)
   {
@@ -65,7 +81,10 @@ class GoogleFirebaseFcmDataV1beta1Data extends \Google\Model
     return $this->countNotificationsAccepted;
   }
   /**
-   * @param GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents
+   * Additional information about delivery performance for messages that were
+   * successfully delivered.
+   *
+   * @param GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents $deliveryPerformancePercents
    */
   public function setDeliveryPerformancePercents(GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents $deliveryPerformancePercents)
   {
@@ -79,7 +98,9 @@ class GoogleFirebaseFcmDataV1beta1Data extends \Google\Model
     return $this->deliveryPerformancePercents;
   }
   /**
-   * @param GoogleFirebaseFcmDataV1beta1MessageInsightPercents
+   * Additional general insights about message delivery.
+   *
+   * @param GoogleFirebaseFcmDataV1beta1MessageInsightPercents $messageInsightPercents
    */
   public function setMessageInsightPercents(GoogleFirebaseFcmDataV1beta1MessageInsightPercents $messageInsightPercents)
   {
@@ -93,7 +114,9 @@ class GoogleFirebaseFcmDataV1beta1Data extends \Google\Model
     return $this->messageInsightPercents;
   }
   /**
-   * @param GoogleFirebaseFcmDataV1beta1MessageOutcomePercents
+   * Mutually exclusive breakdown of message delivery outcomes.
+   *
+   * @param GoogleFirebaseFcmDataV1beta1MessageOutcomePercents $messageOutcomePercents
    */
   public function setMessageOutcomePercents(GoogleFirebaseFcmDataV1beta1MessageOutcomePercents $messageOutcomePercents)
   {
@@ -107,7 +130,9 @@ class GoogleFirebaseFcmDataV1beta1Data extends \Google\Model
     return $this->messageOutcomePercents;
   }
   /**
-   * @param GoogleFirebaseFcmDataV1beta1ProxyNotificationInsightPercents
+   * Additional insights about proxy notification delivery.
+   *
+   * @param GoogleFirebaseFcmDataV1beta1ProxyNotificationInsightPercents $proxyNotificationInsightPercents
    */
   public function setProxyNotificationInsightPercents(GoogleFirebaseFcmDataV1beta1ProxyNotificationInsightPercents $proxyNotificationInsightPercents)
   {

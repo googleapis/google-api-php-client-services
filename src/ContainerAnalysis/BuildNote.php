@@ -20,12 +20,16 @@ namespace Google\Service\ContainerAnalysis;
 class BuildNote extends \Google\Model
 {
   /**
+   * Required. Immutable. Version of the builder which produced this build.
+   *
    * @var string
    */
   public $builderVersion;
 
   /**
-   * @param string
+   * Required. Immutable. Version of the builder which produced this build.
+   *
+   * @param string $builderVersion
    */
   public function setBuilderVersion($builderVersion)
   {

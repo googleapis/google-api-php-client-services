@@ -29,7 +29,12 @@ class Deployment extends \Google\Model
   protected $zipDataType = '';
 
   /**
-   * @param CloudBuildOptions
+   * Options for any Google Cloud Build builds created as a part of this
+   * deployment.These options will only be used if a new build is created, such
+   * as when deploying to the App Engine flexible environment using files or
+   * zip.
+   *
+   * @param CloudBuildOptions $cloudBuildOptions
    */
   public function setCloudBuildOptions(CloudBuildOptions $cloudBuildOptions)
   {
@@ -43,7 +48,10 @@ class Deployment extends \Google\Model
     return $this->cloudBuildOptions;
   }
   /**
-   * @param ContainerInfo
+   * The Docker image for the container that runs the version. Only applicable
+   * for instances running in the App Engine flexible environment.
+   *
+   * @param ContainerInfo $container
    */
   public function setContainer(ContainerInfo $container)
   {
@@ -57,7 +65,11 @@ class Deployment extends \Google\Model
     return $this->container;
   }
   /**
-   * @param FileInfo[]
+   * Manifest of the files stored in Google Cloud Storage that are included as
+   * part of this version. All files must be readable using the credentials
+   * supplied with this call.
+   *
+   * @param FileInfo[] $files
    */
   public function setFiles($files)
   {
@@ -71,7 +83,9 @@ class Deployment extends \Google\Model
     return $this->files;
   }
   /**
-   * @param ZipInfo
+   * The zip file for this deployment, if this is a zip deployment.
+   *
+   * @param ZipInfo $zip
    */
   public function setZip(ZipInfo $zip)
   {

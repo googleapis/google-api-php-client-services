@@ -23,16 +23,24 @@ class ListCaPoolsResponse extends \Google\Collection
   protected $caPoolsType = CaPool::class;
   protected $caPoolsDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass this value in
+   * ListCertificateAuthoritiesRequest.page_token to retrieve the next page of
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * A list of locations (e.g. "us-west1") that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param CaPool[]
+   * The list of CaPools.
+   *
+   * @param CaPool[] $caPools
    */
   public function setCaPools($caPools)
   {
@@ -46,7 +54,11 @@ class ListCaPoolsResponse extends \Google\Collection
     return $this->caPools;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass this value in
+   * ListCertificateAuthoritiesRequest.page_token to retrieve the next page of
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListCaPoolsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * A list of locations (e.g. "us-west1") that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

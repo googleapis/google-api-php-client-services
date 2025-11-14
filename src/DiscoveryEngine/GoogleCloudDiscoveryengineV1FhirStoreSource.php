@@ -21,24 +21,48 @@ class GoogleCloudDiscoveryengineV1FhirStoreSource extends \Google\Collection
 {
   protected $collection_key = 'resourceTypes';
   /**
+   * Required. The full resource name of the FHIR store to import data from, in
+   * the format of `projects/{project}/locations/{location}/datasets/{dataset}/f
+   * hirStores/{fhir_store}`.
+   *
    * @var string
    */
   public $fhirStore;
   /**
+   * Intermediate Cloud Storage directory used for the import with a length
+   * limit of 2,000 characters. Can be specified if one wants to have the
+   * FhirStore export to a specific Cloud Storage directory.
+   *
    * @var string
    */
   public $gcsStagingDir;
   /**
+   * The FHIR resource types to import. The resource types should be a subset of
+   * all [supported FHIR resource types](https://cloud.google.com/generative-ai-
+   * app-builder/docs/fhir-schema-reference#resource-level-specification).
+   * Default to all supported FHIR resource types if empty.
+   *
    * @var string[]
    */
   public $resourceTypes;
   /**
+   * Optional. Whether to update the DataStore schema to the latest predefined
+   * schema. If true, the DataStore schema will be updated to include any FHIR
+   * fields or resource types that have been added since the last import and
+   * corresponding FHIR resources will be imported from the FHIR store. Note
+   * this field cannot be used in conjunction with `resource_types`. It should
+   * be used after initial import.
+   *
    * @var bool
    */
   public $updateFromLatestPredefinedSchema;
 
   /**
-   * @param string
+   * Required. The full resource name of the FHIR store to import data from, in
+   * the format of `projects/{project}/locations/{location}/datasets/{dataset}/f
+   * hirStores/{fhir_store}`.
+   *
+   * @param string $fhirStore
    */
   public function setFhirStore($fhirStore)
   {
@@ -52,7 +76,11 @@ class GoogleCloudDiscoveryengineV1FhirStoreSource extends \Google\Collection
     return $this->fhirStore;
   }
   /**
-   * @param string
+   * Intermediate Cloud Storage directory used for the import with a length
+   * limit of 2,000 characters. Can be specified if one wants to have the
+   * FhirStore export to a specific Cloud Storage directory.
+   *
+   * @param string $gcsStagingDir
    */
   public function setGcsStagingDir($gcsStagingDir)
   {
@@ -66,7 +94,12 @@ class GoogleCloudDiscoveryengineV1FhirStoreSource extends \Google\Collection
     return $this->gcsStagingDir;
   }
   /**
-   * @param string[]
+   * The FHIR resource types to import. The resource types should be a subset of
+   * all [supported FHIR resource types](https://cloud.google.com/generative-ai-
+   * app-builder/docs/fhir-schema-reference#resource-level-specification).
+   * Default to all supported FHIR resource types if empty.
+   *
+   * @param string[] $resourceTypes
    */
   public function setResourceTypes($resourceTypes)
   {
@@ -80,7 +113,14 @@ class GoogleCloudDiscoveryengineV1FhirStoreSource extends \Google\Collection
     return $this->resourceTypes;
   }
   /**
-   * @param bool
+   * Optional. Whether to update the DataStore schema to the latest predefined
+   * schema. If true, the DataStore schema will be updated to include any FHIR
+   * fields or resource types that have been added since the last import and
+   * corresponding FHIR resources will be imported from the FHIR store. Note
+   * this field cannot be used in conjunction with `resource_types`. It should
+   * be used after initial import.
+   *
+   * @param bool $updateFromLatestPredefinedSchema
    */
   public function setUpdateFromLatestPredefinedSchema($updateFromLatestPredefinedSchema)
   {

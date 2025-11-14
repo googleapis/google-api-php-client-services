@@ -24,7 +24,9 @@ class ListPerfSampleSeriesResponse extends \Google\Collection
   protected $perfSampleSeriesDataType = 'array';
 
   /**
-   * @param PerfSampleSeries[]
+   * The resulting PerfSampleSeries sorted by id
+   *
+   * @param PerfSampleSeries[] $perfSampleSeries
    */
   public function setPerfSampleSeries($perfSampleSeries)
   {

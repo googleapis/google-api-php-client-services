@@ -30,7 +30,9 @@ class Comment extends \Google\Collection
   protected $suggestionDataType = '';
 
   /**
-   * @param Assignment
+   * A change on an assignment.
+   *
+   * @param Assignment $assignment
    */
   public function setAssignment(Assignment $assignment)
   {
@@ -44,7 +46,9 @@ class Comment extends \Google\Collection
     return $this->assignment;
   }
   /**
-   * @param User[]
+   * Users who are mentioned in this comment.
+   *
+   * @param User[] $mentionedUsers
    */
   public function setMentionedUsers($mentionedUsers)
   {
@@ -58,7 +62,9 @@ class Comment extends \Google\Collection
     return $this->mentionedUsers;
   }
   /**
-   * @param Post
+   * A change on a regular posted comment.
+   *
+   * @param Post $post
    */
   public function setPost(Post $post)
   {
@@ -72,7 +78,9 @@ class Comment extends \Google\Collection
     return $this->post;
   }
   /**
-   * @param Suggestion
+   * A change on a suggestion.
+   *
+   * @param Suggestion $suggestion
    */
   public function setSuggestion(Suggestion $suggestion)
   {

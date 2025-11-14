@@ -21,12 +21,16 @@ class AdPolicyTopicEvidenceDestinationTextList extends \Google\Collection
 {
   protected $collection_key = 'destinationTexts';
   /**
+   * Destination text that caused the policy finding.
+   *
    * @var string[]
    */
   public $destinationTexts;
 
   /**
-   * @param string[]
+   * Destination text that caused the policy finding.
+   *
+   * @param string[] $destinationTexts
    */
   public function setDestinationTexts($destinationTexts)
   {

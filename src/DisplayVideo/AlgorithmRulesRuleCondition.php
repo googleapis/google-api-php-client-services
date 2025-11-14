@@ -26,7 +26,10 @@ class AlgorithmRulesRuleCondition extends \Google\Collection
   protected $signalComparisonsDataType = 'array';
 
   /**
-   * @param AlgorithmRulesSignalValue
+   * The value returned if the `signalComparisons` condition evaluates to
+   * `TRUE`.
+   *
+   * @param AlgorithmRulesSignalValue $returnValue
    */
   public function setReturnValue(AlgorithmRulesSignalValue $returnValue)
   {
@@ -40,7 +43,10 @@ class AlgorithmRulesRuleCondition extends \Google\Collection
     return $this->returnValue;
   }
   /**
-   * @param AlgorithmRulesSignalComparison[]
+   * List of comparisons that build `if` statement condition. The comparisons
+   * are combined into a single condition with `AND` logical operators.
+   *
+   * @param AlgorithmRulesSignalComparison[] $signalComparisons
    */
   public function setSignalComparisons($signalComparisons)
   {

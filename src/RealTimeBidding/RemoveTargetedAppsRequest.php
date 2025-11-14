@@ -21,12 +21,20 @@ class RemoveTargetedAppsRequest extends \Google\Collection
 {
   protected $collection_key = 'appIds';
   /**
+   * A list of app IDs to stop targeting in the pretargeting configuration.
+   * These values will be removed from the list of targeted app IDs in
+   * PretargetingConfig.appTargeting.mobileAppTargeting.values.
+   *
    * @var string[]
    */
   public $appIds;
 
   /**
-   * @param string[]
+   * A list of app IDs to stop targeting in the pretargeting configuration.
+   * These values will be removed from the list of targeted app IDs in
+   * PretargetingConfig.appTargeting.mobileAppTargeting.values.
+   *
+   * @param string[] $appIds
    */
   public function setAppIds($appIds)
   {

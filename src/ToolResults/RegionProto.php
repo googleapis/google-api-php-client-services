@@ -20,24 +20,34 @@ namespace Google\Service\ToolResults;
 class RegionProto extends \Google\Model
 {
   /**
+   * The height, in pixels. Always set.
+   *
    * @var int
    */
   public $heightPx;
   /**
+   * The left side of the rectangle, in pixels. Always set.
+   *
    * @var int
    */
   public $leftPx;
   /**
+   * The top of the rectangle, in pixels. Always set.
+   *
    * @var int
    */
   public $topPx;
   /**
+   * The width, in pixels. Always set.
+   *
    * @var int
    */
   public $widthPx;
 
   /**
-   * @param int
+   * The height, in pixels. Always set.
+   *
+   * @param int $heightPx
    */
   public function setHeightPx($heightPx)
   {
@@ -51,7 +61,9 @@ class RegionProto extends \Google\Model
     return $this->heightPx;
   }
   /**
-   * @param int
+   * The left side of the rectangle, in pixels. Always set.
+   *
+   * @param int $leftPx
    */
   public function setLeftPx($leftPx)
   {
@@ -65,7 +77,9 @@ class RegionProto extends \Google\Model
     return $this->leftPx;
   }
   /**
-   * @param int
+   * The top of the rectangle, in pixels. Always set.
+   *
+   * @param int $topPx
    */
   public function setTopPx($topPx)
   {
@@ -79,7 +93,9 @@ class RegionProto extends \Google\Model
     return $this->topPx;
   }
   /**
-   * @param int
+   * The width, in pixels. Always set.
+   *
+   * @param int $widthPx
    */
   public function setWidthPx($widthPx)
   {

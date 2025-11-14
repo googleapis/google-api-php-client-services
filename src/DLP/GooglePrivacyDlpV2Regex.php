@@ -21,16 +21,26 @@ class GooglePrivacyDlpV2Regex extends \Google\Collection
 {
   protected $collection_key = 'groupIndexes';
   /**
+   * The index of the submatch to extract as findings. When not specified, the
+   * entire match is returned. No more than 3 may be included.
+   *
    * @var int[]
    */
   public $groupIndexes;
   /**
+   * Pattern defining the regular expression. Its syntax
+   * (https://github.com/google/re2/wiki/Syntax) can be found under the
+   * google/re2 repository on GitHub.
+   *
    * @var string
    */
   public $pattern;
 
   /**
-   * @param int[]
+   * The index of the submatch to extract as findings. When not specified, the
+   * entire match is returned. No more than 3 may be included.
+   *
+   * @param int[] $groupIndexes
    */
   public function setGroupIndexes($groupIndexes)
   {
@@ -44,7 +54,11 @@ class GooglePrivacyDlpV2Regex extends \Google\Collection
     return $this->groupIndexes;
   }
   /**
-   * @param string
+   * Pattern defining the regular expression. Its syntax
+   * (https://github.com/google/re2/wiki/Syntax) can be found under the
+   * google/re2 repository on GitHub.
+   *
+   * @param string $pattern
    */
   public function setPattern($pattern)
   {

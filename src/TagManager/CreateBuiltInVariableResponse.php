@@ -24,7 +24,9 @@ class CreateBuiltInVariableResponse extends \Google\Collection
   protected $builtInVariableDataType = 'array';
 
   /**
-   * @param BuiltInVariable[]
+   * List of created built-in variables.
+   *
+   * @param BuiltInVariable[] $builtInVariable
    */
   public function setBuiltInVariable($builtInVariable)
   {

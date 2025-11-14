@@ -24,7 +24,9 @@ class RomanizeTextResponse extends \Google\Collection
   protected $romanizationsDataType = 'array';
 
   /**
-   * @param Romanization[]
+   * Text romanization responses. This field has the same length as `contents`.
+   *
+   * @param Romanization[] $romanizations
    */
   public function setRomanizations($romanizations)
   {

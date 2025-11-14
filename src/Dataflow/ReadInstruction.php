@@ -23,7 +23,9 @@ class ReadInstruction extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param Source
+   * The source to read from.
+   *
+   * @param Source $source
    */
   public function setSource(Source $source)
   {

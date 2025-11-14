@@ -28,7 +28,9 @@ class GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation extends \Googl
   protected $timeSegmentDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec
+   * Label of the object tracked in this annotation.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec
    */
   public function setAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec)
   {
@@ -42,7 +44,9 @@ class GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation extends \Googl
     return $this->annotationSpec;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1ObjectTrackingFrame[]
+   * The list of frames where this object track appears.
+   *
+   * @param GoogleCloudDatalabelingV1beta1ObjectTrackingFrame[] $objectTrackingFrames
    */
   public function setObjectTrackingFrames($objectTrackingFrames)
   {
@@ -56,7 +60,9 @@ class GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation extends \Googl
     return $this->objectTrackingFrames;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1TimeSegment
+   * The time segment of the video to which object tracking applies.
+   *
+   * @param GoogleCloudDatalabelingV1beta1TimeSegment $timeSegment
    */
   public function setTimeSegment(GoogleCloudDatalabelingV1beta1TimeSegment $timeSegment)
   {

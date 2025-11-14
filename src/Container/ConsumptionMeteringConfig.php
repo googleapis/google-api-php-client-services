@@ -20,12 +20,18 @@ namespace Google\Service\Container;
 class ConsumptionMeteringConfig extends \Google\Model
 {
   /**
+   * Whether to enable consumption metering for this cluster. If enabled, a
+   * second BigQuery table will be created to hold resource consumption records.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether to enable consumption metering for this cluster. If enabled, a
+   * second BigQuery table will be created to hold resource consumption records.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

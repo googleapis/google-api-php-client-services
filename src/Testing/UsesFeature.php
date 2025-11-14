@@ -20,16 +20,22 @@ namespace Google\Service\Testing;
 class UsesFeature extends \Google\Model
 {
   /**
+   * The android:required value
+   *
    * @var bool
    */
   public $isRequired;
   /**
+   * The android:name value
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param bool
+   * The android:required value
+   *
+   * @param bool $isRequired
    */
   public function setIsRequired($isRequired)
   {
@@ -43,7 +49,9 @@ class UsesFeature extends \Google\Model
     return $this->isRequired;
   }
   /**
-   * @param string
+   * The android:name value
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -20,38 +20,85 @@ namespace Google\Service\CloudControlsPartnerService;
 class CustomerOnboardingStep extends \Google\Model
 {
   /**
+   * Unspecified completion state.
+   */
+  public const COMPLETION_STATE_COMPLETION_STATE_UNSPECIFIED = 'COMPLETION_STATE_UNSPECIFIED';
+  /**
+   * Task started (has start date) but not yet completed.
+   */
+  public const COMPLETION_STATE_PENDING = 'PENDING';
+  /**
+   * Succeeded state.
+   */
+  public const COMPLETION_STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Failed state.
+   */
+  public const COMPLETION_STATE_FAILED = 'FAILED';
+  /**
+   * Not applicable state.
+   */
+  public const COMPLETION_STATE_NOT_APPLICABLE = 'NOT_APPLICABLE';
+  /**
+   * Unspecified step
+   */
+  public const STEP_STEP_UNSPECIFIED = 'STEP_UNSPECIFIED';
+  /**
+   * KAJ Enrollment
+   */
+  public const STEP_KAJ_ENROLLMENT = 'KAJ_ENROLLMENT';
+  /**
+   * Customer Environment
+   */
+  public const STEP_CUSTOMER_ENVIRONMENT = 'CUSTOMER_ENVIRONMENT';
+  /**
+   * Output only. Current state of the step
+   *
    * @var string
    */
   public $completionState;
   /**
+   * The completion time of the onboarding step
+   *
    * @var string
    */
   public $completionTime;
   /**
+   * The starting time of the onboarding step
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The onboarding step
+   *
    * @var string
    */
   public $step;
 
   /**
-   * @param string
+   * Output only. Current state of the step
+   *
+   * Accepted values: COMPLETION_STATE_UNSPECIFIED, PENDING, SUCCEEDED, FAILED,
+   * NOT_APPLICABLE
+   *
+   * @param self::COMPLETION_STATE_* $completionState
    */
   public function setCompletionState($completionState)
   {
     $this->completionState = $completionState;
   }
   /**
-   * @return string
+   * @return self::COMPLETION_STATE_*
    */
   public function getCompletionState()
   {
     return $this->completionState;
   }
   /**
-   * @param string
+   * The completion time of the onboarding step
+   *
+   * @param string $completionTime
    */
   public function setCompletionTime($completionTime)
   {
@@ -65,7 +112,9 @@ class CustomerOnboardingStep extends \Google\Model
     return $this->completionTime;
   }
   /**
-   * @param string
+   * The starting time of the onboarding step
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -79,14 +128,18 @@ class CustomerOnboardingStep extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The onboarding step
+   *
+   * Accepted values: STEP_UNSPECIFIED, KAJ_ENROLLMENT, CUSTOMER_ENVIRONMENT
+   *
+   * @param self::STEP_* $step
    */
   public function setStep($step)
   {
     $this->step = $step;
   }
   /**
-   * @return string
+   * @return self::STEP_*
    */
   public function getStep()
   {

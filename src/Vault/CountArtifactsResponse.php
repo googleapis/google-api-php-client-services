@@ -24,12 +24,16 @@ class CountArtifactsResponse extends \Google\Model
   protected $mailCountResultType = MailCountResult::class;
   protected $mailCountResultDataType = '';
   /**
+   * Total count of messages.
+   *
    * @var string
    */
   public $totalCount;
 
   /**
-   * @param GroupsCountResult
+   * Count metrics for Groups.
+   *
+   * @param GroupsCountResult $groupsCountResult
    */
   public function setGroupsCountResult(GroupsCountResult $groupsCountResult)
   {
@@ -43,7 +47,9 @@ class CountArtifactsResponse extends \Google\Model
     return $this->groupsCountResult;
   }
   /**
-   * @param MailCountResult
+   * Count metrics for Gmail and classic Hangouts.
+   *
+   * @param MailCountResult $mailCountResult
    */
   public function setMailCountResult(MailCountResult $mailCountResult)
   {
@@ -57,7 +63,9 @@ class CountArtifactsResponse extends \Google\Model
     return $this->mailCountResult;
   }
   /**
-   * @param string
+   * Total count of messages.
+   *
+   * @param string $totalCount
    */
   public function setTotalCount($totalCount)
   {

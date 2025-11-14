@@ -24,7 +24,9 @@ class GoogleCloudContactcenterinsightsV1ConversationTranscript extends \Google\C
   protected $transcriptSegmentsDataType = 'array';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment[]
+   * A list of sequential transcript segments that comprise the conversation.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment[] $transcriptSegments
    */
   public function setTranscriptSegments($transcriptSegments)
   {

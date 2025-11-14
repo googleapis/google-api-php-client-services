@@ -23,12 +23,17 @@ class GoogleCloudContactcenterinsightsV1ListAssessmentsResponse extends \Google\
   protected $assessmentsType = GoogleCloudContactcenterinsightsV1Assessment::class;
   protected $assessmentsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1Assessment[]
+   * The assessments that match the request.
+   *
+   * @param GoogleCloudContactcenterinsightsV1Assessment[] $assessments
    */
   public function setAssessments($assessments)
   {
@@ -42,7 +47,10 @@ class GoogleCloudContactcenterinsightsV1ListAssessmentsResponse extends \Google\
     return $this->assessments;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

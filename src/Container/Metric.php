@@ -19,16 +19,27 @@ namespace Google\Service\Container;
 
 class Metric extends \Google\Model
 {
+  /**
+   * For metrics with floating point value.
+   *
+   * @var 
+   */
   public $doubleValue;
   /**
+   * For metrics with integer value.
+   *
    * @var string
    */
   public $intValue;
   /**
+   * Required. Metric name, e.g., "nodes total", "percent done".
+   *
    * @var string
    */
   public $name;
   /**
+   * For metrics with custom values (ratios, visual progress, etc.).
+   *
    * @var string
    */
   public $stringValue;
@@ -42,7 +53,9 @@ class Metric extends \Google\Model
     return $this->doubleValue;
   }
   /**
-   * @param string
+   * For metrics with integer value.
+   *
+   * @param string $intValue
    */
   public function setIntValue($intValue)
   {
@@ -56,7 +69,9 @@ class Metric extends \Google\Model
     return $this->intValue;
   }
   /**
-   * @param string
+   * Required. Metric name, e.g., "nodes total", "percent done".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -70,7 +85,9 @@ class Metric extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * For metrics with custom values (ratios, visual progress, etc.).
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

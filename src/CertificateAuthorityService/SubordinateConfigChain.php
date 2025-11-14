@@ -21,12 +21,16 @@ class SubordinateConfigChain extends \Google\Collection
 {
   protected $collection_key = 'pemCertificates';
   /**
+   * Required. Expected to be in leaf-to-root order according to RFC 5246.
+   *
    * @var string[]
    */
   public $pemCertificates;
 
   /**
-   * @param string[]
+   * Required. Expected to be in leaf-to-root order according to RFC 5246.
+   *
+   * @param string[] $pemCertificates
    */
   public function setPemCertificates($pemCertificates)
   {

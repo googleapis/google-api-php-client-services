@@ -20,16 +20,27 @@ namespace Google\Service\Monitoring;
 class Link extends \Google\Model
 {
   /**
+   * A short display name for the link. The display name must not be empty or
+   * exceed 63 characters. Example: "playbook".
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The url of a webpage. A url can be templatized by using variables in the
+   * path or the query parameters. The total length of a URL should not exceed
+   * 2083 characters before and after variable expansion. Example:
+   * "https://my_domain.com/playbook?name=${resource.name}"
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * A short display name for the link. The display name must not be empty or
+   * exceed 63 characters. Example: "playbook".
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +54,12 @@ class Link extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The url of a webpage. A url can be templatized by using variables in the
+   * path or the query parameters. The total length of a URL should not exceed
+   * 2083 characters before and after variable expansion. Example:
+   * "https://my_domain.com/playbook?name=${resource.name}"
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

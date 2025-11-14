@@ -20,20 +20,28 @@ namespace Google\Service\ContainerAnalysis;
 class NonCompliantFile extends \Google\Model
 {
   /**
+   * Command to display the non-compliant files.
+   *
    * @var string
    */
   public $displayCommand;
   /**
+   * Empty if `display_command` is set.
+   *
    * @var string
    */
   public $path;
   /**
+   * Explains why a file is non compliant for a CIS check.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * Command to display the non-compliant files.
+   *
+   * @param string $displayCommand
    */
   public function setDisplayCommand($displayCommand)
   {
@@ -47,7 +55,9 @@ class NonCompliantFile extends \Google\Model
     return $this->displayCommand;
   }
   /**
-   * @param string
+   * Empty if `display_command` is set.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -61,7 +71,9 @@ class NonCompliantFile extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Explains why a file is non compliant for a CIS check.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

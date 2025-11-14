@@ -20,12 +20,18 @@ namespace Google\Service\Docs;
 class BackgroundSuggestionState extends \Google\Model
 {
   /**
+   * Indicates whether the current background color has been modified in this
+   * suggestion.
+   *
    * @var bool
    */
   public $backgroundColorSuggested;
 
   /**
-   * @param bool
+   * Indicates whether the current background color has been modified in this
+   * suggestion.
+   *
+   * @param bool $backgroundColorSuggested
    */
   public function setBackgroundColorSuggested($backgroundColorSuggested)
   {

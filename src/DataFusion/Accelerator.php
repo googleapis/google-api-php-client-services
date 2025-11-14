@@ -20,37 +20,88 @@ namespace Google\Service\DataFusion;
 class Accelerator extends \Google\Model
 {
   /**
+   * Default value, if unspecified.
+   */
+  public const ACCELERATOR_TYPE_ACCELERATOR_TYPE_UNSPECIFIED = 'ACCELERATOR_TYPE_UNSPECIFIED';
+  /**
+   * Change Data Capture accelerator for Cloud Data Fusion.
+   */
+  public const ACCELERATOR_TYPE_CDC = 'CDC';
+  /**
+   * Reserved for internal use.
+   */
+  public const ACCELERATOR_TYPE_HEALTHCARE = 'HEALTHCARE';
+  /**
+   * Contact Center AI Insights This accelerator is used to enable import and
+   * export pipelines custom built to streamline CCAI Insights processing.
+   */
+  public const ACCELERATOR_TYPE_CCAI_INSIGHTS = 'CCAI_INSIGHTS';
+  /**
+   * Reserved for internal use.
+   */
+  public const ACCELERATOR_TYPE_CLOUDSEARCH = 'CLOUDSEARCH';
+  /**
+   * Default value, do not use.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Indicates that the accelerator is enabled and available to use.
+   */
+  public const STATE_ENABLED = 'ENABLED';
+  /**
+   * Indicates that the accelerator is disabled and not available to use.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * Indicates that accelerator state is currently unknown. Requests for enable,
+   * disable could be retried while in this state.
+   */
+  public const STATE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Optional. The type of an accelator for a Cloud Data Fusion instance.
+   *
    * @var string
    */
   public $acceleratorType;
   /**
+   * Output only. The state of the accelerator.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Optional. The type of an accelator for a Cloud Data Fusion instance.
+   *
+   * Accepted values: ACCELERATOR_TYPE_UNSPECIFIED, CDC, HEALTHCARE,
+   * CCAI_INSIGHTS, CLOUDSEARCH
+   *
+   * @param self::ACCELERATOR_TYPE_* $acceleratorType
    */
   public function setAcceleratorType($acceleratorType)
   {
     $this->acceleratorType = $acceleratorType;
   }
   /**
-   * @return string
+   * @return self::ACCELERATOR_TYPE_*
    */
   public function getAcceleratorType()
   {
     return $this->acceleratorType;
   }
   /**
-   * @param string
+   * Output only. The state of the accelerator.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ENABLED, DISABLED, UNKNOWN
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

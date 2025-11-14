@@ -31,7 +31,16 @@ class GoogleCloudDiscoveryengineV1alphaQualityMetrics extends \Google\Model
   protected $pageRecallDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics
+   * Normalized discounted cumulative gain (NDCG) per document, at various top-k
+   * cutoff levels. NDCG measures the ranking quality, giving higher relevance
+   * to top results. Example (top-3): Suppose SampleQuery with three retrieved
+   * documents (D1, D2, D3) and binary relevance judgements (1 for relevant, 0
+   * for not relevant): Retrieved: [D3 (0), D1 (1), D2 (1)] Ideal: [D1 (1), D2
+   * (1), D3 (0)] Calculate NDCG@3 for each SampleQuery: * DCG@3: 0/log2(1+1) +
+   * 1/log2(2+1) + 1/log2(3+1) = 1.13 * Ideal DCG@3: 1/log2(1+1) + 1/log2(2+1) +
+   * 0/log2(3+1) = 1.63 * NDCG@3: 1.13/1.63 = 0.693
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $docNdcg
    */
   public function setDocNdcg(GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $docNdcg)
   {
@@ -45,7 +54,12 @@ class GoogleCloudDiscoveryengineV1alphaQualityMetrics extends \Google\Model
     return $this->docNdcg;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics
+   * Precision per document, at various top-k cutoff levels. Precision is the
+   * fraction of retrieved documents that are relevant. Example (top-5): * For a
+   * single SampleQuery, If 4 out of 5 retrieved documents in the top-5 are
+   * relevant, precision@5 = 4/5 = 0.8
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $docPrecision
    */
   public function setDocPrecision(GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $docPrecision)
   {
@@ -59,7 +73,12 @@ class GoogleCloudDiscoveryengineV1alphaQualityMetrics extends \Google\Model
     return $this->docPrecision;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics
+   * Recall per document, at various top-k cutoff levels. Recall is the fraction
+   * of relevant documents retrieved out of all relevant documents. Example
+   * (top-5): * For a single SampleQuery, If 3 out of 5 relevant documents are
+   * retrieved in the top-5, recall@5 = 3/5 = 0.6
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $docRecall
    */
   public function setDocRecall(GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $docRecall)
   {
@@ -73,7 +92,16 @@ class GoogleCloudDiscoveryengineV1alphaQualityMetrics extends \Google\Model
     return $this->docRecall;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics
+   * Normalized discounted cumulative gain (NDCG) per page, at various top-k
+   * cutoff levels. NDCG measures the ranking quality, giving higher relevance
+   * to top results. Example (top-3): Suppose SampleQuery with three retrieved
+   * pages (P1, P2, P3) and binary relevance judgements (1 for relevant, 0 for
+   * not relevant): Retrieved: [P3 (0), P1 (1), P2 (1)] Ideal: [P1 (1), P2 (1),
+   * P3 (0)] Calculate NDCG@3 for SampleQuery: * DCG@3: 0/log2(1+1) +
+   * 1/log2(2+1) + 1/log2(3+1) = 1.13 * Ideal DCG@3: 1/log2(1+1) + 1/log2(2+1) +
+   * 0/log2(3+1) = 1.63 * NDCG@3: 1.13/1.63 = 0.693
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $pageNdcg
    */
   public function setPageNdcg(GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $pageNdcg)
   {
@@ -87,7 +115,12 @@ class GoogleCloudDiscoveryengineV1alphaQualityMetrics extends \Google\Model
     return $this->pageNdcg;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics
+   * Recall per page, at various top-k cutoff levels. Recall is the fraction of
+   * relevant pages retrieved out of all relevant pages. Example (top-5): * For
+   * a single SampleQuery, if 3 out of 5 relevant pages are retrieved in the
+   * top-5, recall@5 = 3/5 = 0.6
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $pageRecall
    */
   public function setPageRecall(GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics $pageRecall)
   {

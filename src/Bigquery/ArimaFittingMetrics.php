@@ -19,8 +19,23 @@ namespace Google\Service\Bigquery;
 
 class ArimaFittingMetrics extends \Google\Model
 {
+  /**
+   * AIC.
+   *
+   * @var 
+   */
   public $aic;
+  /**
+   * Log-likelihood.
+   *
+   * @var 
+   */
   public $logLikelihood;
+  /**
+   * Variance.
+   *
+   * @var 
+   */
   public $variance;
 
   public function setAic($aic)

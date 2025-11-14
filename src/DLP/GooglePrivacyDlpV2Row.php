@@ -24,7 +24,9 @@ class GooglePrivacyDlpV2Row extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2Value[]
+   * Individual cells.
+   *
+   * @param GooglePrivacyDlpV2Value[] $values
    */
   public function setValues($values)
   {

@@ -22,12 +22,17 @@ class UpdateSubscriptionRequest extends \Google\Model
   protected $subscriptionType = Subscription::class;
   protected $subscriptionDataType = '';
   /**
+   * Required. Indicates which fields in the provided subscription to update.
+   * Must be specified and non-empty.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param Subscription
+   * Required. The updated subscription object.
+   *
+   * @param Subscription $subscription
    */
   public function setSubscription(Subscription $subscription)
   {
@@ -41,7 +46,10 @@ class UpdateSubscriptionRequest extends \Google\Model
     return $this->subscription;
   }
   /**
-   * @param string
+   * Required. Indicates which fields in the provided subscription to update.
+   * Must be specified and non-empty.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {
