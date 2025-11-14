@@ -21,18 +21,30 @@ class ListNotesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * The next pagination token in the list response. It should be used as
+   * `page_token` for the following request. An empty value means no more
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $notesType = Note::class;
   protected $notesDataType = 'array';
   /**
+   * Unordered list. Unreachable regions. Populated for requests from the global
+   * region when `return_partial_success` is set. Format:
+   * `projects/[PROJECT_ID]/locations/[LOCATION]`
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * The next pagination token in the list response. It should be used as
+   * `page_token` for the following request. An empty value means no more
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +58,9 @@ class ListNotesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Note[]
+   * The notes requested.
+   *
+   * @param Note[] $notes
    */
   public function setNotes($notes)
   {
@@ -60,7 +74,11 @@ class ListNotesResponse extends \Google\Collection
     return $this->notes;
   }
   /**
-   * @param string[]
+   * Unordered list. Unreachable regions. Populated for requests from the global
+   * region when `return_partial_success` is set. Format:
+   * `projects/[PROJECT_ID]/locations/[LOCATION]`
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
