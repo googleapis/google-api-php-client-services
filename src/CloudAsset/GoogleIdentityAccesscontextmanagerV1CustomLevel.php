@@ -23,7 +23,9 @@ class GoogleIdentityAccesscontextmanagerV1CustomLevel extends \Google\Model
   protected $exprDataType = '';
 
   /**
-   * @param Expr
+   * Required. A Cloud CEL expression evaluating to a boolean.
+   *
+   * @param Expr $expr
    */
   public function setExpr(Expr $expr)
   {

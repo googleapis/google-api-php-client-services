@@ -20,12 +20,16 @@ namespace Google\Service\CloudAsset;
 class MoveImpact extends \Google\Model
 {
   /**
+   * User friendly impact detail in a free form message.
+   *
    * @var string
    */
   public $detail;
 
   /**
-   * @param string
+   * User friendly impact detail in a free form message.
+   *
+   * @param string $detail
    */
   public function setDetail($detail)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\CloudAsset;
 class ConditionContext extends \Google\Model
 {
   /**
+   * The hypothetical access timestamp to evaluate IAM conditions. Note that
+   * this value must not be earlier than the current time; otherwise, an
+   * INVALID_ARGUMENT error will be returned.
+   *
    * @var string
    */
   public $accessTime;
 
   /**
-   * @param string
+   * The hypothetical access timestamp to evaluate IAM conditions. Note that
+   * this value must not be earlier than the current time; otherwise, an
+   * INVALID_ARGUMENT error will be returned.
+   *
+   * @param string $accessTime
    */
   public function setAccessTime($accessTime)
   {

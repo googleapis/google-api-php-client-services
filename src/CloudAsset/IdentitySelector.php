@@ -20,12 +20,26 @@ namespace Google\Service\CloudAsset;
 class IdentitySelector extends \Google\Model
 {
   /**
+   * Required. The identity appear in the form of principals in [IAM policy
+   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The
+   * examples of supported forms are: "user:mike@example.com",
+   * "group:admins@example.com", "domain:google.com", "serviceAccount:my-
+   * project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+   * (such as * and ?) are not supported. You must give a specific identity.
+   *
    * @var string
    */
   public $identity;
 
   /**
-   * @param string
+   * Required. The identity appear in the form of principals in [IAM policy
+   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The
+   * examples of supported forms are: "user:mike@example.com",
+   * "group:admins@example.com", "domain:google.com", "serviceAccount:my-
+   * project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+   * (such as * and ?) are not supported. You must give a specific identity.
+   *
+   * @param string $identity
    */
   public function setIdentity($identity)
   {
