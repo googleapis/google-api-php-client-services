@@ -20,16 +20,22 @@ namespace Google\Service\Translate;
 class GlossaryTerm extends \Google\Model
 {
   /**
+   * The language for this glossary term.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * The text for the glossary term.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * The language for this glossary term.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -43,7 +49,9 @@ class GlossaryTerm extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * The text for the glossary term.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
