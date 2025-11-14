@@ -20,12 +20,22 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ManualScaling extends \Google\Model
 {
   /**
+   * The number of nodes to allocate for this model. These nodes are always up,
+   * starting from the time the model is deployed, so the cost of operating this
+   * model will be proportional to `nodes` * number of hours since last billing
+   * cycle plus the cost for each prediction performed.
+   *
    * @var int
    */
   public $nodes;
 
   /**
-   * @param int
+   * The number of nodes to allocate for this model. These nodes are always up,
+   * starting from the time the model is deployed, so the cost of operating this
+   * model will be proportional to `nodes` * number of hours since last billing
+   * cycle plus the cost for each prediction performed.
+   *
+   * @param int $nodes
    */
   public function setNodes($nodes)
   {

@@ -22,16 +22,26 @@ class GoogleCloudMlV1CompleteTrialRequest extends \Google\Model
   protected $finalMeasurementType = GoogleCloudMlV1Measurement::class;
   protected $finalMeasurementDataType = '';
   /**
+   * Optional. A human readable reason why the trial was infeasible. This should
+   * only be provided if `trial_infeasible` is true.
+   *
    * @var string
    */
   public $infeasibleReason;
   /**
+   * Optional. True if the trial cannot be run with the given Parameter, and
+   * final_measurement will be ignored.
+   *
    * @var bool
    */
   public $trialInfeasible;
 
   /**
-   * @param GoogleCloudMlV1Measurement
+   * Optional. If provided, it will be used as the completed trial's
+   * final_measurement; Otherwise, the service will auto-select a previously
+   * reported measurement as the final-measurement
+   *
+   * @param GoogleCloudMlV1Measurement $finalMeasurement
    */
   public function setFinalMeasurement(GoogleCloudMlV1Measurement $finalMeasurement)
   {
@@ -45,7 +55,10 @@ class GoogleCloudMlV1CompleteTrialRequest extends \Google\Model
     return $this->finalMeasurement;
   }
   /**
-   * @param string
+   * Optional. A human readable reason why the trial was infeasible. This should
+   * only be provided if `trial_infeasible` is true.
+   *
+   * @param string $infeasibleReason
    */
   public function setInfeasibleReason($infeasibleReason)
   {
@@ -59,7 +72,10 @@ class GoogleCloudMlV1CompleteTrialRequest extends \Google\Model
     return $this->infeasibleReason;
   }
   /**
-   * @param bool
+   * Optional. True if the trial cannot be run with the given Parameter, and
+   * final_measurement will be ignored.
+   *
+   * @param bool $trialInfeasible
    */
   public function setTrialInfeasible($trialInfeasible)
   {

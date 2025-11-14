@@ -20,16 +20,28 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1SuggestTrialsRequest extends \Google\Model
 {
   /**
+   * Required. The identifier of the client that is requesting the suggestion.
+   * If multiple SuggestTrialsRequests have the same `client_id`, the service
+   * will return the identical suggested trial if the trial is pending, and
+   * provide a new trial if the last suggested trial was completed.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * Required. The number of suggestions requested.
+   *
    * @var int
    */
   public $suggestionCount;
 
   /**
-   * @param string
+   * Required. The identifier of the client that is requesting the suggestion.
+   * If multiple SuggestTrialsRequests have the same `client_id`, the service
+   * will return the identical suggested trial if the trial is pending, and
+   * provide a new trial if the last suggested trial was completed.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -43,7 +55,9 @@ class GoogleCloudMlV1SuggestTrialsRequest extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param int
+   * Required. The number of suggestions requested.
+   *
+   * @param int $suggestionCount
    */
   public function setSuggestionCount($suggestionCount)
   {

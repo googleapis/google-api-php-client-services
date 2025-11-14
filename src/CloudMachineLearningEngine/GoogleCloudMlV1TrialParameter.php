@@ -19,16 +19,27 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1TrialParameter extends \Google\Model
 {
+  /**
+   * Must be set if ParameterType is DOUBLE or DISCRETE.
+   *
+   * @var 
+   */
   public $floatValue;
   /**
+   * Must be set if ParameterType is INTEGER
+   *
    * @var string
    */
   public $intValue;
   /**
+   * The name of the parameter.
+   *
    * @var string
    */
   public $parameter;
   /**
+   * Must be set if ParameterTypeis CATEGORICAL
+   *
    * @var string
    */
   public $stringValue;
@@ -42,7 +53,9 @@ class GoogleCloudMlV1TrialParameter extends \Google\Model
     return $this->floatValue;
   }
   /**
-   * @param string
+   * Must be set if ParameterType is INTEGER
+   *
+   * @param string $intValue
    */
   public function setIntValue($intValue)
   {
@@ -56,7 +69,9 @@ class GoogleCloudMlV1TrialParameter extends \Google\Model
     return $this->intValue;
   }
   /**
-   * @param string
+   * The name of the parameter.
+   *
+   * @param string $parameter
    */
   public function setParameter($parameter)
   {
@@ -70,7 +85,9 @@ class GoogleCloudMlV1TrialParameter extends \Google\Model
     return $this->parameter;
   }
   /**
-   * @param string
+   * Must be set if ParameterTypeis CATEGORICAL
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {
