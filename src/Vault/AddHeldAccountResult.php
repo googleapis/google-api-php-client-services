@@ -25,7 +25,9 @@ class AddHeldAccountResult extends \Google\Model
   protected $statusDataType = '';
 
   /**
-   * @param HeldAccount
+   * Returned when the account was successfully created.
+   *
+   * @param HeldAccount $account
    */
   public function setAccount(HeldAccount $account)
   {
@@ -39,7 +41,9 @@ class AddHeldAccountResult extends \Google\Model
     return $this->account;
   }
   /**
-   * @param Status
+   * Reports the request status. If it failed, returns an error message.
+   *
+   * @param Status $status
    */
   public function setStatus(Status $status)
   {

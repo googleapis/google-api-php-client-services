@@ -21,6 +21,9 @@ class ListSavedQueriesResponse extends \Google\Collection
 {
   protected $collection_key = 'savedQueries';
   /**
+   * Page token to retrieve the next page of results in the list. If this is
+   * empty, then there are no more saved queries to list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListSavedQueriesResponse extends \Google\Collection
   protected $savedQueriesDataType = 'array';
 
   /**
-   * @param string
+   * Page token to retrieve the next page of results in the list. If this is
+   * empty, then there are no more saved queries to list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListSavedQueriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SavedQuery[]
+   * List of saved queries.
+   *
+   * @param SavedQuery[] $savedQueries
    */
   public function setSavedQueries($savedQueries)
   {

@@ -19,15 +19,33 @@ namespace Google\Service\Vault;
 
 class CountArtifactsRequest extends \Google\Model
 {
+  /**
+   * Default. Same as **TOTAL_COUNT**.
+   */
+  public const VIEW_COUNT_RESULT_VIEW_UNSPECIFIED = 'COUNT_RESULT_VIEW_UNSPECIFIED';
+  /**
+   * Response includes counts of the total accounts, queried accounts, matching
+   * accounts, non-queryable accounts, and queried account errors.
+   */
+  public const VIEW_TOTAL_COUNT = 'TOTAL_COUNT';
+  /**
+   * Response includes the same details as **TOTAL_COUNT**, plus additional
+   * account breakdown.
+   */
+  public const VIEW_ALL = 'ALL';
   protected $queryType = Query::class;
   protected $queryDataType = '';
   /**
+   * Sets the granularity of the count results.
+   *
    * @var string
    */
   public $view;
 
   /**
-   * @param Query
+   * The search query.
+   *
+   * @param Query $query
    */
   public function setQuery(Query $query)
   {
@@ -41,14 +59,18 @@ class CountArtifactsRequest extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * Sets the granularity of the count results.
+   *
+   * Accepted values: COUNT_RESULT_VIEW_UNSPECIFIED, TOTAL_COUNT, ALL
+   *
+   * @param self::VIEW_* $view
    */
   public function setView($view)
   {
     $this->view = $view;
   }
   /**
-   * @return string
+   * @return self::VIEW_*
    */
   public function getView()
   {
