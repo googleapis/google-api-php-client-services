@@ -19,28 +19,67 @@ namespace Google\Service\ServiceManagement;
 
 class ConfigChange extends \Google\Collection
 {
+  /**
+   * No value was provided.
+   */
+  public const CHANGE_TYPE_CHANGE_TYPE_UNSPECIFIED = 'CHANGE_TYPE_UNSPECIFIED';
+  /**
+   * The changed object exists in the 'new' service configuration, but not in
+   * the 'old' service configuration.
+   */
+  public const CHANGE_TYPE_ADDED = 'ADDED';
+  /**
+   * The changed object exists in the 'old' service configuration, but not in
+   * the 'new' service configuration.
+   */
+  public const CHANGE_TYPE_REMOVED = 'REMOVED';
+  /**
+   * The changed object exists in both service configurations, but its value is
+   * different.
+   */
+  public const CHANGE_TYPE_MODIFIED = 'MODIFIED';
   protected $collection_key = 'advices';
   protected $advicesType = Advice::class;
   protected $advicesDataType = 'array';
   /**
+   * The type for this change, either ADDED, REMOVED, or MODIFIED.
+   *
    * @var string
    */
   public $changeType;
   /**
+   * Object hierarchy path to the change, with levels separated by a '.'
+   * character. For repeated fields, an applicable unique identifier field is
+   * used for the index (usually selector, name, or id). For maps, the term
+   * 'key' is used. If the field has no unique identifier, the numeric index is
+   * used. Examples: -
+   * visibility.rules[selector=="google.LibraryService.ListBooks"].restriction -
+   * quota.metric_rules[selector=="google"].metric_costs[key=="reads"].value -
+   * logging.producer_destinations[0]
+   *
    * @var string
    */
   public $element;
   /**
+   * Value of the changed object in the new Service configuration, in JSON
+   * format. This field will not be populated if ChangeType == REMOVED.
+   *
    * @var string
    */
   public $newValue;
   /**
+   * Value of the changed object in the old Service configuration, in JSON
+   * format. This field will not be populated if ChangeType == ADDED.
+   *
    * @var string
    */
   public $oldValue;
 
   /**
-   * @param Advice[]
+   * Collection of advice provided for this change, useful for determining the
+   * possible impact of this change.
+   *
+   * @param Advice[] $advices
    */
   public function setAdvices($advices)
   {
@@ -54,21 +93,34 @@ class ConfigChange extends \Google\Collection
     return $this->advices;
   }
   /**
-   * @param string
+   * The type for this change, either ADDED, REMOVED, or MODIFIED.
+   *
+   * Accepted values: CHANGE_TYPE_UNSPECIFIED, ADDED, REMOVED, MODIFIED
+   *
+   * @param self::CHANGE_TYPE_* $changeType
    */
   public function setChangeType($changeType)
   {
     $this->changeType = $changeType;
   }
   /**
-   * @return string
+   * @return self::CHANGE_TYPE_*
    */
   public function getChangeType()
   {
     return $this->changeType;
   }
   /**
-   * @param string
+   * Object hierarchy path to the change, with levels separated by a '.'
+   * character. For repeated fields, an applicable unique identifier field is
+   * used for the index (usually selector, name, or id). For maps, the term
+   * 'key' is used. If the field has no unique identifier, the numeric index is
+   * used. Examples: -
+   * visibility.rules[selector=="google.LibraryService.ListBooks"].restriction -
+   * quota.metric_rules[selector=="google"].metric_costs[key=="reads"].value -
+   * logging.producer_destinations[0]
+   *
+   * @param string $element
    */
   public function setElement($element)
   {
@@ -82,7 +134,10 @@ class ConfigChange extends \Google\Collection
     return $this->element;
   }
   /**
-   * @param string
+   * Value of the changed object in the new Service configuration, in JSON
+   * format. This field will not be populated if ChangeType == REMOVED.
+   *
+   * @param string $newValue
    */
   public function setNewValue($newValue)
   {
@@ -96,7 +151,10 @@ class ConfigChange extends \Google\Collection
     return $this->newValue;
   }
   /**
-   * @param string
+   * Value of the changed object in the old Service configuration, in JSON
+   * format. This field will not be populated if ChangeType == ADDED.
+   *
+   * @param string $oldValue
    */
   public function setOldValue($oldValue)
   {
