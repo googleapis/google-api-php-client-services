@@ -20,16 +20,22 @@ namespace Google\Service\ShoppingContent;
 class ProductUnitPricingBaseMeasure extends \Google\Model
 {
   /**
+   * The unit of the denominator.
+   *
    * @var string
    */
   public $unit;
   /**
+   * The denominator of the unit price.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The unit of the denominator.
+   *
+   * @param string $unit
    */
   public function setUnit($unit)
   {
@@ -43,7 +49,9 @@ class ProductUnitPricingBaseMeasure extends \Google\Model
     return $this->unit;
   }
   /**
-   * @param string
+   * The denominator of the unit price.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

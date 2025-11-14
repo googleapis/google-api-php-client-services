@@ -22,16 +22,22 @@ class ProductSubscriptionCost extends \Google\Model
   protected $amountType = Price::class;
   protected $amountDataType = '';
   /**
+   * The type of subscription period. - "`month`" - "`year`"
+   *
    * @var string
    */
   public $period;
   /**
+   * The number of subscription periods the buyer has to pay.
+   *
    * @var string
    */
   public $periodLength;
 
   /**
-   * @param Price
+   * The amount the buyer has to pay per subscription period.
+   *
+   * @param Price $amount
    */
   public function setAmount(Price $amount)
   {
@@ -45,7 +51,9 @@ class ProductSubscriptionCost extends \Google\Model
     return $this->amount;
   }
   /**
-   * @param string
+   * The type of subscription period. - "`month`" - "`year`"
+   *
+   * @param string $period
    */
   public function setPeriod($period)
   {
@@ -59,7 +67,9 @@ class ProductSubscriptionCost extends \Google\Model
     return $this->period;
   }
   /**
-   * @param string
+   * The number of subscription periods the buyer has to pay.
+   *
+   * @param string $periodLength
    */
   public function setPeriodLength($periodLength)
   {

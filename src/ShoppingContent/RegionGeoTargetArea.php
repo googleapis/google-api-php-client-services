@@ -21,12 +21,20 @@ class RegionGeoTargetArea extends \Google\Collection
 {
   protected $collection_key = 'geotargetCriteriaIds';
   /**
+   * Required. A non-empty list of [location
+   * IDs](https://developers.google.com/adwords/api/docs/appendix/geotargeting).
+   * They must all be of the same location type (e.g., state).
+   *
    * @var string[]
    */
   public $geotargetCriteriaIds;
 
   /**
-   * @param string[]
+   * Required. A non-empty list of [location
+   * IDs](https://developers.google.com/adwords/api/docs/appendix/geotargeting).
+   * They must all be of the same location type (e.g., state).
+   *
+   * @param string[] $geotargetCriteriaIds
    */
   public function setGeotargetCriteriaIds($geotargetCriteriaIds)
   {

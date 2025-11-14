@@ -21,40 +21,57 @@ class ProductStatus extends \Google\Collection
 {
   protected $collection_key = 'itemLevelIssues';
   /**
+   * Date on which the item has been created, in ISO 8601 format.
+   *
    * @var string
    */
   public $creationDate;
   protected $destinationStatusesType = ProductStatusDestinationStatus::class;
   protected $destinationStatusesDataType = 'array';
   /**
+   * Date on which the item expires in Google Shopping, in ISO 8601 format.
+   *
    * @var string
    */
   public $googleExpirationDate;
   protected $itemLevelIssuesType = ProductStatusItemLevelIssue::class;
   protected $itemLevelIssuesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#productStatus`"
+   *
    * @var string
    */
   public $kind;
   /**
+   * Date on which the item has been last updated, in ISO 8601 format.
+   *
    * @var string
    */
   public $lastUpdateDate;
   /**
+   * The link to the product.
+   *
    * @var string
    */
   public $link;
   /**
+   * The ID of the product for which status is reported.
+   *
    * @var string
    */
   public $productId;
   /**
+   * The title of the product.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Date on which the item has been created, in ISO 8601 format.
+   *
+   * @param string $creationDate
    */
   public function setCreationDate($creationDate)
   {
@@ -68,7 +85,9 @@ class ProductStatus extends \Google\Collection
     return $this->creationDate;
   }
   /**
-   * @param ProductStatusDestinationStatus[]
+   * The intended destinations for the product.
+   *
+   * @param ProductStatusDestinationStatus[] $destinationStatuses
    */
   public function setDestinationStatuses($destinationStatuses)
   {
@@ -82,7 +101,9 @@ class ProductStatus extends \Google\Collection
     return $this->destinationStatuses;
   }
   /**
-   * @param string
+   * Date on which the item expires in Google Shopping, in ISO 8601 format.
+   *
+   * @param string $googleExpirationDate
    */
   public function setGoogleExpirationDate($googleExpirationDate)
   {
@@ -96,7 +117,9 @@ class ProductStatus extends \Google\Collection
     return $this->googleExpirationDate;
   }
   /**
-   * @param ProductStatusItemLevelIssue[]
+   * A list of all issues associated with the product.
+   *
+   * @param ProductStatusItemLevelIssue[] $itemLevelIssues
    */
   public function setItemLevelIssues($itemLevelIssues)
   {
@@ -110,7 +133,10 @@ class ProductStatus extends \Google\Collection
     return $this->itemLevelIssues;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#productStatus`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -124,7 +150,9 @@ class ProductStatus extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Date on which the item has been last updated, in ISO 8601 format.
+   *
+   * @param string $lastUpdateDate
    */
   public function setLastUpdateDate($lastUpdateDate)
   {
@@ -138,7 +166,9 @@ class ProductStatus extends \Google\Collection
     return $this->lastUpdateDate;
   }
   /**
-   * @param string
+   * The link to the product.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {
@@ -152,7 +182,9 @@ class ProductStatus extends \Google\Collection
     return $this->link;
   }
   /**
-   * @param string
+   * The ID of the product for which status is reported.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -166,7 +198,9 @@ class ProductStatus extends \Google\Collection
     return $this->productId;
   }
   /**
-   * @param string
+   * The title of the product.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

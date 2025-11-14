@@ -26,13 +26,18 @@ class RenderProductIssuesResponse extends \Google\Collection
   protected $issuesDataType = 'array';
 
   /**
-   * @param AlternateDisputeResolution
+   * Alternate Dispute Resolution (ADR) is deprecated. Use
+   * `prerendered_out_of_court_dispute_settlement` instead.
+   *
+   * @deprecated
+   * @param AlternateDisputeResolution $alternateDisputeResolution
    */
   public function setAlternateDisputeResolution(AlternateDisputeResolution $alternateDisputeResolution)
   {
     $this->alternateDisputeResolution = $alternateDisputeResolution;
   }
   /**
+   * @deprecated
    * @return AlternateDisputeResolution
    */
   public function getAlternateDisputeResolution()
@@ -40,7 +45,12 @@ class RenderProductIssuesResponse extends \Google\Collection
     return $this->alternateDisputeResolution;
   }
   /**
-   * @param ProductIssue[]
+   * List of issues for a given product. This list can be shown with compressed,
+   * expandable items. In the compressed form, the title and impact should be
+   * shown for each issue. Once the issue is expanded, the detailed content and
+   * available actions should be rendered.
+   *
+   * @param ProductIssue[] $issues
    */
   public function setIssues($issues)
   {
