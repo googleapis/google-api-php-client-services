@@ -31,6 +31,19 @@ class Bucket extends \Google\Collection
   protected $customPlacementConfigType = BucketCustomPlacementConfig::class;
   protected $customPlacementConfigDataType = '';
   /**
+   * The default value for event-based hold on newly created objects in this
+   * bucket. Event-based hold is a way to retain objects indefinitely until an
+   * event occurs, signified by the hold's release. After being released, such
+   * objects will be subject to bucket-level retention (if any). One sample use
+   * case of this flag is for banks to hold loan documents for at least 3 years
+   * after loan is paid in full. Here, bucket-level retention is 3 years and the
+   * event is loan being paid in full. In this example, these objects will be
+   * held intact for any number of years until the event has occurred (event-
+   * based hold on the object is released) and then 3 more years after that.
+   * That means retention duration of the objects begins from the moment event-
+   * based hold transitioned from true to false. Objects under event-based hold
+   * cannot be deleted, overwritten or archived until the hold is removed.
+   *
    * @var bool
    */
   public $defaultEventBasedHold;
@@ -39,14 +52,20 @@ class Bucket extends \Google\Collection
   protected $encryptionType = BucketEncryption::class;
   protected $encryptionDataType = '';
   /**
+   * HTTP 1.1 Entity tag for the bucket.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The generation of this bucket.
+   *
    * @var string
    */
   public $generation;
   /**
+   * The hard delete time of the bucket in RFC 3339 format.
+   *
    * @var string
    */
   public $hardDeleteTime;
@@ -55,36 +74,53 @@ class Bucket extends \Google\Collection
   protected $iamConfigurationType = BucketIamConfiguration::class;
   protected $iamConfigurationDataType = '';
   /**
+   * The ID of the bucket. For buckets, the id and name properties are the same.
+   *
    * @var string
    */
   public $id;
   protected $ipFilterType = BucketIpFilter::class;
   protected $ipFilterDataType = '';
   /**
+   * The kind of item this is. For buckets, this is always storage#bucket.
+   *
    * @var string
    */
   public $kind;
   /**
+   * User-provided labels, in key/value pairs.
+   *
    * @var string[]
    */
   public $labels;
   protected $lifecycleType = BucketLifecycle::class;
   protected $lifecycleDataType = '';
   /**
+   * The location of the bucket. Object data for objects in the bucket resides
+   * in physical storage within this region. Defaults to US. See the
+   * [Developer's Guide](https://cloud.google.com/storage/docs/locations) for
+   * the authoritative list.
+   *
    * @var string
    */
   public $location;
   /**
+   * The type of the bucket location.
+   *
    * @var string
    */
   public $locationType;
   protected $loggingType = BucketLogging::class;
   protected $loggingDataType = '';
   /**
+   * The metadata generation of this bucket.
+   *
    * @var string
    */
   public $metageneration;
   /**
+   * The name of the bucket.
+   *
    * @var string
    */
   public $name;
@@ -93,42 +129,67 @@ class Bucket extends \Google\Collection
   protected $ownerType = BucketOwner::class;
   protected $ownerDataType = '';
   /**
+   * The project number of the project the bucket belongs to.
+   *
    * @var string
    */
   public $projectNumber;
   protected $retentionPolicyType = BucketRetentionPolicy::class;
   protected $retentionPolicyDataType = '';
   /**
+   * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to
+   * turn on Turbo Replication on a bucket.
+   *
    * @var string
    */
   public $rpo;
   /**
+   * Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPZI;
   /**
+   * Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPZS;
   /**
+   * The URI of this bucket.
+   *
    * @var string
    */
   public $selfLink;
   protected $softDeletePolicyType = BucketSoftDeletePolicy::class;
   protected $softDeletePolicyDataType = '';
   /**
+   * The soft delete time of the bucket in RFC 3339 format.
+   *
    * @var string
    */
   public $softDeleteTime;
   /**
+   * The bucket's default storage class, used whenever no storageClass is
+   * specified for a newly-created object. This defines how objects in the
+   * bucket are stored and determines the SLA and the cost of storage. Values
+   * include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE,
+   * and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the
+   * bucket is created, it will default to STANDARD. For more information, see
+   * [Storage Classes](https://cloud.google.com/storage/docs/storage-classes).
+   *
    * @var string
    */
   public $storageClass;
   /**
+   * The creation time of the bucket in RFC 3339 format.
+   *
    * @var string
    */
   public $timeCreated;
   /**
+   * The modification time of the bucket in RFC 3339 format.
+   *
    * @var string
    */
   public $updated;
@@ -138,7 +199,9 @@ class Bucket extends \Google\Collection
   protected $websiteDataType = '';
 
   /**
-   * @param BucketAccessControl[]
+   * Access controls on the bucket.
+   *
+   * @param BucketAccessControl[] $acl
    */
   public function setAcl($acl)
   {
@@ -152,7 +215,9 @@ class Bucket extends \Google\Collection
     return $this->acl;
   }
   /**
-   * @param BucketAutoclass
+   * The bucket's Autoclass configuration.
+   *
+   * @param BucketAutoclass $autoclass
    */
   public function setAutoclass(BucketAutoclass $autoclass)
   {
@@ -166,7 +231,9 @@ class Bucket extends \Google\Collection
     return $this->autoclass;
   }
   /**
-   * @param BucketBilling
+   * The bucket's billing configuration.
+   *
+   * @param BucketBilling $billing
    */
   public function setBilling(BucketBilling $billing)
   {
@@ -180,7 +247,9 @@ class Bucket extends \Google\Collection
     return $this->billing;
   }
   /**
-   * @param BucketCors[]
+   * The bucket's Cross-Origin Resource Sharing (CORS) configuration.
+   *
+   * @param BucketCors[] $cors
    */
   public function setCors($cors)
   {
@@ -194,7 +263,9 @@ class Bucket extends \Google\Collection
     return $this->cors;
   }
   /**
-   * @param BucketCustomPlacementConfig
+   * The bucket's custom placement configuration for Custom Dual Regions.
+   *
+   * @param BucketCustomPlacementConfig $customPlacementConfig
    */
   public function setCustomPlacementConfig(BucketCustomPlacementConfig $customPlacementConfig)
   {
@@ -208,7 +279,20 @@ class Bucket extends \Google\Collection
     return $this->customPlacementConfig;
   }
   /**
-   * @param bool
+   * The default value for event-based hold on newly created objects in this
+   * bucket. Event-based hold is a way to retain objects indefinitely until an
+   * event occurs, signified by the hold's release. After being released, such
+   * objects will be subject to bucket-level retention (if any). One sample use
+   * case of this flag is for banks to hold loan documents for at least 3 years
+   * after loan is paid in full. Here, bucket-level retention is 3 years and the
+   * event is loan being paid in full. In this example, these objects will be
+   * held intact for any number of years until the event has occurred (event-
+   * based hold on the object is released) and then 3 more years after that.
+   * That means retention duration of the objects begins from the moment event-
+   * based hold transitioned from true to false. Objects under event-based hold
+   * cannot be deleted, overwritten or archived until the hold is removed.
+   *
+   * @param bool $defaultEventBasedHold
    */
   public function setDefaultEventBasedHold($defaultEventBasedHold)
   {
@@ -222,7 +306,9 @@ class Bucket extends \Google\Collection
     return $this->defaultEventBasedHold;
   }
   /**
-   * @param ObjectAccessControl[]
+   * Default access controls to apply to new objects when no ACL is provided.
+   *
+   * @param ObjectAccessControl[] $defaultObjectAcl
    */
   public function setDefaultObjectAcl($defaultObjectAcl)
   {
@@ -236,7 +322,9 @@ class Bucket extends \Google\Collection
     return $this->defaultObjectAcl;
   }
   /**
-   * @param BucketEncryption
+   * Encryption configuration for a bucket.
+   *
+   * @param BucketEncryption $encryption
    */
   public function setEncryption(BucketEncryption $encryption)
   {
@@ -250,7 +338,9 @@ class Bucket extends \Google\Collection
     return $this->encryption;
   }
   /**
-   * @param string
+   * HTTP 1.1 Entity tag for the bucket.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -264,7 +354,9 @@ class Bucket extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * The generation of this bucket.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -278,7 +370,9 @@ class Bucket extends \Google\Collection
     return $this->generation;
   }
   /**
-   * @param string
+   * The hard delete time of the bucket in RFC 3339 format.
+   *
+   * @param string $hardDeleteTime
    */
   public function setHardDeleteTime($hardDeleteTime)
   {
@@ -292,7 +386,9 @@ class Bucket extends \Google\Collection
     return $this->hardDeleteTime;
   }
   /**
-   * @param BucketHierarchicalNamespace
+   * The bucket's hierarchical namespace configuration.
+   *
+   * @param BucketHierarchicalNamespace $hierarchicalNamespace
    */
   public function setHierarchicalNamespace(BucketHierarchicalNamespace $hierarchicalNamespace)
   {
@@ -306,7 +402,9 @@ class Bucket extends \Google\Collection
     return $this->hierarchicalNamespace;
   }
   /**
-   * @param BucketIamConfiguration
+   * The bucket's IAM configuration.
+   *
+   * @param BucketIamConfiguration $iamConfiguration
    */
   public function setIamConfiguration(BucketIamConfiguration $iamConfiguration)
   {
@@ -320,7 +418,9 @@ class Bucket extends \Google\Collection
     return $this->iamConfiguration;
   }
   /**
-   * @param string
+   * The ID of the bucket. For buckets, the id and name properties are the same.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -334,7 +434,11 @@ class Bucket extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param BucketIpFilter
+   * The bucket's IP filter configuration. Specifies the network sources that
+   * are allowed to access the operations on the bucket, as well as its
+   * underlying objects. Only enforced when the mode is set to 'Enabled'.
+   *
+   * @param BucketIpFilter $ipFilter
    */
   public function setIpFilter(BucketIpFilter $ipFilter)
   {
@@ -348,7 +452,9 @@ class Bucket extends \Google\Collection
     return $this->ipFilter;
   }
   /**
-   * @param string
+   * The kind of item this is. For buckets, this is always storage#bucket.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -362,7 +468,9 @@ class Bucket extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * User-provided labels, in key/value pairs.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -376,7 +484,11 @@ class Bucket extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param BucketLifecycle
+   * The bucket's lifecycle configuration. See [Lifecycle
+   * Management](https://cloud.google.com/storage/docs/lifecycle) for more
+   * information.
+   *
+   * @param BucketLifecycle $lifecycle
    */
   public function setLifecycle(BucketLifecycle $lifecycle)
   {
@@ -390,7 +502,12 @@ class Bucket extends \Google\Collection
     return $this->lifecycle;
   }
   /**
-   * @param string
+   * The location of the bucket. Object data for objects in the bucket resides
+   * in physical storage within this region. Defaults to US. See the
+   * [Developer's Guide](https://cloud.google.com/storage/docs/locations) for
+   * the authoritative list.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -404,7 +521,9 @@ class Bucket extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string
+   * The type of the bucket location.
+   *
+   * @param string $locationType
    */
   public function setLocationType($locationType)
   {
@@ -418,7 +537,10 @@ class Bucket extends \Google\Collection
     return $this->locationType;
   }
   /**
-   * @param BucketLogging
+   * The bucket's logging configuration, which defines the destination bucket
+   * and optional name prefix for the current bucket's logs.
+   *
+   * @param BucketLogging $logging
    */
   public function setLogging(BucketLogging $logging)
   {
@@ -432,7 +554,9 @@ class Bucket extends \Google\Collection
     return $this->logging;
   }
   /**
-   * @param string
+   * The metadata generation of this bucket.
+   *
+   * @param string $metageneration
    */
   public function setMetageneration($metageneration)
   {
@@ -446,7 +570,9 @@ class Bucket extends \Google\Collection
     return $this->metageneration;
   }
   /**
-   * @param string
+   * The name of the bucket.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -460,7 +586,9 @@ class Bucket extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param BucketObjectRetention
+   * The bucket's object retention config.
+   *
+   * @param BucketObjectRetention $objectRetention
    */
   public function setObjectRetention(BucketObjectRetention $objectRetention)
   {
@@ -474,7 +602,9 @@ class Bucket extends \Google\Collection
     return $this->objectRetention;
   }
   /**
-   * @param BucketOwner
+   * The owner of the bucket. This is always the project team's owner group.
+   *
+   * @param BucketOwner $owner
    */
   public function setOwner(BucketOwner $owner)
   {
@@ -488,7 +618,9 @@ class Bucket extends \Google\Collection
     return $this->owner;
   }
   /**
-   * @param string
+   * The project number of the project the bucket belongs to.
+   *
+   * @param string $projectNumber
    */
   public function setProjectNumber($projectNumber)
   {
@@ -502,7 +634,17 @@ class Bucket extends \Google\Collection
     return $this->projectNumber;
   }
   /**
-   * @param BucketRetentionPolicy
+   * The bucket's retention policy. The retention policy enforces a minimum
+   * retention time for all objects contained in the bucket, based on their
+   * creation time. Any attempt to overwrite or delete objects younger than the
+   * retention period will result in a PERMISSION_DENIED error. An unlocked
+   * retention policy can be modified or removed from the bucket via a
+   * storage.buckets.update operation. A locked retention policy cannot be
+   * removed or shortened in duration for the lifetime of the bucket. Attempting
+   * to remove or decrease period of a locked retention policy will result in a
+   * PERMISSION_DENIED error.
+   *
+   * @param BucketRetentionPolicy $retentionPolicy
    */
   public function setRetentionPolicy(BucketRetentionPolicy $retentionPolicy)
   {
@@ -516,7 +658,10 @@ class Bucket extends \Google\Collection
     return $this->retentionPolicy;
   }
   /**
-   * @param string
+   * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to
+   * turn on Turbo Replication on a bucket.
+   *
+   * @param string $rpo
    */
   public function setRpo($rpo)
   {
@@ -530,7 +675,9 @@ class Bucket extends \Google\Collection
     return $this->rpo;
   }
   /**
-   * @param bool
+   * Reserved for future use.
+   *
+   * @param bool $satisfiesPZI
    */
   public function setSatisfiesPZI($satisfiesPZI)
   {
@@ -544,7 +691,9 @@ class Bucket extends \Google\Collection
     return $this->satisfiesPZI;
   }
   /**
-   * @param bool
+   * Reserved for future use.
+   *
+   * @param bool $satisfiesPZS
    */
   public function setSatisfiesPZS($satisfiesPZS)
   {
@@ -558,7 +707,9 @@ class Bucket extends \Google\Collection
     return $this->satisfiesPZS;
   }
   /**
-   * @param string
+   * The URI of this bucket.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -572,7 +723,10 @@ class Bucket extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param BucketSoftDeletePolicy
+   * The bucket's soft delete policy, which defines the period of time that
+   * soft-deleted objects will be retained, and cannot be permanently deleted.
+   *
+   * @param BucketSoftDeletePolicy $softDeletePolicy
    */
   public function setSoftDeletePolicy(BucketSoftDeletePolicy $softDeletePolicy)
   {
@@ -586,7 +740,9 @@ class Bucket extends \Google\Collection
     return $this->softDeletePolicy;
   }
   /**
-   * @param string
+   * The soft delete time of the bucket in RFC 3339 format.
+   *
+   * @param string $softDeleteTime
    */
   public function setSoftDeleteTime($softDeleteTime)
   {
@@ -600,7 +756,15 @@ class Bucket extends \Google\Collection
     return $this->softDeleteTime;
   }
   /**
-   * @param string
+   * The bucket's default storage class, used whenever no storageClass is
+   * specified for a newly-created object. This defines how objects in the
+   * bucket are stored and determines the SLA and the cost of storage. Values
+   * include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE,
+   * and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the
+   * bucket is created, it will default to STANDARD. For more information, see
+   * [Storage Classes](https://cloud.google.com/storage/docs/storage-classes).
+   *
+   * @param string $storageClass
    */
   public function setStorageClass($storageClass)
   {
@@ -614,7 +778,9 @@ class Bucket extends \Google\Collection
     return $this->storageClass;
   }
   /**
-   * @param string
+   * The creation time of the bucket in RFC 3339 format.
+   *
+   * @param string $timeCreated
    */
   public function setTimeCreated($timeCreated)
   {
@@ -628,7 +794,9 @@ class Bucket extends \Google\Collection
     return $this->timeCreated;
   }
   /**
-   * @param string
+   * The modification time of the bucket in RFC 3339 format.
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {
@@ -642,7 +810,9 @@ class Bucket extends \Google\Collection
     return $this->updated;
   }
   /**
-   * @param BucketVersioning
+   * The bucket's versioning configuration.
+   *
+   * @param BucketVersioning $versioning
    */
   public function setVersioning(BucketVersioning $versioning)
   {
@@ -656,7 +826,12 @@ class Bucket extends \Google\Collection
     return $this->versioning;
   }
   /**
-   * @param BucketWebsite
+   * The bucket's website configuration, controlling how the service behaves
+   * when accessing bucket contents as a web site. See the [Static Website
+   * Examples](https://cloud.google.com/storage/docs/static-website) for more
+   * information.
+   *
+   * @param BucketWebsite $website
    */
   public function setWebsite(BucketWebsite $website)
   {
