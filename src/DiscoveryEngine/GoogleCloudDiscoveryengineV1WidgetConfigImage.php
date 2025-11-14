@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1WidgetConfigImage extends \Google\Model
 {
   /**
+   * Image URL.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Image URL.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

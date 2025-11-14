@@ -20,24 +20,39 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1RankingRecord extends \Google\Model
 {
   /**
+   * The content of the record. Empty by default. At least one of title or
+   * content should be set otherwise an INVALID_ARGUMENT error is thrown.
+   *
    * @var string
    */
   public $content;
   /**
+   * The unique ID to represent the record.
+   *
    * @var string
    */
   public $id;
   /**
+   * The score of this record based on the given query and selected model. The
+   * score will be rounded to 2 decimal places. If the score is close to 0, it
+   * will be rounded to 0.0001 to avoid returning unset.
+   *
    * @var float
    */
   public $score;
   /**
+   * The title of the record. Empty by default. At least one of title or content
+   * should be set otherwise an INVALID_ARGUMENT error is thrown.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The content of the record. Empty by default. At least one of title or
+   * content should be set otherwise an INVALID_ARGUMENT error is thrown.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -51,7 +66,9 @@ class GoogleCloudDiscoveryengineV1RankingRecord extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * The unique ID to represent the record.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -65,7 +82,11 @@ class GoogleCloudDiscoveryengineV1RankingRecord extends \Google\Model
     return $this->id;
   }
   /**
-   * @param float
+   * The score of this record based on the given query and selected model. The
+   * score will be rounded to 2 decimal places. If the score is close to 0, it
+   * will be rounded to 0.0001 to avoid returning unset.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {
@@ -79,7 +100,10 @@ class GoogleCloudDiscoveryengineV1RankingRecord extends \Google\Model
     return $this->score;
   }
   /**
-   * @param string
+   * The title of the record. Empty by default. At least one of title or content
+   * should be set otherwise an INVALID_ARGUMENT error is thrown.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
