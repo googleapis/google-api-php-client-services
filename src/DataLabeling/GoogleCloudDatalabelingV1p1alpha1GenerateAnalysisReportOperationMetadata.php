@@ -20,16 +20,23 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1p1alpha1GenerateAnalysisReportOperationMetadata extends \Google\Model
 {
   /**
+   * Timestamp when generate report request was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The name of the dataset for which the analysis report is generated. Format:
+   * "projects/datasets"
+   *
    * @var string
    */
   public $dataset;
 
   /**
-   * @param string
+   * Timestamp when generate report request was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -43,7 +50,10 @@ class GoogleCloudDatalabelingV1p1alpha1GenerateAnalysisReportOperationMetadata e
     return $this->createTime;
   }
   /**
-   * @param string
+   * The name of the dataset for which the analysis report is generated. Format:
+   * "projects/datasets"
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
