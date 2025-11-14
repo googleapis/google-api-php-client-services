@@ -20,32 +20,48 @@ namespace Google\Service\Monitoring;
 class GkeWorkload extends \Google\Model
 {
   /**
+   * The name of the parent cluster.
+   *
    * @var string
    */
   public $clusterName;
   /**
+   * The location of the parent cluster. This may be a zone or region.
+   *
    * @var string
    */
   public $location;
   /**
+   * The name of the parent namespace.
+   *
    * @var string
    */
   public $namespaceName;
   /**
+   * Output only. The project this resource lives in. For legacy services
+   * migrated from the Custom type, this may be a distinct project from the one
+   * parenting the service itself.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * The name of this workload.
+   *
    * @var string
    */
   public $topLevelControllerName;
   /**
+   * The type of this workload (for example, "Deployment" or "DaemonSet")
+   *
    * @var string
    */
   public $topLevelControllerType;
 
   /**
-   * @param string
+   * The name of the parent cluster.
+   *
+   * @param string $clusterName
    */
   public function setClusterName($clusterName)
   {
@@ -59,7 +75,9 @@ class GkeWorkload extends \Google\Model
     return $this->clusterName;
   }
   /**
-   * @param string
+   * The location of the parent cluster. This may be a zone or region.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -73,7 +91,9 @@ class GkeWorkload extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The name of the parent namespace.
+   *
+   * @param string $namespaceName
    */
   public function setNamespaceName($namespaceName)
   {
@@ -87,7 +107,11 @@ class GkeWorkload extends \Google\Model
     return $this->namespaceName;
   }
   /**
-   * @param string
+   * Output only. The project this resource lives in. For legacy services
+   * migrated from the Custom type, this may be a distinct project from the one
+   * parenting the service itself.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -101,7 +125,9 @@ class GkeWorkload extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * The name of this workload.
+   *
+   * @param string $topLevelControllerName
    */
   public function setTopLevelControllerName($topLevelControllerName)
   {
@@ -115,7 +141,9 @@ class GkeWorkload extends \Google\Model
     return $this->topLevelControllerName;
   }
   /**
-   * @param string
+   * The type of this workload (for example, "Deployment" or "DaemonSet")
+   *
+   * @param string $topLevelControllerType
    */
   public function setTopLevelControllerType($topLevelControllerType)
   {

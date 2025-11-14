@@ -20,20 +20,32 @@ namespace Google\Service\Monitoring;
 class MeshIstio extends \Google\Model
 {
   /**
+   * Identifier for the mesh in which this Istio service is defined. Corresponds
+   * to the mesh_uid metric label in Istio metrics.
+   *
    * @var string
    */
   public $meshUid;
   /**
+   * The name of the Istio service underlying this service. Corresponds to the
+   * destination_service_name metric label in Istio metrics.
+   *
    * @var string
    */
   public $serviceName;
   /**
+   * The namespace of the Istio service underlying this service. Corresponds to
+   * the destination_service_namespace metric label in Istio metrics.
+   *
    * @var string
    */
   public $serviceNamespace;
 
   /**
-   * @param string
+   * Identifier for the mesh in which this Istio service is defined. Corresponds
+   * to the mesh_uid metric label in Istio metrics.
+   *
+   * @param string $meshUid
    */
   public function setMeshUid($meshUid)
   {
@@ -47,7 +59,10 @@ class MeshIstio extends \Google\Model
     return $this->meshUid;
   }
   /**
-   * @param string
+   * The name of the Istio service underlying this service. Corresponds to the
+   * destination_service_name metric label in Istio metrics.
+   *
+   * @param string $serviceName
    */
   public function setServiceName($serviceName)
   {
@@ -61,7 +76,10 @@ class MeshIstio extends \Google\Model
     return $this->serviceName;
   }
   /**
-   * @param string
+   * The namespace of the Istio service underlying this service. Corresponds to
+   * the destination_service_namespace metric label in Istio metrics.
+   *
+   * @param string $serviceNamespace
    */
   public function setServiceNamespace($serviceNamespace)
   {

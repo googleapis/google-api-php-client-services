@@ -20,12 +20,18 @@ namespace Google\Service\Monitoring;
 class Minutes extends \Google\Model
 {
   /**
+   * Required. Number of minutes between runs. The interval must be greater than
+   * or equal to 5 minutes and less than or equal to 1440 minutes.
+   *
    * @var int
    */
   public $periodicity;
 
   /**
-   * @param int
+   * Required. Number of minutes between runs. The interval must be greater than
+   * or equal to 5 minutes and less than or equal to 1440 minutes.
+   *
+   * @param int $periodicity
    */
   public function setPeriodicity($periodicity)
   {

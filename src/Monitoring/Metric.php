@@ -20,16 +20,25 @@ namespace Google\Service\Monitoring;
 class Metric extends \Google\Model
 {
   /**
+   * The set of label values that uniquely identify this metric. All labels
+   * listed in the MetricDescriptor must be assigned values.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * An existing metric type, see google.api.MetricDescriptor. For example,
+   * custom.googleapis.com/invoice/paid/amount.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string[]
+   * The set of label values that uniquely identify this metric. All labels
+   * listed in the MetricDescriptor must be assigned values.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -43,7 +52,10 @@ class Metric extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * An existing metric type, see google.api.MetricDescriptor. For example,
+   * custom.googleapis.com/invoice/paid/amount.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
