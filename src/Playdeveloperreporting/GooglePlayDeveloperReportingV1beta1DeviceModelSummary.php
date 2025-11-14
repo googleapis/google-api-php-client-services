@@ -22,16 +22,22 @@ class GooglePlayDeveloperReportingV1beta1DeviceModelSummary extends \Google\Mode
   protected $deviceIdType = GooglePlayDeveloperReportingV1beta1DeviceId::class;
   protected $deviceIdDataType = '';
   /**
+   * Link to the device in Play Device Catalog.
+   *
    * @var string
    */
   public $deviceUri;
   /**
+   * Display name of the device.
+   *
    * @var string
    */
   public $marketingName;
 
   /**
-   * @param GooglePlayDeveloperReportingV1beta1DeviceId
+   * Identifier of the device.
+   *
+   * @param GooglePlayDeveloperReportingV1beta1DeviceId $deviceId
    */
   public function setDeviceId(GooglePlayDeveloperReportingV1beta1DeviceId $deviceId)
   {
@@ -45,7 +51,9 @@ class GooglePlayDeveloperReportingV1beta1DeviceModelSummary extends \Google\Mode
     return $this->deviceId;
   }
   /**
-   * @param string
+   * Link to the device in Play Device Catalog.
+   *
+   * @param string $deviceUri
    */
   public function setDeviceUri($deviceUri)
   {
@@ -59,7 +67,9 @@ class GooglePlayDeveloperReportingV1beta1DeviceModelSummary extends \Google\Mode
     return $this->deviceUri;
   }
   /**
-   * @param string
+   * Display name of the device.
+   *
+   * @param string $marketingName
    */
   public function setMarketingName($marketingName)
   {

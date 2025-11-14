@@ -21,6 +21,8 @@ class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricS
 {
   protected $collection_key = 'rows';
   /**
+   * Continuation token to fetch the next page of data.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricS
   protected $rowsDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token to fetch the next page of data.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricS
     return $this->nextPageToken;
   }
   /**
-   * @param GooglePlayDeveloperReportingV1beta1MetricsRow[]
+   * Returned rows of data.
+   *
+   * @param GooglePlayDeveloperReportingV1beta1MetricsRow[] $rows
    */
   public function setRows($rows)
   {

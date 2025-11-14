@@ -20,16 +20,22 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1DeviceId extends \Google\Model
 {
   /**
+   * Value of Build.BRAND.
+   *
    * @var string
    */
   public $buildBrand;
   /**
+   * Value of Build.DEVICE.
+   *
    * @var string
    */
   public $buildDevice;
 
   /**
-   * @param string
+   * Value of Build.BRAND.
+   *
+   * @param string $buildBrand
    */
   public function setBuildBrand($buildBrand)
   {
@@ -43,7 +49,9 @@ class GooglePlayDeveloperReportingV1beta1DeviceId extends \Google\Model
     return $this->buildBrand;
   }
   /**
-   * @param string
+   * Value of Build.DEVICE.
+   *
+   * @param string $buildDevice
    */
   public function setBuildDevice($buildDevice)
   {

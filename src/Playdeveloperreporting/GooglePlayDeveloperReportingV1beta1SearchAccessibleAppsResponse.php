@@ -23,12 +23,17 @@ class GooglePlayDeveloperReportingV1beta1SearchAccessibleAppsResponse extends \G
   protected $appsType = GooglePlayDeveloperReportingV1beta1App::class;
   protected $appsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GooglePlayDeveloperReportingV1beta1App[]
+   * The apps accessible to the user calling the endpoint.
+   *
+   * @param GooglePlayDeveloperReportingV1beta1App[] $apps
    */
   public function setApps($apps)
   {
@@ -42,7 +47,10 @@ class GooglePlayDeveloperReportingV1beta1SearchAccessibleAppsResponse extends \G
     return $this->apps;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

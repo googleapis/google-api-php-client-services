@@ -20,20 +20,32 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1App extends \Google\Model
 {
   /**
+   * Title of the app. This is the latest title as set in the Play Console and
+   * may not yet have been reviewed, so might not match the Play Store. Example:
+   * `Google Maps`.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. The resource name. Format: apps/{app}
+   *
    * @var string
    */
   public $name;
   /**
+   * Package name of the app. Example: `com.example.app123`.
+   *
    * @var string
    */
   public $packageName;
 
   /**
-   * @param string
+   * Title of the app. This is the latest title as set in the Play Console and
+   * may not yet have been reviewed, so might not match the Play Store. Example:
+   * `Google Maps`.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +59,9 @@ class GooglePlayDeveloperReportingV1beta1App extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. The resource name. Format: apps/{app}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +75,9 @@ class GooglePlayDeveloperReportingV1beta1App extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Package name of the app. Example: `com.example.app123`.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {

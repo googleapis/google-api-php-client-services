@@ -21,16 +21,22 @@ class GooglePlayDeveloperReportingV1beta1Release extends \Google\Collection
 {
   protected $collection_key = 'versionCodes';
   /**
+   * Readable identifier of the release.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The version codes contained in this release.
+   *
    * @var string[]
    */
   public $versionCodes;
 
   /**
-   * @param string
+   * Readable identifier of the release.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -44,7 +50,9 @@ class GooglePlayDeveloperReportingV1beta1Release extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * The version codes contained in this release.
+   *
+   * @param string[] $versionCodes
    */
   public function setVersionCodes($versionCodes)
   {

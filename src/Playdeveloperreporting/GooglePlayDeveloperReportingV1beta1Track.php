@@ -21,18 +21,24 @@ class GooglePlayDeveloperReportingV1beta1Track extends \Google\Collection
 {
   protected $collection_key = 'servingReleases';
   /**
+   * Readable identifier of the track.
+   *
    * @var string
    */
   public $displayName;
   protected $servingReleasesType = GooglePlayDeveloperReportingV1beta1Release::class;
   protected $servingReleasesDataType = 'array';
   /**
+   * The type of the track.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Readable identifier of the track.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -46,7 +52,9 @@ class GooglePlayDeveloperReportingV1beta1Track extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GooglePlayDeveloperReportingV1beta1Release[]
+   * Represents all active releases in the track.
+   *
+   * @param GooglePlayDeveloperReportingV1beta1Release[] $servingReleases
    */
   public function setServingReleases($servingReleases)
   {
@@ -60,7 +68,9 @@ class GooglePlayDeveloperReportingV1beta1Track extends \Google\Collection
     return $this->servingReleases;
   }
   /**
-   * @param string
+   * The type of the track.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
