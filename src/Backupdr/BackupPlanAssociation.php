@@ -19,54 +19,116 @@ namespace Google\Service\Backupdr;
 
 class BackupPlanAssociation extends \Google\Collection
 {
+  /**
+   * State not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The resource is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The resource has been created and is fully usable.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The resource is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The resource has been created but is not usable.
+   */
+  public const STATE_INACTIVE = 'INACTIVE';
+  /**
+   * The resource is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
   protected $collection_key = 'rulesConfigInfo';
   /**
+   * Required. Resource name of backup plan which needs to be applied on
+   * workload. Format:
+   * projects/{project}/locations/{location}/backupPlans/{backupPlanId}
+   *
    * @var string
    */
   public $backupPlan;
   /**
+   * Output only. The user friendly revision ID of the `BackupPlanRevision`.
+   * Example: v0, v1, v2, etc.
+   *
    * @var string
    */
   public $backupPlanRevisionId;
   /**
+   * Output only. The resource id of the `BackupPlanRevision`. Format: `projects
+   * /{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revisi
+   * on_id}`
+   *
    * @var string
    */
   public $backupPlanRevisionName;
   protected $cloudSqlInstanceBackupPlanAssociationPropertiesType = CloudSqlInstanceBackupPlanAssociationProperties::class;
   protected $cloudSqlInstanceBackupPlanAssociationPropertiesDataType = '';
   /**
+   * Output only. The time when the instance was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Resource name of data source which will be used as storage
+   * location for backups taken. Format : projects/{project}/locations/{location
+   * }/backupVaults/{backupvault}/dataSources/{datasource}
+   *
    * @var string
    */
   public $dataSource;
   /**
+   * Output only. Identifier. The resource name of BackupPlanAssociation in
+   * below format Format : projects/{project}/locations/{location}/backupPlanAss
+   * ociations/{backupPlanAssociationId}
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Immutable. Resource name of workload on which the backup plan is
+   * applied. The format can either be the resource name (e.g., "projects/my-
+   * project/zones/us-central1-a/instances/my-instance") or the full resource
+   * URI (e.g., "https://www.googleapis.com/compute/v1/projects/my-
+   * project/zones/us-central1-a/instances/my-instance").
+   *
    * @var string
    */
   public $resource;
   /**
+   * Required. Immutable. Resource type of workload on which backupplan is
+   * applied
+   *
    * @var string
    */
   public $resourceType;
   protected $rulesConfigInfoType = RuleConfigInfo::class;
   protected $rulesConfigInfoDataType = 'array';
   /**
+   * Output only. The BackupPlanAssociation resource state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time when the instance was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Required. Resource name of backup plan which needs to be applied on
+   * workload. Format:
+   * projects/{project}/locations/{location}/backupPlans/{backupPlanId}
+   *
+   * @param string $backupPlan
    */
   public function setBackupPlan($backupPlan)
   {
@@ -80,7 +142,10 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->backupPlan;
   }
   /**
-   * @param string
+   * Output only. The user friendly revision ID of the `BackupPlanRevision`.
+   * Example: v0, v1, v2, etc.
+   *
+   * @param string $backupPlanRevisionId
    */
   public function setBackupPlanRevisionId($backupPlanRevisionId)
   {
@@ -94,7 +159,11 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->backupPlanRevisionId;
   }
   /**
-   * @param string
+   * Output only. The resource id of the `BackupPlanRevision`. Format: `projects
+   * /{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revisi
+   * on_id}`
+   *
+   * @param string $backupPlanRevisionName
    */
   public function setBackupPlanRevisionName($backupPlanRevisionName)
   {
@@ -108,7 +177,9 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->backupPlanRevisionName;
   }
   /**
-   * @param CloudSqlInstanceBackupPlanAssociationProperties
+   * Output only. Cloud SQL instance's backup plan association properties.
+   *
+   * @param CloudSqlInstanceBackupPlanAssociationProperties $cloudSqlInstanceBackupPlanAssociationProperties
    */
   public function setCloudSqlInstanceBackupPlanAssociationProperties(CloudSqlInstanceBackupPlanAssociationProperties $cloudSqlInstanceBackupPlanAssociationProperties)
   {
@@ -122,7 +193,9 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->cloudSqlInstanceBackupPlanAssociationProperties;
   }
   /**
-   * @param string
+   * Output only. The time when the instance was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -136,7 +209,11 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Resource name of data source which will be used as storage
+   * location for backups taken. Format : projects/{project}/locations/{location
+   * }/backupVaults/{backupvault}/dataSources/{datasource}
+   *
+   * @param string $dataSource
    */
   public function setDataSource($dataSource)
   {
@@ -150,7 +227,11 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->dataSource;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of BackupPlanAssociation in
+   * below format Format : projects/{project}/locations/{location}/backupPlanAss
+   * ociations/{backupPlanAssociationId}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -164,7 +245,13 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Immutable. Resource name of workload on which the backup plan is
+   * applied. The format can either be the resource name (e.g., "projects/my-
+   * project/zones/us-central1-a/instances/my-instance") or the full resource
+   * URI (e.g., "https://www.googleapis.com/compute/v1/projects/my-
+   * project/zones/us-central1-a/instances/my-instance").
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -178,7 +265,10 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->resource;
   }
   /**
-   * @param string
+   * Required. Immutable. Resource type of workload on which backupplan is
+   * applied
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {
@@ -192,7 +282,9 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->resourceType;
   }
   /**
-   * @param RuleConfigInfo[]
+   * Output only. The config info related to backup rules.
+   *
+   * @param RuleConfigInfo[] $rulesConfigInfo
    */
   public function setRulesConfigInfo($rulesConfigInfo)
   {
@@ -206,21 +298,28 @@ class BackupPlanAssociation extends \Google\Collection
     return $this->rulesConfigInfo;
   }
   /**
-   * @param string
+   * Output only. The BackupPlanAssociation resource state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING, INACTIVE,
+   * UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time when the instance was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,24 +20,39 @@ namespace Google\Service\Backupdr;
 class CustomerEncryptionKey extends \Google\Model
 {
   /**
+   * Optional. The name of the encryption key that is stored in Google Cloud
+   * KMS.
+   *
    * @var string
    */
   public $kmsKeyName;
   /**
+   * Optional. The service account being used for the encryption request for the
+   * given KMS key. If absent, the Compute Engine default service account is
+   * used.
+   *
    * @var string
    */
   public $kmsKeyServiceAccount;
   /**
+   * Optional. Specifies a 256-bit customer-supplied encryption key.
+   *
    * @var string
    */
   public $rawKey;
   /**
+   * Optional. RSA-wrapped 2048-bit customer-supplied encryption key to either
+   * encrypt or decrypt this resource.
+   *
    * @var string
    */
   public $rsaEncryptedKey;
 
   /**
-   * @param string
+   * Optional. The name of the encryption key that is stored in Google Cloud
+   * KMS.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {
@@ -51,7 +66,11 @@ class CustomerEncryptionKey extends \Google\Model
     return $this->kmsKeyName;
   }
   /**
-   * @param string
+   * Optional. The service account being used for the encryption request for the
+   * given KMS key. If absent, the Compute Engine default service account is
+   * used.
+   *
+   * @param string $kmsKeyServiceAccount
    */
   public function setKmsKeyServiceAccount($kmsKeyServiceAccount)
   {
@@ -65,7 +84,9 @@ class CustomerEncryptionKey extends \Google\Model
     return $this->kmsKeyServiceAccount;
   }
   /**
-   * @param string
+   * Optional. Specifies a 256-bit customer-supplied encryption key.
+   *
+   * @param string $rawKey
    */
   public function setRawKey($rawKey)
   {
@@ -79,7 +100,10 @@ class CustomerEncryptionKey extends \Google\Model
     return $this->rawKey;
   }
   /**
-   * @param string
+   * Optional. RSA-wrapped 2048-bit customer-supplied encryption key to either
+   * encrypt or decrypt this resource.
+   *
+   * @param string $rsaEncryptedKey
    */
   public function setRsaEncryptedKey($rsaEncryptedKey)
   {

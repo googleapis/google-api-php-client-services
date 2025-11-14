@@ -20,24 +20,34 @@ namespace Google\Service\Backupdr;
 class FetchAccessTokenResponse extends \Google\Model
 {
   /**
+   * The token is valid until this time.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * The location in bucket that can be used for reading.
+   *
    * @var string
    */
   public $readLocation;
   /**
+   * The downscoped token that was created.
+   *
    * @var string
    */
   public $token;
   /**
+   * The location in bucket that can be used for writing.
+   *
    * @var string
    */
   public $writeLocation;
 
   /**
-   * @param string
+   * The token is valid until this time.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -51,7 +61,9 @@ class FetchAccessTokenResponse extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param string
+   * The location in bucket that can be used for reading.
+   *
+   * @param string $readLocation
    */
   public function setReadLocation($readLocation)
   {
@@ -65,7 +77,9 @@ class FetchAccessTokenResponse extends \Google\Model
     return $this->readLocation;
   }
   /**
-   * @param string
+   * The downscoped token that was created.
+   *
+   * @param string $token
    */
   public function setToken($token)
   {
@@ -79,7 +93,9 @@ class FetchAccessTokenResponse extends \Google\Model
     return $this->token;
   }
   /**
-   * @param string
+   * The location in bucket that can be used for writing.
+   *
+   * @param string $writeLocation
    */
   public function setWriteLocation($writeLocation)
   {
