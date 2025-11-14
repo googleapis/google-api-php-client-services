@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class Dimension extends \Google\Model
 {
   /**
+   * The kind of resource this is, in this case dfareporting#dimension.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The dimension name, e.g. advertiser
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The kind of resource this is, in this case dfareporting#dimension.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -43,7 +49,9 @@ class Dimension extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The dimension name, e.g. advertiser
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -25,6 +25,9 @@ class ReachReportCompatibleFields extends \Google\Collection
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
+   * The kind of resource this is, in this case
+   * dfareporting#reachReportCompatibleFields.
+   *
    * @var string
    */
   public $kind;
@@ -36,7 +39,10 @@ class ReachReportCompatibleFields extends \Google\Collection
   protected $reachByFrequencyMetricsDataType = 'array';
 
   /**
-   * @param Dimension[]
+   * Dimensions which are compatible to be selected in the "dimensionFilters"
+   * section of the report.
+   *
+   * @param Dimension[] $dimensionFilters
    */
   public function setDimensionFilters($dimensionFilters)
   {
@@ -50,7 +56,10 @@ class ReachReportCompatibleFields extends \Google\Collection
     return $this->dimensionFilters;
   }
   /**
-   * @param Dimension[]
+   * Dimensions which are compatible to be selected in the "dimensions" section
+   * of the report.
+   *
+   * @param Dimension[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -64,7 +73,10 @@ class ReachReportCompatibleFields extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case
+   * dfareporting#reachReportCompatibleFields.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +90,10 @@ class ReachReportCompatibleFields extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Metric[]
+   * Metrics which are compatible to be selected in the "metricNames" section of
+   * the report.
+   *
+   * @param Metric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -92,7 +107,10 @@ class ReachReportCompatibleFields extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param Metric[]
+   * Metrics which are compatible to be selected as activity metrics to pivot on
+   * in the "activities" section of the report.
+   *
+   * @param Metric[] $pivotedActivityMetrics
    */
   public function setPivotedActivityMetrics($pivotedActivityMetrics)
   {
@@ -106,7 +124,10 @@ class ReachReportCompatibleFields extends \Google\Collection
     return $this->pivotedActivityMetrics;
   }
   /**
-   * @param Metric[]
+   * Metrics which are compatible to be selected in the
+   * "reachByFrequencyMetricNames" section of the report.
+   *
+   * @param Metric[] $reachByFrequencyMetrics
    */
   public function setReachByFrequencyMetrics($reachByFrequencyMetrics)
   {

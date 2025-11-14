@@ -19,22 +19,47 @@ namespace Google\Service\Dfareporting;
 
 class ObjectFilter extends \Google\Collection
 {
+  /**
+   * Profile has access to none of the objects.
+   */
+  public const STATUS_NONE = 'NONE';
+  /**
+   * Profile has access to only specific objects.
+   */
+  public const STATUS_ASSIGNED = 'ASSIGNED';
+  /**
+   * Profile has access to all objects.
+   */
+  public const STATUS_ALL = 'ALL';
   protected $collection_key = 'objectIds';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#objectFilter".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Applicable when status is ASSIGNED. The user has access to objects with
+   * these object IDs.
+   *
    * @var string[]
    */
   public $objectIds;
   /**
+   * Status of the filter. NONE means the user has access to none of the
+   * objects. ALL means the user has access to all objects. ASSIGNED means the
+   * user has access to the objects with IDs in the objectIds list.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#objectFilter".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -48,7 +73,10 @@ class ObjectFilter extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * Applicable when status is ASSIGNED. The user has access to objects with
+   * these object IDs.
+   *
+   * @param string[] $objectIds
    */
   public function setObjectIds($objectIds)
   {
@@ -62,14 +90,20 @@ class ObjectFilter extends \Google\Collection
     return $this->objectIds;
   }
   /**
-   * @param string
+   * Status of the filter. NONE means the user has access to none of the
+   * objects. ALL means the user has access to all objects. ASSIGNED means the
+   * user has access to the objects with IDs in the objectIds list.
+   *
+   * Accepted values: NONE, ASSIGNED, ALL
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

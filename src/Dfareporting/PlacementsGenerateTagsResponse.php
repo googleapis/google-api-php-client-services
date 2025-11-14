@@ -21,6 +21,9 @@ class PlacementsGenerateTagsResponse extends \Google\Collection
 {
   protected $collection_key = 'placementTags';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#placementsGenerateTagsResponse".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class PlacementsGenerateTagsResponse extends \Google\Collection
   protected $placementTagsDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#placementsGenerateTagsResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class PlacementsGenerateTagsResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param PlacementTag[]
+   * Set of generated tags for the specified placements.
+   *
+   * @param PlacementTag[] $placementTags
    */
   public function setPlacementTags($placementTags)
   {
