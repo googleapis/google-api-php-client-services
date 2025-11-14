@@ -20,6 +20,8 @@ namespace Google\Service\Gmail;
 class Message extends \Google\Collection
 {
   protected $collection_key = 'labelIds';
+  protected $classificationLabelValuesType = ClassificationLabelValue::class;
+  protected $classificationLabelValuesDataType = 'array';
   /**
    * The ID of the last history record that modified this message.
    *
@@ -82,6 +84,26 @@ class Message extends \Google\Collection
    */
   public $threadId;
 
+  /**
+   * Classification Label values on the message. Available Classification Label
+   * schemas can be queried using the Google Drive Labels API. Each
+   * classification label ID must be unique. If duplicate IDs are provided, only
+   * one will be retained, and the selection is arbitrary. Only used for Google
+   * Workspace accounts.
+   *
+   * @param ClassificationLabelValue[] $classificationLabelValues
+   */
+  public function setClassificationLabelValues($classificationLabelValues)
+  {
+    $this->classificationLabelValues = $classificationLabelValues;
+  }
+  /**
+   * @return ClassificationLabelValue[]
+   */
+  public function getClassificationLabelValues()
+  {
+    return $this->classificationLabelValues;
+  }
   /**
    * The ID of the last history record that modified this message.
    *
