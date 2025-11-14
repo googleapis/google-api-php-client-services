@@ -24,13 +24,27 @@ class EasaLabelMetadata extends \Google\Model
   protected $labelIssueDateType = Date::class;
   protected $labelIssueDateDataType = '';
   /**
+   * Version of the label.
+   *
    * @var string
    */
   public $labelVersion;
+  /**
+   * Sustainable Aviation Fuel (SAF) emissions discount percentage applied to
+   * the label. It is a percentage as a decimal. The values are in the interval
+   * [0,1]. For example, 0.0021 means 0.21%. This discount and reduction in
+   * emissions are reported by the EASA label but they are not included in the
+   * CO2e estimates distributed by this API.
+   *
+   * @var 
+   */
   public $safDiscountPercentage;
 
   /**
-   * @param Date
+   * The date when the label expires. The label can be displayed until the end
+   * of this date.
+   *
+   * @param Date $labelExpiryDate
    */
   public function setLabelExpiryDate(Date $labelExpiryDate)
   {
@@ -44,7 +58,9 @@ class EasaLabelMetadata extends \Google\Model
     return $this->labelExpiryDate;
   }
   /**
-   * @param Date
+   * The date when the label was issued.
+   *
+   * @param Date $labelIssueDate
    */
   public function setLabelIssueDate(Date $labelIssueDate)
   {
@@ -58,7 +74,9 @@ class EasaLabelMetadata extends \Google\Model
     return $this->labelIssueDate;
   }
   /**
-   * @param string
+   * Version of the label.
+   *
+   * @param string $labelVersion
    */
   public function setLabelVersion($labelVersion)
   {
