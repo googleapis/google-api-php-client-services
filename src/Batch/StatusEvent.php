@@ -20,26 +20,64 @@ namespace Google\Service\Batch;
 class StatusEvent extends \Google\Model
 {
   /**
+   * Unknown state.
+   */
+  public const TASK_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Task is created and waiting for resources.
+   */
+  public const TASK_STATE_PENDING = 'PENDING';
+  /**
+   * The Task is assigned to at least one VM.
+   */
+  public const TASK_STATE_ASSIGNED = 'ASSIGNED';
+  /**
+   * The Task is running.
+   */
+  public const TASK_STATE_RUNNING = 'RUNNING';
+  /**
+   * The Task has failed.
+   */
+  public const TASK_STATE_FAILED = 'FAILED';
+  /**
+   * The Task has succeeded.
+   */
+  public const TASK_STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The Task has not been executed when the Job finishes.
+   */
+  public const TASK_STATE_UNEXECUTED = 'UNEXECUTED';
+  /**
+   * Description of the event.
+   *
    * @var string
    */
   public $description;
   /**
+   * The time this event occurred.
+   *
    * @var string
    */
   public $eventTime;
   protected $taskExecutionType = TaskExecution::class;
   protected $taskExecutionDataType = '';
   /**
+   * Task State. This field is only defined for task-level status events.
+   *
    * @var string
    */
   public $taskState;
   /**
+   * Type of the event.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Description of the event.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -53,7 +91,9 @@ class StatusEvent extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The time this event occurred.
+   *
+   * @param string $eventTime
    */
   public function setEventTime($eventTime)
   {
@@ -67,7 +107,10 @@ class StatusEvent extends \Google\Model
     return $this->eventTime;
   }
   /**
-   * @param TaskExecution
+   * Task Execution. This field is only defined for task-level status events
+   * where the task fails.
+   *
+   * @param TaskExecution $taskExecution
    */
   public function setTaskExecution(TaskExecution $taskExecution)
   {
@@ -81,21 +124,28 @@ class StatusEvent extends \Google\Model
     return $this->taskExecution;
   }
   /**
-   * @param string
+   * Task State. This field is only defined for task-level status events.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, ASSIGNED, RUNNING, FAILED,
+   * SUCCEEDED, UNEXECUTED
+   *
+   * @param self::TASK_STATE_* $taskState
    */
   public function setTaskState($taskState)
   {
     $this->taskState = $taskState;
   }
   /**
-   * @return string
+   * @return self::TASK_STATE_*
    */
   public function getTaskState()
   {
     return $this->taskState;
   }
   /**
-   * @param string
+   * Type of the event.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
