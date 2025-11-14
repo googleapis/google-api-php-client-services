@@ -21,16 +21,22 @@ class SupportedValues extends \Google\Collection
 {
   protected $collection_key = 'machineTypes';
   /**
+   * Output only. The accelerator types supported by WbI.
+   *
    * @var string[]
    */
   public $acceleratorTypes;
   /**
+   * Output only. The machine types supported by WbI.
+   *
    * @var string[]
    */
   public $machineTypes;
 
   /**
-   * @param string[]
+   * Output only. The accelerator types supported by WbI.
+   *
+   * @param string[] $acceleratorTypes
    */
   public function setAcceleratorTypes($acceleratorTypes)
   {
@@ -44,7 +50,9 @@ class SupportedValues extends \Google\Collection
     return $this->acceleratorTypes;
   }
   /**
-   * @param string[]
+   * Output only. The machine types supported by WbI.
+   *
+   * @param string[] $machineTypes
    */
   public function setMachineTypes($machineTypes)
   {
