@@ -20,16 +20,28 @@ namespace Google\Service\DataManager;
 class IngestMobileDataStatus extends \Google\Model
 {
   /**
+   * The total count of mobile ids sent in the upload request for the
+   * destination. Includes all mobile ids in the request, regardless of whether
+   * they were successfully ingested or not.
+   *
    * @var string
    */
   public $mobileIdCount;
   /**
+   * The total count of audience members sent in the upload request for the
+   * destination. Includes all audience members in the request, regardless of
+   * whether they were successfully ingested or not.
+   *
    * @var string
    */
   public $recordCount;
 
   /**
-   * @param string
+   * The total count of mobile ids sent in the upload request for the
+   * destination. Includes all mobile ids in the request, regardless of whether
+   * they were successfully ingested or not.
+   *
+   * @param string $mobileIdCount
    */
   public function setMobileIdCount($mobileIdCount)
   {
@@ -43,7 +55,11 @@ class IngestMobileDataStatus extends \Google\Model
     return $this->mobileIdCount;
   }
   /**
-   * @param string
+   * The total count of audience members sent in the upload request for the
+   * destination. Includes all audience members in the request, regardless of
+   * whether they were successfully ingested or not.
+   *
+   * @param string $recordCount
    */
   public function setRecordCount($recordCount)
   {

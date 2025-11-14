@@ -23,21 +23,36 @@ class CartData extends \Google\Collection
   protected $itemsType = Item::class;
   protected $itemsDataType = 'array';
   /**
+   * Optional. The Merchant Center feed label associated with the feed of the
+   * items.
+   *
    * @var string
    */
   public $merchantFeedLabel;
   /**
+   * Optional. The language code in ISO 639-1 associated with the Merchant
+   * Center feed of the items.where your items are uploaded.
+   *
    * @var string
    */
   public $merchantFeedLanguageCode;
   /**
+   * Optional. The Merchant Center ID associated with the items.
+   *
    * @var string
    */
   public $merchantId;
+  /**
+   * Optional. The sum of all discounts associated with the transaction.
+   *
+   * @var 
+   */
   public $transactionDiscount;
 
   /**
-   * @param Item[]
+   * Optional. The list of items associated with the event.
+   *
+   * @param Item[] $items
    */
   public function setItems($items)
   {
@@ -51,7 +66,10 @@ class CartData extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Optional. The Merchant Center feed label associated with the feed of the
+   * items.
+   *
+   * @param string $merchantFeedLabel
    */
   public function setMerchantFeedLabel($merchantFeedLabel)
   {
@@ -65,7 +83,10 @@ class CartData extends \Google\Collection
     return $this->merchantFeedLabel;
   }
   /**
-   * @param string
+   * Optional. The language code in ISO 639-1 associated with the Merchant
+   * Center feed of the items.where your items are uploaded.
+   *
+   * @param string $merchantFeedLanguageCode
    */
   public function setMerchantFeedLanguageCode($merchantFeedLanguageCode)
   {
@@ -79,7 +100,9 @@ class CartData extends \Google\Collection
     return $this->merchantFeedLanguageCode;
   }
   /**
-   * @param string
+   * Optional. The Merchant Center ID associated with the items.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
