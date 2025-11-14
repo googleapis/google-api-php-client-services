@@ -20,12 +20,18 @@ namespace Google\Service\Backupdr;
 class ServiceLockInfo extends \Google\Model
 {
   /**
+   * Output only. The name of the operation that created this lock. The lock
+   * will automatically be released when the operation completes.
+   *
    * @var string
    */
   public $operation;
 
   /**
-   * @param string
+   * Output only. The name of the operation that created this lock. The lock
+   * will automatically be released when the operation completes.
+   *
+   * @param string $operation
    */
   public function setOperation($operation)
   {
