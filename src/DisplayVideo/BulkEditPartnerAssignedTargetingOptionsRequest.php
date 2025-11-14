@@ -26,7 +26,11 @@ class BulkEditPartnerAssignedTargetingOptionsRequest extends \Google\Collection
   protected $deleteRequestsDataType = 'array';
 
   /**
-   * @param CreateAssignedTargetingOptionsRequest[]
+   * The assigned targeting options to create in batch, specified as a list of
+   * `CreateAssignedTargetingOptionsRequest`. Supported targeting types: *
+   * `TARGETING_TYPE_CHANNEL`
+   *
+   * @param CreateAssignedTargetingOptionsRequest[] $createRequests
    */
   public function setCreateRequests($createRequests)
   {
@@ -40,7 +44,11 @@ class BulkEditPartnerAssignedTargetingOptionsRequest extends \Google\Collection
     return $this->createRequests;
   }
   /**
-   * @param DeleteAssignedTargetingOptionsRequest[]
+   * The assigned targeting options to delete in batch, specified as a list of
+   * `DeleteAssignedTargetingOptionsRequest`. Supported targeting types: *
+   * `TARGETING_TYPE_CHANNEL`
+   *
+   * @param DeleteAssignedTargetingOptionsRequest[] $deleteRequests
    */
   public function setDeleteRequests($deleteRequests)
   {

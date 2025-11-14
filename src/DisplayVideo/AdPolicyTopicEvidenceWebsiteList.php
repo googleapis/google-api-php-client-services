@@ -21,12 +21,16 @@ class AdPolicyTopicEvidenceWebsiteList extends \Google\Collection
 {
   protected $collection_key = 'websites';
   /**
+   * Websites that caused the policy finding.
+   *
    * @var string[]
    */
   public $websites;
 
   /**
-   * @param string[]
+   * Websites that caused the policy finding.
+   *
+   * @param string[] $websites
    */
   public function setWebsites($websites)
   {

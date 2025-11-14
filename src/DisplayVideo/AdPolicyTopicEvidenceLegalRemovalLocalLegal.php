@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class AdPolicyTopicEvidenceLegalRemovalLocalLegal extends \Google\Model
 {
   /**
+   * Type of law for the legal notice.
+   *
    * @var string
    */
   public $lawType;
 
   /**
-   * @param string
+   * Type of law for the legal notice.
+   *
+   * @param string $lawType
    */
   public function setLawType($lawType)
   {

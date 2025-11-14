@@ -20,6 +20,38 @@ namespace Google\Service\DisplayVideo;
 class AlgorithmRulesSignalComparison extends \Google\Model
 {
   /**
+   * Unknown operator.
+   */
+  public const COMPARISON_OPERATOR_COMPARISON_OPERATOR_UNSPECIFIED = 'COMPARISON_OPERATOR_UNSPECIFIED';
+  /**
+   * Values are equal.
+   */
+  public const COMPARISON_OPERATOR_EQUAL = 'EQUAL';
+  /**
+   * Signal value is greater than the comparison value.
+   */
+  public const COMPARISON_OPERATOR_GREATER_THAN = 'GREATER_THAN';
+  /**
+   * Signal value is less than the second.
+   */
+  public const COMPARISON_OPERATOR_LESS_THAN = 'LESS_THAN';
+  /**
+   * Signal value is greater than or equal to the second.
+   */
+  public const COMPARISON_OPERATOR_GREATER_THAN_OR_EQUAL_TO = 'GREATER_THAN_OR_EQUAL_TO';
+  /**
+   * Signal value is less than or equal to the comparison value.
+   */
+  public const COMPARISON_OPERATOR_LESS_THAN_OR_EQUAL_TO = 'LESS_THAN_OR_EQUAL_TO';
+  /**
+   * Signal value is a list and contains the comparison value.
+   */
+  public const COMPARISON_OPERATOR_LIST_CONTAINS = 'LIST_CONTAINS';
+  /**
+   * Operator used to compare the two values. In the resulting experession, the
+   * `signal` will be the first value and the `comparisonValue will be the
+   * second.
+   *
    * @var string
    */
   public $comparisonOperator;
@@ -29,21 +61,30 @@ class AlgorithmRulesSignalComparison extends \Google\Model
   protected $signalDataType = '';
 
   /**
-   * @param string
+   * Operator used to compare the two values. In the resulting experession, the
+   * `signal` will be the first value and the `comparisonValue will be the
+   * second.
+   *
+   * Accepted values: COMPARISON_OPERATOR_UNSPECIFIED, EQUAL, GREATER_THAN,
+   * LESS_THAN, GREATER_THAN_OR_EQUAL_TO, LESS_THAN_OR_EQUAL_TO, LIST_CONTAINS
+   *
+   * @param self::COMPARISON_OPERATOR_* $comparisonOperator
    */
   public function setComparisonOperator($comparisonOperator)
   {
     $this->comparisonOperator = $comparisonOperator;
   }
   /**
-   * @return string
+   * @return self::COMPARISON_OPERATOR_*
    */
   public function getComparisonOperator()
   {
     return $this->comparisonOperator;
   }
   /**
-   * @param AlgorithmRulesComparisonValue
+   * Value to compare signal to.
+   *
+   * @param AlgorithmRulesComparisonValue $comparisonValue
    */
   public function setComparisonValue(AlgorithmRulesComparisonValue $comparisonValue)
   {
@@ -57,7 +98,9 @@ class AlgorithmRulesSignalComparison extends \Google\Model
     return $this->comparisonValue;
   }
   /**
-   * @param AlgorithmRulesSignal
+   * Signal to compare.
+   *
+   * @param AlgorithmRulesSignal $signal
    */
   public function setSignal(AlgorithmRulesSignal $signal)
   {
