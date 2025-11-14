@@ -21,16 +21,28 @@ class GooglePrivacyDlpV2DiscoveryCloudStorageConditions extends \Google\Collecti
 {
   protected $collection_key = 'includedObjectAttributes';
   /**
+   * Required. Only objects with the specified attributes will be scanned.
+   * Defaults to [ALL_SUPPORTED_BUCKETS] if unset.
+   *
    * @var string[]
    */
   public $includedBucketAttributes;
   /**
+   * Required. Only objects with the specified attributes will be scanned. If an
+   * object has one of the specified attributes but is inside an excluded
+   * bucket, it will not be scanned. Defaults to [ALL_SUPPORTED_OBJECTS]. A
+   * profile will be created even if no objects match the
+   * included_object_attributes.
+   *
    * @var string[]
    */
   public $includedObjectAttributes;
 
   /**
-   * @param string[]
+   * Required. Only objects with the specified attributes will be scanned.
+   * Defaults to [ALL_SUPPORTED_BUCKETS] if unset.
+   *
+   * @param string[] $includedBucketAttributes
    */
   public function setIncludedBucketAttributes($includedBucketAttributes)
   {
@@ -44,7 +56,13 @@ class GooglePrivacyDlpV2DiscoveryCloudStorageConditions extends \Google\Collecti
     return $this->includedBucketAttributes;
   }
   /**
-   * @param string[]
+   * Required. Only objects with the specified attributes will be scanned. If an
+   * object has one of the specified attributes but is inside an excluded
+   * bucket, it will not be scanned. Defaults to [ALL_SUPPORTED_OBJECTS]. A
+   * profile will be created even if no objects match the
+   * included_object_attributes.
+   *
+   * @param string[] $includedObjectAttributes
    */
   public function setIncludedObjectAttributes($includedObjectAttributes)
   {
