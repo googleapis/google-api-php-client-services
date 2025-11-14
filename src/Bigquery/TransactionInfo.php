@@ -20,12 +20,16 @@ namespace Google\Service\Bigquery;
 class TransactionInfo extends \Google\Model
 {
   /**
+   * Output only. [Alpha] Id of the transaction.
+   *
    * @var string
    */
   public $transactionId;
 
   /**
-   * @param string
+   * Output only. [Alpha] Id of the transaction.
+   *
+   * @param string $transactionId
    */
   public function setTransactionId($transactionId)
   {
