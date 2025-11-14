@@ -19,25 +19,60 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ValuedResource extends \Google\Collection
 {
+  /**
+   * The resource value isn't specified.
+   */
+  public const RESOURCE_VALUE_RESOURCE_VALUE_UNSPECIFIED = 'RESOURCE_VALUE_UNSPECIFIED';
+  /**
+   * This is a low-value resource.
+   */
+  public const RESOURCE_VALUE_RESOURCE_VALUE_LOW = 'RESOURCE_VALUE_LOW';
+  /**
+   * This is a medium-value resource.
+   */
+  public const RESOURCE_VALUE_RESOURCE_VALUE_MEDIUM = 'RESOURCE_VALUE_MEDIUM';
+  /**
+   * This is a high-value resource.
+   */
+  public const RESOURCE_VALUE_RESOURCE_VALUE_HIGH = 'RESOURCE_VALUE_HIGH';
   protected $collection_key = 'resourceValueConfigsUsed';
   /**
+   * Human-readable name of the valued resource.
+   *
    * @var string
    */
   public $displayName;
+  /**
+   * Exposed score for this valued resource. A value of 0 means no exposure was
+   * detected exposure.
+   *
+   * @var 
+   */
   public $exposedScore;
   /**
+   * Valued resource name, for example, e.g.:
+   * `organizations/123/simulations/456/valuedResources/789`
+   *
    * @var string
    */
   public $name;
   /**
+   * The [full resource name](https://cloud.google.com/apis/design/resource_name
+   * s#full_resource_name) of the valued resource.
+   *
    * @var string
    */
   public $resource;
   /**
+   * The [resource type](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types) of the valued resource.
+   *
    * @var string
    */
   public $resourceType;
   /**
+   * How valuable this resource is.
+   *
    * @var string
    */
   public $resourceValue;
@@ -45,7 +80,9 @@ class ValuedResource extends \Google\Collection
   protected $resourceValueConfigsUsedDataType = 'array';
 
   /**
-   * @param string
+   * Human-readable name of the valued resource.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -67,7 +104,10 @@ class ValuedResource extends \Google\Collection
     return $this->exposedScore;
   }
   /**
-   * @param string
+   * Valued resource name, for example, e.g.:
+   * `organizations/123/simulations/456/valuedResources/789`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -81,7 +121,10 @@ class ValuedResource extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The [full resource name](https://cloud.google.com/apis/design/resource_name
+   * s#full_resource_name) of the valued resource.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -95,7 +138,10 @@ class ValuedResource extends \Google\Collection
     return $this->resource;
   }
   /**
-   * @param string
+   * The [resource type](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types) of the valued resource.
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {
@@ -109,21 +155,29 @@ class ValuedResource extends \Google\Collection
     return $this->resourceType;
   }
   /**
-   * @param string
+   * How valuable this resource is.
+   *
+   * Accepted values: RESOURCE_VALUE_UNSPECIFIED, RESOURCE_VALUE_LOW,
+   * RESOURCE_VALUE_MEDIUM, RESOURCE_VALUE_HIGH
+   *
+   * @param self::RESOURCE_VALUE_* $resourceValue
    */
   public function setResourceValue($resourceValue)
   {
     $this->resourceValue = $resourceValue;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_VALUE_*
    */
   public function getResourceValue()
   {
     return $this->resourceValue;
   }
   /**
-   * @param ResourceValueConfigMetadata[]
+   * List of resource value configurations' metadata used to determine the value
+   * of this resource. Maximum of 100.
+   *
+   * @param ResourceValueConfigMetadata[] $resourceValueConfigsUsed
    */
   public function setResourceValueConfigsUsed($resourceValueConfigsUsed)
   {
