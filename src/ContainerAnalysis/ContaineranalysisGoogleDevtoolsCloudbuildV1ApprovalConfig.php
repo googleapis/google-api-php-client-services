@@ -20,12 +20,20 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1ApprovalConfig extends \Google\Model
 {
   /**
+   * Whether or not approval is needed. If this is set on a build, it will
+   * become pending when created, and will need to be explicitly approved to
+   * start.
+   *
    * @var bool
    */
   public $approvalRequired;
 
   /**
-   * @param bool
+   * Whether or not approval is needed. If this is set on a build, it will
+   * become pending when created, and will need to be explicitly approved to
+   * start.
+   *
+   * @param bool $approvalRequired
    */
   public function setApprovalRequired($approvalRequired)
   {

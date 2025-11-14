@@ -19,6 +19,30 @@ namespace Google\Service\Docs;
 
 class TableCellStyle extends \Google\Model
 {
+  /**
+   * An unspecified content alignment. The content alignment is inherited from
+   * the parent if one exists.
+   */
+  public const CONTENT_ALIGNMENT_CONTENT_ALIGNMENT_UNSPECIFIED = 'CONTENT_ALIGNMENT_UNSPECIFIED';
+  /**
+   * An unsupported content alignment.
+   */
+  public const CONTENT_ALIGNMENT_CONTENT_ALIGNMENT_UNSUPPORTED = 'CONTENT_ALIGNMENT_UNSUPPORTED';
+  /**
+   * An alignment that aligns the content to the top of the content holder.
+   * Corresponds to ECMA-376 ST_TextAnchoringType 't'.
+   */
+  public const CONTENT_ALIGNMENT_TOP = 'TOP';
+  /**
+   * An alignment that aligns the content to the middle of the content holder.
+   * Corresponds to ECMA-376 ST_TextAnchoringType 'ctr'.
+   */
+  public const CONTENT_ALIGNMENT_MIDDLE = 'MIDDLE';
+  /**
+   * An alignment that aligns the content to the bottom of the content holder.
+   * Corresponds to ECMA-376 ST_TextAnchoringType 'b'.
+   */
+  public const CONTENT_ALIGNMENT_BOTTOM = 'BOTTOM';
   protected $backgroundColorType = OptionalColor::class;
   protected $backgroundColorDataType = '';
   protected $borderBottomType = TableCellBorder::class;
@@ -30,10 +54,15 @@ class TableCellStyle extends \Google\Model
   protected $borderTopType = TableCellBorder::class;
   protected $borderTopDataType = '';
   /**
+   * The column span of the cell. This property is read-only.
+   *
    * @var int
    */
   public $columnSpan;
   /**
+   * The alignment of the content in the table cell. The default alignment
+   * matches the alignment for newly created table cells in the Docs editor.
+   *
    * @var string
    */
   public $contentAlignment;
@@ -46,12 +75,16 @@ class TableCellStyle extends \Google\Model
   protected $paddingTopType = Dimension::class;
   protected $paddingTopDataType = '';
   /**
+   * The row span of the cell. This property is read-only.
+   *
    * @var int
    */
   public $rowSpan;
 
   /**
-   * @param OptionalColor
+   * The background color of the cell.
+   *
+   * @param OptionalColor $backgroundColor
    */
   public function setBackgroundColor(OptionalColor $backgroundColor)
   {
@@ -65,7 +98,9 @@ class TableCellStyle extends \Google\Model
     return $this->backgroundColor;
   }
   /**
-   * @param TableCellBorder
+   * The bottom border of the cell.
+   *
+   * @param TableCellBorder $borderBottom
    */
   public function setBorderBottom(TableCellBorder $borderBottom)
   {
@@ -79,7 +114,9 @@ class TableCellStyle extends \Google\Model
     return $this->borderBottom;
   }
   /**
-   * @param TableCellBorder
+   * The left border of the cell.
+   *
+   * @param TableCellBorder $borderLeft
    */
   public function setBorderLeft(TableCellBorder $borderLeft)
   {
@@ -93,7 +130,9 @@ class TableCellStyle extends \Google\Model
     return $this->borderLeft;
   }
   /**
-   * @param TableCellBorder
+   * The right border of the cell.
+   *
+   * @param TableCellBorder $borderRight
    */
   public function setBorderRight(TableCellBorder $borderRight)
   {
@@ -107,7 +146,9 @@ class TableCellStyle extends \Google\Model
     return $this->borderRight;
   }
   /**
-   * @param TableCellBorder
+   * The top border of the cell.
+   *
+   * @param TableCellBorder $borderTop
    */
   public function setBorderTop(TableCellBorder $borderTop)
   {
@@ -121,7 +162,9 @@ class TableCellStyle extends \Google\Model
     return $this->borderTop;
   }
   /**
-   * @param int
+   * The column span of the cell. This property is read-only.
+   *
+   * @param int $columnSpan
    */
   public function setColumnSpan($columnSpan)
   {
@@ -135,21 +178,29 @@ class TableCellStyle extends \Google\Model
     return $this->columnSpan;
   }
   /**
-   * @param string
+   * The alignment of the content in the table cell. The default alignment
+   * matches the alignment for newly created table cells in the Docs editor.
+   *
+   * Accepted values: CONTENT_ALIGNMENT_UNSPECIFIED,
+   * CONTENT_ALIGNMENT_UNSUPPORTED, TOP, MIDDLE, BOTTOM
+   *
+   * @param self::CONTENT_ALIGNMENT_* $contentAlignment
    */
   public function setContentAlignment($contentAlignment)
   {
     $this->contentAlignment = $contentAlignment;
   }
   /**
-   * @return string
+   * @return self::CONTENT_ALIGNMENT_*
    */
   public function getContentAlignment()
   {
     return $this->contentAlignment;
   }
   /**
-   * @param Dimension
+   * The bottom padding of the cell.
+   *
+   * @param Dimension $paddingBottom
    */
   public function setPaddingBottom(Dimension $paddingBottom)
   {
@@ -163,7 +214,9 @@ class TableCellStyle extends \Google\Model
     return $this->paddingBottom;
   }
   /**
-   * @param Dimension
+   * The left padding of the cell.
+   *
+   * @param Dimension $paddingLeft
    */
   public function setPaddingLeft(Dimension $paddingLeft)
   {
@@ -177,7 +230,9 @@ class TableCellStyle extends \Google\Model
     return $this->paddingLeft;
   }
   /**
-   * @param Dimension
+   * The right padding of the cell.
+   *
+   * @param Dimension $paddingRight
    */
   public function setPaddingRight(Dimension $paddingRight)
   {
@@ -191,7 +246,9 @@ class TableCellStyle extends \Google\Model
     return $this->paddingRight;
   }
   /**
-   * @param Dimension
+   * The top padding of the cell.
+   *
+   * @param Dimension $paddingTop
    */
   public function setPaddingTop(Dimension $paddingTop)
   {
@@ -205,7 +262,9 @@ class TableCellStyle extends \Google\Model
     return $this->paddingTop;
   }
   /**
-   * @param int
+   * The row span of the cell. This property is read-only.
+   *
+   * @param int $rowSpan
    */
   public function setRowSpan($rowSpan)
   {

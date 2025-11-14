@@ -20,12 +20,16 @@ namespace Google\Service\CloudDeploy;
 class CustomMetadata extends \Google\Model
 {
   /**
+   * Output only. Key-value pairs provided by the user-defined operation.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Output only. Key-value pairs provided by the user-defined operation.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

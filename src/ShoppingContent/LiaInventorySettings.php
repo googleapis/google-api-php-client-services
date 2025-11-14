@@ -20,24 +20,36 @@ namespace Google\Service\ShoppingContent;
 class LiaInventorySettings extends \Google\Model
 {
   /**
+   * The email of the contact for the inventory verification process.
+   *
    * @var string
    */
   public $inventoryVerificationContactEmail;
   /**
+   * The name of the contact for the inventory verification process.
+   *
    * @var string
    */
   public $inventoryVerificationContactName;
   /**
+   * The status of the verification contact. Acceptable values are: - "`active`"
+   * - "`inactive`" - "`pending`"
+   *
    * @var string
    */
   public $inventoryVerificationContactStatus;
   /**
+   * The status of the inventory verification process. Acceptable values are: -
+   * "`active`" - "`inactive`" - "`pending`"
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * The email of the contact for the inventory verification process.
+   *
+   * @param string $inventoryVerificationContactEmail
    */
   public function setInventoryVerificationContactEmail($inventoryVerificationContactEmail)
   {
@@ -51,7 +63,9 @@ class LiaInventorySettings extends \Google\Model
     return $this->inventoryVerificationContactEmail;
   }
   /**
-   * @param string
+   * The name of the contact for the inventory verification process.
+   *
+   * @param string $inventoryVerificationContactName
    */
   public function setInventoryVerificationContactName($inventoryVerificationContactName)
   {
@@ -65,7 +79,10 @@ class LiaInventorySettings extends \Google\Model
     return $this->inventoryVerificationContactName;
   }
   /**
-   * @param string
+   * The status of the verification contact. Acceptable values are: - "`active`"
+   * - "`inactive`" - "`pending`"
+   *
+   * @param string $inventoryVerificationContactStatus
    */
   public function setInventoryVerificationContactStatus($inventoryVerificationContactStatus)
   {
@@ -79,7 +96,10 @@ class LiaInventorySettings extends \Google\Model
     return $this->inventoryVerificationContactStatus;
   }
   /**
-   * @param string
+   * The status of the inventory verification process. Acceptable values are: -
+   * "`active`" - "`inactive`" - "`pending`"
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

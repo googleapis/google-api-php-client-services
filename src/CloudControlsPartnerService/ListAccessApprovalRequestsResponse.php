@@ -23,16 +23,23 @@ class ListAccessApprovalRequestsResponse extends \Google\Collection
   protected $accessApprovalRequestsType = AccessApprovalRequest::class;
   protected $accessApprovalRequestsDataType = 'array';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param AccessApprovalRequest[]
+   * List of access approval requests
+   *
+   * @param AccessApprovalRequest[] $accessApprovalRequests
    */
   public function setAccessApprovalRequests($accessApprovalRequests)
   {
@@ -46,7 +53,10 @@ class ListAccessApprovalRequestsResponse extends \Google\Collection
     return $this->accessApprovalRequests;
   }
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListAccessApprovalRequestsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

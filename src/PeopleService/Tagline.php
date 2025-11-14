@@ -22,12 +22,16 @@ class Tagline extends \Google\Model
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The tagline.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param FieldMetadata
+   * Metadata about the tagline.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -41,7 +45,9 @@ class Tagline extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The tagline.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

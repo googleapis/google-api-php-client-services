@@ -19,44 +19,75 @@ namespace Google\Service\SASPortalTesting;
 
 class SasPortalDeviceConfig extends \Google\Collection
 {
+  /**
+   * Unspecified device category.
+   */
+  public const CATEGORY_DEVICE_CATEGORY_UNSPECIFIED = 'DEVICE_CATEGORY_UNSPECIFIED';
+  /**
+   * Category A.
+   */
+  public const CATEGORY_DEVICE_CATEGORY_A = 'DEVICE_CATEGORY_A';
+  /**
+   * Category B.
+   */
+  public const CATEGORY_DEVICE_CATEGORY_B = 'DEVICE_CATEGORY_B';
+  public const STATE_DEVICE_CONFIG_STATE_UNSPECIFIED = 'DEVICE_CONFIG_STATE_UNSPECIFIED';
+  public const STATE_DRAFT = 'DRAFT';
+  public const STATE_FINAL = 'FINAL';
   protected $collection_key = 'measurementCapabilities';
   protected $airInterfaceType = SasPortalDeviceAirInterface::class;
   protected $airInterfaceDataType = '';
   /**
+   * The call sign of the device operator.
+   *
    * @var string
    */
   public $callSign;
   /**
+   * FCC category of the device.
+   *
    * @var string
    */
   public $category;
   protected $installationParamsType = SasPortalInstallationParams::class;
   protected $installationParamsDataType = '';
   /**
+   * Output only. Whether the configuration has been signed by a CPI.
+   *
    * @var bool
    */
   public $isSigned;
   /**
+   * Measurement reporting capabilities of the device.
+   *
    * @var string[]
    */
   public $measurementCapabilities;
   protected $modelType = SasPortalDeviceModel::class;
   protected $modelDataType = '';
   /**
+   * State of the configuration.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The last time the device configuration was edited.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * The identifier of a device user.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param SasPortalDeviceAirInterface
+   * Information about this device's air interface.
+   *
+   * @param SasPortalDeviceAirInterface $airInterface
    */
   public function setAirInterface(SasPortalDeviceAirInterface $airInterface)
   {
@@ -70,7 +101,9 @@ class SasPortalDeviceConfig extends \Google\Collection
     return $this->airInterface;
   }
   /**
-   * @param string
+   * The call sign of the device operator.
+   *
+   * @param string $callSign
    */
   public function setCallSign($callSign)
   {
@@ -84,21 +117,28 @@ class SasPortalDeviceConfig extends \Google\Collection
     return $this->callSign;
   }
   /**
-   * @param string
+   * FCC category of the device.
+   *
+   * Accepted values: DEVICE_CATEGORY_UNSPECIFIED, DEVICE_CATEGORY_A,
+   * DEVICE_CATEGORY_B
+   *
+   * @param self::CATEGORY_* $category
    */
   public function setCategory($category)
   {
     $this->category = $category;
   }
   /**
-   * @return string
+   * @return self::CATEGORY_*
    */
   public function getCategory()
   {
     return $this->category;
   }
   /**
-   * @param SasPortalInstallationParams
+   * Installation parameters for the device.
+   *
+   * @param SasPortalInstallationParams $installationParams
    */
   public function setInstallationParams(SasPortalInstallationParams $installationParams)
   {
@@ -112,7 +152,9 @@ class SasPortalDeviceConfig extends \Google\Collection
     return $this->installationParams;
   }
   /**
-   * @param bool
+   * Output only. Whether the configuration has been signed by a CPI.
+   *
+   * @param bool $isSigned
    */
   public function setIsSigned($isSigned)
   {
@@ -126,7 +168,9 @@ class SasPortalDeviceConfig extends \Google\Collection
     return $this->isSigned;
   }
   /**
-   * @param string[]
+   * Measurement reporting capabilities of the device.
+   *
+   * @param string[] $measurementCapabilities
    */
   public function setMeasurementCapabilities($measurementCapabilities)
   {
@@ -140,7 +184,9 @@ class SasPortalDeviceConfig extends \Google\Collection
     return $this->measurementCapabilities;
   }
   /**
-   * @param SasPortalDeviceModel
+   * Information about this device model.
+   *
+   * @param SasPortalDeviceModel $model
    */
   public function setModel(SasPortalDeviceModel $model)
   {
@@ -154,21 +200,27 @@ class SasPortalDeviceConfig extends \Google\Collection
     return $this->model;
   }
   /**
-   * @param string
+   * State of the configuration.
+   *
+   * Accepted values: DEVICE_CONFIG_STATE_UNSPECIFIED, DRAFT, FINAL
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The last time the device configuration was edited.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -182,7 +234,9 @@ class SasPortalDeviceConfig extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param string
+   * The identifier of a device user.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

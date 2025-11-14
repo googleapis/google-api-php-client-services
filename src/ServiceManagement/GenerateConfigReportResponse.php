@@ -25,16 +25,23 @@ class GenerateConfigReportResponse extends \Google\Collection
   protected $diagnosticsType = Diagnostic::class;
   protected $diagnosticsDataType = 'array';
   /**
+   * ID of the service configuration this report belongs to.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of the service this report belongs to.
+   *
    * @var string
    */
   public $serviceName;
 
   /**
-   * @param ChangeReport[]
+   * list of ChangeReport, each corresponding to comparison between two service
+   * configurations.
+   *
+   * @param ChangeReport[] $changeReports
    */
   public function setChangeReports($changeReports)
   {
@@ -48,7 +55,10 @@ class GenerateConfigReportResponse extends \Google\Collection
     return $this->changeReports;
   }
   /**
-   * @param Diagnostic[]
+   * Errors / Linter warnings associated with the service definition this report
+   * belongs to.
+   *
+   * @param Diagnostic[] $diagnostics
    */
   public function setDiagnostics($diagnostics)
   {
@@ -62,7 +72,9 @@ class GenerateConfigReportResponse extends \Google\Collection
     return $this->diagnostics;
   }
   /**
-   * @param string
+   * ID of the service configuration this report belongs to.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -76,7 +88,9 @@ class GenerateConfigReportResponse extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Name of the service this report belongs to.
+   *
+   * @param string $serviceName
    */
   public function setServiceName($serviceName)
   {

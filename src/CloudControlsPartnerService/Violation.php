@@ -20,46 +20,90 @@ namespace Google\Service\CloudControlsPartnerService;
 class Violation extends \Google\Model
 {
   /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Violation is resolved.
+   */
+  public const STATE_RESOLVED = 'RESOLVED';
+  /**
+   * Violation is Unresolved
+   */
+  public const STATE_UNRESOLVED = 'UNRESOLVED';
+  /**
+   * Violation is Exception
+   */
+  public const STATE_EXCEPTION = 'EXCEPTION';
+  /**
+   * Output only. Time of the event which triggered the Violation.
+   *
    * @var string
    */
   public $beginTime;
   /**
+   * Output only. Category under which this violation is mapped. e.g. Location,
+   * Service Usage, Access, Encryption, etc.
+   *
    * @var string
    */
   public $category;
   /**
+   * Output only. Description for the Violation. e.g. OrgPolicy
+   * gcp.resourceLocations has non compliant value.
+   *
    * @var string
    */
   public $description;
   /**
+   * The folder_id of the violation
+   *
    * @var string
    */
   public $folderId;
   /**
+   * Identifier. Format: `organizations/{organization}/locations/{location}/cust
+   * omers/{customer}/workloads/{workload}/violations/{violation}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Immutable. Name of the OrgPolicy which was modified with non-
+   * compliant change and resulted this violation. Format:
+   * `projects/{project_number}/policies/{constraint_name}`
+   * `folders/{folder_id}/policies/{constraint_name}`
+   * `organizations/{organization_id}/policies/{constraint_name}`
+   *
    * @var string
    */
   public $nonCompliantOrgPolicy;
   protected $remediationType = Remediation::class;
   protected $remediationDataType = '';
   /**
+   * Output only. Time of the event which fixed the Violation. If the violation
+   * is ACTIVE this will be empty.
+   *
    * @var string
    */
   public $resolveTime;
   /**
+   * Output only. State of the violation
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The last time when the Violation record was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Time of the event which triggered the Violation.
+   *
+   * @param string $beginTime
    */
   public function setBeginTime($beginTime)
   {
@@ -73,7 +117,10 @@ class Violation extends \Google\Model
     return $this->beginTime;
   }
   /**
-   * @param string
+   * Output only. Category under which this violation is mapped. e.g. Location,
+   * Service Usage, Access, Encryption, etc.
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -87,7 +134,10 @@ class Violation extends \Google\Model
     return $this->category;
   }
   /**
-   * @param string
+   * Output only. Description for the Violation. e.g. OrgPolicy
+   * gcp.resourceLocations has non compliant value.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -101,7 +151,9 @@ class Violation extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The folder_id of the violation
+   *
+   * @param string $folderId
    */
   public function setFolderId($folderId)
   {
@@ -115,7 +167,10 @@ class Violation extends \Google\Model
     return $this->folderId;
   }
   /**
-   * @param string
+   * Identifier. Format: `organizations/{organization}/locations/{location}/cust
+   * omers/{customer}/workloads/{workload}/violations/{violation}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -129,7 +184,13 @@ class Violation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Immutable. Name of the OrgPolicy which was modified with non-
+   * compliant change and resulted this violation. Format:
+   * `projects/{project_number}/policies/{constraint_name}`
+   * `folders/{folder_id}/policies/{constraint_name}`
+   * `organizations/{organization_id}/policies/{constraint_name}`
+   *
+   * @param string $nonCompliantOrgPolicy
    */
   public function setNonCompliantOrgPolicy($nonCompliantOrgPolicy)
   {
@@ -143,7 +204,9 @@ class Violation extends \Google\Model
     return $this->nonCompliantOrgPolicy;
   }
   /**
-   * @param Remediation
+   * Output only. Compliance violation remediation
+   *
+   * @param Remediation $remediation
    */
   public function setRemediation(Remediation $remediation)
   {
@@ -157,7 +220,10 @@ class Violation extends \Google\Model
     return $this->remediation;
   }
   /**
-   * @param string
+   * Output only. Time of the event which fixed the Violation. If the violation
+   * is ACTIVE this will be empty.
+   *
+   * @param string $resolveTime
    */
   public function setResolveTime($resolveTime)
   {
@@ -171,21 +237,27 @@ class Violation extends \Google\Model
     return $this->resolveTime;
   }
   /**
-   * @param string
+   * Output only. State of the violation
+   *
+   * Accepted values: STATE_UNSPECIFIED, RESOLVED, UNRESOLVED, EXCEPTION
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The last time when the Violation record was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

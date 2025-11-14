@@ -19,26 +19,85 @@ namespace Google\Service\DisplayVideo;
 
 class YoutubeAndPartnersSettings extends \Google\Collection
 {
+  /**
+   * Content category is not specified or is unknown in this version.
+   */
+  public const CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED';
+  /**
+   * A category consisting of a wide range of content appropriate for most
+   * brands. The content is based off of YouTube's [advertiser-friendly content
+   * guidelines](https://support.google.com/youtube/answer/6162278).
+   */
+  public const CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_STANDARD = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_STANDARD';
+  /**
+   * A category including all content across YouTube and video partners that
+   * meets standards for monetization.
+   */
+  public const CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_EXPANDED = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_EXPANDED';
+  /**
+   * A category consisting of a reduced range of content that meets heightened
+   * requirements, especially regarding inappropriate language and sexual
+   * suggestiveness.
+   */
+  public const CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED';
+  /**
+   * Content category is not specified or is unknown in this version.
+   */
+  public const EFFECTIVE_CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED';
+  /**
+   * A category consisting of a wide range of content appropriate for most
+   * brands. The content is based off of YouTube's [advertiser-friendly content
+   * guidelines](https://support.google.com/youtube/answer/6162278).
+   */
+  public const EFFECTIVE_CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_STANDARD = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_STANDARD';
+  /**
+   * A category including all content across YouTube and video partners that
+   * meets standards for monetization.
+   */
+  public const EFFECTIVE_CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_EXPANDED = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_EXPANDED';
+  /**
+   * A category consisting of a reduced range of content that meets heightened
+   * requirements, especially regarding inappropriate language and sexual
+   * suggestiveness.
+   */
+  public const EFFECTIVE_CONTENT_CATEGORY_YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED = 'YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED';
   protected $collection_key = 'relatedVideoIds';
   /**
+   * Output only. The kind of content on which the YouTube and Partners ads will
+   * be shown. *Warning*: This field will be removed in the near future. Use
+   * effective_content_category instead.
+   *
    * @var string
    */
   public $contentCategory;
   /**
+   * Output only. The content category which takes effect when serving the line
+   * item. When content category is set in both line item and advertiser, the
+   * stricter one will take effect when serving the line item. New line items
+   * will only inherit the advertiser level setting.
+   *
    * @var string
    */
   public $effectiveContentCategory;
   protected $inventorySourceSettingsType = YoutubeAndPartnersInventorySourceConfig::class;
   protected $inventorySourceSettingsDataType = '';
   /**
+   * Optional. The ID of the form to generate leads.
+   *
    * @var string
    */
   public $leadFormId;
   /**
+   * Optional. The ID of the merchant which is linked to the line item for
+   * product feed.
+   *
    * @var string
    */
   public $linkedMerchantId;
   /**
+   * Optional. The IDs of the videos appear below the primary video ad when the
+   * ad is playing in the YouTube app on mobile devices.
+   *
    * @var string[]
    */
   public $relatedVideoIds;
@@ -54,35 +113,57 @@ class YoutubeAndPartnersSettings extends \Google\Collection
   protected $viewFrequencyCapDataType = '';
 
   /**
-   * @param string
+   * Output only. The kind of content on which the YouTube and Partners ads will
+   * be shown. *Warning*: This field will be removed in the near future. Use
+   * effective_content_category instead.
+   *
+   * Accepted values: YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED,
+   * YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_STANDARD,
+   * YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_EXPANDED,
+   * YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED
+   *
+   * @param self::CONTENT_CATEGORY_* $contentCategory
    */
   public function setContentCategory($contentCategory)
   {
     $this->contentCategory = $contentCategory;
   }
   /**
-   * @return string
+   * @return self::CONTENT_CATEGORY_*
    */
   public function getContentCategory()
   {
     return $this->contentCategory;
   }
   /**
-   * @param string
+   * Output only. The content category which takes effect when serving the line
+   * item. When content category is set in both line item and advertiser, the
+   * stricter one will take effect when serving the line item. New line items
+   * will only inherit the advertiser level setting.
+   *
+   * Accepted values: YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED,
+   * YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_STANDARD,
+   * YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_EXPANDED,
+   * YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED
+   *
+   * @param self::EFFECTIVE_CONTENT_CATEGORY_* $effectiveContentCategory
    */
   public function setEffectiveContentCategory($effectiveContentCategory)
   {
     $this->effectiveContentCategory = $effectiveContentCategory;
   }
   /**
-   * @return string
+   * @return self::EFFECTIVE_CONTENT_CATEGORY_*
    */
   public function getEffectiveContentCategory()
   {
     return $this->effectiveContentCategory;
   }
   /**
-   * @param YoutubeAndPartnersInventorySourceConfig
+   * Settings that control what YouTube and Partners inventories the line item
+   * will target.
+   *
+   * @param YoutubeAndPartnersInventorySourceConfig $inventorySourceSettings
    */
   public function setInventorySourceSettings(YoutubeAndPartnersInventorySourceConfig $inventorySourceSettings)
   {
@@ -96,7 +177,9 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->inventorySourceSettings;
   }
   /**
-   * @param string
+   * Optional. The ID of the form to generate leads.
+   *
+   * @param string $leadFormId
    */
   public function setLeadFormId($leadFormId)
   {
@@ -110,7 +193,10 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->leadFormId;
   }
   /**
-   * @param string
+   * Optional. The ID of the merchant which is linked to the line item for
+   * product feed.
+   *
+   * @param string $linkedMerchantId
    */
   public function setLinkedMerchantId($linkedMerchantId)
   {
@@ -124,7 +210,10 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->linkedMerchantId;
   }
   /**
-   * @param string[]
+   * Optional. The IDs of the videos appear below the primary video ad when the
+   * ad is playing in the YouTube app on mobile devices.
+   *
+   * @param string[] $relatedVideoIds
    */
   public function setRelatedVideoIds($relatedVideoIds)
   {
@@ -138,7 +227,10 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->relatedVideoIds;
   }
   /**
-   * @param TargetFrequency
+   * Optional. The average number of times you want ads from this line item to
+   * show to the same person over a certain period of time.
+   *
+   * @param TargetFrequency $targetFrequency
    */
   public function setTargetFrequency(TargetFrequency $targetFrequency)
   {
@@ -152,7 +244,9 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->targetFrequency;
   }
   /**
-   * @param ThirdPartyMeasurementConfigs
+   * Optional. The third-party measurement configs of the line item.
+   *
+   * @param ThirdPartyMeasurementConfigs $thirdPartyMeasurementConfigs
    */
   public function setThirdPartyMeasurementConfigs(ThirdPartyMeasurementConfigs $thirdPartyMeasurementConfigs)
   {
@@ -166,7 +260,10 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->thirdPartyMeasurementConfigs;
   }
   /**
-   * @param VideoAdInventoryControl
+   * Optional. The settings to control which inventory is allowed for this line
+   * item.
+   *
+   * @param VideoAdInventoryControl $videoAdInventoryControl
    */
   public function setVideoAdInventoryControl(VideoAdInventoryControl $videoAdInventoryControl)
   {
@@ -180,7 +277,9 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->videoAdInventoryControl;
   }
   /**
-   * @param VideoAdSequenceSettings
+   * Optional. The settings related to VideoAdSequence.
+   *
+   * @param VideoAdSequenceSettings $videoAdSequenceSettings
    */
   public function setVideoAdSequenceSettings(VideoAdSequenceSettings $videoAdSequenceSettings)
   {
@@ -194,7 +293,10 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->videoAdSequenceSettings;
   }
   /**
-   * @param FrequencyCap
+   * The view frequency cap settings of the line item. The max_views field in
+   * this settings object must be used if assigning a limited cap.
+   *
+   * @param FrequencyCap $viewFrequencyCap
    */
   public function setViewFrequencyCap(FrequencyCap $viewFrequencyCap)
   {

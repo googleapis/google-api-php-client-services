@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2DataProfileFindingRecordLocation extends \Google\Model
   protected $fieldDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2FieldId
+   * Field ID of the column containing the finding.
+   *
+   * @param GooglePrivacyDlpV2FieldId $field
    */
   public function setField(GooglePrivacyDlpV2FieldId $field)
   {

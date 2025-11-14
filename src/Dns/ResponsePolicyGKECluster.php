@@ -20,6 +20,12 @@ namespace Google\Service\Dns;
 class ResponsePolicyGKECluster extends \Google\Model
 {
   /**
+   * The resource name of the cluster to bind this response policy to. This
+   * should be specified in the format like: projects/locations/clusters. This
+   * is referenced from GKE projects.locations.clusters.get API:
+   * https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters/get
+   *
    * @var string
    */
   public $gkeClusterName;
@@ -29,7 +35,13 @@ class ResponsePolicyGKECluster extends \Google\Model
   public $kind;
 
   /**
-   * @param string
+   * The resource name of the cluster to bind this response policy to. This
+   * should be specified in the format like: projects/locations/clusters. This
+   * is referenced from GKE projects.locations.clusters.get API:
+   * https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters/get
+   *
+   * @param string $gkeClusterName
    */
   public function setGkeClusterName($gkeClusterName)
   {
@@ -43,7 +55,7 @@ class ResponsePolicyGKECluster extends \Google\Model
     return $this->gkeClusterName;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {

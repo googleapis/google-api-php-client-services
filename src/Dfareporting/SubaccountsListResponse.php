@@ -21,10 +21,15 @@ class SubaccountsListResponse extends \Google\Collection
 {
   protected $collection_key = 'subaccounts';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#subaccountsListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +37,10 @@ class SubaccountsListResponse extends \Google\Collection
   protected $subaccountsDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#subaccountsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +54,9 @@ class SubaccountsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class SubaccountsListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Subaccount[]
+   * Subaccount collection.
+   *
+   * @param Subaccount[] $subaccounts
    */
   public function setSubaccounts($subaccounts)
   {

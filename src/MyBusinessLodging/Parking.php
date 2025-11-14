@@ -20,64 +20,228 @@ namespace Google\Service\MyBusinessLodging;
 class Parking extends \Google\Model
 {
   /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const ELECTRIC_CAR_CHARGING_STATIONS_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const ELECTRIC_CAR_CHARGING_STATIONS_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const ELECTRIC_CAR_CHARGING_STATIONS_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const ELECTRIC_CAR_CHARGING_STATIONS_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const FREE_PARKING_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const FREE_PARKING_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const FREE_PARKING_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const FREE_PARKING_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const FREE_SELF_PARKING_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const FREE_SELF_PARKING_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const FREE_SELF_PARKING_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const FREE_SELF_PARKING_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const FREE_VALET_PARKING_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const FREE_VALET_PARKING_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const FREE_VALET_PARKING_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const FREE_VALET_PARKING_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const PARKING_AVAILABLE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const PARKING_AVAILABLE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const PARKING_AVAILABLE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const PARKING_AVAILABLE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const SELF_PARKING_AVAILABLE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const SELF_PARKING_AVAILABLE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const SELF_PARKING_AVAILABLE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const SELF_PARKING_AVAILABLE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const VALET_PARKING_AVAILABLE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const VALET_PARKING_AVAILABLE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const VALET_PARKING_AVAILABLE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const VALET_PARKING_AVAILABLE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Electric car charging stations. Electric power stations, usually located
+   * outdoors, into which guests plug their electric cars to receive a charge.
+   *
    * @var bool
    */
   public $electricCarChargingStations;
   /**
+   * Electric car charging stations exception.
+   *
    * @var string
    */
   public $electricCarChargingStationsException;
   /**
+   * Free parking. The hotel allows the cars of guests to be parked for free.
+   * Parking facility may be an outdoor lot or an indoor garage, but must be
+   * onsite. Nearby parking does not apply. Parking may be performed by the
+   * guest or by hotel staff. Free parking must be available to all guests
+   * (limited conditions does not apply).
+   *
    * @var bool
    */
   public $freeParking;
   /**
+   * Free parking exception.
+   *
    * @var string
    */
   public $freeParkingException;
   /**
+   * Free self parking. Guests park their own cars for free. Parking facility
+   * may be an outdoor lot or an indoor garage, but must be onsite. Nearby
+   * parking does not apply.
+   *
    * @var bool
    */
   public $freeSelfParking;
   /**
+   * Free self parking exception.
+   *
    * @var string
    */
   public $freeSelfParkingException;
   /**
+   * Free valet parking. Hotel staff member parks the cars of guests. Parking
+   * with this service is free.
+   *
    * @var bool
    */
   public $freeValetParking;
   /**
+   * Free valet parking exception.
+   *
    * @var string
    */
   public $freeValetParkingException;
   /**
+   * Parking available. The hotel allows the cars of guests to be parked. Can be
+   * free or for a fee. Parking facility may be an outdoor lot or an indoor
+   * garage, but must be onsite. Nearby parking does not apply. Parking may be
+   * performed by the guest or by hotel staff.
+   *
    * @var bool
    */
   public $parkingAvailable;
   /**
+   * Parking available exception.
+   *
    * @var string
    */
   public $parkingAvailableException;
   /**
+   * Self parking available. Guests park their own cars. Parking facility may be
+   * an outdoor lot or an indoor garage, but must be onsite. Nearby parking does
+   * not apply. Can be free or for a fee.
+   *
    * @var bool
    */
   public $selfParkingAvailable;
   /**
+   * Self parking available exception.
+   *
    * @var string
    */
   public $selfParkingAvailableException;
   /**
+   * Valet parking available. Hotel staff member parks the cars of guests.
+   * Parking with this service can be free or for a fee.
+   *
    * @var bool
    */
   public $valetParkingAvailable;
   /**
+   * Valet parking available exception.
+   *
    * @var string
    */
   public $valetParkingAvailableException;
 
   /**
-   * @param bool
+   * Electric car charging stations. Electric power stations, usually located
+   * outdoors, into which guests plug their electric cars to receive a charge.
+   *
+   * @param bool $electricCarChargingStations
    */
   public function setElectricCarChargingStations($electricCarChargingStations)
   {
@@ -91,21 +255,32 @@ class Parking extends \Google\Model
     return $this->electricCarChargingStations;
   }
   /**
-   * @param string
+   * Electric car charging stations exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::ELECTRIC_CAR_CHARGING_STATIONS_EXCEPTION_* $electricCarChargingStationsException
    */
   public function setElectricCarChargingStationsException($electricCarChargingStationsException)
   {
     $this->electricCarChargingStationsException = $electricCarChargingStationsException;
   }
   /**
-   * @return string
+   * @return self::ELECTRIC_CAR_CHARGING_STATIONS_EXCEPTION_*
    */
   public function getElectricCarChargingStationsException()
   {
     return $this->electricCarChargingStationsException;
   }
   /**
-   * @param bool
+   * Free parking. The hotel allows the cars of guests to be parked for free.
+   * Parking facility may be an outdoor lot or an indoor garage, but must be
+   * onsite. Nearby parking does not apply. Parking may be performed by the
+   * guest or by hotel staff. Free parking must be available to all guests
+   * (limited conditions does not apply).
+   *
+   * @param bool $freeParking
    */
   public function setFreeParking($freeParking)
   {
@@ -119,21 +294,30 @@ class Parking extends \Google\Model
     return $this->freeParking;
   }
   /**
-   * @param string
+   * Free parking exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::FREE_PARKING_EXCEPTION_* $freeParkingException
    */
   public function setFreeParkingException($freeParkingException)
   {
     $this->freeParkingException = $freeParkingException;
   }
   /**
-   * @return string
+   * @return self::FREE_PARKING_EXCEPTION_*
    */
   public function getFreeParkingException()
   {
     return $this->freeParkingException;
   }
   /**
-   * @param bool
+   * Free self parking. Guests park their own cars for free. Parking facility
+   * may be an outdoor lot or an indoor garage, but must be onsite. Nearby
+   * parking does not apply.
+   *
+   * @param bool $freeSelfParking
    */
   public function setFreeSelfParking($freeSelfParking)
   {
@@ -147,21 +331,29 @@ class Parking extends \Google\Model
     return $this->freeSelfParking;
   }
   /**
-   * @param string
+   * Free self parking exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::FREE_SELF_PARKING_EXCEPTION_* $freeSelfParkingException
    */
   public function setFreeSelfParkingException($freeSelfParkingException)
   {
     $this->freeSelfParkingException = $freeSelfParkingException;
   }
   /**
-   * @return string
+   * @return self::FREE_SELF_PARKING_EXCEPTION_*
    */
   public function getFreeSelfParkingException()
   {
     return $this->freeSelfParkingException;
   }
   /**
-   * @param bool
+   * Free valet parking. Hotel staff member parks the cars of guests. Parking
+   * with this service is free.
+   *
+   * @param bool $freeValetParking
    */
   public function setFreeValetParking($freeValetParking)
   {
@@ -175,21 +367,31 @@ class Parking extends \Google\Model
     return $this->freeValetParking;
   }
   /**
-   * @param string
+   * Free valet parking exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::FREE_VALET_PARKING_EXCEPTION_* $freeValetParkingException
    */
   public function setFreeValetParkingException($freeValetParkingException)
   {
     $this->freeValetParkingException = $freeValetParkingException;
   }
   /**
-   * @return string
+   * @return self::FREE_VALET_PARKING_EXCEPTION_*
    */
   public function getFreeValetParkingException()
   {
     return $this->freeValetParkingException;
   }
   /**
-   * @param bool
+   * Parking available. The hotel allows the cars of guests to be parked. Can be
+   * free or for a fee. Parking facility may be an outdoor lot or an indoor
+   * garage, but must be onsite. Nearby parking does not apply. Parking may be
+   * performed by the guest or by hotel staff.
+   *
+   * @param bool $parkingAvailable
    */
   public function setParkingAvailable($parkingAvailable)
   {
@@ -203,21 +405,30 @@ class Parking extends \Google\Model
     return $this->parkingAvailable;
   }
   /**
-   * @param string
+   * Parking available exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::PARKING_AVAILABLE_EXCEPTION_* $parkingAvailableException
    */
   public function setParkingAvailableException($parkingAvailableException)
   {
     $this->parkingAvailableException = $parkingAvailableException;
   }
   /**
-   * @return string
+   * @return self::PARKING_AVAILABLE_EXCEPTION_*
    */
   public function getParkingAvailableException()
   {
     return $this->parkingAvailableException;
   }
   /**
-   * @param bool
+   * Self parking available. Guests park their own cars. Parking facility may be
+   * an outdoor lot or an indoor garage, but must be onsite. Nearby parking does
+   * not apply. Can be free or for a fee.
+   *
+   * @param bool $selfParkingAvailable
    */
   public function setSelfParkingAvailable($selfParkingAvailable)
   {
@@ -231,21 +442,29 @@ class Parking extends \Google\Model
     return $this->selfParkingAvailable;
   }
   /**
-   * @param string
+   * Self parking available exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::SELF_PARKING_AVAILABLE_EXCEPTION_* $selfParkingAvailableException
    */
   public function setSelfParkingAvailableException($selfParkingAvailableException)
   {
     $this->selfParkingAvailableException = $selfParkingAvailableException;
   }
   /**
-   * @return string
+   * @return self::SELF_PARKING_AVAILABLE_EXCEPTION_*
    */
   public function getSelfParkingAvailableException()
   {
     return $this->selfParkingAvailableException;
   }
   /**
-   * @param bool
+   * Valet parking available. Hotel staff member parks the cars of guests.
+   * Parking with this service can be free or for a fee.
+   *
+   * @param bool $valetParkingAvailable
    */
   public function setValetParkingAvailable($valetParkingAvailable)
   {
@@ -259,14 +478,19 @@ class Parking extends \Google\Model
     return $this->valetParkingAvailable;
   }
   /**
-   * @param string
+   * Valet parking available exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::VALET_PARKING_AVAILABLE_EXCEPTION_* $valetParkingAvailableException
    */
   public function setValetParkingAvailableException($valetParkingAvailableException)
   {
     $this->valetParkingAvailableException = $valetParkingAvailableException;
   }
   /**
-   * @return string
+   * @return self::VALET_PARKING_AVAILABLE_EXCEPTION_*
    */
   public function getValetParkingAvailableException()
   {

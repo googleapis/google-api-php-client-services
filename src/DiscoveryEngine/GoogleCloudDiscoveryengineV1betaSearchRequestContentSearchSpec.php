@@ -19,11 +19,27 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec extends \Google\Model
 {
+  /**
+   * Default value.
+   */
+  public const SEARCH_RESULT_MODE_SEARCH_RESULT_MODE_UNSPECIFIED = 'SEARCH_RESULT_MODE_UNSPECIFIED';
+  /**
+   * Returns documents in the search result.
+   */
+  public const SEARCH_RESULT_MODE_DOCUMENTS = 'DOCUMENTS';
+  /**
+   * Returns chunks in the search result. Only available if the
+   * DocumentProcessingConfig.chunking_config is specified.
+   */
+  public const SEARCH_RESULT_MODE_CHUNKS = 'CHUNKS';
   protected $chunkSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecChunkSpec::class;
   protected $chunkSpecDataType = '';
   protected $extractiveContentSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec::class;
   protected $extractiveContentSpecDataType = '';
   /**
+   * Specifies the search result mode. If unspecified, the search result mode
+   * defaults to `DOCUMENTS`.
+   *
    * @var string
    */
   public $searchResultMode;
@@ -33,7 +49,11 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec extends \Go
   protected $summarySpecDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecChunkSpec
+   * Specifies the chunk spec to be returned from the search response. Only
+   * available if the SearchRequest.ContentSearchSpec.search_result_mode is set
+   * to CHUNKS
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecChunkSpec $chunkSpec
    */
   public function setChunkSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecChunkSpec $chunkSpec)
   {
@@ -47,7 +67,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec extends \Go
     return $this->chunkSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec
+   * If there is no extractive_content_spec provided, there will be no
+   * extractive answer in the search response.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec $extractiveContentSpec
    */
   public function setExtractiveContentSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec $extractiveContentSpec)
   {
@@ -61,21 +84,29 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec extends \Go
     return $this->extractiveContentSpec;
   }
   /**
-   * @param string
+   * Specifies the search result mode. If unspecified, the search result mode
+   * defaults to `DOCUMENTS`.
+   *
+   * Accepted values: SEARCH_RESULT_MODE_UNSPECIFIED, DOCUMENTS, CHUNKS
+   *
+   * @param self::SEARCH_RESULT_MODE_* $searchResultMode
    */
   public function setSearchResultMode($searchResultMode)
   {
     $this->searchResultMode = $searchResultMode;
   }
   /**
-   * @return string
+   * @return self::SEARCH_RESULT_MODE_*
    */
   public function getSearchResultMode()
   {
     return $this->searchResultMode;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSnippetSpec
+   * If `snippetSpec` is not specified, snippets are not included in the search
+   * response.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSnippetSpec $snippetSpec
    */
   public function setSnippetSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSnippetSpec $snippetSpec)
   {
@@ -89,7 +120,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec extends \Go
     return $this->snippetSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec
+   * If `summarySpec` is not specified, summaries are not included in the search
+   * response.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec $summarySpec
    */
   public function setSummarySpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec $summarySpec)
   {

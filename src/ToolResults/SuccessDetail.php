@@ -20,12 +20,16 @@ namespace Google\Service\ToolResults;
 class SuccessDetail extends \Google\Model
 {
   /**
+   * If a native process other than the app crashed.
+   *
    * @var bool
    */
   public $otherNativeCrash;
 
   /**
-   * @param bool
+   * If a native process other than the app crashed.
+   *
+   * @param bool $otherNativeCrash
    */
   public function setOtherNativeCrash($otherNativeCrash)
   {

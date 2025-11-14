@@ -25,7 +25,9 @@ class CertificateConfigPair extends \Google\Model
   protected $keyDataType = '';
 
   /**
-   * @param CertificateConfig
+   * Cert configures the client certificate.
+   *
+   * @param CertificateConfig $cert
    */
   public function setCert(CertificateConfig $cert)
   {
@@ -39,7 +41,9 @@ class CertificateConfigPair extends \Google\Model
     return $this->cert;
   }
   /**
-   * @param CertificateConfig
+   * Key configures the client private key. Optional.
+   *
+   * @param CertificateConfig $key
    */
   public function setKey(CertificateConfig $key)
   {

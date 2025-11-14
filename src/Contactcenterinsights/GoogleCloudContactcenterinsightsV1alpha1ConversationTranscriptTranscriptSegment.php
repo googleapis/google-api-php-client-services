@@ -21,20 +21,33 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
 {
   protected $collection_key = 'words';
   /**
+   * For conversations derived from multi-channel audio, this is the channel
+   * number corresponding to the audio from that channel. For audioChannelCount
+   * = N, its output values can range from '1' to 'N'. A channel tag of 0
+   * indicates that the audio is mono.
+   *
    * @var int
    */
   public $channelTag;
   /**
+   * A confidence estimate between 0.0 and 1.0 of the fidelity of this segment.
+   * A default value of 0.0 indicates that the value is unset.
+   *
    * @var float
    */
   public $confidence;
   protected $dialogflowSegmentMetadataType = GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata::class;
   protected $dialogflowSegmentMetadataDataType = '';
   /**
+   * The language code of this segment as a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * The time that the message occurred, if provided.
+   *
    * @var string
    */
   public $messageTime;
@@ -43,6 +56,8 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
   protected $sentimentType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
   protected $sentimentDataType = '';
   /**
+   * The text of this segment.
+   *
    * @var string
    */
   public $text;
@@ -50,7 +65,12 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
   protected $wordsDataType = 'array';
 
   /**
-   * @param int
+   * For conversations derived from multi-channel audio, this is the channel
+   * number corresponding to the audio from that channel. For audioChannelCount
+   * = N, its output values can range from '1' to 'N'. A channel tag of 0
+   * indicates that the audio is mono.
+   *
+   * @param int $channelTag
    */
   public function setChannelTag($channelTag)
   {
@@ -64,7 +84,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->channelTag;
   }
   /**
-   * @param float
+   * A confidence estimate between 0.0 and 1.0 of the fidelity of this segment.
+   * A default value of 0.0 indicates that the value is unset.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -78,7 +101,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->confidence;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata
+   * CCAI metadata relating to the current transcript segment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata $dialogflowSegmentMetadata
    */
   public function setDialogflowSegmentMetadata(GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata $dialogflowSegmentMetadata)
   {
@@ -92,7 +117,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->dialogflowSegmentMetadata;
   }
   /**
-   * @param string
+   * The language code of this segment as a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -106,7 +134,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->languageCode;
   }
   /**
-   * @param string
+   * The time that the message occurred, if provided.
+   *
+   * @param string $messageTime
    */
   public function setMessageTime($messageTime)
   {
@@ -120,7 +150,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->messageTime;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationParticipant
+   * The participant of this segment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationParticipant $segmentParticipant
    */
   public function setSegmentParticipant(GoogleCloudContactcenterinsightsV1alpha1ConversationParticipant $segmentParticipant)
   {
@@ -134,7 +166,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->segmentParticipant;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1SentimentData
+   * The sentiment for this transcript segment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1SentimentData $sentiment
    */
   public function setSentiment(GoogleCloudContactcenterinsightsV1alpha1SentimentData $sentiment)
   {
@@ -148,7 +182,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->sentiment;
   }
   /**
-   * @param string
+   * The text of this segment.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
@@ -162,7 +198,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
     return $this->text;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentWordInfo[]
+   * A list of the word-specific information for each word in the segment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentWordInfo[] $words
    */
   public function setWords($words)
   {

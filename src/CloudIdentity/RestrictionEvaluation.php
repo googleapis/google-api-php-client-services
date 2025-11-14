@@ -20,19 +20,48 @@ namespace Google\Service\CloudIdentity;
 class RestrictionEvaluation extends \Google\Model
 {
   /**
+   * Default. Should not be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The restriction state is currently being evaluated.
+   */
+  public const STATE_EVALUATING = 'EVALUATING';
+  /**
+   * All transitive memberships are adhering to restriction.
+   */
+  public const STATE_COMPLIANT = 'COMPLIANT';
+  /**
+   * Some transitive memberships violate the restriction. No new violating
+   * memberships can be added.
+   */
+  public const STATE_FORWARD_COMPLIANT = 'FORWARD_COMPLIANT';
+  /**
+   * Some transitive memberships violate the restriction. New violating direct
+   * memberships will be denied while indirect memberships may be added.
+   */
+  public const STATE_NON_COMPLIANT = 'NON_COMPLIANT';
+  /**
+   * Output only. The current state of the restriction
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The current state of the restriction
+   *
+   * Accepted values: STATE_UNSPECIFIED, EVALUATING, COMPLIANT,
+   * FORWARD_COMPLIANT, NON_COMPLIANT
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

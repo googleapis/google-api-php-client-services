@@ -21,38 +21,60 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
 {
   protected $collection_key = 'inputConfigs';
   /**
+   * Output only. The names of any related resources that are blocking changes
+   * to the dataset.
+   *
    * @var string[]
    */
   public $blockingResources;
   /**
+   * Output only. Time the dataset is created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The number of data items in the dataset.
+   *
    * @var string
    */
   public $dataItemCount;
   /**
+   * Optional. User-provided description of the annotation specification set.
+   * The description can be up to 10000 characters long.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display name of the dataset. Maximum of 64 characters.
+   *
    * @var string
    */
   public $displayName;
   protected $inputConfigsType = GoogleCloudDatalabelingV1beta1InputConfig::class;
   protected $inputConfigsDataType = 'array';
   /**
+   * Last time that the Dataset is migrated to AI Platform V2. If any of the
+   * AnnotatedDataset is migrated, the last_migration_time in Dataset is also
+   * updated.
+   *
    * @var string
    */
   public $lastMigrateTime;
   /**
+   * Output only. Dataset resource name, format is:
+   * projects/{project_id}/datasets/{dataset_id}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string[]
+   * Output only. The names of any related resources that are blocking changes
+   * to the dataset.
+   *
+   * @param string[] $blockingResources
    */
   public function setBlockingResources($blockingResources)
   {
@@ -66,7 +88,9 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
     return $this->blockingResources;
   }
   /**
-   * @param string
+   * Output only. Time the dataset is created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -80,7 +104,9 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The number of data items in the dataset.
+   *
+   * @param string $dataItemCount
    */
   public function setDataItemCount($dataItemCount)
   {
@@ -94,7 +120,10 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
     return $this->dataItemCount;
   }
   /**
-   * @param string
+   * Optional. User-provided description of the annotation specification set.
+   * The description can be up to 10000 characters long.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -108,7 +137,9 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display name of the dataset. Maximum of 64 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -122,7 +153,11 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1InputConfig[]
+   * Output only. This is populated with the original input configs where
+   * ImportData is called. It is available only after the clients import data to
+   * this dataset.
+   *
+   * @param GoogleCloudDatalabelingV1beta1InputConfig[] $inputConfigs
    */
   public function setInputConfigs($inputConfigs)
   {
@@ -136,7 +171,11 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
     return $this->inputConfigs;
   }
   /**
-   * @param string
+   * Last time that the Dataset is migrated to AI Platform V2. If any of the
+   * AnnotatedDataset is migrated, the last_migration_time in Dataset is also
+   * updated.
+   *
+   * @param string $lastMigrateTime
    */
   public function setLastMigrateTime($lastMigrateTime)
   {
@@ -150,7 +189,10 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
     return $this->lastMigrateTime;
   }
   /**
-   * @param string
+   * Output only. Dataset resource name, format is:
+   * projects/{project_id}/datasets/{dataset_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

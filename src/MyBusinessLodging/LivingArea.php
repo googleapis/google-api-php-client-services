@@ -31,7 +31,9 @@ class LivingArea extends \Google\Model
   protected $sleepingDataType = '';
 
   /**
-   * @param LivingAreaAccessibility
+   * Accessibility features of the living area.
+   *
+   * @param LivingAreaAccessibility $accessibility
    */
   public function setAccessibility(LivingAreaAccessibility $accessibility)
   {
@@ -45,7 +47,9 @@ class LivingArea extends \Google\Model
     return $this->accessibility;
   }
   /**
-   * @param LivingAreaEating
+   * Information about eating features in the living area.
+   *
+   * @param LivingAreaEating $eating
    */
   public function setEating(LivingAreaEating $eating)
   {
@@ -59,7 +63,9 @@ class LivingArea extends \Google\Model
     return $this->eating;
   }
   /**
-   * @param LivingAreaFeatures
+   * Features in the living area.
+   *
+   * @param LivingAreaFeatures $features
    */
   public function setFeatures(LivingAreaFeatures $features)
   {
@@ -73,7 +79,9 @@ class LivingArea extends \Google\Model
     return $this->features;
   }
   /**
-   * @param LivingAreaLayout
+   * Information about the layout of the living area.
+   *
+   * @param LivingAreaLayout $layout
    */
   public function setLayout(LivingAreaLayout $layout)
   {
@@ -87,7 +95,9 @@ class LivingArea extends \Google\Model
     return $this->layout;
   }
   /**
-   * @param LivingAreaSleeping
+   * Information about sleeping features in the living area.
+   *
+   * @param LivingAreaSleeping $sleeping
    */
   public function setSleeping(LivingAreaSleeping $sleeping)
   {

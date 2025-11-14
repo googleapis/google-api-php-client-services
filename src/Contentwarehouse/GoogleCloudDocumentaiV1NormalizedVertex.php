@@ -20,16 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudDocumentaiV1NormalizedVertex extends \Google\Model
 {
   /**
+   * X coordinate.
+   *
    * @var float
    */
   public $x;
   /**
+   * Y coordinate (starts from the top of the image).
+   *
    * @var float
    */
   public $y;
 
   /**
-   * @param float
+   * X coordinate.
+   *
+   * @param float $x
    */
   public function setX($x)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDocumentaiV1NormalizedVertex extends \Google\Model
     return $this->x;
   }
   /**
-   * @param float
+   * Y coordinate (starts from the top of the image).
+   *
+   * @param float $y
    */
   public function setY($y)
   {

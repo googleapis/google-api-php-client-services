@@ -20,36 +20,52 @@ namespace Google\Service\Backupdr;
 class BackupApplianceBackupConfig extends \Google\Model
 {
   /**
+   * The name of the application.
+   *
    * @var string
    */
   public $applicationName;
   /**
+   * The ID of the backup appliance.
+   *
    * @var string
    */
   public $backupApplianceId;
   /**
+   * The name of the backup appliance.
+   *
    * @var string
    */
   public $backupApplianceName;
   /**
+   * The name of the host where the application is running.
+   *
    * @var string
    */
   public $hostName;
   /**
+   * The ID of the SLA of this application.
+   *
    * @var string
    */
   public $slaId;
   /**
+   * The name of the SLP associated with the application.
+   *
    * @var string
    */
   public $slpName;
   /**
+   * The name of the SLT associated with the application.
+   *
    * @var string
    */
   public $sltName;
 
   /**
-   * @param string
+   * The name of the application.
+   *
+   * @param string $applicationName
    */
   public function setApplicationName($applicationName)
   {
@@ -63,7 +79,9 @@ class BackupApplianceBackupConfig extends \Google\Model
     return $this->applicationName;
   }
   /**
-   * @param string
+   * The ID of the backup appliance.
+   *
+   * @param string $backupApplianceId
    */
   public function setBackupApplianceId($backupApplianceId)
   {
@@ -77,7 +95,9 @@ class BackupApplianceBackupConfig extends \Google\Model
     return $this->backupApplianceId;
   }
   /**
-   * @param string
+   * The name of the backup appliance.
+   *
+   * @param string $backupApplianceName
    */
   public function setBackupApplianceName($backupApplianceName)
   {
@@ -91,7 +111,9 @@ class BackupApplianceBackupConfig extends \Google\Model
     return $this->backupApplianceName;
   }
   /**
-   * @param string
+   * The name of the host where the application is running.
+   *
+   * @param string $hostName
    */
   public function setHostName($hostName)
   {
@@ -105,7 +127,9 @@ class BackupApplianceBackupConfig extends \Google\Model
     return $this->hostName;
   }
   /**
-   * @param string
+   * The ID of the SLA of this application.
+   *
+   * @param string $slaId
    */
   public function setSlaId($slaId)
   {
@@ -119,7 +143,9 @@ class BackupApplianceBackupConfig extends \Google\Model
     return $this->slaId;
   }
   /**
-   * @param string
+   * The name of the SLP associated with the application.
+   *
+   * @param string $slpName
    */
   public function setSlpName($slpName)
   {
@@ -133,7 +159,9 @@ class BackupApplianceBackupConfig extends \Google\Model
     return $this->slpName;
   }
   /**
-   * @param string
+   * The name of the SLT associated with the application.
+   *
+   * @param string $sltName
    */
   public function setSltName($sltName)
   {

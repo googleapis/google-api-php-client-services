@@ -20,56 +20,184 @@ namespace Google\Service\MyBusinessLodging;
 class EnhancedCleaning extends \Google\Model
 {
   /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const COMMERCIAL_GRADE_DISINFECTANT_CLEANING_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const COMMERCIAL_GRADE_DISINFECTANT_CLEANING_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const COMMERCIAL_GRADE_DISINFECTANT_CLEANING_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const COMMERCIAL_GRADE_DISINFECTANT_CLEANING_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const COMMON_AREAS_ENHANCED_CLEANING_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const COMMON_AREAS_ENHANCED_CLEANING_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const COMMON_AREAS_ENHANCED_CLEANING_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const COMMON_AREAS_ENHANCED_CLEANING_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const EMPLOYEES_TRAINED_CLEANING_PROCEDURES_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const EMPLOYEES_TRAINED_CLEANING_PROCEDURES_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const EMPLOYEES_TRAINED_CLEANING_PROCEDURES_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const EMPLOYEES_TRAINED_CLEANING_PROCEDURES_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const EMPLOYEES_TRAINED_THOROUGH_HAND_WASHING_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const EMPLOYEES_TRAINED_THOROUGH_HAND_WASHING_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const EMPLOYEES_TRAINED_THOROUGH_HAND_WASHING_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const EMPLOYEES_TRAINED_THOROUGH_HAND_WASHING_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const EMPLOYEES_WEAR_PROTECTIVE_EQUIPMENT_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const EMPLOYEES_WEAR_PROTECTIVE_EQUIPMENT_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const EMPLOYEES_WEAR_PROTECTIVE_EQUIPMENT_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const EMPLOYEES_WEAR_PROTECTIVE_EQUIPMENT_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const GUEST_ROOMS_ENHANCED_CLEANING_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const GUEST_ROOMS_ENHANCED_CLEANING_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const GUEST_ROOMS_ENHANCED_CLEANING_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const GUEST_ROOMS_ENHANCED_CLEANING_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Commercial-grade disinfectant used to clean the property.
+   *
    * @var bool
    */
   public $commercialGradeDisinfectantCleaning;
   /**
+   * Commercial grade disinfectant cleaning exception.
+   *
    * @var string
    */
   public $commercialGradeDisinfectantCleaningException;
   /**
+   * Enhanced cleaning of common areas.
+   *
    * @var bool
    */
   public $commonAreasEnhancedCleaning;
   /**
+   * Common areas enhanced cleaning exception.
+   *
    * @var string
    */
   public $commonAreasEnhancedCleaningException;
   /**
+   * Employees trained in COVID-19 cleaning procedures.
+   *
    * @var bool
    */
   public $employeesTrainedCleaningProcedures;
   /**
+   * Employees trained cleaning procedures exception.
+   *
    * @var string
    */
   public $employeesTrainedCleaningProceduresException;
   /**
+   * Employees trained in thorough hand-washing.
+   *
    * @var bool
    */
   public $employeesTrainedThoroughHandWashing;
   /**
+   * Employees trained thorough hand washing exception.
+   *
    * @var string
    */
   public $employeesTrainedThoroughHandWashingException;
   /**
+   * Employees wear masks, face shields, and/or gloves.
+   *
    * @var bool
    */
   public $employeesWearProtectiveEquipment;
   /**
+   * Employees wear protective equipment exception.
+   *
    * @var string
    */
   public $employeesWearProtectiveEquipmentException;
   /**
+   * Enhanced cleaning of guest rooms.
+   *
    * @var bool
    */
   public $guestRoomsEnhancedCleaning;
   /**
+   * Guest rooms enhanced cleaning exception.
+   *
    * @var string
    */
   public $guestRoomsEnhancedCleaningException;
 
   /**
-   * @param bool
+   * Commercial-grade disinfectant used to clean the property.
+   *
+   * @param bool $commercialGradeDisinfectantCleaning
    */
   public function setCommercialGradeDisinfectantCleaning($commercialGradeDisinfectantCleaning)
   {
@@ -83,21 +211,28 @@ class EnhancedCleaning extends \Google\Model
     return $this->commercialGradeDisinfectantCleaning;
   }
   /**
-   * @param string
+   * Commercial grade disinfectant cleaning exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::COMMERCIAL_GRADE_DISINFECTANT_CLEANING_EXCEPTION_* $commercialGradeDisinfectantCleaningException
    */
   public function setCommercialGradeDisinfectantCleaningException($commercialGradeDisinfectantCleaningException)
   {
     $this->commercialGradeDisinfectantCleaningException = $commercialGradeDisinfectantCleaningException;
   }
   /**
-   * @return string
+   * @return self::COMMERCIAL_GRADE_DISINFECTANT_CLEANING_EXCEPTION_*
    */
   public function getCommercialGradeDisinfectantCleaningException()
   {
     return $this->commercialGradeDisinfectantCleaningException;
   }
   /**
-   * @param bool
+   * Enhanced cleaning of common areas.
+   *
+   * @param bool $commonAreasEnhancedCleaning
    */
   public function setCommonAreasEnhancedCleaning($commonAreasEnhancedCleaning)
   {
@@ -111,21 +246,28 @@ class EnhancedCleaning extends \Google\Model
     return $this->commonAreasEnhancedCleaning;
   }
   /**
-   * @param string
+   * Common areas enhanced cleaning exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::COMMON_AREAS_ENHANCED_CLEANING_EXCEPTION_* $commonAreasEnhancedCleaningException
    */
   public function setCommonAreasEnhancedCleaningException($commonAreasEnhancedCleaningException)
   {
     $this->commonAreasEnhancedCleaningException = $commonAreasEnhancedCleaningException;
   }
   /**
-   * @return string
+   * @return self::COMMON_AREAS_ENHANCED_CLEANING_EXCEPTION_*
    */
   public function getCommonAreasEnhancedCleaningException()
   {
     return $this->commonAreasEnhancedCleaningException;
   }
   /**
-   * @param bool
+   * Employees trained in COVID-19 cleaning procedures.
+   *
+   * @param bool $employeesTrainedCleaningProcedures
    */
   public function setEmployeesTrainedCleaningProcedures($employeesTrainedCleaningProcedures)
   {
@@ -139,21 +281,28 @@ class EnhancedCleaning extends \Google\Model
     return $this->employeesTrainedCleaningProcedures;
   }
   /**
-   * @param string
+   * Employees trained cleaning procedures exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::EMPLOYEES_TRAINED_CLEANING_PROCEDURES_EXCEPTION_* $employeesTrainedCleaningProceduresException
    */
   public function setEmployeesTrainedCleaningProceduresException($employeesTrainedCleaningProceduresException)
   {
     $this->employeesTrainedCleaningProceduresException = $employeesTrainedCleaningProceduresException;
   }
   /**
-   * @return string
+   * @return self::EMPLOYEES_TRAINED_CLEANING_PROCEDURES_EXCEPTION_*
    */
   public function getEmployeesTrainedCleaningProceduresException()
   {
     return $this->employeesTrainedCleaningProceduresException;
   }
   /**
-   * @param bool
+   * Employees trained in thorough hand-washing.
+   *
+   * @param bool $employeesTrainedThoroughHandWashing
    */
   public function setEmployeesTrainedThoroughHandWashing($employeesTrainedThoroughHandWashing)
   {
@@ -167,21 +316,28 @@ class EnhancedCleaning extends \Google\Model
     return $this->employeesTrainedThoroughHandWashing;
   }
   /**
-   * @param string
+   * Employees trained thorough hand washing exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::EMPLOYEES_TRAINED_THOROUGH_HAND_WASHING_EXCEPTION_* $employeesTrainedThoroughHandWashingException
    */
   public function setEmployeesTrainedThoroughHandWashingException($employeesTrainedThoroughHandWashingException)
   {
     $this->employeesTrainedThoroughHandWashingException = $employeesTrainedThoroughHandWashingException;
   }
   /**
-   * @return string
+   * @return self::EMPLOYEES_TRAINED_THOROUGH_HAND_WASHING_EXCEPTION_*
    */
   public function getEmployeesTrainedThoroughHandWashingException()
   {
     return $this->employeesTrainedThoroughHandWashingException;
   }
   /**
-   * @param bool
+   * Employees wear masks, face shields, and/or gloves.
+   *
+   * @param bool $employeesWearProtectiveEquipment
    */
   public function setEmployeesWearProtectiveEquipment($employeesWearProtectiveEquipment)
   {
@@ -195,21 +351,28 @@ class EnhancedCleaning extends \Google\Model
     return $this->employeesWearProtectiveEquipment;
   }
   /**
-   * @param string
+   * Employees wear protective equipment exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::EMPLOYEES_WEAR_PROTECTIVE_EQUIPMENT_EXCEPTION_* $employeesWearProtectiveEquipmentException
    */
   public function setEmployeesWearProtectiveEquipmentException($employeesWearProtectiveEquipmentException)
   {
     $this->employeesWearProtectiveEquipmentException = $employeesWearProtectiveEquipmentException;
   }
   /**
-   * @return string
+   * @return self::EMPLOYEES_WEAR_PROTECTIVE_EQUIPMENT_EXCEPTION_*
    */
   public function getEmployeesWearProtectiveEquipmentException()
   {
     return $this->employeesWearProtectiveEquipmentException;
   }
   /**
-   * @param bool
+   * Enhanced cleaning of guest rooms.
+   *
+   * @param bool $guestRoomsEnhancedCleaning
    */
   public function setGuestRoomsEnhancedCleaning($guestRoomsEnhancedCleaning)
   {
@@ -223,14 +386,19 @@ class EnhancedCleaning extends \Google\Model
     return $this->guestRoomsEnhancedCleaning;
   }
   /**
-   * @param string
+   * Guest rooms enhanced cleaning exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::GUEST_ROOMS_ENHANCED_CLEANING_EXCEPTION_* $guestRoomsEnhancedCleaningException
    */
   public function setGuestRoomsEnhancedCleaningException($guestRoomsEnhancedCleaningException)
   {
     $this->guestRoomsEnhancedCleaningException = $guestRoomsEnhancedCleaningException;
   }
   /**
-   * @return string
+   * @return self::GUEST_ROOMS_ENHANCED_CLEANING_EXCEPTION_*
    */
   public function getGuestRoomsEnhancedCleaningException()
   {

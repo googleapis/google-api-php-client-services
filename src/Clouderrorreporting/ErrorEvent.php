@@ -22,10 +22,16 @@ class ErrorEvent extends \Google\Model
   protected $contextType = ErrorContext::class;
   protected $contextDataType = '';
   /**
+   * Time when the event occurred as provided in the error report. If the report
+   * did not contain a timestamp, the time the error was received by the Error
+   * Reporting system is used.
+   *
    * @var string
    */
   public $eventTime;
   /**
+   * The stack trace that was reported or logged by the service.
+   *
    * @var string
    */
   public $message;
@@ -33,7 +39,9 @@ class ErrorEvent extends \Google\Model
   protected $serviceContextDataType = '';
 
   /**
-   * @param ErrorContext
+   * Data about the context in which the error occurred.
+   *
+   * @param ErrorContext $context
    */
   public function setContext(ErrorContext $context)
   {
@@ -47,7 +55,11 @@ class ErrorEvent extends \Google\Model
     return $this->context;
   }
   /**
-   * @param string
+   * Time when the event occurred as provided in the error report. If the report
+   * did not contain a timestamp, the time the error was received by the Error
+   * Reporting system is used.
+   *
+   * @param string $eventTime
    */
   public function setEventTime($eventTime)
   {
@@ -61,7 +73,9 @@ class ErrorEvent extends \Google\Model
     return $this->eventTime;
   }
   /**
-   * @param string
+   * The stack trace that was reported or logged by the service.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -75,7 +89,9 @@ class ErrorEvent extends \Google\Model
     return $this->message;
   }
   /**
-   * @param ServiceContext
+   * The `ServiceContext` for which this error was reported.
+   *
+   * @param ServiceContext $serviceContext
    */
   public function setServiceContext(ServiceContext $serviceContext)
   {

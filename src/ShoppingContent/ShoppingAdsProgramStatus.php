@@ -19,8 +19,28 @@ namespace Google\Service\ShoppingContent;
 
 class ShoppingAdsProgramStatus extends \Google\Collection
 {
+  /**
+   * State is unknown.
+   */
+  public const GLOBAL_STATE_PROGRAM_STATE_UNSPECIFIED = 'PROGRAM_STATE_UNSPECIFIED';
+  /**
+   * Program is not enabled for any country.
+   */
+  public const GLOBAL_STATE_NOT_ENABLED = 'NOT_ENABLED';
+  /**
+   * No products have been uploaded for any region. Upload products to Merchant
+   * Center.
+   */
+  public const GLOBAL_STATE_NO_OFFERS_UPLOADED = 'NO_OFFERS_UPLOADED';
+  /**
+   * Program is enabled and offers are uploaded for at least one country.
+   */
+  public const GLOBAL_STATE_ENABLED = 'ENABLED';
   protected $collection_key = 'regionStatuses';
   /**
+   * State of the program. `ENABLED` if there are offers for at least one
+   * region.
+   *
    * @var string
    */
   public $globalState;
@@ -28,21 +48,30 @@ class ShoppingAdsProgramStatus extends \Google\Collection
   protected $regionStatusesDataType = 'array';
 
   /**
-   * @param string
+   * State of the program. `ENABLED` if there are offers for at least one
+   * region.
+   *
+   * Accepted values: PROGRAM_STATE_UNSPECIFIED, NOT_ENABLED,
+   * NO_OFFERS_UPLOADED, ENABLED
+   *
+   * @param self::GLOBAL_STATE_* $globalState
    */
   public function setGlobalState($globalState)
   {
     $this->globalState = $globalState;
   }
   /**
-   * @return string
+   * @return self::GLOBAL_STATE_*
    */
   public function getGlobalState()
   {
     return $this->globalState;
   }
   /**
-   * @param ShoppingAdsProgramStatusRegionStatus[]
+   * Status of the program in each region. Regions with the same status and
+   * review eligibility are grouped together in `regionCodes`.
+   *
+   * @param ShoppingAdsProgramStatusRegionStatus[] $regionStatuses
    */
   public function setRegionStatuses($regionStatuses)
   {

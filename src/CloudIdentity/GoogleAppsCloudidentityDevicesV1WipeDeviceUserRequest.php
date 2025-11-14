@@ -20,12 +20,26 @@ namespace Google\Service\CloudIdentity;
 class GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest extends \Google\Model
 {
   /**
+   * Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use
+   * `customers/my_customer` If you're using this API to manage another
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
+   *
    * @var string
    */
   public $customer;
 
   /**
-   * @param string
+   * Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use
+   * `customers/my_customer` If you're using this API to manage another
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
+   *
+   * @param string $customer
    */
   public function setCustomer($customer)
   {

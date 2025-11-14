@@ -20,36 +20,73 @@ namespace Google\Service\NetworkManagement;
 class InterconnectAttachmentInfo extends \Google\Model
 {
   /**
+   * Unspecified type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Attachment to a dedicated interconnect.
+   */
+  public const TYPE_DEDICATED = 'DEDICATED';
+  /**
+   * Attachment to a partner interconnect, created by the customer.
+   */
+  public const TYPE_PARTNER = 'PARTNER';
+  /**
+   * Attachment to a partner interconnect, created by the partner.
+   */
+  public const TYPE_PARTNER_PROVIDER = 'PARTNER_PROVIDER';
+  /**
+   * Attachment to a L2 interconnect, created by the customer.
+   */
+  public const TYPE_L2_DEDICATED = 'L2_DEDICATED';
+  /**
+   * URI of the Cloud Router to be used for dynamic routing.
+   *
    * @var string
    */
   public $cloudRouterUri;
   /**
+   * Name of an Interconnect attachment.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * URI of the Interconnect where the Interconnect attachment is configured.
+   *
    * @var string
    */
   public $interconnectUri;
   /**
+   * Appliance IP address that was matched for L2_DEDICATED attachments.
+   *
    * @var string
    */
   public $l2AttachmentMatchedIpAddress;
   /**
+   * Name of a Google Cloud region where the Interconnect attachment is
+   * configured.
+   *
    * @var string
    */
   public $region;
   /**
+   * The type of interconnect attachment this is.
+   *
    * @var string
    */
   public $type;
   /**
+   * URI of an Interconnect attachment.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * URI of the Cloud Router to be used for dynamic routing.
+   *
+   * @param string $cloudRouterUri
    */
   public function setCloudRouterUri($cloudRouterUri)
   {
@@ -63,7 +100,9 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->cloudRouterUri;
   }
   /**
-   * @param string
+   * Name of an Interconnect attachment.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -77,7 +116,9 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * URI of the Interconnect where the Interconnect attachment is configured.
+   *
+   * @param string $interconnectUri
    */
   public function setInterconnectUri($interconnectUri)
   {
@@ -91,7 +132,9 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->interconnectUri;
   }
   /**
-   * @param string
+   * Appliance IP address that was matched for L2_DEDICATED attachments.
+   *
+   * @param string $l2AttachmentMatchedIpAddress
    */
   public function setL2AttachmentMatchedIpAddress($l2AttachmentMatchedIpAddress)
   {
@@ -105,7 +148,10 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->l2AttachmentMatchedIpAddress;
   }
   /**
-   * @param string
+   * Name of a Google Cloud region where the Interconnect attachment is
+   * configured.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -119,21 +165,28 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * The type of interconnect attachment this is.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, DEDICATED, PARTNER, PARTNER_PROVIDER,
+   * L2_DEDICATED
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * URI of an Interconnect attachment.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

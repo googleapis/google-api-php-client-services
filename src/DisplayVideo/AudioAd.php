@@ -20,14 +20,20 @@ namespace Google\Service\DisplayVideo;
 class AudioAd extends \Google\Model
 {
   /**
+   * The webpage address that appears with the ad.
+   *
    * @var string
    */
   public $displayUrl;
   /**
+   * The URL address of the webpage that people reach after they click the ad.
+   *
    * @var string
    */
   public $finalUrl;
   /**
+   * The URL address loaded in the background for tracking purposes.
+   *
    * @var string
    */
   public $trackingUrl;
@@ -35,7 +41,9 @@ class AudioAd extends \Google\Model
   protected $videoDataType = '';
 
   /**
-   * @param string
+   * The webpage address that appears with the ad.
+   *
+   * @param string $displayUrl
    */
   public function setDisplayUrl($displayUrl)
   {
@@ -49,7 +57,9 @@ class AudioAd extends \Google\Model
     return $this->displayUrl;
   }
   /**
-   * @param string
+   * The URL address of the webpage that people reach after they click the ad.
+   *
+   * @param string $finalUrl
    */
   public function setFinalUrl($finalUrl)
   {
@@ -63,7 +73,9 @@ class AudioAd extends \Google\Model
     return $this->finalUrl;
   }
   /**
-   * @param string
+   * The URL address loaded in the background for tracking purposes.
+   *
+   * @param string $trackingUrl
    */
   public function setTrackingUrl($trackingUrl)
   {
@@ -77,7 +89,9 @@ class AudioAd extends \Google\Model
     return $this->trackingUrl;
   }
   /**
-   * @param YoutubeVideoDetails
+   * The YouTube video of the ad.
+   *
+   * @param YoutubeVideoDetails $video
    */
   public function setVideo(YoutubeVideoDetails $video)
   {

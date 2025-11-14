@@ -23,10 +23,14 @@ class BqmlTrainingRun extends \Google\Collection
   protected $iterationResultsType = BqmlIterationResult::class;
   protected $iterationResultsDataType = 'array';
   /**
+   * Deprecated.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Deprecated.
+   *
    * @var string
    */
   public $state;
@@ -34,7 +38,9 @@ class BqmlTrainingRun extends \Google\Collection
   protected $trainingOptionsDataType = '';
 
   /**
-   * @param BqmlIterationResult[]
+   * Deprecated.
+   *
+   * @param BqmlIterationResult[] $iterationResults
    */
   public function setIterationResults($iterationResults)
   {
@@ -48,7 +54,9 @@ class BqmlTrainingRun extends \Google\Collection
     return $this->iterationResults;
   }
   /**
-   * @param string
+   * Deprecated.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -62,7 +70,9 @@ class BqmlTrainingRun extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Deprecated.
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -76,7 +86,9 @@ class BqmlTrainingRun extends \Google\Collection
     return $this->state;
   }
   /**
-   * @param BqmlTrainingRunTrainingOptions
+   * Deprecated.
+   *
+   * @param BqmlTrainingRunTrainingOptions $trainingOptions
    */
   public function setTrainingOptions(BqmlTrainingRunTrainingOptions $trainingOptions)
   {

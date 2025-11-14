@@ -20,12 +20,18 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1TextMetadata extends \Google\Model
 {
   /**
+   * The language of this text, as a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
+   *
    * @var string
    */
   public $languageCode;
 
   /**
-   * @param string
+   * The language of this text, as a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {

@@ -23,12 +23,17 @@ class GoogleAppsCloudidentityDevicesV1ListDevicesResponse extends \Google\Collec
   protected $devicesType = GoogleAppsCloudidentityDevicesV1Device::class;
   protected $devicesDataType = 'array';
   /**
+   * Token to retrieve the next page of results. Empty if there are no more
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleAppsCloudidentityDevicesV1Device[]
+   * Devices meeting the list restrictions.
+   *
+   * @param GoogleAppsCloudidentityDevicesV1Device[] $devices
    */
   public function setDevices($devices)
   {
@@ -42,7 +47,10 @@ class GoogleAppsCloudidentityDevicesV1ListDevicesResponse extends \Google\Collec
     return $this->devices;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results. Empty if there are no more
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

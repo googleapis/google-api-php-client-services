@@ -23,16 +23,24 @@ class ListEventsResponse extends \Google\Collection
   protected $errorEventsType = ErrorEvent::class;
   protected $errorEventsDataType = 'array';
   /**
+   * If non-empty, more results are available. Pass this token, along with the
+   * same query parameters as the first request, to view the next page of
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The timestamp specifies the start time to which the request was restricted.
+   *
    * @var string
    */
   public $timeRangeBegin;
 
   /**
-   * @param ErrorEvent[]
+   * The error events which match the given request.
+   *
+   * @param ErrorEvent[] $errorEvents
    */
   public function setErrorEvents($errorEvents)
   {
@@ -46,7 +54,11 @@ class ListEventsResponse extends \Google\Collection
     return $this->errorEvents;
   }
   /**
-   * @param string
+   * If non-empty, more results are available. Pass this token, along with the
+   * same query parameters as the first request, to view the next page of
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListEventsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * The timestamp specifies the start time to which the request was restricted.
+   *
+   * @param string $timeRangeBegin
    */
   public function setTimeRangeBegin($timeRangeBegin)
   {

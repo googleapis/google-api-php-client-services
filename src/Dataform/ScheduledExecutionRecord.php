@@ -22,16 +22,25 @@ class ScheduledExecutionRecord extends \Google\Model
   protected $errorStatusType = Status::class;
   protected $errorStatusDataType = '';
   /**
+   * Output only. The timestamp of this execution attempt.
+   *
    * @var string
    */
   public $executionTime;
   /**
+   * The name of the created workflow invocation, if one was successfully
+   * created. Must be in the format
+   * `projects/locations/repositories/workflowInvocations`.
+   *
    * @var string
    */
   public $workflowInvocation;
 
   /**
-   * @param Status
+   * The error status encountered upon this attempt to create the workflow
+   * invocation, if the attempt was unsuccessful.
+   *
+   * @param Status $errorStatus
    */
   public function setErrorStatus(Status $errorStatus)
   {
@@ -45,7 +54,9 @@ class ScheduledExecutionRecord extends \Google\Model
     return $this->errorStatus;
   }
   /**
-   * @param string
+   * Output only. The timestamp of this execution attempt.
+   *
+   * @param string $executionTime
    */
   public function setExecutionTime($executionTime)
   {
@@ -59,7 +70,11 @@ class ScheduledExecutionRecord extends \Google\Model
     return $this->executionTime;
   }
   /**
-   * @param string
+   * The name of the created workflow invocation, if one was successfully
+   * created. Must be in the format
+   * `projects/locations/repositories/workflowInvocations`.
+   *
+   * @param string $workflowInvocation
    */
   public function setWorkflowInvocation($workflowInvocation)
   {

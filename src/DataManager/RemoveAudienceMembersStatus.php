@@ -27,7 +27,9 @@ class RemoveAudienceMembersStatus extends \Google\Model
   protected $userDataRemovalStatusDataType = '';
 
   /**
-   * @param RemoveMobileDataStatus
+   * The status of the mobile data removal from the destination.
+   *
+   * @param RemoveMobileDataStatus $mobileDataRemovalStatus
    */
   public function setMobileDataRemovalStatus(RemoveMobileDataStatus $mobileDataRemovalStatus)
   {
@@ -41,7 +43,9 @@ class RemoveAudienceMembersStatus extends \Google\Model
     return $this->mobileDataRemovalStatus;
   }
   /**
-   * @param RemovePairDataStatus
+   * The status of the pair data removal from the destination.
+   *
+   * @param RemovePairDataStatus $pairDataRemovalStatus
    */
   public function setPairDataRemovalStatus(RemovePairDataStatus $pairDataRemovalStatus)
   {
@@ -55,7 +59,9 @@ class RemoveAudienceMembersStatus extends \Google\Model
     return $this->pairDataRemovalStatus;
   }
   /**
-   * @param RemoveUserDataStatus
+   * The status of the user data removal from the destination.
+   *
+   * @param RemoveUserDataStatus $userDataRemovalStatus
    */
   public function setUserDataRemovalStatus(RemoveUserDataStatus $userDataRemovalStatus)
   {

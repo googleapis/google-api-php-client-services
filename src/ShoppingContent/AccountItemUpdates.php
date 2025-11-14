@@ -22,24 +22,48 @@ class AccountItemUpdates extends \Google\Model
   protected $accountItemUpdatesSettingsType = AccountItemUpdatesSettings::class;
   protected $accountItemUpdatesSettingsDataType = '';
   /**
+   * Output only. The effective value of allow_availability_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
    * @var bool
    */
   public $effectiveAllowAvailabilityUpdates;
   /**
+   * Output only. The effective value of allow_condition_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
    * @var bool
    */
   public $effectiveAllowConditionUpdates;
   /**
+   * Output only. The effective value of allow_price_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
    * @var bool
    */
   public $effectiveAllowPriceUpdates;
   /**
+   * Output only. The effective value of allow_strict_availability_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
    * @var bool
    */
   public $effectiveAllowStrictAvailabilityUpdates;
 
   /**
-   * @param AccountItemUpdatesSettings
+   * Determines which attributes of the items should be automatically updated.
+   * If this field is not present, then the settings will be deleted. If there
+   * are no settings for subaccount, they are inherited from aggregator.
+   *
+   * @param AccountItemUpdatesSettings $accountItemUpdatesSettings
    */
   public function setAccountItemUpdatesSettings(AccountItemUpdatesSettings $accountItemUpdatesSettings)
   {
@@ -53,7 +77,12 @@ class AccountItemUpdates extends \Google\Model
     return $this->accountItemUpdatesSettings;
   }
   /**
-   * @param bool
+   * Output only. The effective value of allow_availability_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
+   * @param bool $effectiveAllowAvailabilityUpdates
    */
   public function setEffectiveAllowAvailabilityUpdates($effectiveAllowAvailabilityUpdates)
   {
@@ -67,7 +96,12 @@ class AccountItemUpdates extends \Google\Model
     return $this->effectiveAllowAvailabilityUpdates;
   }
   /**
-   * @param bool
+   * Output only. The effective value of allow_condition_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
+   * @param bool $effectiveAllowConditionUpdates
    */
   public function setEffectiveAllowConditionUpdates($effectiveAllowConditionUpdates)
   {
@@ -81,7 +115,12 @@ class AccountItemUpdates extends \Google\Model
     return $this->effectiveAllowConditionUpdates;
   }
   /**
-   * @param bool
+   * Output only. The effective value of allow_price_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
+   * @param bool $effectiveAllowPriceUpdates
    */
   public function setEffectiveAllowPriceUpdates($effectiveAllowPriceUpdates)
   {
@@ -95,7 +134,12 @@ class AccountItemUpdates extends \Google\Model
     return $this->effectiveAllowPriceUpdates;
   }
   /**
-   * @param bool
+   * Output only. The effective value of allow_strict_availability_updates. If
+   * account_item_updates_settings is present, then this value is the same.
+   * Otherwise, it represents the inherited value of the parent account. Read-
+   * only.
+   *
+   * @param bool $effectiveAllowStrictAvailabilityUpdates
    */
   public function setEffectiveAllowStrictAvailabilityUpdates($effectiveAllowStrictAvailabilityUpdates)
   {

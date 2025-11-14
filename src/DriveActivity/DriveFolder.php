@@ -20,19 +20,42 @@ namespace Google\Service\DriveActivity;
 class DriveFolder extends \Google\Model
 {
   /**
+   * The folder type is unknown.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * The folder is the root of a user's MyDrive.
+   */
+  public const TYPE_MY_DRIVE_ROOT = 'MY_DRIVE_ROOT';
+  /**
+   * The folder is the root of a shared drive.
+   */
+  public const TYPE_SHARED_DRIVE_ROOT = 'SHARED_DRIVE_ROOT';
+  /**
+   * The folder is a standard, non-root, folder.
+   */
+  public const TYPE_STANDARD_FOLDER = 'STANDARD_FOLDER';
+  /**
+   * The type of Drive folder.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The type of Drive folder.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, MY_DRIVE_ROOT, SHARED_DRIVE_ROOT,
+   * STANDARD_FOLDER
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

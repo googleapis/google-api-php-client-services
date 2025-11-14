@@ -24,7 +24,10 @@ class Metaline extends \Google\Collection
   protected $propertiesDataType = 'array';
 
   /**
-   * @param DisplayedProperty[]
+   * The list of displayed properties for the metaline. The maximum number of
+   * properties is 5.
+   *
+   * @param DisplayedProperty[] $properties
    */
   public function setProperties($properties)
   {

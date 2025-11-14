@@ -25,7 +25,9 @@ class GoogleCloudDiscoveryengineLoggingErrorContext extends \Google\Model
   protected $reportLocationDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineLoggingHttpRequestContext
+   * The HTTP request which was processed when the error was triggered.
+   *
+   * @param GoogleCloudDiscoveryengineLoggingHttpRequestContext $httpRequest
    */
   public function setHttpRequest(GoogleCloudDiscoveryengineLoggingHttpRequestContext $httpRequest)
   {
@@ -39,7 +41,10 @@ class GoogleCloudDiscoveryengineLoggingErrorContext extends \Google\Model
     return $this->httpRequest;
   }
   /**
-   * @param GoogleCloudDiscoveryengineLoggingSourceLocation
+   * The location in the source code where the decision was made to report the
+   * error, usually the place where it was logged.
+   *
+   * @param GoogleCloudDiscoveryengineLoggingSourceLocation $reportLocation
    */
   public function setReportLocation(GoogleCloudDiscoveryengineLoggingSourceLocation $reportLocation)
   {

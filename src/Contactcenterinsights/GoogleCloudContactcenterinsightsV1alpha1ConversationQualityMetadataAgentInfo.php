@@ -19,54 +19,101 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo extends \Google\Collection
 {
+  /**
+   * Participant's role is not set.
+   */
+  public const AGENT_TYPE_ROLE_UNSPECIFIED = 'ROLE_UNSPECIFIED';
+  /**
+   * Participant is a human agent.
+   */
+  public const AGENT_TYPE_HUMAN_AGENT = 'HUMAN_AGENT';
+  /**
+   * Participant is an automated agent.
+   */
+  public const AGENT_TYPE_AUTOMATED_AGENT = 'AUTOMATED_AGENT';
+  /**
+   * Participant is an end user who conversed with the contact center.
+   */
+  public const AGENT_TYPE_END_USER = 'END_USER';
+  /**
+   * Participant is either a human or automated agent.
+   */
+  public const AGENT_TYPE_ANY_AGENT = 'ANY_AGENT';
   protected $collection_key = 'teams';
   /**
+   * A user-specified string representing the agent.
+   *
    * @var string
    */
   public $agentId;
   /**
+   * The agent type, e.g. HUMAN_AGENT.
+   *
    * @var string
    */
   public $agentType;
   /**
+   * The agent's deployment display name. Only applicable to automated agents.
+   *
    * @var string
    */
   public $deploymentDisplayName;
   /**
+   * The agent's deployment ID. Only applicable to automated agents.
+   *
    * @var string
    */
   public $deploymentId;
   /**
+   * The agent's name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * A user-provided string indicating the outcome of the agent's segment of the
+   * call.
+   *
    * @var string
    */
   public $dispositionCode;
   /**
+   * The agent's location.
+   *
    * @var string
    */
   public $location;
   /**
+   * A user-specified string representing the agent's team. Deprecated in favor
+   * of the `teams` field.
+   *
+   * @deprecated
    * @var string
    */
   public $team;
   /**
+   * User-specified strings representing the agent's teams.
+   *
    * @var string[]
    */
   public $teams;
   /**
+   * The agent's version display name. Only applicable to automated agents.
+   *
    * @var string
    */
   public $versionDisplayName;
   /**
+   * The agent's version ID. Only applicable to automated agents.
+   *
    * @var string
    */
   public $versionId;
 
   /**
-   * @param string
+   * A user-specified string representing the agent.
+   *
+   * @param string $agentId
    */
   public function setAgentId($agentId)
   {
@@ -80,21 +127,28 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->agentId;
   }
   /**
-   * @param string
+   * The agent type, e.g. HUMAN_AGENT.
+   *
+   * Accepted values: ROLE_UNSPECIFIED, HUMAN_AGENT, AUTOMATED_AGENT, END_USER,
+   * ANY_AGENT
+   *
+   * @param self::AGENT_TYPE_* $agentType
    */
   public function setAgentType($agentType)
   {
     $this->agentType = $agentType;
   }
   /**
-   * @return string
+   * @return self::AGENT_TYPE_*
    */
   public function getAgentType()
   {
     return $this->agentType;
   }
   /**
-   * @param string
+   * The agent's deployment display name. Only applicable to automated agents.
+   *
+   * @param string $deploymentDisplayName
    */
   public function setDeploymentDisplayName($deploymentDisplayName)
   {
@@ -108,7 +162,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->deploymentDisplayName;
   }
   /**
-   * @param string
+   * The agent's deployment ID. Only applicable to automated agents.
+   *
+   * @param string $deploymentId
    */
   public function setDeploymentId($deploymentId)
   {
@@ -122,7 +178,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->deploymentId;
   }
   /**
-   * @param string
+   * The agent's name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -136,7 +194,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->displayName;
   }
   /**
-   * @param string
+   * A user-provided string indicating the outcome of the agent's segment of the
+   * call.
+   *
+   * @param string $dispositionCode
    */
   public function setDispositionCode($dispositionCode)
   {
@@ -150,7 +211,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->dispositionCode;
   }
   /**
-   * @param string
+   * The agent's location.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -164,13 +227,18 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->location;
   }
   /**
-   * @param string
+   * A user-specified string representing the agent's team. Deprecated in favor
+   * of the `teams` field.
+   *
+   * @deprecated
+   * @param string $team
    */
   public function setTeam($team)
   {
     $this->team = $team;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTeam()
@@ -178,7 +246,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->team;
   }
   /**
-   * @param string[]
+   * User-specified strings representing the agent's teams.
+   *
+   * @param string[] $teams
    */
   public function setTeams($teams)
   {
@@ -192,7 +262,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->teams;
   }
   /**
-   * @param string
+   * The agent's version display name. Only applicable to automated agents.
+   *
+   * @param string $versionDisplayName
    */
   public function setVersionDisplayName($versionDisplayName)
   {
@@ -206,7 +278,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
     return $this->versionDisplayName;
   }
   /**
-   * @param string
+   * The agent's version ID. Only applicable to automated agents.
+   *
+   * @param string $versionId
    */
   public function setVersionId($versionId)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class TcpProxyScript extends \Google\Model
 {
   /**
+   * The TCP Proxy configuration script.
+   *
    * @var string
    */
   public $script;
 
   /**
-   * @param string
+   * The TCP Proxy configuration script.
+   *
+   * @param string $script
    */
   public function setScript($script)
   {

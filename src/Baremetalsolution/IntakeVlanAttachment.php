@@ -20,16 +20,22 @@ namespace Google\Service\Baremetalsolution;
 class IntakeVlanAttachment extends \Google\Model
 {
   /**
+   * Identifier of the VLAN attachment.
+   *
    * @var string
    */
   public $id;
   /**
+   * Attachment pairing key.
+   *
    * @var string
    */
   public $pairingKey;
 
   /**
-   * @param string
+   * Identifier of the VLAN attachment.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class IntakeVlanAttachment extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Attachment pairing key.
+   *
+   * @param string $pairingKey
    */
   public function setPairingKey($pairingKey)
   {

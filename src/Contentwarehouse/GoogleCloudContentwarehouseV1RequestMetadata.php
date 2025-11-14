@@ -23,7 +23,9 @@ class GoogleCloudContentwarehouseV1RequestMetadata extends \Google\Model
   protected $userInfoDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1UserInfo
+   * Provides user unique identification and groups information.
+   *
+   * @param GoogleCloudContentwarehouseV1UserInfo $userInfo
    */
   public function setUserInfo(GoogleCloudContentwarehouseV1UserInfo $userInfo)
   {

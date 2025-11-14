@@ -21,6 +21,9 @@ class ShippingsettingsGetSupportedPickupServicesResponse extends \Google\Collect
 {
   protected $collection_key = 'pickupServices';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsGetSupportedPickupServicesResponse`".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class ShippingsettingsGetSupportedPickupServicesResponse extends \Google\Collect
   protected $pickupServicesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsGetSupportedPickupServicesResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class ShippingsettingsGetSupportedPickupServicesResponse extends \Google\Collect
     return $this->kind;
   }
   /**
-   * @param PickupServicesPickupService[]
+   * A list of supported pickup services. May be empty.
+   *
+   * @param PickupServicesPickupService[] $pickupServices
    */
   public function setPickupServices($pickupServices)
   {

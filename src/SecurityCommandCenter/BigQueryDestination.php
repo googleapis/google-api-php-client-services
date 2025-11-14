@@ -20,12 +20,18 @@ namespace Google\Service\SecurityCommandCenter;
 class BigQueryDestination extends \Google\Model
 {
   /**
+   * Required. The relative resource name of the destination dataset, in the
+   * form projects/{projectId}/datasets/{datasetId}.
+   *
    * @var string
    */
   public $dataset;
 
   /**
-   * @param string
+   * Required. The relative resource name of the destination dataset, in the
+   * form projects/{projectId}/datasets/{datasetId}.
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {

@@ -23,22 +23,33 @@ class WorkItemServiceState extends \Google\Collection
   protected $completeWorkStatusType = Status::class;
   protected $completeWorkStatusDataType = '';
   /**
+   * Other data returned by the service, specific to the particular worker
+   * harness.
+   *
    * @var array[]
    */
   public $harnessData;
   protected $hotKeyDetectionType = HotKeyDetection::class;
   protected $hotKeyDetectionDataType = '';
   /**
+   * Time at which the current lease will expire.
+   *
    * @var string
    */
   public $leaseExpireTime;
   protected $metricShortIdType = MetricShortId::class;
   protected $metricShortIdDataType = 'array';
   /**
+   * The index value to use for the next report sent by the worker. Note: If the
+   * report call fails for whatever reason, the worker should reuse this index
+   * for subsequent report attempts.
+   *
    * @var string
    */
   public $nextReportIndex;
   /**
+   * New recommended reporting interval.
+   *
    * @var string
    */
   public $reportStatusInterval;
@@ -50,7 +61,12 @@ class WorkItemServiceState extends \Google\Collection
   protected $suggestedStopPositionDataType = '';
 
   /**
-   * @param Status
+   * If set, a request to complete the work item with the given status. This
+   * will not be set to OK, unless supported by the specific kind of WorkItem.
+   * It can be used for the backend to indicate a WorkItem must terminate, e.g.,
+   * for aborting work.
+   *
+   * @param Status $completeWorkStatus
    */
   public function setCompleteWorkStatus(Status $completeWorkStatus)
   {
@@ -64,7 +80,10 @@ class WorkItemServiceState extends \Google\Collection
     return $this->completeWorkStatus;
   }
   /**
-   * @param array[]
+   * Other data returned by the service, specific to the particular worker
+   * harness.
+   *
+   * @param array[] $harnessData
    */
   public function setHarnessData($harnessData)
   {
@@ -78,7 +97,11 @@ class WorkItemServiceState extends \Google\Collection
     return $this->harnessData;
   }
   /**
-   * @param HotKeyDetection
+   * A hot key is a symptom of poor data distribution in which there are enough
+   * elements mapped to a single key to impact pipeline performance. When
+   * present, this field includes metadata associated with any hot key.
+   *
+   * @param HotKeyDetection $hotKeyDetection
    */
   public function setHotKeyDetection(HotKeyDetection $hotKeyDetection)
   {
@@ -92,7 +115,9 @@ class WorkItemServiceState extends \Google\Collection
     return $this->hotKeyDetection;
   }
   /**
-   * @param string
+   * Time at which the current lease will expire.
+   *
+   * @param string $leaseExpireTime
    */
   public function setLeaseExpireTime($leaseExpireTime)
   {
@@ -106,7 +131,13 @@ class WorkItemServiceState extends \Google\Collection
     return $this->leaseExpireTime;
   }
   /**
-   * @param MetricShortId[]
+   * The short ids that workers should use in subsequent metric updates. Workers
+   * should strive to use short ids whenever possible, but it is ok to request
+   * the short_id again if a worker lost track of it (e.g. if the worker is
+   * recovering from a crash). NOTE: it is possible that the response may have
+   * short ids for a subset of the metrics.
+   *
+   * @param MetricShortId[] $metricShortId
    */
   public function setMetricShortId($metricShortId)
   {
@@ -120,7 +151,11 @@ class WorkItemServiceState extends \Google\Collection
     return $this->metricShortId;
   }
   /**
-   * @param string
+   * The index value to use for the next report sent by the worker. Note: If the
+   * report call fails for whatever reason, the worker should reuse this index
+   * for subsequent report attempts.
+   *
+   * @param string $nextReportIndex
    */
   public function setNextReportIndex($nextReportIndex)
   {
@@ -134,7 +169,9 @@ class WorkItemServiceState extends \Google\Collection
     return $this->nextReportIndex;
   }
   /**
-   * @param string
+   * New recommended reporting interval.
+   *
+   * @param string $reportStatusInterval
    */
   public function setReportStatusInterval($reportStatusInterval)
   {
@@ -148,7 +185,10 @@ class WorkItemServiceState extends \Google\Collection
     return $this->reportStatusInterval;
   }
   /**
-   * @param ApproximateSplitRequest
+   * The progress point in the WorkItem where the Dataflow service suggests that
+   * the worker truncate the task.
+   *
+   * @param ApproximateSplitRequest $splitRequest
    */
   public function setSplitRequest(ApproximateSplitRequest $splitRequest)
   {
@@ -162,13 +202,17 @@ class WorkItemServiceState extends \Google\Collection
     return $this->splitRequest;
   }
   /**
-   * @param ApproximateProgress
+   * DEPRECATED in favor of split_request.
+   *
+   * @deprecated
+   * @param ApproximateProgress $suggestedStopPoint
    */
   public function setSuggestedStopPoint(ApproximateProgress $suggestedStopPoint)
   {
     $this->suggestedStopPoint = $suggestedStopPoint;
   }
   /**
+   * @deprecated
    * @return ApproximateProgress
    */
   public function getSuggestedStopPoint()
@@ -176,13 +220,17 @@ class WorkItemServiceState extends \Google\Collection
     return $this->suggestedStopPoint;
   }
   /**
-   * @param Position
+   * Obsolete, always empty.
+   *
+   * @deprecated
+   * @param Position $suggestedStopPosition
    */
   public function setSuggestedStopPosition(Position $suggestedStopPosition)
   {
     $this->suggestedStopPosition = $suggestedStopPosition;
   }
   /**
+   * @deprecated
    * @return Position
    */
   public function getSuggestedStopPosition()

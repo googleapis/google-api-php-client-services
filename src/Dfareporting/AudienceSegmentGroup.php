@@ -23,16 +23,25 @@ class AudienceSegmentGroup extends \Google\Collection
   protected $audienceSegmentsType = AudienceSegment::class;
   protected $audienceSegmentsDataType = 'array';
   /**
+   * ID of this audience segment group. This is a read-only, auto-generated
+   * field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of this audience segment group. This is a required field and must be
+   * less than 65 characters long.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param AudienceSegment[]
+   * Audience segments assigned to this group. The number of segments must be
+   * between 2 and 100.
+   *
+   * @param AudienceSegment[] $audienceSegments
    */
   public function setAudienceSegments($audienceSegments)
   {
@@ -46,7 +55,10 @@ class AudienceSegmentGroup extends \Google\Collection
     return $this->audienceSegments;
   }
   /**
-   * @param string
+   * ID of this audience segment group. This is a read-only, auto-generated
+   * field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -60,7 +72,10 @@ class AudienceSegmentGroup extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Name of this audience segment group. This is a required field and must be
+   * less than 65 characters long.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -27,7 +27,10 @@ class ShardingOption extends \Google\Model
   protected $uniformShardingDataType = '';
 
   /**
-   * @param ManualSharding
+   * Shards test cases into the specified groups of packages, classes, and/or
+   * methods.
+   *
+   * @param ManualSharding $manualSharding
    */
   public function setManualSharding(ManualSharding $manualSharding)
   {
@@ -41,7 +44,9 @@ class ShardingOption extends \Google\Model
     return $this->manualSharding;
   }
   /**
-   * @param SmartSharding
+   * Shards test based on previous test case timing records.
+   *
+   * @param SmartSharding $smartSharding
    */
   public function setSmartSharding(SmartSharding $smartSharding)
   {
@@ -55,7 +60,9 @@ class ShardingOption extends \Google\Model
     return $this->smartSharding;
   }
   /**
-   * @param UniformSharding
+   * Uniformly shards test cases given a total number of shards.
+   *
+   * @param UniformSharding $uniformSharding
    */
   public function setUniformSharding(UniformSharding $uniformSharding)
   {

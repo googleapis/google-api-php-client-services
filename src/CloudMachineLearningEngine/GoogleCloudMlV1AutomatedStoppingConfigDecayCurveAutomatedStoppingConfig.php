@@ -20,12 +20,18 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig extends \Google\Model
 {
   /**
+   * If true, measurement.elapsed_time is used as the x-axis of each Trials
+   * Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+   *
    * @var bool
    */
   public $useElapsedTime;
 
   /**
-   * @param bool
+   * If true, measurement.elapsed_time is used as the x-axis of each Trials
+   * Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
+   *
+   * @param bool $useElapsedTime
    */
   public function setUseElapsedTime($useElapsedTime)
   {

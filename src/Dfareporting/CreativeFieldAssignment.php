@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class CreativeFieldAssignment extends \Google\Model
 {
   /**
+   * ID of the creative field.
+   *
    * @var string
    */
   public $creativeFieldId;
   /**
+   * ID of the creative field value.
+   *
    * @var string
    */
   public $creativeFieldValueId;
 
   /**
-   * @param string
+   * ID of the creative field.
+   *
+   * @param string $creativeFieldId
    */
   public function setCreativeFieldId($creativeFieldId)
   {
@@ -43,7 +49,9 @@ class CreativeFieldAssignment extends \Google\Model
     return $this->creativeFieldId;
   }
   /**
-   * @param string
+   * ID of the creative field value.
+   *
+   * @param string $creativeFieldValueId
    */
   public function setCreativeFieldValueId($creativeFieldValueId)
   {

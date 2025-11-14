@@ -26,7 +26,9 @@ class PermissionChange extends \Google\Collection
   protected $removedPermissionsDataType = 'array';
 
   /**
-   * @param Permission[]
+   * The set of permissions added by this change.
+   *
+   * @param Permission[] $addedPermissions
    */
   public function setAddedPermissions($addedPermissions)
   {
@@ -40,7 +42,9 @@ class PermissionChange extends \Google\Collection
     return $this->addedPermissions;
   }
   /**
-   * @param Permission[]
+   * The set of permissions removed by this change.
+   *
+   * @param Permission[] $removedPermissions
    */
   public function setRemovedPermissions($removedPermissions)
   {

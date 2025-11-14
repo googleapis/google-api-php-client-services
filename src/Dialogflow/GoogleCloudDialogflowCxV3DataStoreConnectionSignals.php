@@ -21,6 +21,8 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
 {
   protected $collection_key = 'searchSnippets';
   /**
+   * Optional. The final compiled answer.
+   *
    * @var string
    */
   public $answer;
@@ -35,6 +37,8 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
   protected $rewriterModelCallSignalsType = GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals::class;
   protected $rewriterModelCallSignalsDataType = '';
   /**
+   * Optional. Rewritten string query used for search.
+   *
    * @var string
    */
   public $rewrittenQuery;
@@ -44,7 +48,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
   protected $searchSnippetsDataType = 'array';
 
   /**
-   * @param string
+   * Optional. The final compiled answer.
+   *
+   * @param string $answer
    */
   public function setAnswer($answer)
   {
@@ -58,7 +64,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->answer;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsAnswerGenerationModelCallSignals
+   * Optional. Diagnostic info related to the answer generation model call.
+   *
+   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsAnswerGenerationModelCallSignals $answerGenerationModelCallSignals
    */
   public function setAnswerGenerationModelCallSignals(GoogleCloudDialogflowCxV3DataStoreConnectionSignalsAnswerGenerationModelCallSignals $answerGenerationModelCallSignals)
   {
@@ -72,7 +80,10 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->answerGenerationModelCallSignals;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsAnswerPart[]
+   * Optional. Answer parts with relevant citations. Concatenation of texts
+   * should add up the `answer` (not counting whitespaces).
+   *
+   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsAnswerPart[] $answerParts
    */
   public function setAnswerParts($answerParts)
   {
@@ -86,7 +97,10 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->answerParts;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnippet[]
+   * Optional. Snippets cited by the answer generation model from the most to
+   * least relevant.
+   *
+   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnippet[] $citedSnippets
    */
   public function setCitedSnippets($citedSnippets)
   {
@@ -100,7 +114,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->citedSnippets;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsGroundingSignals
+   * Optional. Grounding signals.
+   *
+   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsGroundingSignals $groundingSignals
    */
   public function setGroundingSignals(GoogleCloudDialogflowCxV3DataStoreConnectionSignalsGroundingSignals $groundingSignals)
   {
@@ -114,7 +130,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->groundingSignals;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals
+   * Optional. Diagnostic info related to the rewriter model call.
+   *
+   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals $rewriterModelCallSignals
    */
   public function setRewriterModelCallSignals(GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals $rewriterModelCallSignals)
   {
@@ -128,7 +146,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->rewriterModelCallSignals;
   }
   /**
-   * @param string
+   * Optional. Rewritten string query used for search.
+   *
+   * @param string $rewrittenQuery
    */
   public function setRewrittenQuery($rewrittenQuery)
   {
@@ -142,7 +162,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->rewrittenQuery;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSafetySignals
+   * Optional. Safety check result.
+   *
+   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSafetySignals $safetySignals
    */
   public function setSafetySignals(GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSafetySignals $safetySignals)
   {
@@ -156,7 +178,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignals extends \Google\Collec
     return $this->safetySignals;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSearchSnippet[]
+   * Optional. Search snippets included in the answer generation prompt.
+   *
+   * @param GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSearchSnippet[] $searchSnippets
    */
   public function setSearchSnippets($searchSnippets)
   {

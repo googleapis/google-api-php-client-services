@@ -20,12 +20,16 @@ namespace Google\Service\Monitoring;
 class PingConfig extends \Google\Model
 {
   /**
+   * Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.
+   *
    * @var int
    */
   public $pingsCount;
 
   /**
-   * @param int
+   * Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.
+   *
+   * @param int $pingsCount
    */
   public function setPingsCount($pingsCount)
   {

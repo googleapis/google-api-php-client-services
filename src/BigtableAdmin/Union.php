@@ -24,7 +24,9 @@ class Union extends \Google\Collection
   protected $rulesDataType = 'array';
 
   /**
-   * @param GcRule[]
+   * Delete cells which would be deleted by any element of `rules`.
+   *
+   * @param GcRule[] $rules
    */
   public function setRules($rules)
   {

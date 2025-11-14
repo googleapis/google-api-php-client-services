@@ -23,12 +23,18 @@ class SasPortalListDeploymentsResponse extends \Google\Collection
   protected $deploymentsType = SasPortalDeployment::class;
   protected $deploymentsDataType = 'array';
   /**
+   * A pagination token returned from a previous call to ListDeployments that
+   * indicates from where listing should continue. If the field is missing or
+   * empty, it means there are no more deployments.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param SasPortalDeployment[]
+   * The deployments that match the request.
+   *
+   * @param SasPortalDeployment[] $deployments
    */
   public function setDeployments($deployments)
   {
@@ -42,7 +48,11 @@ class SasPortalListDeploymentsResponse extends \Google\Collection
     return $this->deployments;
   }
   /**
-   * @param string
+   * A pagination token returned from a previous call to ListDeployments that
+   * indicates from where listing should continue. If the field is missing or
+   * empty, it means there are no more deployments.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

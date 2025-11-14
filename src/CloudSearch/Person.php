@@ -23,10 +23,16 @@ class Person extends \Google\Collection
   protected $emailAddressesType = EmailAddress::class;
   protected $emailAddressesDataType = 'array';
   /**
+   * The resource name of the person to provide information about. See
+   * [`People.get`](https://developers.google.com/people/api/rest/v1/people/get)
+   * from the Google People API.
+   *
    * @var string
    */
   public $name;
   /**
+   * Obfuscated ID of a person.
+   *
    * @var string
    */
   public $obfuscatedId;
@@ -38,7 +44,9 @@ class Person extends \Google\Collection
   protected $photosDataType = 'array';
 
   /**
-   * @param EmailAddress[]
+   * The person's email addresses
+   *
+   * @param EmailAddress[] $emailAddresses
    */
   public function setEmailAddresses($emailAddresses)
   {
@@ -52,7 +60,11 @@ class Person extends \Google\Collection
     return $this->emailAddresses;
   }
   /**
-   * @param string
+   * The resource name of the person to provide information about. See
+   * [`People.get`](https://developers.google.com/people/api/rest/v1/people/get)
+   * from the Google People API.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -66,7 +78,9 @@ class Person extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Obfuscated ID of a person.
+   *
+   * @param string $obfuscatedId
    */
   public function setObfuscatedId($obfuscatedId)
   {
@@ -80,7 +94,9 @@ class Person extends \Google\Collection
     return $this->obfuscatedId;
   }
   /**
-   * @param Name[]
+   * The person's name
+   *
+   * @param Name[] $personNames
    */
   public function setPersonNames($personNames)
   {
@@ -94,7 +110,9 @@ class Person extends \Google\Collection
     return $this->personNames;
   }
   /**
-   * @param PhoneNumber[]
+   * The person's phone numbers
+   *
+   * @param PhoneNumber[] $phoneNumbers
    */
   public function setPhoneNumbers($phoneNumbers)
   {
@@ -108,7 +126,10 @@ class Person extends \Google\Collection
     return $this->phoneNumbers;
   }
   /**
-   * @param Photo[]
+   * A person's read-only photo. A picture shown next to the person's name to
+   * help others recognize the person in search results.
+   *
+   * @param Photo[] $photos
    */
   public function setPhotos($photos)
   {

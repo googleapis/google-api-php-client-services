@@ -23,12 +23,17 @@ class Attributes extends \Google\Collection
   protected $attributesType = Attribute::class;
   protected $attributesDataType = 'array';
   /**
+   * Required. Google identifier for this location in the form of
+   * `locations/{location_id}/attributes`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param Attribute[]
+   * A collection of attributes that need to be updated.
+   *
+   * @param Attribute[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -42,7 +47,10 @@ class Attributes extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Required. Google identifier for this location in the form of
+   * `locations/{location_id}/attributes`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

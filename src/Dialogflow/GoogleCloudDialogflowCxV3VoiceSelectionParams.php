@@ -20,16 +20,49 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3VoiceSelectionParams extends \Google\Model
 {
   /**
+   * An unspecified gender, which means that the client doesn't care which
+   * gender the selected voice will have.
+   */
+  public const SSML_GENDER_SSML_VOICE_GENDER_UNSPECIFIED = 'SSML_VOICE_GENDER_UNSPECIFIED';
+  /**
+   * A male voice.
+   */
+  public const SSML_GENDER_SSML_VOICE_GENDER_MALE = 'SSML_VOICE_GENDER_MALE';
+  /**
+   * A female voice.
+   */
+  public const SSML_GENDER_SSML_VOICE_GENDER_FEMALE = 'SSML_VOICE_GENDER_FEMALE';
+  /**
+   * A gender-neutral voice.
+   */
+  public const SSML_GENDER_SSML_VOICE_GENDER_NEUTRAL = 'SSML_VOICE_GENDER_NEUTRAL';
+  /**
+   * Optional. The name of the voice. If not set, the service will choose a
+   * voice based on the other parameters such as language_code and ssml_gender.
+   * For the list of available voices, please refer to [Supported voices and
+   * languages](https://cloud.google.com/text-to-speech/docs/voices).
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The preferred gender of the voice. If not set, the service will
+   * choose a voice based on the other parameters such as language_code and
+   * name. Note that this is only a preference, not requirement. If a voice of
+   * the appropriate gender is not available, the synthesizer substitutes a
+   * voice with a different gender rather than failing the request.
+   *
    * @var string
    */
   public $ssmlGender;
 
   /**
-   * @param string
+   * Optional. The name of the voice. If not set, the service will choose a
+   * voice based on the other parameters such as language_code and ssml_gender.
+   * For the list of available voices, please refer to [Supported voices and
+   * languages](https://cloud.google.com/text-to-speech/docs/voices).
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,14 +76,23 @@ class GoogleCloudDialogflowCxV3VoiceSelectionParams extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The preferred gender of the voice. If not set, the service will
+   * choose a voice based on the other parameters such as language_code and
+   * name. Note that this is only a preference, not requirement. If a voice of
+   * the appropriate gender is not available, the synthesizer substitutes a
+   * voice with a different gender rather than failing the request.
+   *
+   * Accepted values: SSML_VOICE_GENDER_UNSPECIFIED, SSML_VOICE_GENDER_MALE,
+   * SSML_VOICE_GENDER_FEMALE, SSML_VOICE_GENDER_NEUTRAL
+   *
+   * @param self::SSML_GENDER_* $ssmlGender
    */
   public function setSsmlGender($ssmlGender)
   {
     $this->ssmlGender = $ssmlGender;
   }
   /**
-   * @return string
+   * @return self::SSML_GENDER_*
    */
   public function getSsmlGender()
   {

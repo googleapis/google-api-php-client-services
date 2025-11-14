@@ -20,12 +20,16 @@ namespace Google\Service\PeopleService;
 class DomainMembership extends \Google\Model
 {
   /**
+   * True if the person is in the viewer's Google Workspace domain.
+   *
    * @var bool
    */
   public $inViewerDomain;
 
   /**
-   * @param bool
+   * True if the person is in the viewer's Google Workspace domain.
+   *
+   * @param bool $inViewerDomain
    */
   public function setInViewerDomain($inViewerDomain)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class DisplayVideoSourceAd extends \Google\Model
 {
   /**
+   * The ID of the source creative.
+   *
    * @var string
    */
   public $creativeId;
 
   /**
-   * @param string
+   * The ID of the source creative.
+   *
+   * @param string $creativeId
    */
   public function setCreativeId($creativeId)
   {

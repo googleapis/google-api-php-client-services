@@ -25,6 +25,11 @@ class GrpcRouteRouteAction extends \Google\Collection
   protected $faultInjectionPolicyType = GrpcRouteFaultInjectionPolicy::class;
   protected $faultInjectionPolicyDataType = '';
   /**
+   * Optional. Specifies the idle timeout for the selected route. The idle
+   * timeout is defined as the period in which there are no bytes sent or
+   * received on either the upstream or downstream connection. If not set, the
+   * default idle timeout is 1 hour. If set to 0s, the timeout will be disabled.
+   *
    * @var string
    */
   public $idleTimeout;
@@ -33,12 +38,21 @@ class GrpcRouteRouteAction extends \Google\Collection
   protected $statefulSessionAffinityType = GrpcRouteStatefulSessionAffinityPolicy::class;
   protected $statefulSessionAffinityDataType = '';
   /**
+   * Optional. Specifies the timeout for selected route. Timeout is computed
+   * from the time the request has been fully processed (i.e. end of stream) up
+   * until the response has been completely processed. Timeout includes all
+   * retries.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param GrpcRouteDestination[]
+   * Optional. The destination services to which traffic should be forwarded. If
+   * multiple destinations are specified, traffic will be split between Backend
+   * Service(s) according to the weight field of these destinations.
+   *
+   * @param GrpcRouteDestination[] $destinations
    */
   public function setDestinations($destinations)
   {
@@ -52,7 +66,15 @@ class GrpcRouteRouteAction extends \Google\Collection
     return $this->destinations;
   }
   /**
-   * @param GrpcRouteFaultInjectionPolicy
+   * Optional. The specification for fault injection introduced into traffic to
+   * test the resiliency of clients to destination service failure. As part of
+   * fault injection, when clients send requests to a destination, delays can be
+   * introduced on a percentage of requests before sending those requests to the
+   * destination service. Similarly requests from clients can be aborted by for
+   * a percentage of requests. timeout and retry_policy will be ignored by
+   * clients that are configured with a fault_injection_policy
+   *
+   * @param GrpcRouteFaultInjectionPolicy $faultInjectionPolicy
    */
   public function setFaultInjectionPolicy(GrpcRouteFaultInjectionPolicy $faultInjectionPolicy)
   {
@@ -66,7 +88,12 @@ class GrpcRouteRouteAction extends \Google\Collection
     return $this->faultInjectionPolicy;
   }
   /**
-   * @param string
+   * Optional. Specifies the idle timeout for the selected route. The idle
+   * timeout is defined as the period in which there are no bytes sent or
+   * received on either the upstream or downstream connection. If not set, the
+   * default idle timeout is 1 hour. If set to 0s, the timeout will be disabled.
+   *
+   * @param string $idleTimeout
    */
   public function setIdleTimeout($idleTimeout)
   {
@@ -80,7 +107,9 @@ class GrpcRouteRouteAction extends \Google\Collection
     return $this->idleTimeout;
   }
   /**
-   * @param GrpcRouteRetryPolicy
+   * Optional. Specifies the retry policy associated with this route.
+   *
+   * @param GrpcRouteRetryPolicy $retryPolicy
    */
   public function setRetryPolicy(GrpcRouteRetryPolicy $retryPolicy)
   {
@@ -94,7 +123,9 @@ class GrpcRouteRouteAction extends \Google\Collection
     return $this->retryPolicy;
   }
   /**
-   * @param GrpcRouteStatefulSessionAffinityPolicy
+   * Optional. Specifies cookie-based stateful session affinity.
+   *
+   * @param GrpcRouteStatefulSessionAffinityPolicy $statefulSessionAffinity
    */
   public function setStatefulSessionAffinity(GrpcRouteStatefulSessionAffinityPolicy $statefulSessionAffinity)
   {
@@ -108,7 +139,12 @@ class GrpcRouteRouteAction extends \Google\Collection
     return $this->statefulSessionAffinity;
   }
   /**
-   * @param string
+   * Optional. Specifies the timeout for selected route. Timeout is computed
+   * from the time the request has been fully processed (i.e. end of stream) up
+   * until the response has been completely processed. Timeout includes all
+   * retries.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {

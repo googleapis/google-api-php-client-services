@@ -24,7 +24,9 @@ class EnterpriseTopazSidekickAnswerSuggestedQueryAnswerCard extends \Google\Coll
   protected $suggestedQueryCategoryDataType = 'array';
 
   /**
-   * @param EnterpriseTopazSidekickAnswerSuggestedQueryCategory[]
+   * A list of queries to suggest.
+   *
+   * @param EnterpriseTopazSidekickAnswerSuggestedQueryCategory[] $suggestedQueryCategory
    */
   public function setSuggestedQueryCategory($suggestedQueryCategory)
   {

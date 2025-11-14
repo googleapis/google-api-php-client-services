@@ -20,16 +20,22 @@ namespace Google\Service\Translate;
 class ReferenceSentencePair extends \Google\Model
 {
   /**
+   * Source sentence in the sentence pair.
+   *
    * @var string
    */
   public $sourceSentence;
   /**
+   * Target sentence in the sentence pair.
+   *
    * @var string
    */
   public $targetSentence;
 
   /**
-   * @param string
+   * Source sentence in the sentence pair.
+   *
+   * @param string $sourceSentence
    */
   public function setSourceSentence($sourceSentence)
   {
@@ -43,7 +49,9 @@ class ReferenceSentencePair extends \Google\Model
     return $this->sourceSentence;
   }
   /**
-   * @param string
+   * Target sentence in the sentence pair.
+   *
+   * @param string $targetSentence
    */
   public function setTargetSentence($targetSentence)
   {

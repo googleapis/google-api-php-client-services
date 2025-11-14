@@ -20,10 +20,14 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3HandlerEventHandler extends \Google\Model
 {
   /**
+   * Optional. The condition that must be satisfied to trigger this handler.
+   *
    * @var string
    */
   public $condition;
   /**
+   * Required. The name of the event that triggers this handler.
+   *
    * @var string
    */
   public $event;
@@ -31,7 +35,9 @@ class GoogleCloudDialogflowCxV3HandlerEventHandler extends \Google\Model
   protected $fulfillmentDataType = '';
 
   /**
-   * @param string
+   * Optional. The condition that must be satisfied to trigger this handler.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -45,7 +51,9 @@ class GoogleCloudDialogflowCxV3HandlerEventHandler extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param string
+   * Required. The name of the event that triggers this handler.
+   *
+   * @param string $event
    */
   public function setEvent($event)
   {
@@ -59,7 +67,9 @@ class GoogleCloudDialogflowCxV3HandlerEventHandler extends \Google\Model
     return $this->event;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Fulfillment
+   * Required. The fulfillment to call when the event occurs.
+   *
+   * @param GoogleCloudDialogflowCxV3Fulfillment $fulfillment
    */
   public function setFulfillment(GoogleCloudDialogflowCxV3Fulfillment $fulfillment)
   {

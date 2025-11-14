@@ -20,28 +20,40 @@ namespace Google\Service\Dataflow;
 class StreamingStragglerInfo extends \Google\Model
 {
   /**
+   * The event-time watermark lag at the time of the straggler detection.
+   *
    * @var string
    */
   public $dataWatermarkLag;
   /**
+   * End time of this straggler.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Start time of this straggler.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The system watermark lag at the time of the straggler detection.
+   *
    * @var string
    */
   public $systemWatermarkLag;
   /**
+   * Name of the worker where the straggler was detected.
+   *
    * @var string
    */
   public $workerName;
 
   /**
-   * @param string
+   * The event-time watermark lag at the time of the straggler detection.
+   *
+   * @param string $dataWatermarkLag
    */
   public function setDataWatermarkLag($dataWatermarkLag)
   {
@@ -55,7 +67,9 @@ class StreamingStragglerInfo extends \Google\Model
     return $this->dataWatermarkLag;
   }
   /**
-   * @param string
+   * End time of this straggler.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -69,7 +83,9 @@ class StreamingStragglerInfo extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Start time of this straggler.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -83,7 +99,9 @@ class StreamingStragglerInfo extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The system watermark lag at the time of the straggler detection.
+   *
+   * @param string $systemWatermarkLag
    */
   public function setSystemWatermarkLag($systemWatermarkLag)
   {
@@ -97,7 +115,9 @@ class StreamingStragglerInfo extends \Google\Model
     return $this->systemWatermarkLag;
   }
   /**
-   * @param string
+   * Name of the worker where the straggler was detected.
+   *
+   * @param string $workerName
    */
   public function setWorkerName($workerName)
   {

@@ -20,20 +20,30 @@ namespace Google\Service\NetworkServices;
 class HttpRouteHttpDirectResponse extends \Google\Model
 {
   /**
+   * Optional. Response body as bytes. Maximum body size is 4096B.
+   *
    * @var string
    */
   public $bytesBody;
   /**
+   * Required. Status to return as part of HTTP Response. Must be a positive
+   * integer.
+   *
    * @var int
    */
   public $status;
   /**
+   * Optional. Response body as a string. Maximum body length is 1024
+   * characters.
+   *
    * @var string
    */
   public $stringBody;
 
   /**
-   * @param string
+   * Optional. Response body as bytes. Maximum body size is 4096B.
+   *
+   * @param string $bytesBody
    */
   public function setBytesBody($bytesBody)
   {
@@ -47,7 +57,10 @@ class HttpRouteHttpDirectResponse extends \Google\Model
     return $this->bytesBody;
   }
   /**
-   * @param int
+   * Required. Status to return as part of HTTP Response. Must be a positive
+   * integer.
+   *
+   * @param int $status
    */
   public function setStatus($status)
   {
@@ -61,7 +74,10 @@ class HttpRouteHttpDirectResponse extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * Optional. Response body as a string. Maximum body length is 1024
+   * characters.
+   *
+   * @param string $stringBody
    */
   public function setStringBody($stringBody)
   {

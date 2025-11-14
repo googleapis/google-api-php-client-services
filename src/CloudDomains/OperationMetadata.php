@@ -20,32 +20,46 @@ namespace Google\Service\CloudDomains;
 class OperationMetadata extends \Google\Model
 {
   /**
+   * API version used to start the operation.
+   *
    * @var string
    */
   public $apiVersion;
   /**
+   * The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Human-readable status of the operation, if any.
+   *
    * @var string
    */
   public $statusDetail;
   /**
+   * Server-defined resource path for the target of the operation.
+   *
    * @var string
    */
   public $target;
   /**
+   * Name of the verb executed by the operation.
+   *
    * @var string
    */
   public $verb;
 
   /**
-   * @param string
+   * API version used to start the operation.
+   *
+   * @param string $apiVersion
    */
   public function setApiVersion($apiVersion)
   {
@@ -59,7 +73,9 @@ class OperationMetadata extends \Google\Model
     return $this->apiVersion;
   }
   /**
-   * @param string
+   * The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -73,7 +89,9 @@ class OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -87,7 +105,9 @@ class OperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Human-readable status of the operation, if any.
+   *
+   * @param string $statusDetail
    */
   public function setStatusDetail($statusDetail)
   {
@@ -101,7 +121,9 @@ class OperationMetadata extends \Google\Model
     return $this->statusDetail;
   }
   /**
-   * @param string
+   * Server-defined resource path for the target of the operation.
+   *
+   * @param string $target
    */
   public function setTarget($target)
   {
@@ -115,7 +137,9 @@ class OperationMetadata extends \Google\Model
     return $this->target;
   }
   /**
-   * @param string
+   * Name of the verb executed by the operation.
+   *
+   * @param string $verb
    */
   public function setVerb($verb)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3FieldExtractionMetadataEntityQuery extends \Google\Model
 {
   /**
+   * The original entity query inputed by the user.
+   *
    * @var string
    */
   public $userEntityQuery;
 
   /**
-   * @param string
+   * The original entity query inputed by the user.
+   *
+   * @param string $userEntityQuery
    */
   public function setUserEntityQuery($userEntityQuery)
   {

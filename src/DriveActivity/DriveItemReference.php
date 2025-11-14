@@ -28,16 +28,22 @@ class DriveItemReference extends \Google\Model
   protected $folderType = Folder::class;
   protected $folderDataType = '';
   /**
+   * The target Drive item. The format is `items/ITEM_ID`.
+   *
    * @var string
    */
   public $name;
   /**
+   * The title of the Drive item.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param DriveFile
+   * The Drive item is a file.
+   *
+   * @param DriveFile $driveFile
    */
   public function setDriveFile(DriveFile $driveFile)
   {
@@ -51,7 +57,9 @@ class DriveItemReference extends \Google\Model
     return $this->driveFile;
   }
   /**
-   * @param DriveFolder
+   * The Drive item is a folder. Includes information about the type of folder.
+   *
+   * @param DriveFolder $driveFolder
    */
   public function setDriveFolder(DriveFolder $driveFolder)
   {
@@ -65,13 +73,17 @@ class DriveItemReference extends \Google\Model
     return $this->driveFolder;
   }
   /**
-   * @param DriveactivityFile
+   * This field is deprecated; please use the `driveFile` field instead.
+   *
+   * @deprecated
+   * @param DriveactivityFile $file
    */
   public function setFile(DriveactivityFile $file)
   {
     $this->file = $file;
   }
   /**
+   * @deprecated
    * @return DriveactivityFile
    */
   public function getFile()
@@ -79,13 +91,17 @@ class DriveItemReference extends \Google\Model
     return $this->file;
   }
   /**
-   * @param Folder
+   * This field is deprecated; please use the `driveFolder` field instead.
+   *
+   * @deprecated
+   * @param Folder $folder
    */
   public function setFolder(Folder $folder)
   {
     $this->folder = $folder;
   }
   /**
+   * @deprecated
    * @return Folder
    */
   public function getFolder()
@@ -93,7 +109,9 @@ class DriveItemReference extends \Google\Model
     return $this->folder;
   }
   /**
-   * @param string
+   * The target Drive item. The format is `items/ITEM_ID`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -107,7 +125,9 @@ class DriveItemReference extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The title of the Drive item.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

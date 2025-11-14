@@ -20,19 +20,37 @@ namespace Google\Service\CloudIdentity;
 class SignInBehavior extends \Google\Model
 {
   /**
+   * Default and means "always"
+   */
+  public const REDIRECT_CONDITION_REDIRECT_CONDITION_UNSPECIFIED = 'REDIRECT_CONDITION_UNSPECIFIED';
+  /**
+   * Sign-in flows where the user is prompted for their identity will not
+   * redirect to the IdP (so the user will most likely be prompted by Google for
+   * a password), but special flows like IdP-initiated SAML and sign-in
+   * following automatic redirection to the IdP by domain-specific service URLs
+   * will accept the IdP's assertion of the user's identity.
+   */
+  public const REDIRECT_CONDITION_NEVER = 'NEVER';
+  /**
+   * When to redirect sign-ins to the IdP.
+   *
    * @var string
    */
   public $redirectCondition;
 
   /**
-   * @param string
+   * When to redirect sign-ins to the IdP.
+   *
+   * Accepted values: REDIRECT_CONDITION_UNSPECIFIED, NEVER
+   *
+   * @param self::REDIRECT_CONDITION_* $redirectCondition
    */
   public function setRedirectCondition($redirectCondition)
   {
     $this->redirectCondition = $redirectCondition;
   }
   /**
-   * @return string
+   * @return self::REDIRECT_CONDITION_*
    */
   public function getRedirectCondition()
   {

@@ -23,12 +23,17 @@ class ListMappingRulesResponse extends \Google\Collection
   protected $mappingRulesType = MappingRule::class;
   protected $mappingRulesDataType = 'array';
   /**
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param MappingRule[]
+   * The list of conversion workspace mapping rules.
+   *
+   * @param MappingRule[] $mappingRules
    */
   public function setMappingRules($mappingRules)
   {
@@ -42,7 +47,10 @@ class ListMappingRulesResponse extends \Google\Collection
     return $this->mappingRules;
   }
   /**
-   * @param string
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

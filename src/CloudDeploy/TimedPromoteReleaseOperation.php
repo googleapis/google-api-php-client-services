@@ -20,20 +20,30 @@ namespace Google\Service\CloudDeploy;
 class TimedPromoteReleaseOperation extends \Google\Model
 {
   /**
+   * Output only. The starting phase of the rollout created by this operation.
+   *
    * @var string
    */
   public $phase;
   /**
+   * Output only. The name of the release to be promoted.
+   *
    * @var string
    */
   public $release;
   /**
+   * Output only. The ID of the target that represents the promotion stage to
+   * which the release will be promoted. The value of this field is the last
+   * segment of a target name.
+   *
    * @var string
    */
   public $targetId;
 
   /**
-   * @param string
+   * Output only. The starting phase of the rollout created by this operation.
+   *
+   * @param string $phase
    */
   public function setPhase($phase)
   {
@@ -47,7 +57,9 @@ class TimedPromoteReleaseOperation extends \Google\Model
     return $this->phase;
   }
   /**
-   * @param string
+   * Output only. The name of the release to be promoted.
+   *
+   * @param string $release
    */
   public function setRelease($release)
   {
@@ -61,7 +73,11 @@ class TimedPromoteReleaseOperation extends \Google\Model
     return $this->release;
   }
   /**
-   * @param string
+   * Output only. The ID of the target that represents the promotion stage to
+   * which the release will be promoted. The value of this field is the last
+   * segment of a target name.
+   *
+   * @param string $targetId
    */
   public function setTargetId($targetId)
   {

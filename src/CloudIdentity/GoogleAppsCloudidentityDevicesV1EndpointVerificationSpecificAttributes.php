@@ -21,6 +21,15 @@ class GoogleAppsCloudidentityDevicesV1EndpointVerificationSpecificAttributes ext
 {
   protected $collection_key = 'certificateAttributes';
   /**
+   * [Additional signals](https://cloud.google.com/endpoint-
+   * verification/docs/device-information) reported by Endpoint Verification. It
+   * includes the following attributes: * Non-configurable attributes: hotfixes,
+   * av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. * [Configurable
+   * attributes](https://cloud.google.com/endpoint-verification/docs/collect-
+   * config-attributes): file, folder, and binary attributes; registry entries;
+   * and properties in a plist.
+   *
    * @var array[]
    */
   public $additionalSignals;
@@ -30,7 +39,16 @@ class GoogleAppsCloudidentityDevicesV1EndpointVerificationSpecificAttributes ext
   protected $certificateAttributesDataType = 'array';
 
   /**
-   * @param array[]
+   * [Additional signals](https://cloud.google.com/endpoint-
+   * verification/docs/device-information) reported by Endpoint Verification. It
+   * includes the following attributes: * Non-configurable attributes: hotfixes,
+   * av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. * [Configurable
+   * attributes](https://cloud.google.com/endpoint-verification/docs/collect-
+   * config-attributes): file, folder, and binary attributes; registry entries;
+   * and properties in a plist.
+   *
+   * @param array[] $additionalSignals
    */
   public function setAdditionalSignals($additionalSignals)
   {
@@ -44,7 +62,9 @@ class GoogleAppsCloudidentityDevicesV1EndpointVerificationSpecificAttributes ext
     return $this->additionalSignals;
   }
   /**
-   * @param GoogleAppsCloudidentityDevicesV1BrowserAttributes[]
+   * Details of browser profiles reported by Endpoint Verification.
+   *
+   * @param GoogleAppsCloudidentityDevicesV1BrowserAttributes[] $browserAttributes
    */
   public function setBrowserAttributes($browserAttributes)
   {
@@ -58,7 +78,9 @@ class GoogleAppsCloudidentityDevicesV1EndpointVerificationSpecificAttributes ext
     return $this->browserAttributes;
   }
   /**
-   * @param GoogleAppsCloudidentityDevicesV1CertificateAttributes[]
+   * Details of certificates.
+   *
+   * @param GoogleAppsCloudidentityDevicesV1CertificateAttributes[] $certificateAttributes
    */
   public function setCertificateAttributes($certificateAttributes)
   {

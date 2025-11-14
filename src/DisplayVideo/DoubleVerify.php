@@ -23,12 +23,19 @@ class DoubleVerify extends \Google\Collection
   protected $appStarRatingType = DoubleVerifyAppStarRating::class;
   protected $appStarRatingDataType = '';
   /**
+   * Avoid bidding on apps with the age rating.
+   *
    * @var string[]
    */
   public $avoidedAgeRatings;
   protected $brandSafetyCategoriesType = DoubleVerifyBrandSafetyCategories::class;
   protected $brandSafetyCategoriesDataType = '';
   /**
+   * The custom segment ID provided by DoubleVerify. The ID must start with "51"
+   * and consist of eight digits. Custom segment ID cannot be specified along
+   * with any of the following fields: * brand_safety_categories *
+   * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
+   *
    * @var string
    */
   public $customSegmentId;
@@ -40,7 +47,9 @@ class DoubleVerify extends \Google\Collection
   protected $videoViewabilityDataType = '';
 
   /**
-   * @param DoubleVerifyAppStarRating
+   * Avoid bidding on apps with the star ratings.
+   *
+   * @param DoubleVerifyAppStarRating $appStarRating
    */
   public function setAppStarRating(DoubleVerifyAppStarRating $appStarRating)
   {
@@ -54,7 +63,9 @@ class DoubleVerify extends \Google\Collection
     return $this->appStarRating;
   }
   /**
-   * @param string[]
+   * Avoid bidding on apps with the age rating.
+   *
+   * @param string[] $avoidedAgeRatings
    */
   public function setAvoidedAgeRatings($avoidedAgeRatings)
   {
@@ -68,7 +79,9 @@ class DoubleVerify extends \Google\Collection
     return $this->avoidedAgeRatings;
   }
   /**
-   * @param DoubleVerifyBrandSafetyCategories
+   * DV Brand Safety Controls.
+   *
+   * @param DoubleVerifyBrandSafetyCategories $brandSafetyCategories
    */
   public function setBrandSafetyCategories(DoubleVerifyBrandSafetyCategories $brandSafetyCategories)
   {
@@ -82,7 +95,12 @@ class DoubleVerify extends \Google\Collection
     return $this->brandSafetyCategories;
   }
   /**
-   * @param string
+   * The custom segment ID provided by DoubleVerify. The ID must start with "51"
+   * and consist of eight digits. Custom segment ID cannot be specified along
+   * with any of the following fields: * brand_safety_categories *
+   * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
+   *
+   * @param string $customSegmentId
    */
   public function setCustomSegmentId($customSegmentId)
   {
@@ -96,7 +114,9 @@ class DoubleVerify extends \Google\Collection
     return $this->customSegmentId;
   }
   /**
-   * @param DoubleVerifyDisplayViewability
+   * Display viewability settings (applicable to display line items only).
+   *
+   * @param DoubleVerifyDisplayViewability $displayViewability
    */
   public function setDisplayViewability(DoubleVerifyDisplayViewability $displayViewability)
   {
@@ -110,7 +130,9 @@ class DoubleVerify extends \Google\Collection
     return $this->displayViewability;
   }
   /**
-   * @param DoubleVerifyFraudInvalidTraffic
+   * Avoid Sites and Apps with historical Fraud & IVT Rates.
+   *
+   * @param DoubleVerifyFraudInvalidTraffic $fraudInvalidTraffic
    */
   public function setFraudInvalidTraffic(DoubleVerifyFraudInvalidTraffic $fraudInvalidTraffic)
   {
@@ -124,7 +146,9 @@ class DoubleVerify extends \Google\Collection
     return $this->fraudInvalidTraffic;
   }
   /**
-   * @param DoubleVerifyVideoViewability
+   * Video viewability settings (applicable to video line items only).
+   *
+   * @param DoubleVerifyVideoViewability $videoViewability
    */
   public function setVideoViewability(DoubleVerifyVideoViewability $videoViewability)
   {

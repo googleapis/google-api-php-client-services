@@ -19,6 +19,15 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2AdaptiveProtection extends \Google\Model
 {
+  /**
+   * A score of 0 means that there is low confidence that the detected event is
+   * an actual attack. A score of 1 means that there is high confidence that the
+   * detected event is an attack. See the [Adaptive Protection
+   * documentation](https://cloud.google.com/armor/docs/adaptive-protection-
+   * overview#configure-alert-tuning) for further explanation.
+   *
+   * @var 
+   */
   public $confidence;
 
   public function setConfidence($confidence)

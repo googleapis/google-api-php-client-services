@@ -19,20 +19,29 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1TrainProcessorVersionRequestCustomDocumentExtractionOptions extends \Google\Model
 {
+  public const TRAINING_METHOD_TRAINING_METHOD_UNSPECIFIED = 'TRAINING_METHOD_UNSPECIFIED';
+  public const TRAINING_METHOD_MODEL_BASED = 'MODEL_BASED';
+  public const TRAINING_METHOD_TEMPLATE_BASED = 'TEMPLATE_BASED';
   /**
+   * Optional. Training method to use for CDE training.
+   *
    * @var string
    */
   public $trainingMethod;
 
   /**
-   * @param string
+   * Optional. Training method to use for CDE training.
+   *
+   * Accepted values: TRAINING_METHOD_UNSPECIFIED, MODEL_BASED, TEMPLATE_BASED
+   *
+   * @param self::TRAINING_METHOD_* $trainingMethod
    */
   public function setTrainingMethod($trainingMethod)
   {
     $this->trainingMethod = $trainingMethod;
   }
   /**
-   * @return string
+   * @return self::TRAINING_METHOD_*
    */
   public function getTrainingMethod()
   {

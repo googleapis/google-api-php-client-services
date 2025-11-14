@@ -23,7 +23,9 @@ class GoogleCloudMlV1AddTrialMeasurementRequest extends \Google\Model
   protected $measurementDataType = '';
 
   /**
-   * @param GoogleCloudMlV1Measurement
+   * Required. The measurement to be added to a trial.
+   *
+   * @param GoogleCloudMlV1Measurement $measurement
    */
   public function setMeasurement(GoogleCloudMlV1Measurement $measurement)
   {

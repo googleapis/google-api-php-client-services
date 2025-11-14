@@ -23,26 +23,36 @@ class Promotion extends \Google\Collection
   protected $bodyLinesType = PromotionBodyLines::class;
   protected $bodyLinesDataType = 'array';
   /**
+   * An abridged version of this search's result URL, e.g. www.example.com.
+   *
    * @var string
    */
   public $displayLink;
   /**
+   * The title of the promotion, in HTML.
+   *
    * @var string
    */
   public $htmlTitle;
   protected $imageType = PromotionImage::class;
   protected $imageDataType = '';
   /**
+   * The URL of the promotion.
+   *
    * @var string
    */
   public $link;
   /**
+   * The title of the promotion.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param PromotionBodyLines[]
+   * An array of block objects for this promotion.
+   *
+   * @param PromotionBodyLines[] $bodyLines
    */
   public function setBodyLines($bodyLines)
   {
@@ -56,7 +66,9 @@ class Promotion extends \Google\Collection
     return $this->bodyLines;
   }
   /**
-   * @param string
+   * An abridged version of this search's result URL, e.g. www.example.com.
+   *
+   * @param string $displayLink
    */
   public function setDisplayLink($displayLink)
   {
@@ -70,7 +82,9 @@ class Promotion extends \Google\Collection
     return $this->displayLink;
   }
   /**
-   * @param string
+   * The title of the promotion, in HTML.
+   *
+   * @param string $htmlTitle
    */
   public function setHtmlTitle($htmlTitle)
   {
@@ -84,7 +98,9 @@ class Promotion extends \Google\Collection
     return $this->htmlTitle;
   }
   /**
-   * @param PromotionImage
+   * Image belonging to a promotion.
+   *
+   * @param PromotionImage $image
    */
   public function setImage(PromotionImage $image)
   {
@@ -98,7 +114,9 @@ class Promotion extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param string
+   * The URL of the promotion.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {
@@ -112,7 +130,9 @@ class Promotion extends \Google\Collection
     return $this->link;
   }
   /**
-   * @param string
+   * The title of the promotion.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

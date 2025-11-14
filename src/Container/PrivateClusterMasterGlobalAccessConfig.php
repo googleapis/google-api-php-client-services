@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class PrivateClusterMasterGlobalAccessConfig extends \Google\Model
 {
   /**
+   * Whenever master is accessible globally or not.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whenever master is accessible globally or not.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

@@ -25,6 +25,9 @@ class EventUpdateResponse extends \Google\Collection
   protected $eventFailuresType = EventRecordFailure::class;
   protected $eventFailuresDataType = 'array';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventUpdateResponse`.
+   *
    * @var string
    */
   public $kind;
@@ -32,7 +35,9 @@ class EventUpdateResponse extends \Google\Collection
   protected $playerEventsDataType = 'array';
 
   /**
-   * @param EventBatchRecordFailure[]
+   * Any batch-wide failures which occurred applying updates.
+   *
+   * @param EventBatchRecordFailure[] $batchFailures
    */
   public function setBatchFailures($batchFailures)
   {
@@ -46,7 +51,9 @@ class EventUpdateResponse extends \Google\Collection
     return $this->batchFailures;
   }
   /**
-   * @param EventRecordFailure[]
+   * Any failures updating a particular event.
+   *
+   * @param EventRecordFailure[] $eventFailures
    */
   public function setEventFailures($eventFailures)
   {
@@ -60,7 +67,10 @@ class EventUpdateResponse extends \Google\Collection
     return $this->eventFailures;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventUpdateResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -74,7 +84,9 @@ class EventUpdateResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param PlayerEvent[]
+   * The current status of any updated events
+   *
+   * @param PlayerEvent[] $playerEvents
    */
   public function setPlayerEvents($playerEvents)
   {

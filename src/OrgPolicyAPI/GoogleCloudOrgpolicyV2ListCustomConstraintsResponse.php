@@ -23,12 +23,18 @@ class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse extends \Google\Collec
   protected $customConstraintsType = GoogleCloudOrgpolicyV2CustomConstraint::class;
   protected $customConstraintsDataType = 'array';
   /**
+   * Page token used to retrieve the next page. This is currently not used, but
+   * the server may at any point start supplying a valid token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudOrgpolicyV2CustomConstraint[]
+   * All custom and managed constraints that exist on the organization resource.
+   * It will be empty if no custom constraints are set.
+   *
+   * @param GoogleCloudOrgpolicyV2CustomConstraint[] $customConstraints
    */
   public function setCustomConstraints($customConstraints)
   {
@@ -42,7 +48,10 @@ class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse extends \Google\Collec
     return $this->customConstraints;
   }
   /**
-   * @param string
+   * Page token used to retrieve the next page. This is currently not used, but
+   * the server may at any point start supplying a valid token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

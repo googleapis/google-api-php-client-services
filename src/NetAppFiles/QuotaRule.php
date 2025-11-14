@@ -20,44 +20,111 @@ namespace Google\Service\NetAppFiles;
 class QuotaRule extends \Google\Model
 {
   /**
+   * Unspecified state for quota rule
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Quota rule is creating
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Quota rule is updating
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Quota rule is deleting
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Quota rule is ready
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Quota rule is in error state.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * Unspecified type for quota rule
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Individual user quota rule
+   */
+  public const TYPE_INDIVIDUAL_USER_QUOTA = 'INDIVIDUAL_USER_QUOTA';
+  /**
+   * Individual group quota rule
+   */
+  public const TYPE_INDIVIDUAL_GROUP_QUOTA = 'INDIVIDUAL_GROUP_QUOTA';
+  /**
+   * Default user quota rule
+   */
+  public const TYPE_DEFAULT_USER_QUOTA = 'DEFAULT_USER_QUOTA';
+  /**
+   * Default group quota rule
+   */
+  public const TYPE_DEFAULT_GROUP_QUOTA = 'DEFAULT_GROUP_QUOTA';
+  /**
+   * Output only. Create time of the quota rule
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Description of the quota rule
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The maximum allowed disk space in MiB.
+   *
    * @var int
    */
   public $diskLimitMib;
   /**
+   * Optional. Labels of the quota rule
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the quota rule. Format: `projects/{project
+   * _number}/locations/{location_id}/volumes/volumes/{volume_id}/quotaRules/{qu
+   * ota_rule_id}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. State of the quota rule
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. State details of the quota rule
+   *
    * @var string
    */
   public $stateDetails;
   /**
+   * Optional. The quota rule applies to the specified user or group, identified
+   * by a Unix UID/GID, Windows SID, or null for default.
+   *
    * @var string
    */
   public $target;
   /**
+   * Required. The type of quota rule.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. Create time of the quota rule
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +138,9 @@ class QuotaRule extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Description of the quota rule
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -85,7 +154,9 @@ class QuotaRule extends \Google\Model
     return $this->description;
   }
   /**
-   * @param int
+   * Required. The maximum allowed disk space in MiB.
+   *
+   * @param int $diskLimitMib
    */
   public function setDiskLimitMib($diskLimitMib)
   {
@@ -99,7 +170,9 @@ class QuotaRule extends \Google\Model
     return $this->diskLimitMib;
   }
   /**
-   * @param string[]
+   * Optional. Labels of the quota rule
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -113,7 +186,11 @@ class QuotaRule extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the quota rule. Format: `projects/{project
+   * _number}/locations/{location_id}/volumes/volumes/{volume_id}/quotaRules/{qu
+   * ota_rule_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -127,21 +204,28 @@ class QuotaRule extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. State of the quota rule
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, UPDATING, DELETING, READY,
+   * ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. State details of the quota rule
+   *
+   * @param string $stateDetails
    */
   public function setStateDetails($stateDetails)
   {
@@ -155,7 +239,10 @@ class QuotaRule extends \Google\Model
     return $this->stateDetails;
   }
   /**
-   * @param string
+   * Optional. The quota rule applies to the specified user or group, identified
+   * by a Unix UID/GID, Windows SID, or null for default.
+   *
+   * @param string $target
    */
   public function setTarget($target)
   {
@@ -169,14 +256,19 @@ class QuotaRule extends \Google\Model
     return $this->target;
   }
   /**
-   * @param string
+   * Required. The type of quota rule.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, INDIVIDUAL_USER_QUOTA,
+   * INDIVIDUAL_GROUP_QUOTA, DEFAULT_USER_QUOTA, DEFAULT_GROUP_QUOTA
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

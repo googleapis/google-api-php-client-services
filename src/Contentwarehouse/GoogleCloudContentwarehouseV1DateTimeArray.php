@@ -24,7 +24,10 @@ class GoogleCloudContentwarehouseV1DateTimeArray extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param GoogleTypeDateTime[]
+   * List of datetime values. Both OffsetDateTime and ZonedDateTime are
+   * supported.
+   *
+   * @param GoogleTypeDateTime[] $values
    */
   public function setValues($values)
   {

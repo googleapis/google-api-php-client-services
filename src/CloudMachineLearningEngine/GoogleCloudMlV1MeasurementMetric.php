@@ -20,13 +20,22 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1MeasurementMetric extends \Google\Model
 {
   /**
+   * Required. Metric name.
+   *
    * @var string
    */
   public $metric;
+  /**
+   * Required. The value for this metric.
+   *
+   * @var 
+   */
   public $value;
 
   /**
-   * @param string
+   * Required. Metric name.
+   *
+   * @param string $metric
    */
   public function setMetric($metric)
   {

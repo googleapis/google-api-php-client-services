@@ -21,8 +21,8 @@ class GoogleFirestoreAdminV1ExportDocumentsRequest extends \Google\Collection
 {
   protected $collection_key = 'namespaceIds';
   /**
-   * Which collection IDs to export. Unspecified means all collections. Each
-   * collection ID in this list must be unique.
+   * IDs of the collection groups to export. Unspecified means all collection
+   * groups. Each collection group in this list must be unique.
    *
    * @var string[]
    */
@@ -63,8 +63,8 @@ class GoogleFirestoreAdminV1ExportDocumentsRequest extends \Google\Collection
   public $snapshotTime;
 
   /**
-   * Which collection IDs to export. Unspecified means all collections. Each
-   * collection ID in this list must be unique.
+   * IDs of the collection groups to export. Unspecified means all collection
+   * groups. Each collection group in this list must be unique.
    *
    * @param string[] $collectionIds
    */

@@ -20,6 +20,11 @@ namespace Google\Service\Bigquery;
 class DoubleCandidates extends \Google\Collection
 {
   protected $collection_key = 'candidates';
+  /**
+   * Candidates for the double parameter in increasing order.
+   *
+   * @var []
+   */
   public $candidates;
 
   public function setCandidates($candidates)

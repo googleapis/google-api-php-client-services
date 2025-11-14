@@ -23,12 +23,16 @@ class ListMattersResponse extends \Google\Collection
   protected $mattersType = Matter::class;
   protected $mattersDataType = 'array';
   /**
+   * Page token to retrieve the next page of results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Matter[]
+   * List of matters.
+   *
+   * @param Matter[] $matters
    */
   public function setMatters($matters)
   {
@@ -42,7 +46,9 @@ class ListMattersResponse extends \Google\Collection
     return $this->matters;
   }
   /**
-   * @param string
+   * Page token to retrieve the next page of results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

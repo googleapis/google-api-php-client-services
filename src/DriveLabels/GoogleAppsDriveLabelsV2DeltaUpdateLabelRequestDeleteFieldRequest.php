@@ -20,12 +20,16 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteFieldRequest extends \Google\Model
 {
   /**
+   * Required. ID of the field to delete.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Required. ID of the field to delete.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

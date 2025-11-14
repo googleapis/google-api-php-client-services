@@ -24,7 +24,9 @@ class BatchDeletePhotosResponse extends \Google\Collection
   protected $statusDataType = 'array';
 
   /**
-   * @param Status[]
+   * The status for the operation to delete a single Photo in the batch request.
+   *
+   * @param Status[] $status
    */
   public function setStatus($status)
   {

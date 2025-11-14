@@ -20,19 +20,71 @@ namespace Google\Service\DisplayVideo;
 class ViewabilityTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Default value when viewability is not specified in this version. This enum
+   * is a placeholder for default value and does not represent a real
+   * viewability option.
+   */
+  public const VIEWABILITY_VIEWABILITY_UNSPECIFIED = 'VIEWABILITY_UNSPECIFIED';
+  /**
+   * Bid only on impressions that are at least 10% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_10_PERCENT_OR_MORE = 'VIEWABILITY_10_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 20% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_20_PERCENT_OR_MORE = 'VIEWABILITY_20_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 30% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_30_PERCENT_OR_MORE = 'VIEWABILITY_30_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 40% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_40_PERCENT_OR_MORE = 'VIEWABILITY_40_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 50% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_50_PERCENT_OR_MORE = 'VIEWABILITY_50_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 60% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_60_PERCENT_OR_MORE = 'VIEWABILITY_60_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 70% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_70_PERCENT_OR_MORE = 'VIEWABILITY_70_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 80% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_80_PERCENT_OR_MORE = 'VIEWABILITY_80_PERCENT_OR_MORE';
+  /**
+   * Bid only on impressions that are at least 90% likely to be viewable.
+   */
+  public const VIEWABILITY_VIEWABILITY_90_PERCENT_OR_MORE = 'VIEWABILITY_90_PERCENT_OR_MORE';
+  /**
+   * Output only. The predicted viewability percentage.
+   *
    * @var string
    */
   public $viewability;
 
   /**
-   * @param string
+   * Output only. The predicted viewability percentage.
+   *
+   * Accepted values: VIEWABILITY_UNSPECIFIED, VIEWABILITY_10_PERCENT_OR_MORE,
+   * VIEWABILITY_20_PERCENT_OR_MORE, VIEWABILITY_30_PERCENT_OR_MORE,
+   * VIEWABILITY_40_PERCENT_OR_MORE, VIEWABILITY_50_PERCENT_OR_MORE,
+   * VIEWABILITY_60_PERCENT_OR_MORE, VIEWABILITY_70_PERCENT_OR_MORE,
+   * VIEWABILITY_80_PERCENT_OR_MORE, VIEWABILITY_90_PERCENT_OR_MORE
+   *
+   * @param self::VIEWABILITY_* $viewability
    */
   public function setViewability($viewability)
   {
     $this->viewability = $viewability;
   }
   /**
-   * @return string
+   * @return self::VIEWABILITY_*
    */
   public function getViewability()
   {

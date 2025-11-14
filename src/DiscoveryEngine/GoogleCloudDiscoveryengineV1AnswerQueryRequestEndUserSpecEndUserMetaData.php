@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestEndUserSpecEndUserMetaData e
   protected $chunkInfoDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestEndUserSpecEndUserMetaDataChunkInfo
+   * Chunk information.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestEndUserSpecEndUserMetaDataChunkInfo $chunkInfo
    */
   public function setChunkInfo(GoogleCloudDiscoveryengineV1AnswerQueryRequestEndUserSpecEndUserMetaDataChunkInfo $chunkInfo)
   {

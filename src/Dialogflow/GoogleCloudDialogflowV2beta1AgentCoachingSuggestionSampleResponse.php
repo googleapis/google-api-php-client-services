@@ -22,6 +22,8 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSampleResponse extends 
   protected $duplicateCheckResultType = GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResult::class;
   protected $duplicateCheckResultDataType = '';
   /**
+   * Optional. Sample response for Agent in text.
+   *
    * @var string
    */
   public $responseText;
@@ -29,7 +31,9 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSampleResponse extends 
   protected $sourcesDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResult
+   * Output only. Duplicate check result for the sample response.
+   *
+   * @param GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResult $duplicateCheckResult
    */
   public function setDuplicateCheckResult(GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResult $duplicateCheckResult)
   {
@@ -43,7 +47,9 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSampleResponse extends 
     return $this->duplicateCheckResult;
   }
   /**
-   * @param string
+   * Optional. Sample response for Agent in text.
+   *
+   * @param string $responseText
    */
   public function setResponseText($responseText)
   {
@@ -57,7 +63,9 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSampleResponse extends 
     return $this->responseText;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources
+   * Output only. Sources for the Sample Response.
+   *
+   * @param GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources $sources
    */
   public function setSources(GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources $sources)
   {

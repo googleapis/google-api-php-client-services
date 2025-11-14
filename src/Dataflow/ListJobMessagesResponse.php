@@ -25,12 +25,16 @@ class ListJobMessagesResponse extends \Google\Collection
   protected $jobMessagesType = JobMessage::class;
   protected $jobMessagesDataType = 'array';
   /**
+   * The token to obtain the next page of results if there are more.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AutoscalingEvent[]
+   * Autoscaling events in ascending timestamp order.
+   *
+   * @param AutoscalingEvent[] $autoscalingEvents
    */
   public function setAutoscalingEvents($autoscalingEvents)
   {
@@ -44,7 +48,9 @@ class ListJobMessagesResponse extends \Google\Collection
     return $this->autoscalingEvents;
   }
   /**
-   * @param JobMessage[]
+   * Messages in ascending timestamp order.
+   *
+   * @param JobMessage[] $jobMessages
    */
   public function setJobMessages($jobMessages)
   {
@@ -58,7 +64,9 @@ class ListJobMessagesResponse extends \Google\Collection
     return $this->jobMessages;
   }
   /**
-   * @param string
+   * The token to obtain the next page of results if there are more.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

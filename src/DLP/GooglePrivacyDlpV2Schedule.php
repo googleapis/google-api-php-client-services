@@ -20,12 +20,24 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Schedule extends \Google\Model
 {
   /**
+   * With this option a job is started on a regular periodic basis. For example:
+   * every day (86400 seconds). A scheduled start time will be skipped if the
+   * previous execution has not ended when its scheduled time occurs. This value
+   * must be set to a time duration greater than or equal to 1 day and can be no
+   * longer than 60 days.
+   *
    * @var string
    */
   public $recurrencePeriodDuration;
 
   /**
-   * @param string
+   * With this option a job is started on a regular periodic basis. For example:
+   * every day (86400 seconds). A scheduled start time will be skipped if the
+   * previous execution has not ended when its scheduled time occurs. This value
+   * must be set to a time duration greater than or equal to 1 day and can be no
+   * longer than 60 days.
+   *
+   * @param string $recurrencePeriodDuration
    */
   public function setRecurrencePeriodDuration($recurrencePeriodDuration)
   {

@@ -24,7 +24,9 @@ class FlattenInstruction extends \Google\Collection
   protected $inputsDataType = 'array';
 
   /**
-   * @param InstructionInput[]
+   * Describes the inputs to the flatten instruction.
+   *
+   * @param InstructionInput[] $inputs
    */
   public function setInputs($inputs)
   {

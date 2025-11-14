@@ -19,15 +19,36 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1ReconcileTagsMetadata extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_RECONCILIATION_STATE_UNSPECIFIED = 'RECONCILIATION_STATE_UNSPECIFIED';
+  /**
+   * The reconciliation has been queued and awaits for execution.
+   */
+  public const STATE_RECONCILIATION_QUEUED = 'RECONCILIATION_QUEUED';
+  /**
+   * The reconciliation is in progress.
+   */
+  public const STATE_RECONCILIATION_IN_PROGRESS = 'RECONCILIATION_IN_PROGRESS';
+  /**
+   * The reconciliation has been finished.
+   */
+  public const STATE_RECONCILIATION_DONE = 'RECONCILIATION_DONE';
   protected $errorsType = Status::class;
   protected $errorsDataType = 'map';
   /**
+   * State of the reconciliation operation.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param Status[]
+   * Maps the name of each tagged column (or empty string for a sole entry) to
+   * tagging operation status.
+   *
+   * @param Status[] $errors
    */
   public function setErrors($errors)
   {
@@ -41,14 +62,19 @@ class GoogleCloudDatacatalogV1ReconcileTagsMetadata extends \Google\Model
     return $this->errors;
   }
   /**
-   * @param string
+   * State of the reconciliation operation.
+   *
+   * Accepted values: RECONCILIATION_STATE_UNSPECIFIED, RECONCILIATION_QUEUED,
+   * RECONCILIATION_IN_PROGRESS, RECONCILIATION_DONE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -21,20 +21,28 @@ class RegionDiskTargetEnvironment extends \Google\Collection
 {
   protected $collection_key = 'replicaZones';
   /**
+   * Required. Target project for the disk.
+   *
    * @var string
    */
   public $project;
   /**
+   * Required. Target region for the disk.
+   *
    * @var string
    */
   public $region;
   /**
+   * Required. Target URLs of the replica zones for the disk.
+   *
    * @var string[]
    */
   public $replicaZones;
 
   /**
-   * @param string
+   * Required. Target project for the disk.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {
@@ -48,7 +56,9 @@ class RegionDiskTargetEnvironment extends \Google\Collection
     return $this->project;
   }
   /**
-   * @param string
+   * Required. Target region for the disk.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -62,7 +72,9 @@ class RegionDiskTargetEnvironment extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param string[]
+   * Required. Target URLs of the replica zones for the disk.
+   *
+   * @param string[] $replicaZones
    */
   public function setReplicaZones($replicaZones)
   {

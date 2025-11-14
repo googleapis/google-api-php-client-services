@@ -20,20 +20,28 @@ namespace Google\Service\Dataflow;
 class BigTableIODetails extends \Google\Model
 {
   /**
+   * InstanceId accessed in the connection.
+   *
    * @var string
    */
   public $instanceId;
   /**
+   * ProjectId accessed in the connection.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * TableId accessed in the connection.
+   *
    * @var string
    */
   public $tableId;
 
   /**
-   * @param string
+   * InstanceId accessed in the connection.
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -47,7 +55,9 @@ class BigTableIODetails extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * @param string
+   * ProjectId accessed in the connection.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -61,7 +71,9 @@ class BigTableIODetails extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * TableId accessed in the connection.
+   *
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {

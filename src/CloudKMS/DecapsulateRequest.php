@@ -20,16 +20,35 @@ namespace Google\Service\CloudKMS;
 class DecapsulateRequest extends \Google\Model
 {
   /**
+   * Required. The ciphertext produced from encapsulation with the named
+   * CryptoKeyVersion public key(s).
+   *
    * @var string
    */
   public $ciphertext;
   /**
+   * Optional. A CRC32C checksum of the DecapsulateRequest.ciphertext. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * DecapsulateRequest.ciphertext using this checksum. KeyManagementService
+   * will report an error if the checksum verification fails. If you receive a
+   * checksum error, your client should verify that
+   * CRC32C(DecapsulateRequest.ciphertext) is equal to
+   * DecapsulateRequest.ciphertext_crc32c, and if so, perform a limited number
+   * of retries. A persistent mismatch may indicate an issue in your computation
+   * of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
    * @var string
    */
   public $ciphertextCrc32c;
 
   /**
-   * @param string
+   * Required. The ciphertext produced from encapsulation with the named
+   * CryptoKeyVersion public key(s).
+   *
+   * @param string $ciphertext
    */
   public function setCiphertext($ciphertext)
   {
@@ -43,7 +62,20 @@ class DecapsulateRequest extends \Google\Model
     return $this->ciphertext;
   }
   /**
-   * @param string
+   * Optional. A CRC32C checksum of the DecapsulateRequest.ciphertext. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * DecapsulateRequest.ciphertext using this checksum. KeyManagementService
+   * will report an error if the checksum verification fails. If you receive a
+   * checksum error, your client should verify that
+   * CRC32C(DecapsulateRequest.ciphertext) is equal to
+   * DecapsulateRequest.ciphertext_crc32c, and if so, perform a limited number
+   * of retries. A persistent mismatch may indicate an issue in your computation
+   * of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
+   * @param string $ciphertextCrc32c
    */
   public function setCiphertextCrc32c($ciphertextCrc32c)
   {

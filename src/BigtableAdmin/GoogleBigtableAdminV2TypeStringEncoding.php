@@ -25,7 +25,9 @@ class GoogleBigtableAdminV2TypeStringEncoding extends \Google\Model
   protected $utf8RawDataType = '';
 
   /**
-   * @param GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes
+   * Use `Utf8Bytes` encoding.
+   *
+   * @param GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes $utf8Bytes
    */
   public function setUtf8Bytes(GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes $utf8Bytes)
   {
@@ -39,13 +41,17 @@ class GoogleBigtableAdminV2TypeStringEncoding extends \Google\Model
     return $this->utf8Bytes;
   }
   /**
-   * @param GoogleBigtableAdminV2TypeStringEncodingUtf8Raw
+   * Deprecated: if set, converts to an empty `utf8_bytes`.
+   *
+   * @deprecated
+   * @param GoogleBigtableAdminV2TypeStringEncodingUtf8Raw $utf8Raw
    */
   public function setUtf8Raw(GoogleBigtableAdminV2TypeStringEncodingUtf8Raw $utf8Raw)
   {
     $this->utf8Raw = $utf8Raw;
   }
   /**
+   * @deprecated
    * @return GoogleBigtableAdminV2TypeStringEncodingUtf8Raw
    */
   public function getUtf8Raw()

@@ -33,7 +33,9 @@ class GooglePrivacyDlpV2DataProfileAction extends \Google\Model
   protected $tagResourcesDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2Export
+   * Export data profiles into a provided location.
+   *
+   * @param GooglePrivacyDlpV2Export $exportData
    */
   public function setExportData(GooglePrivacyDlpV2Export $exportData)
   {
@@ -47,7 +49,9 @@ class GooglePrivacyDlpV2DataProfileAction extends \Google\Model
     return $this->exportData;
   }
   /**
-   * @param GooglePrivacyDlpV2PubSubNotification
+   * Publish a message into the Pub/Sub topic.
+   *
+   * @param GooglePrivacyDlpV2PubSubNotification $pubSubNotification
    */
   public function setPubSubNotification(GooglePrivacyDlpV2PubSubNotification $pubSubNotification)
   {
@@ -61,7 +65,12 @@ class GooglePrivacyDlpV2DataProfileAction extends \Google\Model
     return $this->pubSubNotification;
   }
   /**
-   * @param GooglePrivacyDlpV2PublishToChronicle
+   * Publishes generated data profiles to Google Security Operations. For more
+   * information, see [Use Sensitive Data Protection data in context-aware
+   * analytics](https://cloud.google.com/chronicle/docs/detection/usecase-dlp-
+   * high-risk-user-download).
+   *
+   * @param GooglePrivacyDlpV2PublishToChronicle $publishToChronicle
    */
   public function setPublishToChronicle(GooglePrivacyDlpV2PublishToChronicle $publishToChronicle)
   {
@@ -75,7 +84,10 @@ class GooglePrivacyDlpV2DataProfileAction extends \Google\Model
     return $this->publishToChronicle;
   }
   /**
-   * @param GooglePrivacyDlpV2PublishToDataplexCatalog
+   * Publishes a portion of each profile to Dataplex Universal Catalog with the
+   * aspect type Sensitive Data Protection Profile.
+   *
+   * @param GooglePrivacyDlpV2PublishToDataplexCatalog $publishToDataplexCatalog
    */
   public function setPublishToDataplexCatalog(GooglePrivacyDlpV2PublishToDataplexCatalog $publishToDataplexCatalog)
   {
@@ -89,7 +101,9 @@ class GooglePrivacyDlpV2DataProfileAction extends \Google\Model
     return $this->publishToDataplexCatalog;
   }
   /**
-   * @param GooglePrivacyDlpV2PublishToSecurityCommandCenter
+   * Publishes findings to Security Command Center for each data profile.
+   *
+   * @param GooglePrivacyDlpV2PublishToSecurityCommandCenter $publishToScc
    */
   public function setPublishToScc(GooglePrivacyDlpV2PublishToSecurityCommandCenter $publishToScc)
   {
@@ -103,7 +117,9 @@ class GooglePrivacyDlpV2DataProfileAction extends \Google\Model
     return $this->publishToScc;
   }
   /**
-   * @param GooglePrivacyDlpV2TagResources
+   * Tags the profiled resources with the specified tag values.
+   *
+   * @param GooglePrivacyDlpV2TagResources $tagResources
    */
   public function setTagResources(GooglePrivacyDlpV2TagResources $tagResources)
   {

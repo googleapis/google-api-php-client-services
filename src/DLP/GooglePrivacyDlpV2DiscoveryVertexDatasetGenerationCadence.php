@@ -19,15 +19,38 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DiscoveryVertexDatasetGenerationCadence extends \Google\Model
 {
+  /**
+   * Unspecified.
+   */
+  public const REFRESH_FREQUENCY_UPDATE_FREQUENCY_UNSPECIFIED = 'UPDATE_FREQUENCY_UNSPECIFIED';
+  /**
+   * After the data profile is created, it will never be updated.
+   */
+  public const REFRESH_FREQUENCY_UPDATE_FREQUENCY_NEVER = 'UPDATE_FREQUENCY_NEVER';
+  /**
+   * The data profile can be updated up to once every 24 hours.
+   */
+  public const REFRESH_FREQUENCY_UPDATE_FREQUENCY_DAILY = 'UPDATE_FREQUENCY_DAILY';
+  /**
+   * The data profile can be updated up to once every 30 days. Default.
+   */
+  public const REFRESH_FREQUENCY_UPDATE_FREQUENCY_MONTHLY = 'UPDATE_FREQUENCY_MONTHLY';
   protected $inspectTemplateModifiedCadenceType = GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence::class;
   protected $inspectTemplateModifiedCadenceDataType = '';
   /**
+   * If you set this field, profiles are refreshed at this frequency regardless
+   * of whether the underlying datasets have changed. Defaults to never.
+   *
    * @var string
    */
   public $refreshFrequency;
 
   /**
-   * @param GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence
+   * Governs when to update data profiles when the inspection rules defined by
+   * the `InspectTemplate` change. If not set, changing the template will not
+   * cause a data profile to be updated.
+   *
+   * @param GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence $inspectTemplateModifiedCadence
    */
   public function setInspectTemplateModifiedCadence(GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence $inspectTemplateModifiedCadence)
   {
@@ -41,14 +64,20 @@ class GooglePrivacyDlpV2DiscoveryVertexDatasetGenerationCadence extends \Google\
     return $this->inspectTemplateModifiedCadence;
   }
   /**
-   * @param string
+   * If you set this field, profiles are refreshed at this frequency regardless
+   * of whether the underlying datasets have changed. Defaults to never.
+   *
+   * Accepted values: UPDATE_FREQUENCY_UNSPECIFIED, UPDATE_FREQUENCY_NEVER,
+   * UPDATE_FREQUENCY_DAILY, UPDATE_FREQUENCY_MONTHLY
+   *
+   * @param self::REFRESH_FREQUENCY_* $refreshFrequency
    */
   public function setRefreshFrequency($refreshFrequency)
   {
     $this->refreshFrequency = $refreshFrequency;
   }
   /**
-   * @return string
+   * @return self::REFRESH_FREQUENCY_*
    */
   public function getRefreshFrequency()
   {

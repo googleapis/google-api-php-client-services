@@ -45,7 +45,9 @@ class DocumentTab extends \Google\Model
   protected $suggestedNamedStylesChangesDataType = 'map';
 
   /**
-   * @param Body
+   * The main body of the document tab.
+   *
+   * @param Body $body
    */
   public function setBody(Body $body)
   {
@@ -59,7 +61,9 @@ class DocumentTab extends \Google\Model
     return $this->body;
   }
   /**
-   * @param DocumentStyle
+   * The style of the document tab.
+   *
+   * @param DocumentStyle $documentStyle
    */
   public function setDocumentStyle(DocumentStyle $documentStyle)
   {
@@ -73,7 +77,9 @@ class DocumentTab extends \Google\Model
     return $this->documentStyle;
   }
   /**
-   * @param Footer[]
+   * The footers in the document tab, keyed by footer ID.
+   *
+   * @param Footer[] $footers
    */
   public function setFooters($footers)
   {
@@ -87,7 +93,9 @@ class DocumentTab extends \Google\Model
     return $this->footers;
   }
   /**
-   * @param Footnote[]
+   * The footnotes in the document tab, keyed by footnote ID.
+   *
+   * @param Footnote[] $footnotes
    */
   public function setFootnotes($footnotes)
   {
@@ -101,7 +109,9 @@ class DocumentTab extends \Google\Model
     return $this->footnotes;
   }
   /**
-   * @param Header[]
+   * The headers in the document tab, keyed by header ID.
+   *
+   * @param Header[] $headers
    */
   public function setHeaders($headers)
   {
@@ -115,7 +125,9 @@ class DocumentTab extends \Google\Model
     return $this->headers;
   }
   /**
-   * @param InlineObject[]
+   * The inline objects in the document tab, keyed by object ID.
+   *
+   * @param InlineObject[] $inlineObjects
    */
   public function setInlineObjects($inlineObjects)
   {
@@ -129,7 +141,9 @@ class DocumentTab extends \Google\Model
     return $this->inlineObjects;
   }
   /**
-   * @param DocsList[]
+   * The lists in the document tab, keyed by list ID.
+   *
+   * @param DocsList[] $lists
    */
   public function setLists($lists)
   {
@@ -143,7 +157,9 @@ class DocumentTab extends \Google\Model
     return $this->lists;
   }
   /**
-   * @param NamedRanges[]
+   * The named ranges in the document tab, keyed by name.
+   *
+   * @param NamedRanges[] $namedRanges
    */
   public function setNamedRanges($namedRanges)
   {
@@ -157,7 +173,9 @@ class DocumentTab extends \Google\Model
     return $this->namedRanges;
   }
   /**
-   * @param NamedStyles
+   * The named styles of the document tab.
+   *
+   * @param NamedStyles $namedStyles
    */
   public function setNamedStyles(NamedStyles $namedStyles)
   {
@@ -171,7 +189,9 @@ class DocumentTab extends \Google\Model
     return $this->namedStyles;
   }
   /**
-   * @param PositionedObject[]
+   * The positioned objects in the document tab, keyed by object ID.
+   *
+   * @param PositionedObject[] $positionedObjects
    */
   public function setPositionedObjects($positionedObjects)
   {
@@ -185,7 +205,10 @@ class DocumentTab extends \Google\Model
     return $this->positionedObjects;
   }
   /**
-   * @param SuggestedDocumentStyle[]
+   * The suggested changes to the style of the document tab, keyed by suggestion
+   * ID.
+   *
+   * @param SuggestedDocumentStyle[] $suggestedDocumentStyleChanges
    */
   public function setSuggestedDocumentStyleChanges($suggestedDocumentStyleChanges)
   {
@@ -199,7 +222,10 @@ class DocumentTab extends \Google\Model
     return $this->suggestedDocumentStyleChanges;
   }
   /**
-   * @param SuggestedNamedStyles[]
+   * The suggested changes to the named styles of the document tab, keyed by
+   * suggestion ID.
+   *
+   * @param SuggestedNamedStyles[] $suggestedNamedStylesChanges
    */
   public function setSuggestedNamedStylesChanges($suggestedNamedStylesChanges)
   {

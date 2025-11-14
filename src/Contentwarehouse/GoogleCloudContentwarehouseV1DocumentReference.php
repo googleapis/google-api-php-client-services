@@ -20,44 +20,67 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
 {
   /**
+   * Output only. The time when the document is created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time when the document is deleted.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * display_name of the referenced document; this name does not need to be
+   * consistent to the display_name in the Document proto, depending on the ACL
+   * constraint.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The document type of the document being referenced.
+   *
    * @var bool
    */
   public $documentIsFolder;
   /**
+   * Document is a folder with legal hold.
+   *
    * @var bool
    */
   public $documentIsLegalHoldFolder;
   /**
+   * Document is a folder with retention policy.
+   *
    * @var bool
    */
   public $documentIsRetentionFolder;
   /**
+   * Required. Name of the referenced document.
+   *
    * @var string
    */
   public $documentName;
   /**
+   * Stores the subset of the referenced document's content. This is useful to
+   * allow user peek the information of the referenced document.
+   *
    * @var string
    */
   public $snippet;
   /**
+   * Output only. The time when the document is last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time when the document is created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +94,9 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time when the document is deleted.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -85,7 +110,11 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * display_name of the referenced document; this name does not need to be
+   * consistent to the display_name in the Document proto, depending on the ACL
+   * constraint.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -99,7 +128,9 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * The document type of the document being referenced.
+   *
+   * @param bool $documentIsFolder
    */
   public function setDocumentIsFolder($documentIsFolder)
   {
@@ -113,7 +144,9 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->documentIsFolder;
   }
   /**
-   * @param bool
+   * Document is a folder with legal hold.
+   *
+   * @param bool $documentIsLegalHoldFolder
    */
   public function setDocumentIsLegalHoldFolder($documentIsLegalHoldFolder)
   {
@@ -127,7 +160,9 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->documentIsLegalHoldFolder;
   }
   /**
-   * @param bool
+   * Document is a folder with retention policy.
+   *
+   * @param bool $documentIsRetentionFolder
    */
   public function setDocumentIsRetentionFolder($documentIsRetentionFolder)
   {
@@ -141,7 +176,9 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->documentIsRetentionFolder;
   }
   /**
-   * @param string
+   * Required. Name of the referenced document.
+   *
+   * @param string $documentName
    */
   public function setDocumentName($documentName)
   {
@@ -155,7 +192,10 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->documentName;
   }
   /**
-   * @param string
+   * Stores the subset of the referenced document's content. This is useful to
+   * allow user peek the information of the referenced document.
+   *
+   * @param string $snippet
    */
   public function setSnippet($snippet)
   {
@@ -169,7 +209,9 @@ class GoogleCloudContentwarehouseV1DocumentReference extends \Google\Model
     return $this->snippet;
   }
   /**
-   * @param string
+   * Output only. The time when the document is last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

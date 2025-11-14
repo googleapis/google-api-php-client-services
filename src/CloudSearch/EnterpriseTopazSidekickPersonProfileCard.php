@@ -26,7 +26,7 @@ class EnterpriseTopazSidekickPersonProfileCard extends \Google\Collection
   protected $subjectDataType = '';
 
   /**
-   * @param EnterpriseTopazSidekickPersonProfileCardRelatedPeople[]
+   * @param EnterpriseTopazSidekickPersonProfileCardRelatedPeople[] $relatedPeople
    */
   public function setRelatedPeople($relatedPeople)
   {
@@ -40,7 +40,9 @@ class EnterpriseTopazSidekickPersonProfileCard extends \Google\Collection
     return $this->relatedPeople;
   }
   /**
-   * @param EnterpriseTopazSidekickCommonPerson
+   * The subject of the card.
+   *
+   * @param EnterpriseTopazSidekickCommonPerson $subject
    */
   public function setSubject(EnterpriseTopazSidekickCommonPerson $subject)
   {

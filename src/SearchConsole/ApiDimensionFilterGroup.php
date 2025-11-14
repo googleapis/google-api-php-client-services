@@ -19,6 +19,7 @@ namespace Google\Service\SearchConsole;
 
 class ApiDimensionFilterGroup extends \Google\Collection
 {
+  public const GROUP_TYPE_AND = 'AND';
   protected $collection_key = 'filters';
   protected $filtersType = ApiDimensionFilter::class;
   protected $filtersDataType = 'array';
@@ -28,7 +29,7 @@ class ApiDimensionFilterGroup extends \Google\Collection
   public $groupType;
 
   /**
-   * @param ApiDimensionFilter[]
+   * @param ApiDimensionFilter[] $filters
    */
   public function setFilters($filters)
   {
@@ -42,14 +43,14 @@ class ApiDimensionFilterGroup extends \Google\Collection
     return $this->filters;
   }
   /**
-   * @param string
+   * @param self::GROUP_TYPE_* $groupType
    */
   public function setGroupType($groupType)
   {
     $this->groupType = $groupType;
   }
   /**
-   * @return string
+   * @return self::GROUP_TYPE_*
    */
   public function getGroupType()
   {

@@ -23,12 +23,17 @@ class Header extends \Google\Collection
   protected $contentType = StructuralElement::class;
   protected $contentDataType = 'array';
   /**
+   * The ID of the header.
+   *
    * @var string
    */
   public $headerId;
 
   /**
-   * @param StructuralElement[]
+   * The contents of the header. The indexes for a header's content begin at
+   * zero.
+   *
+   * @param StructuralElement[] $content
    */
   public function setContent($content)
   {
@@ -42,7 +47,9 @@ class Header extends \Google\Collection
     return $this->content;
   }
   /**
-   * @param string
+   * The ID of the header.
+   *
+   * @param string $headerId
    */
   public function setHeaderId($headerId)
   {

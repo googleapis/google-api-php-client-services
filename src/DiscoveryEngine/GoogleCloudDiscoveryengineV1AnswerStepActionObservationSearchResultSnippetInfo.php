@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AnswerStepActionObservationSearchResultSnippetInfo extends \Google\Model
 {
   /**
+   * Snippet content.
+   *
    * @var string
    */
   public $snippet;
   /**
+   * Status of the snippet defined by the search team.
+   *
    * @var string
    */
   public $snippetStatus;
 
   /**
-   * @param string
+   * Snippet content.
+   *
+   * @param string $snippet
    */
   public function setSnippet($snippet)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1AnswerStepActionObservationSearchResultSnippet
     return $this->snippet;
   }
   /**
-   * @param string
+   * Status of the snippet defined by the search team.
+   *
+   * @param string $snippetStatus
    */
   public function setSnippetStatus($snippetStatus)
   {

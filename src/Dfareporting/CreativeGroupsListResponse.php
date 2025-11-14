@@ -23,16 +23,23 @@ class CreativeGroupsListResponse extends \Google\Collection
   protected $creativeGroupsType = CreativeGroup::class;
   protected $creativeGroupsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#creativeGroupsListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CreativeGroup[]
+   * Creative group collection.
+   *
+   * @param CreativeGroup[] $creativeGroups
    */
   public function setCreativeGroups($creativeGroups)
   {
@@ -46,7 +53,10 @@ class CreativeGroupsListResponse extends \Google\Collection
     return $this->creativeGroups;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#creativeGroupsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class CreativeGroupsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

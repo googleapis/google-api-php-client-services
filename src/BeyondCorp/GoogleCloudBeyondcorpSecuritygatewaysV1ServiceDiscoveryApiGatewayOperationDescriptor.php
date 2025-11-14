@@ -20,12 +20,16 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGatewayOperationDescriptor extends \Google\Model
 {
   /**
+   * Required. Contains the URI path fragment where HTTP request is sent.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Required. Contains the URI path fragment where HTTP request is sent.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

@@ -20,10 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2OtherInfoTypeSummary extends \Google\Model
 {
   /**
+   * Approximate percentage of non-null rows that contained data detected by
+   * this infotype.
+   *
    * @var int
    */
   public $estimatedPrevalence;
   /**
+   * Whether this infoType was excluded from sensitivity and risk analysis due
+   * to factors such as low prevalence (subject to change).
+   *
    * @var bool
    */
   public $excludedFromAnalysis;
@@ -31,7 +37,10 @@ class GooglePrivacyDlpV2OtherInfoTypeSummary extends \Google\Model
   protected $infoTypeDataType = '';
 
   /**
-   * @param int
+   * Approximate percentage of non-null rows that contained data detected by
+   * this infotype.
+   *
+   * @param int $estimatedPrevalence
    */
   public function setEstimatedPrevalence($estimatedPrevalence)
   {
@@ -45,7 +54,10 @@ class GooglePrivacyDlpV2OtherInfoTypeSummary extends \Google\Model
     return $this->estimatedPrevalence;
   }
   /**
-   * @param bool
+   * Whether this infoType was excluded from sensitivity and risk analysis due
+   * to factors such as low prevalence (subject to change).
+   *
+   * @param bool $excludedFromAnalysis
    */
   public function setExcludedFromAnalysis($excludedFromAnalysis)
   {
@@ -59,7 +71,9 @@ class GooglePrivacyDlpV2OtherInfoTypeSummary extends \Google\Model
     return $this->excludedFromAnalysis;
   }
   /**
-   * @param GooglePrivacyDlpV2InfoType
+   * The other infoType.
+   *
+   * @param GooglePrivacyDlpV2InfoType $infoType
    */
   public function setInfoType(GooglePrivacyDlpV2InfoType $infoType)
   {

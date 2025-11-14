@@ -22,12 +22,19 @@ class ConnectionInfo extends \Google\Model
   protected $endpointInfoType = EndpointInfo::class;
   protected $endpointInfoDataType = '';
   /**
+   * Output only. A service attachment that exposes a node, and has the
+   * following format: projects/{project}/regions/{region}/serviceAttachments/{s
+   * ervice_attachment_name}
+   *
    * @var string
    */
   public $serviceAttachment;
 
   /**
-   * @param EndpointInfo
+   * Output only. The endpoint information through which to interact with a
+   * blockchain node.
+   *
+   * @param EndpointInfo $endpointInfo
    */
   public function setEndpointInfo(EndpointInfo $endpointInfo)
   {
@@ -41,7 +48,11 @@ class ConnectionInfo extends \Google\Model
     return $this->endpointInfo;
   }
   /**
-   * @param string
+   * Output only. A service attachment that exposes a node, and has the
+   * following format: projects/{project}/regions/{region}/serviceAttachments/{s
+   * ervice_attachment_name}
+   *
+   * @param string $serviceAttachment
    */
   public function setServiceAttachment($serviceAttachment)
   {

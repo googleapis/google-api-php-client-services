@@ -19,9 +19,29 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaQualityMetricsTopkMetrics extends \Google\Model
 {
+  /**
+   * The top-1 value.
+   *
+   * @var 
+   */
   public $top1;
+  /**
+   * The top-10 value.
+   *
+   * @var 
+   */
   public $top10;
+  /**
+   * The top-3 value.
+   *
+   * @var 
+   */
   public $top3;
+  /**
+   * The top-5 value.
+   *
+   * @var 
+   */
   public $top5;
 
   public function setTop1($top1)

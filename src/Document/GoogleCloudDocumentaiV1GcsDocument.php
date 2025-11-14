@@ -20,16 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1GcsDocument extends \Google\Model
 {
   /**
+   * The Cloud Storage object uri.
+   *
    * @var string
    */
   public $gcsUri;
   /**
+   * An IANA MIME type (RFC6838) of the content.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * The Cloud Storage object uri.
+   *
+   * @param string $gcsUri
    */
   public function setGcsUri($gcsUri)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDocumentaiV1GcsDocument extends \Google\Model
     return $this->gcsUri;
   }
   /**
-   * @param string
+   * An IANA MIME type (RFC6838) of the content.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

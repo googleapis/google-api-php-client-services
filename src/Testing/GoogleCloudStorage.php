@@ -20,12 +20,20 @@ namespace Google\Service\Testing;
 class GoogleCloudStorage extends \Google\Model
 {
   /**
+   * Required. The path to a directory in GCS that will eventually contain the
+   * results for this test. The requesting user must have write access on the
+   * bucket in the supplied path.
+   *
    * @var string
    */
   public $gcsPath;
 
   /**
-   * @param string
+   * Required. The path to a directory in GCS that will eventually contain the
+   * results for this test. The requesting user must have write access on the
+   * bucket in the supplied path.
+   *
+   * @param string $gcsPath
    */
   public function setGcsPath($gcsPath)
   {

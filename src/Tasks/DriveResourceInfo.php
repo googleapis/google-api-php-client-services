@@ -20,16 +20,24 @@ namespace Google\Service\Tasks;
 class DriveResourceInfo extends \Google\Model
 {
   /**
+   * Output only. Identifier of the file in the Drive API.
+   *
    * @var string
    */
   public $driveFileId;
   /**
+   * Output only. Resource key required to access files shared via a shared
+   * link. Not required for all files. See also
+   * developers.google.com/drive/api/guides/resource-keys.
+   *
    * @var string
    */
   public $resourceKey;
 
   /**
-   * @param string
+   * Output only. Identifier of the file in the Drive API.
+   *
+   * @param string $driveFileId
    */
   public function setDriveFileId($driveFileId)
   {
@@ -43,7 +51,11 @@ class DriveResourceInfo extends \Google\Model
     return $this->driveFileId;
   }
   /**
-   * @param string
+   * Output only. Resource key required to access files shared via a shared
+   * link. Not required for all files. See also
+   * developers.google.com/drive/api/guides/resource-keys.
+   *
+   * @param string $resourceKey
    */
   public function setResourceKey($resourceKey)
   {

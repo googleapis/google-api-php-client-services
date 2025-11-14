@@ -19,44 +19,103 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
 {
+  /**
+   * Should not be used, an un-set enum has this value by default.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Model being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Model is not deployed but ready to deploy.
+   */
+  public const STATE_UNDEPLOYED = 'UNDEPLOYED';
+  /**
+   * Model is deploying.
+   */
+  public const STATE_DEPLOYING = 'DEPLOYING';
+  /**
+   * Model is deployed and ready to use.
+   */
+  public const STATE_DEPLOYED = 'DEPLOYED';
+  /**
+   * Model is undeploying.
+   */
+  public const STATE_UNDEPLOYING = 'UNDEPLOYING';
+  /**
+   * Model is deleting.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Model is in error state. Not ready to deploy and use.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Model is being created but the training has not started, The model may
+   * remain in this state until there is enough capacity to start training.
+   */
+  public const STATE_PENDING = 'PENDING';
   protected $collection_key = 'datasets';
   protected $articleSuggestionModelMetadataType = GoogleCloudDialogflowV2ArticleSuggestionModelMetadata::class;
   protected $articleSuggestionModelMetadataDataType = '';
   /**
+   * Output only. Creation time of this model.
+   *
    * @var string
    */
   public $createTime;
   protected $datasetsType = GoogleCloudDialogflowV2InputDataset::class;
   protected $datasetsDataType = 'array';
   /**
+   * Required. The display name of the model. At most 64 bytes long.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Language code for the conversation model. If not specified, the language is
+   * en-US. Language at ConversationModel should be set for all non en-us
+   * languages. This should be a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * ConversationModel resource name. Format: `projects//conversationModels/`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of
+   * the model.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. A read only boolean field reflecting Zone Separation status of
+   * the model.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   protected $smartReplyModelMetadataType = GoogleCloudDialogflowV2SmartReplyModelMetadata::class;
   protected $smartReplyModelMetadataDataType = '';
   /**
+   * Output only. State of the model. A model can only serve prediction requests
+   * after it gets deployed.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param GoogleCloudDialogflowV2ArticleSuggestionModelMetadata
+   * Metadata for article suggestion models.
+   *
+   * @param GoogleCloudDialogflowV2ArticleSuggestionModelMetadata $articleSuggestionModelMetadata
    */
   public function setArticleSuggestionModelMetadata(GoogleCloudDialogflowV2ArticleSuggestionModelMetadata $articleSuggestionModelMetadata)
   {
@@ -70,7 +129,9 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->articleSuggestionModelMetadata;
   }
   /**
-   * @param string
+   * Output only. Creation time of this model.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -84,7 +145,9 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudDialogflowV2InputDataset[]
+   * Required. Datasets used to create model.
+   *
+   * @param GoogleCloudDialogflowV2InputDataset[] $datasets
    */
   public function setDatasets($datasets)
   {
@@ -98,7 +161,9 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->datasets;
   }
   /**
-   * @param string
+   * Required. The display name of the model. At most 64 bytes long.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -112,7 +177,12 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Language code for the conversation model. If not specified, the language is
+   * en-US. Language at ConversationModel should be set for all non en-us
+   * languages. This should be a [BCP-47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -126,7 +196,9 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param string
+   * ConversationModel resource name. Format: `projects//conversationModels/`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -140,7 +212,10 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. A read only boolean field reflecting Zone Isolation status of
+   * the model.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -154,7 +229,10 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. A read only boolean field reflecting Zone Separation status of
+   * the model.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -168,7 +246,9 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param GoogleCloudDialogflowV2SmartReplyModelMetadata
+   * Metadata for smart reply models.
+   *
+   * @param GoogleCloudDialogflowV2SmartReplyModelMetadata $smartReplyModelMetadata
    */
   public function setSmartReplyModelMetadata(GoogleCloudDialogflowV2SmartReplyModelMetadata $smartReplyModelMetadata)
   {
@@ -182,14 +262,20 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
     return $this->smartReplyModelMetadata;
   }
   /**
-   * @param string
+   * Output only. State of the model. A model can only serve prediction requests
+   * after it gets deployed.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, UNDEPLOYED, DEPLOYING,
+   * DEPLOYED, UNDEPLOYING, DELETING, FAILED, PENDING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

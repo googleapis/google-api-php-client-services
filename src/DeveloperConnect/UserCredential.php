@@ -20,16 +20,26 @@ namespace Google\Service\DeveloperConnect;
 class UserCredential extends \Google\Model
 {
   /**
+   * Required. A SecretManager resource containing the user token that
+   * authorizes the Developer Connect connection. Format:
+   * `projects/secrets/versions`.
+   *
    * @var string
    */
   public $userTokenSecretVersion;
   /**
+   * Output only. The username associated with this token.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * Required. A SecretManager resource containing the user token that
+   * authorizes the Developer Connect connection. Format:
+   * `projects/secrets/versions`.
+   *
+   * @param string $userTokenSecretVersion
    */
   public function setUserTokenSecretVersion($userTokenSecretVersion)
   {
@@ -43,7 +53,9 @@ class UserCredential extends \Google\Model
     return $this->userTokenSecretVersion;
   }
   /**
-   * @param string
+   * Output only. The username associated with this token.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\MyBusinessAccountManagement;
 class TargetLocation extends \Google\Model
 {
   /**
+   * The address of the location to which the user is invited.
+   *
    * @var string
    */
   public $address;
   /**
+   * The name of the location to which the user is invited.
+   *
    * @var string
    */
   public $locationName;
 
   /**
-   * @param string
+   * The address of the location to which the user is invited.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -43,7 +49,9 @@ class TargetLocation extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * The name of the location to which the user is invited.
+   *
+   * @param string $locationName
    */
   public function setLocationName($locationName)
   {

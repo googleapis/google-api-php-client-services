@@ -24,7 +24,9 @@ class PkixPublicKeySet extends \Google\Collection
   protected $pkixPublicKeysDataType = 'array';
 
   /**
-   * @param PkixPublicKey[]
+   * Required. `pkix_public_keys` must have at least one entry.
+   *
+   * @param PkixPublicKey[] $pkixPublicKeys
    */
   public function setPkixPublicKeys($pkixPublicKeys)
   {

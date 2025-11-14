@@ -25,6 +25,9 @@ class PathToConversionReportCompatibleFields extends \Google\Collection
   protected $customFloodlightVariablesType = Dimension::class;
   protected $customFloodlightVariablesDataType = 'array';
   /**
+   * The kind of resource this is, in this case
+   * dfareporting#pathToConversionReportCompatibleFields.
+   *
    * @var string
    */
   public $kind;
@@ -34,7 +37,10 @@ class PathToConversionReportCompatibleFields extends \Google\Collection
   protected $perInteractionDimensionsDataType = 'array';
 
   /**
-   * @param Dimension[]
+   * Conversion dimensions which are compatible to be selected in the
+   * "conversionDimensions" section of the report.
+   *
+   * @param Dimension[] $conversionDimensions
    */
   public function setConversionDimensions($conversionDimensions)
   {
@@ -48,7 +54,10 @@ class PathToConversionReportCompatibleFields extends \Google\Collection
     return $this->conversionDimensions;
   }
   /**
-   * @param Dimension[]
+   * Custom floodlight variables which are compatible to be selected in the
+   * "customFloodlightVariables" section of the report.
+   *
+   * @param Dimension[] $customFloodlightVariables
    */
   public function setCustomFloodlightVariables($customFloodlightVariables)
   {
@@ -62,7 +71,10 @@ class PathToConversionReportCompatibleFields extends \Google\Collection
     return $this->customFloodlightVariables;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case
+   * dfareporting#pathToConversionReportCompatibleFields.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -76,7 +88,10 @@ class PathToConversionReportCompatibleFields extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Metric[]
+   * Metrics which are compatible to be selected in the "metricNames" section of
+   * the report.
+   *
+   * @param Metric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -90,7 +105,10 @@ class PathToConversionReportCompatibleFields extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param Dimension[]
+   * Per-interaction dimensions which are compatible to be selected in the
+   * "perInteractionDimensions" section of the report.
+   *
+   * @param Dimension[] $perInteractionDimensions
    */
   public function setPerInteractionDimensions($perInteractionDimensions)
   {

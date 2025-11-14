@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AnswerQueryRequestRelatedQuestionsSpec extends \Google\Model
 {
   /**
+   * Enable related questions feature if true.
+   *
    * @var bool
    */
   public $enable;
 
   /**
-   * @param bool
+   * Enable related questions feature if true.
+   *
+   * @param bool $enable
    */
   public function setEnable($enable)
   {

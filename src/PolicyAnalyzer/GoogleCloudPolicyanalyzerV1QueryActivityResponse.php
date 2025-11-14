@@ -23,12 +23,18 @@ class GoogleCloudPolicyanalyzerV1QueryActivityResponse extends \Google\Collectio
   protected $activitiesType = GoogleCloudPolicyanalyzerV1Activity::class;
   protected $activitiesDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `nextPageToken` is included. To get the next set of results, call this
+   * method again using the value of `nextPageToken` as `pageToken`.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudPolicyanalyzerV1Activity[]
+   * The set of activities that match the filter included in the request.
+   *
+   * @param GoogleCloudPolicyanalyzerV1Activity[] $activities
    */
   public function setActivities($activities)
   {
@@ -42,7 +48,11 @@ class GoogleCloudPolicyanalyzerV1QueryActivityResponse extends \Google\Collectio
     return $this->activities;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `nextPageToken` is included. To get the next set of results, call this
+   * method again using the value of `nextPageToken` as `pageToken`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

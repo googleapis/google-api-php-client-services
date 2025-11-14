@@ -20,20 +20,29 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2FieldProperties extends \Google\Model
 {
   /**
+   * Required. The display text to show in the UI identifying this field.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Input only. Insert or move this field before the indicated field. If empty,
+   * the field is placed at the end of the list.
+   *
    * @var string
    */
   public $insertBeforeField;
   /**
+   * Whether the field should be marked as required.
+   *
    * @var bool
    */
   public $required;
 
   /**
-   * @param string
+   * Required. The display text to show in the UI identifying this field.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +56,10 @@ class GoogleAppsDriveLabelsV2FieldProperties extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Input only. Insert or move this field before the indicated field. If empty,
+   * the field is placed at the end of the list.
+   *
+   * @param string $insertBeforeField
    */
   public function setInsertBeforeField($insertBeforeField)
   {
@@ -61,7 +73,9 @@ class GoogleAppsDriveLabelsV2FieldProperties extends \Google\Model
     return $this->insertBeforeField;
   }
   /**
-   * @param bool
+   * Whether the field should be marked as required.
+   *
+   * @param bool $required
    */
   public function setRequired($required)
   {

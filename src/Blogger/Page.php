@@ -19,57 +19,85 @@ namespace Google\Service\Blogger;
 
 class Page extends \Google\Model
 {
+  public const STATUS_LIVE = 'LIVE';
+  public const STATUS_DRAFT = 'DRAFT';
+  public const STATUS_SOFT_TRASHED = 'SOFT_TRASHED';
   protected $authorType = PageAuthor::class;
   protected $authorDataType = '';
   protected $blogType = PageBlog::class;
   protected $blogDataType = '';
   /**
+   * The body content of this Page, in HTML.
+   *
    * @var string
    */
   public $content;
   /**
+   * Etag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The identifier for this resource.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of this entity. Always blogger#page.
+   *
    * @var string
    */
   public $kind;
   /**
+   * RFC 3339 date-time when this Page was published.
+   *
    * @var string
    */
   public $published;
   /**
+   * The API REST URL to fetch this resource from.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The status of the page for admin resources (either LIVE or DRAFT).
+   *
    * @var string
    */
   public $status;
   /**
+   * The title of this entity. This is the name displayed in the Admin user
+   * interface.
+   *
    * @var string
    */
   public $title;
   /**
+   * RFC 3339 date-time when this Page was trashed.
+   *
    * @var string
    */
   public $trashed;
   /**
+   * RFC 3339 date-time when this Page was last updated.
+   *
    * @var string
    */
   public $updated;
   /**
+   * The URL that this Page is displayed at.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param PageAuthor
+   * The author of this Page.
+   *
+   * @param PageAuthor $author
    */
   public function setAuthor(PageAuthor $author)
   {
@@ -83,7 +111,9 @@ class Page extends \Google\Model
     return $this->author;
   }
   /**
-   * @param PageBlog
+   * Data about the blog containing this Page.
+   *
+   * @param PageBlog $blog
    */
   public function setBlog(PageBlog $blog)
   {
@@ -97,7 +127,9 @@ class Page extends \Google\Model
     return $this->blog;
   }
   /**
-   * @param string
+   * The body content of this Page, in HTML.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -111,7 +143,9 @@ class Page extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Etag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -125,7 +159,9 @@ class Page extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The identifier for this resource.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -139,7 +175,9 @@ class Page extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of this entity. Always blogger#page.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -153,7 +191,9 @@ class Page extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * RFC 3339 date-time when this Page was published.
+   *
+   * @param string $published
    */
   public function setPublished($published)
   {
@@ -167,7 +207,9 @@ class Page extends \Google\Model
     return $this->published;
   }
   /**
-   * @param string
+   * The API REST URL to fetch this resource from.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -181,21 +223,28 @@ class Page extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The status of the page for admin resources (either LIVE or DRAFT).
+   *
+   * Accepted values: LIVE, DRAFT, SOFT_TRASHED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * The title of this entity. This is the name displayed in the Admin user
+   * interface.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -209,7 +258,9 @@ class Page extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * RFC 3339 date-time when this Page was trashed.
+   *
+   * @param string $trashed
    */
   public function setTrashed($trashed)
   {
@@ -223,7 +274,9 @@ class Page extends \Google\Model
     return $this->trashed;
   }
   /**
-   * @param string
+   * RFC 3339 date-time when this Page was last updated.
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {
@@ -237,7 +290,9 @@ class Page extends \Google\Model
     return $this->updated;
   }
   /**
-   * @param string
+   * The URL that this Page is displayed at.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

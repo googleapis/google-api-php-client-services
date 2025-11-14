@@ -21,24 +21,50 @@ class RelatedAsset extends \Google\Collection
 {
   protected $collection_key = 'ancestors';
   /**
+   * The ancestors of an asset in Google Cloud [resource
+   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-
+   * resource-hierarchy), represented as a list of relative resource names. An
+   * ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. Example: `["projects/123456789", "folders/5432",
+   * "organizations/1234"]`
+   *
    * @var string[]
    */
   public $ancestors;
   /**
+   * The full name of the asset. Example: `//compute.googleapis.com/projects/my_
+   * project_123/zones/zone1/instances/instance1` See [Resource names](https://c
+   * loud.google.com/apis/design/resource_names#full_resource_name) for more
+   * information.
+   *
    * @var string
    */
   public $asset;
   /**
+   * The type of the asset. Example: `compute.googleapis.com/Disk` See
+   * [Supported asset types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types) for more information.
+   *
    * @var string
    */
   public $assetType;
   /**
+   * The unique identifier of the relationship type. Example:
+   * `INSTANCE_TO_INSTANCEGROUP`
+   *
    * @var string
    */
   public $relationshipType;
 
   /**
-   * @param string[]
+   * The ancestors of an asset in Google Cloud [resource
+   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-
+   * resource-hierarchy), represented as a list of relative resource names. An
+   * ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. Example: `["projects/123456789", "folders/5432",
+   * "organizations/1234"]`
+   *
+   * @param string[] $ancestors
    */
   public function setAncestors($ancestors)
   {
@@ -52,7 +78,12 @@ class RelatedAsset extends \Google\Collection
     return $this->ancestors;
   }
   /**
-   * @param string
+   * The full name of the asset. Example: `//compute.googleapis.com/projects/my_
+   * project_123/zones/zone1/instances/instance1` See [Resource names](https://c
+   * loud.google.com/apis/design/resource_names#full_resource_name) for more
+   * information.
+   *
+   * @param string $asset
    */
   public function setAsset($asset)
   {
@@ -66,7 +97,11 @@ class RelatedAsset extends \Google\Collection
     return $this->asset;
   }
   /**
-   * @param string
+   * The type of the asset. Example: `compute.googleapis.com/Disk` See
+   * [Supported asset types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types) for more information.
+   *
+   * @param string $assetType
    */
   public function setAssetType($assetType)
   {
@@ -80,7 +115,10 @@ class RelatedAsset extends \Google\Collection
     return $this->assetType;
   }
   /**
-   * @param string
+   * The unique identifier of the relationship type. Example:
+   * `INSTANCE_TO_INSTANCEGROUP`
+   *
+   * @param string $relationshipType
    */
   public function setRelationshipType($relationshipType)
   {

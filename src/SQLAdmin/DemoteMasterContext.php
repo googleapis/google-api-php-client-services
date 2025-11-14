@@ -20,26 +20,43 @@ namespace Google\Service\SQLAdmin;
 class DemoteMasterContext extends \Google\Model
 {
   /**
+   * This is always `sql#demoteMasterContext`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The name of the instance which will act as on-premises primary instance in
+   * the replication setup.
+   *
    * @var string
    */
   public $masterInstanceName;
   protected $replicaConfigurationType = DemoteMasterConfiguration::class;
   protected $replicaConfigurationDataType = '';
   /**
+   * Flag to skip replication setup on the instance.
+   *
    * @var bool
    */
   public $skipReplicationSetup;
   /**
+   * Verify the GTID consistency for demote operation. Default value: `True`.
+   * Setting this flag to `false` enables you to bypass the GTID consistency
+   * check between on-premises primary instance and Cloud SQL instance during
+   * the demotion operation but also exposes you to the risk of future
+   * replication failures. Change the value only if you know the reason for the
+   * GTID divergence and are confident that doing so will not cause any
+   * replication issues.
+   *
    * @var bool
    */
   public $verifyGtidConsistency;
 
   /**
-   * @param string
+   * This is always `sql#demoteMasterContext`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -53,7 +70,10 @@ class DemoteMasterContext extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The name of the instance which will act as on-premises primary instance in
+   * the replication setup.
+   *
+   * @param string $masterInstanceName
    */
   public function setMasterInstanceName($masterInstanceName)
   {
@@ -67,7 +87,10 @@ class DemoteMasterContext extends \Google\Model
     return $this->masterInstanceName;
   }
   /**
-   * @param DemoteMasterConfiguration
+   * Configuration specific to read-replicas replicating from the on-premises
+   * primary instance.
+   *
+   * @param DemoteMasterConfiguration $replicaConfiguration
    */
   public function setReplicaConfiguration(DemoteMasterConfiguration $replicaConfiguration)
   {
@@ -81,7 +104,9 @@ class DemoteMasterContext extends \Google\Model
     return $this->replicaConfiguration;
   }
   /**
-   * @param bool
+   * Flag to skip replication setup on the instance.
+   *
+   * @param bool $skipReplicationSetup
    */
   public function setSkipReplicationSetup($skipReplicationSetup)
   {
@@ -95,7 +120,15 @@ class DemoteMasterContext extends \Google\Model
     return $this->skipReplicationSetup;
   }
   /**
-   * @param bool
+   * Verify the GTID consistency for demote operation. Default value: `True`.
+   * Setting this flag to `false` enables you to bypass the GTID consistency
+   * check between on-premises primary instance and Cloud SQL instance during
+   * the demotion operation but also exposes you to the risk of future
+   * replication failures. Change the value only if you know the reason for the
+   * GTID divergence and are confident that doing so will not cause any
+   * replication issues.
+   *
+   * @param bool $verifyGtidConsistency
    */
   public function setVerifyGtidConsistency($verifyGtidConsistency)
   {

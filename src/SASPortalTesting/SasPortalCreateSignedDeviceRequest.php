@@ -20,16 +20,25 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalCreateSignedDeviceRequest extends \Google\Model
 {
   /**
+   * Required. JSON Web Token signed using a CPI private key. Payload must be
+   * the JSON encoding of the device. The user_id field must be set.
+   *
    * @var string
    */
   public $encodedDevice;
   /**
+   * Required. Unique installer id (CPI ID) from the Certified Professional
+   * Installers database.
+   *
    * @var string
    */
   public $installerId;
 
   /**
-   * @param string
+   * Required. JSON Web Token signed using a CPI private key. Payload must be
+   * the JSON encoding of the device. The user_id field must be set.
+   *
+   * @param string $encodedDevice
    */
   public function setEncodedDevice($encodedDevice)
   {
@@ -43,7 +52,10 @@ class SasPortalCreateSignedDeviceRequest extends \Google\Model
     return $this->encodedDevice;
   }
   /**
-   * @param string
+   * Required. Unique installer id (CPI ID) from the Certified Professional
+   * Installers database.
+   *
+   * @param string $installerId
    */
   public function setInstallerId($installerId)
   {

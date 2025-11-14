@@ -26,7 +26,11 @@ class TranslateTextResponse extends \Google\Collection
   protected $translationsDataType = 'array';
 
   /**
-   * @param Translation[]
+   * Text translation responses if a glossary is provided in the request. This
+   * can be the same as `translations` if no terms apply. This field has the
+   * same length as `contents`.
+   *
+   * @param Translation[] $glossaryTranslations
    */
   public function setGlossaryTranslations($glossaryTranslations)
   {
@@ -40,7 +44,10 @@ class TranslateTextResponse extends \Google\Collection
     return $this->glossaryTranslations;
   }
   /**
-   * @param Translation[]
+   * Text translation responses with no glossary applied. This field has the
+   * same length as `contents`.
+   *
+   * @param Translation[] $translations
    */
   public function setTranslations($translations)
   {

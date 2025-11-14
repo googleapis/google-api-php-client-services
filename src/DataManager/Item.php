@@ -23,21 +23,38 @@ class Item extends \Google\Collection
   protected $additionalItemParametersType = ItemParameter::class;
   protected $additionalItemParametersDataType = 'array';
   /**
+   * Optional. A unique identifier to reference the item.
+   *
    * @var string
    */
   public $itemId;
   /**
+   * Optional. The product ID within the Merchant Center account.
+   *
    * @var string
    */
   public $merchantProductId;
   /**
+   * Optional. The number of this item associated with the event.
+   *
    * @var string
    */
   public $quantity;
+  /**
+   * Optional. The unit price excluding tax, shipping, and any transaction level
+   * discounts.
+   *
+   * @var 
+   */
   public $unitPrice;
 
   /**
-   * @param ItemParameter[]
+   * Optional. A bucket of any [event parameters related to an item](https://dev
+   * elopers.google.com/analytics/devguides/collection/protocol/ga4/reference/ev
+   * ents) to be included within the event that were not already specified using
+   * other structured fields.
+   *
+   * @param ItemParameter[] $additionalItemParameters
    */
   public function setAdditionalItemParameters($additionalItemParameters)
   {
@@ -51,7 +68,9 @@ class Item extends \Google\Collection
     return $this->additionalItemParameters;
   }
   /**
-   * @param string
+   * Optional. A unique identifier to reference the item.
+   *
+   * @param string $itemId
    */
   public function setItemId($itemId)
   {
@@ -65,7 +84,9 @@ class Item extends \Google\Collection
     return $this->itemId;
   }
   /**
-   * @param string
+   * Optional. The product ID within the Merchant Center account.
+   *
+   * @param string $merchantProductId
    */
   public function setMerchantProductId($merchantProductId)
   {
@@ -79,7 +100,9 @@ class Item extends \Google\Collection
     return $this->merchantProductId;
   }
   /**
-   * @param string
+   * Optional. The number of this item associated with the event.
+   *
+   * @param string $quantity
    */
   public function setQuantity($quantity)
   {

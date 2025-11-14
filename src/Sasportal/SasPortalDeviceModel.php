@@ -20,28 +20,40 @@ namespace Google\Service\Sasportal;
 class SasPortalDeviceModel extends \Google\Model
 {
   /**
+   * The firmware version of the device.
+   *
    * @var string
    */
   public $firmwareVersion;
   /**
+   * The hardware version of the device.
+   *
    * @var string
    */
   public $hardwareVersion;
   /**
+   * The name of the device model.
+   *
    * @var string
    */
   public $name;
   /**
+   * The software version of the device.
+   *
    * @var string
    */
   public $softwareVersion;
   /**
+   * The name of the device vendor.
+   *
    * @var string
    */
   public $vendor;
 
   /**
-   * @param string
+   * The firmware version of the device.
+   *
+   * @param string $firmwareVersion
    */
   public function setFirmwareVersion($firmwareVersion)
   {
@@ -55,7 +67,9 @@ class SasPortalDeviceModel extends \Google\Model
     return $this->firmwareVersion;
   }
   /**
-   * @param string
+   * The hardware version of the device.
+   *
+   * @param string $hardwareVersion
    */
   public function setHardwareVersion($hardwareVersion)
   {
@@ -69,7 +83,9 @@ class SasPortalDeviceModel extends \Google\Model
     return $this->hardwareVersion;
   }
   /**
-   * @param string
+   * The name of the device model.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +99,9 @@ class SasPortalDeviceModel extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The software version of the device.
+   *
+   * @param string $softwareVersion
    */
   public function setSoftwareVersion($softwareVersion)
   {
@@ -97,7 +115,9 @@ class SasPortalDeviceModel extends \Google\Model
     return $this->softwareVersion;
   }
   /**
-   * @param string
+   * The name of the device vendor.
+   *
+   * @param string $vendor
    */
   public function setVendor($vendor)
   {

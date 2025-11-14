@@ -20,33 +20,58 @@ namespace Google\Service\Bigquery;
 class QueryTimelineSample extends \Google\Model
 {
   /**
+   * Total number of active workers. This does not correspond directly to slot
+   * usage. This is the largest value observed since the last sample.
+   *
    * @var string
    */
   public $activeUnits;
   /**
+   * Total parallel units of work completed by this query.
+   *
    * @var string
    */
   public $completedUnits;
   /**
+   * Milliseconds elapsed since the start of query execution.
+   *
    * @var string
    */
   public $elapsedMs;
   /**
+   * Units of work that can be scheduled immediately. Providing additional slots
+   * for these units of work will accelerate the query, if no other query in the
+   * reservation needs additional slots.
+   *
    * @var string
    */
   public $estimatedRunnableUnits;
   /**
+   * Total units of work remaining for the query. This number can be revised
+   * (increased or decreased) while the query is running.
+   *
    * @var string
    */
   public $pendingUnits;
+  /**
+   * Total shuffle usage ratio in shuffle RAM per reservation of this query.
+   * This will be provided for reservation customers only.
+   *
+   * @var 
+   */
   public $shuffleRamUsageRatio;
   /**
+   * Cumulative slot-ms consumed by the query.
+   *
    * @var string
    */
   public $totalSlotMs;
 
   /**
-   * @param string
+   * Total number of active workers. This does not correspond directly to slot
+   * usage. This is the largest value observed since the last sample.
+   *
+   * @param string $activeUnits
    */
   public function setActiveUnits($activeUnits)
   {
@@ -60,7 +85,9 @@ class QueryTimelineSample extends \Google\Model
     return $this->activeUnits;
   }
   /**
-   * @param string
+   * Total parallel units of work completed by this query.
+   *
+   * @param string $completedUnits
    */
   public function setCompletedUnits($completedUnits)
   {
@@ -74,7 +101,9 @@ class QueryTimelineSample extends \Google\Model
     return $this->completedUnits;
   }
   /**
-   * @param string
+   * Milliseconds elapsed since the start of query execution.
+   *
+   * @param string $elapsedMs
    */
   public function setElapsedMs($elapsedMs)
   {
@@ -88,7 +117,11 @@ class QueryTimelineSample extends \Google\Model
     return $this->elapsedMs;
   }
   /**
-   * @param string
+   * Units of work that can be scheduled immediately. Providing additional slots
+   * for these units of work will accelerate the query, if no other query in the
+   * reservation needs additional slots.
+   *
+   * @param string $estimatedRunnableUnits
    */
   public function setEstimatedRunnableUnits($estimatedRunnableUnits)
   {
@@ -102,7 +135,10 @@ class QueryTimelineSample extends \Google\Model
     return $this->estimatedRunnableUnits;
   }
   /**
-   * @param string
+   * Total units of work remaining for the query. This number can be revised
+   * (increased or decreased) while the query is running.
+   *
+   * @param string $pendingUnits
    */
   public function setPendingUnits($pendingUnits)
   {
@@ -124,7 +160,9 @@ class QueryTimelineSample extends \Google\Model
     return $this->shuffleRamUsageRatio;
   }
   /**
-   * @param string
+   * Cumulative slot-ms consumed by the query.
+   *
+   * @param string $totalSlotMs
    */
   public function setTotalSlotMs($totalSlotMs)
   {

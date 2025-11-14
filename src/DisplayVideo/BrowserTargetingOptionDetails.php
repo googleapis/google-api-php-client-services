@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class BrowserTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The display name of the browser.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * Output only. The display name of the browser.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

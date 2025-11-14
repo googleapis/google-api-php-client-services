@@ -24,7 +24,12 @@ class GoogleCloudDialogflowCxV3BoostSpec extends \Google\Collection
   protected $conditionBoostSpecsDataType = 'array';
 
   /**
-   * @param GoogleCloudDialogflowCxV3BoostSpecConditionBoostSpec[]
+   * Optional. Condition boost specifications. If a document matches multiple
+   * conditions in the specifications, boost scores from these specifications
+   * are all applied and combined in a non-linear way. Maximum number of
+   * specifications is 20.
+   *
+   * @param GoogleCloudDialogflowCxV3BoostSpecConditionBoostSpec[] $conditionBoostSpecs
    */
   public function setConditionBoostSpecs($conditionBoostSpecs)
   {

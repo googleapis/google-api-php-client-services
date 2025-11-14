@@ -20,12 +20,20 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaTuneEngineMetadata extends \Google\Model
 {
   /**
+   * Required. The resource name of the engine that this tune applies to.
+   * Format: `projects/{project}/locations/{location}/collections/{collection_id
+   * }/engines/{engine_id}`
+   *
    * @var string
    */
   public $engine;
 
   /**
-   * @param string
+   * Required. The resource name of the engine that this tune applies to.
+   * Format: `projects/{project}/locations/{location}/collections/{collection_id
+   * }/engines/{engine_id}`
+   *
+   * @param string $engine
    */
   public function setEngine($engine)
   {

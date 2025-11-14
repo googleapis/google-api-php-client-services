@@ -23,7 +23,9 @@ class InstancesAcquireSsrsLeaseRequest extends \Google\Model
   protected $acquireSsrsLeaseContextDataType = '';
 
   /**
-   * @param AcquireSsrsLeaseContext
+   * Contains details about the acquire SSRS lease operation.
+   *
+   * @param AcquireSsrsLeaseContext $acquireSsrsLeaseContext
    */
   public function setAcquireSsrsLeaseContext(AcquireSsrsLeaseContext $acquireSsrsLeaseContext)
   {

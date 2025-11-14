@@ -21,22 +21,33 @@ class AppList extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * The list of app IDs that the user has specified to use by default. The list
+   * is in reverse-priority order (lowest to highest).
+   *
    * @var string[]
    */
   public $defaultAppIds;
   protected $itemsType = App::class;
   protected $itemsDataType = 'array';
   /**
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string "drive#appList".
+   *
    * @var string
    */
   public $kind;
   /**
+   * A link back to this list.
+   *
    * @var string
    */
   public $selfLink;
 
   /**
-   * @param string[]
+   * The list of app IDs that the user has specified to use by default. The list
+   * is in reverse-priority order (lowest to highest).
+   *
+   * @param string[] $defaultAppIds
    */
   public function setDefaultAppIds($defaultAppIds)
   {
@@ -50,7 +61,9 @@ class AppList extends \Google\Collection
     return $this->defaultAppIds;
   }
   /**
-   * @param App[]
+   * The list of apps.
+   *
+   * @param App[] $items
    */
   public function setItems($items)
   {
@@ -64,7 +77,10 @@ class AppList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string "drive#appList".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +94,9 @@ class AppList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * A link back to this list.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {

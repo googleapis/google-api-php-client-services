@@ -20,16 +20,60 @@ namespace Google\Service\MyBusinessPlaceActions;
 class PlaceActionTypeMetadata extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const PLACE_ACTION_TYPE_PLACE_ACTION_TYPE_UNSPECIFIED = 'PLACE_ACTION_TYPE_UNSPECIFIED';
+  /**
+   * The action type is booking an appointment.
+   */
+  public const PLACE_ACTION_TYPE_APPOINTMENT = 'APPOINTMENT';
+  /**
+   * The action type is booking an online appointment.
+   */
+  public const PLACE_ACTION_TYPE_ONLINE_APPOINTMENT = 'ONLINE_APPOINTMENT';
+  /**
+   * The action type is making a dining reservation.
+   */
+  public const PLACE_ACTION_TYPE_DINING_RESERVATION = 'DINING_RESERVATION';
+  /**
+   * The action type is ordering food for delivery and/or takeout.
+   */
+  public const PLACE_ACTION_TYPE_FOOD_ORDERING = 'FOOD_ORDERING';
+  /**
+   * The action type is ordering food for delivery.
+   */
+  public const PLACE_ACTION_TYPE_FOOD_DELIVERY = 'FOOD_DELIVERY';
+  /**
+   * The action type is ordering food for takeout.
+   */
+  public const PLACE_ACTION_TYPE_FOOD_TAKEOUT = 'FOOD_TAKEOUT';
+  /**
+   * The action type is shopping, that can be delivery and/or pickup.
+   */
+  public const PLACE_ACTION_TYPE_SHOP_ONLINE = 'SHOP_ONLINE';
+  /**
+   * The action type is booking an appointment with a Solopneuer partner.
+   */
+  public const PLACE_ACTION_TYPE_SOLOPRENEUR_APPOINTMENT = 'SOLOPRENEUR_APPOINTMENT';
+  /**
+   * The localized display name for the attribute, if available; otherwise, the
+   * English display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The place action type.
+   *
    * @var string
    */
   public $placeActionType;
 
   /**
-   * @param string
+   * The localized display name for the attribute, if available; otherwise, the
+   * English display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,14 +87,20 @@ class PlaceActionTypeMetadata extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The place action type.
+   *
+   * Accepted values: PLACE_ACTION_TYPE_UNSPECIFIED, APPOINTMENT,
+   * ONLINE_APPOINTMENT, DINING_RESERVATION, FOOD_ORDERING, FOOD_DELIVERY,
+   * FOOD_TAKEOUT, SHOP_ONLINE, SOLOPRENEUR_APPOINTMENT
+   *
+   * @param self::PLACE_ACTION_TYPE_* $placeActionType
    */
   public function setPlaceActionType($placeActionType)
   {
     $this->placeActionType = $placeActionType;
   }
   /**
-   * @return string
+   * @return self::PLACE_ACTION_TYPE_*
    */
   public function getPlaceActionType()
   {

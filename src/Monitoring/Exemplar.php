@@ -21,17 +21,39 @@ class Exemplar extends \Google\Collection
 {
   protected $collection_key = 'attachments';
   /**
+   * Contextual information about the example value. Examples are:Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContextLiteral string:
+   * type.googleapis.com/google.protobuf.StringValueLabels dropped during
+   * aggregation: type.googleapis.com/google.monitoring.v3.DroppedLabelsThere
+   * may be only a single attachment of any given message type in a single
+   * exemplar, and this is enforced by the system.
+   *
    * @var array[]
    */
   public $attachments;
   /**
+   * The observation (sampling) time of the above value.
+   *
    * @var string
    */
   public $timestamp;
+  /**
+   * Value of the exemplar point. This value determines to which bucket the
+   * exemplar belongs.
+   *
+   * @var 
+   */
   public $value;
 
   /**
-   * @param array[]
+   * Contextual information about the example value. Examples are:Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContextLiteral string:
+   * type.googleapis.com/google.protobuf.StringValueLabels dropped during
+   * aggregation: type.googleapis.com/google.monitoring.v3.DroppedLabelsThere
+   * may be only a single attachment of any given message type in a single
+   * exemplar, and this is enforced by the system.
+   *
+   * @param array[] $attachments
    */
   public function setAttachments($attachments)
   {
@@ -45,7 +67,9 @@ class Exemplar extends \Google\Collection
     return $this->attachments;
   }
   /**
-   * @param string
+   * The observation (sampling) time of the above value.
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {

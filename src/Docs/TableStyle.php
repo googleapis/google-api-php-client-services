@@ -24,7 +24,11 @@ class TableStyle extends \Google\Collection
   protected $tableColumnPropertiesDataType = 'array';
 
   /**
-   * @param TableColumnProperties[]
+   * The properties of each column. Note that in Docs, tables contain rows and
+   * rows contain cells, similar to HTML. So the properties for a row can be
+   * found on the row's table_row_style.
+   *
+   * @param TableColumnProperties[] $tableColumnProperties
    */
   public function setTableColumnProperties($tableColumnProperties)
   {

@@ -19,44 +19,81 @@ namespace Google\Service\SearchConsole;
 
 class WmxSitemap extends \Google\Collection
 {
+  public const TYPE_NOT_SITEMAP = 'NOT_SITEMAP';
+  public const TYPE_URL_LIST = 'URL_LIST';
+  public const TYPE_SITEMAP = 'SITEMAP';
+  public const TYPE_RSS_FEED = 'RSS_FEED';
+  public const TYPE_ATOM_FEED = 'ATOM_FEED';
+  /**
+   * Unsupported sitemap types.
+   *
+   * @deprecated
+   */
+  public const TYPE_PATTERN_SITEMAP = 'PATTERN_SITEMAP';
+  /**
+   * @deprecated
+   */
+  public const TYPE_OCEANFRONT = 'OCEANFRONT';
   protected $collection_key = 'contents';
   protected $contentsType = WmxSitemapContent::class;
   protected $contentsDataType = 'array';
   /**
+   * Number of errors in the sitemap. These are issues with the sitemap itself
+   * that need to be fixed before it can be processed correctly.
+   *
    * @var string
    */
   public $errors;
   /**
+   * If true, the sitemap has not been processed.
+   *
    * @var bool
    */
   public $isPending;
   /**
+   * If true, the sitemap is a collection of sitemaps.
+   *
    * @var bool
    */
   public $isSitemapsIndex;
   /**
+   * Date & time in which this sitemap was last downloaded. Date format is in
+   * RFC 3339 format (yyyy-mm-dd).
+   *
    * @var string
    */
   public $lastDownloaded;
   /**
+   * Date & time in which this sitemap was submitted. Date format is in RFC 3339
+   * format (yyyy-mm-dd).
+   *
    * @var string
    */
   public $lastSubmitted;
   /**
+   * The url of the sitemap.
+   *
    * @var string
    */
   public $path;
   /**
+   * The type of the sitemap. For example: `rssFeed`.
+   *
    * @var string
    */
   public $type;
   /**
+   * Number of warnings for the sitemap. These are generally non-critical issues
+   * with URLs in the sitemaps.
+   *
    * @var string
    */
   public $warnings;
 
   /**
-   * @param WmxSitemapContent[]
+   * The various content types in the sitemap.
+   *
+   * @param WmxSitemapContent[] $contents
    */
   public function setContents($contents)
   {
@@ -70,7 +107,10 @@ class WmxSitemap extends \Google\Collection
     return $this->contents;
   }
   /**
-   * @param string
+   * Number of errors in the sitemap. These are issues with the sitemap itself
+   * that need to be fixed before it can be processed correctly.
+   *
+   * @param string $errors
    */
   public function setErrors($errors)
   {
@@ -84,7 +124,9 @@ class WmxSitemap extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param bool
+   * If true, the sitemap has not been processed.
+   *
+   * @param bool $isPending
    */
   public function setIsPending($isPending)
   {
@@ -98,7 +140,9 @@ class WmxSitemap extends \Google\Collection
     return $this->isPending;
   }
   /**
-   * @param bool
+   * If true, the sitemap is a collection of sitemaps.
+   *
+   * @param bool $isSitemapsIndex
    */
   public function setIsSitemapsIndex($isSitemapsIndex)
   {
@@ -112,7 +156,10 @@ class WmxSitemap extends \Google\Collection
     return $this->isSitemapsIndex;
   }
   /**
-   * @param string
+   * Date & time in which this sitemap was last downloaded. Date format is in
+   * RFC 3339 format (yyyy-mm-dd).
+   *
+   * @param string $lastDownloaded
    */
   public function setLastDownloaded($lastDownloaded)
   {
@@ -126,7 +173,10 @@ class WmxSitemap extends \Google\Collection
     return $this->lastDownloaded;
   }
   /**
-   * @param string
+   * Date & time in which this sitemap was submitted. Date format is in RFC 3339
+   * format (yyyy-mm-dd).
+   *
+   * @param string $lastSubmitted
    */
   public function setLastSubmitted($lastSubmitted)
   {
@@ -140,7 +190,9 @@ class WmxSitemap extends \Google\Collection
     return $this->lastSubmitted;
   }
   /**
-   * @param string
+   * The url of the sitemap.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -154,21 +206,29 @@ class WmxSitemap extends \Google\Collection
     return $this->path;
   }
   /**
-   * @param string
+   * The type of the sitemap. For example: `rssFeed`.
+   *
+   * Accepted values: NOT_SITEMAP, URL_LIST, SITEMAP, RSS_FEED, ATOM_FEED,
+   * PATTERN_SITEMAP, OCEANFRONT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Number of warnings for the sitemap. These are generally non-critical issues
+   * with URLs in the sitemaps.
+   *
+   * @param string $warnings
    */
   public function setWarnings($warnings)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class SourceSqlChange extends \Google\Model
 {
   /**
+   * Required. Sql code for source (stored procedure, function, trigger or view)
+   *
    * @var string
    */
   public $sqlCode;
 
   /**
-   * @param string
+   * Required. Sql code for source (stored procedure, function, trigger or view)
+   *
+   * @param string $sqlCode
    */
   public function setSqlCode($sqlCode)
   {

@@ -20,6 +20,8 @@ namespace Google\Service\BigtableAdmin;
 class OptimizeRestoredTableMetadata extends \Google\Model
 {
   /**
+   * Name of the restored table being optimized.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +29,9 @@ class OptimizeRestoredTableMetadata extends \Google\Model
   protected $progressDataType = '';
 
   /**
-   * @param string
+   * Name of the restored table being optimized.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +45,9 @@ class OptimizeRestoredTableMetadata extends \Google\Model
     return $this->name;
   }
   /**
-   * @param OperationProgress
+   * The progress of the post-restore optimizations.
+   *
+   * @param OperationProgress $progress
    */
   public function setProgress(OperationProgress $progress)
   {

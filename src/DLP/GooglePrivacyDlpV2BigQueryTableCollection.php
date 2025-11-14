@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2BigQueryTableCollection extends \Google\Model
   protected $includeRegexesDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2BigQueryRegexes
+   * A collection of regular expressions to match a BigQuery table against.
+   *
+   * @param GooglePrivacyDlpV2BigQueryRegexes $includeRegexes
    */
   public function setIncludeRegexes(GooglePrivacyDlpV2BigQueryRegexes $includeRegexes)
   {

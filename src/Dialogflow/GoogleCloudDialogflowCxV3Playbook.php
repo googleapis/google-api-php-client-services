@@ -19,24 +19,49 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
 {
+  /**
+   * Unspecified type. Default to TASK.
+   */
+  public const PLAYBOOK_TYPE_PLAYBOOK_TYPE_UNSPECIFIED = 'PLAYBOOK_TYPE_UNSPECIFIED';
+  /**
+   * Task playbook.
+   */
+  public const PLAYBOOK_TYPE_TASK = 'TASK';
+  /**
+   * Routine playbook.
+   */
+  public const PLAYBOOK_TYPE_ROUTINE = 'ROUTINE';
   protected $collection_key = 'referencedTools';
   protected $codeBlockType = GoogleCloudDialogflowCxV3CodeBlock::class;
   protected $codeBlockDataType = '';
   /**
+   * Output only. The timestamp of initial playbook creation.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The human-readable name of the playbook, unique within an agent.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. High level description of the goal the playbook intend to
+   * accomplish. A goal should be concise since it's visible to other playbooks
+   * that may reference this playbook.
+   *
    * @var string
    */
   public $goal;
   protected $handlersType = GoogleCloudDialogflowCxV3Handler::class;
   protected $handlersDataType = 'array';
   /**
+   * Optional. Output only. Names of inline actions scoped to this playbook.
+   * These actions are in addition to those belonging to referenced tools, child
+   * playbooks, and flows, e.g. actions that are defined in the playbook's code
+   * block.
+   *
    * @var string[]
    */
   public $inlineActions;
@@ -47,38 +72,61 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
   protected $llmModelSettingsType = GoogleCloudDialogflowCxV3LlmModelSettings::class;
   protected $llmModelSettingsDataType = '';
   /**
+   * The unique identifier of the playbook. Format:
+   * `projects//locations//agents//playbooks/`.
+   *
    * @var string
    */
   public $name;
   protected $outputParameterDefinitionsType = GoogleCloudDialogflowCxV3ParameterDefinition::class;
   protected $outputParameterDefinitionsDataType = 'array';
   /**
+   * Optional. Type of the playbook.
+   *
    * @var string
    */
   public $playbookType;
   /**
+   * Output only. The resource name of flows referenced by the current playbook
+   * in the instructions.
+   *
    * @var string[]
    */
   public $referencedFlows;
   /**
+   * Output only. The resource name of other playbooks referenced by the current
+   * playbook in the instructions.
+   *
    * @var string[]
    */
   public $referencedPlaybooks;
   /**
+   * Optional. The resource name of tools referenced by the current playbook in
+   * the instructions. If not provided explicitly, they are will be implied
+   * using the tool being referenced in goal and steps.
+   *
    * @var string[]
    */
   public $referencedTools;
   /**
+   * Output only. Estimated number of tokes current playbook takes when sent to
+   * the LLM.
+   *
    * @var string
    */
   public $tokenCount;
   /**
+   * Output only. Last time the playbook version was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudDialogflowCxV3CodeBlock
+   * Optional. The playbook's scoped code block, which may implement handlers
+   * and actions.
+   *
+   * @param GoogleCloudDialogflowCxV3CodeBlock $codeBlock
    */
   public function setCodeBlock(GoogleCloudDialogflowCxV3CodeBlock $codeBlock)
   {
@@ -92,7 +140,9 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->codeBlock;
   }
   /**
-   * @param string
+   * Output only. The timestamp of initial playbook creation.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -106,7 +156,9 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The human-readable name of the playbook, unique within an agent.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -120,7 +172,11 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. High level description of the goal the playbook intend to
+   * accomplish. A goal should be concise since it's visible to other playbooks
+   * that may reference this playbook.
+   *
+   * @param string $goal
    */
   public function setGoal($goal)
   {
@@ -134,7 +190,10 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->goal;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Handler[]
+   * Optional. A list of registered handlers to execuate based on the specified
+   * triggers.
+   *
+   * @param GoogleCloudDialogflowCxV3Handler[] $handlers
    */
   public function setHandlers($handlers)
   {
@@ -148,7 +207,12 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->handlers;
   }
   /**
-   * @param string[]
+   * Optional. Output only. Names of inline actions scoped to this playbook.
+   * These actions are in addition to those belonging to referenced tools, child
+   * playbooks, and flows, e.g. actions that are defined in the playbook's code
+   * block.
+   *
+   * @param string[] $inlineActions
    */
   public function setInlineActions($inlineActions)
   {
@@ -162,7 +226,9 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->inlineActions;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ParameterDefinition[]
+   * Optional. Defined structured input parameters for this playbook.
+   *
+   * @param GoogleCloudDialogflowCxV3ParameterDefinition[] $inputParameterDefinitions
    */
   public function setInputParameterDefinitions($inputParameterDefinitions)
   {
@@ -176,7 +242,9 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->inputParameterDefinitions;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3PlaybookInstruction
+   * Instruction to accomplish target goal.
+   *
+   * @param GoogleCloudDialogflowCxV3PlaybookInstruction $instruction
    */
   public function setInstruction(GoogleCloudDialogflowCxV3PlaybookInstruction $instruction)
   {
@@ -190,7 +258,9 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->instruction;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3LlmModelSettings
+   * Optional. Llm model settings for the playbook.
+   *
+   * @param GoogleCloudDialogflowCxV3LlmModelSettings $llmModelSettings
    */
   public function setLlmModelSettings(GoogleCloudDialogflowCxV3LlmModelSettings $llmModelSettings)
   {
@@ -204,7 +274,10 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->llmModelSettings;
   }
   /**
-   * @param string
+   * The unique identifier of the playbook. Format:
+   * `projects//locations//agents//playbooks/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -218,7 +291,9 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ParameterDefinition[]
+   * Optional. Defined structured output parameters for this playbook.
+   *
+   * @param GoogleCloudDialogflowCxV3ParameterDefinition[] $outputParameterDefinitions
    */
   public function setOutputParameterDefinitions($outputParameterDefinitions)
   {
@@ -232,21 +307,28 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->outputParameterDefinitions;
   }
   /**
-   * @param string
+   * Optional. Type of the playbook.
+   *
+   * Accepted values: PLAYBOOK_TYPE_UNSPECIFIED, TASK, ROUTINE
+   *
+   * @param self::PLAYBOOK_TYPE_* $playbookType
    */
   public function setPlaybookType($playbookType)
   {
     $this->playbookType = $playbookType;
   }
   /**
-   * @return string
+   * @return self::PLAYBOOK_TYPE_*
    */
   public function getPlaybookType()
   {
     return $this->playbookType;
   }
   /**
-   * @param string[]
+   * Output only. The resource name of flows referenced by the current playbook
+   * in the instructions.
+   *
+   * @param string[] $referencedFlows
    */
   public function setReferencedFlows($referencedFlows)
   {
@@ -260,7 +342,10 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->referencedFlows;
   }
   /**
-   * @param string[]
+   * Output only. The resource name of other playbooks referenced by the current
+   * playbook in the instructions.
+   *
+   * @param string[] $referencedPlaybooks
    */
   public function setReferencedPlaybooks($referencedPlaybooks)
   {
@@ -274,7 +359,11 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->referencedPlaybooks;
   }
   /**
-   * @param string[]
+   * Optional. The resource name of tools referenced by the current playbook in
+   * the instructions. If not provided explicitly, they are will be implied
+   * using the tool being referenced in goal and steps.
+   *
+   * @param string[] $referencedTools
    */
   public function setReferencedTools($referencedTools)
   {
@@ -288,7 +377,10 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->referencedTools;
   }
   /**
-   * @param string
+   * Output only. Estimated number of tokes current playbook takes when sent to
+   * the LLM.
+   *
+   * @param string $tokenCount
    */
   public function setTokenCount($tokenCount)
   {
@@ -302,7 +394,9 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->tokenCount;
   }
   /**
-   * @param string
+   * Output only. Last time the playbook version was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

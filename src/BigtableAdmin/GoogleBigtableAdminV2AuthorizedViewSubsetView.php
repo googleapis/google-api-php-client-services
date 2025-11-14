@@ -23,12 +23,18 @@ class GoogleBigtableAdminV2AuthorizedViewSubsetView extends \Google\Collection
   protected $familySubsetsType = GoogleBigtableAdminV2AuthorizedViewFamilySubsets::class;
   protected $familySubsetsDataType = 'map';
   /**
+   * Row prefixes to be included in the AuthorizedView. To provide access to all
+   * rows, include the empty string as a prefix ("").
+   *
    * @var string[]
    */
   public $rowPrefixes;
 
   /**
-   * @param GoogleBigtableAdminV2AuthorizedViewFamilySubsets[]
+   * Map from column family name to the columns in this family to be included in
+   * the AuthorizedView.
+   *
+   * @param GoogleBigtableAdminV2AuthorizedViewFamilySubsets[] $familySubsets
    */
   public function setFamilySubsets($familySubsets)
   {
@@ -42,7 +48,10 @@ class GoogleBigtableAdminV2AuthorizedViewSubsetView extends \Google\Collection
     return $this->familySubsets;
   }
   /**
-   * @param string[]
+   * Row prefixes to be included in the AuthorizedView. To provide access to all
+   * rows, include the empty string as a prefix ("").
+   *
+   * @param string[] $rowPrefixes
    */
   public function setRowPrefixes($rowPrefixes)
   {

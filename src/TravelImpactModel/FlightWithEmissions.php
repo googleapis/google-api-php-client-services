@@ -20,6 +20,37 @@ namespace Google\Service\TravelImpactModel;
 class FlightWithEmissions extends \Google\Model
 {
   /**
+   * The contrails impact is unspecified.
+   */
+  public const CONTRAILS_IMPACT_BUCKET_CONTRAILS_IMPACT_UNSPECIFIED = 'CONTRAILS_IMPACT_UNSPECIFIED';
+  /**
+   * The contrails impact is negligible compared to the total CO2e emissions.
+   */
+  public const CONTRAILS_IMPACT_BUCKET_CONTRAILS_IMPACT_NEGLIGIBLE = 'CONTRAILS_IMPACT_NEGLIGIBLE';
+  /**
+   * The contrails impact is comparable to the total CO2e emissions.
+   */
+  public const CONTRAILS_IMPACT_BUCKET_CONTRAILS_IMPACT_MODERATE = 'CONTRAILS_IMPACT_MODERATE';
+  /**
+   * The contrails impact is higher than the total CO2e emissions impact.
+   */
+  public const CONTRAILS_IMPACT_BUCKET_CONTRAILS_IMPACT_SEVERE = 'CONTRAILS_IMPACT_SEVERE';
+  /**
+   * The source of the emissions data is unspecified.
+   */
+  public const SOURCE_SOURCE_UNSPECIFIED = 'SOURCE_UNSPECIFIED';
+  /**
+   * The emissions data is from the Travel Impact Model.
+   */
+  public const SOURCE_TIM = 'TIM';
+  /**
+   * The emissions data is from the EASA environmental labels.
+   */
+  public const SOURCE_EASA = 'EASA';
+  /**
+   * Optional. The significance of contrails warming impact compared to the
+   * total CO2e emissions impact.
+   *
    * @var string
    */
   public $contrailsImpactBucket;
@@ -30,26 +61,37 @@ class FlightWithEmissions extends \Google\Model
   protected $flightType = Flight::class;
   protected $flightDataType = '';
   /**
+   * Optional. The source of the emissions data.
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param string
+   * Optional. The significance of contrails warming impact compared to the
+   * total CO2e emissions impact.
+   *
+   * Accepted values: CONTRAILS_IMPACT_UNSPECIFIED, CONTRAILS_IMPACT_NEGLIGIBLE,
+   * CONTRAILS_IMPACT_MODERATE, CONTRAILS_IMPACT_SEVERE
+   *
+   * @param self::CONTRAILS_IMPACT_BUCKET_* $contrailsImpactBucket
    */
   public function setContrailsImpactBucket($contrailsImpactBucket)
   {
     $this->contrailsImpactBucket = $contrailsImpactBucket;
   }
   /**
-   * @return string
+   * @return self::CONTRAILS_IMPACT_BUCKET_*
    */
   public function getContrailsImpactBucket()
   {
     return $this->contrailsImpactBucket;
   }
   /**
-   * @param EasaLabelMetadata
+   * Optional. Metadata about the EASA Flight Emissions Label. Only set when the
+   * emissions data source is EASA.
+   *
+   * @param EasaLabelMetadata $easaLabelMetadata
    */
   public function setEasaLabelMetadata(EasaLabelMetadata $easaLabelMetadata)
   {
@@ -63,7 +105,11 @@ class FlightWithEmissions extends \Google\Model
     return $this->easaLabelMetadata;
   }
   /**
-   * @param EmissionsGramsPerPax
+   * Optional. Per-passenger emission estimate numbers. Will not be present if
+   * emissions could not be computed. For the list of reasons why emissions
+   * could not be computed, see ComputeFlightEmissions.
+   *
+   * @param EmissionsGramsPerPax $emissionsGramsPerPax
    */
   public function setEmissionsGramsPerPax(EmissionsGramsPerPax $emissionsGramsPerPax)
   {
@@ -77,7 +123,10 @@ class FlightWithEmissions extends \Google\Model
     return $this->emissionsGramsPerPax;
   }
   /**
-   * @param Flight
+   * Required. Matches the flight identifiers in the request. Note: all IATA
+   * codes are capitalized.
+   *
+   * @param Flight $flight
    */
   public function setFlight(Flight $flight)
   {
@@ -91,14 +140,18 @@ class FlightWithEmissions extends \Google\Model
     return $this->flight;
   }
   /**
-   * @param string
+   * Optional. The source of the emissions data.
+   *
+   * Accepted values: SOURCE_UNSPECIFIED, TIM, EASA
+   *
+   * @param self::SOURCE_* $source
    */
   public function setSource($source)
   {
     $this->source = $source;
   }
   /**
-   * @return string
+   * @return self::SOURCE_*
    */
   public function getSource()
   {

@@ -20,52 +20,82 @@ namespace Google\Service\SQLAdmin;
 class MySqlReplicaConfiguration extends \Google\Model
 {
   /**
+   * PEM representation of the trusted CA's x509 certificate.
+   *
    * @var string
    */
   public $caCertificate;
   /**
+   * PEM representation of the replica's x509 certificate.
+   *
    * @var string
    */
   public $clientCertificate;
   /**
+   * PEM representation of the replica's private key. The corresponding public
+   * key is encoded in the client's certificate.
+   *
    * @var string
    */
   public $clientKey;
   /**
+   * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+   *
    * @var int
    */
   public $connectRetryInterval;
   /**
+   * Path to a SQL dump file in Google Cloud Storage from which the replica
+   * instance is to be created. The URI is in the form gs://bucketName/fileName.
+   * Compressed gzip files (.gz) are also supported. Dumps have the binlog co-
+   * ordinates from which replication begins. This can be accomplished by
+   * setting --master-data to 1 when using mysqldump.
+   *
    * @var string
    */
   public $dumpFilePath;
   /**
+   * This is always `sql#mysqlReplicaConfiguration`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Interval in milliseconds between replication heartbeats.
+   *
    * @var string
    */
   public $masterHeartbeatPeriod;
   /**
+   * The password for the replication connection.
+   *
    * @var string
    */
   public $password;
   /**
+   * A list of permissible ciphers to use for SSL encryption.
+   *
    * @var string
    */
   public $sslCipher;
   /**
+   * The username for the replication connection.
+   *
    * @var string
    */
   public $username;
   /**
+   * Whether or not to check the primary instance's Common Name value in the
+   * certificate that it sends during the SSL handshake.
+   *
    * @var bool
    */
   public $verifyServerCertificate;
 
   /**
-   * @param string
+   * PEM representation of the trusted CA's x509 certificate.
+   *
+   * @param string $caCertificate
    */
   public function setCaCertificate($caCertificate)
   {
@@ -79,7 +109,9 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->caCertificate;
   }
   /**
-   * @param string
+   * PEM representation of the replica's x509 certificate.
+   *
+   * @param string $clientCertificate
    */
   public function setClientCertificate($clientCertificate)
   {
@@ -93,7 +125,10 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->clientCertificate;
   }
   /**
-   * @param string
+   * PEM representation of the replica's private key. The corresponding public
+   * key is encoded in the client's certificate.
+   *
+   * @param string $clientKey
    */
   public function setClientKey($clientKey)
   {
@@ -107,7 +142,9 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->clientKey;
   }
   /**
-   * @param int
+   * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+   *
+   * @param int $connectRetryInterval
    */
   public function setConnectRetryInterval($connectRetryInterval)
   {
@@ -121,7 +158,13 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->connectRetryInterval;
   }
   /**
-   * @param string
+   * Path to a SQL dump file in Google Cloud Storage from which the replica
+   * instance is to be created. The URI is in the form gs://bucketName/fileName.
+   * Compressed gzip files (.gz) are also supported. Dumps have the binlog co-
+   * ordinates from which replication begins. This can be accomplished by
+   * setting --master-data to 1 when using mysqldump.
+   *
+   * @param string $dumpFilePath
    */
   public function setDumpFilePath($dumpFilePath)
   {
@@ -135,7 +178,9 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->dumpFilePath;
   }
   /**
-   * @param string
+   * This is always `sql#mysqlReplicaConfiguration`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -149,7 +194,9 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Interval in milliseconds between replication heartbeats.
+   *
+   * @param string $masterHeartbeatPeriod
    */
   public function setMasterHeartbeatPeriod($masterHeartbeatPeriod)
   {
@@ -163,7 +210,9 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->masterHeartbeatPeriod;
   }
   /**
-   * @param string
+   * The password for the replication connection.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -177,7 +226,9 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->password;
   }
   /**
-   * @param string
+   * A list of permissible ciphers to use for SSL encryption.
+   *
+   * @param string $sslCipher
    */
   public function setSslCipher($sslCipher)
   {
@@ -191,7 +242,9 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->sslCipher;
   }
   /**
-   * @param string
+   * The username for the replication connection.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {
@@ -205,7 +258,10 @@ class MySqlReplicaConfiguration extends \Google\Model
     return $this->username;
   }
   /**
-   * @param bool
+   * Whether or not to check the primary instance's Common Name value in the
+   * certificate that it sends during the SSL handshake.
+   *
+   * @param bool $verifyServerCertificate
    */
   public function setVerifyServerCertificate($verifyServerCertificate)
   {

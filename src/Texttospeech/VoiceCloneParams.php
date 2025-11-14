@@ -20,12 +20,16 @@ namespace Google\Service\Texttospeech;
 class VoiceCloneParams extends \Google\Model
 {
   /**
+   * Required. Created by GenerateVoiceCloningKey.
+   *
    * @var string
    */
   public $voiceCloningKey;
 
   /**
-   * @param string
+   * Required. Created by GenerateVoiceCloningKey.
+   *
+   * @param string $voiceCloningKey
    */
   public function setVoiceCloningKey($voiceCloningKey)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class CommitConversionWorkspaceRequest extends \Google\Model
 {
   /**
+   * Optional. Optional name of the commit.
+   *
    * @var string
    */
   public $commitName;
 
   /**
-   * @param string
+   * Optional. Optional name of the commit.
+   *
+   * @param string $commitName
    */
   public function setCommitName($commitName)
   {

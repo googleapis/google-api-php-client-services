@@ -23,7 +23,9 @@ class GoogleCloudDialogflowCxV3RunTestCaseResponse extends \Google\Model
   protected $resultDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3TestCaseResult
+   * The result.
+   *
+   * @param GoogleCloudDialogflowCxV3TestCaseResult $result
    */
   public function setResult(GoogleCloudDialogflowCxV3TestCaseResult $result)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickNlpMetadata extends \Google\Model
 {
   /**
+   * Confidence of the interpretation that generated this card.
+   *
    * @var float
    */
   public $confidence;
 
   /**
-   * @param float
+   * Confidence of the interpretation that generated this card.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {

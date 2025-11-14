@@ -24,7 +24,9 @@ class Intersection extends \Google\Collection
   protected $rulesDataType = 'array';
 
   /**
-   * @param GcRule[]
+   * Only delete cells which would be deleted by every element of `rules`.
+   *
+   * @param GcRule[] $rules
    */
   public function setRules($rules)
   {

@@ -24,7 +24,9 @@ class CustomOutputSpec extends \Google\Collection
   protected $propertiesDataType = 'array';
 
   /**
-   * @param Property[]
+   * Optional. The custom source properties that can appear in findings.
+   *
+   * @param Property[] $properties
    */
   public function setProperties($properties)
   {

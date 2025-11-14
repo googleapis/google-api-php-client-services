@@ -23,16 +23,23 @@ class StragglerSummary extends \Google\Collection
   protected $recentStragglersType = Straggler::class;
   protected $recentStragglersDataType = 'array';
   /**
+   * Aggregated counts of straggler causes, keyed by the string representation
+   * of the StragglerCause enum.
+   *
    * @var string[]
    */
   public $stragglerCauseCount;
   /**
+   * The total count of stragglers.
+   *
    * @var string
    */
   public $totalStragglerCount;
 
   /**
-   * @param Straggler[]
+   * The most recent stragglers.
+   *
+   * @param Straggler[] $recentStragglers
    */
   public function setRecentStragglers($recentStragglers)
   {
@@ -46,7 +53,10 @@ class StragglerSummary extends \Google\Collection
     return $this->recentStragglers;
   }
   /**
-   * @param string[]
+   * Aggregated counts of straggler causes, keyed by the string representation
+   * of the StragglerCause enum.
+   *
+   * @param string[] $stragglerCauseCount
    */
   public function setStragglerCauseCount($stragglerCauseCount)
   {
@@ -60,7 +70,9 @@ class StragglerSummary extends \Google\Collection
     return $this->stragglerCauseCount;
   }
   /**
-   * @param string
+   * The total count of stragglers.
+   *
+   * @param string $totalStragglerCount
    */
   public function setTotalStragglerCount($totalStragglerCount)
   {

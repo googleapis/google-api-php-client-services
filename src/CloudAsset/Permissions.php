@@ -21,12 +21,16 @@ class Permissions extends \Google\Collection
 {
   protected $collection_key = 'permissions';
   /**
+   * A list of permissions. A sample permission string: `compute.disk.get`.
+   *
    * @var string[]
    */
   public $permissions;
 
   /**
-   * @param string[]
+   * A list of permissions. A sample permission string: `compute.disk.get`.
+   *
+   * @param string[] $permissions
    */
   public function setPermissions($permissions)
   {

@@ -20,16 +20,23 @@ namespace Google\Service\ContainerAnalysis;
 class SBOMReferenceNote extends \Google\Model
 {
   /**
+   * The format that SBOM takes. E.g. may be spdx, cyclonedx, etc...
+   *
    * @var string
    */
   public $format;
   /**
+   * The version of the format that the SBOM takes. E.g. if the format is spdx,
+   * the version may be 2.3.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The format that SBOM takes. E.g. may be spdx, cyclonedx, etc...
+   *
+   * @param string $format
    */
   public function setFormat($format)
   {
@@ -43,7 +50,10 @@ class SBOMReferenceNote extends \Google\Model
     return $this->format;
   }
   /**
-   * @param string
+   * The version of the format that the SBOM takes. E.g. if the format is spdx,
+   * the version may be 2.3.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

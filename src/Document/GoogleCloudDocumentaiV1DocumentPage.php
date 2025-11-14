@@ -39,6 +39,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
   protected $linesType = GoogleCloudDocumentaiV1DocumentPageLine::class;
   protected $linesDataType = 'array';
   /**
+   * 1-based index for current Page in a parent Document. Useful when a page is
+   * taken out of a Document for individual processing.
+   *
    * @var int
    */
   public $pageNumber;
@@ -58,7 +61,11 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
   protected $visualElementsDataType = 'array';
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageBlock[]
+   * A list of visually detected text blocks on the page. A block has a set of
+   * lines (collected into paragraphs) that have a common line-spacing and
+   * orientation.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageBlock[] $blocks
    */
   public function setBlocks($blocks)
   {
@@ -72,7 +79,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->blocks;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageDetectedBarcode[]
+   * A list of detected barcodes.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageDetectedBarcode[] $detectedBarcodes
    */
   public function setDetectedBarcodes($detectedBarcodes)
   {
@@ -86,7 +95,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->detectedBarcodes;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[]
+   * A list of detected languages together with confidence.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] $detectedLanguages
    */
   public function setDetectedLanguages($detectedLanguages)
   {
@@ -100,7 +111,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->detectedLanguages;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageDimension
+   * Physical dimension of the page.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageDimension $dimension
    */
   public function setDimension(GoogleCloudDocumentaiV1DocumentPageDimension $dimension)
   {
@@ -114,7 +127,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->dimension;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageFormField[]
+   * A list of visually detected form fields on the page.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageFormField[] $formFields
    */
   public function setFormFields($formFields)
   {
@@ -128,7 +143,11 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->formFields;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageImage
+   * Rendered image for this page. This image is preprocessed to remove any
+   * skew, rotation, and distortions such that the annotation bounding boxes can
+   * be upright and axis-aligned.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageImage $image
    */
   public function setImage(GoogleCloudDocumentaiV1DocumentPageImage $image)
   {
@@ -142,7 +161,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageImageQualityScores
+   * Image quality scores.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageImageQualityScores $imageQualityScores
    */
   public function setImageQualityScores(GoogleCloudDocumentaiV1DocumentPageImageQualityScores $imageQualityScores)
   {
@@ -156,7 +177,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->imageQualityScores;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageLayout
+   * Layout for the page.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageLayout $layout
    */
   public function setLayout(GoogleCloudDocumentaiV1DocumentPageLayout $layout)
   {
@@ -170,7 +193,10 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->layout;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageLine[]
+   * A list of visually detected text lines on the page. A collection of tokens
+   * that a human would perceive as a line.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageLine[] $lines
    */
   public function setLines($lines)
   {
@@ -184,7 +210,10 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->lines;
   }
   /**
-   * @param int
+   * 1-based index for current Page in a parent Document. Useful when a page is
+   * taken out of a Document for individual processing.
+   *
+   * @param int $pageNumber
    */
   public function setPageNumber($pageNumber)
   {
@@ -198,7 +227,10 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->pageNumber;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageParagraph[]
+   * A list of visually detected text paragraphs on the page. A collection of
+   * lines that a human would perceive as a paragraph.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageParagraph[] $paragraphs
    */
   public function setParagraphs($paragraphs)
   {
@@ -212,13 +244,17 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->paragraphs;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentProvenance
+   * The history of this page.
+   *
+   * @deprecated
+   * @param GoogleCloudDocumentaiV1DocumentProvenance $provenance
    */
   public function setProvenance(GoogleCloudDocumentaiV1DocumentProvenance $provenance)
   {
     $this->provenance = $provenance;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDocumentaiV1DocumentProvenance
    */
   public function getProvenance()
@@ -226,7 +262,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->provenance;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageSymbol[]
+   * A list of visually detected symbols on the page.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageSymbol[] $symbols
    */
   public function setSymbols($symbols)
   {
@@ -240,7 +278,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->symbols;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageTable[]
+   * A list of visually detected tables on the page.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageTable[] $tables
    */
   public function setTables($tables)
   {
@@ -254,7 +294,9 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->tables;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageToken[]
+   * A list of visually detected tokens on the page.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageToken[] $tokens
    */
   public function setTokens($tokens)
   {
@@ -268,7 +310,10 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->tokens;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageMatrix[]
+   * Transformation matrices that were applied to the original document image to
+   * produce Page.image.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageMatrix[] $transforms
    */
   public function setTransforms($transforms)
   {
@@ -282,7 +327,10 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->transforms;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPageVisualElement[]
+   * A list of detected non-text visual elements e.g. checkbox, signature etc.
+   * on the page.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPageVisualElement[] $visualElements
    */
   public function setVisualElements($visualElements)
   {

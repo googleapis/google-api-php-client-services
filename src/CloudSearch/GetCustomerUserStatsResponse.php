@@ -24,7 +24,7 @@ class GetCustomerUserStatsResponse extends \Google\Collection
   protected $statsDataType = 'array';
 
   /**
-   * @param CustomerUserStats[]
+   * @param CustomerUserStats[] $stats
    */
   public function setStats($stats)
   {

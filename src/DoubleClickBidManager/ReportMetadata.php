@@ -20,6 +20,9 @@ namespace Google\Service\DoubleClickBidManager;
 class ReportMetadata extends \Google\Model
 {
   /**
+   * Output only. The location of the generated report file in Google Cloud
+   * Storage. This field will be absent if status.state is not `DONE`.
+   *
    * @var string
    */
   public $googleCloudStoragePath;
@@ -31,7 +34,10 @@ class ReportMetadata extends \Google\Model
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * Output only. The location of the generated report file in Google Cloud
+   * Storage. This field will be absent if status.state is not `DONE`.
+   *
+   * @param string $googleCloudStoragePath
    */
   public function setGoogleCloudStoragePath($googleCloudStoragePath)
   {
@@ -45,7 +51,9 @@ class ReportMetadata extends \Google\Model
     return $this->googleCloudStoragePath;
   }
   /**
-   * @param Date
+   * The end date of the report data date range.
+   *
+   * @param Date $reportDataEndDate
    */
   public function setReportDataEndDate(Date $reportDataEndDate)
   {
@@ -59,7 +67,9 @@ class ReportMetadata extends \Google\Model
     return $this->reportDataEndDate;
   }
   /**
-   * @param Date
+   * The start date of the report data date range.
+   *
+   * @param Date $reportDataStartDate
    */
   public function setReportDataStartDate(Date $reportDataStartDate)
   {
@@ -73,7 +83,9 @@ class ReportMetadata extends \Google\Model
     return $this->reportDataStartDate;
   }
   /**
-   * @param ReportStatus
+   * The status of the report.
+   *
+   * @param ReportStatus $status
    */
   public function setStatus(ReportStatus $status)
   {

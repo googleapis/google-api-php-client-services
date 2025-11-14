@@ -19,15 +19,30 @@ namespace Google\Service\Docs;
 
 class CreateHeaderRequest extends \Google\Model
 {
+  /**
+   * The header/footer type is unspecified.
+   */
+  public const TYPE_HEADER_FOOTER_TYPE_UNSPECIFIED = 'HEADER_FOOTER_TYPE_UNSPECIFIED';
+  /**
+   * A default header/footer.
+   */
+  public const TYPE_DEFAULT = 'DEFAULT';
   protected $sectionBreakLocationType = Location::class;
   protected $sectionBreakLocationDataType = '';
   /**
+   * The type of header to create.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param Location
+   * The location of the SectionBreak which begins the section this header
+   * should belong to. If `section_break_location' is unset or if it refers to
+   * the first section break in the document body, the header applies to the
+   * DocumentStyle
+   *
+   * @param Location $sectionBreakLocation
    */
   public function setSectionBreakLocation(Location $sectionBreakLocation)
   {
@@ -41,14 +56,18 @@ class CreateHeaderRequest extends \Google\Model
     return $this->sectionBreakLocation;
   }
   /**
-   * @param string
+   * The type of header to create.
+   *
+   * Accepted values: HEADER_FOOTER_TYPE_UNSPECIFIED, DEFAULT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

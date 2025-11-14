@@ -22,6 +22,8 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
   protected $accessControlType = GoogleCloudContentwarehouseV1AccessControlAction::class;
   protected $accessControlDataType = '';
   /**
+   * ID of the action. Managed internally.
+   *
    * @var string
    */
   public $actionId;
@@ -39,7 +41,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
   protected $removeFromFolderActionDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1AccessControlAction
+   * Action triggering access control operations.
+   *
+   * @param GoogleCloudContentwarehouseV1AccessControlAction $accessControl
    */
   public function setAccessControl(GoogleCloudContentwarehouseV1AccessControlAction $accessControl)
   {
@@ -53,7 +57,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
     return $this->accessControl;
   }
   /**
-   * @param string
+   * ID of the action. Managed internally.
+   *
+   * @param string $actionId
    */
   public function setActionId($actionId)
   {
@@ -67,7 +73,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
     return $this->actionId;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1AddToFolderAction
+   * Action triggering create document link operation.
+   *
+   * @param GoogleCloudContentwarehouseV1AddToFolderAction $addToFolder
    */
   public function setAddToFolder(GoogleCloudContentwarehouseV1AddToFolderAction $addToFolder)
   {
@@ -81,7 +89,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
     return $this->addToFolder;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1DataUpdateAction
+   * Action triggering data update operations.
+   *
+   * @param GoogleCloudContentwarehouseV1DataUpdateAction $dataUpdate
    */
   public function setDataUpdate(GoogleCloudContentwarehouseV1DataUpdateAction $dataUpdate)
   {
@@ -95,7 +105,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
     return $this->dataUpdate;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1DataValidationAction
+   * Action triggering data validation operations.
+   *
+   * @param GoogleCloudContentwarehouseV1DataValidationAction $dataValidation
    */
   public function setDataValidation(GoogleCloudContentwarehouseV1DataValidationAction $dataValidation)
   {
@@ -109,7 +121,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
     return $this->dataValidation;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1DeleteDocumentAction
+   * Action deleting the document.
+   *
+   * @param GoogleCloudContentwarehouseV1DeleteDocumentAction $deleteDocumentAction
    */
   public function setDeleteDocumentAction(GoogleCloudContentwarehouseV1DeleteDocumentAction $deleteDocumentAction)
   {
@@ -123,7 +137,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
     return $this->deleteDocumentAction;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1PublishAction
+   * Action publish to Pub/Sub operation.
+   *
+   * @param GoogleCloudContentwarehouseV1PublishAction $publishToPubSub
    */
   public function setPublishToPubSub(GoogleCloudContentwarehouseV1PublishAction $publishToPubSub)
   {
@@ -137,7 +153,9 @@ class GoogleCloudContentwarehouseV1Action extends \Google\Model
     return $this->publishToPubSub;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1RemoveFromFolderAction
+   * Action removing a document from a folder.
+   *
+   * @param GoogleCloudContentwarehouseV1RemoveFromFolderAction $removeFromFolderAction
    */
   public function setRemoveFromFolderAction(GoogleCloudContentwarehouseV1RemoveFromFolderAction $removeFromFolderAction)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Dataform;
 class DirectorySearchResult extends \Google\Model
 {
   /**
+   * File system path relative to the workspace root.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * File system path relative to the workspace root.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

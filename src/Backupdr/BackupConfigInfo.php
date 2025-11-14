@@ -19,6 +19,27 @@ namespace Google\Service\Backupdr;
 
 class BackupConfigInfo extends \Google\Model
 {
+  /**
+   * Status not set.
+   */
+  public const LAST_BACKUP_STATE_LAST_BACKUP_STATE_UNSPECIFIED = 'LAST_BACKUP_STATE_UNSPECIFIED';
+  /**
+   * The first backup has not yet completed
+   */
+  public const LAST_BACKUP_STATE_FIRST_BACKUP_PENDING = 'FIRST_BACKUP_PENDING';
+  /**
+   * The most recent backup was successful
+   */
+  public const LAST_BACKUP_STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The most recent backup failed
+   */
+  public const LAST_BACKUP_STATE_FAILED = 'FAILED';
+  /**
+   * The most recent backup could not be run/failed because of the lack of
+   * permissions
+   */
+  public const LAST_BACKUP_STATE_PERMISSION_DENIED = 'PERMISSION_DENIED';
   protected $backupApplianceBackupConfigType = BackupApplianceBackupConfig::class;
   protected $backupApplianceBackupConfigDataType = '';
   protected $gcpBackupConfigType = GcpBackupConfig::class;
@@ -26,16 +47,23 @@ class BackupConfigInfo extends \Google\Model
   protected $lastBackupErrorType = Status::class;
   protected $lastBackupErrorDataType = '';
   /**
+   * Output only. The status of the last backup to this BackupVault
+   *
    * @var string
    */
   public $lastBackupState;
   /**
+   * Output only. If the last backup were successful, this field has the
+   * consistency date.
+   *
    * @var string
    */
   public $lastSuccessfulBackupConsistencyTime;
 
   /**
-   * @param BackupApplianceBackupConfig
+   * Configuration for an application backed up by a Backup Appliance.
+   *
+   * @param BackupApplianceBackupConfig $backupApplianceBackupConfig
    */
   public function setBackupApplianceBackupConfig(BackupApplianceBackupConfig $backupApplianceBackupConfig)
   {
@@ -49,7 +77,9 @@ class BackupConfigInfo extends \Google\Model
     return $this->backupApplianceBackupConfig;
   }
   /**
-   * @param GcpBackupConfig
+   * Configuration for a Google Cloud resource.
+   *
+   * @param GcpBackupConfig $gcpBackupConfig
    */
   public function setGcpBackupConfig(GcpBackupConfig $gcpBackupConfig)
   {
@@ -63,7 +93,9 @@ class BackupConfigInfo extends \Google\Model
     return $this->gcpBackupConfig;
   }
   /**
-   * @param Status
+   * Output only. If the last backup failed, this field has the error message.
+   *
+   * @param Status $lastBackupError
    */
   public function setLastBackupError(Status $lastBackupError)
   {
@@ -77,21 +109,29 @@ class BackupConfigInfo extends \Google\Model
     return $this->lastBackupError;
   }
   /**
-   * @param string
+   * Output only. The status of the last backup to this BackupVault
+   *
+   * Accepted values: LAST_BACKUP_STATE_UNSPECIFIED, FIRST_BACKUP_PENDING,
+   * SUCCEEDED, FAILED, PERMISSION_DENIED
+   *
+   * @param self::LAST_BACKUP_STATE_* $lastBackupState
    */
   public function setLastBackupState($lastBackupState)
   {
     $this->lastBackupState = $lastBackupState;
   }
   /**
-   * @return string
+   * @return self::LAST_BACKUP_STATE_*
    */
   public function getLastBackupState()
   {
     return $this->lastBackupState;
   }
   /**
-   * @param string
+   * Output only. If the last backup were successful, this field has the
+   * consistency date.
+   *
+   * @param string $lastSuccessfulBackupConsistencyTime
    */
   public function setLastSuccessfulBackupConsistencyTime($lastSuccessfulBackupConsistencyTime)
   {

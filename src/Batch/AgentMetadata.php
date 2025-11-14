@@ -20,54 +20,81 @@ namespace Google\Service\Batch;
 class AgentMetadata extends \Google\Model
 {
   /**
+   * When the VM agent started. Use agent_startup_time instead.
+   *
+   * @deprecated
    * @var string
    */
   public $creationTime;
   /**
+   * Full name of the entity that created this vm. For MIG, this path is:
+   * projects/{project}/regions/{region}/InstanceGroupManagers/{igm} The value
+   * is retrieved from the vm metadata key of "created-by".
+   *
    * @var string
    */
   public $creator;
   /**
+   * image version for the VM that this agent is installed on.
+   *
    * @var string
    */
   public $imageVersion;
   /**
+   * GCP instance name (go/instance-name).
+   *
    * @var string
    */
   public $instance;
   /**
+   * GCP instance ID (go/instance-id).
+   *
    * @var string
    */
   public $instanceId;
   /**
+   * If the GCP instance has received preemption notice.
+   *
    * @var bool
    */
   public $instancePreemptionNoticeReceived;
   /**
+   * Optional. machine type of the VM
+   *
    * @var string
    */
   public $machineType;
   /**
+   * parsed contents of /etc/os-release
+   *
    * @var string[]
    */
   public $osRelease;
   /**
+   * agent binary version running on VM
+   *
    * @var string
    */
   public $version;
   /**
+   * Agent zone.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * When the VM agent started. Use agent_startup_time instead.
+   *
+   * @deprecated
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
     $this->creationTime = $creationTime;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getCreationTime()
@@ -75,7 +102,11 @@ class AgentMetadata extends \Google\Model
     return $this->creationTime;
   }
   /**
-   * @param string
+   * Full name of the entity that created this vm. For MIG, this path is:
+   * projects/{project}/regions/{region}/InstanceGroupManagers/{igm} The value
+   * is retrieved from the vm metadata key of "created-by".
+   *
+   * @param string $creator
    */
   public function setCreator($creator)
   {
@@ -89,7 +120,9 @@ class AgentMetadata extends \Google\Model
     return $this->creator;
   }
   /**
-   * @param string
+   * image version for the VM that this agent is installed on.
+   *
+   * @param string $imageVersion
    */
   public function setImageVersion($imageVersion)
   {
@@ -103,7 +136,9 @@ class AgentMetadata extends \Google\Model
     return $this->imageVersion;
   }
   /**
-   * @param string
+   * GCP instance name (go/instance-name).
+   *
+   * @param string $instance
    */
   public function setInstance($instance)
   {
@@ -117,7 +152,9 @@ class AgentMetadata extends \Google\Model
     return $this->instance;
   }
   /**
-   * @param string
+   * GCP instance ID (go/instance-id).
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -131,7 +168,9 @@ class AgentMetadata extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * @param bool
+   * If the GCP instance has received preemption notice.
+   *
+   * @param bool $instancePreemptionNoticeReceived
    */
   public function setInstancePreemptionNoticeReceived($instancePreemptionNoticeReceived)
   {
@@ -145,7 +184,9 @@ class AgentMetadata extends \Google\Model
     return $this->instancePreemptionNoticeReceived;
   }
   /**
-   * @param string
+   * Optional. machine type of the VM
+   *
+   * @param string $machineType
    */
   public function setMachineType($machineType)
   {
@@ -159,7 +200,9 @@ class AgentMetadata extends \Google\Model
     return $this->machineType;
   }
   /**
-   * @param string[]
+   * parsed contents of /etc/os-release
+   *
+   * @param string[] $osRelease
    */
   public function setOsRelease($osRelease)
   {
@@ -173,7 +216,9 @@ class AgentMetadata extends \Google\Model
     return $this->osRelease;
   }
   /**
-   * @param string
+   * agent binary version running on VM
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {
@@ -187,7 +232,9 @@ class AgentMetadata extends \Google\Model
     return $this->version;
   }
   /**
-   * @param string
+   * Agent zone.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

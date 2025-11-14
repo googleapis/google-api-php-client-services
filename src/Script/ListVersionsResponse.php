@@ -21,6 +21,9 @@ class ListVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'versions';
   /**
+   * The token use to fetch the next page of records. if not exist in the
+   * response, that means no more versions to list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListVersionsResponse extends \Google\Collection
   protected $versionsDataType = 'array';
 
   /**
-   * @param string
+   * The token use to fetch the next page of records. if not exist in the
+   * response, that means no more versions to list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListVersionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Version[]
+   * The list of versions.
+   *
+   * @param Version[] $versions
    */
   public function setVersions($versions)
   {

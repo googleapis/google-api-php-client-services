@@ -23,16 +23,22 @@ class ViewEntity extends \Google\Collection
   protected $constraintsType = ConstraintEntity::class;
   protected $constraintsDataType = 'array';
   /**
+   * Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
   /**
+   * The SQL code which creates the view.
+   *
    * @var string
    */
   public $sqlCode;
 
   /**
-   * @param ConstraintEntity[]
+   * View constraints.
+   *
+   * @param ConstraintEntity[] $constraints
    */
   public function setConstraints($constraints)
   {
@@ -46,7 +52,9 @@ class ViewEntity extends \Google\Collection
     return $this->constraints;
   }
   /**
-   * @param array[]
+   * Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {
@@ -60,7 +68,9 @@ class ViewEntity extends \Google\Collection
     return $this->customFeatures;
   }
   /**
-   * @param string
+   * The SQL code which creates the view.
+   *
+   * @param string $sqlCode
    */
   public function setSqlCode($sqlCode)
   {

@@ -24,7 +24,9 @@ class GoogleCloudDialogflowCxV3VersionVariants extends \Google\Collection
   protected $variantsDataType = 'array';
 
   /**
-   * @param GoogleCloudDialogflowCxV3VersionVariantsVariant[]
+   * A list of flow version variants.
+   *
+   * @param GoogleCloudDialogflowCxV3VersionVariantsVariant[] $variants
    */
   public function setVariants($variants)
   {

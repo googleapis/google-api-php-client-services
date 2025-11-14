@@ -20,6 +20,9 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1DeployFlowResponse extends \Google\Model
 {
   /**
+   * The name of the flow version deployment. Format:
+   * `projects//locations//agents//environments//deployments/`.
+   *
    * @var string
    */
   public $deployment;
@@ -27,7 +30,10 @@ class GoogleCloudDialogflowCxV3beta1DeployFlowResponse extends \Google\Model
   protected $environmentDataType = '';
 
   /**
-   * @param string
+   * The name of the flow version deployment. Format:
+   * `projects//locations//agents//environments//deployments/`.
+   *
+   * @param string $deployment
    */
   public function setDeployment($deployment)
   {
@@ -41,7 +47,9 @@ class GoogleCloudDialogflowCxV3beta1DeployFlowResponse extends \Google\Model
     return $this->deployment;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1Environment
+   * The updated environment where the flow is deployed.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1Environment $environment
    */
   public function setEnvironment(GoogleCloudDialogflowCxV3beta1Environment $environment)
   {

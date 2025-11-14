@@ -27,16 +27,25 @@ class QueryParameterType extends \Google\Collection
   protected $structTypesType = QueryParameterTypeStructTypes::class;
   protected $structTypesDataType = 'array';
   /**
+   * Optional. Precision (maximum number of total digits in base 10) for seconds
+   * of TIMESTAMP type. Possible values include: * 6 (Default, for TIMESTAMP
+   * type with microsecond precision) * 12 (For TIMESTAMP type with picosecond
+   * precision)
+   *
    * @var string
    */
   public $timestampPrecision;
   /**
+   * Required. The top level type of this field.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param QueryParameterType
+   * Optional. The type of the array's elements, if this is an array.
+   *
+   * @param QueryParameterType $arrayType
    */
   public function setArrayType(QueryParameterType $arrayType)
   {
@@ -50,7 +59,9 @@ class QueryParameterType extends \Google\Collection
     return $this->arrayType;
   }
   /**
-   * @param QueryParameterType
+   * Optional. The element type of the range, if this is a range.
+   *
+   * @param QueryParameterType $rangeElementType
    */
   public function setRangeElementType(QueryParameterType $rangeElementType)
   {
@@ -64,7 +75,10 @@ class QueryParameterType extends \Google\Collection
     return $this->rangeElementType;
   }
   /**
-   * @param QueryParameterTypeStructTypes[]
+   * Optional. The types of the fields of this struct, in order, if this is a
+   * struct.
+   *
+   * @param QueryParameterTypeStructTypes[] $structTypes
    */
   public function setStructTypes($structTypes)
   {
@@ -78,7 +92,12 @@ class QueryParameterType extends \Google\Collection
     return $this->structTypes;
   }
   /**
-   * @param string
+   * Optional. Precision (maximum number of total digits in base 10) for seconds
+   * of TIMESTAMP type. Possible values include: * 6 (Default, for TIMESTAMP
+   * type with microsecond precision) * 12 (For TIMESTAMP type with picosecond
+   * precision)
+   *
+   * @param string $timestampPrecision
    */
   public function setTimestampPrecision($timestampPrecision)
   {
@@ -92,7 +111,9 @@ class QueryParameterType extends \Google\Collection
     return $this->timestampPrecision;
   }
   /**
-   * @param string
+   * Required. The top level type of this field.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

@@ -23,7 +23,10 @@ class GoogleCloudContentwarehouseV1ListLinkedTargetsRequest extends \Google\Mode
   protected $requestMetadataDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1RequestMetadata
+   * The meta information collected about the document creator, used to enforce
+   * access control for the service.
+   *
+   * @param GoogleCloudContentwarehouseV1RequestMetadata $requestMetadata
    */
   public function setRequestMetadata(GoogleCloudContentwarehouseV1RequestMetadata $requestMetadata)
   {

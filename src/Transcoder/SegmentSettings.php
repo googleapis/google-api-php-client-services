@@ -20,16 +20,25 @@ namespace Google\Service\Transcoder;
 class SegmentSettings extends \Google\Model
 {
   /**
+   * Required. Create an individual segment file. The default is `false`.
+   *
    * @var bool
    */
   public $individualSegments;
   /**
+   * Duration of the segments in seconds. The default is `6.0s`. Note that
+   * `segmentDuration` must be greater than or equal to
+   * [`gopDuration`](#videostream), and `segmentDuration` must be divisible by
+   * [`gopDuration`](#videostream).
+   *
    * @var string
    */
   public $segmentDuration;
 
   /**
-   * @param bool
+   * Required. Create an individual segment file. The default is `false`.
+   *
+   * @param bool $individualSegments
    */
   public function setIndividualSegments($individualSegments)
   {
@@ -43,7 +52,12 @@ class SegmentSettings extends \Google\Model
     return $this->individualSegments;
   }
   /**
-   * @param string
+   * Duration of the segments in seconds. The default is `6.0s`. Note that
+   * `segmentDuration` must be greater than or equal to
+   * [`gopDuration`](#videostream), and `segmentDuration` must be divisible by
+   * [`gopDuration`](#videostream).
+   *
+   * @param string $segmentDuration
    */
   public function setSegmentDuration($segmentDuration)
   {

@@ -20,22 +20,35 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3EventHandler extends \Google\Model
 {
   /**
+   * Required. The name of the event to handle.
+   *
    * @var string
    */
   public $event;
   /**
+   * Output only. The unique identifier of this event handler.
+   *
    * @var string
    */
   public $name;
   /**
+   * The target flow to transition to. Format:
+   * `projects//locations//agents//flows/`.
+   *
    * @var string
    */
   public $targetFlow;
   /**
+   * The target page to transition to. Format:
+   * `projects//locations//agents//flows//pages/`.
+   *
    * @var string
    */
   public $targetPage;
   /**
+   * The target playbook to transition to. Format:
+   * `projects//locations//agents//playbooks/`.
+   *
    * @var string
    */
   public $targetPlaybook;
@@ -43,7 +56,9 @@ class GoogleCloudDialogflowCxV3EventHandler extends \Google\Model
   protected $triggerFulfillmentDataType = '';
 
   /**
-   * @param string
+   * Required. The name of the event to handle.
+   *
+   * @param string $event
    */
   public function setEvent($event)
   {
@@ -57,7 +72,9 @@ class GoogleCloudDialogflowCxV3EventHandler extends \Google\Model
     return $this->event;
   }
   /**
-   * @param string
+   * Output only. The unique identifier of this event handler.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -71,7 +88,10 @@ class GoogleCloudDialogflowCxV3EventHandler extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The target flow to transition to. Format:
+   * `projects//locations//agents//flows/`.
+   *
+   * @param string $targetFlow
    */
   public function setTargetFlow($targetFlow)
   {
@@ -85,7 +105,10 @@ class GoogleCloudDialogflowCxV3EventHandler extends \Google\Model
     return $this->targetFlow;
   }
   /**
-   * @param string
+   * The target page to transition to. Format:
+   * `projects//locations//agents//flows//pages/`.
+   *
+   * @param string $targetPage
    */
   public function setTargetPage($targetPage)
   {
@@ -99,7 +122,10 @@ class GoogleCloudDialogflowCxV3EventHandler extends \Google\Model
     return $this->targetPage;
   }
   /**
-   * @param string
+   * The target playbook to transition to. Format:
+   * `projects//locations//agents//playbooks/`.
+   *
+   * @param string $targetPlaybook
    */
   public function setTargetPlaybook($targetPlaybook)
   {
@@ -113,7 +139,11 @@ class GoogleCloudDialogflowCxV3EventHandler extends \Google\Model
     return $this->targetPlaybook;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Fulfillment
+   * The fulfillment to call when the event occurs. Handling webhook errors with
+   * a fulfillment enabled with webhook could cause infinite loop. It is invalid
+   * to specify such fulfillment for a handler handling webhooks.
+   *
+   * @param GoogleCloudDialogflowCxV3Fulfillment $triggerFulfillment
    */
   public function setTriggerFulfillment(GoogleCloudDialogflowCxV3Fulfillment $triggerFulfillment)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Monitoring;
 class LatencyCriteria extends \Google\Model
 {
   /**
+   * Good service is defined to be the count of requests made to this service
+   * that return in no more than threshold.
+   *
    * @var string
    */
   public $threshold;
 
   /**
-   * @param string
+   * Good service is defined to be the count of requests made to this service
+   * that return in no more than threshold.
+   *
+   * @param string $threshold
    */
   public function setThreshold($threshold)
   {

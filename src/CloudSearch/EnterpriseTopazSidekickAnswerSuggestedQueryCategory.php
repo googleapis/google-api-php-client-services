@@ -19,36 +19,64 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickAnswerSuggestedQueryCategory extends \Google\Collection
 {
+  /**
+   * Unknown.
+   */
+  public const CATEGORY_UNKNOWN = 'UNKNOWN';
+  /**
+   * Calendar based queries (e.g. "my agenda for tomorrow").
+   */
+  public const CATEGORY_CALENDAR = 'CALENDAR';
+  /**
+   * Document based queries (e.g. "files shared with me").
+   */
+  public const CATEGORY_DOCUMENT = 'DOCUMENT';
+  /**
+   * People based queries (e.g. "what is x's email address?").
+   */
+  public const CATEGORY_PEOPLE = 'PEOPLE';
   protected $collection_key = 'query';
   /**
+   * The query list category.
+   *
    * @var string
    */
   public $category;
   /**
+   * Whether this category is enabled.
+   *
    * @var bool
    */
   public $isEnabled;
   /**
+   * List of suggested queries to show the user.
+   *
    * @var string[]
    */
   public $query;
 
   /**
-   * @param string
+   * The query list category.
+   *
+   * Accepted values: UNKNOWN, CALENDAR, DOCUMENT, PEOPLE
+   *
+   * @param self::CATEGORY_* $category
    */
   public function setCategory($category)
   {
     $this->category = $category;
   }
   /**
-   * @return string
+   * @return self::CATEGORY_*
    */
   public function getCategory()
   {
     return $this->category;
   }
   /**
-   * @param bool
+   * Whether this category is enabled.
+   *
+   * @param bool $isEnabled
    */
   public function setIsEnabled($isEnabled)
   {
@@ -62,7 +90,9 @@ class EnterpriseTopazSidekickAnswerSuggestedQueryCategory extends \Google\Collec
     return $this->isEnabled;
   }
   /**
-   * @param string[]
+   * List of suggested queries to show the user.
+   *
+   * @param string[] $query
    */
   public function setQuery($query)
   {

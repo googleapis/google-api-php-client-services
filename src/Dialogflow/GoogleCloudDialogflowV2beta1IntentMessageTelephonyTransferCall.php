@@ -20,12 +20,20 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall extends \Google\Model
 {
   /**
+   * Required. The phone number to transfer the call to in [E.164
+   * format](https://en.wikipedia.org/wiki/E.164). We currently only allow
+   * transferring to US numbers (+1xxxyyyzzzz).
+   *
    * @var string
    */
   public $phoneNumber;
 
   /**
-   * @param string
+   * Required. The phone number to transfer the call to in [E.164
+   * format](https://en.wikipedia.org/wiki/E.164). We currently only allow
+   * transferring to US numbers (+1xxxyyyzzzz).
+   *
+   * @param string $phoneNumber
    */
   public function setPhoneNumber($phoneNumber)
   {

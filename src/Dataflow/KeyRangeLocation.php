@@ -20,28 +20,49 @@ namespace Google\Service\Dataflow;
 class KeyRangeLocation extends \Google\Model
 {
   /**
+   * The name of the data disk where data for this range is stored. This name is
+   * local to the Google Cloud Platform project and uniquely identifies the disk
+   * within that project, for example
+   * "myproject-1014-104817-4c2-harness-0-disk-1".
+   *
    * @var string
    */
   public $dataDisk;
   /**
+   * The physical location of this range assignment to be used for streaming
+   * computation cross-worker message delivery.
+   *
    * @var string
    */
   public $deliveryEndpoint;
   /**
+   * DEPRECATED. The location of the persistent state for this range, as a
+   * persistent directory in the worker local filesystem.
+   *
+   * @deprecated
    * @var string
    */
   public $deprecatedPersistentDirectory;
   /**
+   * The end (exclusive) of the key range.
+   *
    * @var string
    */
   public $end;
   /**
+   * The start (inclusive) of the key range.
+   *
    * @var string
    */
   public $start;
 
   /**
-   * @param string
+   * The name of the data disk where data for this range is stored. This name is
+   * local to the Google Cloud Platform project and uniquely identifies the disk
+   * within that project, for example
+   * "myproject-1014-104817-4c2-harness-0-disk-1".
+   *
+   * @param string $dataDisk
    */
   public function setDataDisk($dataDisk)
   {
@@ -55,7 +76,10 @@ class KeyRangeLocation extends \Google\Model
     return $this->dataDisk;
   }
   /**
-   * @param string
+   * The physical location of this range assignment to be used for streaming
+   * computation cross-worker message delivery.
+   *
+   * @param string $deliveryEndpoint
    */
   public function setDeliveryEndpoint($deliveryEndpoint)
   {
@@ -69,13 +93,18 @@ class KeyRangeLocation extends \Google\Model
     return $this->deliveryEndpoint;
   }
   /**
-   * @param string
+   * DEPRECATED. The location of the persistent state for this range, as a
+   * persistent directory in the worker local filesystem.
+   *
+   * @deprecated
+   * @param string $deprecatedPersistentDirectory
    */
   public function setDeprecatedPersistentDirectory($deprecatedPersistentDirectory)
   {
     $this->deprecatedPersistentDirectory = $deprecatedPersistentDirectory;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getDeprecatedPersistentDirectory()
@@ -83,7 +112,9 @@ class KeyRangeLocation extends \Google\Model
     return $this->deprecatedPersistentDirectory;
   }
   /**
-   * @param string
+   * The end (exclusive) of the key range.
+   *
+   * @param string $end
    */
   public function setEnd($end)
   {
@@ -97,7 +128,9 @@ class KeyRangeLocation extends \Google\Model
     return $this->end;
   }
   /**
-   * @param string
+   * The start (inclusive) of the key range.
+   *
+   * @param string $start
    */
   public function setStart($start)
   {

@@ -19,8 +19,19 @@ namespace Google\Service\CloudSearch;
 
 class CompositeFilter extends \Google\Collection
 {
+  /**
+   * Logical operators, which can only be applied to sub filters.
+   */
+  public const LOGIC_OPERATOR_AND = 'AND';
+  public const LOGIC_OPERATOR_OR = 'OR';
+  /**
+   * NOT can only be applied on a single sub filter.
+   */
+  public const LOGIC_OPERATOR_NOT = 'NOT';
   protected $collection_key = 'subFilters';
   /**
+   * The logic operator of the sub filter.
+   *
    * @var string
    */
   public $logicOperator;
@@ -28,21 +39,27 @@ class CompositeFilter extends \Google\Collection
   protected $subFiltersDataType = 'array';
 
   /**
-   * @param string
+   * The logic operator of the sub filter.
+   *
+   * Accepted values: AND, OR, NOT
+   *
+   * @param self::LOGIC_OPERATOR_* $logicOperator
    */
   public function setLogicOperator($logicOperator)
   {
     $this->logicOperator = $logicOperator;
   }
   /**
-   * @return string
+   * @return self::LOGIC_OPERATOR_*
    */
   public function getLogicOperator()
   {
     return $this->logicOperator;
   }
   /**
-   * @param Filter[]
+   * Sub filters.
+   *
+   * @param Filter[] $subFilters
    */
   public function setSubFilters($subFilters)
   {

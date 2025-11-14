@@ -19,18 +19,36 @@ namespace Google\Service\ServiceManagement;
 
 class Type extends \Google\Collection
 {
+  /**
+   * Syntax `proto2`.
+   */
+  public const SYNTAX_SYNTAX_PROTO2 = 'SYNTAX_PROTO2';
+  /**
+   * Syntax `proto3`.
+   */
+  public const SYNTAX_SYNTAX_PROTO3 = 'SYNTAX_PROTO3';
+  /**
+   * Syntax `editions`.
+   */
+  public const SYNTAX_SYNTAX_EDITIONS = 'SYNTAX_EDITIONS';
   protected $collection_key = 'options';
   /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   *
    * @var string
    */
   public $edition;
   protected $fieldsType = Field::class;
   protected $fieldsDataType = 'array';
   /**
+   * The fully qualified message name.
+   *
    * @var string
    */
   public $name;
   /**
+   * The list of types appearing in `oneof` definitions in this type.
+   *
    * @var string[]
    */
   public $oneofs;
@@ -39,12 +57,16 @@ class Type extends \Google\Collection
   protected $sourceContextType = SourceContext::class;
   protected $sourceContextDataType = '';
   /**
+   * The source syntax.
+   *
    * @var string
    */
   public $syntax;
 
   /**
-   * @param string
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   *
+   * @param string $edition
    */
   public function setEdition($edition)
   {
@@ -58,7 +80,9 @@ class Type extends \Google\Collection
     return $this->edition;
   }
   /**
-   * @param Field[]
+   * The list of fields.
+   *
+   * @param Field[] $fields
    */
   public function setFields($fields)
   {
@@ -72,7 +96,9 @@ class Type extends \Google\Collection
     return $this->fields;
   }
   /**
-   * @param string
+   * The fully qualified message name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -86,7 +112,9 @@ class Type extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * The list of types appearing in `oneof` definitions in this type.
+   *
+   * @param string[] $oneofs
    */
   public function setOneofs($oneofs)
   {
@@ -100,7 +128,9 @@ class Type extends \Google\Collection
     return $this->oneofs;
   }
   /**
-   * @param Option[]
+   * The protocol buffer options.
+   *
+   * @param Option[] $options
    */
   public function setOptions($options)
   {
@@ -114,7 +144,9 @@ class Type extends \Google\Collection
     return $this->options;
   }
   /**
-   * @param SourceContext
+   * The source context.
+   *
+   * @param SourceContext $sourceContext
    */
   public function setSourceContext(SourceContext $sourceContext)
   {
@@ -128,14 +160,18 @@ class Type extends \Google\Collection
     return $this->sourceContext;
   }
   /**
-   * @param string
+   * The source syntax.
+   *
+   * Accepted values: SYNTAX_PROTO2, SYNTAX_PROTO3, SYNTAX_EDITIONS
+   *
+   * @param self::SYNTAX_* $syntax
    */
   public function setSyntax($syntax)
   {
     $this->syntax = $syntax;
   }
   /**
-   * @return string
+   * @return self::SYNTAX_*
    */
   public function getSyntax()
   {

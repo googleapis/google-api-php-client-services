@@ -20,24 +20,35 @@ namespace Google\Service\CloudAsset;
 class RelationshipAttributes extends \Google\Model
 {
   /**
+   * The detail of the relationship, e.g. `contains`, `attaches`
+   *
    * @var string
    */
   public $action;
   /**
+   * The source asset type. Example: `compute.googleapis.com/Instance`
+   *
    * @var string
    */
   public $sourceResourceType;
   /**
+   * The target asset type. Example: `compute.googleapis.com/Disk`
+   *
    * @var string
    */
   public $targetResourceType;
   /**
+   * The unique identifier of the relationship type. Example:
+   * `INSTANCE_TO_INSTANCEGROUP`
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The detail of the relationship, e.g. `contains`, `attaches`
+   *
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -51,7 +62,9 @@ class RelationshipAttributes extends \Google\Model
     return $this->action;
   }
   /**
-   * @param string
+   * The source asset type. Example: `compute.googleapis.com/Instance`
+   *
+   * @param string $sourceResourceType
    */
   public function setSourceResourceType($sourceResourceType)
   {
@@ -65,7 +78,9 @@ class RelationshipAttributes extends \Google\Model
     return $this->sourceResourceType;
   }
   /**
-   * @param string
+   * The target asset type. Example: `compute.googleapis.com/Disk`
+   *
+   * @param string $targetResourceType
    */
   public function setTargetResourceType($targetResourceType)
   {
@@ -79,7 +94,10 @@ class RelationshipAttributes extends \Google\Model
     return $this->targetResourceType;
   }
   /**
-   * @param string
+   * The unique identifier of the relationship type. Example:
+   * `INSTANCE_TO_INSTANCEGROUP`
+   *
+   * @param string $type
    */
   public function setType($type)
   {

@@ -23,12 +23,18 @@ class SearchCaseClassificationsResponse extends \Google\Collection
   protected $caseClassificationsType = CaseClassification::class;
   protected $caseClassificationsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Set this in the `page_token`
+   * field of subsequent `caseClassifications.list` requests. If unspecified,
+   * there are no more results to retrieve.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CaseClassification[]
+   * The classifications retrieved.
+   *
+   * @param CaseClassification[] $caseClassifications
    */
   public function setCaseClassifications($caseClassifications)
   {
@@ -42,7 +48,11 @@ class SearchCaseClassificationsResponse extends \Google\Collection
     return $this->caseClassifications;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Set this in the `page_token`
+   * field of subsequent `caseClassifications.list` requests. If unspecified,
+   * there are no more results to retrieve.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

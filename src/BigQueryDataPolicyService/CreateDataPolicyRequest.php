@@ -22,12 +22,19 @@ class CreateDataPolicyRequest extends \Google\Model
   protected $dataPolicyType = DataPolicy::class;
   protected $dataPolicyDataType = '';
   /**
+   * Required. User-assigned (human readable) ID of the data policy that needs
+   * to be unique within a project. Used as {data_policy_id} in part of the
+   * resource name.
+   *
    * @var string
    */
   public $dataPolicyId;
 
   /**
-   * @param DataPolicy
+   * Required. The data policy to create. The `name` field does not need to be
+   * provided for the data policy creation.
+   *
+   * @param DataPolicy $dataPolicy
    */
   public function setDataPolicy(DataPolicy $dataPolicy)
   {
@@ -41,7 +48,11 @@ class CreateDataPolicyRequest extends \Google\Model
     return $this->dataPolicy;
   }
   /**
-   * @param string
+   * Required. User-assigned (human readable) ID of the data policy that needs
+   * to be unique within a project. Used as {data_policy_id} in part of the
+   * resource name.
+   *
+   * @param string $dataPolicyId
    */
   public function setDataPolicyId($dataPolicyId)
   {

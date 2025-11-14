@@ -24,7 +24,9 @@ class UserManagedStatus extends \Google\Collection
   protected $replicasDataType = 'array';
 
   /**
-   * @param ReplicaStatus[]
+   * Output only. The list of replica statuses for the SecretVersion.
+   *
+   * @param ReplicaStatus[] $replicas
    */
   public function setReplicas($replicas)
   {

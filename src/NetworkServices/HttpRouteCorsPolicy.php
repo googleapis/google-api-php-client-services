@@ -21,40 +21,68 @@ class HttpRouteCorsPolicy extends \Google\Collection
 {
   protected $collection_key = 'exposeHeaders';
   /**
+   * In response to a preflight request, setting this to true indicates that the
+   * actual request can include user credentials. This translates to the Access-
+   * Control-Allow-Credentials header. Default value is false.
+   *
    * @var bool
    */
   public $allowCredentials;
   /**
+   * Specifies the content for Access-Control-Allow-Headers header.
+   *
    * @var string[]
    */
   public $allowHeaders;
   /**
+   * Specifies the content for Access-Control-Allow-Methods header.
+   *
    * @var string[]
    */
   public $allowMethods;
   /**
+   * Specifies the regular expression patterns that match allowed origins. For
+   * regular expression grammar, please see
+   * https://github.com/google/re2/wiki/Syntax.
+   *
    * @var string[]
    */
   public $allowOriginRegexes;
   /**
+   * Specifies the list of origins that will be allowed to do CORS requests. An
+   * origin is allowed if it matches either an item in allow_origins or an item
+   * in allow_origin_regexes.
+   *
    * @var string[]
    */
   public $allowOrigins;
   /**
+   * If true, the CORS policy is disabled. The default value is false, which
+   * indicates that the CORS policy is in effect.
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * Specifies the content for Access-Control-Expose-Headers header.
+   *
    * @var string[]
    */
   public $exposeHeaders;
   /**
+   * Specifies how long result of a preflight request can be cached in seconds.
+   * This translates to the Access-Control-Max-Age header.
+   *
    * @var string
    */
   public $maxAge;
 
   /**
-   * @param bool
+   * In response to a preflight request, setting this to true indicates that the
+   * actual request can include user credentials. This translates to the Access-
+   * Control-Allow-Credentials header. Default value is false.
+   *
+   * @param bool $allowCredentials
    */
   public function setAllowCredentials($allowCredentials)
   {
@@ -68,7 +96,9 @@ class HttpRouteCorsPolicy extends \Google\Collection
     return $this->allowCredentials;
   }
   /**
-   * @param string[]
+   * Specifies the content for Access-Control-Allow-Headers header.
+   *
+   * @param string[] $allowHeaders
    */
   public function setAllowHeaders($allowHeaders)
   {
@@ -82,7 +112,9 @@ class HttpRouteCorsPolicy extends \Google\Collection
     return $this->allowHeaders;
   }
   /**
-   * @param string[]
+   * Specifies the content for Access-Control-Allow-Methods header.
+   *
+   * @param string[] $allowMethods
    */
   public function setAllowMethods($allowMethods)
   {
@@ -96,7 +128,11 @@ class HttpRouteCorsPolicy extends \Google\Collection
     return $this->allowMethods;
   }
   /**
-   * @param string[]
+   * Specifies the regular expression patterns that match allowed origins. For
+   * regular expression grammar, please see
+   * https://github.com/google/re2/wiki/Syntax.
+   *
+   * @param string[] $allowOriginRegexes
    */
   public function setAllowOriginRegexes($allowOriginRegexes)
   {
@@ -110,7 +146,11 @@ class HttpRouteCorsPolicy extends \Google\Collection
     return $this->allowOriginRegexes;
   }
   /**
-   * @param string[]
+   * Specifies the list of origins that will be allowed to do CORS requests. An
+   * origin is allowed if it matches either an item in allow_origins or an item
+   * in allow_origin_regexes.
+   *
+   * @param string[] $allowOrigins
    */
   public function setAllowOrigins($allowOrigins)
   {
@@ -124,7 +164,10 @@ class HttpRouteCorsPolicy extends \Google\Collection
     return $this->allowOrigins;
   }
   /**
-   * @param bool
+   * If true, the CORS policy is disabled. The default value is false, which
+   * indicates that the CORS policy is in effect.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -138,7 +181,9 @@ class HttpRouteCorsPolicy extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * @param string[]
+   * Specifies the content for Access-Control-Expose-Headers header.
+   *
+   * @param string[] $exposeHeaders
    */
   public function setExposeHeaders($exposeHeaders)
   {
@@ -152,7 +197,10 @@ class HttpRouteCorsPolicy extends \Google\Collection
     return $this->exposeHeaders;
   }
   /**
-   * @param string
+   * Specifies how long result of a preflight request can be cached in seconds.
+   * This translates to the Access-Control-Max-Age header.
+   *
+   * @param string $maxAge
    */
   public function setMaxAge($maxAge)
   {

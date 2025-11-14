@@ -20,12 +20,16 @@ namespace Google\Service\Pubsub;
 class TextFormat extends \Google\Model
 {
   /**
+   * Optional. When unset, '\n' is used.
+   *
    * @var string
    */
   public $delimiter;
 
   /**
-   * @param string
+   * Optional. When unset, '\n' is used.
+   *
+   * @param string $delimiter
    */
   public function setDelimiter($delimiter)
   {

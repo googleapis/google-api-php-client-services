@@ -25,7 +25,9 @@ class EncryptionInfo extends \Google\Model
   protected $gcpWrappedKeyInfoDataType = '';
 
   /**
-   * @param AwsWrappedKeyInfo
+   * Amazon Web Services wrapped key information.
+   *
+   * @param AwsWrappedKeyInfo $awsWrappedKeyInfo
    */
   public function setAwsWrappedKeyInfo(AwsWrappedKeyInfo $awsWrappedKeyInfo)
   {
@@ -39,7 +41,9 @@ class EncryptionInfo extends \Google\Model
     return $this->awsWrappedKeyInfo;
   }
   /**
-   * @param GcpWrappedKeyInfo
+   * Google Cloud Platform wrapped key information.
+   *
+   * @param GcpWrappedKeyInfo $gcpWrappedKeyInfo
    */
   public function setGcpWrappedKeyInfo(GcpWrappedKeyInfo $gcpWrappedKeyInfo)
   {

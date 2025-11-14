@@ -20,12 +20,18 @@ namespace Google\Service\ContainerAnalysis;
 class Hint extends \Google\Model
 {
   /**
+   * Required. The human readable name of this attestation authority, for
+   * example "qa".
+   *
    * @var string
    */
   public $humanReadableName;
 
   /**
-   * @param string
+   * Required. The human readable name of this attestation authority, for
+   * example "qa".
+   *
+   * @param string $humanReadableName
    */
   public function setHumanReadableName($humanReadableName)
   {

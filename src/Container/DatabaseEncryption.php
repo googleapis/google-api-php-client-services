@@ -19,42 +19,106 @@ namespace Google\Service\Container;
 
 class DatabaseEncryption extends \Google\Collection
 {
+  /**
+   * Should never be set
+   */
+  public const CURRENT_STATE_CURRENT_STATE_UNSPECIFIED = 'CURRENT_STATE_UNSPECIFIED';
+  /**
+   * Secrets in etcd are encrypted.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_ENCRYPTED = 'CURRENT_STATE_ENCRYPTED';
+  /**
+   * Secrets in etcd are stored in plain text (at etcd level) - this is
+   * unrelated to Compute Engine level full disk encryption.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_DECRYPTED = 'CURRENT_STATE_DECRYPTED';
+  /**
+   * Encryption (or re-encryption with a different CloudKMS key) of Secrets is
+   * in progress.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_ENCRYPTION_PENDING = 'CURRENT_STATE_ENCRYPTION_PENDING';
+  /**
+   * Encryption (or re-encryption with a different CloudKMS key) of Secrets in
+   * etcd encountered an error.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_ENCRYPTION_ERROR = 'CURRENT_STATE_ENCRYPTION_ERROR';
+  /**
+   * De-crypting Secrets to plain text in etcd is in progress.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_DECRYPTION_PENDING = 'CURRENT_STATE_DECRYPTION_PENDING';
+  /**
+   * De-crypting Secrets to plain text in etcd encountered an error.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_DECRYPTION_ERROR = 'CURRENT_STATE_DECRYPTION_ERROR';
+  /**
+   * Should never be set
+   */
+  public const STATE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Secrets in etcd are encrypted.
+   */
+  public const STATE_ENCRYPTED = 'ENCRYPTED';
+  /**
+   * Secrets in etcd are stored in plain text (at etcd level) - this is
+   * unrelated to Compute Engine level full disk encryption.
+   */
+  public const STATE_DECRYPTED = 'DECRYPTED';
   protected $collection_key = 'lastOperationErrors';
   /**
+   * Output only. The current state of etcd encryption.
+   *
    * @var string
    */
   public $currentState;
   /**
+   * Output only. Keys in use by the cluster for decrypting existing objects, in
+   * addition to the key in `key_name`. Each item is a CloudKMS key resource.
+   *
    * @var string[]
    */
   public $decryptionKeys;
   /**
+   * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex.
+   * projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+   *
    * @var string
    */
   public $keyName;
   protected $lastOperationErrorsType = OperationError::class;
   protected $lastOperationErrorsDataType = 'array';
   /**
+   * The desired state of etcd encryption.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The current state of etcd encryption.
+   *
+   * Accepted values: CURRENT_STATE_UNSPECIFIED, CURRENT_STATE_ENCRYPTED,
+   * CURRENT_STATE_DECRYPTED, CURRENT_STATE_ENCRYPTION_PENDING,
+   * CURRENT_STATE_ENCRYPTION_ERROR, CURRENT_STATE_DECRYPTION_PENDING,
+   * CURRENT_STATE_DECRYPTION_ERROR
+   *
+   * @param self::CURRENT_STATE_* $currentState
    */
   public function setCurrentState($currentState)
   {
     $this->currentState = $currentState;
   }
   /**
-   * @return string
+   * @return self::CURRENT_STATE_*
    */
   public function getCurrentState()
   {
     return $this->currentState;
   }
   /**
-   * @param string[]
+   * Output only. Keys in use by the cluster for decrypting existing objects, in
+   * addition to the key in `key_name`. Each item is a CloudKMS key resource.
+   *
+   * @param string[] $decryptionKeys
    */
   public function setDecryptionKeys($decryptionKeys)
   {
@@ -68,7 +132,10 @@ class DatabaseEncryption extends \Google\Collection
     return $this->decryptionKeys;
   }
   /**
-   * @param string
+   * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex.
+   * projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+   *
+   * @param string $keyName
    */
   public function setKeyName($keyName)
   {
@@ -82,7 +149,10 @@ class DatabaseEncryption extends \Google\Collection
     return $this->keyName;
   }
   /**
-   * @param OperationError[]
+   * Output only. Records errors seen during DatabaseEncryption update
+   * operations.
+   *
+   * @param OperationError[] $lastOperationErrors
    */
   public function setLastOperationErrors($lastOperationErrors)
   {
@@ -96,14 +166,18 @@ class DatabaseEncryption extends \Google\Collection
     return $this->lastOperationErrors;
   }
   /**
-   * @param string
+   * The desired state of etcd encryption.
+   *
+   * Accepted values: UNKNOWN, ENCRYPTED, DECRYPTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

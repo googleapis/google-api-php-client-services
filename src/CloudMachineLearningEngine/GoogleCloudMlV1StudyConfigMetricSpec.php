@@ -20,30 +20,52 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1StudyConfigMetricSpec extends \Google\Model
 {
   /**
+   * Goal Type will default to maximize.
+   */
+  public const GOAL_GOAL_TYPE_UNSPECIFIED = 'GOAL_TYPE_UNSPECIFIED';
+  /**
+   * Maximize the goal metric.
+   */
+  public const GOAL_MAXIMIZE = 'MAXIMIZE';
+  /**
+   * Minimize the goal metric.
+   */
+  public const GOAL_MINIMIZE = 'MINIMIZE';
+  /**
+   * Required. The optimization goal of the metric.
+   *
    * @var string
    */
   public $goal;
   /**
+   * Required. The name of the metric.
+   *
    * @var string
    */
   public $metric;
 
   /**
-   * @param string
+   * Required. The optimization goal of the metric.
+   *
+   * Accepted values: GOAL_TYPE_UNSPECIFIED, MAXIMIZE, MINIMIZE
+   *
+   * @param self::GOAL_* $goal
    */
   public function setGoal($goal)
   {
     $this->goal = $goal;
   }
   /**
-   * @return string
+   * @return self::GOAL_*
    */
   public function getGoal()
   {
     return $this->goal;
   }
   /**
-   * @param string
+   * Required. The name of the metric.
+   *
+   * @param string $metric
    */
   public function setMetric($metric)
   {

@@ -19,108 +19,390 @@ namespace Google\Service\MyBusinessLodging;
 
 class Services extends \Google\Collection
 {
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const BAGGAGE_STORAGE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const BAGGAGE_STORAGE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const BAGGAGE_STORAGE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const BAGGAGE_STORAGE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const CONCIERGE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const CONCIERGE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const CONCIERGE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const CONCIERGE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const CONVENIENCE_STORE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const CONVENIENCE_STORE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const CONVENIENCE_STORE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const CONVENIENCE_STORE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const CURRENCY_EXCHANGE_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const CURRENCY_EXCHANGE_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const CURRENCY_EXCHANGE_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const CURRENCY_EXCHANGE_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const ELEVATOR_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const ELEVATOR_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const ELEVATOR_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const ELEVATOR_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const FRONT_DESK_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const FRONT_DESK_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const FRONT_DESK_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const FRONT_DESK_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const FULL_SERVICE_LAUNDRY_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const FULL_SERVICE_LAUNDRY_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const FULL_SERVICE_LAUNDRY_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const FULL_SERVICE_LAUNDRY_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const GIFT_SHOP_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const GIFT_SHOP_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const GIFT_SHOP_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const GIFT_SHOP_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const SELF_SERVICE_LAUNDRY_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const SELF_SERVICE_LAUNDRY_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const SELF_SERVICE_LAUNDRY_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const SELF_SERVICE_LAUNDRY_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const SOCIAL_HOUR_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const SOCIAL_HOUR_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const SOCIAL_HOUR_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const SOCIAL_HOUR_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const TWENTY_FOUR_HOUR_FRONT_DESK_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const TWENTY_FOUR_HOUR_FRONT_DESK_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const TWENTY_FOUR_HOUR_FRONT_DESK_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const TWENTY_FOUR_HOUR_FRONT_DESK_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const WAKE_UP_CALLS_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const WAKE_UP_CALLS_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const WAKE_UP_CALLS_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const WAKE_UP_CALLS_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
   protected $collection_key = 'languagesSpoken';
   /**
+   * Baggage storage. A provision for guests to leave their bags at the hotel
+   * when they arrive for their stay before the official check-in time. May or
+   * may not apply for guests who wish to leave their bags after check-out and
+   * before departing the locale. Also known as bag dropoff.
+   *
    * @var bool
    */
   public $baggageStorage;
   /**
+   * Baggage storage exception.
+   *
    * @var string
    */
   public $baggageStorageException;
   /**
+   * Concierge. Hotel staff member(s) responsible for facilitating an easy,
+   * comfortable stay through making reservations for meals, sourcing theater
+   * tickets, arranging tours, finding a doctor, making recommendations, and
+   * answering questions.
+   *
    * @var bool
    */
   public $concierge;
   /**
+   * Concierge exception.
+   *
    * @var string
    */
   public $conciergeException;
   /**
+   * Convenience store. A shop at the hotel primarily selling snacks, drinks,
+   * non-prescription medicines, health and beauty aids, magazines and
+   * newspapers.
+   *
    * @var bool
    */
   public $convenienceStore;
   /**
+   * Convenience store exception.
+   *
    * @var string
    */
   public $convenienceStoreException;
   /**
+   * Currency exchange. A staff member or automated machine tasked with the
+   * transaction of providing the native currency of the hotel's locale in
+   * exchange for the foreign currency provided by a guest.
+   *
    * @var bool
    */
   public $currencyExchange;
   /**
+   * Currency exchange exception.
+   *
    * @var string
    */
   public $currencyExchangeException;
   /**
+   * Elevator. A passenger elevator that transports guests from one story to
+   * another. Also known as lift.
+   *
    * @var bool
    */
   public $elevator;
   /**
+   * Elevator exception.
+   *
    * @var string
    */
   public $elevatorException;
   /**
+   * Front desk. A counter or desk in the lobby or the immediate interior of the
+   * hotel where a member of the staff greets guests and processes the
+   * information related to their stay (including check-in and check-out). May
+   * or may not be manned and open 24/7.
+   *
    * @var bool
    */
   public $frontDesk;
   /**
+   * Front desk exception.
+   *
    * @var string
    */
   public $frontDeskException;
   /**
+   * Full service laundry. Laundry and dry cleaning facilitated and handled by
+   * the hotel on behalf of the guest. Does not include the provision for guests
+   * to do their own laundry in on-site machines.
+   *
    * @var bool
    */
   public $fullServiceLaundry;
   /**
+   * Full service laundry exception.
+   *
    * @var string
    */
   public $fullServiceLaundryException;
   /**
+   * Gift shop. An on-site store primarily selling souvenirs, mementos and other
+   * gift items. May or may not also sell sundries, magazines and newspapers,
+   * clothing, or snacks.
+   *
    * @var bool
    */
   public $giftShop;
   /**
+   * Gift shop exception.
+   *
    * @var string
    */
   public $giftShopException;
   protected $languagesSpokenType = LanguageSpoken::class;
   protected $languagesSpokenDataType = 'array';
   /**
+   * Self service laundry. On-site clothes washers and dryers accessible to
+   * guests for the purpose of washing and drying their own clothes. May or may
+   * not require payment to use the machines.
+   *
    * @var bool
    */
   public $selfServiceLaundry;
   /**
+   * Self service laundry exception.
+   *
    * @var string
    */
   public $selfServiceLaundryException;
   /**
+   * Social hour. A reception with complimentary soft drinks, tea, coffee, wine
+   * and/or cocktails in the afternoon or evening. Can be hosted by hotel staff
+   * or guests may serve themselves. Also known as wine hour. The availability
+   * of coffee/tea in the lobby throughout the day does not constitute a social
+   * or wine hour.
+   *
    * @var bool
    */
   public $socialHour;
   /**
+   * Social hour exception.
+   *
    * @var string
    */
   public $socialHourException;
   /**
+   * 24hr front desk. Front desk is staffed 24 hours a day.
+   *
    * @var bool
    */
   public $twentyFourHourFrontDesk;
   /**
+   * 24hr front desk exception.
+   *
    * @var string
    */
   public $twentyFourHourFrontDeskException;
   /**
+   * Wake up calls. By direction of the guest, a hotel staff member will phone
+   * the guest unit at the requested hour. Also known as morning call.
+   *
    * @var bool
    */
   public $wakeUpCalls;
   /**
+   * Wake up calls exception.
+   *
    * @var string
    */
   public $wakeUpCallsException;
 
   /**
-   * @param bool
+   * Baggage storage. A provision for guests to leave their bags at the hotel
+   * when they arrive for their stay before the official check-in time. May or
+   * may not apply for guests who wish to leave their bags after check-out and
+   * before departing the locale. Also known as bag dropoff.
+   *
+   * @param bool $baggageStorage
    */
   public function setBaggageStorage($baggageStorage)
   {
@@ -134,21 +416,31 @@ class Services extends \Google\Collection
     return $this->baggageStorage;
   }
   /**
-   * @param string
+   * Baggage storage exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::BAGGAGE_STORAGE_EXCEPTION_* $baggageStorageException
    */
   public function setBaggageStorageException($baggageStorageException)
   {
     $this->baggageStorageException = $baggageStorageException;
   }
   /**
-   * @return string
+   * @return self::BAGGAGE_STORAGE_EXCEPTION_*
    */
   public function getBaggageStorageException()
   {
     return $this->baggageStorageException;
   }
   /**
-   * @param bool
+   * Concierge. Hotel staff member(s) responsible for facilitating an easy,
+   * comfortable stay through making reservations for meals, sourcing theater
+   * tickets, arranging tours, finding a doctor, making recommendations, and
+   * answering questions.
+   *
+   * @param bool $concierge
    */
   public function setConcierge($concierge)
   {
@@ -162,21 +454,30 @@ class Services extends \Google\Collection
     return $this->concierge;
   }
   /**
-   * @param string
+   * Concierge exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::CONCIERGE_EXCEPTION_* $conciergeException
    */
   public function setConciergeException($conciergeException)
   {
     $this->conciergeException = $conciergeException;
   }
   /**
-   * @return string
+   * @return self::CONCIERGE_EXCEPTION_*
    */
   public function getConciergeException()
   {
     return $this->conciergeException;
   }
   /**
-   * @param bool
+   * Convenience store. A shop at the hotel primarily selling snacks, drinks,
+   * non-prescription medicines, health and beauty aids, magazines and
+   * newspapers.
+   *
+   * @param bool $convenienceStore
    */
   public function setConvenienceStore($convenienceStore)
   {
@@ -190,21 +491,30 @@ class Services extends \Google\Collection
     return $this->convenienceStore;
   }
   /**
-   * @param string
+   * Convenience store exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::CONVENIENCE_STORE_EXCEPTION_* $convenienceStoreException
    */
   public function setConvenienceStoreException($convenienceStoreException)
   {
     $this->convenienceStoreException = $convenienceStoreException;
   }
   /**
-   * @return string
+   * @return self::CONVENIENCE_STORE_EXCEPTION_*
    */
   public function getConvenienceStoreException()
   {
     return $this->convenienceStoreException;
   }
   /**
-   * @param bool
+   * Currency exchange. A staff member or automated machine tasked with the
+   * transaction of providing the native currency of the hotel's locale in
+   * exchange for the foreign currency provided by a guest.
+   *
+   * @param bool $currencyExchange
    */
   public function setCurrencyExchange($currencyExchange)
   {
@@ -218,21 +528,29 @@ class Services extends \Google\Collection
     return $this->currencyExchange;
   }
   /**
-   * @param string
+   * Currency exchange exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::CURRENCY_EXCHANGE_EXCEPTION_* $currencyExchangeException
    */
   public function setCurrencyExchangeException($currencyExchangeException)
   {
     $this->currencyExchangeException = $currencyExchangeException;
   }
   /**
-   * @return string
+   * @return self::CURRENCY_EXCHANGE_EXCEPTION_*
    */
   public function getCurrencyExchangeException()
   {
     return $this->currencyExchangeException;
   }
   /**
-   * @param bool
+   * Elevator. A passenger elevator that transports guests from one story to
+   * another. Also known as lift.
+   *
+   * @param bool $elevator
    */
   public function setElevator($elevator)
   {
@@ -246,21 +564,31 @@ class Services extends \Google\Collection
     return $this->elevator;
   }
   /**
-   * @param string
+   * Elevator exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::ELEVATOR_EXCEPTION_* $elevatorException
    */
   public function setElevatorException($elevatorException)
   {
     $this->elevatorException = $elevatorException;
   }
   /**
-   * @return string
+   * @return self::ELEVATOR_EXCEPTION_*
    */
   public function getElevatorException()
   {
     return $this->elevatorException;
   }
   /**
-   * @param bool
+   * Front desk. A counter or desk in the lobby or the immediate interior of the
+   * hotel where a member of the staff greets guests and processes the
+   * information related to their stay (including check-in and check-out). May
+   * or may not be manned and open 24/7.
+   *
+   * @param bool $frontDesk
    */
   public function setFrontDesk($frontDesk)
   {
@@ -274,21 +602,30 @@ class Services extends \Google\Collection
     return $this->frontDesk;
   }
   /**
-   * @param string
+   * Front desk exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::FRONT_DESK_EXCEPTION_* $frontDeskException
    */
   public function setFrontDeskException($frontDeskException)
   {
     $this->frontDeskException = $frontDeskException;
   }
   /**
-   * @return string
+   * @return self::FRONT_DESK_EXCEPTION_*
    */
   public function getFrontDeskException()
   {
     return $this->frontDeskException;
   }
   /**
-   * @param bool
+   * Full service laundry. Laundry and dry cleaning facilitated and handled by
+   * the hotel on behalf of the guest. Does not include the provision for guests
+   * to do their own laundry in on-site machines.
+   *
+   * @param bool $fullServiceLaundry
    */
   public function setFullServiceLaundry($fullServiceLaundry)
   {
@@ -302,21 +639,30 @@ class Services extends \Google\Collection
     return $this->fullServiceLaundry;
   }
   /**
-   * @param string
+   * Full service laundry exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::FULL_SERVICE_LAUNDRY_EXCEPTION_* $fullServiceLaundryException
    */
   public function setFullServiceLaundryException($fullServiceLaundryException)
   {
     $this->fullServiceLaundryException = $fullServiceLaundryException;
   }
   /**
-   * @return string
+   * @return self::FULL_SERVICE_LAUNDRY_EXCEPTION_*
    */
   public function getFullServiceLaundryException()
   {
     return $this->fullServiceLaundryException;
   }
   /**
-   * @param bool
+   * Gift shop. An on-site store primarily selling souvenirs, mementos and other
+   * gift items. May or may not also sell sundries, magazines and newspapers,
+   * clothing, or snacks.
+   *
+   * @param bool $giftShop
    */
   public function setGiftShop($giftShop)
   {
@@ -330,21 +676,28 @@ class Services extends \Google\Collection
     return $this->giftShop;
   }
   /**
-   * @param string
+   * Gift shop exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::GIFT_SHOP_EXCEPTION_* $giftShopException
    */
   public function setGiftShopException($giftShopException)
   {
     $this->giftShopException = $giftShopException;
   }
   /**
-   * @return string
+   * @return self::GIFT_SHOP_EXCEPTION_*
    */
   public function getGiftShopException()
   {
     return $this->giftShopException;
   }
   /**
-   * @param LanguageSpoken[]
+   * Languages spoken by at least one staff member.
+   *
+   * @param LanguageSpoken[] $languagesSpoken
    */
   public function setLanguagesSpoken($languagesSpoken)
   {
@@ -358,7 +711,11 @@ class Services extends \Google\Collection
     return $this->languagesSpoken;
   }
   /**
-   * @param bool
+   * Self service laundry. On-site clothes washers and dryers accessible to
+   * guests for the purpose of washing and drying their own clothes. May or may
+   * not require payment to use the machines.
+   *
+   * @param bool $selfServiceLaundry
    */
   public function setSelfServiceLaundry($selfServiceLaundry)
   {
@@ -372,21 +729,32 @@ class Services extends \Google\Collection
     return $this->selfServiceLaundry;
   }
   /**
-   * @param string
+   * Self service laundry exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::SELF_SERVICE_LAUNDRY_EXCEPTION_* $selfServiceLaundryException
    */
   public function setSelfServiceLaundryException($selfServiceLaundryException)
   {
     $this->selfServiceLaundryException = $selfServiceLaundryException;
   }
   /**
-   * @return string
+   * @return self::SELF_SERVICE_LAUNDRY_EXCEPTION_*
    */
   public function getSelfServiceLaundryException()
   {
     return $this->selfServiceLaundryException;
   }
   /**
-   * @param bool
+   * Social hour. A reception with complimentary soft drinks, tea, coffee, wine
+   * and/or cocktails in the afternoon or evening. Can be hosted by hotel staff
+   * or guests may serve themselves. Also known as wine hour. The availability
+   * of coffee/tea in the lobby throughout the day does not constitute a social
+   * or wine hour.
+   *
+   * @param bool $socialHour
    */
   public function setSocialHour($socialHour)
   {
@@ -400,21 +768,28 @@ class Services extends \Google\Collection
     return $this->socialHour;
   }
   /**
-   * @param string
+   * Social hour exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::SOCIAL_HOUR_EXCEPTION_* $socialHourException
    */
   public function setSocialHourException($socialHourException)
   {
     $this->socialHourException = $socialHourException;
   }
   /**
-   * @return string
+   * @return self::SOCIAL_HOUR_EXCEPTION_*
    */
   public function getSocialHourException()
   {
     return $this->socialHourException;
   }
   /**
-   * @param bool
+   * 24hr front desk. Front desk is staffed 24 hours a day.
+   *
+   * @param bool $twentyFourHourFrontDesk
    */
   public function setTwentyFourHourFrontDesk($twentyFourHourFrontDesk)
   {
@@ -428,21 +803,29 @@ class Services extends \Google\Collection
     return $this->twentyFourHourFrontDesk;
   }
   /**
-   * @param string
+   * 24hr front desk exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::TWENTY_FOUR_HOUR_FRONT_DESK_EXCEPTION_* $twentyFourHourFrontDeskException
    */
   public function setTwentyFourHourFrontDeskException($twentyFourHourFrontDeskException)
   {
     $this->twentyFourHourFrontDeskException = $twentyFourHourFrontDeskException;
   }
   /**
-   * @return string
+   * @return self::TWENTY_FOUR_HOUR_FRONT_DESK_EXCEPTION_*
    */
   public function getTwentyFourHourFrontDeskException()
   {
     return $this->twentyFourHourFrontDeskException;
   }
   /**
-   * @param bool
+   * Wake up calls. By direction of the guest, a hotel staff member will phone
+   * the guest unit at the requested hour. Also known as morning call.
+   *
+   * @param bool $wakeUpCalls
    */
   public function setWakeUpCalls($wakeUpCalls)
   {
@@ -456,14 +839,19 @@ class Services extends \Google\Collection
     return $this->wakeUpCalls;
   }
   /**
-   * @param string
+   * Wake up calls exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::WAKE_UP_CALLS_EXCEPTION_* $wakeUpCallsException
    */
   public function setWakeUpCallsException($wakeUpCallsException)
   {
     $this->wakeUpCallsException = $wakeUpCallsException;
   }
   /**
-   * @return string
+   * @return self::WAKE_UP_CALLS_EXCEPTION_*
    */
   public function getWakeUpCallsException()
   {

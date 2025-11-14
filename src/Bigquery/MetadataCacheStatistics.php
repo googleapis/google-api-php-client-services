@@ -24,7 +24,9 @@ class MetadataCacheStatistics extends \Google\Collection
   protected $tableMetadataCacheUsageDataType = 'array';
 
   /**
-   * @param TableMetadataCacheUsage[]
+   * Set for the Metadata caching eligible tables referenced in the query.
+   *
+   * @param TableMetadataCacheUsage[] $tableMetadataCacheUsage
    */
   public function setTableMetadataCacheUsage($tableMetadataCacheUsage)
   {

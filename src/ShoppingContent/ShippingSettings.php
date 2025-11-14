@@ -21,6 +21,9 @@ class ShippingSettings extends \Google\Collection
 {
   protected $collection_key = 'warehouses';
   /**
+   * The ID of the account to which these account shipping settings belong.
+   * Ignored upon update, always present in get request responses.
+   *
    * @var string
    */
   public $accountId;
@@ -32,7 +35,10 @@ class ShippingSettings extends \Google\Collection
   protected $warehousesDataType = 'array';
 
   /**
-   * @param string
+   * The ID of the account to which these account shipping settings belong.
+   * Ignored upon update, always present in get request responses.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -46,7 +52,10 @@ class ShippingSettings extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param PostalCodeGroup[]
+   * A list of postal code groups that can be referred to in `services`.
+   * Optional.
+   *
+   * @param PostalCodeGroup[] $postalCodeGroups
    */
   public function setPostalCodeGroups($postalCodeGroups)
   {
@@ -60,7 +69,9 @@ class ShippingSettings extends \Google\Collection
     return $this->postalCodeGroups;
   }
   /**
-   * @param Service[]
+   * The target account's list of services. Optional.
+   *
+   * @param Service[] $services
    */
   public function setServices($services)
   {
@@ -74,7 +85,9 @@ class ShippingSettings extends \Google\Collection
     return $this->services;
   }
   /**
-   * @param Warehouse[]
+   * Optional. A list of warehouses which can be referred to in `services`.
+   *
+   * @param Warehouse[] $warehouses
    */
   public function setWarehouses($warehouses)
   {

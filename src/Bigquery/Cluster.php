@@ -21,10 +21,14 @@ class Cluster extends \Google\Collection
 {
   protected $collection_key = 'featureValues';
   /**
+   * Centroid id.
+   *
    * @var string
    */
   public $centroidId;
   /**
+   * Count of training data rows that were assigned to this cluster.
+   *
    * @var string
    */
   public $count;
@@ -32,7 +36,9 @@ class Cluster extends \Google\Collection
   protected $featureValuesDataType = 'array';
 
   /**
-   * @param string
+   * Centroid id.
+   *
+   * @param string $centroidId
    */
   public function setCentroidId($centroidId)
   {
@@ -46,7 +52,9 @@ class Cluster extends \Google\Collection
     return $this->centroidId;
   }
   /**
-   * @param string
+   * Count of training data rows that were assigned to this cluster.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -60,7 +68,9 @@ class Cluster extends \Google\Collection
     return $this->count;
   }
   /**
-   * @param FeatureValue[]
+   * Values of highly variant features for this cluster.
+   *
+   * @param FeatureValue[] $featureValues
    */
   public function setFeatureValues($featureValues)
   {

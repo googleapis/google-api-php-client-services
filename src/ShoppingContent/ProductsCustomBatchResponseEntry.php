@@ -20,12 +20,17 @@ namespace Google\Service\ShoppingContent;
 class ProductsCustomBatchResponseEntry extends \Google\Model
 {
   /**
+   * The ID of the request entry this entry responds to.
+   *
    * @var string
    */
   public $batchId;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#productsCustomBatchResponseEntry`"
+   *
    * @var string
    */
   public $kind;
@@ -33,7 +38,9 @@ class ProductsCustomBatchResponseEntry extends \Google\Model
   protected $productDataType = '';
 
   /**
-   * @param string
+   * The ID of the request entry this entry responds to.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -47,7 +54,10 @@ class ProductsCustomBatchResponseEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param Errors
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail
+   * the whole request.
+   *
+   * @param Errors $errors
    */
   public function setErrors(Errors $errors)
   {
@@ -61,7 +71,10 @@ class ProductsCustomBatchResponseEntry extends \Google\Model
     return $this->errors;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#productsCustomBatchResponseEntry`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -75,7 +88,10 @@ class ProductsCustomBatchResponseEntry extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param Product
+   * The inserted product. Only defined if the method is `insert` and if the
+   * request was successful.
+   *
+   * @param Product $product
    */
   public function setProduct(Product $product)
   {

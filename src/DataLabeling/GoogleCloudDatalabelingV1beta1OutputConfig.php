@@ -25,7 +25,10 @@ class GoogleCloudDatalabelingV1beta1OutputConfig extends \Google\Model
   protected $gcsFolderDestinationDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1GcsDestination
+   * Output to a file in Cloud Storage. Should be used for labeling output other
+   * than image segmentation.
+   *
+   * @param GoogleCloudDatalabelingV1beta1GcsDestination $gcsDestination
    */
   public function setGcsDestination(GoogleCloudDatalabelingV1beta1GcsDestination $gcsDestination)
   {
@@ -39,7 +42,10 @@ class GoogleCloudDatalabelingV1beta1OutputConfig extends \Google\Model
     return $this->gcsDestination;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1GcsFolderDestination
+   * Output to a folder in Cloud Storage. Should be used for image segmentation
+   * or document de-identification labeling outputs.
+   *
+   * @param GoogleCloudDatalabelingV1beta1GcsFolderDestination $gcsFolderDestination
    */
   public function setGcsFolderDestination(GoogleCloudDatalabelingV1beta1GcsFolderDestination $gcsFolderDestination)
   {

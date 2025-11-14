@@ -20,12 +20,16 @@ namespace Google\Service\SearchConsole;
 class BlockedResource extends \Google\Model
 {
   /**
+   * URL of the blocked resource.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * URL of the blocked resource.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

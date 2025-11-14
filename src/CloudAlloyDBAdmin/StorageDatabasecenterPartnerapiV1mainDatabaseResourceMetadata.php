@@ -212,6 +212,12 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    */
   public $instanceType;
   /**
+   * Optional. Whether deletion protection is enabled for this resource.
+   *
+   * @var bool
+   */
+  public $isDeletionProtectionEnabled;
+  /**
    * The resource location. REQUIRED
    *
    * @var string
@@ -503,6 +509,22 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getInstanceType()
   {
     return $this->instanceType;
+  }
+  /**
+   * Optional. Whether deletion protection is enabled for this resource.
+   *
+   * @param bool $isDeletionProtectionEnabled
+   */
+  public function setIsDeletionProtectionEnabled($isDeletionProtectionEnabled)
+  {
+    $this->isDeletionProtectionEnabled = $isDeletionProtectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsDeletionProtectionEnabled()
+  {
+    return $this->isDeletionProtectionEnabled;
   }
   /**
    * The resource location. REQUIRED

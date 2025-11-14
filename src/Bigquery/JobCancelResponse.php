@@ -22,12 +22,16 @@ class JobCancelResponse extends \Google\Model
   protected $jobType = Job::class;
   protected $jobDataType = '';
   /**
+   * The resource type of the response.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param Job
+   * The final state of the job.
+   *
+   * @param Job $job
    */
   public function setJob(Job $job)
   {
@@ -41,7 +45,9 @@ class JobCancelResponse extends \Google\Model
     return $this->job;
   }
   /**
-   * @param string
+   * The resource type of the response.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -23,20 +23,31 @@ class ResultLabels extends \Google\Model
         "labelWithOp" => "label_with_op",
   ];
   /**
+   * The display name of a refinement label. This is the name you should display
+   * in your user interface.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Refinement label and the associated refinement operation.
+   *
    * @var string
    */
   public $labelWithOp;
   /**
+   * The name of a refinement label, which you can use to refine searches. Don't
+   * display this in your user interface; instead, use displayName.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The display name of a refinement label. This is the name you should display
+   * in your user interface.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -50,7 +61,9 @@ class ResultLabels extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Refinement label and the associated refinement operation.
+   *
+   * @param string $labelWithOp
    */
   public function setLabelWithOp($labelWithOp)
   {
@@ -64,7 +77,10 @@ class ResultLabels extends \Google\Model
     return $this->labelWithOp;
   }
   /**
-   * @param string
+   * The name of a refinement label, which you can use to refine searches. Don't
+   * display this in your user interface; instead, use displayName.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

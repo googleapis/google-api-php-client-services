@@ -20,12 +20,16 @@ namespace Google\Service\Backupdr;
 class FetchAccessTokenRequest extends \Google\Model
 {
   /**
+   * Required. The generation of the backup to update.
+   *
    * @var int
    */
   public $generationId;
 
   /**
-   * @param int
+   * Required. The generation of the backup to update.
+   *
+   * @param int $generationId
    */
   public function setGenerationId($generationId)
   {

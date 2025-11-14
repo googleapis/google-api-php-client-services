@@ -21,12 +21,20 @@ class GooglePrivacyDlpV2WordList extends \Google\Collection
 {
   protected $collection_key = 'words';
   /**
+   * Words or phrases defining the dictionary. The dictionary must contain at
+   * least one phrase and every phrase must contain at least 2 characters that
+   * are letters or digits. [required]
+   *
    * @var string[]
    */
   public $words;
 
   /**
-   * @param string[]
+   * Words or phrases defining the dictionary. The dictionary must contain at
+   * least one phrase and every phrase must contain at least 2 characters that
+   * are letters or digits. [required]
+   *
+   * @param string[] $words
    */
   public function setWords($words)
   {

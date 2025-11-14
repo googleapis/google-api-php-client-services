@@ -20,34 +20,68 @@ namespace Google\Service\Appengine;
 class ErrorHandler extends \Google\Model
 {
   /**
+   * Not specified. ERROR_CODE_DEFAULT is assumed.
+   */
+  public const ERROR_CODE_ERROR_CODE_UNSPECIFIED = 'ERROR_CODE_UNSPECIFIED';
+  /**
+   * All other error types.
+   */
+  public const ERROR_CODE_ERROR_CODE_DEFAULT = 'ERROR_CODE_DEFAULT';
+  /**
+   * Application has exceeded a resource quota.
+   */
+  public const ERROR_CODE_ERROR_CODE_OVER_QUOTA = 'ERROR_CODE_OVER_QUOTA';
+  /**
+   * Client blocked by the application's Denial of Service protection
+   * configuration.
+   */
+  public const ERROR_CODE_ERROR_CODE_DOS_API_DENIAL = 'ERROR_CODE_DOS_API_DENIAL';
+  /**
+   * Deadline reached before the application responds.
+   */
+  public const ERROR_CODE_ERROR_CODE_TIMEOUT = 'ERROR_CODE_TIMEOUT';
+  /**
+   * Error condition this handler applies to.
+   *
    * @var string
    */
   public $errorCode;
   /**
+   * MIME type of file. Defaults to text/html.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * Static file content to be served for this error.
+   *
    * @var string
    */
   public $staticFile;
 
   /**
-   * @param string
+   * Error condition this handler applies to.
+   *
+   * Accepted values: ERROR_CODE_UNSPECIFIED, ERROR_CODE_DEFAULT,
+   * ERROR_CODE_OVER_QUOTA, ERROR_CODE_DOS_API_DENIAL, ERROR_CODE_TIMEOUT
+   *
+   * @param self::ERROR_CODE_* $errorCode
    */
   public function setErrorCode($errorCode)
   {
     $this->errorCode = $errorCode;
   }
   /**
-   * @return string
+   * @return self::ERROR_CODE_*
    */
   public function getErrorCode()
   {
     return $this->errorCode;
   }
   /**
-   * @param string
+   * MIME type of file. Defaults to text/html.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -61,7 +95,9 @@ class ErrorHandler extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * Static file content to be served for this error.
+   *
+   * @param string $staticFile
    */
   public function setStaticFile($staticFile)
   {

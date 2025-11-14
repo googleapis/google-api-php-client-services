@@ -20,12 +20,20 @@ namespace Google\Service\Vault;
 class DriveExportOptions extends \Google\Model
 {
   /**
+   * To include access level information for users with [indirect
+   * access](https://support.google.com/vault/answer/6099459#metadata) to files,
+   * set to **true**.
+   *
    * @var bool
    */
   public $includeAccessInfo;
 
   /**
-   * @param bool
+   * To include access level information for users with [indirect
+   * access](https://support.google.com/vault/answer/6099459#metadata) to files,
+   * set to **true**.
+   *
+   * @param bool $includeAccessInfo
    */
   public function setIncludeAccessInfo($includeAccessInfo)
   {

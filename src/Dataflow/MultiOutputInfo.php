@@ -20,12 +20,18 @@ namespace Google\Service\Dataflow;
 class MultiOutputInfo extends \Google\Model
 {
   /**
+   * The id of the tag the user code will emit to this output by; this should
+   * correspond to the tag of some SideInputInfo.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * The id of the tag the user code will emit to this output by; this should
+   * correspond to the tag of some SideInputInfo.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

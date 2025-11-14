@@ -24,7 +24,9 @@ class BatchCreateNotesResponse extends \Google\Collection
   protected $notesDataType = 'array';
 
   /**
-   * @param Note[]
+   * The notes that were created.
+   *
+   * @param Note[] $notes
    */
   public function setNotes($notes)
   {

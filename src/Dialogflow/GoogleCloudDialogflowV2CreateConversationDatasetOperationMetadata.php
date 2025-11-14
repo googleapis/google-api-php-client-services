@@ -20,12 +20,18 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata extends \Google\Model
 {
   /**
+   * The resource name of the conversation dataset that will be created. Format:
+   * `projects//locations//conversationDatasets/`
+   *
    * @var string
    */
   public $conversationDataset;
 
   /**
-   * @param string
+   * The resource name of the conversation dataset that will be created. Format:
+   * `projects//locations//conversationDatasets/`
+   *
+   * @param string $conversationDataset
    */
   public function setConversationDataset($conversationDataset)
   {

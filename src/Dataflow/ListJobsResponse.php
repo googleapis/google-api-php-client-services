@@ -25,12 +25,18 @@ class ListJobsResponse extends \Google\Collection
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
   /**
+   * Set if there may be more results than fit in this response.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param FailedLocation[]
+   * Zero or more messages describing the [regional endpoints]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+   * failed to respond.
+   *
+   * @param FailedLocation[] $failedLocation
    */
   public function setFailedLocation($failedLocation)
   {
@@ -44,7 +50,9 @@ class ListJobsResponse extends \Google\Collection
     return $this->failedLocation;
   }
   /**
-   * @param Job[]
+   * A subset of the requested job information.
+   *
+   * @param Job[] $jobs
    */
   public function setJobs($jobs)
   {
@@ -58,7 +66,9 @@ class ListJobsResponse extends \Google\Collection
     return $this->jobs;
   }
   /**
-   * @param string
+   * Set if there may be more results than fit in this response.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

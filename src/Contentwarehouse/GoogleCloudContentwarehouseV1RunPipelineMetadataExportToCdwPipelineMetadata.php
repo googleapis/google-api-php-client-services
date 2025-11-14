@@ -21,20 +21,28 @@ class GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadat
 {
   protected $collection_key = 'documents';
   /**
+   * The output CDW dataset resource name.
+   *
    * @var string
    */
   public $docAiDataset;
   /**
+   * The input list of all the resource names of the documents to be exported.
+   *
    * @var string[]
    */
   public $documents;
   /**
+   * The output Cloud Storage folder in this pipeline.
+   *
    * @var string
    */
   public $outputPath;
 
   /**
-   * @param string
+   * The output CDW dataset resource name.
+   *
+   * @param string $docAiDataset
    */
   public function setDocAiDataset($docAiDataset)
   {
@@ -48,7 +56,9 @@ class GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadat
     return $this->docAiDataset;
   }
   /**
-   * @param string[]
+   * The input list of all the resource names of the documents to be exported.
+   *
+   * @param string[] $documents
    */
   public function setDocuments($documents)
   {
@@ -62,7 +72,9 @@ class GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadat
     return $this->documents;
   }
   /**
-   * @param string
+   * The output Cloud Storage folder in this pipeline.
+   *
+   * @param string $outputPath
    */
   public function setOutputPath($outputPath)
   {

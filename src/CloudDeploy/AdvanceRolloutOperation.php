@@ -20,24 +20,34 @@ namespace Google\Service\CloudDeploy;
 class AdvanceRolloutOperation extends \Google\Model
 {
   /**
+   * Output only. The phase the rollout will be advanced to.
+   *
    * @var string
    */
   public $destinationPhase;
   /**
+   * Output only. The name of the rollout that initiates the `AutomationRun`.
+   *
    * @var string
    */
   public $rollout;
   /**
+   * Output only. The phase of a deployment that initiated the operation.
+   *
    * @var string
    */
   public $sourcePhase;
   /**
+   * Output only. How long the operation will be paused.
+   *
    * @var string
    */
   public $wait;
 
   /**
-   * @param string
+   * Output only. The phase the rollout will be advanced to.
+   *
+   * @param string $destinationPhase
    */
   public function setDestinationPhase($destinationPhase)
   {
@@ -51,7 +61,9 @@ class AdvanceRolloutOperation extends \Google\Model
     return $this->destinationPhase;
   }
   /**
-   * @param string
+   * Output only. The name of the rollout that initiates the `AutomationRun`.
+   *
+   * @param string $rollout
    */
   public function setRollout($rollout)
   {
@@ -65,7 +77,9 @@ class AdvanceRolloutOperation extends \Google\Model
     return $this->rollout;
   }
   /**
-   * @param string
+   * Output only. The phase of a deployment that initiated the operation.
+   *
+   * @param string $sourcePhase
    */
   public function setSourcePhase($sourcePhase)
   {
@@ -79,7 +93,9 @@ class AdvanceRolloutOperation extends \Google\Model
     return $this->sourcePhase;
   }
   /**
-   * @param string
+   * Output only. How long the operation will be paused.
+   *
+   * @param string $wait
    */
   public function setWait($wait)
   {

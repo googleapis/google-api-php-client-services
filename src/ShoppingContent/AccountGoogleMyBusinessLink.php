@@ -20,20 +20,35 @@ namespace Google\Service\ShoppingContent;
 class AccountGoogleMyBusinessLink extends \Google\Model
 {
   /**
+   * The ID of the Business Profile. If this is provided, then `gmbEmail` is
+   * ignored. The value of this field should match the `accountId` used by the
+   * Business Profile API.
+   *
    * @var string
    */
   public $gmbAccountId;
   /**
+   * The Business Profile email address of a specific account within a Business
+   * Profile. A sample account within a Business Profile could be a business
+   * account with set of locations, managed under the Business Profile.
+   *
    * @var string
    */
   public $gmbEmail;
   /**
+   * Status of the link between this Merchant Center account and the Business
+   * Profile. Acceptable values are: - "`active`" - "`pending`"
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * The ID of the Business Profile. If this is provided, then `gmbEmail` is
+   * ignored. The value of this field should match the `accountId` used by the
+   * Business Profile API.
+   *
+   * @param string $gmbAccountId
    */
   public function setGmbAccountId($gmbAccountId)
   {
@@ -47,7 +62,11 @@ class AccountGoogleMyBusinessLink extends \Google\Model
     return $this->gmbAccountId;
   }
   /**
-   * @param string
+   * The Business Profile email address of a specific account within a Business
+   * Profile. A sample account within a Business Profile could be a business
+   * account with set of locations, managed under the Business Profile.
+   *
+   * @param string $gmbEmail
    */
   public function setGmbEmail($gmbEmail)
   {
@@ -61,7 +80,10 @@ class AccountGoogleMyBusinessLink extends \Google\Model
     return $this->gmbEmail;
   }
   /**
-   * @param string
+   * Status of the link between this Merchant Center account and the Business
+   * Profile. Acceptable values are: - "`active`" - "`pending`"
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

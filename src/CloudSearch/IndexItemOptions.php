@@ -20,12 +20,18 @@ namespace Google\Service\CloudSearch;
 class IndexItemOptions extends \Google\Model
 {
   /**
+   * Specifies if the index request should allow Google Workspace principals
+   * that do not exist or are deleted.
+   *
    * @var bool
    */
   public $allowUnknownGsuitePrincipals;
 
   /**
-   * @param bool
+   * Specifies if the index request should allow Google Workspace principals
+   * that do not exist or are deleted.
+   *
+   * @param bool $allowUnknownGsuitePrincipals
    */
   public function setAllowUnknownGsuitePrincipals($allowUnknownGsuitePrincipals)
   {

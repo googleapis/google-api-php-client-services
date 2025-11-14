@@ -31,7 +31,9 @@ class ProcessingFailureDetails extends \Google\Model
   protected $notOutdoorsDetailsDataType = '';
 
   /**
-   * @param GpsDataGapFailureDetails
+   * See GpsDataGapFailureDetails.
+   *
+   * @param GpsDataGapFailureDetails $gpsDataGapDetails
    */
   public function setGpsDataGapDetails(GpsDataGapFailureDetails $gpsDataGapDetails)
   {
@@ -45,7 +47,9 @@ class ProcessingFailureDetails extends \Google\Model
     return $this->gpsDataGapDetails;
   }
   /**
-   * @param ImuDataGapFailureDetails
+   * See ImuDataGapFailureDetails.
+   *
+   * @param ImuDataGapFailureDetails $imuDataGapDetails
    */
   public function setImuDataGapDetails(ImuDataGapFailureDetails $imuDataGapDetails)
   {
@@ -59,7 +63,9 @@ class ProcessingFailureDetails extends \Google\Model
     return $this->imuDataGapDetails;
   }
   /**
-   * @param InsufficientGpsFailureDetails
+   * See InsufficientGpsFailureDetails.
+   *
+   * @param InsufficientGpsFailureDetails $insufficientGpsDetails
    */
   public function setInsufficientGpsDetails(InsufficientGpsFailureDetails $insufficientGpsDetails)
   {
@@ -73,7 +79,9 @@ class ProcessingFailureDetails extends \Google\Model
     return $this->insufficientGpsDetails;
   }
   /**
-   * @param NoOverlapGpsFailureDetails
+   * See NoOverlapGpsFailureDetails.
+   *
+   * @param NoOverlapGpsFailureDetails $noOverlapGpsDetails
    */
   public function setNoOverlapGpsDetails(NoOverlapGpsFailureDetails $noOverlapGpsDetails)
   {
@@ -87,7 +95,9 @@ class ProcessingFailureDetails extends \Google\Model
     return $this->noOverlapGpsDetails;
   }
   /**
-   * @param NotOutdoorsFailureDetails
+   * See NotOutdoorsFailureDetails.
+   *
+   * @param NotOutdoorsFailureDetails $notOutdoorsDetails
    */
   public function setNotOutdoorsDetails(NotOutdoorsFailureDetails $notOutdoorsDetails)
   {

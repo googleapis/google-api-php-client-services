@@ -23,12 +23,17 @@ class SearchGroupsResponse extends \Google\Collection
   protected $groupsType = Group::class;
   protected $groupsDataType = 'array';
   /**
+   * A continuation token to retrieve the next page of results, or empty if
+   * there are no more results available.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Group[]
+   * The `Group` resources that match the search query.
+   *
+   * @param Group[] $groups
    */
   public function setGroups($groups)
   {
@@ -42,7 +47,10 @@ class SearchGroupsResponse extends \Google\Collection
     return $this->groups;
   }
   /**
-   * @param string
+   * A continuation token to retrieve the next page of results, or empty if
+   * there are no more results available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

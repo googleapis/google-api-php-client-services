@@ -21,12 +21,16 @@ class GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelectorQaConfigScorecard
 {
   protected $collection_key = 'qaScorecardRevisions';
   /**
+   * List of QaScorecardRevisions.
+   *
    * @var string[]
    */
   public $qaScorecardRevisions;
 
   /**
-   * @param string[]
+   * List of QaScorecardRevisions.
+   *
+   * @param string[] $qaScorecardRevisions
    */
   public function setQaScorecardRevisions($qaScorecardRevisions)
   {

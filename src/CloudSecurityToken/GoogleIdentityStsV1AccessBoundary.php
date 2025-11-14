@@ -24,7 +24,12 @@ class GoogleIdentityStsV1AccessBoundary extends \Google\Collection
   protected $accessBoundaryRulesDataType = 'array';
 
   /**
-   * @param GoogleIdentityStsV1AccessBoundaryRule[]
+   * A list of access boundary rules which defines the upper bound of the
+   * permission a principal may carry. If multiple rules are specified, the
+   * effective access boundary is the union of all the access boundary rules
+   * attached. One access boundary can contain at most 10 rules.
+   *
+   * @param GoogleIdentityStsV1AccessBoundaryRule[] $accessBoundaryRules
    */
   public function setAccessBoundaryRules($accessBoundaryRules)
   {

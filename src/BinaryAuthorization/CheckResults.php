@@ -24,7 +24,9 @@ class CheckResults extends \Google\Collection
   protected $resultsDataType = 'array';
 
   /**
-   * @param CheckResult[]
+   * Per-check details.
+   *
+   * @param CheckResult[] $results
    */
   public function setResults($results)
   {

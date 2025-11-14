@@ -24,7 +24,10 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutList
   protected $blocksDataType = 'array';
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock[]
+   * A list entry is a list of blocks. Repeated blocks support further
+   * hierarchies and nested blocks.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock[] $blocks
    */
   public function setBlocks($blocks)
   {

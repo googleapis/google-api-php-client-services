@@ -20,16 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo extends \Google\Model
 {
   /**
+   * The time at which this processor version will be deprecated.
+   *
    * @var string
    */
   public $deprecationTime;
   /**
+   * If set, the processor version that will be used as a replacement.
+   *
    * @var string
    */
   public $replacementProcessorVersion;
 
   /**
-   * @param string
+   * The time at which this processor version will be deprecated.
+   *
+   * @param string $deprecationTime
    */
   public function setDeprecationTime($deprecationTime)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo extends \Google\Mod
     return $this->deprecationTime;
   }
   /**
-   * @param string
+   * If set, the processor version that will be used as a replacement.
+   *
+   * @param string $replacementProcessorVersion
    */
   public function setReplacementProcessorVersion($replacementProcessorVersion)
   {

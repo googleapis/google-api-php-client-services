@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1ImportIdentityMappingsRequestInlineSource exte
   protected $identityMappingEntriesDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1IdentityMappingEntry[]
+   * A maximum of 10000 entries can be imported at one time
+   *
+   * @param GoogleCloudDiscoveryengineV1IdentityMappingEntry[] $identityMappingEntries
    */
   public function setIdentityMappingEntries($identityMappingEntries)
   {

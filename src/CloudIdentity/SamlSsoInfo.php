@@ -20,12 +20,18 @@ namespace Google\Service\CloudIdentity;
 class SamlSsoInfo extends \Google\Model
 {
   /**
+   * Required. Name of the `InboundSamlSsoProfile` to use. Must be of the form
+   * `inboundSamlSsoProfiles/{inbound_saml_sso_profile}`.
+   *
    * @var string
    */
   public $inboundSamlSsoProfile;
 
   /**
-   * @param string
+   * Required. Name of the `InboundSamlSsoProfile` to use. Must be of the form
+   * `inboundSamlSsoProfiles/{inbound_saml_sso_profile}`.
+   *
+   * @param string $inboundSamlSsoProfile
    */
   public function setInboundSamlSsoProfile($inboundSamlSsoProfile)
   {

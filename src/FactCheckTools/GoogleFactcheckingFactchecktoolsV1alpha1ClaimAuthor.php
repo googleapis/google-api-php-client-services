@@ -20,24 +20,35 @@ namespace Google\Service\FactCheckTools;
 class GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor extends \Google\Model
 {
   /**
+   * Corresponds to `ClaimReview.itemReviewed.author.image`.
+   *
    * @var string
    */
   public $imageUrl;
   /**
+   * Corresponds to `ClaimReview.itemReviewed.author.jobTitle`.
+   *
    * @var string
    */
   public $jobTitle;
   /**
+   * A person or organization stating the claim. For instance, "John Doe".
+   * Corresponds to `ClaimReview.itemReviewed.author.name`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Corresponds to `ClaimReview.itemReviewed.author.sameAs`.
+   *
    * @var string
    */
   public $sameAs;
 
   /**
-   * @param string
+   * Corresponds to `ClaimReview.itemReviewed.author.image`.
+   *
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -51,7 +62,9 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor extends \Google\Model
     return $this->imageUrl;
   }
   /**
-   * @param string
+   * Corresponds to `ClaimReview.itemReviewed.author.jobTitle`.
+   *
+   * @param string $jobTitle
    */
   public function setJobTitle($jobTitle)
   {
@@ -65,7 +78,10 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor extends \Google\Model
     return $this->jobTitle;
   }
   /**
-   * @param string
+   * A person or organization stating the claim. For instance, "John Doe".
+   * Corresponds to `ClaimReview.itemReviewed.author.name`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +95,9 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Corresponds to `ClaimReview.itemReviewed.author.sameAs`.
+   *
+   * @param string $sameAs
    */
   public function setSameAs($sameAs)
   {

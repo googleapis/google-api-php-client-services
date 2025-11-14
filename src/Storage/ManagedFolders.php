@@ -23,16 +23,24 @@ class ManagedFolders extends \Google\Collection
   protected $itemsType = ManagedFolder::class;
   protected $itemsDataType = 'array';
   /**
+   * The kind of item this is. For lists of managed folders, this is always
+   * storage#managedFolders.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ManagedFolder[]
+   * The list of items.
+   *
+   * @param ManagedFolder[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +54,10 @@ class ManagedFolders extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The kind of item this is. For lists of managed folders, this is always
+   * storage#managedFolders.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +71,10 @@ class ManagedFolders extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

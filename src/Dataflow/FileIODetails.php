@@ -20,12 +20,16 @@ namespace Google\Service\Dataflow;
 class FileIODetails extends \Google\Model
 {
   /**
+   * File Pattern used to access files by the connector.
+   *
    * @var string
    */
   public $filePattern;
 
   /**
-   * @param string
+   * File Pattern used to access files by the connector.
+   *
+   * @param string $filePattern
    */
   public function setFilePattern($filePattern)
   {

@@ -21,12 +21,18 @@ class GoogleCloudContentwarehouseV1AddToFolderAction extends \Google\Collection
 {
   protected $collection_key = 'folders';
   /**
+   * Names of the folder under which new document is to be added. Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
    * @var string[]
    */
   public $folders;
 
   /**
-   * @param string[]
+   * Names of the folder under which new document is to be added. Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
+   * @param string[] $folders
    */
   public function setFolders($folders)
   {

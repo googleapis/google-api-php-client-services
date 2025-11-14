@@ -27,7 +27,9 @@ class GoogleCloudContentwarehouseV1UpdateDocumentResponse extends \Google\Model
   protected $ruleEngineOutputDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1Document
+   * Updated document after executing update request.
+   *
+   * @param GoogleCloudContentwarehouseV1Document $document
    */
   public function setDocument(GoogleCloudContentwarehouseV1Document $document)
   {
@@ -41,7 +43,10 @@ class GoogleCloudContentwarehouseV1UpdateDocumentResponse extends \Google\Model
     return $this->document;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1ResponseMetadata
+   * Additional information for the API invocation, such as the request tracking
+   * id.
+   *
+   * @param GoogleCloudContentwarehouseV1ResponseMetadata $metadata
    */
   public function setMetadata(GoogleCloudContentwarehouseV1ResponseMetadata $metadata)
   {
@@ -55,7 +60,10 @@ class GoogleCloudContentwarehouseV1UpdateDocumentResponse extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1RuleEngineOutput
+   * Output from Rule Engine recording the rule evaluator and action executor's
+   * output. Refer format in: google/cloud/contentwarehouse/v1/rule_engine.proto
+   *
+   * @param GoogleCloudContentwarehouseV1RuleEngineOutput $ruleEngineOutput
    */
   public function setRuleEngineOutput(GoogleCloudContentwarehouseV1RuleEngineOutput $ruleEngineOutput)
   {

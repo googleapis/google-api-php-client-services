@@ -20,12 +20,18 @@ namespace Google\Service\AIPlatformNotebooks;
 class GenerateAccessTokenRequest extends \Google\Model
 {
   /**
+   * Required. The VM identity token (a JWT) for authenticating the VM.
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+   *
    * @var string
    */
   public $vmToken;
 
   /**
-   * @param string
+   * Required. The VM identity token (a JWT) for authenticating the VM.
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+   *
+   * @param string $vmToken
    */
   public function setVmToken($vmToken)
   {

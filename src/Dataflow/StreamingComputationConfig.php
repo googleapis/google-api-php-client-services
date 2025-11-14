@@ -21,26 +21,37 @@ class StreamingComputationConfig extends \Google\Collection
 {
   protected $collection_key = 'instructions';
   /**
+   * Unique identifier for this computation.
+   *
    * @var string
    */
   public $computationId;
   protected $instructionsType = ParallelInstruction::class;
   protected $instructionsDataType = 'array';
   /**
+   * Stage name of this computation.
+   *
    * @var string
    */
   public $stageName;
   /**
+   * System defined name for this computation.
+   *
    * @var string
    */
   public $systemName;
   /**
+   * Map from user name of stateful transforms in this stage to their state
+   * family.
+   *
    * @var string[]
    */
   public $transformUserNameToStateFamily;
 
   /**
-   * @param string
+   * Unique identifier for this computation.
+   *
+   * @param string $computationId
    */
   public function setComputationId($computationId)
   {
@@ -54,7 +65,9 @@ class StreamingComputationConfig extends \Google\Collection
     return $this->computationId;
   }
   /**
-   * @param ParallelInstruction[]
+   * Instructions that comprise the computation.
+   *
+   * @param ParallelInstruction[] $instructions
    */
   public function setInstructions($instructions)
   {
@@ -68,7 +81,9 @@ class StreamingComputationConfig extends \Google\Collection
     return $this->instructions;
   }
   /**
-   * @param string
+   * Stage name of this computation.
+   *
+   * @param string $stageName
    */
   public function setStageName($stageName)
   {
@@ -82,7 +97,9 @@ class StreamingComputationConfig extends \Google\Collection
     return $this->stageName;
   }
   /**
-   * @param string
+   * System defined name for this computation.
+   *
+   * @param string $systemName
    */
   public function setSystemName($systemName)
   {
@@ -96,7 +113,10 @@ class StreamingComputationConfig extends \Google\Collection
     return $this->systemName;
   }
   /**
-   * @param string[]
+   * Map from user name of stateful transforms in this stage to their state
+   * family.
+   *
+   * @param string[] $transformUserNameToStateFamily
    */
   public function setTransformUserNameToStateFamily($transformUserNameToStateFamily)
   {

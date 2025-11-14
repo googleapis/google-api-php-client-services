@@ -20,30 +20,50 @@ namespace Google\Service\ShoppingContent;
 class CarrierRate extends \Google\Model
 {
   /**
+   * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported
+   * carriers can be retrieved through the `getSupportedCarriers` method.
+   * Required.
+   *
    * @var string
    */
   public $carrierName;
   /**
+   * Carrier service, such as `"ground"` or `"2 days"`. The list of supported
+   * services for a carrier can be retrieved through the `getSupportedCarriers`
+   * method. Required.
+   *
    * @var string
    */
   public $carrierService;
   protected $flatAdjustmentType = Price::class;
   protected $flatAdjustmentDataType = '';
   /**
+   * Name of the carrier rate. Must be unique per rate group. Required.
+   *
    * @var string
    */
   public $name;
   /**
+   * Shipping origin for this carrier rate. Required.
+   *
    * @var string
    */
   public $originPostalCode;
   /**
+   * Multiplicative shipping rate modifier as a number in decimal notation. Can
+   * be negative. For example `"5.4"` increases the rate by 5.4%, `"-3"`
+   * decreases the rate by 3%. Optional.
+   *
    * @var string
    */
   public $percentageAdjustment;
 
   /**
-   * @param string
+   * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported
+   * carriers can be retrieved through the `getSupportedCarriers` method.
+   * Required.
+   *
+   * @param string $carrierName
    */
   public function setCarrierName($carrierName)
   {
@@ -57,7 +77,11 @@ class CarrierRate extends \Google\Model
     return $this->carrierName;
   }
   /**
-   * @param string
+   * Carrier service, such as `"ground"` or `"2 days"`. The list of supported
+   * services for a carrier can be retrieved through the `getSupportedCarriers`
+   * method. Required.
+   *
+   * @param string $carrierService
    */
   public function setCarrierService($carrierService)
   {
@@ -71,7 +95,11 @@ class CarrierRate extends \Google\Model
     return $this->carrierService;
   }
   /**
-   * @param Price
+   * Additive shipping rate modifier. Can be negative. For example `{ "value":
+   * "1", "currency" : "USD" }` adds $1 to the rate, `{ "value": "-3",
+   * "currency" : "USD" }` removes $3 from the rate. Optional.
+   *
+   * @param Price $flatAdjustment
    */
   public function setFlatAdjustment(Price $flatAdjustment)
   {
@@ -85,7 +113,9 @@ class CarrierRate extends \Google\Model
     return $this->flatAdjustment;
   }
   /**
-   * @param string
+   * Name of the carrier rate. Must be unique per rate group. Required.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -99,7 +129,9 @@ class CarrierRate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Shipping origin for this carrier rate. Required.
+   *
+   * @param string $originPostalCode
    */
   public function setOriginPostalCode($originPostalCode)
   {
@@ -113,7 +145,11 @@ class CarrierRate extends \Google\Model
     return $this->originPostalCode;
   }
   /**
-   * @param string
+   * Multiplicative shipping rate modifier as a number in decimal notation. Can
+   * be negative. For example `"5.4"` increases the rate by 5.4%, `"-3"`
+   * decreases the rate by 3%. Optional.
+   *
+   * @param string $percentageAdjustment
    */
   public function setPercentageAdjustment($percentageAdjustment)
   {

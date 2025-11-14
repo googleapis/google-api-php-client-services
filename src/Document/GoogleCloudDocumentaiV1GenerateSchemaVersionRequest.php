@@ -20,6 +20,10 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
 {
   /**
+   * The base schema version name to use for the schema generation. Format: `pro
+   * jects/{project}/locations/{location}/schemas/{schema}/schemaVersions/{schem
+   * a_version}`
+   *
    * @var string
    */
   public $baseSchemaVersion;
@@ -35,7 +39,11 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
   protected $rawDocumentsDataType = '';
 
   /**
-   * @param string
+   * The base schema version name to use for the schema generation. Format: `pro
+   * jects/{project}/locations/{location}/schemas/{schema}/schemaVersions/{schem
+   * a_version}`
+   *
+   * @param string $baseSchemaVersion
    */
   public function setBaseSchemaVersion($baseSchemaVersion)
   {
@@ -49,7 +57,9 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
     return $this->baseSchemaVersion;
   }
   /**
-   * @param GoogleCloudDocumentaiV1GcsDocuments
+   * The set of documents placed on Cloud Storage.
+   *
+   * @param GoogleCloudDocumentaiV1GcsDocuments $gcsDocuments
    */
   public function setGcsDocuments(GoogleCloudDocumentaiV1GcsDocuments $gcsDocuments)
   {
@@ -63,7 +73,9 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
     return $this->gcsDocuments;
   }
   /**
-   * @param GoogleCloudDocumentaiV1GcsPrefix
+   * The common prefix of documents placed on Cloud Storage.
+   *
+   * @param GoogleCloudDocumentaiV1GcsPrefix $gcsPrefix
    */
   public function setGcsPrefix(GoogleCloudDocumentaiV1GcsPrefix $gcsPrefix)
   {
@@ -77,7 +89,9 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
     return $this->gcsPrefix;
   }
   /**
-   * @param GoogleCloudDocumentaiV1GenerateSchemaVersionRequestGenerateSchemaVersionParams
+   * Optional. User specified parameters for the schema generation.
+   *
+   * @param GoogleCloudDocumentaiV1GenerateSchemaVersionRequestGenerateSchemaVersionParams $generateSchemaVersionParams
    */
   public function setGenerateSchemaVersionParams(GoogleCloudDocumentaiV1GenerateSchemaVersionRequestGenerateSchemaVersionParams $generateSchemaVersionParams)
   {
@@ -91,7 +105,9 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
     return $this->generateSchemaVersionParams;
   }
   /**
-   * @param GoogleCloudDocumentaiV1Documents
+   * The set of documents specified inline.
+   *
+   * @param GoogleCloudDocumentaiV1Documents $inlineDocuments
    */
   public function setInlineDocuments(GoogleCloudDocumentaiV1Documents $inlineDocuments)
   {
@@ -105,7 +121,9 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
     return $this->inlineDocuments;
   }
   /**
-   * @param GoogleCloudDocumentaiV1RawDocuments
+   * The set of raw documents.
+   *
+   * @param GoogleCloudDocumentaiV1RawDocuments $rawDocuments
    */
   public function setRawDocuments(GoogleCloudDocumentaiV1RawDocuments $rawDocuments)
   {

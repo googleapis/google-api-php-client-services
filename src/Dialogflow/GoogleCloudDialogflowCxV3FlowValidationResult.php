@@ -21,10 +21,15 @@ class GoogleCloudDialogflowCxV3FlowValidationResult extends \Google\Collection
 {
   protected $collection_key = 'validationMessages';
   /**
+   * The unique identifier of the flow validation result. Format:
+   * `projects//locations//agents//flows//validationResult`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Last time the flow was validated.
+   *
    * @var string
    */
   public $updateTime;
@@ -32,7 +37,10 @@ class GoogleCloudDialogflowCxV3FlowValidationResult extends \Google\Collection
   protected $validationMessagesDataType = 'array';
 
   /**
-   * @param string
+   * The unique identifier of the flow validation result. Format:
+   * `projects//locations//agents//flows//validationResult`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -46,7 +54,9 @@ class GoogleCloudDialogflowCxV3FlowValidationResult extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Last time the flow was validated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDialogflowCxV3FlowValidationResult extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ValidationMessage[]
+   * Contains all validation messages.
+   *
+   * @param GoogleCloudDialogflowCxV3ValidationMessage[] $validationMessages
    */
   public function setValidationMessages($validationMessages)
   {

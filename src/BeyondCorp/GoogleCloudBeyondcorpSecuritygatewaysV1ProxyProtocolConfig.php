@@ -19,28 +19,51 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig extends \Google\Collection
 {
+  /**
+   * Unspecified gateway identity.
+   */
+  public const GATEWAY_IDENTITY_GATEWAY_IDENTITY_UNSPECIFIED = 'GATEWAY_IDENTITY_UNSPECIFIED';
+  /**
+   * Resource name for gateway identity, in the format: projects/{project_id}/lo
+   * cations/{location_id}/securityGateways/{security_gateway_id}
+   */
+  public const GATEWAY_IDENTITY_RESOURCE_NAME = 'RESOURCE_NAME';
   protected $collection_key = 'allowedClientHeaders';
   /**
+   * Optional. List of the allowed client header names.
+   *
    * @var string[]
    */
   public $allowedClientHeaders;
   /**
+   * Optional. Client IP configuration. The client IP address is included if
+   * true.
+   *
    * @var bool
    */
   public $clientIp;
   protected $contextualHeadersType = GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders::class;
   protected $contextualHeadersDataType = '';
   /**
+   * Optional. The security gateway identity configuration.
+   *
    * @var string
    */
   public $gatewayIdentity;
   /**
+   * Optional. Custom resource specific headers along with the values. The names
+   * should conform to RFC 9110: >Field names can contain alphanumeric
+   * characters, hyphens, and periods, can contain only ASCII-printable
+   * characters and tabs, and must start with a letter.
+   *
    * @var string[]
    */
   public $metadataHeaders;
 
   /**
-   * @param string[]
+   * Optional. List of the allowed client header names.
+   *
+   * @param string[] $allowedClientHeaders
    */
   public function setAllowedClientHeaders($allowedClientHeaders)
   {
@@ -54,7 +77,10 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig extends \Google
     return $this->allowedClientHeaders;
   }
   /**
-   * @param bool
+   * Optional. Client IP configuration. The client IP address is included if
+   * true.
+   *
+   * @param bool $clientIp
    */
   public function setClientIp($clientIp)
   {
@@ -68,7 +94,9 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig extends \Google
     return $this->clientIp;
   }
   /**
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders
+   * Optional. Configuration for the contextual headers.
+   *
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders $contextualHeaders
    */
   public function setContextualHeaders(GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeaders $contextualHeaders)
   {
@@ -82,21 +110,30 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig extends \Google
     return $this->contextualHeaders;
   }
   /**
-   * @param string
+   * Optional. The security gateway identity configuration.
+   *
+   * Accepted values: GATEWAY_IDENTITY_UNSPECIFIED, RESOURCE_NAME
+   *
+   * @param self::GATEWAY_IDENTITY_* $gatewayIdentity
    */
   public function setGatewayIdentity($gatewayIdentity)
   {
     $this->gatewayIdentity = $gatewayIdentity;
   }
   /**
-   * @return string
+   * @return self::GATEWAY_IDENTITY_*
    */
   public function getGatewayIdentity()
   {
     return $this->gatewayIdentity;
   }
   /**
-   * @param string[]
+   * Optional. Custom resource specific headers along with the values. The names
+   * should conform to RFC 9110: >Field names can contain alphanumeric
+   * characters, hyphens, and periods, can contain only ASCII-printable
+   * characters and tabs, and must start with a letter.
+   *
+   * @param string[] $metadataHeaders
    */
   public function setMetadataHeaders($metadataHeaders)
   {

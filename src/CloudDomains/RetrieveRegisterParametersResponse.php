@@ -23,7 +23,9 @@ class RetrieveRegisterParametersResponse extends \Google\Model
   protected $registerParametersDataType = '';
 
   /**
-   * @param RegisterParameters
+   * Parameters to use when calling the `RegisterDomain` method.
+   *
+   * @param RegisterParameters $registerParameters
    */
   public function setRegisterParameters(RegisterParameters $registerParameters)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class VirtualNIC extends \Google\Model
 {
   /**
+   * Whether gVNIC features are enabled in the node pool.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether gVNIC features are enabled in the node pool.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2DiskPath extends \Google\Model
 {
   /**
+   * UUID of the partition (format
+   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
+   *
    * @var string
    */
   public $partitionUuid;
   /**
+   * Relative path of the file in the partition as a JSON encoded string.
+   * Example: /home/user1/executable_file.sh
+   *
    * @var string
    */
   public $relativePath;
 
   /**
-   * @param string
+   * UUID of the partition (format
+   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
+   *
+   * @param string $partitionUuid
    */
   public function setPartitionUuid($partitionUuid)
   {
@@ -43,7 +52,10 @@ class GoogleCloudSecuritycenterV2DiskPath extends \Google\Model
     return $this->partitionUuid;
   }
   /**
-   * @param string
+   * Relative path of the file in the partition as a JSON encoded string.
+   * Example: /home/user1/executable_file.sh
+   *
+   * @param string $relativePath
    */
   public function setRelativePath($relativePath)
   {

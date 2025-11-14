@@ -27,7 +27,9 @@ class GoogleCloudDocumentaiV1beta3DocumentId extends \Google\Model
   protected $unmanagedDocIdDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId
+   * A document id within user-managed Cloud Storage.
+   *
+   * @param GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId $gcsManagedDocId
    */
   public function setGcsManagedDocId(GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId $gcsManagedDocId)
   {
@@ -41,7 +43,9 @@ class GoogleCloudDocumentaiV1beta3DocumentId extends \Google\Model
     return $this->gcsManagedDocId;
   }
   /**
-   * @param GoogleCloudDocumentaiV1beta3RevisionRef
+   * Points to a specific revision of the document if set.
+   *
+   * @param GoogleCloudDocumentaiV1beta3RevisionRef $revisionRef
    */
   public function setRevisionRef(GoogleCloudDocumentaiV1beta3RevisionRef $revisionRef)
   {
@@ -55,7 +59,9 @@ class GoogleCloudDocumentaiV1beta3DocumentId extends \Google\Model
     return $this->revisionRef;
   }
   /**
-   * @param GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId
+   * A document id within unmanaged dataset.
+   *
+   * @param GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId $unmanagedDocId
    */
   public function setUnmanagedDocId(GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId $unmanagedDocId)
   {

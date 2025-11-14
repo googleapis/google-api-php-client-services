@@ -23,20 +23,30 @@ class FacetResult extends \Google\Collection
   protected $bucketsType = FacetBucket::class;
   protected $bucketsDataType = 'array';
   /**
+   * Object type for which facet results are returned. Can be empty.
+   *
    * @var string
    */
   public $objectType;
   /**
+   * The name of the operator chosen for faceting. @see
+   * cloudsearch.SchemaPropertyOptions
+   *
    * @var string
    */
   public $operatorName;
   /**
+   * Source name for which facet results are returned. Will not be empty.
+   *
    * @var string
    */
   public $sourceName;
 
   /**
-   * @param FacetBucket[]
+   * FacetBuckets for values in response containing at least a single result
+   * with the corresponding filter.
+   *
+   * @param FacetBucket[] $buckets
    */
   public function setBuckets($buckets)
   {
@@ -50,7 +60,9 @@ class FacetResult extends \Google\Collection
     return $this->buckets;
   }
   /**
-   * @param string
+   * Object type for which facet results are returned. Can be empty.
+   *
+   * @param string $objectType
    */
   public function setObjectType($objectType)
   {
@@ -64,7 +76,10 @@ class FacetResult extends \Google\Collection
     return $this->objectType;
   }
   /**
-   * @param string
+   * The name of the operator chosen for faceting. @see
+   * cloudsearch.SchemaPropertyOptions
+   *
+   * @param string $operatorName
    */
   public function setOperatorName($operatorName)
   {
@@ -78,7 +93,9 @@ class FacetResult extends \Google\Collection
     return $this->operatorName;
   }
   /**
-   * @param string
+   * Source name for which facet results are returned. Will not be empty.
+   *
+   * @param string $sourceName
    */
   public function setSourceName($sourceName)
   {

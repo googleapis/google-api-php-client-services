@@ -20,32 +20,48 @@ namespace Google\Service\Clouderrorreporting;
 class HttpRequestContext extends \Google\Model
 {
   /**
+   * The type of HTTP request, such as `GET`, `POST`, etc.
+   *
    * @var string
    */
   public $method;
   /**
+   * The referrer information that is provided with the request.
+   *
    * @var string
    */
   public $referrer;
   /**
+   * The IP address from which the request originated. This can be IPv4, IPv6,
+   * or a token which is derived from the IP address, depending on the data that
+   * has been provided in the error report.
+   *
    * @var string
    */
   public $remoteIp;
   /**
+   * The HTTP response status code for the request.
+   *
    * @var int
    */
   public $responseStatusCode;
   /**
+   * The URL of the request.
+   *
    * @var string
    */
   public $url;
   /**
+   * The user agent information that is provided with the request.
+   *
    * @var string
    */
   public $userAgent;
 
   /**
-   * @param string
+   * The type of HTTP request, such as `GET`, `POST`, etc.
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -59,7 +75,9 @@ class HttpRequestContext extends \Google\Model
     return $this->method;
   }
   /**
-   * @param string
+   * The referrer information that is provided with the request.
+   *
+   * @param string $referrer
    */
   public function setReferrer($referrer)
   {
@@ -73,7 +91,11 @@ class HttpRequestContext extends \Google\Model
     return $this->referrer;
   }
   /**
-   * @param string
+   * The IP address from which the request originated. This can be IPv4, IPv6,
+   * or a token which is derived from the IP address, depending on the data that
+   * has been provided in the error report.
+   *
+   * @param string $remoteIp
    */
   public function setRemoteIp($remoteIp)
   {
@@ -87,7 +109,9 @@ class HttpRequestContext extends \Google\Model
     return $this->remoteIp;
   }
   /**
-   * @param int
+   * The HTTP response status code for the request.
+   *
+   * @param int $responseStatusCode
    */
   public function setResponseStatusCode($responseStatusCode)
   {
@@ -101,7 +125,9 @@ class HttpRequestContext extends \Google\Model
     return $this->responseStatusCode;
   }
   /**
-   * @param string
+   * The URL of the request.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {
@@ -115,7 +141,9 @@ class HttpRequestContext extends \Google\Model
     return $this->url;
   }
   /**
-   * @param string
+   * The user agent information that is provided with the request.
+   *
+   * @param string $userAgent
    */
   public function setUserAgent($userAgent)
   {

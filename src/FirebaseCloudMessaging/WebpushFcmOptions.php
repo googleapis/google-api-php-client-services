@@ -20,16 +20,23 @@ namespace Google\Service\FirebaseCloudMessaging;
 class WebpushFcmOptions extends \Google\Model
 {
   /**
+   * Label associated with the message's analytics data.
+   *
    * @var string
    */
   public $analyticsLabel;
   /**
+   * The link to open when the user clicks on the notification. For all URL
+   * values, HTTPS is required.
+   *
    * @var string
    */
   public $link;
 
   /**
-   * @param string
+   * Label associated with the message's analytics data.
+   *
+   * @param string $analyticsLabel
    */
   public function setAnalyticsLabel($analyticsLabel)
   {
@@ -43,7 +50,10 @@ class WebpushFcmOptions extends \Google\Model
     return $this->analyticsLabel;
   }
   /**
-   * @param string
+   * The link to open when the user clicks on the notification. For all URL
+   * values, HTTPS is required.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {

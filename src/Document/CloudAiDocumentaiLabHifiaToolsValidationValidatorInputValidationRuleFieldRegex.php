@@ -22,12 +22,14 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldR
   protected $fieldType = CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField::class;
   protected $fieldDataType = '';
   /**
+   * Python regex to validate the field values.
+   *
    * @var string
    */
   public $pattern;
 
   /**
-   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField $field
    */
   public function setField(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleField $field)
   {
@@ -41,7 +43,9 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldR
     return $this->field;
   }
   /**
-   * @param string
+   * Python regex to validate the field values.
+   *
+   * @param string $pattern
    */
   public function setPattern($pattern)
   {

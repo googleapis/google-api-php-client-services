@@ -20,12 +20,16 @@ namespace Google\Service\Monitoring;
 class DroppedLabels extends \Google\Model
 {
   /**
+   * Map from label to its value, for all labels dropped in any aggregation.
+   *
    * @var string[]
    */
   public $label;
 
   /**
-   * @param string[]
+   * Map from label to its value, for all labels dropped in any aggregation.
+   *
+   * @param string[] $label
    */
   public function setLabel($label)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaEstimateDataSizeMetadata extends \Google\Model
 {
   /**
+   * Operation create time.
+   *
    * @var string
    */
   public $createTime;
 
   /**
-   * @param string
+   * Operation create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {

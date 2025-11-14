@@ -21,20 +21,29 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUIComponentField extends \Google\C
 {
   protected $collection_key = 'deviceVisibility';
   /**
+   * The field visibility on different types of devices.
+   *
    * @var string[]
    */
   public $deviceVisibility;
   /**
+   * The template to customize how the field is displayed. An example value
+   * would be a string that looks like: "Price: {value}".
+   *
    * @var string
    */
   public $displayTemplate;
   /**
+   * Required. Registered field name. The format is `field.abc`.
+   *
    * @var string
    */
   public $field;
 
   /**
-   * @param string[]
+   * The field visibility on different types of devices.
+   *
+   * @param string[] $deviceVisibility
    */
   public function setDeviceVisibility($deviceVisibility)
   {
@@ -48,7 +57,10 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUIComponentField extends \Google\C
     return $this->deviceVisibility;
   }
   /**
-   * @param string
+   * The template to customize how the field is displayed. An example value
+   * would be a string that looks like: "Price: {value}".
+   *
+   * @param string $displayTemplate
    */
   public function setDisplayTemplate($displayTemplate)
   {
@@ -62,7 +74,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUIComponentField extends \Google\C
     return $this->displayTemplate;
   }
   /**
-   * @param string
+   * Required. Registered field name. The format is `field.abc`.
+   *
+   * @param string $field
    */
   public function setField($field)
   {

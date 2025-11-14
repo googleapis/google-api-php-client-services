@@ -21,18 +21,29 @@ class ListProfilesResponse extends \Google\Collection
 {
   protected $collection_key = 'profiles';
   /**
+   * Token to receive the next page of results. This field maybe empty if there
+   * are no more profiles to fetch.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $profilesType = Profile::class;
   protected $profilesDataType = 'array';
   /**
+   * Number of profiles that were skipped in the current page since they were
+   * not able to be fetched successfully. This should typically be zero. A non-
+   * zero value may indicate a transient failure, in which case if the number is
+   * too high for your use case, the call may be retried.
+   *
    * @var int
    */
   public $skippedProfiles;
 
   /**
-   * @param string
+   * Token to receive the next page of results. This field maybe empty if there
+   * are no more profiles to fetch.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +57,9 @@ class ListProfilesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Profile[]
+   * List of profiles fetched.
+   *
+   * @param Profile[] $profiles
    */
   public function setProfiles($profiles)
   {
@@ -60,7 +73,12 @@ class ListProfilesResponse extends \Google\Collection
     return $this->profiles;
   }
   /**
-   * @param int
+   * Number of profiles that were skipped in the current page since they were
+   * not able to be fetched successfully. This should typically be zero. A non-
+   * zero value may indicate a transient failure, in which case if the number is
+   * too high for your use case, the call may be retried.
+   *
+   * @param int $skippedProfiles
    */
   public function setSkippedProfiles($skippedProfiles)
   {

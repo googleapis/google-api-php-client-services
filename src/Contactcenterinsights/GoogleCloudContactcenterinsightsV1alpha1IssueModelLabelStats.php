@@ -20,18 +20,25 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStats extends \Google\Model
 {
   /**
+   * Number of conversations the issue model has analyzed at this point in time.
+   *
    * @var string
    */
   public $analyzedConversationsCount;
   protected $issueStatsType = GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStatsIssueStats::class;
   protected $issueStatsDataType = 'map';
   /**
+   * Number of analyzed conversations for which no issue was applicable at this
+   * point in time.
+   *
    * @var string
    */
   public $unclassifiedConversationsCount;
 
   /**
-   * @param string
+   * Number of conversations the issue model has analyzed at this point in time.
+   *
+   * @param string $analyzedConversationsCount
    */
   public function setAnalyzedConversationsCount($analyzedConversationsCount)
   {
@@ -45,7 +52,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStats extends \Goog
     return $this->analyzedConversationsCount;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStatsIssueStats[]
+   * Statistics on each issue. Key is the issue's resource name.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStatsIssueStats[] $issueStats
    */
   public function setIssueStats($issueStats)
   {
@@ -59,7 +68,10 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStats extends \Goog
     return $this->issueStats;
   }
   /**
-   * @param string
+   * Number of analyzed conversations for which no issue was applicable at this
+   * point in time.
+   *
+   * @param string $unclassifiedConversationsCount
    */
   public function setUnclassifiedConversationsCount($unclassifiedConversationsCount)
   {

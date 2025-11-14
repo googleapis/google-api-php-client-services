@@ -20,20 +20,53 @@ namespace Google\Service\CloudSearch;
 class IntegerOperatorOptions extends \Google\Model
 {
   /**
+   * Indicates the operator name required in the query in order to isolate the
+   * integer property using the greater-than operator. For example, if
+   * greaterThanOperatorName is *priorityabove* and the property's name is
+   * *priorityVal*, then queries like *priorityabove:* show results only where
+   * the value of the property named *priorityVal* is greater than **. The
+   * operator name can only contain lowercase letters (a-z). The maximum length
+   * is 32 characters.
+   *
    * @var string
    */
   public $greaterThanOperatorName;
   /**
+   * Indicates the operator name required in the query in order to isolate the
+   * integer property using the less-than operator. For example, if
+   * lessThanOperatorName is *prioritybelow* and the property's name is
+   * *priorityVal*, then queries like *prioritybelow:* show results only where
+   * the value of the property named *priorityVal* is less than **. The operator
+   * name can only contain lowercase letters (a-z). The maximum length is 32
+   * characters.
+   *
    * @var string
    */
   public $lessThanOperatorName;
   /**
+   * Indicates the operator name required in the query in order to isolate the
+   * integer property. For example, if operatorName is *priority* and the
+   * property's name is *priorityVal*, then queries like *priority:* show
+   * results only where the value of the property named *priorityVal* matches
+   * **. By contrast, a search that uses the same ** without an operator returns
+   * all items where ** matches the value of any String properties or text
+   * within the content field for the item. The operator name can only contain
+   * lowercase letters (a-z). The maximum length is 32 characters.
+   *
    * @var string
    */
   public $operatorName;
 
   /**
-   * @param string
+   * Indicates the operator name required in the query in order to isolate the
+   * integer property using the greater-than operator. For example, if
+   * greaterThanOperatorName is *priorityabove* and the property's name is
+   * *priorityVal*, then queries like *priorityabove:* show results only where
+   * the value of the property named *priorityVal* is greater than **. The
+   * operator name can only contain lowercase letters (a-z). The maximum length
+   * is 32 characters.
+   *
+   * @param string $greaterThanOperatorName
    */
   public function setGreaterThanOperatorName($greaterThanOperatorName)
   {
@@ -47,7 +80,15 @@ class IntegerOperatorOptions extends \Google\Model
     return $this->greaterThanOperatorName;
   }
   /**
-   * @param string
+   * Indicates the operator name required in the query in order to isolate the
+   * integer property using the less-than operator. For example, if
+   * lessThanOperatorName is *prioritybelow* and the property's name is
+   * *priorityVal*, then queries like *prioritybelow:* show results only where
+   * the value of the property named *priorityVal* is less than **. The operator
+   * name can only contain lowercase letters (a-z). The maximum length is 32
+   * characters.
+   *
+   * @param string $lessThanOperatorName
    */
   public function setLessThanOperatorName($lessThanOperatorName)
   {
@@ -61,7 +102,16 @@ class IntegerOperatorOptions extends \Google\Model
     return $this->lessThanOperatorName;
   }
   /**
-   * @param string
+   * Indicates the operator name required in the query in order to isolate the
+   * integer property. For example, if operatorName is *priority* and the
+   * property's name is *priorityVal*, then queries like *priority:* show
+   * results only where the value of the property named *priorityVal* matches
+   * **. By contrast, a search that uses the same ** without an operator returns
+   * all items where ** matches the value of any String properties or text
+   * within the content field for the item. The operator name can only contain
+   * lowercase letters (a-z). The maximum length is 32 characters.
+   *
+   * @param string $operatorName
    */
   public function setOperatorName($operatorName)
   {

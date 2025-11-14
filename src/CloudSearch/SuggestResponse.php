@@ -24,7 +24,9 @@ class SuggestResponse extends \Google\Collection
   protected $suggestResultsDataType = 'array';
 
   /**
-   * @param SuggestResult[]
+   * List of suggestions.
+   *
+   * @param SuggestResult[] $suggestResults
    */
   public function setSuggestResults($suggestResults)
   {

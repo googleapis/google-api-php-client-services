@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class CostManagementConfig extends \Google\Model
 {
   /**
+   * Whether the feature is enabled or not.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether the feature is enabled or not.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

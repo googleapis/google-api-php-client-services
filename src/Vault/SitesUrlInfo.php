@@ -21,12 +21,16 @@ class SitesUrlInfo extends \Google\Collection
 {
   protected $collection_key = 'urls';
   /**
+   * A list of published site URLs.
+   *
    * @var string[]
    */
   public $urls;
 
   /**
-   * @param string[]
+   * A list of published site URLs.
+   *
+   * @param string[] $urls
    */
   public function setUrls($urls)
   {

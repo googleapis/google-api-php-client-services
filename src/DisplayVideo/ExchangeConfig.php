@@ -24,7 +24,10 @@ class ExchangeConfig extends \Google\Collection
   protected $enabledExchangesDataType = 'array';
 
   /**
-   * @param ExchangeConfigEnabledExchange[]
+   * All enabled exchanges in the partner. Duplicate enabled exchanges will be
+   * ignored.
+   *
+   * @param ExchangeConfigEnabledExchange[] $enabledExchanges
    */
   public function setEnabledExchanges($enabledExchanges)
   {

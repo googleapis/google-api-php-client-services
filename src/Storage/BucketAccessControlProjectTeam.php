@@ -20,16 +20,22 @@ namespace Google\Service\Storage;
 class BucketAccessControlProjectTeam extends \Google\Model
 {
   /**
+   * The project number.
+   *
    * @var string
    */
   public $projectNumber;
   /**
+   * The team.
+   *
    * @var string
    */
   public $team;
 
   /**
-   * @param string
+   * The project number.
+   *
+   * @param string $projectNumber
    */
   public function setProjectNumber($projectNumber)
   {
@@ -43,7 +49,9 @@ class BucketAccessControlProjectTeam extends \Google\Model
     return $this->projectNumber;
   }
   /**
-   * @param string
+   * The team.
+   *
+   * @param string $team
    */
   public function setTeam($team)
   {

@@ -20,16 +20,40 @@ namespace Google\Service\DataManager;
 class DeviceInfo extends \Google\Model
 {
   /**
+   * Optional. The IP address of the device for the given context. **Note:**
+   * Google Ads does not support IP address matching for end users in the
+   * European Economic Area (EEA), United Kingdom (UK), or Switzerland (CH). Add
+   * logic to conditionally exclude sharing IP addresses from users from these
+   * regions and ensure that you provide users with clear and comprehensive
+   * information about the data you collect on your sites, apps, and other
+   * properties and get consent where required by law or any applicable Google
+   * policies. See the [About offline conversion
+   * imports](https://support.google.com/google-ads/answer/2998031) page for
+   * more details.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * Optional. The user-agent string of the device for the given context.
+   *
    * @var string
    */
   public $userAgent;
 
   /**
-   * @param string
+   * Optional. The IP address of the device for the given context. **Note:**
+   * Google Ads does not support IP address matching for end users in the
+   * European Economic Area (EEA), United Kingdom (UK), or Switzerland (CH). Add
+   * logic to conditionally exclude sharing IP addresses from users from these
+   * regions and ensure that you provide users with clear and comprehensive
+   * information about the data you collect on your sites, apps, and other
+   * properties and get consent where required by law or any applicable Google
+   * policies. See the [About offline conversion
+   * imports](https://support.google.com/google-ads/answer/2998031) page for
+   * more details.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -43,7 +67,9 @@ class DeviceInfo extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * Optional. The user-agent string of the device for the given context.
+   *
+   * @param string $userAgent
    */
   public function setUserAgent($userAgent)
   {

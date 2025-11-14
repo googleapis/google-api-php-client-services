@@ -19,43 +19,73 @@ namespace Google\Service\CloudIdentity;
 
 class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Model
 {
+  /**
+   * Default value.
+   */
+  public const VALIDATION_STATE_CERTIFICATE_VALIDATION_STATE_UNSPECIFIED = 'CERTIFICATE_VALIDATION_STATE_UNSPECIFIED';
+  /**
+   * Certificate validation was successful.
+   */
+  public const VALIDATION_STATE_VALIDATION_SUCCESSFUL = 'VALIDATION_SUCCESSFUL';
+  /**
+   * Certificate validation failed.
+   */
+  public const VALIDATION_STATE_VALIDATION_FAILED = 'VALIDATION_FAILED';
   protected $certificateTemplateType = GoogleAppsCloudidentityDevicesV1CertificateTemplate::class;
   protected $certificateTemplateDataType = '';
   /**
+   * The encoded certificate fingerprint.
+   *
    * @var string
    */
   public $fingerprint;
   /**
+   * The name of the issuer of this certificate.
+   *
    * @var string
    */
   public $issuer;
   /**
+   * Serial number of the certificate, Example: "123456789".
+   *
    * @var string
    */
   public $serialNumber;
   /**
+   * The subject name of this certificate.
+   *
    * @var string
    */
   public $subject;
   /**
+   * The certificate thumbprint.
+   *
    * @var string
    */
   public $thumbprint;
   /**
+   * Output only. Validation state of this certificate.
+   *
    * @var string
    */
   public $validationState;
   /**
+   * Certificate not valid at or after this timestamp.
+   *
    * @var string
    */
   public $validityExpirationTime;
   /**
+   * Certificate not valid before this timestamp.
+   *
    * @var string
    */
   public $validityStartTime;
 
   /**
-   * @param GoogleAppsCloudidentityDevicesV1CertificateTemplate
+   * The X.509 extension for CertificateTemplate.
+   *
+   * @param GoogleAppsCloudidentityDevicesV1CertificateTemplate $certificateTemplate
    */
   public function setCertificateTemplate(GoogleAppsCloudidentityDevicesV1CertificateTemplate $certificateTemplate)
   {
@@ -69,7 +99,9 @@ class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Mode
     return $this->certificateTemplate;
   }
   /**
-   * @param string
+   * The encoded certificate fingerprint.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -83,7 +115,9 @@ class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Mode
     return $this->fingerprint;
   }
   /**
-   * @param string
+   * The name of the issuer of this certificate.
+   *
+   * @param string $issuer
    */
   public function setIssuer($issuer)
   {
@@ -97,7 +131,9 @@ class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Mode
     return $this->issuer;
   }
   /**
-   * @param string
+   * Serial number of the certificate, Example: "123456789".
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {
@@ -111,7 +147,9 @@ class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Mode
     return $this->serialNumber;
   }
   /**
-   * @param string
+   * The subject name of this certificate.
+   *
+   * @param string $subject
    */
   public function setSubject($subject)
   {
@@ -125,7 +163,9 @@ class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Mode
     return $this->subject;
   }
   /**
-   * @param string
+   * The certificate thumbprint.
+   *
+   * @param string $thumbprint
    */
   public function setThumbprint($thumbprint)
   {
@@ -139,21 +179,28 @@ class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Mode
     return $this->thumbprint;
   }
   /**
-   * @param string
+   * Output only. Validation state of this certificate.
+   *
+   * Accepted values: CERTIFICATE_VALIDATION_STATE_UNSPECIFIED,
+   * VALIDATION_SUCCESSFUL, VALIDATION_FAILED
+   *
+   * @param self::VALIDATION_STATE_* $validationState
    */
   public function setValidationState($validationState)
   {
     $this->validationState = $validationState;
   }
   /**
-   * @return string
+   * @return self::VALIDATION_STATE_*
    */
   public function getValidationState()
   {
     return $this->validationState;
   }
   /**
-   * @param string
+   * Certificate not valid at or after this timestamp.
+   *
+   * @param string $validityExpirationTime
    */
   public function setValidityExpirationTime($validityExpirationTime)
   {
@@ -167,7 +214,9 @@ class GoogleAppsCloudidentityDevicesV1CertificateAttributes extends \Google\Mode
     return $this->validityExpirationTime;
   }
   /**
-   * @param string
+   * Certificate not valid before this timestamp.
+   *
+   * @param string $validityStartTime
    */
   public function setValidityStartTime($validityStartTime)
   {

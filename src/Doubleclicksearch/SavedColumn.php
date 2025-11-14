@@ -20,20 +20,30 @@ namespace Google\Service\Doubleclicksearch;
 class SavedColumn extends \Google\Model
 {
   /**
+   * Identifies this as a SavedColumn resource. Value: the fixed string
+   * doubleclicksearch#savedColumn.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The name of the saved column.
+   *
    * @var string
    */
   public $savedColumnName;
   /**
+   * The type of data this saved column will produce.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Identifies this as a SavedColumn resource. Value: the fixed string
+   * doubleclicksearch#savedColumn.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -47,7 +57,9 @@ class SavedColumn extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The name of the saved column.
+   *
+   * @param string $savedColumnName
    */
   public function setSavedColumnName($savedColumnName)
   {
@@ -61,7 +73,9 @@ class SavedColumn extends \Google\Model
     return $this->savedColumnName;
   }
   /**
-   * @param string
+   * The type of data this saved column will produce.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

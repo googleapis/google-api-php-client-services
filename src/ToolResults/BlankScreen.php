@@ -20,12 +20,16 @@ namespace Google\Service\ToolResults;
 class BlankScreen extends \Google\Model
 {
   /**
+   * The screen id of the element
+   *
    * @var string
    */
   public $screenId;
 
   /**
-   * @param string
+   * The screen id of the element
+   *
+   * @param string $screenId
    */
   public function setScreenId($screenId)
   {

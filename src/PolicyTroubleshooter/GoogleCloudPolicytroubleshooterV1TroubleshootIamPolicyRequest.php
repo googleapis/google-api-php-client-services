@@ -23,7 +23,10 @@ class GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest extends \Goo
   protected $accessTupleDataType = '';
 
   /**
-   * @param GoogleCloudPolicytroubleshooterV1AccessTuple
+   * The information to use for checking whether a principal has a permission
+   * for a resource.
+   *
+   * @param GoogleCloudPolicytroubleshooterV1AccessTuple $accessTuple
    */
   public function setAccessTuple(GoogleCloudPolicytroubleshooterV1AccessTuple $accessTuple)
   {

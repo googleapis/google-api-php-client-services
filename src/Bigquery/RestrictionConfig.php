@@ -20,19 +20,35 @@ namespace Google\Service\Bigquery;
 class RestrictionConfig extends \Google\Model
 {
   /**
+   * Should never be used.
+   */
+  public const TYPE_RESTRICTION_TYPE_UNSPECIFIED = 'RESTRICTION_TYPE_UNSPECIFIED';
+  /**
+   * Restrict data egress. See [Data
+   * egress](https://cloud.google.com/bigquery/docs/analytics-hub-
+   * introduction#data_egress) for more details.
+   */
+  public const TYPE_RESTRICTED_DATA_EGRESS = 'RESTRICTED_DATA_EGRESS';
+  /**
+   * Output only. Specifies the type of dataset/table restriction.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. Specifies the type of dataset/table restriction.
+   *
+   * Accepted values: RESTRICTION_TYPE_UNSPECIFIED, RESTRICTED_DATA_EGRESS
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

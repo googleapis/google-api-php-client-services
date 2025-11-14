@@ -20,38 +20,58 @@ namespace Google\Service\NetworkServices;
 class HttpRouteHeaderMatch extends \Google\Model
 {
   /**
+   * The value of the header should match exactly the content of exact_match.
+   *
    * @var string
    */
   public $exactMatch;
   /**
+   * The name of the HTTP header to match against.
+   *
    * @var string
    */
   public $header;
   /**
+   * If specified, the match result will be inverted before checking. Default
+   * value is set to false.
+   *
    * @var bool
    */
   public $invertMatch;
   /**
+   * The value of the header must start with the contents of prefix_match.
+   *
    * @var string
    */
   public $prefixMatch;
   /**
+   * A header with header_name must exist. The match takes place whether or not
+   * the header has a value.
+   *
    * @var bool
    */
   public $presentMatch;
   protected $rangeMatchType = HttpRouteHeaderMatchIntegerRange::class;
   protected $rangeMatchDataType = '';
   /**
+   * The value of the header must match the regular expression specified in
+   * regex_match. For regular expression grammar, please see:
+   * https://github.com/google/re2/wiki/Syntax
+   *
    * @var string
    */
   public $regexMatch;
   /**
+   * The value of the header must end with the contents of suffix_match.
+   *
    * @var string
    */
   public $suffixMatch;
 
   /**
-   * @param string
+   * The value of the header should match exactly the content of exact_match.
+   *
+   * @param string $exactMatch
    */
   public function setExactMatch($exactMatch)
   {
@@ -65,7 +85,9 @@ class HttpRouteHeaderMatch extends \Google\Model
     return $this->exactMatch;
   }
   /**
-   * @param string
+   * The name of the HTTP header to match against.
+   *
+   * @param string $header
    */
   public function setHeader($header)
   {
@@ -79,7 +101,10 @@ class HttpRouteHeaderMatch extends \Google\Model
     return $this->header;
   }
   /**
-   * @param bool
+   * If specified, the match result will be inverted before checking. Default
+   * value is set to false.
+   *
+   * @param bool $invertMatch
    */
   public function setInvertMatch($invertMatch)
   {
@@ -93,7 +118,9 @@ class HttpRouteHeaderMatch extends \Google\Model
     return $this->invertMatch;
   }
   /**
-   * @param string
+   * The value of the header must start with the contents of prefix_match.
+   *
+   * @param string $prefixMatch
    */
   public function setPrefixMatch($prefixMatch)
   {
@@ -107,7 +134,10 @@ class HttpRouteHeaderMatch extends \Google\Model
     return $this->prefixMatch;
   }
   /**
-   * @param bool
+   * A header with header_name must exist. The match takes place whether or not
+   * the header has a value.
+   *
+   * @param bool $presentMatch
    */
   public function setPresentMatch($presentMatch)
   {
@@ -121,7 +151,10 @@ class HttpRouteHeaderMatch extends \Google\Model
     return $this->presentMatch;
   }
   /**
-   * @param HttpRouteHeaderMatchIntegerRange
+   * If specified, the rule will match if the request header value is within the
+   * range.
+   *
+   * @param HttpRouteHeaderMatchIntegerRange $rangeMatch
    */
   public function setRangeMatch(HttpRouteHeaderMatchIntegerRange $rangeMatch)
   {
@@ -135,7 +168,11 @@ class HttpRouteHeaderMatch extends \Google\Model
     return $this->rangeMatch;
   }
   /**
-   * @param string
+   * The value of the header must match the regular expression specified in
+   * regex_match. For regular expression grammar, please see:
+   * https://github.com/google/re2/wiki/Syntax
+   *
+   * @param string $regexMatch
    */
   public function setRegexMatch($regexMatch)
   {
@@ -149,7 +186,9 @@ class HttpRouteHeaderMatch extends \Google\Model
     return $this->regexMatch;
   }
   /**
-   * @param string
+   * The value of the header must end with the contents of suffix_match.
+   *
+   * @param string $suffixMatch
    */
   public function setSuffixMatch($suffixMatch)
   {

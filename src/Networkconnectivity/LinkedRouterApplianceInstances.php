@@ -21,22 +21,36 @@ class LinkedRouterApplianceInstances extends \Google\Collection
 {
   protected $collection_key = 'instances';
   /**
+   * Optional. Hub routes fully encompassed by include import ranges are
+   * included during import from hub.
+   *
    * @var string[]
    */
   public $includeImportRanges;
   protected $instancesType = RouterApplianceInstance::class;
   protected $instancesDataType = 'array';
   /**
+   * A value that controls whether site-to-site data transfer is enabled for
+   * these resources. Data transfer is available only in [supported
+   * locations](https://cloud.google.com/network-connectivity/docs/network-
+   * connectivity-center/concepts/locations).
+   *
    * @var bool
    */
   public $siteToSiteDataTransfer;
   /**
+   * Output only. The VPC network where these router appliance instances are
+   * located.
+   *
    * @var string
    */
   public $vpcNetwork;
 
   /**
-   * @param string[]
+   * Optional. Hub routes fully encompassed by include import ranges are
+   * included during import from hub.
+   *
+   * @param string[] $includeImportRanges
    */
   public function setIncludeImportRanges($includeImportRanges)
   {
@@ -50,7 +64,9 @@ class LinkedRouterApplianceInstances extends \Google\Collection
     return $this->includeImportRanges;
   }
   /**
-   * @param RouterApplianceInstance[]
+   * The list of router appliance instances.
+   *
+   * @param RouterApplianceInstance[] $instances
    */
   public function setInstances($instances)
   {
@@ -64,7 +80,12 @@ class LinkedRouterApplianceInstances extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param bool
+   * A value that controls whether site-to-site data transfer is enabled for
+   * these resources. Data transfer is available only in [supported
+   * locations](https://cloud.google.com/network-connectivity/docs/network-
+   * connectivity-center/concepts/locations).
+   *
+   * @param bool $siteToSiteDataTransfer
    */
   public function setSiteToSiteDataTransfer($siteToSiteDataTransfer)
   {
@@ -78,7 +99,10 @@ class LinkedRouterApplianceInstances extends \Google\Collection
     return $this->siteToSiteDataTransfer;
   }
   /**
-   * @param string
+   * Output only. The VPC network where these router appliance instances are
+   * located.
+   *
+   * @param string $vpcNetwork
    */
   public function setVpcNetwork($vpcNetwork)
   {

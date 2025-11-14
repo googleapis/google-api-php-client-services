@@ -24,7 +24,7 @@ class EnterpriseTopazSidekickRecentDocumentsCardProto extends \Google\Collection
   protected $documentDataType = 'array';
 
   /**
-   * @param EnterpriseTopazSidekickCommonDocument[]
+   * @param EnterpriseTopazSidekickCommonDocument[] $document
    */
   public function setDocument($document)
   {

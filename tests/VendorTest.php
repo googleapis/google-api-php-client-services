@@ -31,12 +31,6 @@ class VendorTest extends TestCase
      */
     public function testApiClientVersions($apiClientVersion)
     {
-        if (
-            'dev-main' === $apiClientVersion
-            && version_compare(PHP_VERSION, '5.6', '<')
-        ) {
-            self::markTestSkipped('dev-main of google/apiclient can only run on 5.6');
-        }
         if ('true' === getenv('SKIP_VENDOR_TESTS')) {
             self::markTestSkipped('Explicitly skipping the vendor tests');
         }
@@ -65,7 +59,7 @@ class VendorTest extends TestCase
     {
         return [
             ['dev-main'],
-            ['2.7.2'],
+            ['2.18.4'],
         ];
     }
 

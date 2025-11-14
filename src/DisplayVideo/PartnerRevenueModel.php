@@ -20,16 +20,62 @@ namespace Google\Service\DisplayVideo;
 class PartnerRevenueModel extends \Google\Model
 {
   /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const MARKUP_TYPE_PARTNER_REVENUE_MODEL_MARKUP_TYPE_UNSPECIFIED = 'PARTNER_REVENUE_MODEL_MARKUP_TYPE_UNSPECIFIED';
+  /**
+   * Calculate the partner revenue based on a fixed CPM.
+   */
+  public const MARKUP_TYPE_PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM = 'PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM';
+  /**
+   * Calculate the partner revenue based on a percentage surcharge of its media
+   * cost.
+   *
+   * @deprecated
+   */
+  public const MARKUP_TYPE_PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP = 'PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP';
+  /**
+   * Calculate the partner revenue based on a percentage surcharge of its total
+   * media cost, which includes all partner costs and data costs.
+   */
+  public const MARKUP_TYPE_PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP = 'PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP';
+  /**
+   * Required. The markup amount of the partner revenue model. Must be greater
+   * than or equal to 0. * When the markup_type is set to be
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field represents the CPM
+   * markup in micros of advertiser's currency. For example, 1500000 represents
+   * 1.5 standard units of the currency. * When the markup_type is set to be
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP`, this field
+   * represents the media cost percent markup in millis. For example, 100
+   * represents 0.1% (decimal 0.001). * When the markup_type is set to be
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP`, this field
+   * represents the total media cost percent markup in millis. For example, 100
+   * represents 0.1% (decimal 0.001).
+   *
    * @var string
    */
   public $markupAmount;
   /**
+   * Required. The markup type of the partner revenue model.
+   *
    * @var string
    */
   public $markupType;
 
   /**
-   * @param string
+   * Required. The markup amount of the partner revenue model. Must be greater
+   * than or equal to 0. * When the markup_type is set to be
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field represents the CPM
+   * markup in micros of advertiser's currency. For example, 1500000 represents
+   * 1.5 standard units of the currency. * When the markup_type is set to be
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP`, this field
+   * represents the media cost percent markup in millis. For example, 100
+   * represents 0.1% (decimal 0.001). * When the markup_type is set to be
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP`, this field
+   * represents the total media cost percent markup in millis. For example, 100
+   * represents 0.1% (decimal 0.001).
+   *
+   * @param string $markupAmount
    */
   public function setMarkupAmount($markupAmount)
   {
@@ -43,14 +89,21 @@ class PartnerRevenueModel extends \Google\Model
     return $this->markupAmount;
   }
   /**
-   * @param string
+   * Required. The markup type of the partner revenue model.
+   *
+   * Accepted values: PARTNER_REVENUE_MODEL_MARKUP_TYPE_UNSPECIFIED,
+   * PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM,
+   * PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP,
+   * PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP
+   *
+   * @param self::MARKUP_TYPE_* $markupType
    */
   public function setMarkupType($markupType)
   {
     $this->markupType = $markupType;
   }
   /**
-   * @return string
+   * @return self::MARKUP_TYPE_*
    */
   public function getMarkupType()
   {

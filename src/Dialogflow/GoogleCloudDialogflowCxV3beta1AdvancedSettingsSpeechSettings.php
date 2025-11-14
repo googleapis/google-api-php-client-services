@@ -20,24 +20,40 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings extends \Google\Model
 {
   /**
+   * Sensitivity of the speech model that detects the end of speech. Scale from
+   * 0 to 100.
+   *
    * @var int
    */
   public $endpointerSensitivity;
   /**
+   * Mapping from language to Speech-to-Text model. The mapped Speech-to-Text
+   * model will be selected for requests from its corresponding language. For
+   * more information, see [Speech
+   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
+   *
    * @var string[]
    */
   public $models;
   /**
+   * Timeout before detecting no speech.
+   *
    * @var string
    */
   public $noSpeechTimeout;
   /**
+   * Use timeout based endpointing, interpreting endpointer sensitivity as
+   * seconds of timeout value.
+   *
    * @var bool
    */
   public $useTimeoutBasedEndpointing;
 
   /**
-   * @param int
+   * Sensitivity of the speech model that detects the end of speech. Scale from
+   * 0 to 100.
+   *
+   * @param int $endpointerSensitivity
    */
   public function setEndpointerSensitivity($endpointerSensitivity)
   {
@@ -51,7 +67,12 @@ class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings extends \Goog
     return $this->endpointerSensitivity;
   }
   /**
-   * @param string[]
+   * Mapping from language to Speech-to-Text model. The mapped Speech-to-Text
+   * model will be selected for requests from its corresponding language. For
+   * more information, see [Speech
+   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
+   *
+   * @param string[] $models
    */
   public function setModels($models)
   {
@@ -65,7 +86,9 @@ class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings extends \Goog
     return $this->models;
   }
   /**
-   * @param string
+   * Timeout before detecting no speech.
+   *
+   * @param string $noSpeechTimeout
    */
   public function setNoSpeechTimeout($noSpeechTimeout)
   {
@@ -79,7 +102,10 @@ class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings extends \Goog
     return $this->noSpeechTimeout;
   }
   /**
-   * @param bool
+   * Use timeout based endpointing, interpreting endpointer sensitivity as
+   * seconds of timeout value.
+   *
+   * @param bool $useTimeoutBasedEndpointing
    */
   public function setUseTimeoutBasedEndpointing($useTimeoutBasedEndpointing)
   {

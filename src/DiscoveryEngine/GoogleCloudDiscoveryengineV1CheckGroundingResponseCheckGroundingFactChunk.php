@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1CheckGroundingResponseCheckGroundingFactChunk extends \Google\Model
 {
   /**
+   * Text content of the fact chunk. Can be at most 10K characters long.
+   *
    * @var string
    */
   public $chunkText;
 
   /**
-   * @param string
+   * Text content of the fact chunk. Can be at most 10K characters long.
+   *
+   * @param string $chunkText
    */
   public function setChunkText($chunkText)
   {

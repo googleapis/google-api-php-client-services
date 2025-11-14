@@ -21,16 +21,26 @@ class AdditionalIPRangesConfig extends \Google\Collection
 {
   protected $collection_key = 'podIpv4RangeNames';
   /**
+   * List of secondary ranges names within this subnetwork that can be used for
+   * pod IPs. Example1: gke-pod-range1 Example2: gke-pod-range1,gke-pod-range2
+   *
    * @var string[]
    */
   public $podIpv4RangeNames;
   /**
+   * Name of the subnetwork. This can be the full path of the subnetwork or just
+   * the name. Example1: my-subnet Example2: projects/gke-project/regions/us-
+   * central1/subnetworks/my-subnet
+   *
    * @var string
    */
   public $subnetwork;
 
   /**
-   * @param string[]
+   * List of secondary ranges names within this subnetwork that can be used for
+   * pod IPs. Example1: gke-pod-range1 Example2: gke-pod-range1,gke-pod-range2
+   *
+   * @param string[] $podIpv4RangeNames
    */
   public function setPodIpv4RangeNames($podIpv4RangeNames)
   {
@@ -44,7 +54,11 @@ class AdditionalIPRangesConfig extends \Google\Collection
     return $this->podIpv4RangeNames;
   }
   /**
-   * @param string
+   * Name of the subnetwork. This can be the full path of the subnetwork or just
+   * the name. Example1: my-subnet Example2: projects/gke-project/regions/us-
+   * central1/subnetworks/my-subnet
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {

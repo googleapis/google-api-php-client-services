@@ -23,7 +23,12 @@ class GoogleCloudPolicysimulatorV1ReplayDiff extends \Google\Model
   protected $accessDiffDataType = '';
 
   /**
-   * @param GoogleCloudPolicysimulatorV1AccessStateDiff
+   * A summary and comparison of the principal's access under the current
+   * (baseline) policies and the proposed (simulated) policies for a single
+   * access tuple. The evaluation of the principal's access is reported in the
+   * AccessState field.
+   *
+   * @param GoogleCloudPolicysimulatorV1AccessStateDiff $accessDiff
    */
   public function setAccessDiff(GoogleCloudPolicysimulatorV1AccessStateDiff $accessDiff)
   {

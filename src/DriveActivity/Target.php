@@ -29,7 +29,9 @@ class Target extends \Google\Model
   protected $teamDriveDataType = '';
 
   /**
-   * @param Drive
+   * The target is a shared drive.
+   *
+   * @param Drive $drive
    */
   public function setDrive(Drive $drive)
   {
@@ -43,7 +45,9 @@ class Target extends \Google\Model
     return $this->drive;
   }
   /**
-   * @param DriveItem
+   * The target is a Drive item.
+   *
+   * @param DriveItem $driveItem
    */
   public function setDriveItem(DriveItem $driveItem)
   {
@@ -57,7 +61,9 @@ class Target extends \Google\Model
     return $this->driveItem;
   }
   /**
-   * @param FileComment
+   * The target is a comment on a Drive file.
+   *
+   * @param FileComment $fileComment
    */
   public function setFileComment(FileComment $fileComment)
   {
@@ -71,13 +77,17 @@ class Target extends \Google\Model
     return $this->fileComment;
   }
   /**
-   * @param TeamDrive
+   * This field is deprecated; please use the `drive` field instead.
+   *
+   * @deprecated
+   * @param TeamDrive $teamDrive
    */
   public function setTeamDrive(TeamDrive $teamDrive)
   {
     $this->teamDrive = $teamDrive;
   }
   /**
+   * @deprecated
    * @return TeamDrive
    */
   public function getTeamDrive()

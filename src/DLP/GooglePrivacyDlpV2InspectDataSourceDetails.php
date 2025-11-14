@@ -25,7 +25,9 @@ class GooglePrivacyDlpV2InspectDataSourceDetails extends \Google\Model
   protected $resultDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2RequestedOptions
+   * The configuration used for this job.
+   *
+   * @param GooglePrivacyDlpV2RequestedOptions $requestedOptions
    */
   public function setRequestedOptions(GooglePrivacyDlpV2RequestedOptions $requestedOptions)
   {
@@ -39,7 +41,9 @@ class GooglePrivacyDlpV2InspectDataSourceDetails extends \Google\Model
     return $this->requestedOptions;
   }
   /**
-   * @param GooglePrivacyDlpV2Result
+   * A summary of the outcome of this inspection job.
+   *
+   * @param GooglePrivacyDlpV2Result $result
    */
   public function setResult(GooglePrivacyDlpV2Result $result)
   {

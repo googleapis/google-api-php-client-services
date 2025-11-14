@@ -20,28 +20,46 @@ namespace Google\Service\ShoppingContent;
 class AccountAddress extends \Google\Model
 {
   /**
+   * CLDR country code (for example, "US"). All MCA sub-accounts inherit the
+   * country of their parent MCA by default, however the country can be updated
+   * for individual sub-accounts.
+   *
    * @var string
    */
   public $country;
   /**
+   * City, town or commune. May also include dependent localities or
+   * sublocalities (for example, neighborhoods or suburbs).
+   *
    * @var string
    */
   public $locality;
   /**
+   * Postal code or ZIP (for example, "94043").
+   *
    * @var string
    */
   public $postalCode;
   /**
+   * Top-level administrative subdivision of the country. For example, a state
+   * like California ("CA") or a province like Quebec ("QC").
+   *
    * @var string
    */
   public $region;
   /**
+   * Street-level part of the address. Use `\n` to add a second line.
+   *
    * @var string
    */
   public $streetAddress;
 
   /**
-   * @param string
+   * CLDR country code (for example, "US"). All MCA sub-accounts inherit the
+   * country of their parent MCA by default, however the country can be updated
+   * for individual sub-accounts.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -55,7 +73,10 @@ class AccountAddress extends \Google\Model
     return $this->country;
   }
   /**
-   * @param string
+   * City, town or commune. May also include dependent localities or
+   * sublocalities (for example, neighborhoods or suburbs).
+   *
+   * @param string $locality
    */
   public function setLocality($locality)
   {
@@ -69,7 +90,9 @@ class AccountAddress extends \Google\Model
     return $this->locality;
   }
   /**
-   * @param string
+   * Postal code or ZIP (for example, "94043").
+   *
+   * @param string $postalCode
    */
   public function setPostalCode($postalCode)
   {
@@ -83,7 +106,10 @@ class AccountAddress extends \Google\Model
     return $this->postalCode;
   }
   /**
-   * @param string
+   * Top-level administrative subdivision of the country. For example, a state
+   * like California ("CA") or a province like Quebec ("QC").
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -97,7 +123,9 @@ class AccountAddress extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * Street-level part of the address. Use `\n` to add a second line.
+   *
+   * @param string $streetAddress
    */
   public function setStreetAddress($streetAddress)
   {

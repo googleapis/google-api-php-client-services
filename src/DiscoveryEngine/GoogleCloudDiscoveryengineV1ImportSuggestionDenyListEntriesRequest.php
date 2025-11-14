@@ -25,7 +25,13 @@ class GoogleCloudDiscoveryengineV1ImportSuggestionDenyListEntriesRequest extends
   protected $inlineSourceDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1GcsSource
+   * Cloud Storage location for the input content. Only 1 file can be specified
+   * that contains all entries to import. Supported values `gcs_source.schema`
+   * for autocomplete suggestion deny list entry imports: *
+   * `suggestion_deny_list` (default): One JSON [SuggestionDenyListEntry] per
+   * line.
+   *
+   * @param GoogleCloudDiscoveryengineV1GcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudDiscoveryengineV1GcsSource $gcsSource)
   {
@@ -39,7 +45,9 @@ class GoogleCloudDiscoveryengineV1ImportSuggestionDenyListEntriesRequest extends
     return $this->gcsSource;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ImportSuggestionDenyListEntriesRequestInlineSource
+   * The Inline source for the input content for suggestion deny list entries.
+   *
+   * @param GoogleCloudDiscoveryengineV1ImportSuggestionDenyListEntriesRequestInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudDiscoveryengineV1ImportSuggestionDenyListEntriesRequestInlineSource $inlineSource)
   {

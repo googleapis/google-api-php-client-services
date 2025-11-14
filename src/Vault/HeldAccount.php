@@ -20,28 +20,43 @@ namespace Google\Service\Vault;
 class HeldAccount extends \Google\Model
 {
   /**
+   * The account ID, as provided by the [Admin
+   * SDK](https://developers.google.com/admin-sdk/).
+   *
    * @var string
    */
   public $accountId;
   /**
+   * The primary email address of the account. If used as an input, this takes
+   * precedence over **accountId**.
+   *
    * @var string
    */
   public $email;
   /**
+   * Output only. The first name of the account holder.
+   *
    * @var string
    */
   public $firstName;
   /**
+   * Output only. When the account was put on hold.
+   *
    * @var string
    */
   public $holdTime;
   /**
+   * Output only. The last name of the account holder.
+   *
    * @var string
    */
   public $lastName;
 
   /**
-   * @param string
+   * The account ID, as provided by the [Admin
+   * SDK](https://developers.google.com/admin-sdk/).
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -55,7 +70,10 @@ class HeldAccount extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * The primary email address of the account. If used as an input, this takes
+   * precedence over **accountId**.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -69,7 +87,9 @@ class HeldAccount extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Output only. The first name of the account holder.
+   *
+   * @param string $firstName
    */
   public function setFirstName($firstName)
   {
@@ -83,7 +103,9 @@ class HeldAccount extends \Google\Model
     return $this->firstName;
   }
   /**
-   * @param string
+   * Output only. When the account was put on hold.
+   *
+   * @param string $holdTime
    */
   public function setHoldTime($holdTime)
   {
@@ -97,7 +119,9 @@ class HeldAccount extends \Google\Model
     return $this->holdTime;
   }
   /**
-   * @param string
+   * Output only. The last name of the account holder.
+   *
+   * @param string $lastName
    */
   public function setLastName($lastName)
   {
