@@ -19,31 +19,111 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Google\Model
 {
+  /**
+   * Unspecified. Defaults to EXPORT_V3.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_SCHEMA_VERSION_UNSPECIFIED = 'EXPORT_SCHEMA_VERSION_UNSPECIFIED';
+  /**
+   * Export schema version 1.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V1 = 'EXPORT_V1';
+  /**
+   * Export schema version 2.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V2 = 'EXPORT_V2';
+  /**
+   * Export schema version 3.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V3 = 'EXPORT_V3';
+  /**
+   * Export schema version 4.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V4 = 'EXPORT_V4';
+  /**
+   * Export schema version 5.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V5 = 'EXPORT_V5';
+  /**
+   * Export schema version 6.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V6 = 'EXPORT_V6';
+  /**
+   * Export schema version 7.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V7 = 'EXPORT_V7';
+  /**
+   * Export schema version 8.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V8 = 'EXPORT_V8';
+  /**
+   * Export schema version 9.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V9 = 'EXPORT_V9';
+  /**
+   * Export schema version 10.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V10 = 'EXPORT_V10';
+  /**
+   * Export schema version 11.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V11 = 'EXPORT_V11';
+  /**
+   * Export schema version latest available.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_VERSION_LATEST_AVAILABLE = 'EXPORT_VERSION_LATEST_AVAILABLE';
+  /**
+   * Write disposition is not specified. Defaults to WRITE_TRUNCATE.
+   */
+  public const WRITE_DISPOSITION_WRITE_DISPOSITION_UNSPECIFIED = 'WRITE_DISPOSITION_UNSPECIFIED';
+  /**
+   * If the table already exists, BigQuery will overwrite the table data and use
+   * the schema from the load.
+   */
+  public const WRITE_DISPOSITION_WRITE_TRUNCATE = 'WRITE_TRUNCATE';
+  /**
+   * If the table already exists, BigQuery will append data to the table.
+   */
+  public const WRITE_DISPOSITION_WRITE_APPEND = 'WRITE_APPEND';
   protected $bigQueryDestinationType = GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination::class;
   protected $bigQueryDestinationDataType = '';
   /**
+   * Optional. Version of the export schema.
+   *
    * @var string
    */
   public $exportSchemaVersion;
   /**
+   * A filter to reduce results to a specific subset. Useful for exporting
+   * conversations with specific properties.
+   *
    * @var string
    */
   public $filter;
   /**
+   * A fully qualified KMS key name for BigQuery tables protected by CMEK.
+   * Format: projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKe
+   * ys/{key}/cryptoKeyVersions/{version}
+   *
    * @var string
    */
   public $kmsKey;
   /**
+   * Required. The parent resource to export data from.
+   *
    * @var string
    */
   public $parent;
   /**
+   * Options for what to do if the destination table already exists.
+   *
    * @var string
    */
   public $writeDisposition;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination
+   * Specified if sink is a BigQuery table.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination $bigQueryDestination
    */
   public function setBigQueryDestination(GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination $bigQueryDestination)
   {
@@ -57,21 +137,30 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Googl
     return $this->bigQueryDestination;
   }
   /**
-   * @param string
+   * Optional. Version of the export schema.
+   *
+   * Accepted values: EXPORT_SCHEMA_VERSION_UNSPECIFIED, EXPORT_V1, EXPORT_V2,
+   * EXPORT_V3, EXPORT_V4, EXPORT_V5, EXPORT_V6, EXPORT_V7, EXPORT_V8,
+   * EXPORT_V9, EXPORT_V10, EXPORT_V11, EXPORT_VERSION_LATEST_AVAILABLE
+   *
+   * @param self::EXPORT_SCHEMA_VERSION_* $exportSchemaVersion
    */
   public function setExportSchemaVersion($exportSchemaVersion)
   {
     $this->exportSchemaVersion = $exportSchemaVersion;
   }
   /**
-   * @return string
+   * @return self::EXPORT_SCHEMA_VERSION_*
    */
   public function getExportSchemaVersion()
   {
     return $this->exportSchemaVersion;
   }
   /**
-   * @param string
+   * A filter to reduce results to a specific subset. Useful for exporting
+   * conversations with specific properties.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -85,7 +174,11 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Googl
     return $this->filter;
   }
   /**
-   * @param string
+   * A fully qualified KMS key name for BigQuery tables protected by CMEK.
+   * Format: projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKe
+   * ys/{key}/cryptoKeyVersions/{version}
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {
@@ -99,7 +192,9 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Googl
     return $this->kmsKey;
   }
   /**
-   * @param string
+   * Required. The parent resource to export data from.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -113,14 +208,19 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Googl
     return $this->parent;
   }
   /**
-   * @param string
+   * Options for what to do if the destination table already exists.
+   *
+   * Accepted values: WRITE_DISPOSITION_UNSPECIFIED, WRITE_TRUNCATE,
+   * WRITE_APPEND
+   *
+   * @param self::WRITE_DISPOSITION_* $writeDisposition
    */
   public function setWriteDisposition($writeDisposition)
   {
     $this->writeDisposition = $writeDisposition;
   }
   /**
-   * @return string
+   * @return self::WRITE_DISPOSITION_*
    */
   public function getWriteDisposition()
   {

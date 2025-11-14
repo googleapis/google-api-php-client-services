@@ -17,54 +17,54 @@
 
 namespace Google\Service\Contactcenterinsights;
 
-class GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensionMetadata extends \Google\Model
+class GoogleCloudContactcenterinsightsV1DimensionLabelDimensionMetadata extends \Google\Model
 {
   /**
-   * Optional. The dialogflow tool display name.
+   * Optional. The label key.
    *
    * @var string
    */
-  public $toolDisplayName;
+  public $labelKey;
   /**
-   * Optional. The dialogflow tool ID.
+   * Optional. The label value.
    *
    * @var string
    */
-  public $toolId;
+  public $labelValue;
 
   /**
-   * Optional. The dialogflow tool display name.
+   * Optional. The label key.
    *
-   * @param string $toolDisplayName
+   * @param string $labelKey
    */
-  public function setToolDisplayName($toolDisplayName)
+  public function setLabelKey($labelKey)
   {
-    $this->toolDisplayName = $toolDisplayName;
+    $this->labelKey = $labelKey;
   }
   /**
    * @return string
    */
-  public function getToolDisplayName()
+  public function getLabelKey()
   {
-    return $this->toolDisplayName;
+    return $this->labelKey;
   }
   /**
-   * Optional. The dialogflow tool ID.
+   * Optional. The label value.
    *
-   * @param string $toolId
+   * @param string $labelValue
    */
-  public function setToolId($toolId)
+  public function setLabelValue($labelValue)
   {
-    $this->toolId = $toolId;
+    $this->labelValue = $labelValue;
   }
   /**
    * @return string
    */
-  public function getToolId()
+  public function getLabelValue()
   {
-    return $this->toolId;
+    return $this->labelValue;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensionMetadata::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensionMetadata');
+class_alias(GoogleCloudContactcenterinsightsV1DimensionLabelDimensionMetadata::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1DimensionLabelDimensionMetadata');

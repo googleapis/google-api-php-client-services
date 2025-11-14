@@ -20,12 +20,18 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata extends \Google\Model
 {
   /**
+   * Whether the transcript segment was covered under the configured smart reply
+   * allowlist in Agent Assist.
+   *
    * @var bool
    */
   public $smartReplyAllowlistCovered;
 
   /**
-   * @param bool
+   * Whether the transcript segment was covered under the configured smart reply
+   * allowlist in Agent Assist.
+   *
+   * @param bool $smartReplyAllowlistCovered
    */
   public function setSmartReplyAllowlistCovered($smartReplyAllowlistCovered)
   {
