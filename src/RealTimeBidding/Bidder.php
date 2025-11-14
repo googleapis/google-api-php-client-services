@@ -20,28 +20,63 @@ namespace Google\Service\RealTimeBidding;
 class Bidder extends \Google\Model
 {
   /**
+   * Output only. An option to bypass pretargeting for private auctions and
+   * preferred deals. When true, bid requests from these nonguaranteed deals
+   * will always be sent. When false, bid requests will be subject to regular
+   * pretargeting configurations. Programmatic Guaranteed deals will always be
+   * sent to the bidder, regardless of the value for this option. Auction
+   * packages are not impacted by this value and are subject to the regular
+   * pretargeting configurations.
+   *
    * @var bool
    */
   public $bypassNonguaranteedDealsPretargeting;
   /**
+   * Output only. The buyer's network ID used for cookie matching. This ID
+   * corresponds to the `google_nid` parameter in the URL used in cookie match
+   * requests. Refer to https://developers.google.com/authorized-
+   * buyers/rtb/cookie-guide for further information.
+   *
    * @var string
    */
   public $cookieMatchingNetworkId;
   /**
+   * Output only. The base URL used in cookie match requests. Refer to
+   * https://developers.google.com/authorized-buyers/rtb/cookie-guide for
+   * further information.
+   *
    * @var string
    */
   public $cookieMatchingUrl;
   /**
+   * Output only. The billing ID for the deals pretargeting config. This billing
+   * ID is sent on the bid request for guaranteed and nonguaranteed deals
+   * matched in pretargeting.
+   *
    * @var string
    */
   public $dealsBillingId;
   /**
+   * Output only. Name of the bidder resource that must follow the pattern
+   * `bidders/{bidderAccountId}`, where `{bidderAccountId}` is the account ID of
+   * the bidder whose information is to be received. One can get their account
+   * ID on the Authorized Buyers or Open Bidding UI, or by contacting their
+   * Google account manager.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param bool
+   * Output only. An option to bypass pretargeting for private auctions and
+   * preferred deals. When true, bid requests from these nonguaranteed deals
+   * will always be sent. When false, bid requests will be subject to regular
+   * pretargeting configurations. Programmatic Guaranteed deals will always be
+   * sent to the bidder, regardless of the value for this option. Auction
+   * packages are not impacted by this value and are subject to the regular
+   * pretargeting configurations.
+   *
+   * @param bool $bypassNonguaranteedDealsPretargeting
    */
   public function setBypassNonguaranteedDealsPretargeting($bypassNonguaranteedDealsPretargeting)
   {
@@ -55,7 +90,12 @@ class Bidder extends \Google\Model
     return $this->bypassNonguaranteedDealsPretargeting;
   }
   /**
-   * @param string
+   * Output only. The buyer's network ID used for cookie matching. This ID
+   * corresponds to the `google_nid` parameter in the URL used in cookie match
+   * requests. Refer to https://developers.google.com/authorized-
+   * buyers/rtb/cookie-guide for further information.
+   *
+   * @param string $cookieMatchingNetworkId
    */
   public function setCookieMatchingNetworkId($cookieMatchingNetworkId)
   {
@@ -69,7 +109,11 @@ class Bidder extends \Google\Model
     return $this->cookieMatchingNetworkId;
   }
   /**
-   * @param string
+   * Output only. The base URL used in cookie match requests. Refer to
+   * https://developers.google.com/authorized-buyers/rtb/cookie-guide for
+   * further information.
+   *
+   * @param string $cookieMatchingUrl
    */
   public function setCookieMatchingUrl($cookieMatchingUrl)
   {
@@ -83,7 +127,11 @@ class Bidder extends \Google\Model
     return $this->cookieMatchingUrl;
   }
   /**
-   * @param string
+   * Output only. The billing ID for the deals pretargeting config. This billing
+   * ID is sent on the bid request for guaranteed and nonguaranteed deals
+   * matched in pretargeting.
+   *
+   * @param string $dealsBillingId
    */
   public function setDealsBillingId($dealsBillingId)
   {
@@ -97,7 +145,13 @@ class Bidder extends \Google\Model
     return $this->dealsBillingId;
   }
   /**
-   * @param string
+   * Output only. Name of the bidder resource that must follow the pattern
+   * `bidders/{bidderAccountId}`, where `{bidderAccountId}` is the account ID of
+   * the bidder whose information is to be received. One can get their account
+   * ID on the Authorized Buyers or Open Bidding UI, or by contacting their
+   * Google account manager.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
