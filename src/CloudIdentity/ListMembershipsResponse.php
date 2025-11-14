@@ -23,12 +23,17 @@ class ListMembershipsResponse extends \Google\Collection
   protected $membershipsType = Membership::class;
   protected $membershipsDataType = 'array';
   /**
+   * A continuation token to retrieve the next page of results, or empty if
+   * there are no more results available.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Membership[]
+   * The `Membership`s under the specified `parent`.
+   *
+   * @param Membership[] $memberships
    */
   public function setMemberships($memberships)
   {
@@ -42,7 +47,10 @@ class ListMembershipsResponse extends \Google\Collection
     return $this->memberships;
   }
   /**
-   * @param string
+   * A continuation token to retrieve the next page of results, or empty if
+   * there are no more results available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

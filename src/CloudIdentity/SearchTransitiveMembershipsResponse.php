@@ -23,12 +23,17 @@ class SearchTransitiveMembershipsResponse extends \Google\Collection
   protected $membershipsType = MemberRelation::class;
   protected $membershipsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param MemberRelation[]
+   * List of transitive members satisfying the query.
+   *
+   * @param MemberRelation[] $memberships
    */
   public function setMemberships($memberships)
   {
@@ -42,7 +47,10 @@ class SearchTransitiveMembershipsResponse extends \Google\Collection
     return $this->memberships;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
