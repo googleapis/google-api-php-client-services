@@ -28,20 +28,31 @@ class JobListJobs extends \Google\Model
   protected $errorResultType = ErrorProto::class;
   protected $errorResultDataType = '';
   /**
+   * Unique opaque ID of the job.
+   *
    * @var string
    */
   public $id;
   protected $jobReferenceType = JobReference::class;
   protected $jobReferenceDataType = '';
   /**
+   * The resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Full-projection-only] String representation of identity of requesting
+   * party. Populated for both first- and third-party identities. Only present
+   * for APIs that support third-party identities.
+   *
    * @var string
    */
   public $principalSubject;
   /**
+   * Running state of the job. When the state is DONE, errorResult can be
+   * checked to determine whether the job succeeded or failed.
+   *
    * @var string
    */
   public $state;
@@ -50,12 +61,16 @@ class JobListJobs extends \Google\Model
   protected $statusType = JobStatus::class;
   protected $statusDataType = '';
   /**
+   * [Full-projection-only] Email address of the user who ran the job.
+   *
    * @var string
    */
   public $userEmail;
 
   /**
-   * @param JobConfiguration
+   * Required. Describes the job configuration.
+   *
+   * @param JobConfiguration $configuration
    */
   public function setConfiguration(JobConfiguration $configuration)
   {
@@ -69,7 +84,9 @@ class JobListJobs extends \Google\Model
     return $this->configuration;
   }
   /**
-   * @param ErrorProto
+   * A result object that will be present only if the job has failed.
+   *
+   * @param ErrorProto $errorResult
    */
   public function setErrorResult(ErrorProto $errorResult)
   {
@@ -83,7 +100,9 @@ class JobListJobs extends \Google\Model
     return $this->errorResult;
   }
   /**
-   * @param string
+   * Unique opaque ID of the job.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -97,7 +116,9 @@ class JobListJobs extends \Google\Model
     return $this->id;
   }
   /**
-   * @param JobReference
+   * Unique opaque ID of the job.
+   *
+   * @param JobReference $jobReference
    */
   public function setJobReference(JobReference $jobReference)
   {
@@ -111,7 +132,9 @@ class JobListJobs extends \Google\Model
     return $this->jobReference;
   }
   /**
-   * @param string
+   * The resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -125,7 +148,11 @@ class JobListJobs extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * [Full-projection-only] String representation of identity of requesting
+   * party. Populated for both first- and third-party identities. Only present
+   * for APIs that support third-party identities.
+   *
+   * @param string $principalSubject
    */
   public function setPrincipalSubject($principalSubject)
   {
@@ -139,7 +166,10 @@ class JobListJobs extends \Google\Model
     return $this->principalSubject;
   }
   /**
-   * @param string
+   * Running state of the job. When the state is DONE, errorResult can be
+   * checked to determine whether the job succeeded or failed.
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -153,7 +183,10 @@ class JobListJobs extends \Google\Model
     return $this->state;
   }
   /**
-   * @param JobStatistics
+   * Output only. Information about the job, including starting time and ending
+   * time of the job.
+   *
+   * @param JobStatistics $statistics
    */
   public function setStatistics(JobStatistics $statistics)
   {
@@ -167,7 +200,9 @@ class JobListJobs extends \Google\Model
     return $this->statistics;
   }
   /**
-   * @param JobStatus
+   * [Full-projection-only] Describes the status of this job.
+   *
+   * @param JobStatus $status
    */
   public function setStatus(JobStatus $status)
   {
@@ -181,7 +216,9 @@ class JobListJobs extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * [Full-projection-only] Email address of the user who ran the job.
+   *
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {

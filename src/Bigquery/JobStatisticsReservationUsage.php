@@ -20,16 +20,24 @@ namespace Google\Service\Bigquery;
 class JobStatisticsReservationUsage extends \Google\Model
 {
   /**
+   * Reservation name or "unreserved" for on-demand resource usage and multi-
+   * statement queries.
+   *
    * @var string
    */
   public $name;
   /**
+   * Total slot milliseconds used by the reservation for a particular job.
+   *
    * @var string
    */
   public $slotMs;
 
   /**
-   * @param string
+   * Reservation name or "unreserved" for on-demand resource usage and multi-
+   * statement queries.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,9 @@ class JobStatisticsReservationUsage extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Total slot milliseconds used by the reservation for a particular job.
+   *
+   * @param string $slotMs
    */
   public function setSlotMs($slotMs)
   {

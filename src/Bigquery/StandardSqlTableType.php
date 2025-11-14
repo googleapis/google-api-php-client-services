@@ -24,7 +24,9 @@ class StandardSqlTableType extends \Google\Collection
   protected $columnsDataType = 'array';
 
   /**
-   * @param StandardSqlField[]
+   * The columns in this table type
+   *
+   * @param StandardSqlField[] $columns
    */
   public function setColumns($columns)
   {

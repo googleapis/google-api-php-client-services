@@ -20,12 +20,18 @@ namespace Google\Service\Bigquery;
 class ProjectReference extends \Google\Model
 {
   /**
+   * Required. ID of the project. Can be either the numeric ID or the assigned
+   * ID of the project.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * Required. ID of the project. Can be either the numeric ID or the assigned
+   * ID of the project.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
