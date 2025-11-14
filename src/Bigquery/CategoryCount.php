@@ -20,16 +20,22 @@ namespace Google\Service\Bigquery;
 class CategoryCount extends \Google\Model
 {
   /**
+   * The name of category.
+   *
    * @var string
    */
   public $category;
   /**
+   * The count of training samples matching the category within the cluster.
+   *
    * @var string
    */
   public $count;
 
   /**
-   * @param string
+   * The name of category.
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -43,7 +49,9 @@ class CategoryCount extends \Google\Model
     return $this->category;
   }
   /**
-   * @param string
+   * The count of training samples matching the category within the cluster.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {

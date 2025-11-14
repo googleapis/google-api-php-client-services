@@ -20,30 +20,62 @@ namespace Google\Service\Bigquery;
 class DataFormatOptions extends \Google\Model
 {
   /**
+   * Corresponds to default API output behavior, which is FLOAT64.
+   */
+  public const TIMESTAMP_OUTPUT_FORMAT_TIMESTAMP_OUTPUT_FORMAT_UNSPECIFIED = 'TIMESTAMP_OUTPUT_FORMAT_UNSPECIFIED';
+  /**
+   * Timestamp is output as float64 seconds since Unix epoch.
+   */
+  public const TIMESTAMP_OUTPUT_FORMAT_FLOAT64 = 'FLOAT64';
+  /**
+   * Timestamp is output as int64 microseconds since Unix epoch.
+   */
+  public const TIMESTAMP_OUTPUT_FORMAT_INT64 = 'INT64';
+  /**
+   * Timestamp is output as ISO 8601 String ("YYYY-MM-
+   * DDTHH:MM:SS.FFFFFFFFFFFFZ").
+   */
+  public const TIMESTAMP_OUTPUT_FORMAT_ISO8601_STRING = 'ISO8601_STRING';
+  /**
+   * Optional. The API output format for a timestamp. This offers more explicit
+   * control over the timestamp output format as compared to the existing
+   * `use_int64_timestamp` option.
+   *
    * @var string
    */
   public $timestampOutputFormat;
   /**
+   * Optional. Output timestamp as usec int64. Default is false.
+   *
    * @var bool
    */
   public $useInt64Timestamp;
 
   /**
-   * @param string
+   * Optional. The API output format for a timestamp. This offers more explicit
+   * control over the timestamp output format as compared to the existing
+   * `use_int64_timestamp` option.
+   *
+   * Accepted values: TIMESTAMP_OUTPUT_FORMAT_UNSPECIFIED, FLOAT64, INT64,
+   * ISO8601_STRING
+   *
+   * @param self::TIMESTAMP_OUTPUT_FORMAT_* $timestampOutputFormat
    */
   public function setTimestampOutputFormat($timestampOutputFormat)
   {
     $this->timestampOutputFormat = $timestampOutputFormat;
   }
   /**
-   * @return string
+   * @return self::TIMESTAMP_OUTPUT_FORMAT_*
    */
   public function getTimestampOutputFormat()
   {
     return $this->timestampOutputFormat;
   }
   /**
-   * @param bool
+   * Optional. Output timestamp as usec int64. Default is false.
+   *
+   * @param bool $useInt64Timestamp
    */
   public function setUseInt64Timestamp($useInt64Timestamp)
   {

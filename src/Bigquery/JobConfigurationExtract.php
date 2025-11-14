@@ -21,28 +21,54 @@ class JobConfigurationExtract extends \Google\Collection
 {
   protected $collection_key = 'destinationUris';
   /**
+   * Optional. The compression type to use for exported files. Possible values
+   * include DEFLATE, GZIP, NONE, SNAPPY, and ZSTD. The default value is NONE.
+   * Not all compression formats are support for all file formats. DEFLATE is
+   * only supported for Avro. ZSTD is only supported for Parquet. Not applicable
+   * when extracting models.
+   *
    * @var string
    */
   public $compression;
   /**
+   * Optional. The exported file format. Possible values include CSV,
+   * NEWLINE_DELIMITED_JSON, PARQUET, or AVRO for tables and ML_TF_SAVED_MODEL
+   * or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV.
+   * Tables with nested or repeated fields cannot be exported as CSV. The
+   * default value for models is ML_TF_SAVED_MODEL.
+   *
    * @var string
    */
   public $destinationFormat;
   /**
+   * [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as
+   * necessary. The fully-qualified Google Cloud Storage URI where the extracted
+   * table should be written.
+   *
    * @var string
    */
   public $destinationUri;
   /**
+   * [Pick one] A list of fully-qualified Google Cloud Storage URIs where the
+   * extracted table should be written.
+   *
    * @var string[]
    */
   public $destinationUris;
   /**
+   * Optional. When extracting data in CSV format, this defines the delimiter to
+   * use between fields in the exported data. Default is ','. Not applicable
+   * when extracting models.
+   *
    * @var string
    */
   public $fieldDelimiter;
   protected $modelExtractOptionsType = ModelExtractOptions::class;
   protected $modelExtractOptionsDataType = '';
   /**
+   * Optional. Whether to print out a header row in the results. Default is
+   * true. Not applicable when extracting models.
+   *
    * @var bool
    */
   public $printHeader;
@@ -51,12 +77,21 @@ class JobConfigurationExtract extends \Google\Collection
   protected $sourceTableType = TableReference::class;
   protected $sourceTableDataType = '';
   /**
+   * Whether to use logical types when extracting to AVRO format. Not applicable
+   * when extracting models.
+   *
    * @var bool
    */
   public $useAvroLogicalTypes;
 
   /**
-   * @param string
+   * Optional. The compression type to use for exported files. Possible values
+   * include DEFLATE, GZIP, NONE, SNAPPY, and ZSTD. The default value is NONE.
+   * Not all compression formats are support for all file formats. DEFLATE is
+   * only supported for Avro. ZSTD is only supported for Parquet. Not applicable
+   * when extracting models.
+   *
+   * @param string $compression
    */
   public function setCompression($compression)
   {
@@ -70,7 +105,13 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->compression;
   }
   /**
-   * @param string
+   * Optional. The exported file format. Possible values include CSV,
+   * NEWLINE_DELIMITED_JSON, PARQUET, or AVRO for tables and ML_TF_SAVED_MODEL
+   * or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV.
+   * Tables with nested or repeated fields cannot be exported as CSV. The
+   * default value for models is ML_TF_SAVED_MODEL.
+   *
+   * @param string $destinationFormat
    */
   public function setDestinationFormat($destinationFormat)
   {
@@ -84,7 +125,11 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->destinationFormat;
   }
   /**
-   * @param string
+   * [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as
+   * necessary. The fully-qualified Google Cloud Storage URI where the extracted
+   * table should be written.
+   *
+   * @param string $destinationUri
    */
   public function setDestinationUri($destinationUri)
   {
@@ -98,7 +143,10 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->destinationUri;
   }
   /**
-   * @param string[]
+   * [Pick one] A list of fully-qualified Google Cloud Storage URIs where the
+   * extracted table should be written.
+   *
+   * @param string[] $destinationUris
    */
   public function setDestinationUris($destinationUris)
   {
@@ -112,7 +160,11 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->destinationUris;
   }
   /**
-   * @param string
+   * Optional. When extracting data in CSV format, this defines the delimiter to
+   * use between fields in the exported data. Default is ','. Not applicable
+   * when extracting models.
+   *
+   * @param string $fieldDelimiter
    */
   public function setFieldDelimiter($fieldDelimiter)
   {
@@ -126,7 +178,9 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->fieldDelimiter;
   }
   /**
-   * @param ModelExtractOptions
+   * Optional. Model extract options only applicable when extracting models.
+   *
+   * @param ModelExtractOptions $modelExtractOptions
    */
   public function setModelExtractOptions(ModelExtractOptions $modelExtractOptions)
   {
@@ -140,7 +194,10 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->modelExtractOptions;
   }
   /**
-   * @param bool
+   * Optional. Whether to print out a header row in the results. Default is
+   * true. Not applicable when extracting models.
+   *
+   * @param bool $printHeader
    */
   public function setPrintHeader($printHeader)
   {
@@ -154,7 +211,9 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->printHeader;
   }
   /**
-   * @param ModelReference
+   * A reference to the model being exported.
+   *
+   * @param ModelReference $sourceModel
    */
   public function setSourceModel(ModelReference $sourceModel)
   {
@@ -168,7 +227,9 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->sourceModel;
   }
   /**
-   * @param TableReference
+   * A reference to the table being exported.
+   *
+   * @param TableReference $sourceTable
    */
   public function setSourceTable(TableReference $sourceTable)
   {
@@ -182,7 +243,10 @@ class JobConfigurationExtract extends \Google\Collection
     return $this->sourceTable;
   }
   /**
-   * @param bool
+   * Whether to use logical types when extracting to AVRO format. Not applicable
+   * when extracting models.
+   *
+   * @param bool $useAvroLogicalTypes
    */
   public function setUseAvroLogicalTypes($useAvroLogicalTypes)
   {

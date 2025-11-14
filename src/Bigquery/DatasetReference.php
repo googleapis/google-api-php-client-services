@@ -20,16 +20,26 @@ namespace Google\Service\Bigquery;
 class DatasetReference extends \Google\Model
 {
   /**
+   * Required. A unique ID for this dataset, without the project name. The ID
+   * must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_).
+   * The maximum length is 1,024 characters.
+   *
    * @var string
    */
   public $datasetId;
   /**
+   * Optional. The ID of the project containing this dataset.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * Required. A unique ID for this dataset, without the project name. The ID
+   * must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_).
+   * The maximum length is 1,024 characters.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -43,7 +53,9 @@ class DatasetReference extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param string
+   * Optional. The ID of the project containing this dataset.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

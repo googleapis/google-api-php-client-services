@@ -21,12 +21,16 @@ class IntArray extends \Google\Collection
 {
   protected $collection_key = 'elements';
   /**
+   * Elements in the int array.
+   *
    * @var string[]
    */
   public $elements;
 
   /**
-   * @param string[]
+   * Elements in the int array.
+   *
+   * @param string[] $elements
    */
   public function setElements($elements)
   {
