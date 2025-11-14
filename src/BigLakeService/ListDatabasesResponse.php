@@ -23,12 +23,17 @@ class ListDatabasesResponse extends \Google\Collection
   protected $databasesType = Database::class;
   protected $databasesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Database[]
+   * The databases from the specified catalog.
+   *
+   * @param Database[] $databases
    */
   public function setDatabases($databases)
   {
@@ -42,7 +47,10 @@ class ListDatabasesResponse extends \Google\Collection
     return $this->databases;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

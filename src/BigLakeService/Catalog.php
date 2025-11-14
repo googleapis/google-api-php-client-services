@@ -20,28 +20,43 @@ namespace Google\Service\BigLakeService;
 class Catalog extends \Google\Model
 {
   /**
+   * Output only. The creation time of the catalog.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The deletion time of the catalog. Only set after the catalog
+   * is deleted.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * Output only. The time when this catalog is considered expired. Only set
+   * after the catalog is deleted.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Output only. The resource name. Format: projects/{project_id_or_number}/loc
+   * ations/{location_id}/catalogs/{catalog_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The last modification time of the catalog.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The creation time of the catalog.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +70,10 @@ class Catalog extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The deletion time of the catalog. Only set after the catalog
+   * is deleted.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -69,7 +87,10 @@ class Catalog extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * Output only. The time when this catalog is considered expired. Only set
+   * after the catalog is deleted.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -83,7 +104,10 @@ class Catalog extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param string
+   * Output only. The resource name. Format: projects/{project_id_or_number}/loc
+   * ations/{location_id}/catalogs/{catalog_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -97,7 +121,9 @@ class Catalog extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The last modification time of the catalog.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
