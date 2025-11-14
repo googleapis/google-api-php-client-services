@@ -20,12 +20,16 @@ namespace Google\Service\PolicySimulator;
 class GoogleCloudPolicysimulatorV1ReplayOperationMetadata extends \Google\Model
 {
   /**
+   * Time when the request was received.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Time when the request was received.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
