@@ -20,16 +20,22 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1PlaceConsumerAlertDetailsLink extends \Google\Model
 {
   /**
+   * The title to show for the link.
+   *
    * @var string
    */
   public $title;
   /**
+   * The uri of the link.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The title to show for the link.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -43,7 +49,9 @@ class GoogleMapsPlacesV1PlaceConsumerAlertDetailsLink extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * The uri of the link.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

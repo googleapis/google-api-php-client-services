@@ -23,7 +23,9 @@ class GoogleMapsPlacesV1SearchNearbyRequestLocationRestriction extends \Google\M
   protected $circleDataType = '';
 
   /**
-   * @param GoogleMapsPlacesV1Circle
+   * A circle defined by center point and radius.
+   *
+   * @param GoogleMapsPlacesV1Circle $circle
    */
   public function setCircle(GoogleMapsPlacesV1Circle $circle)
   {

@@ -25,7 +25,9 @@ class GoogleMapsPlacesV1AutocompletePlacesRequestLocationBias extends \Google\Mo
   protected $rectangleDataType = '';
 
   /**
-   * @param GoogleMapsPlacesV1Circle
+   * A circle defined by a center point and radius.
+   *
+   * @param GoogleMapsPlacesV1Circle $circle
    */
   public function setCircle(GoogleMapsPlacesV1Circle $circle)
   {
@@ -39,7 +41,9 @@ class GoogleMapsPlacesV1AutocompletePlacesRequestLocationBias extends \Google\Mo
     return $this->circle;
   }
   /**
-   * @param GoogleGeoTypeViewport
+   * A viewport defined by a northeast and a southwest corner.
+   *
+   * @param GoogleGeoTypeViewport $rectangle
    */
   public function setRectangle(GoogleGeoTypeViewport $rectangle)
   {

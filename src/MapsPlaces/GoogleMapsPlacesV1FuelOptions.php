@@ -24,7 +24,10 @@ class GoogleMapsPlacesV1FuelOptions extends \Google\Collection
   protected $fuelPricesDataType = 'array';
 
   /**
-   * @param GoogleMapsPlacesV1FuelOptionsFuelPrice[]
+   * The last known fuel price for each type of fuel this station has. There is
+   * one entry per fuel type this station has. Order is not important.
+   *
+   * @param GoogleMapsPlacesV1FuelOptionsFuelPrice[] $fuelPrices
    */
   public function setFuelPrices($fuelPrices)
   {

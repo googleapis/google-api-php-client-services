@@ -20,16 +20,26 @@ namespace Google\Service\MapsPlaces;
 class GoogleTypeLocalizedText extends \Google\Model
 {
   /**
+   * The text's BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Localized string in the language corresponding to language_code below.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * The text's BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -43,7 +53,9 @@ class GoogleTypeLocalizedText extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Localized string in the language corresponding to language_code below.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

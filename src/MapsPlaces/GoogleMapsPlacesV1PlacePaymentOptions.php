@@ -20,24 +20,36 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1PlacePaymentOptions extends \Google\Model
 {
   /**
+   * Place accepts cash only as payment. Places with this attribute may still
+   * accept other payment methods.
+   *
    * @var bool
    */
   public $acceptsCashOnly;
   /**
+   * Place accepts credit cards as payment.
+   *
    * @var bool
    */
   public $acceptsCreditCards;
   /**
+   * Place accepts debit cards as payment.
+   *
    * @var bool
    */
   public $acceptsDebitCards;
   /**
+   * Place accepts NFC payments.
+   *
    * @var bool
    */
   public $acceptsNfc;
 
   /**
-   * @param bool
+   * Place accepts cash only as payment. Places with this attribute may still
+   * accept other payment methods.
+   *
+   * @param bool $acceptsCashOnly
    */
   public function setAcceptsCashOnly($acceptsCashOnly)
   {
@@ -51,7 +63,9 @@ class GoogleMapsPlacesV1PlacePaymentOptions extends \Google\Model
     return $this->acceptsCashOnly;
   }
   /**
-   * @param bool
+   * Place accepts credit cards as payment.
+   *
+   * @param bool $acceptsCreditCards
    */
   public function setAcceptsCreditCards($acceptsCreditCards)
   {
@@ -65,7 +79,9 @@ class GoogleMapsPlacesV1PlacePaymentOptions extends \Google\Model
     return $this->acceptsCreditCards;
   }
   /**
-   * @param bool
+   * Place accepts debit cards as payment.
+   *
+   * @param bool $acceptsDebitCards
    */
   public function setAcceptsDebitCards($acceptsDebitCards)
   {
@@ -79,7 +95,9 @@ class GoogleMapsPlacesV1PlacePaymentOptions extends \Google\Model
     return $this->acceptsDebitCards;
   }
   /**
-   * @param bool
+   * Place accepts NFC payments.
+   *
+   * @param bool $acceptsNfc
    */
   public function setAcceptsNfc($acceptsNfc)
   {

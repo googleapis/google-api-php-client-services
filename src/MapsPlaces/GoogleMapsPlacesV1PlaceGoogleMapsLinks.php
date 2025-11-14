@@ -20,28 +20,42 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends \Google\Model
 {
   /**
+   * A link to show the directions to the place. The link only populates the
+   * destination location and uses the default travel mode `DRIVE`.
+   *
    * @var string
    */
   public $directionsUri;
   /**
+   * A link to show photos of this place on Google Maps.
+   *
    * @var string
    */
   public $photosUri;
   /**
+   * A link to show this place.
+   *
    * @var string
    */
   public $placeUri;
   /**
+   * A link to show reviews of this place on Google Maps.
+   *
    * @var string
    */
   public $reviewsUri;
   /**
+   * A link to write a review for this place on Google Maps.
+   *
    * @var string
    */
   public $writeAReviewUri;
 
   /**
-   * @param string
+   * A link to show the directions to the place. The link only populates the
+   * destination location and uses the default travel mode `DRIVE`.
+   *
+   * @param string $directionsUri
    */
   public function setDirectionsUri($directionsUri)
   {
@@ -55,7 +69,9 @@ class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends \Google\Model
     return $this->directionsUri;
   }
   /**
-   * @param string
+   * A link to show photos of this place on Google Maps.
+   *
+   * @param string $photosUri
    */
   public function setPhotosUri($photosUri)
   {
@@ -69,7 +85,9 @@ class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends \Google\Model
     return $this->photosUri;
   }
   /**
-   * @param string
+   * A link to show this place.
+   *
+   * @param string $placeUri
    */
   public function setPlaceUri($placeUri)
   {
@@ -83,7 +101,9 @@ class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends \Google\Model
     return $this->placeUri;
   }
   /**
-   * @param string
+   * A link to show reviews of this place on Google Maps.
+   *
+   * @param string $reviewsUri
    */
   public function setReviewsUri($reviewsUri)
   {
@@ -97,7 +117,9 @@ class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends \Google\Model
     return $this->reviewsUri;
   }
   /**
-   * @param string
+   * A link to write a review for this place on Google Maps.
+   *
+   * @param string $writeAReviewUri
    */
   public function setWriteAReviewUri($writeAReviewUri)
   {

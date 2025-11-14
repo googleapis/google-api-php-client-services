@@ -25,7 +25,10 @@ class GoogleMapsPlacesV1PriceRange extends \Google\Model
   protected $startPriceDataType = '';
 
   /**
-   * @param GoogleTypeMoney
+   * The high end of the price range (exclusive). Price should be lower than
+   * this amount.
+   *
+   * @param GoogleTypeMoney $endPrice
    */
   public function setEndPrice(GoogleTypeMoney $endPrice)
   {
@@ -39,7 +42,10 @@ class GoogleMapsPlacesV1PriceRange extends \Google\Model
     return $this->endPrice;
   }
   /**
-   * @param GoogleTypeMoney
+   * The low end of the price range (inclusive). Price should be at or above
+   * this amount.
+   *
+   * @param GoogleTypeMoney $startPrice
    */
   public function setStartPrice(GoogleTypeMoney $startPrice)
   {

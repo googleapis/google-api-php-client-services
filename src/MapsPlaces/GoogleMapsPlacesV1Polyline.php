@@ -20,12 +20,26 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1Polyline extends \Google\Model
 {
   /**
+   * An [encoded polyline](https://developers.google.com/maps/documentation/util
+   * ities/polylinealgorithm), as returned by the [Routes API by default](https:
+   * //developers.google.com/maps/documentation/routes/reference/rest/v2/TopLeve
+   * l/computeRoutes#polylineencoding). See the [encoder](https://developers.goo
+   * gle.com/maps/documentation/utilities/polylineutility) and [decoder](https:/
+   * /developers.google.com/maps/documentation/routes/polylinedecoder) tools.
+   *
    * @var string
    */
   public $encodedPolyline;
 
   /**
-   * @param string
+   * An [encoded polyline](https://developers.google.com/maps/documentation/util
+   * ities/polylinealgorithm), as returned by the [Routes API by default](https:
+   * //developers.google.com/maps/documentation/routes/reference/rest/v2/TopLeve
+   * l/computeRoutes#polylineencoding). See the [encoder](https://developers.goo
+   * gle.com/maps/documentation/utilities/polylineutility) and [decoder](https:/
+   * /developers.google.com/maps/documentation/routes/polylinedecoder) tools.
+   *
+   * @param string $encodedPolyline
    */
   public function setEncodedPolyline($encodedPolyline)
   {

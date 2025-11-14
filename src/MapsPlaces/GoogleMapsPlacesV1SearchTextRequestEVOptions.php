@@ -21,13 +21,25 @@ class GoogleMapsPlacesV1SearchTextRequestEVOptions extends \Google\Collection
 {
   protected $collection_key = 'connectorTypes';
   /**
+   * Optional. The list of preferred EV connector types. A place that does not
+   * support any of the listed connector types is filtered out.
+   *
    * @var string[]
    */
   public $connectorTypes;
+  /**
+   * Optional. Minimum required charging rate in kilowatts. A place with a
+   * charging rate less than the specified rate is filtered out.
+   *
+   * @var 
+   */
   public $minimumChargingRateKw;
 
   /**
-   * @param string[]
+   * Optional. The list of preferred EV connector types. A place that does not
+   * support any of the listed connector types is filtered out.
+   *
+   * @param string[] $connectorTypes
    */
   public function setConnectorTypes($connectorTypes)
   {

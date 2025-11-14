@@ -23,12 +23,22 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionFormattableText exte
   protected $matchesType = GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStringRange::class;
   protected $matchesDataType = 'array';
   /**
+   * Text that may be used as is or formatted with `matches`.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStringRange[]
+   * A list of string ranges identifying where the input request matched in
+   * `text`. The ranges can be used to format specific parts of `text`. The
+   * substrings may not be exact matches of `input` if the matching was
+   * determined by criteria other than string matching (for example, spell
+   * corrections or transliterations). These values are Unicode character
+   * offsets of `text`. The ranges are guaranteed to be ordered in increasing
+   * offset values.
+   *
+   * @param GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStringRange[] $matches
    */
   public function setMatches($matches)
   {
@@ -42,7 +52,9 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionFormattableText exte
     return $this->matches;
   }
   /**
-   * @param string
+   * Text that may be used as is or formatted with `matches`.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

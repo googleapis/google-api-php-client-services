@@ -28,7 +28,12 @@ class GoogleMapsPlacesV1ContextualContent extends \Google\Collection
   protected $reviewsDataType = 'array';
 
   /**
-   * @param GoogleMapsPlacesV1ContextualContentJustification[]
+   * Experimental: See
+   * https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. Justifications for
+   * the place.
+   *
+   * @param GoogleMapsPlacesV1ContextualContentJustification[] $justifications
    */
   public function setJustifications($justifications)
   {
@@ -42,7 +47,10 @@ class GoogleMapsPlacesV1ContextualContent extends \Google\Collection
     return $this->justifications;
   }
   /**
-   * @param GoogleMapsPlacesV1Photo[]
+   * Information (including references) about photos of this place, contexual to
+   * the place query.
+   *
+   * @param GoogleMapsPlacesV1Photo[] $photos
    */
   public function setPhotos($photos)
   {
@@ -56,7 +64,9 @@ class GoogleMapsPlacesV1ContextualContent extends \Google\Collection
     return $this->photos;
   }
   /**
-   * @param GoogleMapsPlacesV1Review[]
+   * List of reviews about this place, contexual to the place query.
+   *
+   * @param GoogleMapsPlacesV1Review[] $reviews
    */
   public function setReviews($reviews)
   {

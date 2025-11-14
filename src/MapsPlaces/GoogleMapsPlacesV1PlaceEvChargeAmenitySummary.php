@@ -24,6 +24,8 @@ class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends \Google\Model
   protected $disclosureTextType = GoogleTypeLocalizedText::class;
   protected $disclosureTextDataType = '';
   /**
+   * A link where users can flag a problem with the summary.
+   *
    * @var string
    */
   public $flagContentUri;
@@ -35,7 +37,9 @@ class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends \Google\Model
   protected $storeDataType = '';
 
   /**
-   * @param GoogleMapsPlacesV1ContentBlock
+   * A summary of the nearby coffee options.
+   *
+   * @param GoogleMapsPlacesV1ContentBlock $coffee
    */
   public function setCoffee(GoogleMapsPlacesV1ContentBlock $coffee)
   {
@@ -49,7 +53,11 @@ class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends \Google\Model
     return $this->coffee;
   }
   /**
-   * @param GoogleTypeLocalizedText
+   * The AI disclosure message "Summarized with Gemini" (and its localized
+   * variants). This will be in the language specified in the request if
+   * available.
+   *
+   * @param GoogleTypeLocalizedText $disclosureText
    */
   public function setDisclosureText(GoogleTypeLocalizedText $disclosureText)
   {
@@ -63,7 +71,9 @@ class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends \Google\Model
     return $this->disclosureText;
   }
   /**
-   * @param string
+   * A link where users can flag a problem with the summary.
+   *
+   * @param string $flagContentUri
    */
   public function setFlagContentUri($flagContentUri)
   {
@@ -77,7 +87,9 @@ class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends \Google\Model
     return $this->flagContentUri;
   }
   /**
-   * @param GoogleMapsPlacesV1ContentBlock
+   * An overview of the available amenities. This is guaranteed to be provided.
+   *
+   * @param GoogleMapsPlacesV1ContentBlock $overview
    */
   public function setOverview(GoogleMapsPlacesV1ContentBlock $overview)
   {
@@ -91,7 +103,9 @@ class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends \Google\Model
     return $this->overview;
   }
   /**
-   * @param GoogleMapsPlacesV1ContentBlock
+   * A summary of the nearby restaurants.
+   *
+   * @param GoogleMapsPlacesV1ContentBlock $restaurant
    */
   public function setRestaurant(GoogleMapsPlacesV1ContentBlock $restaurant)
   {
@@ -105,7 +119,9 @@ class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends \Google\Model
     return $this->restaurant;
   }
   /**
-   * @param GoogleMapsPlacesV1ContentBlock
+   * A summary of the nearby stores.
+   *
+   * @param GoogleMapsPlacesV1ContentBlock $store
    */
   public function setStore(GoogleMapsPlacesV1ContentBlock $store)
   {

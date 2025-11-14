@@ -20,16 +20,22 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1RoutingSummaryLeg extends \Google\Model
 {
   /**
+   * The distance of this leg of the trip.
+   *
    * @var int
    */
   public $distanceMeters;
   /**
+   * The time it takes to complete this leg of the trip.
+   *
    * @var string
    */
   public $duration;
 
   /**
-   * @param int
+   * The distance of this leg of the trip.
+   *
+   * @param int $distanceMeters
    */
   public function setDistanceMeters($distanceMeters)
   {
@@ -43,7 +49,9 @@ class GoogleMapsPlacesV1RoutingSummaryLeg extends \Google\Model
     return $this->distanceMeters;
   }
   /**
-   * @param string
+   * The time it takes to complete this leg of the trip.
+   *
+   * @param string $duration
    */
   public function setDuration($duration)
   {
