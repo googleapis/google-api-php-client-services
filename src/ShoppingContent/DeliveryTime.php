@@ -27,18 +27,33 @@ class DeliveryTime extends \Google\Collection
   protected $holidayCutoffsType = HolidayCutoff::class;
   protected $holidayCutoffsDataType = 'array';
   /**
+   * Maximum number of business days spent before an order is shipped. 0 means
+   * same day shipped, 1 means next day shipped. Must be greater than or equal
+   * to `minHandlingTimeInDays`.
+   *
    * @var string
    */
   public $maxHandlingTimeInDays;
   /**
+   * Maximum number of business days that are spent in transit. 0 means same day
+   * delivery, 1 means next day delivery. Must be greater than or equal to
+   * `minTransitTimeInDays`.
+   *
    * @var string
    */
   public $maxTransitTimeInDays;
   /**
+   * Minimum number of business days spent before an order is shipped. 0 means
+   * same day shipped, 1 means next day shipped.
+   *
    * @var string
    */
   public $minHandlingTimeInDays;
   /**
+   * Minimum number of business days that are spent in transit. 0 means same day
+   * delivery, 1 means next day delivery. Either `{min,max}TransitTimeInDays` or
+   * `transitTimeTable` must be set, but not both.
+   *
    * @var string
    */
   public $minTransitTimeInDays;
@@ -50,7 +65,11 @@ class DeliveryTime extends \Google\Collection
   protected $warehouseBasedDeliveryTimesDataType = 'array';
 
   /**
-   * @param CutoffTime
+   * Business days cutoff time definition. If not configured, the cutoff time
+   * will be defaulted to 8AM PST. If local delivery, use
+   * Service.StoreConfig.CutoffConfig.
+   *
+   * @param CutoffTime $cutoffTime
    */
   public function setCutoffTime(CutoffTime $cutoffTime)
   {
@@ -64,7 +83,10 @@ class DeliveryTime extends \Google\Collection
     return $this->cutoffTime;
   }
   /**
-   * @param BusinessDayConfig
+   * The business days during which orders can be handled. If not provided,
+   * Monday to Friday business days will be assumed.
+   *
+   * @param BusinessDayConfig $handlingBusinessDayConfig
    */
   public function setHandlingBusinessDayConfig(BusinessDayConfig $handlingBusinessDayConfig)
   {
@@ -78,7 +100,10 @@ class DeliveryTime extends \Google\Collection
     return $this->handlingBusinessDayConfig;
   }
   /**
-   * @param HolidayCutoff[]
+   * Holiday cutoff definitions. If configured, they specify order cutoff times
+   * for holiday-specific shipping.
+   *
+   * @param HolidayCutoff[] $holidayCutoffs
    */
   public function setHolidayCutoffs($holidayCutoffs)
   {
@@ -92,7 +117,11 @@ class DeliveryTime extends \Google\Collection
     return $this->holidayCutoffs;
   }
   /**
-   * @param string
+   * Maximum number of business days spent before an order is shipped. 0 means
+   * same day shipped, 1 means next day shipped. Must be greater than or equal
+   * to `minHandlingTimeInDays`.
+   *
+   * @param string $maxHandlingTimeInDays
    */
   public function setMaxHandlingTimeInDays($maxHandlingTimeInDays)
   {
@@ -106,7 +135,11 @@ class DeliveryTime extends \Google\Collection
     return $this->maxHandlingTimeInDays;
   }
   /**
-   * @param string
+   * Maximum number of business days that are spent in transit. 0 means same day
+   * delivery, 1 means next day delivery. Must be greater than or equal to
+   * `minTransitTimeInDays`.
+   *
+   * @param string $maxTransitTimeInDays
    */
   public function setMaxTransitTimeInDays($maxTransitTimeInDays)
   {
@@ -120,7 +153,10 @@ class DeliveryTime extends \Google\Collection
     return $this->maxTransitTimeInDays;
   }
   /**
-   * @param string
+   * Minimum number of business days spent before an order is shipped. 0 means
+   * same day shipped, 1 means next day shipped.
+   *
+   * @param string $minHandlingTimeInDays
    */
   public function setMinHandlingTimeInDays($minHandlingTimeInDays)
   {
@@ -134,7 +170,11 @@ class DeliveryTime extends \Google\Collection
     return $this->minHandlingTimeInDays;
   }
   /**
-   * @param string
+   * Minimum number of business days that are spent in transit. 0 means same day
+   * delivery, 1 means next day delivery. Either `{min,max}TransitTimeInDays` or
+   * `transitTimeTable` must be set, but not both.
+   *
+   * @param string $minTransitTimeInDays
    */
   public function setMinTransitTimeInDays($minTransitTimeInDays)
   {
@@ -148,7 +188,10 @@ class DeliveryTime extends \Google\Collection
     return $this->minTransitTimeInDays;
   }
   /**
-   * @param BusinessDayConfig
+   * The business days during which orders can be in-transit. If not provided,
+   * Monday to Friday business days will be assumed.
+   *
+   * @param BusinessDayConfig $transitBusinessDayConfig
    */
   public function setTransitBusinessDayConfig(BusinessDayConfig $transitBusinessDayConfig)
   {
@@ -162,7 +205,11 @@ class DeliveryTime extends \Google\Collection
     return $this->transitBusinessDayConfig;
   }
   /**
-   * @param TransitTable
+   * Transit time table, number of business days spent in transit based on row
+   * and column dimensions. Either `{min,max}TransitTimeInDays` or
+   * `transitTimeTable` can be set, but not both.
+   *
+   * @param TransitTable $transitTimeTable
    */
   public function setTransitTimeTable(TransitTable $transitTimeTable)
   {
@@ -176,7 +223,12 @@ class DeliveryTime extends \Google\Collection
     return $this->transitTimeTable;
   }
   /**
-   * @param WarehouseBasedDeliveryTime[]
+   * Indicates that the delivery time should be calculated per warehouse
+   * (shipping origin location) based on the settings of the selected carrier.
+   * When set, no other transit time related field in DeliveryTime should be
+   * set.
+   *
+   * @param WarehouseBasedDeliveryTime[] $warehouseBasedDeliveryTimes
    */
   public function setWarehouseBasedDeliveryTimes($warehouseBasedDeliveryTimes)
   {

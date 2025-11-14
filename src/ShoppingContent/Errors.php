@@ -21,18 +21,24 @@ class Errors extends \Google\Collection
 {
   protected $collection_key = 'errors';
   /**
+   * The HTTP status of the first error in `errors`.
+   *
    * @var string
    */
   public $code;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**
+   * The message of the first error in `errors`.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * The HTTP status of the first error in `errors`.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -46,7 +52,9 @@ class Errors extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param Error[]
+   * A list of errors.
+   *
+   * @param Error[] $errors
    */
   public function setErrors($errors)
   {
@@ -60,7 +68,9 @@ class Errors extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * The message of the first error in `errors`.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

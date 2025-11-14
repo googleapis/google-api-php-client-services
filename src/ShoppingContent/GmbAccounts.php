@@ -21,6 +21,8 @@ class GmbAccounts extends \Google\Collection
 {
   protected $collection_key = 'gmbAccounts';
   /**
+   * The ID of the Merchant Center account.
+   *
    * @var string
    */
   public $accountId;
@@ -28,7 +30,9 @@ class GmbAccounts extends \Google\Collection
   protected $gmbAccountsDataType = 'array';
 
   /**
-   * @param string
+   * The ID of the Merchant Center account.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -42,7 +46,9 @@ class GmbAccounts extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param GmbAccountsGmbAccount[]
+   * A list of Business Profiles which are available to the merchant.
+   *
+   * @param GmbAccountsGmbAccount[] $gmbAccounts
    */
   public function setGmbAccounts($gmbAccounts)
   {

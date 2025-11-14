@@ -20,16 +20,27 @@ namespace Google\Service\ShoppingContent;
 class LinkService extends \Google\Model
 {
   /**
+   * Service provided to or by the linked account. Acceptable values are: -
+   * "`shoppingActionsOrderManagement`" - "`shoppingActionsProductManagement`" -
+   * "`shoppingAdsProductManagement`" - "`paymentProcessing`"
+   *
    * @var string
    */
   public $service;
   /**
+   * Status of the link Acceptable values are: - "`active`" - "`inactive`" -
+   * "`pending`"
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * Service provided to or by the linked account. Acceptable values are: -
+   * "`shoppingActionsOrderManagement`" - "`shoppingActionsProductManagement`" -
+   * "`shoppingAdsProductManagement`" - "`paymentProcessing`"
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -43,7 +54,10 @@ class LinkService extends \Google\Model
     return $this->service;
   }
   /**
-   * @param string
+   * Status of the link Acceptable values are: - "`active`" - "`inactive`" -
+   * "`pending`"
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {
