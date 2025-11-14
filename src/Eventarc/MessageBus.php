@@ -20,46 +20,73 @@ namespace Google\Service\Eventarc;
 class MessageBus extends \Google\Model
 {
   /**
+   * Optional. Resource annotations.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. The creation time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Resource name of a KMS crypto key (managed by the user) used to
+   * encrypt/decrypt their event data. It must match the pattern
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
    * @var string
    */
   public $cryptoKeyName;
   /**
+   * Optional. Resource display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and might be sent only on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. Resource labels.
+   *
    * @var string[]
    */
   public $labels;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
+   * Identifier. Resource name of the form
+   * projects/{project}/locations/{location}/messageBuses/{message_bus}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Server assigned unique identifier for the channel. The value
+   * is a UUID4 string and guaranteed to remain unchanged until the resource is
+   * deleted.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The last-modified time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. Resource annotations.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -73,7 +100,9 @@ class MessageBus extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * Output only. The creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -87,7 +116,11 @@ class MessageBus extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Resource name of a KMS crypto key (managed by the user) used to
+   * encrypt/decrypt their event data. It must match the pattern
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
+   * @param string $cryptoKeyName
    */
   public function setCryptoKeyName($cryptoKeyName)
   {
@@ -101,7 +134,9 @@ class MessageBus extends \Google\Model
     return $this->cryptoKeyName;
   }
   /**
-   * @param string
+   * Optional. Resource display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -115,7 +150,11 @@ class MessageBus extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and might be sent only on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -129,7 +168,9 @@ class MessageBus extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. Resource labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -143,7 +184,11 @@ class MessageBus extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param LoggingConfig
+   * Optional. Config to control Platform logging for the Message Bus. This log
+   * configuration is applied to the Message Bus itself, and all the Enrollments
+   * attached to it.
+   *
+   * @param LoggingConfig $loggingConfig
    */
   public function setLoggingConfig(LoggingConfig $loggingConfig)
   {
@@ -157,7 +202,10 @@ class MessageBus extends \Google\Model
     return $this->loggingConfig;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the form
+   * projects/{project}/locations/{location}/messageBuses/{message_bus}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -171,7 +219,11 @@ class MessageBus extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Server assigned unique identifier for the channel. The value
+   * is a UUID4 string and guaranteed to remain unchanged until the resource is
+   * deleted.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -185,7 +237,9 @@ class MessageBus extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The last-modified time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
