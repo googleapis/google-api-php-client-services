@@ -21,10 +21,18 @@ class ListWasmPluginVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'wasmPluginVersions';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unreachable resources. Populated when the request attempts to list all
+   * resources across all supported locations, while some locations are
+   * temporarily unavailable.
+   *
    * @var string[]
    */
   public $unreachable;
@@ -32,7 +40,11 @@ class ListWasmPluginVersionsResponse extends \Google\Collection
   protected $wasmPluginVersionsDataType = 'array';
 
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +58,11 @@ class ListWasmPluginVersionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Unreachable resources. Populated when the request attempts to list all
+   * resources across all supported locations, while some locations are
+   * temporarily unavailable.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
@@ -60,7 +76,9 @@ class ListWasmPluginVersionsResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * @param WasmPluginVersion[]
+   * List of `WasmPluginVersion` resources.
+   *
+   * @param WasmPluginVersion[] $wasmPluginVersions
    */
   public function setWasmPluginVersions($wasmPluginVersions)
   {

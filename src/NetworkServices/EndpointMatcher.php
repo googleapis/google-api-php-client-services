@@ -23,7 +23,9 @@ class EndpointMatcher extends \Google\Model
   protected $metadataLabelMatcherDataType = '';
 
   /**
-   * @param EndpointMatcherMetadataLabelMatcher
+   * The matcher is based on node metadata presented by xDS clients.
+   *
+   * @param EndpointMatcherMetadataLabelMatcher $metadataLabelMatcher
    */
   public function setMetadataLabelMatcher(EndpointMatcherMetadataLabelMatcher $metadataLabelMatcher)
   {
