@@ -25,6 +25,8 @@ class GoogleCloudDatacatalogV1ReconcileTagsRequest extends \Google\Collection
    */
   public $forceDeleteMissing;
   /**
+   * Required. The name of the tag template, which is used for reconciliation.
+   *
    * @var string
    */
   public $tagTemplate;
@@ -32,7 +34,7 @@ class GoogleCloudDatacatalogV1ReconcileTagsRequest extends \Google\Collection
   protected $tagsDataType = 'array';
 
   /**
-   * @param bool
+   * @param bool $forceDeleteMissing
    */
   public function setForceDeleteMissing($forceDeleteMissing)
   {
@@ -46,7 +48,9 @@ class GoogleCloudDatacatalogV1ReconcileTagsRequest extends \Google\Collection
     return $this->forceDeleteMissing;
   }
   /**
-   * @param string
+   * Required. The name of the tag template, which is used for reconciliation.
+   *
+   * @param string $tagTemplate
    */
   public function setTagTemplate($tagTemplate)
   {
@@ -60,7 +64,11 @@ class GoogleCloudDatacatalogV1ReconcileTagsRequest extends \Google\Collection
     return $this->tagTemplate;
   }
   /**
-   * @param GoogleCloudDatacatalogV1Tag[]
+   * A list of tags to apply to an entry. A tag can specify a tag template,
+   * which must be the template specified in the `ReconcileTagsRequest`. The
+   * sole entry and each of its columns must be mentioned at most once.
+   *
+   * @param GoogleCloudDatacatalogV1Tag[] $tags
    */
   public function setTags($tags)
   {

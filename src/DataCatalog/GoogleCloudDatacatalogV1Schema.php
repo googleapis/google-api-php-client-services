@@ -24,7 +24,11 @@ class GoogleCloudDatacatalogV1Schema extends \Google\Collection
   protected $columnsDataType = 'array';
 
   /**
-   * @param GoogleCloudDatacatalogV1ColumnSchema[]
+   * The unified GoogleSQL-like schema of columns. The overall maximum number of
+   * columns and nested columns is 10,000. The maximum nested depth is 15
+   * levels.
+   *
+   * @param GoogleCloudDatacatalogV1ColumnSchema[] $columns
    */
   public function setColumns($columns)
   {
