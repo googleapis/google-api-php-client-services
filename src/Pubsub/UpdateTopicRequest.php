@@ -22,12 +22,20 @@ class UpdateTopicRequest extends \Google\Model
   protected $topicType = Topic::class;
   protected $topicDataType = '';
   /**
+   * Required. Indicates which fields in the provided topic to update. Must be
+   * specified and non-empty. Note that if `update_mask` contains
+   * "message_storage_policy" but the `message_storage_policy` is not set in the
+   * `topic` provided above, then the updated value is determined by the policy
+   * configured at the project or organization level.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param Topic
+   * Required. The updated topic object.
+   *
+   * @param Topic $topic
    */
   public function setTopic(Topic $topic)
   {
@@ -41,7 +49,13 @@ class UpdateTopicRequest extends \Google\Model
     return $this->topic;
   }
   /**
-   * @param string
+   * Required. Indicates which fields in the provided topic to update. Must be
+   * specified and non-empty. Note that if `update_mask` contains
+   * "message_storage_policy" but the `message_storage_policy` is not set in the
+   * `topic` provided above, then the updated value is determined by the policy
+   * configured at the project or organization level.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {
