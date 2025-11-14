@@ -20,26 +20,44 @@ namespace Google\Service\PeopleService;
 class PhoneNumber extends \Google\Model
 {
   /**
+   * Output only. The canonicalized [ITU-T
+   * E.164](https://law.resource.org/pub/us/cfr/ibr/004/itu-t.E.164.1.2008.pdf)
+   * form of the phone number.
+   *
    * @var string
    */
   public $canonicalForm;
   /**
+   * Output only. The type of the phone number translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
    * @var string
    */
   public $formattedType;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The type of the phone number. The type can be custom or one of these
+   * predefined values: * `home` * `work` * `mobile` * `homeFax` * `workFax` *
+   * `otherFax` * `pager` * `workMobile` * `workPager` * `main` * `googleVoice`
+   * * `other`
+   *
    * @var string
    */
   public $type;
   /**
+   * The phone number.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Output only. The canonicalized [ITU-T
+   * E.164](https://law.resource.org/pub/us/cfr/ibr/004/itu-t.E.164.1.2008.pdf)
+   * form of the phone number.
+   *
+   * @param string $canonicalForm
    */
   public function setCanonicalForm($canonicalForm)
   {
@@ -53,7 +71,10 @@ class PhoneNumber extends \Google\Model
     return $this->canonicalForm;
   }
   /**
-   * @param string
+   * Output only. The type of the phone number translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
+   * @param string $formattedType
    */
   public function setFormattedType($formattedType)
   {
@@ -67,7 +88,9 @@ class PhoneNumber extends \Google\Model
     return $this->formattedType;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the phone number.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -81,7 +104,12 @@ class PhoneNumber extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The type of the phone number. The type can be custom or one of these
+   * predefined values: * `home` * `work` * `mobile` * `homeFax` * `workFax` *
+   * `otherFax` * `pager` * `workMobile` * `workPager` * `main` * `googleVoice`
+   * * `other`
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -95,7 +123,9 @@ class PhoneNumber extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The phone number.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

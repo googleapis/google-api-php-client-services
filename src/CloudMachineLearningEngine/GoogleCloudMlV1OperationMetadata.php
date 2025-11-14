@@ -20,34 +20,79 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1OperationMetadata extends \Google\Model
 {
   /**
+   * Unspecified operation type.
+   */
+  public const OPERATION_TYPE_OPERATION_TYPE_UNSPECIFIED = 'OPERATION_TYPE_UNSPECIFIED';
+  /**
+   * An operation to create a new version.
+   */
+  public const OPERATION_TYPE_CREATE_VERSION = 'CREATE_VERSION';
+  /**
+   * An operation to delete an existing version.
+   */
+  public const OPERATION_TYPE_DELETE_VERSION = 'DELETE_VERSION';
+  /**
+   * An operation to delete an existing model.
+   */
+  public const OPERATION_TYPE_DELETE_MODEL = 'DELETE_MODEL';
+  /**
+   * An operation to update an existing model.
+   */
+  public const OPERATION_TYPE_UPDATE_MODEL = 'UPDATE_MODEL';
+  /**
+   * An operation to update an existing version.
+   */
+  public const OPERATION_TYPE_UPDATE_VERSION = 'UPDATE_VERSION';
+  /**
+   * An operation to update project configuration.
+   */
+  public const OPERATION_TYPE_UPDATE_CONFIG = 'UPDATE_CONFIG';
+  /**
+   * The time the operation was submitted.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The time operation processing completed.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Indicates whether a request to cancel this operation has been made.
+   *
    * @var bool
    */
   public $isCancellationRequested;
   /**
+   * The user labels, inherited from the model or the model version being
+   * operated on.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Contains the name of the model associated with the operation.
+   *
    * @var string
    */
   public $modelName;
   /**
+   * The operation type.
+   *
    * @var string
    */
   public $operationType;
   /**
+   * Contains the project number associated with the operation.
+   *
    * @var string
    */
   public $projectNumber;
   /**
+   * The time operation processing started.
+   *
    * @var string
    */
   public $startTime;
@@ -55,7 +100,9 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
   protected $versionDataType = '';
 
   /**
-   * @param string
+   * The time the operation was submitted.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -69,7 +116,9 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The time operation processing completed.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -83,7 +132,9 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param bool
+   * Indicates whether a request to cancel this operation has been made.
+   *
+   * @param bool $isCancellationRequested
    */
   public function setIsCancellationRequested($isCancellationRequested)
   {
@@ -97,7 +148,10 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
     return $this->isCancellationRequested;
   }
   /**
-   * @param string[]
+   * The user labels, inherited from the model or the model version being
+   * operated on.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -111,7 +165,9 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Contains the name of the model associated with the operation.
+   *
+   * @param string $modelName
    */
   public function setModelName($modelName)
   {
@@ -125,21 +181,28 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
     return $this->modelName;
   }
   /**
-   * @param string
+   * The operation type.
+   *
+   * Accepted values: OPERATION_TYPE_UNSPECIFIED, CREATE_VERSION,
+   * DELETE_VERSION, DELETE_MODEL, UPDATE_MODEL, UPDATE_VERSION, UPDATE_CONFIG
+   *
+   * @param self::OPERATION_TYPE_* $operationType
    */
   public function setOperationType($operationType)
   {
     $this->operationType = $operationType;
   }
   /**
-   * @return string
+   * @return self::OPERATION_TYPE_*
    */
   public function getOperationType()
   {
     return $this->operationType;
   }
   /**
-   * @param string
+   * Contains the project number associated with the operation.
+   *
+   * @param string $projectNumber
    */
   public function setProjectNumber($projectNumber)
   {
@@ -153,7 +216,9 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
     return $this->projectNumber;
   }
   /**
-   * @param string
+   * The time operation processing started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -167,7 +232,9 @@ class GoogleCloudMlV1OperationMetadata extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param GoogleCloudMlV1Version
+   * Contains the version associated with the operation.
+   *
+   * @param GoogleCloudMlV1Version $version
    */
   public function setVersion(GoogleCloudMlV1Version $version)
   {

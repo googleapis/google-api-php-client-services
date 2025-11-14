@@ -20,38 +20,86 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequest extends \Google\Model
 {
   /**
+   * Copy mode unspecified.
+   */
+  public const COPY_MODE_COPY_MODE_UNSPECIFIED = 'COPY_MODE_UNSPECIFIED';
+  /**
+   * The applied label and field values aren't copied by default when the Drive
+   * item it's applied to is copied.
+   */
+  public const COPY_MODE_DO_NOT_COPY = 'DO_NOT_COPY';
+  /**
+   * The applied label and field values are always copied when the Drive item
+   * it's applied to is copied. Only admins can use this mode.
+   */
+  public const COPY_MODE_ALWAYS_COPY = 'ALWAYS_COPY';
+  /**
+   * The applied label and field values are copied if the label is appliable by
+   * the user making the copy.
+   */
+  public const COPY_MODE_COPY_APPLIABLE = 'COPY_APPLIABLE';
+  /**
+   * Implies the field mask: `name,id,revision_id,label_type,properties.*`
+   */
+  public const VIEW_LABEL_VIEW_BASIC = 'LABEL_VIEW_BASIC';
+  /**
+   * All possible fields.
+   */
+  public const VIEW_LABEL_VIEW_FULL = 'LABEL_VIEW_FULL';
+  /**
+   * Required. Indicates how the applied label and field values should be copied
+   * when a Drive item is copied.
+   *
    * @var string
    */
   public $copyMode;
   /**
+   * The BCP-47 language code to use for evaluating localized field labels. When
+   * not specified, values in the default configured language will be used.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
    * @var bool
    */
   public $useAdminAccess;
   /**
+   * When specified, only certain fields belonging to the indicated view will be
+   * returned.
+   *
    * @var string
    */
   public $view;
 
   /**
-   * @param string
+   * Required. Indicates how the applied label and field values should be copied
+   * when a Drive item is copied.
+   *
+   * Accepted values: COPY_MODE_UNSPECIFIED, DO_NOT_COPY, ALWAYS_COPY,
+   * COPY_APPLIABLE
+   *
+   * @param self::COPY_MODE_* $copyMode
    */
   public function setCopyMode($copyMode)
   {
     $this->copyMode = $copyMode;
   }
   /**
-   * @return string
+   * @return self::COPY_MODE_*
    */
   public function getCopyMode()
   {
     return $this->copyMode;
   }
   /**
-   * @param string
+   * The BCP-47 language code to use for evaluating localized field labels. When
+   * not specified, values in the default configured language will be used.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -65,7 +113,10 @@ class GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequest extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
+   * @param bool $useAdminAccess
    */
   public function setUseAdminAccess($useAdminAccess)
   {
@@ -79,14 +130,19 @@ class GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequest extends \Google\Model
     return $this->useAdminAccess;
   }
   /**
-   * @param string
+   * When specified, only certain fields belonging to the indicated view will be
+   * returned.
+   *
+   * Accepted values: LABEL_VIEW_BASIC, LABEL_VIEW_FULL
+   *
+   * @param self::VIEW_* $view
    */
   public function setView($view)
   {
     $this->view = $view;
   }
   /**
-   * @return string
+   * @return self::VIEW_*
    */
   public function getView()
   {

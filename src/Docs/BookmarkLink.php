@@ -20,16 +20,22 @@ namespace Google\Service\Docs;
 class BookmarkLink extends \Google\Model
 {
   /**
+   * The ID of a bookmark in this document.
+   *
    * @var string
    */
   public $id;
   /**
+   * The ID of the tab containing this bookmark.
+   *
    * @var string
    */
   public $tabId;
 
   /**
-   * @param string
+   * The ID of a bookmark in this document.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class BookmarkLink extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The ID of the tab containing this bookmark.
+   *
+   * @param string $tabId
    */
   public function setTabId($tabId)
   {

@@ -21,6 +21,9 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse extends \G
 {
   protected $collection_key = 'processLinks';
   /**
+   * The token to specify as `page_token` in the subsequent call to get the next
+   * page. Omitted if there are no more pages in the response.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse extends \G
   protected $processLinksDataType = 'array';
 
   /**
-   * @param string
+   * The token to specify as `page_token` in the subsequent call to get the next
+   * page. Omitted if there are no more pages in the response.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse extends \G
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDatacatalogLineageV1ProcessLinks[]
+   * An array of processes associated with the specified links.
+   *
+   * @param GoogleCloudDatacatalogLineageV1ProcessLinks[] $processLinks
    */
   public function setProcessLinks($processLinks)
   {

@@ -24,7 +24,10 @@ class ListInvitationsResponse extends \Google\Collection
   protected $invitationsDataType = 'array';
 
   /**
-   * @param Invitation[]
+   * A collection of invitations that are pending for the account. The number of
+   * invitations listed here cannot exceed 1000.
+   *
+   * @param Invitation[] $invitations
    */
   public function setInvitations($invitations)
   {

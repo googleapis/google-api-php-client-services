@@ -19,6 +19,12 @@ namespace Google\Service\Bigquery;
 
 class DimensionalityReductionMetrics extends \Google\Model
 {
+  /**
+   * Total percentage of variance explained by the selected principal
+   * components.
+   *
+   * @var 
+   */
   public $totalExplainedVarianceRatio;
 
   public function setTotalExplainedVarianceRatio($totalExplainedVarianceRatio)

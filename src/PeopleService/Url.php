@@ -20,22 +20,35 @@ namespace Google\Service\PeopleService;
 class Url extends \Google\Model
 {
   /**
+   * Output only. The type of the URL translated and formatted in the viewer's
+   * account locale or the `Accept-Language` HTTP header locale.
+   *
    * @var string
    */
   public $formattedType;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The type of the URL. The type can be custom or one of these predefined
+   * values: * `home` * `work` * `blog` * `profile` * `homePage` * `ftp` *
+   * `reservations` * `appInstallPage`: website for a Currents application. *
+   * `other`
+   *
    * @var string
    */
   public $type;
   /**
+   * The URL.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Output only. The type of the URL translated and formatted in the viewer's
+   * account locale or the `Accept-Language` HTTP header locale.
+   *
+   * @param string $formattedType
    */
   public function setFormattedType($formattedType)
   {
@@ -49,7 +62,9 @@ class Url extends \Google\Model
     return $this->formattedType;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the URL.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -63,7 +78,12 @@ class Url extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The type of the URL. The type can be custom or one of these predefined
+   * values: * `home` * `work` * `blog` * `profile` * `homePage` * `ftp` *
+   * `reservations` * `appInstallPage`: website for a Currents application. *
+   * `other`
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -77,7 +97,9 @@ class Url extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The URL.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

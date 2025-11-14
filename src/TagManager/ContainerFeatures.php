@@ -20,64 +20,94 @@ namespace Google\Service\TagManager;
 class ContainerFeatures extends \Google\Model
 {
   /**
+   * Whether this Container supports built-in variables
+   *
    * @var bool
    */
   public $supportBuiltInVariables;
   /**
+   * Whether this Container supports clients.
+   *
    * @var bool
    */
   public $supportClients;
   /**
+   * Whether this Container supports environments.
+   *
    * @var bool
    */
   public $supportEnvironments;
   /**
+   * Whether this Container supports folders.
+   *
    * @var bool
    */
   public $supportFolders;
   /**
+   * Whether this Container supports Google tag config.
+   *
    * @var bool
    */
   public $supportGtagConfigs;
   /**
+   * Whether this Container supports tags.
+   *
    * @var bool
    */
   public $supportTags;
   /**
+   * Whether this Container supports templates.
+   *
    * @var bool
    */
   public $supportTemplates;
   /**
+   * Whether this Container supports transformations.
+   *
    * @var bool
    */
   public $supportTransformations;
   /**
+   * Whether this Container supports triggers.
+   *
    * @var bool
    */
   public $supportTriggers;
   /**
+   * Whether this Container supports user permissions managed by GTM.
+   *
    * @var bool
    */
   public $supportUserPermissions;
   /**
+   * Whether this Container supports variables.
+   *
    * @var bool
    */
   public $supportVariables;
   /**
+   * Whether this Container supports Container versions.
+   *
    * @var bool
    */
   public $supportVersions;
   /**
+   * Whether this Container supports workspaces.
+   *
    * @var bool
    */
   public $supportWorkspaces;
   /**
+   * Whether this Container supports zones.
+   *
    * @var bool
    */
   public $supportZones;
 
   /**
-   * @param bool
+   * Whether this Container supports built-in variables
+   *
+   * @param bool $supportBuiltInVariables
    */
   public function setSupportBuiltInVariables($supportBuiltInVariables)
   {
@@ -91,7 +121,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportBuiltInVariables;
   }
   /**
-   * @param bool
+   * Whether this Container supports clients.
+   *
+   * @param bool $supportClients
    */
   public function setSupportClients($supportClients)
   {
@@ -105,7 +137,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportClients;
   }
   /**
-   * @param bool
+   * Whether this Container supports environments.
+   *
+   * @param bool $supportEnvironments
    */
   public function setSupportEnvironments($supportEnvironments)
   {
@@ -119,7 +153,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportEnvironments;
   }
   /**
-   * @param bool
+   * Whether this Container supports folders.
+   *
+   * @param bool $supportFolders
    */
   public function setSupportFolders($supportFolders)
   {
@@ -133,7 +169,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportFolders;
   }
   /**
-   * @param bool
+   * Whether this Container supports Google tag config.
+   *
+   * @param bool $supportGtagConfigs
    */
   public function setSupportGtagConfigs($supportGtagConfigs)
   {
@@ -147,7 +185,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportGtagConfigs;
   }
   /**
-   * @param bool
+   * Whether this Container supports tags.
+   *
+   * @param bool $supportTags
    */
   public function setSupportTags($supportTags)
   {
@@ -161,7 +201,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportTags;
   }
   /**
-   * @param bool
+   * Whether this Container supports templates.
+   *
+   * @param bool $supportTemplates
    */
   public function setSupportTemplates($supportTemplates)
   {
@@ -175,7 +217,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportTemplates;
   }
   /**
-   * @param bool
+   * Whether this Container supports transformations.
+   *
+   * @param bool $supportTransformations
    */
   public function setSupportTransformations($supportTransformations)
   {
@@ -189,7 +233,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportTransformations;
   }
   /**
-   * @param bool
+   * Whether this Container supports triggers.
+   *
+   * @param bool $supportTriggers
    */
   public function setSupportTriggers($supportTriggers)
   {
@@ -203,7 +249,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportTriggers;
   }
   /**
-   * @param bool
+   * Whether this Container supports user permissions managed by GTM.
+   *
+   * @param bool $supportUserPermissions
    */
   public function setSupportUserPermissions($supportUserPermissions)
   {
@@ -217,7 +265,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportUserPermissions;
   }
   /**
-   * @param bool
+   * Whether this Container supports variables.
+   *
+   * @param bool $supportVariables
    */
   public function setSupportVariables($supportVariables)
   {
@@ -231,7 +281,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportVariables;
   }
   /**
-   * @param bool
+   * Whether this Container supports Container versions.
+   *
+   * @param bool $supportVersions
    */
   public function setSupportVersions($supportVersions)
   {
@@ -245,7 +297,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportVersions;
   }
   /**
-   * @param bool
+   * Whether this Container supports workspaces.
+   *
+   * @param bool $supportWorkspaces
    */
   public function setSupportWorkspaces($supportWorkspaces)
   {
@@ -259,7 +313,9 @@ class ContainerFeatures extends \Google\Model
     return $this->supportWorkspaces;
   }
   /**
-   * @param bool
+   * Whether this Container supports zones.
+   *
+   * @param bool $supportZones
    */
   public function setSupportZones($supportZones)
   {

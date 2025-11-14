@@ -22,16 +22,24 @@ class SimulatedResource extends \Google\Model
   protected $iamPolicyDataType = Policy::class;
   protected $iamPolicyDataDataType = '';
   /**
+   * Optional. A representation of the Google Cloud resource. Should match the
+   * Google Cloud resource JSON format.
+   *
    * @var array[]
    */
   public $resourceData;
   /**
+   * Required. The type of the resource, for example,
+   * `compute.googleapis.com/Disk`.
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param Policy
+   * Optional. A representation of the IAM policy.
+   *
+   * @param Policy $iamPolicyData
    */
   public function setIamPolicyData(Policy $iamPolicyData)
   {
@@ -45,7 +53,10 @@ class SimulatedResource extends \Google\Model
     return $this->iamPolicyData;
   }
   /**
-   * @param array[]
+   * Optional. A representation of the Google Cloud resource. Should match the
+   * Google Cloud resource JSON format.
+   *
+   * @param array[] $resourceData
    */
   public function setResourceData($resourceData)
   {
@@ -59,7 +70,10 @@ class SimulatedResource extends \Google\Model
     return $this->resourceData;
   }
   /**
-   * @param string
+   * Required. The type of the resource, for example,
+   * `compute.googleapis.com/Disk`.
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {

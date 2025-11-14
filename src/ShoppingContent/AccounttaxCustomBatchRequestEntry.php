@@ -20,26 +20,37 @@ namespace Google\Service\ShoppingContent;
 class AccounttaxCustomBatchRequestEntry extends \Google\Model
 {
   /**
+   * The ID of the account for which to get/update account tax settings.
+   *
    * @var string
    */
   public $accountId;
   protected $accountTaxType = AccountTax::class;
   protected $accountTaxDataType = '';
   /**
+   * An entry ID, unique within the batch request.
+   *
    * @var string
    */
   public $batchId;
   /**
+   * The ID of the managing account.
+   *
    * @var string
    */
   public $merchantId;
   /**
+   * The method of the batch entry. Acceptable values are: - "`get`" -
+   * "`update`"
+   *
    * @var string
    */
   public $method;
 
   /**
-   * @param string
+   * The ID of the account for which to get/update account tax settings.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -53,7 +64,9 @@ class AccounttaxCustomBatchRequestEntry extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param AccountTax
+   * The account tax settings to update. Only defined if the method is `update`.
+   *
+   * @param AccountTax $accountTax
    */
   public function setAccountTax(AccountTax $accountTax)
   {
@@ -67,7 +80,9 @@ class AccounttaxCustomBatchRequestEntry extends \Google\Model
     return $this->accountTax;
   }
   /**
-   * @param string
+   * An entry ID, unique within the batch request.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -81,7 +96,9 @@ class AccounttaxCustomBatchRequestEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param string
+   * The ID of the managing account.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -95,7 +112,10 @@ class AccounttaxCustomBatchRequestEntry extends \Google\Model
     return $this->merchantId;
   }
   /**
-   * @param string
+   * The method of the batch entry. Acceptable values are: - "`get`" -
+   * "`update`"
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {

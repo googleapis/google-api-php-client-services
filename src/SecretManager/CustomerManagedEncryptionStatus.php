@@ -20,12 +20,20 @@ namespace Google\Service\SecretManager;
 class CustomerManagedEncryptionStatus extends \Google\Model
 {
   /**
+   * Required. The resource name of the Cloud KMS CryptoKeyVersion used to
+   * encrypt the secret payload, in the following format:
+   * `projects/locations/keyRings/cryptoKeys/versions`.
+   *
    * @var string
    */
   public $kmsKeyVersionName;
 
   /**
-   * @param string
+   * Required. The resource name of the Cloud KMS CryptoKeyVersion used to
+   * encrypt the secret payload, in the following format:
+   * `projects/locations/keyRings/cryptoKeys/versions`.
+   *
+   * @param string $kmsKeyVersionName
    */
   public function setKmsKeyVersionName($kmsKeyVersionName)
   {

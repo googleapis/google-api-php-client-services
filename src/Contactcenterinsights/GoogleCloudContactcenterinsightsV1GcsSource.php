@@ -20,16 +20,25 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1GcsSource extends \Google\Model
 {
   /**
+   * Cloud Storage URI that points to a file that contains the conversation
+   * audio.
+   *
    * @var string
    */
   public $audioUri;
   /**
+   * Immutable. Cloud Storage URI that points to a file that contains the
+   * conversation transcript.
+   *
    * @var string
    */
   public $transcriptUri;
 
   /**
-   * @param string
+   * Cloud Storage URI that points to a file that contains the conversation
+   * audio.
+   *
+   * @param string $audioUri
    */
   public function setAudioUri($audioUri)
   {
@@ -43,7 +52,10 @@ class GoogleCloudContactcenterinsightsV1GcsSource extends \Google\Model
     return $this->audioUri;
   }
   /**
-   * @param string
+   * Immutable. Cloud Storage URI that points to a file that contains the
+   * conversation transcript.
+   *
+   * @param string $transcriptUri
    */
   public function setTranscriptUri($transcriptUri)
   {

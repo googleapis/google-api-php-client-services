@@ -20,32 +20,59 @@ namespace Google\Service\Css;
 class AccountLabel extends \Google\Model
 {
   /**
+   * Unknown label type.
+   */
+  public const LABEL_TYPE_LABEL_TYPE_UNSPECIFIED = 'LABEL_TYPE_UNSPECIFIED';
+  /**
+   * Indicates that the label was created manually.
+   */
+  public const LABEL_TYPE_MANUAL = 'MANUAL';
+  /**
+   * Indicates that the label was created automatically by CSS Center.
+   */
+  public const LABEL_TYPE_AUTOMATIC = 'AUTOMATIC';
+  /**
+   * Output only. The ID of account this label belongs to.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * The description of this label.
+   *
    * @var string
    */
   public $description;
   /**
+   * The display name of this label.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The ID of the label.
+   *
    * @var string
    */
   public $labelId;
   /**
+   * Output only. The type of this label.
+   *
    * @var string
    */
   public $labelType;
   /**
+   * Identifier. The resource name of the label. Format:
+   * accounts/{account}/labels/{label}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The ID of account this label belongs to.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -59,7 +86,9 @@ class AccountLabel extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * The description of this label.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -73,7 +102,9 @@ class AccountLabel extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The display name of this label.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -87,7 +118,9 @@ class AccountLabel extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The ID of the label.
+   *
+   * @param string $labelId
    */
   public function setLabelId($labelId)
   {
@@ -101,21 +134,28 @@ class AccountLabel extends \Google\Model
     return $this->labelId;
   }
   /**
-   * @param string
+   * Output only. The type of this label.
+   *
+   * Accepted values: LABEL_TYPE_UNSPECIFIED, MANUAL, AUTOMATIC
+   *
+   * @param self::LABEL_TYPE_* $labelType
    */
   public function setLabelType($labelType)
   {
     $this->labelType = $labelType;
   }
   /**
-   * @return string
+   * @return self::LABEL_TYPE_*
    */
   public function getLabelType()
   {
     return $this->labelType;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the label. Format:
+   * accounts/{account}/labels/{label}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

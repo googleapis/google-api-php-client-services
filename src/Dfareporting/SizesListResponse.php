@@ -21,6 +21,9 @@ class SizesListResponse extends \Google\Collection
 {
   protected $collection_key = 'sizes';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#sizesListResponse".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class SizesListResponse extends \Google\Collection
   protected $sizesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#sizesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class SizesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Size[]
+   * Size collection.
+   *
+   * @param Size[] $sizes
    */
   public function setSizes($sizes)
   {

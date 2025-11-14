@@ -31,36 +31,53 @@ class GetOpenIDConfigResponse extends \Google\Collection
   protected $cacheHeaderType = HttpCacheControlResponseHeader::class;
   protected $cacheHeaderDataType = '';
   /**
+   * Supported claims.
+   *
    * @var string[]
    */
   public $claimsSupported;
   /**
+   * Supported grant types.
+   *
    * @var string[]
    */
   public $grantTypes;
   /**
+   * supported ID Token signing Algorithms.
+   *
    * @var string[]
    */
   public $idTokenSigningAlgValuesSupported;
   /**
+   * OIDC Issuer.
+   *
    * @var string
    */
   public $issuer;
   /**
+   * JSON Web Key uri.
+   *
    * @var string
    */
   public $jwksUri;
   /**
+   * Supported response types.
+   *
    * @var string[]
    */
   public $responseTypesSupported;
   /**
+   * Supported subject types.
+   *
    * @var string[]
    */
   public $subjectTypesSupported;
 
   /**
-   * @param HttpCacheControlResponseHeader
+   * For HTTP requests, this field is automatically extracted into the Cache-
+   * Control HTTP header.
+   *
+   * @param HttpCacheControlResponseHeader $cacheHeader
    */
   public function setCacheHeader(HttpCacheControlResponseHeader $cacheHeader)
   {
@@ -74,7 +91,9 @@ class GetOpenIDConfigResponse extends \Google\Collection
     return $this->cacheHeader;
   }
   /**
-   * @param string[]
+   * Supported claims.
+   *
+   * @param string[] $claimsSupported
    */
   public function setClaimsSupported($claimsSupported)
   {
@@ -88,7 +107,9 @@ class GetOpenIDConfigResponse extends \Google\Collection
     return $this->claimsSupported;
   }
   /**
-   * @param string[]
+   * Supported grant types.
+   *
+   * @param string[] $grantTypes
    */
   public function setGrantTypes($grantTypes)
   {
@@ -102,7 +123,9 @@ class GetOpenIDConfigResponse extends \Google\Collection
     return $this->grantTypes;
   }
   /**
-   * @param string[]
+   * supported ID Token signing Algorithms.
+   *
+   * @param string[] $idTokenSigningAlgValuesSupported
    */
   public function setIdTokenSigningAlgValuesSupported($idTokenSigningAlgValuesSupported)
   {
@@ -116,7 +139,9 @@ class GetOpenIDConfigResponse extends \Google\Collection
     return $this->idTokenSigningAlgValuesSupported;
   }
   /**
-   * @param string
+   * OIDC Issuer.
+   *
+   * @param string $issuer
    */
   public function setIssuer($issuer)
   {
@@ -130,7 +155,9 @@ class GetOpenIDConfigResponse extends \Google\Collection
     return $this->issuer;
   }
   /**
-   * @param string
+   * JSON Web Key uri.
+   *
+   * @param string $jwksUri
    */
   public function setJwksUri($jwksUri)
   {
@@ -144,7 +171,9 @@ class GetOpenIDConfigResponse extends \Google\Collection
     return $this->jwksUri;
   }
   /**
-   * @param string[]
+   * Supported response types.
+   *
+   * @param string[] $responseTypesSupported
    */
   public function setResponseTypesSupported($responseTypesSupported)
   {
@@ -158,7 +187,9 @@ class GetOpenIDConfigResponse extends \Google\Collection
     return $this->responseTypesSupported;
   }
   /**
-   * @param string[]
+   * Supported subject types.
+   *
+   * @param string[] $subjectTypesSupported
    */
   public function setSubjectTypesSupported($subjectTypesSupported)
   {

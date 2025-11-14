@@ -20,20 +20,35 @@ namespace Google\Service\Dfareporting;
 class CreativeClickThroughUrl extends \Google\Model
 {
   /**
+   * Read-only convenience field representing the actual URL that will be used
+   * for this click-through. The URL is computed as follows: - If landingPageId
+   * is specified then that landing page's URL is assigned to this field. -
+   * Otherwise, the customClickThroughUrl is assigned to this field.
+   *
    * @var string
    */
   public $computedClickThroughUrl;
   /**
+   * Custom click-through URL. Applicable if the landingPageId field is left
+   * unset.
+   *
    * @var string
    */
   public $customClickThroughUrl;
   /**
+   * ID of the landing page for the click-through URL.
+   *
    * @var string
    */
   public $landingPageId;
 
   /**
-   * @param string
+   * Read-only convenience field representing the actual URL that will be used
+   * for this click-through. The URL is computed as follows: - If landingPageId
+   * is specified then that landing page's URL is assigned to this field. -
+   * Otherwise, the customClickThroughUrl is assigned to this field.
+   *
+   * @param string $computedClickThroughUrl
    */
   public function setComputedClickThroughUrl($computedClickThroughUrl)
   {
@@ -47,7 +62,10 @@ class CreativeClickThroughUrl extends \Google\Model
     return $this->computedClickThroughUrl;
   }
   /**
-   * @param string
+   * Custom click-through URL. Applicable if the landingPageId field is left
+   * unset.
+   *
+   * @param string $customClickThroughUrl
    */
   public function setCustomClickThroughUrl($customClickThroughUrl)
   {
@@ -61,7 +79,9 @@ class CreativeClickThroughUrl extends \Google\Model
     return $this->customClickThroughUrl;
   }
   /**
-   * @param string
+   * ID of the landing page for the click-through URL.
+   *
+   * @param string $landingPageId
    */
   public function setLandingPageId($landingPageId)
   {

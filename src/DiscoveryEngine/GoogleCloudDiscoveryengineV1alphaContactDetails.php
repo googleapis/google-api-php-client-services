@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaContactDetails extends \Google\Model
 {
   /**
+   * Optional. The email address of the contact.
+   *
    * @var string
    */
   public $emailAddress;
 
   /**
-   * @param string
+   * Optional. The email address of the contact.
+   *
+   * @param string $emailAddress
    */
   public function setEmailAddress($emailAddress)
   {

@@ -20,34 +20,58 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec extends \Google\Model
 {
   /**
+   * Optional. Whether or not to enable and include user defined classifier.
+   *
    * @var bool
    */
   public $enableUserDefinedClassifier;
   /**
+   * Optional. The model id to be used for the user defined classifier.
+   *
    * @var string
    */
   public $modelId;
   /**
+   * Optional. The preamble to be used for the user defined classifier.
+   *
    * @var string
    */
   public $preamble;
   /**
+   * Optional. The seed value to be used for the user defined classifier.
+   *
    * @var int
    */
   public $seed;
   /**
+   * Optional. The task marker to be used for the user defined classifier.
+   *
    * @var string
    */
   public $taskMarker;
+  /**
+   * Optional. The temperature value to be used for the user defined classifier.
+   *
+   * @var 
+   */
   public $temperature;
   /**
+   * Optional. The top-k value to be used for the user defined classifier.
+   *
    * @var string
    */
   public $topK;
+  /**
+   * Optional. The top-p value to be used for the user defined classifier.
+   *
+   * @var 
+   */
   public $topP;
 
   /**
-   * @param bool
+   * Optional. Whether or not to enable and include user defined classifier.
+   *
+   * @param bool $enableUserDefinedClassifier
    */
   public function setEnableUserDefinedClassifier($enableUserDefinedClassifier)
   {
@@ -61,7 +85,9 @@ class GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec 
     return $this->enableUserDefinedClassifier;
   }
   /**
-   * @param string
+   * Optional. The model id to be used for the user defined classifier.
+   *
+   * @param string $modelId
    */
   public function setModelId($modelId)
   {
@@ -75,7 +101,9 @@ class GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec 
     return $this->modelId;
   }
   /**
-   * @param string
+   * Optional. The preamble to be used for the user defined classifier.
+   *
+   * @param string $preamble
    */
   public function setPreamble($preamble)
   {
@@ -89,7 +117,9 @@ class GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec 
     return $this->preamble;
   }
   /**
-   * @param int
+   * Optional. The seed value to be used for the user defined classifier.
+   *
+   * @param int $seed
    */
   public function setSeed($seed)
   {
@@ -103,7 +133,9 @@ class GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec 
     return $this->seed;
   }
   /**
-   * @param string
+   * Optional. The task marker to be used for the user defined classifier.
+   *
+   * @param string $taskMarker
    */
   public function setTaskMarker($taskMarker)
   {
@@ -125,7 +157,9 @@ class GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec 
     return $this->temperature;
   }
   /**
-   * @param string
+   * Optional. The top-k value to be used for the user defined classifier.
+   *
+   * @param string $topK
    */
   public function setTopK($topK)
   {

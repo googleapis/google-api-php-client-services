@@ -19,28 +19,60 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo extends \Google\Collection
 {
+  /**
+   * Health status is unknown: not initialized or failed to retrieve.
+   */
+  public const STATUS_HEALTH_STATUS_UNSPECIFIED = 'HEALTH_STATUS_UNSPECIFIED';
+  /**
+   * The resource is healthy.
+   */
+  public const STATUS_HEALTHY = 'HEALTHY';
+  /**
+   * The resource is unhealthy.
+   */
+  public const STATUS_UNHEALTHY = 'UNHEALTHY';
+  /**
+   * The resource is unresponsive.
+   */
+  public const STATUS_UNRESPONSIVE = 'UNRESPONSIVE';
+  /**
+   * Some sub-resources are UNHEALTHY.
+   */
+  public const STATUS_DEGRADED = 'DEGRADED';
   protected $collection_key = 'sub';
   /**
+   * Required. Unique Id for the resource.
+   *
    * @var string
    */
   public $id;
   /**
+   * Specific details for the resource. This is for internal use only.
+   *
    * @var array[]
    */
   public $resource;
   /**
+   * Overall health status. Overall status is derived based on the status of
+   * each sub level resources.
+   *
    * @var string
    */
   public $status;
   protected $subType = GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo::class;
   protected $subDataType = 'array';
   /**
+   * The timestamp to collect the info. It is suggested to be set by the topmost
+   * level resource only.
+   *
    * @var string
    */
   public $time;
 
   /**
-   * @param string
+   * Required. Unique Id for the resource.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -54,7 +86,9 @@ class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo extends \Google\Collectio
     return $this->id;
   }
   /**
-   * @param array[]
+   * Specific details for the resource. This is for internal use only.
+   *
+   * @param array[] $resource
    */
   public function setResource($resource)
   {
@@ -68,21 +102,29 @@ class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo extends \Google\Collectio
     return $this->resource;
   }
   /**
-   * @param string
+   * Overall health status. Overall status is derived based on the status of
+   * each sub level resources.
+   *
+   * Accepted values: HEALTH_STATUS_UNSPECIFIED, HEALTHY, UNHEALTHY,
+   * UNRESPONSIVE, DEGRADED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo[]
+   * List of Info for the sub level resources.
+   *
+   * @param GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo[] $sub
    */
   public function setSub($sub)
   {
@@ -96,7 +138,10 @@ class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo extends \Google\Collectio
     return $this->sub;
   }
   /**
-   * @param string
+   * The timestamp to collect the info. It is suggested to be set by the topmost
+   * level resource only.
+   *
+   * @param string $time
    */
   public function setTime($time)
   {

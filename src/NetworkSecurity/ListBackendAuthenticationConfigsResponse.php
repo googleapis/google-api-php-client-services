@@ -23,16 +23,24 @@ class ListBackendAuthenticationConfigsResponse extends \Google\Collection
   protected $backendAuthenticationConfigsType = BackendAuthenticationConfig::class;
   protected $backendAuthenticationConfigsDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param BackendAuthenticationConfig[]
+   * List of BackendAuthenticationConfig resources.
+   *
+   * @param BackendAuthenticationConfig[] $backendAuthenticationConfigs
    */
   public function setBackendAuthenticationConfigs($backendAuthenticationConfigs)
   {
@@ -46,7 +54,11 @@ class ListBackendAuthenticationConfigsResponse extends \Google\Collection
     return $this->backendAuthenticationConfigs;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListBackendAuthenticationConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

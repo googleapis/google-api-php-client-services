@@ -23,7 +23,9 @@ class GoogleAppsCloudidentityDevicesV1ApproveDeviceUserResponse extends \Google\
   protected $deviceUserDataType = '';
 
   /**
-   * @param GoogleAppsCloudidentityDevicesV1DeviceUser
+   * Resultant DeviceUser object for the action.
+   *
+   * @param GoogleAppsCloudidentityDevicesV1DeviceUser $deviceUser
    */
   public function setDeviceUser(GoogleAppsCloudidentityDevicesV1DeviceUser $deviceUser)
   {

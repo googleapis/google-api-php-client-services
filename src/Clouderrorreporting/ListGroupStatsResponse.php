@@ -23,16 +23,27 @@ class ListGroupStatsResponse extends \Google\Collection
   protected $errorGroupStatsType = ErrorGroupStats::class;
   protected $errorGroupStatsDataType = 'array';
   /**
+   * If non-empty, more results are available. Pass this token, along with the
+   * same query parameters as the first request, to view the next page of
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The timestamp specifies the start time to which the request was restricted.
+   * The start time is set based on the requested time range. It may be adjusted
+   * to a later time if a project has exceeded the storage quota and older data
+   * has been deleted.
+   *
    * @var string
    */
   public $timeRangeBegin;
 
   /**
-   * @param ErrorGroupStats[]
+   * The error group stats which match the given request.
+   *
+   * @param ErrorGroupStats[] $errorGroupStats
    */
   public function setErrorGroupStats($errorGroupStats)
   {
@@ -46,7 +57,11 @@ class ListGroupStatsResponse extends \Google\Collection
     return $this->errorGroupStats;
   }
   /**
-   * @param string
+   * If non-empty, more results are available. Pass this token, along with the
+   * same query parameters as the first request, to view the next page of
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +75,12 @@ class ListGroupStatsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * The timestamp specifies the start time to which the request was restricted.
+   * The start time is set based on the requested time range. It may be adjusted
+   * to a later time if a project has exceeded the storage quota and older data
+   * has been deleted.
+   *
+   * @param string $timeRangeBegin
    */
   public function setTimeRangeBegin($timeRangeBegin)
   {

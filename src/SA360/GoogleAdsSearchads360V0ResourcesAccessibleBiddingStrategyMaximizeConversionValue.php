@@ -19,6 +19,15 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategyMaximizeConversionValue extends \Google\Model
 {
+  /**
+   * Output only. The target return on ad spend (ROAS) option. If set, the bid
+   * strategy will maximize revenue while averaging the target return on ad
+   * spend. If the target ROAS is high, the bid strategy may not be able to
+   * spend the full budget. If the target ROAS is not set, the bid strategy will
+   * aim to achieve the highest possible ROAS for the budget.
+   *
+   * @var 
+   */
   public $targetRoas;
 
   public function setTargetRoas($targetRoas)

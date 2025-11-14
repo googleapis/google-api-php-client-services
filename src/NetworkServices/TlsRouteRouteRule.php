@@ -26,7 +26,9 @@ class TlsRouteRouteRule extends \Google\Collection
   protected $matchesDataType = 'array';
 
   /**
-   * @param TlsRouteRouteAction
+   * Required. The detailed rule defining how to route matched traffic.
+   *
+   * @param TlsRouteRouteAction $action
    */
   public function setAction(TlsRouteRouteAction $action)
   {
@@ -40,7 +42,11 @@ class TlsRouteRouteRule extends \Google\Collection
     return $this->action;
   }
   /**
-   * @param TlsRouteRouteMatch[]
+   * Required. RouteMatch defines the predicate used to match requests to a
+   * given action. Multiple match types are "OR"ed for evaluation. Atleast one
+   * RouteMatch must be supplied.
+   *
+   * @param TlsRouteRouteMatch[] $matches
    */
   public function setMatches($matches)
   {

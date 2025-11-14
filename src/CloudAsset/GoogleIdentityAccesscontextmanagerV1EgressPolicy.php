@@ -24,12 +24,20 @@ class GoogleIdentityAccesscontextmanagerV1EgressPolicy extends \Google\Model
   protected $egressToType = GoogleIdentityAccesscontextmanagerV1EgressTo::class;
   protected $egressToDataType = '';
   /**
+   * Optional. Human-readable title for the egress rule. The title must be
+   * unique within the perimeter and can not exceed 100 characters. Within the
+   * access policy, the combined length of all rule titles must not exceed
+   * 240,000 characters.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param GoogleIdentityAccesscontextmanagerV1EgressFrom
+   * Defines conditions on the source of a request causing this EgressPolicy to
+   * apply.
+   *
+   * @param GoogleIdentityAccesscontextmanagerV1EgressFrom $egressFrom
    */
   public function setEgressFrom(GoogleIdentityAccesscontextmanagerV1EgressFrom $egressFrom)
   {
@@ -43,7 +51,10 @@ class GoogleIdentityAccesscontextmanagerV1EgressPolicy extends \Google\Model
     return $this->egressFrom;
   }
   /**
-   * @param GoogleIdentityAccesscontextmanagerV1EgressTo
+   * Defines the conditions on the ApiOperation and destination resources that
+   * cause this EgressPolicy to apply.
+   *
+   * @param GoogleIdentityAccesscontextmanagerV1EgressTo $egressTo
    */
   public function setEgressTo(GoogleIdentityAccesscontextmanagerV1EgressTo $egressTo)
   {
@@ -57,7 +68,12 @@ class GoogleIdentityAccesscontextmanagerV1EgressPolicy extends \Google\Model
     return $this->egressTo;
   }
   /**
-   * @param string
+   * Optional. Human-readable title for the egress rule. The title must be
+   * unique within the perimeter and can not exceed 100 characters. Within the
+   * access policy, the combined length of all rule titles must not exceed
+   * 240,000 characters.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

@@ -20,14 +20,26 @@ namespace Google\Service\DriveActivity;
 class FileComment extends \Google\Model
 {
   /**
+   * The comment in the discussion thread. This identifier is an opaque string
+   * compatible with the Drive API; see
+   * https://developers.google.com/workspace/drive/v3/reference/comments/get
+   *
    * @var string
    */
   public $legacyCommentId;
   /**
+   * The discussion thread to which the comment was added. This identifier is an
+   * opaque string compatible with the Drive API and references the first
+   * comment in a discussion; see
+   * https://developers.google.com/workspace/drive/v3/reference/comments/get
+   *
    * @var string
    */
   public $legacyDiscussionId;
   /**
+   * The link to the discussion thread containing this comment, for example,
+   * `https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID`.
+   *
    * @var string
    */
   public $linkToDiscussion;
@@ -35,7 +47,11 @@ class FileComment extends \Google\Model
   protected $parentDataType = '';
 
   /**
-   * @param string
+   * The comment in the discussion thread. This identifier is an opaque string
+   * compatible with the Drive API; see
+   * https://developers.google.com/workspace/drive/v3/reference/comments/get
+   *
+   * @param string $legacyCommentId
    */
   public function setLegacyCommentId($legacyCommentId)
   {
@@ -49,7 +65,12 @@ class FileComment extends \Google\Model
     return $this->legacyCommentId;
   }
   /**
-   * @param string
+   * The discussion thread to which the comment was added. This identifier is an
+   * opaque string compatible with the Drive API and references the first
+   * comment in a discussion; see
+   * https://developers.google.com/workspace/drive/v3/reference/comments/get
+   *
+   * @param string $legacyDiscussionId
    */
   public function setLegacyDiscussionId($legacyDiscussionId)
   {
@@ -63,7 +84,10 @@ class FileComment extends \Google\Model
     return $this->legacyDiscussionId;
   }
   /**
-   * @param string
+   * The link to the discussion thread containing this comment, for example,
+   * `https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID`.
+   *
+   * @param string $linkToDiscussion
    */
   public function setLinkToDiscussion($linkToDiscussion)
   {
@@ -77,7 +101,9 @@ class FileComment extends \Google\Model
     return $this->linkToDiscussion;
   }
   /**
-   * @param DriveItem
+   * The Drive item containing this comment.
+   *
+   * @param DriveItem $parent
    */
   public function setParent(DriveItem $parent)
   {

@@ -20,20 +20,29 @@ namespace Google\Service\Games;
 class Category extends \Google\Model
 {
   /**
+   * The category name.
+   *
    * @var string
    */
   public $category;
   /**
+   * Experience points earned in this category.
+   *
    * @var string
    */
   public $experiencePoints;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#category`.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * The category name.
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -47,7 +56,9 @@ class Category extends \Google\Model
     return $this->category;
   }
   /**
-   * @param string
+   * Experience points earned in this category.
+   *
+   * @param string $experiencePoints
    */
   public function setExperiencePoints($experiencePoints)
   {
@@ -61,7 +72,10 @@ class Category extends \Google\Model
     return $this->experiencePoints;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#category`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

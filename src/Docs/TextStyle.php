@@ -19,13 +19,36 @@ namespace Google\Service\Docs;
 
 class TextStyle extends \Google\Model
 {
+  /**
+   * The text's baseline offset is inherited from the parent.
+   */
+  public const BASELINE_OFFSET_BASELINE_OFFSET_UNSPECIFIED = 'BASELINE_OFFSET_UNSPECIFIED';
+  /**
+   * The text is not vertically offset.
+   */
+  public const BASELINE_OFFSET_NONE = 'NONE';
+  /**
+   * The text is vertically offset upwards (superscript).
+   */
+  public const BASELINE_OFFSET_SUPERSCRIPT = 'SUPERSCRIPT';
+  /**
+   * The text is vertically offset downwards (subscript).
+   */
+  public const BASELINE_OFFSET_SUBSCRIPT = 'SUBSCRIPT';
   protected $backgroundColorType = OptionalColor::class;
   protected $backgroundColorDataType = '';
   /**
+   * The text's vertical offset from its normal position. Text with
+   * `SUPERSCRIPT` or `SUBSCRIPT` baseline offsets is automatically rendered in
+   * a smaller font size, computed based on the `font_size` field. Changes in
+   * this field don't affect the `font_size`.
+   *
    * @var string
    */
   public $baselineOffset;
   /**
+   * Whether or not the text is rendered as bold.
+   *
    * @var bool
    */
   public $bold;
@@ -34,20 +57,28 @@ class TextStyle extends \Google\Model
   protected $foregroundColorType = OptionalColor::class;
   protected $foregroundColorDataType = '';
   /**
+   * Whether or not the text is italicized.
+   *
    * @var bool
    */
   public $italic;
   protected $linkType = Link::class;
   protected $linkDataType = '';
   /**
+   * Whether or not the text is in small capital letters.
+   *
    * @var bool
    */
   public $smallCaps;
   /**
+   * Whether or not the text is struck through.
+   *
    * @var bool
    */
   public $strikethrough;
   /**
+   * Whether or not the text is underlined.
+   *
    * @var bool
    */
   public $underline;
@@ -55,7 +86,10 @@ class TextStyle extends \Google\Model
   protected $weightedFontFamilyDataType = '';
 
   /**
-   * @param OptionalColor
+   * The background color of the text. If set, the color is either an RGB color
+   * or transparent, depending on the `color` field.
+   *
+   * @param OptionalColor $backgroundColor
    */
   public function setBackgroundColor(OptionalColor $backgroundColor)
   {
@@ -69,21 +103,30 @@ class TextStyle extends \Google\Model
     return $this->backgroundColor;
   }
   /**
-   * @param string
+   * The text's vertical offset from its normal position. Text with
+   * `SUPERSCRIPT` or `SUBSCRIPT` baseline offsets is automatically rendered in
+   * a smaller font size, computed based on the `font_size` field. Changes in
+   * this field don't affect the `font_size`.
+   *
+   * Accepted values: BASELINE_OFFSET_UNSPECIFIED, NONE, SUPERSCRIPT, SUBSCRIPT
+   *
+   * @param self::BASELINE_OFFSET_* $baselineOffset
    */
   public function setBaselineOffset($baselineOffset)
   {
     $this->baselineOffset = $baselineOffset;
   }
   /**
-   * @return string
+   * @return self::BASELINE_OFFSET_*
    */
   public function getBaselineOffset()
   {
     return $this->baselineOffset;
   }
   /**
-   * @param bool
+   * Whether or not the text is rendered as bold.
+   *
+   * @param bool $bold
    */
   public function setBold($bold)
   {
@@ -97,7 +140,9 @@ class TextStyle extends \Google\Model
     return $this->bold;
   }
   /**
-   * @param Dimension
+   * The size of the text's font.
+   *
+   * @param Dimension $fontSize
    */
   public function setFontSize(Dimension $fontSize)
   {
@@ -111,7 +156,10 @@ class TextStyle extends \Google\Model
     return $this->fontSize;
   }
   /**
-   * @param OptionalColor
+   * The foreground color of the text. If set, the color is either an RGB color
+   * or transparent, depending on the `color` field.
+   *
+   * @param OptionalColor $foregroundColor
    */
   public function setForegroundColor(OptionalColor $foregroundColor)
   {
@@ -125,7 +173,9 @@ class TextStyle extends \Google\Model
     return $this->foregroundColor;
   }
   /**
-   * @param bool
+   * Whether or not the text is italicized.
+   *
+   * @param bool $italic
    */
   public function setItalic($italic)
   {
@@ -139,7 +189,23 @@ class TextStyle extends \Google\Model
     return $this->italic;
   }
   /**
-   * @param Link
+   * The hyperlink destination of the text. If unset, there's no link. Links are
+   * not inherited from parent text. Changing the link in an update request
+   * causes some other changes to the text style of the range: * When setting a
+   * link, the text foreground color will be updated to the default link color
+   * and the text will be underlined. If these fields are modified in the same
+   * request, those values will be used instead of the link defaults. * Setting
+   * a link on a text range that overlaps with an existing link will also update
+   * the existing link to point to the new URL. * Links are not settable on
+   * newline characters. As a result, setting a link on a text range that
+   * crosses a paragraph boundary, such as `"ABC\n123"`, will separate the
+   * newline character(s) into their own text runs. The link will be applied
+   * separately to the runs before and after the newline. * Removing a link will
+   * update the text style of the range to match the style of the preceding text
+   * (or the default text styles if the preceding text is another link) unless
+   * different styles are being set in the same request.
+   *
+   * @param Link $link
    */
   public function setLink(Link $link)
   {
@@ -153,7 +219,9 @@ class TextStyle extends \Google\Model
     return $this->link;
   }
   /**
-   * @param bool
+   * Whether or not the text is in small capital letters.
+   *
+   * @param bool $smallCaps
    */
   public function setSmallCaps($smallCaps)
   {
@@ -167,7 +235,9 @@ class TextStyle extends \Google\Model
     return $this->smallCaps;
   }
   /**
-   * @param bool
+   * Whether or not the text is struck through.
+   *
+   * @param bool $strikethrough
    */
   public function setStrikethrough($strikethrough)
   {
@@ -181,7 +251,9 @@ class TextStyle extends \Google\Model
     return $this->strikethrough;
   }
   /**
-   * @param bool
+   * Whether or not the text is underlined.
+   *
+   * @param bool $underline
    */
   public function setUnderline($underline)
   {
@@ -195,7 +267,15 @@ class TextStyle extends \Google\Model
     return $this->underline;
   }
   /**
-   * @param WeightedFontFamily
+   * The font family and rendered weight of the text. If an update request
+   * specifies values for both `weighted_font_family` and `bold`, the
+   * `weighted_font_family` is applied first, then `bold`. If
+   * `weighted_font_family#weight` is not set, it defaults to `400`. If
+   * `weighted_font_family` is set, then `weighted_font_family#font_family` must
+   * also be set with a non-empty value. Otherwise, a 400 bad request error is
+   * returned.
+   *
+   * @param WeightedFontFamily $weightedFontFamily
    */
   public function setWeightedFontFamily(WeightedFontFamily $weightedFontFamily)
   {

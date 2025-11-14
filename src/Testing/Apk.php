@@ -22,12 +22,17 @@ class Apk extends \Google\Model
   protected $locationType = FileReference::class;
   protected $locationDataType = '';
   /**
+   * The java package for the APK to be installed. Value is determined by
+   * examining the application's manifest.
+   *
    * @var string
    */
   public $packageName;
 
   /**
-   * @param FileReference
+   * The path to an APK to be installed on the device before the test begins.
+   *
+   * @param FileReference $location
    */
   public function setLocation(FileReference $location)
   {
@@ -41,7 +46,10 @@ class Apk extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The java package for the APK to be installed. Value is determined by
+   * examining the application's manifest.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {

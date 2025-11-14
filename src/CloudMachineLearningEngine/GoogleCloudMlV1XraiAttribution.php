@@ -20,12 +20,20 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1XraiAttribution extends \Google\Model
 {
   /**
+   * Number of steps for approximating the path integral. A good value to start
+   * is 50 and gradually increase until the sum to diff property is met within
+   * the desired error range.
+   *
    * @var int
    */
   public $numIntegralSteps;
 
   /**
-   * @param int
+   * Number of steps for approximating the path integral. A good value to start
+   * is 50 and gradually increase until the sum to diff property is met within
+   * the desired error range.
+   *
+   * @param int $numIntegralSteps
    */
   public function setNumIntegralSteps($numIntegralSteps)
   {

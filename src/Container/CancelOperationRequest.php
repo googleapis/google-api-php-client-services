@@ -20,24 +20,45 @@ namespace Google\Service\Container;
 class CancelOperationRequest extends \Google\Model
 {
   /**
+   * The name (project, location, operation id) of the operation to cancel.
+   * Specified in the format `projects/locations/operations`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Deprecated. The server-assigned `name` of the operation. This field has
+   * been deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $operationId;
   /**
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $projectId;
   /**
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * operation resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * The name (project, location, operation id) of the operation to cancel.
+   * Specified in the format `projects/locations/operations`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -51,13 +72,18 @@ class CancelOperationRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Deprecated. The server-assigned `name` of the operation. This field has
+   * been deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $operationId
    */
   public function setOperationId($operationId)
   {
     $this->operationId = $operationId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getOperationId()
@@ -65,13 +91,19 @@ class CancelOperationRequest extends \Google\Model
     return $this->operationId;
   }
   /**
-   * @param string
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
     $this->projectId = $projectId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProjectId()
@@ -79,13 +111,20 @@ class CancelOperationRequest extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * operation resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
+   * @param string $zone
    */
   public function setZone($zone)
   {
     $this->zone = $zone;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getZone()

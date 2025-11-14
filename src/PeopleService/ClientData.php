@@ -20,18 +20,24 @@ namespace Google\Service\PeopleService;
 class ClientData extends \Google\Model
 {
   /**
+   * The client specified key of the client data.
+   *
    * @var string
    */
   public $key;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The client specified value of the client data.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The client specified key of the client data.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -45,7 +51,9 @@ class ClientData extends \Google\Model
     return $this->key;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the client data.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -59,7 +67,9 @@ class ClientData extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The client specified value of the client data.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

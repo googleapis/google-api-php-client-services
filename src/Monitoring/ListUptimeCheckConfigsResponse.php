@@ -21,10 +21,19 @@ class ListUptimeCheckConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'uptimeCheckConfigs';
   /**
+   * This field represents the pagination token to retrieve the next page of
+   * results. If the value is empty, it means no further results for the
+   * request. To retrieve the next page of results, the value of the
+   * next_page_token is passed to the subsequent List method call (in the
+   * request message's page_token field).
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The total number of Uptime check configurations for the project,
+   * irrespective of any pagination.
+   *
    * @var int
    */
   public $totalSize;
@@ -32,7 +41,13 @@ class ListUptimeCheckConfigsResponse extends \Google\Collection
   protected $uptimeCheckConfigsDataType = 'array';
 
   /**
-   * @param string
+   * This field represents the pagination token to retrieve the next page of
+   * results. If the value is empty, it means no further results for the
+   * request. To retrieve the next page of results, the value of the
+   * next_page_token is passed to the subsequent List method call (in the
+   * request message's page_token field).
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +61,10 @@ class ListUptimeCheckConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * The total number of Uptime check configurations for the project,
+   * irrespective of any pagination.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {
@@ -60,7 +78,9 @@ class ListUptimeCheckConfigsResponse extends \Google\Collection
     return $this->totalSize;
   }
   /**
-   * @param UptimeCheckConfig[]
+   * The returned Uptime check configurations.
+   *
+   * @param UptimeCheckConfig[] $uptimeCheckConfigs
    */
   public function setUptimeCheckConfigs($uptimeCheckConfigs)
   {

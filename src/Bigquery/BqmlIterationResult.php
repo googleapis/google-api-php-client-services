@@ -20,19 +20,40 @@ namespace Google\Service\Bigquery;
 class BqmlIterationResult extends \Google\Model
 {
   /**
+   * Deprecated.
+   *
    * @var string
    */
   public $durationMs;
+  /**
+   * Deprecated.
+   *
+   * @var 
+   */
   public $evalLoss;
   /**
+   * Deprecated.
+   *
    * @var int
    */
   public $index;
+  /**
+   * Deprecated.
+   *
+   * @var 
+   */
   public $learnRate;
+  /**
+   * Deprecated.
+   *
+   * @var 
+   */
   public $trainingLoss;
 
   /**
-   * @param string
+   * Deprecated.
+   *
+   * @param string $durationMs
    */
   public function setDurationMs($durationMs)
   {
@@ -54,7 +75,9 @@ class BqmlIterationResult extends \Google\Model
     return $this->evalLoss;
   }
   /**
-   * @param int
+   * Deprecated.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {

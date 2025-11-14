@@ -20,22 +20,34 @@ namespace Google\Service\CloudTasks;
 class Attempt extends \Google\Model
 {
   /**
+   * Output only. The time that this attempt was dispatched. `dispatch_time`
+   * will be truncated to the nearest microsecond.
+   *
    * @var string
    */
   public $dispatchTime;
   protected $responseStatusType = Status::class;
   protected $responseStatusDataType = '';
   /**
+   * Output only. The time that this attempt response was received.
+   * `response_time` will be truncated to the nearest microsecond.
+   *
    * @var string
    */
   public $responseTime;
   /**
+   * Output only. The time that this attempt was scheduled. `schedule_time` will
+   * be truncated to the nearest microsecond.
+   *
    * @var string
    */
   public $scheduleTime;
 
   /**
-   * @param string
+   * Output only. The time that this attempt was dispatched. `dispatch_time`
+   * will be truncated to the nearest microsecond.
+   *
+   * @param string $dispatchTime
    */
   public function setDispatchTime($dispatchTime)
   {
@@ -49,7 +61,11 @@ class Attempt extends \Google\Model
     return $this->dispatchTime;
   }
   /**
-   * @param Status
+   * Output only. The response from the worker for this attempt. If
+   * `response_time` is unset, then the task has not been attempted or is
+   * currently running and the `response_status` field is meaningless.
+   *
+   * @param Status $responseStatus
    */
   public function setResponseStatus(Status $responseStatus)
   {
@@ -63,7 +79,10 @@ class Attempt extends \Google\Model
     return $this->responseStatus;
   }
   /**
-   * @param string
+   * Output only. The time that this attempt response was received.
+   * `response_time` will be truncated to the nearest microsecond.
+   *
+   * @param string $responseTime
    */
   public function setResponseTime($responseTime)
   {
@@ -77,7 +96,10 @@ class Attempt extends \Google\Model
     return $this->responseTime;
   }
   /**
-   * @param string
+   * Output only. The time that this attempt was scheduled. `schedule_time` will
+   * be truncated to the nearest microsecond.
+   *
+   * @param string $scheduleTime
    */
   public function setScheduleTime($scheduleTime)
   {

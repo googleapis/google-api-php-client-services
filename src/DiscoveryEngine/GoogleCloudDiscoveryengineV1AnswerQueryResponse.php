@@ -22,6 +22,8 @@ class GoogleCloudDiscoveryengineV1AnswerQueryResponse extends \Google\Model
   protected $answerType = GoogleCloudDiscoveryengineV1Answer::class;
   protected $answerDataType = '';
   /**
+   * A global unique ID used for logging.
+   *
    * @var string
    */
   public $answerQueryToken;
@@ -29,7 +31,11 @@ class GoogleCloudDiscoveryengineV1AnswerQueryResponse extends \Google\Model
   protected $sessionDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1Answer
+   * Answer resource object. If AnswerQueryRequest.QueryUnderstandingSpec.QueryR
+   * ephraserSpec.max_rephrase_steps is greater than 1, use Answer.name to fetch
+   * answer information using ConversationalSearchService.GetAnswer API.
+   *
+   * @param GoogleCloudDiscoveryengineV1Answer $answer
    */
   public function setAnswer(GoogleCloudDiscoveryengineV1Answer $answer)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryResponse extends \Google\Model
     return $this->answer;
   }
   /**
-   * @param string
+   * A global unique ID used for logging.
+   *
+   * @param string $answerQueryToken
    */
   public function setAnswerQueryToken($answerQueryToken)
   {
@@ -57,7 +65,10 @@ class GoogleCloudDiscoveryengineV1AnswerQueryResponse extends \Google\Model
     return $this->answerQueryToken;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1Session
+   * Session resource object. It will be only available when session field is
+   * set and valid in the AnswerQueryRequest request.
+   *
+   * @param GoogleCloudDiscoveryengineV1Session $session
    */
   public function setSession(GoogleCloudDiscoveryengineV1Session $session)
   {

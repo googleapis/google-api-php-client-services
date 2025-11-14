@@ -20,16 +20,52 @@ namespace Google\Service\DatabaseMigrationService;
 class MultiEntityRename extends \Google\Model
 {
   /**
+   * Entity name transformation unspecified.
+   */
+  public const SOURCE_NAME_TRANSFORMATION_ENTITY_NAME_TRANSFORMATION_UNSPECIFIED = 'ENTITY_NAME_TRANSFORMATION_UNSPECIFIED';
+  /**
+   * No transformation.
+   */
+  public const SOURCE_NAME_TRANSFORMATION_ENTITY_NAME_TRANSFORMATION_NO_TRANSFORMATION = 'ENTITY_NAME_TRANSFORMATION_NO_TRANSFORMATION';
+  /**
+   * Transform to lower case.
+   */
+  public const SOURCE_NAME_TRANSFORMATION_ENTITY_NAME_TRANSFORMATION_LOWER_CASE = 'ENTITY_NAME_TRANSFORMATION_LOWER_CASE';
+  /**
+   * Transform to upper case.
+   */
+  public const SOURCE_NAME_TRANSFORMATION_ENTITY_NAME_TRANSFORMATION_UPPER_CASE = 'ENTITY_NAME_TRANSFORMATION_UPPER_CASE';
+  /**
+   * Transform to capitalized case.
+   */
+  public const SOURCE_NAME_TRANSFORMATION_ENTITY_NAME_TRANSFORMATION_CAPITALIZED_CASE = 'ENTITY_NAME_TRANSFORMATION_CAPITALIZED_CASE';
+  /**
+   * Optional. The pattern used to generate the new entity's name. This pattern
+   * must include the characters '{name}', which will be replaced with the name
+   * of the original entity. For example, the pattern 't_{name}' for an entity
+   * name jobs would be converted to 't_jobs'. If unspecified, the default value
+   * for this field is '{name}'
+   *
    * @var string
    */
   public $newNamePattern;
   /**
+   * Optional. Additional transformation that can be done on the source entity
+   * name before it is being used by the new_name_pattern, for example lower
+   * case. If no transformation is desired, use NO_TRANSFORMATION
+   *
    * @var string
    */
   public $sourceNameTransformation;
 
   /**
-   * @param string
+   * Optional. The pattern used to generate the new entity's name. This pattern
+   * must include the characters '{name}', which will be replaced with the name
+   * of the original entity. For example, the pattern 't_{name}' for an entity
+   * name jobs would be converted to 't_jobs'. If unspecified, the default value
+   * for this field is '{name}'
+   *
+   * @param string $newNamePattern
    */
   public function setNewNamePattern($newNamePattern)
   {
@@ -43,14 +79,24 @@ class MultiEntityRename extends \Google\Model
     return $this->newNamePattern;
   }
   /**
-   * @param string
+   * Optional. Additional transformation that can be done on the source entity
+   * name before it is being used by the new_name_pattern, for example lower
+   * case. If no transformation is desired, use NO_TRANSFORMATION
+   *
+   * Accepted values: ENTITY_NAME_TRANSFORMATION_UNSPECIFIED,
+   * ENTITY_NAME_TRANSFORMATION_NO_TRANSFORMATION,
+   * ENTITY_NAME_TRANSFORMATION_LOWER_CASE,
+   * ENTITY_NAME_TRANSFORMATION_UPPER_CASE,
+   * ENTITY_NAME_TRANSFORMATION_CAPITALIZED_CASE
+   *
+   * @param self::SOURCE_NAME_TRANSFORMATION_* $sourceNameTransformation
    */
   public function setSourceNameTransformation($sourceNameTransformation)
   {
     $this->sourceNameTransformation = $sourceNameTransformation;
   }
   /**
-   * @return string
+   * @return self::SOURCE_NAME_TRANSFORMATION_*
    */
   public function getSourceNameTransformation()
   {

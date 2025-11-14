@@ -20,12 +20,16 @@ namespace Google\Service\Blogger;
 class UserBlogs extends \Google\Model
 {
   /**
+   * The URL of the Blogs for this user.
+   *
    * @var string
    */
   public $selfLink;
 
   /**
-   * @param string
+   * The URL of the Blogs for this user.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {

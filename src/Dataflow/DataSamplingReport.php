@@ -20,36 +20,55 @@ namespace Google\Service\Dataflow;
 class DataSamplingReport extends \Google\Model
 {
   /**
+   * Optional. Delta of bytes written to file from previous report.
+   *
    * @var string
    */
   public $bytesWrittenDelta;
   /**
+   * Optional. Delta of bytes sampled from previous report.
+   *
    * @var string
    */
   public $elementsSampledBytes;
   /**
+   * Optional. Delta of number of elements sampled from previous report.
+   *
    * @var string
    */
   public $elementsSampledCount;
   /**
+   * Optional. Delta of number of samples taken from user code exceptions from
+   * previous report.
+   *
    * @var string
    */
   public $exceptionsSampledCount;
   /**
+   * Optional. Delta of number of PCollections sampled from previous report.
+   *
    * @var string
    */
   public $pcollectionsSampledCount;
   /**
+   * Optional. Delta of errors counts from persisting the samples from previous
+   * report.
+   *
    * @var string
    */
   public $persistenceErrorsCount;
   /**
+   * Optional. Delta of errors counts from retrieving, or translating the
+   * samples from previous report.
+   *
    * @var string
    */
   public $translationErrorsCount;
 
   /**
-   * @param string
+   * Optional. Delta of bytes written to file from previous report.
+   *
+   * @param string $bytesWrittenDelta
    */
   public function setBytesWrittenDelta($bytesWrittenDelta)
   {
@@ -63,7 +82,9 @@ class DataSamplingReport extends \Google\Model
     return $this->bytesWrittenDelta;
   }
   /**
-   * @param string
+   * Optional. Delta of bytes sampled from previous report.
+   *
+   * @param string $elementsSampledBytes
    */
   public function setElementsSampledBytes($elementsSampledBytes)
   {
@@ -77,7 +98,9 @@ class DataSamplingReport extends \Google\Model
     return $this->elementsSampledBytes;
   }
   /**
-   * @param string
+   * Optional. Delta of number of elements sampled from previous report.
+   *
+   * @param string $elementsSampledCount
    */
   public function setElementsSampledCount($elementsSampledCount)
   {
@@ -91,7 +114,10 @@ class DataSamplingReport extends \Google\Model
     return $this->elementsSampledCount;
   }
   /**
-   * @param string
+   * Optional. Delta of number of samples taken from user code exceptions from
+   * previous report.
+   *
+   * @param string $exceptionsSampledCount
    */
   public function setExceptionsSampledCount($exceptionsSampledCount)
   {
@@ -105,7 +131,9 @@ class DataSamplingReport extends \Google\Model
     return $this->exceptionsSampledCount;
   }
   /**
-   * @param string
+   * Optional. Delta of number of PCollections sampled from previous report.
+   *
+   * @param string $pcollectionsSampledCount
    */
   public function setPcollectionsSampledCount($pcollectionsSampledCount)
   {
@@ -119,7 +147,10 @@ class DataSamplingReport extends \Google\Model
     return $this->pcollectionsSampledCount;
   }
   /**
-   * @param string
+   * Optional. Delta of errors counts from persisting the samples from previous
+   * report.
+   *
+   * @param string $persistenceErrorsCount
    */
   public function setPersistenceErrorsCount($persistenceErrorsCount)
   {
@@ -133,7 +164,10 @@ class DataSamplingReport extends \Google\Model
     return $this->persistenceErrorsCount;
   }
   /**
-   * @param string
+   * Optional. Delta of errors counts from retrieving, or translating the
+   * samples from previous report.
+   *
+   * @param string $translationErrorsCount
    */
   public function setTranslationErrorsCount($translationErrorsCount)
   {

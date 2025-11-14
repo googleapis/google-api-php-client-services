@@ -20,12 +20,20 @@ namespace Google\Service\Bigquery;
 class UndeleteDatasetRequest extends \Google\Model
 {
   /**
+   * Optional. The exact time when the dataset was deleted. If not specified,
+   * the most recently deleted version is undeleted. Undeleting a dataset using
+   * deletion time is not supported.
+   *
    * @var string
    */
   public $deletionTime;
 
   /**
-   * @param string
+   * Optional. The exact time when the dataset was deleted. If not specified,
+   * the most recently deleted version is undeleted. Undeleting a dataset using
+   * deletion time is not supported.
+   *
+   * @param string $deletionTime
    */
   public function setDeletionTime($deletionTime)
   {

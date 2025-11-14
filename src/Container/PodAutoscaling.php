@@ -20,19 +20,39 @@ namespace Google\Service\Container;
 class PodAutoscaling extends \Google\Model
 {
   /**
+   * HPA_PROFILE_UNSPECIFIED is used when no custom HPA profile is set.
+   */
+  public const HPA_PROFILE_HPA_PROFILE_UNSPECIFIED = 'HPA_PROFILE_UNSPECIFIED';
+  /**
+   * Customers explicitly opt-out of HPA profiles.
+   */
+  public const HPA_PROFILE_NONE = 'NONE';
+  /**
+   * PERFORMANCE is used when customers opt-in to the performance HPA profile.
+   * In this profile we support a higher number of HPAs per cluster and faster
+   * metrics collection for workload autoscaling.
+   */
+  public const HPA_PROFILE_PERFORMANCE = 'PERFORMANCE';
+  /**
+   * Selected Horizontal Pod Autoscaling profile.
+   *
    * @var string
    */
   public $hpaProfile;
 
   /**
-   * @param string
+   * Selected Horizontal Pod Autoscaling profile.
+   *
+   * Accepted values: HPA_PROFILE_UNSPECIFIED, NONE, PERFORMANCE
+   *
+   * @param self::HPA_PROFILE_* $hpaProfile
    */
   public function setHpaProfile($hpaProfile)
   {
     $this->hpaProfile = $hpaProfile;
   }
   /**
-   * @return string
+   * @return self::HPA_PROFILE_*
    */
   public function getHpaProfile()
   {

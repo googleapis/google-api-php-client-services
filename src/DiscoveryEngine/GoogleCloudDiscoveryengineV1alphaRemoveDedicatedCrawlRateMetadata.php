@@ -20,16 +20,23 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaRemoveDedicatedCrawlRateMetadata extends \Google\Model
 {
   /**
+   * Operation create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Operation create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -43,7 +50,10 @@ class GoogleCloudDiscoveryengineV1alphaRemoveDedicatedCrawlRateMetadata extends 
     return $this->createTime;
   }
   /**
-   * @param string
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

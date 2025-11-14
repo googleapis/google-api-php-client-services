@@ -20,18 +20,24 @@ namespace Google\Service\BigLakeService;
 class HiveTableOptions extends \Google\Model
 {
   /**
+   * Stores user supplied Hive table parameters.
+   *
    * @var string[]
    */
   public $parameters;
   protected $storageDescriptorType = StorageDescriptor::class;
   protected $storageDescriptorDataType = '';
   /**
+   * Hive table type. For example, MANAGED_TABLE, EXTERNAL_TABLE.
+   *
    * @var string
    */
   public $tableType;
 
   /**
-   * @param string[]
+   * Stores user supplied Hive table parameters.
+   *
+   * @param string[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -45,7 +51,9 @@ class HiveTableOptions extends \Google\Model
     return $this->parameters;
   }
   /**
-   * @param StorageDescriptor
+   * Stores physical storage information of the data.
+   *
+   * @param StorageDescriptor $storageDescriptor
    */
   public function setStorageDescriptor(StorageDescriptor $storageDescriptor)
   {
@@ -59,7 +67,9 @@ class HiveTableOptions extends \Google\Model
     return $this->storageDescriptor;
   }
   /**
-   * @param string
+   * Hive table type. For example, MANAGED_TABLE, EXTERNAL_TABLE.
+   *
+   * @param string $tableType
    */
   public function setTableType($tableType)
   {

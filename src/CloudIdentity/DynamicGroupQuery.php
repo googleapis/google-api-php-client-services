@@ -20,16 +20,44 @@ namespace Google\Service\CloudIdentity;
 class DynamicGroupQuery extends \Google\Model
 {
   /**
+   * Default value (not valid)
+   */
+  public const RESOURCE_TYPE_RESOURCE_TYPE_UNSPECIFIED = 'RESOURCE_TYPE_UNSPECIFIED';
+  /**
+   * For queries on User
+   */
+  public const RESOURCE_TYPE_USER = 'USER';
+  /**
+   * Query that determines the memberships of the dynamic group. Examples: All
+   * users with at least one `organizations.department` of engineering.
+   * `user.organizations.exists(org, org.department=='engineering')` All users
+   * with at least one location that has `area` of `foo` and `building_id` of
+   * `bar`. `user.locations.exists(loc, loc.area=='foo' &&
+   * loc.building_id=='bar')` All users with any variation of the name John Doe
+   * (case-insensitive queries add `equalsIgnoreCase()` to the value being
+   * queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
+   *
    * @var string
    */
   public $query;
   /**
+   * Resource type for the Dynamic Group Query
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param string
+   * Query that determines the memberships of the dynamic group. Examples: All
+   * users with at least one `organizations.department` of engineering.
+   * `user.organizations.exists(org, org.department=='engineering')` All users
+   * with at least one location that has `area` of `foo` and `building_id` of
+   * `bar`. `user.locations.exists(loc, loc.area=='foo' &&
+   * loc.building_id=='bar')` All users with any variation of the name John Doe
+   * (case-insensitive queries add `equalsIgnoreCase()` to the value being
+   * queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -43,14 +71,18 @@ class DynamicGroupQuery extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * Resource type for the Dynamic Group Query
+   *
+   * Accepted values: RESOURCE_TYPE_UNSPECIFIED, USER
+   *
+   * @param self::RESOURCE_TYPE_* $resourceType
    */
   public function setResourceType($resourceType)
   {
     $this->resourceType = $resourceType;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_TYPE_*
    */
   public function getResourceType()
   {

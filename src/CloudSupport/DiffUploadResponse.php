@@ -20,6 +20,8 @@ namespace Google\Service\CloudSupport;
 class DiffUploadResponse extends \Google\Model
 {
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $objectVersion;
@@ -27,7 +29,9 @@ class DiffUploadResponse extends \Google\Model
   protected $originalObjectDataType = '';
 
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $objectVersion
    */
   public function setObjectVersion($objectVersion)
   {
@@ -41,7 +45,9 @@ class DiffUploadResponse extends \Google\Model
     return $this->objectVersion;
   }
   /**
-   * @param CompositeMedia
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param CompositeMedia $originalObject
    */
   public function setOriginalObject(CompositeMedia $originalObject)
   {

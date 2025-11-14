@@ -20,24 +20,34 @@ namespace Google\Service\CustomSearchAPI;
 class PromotionBodyLines extends \Google\Model
 {
   /**
+   * The block object's text in HTML, if it has text.
+   *
    * @var string
    */
   public $htmlTitle;
   /**
+   * The anchor text of the block object's link, if it has a link.
+   *
    * @var string
    */
   public $link;
   /**
+   * The block object's text, if it has text.
+   *
    * @var string
    */
   public $title;
   /**
+   * The URL of the block object's link, if it has one.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The block object's text in HTML, if it has text.
+   *
+   * @param string $htmlTitle
    */
   public function setHtmlTitle($htmlTitle)
   {
@@ -51,7 +61,9 @@ class PromotionBodyLines extends \Google\Model
     return $this->htmlTitle;
   }
   /**
-   * @param string
+   * The anchor text of the block object's link, if it has a link.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {
@@ -65,7 +77,9 @@ class PromotionBodyLines extends \Google\Model
     return $this->link;
   }
   /**
-   * @param string
+   * The block object's text, if it has text.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -79,7 +93,9 @@ class PromotionBodyLines extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * The URL of the block object's link, if it has one.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

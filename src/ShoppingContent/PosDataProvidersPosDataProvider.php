@@ -20,20 +20,28 @@ namespace Google\Service\ShoppingContent;
 class PosDataProvidersPosDataProvider extends \Google\Model
 {
   /**
+   * The display name of Pos data Provider.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The full name of this POS data Provider.
+   *
    * @var string
    */
   public $fullName;
   /**
+   * The ID of the account.
+   *
    * @var string
    */
   public $providerId;
 
   /**
-   * @param string
+   * The display name of Pos data Provider.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +55,9 @@ class PosDataProvidersPosDataProvider extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The full name of this POS data Provider.
+   *
+   * @param string $fullName
    */
   public function setFullName($fullName)
   {
@@ -61,7 +71,9 @@ class PosDataProvidersPosDataProvider extends \Google\Model
     return $this->fullName;
   }
   /**
-   * @param string
+   * The ID of the account.
+   *
+   * @param string $providerId
    */
   public function setProviderId($providerId)
   {

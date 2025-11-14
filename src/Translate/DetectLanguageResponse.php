@@ -24,7 +24,10 @@ class DetectLanguageResponse extends \Google\Collection
   protected $languagesDataType = 'array';
 
   /**
-   * @param DetectedLanguage[]
+   * The most probable language detected by the Translation API. For each
+   * request, the Translation API will always return only one result.
+   *
+   * @param DetectedLanguage[] $languages
    */
   public function setLanguages($languages)
   {

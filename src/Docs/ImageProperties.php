@@ -20,34 +20,55 @@ namespace Google\Service\Docs;
 class ImageProperties extends \Google\Model
 {
   /**
+   * The clockwise rotation angle of the image, in radians.
+   *
    * @var float
    */
   public $angle;
   /**
+   * The brightness effect of the image. The value should be in the interval
+   * [-1.0, 1.0], where 0 means no effect.
+   *
    * @var float
    */
   public $brightness;
   /**
+   * A URI to the image with a default lifetime of 30 minutes. This URI is
+   * tagged with the account of the requester. Anyone with the URI effectively
+   * accesses the image as the original requester. Access to the image may be
+   * lost if the document's sharing settings change.
+   *
    * @var string
    */
   public $contentUri;
   /**
+   * The contrast effect of the image. The value should be in the interval
+   * [-1.0, 1.0], where 0 means no effect.
+   *
    * @var float
    */
   public $contrast;
   protected $cropPropertiesType = CropProperties::class;
   protected $cropPropertiesDataType = '';
   /**
+   * The source URI is the URI used to insert the image. The source URI can be
+   * empty.
+   *
    * @var string
    */
   public $sourceUri;
   /**
+   * The transparency effect of the image. The value should be in the interval
+   * [0.0, 1.0], where 0 means no effect and 1 means transparent.
+   *
    * @var float
    */
   public $transparency;
 
   /**
-   * @param float
+   * The clockwise rotation angle of the image, in radians.
+   *
+   * @param float $angle
    */
   public function setAngle($angle)
   {
@@ -61,7 +82,10 @@ class ImageProperties extends \Google\Model
     return $this->angle;
   }
   /**
-   * @param float
+   * The brightness effect of the image. The value should be in the interval
+   * [-1.0, 1.0], where 0 means no effect.
+   *
+   * @param float $brightness
    */
   public function setBrightness($brightness)
   {
@@ -75,7 +99,12 @@ class ImageProperties extends \Google\Model
     return $this->brightness;
   }
   /**
-   * @param string
+   * A URI to the image with a default lifetime of 30 minutes. This URI is
+   * tagged with the account of the requester. Anyone with the URI effectively
+   * accesses the image as the original requester. Access to the image may be
+   * lost if the document's sharing settings change.
+   *
+   * @param string $contentUri
    */
   public function setContentUri($contentUri)
   {
@@ -89,7 +118,10 @@ class ImageProperties extends \Google\Model
     return $this->contentUri;
   }
   /**
-   * @param float
+   * The contrast effect of the image. The value should be in the interval
+   * [-1.0, 1.0], where 0 means no effect.
+   *
+   * @param float $contrast
    */
   public function setContrast($contrast)
   {
@@ -103,7 +135,9 @@ class ImageProperties extends \Google\Model
     return $this->contrast;
   }
   /**
-   * @param CropProperties
+   * The crop properties of the image.
+   *
+   * @param CropProperties $cropProperties
    */
   public function setCropProperties(CropProperties $cropProperties)
   {
@@ -117,7 +151,10 @@ class ImageProperties extends \Google\Model
     return $this->cropProperties;
   }
   /**
-   * @param string
+   * The source URI is the URI used to insert the image. The source URI can be
+   * empty.
+   *
+   * @param string $sourceUri
    */
   public function setSourceUri($sourceUri)
   {
@@ -131,7 +168,10 @@ class ImageProperties extends \Google\Model
     return $this->sourceUri;
   }
   /**
-   * @param float
+   * The transparency effect of the image. The value should be in the interval
+   * [0.0, 1.0], where 0 means no effect and 1 means transparent.
+   *
+   * @param float $transparency
    */
   public function setTransparency($transparency)
   {

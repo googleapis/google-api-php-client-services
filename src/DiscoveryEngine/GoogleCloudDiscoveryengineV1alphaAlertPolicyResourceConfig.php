@@ -23,18 +23,24 @@ class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig extends \Google
   protected $alertEnrollmentsType = GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfigAlertEnrollment::class;
   protected $alertEnrollmentsDataType = 'array';
   /**
+   * Immutable. The fully qualified resource name of the AlertPolicy.
+   *
    * @var string
    */
   public $alertPolicy;
   protected $contactDetailsType = GoogleCloudDiscoveryengineV1alphaContactDetails::class;
   protected $contactDetailsDataType = 'array';
   /**
+   * Optional. The language code used for notifications
+   *
    * @var string
    */
   public $languageCode;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfigAlertEnrollment[]
+   * Optional. The enrollment state of each alert.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfigAlertEnrollment[] $alertEnrollments
    */
   public function setAlertEnrollments($alertEnrollments)
   {
@@ -48,7 +54,9 @@ class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig extends \Google
     return $this->alertEnrollments;
   }
   /**
-   * @param string
+   * Immutable. The fully qualified resource name of the AlertPolicy.
+   *
+   * @param string $alertPolicy
    */
   public function setAlertPolicy($alertPolicy)
   {
@@ -62,7 +70,9 @@ class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig extends \Google
     return $this->alertPolicy;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaContactDetails[]
+   * Optional. The contact details for each alert policy.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaContactDetails[] $contactDetails
    */
   public function setContactDetails($contactDetails)
   {
@@ -76,7 +86,9 @@ class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig extends \Google
     return $this->contactDetails;
   }
   /**
-   * @param string
+   * Optional. The language code used for notifications
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {

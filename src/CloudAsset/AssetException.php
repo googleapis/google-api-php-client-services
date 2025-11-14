@@ -20,16 +20,30 @@ namespace Google\Service\CloudAsset;
 class AssetException extends \Google\Model
 {
   /**
+   * exception_type is not applicable for the current asset.
+   */
+  public const EXCEPTION_TYPE_EXCEPTION_TYPE_UNSPECIFIED = 'EXCEPTION_TYPE_UNSPECIFIED';
+  /**
+   * The asset content is truncated.
+   */
+  public const EXCEPTION_TYPE_TRUNCATION = 'TRUNCATION';
+  /**
+   * The details of the exception.
+   *
    * @var string
    */
   public $details;
   /**
+   * The type of exception.
+   *
    * @var string
    */
   public $exceptionType;
 
   /**
-   * @param string
+   * The details of the exception.
+   *
+   * @param string $details
    */
   public function setDetails($details)
   {
@@ -43,14 +57,18 @@ class AssetException extends \Google\Model
     return $this->details;
   }
   /**
-   * @param string
+   * The type of exception.
+   *
+   * Accepted values: EXCEPTION_TYPE_UNSPECIFIED, TRUNCATION
+   *
+   * @param self::EXCEPTION_TYPE_* $exceptionType
    */
   public function setExceptionType($exceptionType)
   {
     $this->exceptionType = $exceptionType;
   }
   /**
-   * @return string
+   * @return self::EXCEPTION_TYPE_*
    */
   public function getExceptionType()
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class GcfsConfig extends \Google\Model
 {
   /**
+   * Whether to use GCFS.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether to use GCFS.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

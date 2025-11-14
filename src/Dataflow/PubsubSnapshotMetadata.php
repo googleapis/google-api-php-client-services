@@ -20,20 +20,28 @@ namespace Google\Service\Dataflow;
 class PubsubSnapshotMetadata extends \Google\Model
 {
   /**
+   * The expire time of the Pubsub snapshot.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * The name of the Pubsub snapshot.
+   *
    * @var string
    */
   public $snapshotName;
   /**
+   * The name of the Pubsub topic.
+   *
    * @var string
    */
   public $topicName;
 
   /**
-   * @param string
+   * The expire time of the Pubsub snapshot.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -47,7 +55,9 @@ class PubsubSnapshotMetadata extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param string
+   * The name of the Pubsub snapshot.
+   *
+   * @param string $snapshotName
    */
   public function setSnapshotName($snapshotName)
   {
@@ -61,7 +71,9 @@ class PubsubSnapshotMetadata extends \Google\Model
     return $this->snapshotName;
   }
   /**
-   * @param string
+   * The name of the Pubsub topic.
+   *
+   * @param string $topicName
    */
   public function setTopicName($topicName)
   {

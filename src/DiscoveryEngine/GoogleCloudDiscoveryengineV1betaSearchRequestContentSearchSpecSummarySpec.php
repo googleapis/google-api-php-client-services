@@ -20,26 +20,76 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec extends \Google\Model
 {
   /**
+   * Specifies whether to filter out adversarial queries. The default value is
+   * `false`. Google employs search-query classification to detect adversarial
+   * queries. No summary is returned if the search query is classified as an
+   * adversarial query. For example, a user might ask a question regarding
+   * negative comments about the company or submit a query designed to generate
+   * unsafe, policy-violating output. If this field is set to `true`, we skip
+   * generating summaries for adversarial queries and return fallback messages
+   * instead.
+   *
    * @var bool
    */
   public $ignoreAdversarialQuery;
   /**
+   * Optional. Specifies whether to filter out jail-breaking queries. The
+   * default value is `false`. Google employs search-query classification to
+   * detect jail-breaking queries. No summary is returned if the search query is
+   * classified as a jail-breaking query. A user might add instructions to the
+   * query to change the tone, style, language, content of the answer, or ask
+   * the model to act as a different entity, e.g. "Reply in the tone of a
+   * competing company's CEO". If this field is set to `true`, we skip
+   * generating summaries for jail-breaking queries and return fallback messages
+   * instead.
+   *
    * @var bool
    */
   public $ignoreJailBreakingQuery;
   /**
+   * Specifies whether to filter out queries that have low relevance. The
+   * default value is `false`. If this field is set to `false`, all search
+   * results are used regardless of relevance to generate answers. If set to
+   * `true`, only queries with high relevance search results will generate
+   * answers.
+   *
    * @var bool
    */
   public $ignoreLowRelevantContent;
   /**
+   * Specifies whether to filter out queries that are not summary-seeking. The
+   * default value is `false`. Google employs search-query classification to
+   * detect summary-seeking queries. No summary is returned if the search query
+   * is classified as a non-summary seeking query. For example, `why is the sky
+   * blue` and `Who is the best soccer player in the world?` are summary-seeking
+   * queries, but `SFO airport` and `world cup 2026` are not. They are most
+   * likely navigational queries. If this field is set to `true`, we skip
+   * generating summaries for non-summary seeking queries and return fallback
+   * messages instead.
+   *
    * @var bool
    */
   public $ignoreNonSummarySeekingQuery;
   /**
+   * Specifies whether to include citations in the summary. The default value is
+   * `false`. When this field is set to `true`, summaries include in-line
+   * citation numbers. Example summary including citations: BigQuery is Google
+   * Cloud's fully managed and completely serverless enterprise data warehouse
+   * [1]. BigQuery supports all data types, works across clouds, and has built-
+   * in machine learning and business intelligence, all within a unified
+   * platform [2, 3]. The citation numbers refer to the returned search results
+   * and are 1-indexed. For example, [1] means that the sentence is attributed
+   * to the first search result. [2, 3] means that the sentence is attributed to
+   * both the second and third search results.
+   *
    * @var bool
    */
   public $includeCitations;
   /**
+   * Language code for Summary. Use language tags defined by
+   * [BCP47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Note: This is an
+   * experimental feature.
+   *
    * @var string
    */
   public $languageCode;
@@ -50,16 +100,38 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
   protected $multimodalSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecMultiModalSpec::class;
   protected $multimodalSpecDataType = '';
   /**
+   * The number of top results to generate the summary from. If the number of
+   * results returned is less than `summaryResultCount`, the summary is
+   * generated from all of the results. At most 10 results for documents mode,
+   * or 50 for chunks mode, can be used to generate a summary. The chunks mode
+   * is used when SearchRequest.ContentSearchSpec.search_result_mode is set to
+   * CHUNKS.
+   *
    * @var int
    */
   public $summaryResultCount;
   /**
+   * If true, answer will be generated from most relevant chunks from top search
+   * results. This feature will improve summary quality. Note that with this
+   * feature enabled, not all top search results will be referenced and included
+   * in the reference list, so the citation source index only points to the
+   * search results listed in the reference list.
+   *
    * @var bool
    */
   public $useSemanticChunks;
 
   /**
-   * @param bool
+   * Specifies whether to filter out adversarial queries. The default value is
+   * `false`. Google employs search-query classification to detect adversarial
+   * queries. No summary is returned if the search query is classified as an
+   * adversarial query. For example, a user might ask a question regarding
+   * negative comments about the company or submit a query designed to generate
+   * unsafe, policy-violating output. If this field is set to `true`, we skip
+   * generating summaries for adversarial queries and return fallback messages
+   * instead.
+   *
+   * @param bool $ignoreAdversarialQuery
    */
   public function setIgnoreAdversarialQuery($ignoreAdversarialQuery)
   {
@@ -73,7 +145,17 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->ignoreAdversarialQuery;
   }
   /**
-   * @param bool
+   * Optional. Specifies whether to filter out jail-breaking queries. The
+   * default value is `false`. Google employs search-query classification to
+   * detect jail-breaking queries. No summary is returned if the search query is
+   * classified as a jail-breaking query. A user might add instructions to the
+   * query to change the tone, style, language, content of the answer, or ask
+   * the model to act as a different entity, e.g. "Reply in the tone of a
+   * competing company's CEO". If this field is set to `true`, we skip
+   * generating summaries for jail-breaking queries and return fallback messages
+   * instead.
+   *
+   * @param bool $ignoreJailBreakingQuery
    */
   public function setIgnoreJailBreakingQuery($ignoreJailBreakingQuery)
   {
@@ -87,7 +169,13 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->ignoreJailBreakingQuery;
   }
   /**
-   * @param bool
+   * Specifies whether to filter out queries that have low relevance. The
+   * default value is `false`. If this field is set to `false`, all search
+   * results are used regardless of relevance to generate answers. If set to
+   * `true`, only queries with high relevance search results will generate
+   * answers.
+   *
+   * @param bool $ignoreLowRelevantContent
    */
   public function setIgnoreLowRelevantContent($ignoreLowRelevantContent)
   {
@@ -101,7 +189,17 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->ignoreLowRelevantContent;
   }
   /**
-   * @param bool
+   * Specifies whether to filter out queries that are not summary-seeking. The
+   * default value is `false`. Google employs search-query classification to
+   * detect summary-seeking queries. No summary is returned if the search query
+   * is classified as a non-summary seeking query. For example, `why is the sky
+   * blue` and `Who is the best soccer player in the world?` are summary-seeking
+   * queries, but `SFO airport` and `world cup 2026` are not. They are most
+   * likely navigational queries. If this field is set to `true`, we skip
+   * generating summaries for non-summary seeking queries and return fallback
+   * messages instead.
+   *
+   * @param bool $ignoreNonSummarySeekingQuery
    */
   public function setIgnoreNonSummarySeekingQuery($ignoreNonSummarySeekingQuery)
   {
@@ -115,7 +213,18 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->ignoreNonSummarySeekingQuery;
   }
   /**
-   * @param bool
+   * Specifies whether to include citations in the summary. The default value is
+   * `false`. When this field is set to `true`, summaries include in-line
+   * citation numbers. Example summary including citations: BigQuery is Google
+   * Cloud's fully managed and completely serverless enterprise data warehouse
+   * [1]. BigQuery supports all data types, works across clouds, and has built-
+   * in machine learning and business intelligence, all within a unified
+   * platform [2, 3]. The citation numbers refer to the returned search results
+   * and are 1-indexed. For example, [1] means that the sentence is attributed
+   * to the first search result. [2, 3] means that the sentence is attributed to
+   * both the second and third search results.
+   *
+   * @param bool $includeCitations
    */
   public function setIncludeCitations($includeCitations)
   {
@@ -129,7 +238,11 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->includeCitations;
   }
   /**
-   * @param string
+   * Language code for Summary. Use language tags defined by
+   * [BCP47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Note: This is an
+   * experimental feature.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -143,7 +256,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->languageCode;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec
+   * If specified, the spec will be used to modify the prompt provided to the
+   * LLM.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec $modelPromptSpec
    */
   public function setModelPromptSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec $modelPromptSpec)
   {
@@ -157,7 +273,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->modelPromptSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec
+   * If specified, the spec will be used to modify the model specification
+   * provided to the LLM.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec $modelSpec
    */
   public function setModelSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec $modelSpec)
   {
@@ -171,7 +290,9 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->modelSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecMultiModalSpec
+   * Optional. Multimodal specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecMultiModalSpec $multimodalSpec
    */
   public function setMultimodalSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecMultiModalSpec $multimodalSpec)
   {
@@ -185,7 +306,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->multimodalSpec;
   }
   /**
-   * @param int
+   * The number of top results to generate the summary from. If the number of
+   * results returned is less than `summaryResultCount`, the summary is
+   * generated from all of the results. At most 10 results for documents mode,
+   * or 50 for chunks mode, can be used to generate a summary. The chunks mode
+   * is used when SearchRequest.ContentSearchSpec.search_result_mode is set to
+   * CHUNKS.
+   *
+   * @param int $summaryResultCount
    */
   public function setSummaryResultCount($summaryResultCount)
   {
@@ -199,7 +327,13 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
     return $this->summaryResultCount;
   }
   /**
-   * @param bool
+   * If true, answer will be generated from most relevant chunks from top search
+   * results. This feature will improve summary quality. Note that with this
+   * feature enabled, not all top search results will be referenced and included
+   * in the reference list, so the citation source index only points to the
+   * search results listed in the reference list.
+   *
+   * @param bool $useSemanticChunks
    */
   public function setUseSemanticChunks($useSemanticChunks)
   {

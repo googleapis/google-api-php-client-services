@@ -26,7 +26,9 @@ class MultiClassClassificationMetrics extends \Google\Collection
   protected $confusionMatrixListDataType = 'array';
 
   /**
-   * @param AggregateClassificationMetrics
+   * Aggregate classification metrics.
+   *
+   * @param AggregateClassificationMetrics $aggregateClassificationMetrics
    */
   public function setAggregateClassificationMetrics(AggregateClassificationMetrics $aggregateClassificationMetrics)
   {
@@ -40,7 +42,9 @@ class MultiClassClassificationMetrics extends \Google\Collection
     return $this->aggregateClassificationMetrics;
   }
   /**
-   * @param ConfusionMatrix[]
+   * Confusion matrix at different thresholds.
+   *
+   * @param ConfusionMatrix[] $confusionMatrixList
    */
   public function setConfusionMatrixList($confusionMatrixList)
   {

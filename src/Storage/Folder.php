@@ -20,42 +20,61 @@ namespace Google\Service\Storage;
 class Folder extends \Google\Model
 {
   /**
+   * The name of the bucket containing this folder.
+   *
    * @var string
    */
   public $bucket;
   /**
+   * The creation time of the folder in RFC 3339 format.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The ID of the folder, including the bucket name, folder name.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of item this is. For folders, this is always storage#folder.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The version of the metadata for this folder. Used for preconditions and for
+   * detecting changes in metadata.
+   *
    * @var string
    */
   public $metageneration;
   /**
+   * The name of the folder. Required if not specified by URL parameter.
+   *
    * @var string
    */
   public $name;
   protected $pendingRenameInfoType = FolderPendingRenameInfo::class;
   protected $pendingRenameInfoDataType = '';
   /**
+   * The link to this folder.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The modification time of the folder metadata in RFC 3339 format.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The name of the bucket containing this folder.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -69,7 +88,9 @@ class Folder extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * The creation time of the folder in RFC 3339 format.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -83,7 +104,9 @@ class Folder extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The ID of the folder, including the bucket name, folder name.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -97,7 +120,9 @@ class Folder extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of item this is. For folders, this is always storage#folder.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -111,7 +136,10 @@ class Folder extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The version of the metadata for this folder. Used for preconditions and for
+   * detecting changes in metadata.
+   *
+   * @param string $metageneration
    */
   public function setMetageneration($metageneration)
   {
@@ -125,7 +153,9 @@ class Folder extends \Google\Model
     return $this->metageneration;
   }
   /**
-   * @param string
+   * The name of the folder. Required if not specified by URL parameter.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -139,7 +169,10 @@ class Folder extends \Google\Model
     return $this->name;
   }
   /**
-   * @param FolderPendingRenameInfo
+   * Only present if the folder is part of an ongoing rename folder operation.
+   * Contains information which can be used to query the operation status.
+   *
+   * @param FolderPendingRenameInfo $pendingRenameInfo
    */
   public function setPendingRenameInfo(FolderPendingRenameInfo $pendingRenameInfo)
   {
@@ -153,7 +186,9 @@ class Folder extends \Google\Model
     return $this->pendingRenameInfo;
   }
   /**
-   * @param string
+   * The link to this folder.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -167,7 +202,9 @@ class Folder extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The modification time of the folder metadata in RFC 3339 format.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

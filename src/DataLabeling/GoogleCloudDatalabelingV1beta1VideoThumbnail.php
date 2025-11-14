@@ -20,16 +20,23 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1VideoThumbnail extends \Google\Model
 {
   /**
+   * A byte string of the video frame.
+   *
    * @var string
    */
   public $thumbnail;
   /**
+   * Time offset relative to the beginning of the video, corresponding to the
+   * video frame where the thumbnail has been extracted from.
+   *
    * @var string
    */
   public $timeOffset;
 
   /**
-   * @param string
+   * A byte string of the video frame.
+   *
+   * @param string $thumbnail
    */
   public function setThumbnail($thumbnail)
   {
@@ -43,7 +50,10 @@ class GoogleCloudDatalabelingV1beta1VideoThumbnail extends \Google\Model
     return $this->thumbnail;
   }
   /**
-   * @param string
+   * Time offset relative to the beginning of the video, corresponding to the
+   * video frame where the thumbnail has been extracted from.
+   *
+   * @param string $timeOffset
    */
   public function setTimeOffset($timeOffset)
   {

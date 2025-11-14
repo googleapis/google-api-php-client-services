@@ -23,12 +23,16 @@ class GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfo extends \G
   protected $failureReasonsType = GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfoFailureReason::class;
   protected $failureReasonsDataType = 'array';
   /**
+   * URI that failed to be crawled.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfoFailureReason[]
+   * List of failure reasons by corpus type (e.g. desktop, mobile).
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfoFailureReason[] $failureReasons
    */
   public function setFailureReasons($failureReasons)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfo extends \G
     return $this->failureReasons;
   }
   /**
-   * @param string
+   * URI that failed to be crawled.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

@@ -23,12 +23,18 @@ class GoogleCloudDatacatalogLineageV1SearchLinksResponse extends \Google\Collect
   protected $linksType = GoogleCloudDatacatalogLineageV1Link::class;
   protected $linksDataType = 'array';
   /**
+   * The token to specify as `page_token` in the subsequent call to get the next
+   * page. Omitted if there are no more pages in the response.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDatacatalogLineageV1Link[]
+   * The list of links for a given asset. Can be empty if the asset has no
+   * relations of requested type (source or target).
+   *
+   * @param GoogleCloudDatacatalogLineageV1Link[] $links
    */
   public function setLinks($links)
   {
@@ -42,7 +48,10 @@ class GoogleCloudDatacatalogLineageV1SearchLinksResponse extends \Google\Collect
     return $this->links;
   }
   /**
-   * @param string
+   * The token to specify as `page_token` in the subsequent call to get the next
+   * page. Omitted if there are no more pages in the response.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

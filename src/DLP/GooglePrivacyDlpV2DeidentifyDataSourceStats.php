@@ -20,20 +20,28 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DeidentifyDataSourceStats extends \Google\Model
 {
   /**
+   * Number of successfully applied transformations.
+   *
    * @var string
    */
   public $transformationCount;
   /**
+   * Number of errors encountered while trying to apply transformations.
+   *
    * @var string
    */
   public $transformationErrorCount;
   /**
+   * Total size in bytes that were transformed in some way.
+   *
    * @var string
    */
   public $transformedBytes;
 
   /**
-   * @param string
+   * Number of successfully applied transformations.
+   *
+   * @param string $transformationCount
    */
   public function setTransformationCount($transformationCount)
   {
@@ -47,7 +55,9 @@ class GooglePrivacyDlpV2DeidentifyDataSourceStats extends \Google\Model
     return $this->transformationCount;
   }
   /**
-   * @param string
+   * Number of errors encountered while trying to apply transformations.
+   *
+   * @param string $transformationErrorCount
    */
   public function setTransformationErrorCount($transformationErrorCount)
   {
@@ -61,7 +71,9 @@ class GooglePrivacyDlpV2DeidentifyDataSourceStats extends \Google\Model
     return $this->transformationErrorCount;
   }
   /**
-   * @param string
+   * Total size in bytes that were transformed in some way.
+   *
+   * @param string $transformedBytes
    */
   public function setTransformedBytes($transformedBytes)
   {

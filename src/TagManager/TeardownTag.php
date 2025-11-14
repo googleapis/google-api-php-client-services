@@ -20,16 +20,26 @@ namespace Google\Service\TagManager;
 class TeardownTag extends \Google\Model
 {
   /**
+   * If true, fire the teardown tag if and only if the main tag fires
+   * successfully. If false, fire the teardown tag regardless of main tag firing
+   * status.
+   *
    * @var bool
    */
   public $stopTeardownOnFailure;
   /**
+   * The name of the teardown tag.
+   *
    * @var string
    */
   public $tagName;
 
   /**
-   * @param bool
+   * If true, fire the teardown tag if and only if the main tag fires
+   * successfully. If false, fire the teardown tag regardless of main tag firing
+   * status.
+   *
+   * @param bool $stopTeardownOnFailure
    */
   public function setStopTeardownOnFailure($stopTeardownOnFailure)
   {
@@ -43,7 +53,9 @@ class TeardownTag extends \Google\Model
     return $this->stopTeardownOnFailure;
   }
   /**
-   * @param string
+   * The name of the teardown tag.
+   *
+   * @param string $tagName
    */
   public function setTagName($tagName)
   {

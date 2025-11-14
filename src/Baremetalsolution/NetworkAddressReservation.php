@@ -20,20 +20,33 @@ namespace Google\Service\Baremetalsolution;
 class NetworkAddressReservation extends \Google\Model
 {
   /**
+   * The last address of this reservation block, inclusive. I.e., for cases when
+   * reservations are only single addresses, end_address and start_address will
+   * be the same. Must be specified as a single IPv4 address, e.g. 10.1.2.2.
+   *
    * @var string
    */
   public $endAddress;
   /**
+   * A note about this reservation, intended for human consumption.
+   *
    * @var string
    */
   public $note;
   /**
+   * The first address of this reservation block. Must be specified as a single
+   * IPv4 address, e.g. 10.1.2.2.
+   *
    * @var string
    */
   public $startAddress;
 
   /**
-   * @param string
+   * The last address of this reservation block, inclusive. I.e., for cases when
+   * reservations are only single addresses, end_address and start_address will
+   * be the same. Must be specified as a single IPv4 address, e.g. 10.1.2.2.
+   *
+   * @param string $endAddress
    */
   public function setEndAddress($endAddress)
   {
@@ -47,7 +60,9 @@ class NetworkAddressReservation extends \Google\Model
     return $this->endAddress;
   }
   /**
-   * @param string
+   * A note about this reservation, intended for human consumption.
+   *
+   * @param string $note
    */
   public function setNote($note)
   {
@@ -61,7 +76,10 @@ class NetworkAddressReservation extends \Google\Model
     return $this->note;
   }
   /**
-   * @param string
+   * The first address of this reservation block. Must be specified as a single
+   * IPv4 address, e.g. 10.1.2.2.
+   *
+   * @param string $startAddress
    */
   public function setStartAddress($startAddress)
   {

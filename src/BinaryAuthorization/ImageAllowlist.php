@@ -21,12 +21,18 @@ class ImageAllowlist extends \Google\Collection
 {
   protected $collection_key = 'allowPattern';
   /**
+   * Required. A disjunction of image patterns to allow. If any of these
+   * patterns match, then the image is considered exempted by this allowlist.
+   *
    * @var string[]
    */
   public $allowPattern;
 
   /**
-   * @param string[]
+   * Required. A disjunction of image patterns to allow. If any of these
+   * patterns match, then the image is considered exempted by this allowlist.
+   *
+   * @param string[] $allowPattern
    */
   public function setAllowPattern($allowPattern)
   {

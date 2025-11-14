@@ -20,12 +20,18 @@ namespace Google\Service\CloudIdentity;
 class OidcSsoInfo extends \Google\Model
 {
   /**
+   * Required. Name of the `InboundOidcSsoProfile` to use. Must be of the form
+   * `inboundOidcSsoProfiles/{inbound_oidc_sso_profile}`.
+   *
    * @var string
    */
   public $inboundOidcSsoProfile;
 
   /**
-   * @param string
+   * Required. Name of the `InboundOidcSsoProfile` to use. Must be of the form
+   * `inboundOidcSsoProfiles/{inbound_oidc_sso_profile}`.
+   *
+   * @param string $inboundOidcSsoProfile
    */
   public function setInboundOidcSsoProfile($inboundOidcSsoProfile)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Backupdr;
 class DisplayDevice extends \Google\Model
 {
   /**
+   * Optional. Enables display for the Compute Engine VM
+   *
    * @var bool
    */
   public $enableDisplay;
 
   /**
-   * @param bool
+   * Optional. Enables display for the Compute Engine VM
+   *
+   * @param bool $enableDisplay
    */
   public function setEnableDisplay($enableDisplay)
   {

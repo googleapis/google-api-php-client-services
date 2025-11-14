@@ -20,12 +20,20 @@ namespace Google\Service\BigLakeService;
 class RenameTableRequest extends \Google\Model
 {
   /**
+   * Required. The new `name` for the specified table, must be in the same
+   * database. Format: projects/{project_id_or_number}/locations/{location_id}/c
+   * atalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
+   *
    * @var string
    */
   public $newName;
 
   /**
-   * @param string
+   * Required. The new `name` for the specified table, must be in the same
+   * database. Format: projects/{project_id_or_number}/locations/{location_id}/c
+   * atalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
+   *
+   * @param string $newName
    */
   public function setNewName($newName)
   {

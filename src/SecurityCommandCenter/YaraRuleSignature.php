@@ -20,12 +20,16 @@ namespace Google\Service\SecurityCommandCenter;
 class YaraRuleSignature extends \Google\Model
 {
   /**
+   * The name of the YARA rule.
+   *
    * @var string
    */
   public $yaraRule;
 
   /**
-   * @param string
+   * The name of the YARA rule.
+   *
+   * @param string $yaraRule
    */
   public function setYaraRule($yaraRule)
   {

@@ -20,26 +20,43 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
 {
   /**
+   * The input Cloud Storage folder. All files under this folder will be
+   * imported to Document Warehouse. Format: `gs:`.
+   *
    * @var string
    */
   public $inputPath;
   protected $pipelineConfigType = GoogleCloudContentwarehouseV1IngestPipelineConfig::class;
   protected $pipelineConfigDataType = '';
   /**
+   * The Doc AI processor type name. Only used when the format of ingested files
+   * is Doc AI Document proto format.
+   *
    * @var string
    */
   public $processorType;
   /**
+   * The Document Warehouse schema resource name. All documents processed by
+   * this pipeline will use this schema. Format: projects/{project_number}/locat
+   * ions/{location}/documentSchemas/{document_schema_id}.
+   *
    * @var string
    */
   public $schemaName;
   /**
+   * The flag whether to skip ingested documents. If it is set to true,
+   * documents in Cloud Storage contains key "status" with value
+   * "status=ingested" in custom metadata will be skipped to ingest.
+   *
    * @var bool
    */
   public $skipIngestedDocuments;
 
   /**
-   * @param string
+   * The input Cloud Storage folder. All files under this folder will be
+   * imported to Document Warehouse. Format: `gs:`.
+   *
+   * @param string $inputPath
    */
   public function setInputPath($inputPath)
   {
@@ -53,7 +70,11 @@ class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
     return $this->inputPath;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1IngestPipelineConfig
+   * Optional. The config for the Cloud Storage Ingestion pipeline. It provides
+   * additional customization options to run the pipeline and can be skipped if
+   * it is not applicable.
+   *
+   * @param GoogleCloudContentwarehouseV1IngestPipelineConfig $pipelineConfig
    */
   public function setPipelineConfig(GoogleCloudContentwarehouseV1IngestPipelineConfig $pipelineConfig)
   {
@@ -67,7 +88,10 @@ class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
     return $this->pipelineConfig;
   }
   /**
-   * @param string
+   * The Doc AI processor type name. Only used when the format of ingested files
+   * is Doc AI Document proto format.
+   *
+   * @param string $processorType
    */
   public function setProcessorType($processorType)
   {
@@ -81,7 +105,11 @@ class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
     return $this->processorType;
   }
   /**
-   * @param string
+   * The Document Warehouse schema resource name. All documents processed by
+   * this pipeline will use this schema. Format: projects/{project_number}/locat
+   * ions/{location}/documentSchemas/{document_schema_id}.
+   *
+   * @param string $schemaName
    */
   public function setSchemaName($schemaName)
   {
@@ -95,7 +123,11 @@ class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
     return $this->schemaName;
   }
   /**
-   * @param bool
+   * The flag whether to skip ingested documents. If it is set to true,
+   * documents in Cloud Storage contains key "status" with value
+   * "status=ingested" in custom metadata will be skipped to ingest.
+   *
+   * @param bool $skipIngestedDocuments
    */
   public function setSkipIngestedDocuments($skipIngestedDocuments)
   {

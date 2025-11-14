@@ -23,12 +23,16 @@ class GoogleCloudDiscoveryengineV1PurgeCompletionSuggestionsResponse extends \Go
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
   /**
+   * Whether the completion suggestions were successfully purged.
+   *
    * @var bool
    */
   public $purgeSucceeded;
 
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDiscoveryengineV1PurgeCompletionSuggestionsResponse extends \Go
     return $this->errorSamples;
   }
   /**
-   * @param bool
+   * Whether the completion suggestions were successfully purged.
+   *
+   * @param bool $purgeSucceeded
    */
   public function setPurgeSucceeded($purgeSucceeded)
   {

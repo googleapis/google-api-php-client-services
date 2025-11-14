@@ -20,19 +20,45 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductCondition extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const CONDITION_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const CONDITION_UNKNOWN = 'UNKNOWN';
+  /**
+   * The product condition is new.
+   */
+  public const CONDITION_NEW = 'NEW';
+  /**
+   * The product condition is refurbished.
+   */
+  public const CONDITION_REFURBISHED = 'REFURBISHED';
+  /**
+   * The product condition is used.
+   */
+  public const CONDITION_USED = 'USED';
+  /**
+   * Value of the condition.
+   *
    * @var string
    */
   public $condition;
 
   /**
-   * @param string
+   * Value of the condition.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, NEW, REFURBISHED, USED
+   *
+   * @param self::CONDITION_* $condition
    */
   public function setCondition($condition)
   {
     $this->condition = $condition;
   }
   /**
-   * @return string
+   * @return self::CONDITION_*
    */
   public function getCondition()
   {

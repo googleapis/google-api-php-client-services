@@ -25,12 +25,16 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummarySummaryWithMetadata exten
   protected $referencesType = GoogleCloudDiscoveryengineV1SearchResponseSummaryReference::class;
   protected $referencesDataType = 'array';
   /**
+   * Summary text with no citation information.
+   *
    * @var string
    */
   public $summary;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSummaryCitationMetadata
+   * Citation metadata for given summary.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSummaryCitationMetadata $citationMetadata
    */
   public function setCitationMetadata(GoogleCloudDiscoveryengineV1SearchResponseSummaryCitationMetadata $citationMetadata)
   {
@@ -44,7 +48,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummarySummaryWithMetadata exten
     return $this->citationMetadata;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSummaryReference[]
+   * Document References.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSummaryReference[] $references
    */
   public function setReferences($references)
   {
@@ -58,7 +64,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummarySummaryWithMetadata exten
     return $this->references;
   }
   /**
-   * @param string
+   * Summary text with no citation information.
+   *
+   * @param string $summary
    */
   public function setSummary($summary)
   {

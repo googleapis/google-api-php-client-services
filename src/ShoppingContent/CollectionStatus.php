@@ -23,22 +23,34 @@ class CollectionStatus extends \Google\Collection
   protected $collectionLevelIssusesType = CollectionStatusItemLevelIssue::class;
   protected $collectionLevelIssusesDataType = 'array';
   /**
+   * Date on which the collection has been created in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and
+   * offset, for example "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
+   *
    * @var string
    */
   public $creationDate;
   protected $destinationStatusesType = CollectionStatusDestinationStatus::class;
   protected $destinationStatusesDataType = 'array';
   /**
+   * Required. The ID of the collection for which status is reported.
+   *
    * @var string
    */
   public $id;
   /**
+   * Date on which the collection has been last updated in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and
+   * offset, for example "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
+   *
    * @var string
    */
   public $lastUpdateDate;
 
   /**
-   * @param CollectionStatusItemLevelIssue[]
+   * A list of all issues associated with the collection.
+   *
+   * @param CollectionStatusItemLevelIssue[] $collectionLevelIssuses
    */
   public function setCollectionLevelIssuses($collectionLevelIssuses)
   {
@@ -52,7 +64,11 @@ class CollectionStatus extends \Google\Collection
     return $this->collectionLevelIssuses;
   }
   /**
-   * @param string
+   * Date on which the collection has been created in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and
+   * offset, for example "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
+   *
+   * @param string $creationDate
    */
   public function setCreationDate($creationDate)
   {
@@ -66,7 +82,9 @@ class CollectionStatus extends \Google\Collection
     return $this->creationDate;
   }
   /**
-   * @param CollectionStatusDestinationStatus[]
+   * The intended destinations for the collection.
+   *
+   * @param CollectionStatusDestinationStatus[] $destinationStatuses
    */
   public function setDestinationStatuses($destinationStatuses)
   {
@@ -80,7 +98,9 @@ class CollectionStatus extends \Google\Collection
     return $this->destinationStatuses;
   }
   /**
-   * @param string
+   * Required. The ID of the collection for which status is reported.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -94,7 +114,11 @@ class CollectionStatus extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Date on which the collection has been last updated in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and
+   * offset, for example "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
+   *
+   * @param string $lastUpdateDate
    */
   public function setLastUpdateDate($lastUpdateDate)
   {

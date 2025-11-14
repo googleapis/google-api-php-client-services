@@ -20,16 +20,22 @@ namespace Google\Service\StreetViewPublish;
 class ImuDataGapFailureDetails extends \Google\Model
 {
   /**
+   * The duration of the gap in IMU data that was found.
+   *
    * @var string
    */
   public $gapDuration;
   /**
+   * Relative time (from the start of the video stream) when the gap started.
+   *
    * @var string
    */
   public $gapStartTime;
 
   /**
-   * @param string
+   * The duration of the gap in IMU data that was found.
+   *
+   * @param string $gapDuration
    */
   public function setGapDuration($gapDuration)
   {
@@ -43,7 +49,9 @@ class ImuDataGapFailureDetails extends \Google\Model
     return $this->gapDuration;
   }
   /**
-   * @param string
+   * Relative time (from the start of the video stream) when the gap started.
+   *
+   * @param string $gapStartTime
    */
   public function setGapStartTime($gapStartTime)
   {

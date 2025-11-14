@@ -20,20 +20,35 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3AgentClientCertificateSettings extends \Google\Model
 {
   /**
+   * Optional. The name of the SecretManager secret version resource storing the
+   * passphrase. 'passphrase' should be left unset if the private key is not
+   * encrypted. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   *
    * @var string
    */
   public $passphrase;
   /**
+   * Required. The name of the SecretManager secret version resource storing the
+   * private key encoded in PEM format. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   *
    * @var string
    */
   public $privateKey;
   /**
+   * Required. The ssl certificate encoded in PEM format. This string must
+   * include the begin header and end footer lines.
+   *
    * @var string
    */
   public $sslCertificate;
 
   /**
-   * @param string
+   * Optional. The name of the SecretManager secret version resource storing the
+   * passphrase. 'passphrase' should be left unset if the private key is not
+   * encrypted. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   *
+   * @param string $passphrase
    */
   public function setPassphrase($passphrase)
   {
@@ -47,7 +62,11 @@ class GoogleCloudDialogflowCxV3AgentClientCertificateSettings extends \Google\Mo
     return $this->passphrase;
   }
   /**
-   * @param string
+   * Required. The name of the SecretManager secret version resource storing the
+   * private key encoded in PEM format. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   *
+   * @param string $privateKey
    */
   public function setPrivateKey($privateKey)
   {
@@ -61,7 +80,10 @@ class GoogleCloudDialogflowCxV3AgentClientCertificateSettings extends \Google\Mo
     return $this->privateKey;
   }
   /**
-   * @param string
+   * Required. The ssl certificate encoded in PEM format. This string must
+   * include the begin header and end footer lines.
+   *
+   * @param string $sslCertificate
    */
   public function setSslCertificate($sslCertificate)
   {

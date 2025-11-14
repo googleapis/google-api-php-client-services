@@ -20,16 +20,24 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ConditionQueryTerm extends \Google\Model
 {
   /**
+   * Whether the search query needs to exactly match the query term.
+   *
    * @var bool
    */
   public $fullMatch;
   /**
+   * The specific query value to match against Must be lowercase, must be UTF-8.
+   * Can have at most 3 space separated terms if full_match is true. Cannot be
+   * an empty string. Maximum length of 5000 characters.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param bool
+   * Whether the search query needs to exactly match the query term.
+   *
+   * @param bool $fullMatch
    */
   public function setFullMatch($fullMatch)
   {
@@ -43,7 +51,11 @@ class GoogleCloudDiscoveryengineV1ConditionQueryTerm extends \Google\Model
     return $this->fullMatch;
   }
   /**
-   * @param string
+   * The specific query value to match against Must be lowercase, must be UTF-8.
+   * Can have at most 3 space separated terms if full_match is true. Cannot be
+   * an empty string. Maximum length of 5000 characters.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

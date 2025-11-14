@@ -23,7 +23,9 @@ class ContactToCreate extends \Google\Model
   protected $contactPersonDataType = '';
 
   /**
-   * @param Person
+   * Required. The person data to populate a newly created source.
+   *
+   * @param Person $contactPerson
    */
   public function setContactPerson(Person $contactPerson)
   {

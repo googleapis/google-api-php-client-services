@@ -24,7 +24,9 @@ class DumpFlags extends \Google\Collection
   protected $dumpFlagsDataType = 'array';
 
   /**
-   * @param DumpFlag[]
+   * The flags for the initial dump.
+   *
+   * @param DumpFlag[] $dumpFlags
    */
   public function setDumpFlags($dumpFlags)
   {

@@ -20,36 +20,65 @@ namespace Google\Service\DisplayVideo;
 class CustomBiddingAlgorithmRules extends \Google\Model
 {
   /**
+   * The rules state are unspecified or unknown in this version.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The rules have been accepted for scoring impressions.
+   */
+  public const STATE_ACCEPTED = 'ACCEPTED';
+  /**
+   * The rules have been rejected by backend pipelines. They may have errors.
+   */
+  public const STATE_REJECTED = 'REJECTED';
+  /**
+   * Output only. Whether the rules resource is currently being used for scoring
+   * by the parent algorithm.
+   *
    * @var bool
    */
   public $active;
   /**
+   * Output only. The time when the rules resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The unique ID of the custom bidding algorithm that the rules
+   * resource belongs to.
+   *
    * @var string
    */
   public $customBiddingAlgorithmId;
   /**
+   * Output only. The unique ID of the rules resource.
+   *
    * @var string
    */
   public $customBiddingAlgorithmRulesId;
   protected $errorType = CustomBiddingAlgorithmRulesError::class;
   protected $errorDataType = '';
   /**
+   * Output only. The resource name of the rules resource.
+   *
    * @var string
    */
   public $name;
   protected $rulesType = CustomBiddingAlgorithmRulesRef::class;
   protected $rulesDataType = '';
   /**
+   * Output only. The state of the rules resource.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param bool
+   * Output only. Whether the rules resource is currently being used for scoring
+   * by the parent algorithm.
+   *
+   * @param bool $active
    */
   public function setActive($active)
   {
@@ -63,7 +92,9 @@ class CustomBiddingAlgorithmRules extends \Google\Model
     return $this->active;
   }
   /**
-   * @param string
+   * Output only. The time when the rules resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -77,7 +108,10 @@ class CustomBiddingAlgorithmRules extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the custom bidding algorithm that the rules
+   * resource belongs to.
+   *
+   * @param string $customBiddingAlgorithmId
    */
   public function setCustomBiddingAlgorithmId($customBiddingAlgorithmId)
   {
@@ -91,7 +125,9 @@ class CustomBiddingAlgorithmRules extends \Google\Model
     return $this->customBiddingAlgorithmId;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the rules resource.
+   *
+   * @param string $customBiddingAlgorithmRulesId
    */
   public function setCustomBiddingAlgorithmRulesId($customBiddingAlgorithmRulesId)
   {
@@ -105,7 +141,10 @@ class CustomBiddingAlgorithmRules extends \Google\Model
     return $this->customBiddingAlgorithmRulesId;
   }
   /**
-   * @param CustomBiddingAlgorithmRulesError
+   * Output only. Error code of the rejected rules resource. This field will
+   * only be populated when the state is `REJECTED`.
+   *
+   * @param CustomBiddingAlgorithmRulesError $error
    */
   public function setError(CustomBiddingAlgorithmRulesError $error)
   {
@@ -119,7 +158,9 @@ class CustomBiddingAlgorithmRules extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * Output only. The resource name of the rules resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -133,7 +174,9 @@ class CustomBiddingAlgorithmRules extends \Google\Model
     return $this->name;
   }
   /**
-   * @param CustomBiddingAlgorithmRulesRef
+   * Required. Immutable. The reference to the uploaded AlgorithmRules file.
+   *
+   * @param CustomBiddingAlgorithmRulesRef $rules
    */
   public function setRules(CustomBiddingAlgorithmRulesRef $rules)
   {
@@ -147,14 +190,18 @@ class CustomBiddingAlgorithmRules extends \Google\Model
     return $this->rules;
   }
   /**
-   * @param string
+   * Output only. The state of the rules resource.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACCEPTED, REJECTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

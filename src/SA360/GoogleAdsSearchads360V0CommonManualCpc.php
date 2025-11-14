@@ -20,12 +20,16 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonManualCpc extends \Google\Model
 {
   /**
+   * Whether bids are to be enhanced based on conversion optimizer data.
+   *
    * @var bool
    */
   public $enhancedCpcEnabled;
 
   /**
-   * @param bool
+   * Whether bids are to be enhanced based on conversion optimizer data.
+   *
+   * @param bool $enhancedCpcEnabled
    */
   public function setEnhancedCpcEnabled($enhancedCpcEnabled)
   {

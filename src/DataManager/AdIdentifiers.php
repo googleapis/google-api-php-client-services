@@ -20,26 +20,39 @@ namespace Google\Service\DataManager;
 class AdIdentifiers extends \Google\Model
 {
   /**
+   * Optional. The click identifier for clicks associated with app events and
+   * originating from iOS devices starting with iOS14.
+   *
    * @var string
    */
   public $gbraid;
   /**
+   * Optional. The Google click ID (gclid) associated with this event.
+   *
    * @var string
    */
   public $gclid;
   protected $landingPageDeviceInfoType = DeviceInfo::class;
   protected $landingPageDeviceInfoDataType = '';
   /**
+   * Optional. Session attributes for event attribution and modeling.
+   *
    * @var string
    */
   public $sessionAttributes;
   /**
+   * Optional. The click identifier for clicks associated with web events and
+   * originating from iOS devices starting with iOS14.
+   *
    * @var string
    */
   public $wbraid;
 
   /**
-   * @param string
+   * Optional. The click identifier for clicks associated with app events and
+   * originating from iOS devices starting with iOS14.
+   *
+   * @param string $gbraid
    */
   public function setGbraid($gbraid)
   {
@@ -53,7 +66,9 @@ class AdIdentifiers extends \Google\Model
     return $this->gbraid;
   }
   /**
-   * @param string
+   * Optional. The Google click ID (gclid) associated with this event.
+   *
+   * @param string $gclid
    */
   public function setGclid($gclid)
   {
@@ -67,7 +82,10 @@ class AdIdentifiers extends \Google\Model
     return $this->gclid;
   }
   /**
-   * @param DeviceInfo
+   * Optional. Information gathered about the device being used (if any) at the
+   * time of landing onto the advertiser’s site after interacting with the ad.
+   *
+   * @param DeviceInfo $landingPageDeviceInfo
    */
   public function setLandingPageDeviceInfo(DeviceInfo $landingPageDeviceInfo)
   {
@@ -81,7 +99,9 @@ class AdIdentifiers extends \Google\Model
     return $this->landingPageDeviceInfo;
   }
   /**
-   * @param string
+   * Optional. Session attributes for event attribution and modeling.
+   *
+   * @param string $sessionAttributes
    */
   public function setSessionAttributes($sessionAttributes)
   {
@@ -95,7 +115,10 @@ class AdIdentifiers extends \Google\Model
     return $this->sessionAttributes;
   }
   /**
-   * @param string
+   * Optional. The click identifier for clicks associated with web events and
+   * originating from iOS devices starting with iOS14.
+   *
+   * @param string $wbraid
    */
   public function setWbraid($wbraid)
   {

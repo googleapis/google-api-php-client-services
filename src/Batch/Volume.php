@@ -21,16 +21,34 @@ class Volume extends \Google\Collection
 {
   protected $collection_key = 'mountOptions';
   /**
+   * Device name of an attached disk volume, which should align with a
+   * device_name specified by
+   * job.allocation_policy.instances[0].policy.disks[i].device_name or defined
+   * by the given instance template in
+   * job.allocation_policy.instances[0].instance_template.
+   *
    * @var string
    */
   public $deviceName;
   protected $gcsType = GCS::class;
   protected $gcsDataType = '';
   /**
+   * Mount options vary based on the type of storage volume: * For a Cloud
+   * Storage bucket, all the mount options provided by the [`gcsfuse`
+   * tool](https://cloud.google.com/storage/docs/gcsfuse-cli) are supported. *
+   * For an existing persistent disk, all mount options provided by the [`mount`
+   * command](https://man7.org/linux/man-pages/man8/mount.8.html) except writing
+   * are supported. This is due to restrictions of [multi-writer
+   * mode](https://cloud.google.com/compute/docs/disks/sharing-disks-between-
+   * vms). * For any other disk or a Network File System (NFS), all the mount
+   * options provided by the `mount` command are supported.
+   *
    * @var string[]
    */
   public $mountOptions;
   /**
+   * The mount path for the volume, e.g. /mnt/disks/share.
+   *
    * @var string
    */
   public $mountPath;
@@ -38,7 +56,13 @@ class Volume extends \Google\Collection
   protected $nfsDataType = '';
 
   /**
-   * @param string
+   * Device name of an attached disk volume, which should align with a
+   * device_name specified by
+   * job.allocation_policy.instances[0].policy.disks[i].device_name or defined
+   * by the given instance template in
+   * job.allocation_policy.instances[0].instance_template.
+   *
+   * @param string $deviceName
    */
   public function setDeviceName($deviceName)
   {
@@ -52,7 +76,9 @@ class Volume extends \Google\Collection
     return $this->deviceName;
   }
   /**
-   * @param GCS
+   * A Google Cloud Storage (GCS) volume.
+   *
+   * @param GCS $gcs
    */
   public function setGcs(GCS $gcs)
   {
@@ -66,7 +92,17 @@ class Volume extends \Google\Collection
     return $this->gcs;
   }
   /**
-   * @param string[]
+   * Mount options vary based on the type of storage volume: * For a Cloud
+   * Storage bucket, all the mount options provided by the [`gcsfuse`
+   * tool](https://cloud.google.com/storage/docs/gcsfuse-cli) are supported. *
+   * For an existing persistent disk, all mount options provided by the [`mount`
+   * command](https://man7.org/linux/man-pages/man8/mount.8.html) except writing
+   * are supported. This is due to restrictions of [multi-writer
+   * mode](https://cloud.google.com/compute/docs/disks/sharing-disks-between-
+   * vms). * For any other disk or a Network File System (NFS), all the mount
+   * options provided by the `mount` command are supported.
+   *
+   * @param string[] $mountOptions
    */
   public function setMountOptions($mountOptions)
   {
@@ -80,7 +116,9 @@ class Volume extends \Google\Collection
     return $this->mountOptions;
   }
   /**
-   * @param string
+   * The mount path for the volume, e.g. /mnt/disks/share.
+   *
+   * @param string $mountPath
    */
   public function setMountPath($mountPath)
   {
@@ -94,7 +132,9 @@ class Volume extends \Google\Collection
     return $this->mountPath;
   }
   /**
-   * @param NFS
+   * A Network File System (NFS) volume. For example, a Filestore file share.
+   *
+   * @param NFS $nfs
    */
   public function setNfs(NFS $nfs)
   {

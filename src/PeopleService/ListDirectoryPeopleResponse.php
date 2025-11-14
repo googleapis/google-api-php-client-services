@@ -21,10 +21,17 @@ class ListDirectoryPeopleResponse extends \Google\Collection
 {
   protected $collection_key = 'people';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * A token, which can be sent as `sync_token` to retrieve changes since the
+   * last request. Request must set `request_sync_token` to return the sync
+   * token.
+   *
    * @var string
    */
   public $nextSyncToken;
@@ -32,7 +39,10 @@ class ListDirectoryPeopleResponse extends \Google\Collection
   protected $peopleDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,11 @@ class ListDirectoryPeopleResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * A token, which can be sent as `sync_token` to retrieve changes since the
+   * last request. Request must set `request_sync_token` to return the sync
+   * token.
+   *
+   * @param string $nextSyncToken
    */
   public function setNextSyncToken($nextSyncToken)
   {
@@ -60,7 +74,9 @@ class ListDirectoryPeopleResponse extends \Google\Collection
     return $this->nextSyncToken;
   }
   /**
-   * @param Person[]
+   * The list of people in the domain directory.
+   *
+   * @param Person[] $people
    */
   public function setPeople($people)
   {

@@ -21,6 +21,8 @@ class JobMetrics extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
+   * Timestamp as of which metric values are current.
+   *
    * @var string
    */
   public $metricTime;
@@ -28,7 +30,9 @@ class JobMetrics extends \Google\Collection
   protected $metricsDataType = 'array';
 
   /**
-   * @param string
+   * Timestamp as of which metric values are current.
+   *
+   * @param string $metricTime
    */
   public function setMetricTime($metricTime)
   {
@@ -42,7 +46,9 @@ class JobMetrics extends \Google\Collection
     return $this->metricTime;
   }
   /**
-   * @param MetricUpdate[]
+   * All metrics for this job.
+   *
+   * @param MetricUpdate[] $metrics
    */
   public function setMetrics($metrics)
   {

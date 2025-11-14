@@ -24,7 +24,9 @@ class AppliedLabelChange extends \Google\Collection
   protected $changesDataType = 'array';
 
   /**
-   * @param AppliedLabelChangeDetail[]
+   * Changes that were made to the Label on the Target.
+   *
+   * @param AppliedLabelChangeDetail[] $changes
    */
   public function setChanges($changes)
   {

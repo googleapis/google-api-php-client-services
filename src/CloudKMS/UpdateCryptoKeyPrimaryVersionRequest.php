@@ -20,12 +20,16 @@ namespace Google\Service\CloudKMS;
 class UpdateCryptoKeyPrimaryVersionRequest extends \Google\Model
 {
   /**
+   * Required. The id of the child CryptoKeyVersion to use as primary.
+   *
    * @var string
    */
   public $cryptoKeyVersionId;
 
   /**
-   * @param string
+   * Required. The id of the child CryptoKeyVersion to use as primary.
+   *
+   * @param string $cryptoKeyVersionId
    */
   public function setCryptoKeyVersionId($cryptoKeyVersionId)
   {

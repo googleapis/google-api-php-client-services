@@ -25,7 +25,9 @@ class GoogleCloudDialogflowCxV3TypeSchema extends \Google\Model
   protected $schemaReferenceDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3InlineSchema
+   * Set if this is an inline schema definition.
+   *
+   * @param GoogleCloudDialogflowCxV3InlineSchema $inlineSchema
    */
   public function setInlineSchema(GoogleCloudDialogflowCxV3InlineSchema $inlineSchema)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDialogflowCxV3TypeSchema extends \Google\Model
     return $this->inlineSchema;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3TypeSchemaSchemaReference
+   * Set if this is a schema reference.
+   *
+   * @param GoogleCloudDialogflowCxV3TypeSchemaSchemaReference $schemaReference
    */
   public function setSchemaReference(GoogleCloudDialogflowCxV3TypeSchemaSchemaReference $schemaReference)
   {

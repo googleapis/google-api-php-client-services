@@ -21,6 +21,9 @@ class TaskGroupStatus extends \Google\Collection
 {
   protected $collection_key = 'instances';
   /**
+   * Count of task in each state in the TaskGroup. The map key is task state
+   * name.
+   *
    * @var string[]
    */
   public $counts;
@@ -28,7 +31,10 @@ class TaskGroupStatus extends \Google\Collection
   protected $instancesDataType = 'array';
 
   /**
-   * @param string[]
+   * Count of task in each state in the TaskGroup. The map key is task state
+   * name.
+   *
+   * @param string[] $counts
    */
   public function setCounts($counts)
   {
@@ -42,7 +48,9 @@ class TaskGroupStatus extends \Google\Collection
     return $this->counts;
   }
   /**
-   * @param InstanceStatus[]
+   * Status of instances allocated for the TaskGroup.
+   *
+   * @param InstanceStatus[] $instances
    */
   public function setInstances($instances)
   {

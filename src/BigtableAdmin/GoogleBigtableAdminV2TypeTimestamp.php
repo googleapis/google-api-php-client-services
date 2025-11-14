@@ -23,7 +23,9 @@ class GoogleBigtableAdminV2TypeTimestamp extends \Google\Model
   protected $encodingDataType = '';
 
   /**
-   * @param GoogleBigtableAdminV2TypeTimestampEncoding
+   * The encoding to use when converting to or from lower level types.
+   *
+   * @param GoogleBigtableAdminV2TypeTimestampEncoding $encoding
    */
   public function setEncoding(GoogleBigtableAdminV2TypeTimestampEncoding $encoding)
   {

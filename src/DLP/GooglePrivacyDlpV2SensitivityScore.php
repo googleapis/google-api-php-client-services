@@ -20,19 +20,51 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2SensitivityScore extends \Google\Model
 {
   /**
+   * Unused.
+   */
+  public const SCORE_SENSITIVITY_SCORE_UNSPECIFIED = 'SENSITIVITY_SCORE_UNSPECIFIED';
+  /**
+   * No sensitive information detected. The resource isn't publicly accessible.
+   */
+  public const SCORE_SENSITIVITY_LOW = 'SENSITIVITY_LOW';
+  /**
+   * Unable to determine sensitivity.
+   */
+  public const SCORE_SENSITIVITY_UNKNOWN = 'SENSITIVITY_UNKNOWN';
+  /**
+   * Medium risk. Contains personally identifiable information (PII),
+   * potentially sensitive data, or fields with free-text data that are at a
+   * higher risk of having intermittent sensitive data. Consider limiting
+   * access.
+   */
+  public const SCORE_SENSITIVITY_MODERATE = 'SENSITIVITY_MODERATE';
+  /**
+   * High risk. Sensitive personally identifiable information (SPII) can be
+   * present. Exfiltration of data can lead to user data loss. Re-identification
+   * of users might be possible. Consider limiting usage and or removing SPII.
+   */
+  public const SCORE_SENSITIVITY_HIGH = 'SENSITIVITY_HIGH';
+  /**
+   * The sensitivity score applied to the resource.
+   *
    * @var string
    */
   public $score;
 
   /**
-   * @param string
+   * The sensitivity score applied to the resource.
+   *
+   * Accepted values: SENSITIVITY_SCORE_UNSPECIFIED, SENSITIVITY_LOW,
+   * SENSITIVITY_UNKNOWN, SENSITIVITY_MODERATE, SENSITIVITY_HIGH
+   *
+   * @param self::SCORE_* $score
    */
   public function setScore($score)
   {
     $this->score = $score;
   }
   /**
-   * @return string
+   * @return self::SCORE_*
    */
   public function getScore()
   {

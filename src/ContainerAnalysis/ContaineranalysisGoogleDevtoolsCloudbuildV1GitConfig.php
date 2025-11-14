@@ -23,7 +23,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfig extends \Google\Model
   protected $httpDataType = '';
 
   /**
-   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfigHttpConfig
+   * Configuration for HTTP related git operations.
+   *
+   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfigHttpConfig $http
    */
   public function setHttp(ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfigHttpConfig $http)
   {

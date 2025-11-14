@@ -23,12 +23,17 @@ class GoogleCloudMlV1ListModelsResponse extends \Google\Collection
   protected $modelsType = GoogleCloudMlV1Model::class;
   protected $modelsDataType = 'array';
   /**
+   * Optional. Pass this token as the `page_token` field of the request for a
+   * subsequent call.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudMlV1Model[]
+   * The list of models.
+   *
+   * @param GoogleCloudMlV1Model[] $models
    */
   public function setModels($models)
   {
@@ -42,7 +47,10 @@ class GoogleCloudMlV1ListModelsResponse extends \Google\Collection
     return $this->models;
   }
   /**
-   * @param string
+   * Optional. Pass this token as the `page_token` field of the request for a
+   * subsequent call.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

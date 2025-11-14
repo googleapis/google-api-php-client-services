@@ -20,6 +20,9 @@ namespace Google\Service\BigtableAdmin;
 class GoogleBigtableAdminV2TypeStructField extends \Google\Model
 {
   /**
+   * The field name (optional). Fields without a `field_name` are considered
+   * anonymous and cannot be referenced by name.
+   *
    * @var string
    */
   public $fieldName;
@@ -27,7 +30,10 @@ class GoogleBigtableAdminV2TypeStructField extends \Google\Model
   protected $typeDataType = '';
 
   /**
-   * @param string
+   * The field name (optional). Fields without a `field_name` are considered
+   * anonymous and cannot be referenced by name.
+   *
+   * @param string $fieldName
    */
   public function setFieldName($fieldName)
   {
@@ -41,7 +47,9 @@ class GoogleBigtableAdminV2TypeStructField extends \Google\Model
     return $this->fieldName;
   }
   /**
-   * @param Type
+   * The type of values in this field.
+   *
+   * @param Type $type
    */
   public function setType(Type $type)
   {

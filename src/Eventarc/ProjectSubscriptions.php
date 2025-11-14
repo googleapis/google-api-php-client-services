@@ -21,12 +21,24 @@ class ProjectSubscriptions extends \Google\Collection
 {
   protected $collection_key = 'list';
   /**
+   * Required. A list of projects to receive events from. All the projects must
+   * be in the same org. The listed projects should have the format
+   * project/{identifier} where identifier can be either the project id for
+   * project number. A single list may contain both formats. At most 100
+   * projects can be listed.
+   *
    * @var string[]
    */
   public $list;
 
   /**
-   * @param string[]
+   * Required. A list of projects to receive events from. All the projects must
+   * be in the same org. The listed projects should have the format
+   * project/{identifier} where identifier can be either the project id for
+   * project number. A single list may contain both formats. At most 100
+   * projects can be listed.
+   *
+   * @param string[] $list
    */
   public function setList($list)
   {

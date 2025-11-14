@@ -19,23 +19,49 @@ namespace Google\Service\SecurityPosture;
 
 class SecurityHealthAnalyticsCustomModule extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const MODULE_ENABLEMENT_STATE_ENABLEMENT_STATE_UNSPECIFIED = 'ENABLEMENT_STATE_UNSPECIFIED';
+  /**
+   * The detector or custom module is enabled.
+   */
+  public const MODULE_ENABLEMENT_STATE_ENABLED = 'ENABLED';
+  /**
+   * The detector or custom module is disabled.
+   */
+  public const MODULE_ENABLEMENT_STATE_DISABLED = 'DISABLED';
   protected $configType = CustomConfig::class;
   protected $configDataType = '';
   /**
+   * Optional. The display name of the custom module. This value is used as the
+   * finding category for all the asset violation findings that the custom
+   * module returns. The display name must contain between 1 and 128
+   * alphanumeric characters or underscores, and it must start with a lowercase
+   * letter.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Immutable. The unique identifier for the custom module.
+   * Contains 1 to 20 digits.
+   *
    * @var string
    */
   public $id;
   /**
+   * Whether the custom module is enabled at a specified level of the resource
+   * hierarchy.
+   *
    * @var string
    */
   public $moduleEnablementState;
 
   /**
-   * @param CustomConfig
+   * Required. Configuration settings for the custom module.
+   *
+   * @param CustomConfig $config
    */
   public function setConfig(CustomConfig $config)
   {
@@ -49,7 +75,13 @@ class SecurityHealthAnalyticsCustomModule extends \Google\Model
     return $this->config;
   }
   /**
-   * @param string
+   * Optional. The display name of the custom module. This value is used as the
+   * finding category for all the asset violation findings that the custom
+   * module returns. The display name must contain between 1 and 128
+   * alphanumeric characters or underscores, and it must start with a lowercase
+   * letter.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -63,7 +95,10 @@ class SecurityHealthAnalyticsCustomModule extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Immutable. The unique identifier for the custom module.
+   * Contains 1 to 20 digits.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -77,14 +112,19 @@ class SecurityHealthAnalyticsCustomModule extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Whether the custom module is enabled at a specified level of the resource
+   * hierarchy.
+   *
+   * Accepted values: ENABLEMENT_STATE_UNSPECIFIED, ENABLED, DISABLED
+   *
+   * @param self::MODULE_ENABLEMENT_STATE_* $moduleEnablementState
    */
   public function setModuleEnablementState($moduleEnablementState)
   {
     $this->moduleEnablementState = $moduleEnablementState;
   }
   /**
-   * @return string
+   * @return self::MODULE_ENABLEMENT_STATE_*
    */
   public function getModuleEnablementState()
   {

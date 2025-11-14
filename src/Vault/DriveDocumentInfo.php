@@ -23,7 +23,9 @@ class DriveDocumentInfo extends \Google\Model
   protected $documentIdsDataType = '';
 
   /**
-   * @param DriveDocumentIds
+   * Specify Drive documents by document ID.
+   *
+   * @param DriveDocumentIds $documentIds
    */
   public function setDocumentIds(DriveDocumentIds $documentIds)
   {

@@ -21,18 +21,25 @@ class LiasettingsGetAccessibleGmbAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'gmbAccounts';
   /**
+   * The ID of the Merchant Center account.
+   *
    * @var string
    */
   public $accountId;
   protected $gmbAccountsType = GmbAccountsGmbAccount::class;
   protected $gmbAccountsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsGetAccessibleGmbAccountsResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * The ID of the Merchant Center account.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -46,7 +53,9 @@ class LiasettingsGetAccessibleGmbAccountsResponse extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param GmbAccountsGmbAccount[]
+   * A list of Business Profiles which are available to the merchant.
+   *
+   * @param GmbAccountsGmbAccount[] $gmbAccounts
    */
   public function setGmbAccounts($gmbAccounts)
   {
@@ -60,7 +69,10 @@ class LiasettingsGetAccessibleGmbAccountsResponse extends \Google\Collection
     return $this->gmbAccounts;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsGetAccessibleGmbAccountsResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

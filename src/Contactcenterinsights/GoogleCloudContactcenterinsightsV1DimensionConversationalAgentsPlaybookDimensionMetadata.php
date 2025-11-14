@@ -20,16 +20,22 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsPlaybookDimensionMetadata extends \Google\Model
 {
   /**
+   * Optional. The dialogflow playbook display name.
+   *
    * @var string
    */
   public $playbookDisplayName;
   /**
+   * Optional. The dialogflow playbook ID.
+   *
    * @var string
    */
   public $playbookId;
 
   /**
-   * @param string
+   * Optional. The dialogflow playbook display name.
+   *
+   * @param string $playbookDisplayName
    */
   public function setPlaybookDisplayName($playbookDisplayName)
   {
@@ -43,7 +49,9 @@ class GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsPlaybookDim
     return $this->playbookDisplayName;
   }
   /**
-   * @param string
+   * Optional. The dialogflow playbook ID.
+   *
+   * @param string $playbookId
    */
   public function setPlaybookId($playbookId)
   {

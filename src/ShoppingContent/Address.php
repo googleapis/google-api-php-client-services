@@ -20,28 +20,44 @@ namespace Google\Service\ShoppingContent;
 class Address extends \Google\Model
 {
   /**
+   * Required. Top-level administrative subdivision of the country. For example,
+   * a state like California ("CA") or a province like Quebec ("QC").
+   *
    * @var string
    */
   public $administrativeArea;
   /**
+   * Required. City, town or commune. May also include dependent localities or
+   * sublocalities (for example, neighborhoods or suburbs).
+   *
    * @var string
    */
   public $city;
   /**
+   * Required. [CLDR country code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml) (for example, "US").
+   *
    * @var string
    */
   public $country;
   /**
+   * Required. Postal code or ZIP (for example, "94043").
+   *
    * @var string
    */
   public $postalCode;
   /**
+   * Street-level part of the address. Use `\n` to add a second line.
+   *
    * @var string
    */
   public $streetAddress;
 
   /**
-   * @param string
+   * Required. Top-level administrative subdivision of the country. For example,
+   * a state like California ("CA") or a province like Quebec ("QC").
+   *
+   * @param string $administrativeArea
    */
   public function setAdministrativeArea($administrativeArea)
   {
@@ -55,7 +71,10 @@ class Address extends \Google\Model
     return $this->administrativeArea;
   }
   /**
-   * @param string
+   * Required. City, town or commune. May also include dependent localities or
+   * sublocalities (for example, neighborhoods or suburbs).
+   *
+   * @param string $city
    */
   public function setCity($city)
   {
@@ -69,7 +88,10 @@ class Address extends \Google\Model
     return $this->city;
   }
   /**
-   * @param string
+   * Required. [CLDR country code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml) (for example, "US").
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -83,7 +105,9 @@ class Address extends \Google\Model
     return $this->country;
   }
   /**
-   * @param string
+   * Required. Postal code or ZIP (for example, "94043").
+   *
+   * @param string $postalCode
    */
   public function setPostalCode($postalCode)
   {
@@ -97,7 +121,9 @@ class Address extends \Google\Model
     return $this->postalCode;
   }
   /**
-   * @param string
+   * Street-level part of the address. Use `\n` to add a second line.
+   *
+   * @param string $streetAddress
    */
   public function setStreetAddress($streetAddress)
   {

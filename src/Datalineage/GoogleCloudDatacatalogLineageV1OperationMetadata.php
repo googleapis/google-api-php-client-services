@@ -20,32 +20,80 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageV1OperationMetadata extends \Google\Model
 {
   /**
+   * Unused.
+   */
+  public const OPERATION_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * The resource deletion operation.
+   */
+  public const OPERATION_TYPE_DELETE = 'DELETE';
+  /**
+   * The resource creation operation.
+   */
+  public const OPERATION_TYPE_CREATE = 'CREATE';
+  /**
+   * Unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The operation has been created but is not yet started.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The operation is underway.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The operation completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The operation is no longer running and did not succeed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Output only. The timestamp of the operation submission to the server.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The timestamp of the operation termination, regardless of its
+   * success. This field is unset if the operation is still ongoing.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. The type of the operation being performed.
+   *
    * @var string
    */
   public $operationType;
   /**
+   * Output only. The [relative name] (https://cloud.google.com//apis/design/res
+   * ource_names#relative_resource_name) of the resource being operated on.
+   *
    * @var string
    */
   public $resource;
   /**
+   * Output only. The UUID of the resource being operated on.
+   *
    * @var string
    */
   public $resourceUuid;
   /**
+   * Output only. The current operation state.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The timestamp of the operation submission to the server.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -59,7 +107,10 @@ class GoogleCloudDatacatalogLineageV1OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The timestamp of the operation termination, regardless of its
+   * success. This field is unset if the operation is still ongoing.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -73,21 +124,28 @@ class GoogleCloudDatacatalogLineageV1OperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. The type of the operation being performed.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, DELETE, CREATE
+   *
+   * @param self::OPERATION_TYPE_* $operationType
    */
   public function setOperationType($operationType)
   {
     $this->operationType = $operationType;
   }
   /**
-   * @return string
+   * @return self::OPERATION_TYPE_*
    */
   public function getOperationType()
   {
     return $this->operationType;
   }
   /**
-   * @param string
+   * Output only. The [relative name] (https://cloud.google.com//apis/design/res
+   * ource_names#relative_resource_name) of the resource being operated on.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -101,7 +159,9 @@ class GoogleCloudDatacatalogLineageV1OperationMetadata extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * Output only. The UUID of the resource being operated on.
+   *
+   * @param string $resourceUuid
    */
   public function setResourceUuid($resourceUuid)
   {
@@ -115,14 +175,18 @@ class GoogleCloudDatacatalogLineageV1OperationMetadata extends \Google\Model
     return $this->resourceUuid;
   }
   /**
-   * @param string
+   * Output only. The current operation state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, RUNNING, SUCCEEDED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -22,20 +22,30 @@ class AdditionalPodNetworkConfig extends \Google\Model
   protected $maxPodsPerNodeType = MaxPodsConstraint::class;
   protected $maxPodsPerNodeDataType = '';
   /**
+   * The name of the network attachment for pods to communicate to; cannot be
+   * specified along with subnetwork or secondary_pod_range.
+   *
    * @var string
    */
   public $networkAttachment;
   /**
+   * The name of the secondary range on the subnet which provides IP address for
+   * this pod range.
+   *
    * @var string
    */
   public $secondaryPodRange;
   /**
+   * Name of the subnetwork where the additional pod network belongs.
+   *
    * @var string
    */
   public $subnetwork;
 
   /**
-   * @param MaxPodsConstraint
+   * The maximum number of pods per node which use this pod network.
+   *
+   * @param MaxPodsConstraint $maxPodsPerNode
    */
   public function setMaxPodsPerNode(MaxPodsConstraint $maxPodsPerNode)
   {
@@ -49,7 +59,10 @@ class AdditionalPodNetworkConfig extends \Google\Model
     return $this->maxPodsPerNode;
   }
   /**
-   * @param string
+   * The name of the network attachment for pods to communicate to; cannot be
+   * specified along with subnetwork or secondary_pod_range.
+   *
+   * @param string $networkAttachment
    */
   public function setNetworkAttachment($networkAttachment)
   {
@@ -63,7 +76,10 @@ class AdditionalPodNetworkConfig extends \Google\Model
     return $this->networkAttachment;
   }
   /**
-   * @param string
+   * The name of the secondary range on the subnet which provides IP address for
+   * this pod range.
+   *
+   * @param string $secondaryPodRange
    */
   public function setSecondaryPodRange($secondaryPodRange)
   {
@@ -77,7 +93,9 @@ class AdditionalPodNetworkConfig extends \Google\Model
     return $this->secondaryPodRange;
   }
   /**
-   * @param string
+   * Name of the subnetwork where the additional pod network belongs.
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {

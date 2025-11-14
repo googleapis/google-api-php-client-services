@@ -21,6 +21,10 @@ class ListQueriesResponse extends \Google\Collection
 {
   protected $collection_key = 'queries';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `queries.list` method to
+   * retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListQueriesResponse extends \Google\Collection
   protected $queriesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `queries.list` method to
+   * retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListQueriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Query[]
+   * The list of queries. This field will be absent if empty.
+   *
+   * @param Query[] $queries
    */
   public function setQueries($queries)
   {

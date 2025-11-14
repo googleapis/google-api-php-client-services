@@ -23,20 +23,34 @@ class AdvanceRolloutRule extends \Google\Collection
   protected $conditionType = AutomationRuleCondition::class;
   protected $conditionDataType = '';
   /**
+   * Required. ID of the rule. This id must be unique in the `Automation`
+   * resource to which this rule belongs. The format is
+   * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
+   *
    * @var string
    */
   public $id;
   /**
+   * Optional. Proceeds only after phase name matched any one in the list. This
+   * value must consist of lower-case letters, numbers, and hyphens, start with
+   * a letter and end with a letter or a number, and have a max length of 63
+   * characters. In other words, it must match the following regex:
+   * `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+   *
    * @var string[]
    */
   public $sourcePhases;
   /**
+   * Optional. How long to wait after a rollout is finished.
+   *
    * @var string
    */
   public $wait;
 
   /**
-   * @param AutomationRuleCondition
+   * Output only. Information around the state of the Automation rule.
+   *
+   * @param AutomationRuleCondition $condition
    */
   public function setCondition(AutomationRuleCondition $condition)
   {
@@ -50,7 +64,11 @@ class AdvanceRolloutRule extends \Google\Collection
     return $this->condition;
   }
   /**
-   * @param string
+   * Required. ID of the rule. This id must be unique in the `Automation`
+   * resource to which this rule belongs. The format is
+   * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -64,7 +82,13 @@ class AdvanceRolloutRule extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string[]
+   * Optional. Proceeds only after phase name matched any one in the list. This
+   * value must consist of lower-case letters, numbers, and hyphens, start with
+   * a letter and end with a letter or a number, and have a max length of 63
+   * characters. In other words, it must match the following regex:
+   * `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+   *
+   * @param string[] $sourcePhases
    */
   public function setSourcePhases($sourcePhases)
   {
@@ -78,7 +102,9 @@ class AdvanceRolloutRule extends \Google\Collection
     return $this->sourcePhases;
   }
   /**
-   * @param string
+   * Optional. How long to wait after a rollout is finished.
+   *
+   * @param string $wait
    */
   public function setWait($wait)
   {

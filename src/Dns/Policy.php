@@ -23,20 +23,32 @@ class Policy extends \Google\Collection
   protected $alternativeNameServerConfigType = PolicyAlternativeNameServerConfig::class;
   protected $alternativeNameServerConfigDataType = '';
   /**
+   * A mutable string of at most 1024 characters associated with this resource
+   * for the user's convenience. Has no effect on the policy's function.
+   *
    * @var string
    */
   public $description;
   protected $dns64ConfigType = PolicyDns64Config::class;
   protected $dns64ConfigDataType = '';
   /**
+   * Allows networks bound to this policy to receive DNS queries sent by VMs or
+   * applications over VPN connections. When enabled, a virtual IP address is
+   * allocated from each of the subnetworks that are bound to this policy.
+   *
    * @var bool
    */
   public $enableInboundForwarding;
   /**
+   * Controls whether logging is enabled for the networks bound to this policy.
+   * Defaults to no logging if not set.
+   *
    * @var bool
    */
   public $enableLogging;
   /**
+   * Unique identifier for the resource; defined by the server (output only).
+   *
    * @var string
    */
   public $id;
@@ -45,6 +57,8 @@ class Policy extends \Google\Collection
    */
   public $kind;
   /**
+   * User-assigned name for this policy.
+   *
    * @var string
    */
   public $name;
@@ -52,7 +66,12 @@ class Policy extends \Google\Collection
   protected $networksDataType = 'array';
 
   /**
-   * @param PolicyAlternativeNameServerConfig
+   * Sets an alternative name server for the associated networks. When
+   * specified, all DNS queries are forwarded to a name server that you choose.
+   * Names such as .internal are not available when an alternative name server
+   * is specified.
+   *
+   * @param PolicyAlternativeNameServerConfig $alternativeNameServerConfig
    */
   public function setAlternativeNameServerConfig(PolicyAlternativeNameServerConfig $alternativeNameServerConfig)
   {
@@ -66,7 +85,10 @@ class Policy extends \Google\Collection
     return $this->alternativeNameServerConfig;
   }
   /**
-   * @param string
+   * A mutable string of at most 1024 characters associated with this resource
+   * for the user's convenience. Has no effect on the policy's function.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -80,7 +102,9 @@ class Policy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param PolicyDns64Config
+   * Configurations related to DNS64 for this policy.
+   *
+   * @param PolicyDns64Config $dns64Config
    */
   public function setDns64Config(PolicyDns64Config $dns64Config)
   {
@@ -94,7 +118,11 @@ class Policy extends \Google\Collection
     return $this->dns64Config;
   }
   /**
-   * @param bool
+   * Allows networks bound to this policy to receive DNS queries sent by VMs or
+   * applications over VPN connections. When enabled, a virtual IP address is
+   * allocated from each of the subnetworks that are bound to this policy.
+   *
+   * @param bool $enableInboundForwarding
    */
   public function setEnableInboundForwarding($enableInboundForwarding)
   {
@@ -108,7 +136,10 @@ class Policy extends \Google\Collection
     return $this->enableInboundForwarding;
   }
   /**
-   * @param bool
+   * Controls whether logging is enabled for the networks bound to this policy.
+   * Defaults to no logging if not set.
+   *
+   * @param bool $enableLogging
    */
   public function setEnableLogging($enableLogging)
   {
@@ -122,7 +153,9 @@ class Policy extends \Google\Collection
     return $this->enableLogging;
   }
   /**
-   * @param string
+   * Unique identifier for the resource; defined by the server (output only).
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -136,7 +169,7 @@ class Policy extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -150,7 +183,9 @@ class Policy extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * User-assigned name for this policy.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -164,7 +199,9 @@ class Policy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PolicyNetwork[]
+   * List of network names specifying networks to which this policy is applied.
+   *
+   * @param PolicyNetwork[] $networks
    */
   public function setNetworks($networks)
   {

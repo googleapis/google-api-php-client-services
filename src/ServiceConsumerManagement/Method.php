@@ -19,46 +19,84 @@ namespace Google\Service\ServiceConsumerManagement;
 
 class Method extends \Google\Collection
 {
+  /**
+   * Syntax `proto2`.
+   */
+  public const SYNTAX_SYNTAX_PROTO2 = 'SYNTAX_PROTO2';
+  /**
+   * Syntax `proto3`.
+   */
+  public const SYNTAX_SYNTAX_PROTO3 = 'SYNTAX_PROTO3';
+  /**
+   * Syntax `editions`.
+   */
+  public const SYNTAX_SYNTAX_EDITIONS = 'SYNTAX_EDITIONS';
   protected $collection_key = 'options';
   /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS. This
+   * field should be ignored, instead the edition should be inherited from Api.
+   * This is similar to Field and EnumValue.
+   *
+   * @deprecated
    * @var string
    */
   public $edition;
   /**
+   * The simple name of this method.
+   *
    * @var string
    */
   public $name;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
   /**
+   * If true, the request is streamed.
+   *
    * @var bool
    */
   public $requestStreaming;
   /**
+   * A URL of the input message type.
+   *
    * @var string
    */
   public $requestTypeUrl;
   /**
+   * If true, the response is streamed.
+   *
    * @var bool
    */
   public $responseStreaming;
   /**
+   * The URL of the output message type.
+   *
    * @var string
    */
   public $responseTypeUrl;
   /**
+   * The source syntax of this method. This field should be ignored, instead the
+   * syntax should be inherited from Api. This is similar to Field and
+   * EnumValue.
+   *
+   * @deprecated
    * @var string
    */
   public $syntax;
 
   /**
-   * @param string
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS. This
+   * field should be ignored, instead the edition should be inherited from Api.
+   * This is similar to Field and EnumValue.
+   *
+   * @deprecated
+   * @param string $edition
    */
   public function setEdition($edition)
   {
     $this->edition = $edition;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getEdition()
@@ -66,7 +104,9 @@ class Method extends \Google\Collection
     return $this->edition;
   }
   /**
-   * @param string
+   * The simple name of this method.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +120,9 @@ class Method extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Option[]
+   * Any metadata attached to the method.
+   *
+   * @param Option[] $options
    */
   public function setOptions($options)
   {
@@ -94,7 +136,9 @@ class Method extends \Google\Collection
     return $this->options;
   }
   /**
-   * @param bool
+   * If true, the request is streamed.
+   *
+   * @param bool $requestStreaming
    */
   public function setRequestStreaming($requestStreaming)
   {
@@ -108,7 +152,9 @@ class Method extends \Google\Collection
     return $this->requestStreaming;
   }
   /**
-   * @param string
+   * A URL of the input message type.
+   *
+   * @param string $requestTypeUrl
    */
   public function setRequestTypeUrl($requestTypeUrl)
   {
@@ -122,7 +168,9 @@ class Method extends \Google\Collection
     return $this->requestTypeUrl;
   }
   /**
-   * @param bool
+   * If true, the response is streamed.
+   *
+   * @param bool $responseStreaming
    */
   public function setResponseStreaming($responseStreaming)
   {
@@ -136,7 +184,9 @@ class Method extends \Google\Collection
     return $this->responseStreaming;
   }
   /**
-   * @param string
+   * The URL of the output message type.
+   *
+   * @param string $responseTypeUrl
    */
   public function setResponseTypeUrl($responseTypeUrl)
   {
@@ -150,14 +200,22 @@ class Method extends \Google\Collection
     return $this->responseTypeUrl;
   }
   /**
-   * @param string
+   * The source syntax of this method. This field should be ignored, instead the
+   * syntax should be inherited from Api. This is similar to Field and
+   * EnumValue.
+   *
+   * Accepted values: SYNTAX_PROTO2, SYNTAX_PROTO3, SYNTAX_EDITIONS
+   *
+   * @deprecated
+   * @param self::SYNTAX_* $syntax
    */
   public function setSyntax($syntax)
   {
     $this->syntax = $syntax;
   }
   /**
-   * @return string
+   * @deprecated
+   * @return self::SYNTAX_*
    */
   public function getSyntax()
   {

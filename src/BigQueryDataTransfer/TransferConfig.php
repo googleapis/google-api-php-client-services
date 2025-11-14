@@ -20,26 +20,84 @@ namespace Google\Service\BigQueryDataTransfer;
 class TransferConfig extends \Google\Model
 {
   /**
+   * Type unspecified. This defaults to `NATIVE` table.
+   */
+  public const MANAGED_TABLE_TYPE_MANAGED_TABLE_TYPE_UNSPECIFIED = 'MANAGED_TABLE_TYPE_UNSPECIFIED';
+  /**
+   * The managed table is a native BigQuery table. This is the default value.
+   */
+  public const MANAGED_TABLE_TYPE_NATIVE = 'NATIVE';
+  /**
+   * The managed table is a BigQuery table for Apache Iceberg (formerly BigLake
+   * managed tables), with a BigLake configuration.
+   */
+  public const MANAGED_TABLE_TYPE_BIGLAKE = 'BIGLAKE';
+  /**
+   * State placeholder (0).
+   */
+  public const STATE_TRANSFER_STATE_UNSPECIFIED = 'TRANSFER_STATE_UNSPECIFIED';
+  /**
+   * Data transfer is scheduled and is waiting to be picked up by data transfer
+   * backend (2).
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * Data transfer is in progress (3).
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * Data transfer completed successfully (4).
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Data transfer failed (5).
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Data transfer is cancelled (6).
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The number of days to look back to automatically refresh the data. For
+   * example, if `data_refresh_window_days = 10`, then every day BigQuery
+   * reingests data for [today-10, today-1], rather than ingesting data for just
+   * [today-1]. Only valid if the data source supports the feature. Set the
+   * value to 0 to use the default value.
+   *
    * @var int
    */
   public $dataRefreshWindowDays;
   /**
+   * Data source ID. This cannot be changed once data transfer is created. The
+   * full list of available data source IDs can be returned through an API call:
+   * https://cloud.google.com/bigquery-transfer/docs/reference/datatransfer/rest
+   * /v1/projects.locations.dataSources/list
+   *
    * @var string
    */
   public $dataSourceId;
   /**
+   * Output only. Region in which BigQuery dataset is located.
+   *
    * @var string
    */
   public $datasetRegion;
   /**
+   * The BigQuery target dataset id.
+   *
    * @var string
    */
   public $destinationDatasetId;
   /**
+   * Is this config disabled. When set to true, no runs will be scheduled for
+   * this transfer config.
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * User specified display name for the data transfer.
+   *
    * @var string
    */
   public $displayName;
@@ -50,28 +108,58 @@ class TransferConfig extends \Google\Model
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * The classification of the destination table.
+   *
    * @var string
    */
   public $managedTableType;
   /**
+   * Identifier. The resource name of the transfer config. Transfer config names
+   * have the form either
+   * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
+   * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is
+   * usually a UUID, even though it is not guaranteed or required. The name is
+   * ignored when creating a transfer config.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Next time when data transfer will run.
+   *
    * @var string
    */
   public $nextRunTime;
   /**
+   * Pub/Sub topic where notifications will be sent after transfer runs
+   * associated with this transfer config finish. The format for specifying a
+   * pubsub topic is: `projects/{project_id}/topics/{topic_id}`
+   *
    * @var string
    */
   public $notificationPubsubTopic;
   protected $ownerInfoType = UserInfo::class;
   protected $ownerInfoDataType = '';
   /**
+   * Parameters specific to each data source. For more information see the bq
+   * tab in the 'Setting up a data transfer' section for each data source. For
+   * example the parameters for Cloud Storage transfers are listed here:
+   * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+   *
    * @var array[]
    */
   public $params;
   /**
+   * Data transfer schedule. If the data source does not support a custom
+   * schedule, this should be empty. If it is empty, the default value for the
+   * data source will be used. The specified times are in UTC. Examples of valid
+   * format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`,
+   * and `first sunday of quarter 00:00`. See more explanation about the format
+   * here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-
+   * jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time
+   * between recurring transfers depends on the data source; refer to the
+   * documentation for your data source.
+   *
    * @var string
    */
   public $schedule;
@@ -80,20 +168,32 @@ class TransferConfig extends \Google\Model
   protected $scheduleOptionsV2Type = ScheduleOptionsV2::class;
   protected $scheduleOptionsV2DataType = '';
   /**
+   * Output only. State of the most recently updated transfer run.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Data transfer modification time. Ignored by server on input.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Deprecated. Unique ID of the user on whose behalf transfer is done.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param int
+   * The number of days to look back to automatically refresh the data. For
+   * example, if `data_refresh_window_days = 10`, then every day BigQuery
+   * reingests data for [today-10, today-1], rather than ingesting data for just
+   * [today-1]. Only valid if the data source supports the feature. Set the
+   * value to 0 to use the default value.
+   *
+   * @param int $dataRefreshWindowDays
    */
   public function setDataRefreshWindowDays($dataRefreshWindowDays)
   {
@@ -107,7 +207,12 @@ class TransferConfig extends \Google\Model
     return $this->dataRefreshWindowDays;
   }
   /**
-   * @param string
+   * Data source ID. This cannot be changed once data transfer is created. The
+   * full list of available data source IDs can be returned through an API call:
+   * https://cloud.google.com/bigquery-transfer/docs/reference/datatransfer/rest
+   * /v1/projects.locations.dataSources/list
+   *
+   * @param string $dataSourceId
    */
   public function setDataSourceId($dataSourceId)
   {
@@ -121,7 +226,9 @@ class TransferConfig extends \Google\Model
     return $this->dataSourceId;
   }
   /**
-   * @param string
+   * Output only. Region in which BigQuery dataset is located.
+   *
+   * @param string $datasetRegion
    */
   public function setDatasetRegion($datasetRegion)
   {
@@ -135,7 +242,9 @@ class TransferConfig extends \Google\Model
     return $this->datasetRegion;
   }
   /**
-   * @param string
+   * The BigQuery target dataset id.
+   *
+   * @param string $destinationDatasetId
    */
   public function setDestinationDatasetId($destinationDatasetId)
   {
@@ -149,7 +258,10 @@ class TransferConfig extends \Google\Model
     return $this->destinationDatasetId;
   }
   /**
-   * @param bool
+   * Is this config disabled. When set to true, no runs will be scheduled for
+   * this transfer config.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -163,7 +275,9 @@ class TransferConfig extends \Google\Model
     return $this->disabled;
   }
   /**
-   * @param string
+   * User specified display name for the data transfer.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -177,7 +291,10 @@ class TransferConfig extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param EmailPreferences
+   * Email notifications will be sent according to these preferences to the
+   * email address of the user who owns this transfer config.
+   *
+   * @param EmailPreferences $emailPreferences
    */
   public function setEmailPreferences(EmailPreferences $emailPreferences)
   {
@@ -191,7 +308,13 @@ class TransferConfig extends \Google\Model
     return $this->emailPreferences;
   }
   /**
-   * @param EncryptionConfiguration
+   * The encryption configuration part. Currently, it is only used for the
+   * optional KMS key name. The BigQuery service account of your project must be
+   * granted permissions to use the key. Read methods will return the key name
+   * applied in effect. Write methods will apply the key if it is present, or
+   * otherwise try to apply project default keys if it is absent.
+   *
+   * @param EncryptionConfiguration $encryptionConfiguration
    */
   public function setEncryptionConfiguration(EncryptionConfiguration $encryptionConfiguration)
   {
@@ -205,7 +328,10 @@ class TransferConfig extends \Google\Model
     return $this->encryptionConfiguration;
   }
   /**
-   * @param Status
+   * Output only. Error code with detailed information about reason of the
+   * latest config failure.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -219,21 +345,32 @@ class TransferConfig extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * The classification of the destination table.
+   *
+   * Accepted values: MANAGED_TABLE_TYPE_UNSPECIFIED, NATIVE, BIGLAKE
+   *
+   * @param self::MANAGED_TABLE_TYPE_* $managedTableType
    */
   public function setManagedTableType($managedTableType)
   {
     $this->managedTableType = $managedTableType;
   }
   /**
-   * @return string
+   * @return self::MANAGED_TABLE_TYPE_*
    */
   public function getManagedTableType()
   {
     return $this->managedTableType;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the transfer config. Transfer config names
+   * have the form either
+   * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
+   * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is
+   * usually a UUID, even though it is not guaranteed or required. The name is
+   * ignored when creating a transfer config.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -247,7 +384,9 @@ class TransferConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Next time when data transfer will run.
+   *
+   * @param string $nextRunTime
    */
   public function setNextRunTime($nextRunTime)
   {
@@ -261,7 +400,11 @@ class TransferConfig extends \Google\Model
     return $this->nextRunTime;
   }
   /**
-   * @param string
+   * Pub/Sub topic where notifications will be sent after transfer runs
+   * associated with this transfer config finish. The format for specifying a
+   * pubsub topic is: `projects/{project_id}/topics/{topic_id}`
+   *
+   * @param string $notificationPubsubTopic
    */
   public function setNotificationPubsubTopic($notificationPubsubTopic)
   {
@@ -275,7 +418,11 @@ class TransferConfig extends \Google\Model
     return $this->notificationPubsubTopic;
   }
   /**
-   * @param UserInfo
+   * Output only. Information about the user whose credentials are used to
+   * transfer data. Populated only for `transferConfigs.get` requests. In case
+   * the user information is not available, this field will not be populated.
+   *
+   * @param UserInfo $ownerInfo
    */
   public function setOwnerInfo(UserInfo $ownerInfo)
   {
@@ -289,7 +436,12 @@ class TransferConfig extends \Google\Model
     return $this->ownerInfo;
   }
   /**
-   * @param array[]
+   * Parameters specific to each data source. For more information see the bq
+   * tab in the 'Setting up a data transfer' section for each data source. For
+   * example the parameters for Cloud Storage transfers are listed here:
+   * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+   *
+   * @param array[] $params
    */
   public function setParams($params)
   {
@@ -303,7 +455,17 @@ class TransferConfig extends \Google\Model
     return $this->params;
   }
   /**
-   * @param string
+   * Data transfer schedule. If the data source does not support a custom
+   * schedule, this should be empty. If it is empty, the default value for the
+   * data source will be used. The specified times are in UTC. Examples of valid
+   * format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`,
+   * and `first sunday of quarter 00:00`. See more explanation about the format
+   * here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-
+   * jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time
+   * between recurring transfers depends on the data source; refer to the
+   * documentation for your data source.
+   *
+   * @param string $schedule
    */
   public function setSchedule($schedule)
   {
@@ -317,7 +479,9 @@ class TransferConfig extends \Google\Model
     return $this->schedule;
   }
   /**
-   * @param ScheduleOptions
+   * Options customizing the data transfer schedule.
+   *
+   * @param ScheduleOptions $scheduleOptions
    */
   public function setScheduleOptions(ScheduleOptions $scheduleOptions)
   {
@@ -331,7 +495,11 @@ class TransferConfig extends \Google\Model
     return $this->scheduleOptions;
   }
   /**
-   * @param ScheduleOptionsV2
+   * Options customizing different types of data transfer schedule. This field
+   * replaces "schedule" and "schedule_options" fields. ScheduleOptionsV2 cannot
+   * be used together with ScheduleOptions/Schedule.
+   *
+   * @param ScheduleOptionsV2 $scheduleOptionsV2
    */
   public function setScheduleOptionsV2(ScheduleOptionsV2 $scheduleOptionsV2)
   {
@@ -345,21 +513,28 @@ class TransferConfig extends \Google\Model
     return $this->scheduleOptionsV2;
   }
   /**
-   * @param string
+   * Output only. State of the most recently updated transfer run.
+   *
+   * Accepted values: TRANSFER_STATE_UNSPECIFIED, PENDING, RUNNING, SUCCEEDED,
+   * FAILED, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Data transfer modification time. Ignored by server on input.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -373,7 +548,9 @@ class TransferConfig extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Deprecated. Unique ID of the user on whose behalf transfer is done.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class MaxPodsConstraint extends \Google\Model
 {
   /**
+   * Constraint enforced on the max num of pods per node.
+   *
    * @var string
    */
   public $maxPodsPerNode;
 
   /**
-   * @param string
+   * Constraint enforced on the max num of pods per node.
+   *
+   * @param string $maxPodsPerNode
    */
   public function setMaxPodsPerNode($maxPodsPerNode)
   {

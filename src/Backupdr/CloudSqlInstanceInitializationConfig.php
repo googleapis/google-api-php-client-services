@@ -20,19 +20,37 @@ namespace Google\Service\Backupdr;
 class CloudSqlInstanceInitializationConfig extends \Google\Model
 {
   /**
+   * Unspecified edition.
+   */
+  public const EDITION_EDITION_UNSPECIFIED = 'EDITION_UNSPECIFIED';
+  /**
+   * Enterprise edition.
+   */
+  public const EDITION_ENTERPRISE = 'ENTERPRISE';
+  /**
+   * Enterprise Plus edition.
+   */
+  public const EDITION_ENTERPRISE_PLUS = 'ENTERPRISE_PLUS';
+  /**
+   * Required. The edition of the Cloud SQL instance.
+   *
    * @var string
    */
   public $edition;
 
   /**
-   * @param string
+   * Required. The edition of the Cloud SQL instance.
+   *
+   * Accepted values: EDITION_UNSPECIFIED, ENTERPRISE, ENTERPRISE_PLUS
+   *
+   * @param self::EDITION_* $edition
    */
   public function setEdition($edition)
   {
     $this->edition = $edition;
   }
   /**
-   * @return string
+   * @return self::EDITION_*
    */
   public function getEdition()
   {

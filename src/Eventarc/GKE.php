@@ -20,28 +20,47 @@ namespace Google\Service\Eventarc;
 class GKE extends \Google\Model
 {
   /**
+   * Required. The name of the cluster the GKE service is running in. The
+   * cluster must be running in the same project as the trigger being created.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * Required. The name of the Google Compute Engine in which the cluster
+   * resides, which can either be compute zone (for example, us-central1-a) for
+   * the zonal clusters or region (for example, us-central1) for regional
+   * clusters.
+   *
    * @var string
    */
   public $location;
   /**
+   * Required. The namespace the GKE service is running in.
+   *
    * @var string
    */
   public $namespace;
   /**
+   * Optional. The relative path on the GKE service the events should be sent
+   * to. The value must conform to the definition of a URI path segment (section
+   * 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+   *
    * @var string
    */
   public $path;
   /**
+   * Required. Name of the GKE service.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * Required. The name of the cluster the GKE service is running in. The
+   * cluster must be running in the same project as the trigger being created.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -55,7 +74,12 @@ class GKE extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * Required. The name of the Google Compute Engine in which the cluster
+   * resides, which can either be compute zone (for example, us-central1-a) for
+   * the zonal clusters or region (for example, us-central1) for regional
+   * clusters.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -69,7 +93,9 @@ class GKE extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Required. The namespace the GKE service is running in.
+   *
+   * @param string $namespace
    */
   public function setNamespace($namespace)
   {
@@ -83,7 +109,11 @@ class GKE extends \Google\Model
     return $this->namespace;
   }
   /**
-   * @param string
+   * Optional. The relative path on the GKE service the events should be sent
+   * to. The value must conform to the definition of a URI path segment (section
+   * 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -97,7 +127,9 @@ class GKE extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Required. Name of the GKE service.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

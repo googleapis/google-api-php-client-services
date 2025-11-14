@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class GoogleBytestreamMedia extends \Google\Model
 {
   /**
+   * Name of the media resource.
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Name of the media resource.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

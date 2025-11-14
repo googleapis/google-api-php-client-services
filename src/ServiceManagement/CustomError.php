@@ -23,12 +23,17 @@ class CustomError extends \Google\Collection
   protected $rulesType = CustomErrorRule::class;
   protected $rulesDataType = 'array';
   /**
+   * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
+   *
    * @var string[]
    */
   public $types;
 
   /**
-   * @param CustomErrorRule[]
+   * The list of custom error rules that apply to individual API messages.
+   * **NOTE:** All service configuration rules follow "last one wins" order.
+   *
+   * @param CustomErrorRule[] $rules
    */
   public function setRules($rules)
   {
@@ -42,7 +47,9 @@ class CustomError extends \Google\Collection
     return $this->rules;
   }
   /**
-   * @param string[]
+   * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
+   *
+   * @param string[] $types
    */
   public function setTypes($types)
   {

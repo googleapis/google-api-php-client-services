@@ -21,6 +21,9 @@ class ListQuotaGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'quotaGroups';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListQuotaGroupsResponse extends \Google\Collection
   protected $quotaGroupsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,11 @@ class ListQuotaGroupsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param QuotaGroup[]
+   * The methods, current quota usage and limits per each group. The quota is
+   * shared between all methods in the group. The groups are sorted in
+   * descending order based on quota_usage.
+   *
+   * @param QuotaGroup[] $quotaGroups
    */
   public function setQuotaGroups($quotaGroups)
   {

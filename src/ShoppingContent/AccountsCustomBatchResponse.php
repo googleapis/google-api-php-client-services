@@ -23,12 +23,17 @@ class AccountsCustomBatchResponse extends \Google\Collection
   protected $entriesType = AccountsCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountsCustomBatchResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param AccountsCustomBatchResponseEntry[]
+   * The result of the execution of the batch requests.
+   *
+   * @param AccountsCustomBatchResponseEntry[] $entries
    */
   public function setEntries($entries)
   {
@@ -42,7 +47,10 @@ class AccountsCustomBatchResponse extends \Google\Collection
     return $this->entries;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountsCustomBatchResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

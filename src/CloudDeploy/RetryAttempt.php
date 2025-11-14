@@ -20,24 +20,62 @@ namespace Google\Service\CloudDeploy;
 class RetryAttempt extends \Google\Model
 {
   /**
+   * The `repair` has an unspecified state.
+   */
+  public const STATE_REPAIR_STATE_UNSPECIFIED = 'REPAIR_STATE_UNSPECIFIED';
+  /**
+   * The `repair` action has succeeded.
+   */
+  public const STATE_REPAIR_STATE_SUCCEEDED = 'REPAIR_STATE_SUCCEEDED';
+  /**
+   * The `repair` action was cancelled.
+   */
+  public const STATE_REPAIR_STATE_CANCELLED = 'REPAIR_STATE_CANCELLED';
+  /**
+   * The `repair` action has failed.
+   */
+  public const STATE_REPAIR_STATE_FAILED = 'REPAIR_STATE_FAILED';
+  /**
+   * The `repair` action is in progress.
+   */
+  public const STATE_REPAIR_STATE_IN_PROGRESS = 'REPAIR_STATE_IN_PROGRESS';
+  /**
+   * The `repair` action is pending.
+   */
+  public const STATE_REPAIR_STATE_PENDING = 'REPAIR_STATE_PENDING';
+  /**
+   * The `repair` action was aborted.
+   */
+  public const STATE_REPAIR_STATE_ABORTED = 'REPAIR_STATE_ABORTED';
+  /**
+   * Output only. The index of this retry attempt.
+   *
    * @var string
    */
   public $attempt;
   /**
+   * Output only. Valid state of this retry action.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Description of the state of the Retry.
+   *
    * @var string
    */
   public $stateDesc;
   /**
+   * Output only. How long the operation will be paused.
+   *
    * @var string
    */
   public $wait;
 
   /**
-   * @param string
+   * Output only. The index of this retry attempt.
+   *
+   * @param string $attempt
    */
   public function setAttempt($attempt)
   {
@@ -51,21 +89,29 @@ class RetryAttempt extends \Google\Model
     return $this->attempt;
   }
   /**
-   * @param string
+   * Output only. Valid state of this retry action.
+   *
+   * Accepted values: REPAIR_STATE_UNSPECIFIED, REPAIR_STATE_SUCCEEDED,
+   * REPAIR_STATE_CANCELLED, REPAIR_STATE_FAILED, REPAIR_STATE_IN_PROGRESS,
+   * REPAIR_STATE_PENDING, REPAIR_STATE_ABORTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Description of the state of the Retry.
+   *
+   * @param string $stateDesc
    */
   public function setStateDesc($stateDesc)
   {
@@ -79,7 +125,9 @@ class RetryAttempt extends \Google\Model
     return $this->stateDesc;
   }
   /**
-   * @param string
+   * Output only. How long the operation will be paused.
+   *
+   * @param string $wait
    */
   public function setWait($wait)
   {

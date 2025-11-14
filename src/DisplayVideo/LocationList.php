@@ -20,28 +20,56 @@ namespace Google\Service\DisplayVideo;
 class LocationList extends \Google\Model
 {
   /**
+   * Default value when type is not specified or is unknown.
+   */
+  public const LOCATION_TYPE_TARGETING_LOCATION_TYPE_UNSPECIFIED = 'TARGETING_LOCATION_TYPE_UNSPECIFIED';
+  /**
+   * The type for proximity geo location.
+   */
+  public const LOCATION_TYPE_TARGETING_LOCATION_TYPE_PROXIMITY = 'TARGETING_LOCATION_TYPE_PROXIMITY';
+  /**
+   * The type for regional geo location.
+   */
+  public const LOCATION_TYPE_TARGETING_LOCATION_TYPE_REGIONAL = 'TARGETING_LOCATION_TYPE_REGIONAL';
+  /**
+   * Required. Immutable. The unique ID of the advertiser the location list
+   * belongs to.
+   *
    * @var string
    */
   public $advertiserId;
   /**
+   * Required. The display name of the location list. Must be UTF-8 encoded with
+   * a maximum size of 240 bytes.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The unique ID of the location list. Assigned by the system.
+   *
    * @var string
    */
   public $locationListId;
   /**
+   * Required. Immutable. The type of location. All locations in the list will
+   * share this type.
+   *
    * @var string
    */
   public $locationType;
   /**
+   * Output only. The resource name of the location list.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. Immutable. The unique ID of the advertiser the location list
+   * belongs to.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -55,7 +83,10 @@ class LocationList extends \Google\Model
     return $this->advertiserId;
   }
   /**
-   * @param string
+   * Required. The display name of the location list. Must be UTF-8 encoded with
+   * a maximum size of 240 bytes.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -69,7 +100,9 @@ class LocationList extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the location list. Assigned by the system.
+   *
+   * @param string $locationListId
    */
   public function setLocationListId($locationListId)
   {
@@ -83,21 +116,29 @@ class LocationList extends \Google\Model
     return $this->locationListId;
   }
   /**
-   * @param string
+   * Required. Immutable. The type of location. All locations in the list will
+   * share this type.
+   *
+   * Accepted values: TARGETING_LOCATION_TYPE_UNSPECIFIED,
+   * TARGETING_LOCATION_TYPE_PROXIMITY, TARGETING_LOCATION_TYPE_REGIONAL
+   *
+   * @param self::LOCATION_TYPE_* $locationType
    */
   public function setLocationType($locationType)
   {
     $this->locationType = $locationType;
   }
   /**
-   * @return string
+   * @return self::LOCATION_TYPE_*
    */
   public function getLocationType()
   {
     return $this->locationType;
   }
   /**
-   * @param string
+   * Output only. The resource name of the location list.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

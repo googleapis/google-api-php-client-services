@@ -20,20 +20,35 @@ namespace Google\Service\Eventarc;
 class CloudRun extends \Google\Model
 {
   /**
+   * Optional. The relative path on the Cloud Run service the events should be
+   * sent to. The value must conform to the definition of a URI path segment
+   * (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+   *
    * @var string
    */
   public $path;
   /**
+   * Required. The region the Cloud Run service is deployed in.
+   *
    * @var string
    */
   public $region;
   /**
+   * Required. The name of the Cloud Run service being addressed. See
+   * https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services.
+   * Only services located in the same project as the trigger object can be
+   * addressed.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * Optional. The relative path on the Cloud Run service the events should be
+   * sent to. The value must conform to the definition of a URI path segment
+   * (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -47,7 +62,9 @@ class CloudRun extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Required. The region the Cloud Run service is deployed in.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -61,7 +78,12 @@ class CloudRun extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * Required. The name of the Cloud Run service being addressed. See
+   * https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services.
+   * Only services located in the same project as the trigger object can be
+   * addressed.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

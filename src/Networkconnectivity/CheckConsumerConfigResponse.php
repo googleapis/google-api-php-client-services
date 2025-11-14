@@ -21,12 +21,18 @@ class CheckConsumerConfigResponse extends \Google\Collection
 {
   protected $collection_key = 'errors';
   /**
+   * List of validation errors. If the list is empty, the consumer config is
+   * valid.
+   *
    * @var string[]
    */
   public $errors;
 
   /**
-   * @param string[]
+   * List of validation errors. If the list is empty, the consumer config is
+   * valid.
+   *
+   * @param string[] $errors
    */
   public function setErrors($errors)
   {

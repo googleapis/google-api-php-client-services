@@ -20,12 +20,16 @@ namespace Google\Service\CloudIdentity;
 class ExpiryDetail extends \Google\Model
 {
   /**
+   * The time at which the `MembershipRole` will expire.
+   *
    * @var string
    */
   public $expireTime;
 
   /**
-   * @param string
+   * The time at which the `MembershipRole` will expire.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {

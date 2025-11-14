@@ -20,18 +20,25 @@ namespace Google\Service\ShoppingContent;
 class LocalinventoryCustomBatchResponseEntry extends \Google\Model
 {
   /**
+   * The ID of the request entry this entry responds to.
+   *
    * @var string
    */
   public $batchId;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#localinventoryCustomBatchResponseEntry`"
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * The ID of the request entry this entry responds to.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -45,7 +52,10 @@ class LocalinventoryCustomBatchResponseEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param Errors
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail
+   * the whole request.
+   *
+   * @param Errors $errors
    */
   public function setErrors(Errors $errors)
   {
@@ -59,7 +69,10 @@ class LocalinventoryCustomBatchResponseEntry extends \Google\Model
     return $this->errors;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#localinventoryCustomBatchResponseEntry`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

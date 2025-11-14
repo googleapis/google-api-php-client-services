@@ -23,12 +23,17 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
   protected $currentPageType = GoogleCloudDialogflowCxV3beta1Page::class;
   protected $currentPageDataType = '';
   /**
+   * Required. Input only. The diagnostic info output for the turn. Required to
+   * calculate the testing coverage.
+   *
    * @var array[]
    */
   public $diagnosticInfo;
   protected $differencesType = GoogleCloudDialogflowCxV3beta1TestRunDifference::class;
   protected $differencesDataType = 'array';
   /**
+   * The session parameters available to the bot at this point.
+   *
    * @var array[]
    */
   public $sessionParameters;
@@ -40,7 +45,10 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
   protected $triggeredIntentDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3beta1Page
+   * The Page on which the utterance was spoken. Only name and displayName will
+   * be set.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1Page $currentPage
    */
   public function setCurrentPage(GoogleCloudDialogflowCxV3beta1Page $currentPage)
   {
@@ -54,7 +62,10 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
     return $this->currentPage;
   }
   /**
-   * @param array[]
+   * Required. Input only. The diagnostic info output for the turn. Required to
+   * calculate the testing coverage.
+   *
+   * @param array[] $diagnosticInfo
    */
   public function setDiagnosticInfo($diagnosticInfo)
   {
@@ -68,7 +79,11 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
     return $this->diagnosticInfo;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1TestRunDifference[]
+   * Output only. If this is part of a result conversation turn, the list of
+   * differences between the original run and the replay for this output, if
+   * any.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1TestRunDifference[] $differences
    */
   public function setDifferences($differences)
   {
@@ -82,7 +97,9 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
     return $this->differences;
   }
   /**
-   * @param array[]
+   * The session parameters available to the bot at this point.
+   *
+   * @param array[] $sessionParameters
    */
   public function setSessionParameters($sessionParameters)
   {
@@ -96,7 +113,10 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
     return $this->sessionParameters;
   }
   /**
-   * @param GoogleRpcStatus
+   * Response error from the agent in the test result. If set, other output is
+   * empty.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {
@@ -110,7 +130,9 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
     return $this->status;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1ResponseMessageText[]
+   * The text responses from the agent for the turn.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1ResponseMessageText[] $textResponses
    */
   public function setTextResponses($textResponses)
   {
@@ -124,7 +146,10 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends \
     return $this->textResponses;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1Intent
+   * The Intent that triggered the response. Only name and displayName will be
+   * set.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1Intent $triggeredIntent
    */
   public function setTriggeredIntent(GoogleCloudDialogflowCxV3beta1Intent $triggeredIntent)
   {

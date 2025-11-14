@@ -20,20 +20,28 @@ namespace Google\Service\Monitoring;
 class LabelValue extends \Google\Model
 {
   /**
+   * A bool label value.
+   *
    * @var bool
    */
   public $boolValue;
   /**
+   * An int64 label value.
+   *
    * @var string
    */
   public $int64Value;
   /**
+   * A string label value.
+   *
    * @var string
    */
   public $stringValue;
 
   /**
-   * @param bool
+   * A bool label value.
+   *
+   * @param bool $boolValue
    */
   public function setBoolValue($boolValue)
   {
@@ -47,7 +55,9 @@ class LabelValue extends \Google\Model
     return $this->boolValue;
   }
   /**
-   * @param string
+   * An int64 label value.
+   *
+   * @param string $int64Value
    */
   public function setInt64Value($int64Value)
   {
@@ -61,7 +71,9 @@ class LabelValue extends \Google\Model
     return $this->int64Value;
   }
   /**
-   * @param string
+   * A string label value.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

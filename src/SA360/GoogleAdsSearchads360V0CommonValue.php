@@ -20,25 +20,40 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonValue extends \Google\Model
 {
   /**
+   * A boolean.
+   *
    * @var bool
    */
   public $booleanValue;
+  /**
+   * A double.
+   *
+   * @var 
+   */
   public $doubleValue;
   /**
+   * A float.
+   *
    * @var float
    */
   public $floatValue;
   /**
+   * An int64.
+   *
    * @var string
    */
   public $int64Value;
   /**
+   * A string.
+   *
    * @var string
    */
   public $stringValue;
 
   /**
-   * @param bool
+   * A boolean.
+   *
+   * @param bool $booleanValue
    */
   public function setBooleanValue($booleanValue)
   {
@@ -60,7 +75,9 @@ class GoogleAdsSearchads360V0CommonValue extends \Google\Model
     return $this->doubleValue;
   }
   /**
-   * @param float
+   * A float.
+   *
+   * @param float $floatValue
    */
   public function setFloatValue($floatValue)
   {
@@ -74,7 +91,9 @@ class GoogleAdsSearchads360V0CommonValue extends \Google\Model
     return $this->floatValue;
   }
   /**
-   * @param string
+   * An int64.
+   *
+   * @param string $int64Value
    */
   public function setInt64Value($int64Value)
   {
@@ -88,7 +107,9 @@ class GoogleAdsSearchads360V0CommonValue extends \Google\Model
     return $this->int64Value;
   }
   /**
-   * @param string
+   * A string.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

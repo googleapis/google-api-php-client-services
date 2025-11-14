@@ -21,6 +21,14 @@ class ObjectDefinition extends \Google\Collection
 {
   protected $collection_key = 'propertyDefinitions';
   /**
+   * The name for the object, which then defines its type. Item indexing
+   * requests should set the objectType field equal to this value. For example,
+   * if *name* is *Document*, then indexing requests for items of type Document
+   * should set objectType equal to *Document*. Each object definition must be
+   * uniquely named within a schema. The name must start with a letter and can
+   * only contain letters (A-Z, a-z) or numbers (0-9). The maximum length is 256
+   * characters.
+   *
    * @var string
    */
   public $name;
@@ -30,7 +38,15 @@ class ObjectDefinition extends \Google\Collection
   protected $propertyDefinitionsDataType = 'array';
 
   /**
-   * @param string
+   * The name for the object, which then defines its type. Item indexing
+   * requests should set the objectType field equal to this value. For example,
+   * if *name* is *Document*, then indexing requests for items of type Document
+   * should set objectType equal to *Document*. Each object definition must be
+   * uniquely named within a schema. The name must start with a letter and can
+   * only contain letters (A-Z, a-z) or numbers (0-9). The maximum length is 256
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -44,7 +60,9 @@ class ObjectDefinition extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ObjectOptions
+   * The optional object-specific options.
+   *
+   * @param ObjectOptions $options
    */
   public function setOptions(ObjectOptions $options)
   {
@@ -58,7 +76,10 @@ class ObjectDefinition extends \Google\Collection
     return $this->options;
   }
   /**
-   * @param PropertyDefinition[]
+   * The property definitions for the object. The maximum number of elements is
+   * 1000.
+   *
+   * @param PropertyDefinition[] $propertyDefinitions
    */
   public function setPropertyDefinitions($propertyDefinitions)
   {

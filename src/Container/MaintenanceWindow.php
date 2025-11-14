@@ -27,7 +27,9 @@ class MaintenanceWindow extends \Google\Model
   protected $recurringWindowDataType = '';
 
   /**
-   * @param DailyMaintenanceWindow
+   * DailyMaintenanceWindow specifies a daily maintenance operation window.
+   *
+   * @param DailyMaintenanceWindow $dailyMaintenanceWindow
    */
   public function setDailyMaintenanceWindow(DailyMaintenanceWindow $dailyMaintenanceWindow)
   {
@@ -41,7 +43,10 @@ class MaintenanceWindow extends \Google\Model
     return $this->dailyMaintenanceWindow;
   }
   /**
-   * @param TimeWindow[]
+   * Exceptions to maintenance window. Non-emergency maintenance should not
+   * occur in these windows.
+   *
+   * @param TimeWindow[] $maintenanceExclusions
    */
   public function setMaintenanceExclusions($maintenanceExclusions)
   {
@@ -55,7 +60,11 @@ class MaintenanceWindow extends \Google\Model
     return $this->maintenanceExclusions;
   }
   /**
-   * @param RecurringTimeWindow
+   * RecurringWindow specifies some number of recurring time periods for
+   * maintenance to occur. The time windows may be overlapping. If no
+   * maintenance windows are set, maintenance can occur at any time.
+   *
+   * @param RecurringTimeWindow $recurringWindow
    */
   public function setRecurringWindow(RecurringTimeWindow $recurringWindow)
   {

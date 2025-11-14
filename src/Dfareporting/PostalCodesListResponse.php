@@ -21,6 +21,9 @@ class PostalCodesListResponse extends \Google\Collection
 {
   protected $collection_key = 'postalCodes';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#postalCodesListResponse".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class PostalCodesListResponse extends \Google\Collection
   protected $postalCodesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#postalCodesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class PostalCodesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param PostalCode[]
+   * Postal code collection.
+   *
+   * @param PostalCode[] $postalCodes
    */
   public function setPostalCodes($postalCodes)
   {

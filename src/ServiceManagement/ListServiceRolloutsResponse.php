@@ -21,6 +21,8 @@ class ListServiceRolloutsResponse extends \Google\Collection
 {
   protected $collection_key = 'rollouts';
   /**
+   * The token of the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListServiceRolloutsResponse extends \Google\Collection
   protected $rolloutsDataType = 'array';
 
   /**
-   * @param string
+   * The token of the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListServiceRolloutsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Rollout[]
+   * The list of rollout resources.
+   *
+   * @param Rollout[] $rollouts
    */
   public function setRollouts($rollouts)
   {

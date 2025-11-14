@@ -21,12 +21,20 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsRequestInlineSource extends \Goo
 {
   protected $collection_key = 'documents';
   /**
+   * Required. A list of full resource name of documents to purge. In the format
+   * `projects/locations/collections/dataStores/branches/documents`. Recommended
+   * max of 100 items.
+   *
    * @var string[]
    */
   public $documents;
 
   /**
-   * @param string[]
+   * Required. A list of full resource name of documents to purge. In the format
+   * `projects/locations/collections/dataStores/branches/documents`. Recommended
+   * max of 100 items.
+   *
+   * @param string[] $documents
    */
   public function setDocuments($documents)
   {

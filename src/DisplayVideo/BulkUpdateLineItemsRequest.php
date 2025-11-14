@@ -21,18 +21,26 @@ class BulkUpdateLineItemsRequest extends \Google\Collection
 {
   protected $collection_key = 'lineItemIds';
   /**
+   * Required. IDs of line items to update.
+   *
    * @var string[]
    */
   public $lineItemIds;
   protected $targetLineItemType = LineItem::class;
   protected $targetLineItemDataType = '';
   /**
+   * Required. A field mask identifying which fields to update. Only the
+   * following fields are currently supported: * entityStatus *
+   * containsEuPoliticalAds
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param string[]
+   * Required. IDs of line items to update.
+   *
+   * @param string[] $lineItemIds
    */
   public function setLineItemIds($lineItemIds)
   {
@@ -46,7 +54,10 @@ class BulkUpdateLineItemsRequest extends \Google\Collection
     return $this->lineItemIds;
   }
   /**
-   * @param LineItem
+   * Required. A line item object containing the fields to be updated and the
+   * new values to assign to all line items specified in line_item_ids."
+   *
+   * @param LineItem $targetLineItem
    */
   public function setTargetLineItem(LineItem $targetLineItem)
   {
@@ -60,7 +71,11 @@ class BulkUpdateLineItemsRequest extends \Google\Collection
     return $this->targetLineItem;
   }
   /**
-   * @param string
+   * Required. A field mask identifying which fields to update. Only the
+   * following fields are currently supported: * entityStatus *
+   * containsEuPoliticalAds
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

@@ -21,6 +21,9 @@ class ListSubscriptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'subscriptions';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page of
+   * results. If this field is omitted, there are no more results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListSubscriptionsResponse extends \Google\Collection
   protected $subscriptionsDataType = 'array';
 
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page of
+   * results. If this field is omitted, there are no more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,10 @@ class ListSubscriptionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Subscription[]
+   * The list of subscriptions in the requested parent. The order of the
+   * subscriptions is unspecified.
+   *
+   * @param Subscription[] $subscriptions
    */
   public function setSubscriptions($subscriptions)
   {

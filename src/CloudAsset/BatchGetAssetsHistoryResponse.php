@@ -24,7 +24,9 @@ class BatchGetAssetsHistoryResponse extends \Google\Collection
   protected $assetsDataType = 'array';
 
   /**
-   * @param TemporalAsset[]
+   * A list of assets with valid time windows.
+   *
+   * @param TemporalAsset[] $assets
    */
   public function setAssets($assets)
   {

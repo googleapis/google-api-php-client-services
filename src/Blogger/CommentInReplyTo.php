@@ -20,12 +20,16 @@ namespace Google\Service\Blogger;
 class CommentInReplyTo extends \Google\Model
 {
   /**
+   * The identified of the parent of this comment.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * The identified of the parent of this comment.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

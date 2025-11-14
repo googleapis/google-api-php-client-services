@@ -20,16 +20,23 @@ namespace Google\Service\ShoppingContent;
 class TransitTableTransitTimeRowTransitTimeValue extends \Google\Model
 {
   /**
+   * Must be greater than or equal to `minTransitTimeInDays`.
+   *
    * @var string
    */
   public $maxTransitTimeInDays;
   /**
+   * Transit time range (min-max) in business days. 0 means same day delivery, 1
+   * means next day delivery.
+   *
    * @var string
    */
   public $minTransitTimeInDays;
 
   /**
-   * @param string
+   * Must be greater than or equal to `minTransitTimeInDays`.
+   *
+   * @param string $maxTransitTimeInDays
    */
   public function setMaxTransitTimeInDays($maxTransitTimeInDays)
   {
@@ -43,7 +50,10 @@ class TransitTableTransitTimeRowTransitTimeValue extends \Google\Model
     return $this->maxTransitTimeInDays;
   }
   /**
-   * @param string
+   * Transit time range (min-max) in business days. 0 means same day delivery, 1
+   * means next day delivery.
+   *
+   * @param string $minTransitTimeInDays
    */
   public function setMinTransitTimeInDays($minTransitTimeInDays)
   {

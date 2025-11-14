@@ -21,6 +21,8 @@ class PosDataProviders extends \Google\Collection
 {
   protected $collection_key = 'posDataProviders';
   /**
+   * Country code.
+   *
    * @var string
    */
   public $country;
@@ -28,7 +30,9 @@ class PosDataProviders extends \Google\Collection
   protected $posDataProvidersDataType = 'array';
 
   /**
-   * @param string
+   * Country code.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -42,7 +46,9 @@ class PosDataProviders extends \Google\Collection
     return $this->country;
   }
   /**
-   * @param PosDataProvidersPosDataProvider[]
+   * A list of POS data providers.
+   *
+   * @param PosDataProvidersPosDataProvider[] $posDataProviders
    */
   public function setPosDataProviders($posDataProviders)
   {

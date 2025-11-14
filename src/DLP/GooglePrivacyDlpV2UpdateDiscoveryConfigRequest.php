@@ -22,12 +22,16 @@ class GooglePrivacyDlpV2UpdateDiscoveryConfigRequest extends \Google\Model
   protected $discoveryConfigType = GooglePrivacyDlpV2DiscoveryConfig::class;
   protected $discoveryConfigDataType = '';
   /**
+   * Mask to control which fields get updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GooglePrivacyDlpV2DiscoveryConfig
+   * Required. New DiscoveryConfig value.
+   *
+   * @param GooglePrivacyDlpV2DiscoveryConfig $discoveryConfig
    */
   public function setDiscoveryConfig(GooglePrivacyDlpV2DiscoveryConfig $discoveryConfig)
   {
@@ -41,7 +45,9 @@ class GooglePrivacyDlpV2UpdateDiscoveryConfigRequest extends \Google\Model
     return $this->discoveryConfig;
   }
   /**
-   * @param string
+   * Mask to control which fields get updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

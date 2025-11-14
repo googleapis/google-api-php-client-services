@@ -20,12 +20,18 @@ namespace Google\Service\Dataform;
 class DataEncryptionState extends \Google\Model
 {
   /**
+   * Required. The KMS key version name with which data of a resource is
+   * encrypted.
+   *
    * @var string
    */
   public $kmsKeyVersionName;
 
   /**
-   * @param string
+   * Required. The KMS key version name with which data of a resource is
+   * encrypted.
+   *
+   * @param string $kmsKeyVersionName
    */
   public function setKmsKeyVersionName($kmsKeyVersionName)
   {

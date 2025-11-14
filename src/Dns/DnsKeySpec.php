@@ -19,15 +19,32 @@ namespace Google\Service\Dns;
 
 class DnsKeySpec extends \Google\Model
 {
+  public const ALGORITHM_rsasha1 = 'rsasha1';
+  public const ALGORITHM_rsasha256 = 'rsasha256';
+  public const ALGORITHM_rsasha512 = 'rsasha512';
+  public const ALGORITHM_ecdsap256sha256 = 'ecdsap256sha256';
+  public const ALGORITHM_ecdsap384sha384 = 'ecdsap384sha384';
+  public const KEY_TYPE_keySigning = 'keySigning';
+  public const KEY_TYPE_zoneSigning = 'zoneSigning';
   /**
+   * String mnemonic specifying the DNSSEC algorithm of this key.
+   *
    * @var string
    */
   public $algorithm;
   /**
+   * Length of the keys in bits.
+   *
    * @var string
    */
   public $keyLength;
   /**
+   * Specifies whether this is a key signing key (KSK) or a zone signing key
+   * (ZSK). Key signing keys have the Secure Entry Point flag set and, when
+   * active, are only used to sign resource record sets of type DNSKEY. Zone
+   * signing keys do not have the Secure Entry Point flag set and are used to
+   * sign all other types of resource record sets.
+   *
    * @var string
    */
   public $keyType;
@@ -37,21 +54,28 @@ class DnsKeySpec extends \Google\Model
   public $kind;
 
   /**
-   * @param string
+   * String mnemonic specifying the DNSSEC algorithm of this key.
+   *
+   * Accepted values: rsasha1, rsasha256, rsasha512, ecdsap256sha256,
+   * ecdsap384sha384
+   *
+   * @param self::ALGORITHM_* $algorithm
    */
   public function setAlgorithm($algorithm)
   {
     $this->algorithm = $algorithm;
   }
   /**
-   * @return string
+   * @return self::ALGORITHM_*
    */
   public function getAlgorithm()
   {
     return $this->algorithm;
   }
   /**
-   * @param string
+   * Length of the keys in bits.
+   *
+   * @param string $keyLength
    */
   public function setKeyLength($keyLength)
   {
@@ -65,21 +89,29 @@ class DnsKeySpec extends \Google\Model
     return $this->keyLength;
   }
   /**
-   * @param string
+   * Specifies whether this is a key signing key (KSK) or a zone signing key
+   * (ZSK). Key signing keys have the Secure Entry Point flag set and, when
+   * active, are only used to sign resource record sets of type DNSKEY. Zone
+   * signing keys do not have the Secure Entry Point flag set and are used to
+   * sign all other types of resource record sets.
+   *
+   * Accepted values: keySigning, zoneSigning
+   *
+   * @param self::KEY_TYPE_* $keyType
    */
   public function setKeyType($keyType)
   {
     $this->keyType = $keyType;
   }
   /**
-   * @return string
+   * @return self::KEY_TYPE_*
    */
   public function getKeyType()
   {
     return $this->keyType;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {

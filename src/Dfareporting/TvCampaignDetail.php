@@ -21,10 +21,15 @@ class TvCampaignDetail extends \Google\Collection
 {
   protected $collection_key = 'timepoints';
   /**
+   * ID of this TV campaign.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#tvCampaignSummary".
+   *
    * @var string
    */
   public $kind;
@@ -32,7 +37,9 @@ class TvCampaignDetail extends \Google\Collection
   protected $timepointsDataType = 'array';
 
   /**
-   * @param string
+   * ID of this TV campaign.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -46,7 +53,10 @@ class TvCampaignDetail extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#tvCampaignSummary".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class TvCampaignDetail extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param TvCampaignTimepoint[]
+   * The timepoints of the TV campaign.
+   *
+   * @param TvCampaignTimepoint[] $timepoints
    */
   public function setTimepoints($timepoints)
   {

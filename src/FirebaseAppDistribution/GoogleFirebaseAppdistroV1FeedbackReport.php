@@ -20,32 +20,49 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1FeedbackReport extends \Google\Model
 {
   /**
+   * Output only. The time when the feedback report was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. A link to the Firebase console displaying the feedback report.
+   *
    * @var string
    */
   public $firebaseConsoleUri;
   /**
+   * The name of the feedback report resource. Format: `projects/{project_number
+   * }/apps/{app}/releases/{release}/feedbackReports/{feedback_report}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. A signed link (which expires in one hour) that lets you
+   * directly download the screenshot.
+   *
    * @var string
    */
   public $screenshotUri;
   /**
+   * Output only. The resource name of the tester who submitted the feedback
+   * report.
+   *
    * @var string
    */
   public $tester;
   /**
+   * Output only. The text of the feedback report.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * Output only. The time when the feedback report was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -59,7 +76,9 @@ class GoogleFirebaseAppdistroV1FeedbackReport extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. A link to the Firebase console displaying the feedback report.
+   *
+   * @param string $firebaseConsoleUri
    */
   public function setFirebaseConsoleUri($firebaseConsoleUri)
   {
@@ -73,7 +92,10 @@ class GoogleFirebaseAppdistroV1FeedbackReport extends \Google\Model
     return $this->firebaseConsoleUri;
   }
   /**
-   * @param string
+   * The name of the feedback report resource. Format: `projects/{project_number
+   * }/apps/{app}/releases/{release}/feedbackReports/{feedback_report}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -87,7 +109,10 @@ class GoogleFirebaseAppdistroV1FeedbackReport extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. A signed link (which expires in one hour) that lets you
+   * directly download the screenshot.
+   *
+   * @param string $screenshotUri
    */
   public function setScreenshotUri($screenshotUri)
   {
@@ -101,7 +126,10 @@ class GoogleFirebaseAppdistroV1FeedbackReport extends \Google\Model
     return $this->screenshotUri;
   }
   /**
-   * @param string
+   * Output only. The resource name of the tester who submitted the feedback
+   * report.
+   *
+   * @param string $tester
    */
   public function setTester($tester)
   {
@@ -115,7 +143,9 @@ class GoogleFirebaseAppdistroV1FeedbackReport extends \Google\Model
     return $this->tester;
   }
   /**
-   * @param string
+   * Output only. The text of the feedback report.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

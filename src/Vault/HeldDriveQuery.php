@@ -20,16 +20,23 @@ namespace Google\Service\Vault;
 class HeldDriveQuery extends \Google\Model
 {
   /**
+   * To include files in shared drives in the hold, set to **true**.
+   *
    * @var bool
    */
   public $includeSharedDriveFiles;
   /**
+   * To include files in Team Drives in the hold, set to **true**.
+   *
+   * @deprecated
    * @var bool
    */
   public $includeTeamDriveFiles;
 
   /**
-   * @param bool
+   * To include files in shared drives in the hold, set to **true**.
+   *
+   * @param bool $includeSharedDriveFiles
    */
   public function setIncludeSharedDriveFiles($includeSharedDriveFiles)
   {
@@ -43,13 +50,17 @@ class HeldDriveQuery extends \Google\Model
     return $this->includeSharedDriveFiles;
   }
   /**
-   * @param bool
+   * To include files in Team Drives in the hold, set to **true**.
+   *
+   * @deprecated
+   * @param bool $includeTeamDriveFiles
    */
   public function setIncludeTeamDriveFiles($includeTeamDriveFiles)
   {
     $this->includeTeamDriveFiles = $includeTeamDriveFiles;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getIncludeTeamDriveFiles()

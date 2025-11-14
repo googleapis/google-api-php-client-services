@@ -20,12 +20,16 @@ namespace Google\Service\BigQueryDataTransfer;
 class EmailPreferences extends \Google\Model
 {
   /**
+   * If true, email notifications will be sent on transfer run failures.
+   *
    * @var bool
    */
   public $enableFailureEmail;
 
   /**
-   * @param bool
+   * If true, email notifications will be sent on transfer run failures.
+   *
+   * @param bool $enableFailureEmail
    */
   public function setEnableFailureEmail($enableFailureEmail)
   {

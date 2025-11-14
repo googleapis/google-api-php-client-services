@@ -26,7 +26,10 @@ class GrpcRouteRouteRule extends \Google\Collection
   protected $matchesDataType = 'array';
 
   /**
-   * @param GrpcRouteRouteAction
+   * Required. A detailed rule defining how to route traffic. This field is
+   * required.
+   *
+   * @param GrpcRouteRouteAction $action
    */
   public function setAction(GrpcRouteRouteAction $action)
   {
@@ -40,7 +43,12 @@ class GrpcRouteRouteRule extends \Google\Collection
     return $this->action;
   }
   /**
-   * @param GrpcRouteRouteMatch[]
+   * Optional. Matches define conditions used for matching the rule against
+   * incoming gRPC requests. Each match is independent, i.e. this rule will be
+   * matched if ANY one of the matches is satisfied. If no matches field is
+   * specified, this rule will unconditionally match traffic.
+   *
+   * @param GrpcRouteRouteMatch[] $matches
    */
   public function setMatches($matches)
   {

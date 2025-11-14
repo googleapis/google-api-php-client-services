@@ -21,24 +21,36 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownlo
 {
   protected $collection_key = 'fileNames';
   /**
+   * Output only. Full name of the files written to Cloud storage.
+   *
    * @var string[]
    */
   public $fileNames;
   /**
+   * The number of objects processed during the download operation.
+   *
    * @var int
    */
   public $processedObjectCount;
   /**
+   * The number of new feedback labels downloaded during this operation.
+   * Different from "processed" because some labels might not be downloaded
+   * because an error.
+   *
    * @var int
    */
   public $successfulDownloadCount;
   /**
+   * Total number of files written to the provided Cloud Storage bucket.
+   *
    * @var int
    */
   public $totalFilesWritten;
 
   /**
-   * @param string[]
+   * Output only. Full name of the files written to Cloud storage.
+   *
+   * @param string[] $fileNames
    */
   public function setFileNames($fileNames)
   {
@@ -52,7 +64,9 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownlo
     return $this->fileNames;
   }
   /**
-   * @param int
+   * The number of objects processed during the download operation.
+   *
+   * @param int $processedObjectCount
    */
   public function setProcessedObjectCount($processedObjectCount)
   {
@@ -66,7 +80,11 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownlo
     return $this->processedObjectCount;
   }
   /**
-   * @param int
+   * The number of new feedback labels downloaded during this operation.
+   * Different from "processed" because some labels might not be downloaded
+   * because an error.
+   *
+   * @param int $successfulDownloadCount
    */
   public function setSuccessfulDownloadCount($successfulDownloadCount)
   {
@@ -80,7 +98,9 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownlo
     return $this->successfulDownloadCount;
   }
   /**
-   * @param int
+   * Total number of files written to the provided Cloud Storage bucket.
+   *
+   * @param int $totalFilesWritten
    */
   public function setTotalFilesWritten($totalFilesWritten)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3RunTestCaseRequest extends \Google\Model
 {
   /**
+   * Optional. Environment name. If not set, draft environment is assumed.
+   * Format: `projects//locations//agents//environments/`.
+   *
    * @var string
    */
   public $environment;
 
   /**
-   * @param string
+   * Optional. Environment name. If not set, draft environment is assumed.
+   * Format: `projects//locations//agents//environments/`.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {

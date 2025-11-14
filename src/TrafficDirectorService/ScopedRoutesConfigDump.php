@@ -26,7 +26,9 @@ class ScopedRoutesConfigDump extends \Google\Collection
   protected $inlineScopedRouteConfigsDataType = 'array';
 
   /**
-   * @param DynamicScopedRouteConfigs[]
+   * The dynamically loaded scoped route configs.
+   *
+   * @param DynamicScopedRouteConfigs[] $dynamicScopedRouteConfigs
    */
   public function setDynamicScopedRouteConfigs($dynamicScopedRouteConfigs)
   {
@@ -40,7 +42,9 @@ class ScopedRoutesConfigDump extends \Google\Collection
     return $this->dynamicScopedRouteConfigs;
   }
   /**
-   * @param InlineScopedRouteConfigs[]
+   * The statically loaded scoped route configs.
+   *
+   * @param InlineScopedRouteConfigs[] $inlineScopedRouteConfigs
    */
   public function setInlineScopedRouteConfigs($inlineScopedRouteConfigs)
   {

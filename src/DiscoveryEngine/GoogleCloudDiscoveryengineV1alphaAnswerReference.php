@@ -27,7 +27,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReference extends \Google\Model
   protected $unstructuredDocumentInfoDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfo
+   * Chunk information.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfo $chunkInfo
    */
   public function setChunkInfo(GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfo $chunkInfo)
   {
@@ -41,7 +43,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReference extends \Google\Model
     return $this->chunkInfo;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo
+   * Structured document information.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo $structuredDocumentInfo
    */
   public function setStructuredDocumentInfo(GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo $structuredDocumentInfo)
   {
@@ -55,7 +59,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReference extends \Google\Model
     return $this->structuredDocumentInfo;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfo
+   * Unstructured document information.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfo $unstructuredDocumentInfo
    */
   public function setUnstructuredDocumentInfo(GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfo $unstructuredDocumentInfo)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalMigrateOrganizationRequest extends \Google\Model
 {
   /**
+   * Required. Id of the SAS organization to be migrated.
+   *
    * @var string
    */
   public $organizationId;
 
   /**
-   * @param string
+   * Required. Id of the SAS organization to be migrated.
+   *
+   * @param string $organizationId
    */
   public function setOrganizationId($organizationId)
   {

@@ -209,6 +209,14 @@ class Instance extends \Google\Collection
   protected $machineConfigType = MachineConfig::class;
   protected $machineConfigDataType = '';
   /**
+   * Output only. Maintenance version of the instance, for example:
+   * POSTGRES_15.2025_07_15.04_00. Output only. Update this field via the parent
+   * cluster's maintenance_version field(s).
+   *
+   * @var string
+   */
+  public $maintenanceVersionName;
+  /**
    * Output only. The name of the instance resource with the format: * projects/
    * {project}/locations/{region}/clusters/{cluster_id}/instances/{instance_id}
    * where the cluster and instance ID segments should satisfy the regex
@@ -557,6 +565,24 @@ class Instance extends \Google\Collection
   public function getMachineConfig()
   {
     return $this->machineConfig;
+  }
+  /**
+   * Output only. Maintenance version of the instance, for example:
+   * POSTGRES_15.2025_07_15.04_00. Output only. Update this field via the parent
+   * cluster's maintenance_version field(s).
+   *
+   * @param string $maintenanceVersionName
+   */
+  public function setMaintenanceVersionName($maintenanceVersionName)
+  {
+    $this->maintenanceVersionName = $maintenanceVersionName;
+  }
+  /**
+   * @return string
+   */
+  public function getMaintenanceVersionName()
+  {
+    return $this->maintenanceVersionName;
   }
   /**
    * Output only. The name of the instance resource with the format: * projects/

@@ -20,24 +20,37 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1BulkDeleteConversationsRequest extends \Google\Model
 {
   /**
+   * Filter used to select the subset of conversations to delete.
+   *
    * @var string
    */
   public $filter;
   /**
+   * If set to true, all of this conversation's analyses will also be deleted.
+   * Otherwise, the request will only succeed if the conversation has no
+   * analyses.
+   *
    * @var bool
    */
   public $force;
   /**
+   * Maximum number of conversations to delete.
+   *
    * @var int
    */
   public $maxDeleteCount;
   /**
+   * Required. The parent resource to delete conversations from. Format:
+   * projects/{project}/locations/{location}
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param string
+   * Filter used to select the subset of conversations to delete.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -51,7 +64,11 @@ class GoogleCloudContactcenterinsightsV1alpha1BulkDeleteConversationsRequest ext
     return $this->filter;
   }
   /**
-   * @param bool
+   * If set to true, all of this conversation's analyses will also be deleted.
+   * Otherwise, the request will only succeed if the conversation has no
+   * analyses.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -65,7 +82,9 @@ class GoogleCloudContactcenterinsightsV1alpha1BulkDeleteConversationsRequest ext
     return $this->force;
   }
   /**
-   * @param int
+   * Maximum number of conversations to delete.
+   *
+   * @param int $maxDeleteCount
    */
   public function setMaxDeleteCount($maxDeleteCount)
   {
@@ -79,7 +98,10 @@ class GoogleCloudContactcenterinsightsV1alpha1BulkDeleteConversationsRequest ext
     return $this->maxDeleteCount;
   }
   /**
-   * @param string
+   * Required. The parent resource to delete conversations from. Format:
+   * projects/{project}/locations/{location}
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {

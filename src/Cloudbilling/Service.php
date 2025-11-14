@@ -20,24 +20,36 @@ namespace Google\Service\Cloudbilling;
 class Service extends \Google\Model
 {
   /**
+   * The business under which the service is offered. Ex.
+   * "businessEntities/GCP", "businessEntities/Maps"
+   *
    * @var string
    */
   public $businessEntityName;
   /**
+   * A human readable display name for this service.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The resource name for the service. Example: "services/6F81-5844-456A"
+   *
    * @var string
    */
   public $name;
   /**
+   * The identifier for the service. Example: "6F81-5844-456A"
+   *
    * @var string
    */
   public $serviceId;
 
   /**
-   * @param string
+   * The business under which the service is offered. Ex.
+   * "businessEntities/GCP", "businessEntities/Maps"
+   *
+   * @param string $businessEntityName
    */
   public function setBusinessEntityName($businessEntityName)
   {
@@ -51,7 +63,9 @@ class Service extends \Google\Model
     return $this->businessEntityName;
   }
   /**
-   * @param string
+   * A human readable display name for this service.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -65,7 +79,9 @@ class Service extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The resource name for the service. Example: "services/6F81-5844-456A"
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +95,9 @@ class Service extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The identifier for the service. Example: "6F81-5844-456A"
+   *
+   * @param string $serviceId
    */
   public function setServiceId($serviceId)
   {

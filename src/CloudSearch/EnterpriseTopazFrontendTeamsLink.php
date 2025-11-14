@@ -20,6 +20,8 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazFrontendTeamsLink extends \Google\Model
 {
   /**
+   * The identifying link type
+   *
    * @var string
    */
   public $type;
@@ -27,7 +29,9 @@ class EnterpriseTopazFrontendTeamsLink extends \Google\Model
   protected $urlDataType = '';
 
   /**
-   * @param string
+   * The identifying link type
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -41,7 +45,7 @@ class EnterpriseTopazFrontendTeamsLink extends \Google\Model
     return $this->type;
   }
   /**
-   * @param SafeUrlProto
+   * @param SafeUrlProto $url
    */
   public function setUrl(SafeUrlProto $url)
   {

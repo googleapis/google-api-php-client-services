@@ -20,20 +20,29 @@ namespace Google\Service\Dfareporting;
 class AccountPermissionGroup extends \Google\Model
 {
   /**
+   * ID of this account permission group.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountPermissionGroup".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of this account permission group.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * ID of this account permission group.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +56,10 @@ class AccountPermissionGroup extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountPermissionGroup".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +73,9 @@ class AccountPermissionGroup extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of this account permission group.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

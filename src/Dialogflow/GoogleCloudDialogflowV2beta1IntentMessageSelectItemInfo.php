@@ -21,16 +21,25 @@ class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfo extends \Google\Co
 {
   protected $collection_key = 'synonyms';
   /**
+   * Required. A unique key that will be sent back to the agent if this response
+   * is given.
+   *
    * @var string
    */
   public $key;
   /**
+   * Optional. A list of synonyms that can also be used to trigger this item in
+   * dialog.
+   *
    * @var string[]
    */
   public $synonyms;
 
   /**
-   * @param string
+   * Required. A unique key that will be sent back to the agent if this response
+   * is given.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -44,7 +53,10 @@ class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfo extends \Google\Co
     return $this->key;
   }
   /**
-   * @param string[]
+   * Optional. A list of synonyms that can also be used to trigger this item in
+   * dialog.
+   *
+   * @param string[] $synonyms
    */
   public function setSynonyms($synonyms)
   {

@@ -23,16 +23,22 @@ class ListJobsResponse extends \Google\Collection
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Job[]
+   * Jobs.
+   *
+   * @param Job[] $jobs
    */
   public function setJobs($jobs)
   {
@@ -46,7 +52,9 @@ class ListJobsResponse extends \Google\Collection
     return $this->jobs;
   }
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

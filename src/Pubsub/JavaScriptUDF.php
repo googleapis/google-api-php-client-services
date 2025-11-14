@@ -20,16 +20,43 @@ namespace Google\Service\Pubsub;
 class JavaScriptUDF extends \Google\Model
 {
   /**
+   * Required. JavaScript code that contains a function `function_name` with the
+   * below signature: ``` * * Transforms a Pub/Sub message. * @return
+   * {(Object)>|null)} - To * filter a message, return `null`. To transform a
+   * message return a map * with the following keys: * - (required) 'data' :
+   * {string} * - (optional) 'attributes' : {Object} * Returning empty
+   * `attributes` will remove all attributes from the * message. * * @param
+   * {(Object)>} Pub/Sub * message. Keys: * - (required) 'data' : {string} * -
+   * (required) 'attributes' : {Object} * * @param {Object} metadata - Pub/Sub
+   * message metadata. * Keys: * - (optional) 'message_id' : {string} * -
+   * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * -
+   * (optional) 'ordering_key': {string}  function (message, metadata) { } ```
+   *
    * @var string
    */
   public $code;
   /**
+   * Required. Name of the JavasScript function that should applied to Pub/Sub
+   * messages.
+   *
    * @var string
    */
   public $functionName;
 
   /**
-   * @param string
+   * Required. JavaScript code that contains a function `function_name` with the
+   * below signature: ``` * * Transforms a Pub/Sub message. * @return
+   * {(Object)>|null)} - To * filter a message, return `null`. To transform a
+   * message return a map * with the following keys: * - (required) 'data' :
+   * {string} * - (optional) 'attributes' : {Object} * Returning empty
+   * `attributes` will remove all attributes from the * message. * * @param
+   * {(Object)>} Pub/Sub * message. Keys: * - (required) 'data' : {string} * -
+   * (required) 'attributes' : {Object} * * @param {Object} metadata - Pub/Sub
+   * message metadata. * Keys: * - (optional) 'message_id' : {string} * -
+   * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * -
+   * (optional) 'ordering_key': {string}  function (message, metadata) { } ```
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -43,7 +70,10 @@ class JavaScriptUDF extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * Required. Name of the JavasScript function that should applied to Pub/Sub
+   * messages.
+   *
+   * @param string $functionName
    */
   public function setFunctionName($functionName)
   {

@@ -21,6 +21,9 @@ class ListSnoozesResponse extends \Google\Collection
 {
   protected $collection_key = 'snoozes';
   /**
+   * Page token for repeated calls to ListSnoozes, to fetch additional pages of
+   * results. If this is empty or missing, there are no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListSnoozesResponse extends \Google\Collection
   protected $snoozesDataType = 'array';
 
   /**
-   * @param string
+   * Page token for repeated calls to ListSnoozes, to fetch additional pages of
+   * results. If this is empty or missing, there are no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListSnoozesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Snooze[]
+   * Snoozes matching this list call.
+   *
+   * @param Snooze[] $snoozes
    */
   public function setSnoozes($snoozes)
   {

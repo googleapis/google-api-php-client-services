@@ -24,12 +24,19 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
   protected $gcsSourceType = GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource::class;
   protected $gcsSourceDataType = '';
   /**
+   * Required. The parent resource for new conversations.
+   *
    * @var string
    */
   public $parent;
   protected $redactionConfigType = GoogleCloudContactcenterinsightsV1alpha1RedactionConfig::class;
   protected $redactionConfigDataType = '';
   /**
+   * Optional. If set, this fields indicates the number of objects to ingest
+   * from the Cloud Storage bucket. If empty, the entire bucket will be
+   * ingested. Unless they are first deleted, conversations produced through
+   * sampling won't be ingested by subsequent ingest requests.
+   *
    * @var int
    */
   public $sampleSize;
@@ -39,7 +46,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
   protected $transcriptObjectConfigDataType = '';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig
+   * Configuration that applies to all conversations.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig $conversationConfig
    */
   public function setConversationConfig(GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig $conversationConfig)
   {
@@ -53,7 +62,10 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
     return $this->conversationConfig;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource
+   * A cloud storage bucket source. Note that any previously ingested objects
+   * from the source will be skipped to avoid duplication.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource $gcsSource)
   {
@@ -67,7 +79,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
     return $this->gcsSource;
   }
   /**
-   * @param string
+   * Required. The parent resource for new conversations.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -81,7 +95,10 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
     return $this->parent;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1RedactionConfig
+   * Optional. DLP settings for transcript redaction. Optional, will default to
+   * the config specified in Settings.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1RedactionConfig $redactionConfig
    */
   public function setRedactionConfig(GoogleCloudContactcenterinsightsV1alpha1RedactionConfig $redactionConfig)
   {
@@ -95,7 +112,12 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
     return $this->redactionConfig;
   }
   /**
-   * @param int
+   * Optional. If set, this fields indicates the number of objects to ingest
+   * from the Cloud Storage bucket. If empty, the entire bucket will be
+   * ingested. Unless they are first deleted, conversations produced through
+   * sampling won't be ingested by subsequent ingest requests.
+   *
+   * @param int $sampleSize
    */
   public function setSampleSize($sampleSize)
   {
@@ -109,7 +131,10 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
     return $this->sampleSize;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1SpeechConfig
+   * Optional. Default Speech-to-Text configuration. Optional, will default to
+   * the config specified in Settings.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1SpeechConfig $speechConfig
    */
   public function setSpeechConfig(GoogleCloudContactcenterinsightsV1alpha1SpeechConfig $speechConfig)
   {
@@ -123,7 +148,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest extends
     return $this->speechConfig;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestTranscriptObjectConfig
+   * Configuration for when `source` contains conversation transcripts.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestTranscriptObjectConfig $transcriptObjectConfig
    */
   public function setTranscriptObjectConfig(GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestTranscriptObjectConfig $transcriptObjectConfig)
   {

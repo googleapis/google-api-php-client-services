@@ -20,12 +20,16 @@ namespace Google\Service\SQLAdmin;
 class DataCacheConfig extends \Google\Model
 {
   /**
+   * Whether data cache is enabled for the instance.
+   *
    * @var bool
    */
   public $dataCacheEnabled;
 
   /**
-   * @param bool
+   * Whether data cache is enabled for the instance.
+   *
+   * @param bool $dataCacheEnabled
    */
   public function setDataCacheEnabled($dataCacheEnabled)
   {

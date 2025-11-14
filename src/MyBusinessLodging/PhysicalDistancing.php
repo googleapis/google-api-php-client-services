@@ -20,48 +20,155 @@ namespace Google\Service\MyBusinessLodging;
 class PhysicalDistancing extends \Google\Model
 {
   /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const COMMON_AREAS_PHYSICAL_DISTANCING_ARRANGED_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const COMMON_AREAS_PHYSICAL_DISTANCING_ARRANGED_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const COMMON_AREAS_PHYSICAL_DISTANCING_ARRANGED_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const COMMON_AREAS_PHYSICAL_DISTANCING_ARRANGED_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const PHYSICAL_DISTANCING_REQUIRED_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const PHYSICAL_DISTANCING_REQUIRED_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const PHYSICAL_DISTANCING_REQUIRED_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const PHYSICAL_DISTANCING_REQUIRED_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const SAFETY_DIVIDERS_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const SAFETY_DIVIDERS_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const SAFETY_DIVIDERS_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const SAFETY_DIVIDERS_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const SHARED_AREAS_LIMITED_OCCUPANCY_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const SHARED_AREAS_LIMITED_OCCUPANCY_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const SHARED_AREAS_LIMITED_OCCUPANCY_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const SHARED_AREAS_LIMITED_OCCUPANCY_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const WELLNESS_AREAS_HAVE_PRIVATE_SPACES_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const WELLNESS_AREAS_HAVE_PRIVATE_SPACES_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const WELLNESS_AREAS_HAVE_PRIVATE_SPACES_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const WELLNESS_AREAS_HAVE_PRIVATE_SPACES_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Common areas arranged to maintain physical distancing.
+   *
    * @var bool
    */
   public $commonAreasPhysicalDistancingArranged;
   /**
+   * Common areas physical distancing arranged exception.
+   *
    * @var string
    */
   public $commonAreasPhysicalDistancingArrangedException;
   /**
+   * Physical distancing required.
+   *
    * @var bool
    */
   public $physicalDistancingRequired;
   /**
+   * Physical distancing required exception.
+   *
    * @var string
    */
   public $physicalDistancingRequiredException;
   /**
+   * Safety dividers at front desk and other locations.
+   *
    * @var bool
    */
   public $safetyDividers;
   /**
+   * Safety dividers exception.
+   *
    * @var string
    */
   public $safetyDividersException;
   /**
+   * Guest occupancy limited within shared facilities.
+   *
    * @var bool
    */
   public $sharedAreasLimitedOccupancy;
   /**
+   * Shared areas limited occupancy exception.
+   *
    * @var string
    */
   public $sharedAreasLimitedOccupancyException;
   /**
+   * Private spaces designated in spa and wellness areas.
+   *
    * @var bool
    */
   public $wellnessAreasHavePrivateSpaces;
   /**
+   * Wellness areas have private spaces exception.
+   *
    * @var string
    */
   public $wellnessAreasHavePrivateSpacesException;
 
   /**
-   * @param bool
+   * Common areas arranged to maintain physical distancing.
+   *
+   * @param bool $commonAreasPhysicalDistancingArranged
    */
   public function setCommonAreasPhysicalDistancingArranged($commonAreasPhysicalDistancingArranged)
   {
@@ -75,21 +182,28 @@ class PhysicalDistancing extends \Google\Model
     return $this->commonAreasPhysicalDistancingArranged;
   }
   /**
-   * @param string
+   * Common areas physical distancing arranged exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::COMMON_AREAS_PHYSICAL_DISTANCING_ARRANGED_EXCEPTION_* $commonAreasPhysicalDistancingArrangedException
    */
   public function setCommonAreasPhysicalDistancingArrangedException($commonAreasPhysicalDistancingArrangedException)
   {
     $this->commonAreasPhysicalDistancingArrangedException = $commonAreasPhysicalDistancingArrangedException;
   }
   /**
-   * @return string
+   * @return self::COMMON_AREAS_PHYSICAL_DISTANCING_ARRANGED_EXCEPTION_*
    */
   public function getCommonAreasPhysicalDistancingArrangedException()
   {
     return $this->commonAreasPhysicalDistancingArrangedException;
   }
   /**
-   * @param bool
+   * Physical distancing required.
+   *
+   * @param bool $physicalDistancingRequired
    */
   public function setPhysicalDistancingRequired($physicalDistancingRequired)
   {
@@ -103,21 +217,28 @@ class PhysicalDistancing extends \Google\Model
     return $this->physicalDistancingRequired;
   }
   /**
-   * @param string
+   * Physical distancing required exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::PHYSICAL_DISTANCING_REQUIRED_EXCEPTION_* $physicalDistancingRequiredException
    */
   public function setPhysicalDistancingRequiredException($physicalDistancingRequiredException)
   {
     $this->physicalDistancingRequiredException = $physicalDistancingRequiredException;
   }
   /**
-   * @return string
+   * @return self::PHYSICAL_DISTANCING_REQUIRED_EXCEPTION_*
    */
   public function getPhysicalDistancingRequiredException()
   {
     return $this->physicalDistancingRequiredException;
   }
   /**
-   * @param bool
+   * Safety dividers at front desk and other locations.
+   *
+   * @param bool $safetyDividers
    */
   public function setSafetyDividers($safetyDividers)
   {
@@ -131,21 +252,28 @@ class PhysicalDistancing extends \Google\Model
     return $this->safetyDividers;
   }
   /**
-   * @param string
+   * Safety dividers exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::SAFETY_DIVIDERS_EXCEPTION_* $safetyDividersException
    */
   public function setSafetyDividersException($safetyDividersException)
   {
     $this->safetyDividersException = $safetyDividersException;
   }
   /**
-   * @return string
+   * @return self::SAFETY_DIVIDERS_EXCEPTION_*
    */
   public function getSafetyDividersException()
   {
     return $this->safetyDividersException;
   }
   /**
-   * @param bool
+   * Guest occupancy limited within shared facilities.
+   *
+   * @param bool $sharedAreasLimitedOccupancy
    */
   public function setSharedAreasLimitedOccupancy($sharedAreasLimitedOccupancy)
   {
@@ -159,21 +287,28 @@ class PhysicalDistancing extends \Google\Model
     return $this->sharedAreasLimitedOccupancy;
   }
   /**
-   * @param string
+   * Shared areas limited occupancy exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::SHARED_AREAS_LIMITED_OCCUPANCY_EXCEPTION_* $sharedAreasLimitedOccupancyException
    */
   public function setSharedAreasLimitedOccupancyException($sharedAreasLimitedOccupancyException)
   {
     $this->sharedAreasLimitedOccupancyException = $sharedAreasLimitedOccupancyException;
   }
   /**
-   * @return string
+   * @return self::SHARED_AREAS_LIMITED_OCCUPANCY_EXCEPTION_*
    */
   public function getSharedAreasLimitedOccupancyException()
   {
     return $this->sharedAreasLimitedOccupancyException;
   }
   /**
-   * @param bool
+   * Private spaces designated in spa and wellness areas.
+   *
+   * @param bool $wellnessAreasHavePrivateSpaces
    */
   public function setWellnessAreasHavePrivateSpaces($wellnessAreasHavePrivateSpaces)
   {
@@ -187,14 +322,19 @@ class PhysicalDistancing extends \Google\Model
     return $this->wellnessAreasHavePrivateSpaces;
   }
   /**
-   * @param string
+   * Wellness areas have private spaces exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::WELLNESS_AREAS_HAVE_PRIVATE_SPACES_EXCEPTION_* $wellnessAreasHavePrivateSpacesException
    */
   public function setWellnessAreasHavePrivateSpacesException($wellnessAreasHavePrivateSpacesException)
   {
     $this->wellnessAreasHavePrivateSpacesException = $wellnessAreasHavePrivateSpacesException;
   }
   /**
-   * @return string
+   * @return self::WELLNESS_AREAS_HAVE_PRIVATE_SPACES_EXCEPTION_*
    */
   public function getWellnessAreasHavePrivateSpacesException()
   {

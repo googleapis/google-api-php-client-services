@@ -20,16 +20,22 @@ namespace Google\Service\TagManager;
 class CreateContainerVersionRequestVersionOptions extends \Google\Model
 {
   /**
+   * The name of the container version to be created.
+   *
    * @var string
    */
   public $name;
   /**
+   * The notes of the container version to be created.
+   *
    * @var string
    */
   public $notes;
 
   /**
-   * @param string
+   * The name of the container version to be created.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class CreateContainerVersionRequestVersionOptions extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The notes of the container version to be created.
+   *
+   * @param string $notes
    */
   public function setNotes($notes)
   {

@@ -19,8 +19,19 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickDocumentGroup extends \Google\Collection
 {
+  /**
+   * Unknown type.
+   */
+  public const GROUP_TYPE_UNKNOWN_TYPE = 'UNKNOWN_TYPE';
+  /**
+   * A mix of all the document types.
+   */
+  public const GROUP_TYPE_ALL = 'ALL';
   protected $collection_key = 'personalizedDocument';
   /**
+   * Document group type
+   *
+   * @deprecated
    * @var string
    */
   public $groupType;
@@ -28,21 +39,29 @@ class EnterpriseTopazSidekickDocumentGroup extends \Google\Collection
   protected $personalizedDocumentDataType = 'array';
 
   /**
-   * @param string
+   * Document group type
+   *
+   * Accepted values: UNKNOWN_TYPE, ALL
+   *
+   * @deprecated
+   * @param self::GROUP_TYPE_* $groupType
    */
   public function setGroupType($groupType)
   {
     $this->groupType = $groupType;
   }
   /**
-   * @return string
+   * @deprecated
+   * @return self::GROUP_TYPE_*
    */
   public function getGroupType()
   {
     return $this->groupType;
   }
   /**
-   * @param EnterpriseTopazSidekickCommonDocument[]
+   * The list of corresponding documents.
+   *
+   * @param EnterpriseTopazSidekickCommonDocument[] $personalizedDocument
    */
   public function setPersonalizedDocument($personalizedDocument)
   {

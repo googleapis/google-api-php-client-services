@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfigChunkingConfig extends
   protected $layoutBasedChunkingConfigDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigChunkingConfigLayoutBasedChunkingConfig
+   * Configuration for the layout based chunking.
+   *
+   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigChunkingConfigLayoutBasedChunkingConfig $layoutBasedChunkingConfig
    */
   public function setLayoutBasedChunkingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigChunkingConfigLayoutBasedChunkingConfig $layoutBasedChunkingConfig)
   {

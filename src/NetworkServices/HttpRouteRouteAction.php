@@ -29,6 +29,11 @@ class HttpRouteRouteAction extends \Google\Collection
   protected $faultInjectionPolicyType = HttpRouteFaultInjectionPolicy::class;
   protected $faultInjectionPolicyDataType = '';
   /**
+   * Optional. Specifies the idle timeout for the selected route. The idle
+   * timeout is defined as the period in which there are no bytes sent or
+   * received on either the upstream or downstream connection. If not set, the
+   * default idle timeout is 1 hour. If set to 0s, the timeout will be disabled.
+   *
    * @var string
    */
   public $idleTimeout;
@@ -45,6 +50,10 @@ class HttpRouteRouteAction extends \Google\Collection
   protected $statefulSessionAffinityType = HttpRouteStatefulSessionAffinityPolicy::class;
   protected $statefulSessionAffinityDataType = '';
   /**
+   * Specifies the timeout for selected route. Timeout is computed from the time
+   * the request has been fully processed (i.e. end of stream) up until the
+   * response has been completely processed. Timeout includes all retries.
+   *
    * @var string
    */
   public $timeout;
@@ -52,7 +61,9 @@ class HttpRouteRouteAction extends \Google\Collection
   protected $urlRewriteDataType = '';
 
   /**
-   * @param HttpRouteCorsPolicy
+   * The specification for allowing client side cross-origin requests.
+   *
+   * @param HttpRouteCorsPolicy $corsPolicy
    */
   public function setCorsPolicy(HttpRouteCorsPolicy $corsPolicy)
   {
@@ -66,7 +77,9 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->corsPolicy;
   }
   /**
-   * @param HttpRouteDestination[]
+   * The destination to which traffic should be forwarded.
+   *
+   * @param HttpRouteDestination[] $destinations
    */
   public function setDestinations($destinations)
   {
@@ -80,7 +93,10 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->destinations;
   }
   /**
-   * @param HttpRouteHttpDirectResponse
+   * Optional. Static HTTP Response object to be returned regardless of the
+   * request.
+   *
+   * @param HttpRouteHttpDirectResponse $directResponse
    */
   public function setDirectResponse(HttpRouteHttpDirectResponse $directResponse)
   {
@@ -94,7 +110,15 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->directResponse;
   }
   /**
-   * @param HttpRouteFaultInjectionPolicy
+   * The specification for fault injection introduced into traffic to test the
+   * resiliency of clients to backend service failure. As part of fault
+   * injection, when clients send requests to a backend service, delays can be
+   * introduced on a percentage of requests before sending those requests to the
+   * backend service. Similarly requests from clients can be aborted for a
+   * percentage of requests. timeout and retry_policy will be ignored by clients
+   * that are configured with a fault_injection_policy
+   *
+   * @param HttpRouteFaultInjectionPolicy $faultInjectionPolicy
    */
   public function setFaultInjectionPolicy(HttpRouteFaultInjectionPolicy $faultInjectionPolicy)
   {
@@ -108,7 +132,12 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->faultInjectionPolicy;
   }
   /**
-   * @param string
+   * Optional. Specifies the idle timeout for the selected route. The idle
+   * timeout is defined as the period in which there are no bytes sent or
+   * received on either the upstream or downstream connection. If not set, the
+   * default idle timeout is 1 hour. If set to 0s, the timeout will be disabled.
+   *
+   * @param string $idleTimeout
    */
   public function setIdleTimeout($idleTimeout)
   {
@@ -122,7 +151,9 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->idleTimeout;
   }
   /**
-   * @param HttpRouteRedirect
+   * If set, the request is directed as configured by this field.
+   *
+   * @param HttpRouteRedirect $redirect
    */
   public function setRedirect(HttpRouteRedirect $redirect)
   {
@@ -136,7 +167,12 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->redirect;
   }
   /**
-   * @param HttpRouteHeaderModifier
+   * The specification for modifying the headers of a matching request prior to
+   * delivery of the request to the destination. If HeaderModifiers are set on
+   * both the Destination and the RouteAction, they will be merged. Conflicts
+   * between the two will not be resolved on the configuration.
+   *
+   * @param HttpRouteHeaderModifier $requestHeaderModifier
    */
   public function setRequestHeaderModifier(HttpRouteHeaderModifier $requestHeaderModifier)
   {
@@ -150,7 +186,13 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->requestHeaderModifier;
   }
   /**
-   * @param HttpRouteRequestMirrorPolicy
+   * Specifies the policy on how requests intended for the routes destination
+   * are shadowed to a separate mirrored destination. Proxy will not wait for
+   * the shadow destination to respond before returning the response. Prior to
+   * sending traffic to the shadow service, the host/authority header is
+   * suffixed with -shadow.
+   *
+   * @param HttpRouteRequestMirrorPolicy $requestMirrorPolicy
    */
   public function setRequestMirrorPolicy(HttpRouteRequestMirrorPolicy $requestMirrorPolicy)
   {
@@ -164,7 +206,12 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->requestMirrorPolicy;
   }
   /**
-   * @param HttpRouteHeaderModifier
+   * The specification for modifying the headers of a response prior to sending
+   * the response back to the client. If HeaderModifiers are set on both the
+   * Destination and the RouteAction, they will be merged. Conflicts between the
+   * two will not be resolved on the configuration.
+   *
+   * @param HttpRouteHeaderModifier $responseHeaderModifier
    */
   public function setResponseHeaderModifier(HttpRouteHeaderModifier $responseHeaderModifier)
   {
@@ -178,7 +225,9 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->responseHeaderModifier;
   }
   /**
-   * @param HttpRouteRetryPolicy
+   * Specifies the retry policy associated with this route.
+   *
+   * @param HttpRouteRetryPolicy $retryPolicy
    */
   public function setRetryPolicy(HttpRouteRetryPolicy $retryPolicy)
   {
@@ -192,7 +241,9 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->retryPolicy;
   }
   /**
-   * @param HttpRouteStatefulSessionAffinityPolicy
+   * Optional. Specifies cookie-based stateful session affinity.
+   *
+   * @param HttpRouteStatefulSessionAffinityPolicy $statefulSessionAffinity
    */
   public function setStatefulSessionAffinity(HttpRouteStatefulSessionAffinityPolicy $statefulSessionAffinity)
   {
@@ -206,7 +257,11 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->statefulSessionAffinity;
   }
   /**
-   * @param string
+   * Specifies the timeout for selected route. Timeout is computed from the time
+   * the request has been fully processed (i.e. end of stream) up until the
+   * response has been completely processed. Timeout includes all retries.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {
@@ -220,7 +275,10 @@ class HttpRouteRouteAction extends \Google\Collection
     return $this->timeout;
   }
   /**
-   * @param HttpRouteURLRewrite
+   * The specification for rewrite URL before forwarding requests to the
+   * destination.
+   *
+   * @param HttpRouteURLRewrite $urlRewrite
    */
   public function setUrlRewrite(HttpRouteURLRewrite $urlRewrite)
   {

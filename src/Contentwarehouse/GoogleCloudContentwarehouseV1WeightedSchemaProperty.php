@@ -21,16 +21,22 @@ class GoogleCloudContentwarehouseV1WeightedSchemaProperty extends \Google\Collec
 {
   protected $collection_key = 'propertyNames';
   /**
+   * The document schema name.
+   *
    * @var string
    */
   public $documentSchemaName;
   /**
+   * The property definition names in the schema.
+   *
    * @var string[]
    */
   public $propertyNames;
 
   /**
-   * @param string
+   * The document schema name.
+   *
+   * @param string $documentSchemaName
    */
   public function setDocumentSchemaName($documentSchemaName)
   {
@@ -44,7 +50,9 @@ class GoogleCloudContentwarehouseV1WeightedSchemaProperty extends \Google\Collec
     return $this->documentSchemaName;
   }
   /**
-   * @param string[]
+   * The property definition names in the schema.
+   *
+   * @param string[] $propertyNames
    */
   public function setPropertyNames($propertyNames)
   {

@@ -20,16 +20,27 @@ namespace Google\Service\Docs;
 class DeletePositionedObjectRequest extends \Google\Model
 {
   /**
+   * The ID of the positioned object to delete.
+   *
    * @var string
    */
   public $objectId;
   /**
+   * The tab that the positioned object to delete is in. When omitted, the
+   * request is applied to the first tab. In a document containing a single tab:
+   * - If provided, must match the singular tab's ID. - If omitted, the request
+   * applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the
+   * request applies to the first tab in the document.
+   *
    * @var string
    */
   public $tabId;
 
   /**
-   * @param string
+   * The ID of the positioned object to delete.
+   *
+   * @param string $objectId
    */
   public function setObjectId($objectId)
   {
@@ -43,7 +54,14 @@ class DeletePositionedObjectRequest extends \Google\Model
     return $this->objectId;
   }
   /**
-   * @param string
+   * The tab that the positioned object to delete is in. When omitted, the
+   * request is applied to the first tab. In a document containing a single tab:
+   * - If provided, must match the singular tab's ID. - If omitted, the request
+   * applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the
+   * request applies to the first tab in the document.
+   *
+   * @param string $tabId
    */
   public function setTabId($tabId)
   {

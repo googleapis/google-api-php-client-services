@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason extends \Google\M
   protected $quotaFailureDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure
+   * Failed due to insufficient quota.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure $quotaFailure
    */
   public function setQuotaFailure(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure $quotaFailure)
   {

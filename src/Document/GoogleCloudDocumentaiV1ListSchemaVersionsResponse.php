@@ -21,6 +21,8 @@ class GoogleCloudDocumentaiV1ListSchemaVersionsResponse extends \Google\Collecti
 {
   protected $collection_key = 'schemaVersions';
   /**
+   * Points to the next SchemaVersion, otherwise empty.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudDocumentaiV1ListSchemaVersionsResponse extends \Google\Collecti
   protected $schemaVersionsDataType = 'array';
 
   /**
-   * @param string
+   * Points to the next SchemaVersion, otherwise empty.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDocumentaiV1ListSchemaVersionsResponse extends \Google\Collecti
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDocumentaiV1SchemaVersion[]
+   * The list of SchemaVersions.
+   *
+   * @param GoogleCloudDocumentaiV1SchemaVersion[] $schemaVersions
    */
   public function setSchemaVersions($schemaVersions)
   {

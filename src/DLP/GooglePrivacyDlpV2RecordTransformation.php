@@ -20,10 +20,14 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2RecordTransformation extends \Google\Model
 {
   /**
+   * Findings container modification timestamp, if applicable.
+   *
    * @var string
    */
   public $containerTimestamp;
   /**
+   * Container version, if available ("generation" for Cloud Storage).
+   *
    * @var string
    */
   public $containerVersion;
@@ -31,7 +35,9 @@ class GooglePrivacyDlpV2RecordTransformation extends \Google\Model
   protected $fieldIdDataType = '';
 
   /**
-   * @param string
+   * Findings container modification timestamp, if applicable.
+   *
+   * @param string $containerTimestamp
    */
   public function setContainerTimestamp($containerTimestamp)
   {
@@ -45,7 +51,9 @@ class GooglePrivacyDlpV2RecordTransformation extends \Google\Model
     return $this->containerTimestamp;
   }
   /**
-   * @param string
+   * Container version, if available ("generation" for Cloud Storage).
+   *
+   * @param string $containerVersion
    */
   public function setContainerVersion($containerVersion)
   {
@@ -59,7 +67,9 @@ class GooglePrivacyDlpV2RecordTransformation extends \Google\Model
     return $this->containerVersion;
   }
   /**
-   * @param GooglePrivacyDlpV2FieldId
+   * For record transformations, provide a field.
+   *
+   * @param GooglePrivacyDlpV2FieldId $fieldId
    */
   public function setFieldId(GooglePrivacyDlpV2FieldId $fieldId)
   {

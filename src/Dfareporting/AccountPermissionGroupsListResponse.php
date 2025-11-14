@@ -23,12 +23,17 @@ class AccountPermissionGroupsListResponse extends \Google\Collection
   protected $accountPermissionGroupsType = AccountPermissionGroup::class;
   protected $accountPermissionGroupsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountPermissionGroupGroupsListResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param AccountPermissionGroup[]
+   * Account permission group collection.
+   *
+   * @param AccountPermissionGroup[] $accountPermissionGroups
    */
   public function setAccountPermissionGroups($accountPermissionGroups)
   {
@@ -42,7 +47,10 @@ class AccountPermissionGroupsListResponse extends \Google\Collection
     return $this->accountPermissionGroups;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountPermissionGroupGroupsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -24,7 +24,9 @@ class EnterpriseTopazSidekickPersonalizedDocsCardProto extends \Google\Collectio
   protected $documentGroupDataType = 'array';
 
   /**
-   * @param EnterpriseTopazSidekickDocumentGroup[]
+   * Document group.
+   *
+   * @param EnterpriseTopazSidekickDocumentGroup[] $documentGroup
    */
   public function setDocumentGroup($documentGroup)
   {

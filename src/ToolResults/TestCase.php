@@ -19,12 +19,35 @@ namespace Google\Service\ToolResults;
 
 class TestCase extends \Google\Collection
 {
+  /**
+   * Test passed.
+   */
+  public const STATUS_passed = 'passed';
+  /**
+   * Test failed.
+   */
+  public const STATUS_failed = 'failed';
+  /**
+   * Test encountered an error
+   */
+  public const STATUS_error = 'error';
+  /**
+   * Test skipped
+   */
+  public const STATUS_skipped = 'skipped';
+  /**
+   * Test flaked. Present only for rollup test cases; test cases from steps that
+   * were run with the same configuration had both failure and success outcomes.
+   */
+  public const STATUS_flaky = 'flaky';
   protected $collection_key = 'toolOutputs';
   protected $elapsedTimeType = Duration::class;
   protected $elapsedTimeDataType = '';
   protected $endTimeType = Timestamp::class;
   protected $endTimeDataType = '';
   /**
+   * Why the test case was skipped. Present only for skipped test case
+   *
    * @var string
    */
   public $skippedMessage;
@@ -33,10 +56,14 @@ class TestCase extends \Google\Collection
   protected $startTimeType = Timestamp::class;
   protected $startTimeDataType = '';
   /**
+   * The status of the test case. Required.
+   *
    * @var string
    */
   public $status;
   /**
+   * A unique identifier within a Step for this Test Case.
+   *
    * @var string
    */
   public $testCaseId;
@@ -46,7 +73,9 @@ class TestCase extends \Google\Collection
   protected $toolOutputsDataType = 'array';
 
   /**
-   * @param Duration
+   * The elapsed run time of the test case. Required.
+   *
+   * @param Duration $elapsedTime
    */
   public function setElapsedTime(Duration $elapsedTime)
   {
@@ -60,7 +89,9 @@ class TestCase extends \Google\Collection
     return $this->elapsedTime;
   }
   /**
-   * @param Timestamp
+   * The end time of the test case.
+   *
+   * @param Timestamp $endTime
    */
   public function setEndTime(Timestamp $endTime)
   {
@@ -74,7 +105,9 @@ class TestCase extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param string
+   * Why the test case was skipped. Present only for skipped test case
+   *
+   * @param string $skippedMessage
    */
   public function setSkippedMessage($skippedMessage)
   {
@@ -88,7 +121,11 @@ class TestCase extends \Google\Collection
     return $this->skippedMessage;
   }
   /**
-   * @param StackTrace[]
+   * The stack trace details if the test case failed or encountered an error.
+   * The maximum size of the stack traces is 100KiB, beyond which the stack
+   * track will be truncated. Zero if the test case passed.
+   *
+   * @param StackTrace[] $stackTraces
    */
   public function setStackTraces($stackTraces)
   {
@@ -102,7 +139,9 @@ class TestCase extends \Google\Collection
     return $this->stackTraces;
   }
   /**
-   * @param Timestamp
+   * The start time of the test case.
+   *
+   * @param Timestamp $startTime
    */
   public function setStartTime(Timestamp $startTime)
   {
@@ -116,21 +155,27 @@ class TestCase extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * The status of the test case. Required.
+   *
+   * Accepted values: passed, failed, error, skipped, flaky
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * A unique identifier within a Step for this Test Case.
+   *
+   * @param string $testCaseId
    */
   public function setTestCaseId($testCaseId)
   {
@@ -144,7 +189,9 @@ class TestCase extends \Google\Collection
     return $this->testCaseId;
   }
   /**
-   * @param TestCaseReference
+   * Test case reference, e.g. name, class name and test suite name. Required.
+   *
+   * @param TestCaseReference $testCaseReference
    */
   public function setTestCaseReference(TestCaseReference $testCaseReference)
   {
@@ -158,7 +205,10 @@ class TestCase extends \Google\Collection
     return $this->testCaseReference;
   }
   /**
-   * @param ToolOutputReference[]
+   * References to opaque files of any format output by the tool execution.
+   * @OutputOnly
+   *
+   * @param ToolOutputReference[] $toolOutputs
    */
   public function setToolOutputs($toolOutputs)
   {

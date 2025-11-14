@@ -24,7 +24,7 @@ class BatchCreatePerfSamplesResponse extends \Google\Collection
   protected $perfSamplesDataType = 'array';
 
   /**
-   * @param PerfSample[]
+   * @param PerfSample[] $perfSamples
    */
   public function setPerfSamples($perfSamples)
   {

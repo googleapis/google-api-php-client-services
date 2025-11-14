@@ -23,16 +23,22 @@ class ListLunsResponse extends \Google\Collection
   protected $lunsType = Lun::class;
   protected $lunsDataType = 'array';
   /**
+   * A token identifying a page of results from the server.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Lun[]
+   * The list of luns.
+   *
+   * @param Lun[] $luns
    */
   public function setLuns($luns)
   {
@@ -46,7 +52,9 @@ class ListLunsResponse extends \Google\Collection
     return $this->luns;
   }
   /**
-   * @param string
+   * A token identifying a page of results from the server.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListLunsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

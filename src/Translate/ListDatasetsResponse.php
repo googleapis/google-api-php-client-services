@@ -23,12 +23,17 @@ class ListDatasetsResponse extends \Google\Collection
   protected $datasetsType = Dataset::class;
   protected $datasetsDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass this token to the page_token
+   * field in the ListDatasetsRequest to obtain the corresponding page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Dataset[]
+   * The datasets read.
+   *
+   * @param Dataset[] $datasets
    */
   public function setDatasets($datasets)
   {
@@ -42,7 +47,10 @@ class ListDatasetsResponse extends \Google\Collection
     return $this->datasets;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass this token to the page_token
+   * field in the ListDatasetsRequest to obtain the corresponding page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

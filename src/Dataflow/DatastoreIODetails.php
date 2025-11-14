@@ -20,16 +20,22 @@ namespace Google\Service\Dataflow;
 class DatastoreIODetails extends \Google\Model
 {
   /**
+   * Namespace used in the connection.
+   *
    * @var string
    */
   public $namespace;
   /**
+   * ProjectId accessed in the connection.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * Namespace used in the connection.
+   *
+   * @param string $namespace
    */
   public function setNamespace($namespace)
   {
@@ -43,7 +49,9 @@ class DatastoreIODetails extends \Google\Model
     return $this->namespace;
   }
   /**
-   * @param string
+   * ProjectId accessed in the connection.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

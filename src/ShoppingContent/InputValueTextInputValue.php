@@ -20,12 +20,16 @@ namespace Google\Service\ShoppingContent;
 class InputValueTextInputValue extends \Google\Model
 {
   /**
+   * Required. Text provided by the merchant.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. Text provided by the merchant.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

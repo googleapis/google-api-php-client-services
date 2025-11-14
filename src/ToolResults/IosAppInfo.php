@@ -20,12 +20,16 @@ namespace Google\Service\ToolResults;
 class IosAppInfo extends \Google\Model
 {
   /**
+   * The name of the app. Required
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The name of the app. Required
+   *
+   * @param string $name
    */
   public function setName($name)
   {

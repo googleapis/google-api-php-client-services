@@ -20,26 +20,38 @@ namespace Google\Service\PeopleService;
 class EmailAddress extends \Google\Model
 {
   /**
+   * The display name of the email.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The type of the email address translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
    * @var string
    */
   public $formattedType;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The type of the email address. The type can be custom or one of these
+   * predefined values: * `home` * `work` * `other`
+   *
    * @var string
    */
   public $type;
   /**
+   * The email address.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The display name of the email.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -53,7 +65,10 @@ class EmailAddress extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The type of the email address translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
+   * @param string $formattedType
    */
   public function setFormattedType($formattedType)
   {
@@ -67,7 +82,9 @@ class EmailAddress extends \Google\Model
     return $this->formattedType;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the email address.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -81,7 +98,10 @@ class EmailAddress extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The type of the email address. The type can be custom or one of these
+   * predefined values: * `home` * `work` * `other`
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -95,7 +115,9 @@ class EmailAddress extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The email address.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

@@ -25,7 +25,10 @@ class GoogleBigtableAdminV2TypeMap extends \Google\Model
   protected $valueTypeDataType = '';
 
   /**
-   * @param Type
+   * The type of a map key. Only `Bytes`, `String`, and `Int64` are allowed as
+   * key types.
+   *
+   * @param Type $keyType
    */
   public function setKeyType(Type $keyType)
   {
@@ -39,7 +42,9 @@ class GoogleBigtableAdminV2TypeMap extends \Google\Model
     return $this->keyType;
   }
   /**
-   * @param Type
+   * The type of the values in a map.
+   *
+   * @param Type $valueType
    */
   public function setValueType(Type $valueType)
   {

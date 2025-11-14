@@ -25,7 +25,9 @@ class GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData extends \Goog
   protected $trainingDocumentsDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1BatchDocumentsInputConfig
+   * The documents used for testing the trained version.
+   *
+   * @param GoogleCloudDocumentaiV1BatchDocumentsInputConfig $testDocuments
    */
   public function setTestDocuments(GoogleCloudDocumentaiV1BatchDocumentsInputConfig $testDocuments)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData extends \Goog
     return $this->testDocuments;
   }
   /**
-   * @param GoogleCloudDocumentaiV1BatchDocumentsInputConfig
+   * The documents used for training the new version.
+   *
+   * @param GoogleCloudDocumentaiV1BatchDocumentsInputConfig $trainingDocuments
    */
   public function setTrainingDocuments(GoogleCloudDocumentaiV1BatchDocumentsInputConfig $trainingDocuments)
   {

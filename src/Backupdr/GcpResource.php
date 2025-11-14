@@ -20,20 +20,29 @@ namespace Google\Service\Backupdr;
 class GcpResource extends \Google\Model
 {
   /**
+   * Name of the Google Cloud resource.
+   *
    * @var string
    */
   public $gcpResourcename;
   /**
+   * Location of the resource: //"global"/"unspecified".
+   *
    * @var string
    */
   public $location;
   /**
+   * Type of the resource. Use the Unified Resource Type, eg.
+   * compute.googleapis.com/Instance.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Name of the Google Cloud resource.
+   *
+   * @param string $gcpResourcename
    */
   public function setGcpResourcename($gcpResourcename)
   {
@@ -47,7 +56,9 @@ class GcpResource extends \Google\Model
     return $this->gcpResourcename;
   }
   /**
-   * @param string
+   * Location of the resource: //"global"/"unspecified".
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -61,7 +72,10 @@ class GcpResource extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Type of the resource. Use the Unified Resource Type, eg.
+   * compute.googleapis.com/Instance.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

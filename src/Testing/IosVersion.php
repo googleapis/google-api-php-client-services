@@ -21,28 +21,42 @@ class IosVersion extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * An opaque id for this iOS version. Use this id to invoke the
+   * TestExecutionService.
+   *
    * @var string
    */
   public $id;
   /**
+   * An integer representing the major iOS version. Examples: "8", "9".
+   *
    * @var int
    */
   public $majorVersion;
   /**
+   * An integer representing the minor iOS version. Examples: "1", "2".
+   *
    * @var int
    */
   public $minorVersion;
   /**
+   * The available Xcode versions for this version.
+   *
    * @var string[]
    */
   public $supportedXcodeVersionIds;
   /**
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string
+   * An opaque id for this iOS version. Use this id to invoke the
+   * TestExecutionService.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -56,7 +70,9 @@ class IosVersion extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param int
+   * An integer representing the major iOS version. Examples: "8", "9".
+   *
+   * @param int $majorVersion
    */
   public function setMajorVersion($majorVersion)
   {
@@ -70,7 +86,9 @@ class IosVersion extends \Google\Collection
     return $this->majorVersion;
   }
   /**
-   * @param int
+   * An integer representing the minor iOS version. Examples: "1", "2".
+   *
+   * @param int $minorVersion
    */
   public function setMinorVersion($minorVersion)
   {
@@ -84,7 +102,9 @@ class IosVersion extends \Google\Collection
     return $this->minorVersion;
   }
   /**
-   * @param string[]
+   * The available Xcode versions for this version.
+   *
+   * @param string[] $supportedXcodeVersionIds
    */
   public function setSupportedXcodeVersionIds($supportedXcodeVersionIds)
   {
@@ -98,7 +118,9 @@ class IosVersion extends \Google\Collection
     return $this->supportedXcodeVersionIds;
   }
   /**
-   * @param string[]
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

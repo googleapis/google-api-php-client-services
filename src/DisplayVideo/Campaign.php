@@ -19,8 +19,35 @@ namespace Google\Service\DisplayVideo;
 
 class Campaign extends \Google\Collection
 {
+  /**
+   * Default value when status is not specified or is unknown in this version.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_UNSPECIFIED = 'ENTITY_STATUS_UNSPECIFIED';
+  /**
+   * The entity is enabled to bid and spend budget.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_ACTIVE = 'ENTITY_STATUS_ACTIVE';
+  /**
+   * The entity is archived. Bidding and budget spending are disabled. An entity
+   * can be deleted after archived. Deleted entities cannot be retrieved.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_ARCHIVED = 'ENTITY_STATUS_ARCHIVED';
+  /**
+   * The entity is under draft. Bidding and budget spending are disabled.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_DRAFT = 'ENTITY_STATUS_DRAFT';
+  /**
+   * Bidding and budget spending are paused for the entity.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_PAUSED = 'ENTITY_STATUS_PAUSED';
+  /**
+   * The entity is scheduled for deletion.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_SCHEDULED_FOR_DELETION = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION';
   protected $collection_key = 'campaignBudgets';
   /**
+   * Output only. The unique ID of the advertiser the campaign belongs to.
+   *
    * @var string
    */
   public $advertiserId;
@@ -31,30 +58,48 @@ class Campaign extends \Google\Collection
   protected $campaignGoalType = CampaignGoal::class;
   protected $campaignGoalDataType = '';
   /**
+   * Output only. The unique ID of the campaign. Assigned by the system.
+   *
    * @var string
    */
   public $campaignId;
   /**
+   * Required. The display name of the campaign. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. Controls whether or not the insertion orders under this campaign
+   * can spend their budgets and bid on inventory. * Accepted values are
+   * `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
+   * `ENTITY_STATUS_PAUSED`. * For CreateCampaign method,
+   * `ENTITY_STATUS_ARCHIVED` is not allowed.
+   *
    * @var string
    */
   public $entityStatus;
   protected $frequencyCapType = FrequencyCap::class;
   protected $frequencyCapDataType = '';
   /**
+   * Output only. The resource name of the campaign.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The timestamp when the campaign was last updated. Assigned by
+   * the system.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The unique ID of the advertiser the campaign belongs to.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -68,7 +113,10 @@ class Campaign extends \Google\Collection
     return $this->advertiserId;
   }
   /**
-   * @param CampaignBudget[]
+   * The list of budgets available to this campaign. If this field is not set,
+   * the campaign uses an unlimited budget.
+   *
+   * @param CampaignBudget[] $campaignBudgets
    */
   public function setCampaignBudgets($campaignBudgets)
   {
@@ -82,7 +130,9 @@ class Campaign extends \Google\Collection
     return $this->campaignBudgets;
   }
   /**
-   * @param CampaignFlight
+   * Required. The planned spend and duration of the campaign.
+   *
+   * @param CampaignFlight $campaignFlight
    */
   public function setCampaignFlight(CampaignFlight $campaignFlight)
   {
@@ -96,7 +146,9 @@ class Campaign extends \Google\Collection
     return $this->campaignFlight;
   }
   /**
-   * @param CampaignGoal
+   * Required. The goal of the campaign.
+   *
+   * @param CampaignGoal $campaignGoal
    */
   public function setCampaignGoal(CampaignGoal $campaignGoal)
   {
@@ -110,7 +162,9 @@ class Campaign extends \Google\Collection
     return $this->campaignGoal;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the campaign. Assigned by the system.
+   *
+   * @param string $campaignId
    */
   public function setCampaignId($campaignId)
   {
@@ -124,7 +178,10 @@ class Campaign extends \Google\Collection
     return $this->campaignId;
   }
   /**
-   * @param string
+   * Required. The display name of the campaign. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -138,21 +195,36 @@ class Campaign extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. Controls whether or not the insertion orders under this campaign
+   * can spend their budgets and bid on inventory. * Accepted values are
+   * `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
+   * `ENTITY_STATUS_PAUSED`. * For CreateCampaign method,
+   * `ENTITY_STATUS_ARCHIVED` is not allowed.
+   *
+   * Accepted values: ENTITY_STATUS_UNSPECIFIED, ENTITY_STATUS_ACTIVE,
+   * ENTITY_STATUS_ARCHIVED, ENTITY_STATUS_DRAFT, ENTITY_STATUS_PAUSED,
+   * ENTITY_STATUS_SCHEDULED_FOR_DELETION
+   *
+   * @param self::ENTITY_STATUS_* $entityStatus
    */
   public function setEntityStatus($entityStatus)
   {
     $this->entityStatus = $entityStatus;
   }
   /**
-   * @return string
+   * @return self::ENTITY_STATUS_*
    */
   public function getEntityStatus()
   {
     return $this->entityStatus;
   }
   /**
-   * @param FrequencyCap
+   * Required. The frequency cap setting of the campaign. *Warning*: On
+   * **February 28, 2025**, frequency cap time periods greater than 30 days will
+   * no longer be accepted. [Read more about this announced change](/display-
+   * video/api/deprecations#features.lifetime_frequency_cap)
+   *
+   * @param FrequencyCap $frequencyCap
    */
   public function setFrequencyCap(FrequencyCap $frequencyCap)
   {
@@ -166,7 +238,9 @@ class Campaign extends \Google\Collection
     return $this->frequencyCap;
   }
   /**
-   * @param string
+   * Output only. The resource name of the campaign.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -180,7 +254,10 @@ class Campaign extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the campaign was last updated. Assigned by
+   * the system.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

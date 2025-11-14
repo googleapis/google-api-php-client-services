@@ -25,7 +25,9 @@ class LatLngBounds extends \Google\Model
   protected $southwestDataType = '';
 
   /**
-   * @param LatLng
+   * The northeast corner of these bounds.
+   *
+   * @param LatLng $northeast
    */
   public function setNortheast(LatLng $northeast)
   {
@@ -39,7 +41,9 @@ class LatLngBounds extends \Google\Model
     return $this->northeast;
   }
   /**
-   * @param LatLng
+   * The southwest corner of these bounds.
+   *
+   * @param LatLng $southwest
    */
   public function setSouthwest(LatLng $southwest)
   {

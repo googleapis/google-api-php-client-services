@@ -20,16 +20,24 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1p2alpha1GcsDestination extends \Google\Model
 {
   /**
+   * Required. The format of the gcs destination. Only "text/csv" and
+   * "application/json" are supported.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * Required. The output uri of destination file.
+   *
    * @var string
    */
   public $outputUri;
 
   /**
-   * @param string
+   * Required. The format of the gcs destination. Only "text/csv" and
+   * "application/json" are supported.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDatalabelingV1p2alpha1GcsDestination extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * Required. The output uri of destination file.
+   *
+   * @param string $outputUri
    */
   public function setOutputUri($outputUri)
   {

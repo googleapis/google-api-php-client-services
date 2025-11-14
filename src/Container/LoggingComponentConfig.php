@@ -21,12 +21,16 @@ class LoggingComponentConfig extends \Google\Collection
 {
   protected $collection_key = 'enableComponents';
   /**
+   * Select components to collect logs. An empty set would disable all logging.
+   *
    * @var string[]
    */
   public $enableComponents;
 
   /**
-   * @param string[]
+   * Select components to collect logs. An empty set would disable all logging.
+   *
+   * @param string[] $enableComponents
    */
   public function setEnableComponents($enableComponents)
   {

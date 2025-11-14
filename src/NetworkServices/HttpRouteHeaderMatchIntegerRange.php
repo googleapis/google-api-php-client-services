@@ -20,16 +20,22 @@ namespace Google\Service\NetworkServices;
 class HttpRouteHeaderMatchIntegerRange extends \Google\Model
 {
   /**
+   * End of the range (exclusive)
+   *
    * @var int
    */
   public $end;
   /**
+   * Start of the range (inclusive)
+   *
    * @var int
    */
   public $start;
 
   /**
-   * @param int
+   * End of the range (exclusive)
+   *
+   * @param int $end
    */
   public function setEnd($end)
   {
@@ -43,7 +49,9 @@ class HttpRouteHeaderMatchIntegerRange extends \Google\Model
     return $this->end;
   }
   /**
-   * @param int
+   * Start of the range (inclusive)
+   *
+   * @param int $start
    */
   public function setStart($start)
   {

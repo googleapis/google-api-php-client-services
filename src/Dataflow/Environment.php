@@ -19,86 +19,204 @@ namespace Google\Service\Dataflow;
 
 class Environment extends \Google\Collection
 {
+  /**
+   * Run in the default mode.
+   */
+  public const FLEX_RESOURCE_SCHEDULING_GOAL_FLEXRS_UNSPECIFIED = 'FLEXRS_UNSPECIFIED';
+  /**
+   * Optimize for lower execution time.
+   */
+  public const FLEX_RESOURCE_SCHEDULING_GOAL_FLEXRS_SPEED_OPTIMIZED = 'FLEXRS_SPEED_OPTIMIZED';
+  /**
+   * Optimize for lower cost.
+   */
+  public const FLEX_RESOURCE_SCHEDULING_GOAL_FLEXRS_COST_OPTIMIZED = 'FLEXRS_COST_OPTIMIZED';
+  /**
+   * Shuffle mode information is not available.
+   */
+  public const SHUFFLE_MODE_SHUFFLE_MODE_UNSPECIFIED = 'SHUFFLE_MODE_UNSPECIFIED';
+  /**
+   * Shuffle is done on the worker VMs.
+   */
+  public const SHUFFLE_MODE_VM_BASED = 'VM_BASED';
+  /**
+   * Shuffle is done on the service side.
+   */
+  public const SHUFFLE_MODE_SERVICE_BASED = 'SERVICE_BASED';
+  /**
+   * Run in the default mode.
+   */
+  public const STREAMING_MODE_STREAMING_MODE_UNSPECIFIED = 'STREAMING_MODE_UNSPECIFIED';
+  /**
+   * In this mode, message deduplication is performed against persistent state
+   * to make sure each message is processed and committed to storage exactly
+   * once.
+   */
+  public const STREAMING_MODE_STREAMING_MODE_EXACTLY_ONCE = 'STREAMING_MODE_EXACTLY_ONCE';
+  /**
+   * Message deduplication is not performed. Messages might be processed
+   * multiple times, and the results are applied multiple times. Note: Setting
+   * this value also enables Streaming Engine and Streaming Engine resource-
+   * based billing.
+   */
+  public const STREAMING_MODE_STREAMING_MODE_AT_LEAST_ONCE = 'STREAMING_MODE_AT_LEAST_ONCE';
   protected $collection_key = 'workerPools';
   /**
+   * The type of cluster manager API to use. If unknown or unspecified, the
+   * service will attempt to choose a reasonable default. This should be in the
+   * form of the API service name, e.g. "compute.googleapis.com".
+   *
    * @var string
    */
   public $clusterManagerApiService;
   /**
+   * Optional. The dataset for the current project where various workflow
+   * related tables are stored. The supported resource type is: Google BigQuery:
+   * bigquery.googleapis.com/{dataset}
+   *
    * @var string
    */
   public $dataset;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
   /**
+   * The list of experiments to enable. This field should be used for SDK
+   * related experiments and not for service related experiments. The proper
+   * field for service related experiments is service_options.
+   *
    * @var string[]
    */
   public $experiments;
   /**
+   * Optional. Which Flexible Resource Scheduling mode to run in.
+   *
    * @var string
    */
   public $flexResourceSchedulingGoal;
   /**
+   * Experimental settings.
+   *
    * @var array[]
    */
   public $internalExperiments;
   /**
+   * The Cloud Dataflow SDK pipeline options specified by the user. These
+   * options are passed through the service and are used to recreate the SDK
+   * pipeline options on the worker in a language agnostic and platform
+   * independent way.
+   *
    * @var array[]
    */
   public $sdkPipelineOptions;
   /**
+   * Optional. Identity to run virtual machines as. Defaults to the default
+   * account.
+   *
    * @var string
    */
   public $serviceAccountEmail;
   /**
+   * Optional. If set, contains the Cloud KMS key identifier used to encrypt
+   * data at rest, AKA a Customer Managed Encryption Key (CMEK). Format:
+   * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   *
    * @var string
    */
   public $serviceKmsKeyName;
   /**
+   * Optional. The list of service options to enable. This field should be used
+   * for service related experiments only. These experiments, when graduating to
+   * GA, should be replaced by dedicated fields or become default (i.e. always
+   * on).
+   *
    * @var string[]
    */
   public $serviceOptions;
   /**
+   * Output only. The shuffle mode used for the job.
+   *
    * @var string
    */
   public $shuffleMode;
   /**
+   * Optional. Specifies the Streaming Engine message processing guarantees.
+   * Reduces cost and latency but might result in duplicate messages committed
+   * to storage. Designed to run simple mapping streaming ETL jobs at the lowest
+   * cost. For example, Change Data Capture (CDC) to BigQuery is a canonical use
+   * case. For more information, see [Set the pipeline streaming
+   * mode](https://cloud.google.com/dataflow/docs/guides/streaming-modes).
+   *
    * @var string
    */
   public $streamingMode;
   /**
+   * The prefix of the resources the system should use for temporary storage.
+   * The system will append the suffix "/temp-{JOBNAME} to this resource prefix,
+   * where {JOBNAME} is the value of the job_name field. The resulting bucket
+   * and object prefix is used as the prefix of the resources used to store
+   * temporary data needed during the job execution. NOTE: This will override
+   * the value in taskrunner_settings. The supported resource type is: Google
+   * Cloud Storage: storage.googleapis.com/{bucket}/{object}
+   * bucket.storage.googleapis.com/{object}
+   *
    * @var string
    */
   public $tempStoragePrefix;
   /**
+   * Optional. True when any worker pool that uses public IPs is present.
+   *
    * @var bool
    */
   public $usePublicIps;
   /**
+   * Output only. Whether the job uses the Streaming Engine resource-based
+   * billing model.
+   *
    * @var bool
    */
   public $useStreamingEngineResourceBasedBilling;
   /**
+   * Optional. A description of the process that generated the request.
+   *
    * @var array[]
    */
   public $userAgent;
   /**
+   * A structure describing which components and their versions of the service
+   * are required in order to run the job.
+   *
    * @var array[]
    */
   public $version;
   protected $workerPoolsType = WorkerPool::class;
   protected $workerPoolsDataType = 'array';
   /**
+   * Optional. The Compute Engine region
+   * (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1". Mutually exclusive
+   * with worker_zone. If neither worker_region nor worker_zone is specified,
+   * default to the control plane's region.
+   *
    * @var string
    */
   public $workerRegion;
   /**
+   * Optional. The Compute Engine zone
+   * (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive
+   * with worker_region. If neither worker_region nor worker_zone is specified,
+   * a zone in the control plane's region is chosen based on available capacity.
+   *
    * @var string
    */
   public $workerZone;
 
   /**
-   * @param string
+   * The type of cluster manager API to use. If unknown or unspecified, the
+   * service will attempt to choose a reasonable default. This should be in the
+   * form of the API service name, e.g. "compute.googleapis.com".
+   *
+   * @param string $clusterManagerApiService
    */
   public function setClusterManagerApiService($clusterManagerApiService)
   {
@@ -112,7 +230,11 @@ class Environment extends \Google\Collection
     return $this->clusterManagerApiService;
   }
   /**
-   * @param string
+   * Optional. The dataset for the current project where various workflow
+   * related tables are stored. The supported resource type is: Google BigQuery:
+   * bigquery.googleapis.com/{dataset}
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -126,7 +248,9 @@ class Environment extends \Google\Collection
     return $this->dataset;
   }
   /**
-   * @param DebugOptions
+   * Optional. Any debugging options to be supplied to the job.
+   *
+   * @param DebugOptions $debugOptions
    */
   public function setDebugOptions(DebugOptions $debugOptions)
   {
@@ -140,7 +264,11 @@ class Environment extends \Google\Collection
     return $this->debugOptions;
   }
   /**
-   * @param string[]
+   * The list of experiments to enable. This field should be used for SDK
+   * related experiments and not for service related experiments. The proper
+   * field for service related experiments is service_options.
+   *
+   * @param string[] $experiments
    */
   public function setExperiments($experiments)
   {
@@ -154,21 +282,28 @@ class Environment extends \Google\Collection
     return $this->experiments;
   }
   /**
-   * @param string
+   * Optional. Which Flexible Resource Scheduling mode to run in.
+   *
+   * Accepted values: FLEXRS_UNSPECIFIED, FLEXRS_SPEED_OPTIMIZED,
+   * FLEXRS_COST_OPTIMIZED
+   *
+   * @param self::FLEX_RESOURCE_SCHEDULING_GOAL_* $flexResourceSchedulingGoal
    */
   public function setFlexResourceSchedulingGoal($flexResourceSchedulingGoal)
   {
     $this->flexResourceSchedulingGoal = $flexResourceSchedulingGoal;
   }
   /**
-   * @return string
+   * @return self::FLEX_RESOURCE_SCHEDULING_GOAL_*
    */
   public function getFlexResourceSchedulingGoal()
   {
     return $this->flexResourceSchedulingGoal;
   }
   /**
-   * @param array[]
+   * Experimental settings.
+   *
+   * @param array[] $internalExperiments
    */
   public function setInternalExperiments($internalExperiments)
   {
@@ -182,7 +317,12 @@ class Environment extends \Google\Collection
     return $this->internalExperiments;
   }
   /**
-   * @param array[]
+   * The Cloud Dataflow SDK pipeline options specified by the user. These
+   * options are passed through the service and are used to recreate the SDK
+   * pipeline options on the worker in a language agnostic and platform
+   * independent way.
+   *
+   * @param array[] $sdkPipelineOptions
    */
   public function setSdkPipelineOptions($sdkPipelineOptions)
   {
@@ -196,7 +336,10 @@ class Environment extends \Google\Collection
     return $this->sdkPipelineOptions;
   }
   /**
-   * @param string
+   * Optional. Identity to run virtual machines as. Defaults to the default
+   * account.
+   *
+   * @param string $serviceAccountEmail
    */
   public function setServiceAccountEmail($serviceAccountEmail)
   {
@@ -210,7 +353,11 @@ class Environment extends \Google\Collection
     return $this->serviceAccountEmail;
   }
   /**
-   * @param string
+   * Optional. If set, contains the Cloud KMS key identifier used to encrypt
+   * data at rest, AKA a Customer Managed Encryption Key (CMEK). Format:
+   * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   *
+   * @param string $serviceKmsKeyName
    */
   public function setServiceKmsKeyName($serviceKmsKeyName)
   {
@@ -224,7 +371,12 @@ class Environment extends \Google\Collection
     return $this->serviceKmsKeyName;
   }
   /**
-   * @param string[]
+   * Optional. The list of service options to enable. This field should be used
+   * for service related experiments only. These experiments, when graduating to
+   * GA, should be replaced by dedicated fields or become default (i.e. always
+   * on).
+   *
+   * @param string[] $serviceOptions
    */
   public function setServiceOptions($serviceOptions)
   {
@@ -238,35 +390,58 @@ class Environment extends \Google\Collection
     return $this->serviceOptions;
   }
   /**
-   * @param string
+   * Output only. The shuffle mode used for the job.
+   *
+   * Accepted values: SHUFFLE_MODE_UNSPECIFIED, VM_BASED, SERVICE_BASED
+   *
+   * @param self::SHUFFLE_MODE_* $shuffleMode
    */
   public function setShuffleMode($shuffleMode)
   {
     $this->shuffleMode = $shuffleMode;
   }
   /**
-   * @return string
+   * @return self::SHUFFLE_MODE_*
    */
   public function getShuffleMode()
   {
     return $this->shuffleMode;
   }
   /**
-   * @param string
+   * Optional. Specifies the Streaming Engine message processing guarantees.
+   * Reduces cost and latency but might result in duplicate messages committed
+   * to storage. Designed to run simple mapping streaming ETL jobs at the lowest
+   * cost. For example, Change Data Capture (CDC) to BigQuery is a canonical use
+   * case. For more information, see [Set the pipeline streaming
+   * mode](https://cloud.google.com/dataflow/docs/guides/streaming-modes).
+   *
+   * Accepted values: STREAMING_MODE_UNSPECIFIED, STREAMING_MODE_EXACTLY_ONCE,
+   * STREAMING_MODE_AT_LEAST_ONCE
+   *
+   * @param self::STREAMING_MODE_* $streamingMode
    */
   public function setStreamingMode($streamingMode)
   {
     $this->streamingMode = $streamingMode;
   }
   /**
-   * @return string
+   * @return self::STREAMING_MODE_*
    */
   public function getStreamingMode()
   {
     return $this->streamingMode;
   }
   /**
-   * @param string
+   * The prefix of the resources the system should use for temporary storage.
+   * The system will append the suffix "/temp-{JOBNAME} to this resource prefix,
+   * where {JOBNAME} is the value of the job_name field. The resulting bucket
+   * and object prefix is used as the prefix of the resources used to store
+   * temporary data needed during the job execution. NOTE: This will override
+   * the value in taskrunner_settings. The supported resource type is: Google
+   * Cloud Storage: storage.googleapis.com/{bucket}/{object}
+   * bucket.storage.googleapis.com/{object}
+   *
+   * @param string $tempStoragePrefix
    */
   public function setTempStoragePrefix($tempStoragePrefix)
   {
@@ -280,7 +455,9 @@ class Environment extends \Google\Collection
     return $this->tempStoragePrefix;
   }
   /**
-   * @param bool
+   * Optional. True when any worker pool that uses public IPs is present.
+   *
+   * @param bool $usePublicIps
    */
   public function setUsePublicIps($usePublicIps)
   {
@@ -294,7 +471,10 @@ class Environment extends \Google\Collection
     return $this->usePublicIps;
   }
   /**
-   * @param bool
+   * Output only. Whether the job uses the Streaming Engine resource-based
+   * billing model.
+   *
+   * @param bool $useStreamingEngineResourceBasedBilling
    */
   public function setUseStreamingEngineResourceBasedBilling($useStreamingEngineResourceBasedBilling)
   {
@@ -308,7 +488,9 @@ class Environment extends \Google\Collection
     return $this->useStreamingEngineResourceBasedBilling;
   }
   /**
-   * @param array[]
+   * Optional. A description of the process that generated the request.
+   *
+   * @param array[] $userAgent
    */
   public function setUserAgent($userAgent)
   {
@@ -322,7 +504,10 @@ class Environment extends \Google\Collection
     return $this->userAgent;
   }
   /**
-   * @param array[]
+   * A structure describing which components and their versions of the service
+   * are required in order to run the job.
+   *
+   * @param array[] $version
    */
   public function setVersion($version)
   {
@@ -336,7 +521,10 @@ class Environment extends \Google\Collection
     return $this->version;
   }
   /**
-   * @param WorkerPool[]
+   * The worker pools. At least one "harness" worker pool must be specified in
+   * order for the job to have workers.
+   *
+   * @param WorkerPool[] $workerPools
    */
   public function setWorkerPools($workerPools)
   {
@@ -350,7 +538,13 @@ class Environment extends \Google\Collection
     return $this->workerPools;
   }
   /**
-   * @param string
+   * Optional. The Compute Engine region
+   * (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1". Mutually exclusive
+   * with worker_zone. If neither worker_region nor worker_zone is specified,
+   * default to the control plane's region.
+   *
+   * @param string $workerRegion
    */
   public function setWorkerRegion($workerRegion)
   {
@@ -364,7 +558,13 @@ class Environment extends \Google\Collection
     return $this->workerRegion;
   }
   /**
-   * @param string
+   * Optional. The Compute Engine zone
+   * (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive
+   * with worker_region. If neither worker_region nor worker_zone is specified,
+   * a zone in the control plane's region is chosen based on available capacity.
+   *
+   * @param string $workerZone
    */
   public function setWorkerZone($workerZone)
   {

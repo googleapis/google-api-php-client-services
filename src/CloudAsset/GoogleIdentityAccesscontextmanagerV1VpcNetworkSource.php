@@ -23,7 +23,9 @@ class GoogleIdentityAccesscontextmanagerV1VpcNetworkSource extends \Google\Model
   protected $vpcSubnetworkDataType = '';
 
   /**
-   * @param GoogleIdentityAccesscontextmanagerV1VpcSubNetwork
+   * Sub-segment ranges of a VPC network.
+   *
+   * @param GoogleIdentityAccesscontextmanagerV1VpcSubNetwork $vpcSubnetwork
    */
   public function setVpcSubnetwork(GoogleIdentityAccesscontextmanagerV1VpcSubNetwork $vpcSubnetwork)
   {

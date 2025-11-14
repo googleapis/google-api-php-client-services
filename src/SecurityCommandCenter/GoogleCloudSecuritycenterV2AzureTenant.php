@@ -20,16 +20,23 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2AzureTenant extends \Google\Model
 {
   /**
+   * The display name of the Azure tenant.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The ID of the Microsoft Entra tenant, for example,
+   * "a11aaa11-aa11-1aa1-11aa-1aaa11a".
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * The display name of the Azure tenant.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +50,10 @@ class GoogleCloudSecuritycenterV2AzureTenant extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The ID of the Microsoft Entra tenant, for example,
+   * "a11aaa11-aa11-1aa1-11aa-1aaa11a".
+   *
+   * @param string $id
    */
   public function setId($id)
   {

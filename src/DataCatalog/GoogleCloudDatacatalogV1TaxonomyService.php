@@ -20,16 +20,34 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1TaxonomyService extends \Google\Model
 {
   /**
+   * Default value
+   */
+  public const NAME_MANAGING_SYSTEM_UNSPECIFIED = 'MANAGING_SYSTEM_UNSPECIFIED';
+  /**
+   * Dataplex Universal Catalog.
+   */
+  public const NAME_MANAGING_SYSTEM_DATAPLEX = 'MANAGING_SYSTEM_DATAPLEX';
+  /**
+   * Other
+   */
+  public const NAME_MANAGING_SYSTEM_OTHER = 'MANAGING_SYSTEM_OTHER';
+  /**
+   * The service agent for the service.
+   *
    * @var string
    */
   public $identity;
   /**
+   * The Google Cloud service name.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The service agent for the service.
+   *
+   * @param string $identity
    */
   public function setIdentity($identity)
   {
@@ -43,14 +61,19 @@ class GoogleCloudDatacatalogV1TaxonomyService extends \Google\Model
     return $this->identity;
   }
   /**
-   * @param string
+   * The Google Cloud service name.
+   *
+   * Accepted values: MANAGING_SYSTEM_UNSPECIFIED, MANAGING_SYSTEM_DATAPLEX,
+   * MANAGING_SYSTEM_OTHER
+   *
+   * @param self::NAME_* $name
    */
   public function setName($name)
   {
     $this->name = $name;
   }
   /**
-   * @return string
+   * @return self::NAME_*
    */
   public function getName()
   {

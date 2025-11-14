@@ -20,12 +20,36 @@ namespace Google\Service\BigtableAdmin;
 class ProtoSchema extends \Google\Model
 {
   /**
+   * Required. Contains a protobuf-serialized [google.protobuf.FileDescriptorSet
+   * ](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf
+   * /descriptor.proto), which could include multiple proto files. To generate
+   * it, [install](https://grpc.io/docs/protoc-installation/) and run `protoc`
+   * with `--include_imports` and `--descriptor_set_out`. For example, to
+   * generate for moon/shot/app.proto, run ``` $protoc --proto_path=/app_path
+   * --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.pb \ moon/shot/app.proto ``` For more
+   * details, see protobuffer [self
+   * description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
+   *
    * @var string
    */
   public $protoDescriptors;
 
   /**
-   * @param string
+   * Required. Contains a protobuf-serialized [google.protobuf.FileDescriptorSet
+   * ](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf
+   * /descriptor.proto), which could include multiple proto files. To generate
+   * it, [install](https://grpc.io/docs/protoc-installation/) and run `protoc`
+   * with `--include_imports` and `--descriptor_set_out`. For example, to
+   * generate for moon/shot/app.proto, run ``` $protoc --proto_path=/app_path
+   * --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.pb \ moon/shot/app.proto ``` For more
+   * details, see protobuffer [self
+   * description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
+   *
+   * @param string $protoDescriptors
    */
   public function setProtoDescriptors($protoDescriptors)
   {

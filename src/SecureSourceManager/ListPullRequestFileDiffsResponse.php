@@ -23,12 +23,16 @@ class ListPullRequestFileDiffsResponse extends \Google\Collection
   protected $fileDiffsType = FileDiff::class;
   protected $fileDiffsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param FileDiff[]
+   * The list of pull request file diffs.
+   *
+   * @param FileDiff[] $fileDiffs
    */
   public function setFileDiffs($fileDiffs)
   {
@@ -42,7 +46,9 @@ class ListPullRequestFileDiffsResponse extends \Google\Collection
     return $this->fileDiffs;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

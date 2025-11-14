@@ -25,7 +25,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
   protected $unstructuredDocumentInfoDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfo
+   * Chunk information.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfo $chunkInfo
    */
   public function setChunkInfo(GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfo $chunkInfo)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSe
     return $this->chunkInfo;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfo
+   * Unstructured document information.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfo $unstructuredDocumentInfo
    */
   public function setUnstructuredDocumentInfo(GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfo $unstructuredDocumentInfo)
   {

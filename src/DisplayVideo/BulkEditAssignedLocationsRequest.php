@@ -23,12 +23,18 @@ class BulkEditAssignedLocationsRequest extends \Google\Collection
   protected $createdAssignedLocationsType = AssignedLocation::class;
   protected $createdAssignedLocationsDataType = 'array';
   /**
+   * The IDs of the assigned locations to delete in bulk, specified as a list of
+   * assignedLocationId values.
+   *
    * @var string[]
    */
   public $deletedAssignedLocations;
 
   /**
-   * @param AssignedLocation[]
+   * The assigned locations to create in bulk, specified as a list of
+   * AssignedLocation resources.
+   *
+   * @param AssignedLocation[] $createdAssignedLocations
    */
   public function setCreatedAssignedLocations($createdAssignedLocations)
   {
@@ -42,7 +48,10 @@ class BulkEditAssignedLocationsRequest extends \Google\Collection
     return $this->createdAssignedLocations;
   }
   /**
-   * @param string[]
+   * The IDs of the assigned locations to delete in bulk, specified as a list of
+   * assignedLocationId values.
+   *
+   * @param string[] $deletedAssignedLocations
    */
   public function setDeletedAssignedLocations($deletedAssignedLocations)
   {

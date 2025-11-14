@@ -20,36 +20,52 @@ namespace Google\Service\Backupdr;
 class DataSourceBackupApplianceApplication extends \Google\Model
 {
   /**
+   * Appliance Id of the Backup Appliance.
+   *
    * @var string
    */
   public $applianceId;
   /**
+   * The appid field of the application within the Backup Appliance.
+   *
    * @var string
    */
   public $applicationId;
   /**
+   * The name of the Application as known to the Backup Appliance.
+   *
    * @var string
    */
   public $applicationName;
   /**
+   * Appliance name.
+   *
    * @var string
    */
   public $backupAppliance;
   /**
+   * Hostid of the application host.
+   *
    * @var string
    */
   public $hostId;
   /**
+   * Hostname of the host where the application is running.
+   *
    * @var string
    */
   public $hostname;
   /**
+   * The type of the application. e.g. VMBackup
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Appliance Id of the Backup Appliance.
+   *
+   * @param string $applianceId
    */
   public function setApplianceId($applianceId)
   {
@@ -63,7 +79,9 @@ class DataSourceBackupApplianceApplication extends \Google\Model
     return $this->applianceId;
   }
   /**
-   * @param string
+   * The appid field of the application within the Backup Appliance.
+   *
+   * @param string $applicationId
    */
   public function setApplicationId($applicationId)
   {
@@ -77,7 +95,9 @@ class DataSourceBackupApplianceApplication extends \Google\Model
     return $this->applicationId;
   }
   /**
-   * @param string
+   * The name of the Application as known to the Backup Appliance.
+   *
+   * @param string $applicationName
    */
   public function setApplicationName($applicationName)
   {
@@ -91,7 +111,9 @@ class DataSourceBackupApplianceApplication extends \Google\Model
     return $this->applicationName;
   }
   /**
-   * @param string
+   * Appliance name.
+   *
+   * @param string $backupAppliance
    */
   public function setBackupAppliance($backupAppliance)
   {
@@ -105,7 +127,9 @@ class DataSourceBackupApplianceApplication extends \Google\Model
     return $this->backupAppliance;
   }
   /**
-   * @param string
+   * Hostid of the application host.
+   *
+   * @param string $hostId
    */
   public function setHostId($hostId)
   {
@@ -119,7 +143,9 @@ class DataSourceBackupApplianceApplication extends \Google\Model
     return $this->hostId;
   }
   /**
-   * @param string
+   * Hostname of the host where the application is running.
+   *
+   * @param string $hostname
    */
   public function setHostname($hostname)
   {
@@ -133,7 +159,9 @@ class DataSourceBackupApplianceApplication extends \Google\Model
     return $this->hostname;
   }
   /**
-   * @param string
+   * The type of the application. e.g. VMBackup
+   *
+   * @param string $type
    */
   public function setType($type)
   {

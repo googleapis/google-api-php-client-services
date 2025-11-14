@@ -25,7 +25,9 @@ class SourceOperationResponse extends \Google\Model
   protected $splitDataType = '';
 
   /**
-   * @param SourceGetMetadataResponse
+   * A response to a request to get metadata about a source.
+   *
+   * @param SourceGetMetadataResponse $getMetadata
    */
   public function setGetMetadata(SourceGetMetadataResponse $getMetadata)
   {
@@ -39,7 +41,9 @@ class SourceOperationResponse extends \Google\Model
     return $this->getMetadata;
   }
   /**
-   * @param SourceSplitResponse
+   * A response to a request to split a source.
+   *
+   * @param SourceSplitResponse $split
    */
   public function setSplit(SourceSplitResponse $split)
   {

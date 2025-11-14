@@ -20,12 +20,18 @@ namespace Google\Service\Networkconnectivity;
 class InterconnectAttachment extends \Google\Model
 {
   /**
+   * Optional. Cloud region to install this policy-based route on interconnect
+   * attachment. Use `all` to install it on all interconnect attachments.
+   *
    * @var string
    */
   public $region;
 
   /**
-   * @param string
+   * Optional. Cloud region to install this policy-based route on interconnect
+   * attachment. Use `all` to install it on all interconnect attachments.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {

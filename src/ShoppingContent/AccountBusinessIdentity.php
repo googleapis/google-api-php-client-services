@@ -22,6 +22,13 @@ class AccountBusinessIdentity extends \Google\Model
   protected $blackOwnedType = AccountIdentityType::class;
   protected $blackOwnedDataType = '';
   /**
+   * Required. By setting this field, your business may be included in
+   * promotions for all the selected attributes. If you clear this option, it
+   * won't affect your identification with any of the attributes. For this field
+   * to be set, the merchant must self identify with at least one of the
+   * `AccountIdentityType`. If none are included, the request will be considered
+   * invalid.
+   *
    * @var bool
    */
   public $includeForPromotions;
@@ -35,7 +42,11 @@ class AccountBusinessIdentity extends \Google\Model
   protected $womenOwnedDataType = '';
 
   /**
-   * @param AccountIdentityType
+   * Specifies whether the business identifies itself as being black-owned. This
+   * optional field is only available for merchants with a business country set
+   * to "US". This field is not allowed for marketplaces or marketplace sellers.
+   *
+   * @param AccountIdentityType $blackOwned
    */
   public function setBlackOwned(AccountIdentityType $blackOwned)
   {
@@ -49,7 +60,14 @@ class AccountBusinessIdentity extends \Google\Model
     return $this->blackOwned;
   }
   /**
-   * @param bool
+   * Required. By setting this field, your business may be included in
+   * promotions for all the selected attributes. If you clear this option, it
+   * won't affect your identification with any of the attributes. For this field
+   * to be set, the merchant must self identify with at least one of the
+   * `AccountIdentityType`. If none are included, the request will be considered
+   * invalid.
+   *
+   * @param bool $includeForPromotions
    */
   public function setIncludeForPromotions($includeForPromotions)
   {
@@ -63,7 +81,12 @@ class AccountBusinessIdentity extends \Google\Model
     return $this->includeForPromotions;
   }
   /**
-   * @param AccountIdentityType
+   * Specifies whether the business identifies itself as being latino-owned.
+   * This optional field is only available for merchants with a business country
+   * set to "US". This field is not allowed for marketplaces or marketplace
+   * sellers.
+   *
+   * @param AccountIdentityType $latinoOwned
    */
   public function setLatinoOwned(AccountIdentityType $latinoOwned)
   {
@@ -77,7 +100,12 @@ class AccountBusinessIdentity extends \Google\Model
     return $this->latinoOwned;
   }
   /**
-   * @param AccountIdentityType
+   * Specifies whether the business identifies itself as a small business. This
+   * optional field is only available for merchants with a business country set
+   * to "US". It is also not allowed for marketplaces, but it is allowed to
+   * marketplace sellers.
+   *
+   * @param AccountIdentityType $smallBusiness
    */
   public function setSmallBusiness(AccountIdentityType $smallBusiness)
   {
@@ -91,7 +119,12 @@ class AccountBusinessIdentity extends \Google\Model
     return $this->smallBusiness;
   }
   /**
-   * @param AccountIdentityType
+   * Specifies whether the business identifies itself as being veteran-owned.
+   * This optional field is only available for merchants with a business country
+   * set to "US". This field is not allowed for marketplaces or marketplace
+   * sellers.
+   *
+   * @param AccountIdentityType $veteranOwned
    */
   public function setVeteranOwned(AccountIdentityType $veteranOwned)
   {
@@ -105,7 +138,11 @@ class AccountBusinessIdentity extends \Google\Model
     return $this->veteranOwned;
   }
   /**
-   * @param AccountIdentityType
+   * Specifies whether the business identifies itself as being women-owned. This
+   * optional field is only available for merchants with a business country set
+   * to "US". This field is not allowed for marketplaces or marketplace sellers.
+   *
+   * @param AccountIdentityType $womenOwned
    */
   public function setWomenOwned(AccountIdentityType $womenOwned)
   {

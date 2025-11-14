@@ -23,16 +23,23 @@ class ListAutomationRunsResponse extends \Google\Collection
   protected $automationRunsType = AutomationRun::class;
   protected $automationRunsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param AutomationRun[]
+   * The `AutomationRuns` objects.
+   *
+   * @param AutomationRun[] $automationRuns
    */
   public function setAutomationRuns($automationRuns)
   {
@@ -46,7 +53,10 @@ class ListAutomationRunsResponse extends \Google\Collection
     return $this->automationRuns;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListAutomationRunsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

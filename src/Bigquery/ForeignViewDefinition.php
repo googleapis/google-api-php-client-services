@@ -20,16 +20,22 @@ namespace Google\Service\Bigquery;
 class ForeignViewDefinition extends \Google\Model
 {
   /**
+   * Optional. Represents the dialect of the query.
+   *
    * @var string
    */
   public $dialect;
   /**
+   * Required. The query that defines the view.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param string
+   * Optional. Represents the dialect of the query.
+   *
+   * @param string $dialect
    */
   public function setDialect($dialect)
   {
@@ -43,7 +49,9 @@ class ForeignViewDefinition extends \Google\Model
     return $this->dialect;
   }
   /**
-   * @param string
+   * Required. The query that defines the view.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

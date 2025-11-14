@@ -20,16 +20,31 @@ namespace Google\Service\BigQueryDataTransfer;
 class TimeRange extends \Google\Model
 {
   /**
+   * End time of the range of transfer runs. For example,
+   * `"2017-05-30T00:00:00+00:00"`. The end_time must not be in the future.
+   * Creates transfer runs where run_time is in the range between start_time
+   * (inclusive) and end_time (exclusive).
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Start time of the range of transfer runs. For example,
+   * `"2017-05-25T00:00:00+00:00"`. The start_time must be strictly less than
+   * the end_time. Creates transfer runs where run_time is in the range between
+   * start_time (inclusive) and end_time (exclusive).
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * End time of the range of transfer runs. For example,
+   * `"2017-05-30T00:00:00+00:00"`. The end_time must not be in the future.
+   * Creates transfer runs where run_time is in the range between start_time
+   * (inclusive) and end_time (exclusive).
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +58,12 @@ class TimeRange extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Start time of the range of transfer runs. For example,
+   * `"2017-05-25T00:00:00+00:00"`. The start_time must be strictly less than
+   * the end_time. Creates transfer runs where run_time is in the range between
+   * start_time (inclusive) and end_time (exclusive).
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

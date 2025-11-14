@@ -25,7 +25,9 @@ class SplitCapacityCommitmentResponse extends \Google\Model
   protected $secondDataType = '';
 
   /**
-   * @param CapacityCommitment
+   * First capacity commitment, result of a split.
+   *
+   * @param CapacityCommitment $first
    */
   public function setFirst(CapacityCommitment $first)
   {
@@ -39,7 +41,9 @@ class SplitCapacityCommitmentResponse extends \Google\Model
     return $this->first;
   }
   /**
-   * @param CapacityCommitment
+   * Second capacity commitment, result of a split.
+   *
+   * @param CapacityCommitment $second
    */
   public function setSecond(CapacityCommitment $second)
   {

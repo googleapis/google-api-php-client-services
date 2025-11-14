@@ -20,20 +20,28 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1p2alpha1ImportDataOperationResponse extends \Google\Model
 {
   /**
+   * Ouptut only. The name of imported dataset.
+   *
    * @var string
    */
   public $dataset;
   /**
+   * Output only. Number of examples imported successfully.
+   *
    * @var int
    */
   public $importCount;
   /**
+   * Output only. Total number of examples requested to import
+   *
    * @var int
    */
   public $totalCount;
 
   /**
-   * @param string
+   * Ouptut only. The name of imported dataset.
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -47,7 +55,9 @@ class GoogleCloudDatalabelingV1p2alpha1ImportDataOperationResponse extends \Goog
     return $this->dataset;
   }
   /**
-   * @param int
+   * Output only. Number of examples imported successfully.
+   *
+   * @param int $importCount
    */
   public function setImportCount($importCount)
   {
@@ -61,7 +71,9 @@ class GoogleCloudDatalabelingV1p2alpha1ImportDataOperationResponse extends \Goog
     return $this->importCount;
   }
   /**
-   * @param int
+   * Output only. Total number of examples requested to import
+   *
+   * @param int $totalCount
    */
   public function setTotalCount($totalCount)
   {

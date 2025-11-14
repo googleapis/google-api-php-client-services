@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2FieldId extends \Google\Model
 {
   /**
+   * Name describing the field.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Name describing the field.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

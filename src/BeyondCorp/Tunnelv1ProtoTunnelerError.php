@@ -20,16 +20,22 @@ namespace Google\Service\BeyondCorp;
 class Tunnelv1ProtoTunnelerError extends \Google\Model
 {
   /**
+   * Original raw error
+   *
    * @var string
    */
   public $err;
   /**
+   * retryable isn't used for now, but we may want to reuse it in the future.
+   *
    * @var bool
    */
   public $retryable;
 
   /**
-   * @param string
+   * Original raw error
+   *
+   * @param string $err
    */
   public function setErr($err)
   {
@@ -43,7 +49,9 @@ class Tunnelv1ProtoTunnelerError extends \Google\Model
     return $this->err;
   }
   /**
-   * @param bool
+   * retryable isn't used for now, but we may want to reuse it in the future.
+   *
+   * @param bool $retryable
    */
   public function setRetryable($retryable)
   {

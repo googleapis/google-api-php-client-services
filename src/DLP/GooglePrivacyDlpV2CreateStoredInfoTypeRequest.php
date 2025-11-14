@@ -22,16 +22,25 @@ class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends \Google\Model
   protected $configType = GooglePrivacyDlpV2StoredInfoTypeConfig::class;
   protected $configDataType = '';
   /**
+   * Deprecated. This field has no effect.
+   *
    * @var string
    */
   public $locationId;
   /**
+   * The storedInfoType ID can contain uppercase and lowercase letters, numbers,
+   * and hyphens; that is, it must match the regular expression:
+   * `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to
+   * allow the system to generate one.
+   *
    * @var string
    */
   public $storedInfoTypeId;
 
   /**
-   * @param GooglePrivacyDlpV2StoredInfoTypeConfig
+   * Required. Configuration of the storedInfoType to create.
+   *
+   * @param GooglePrivacyDlpV2StoredInfoTypeConfig $config
    */
   public function setConfig(GooglePrivacyDlpV2StoredInfoTypeConfig $config)
   {
@@ -45,7 +54,9 @@ class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends \Google\Model
     return $this->config;
   }
   /**
-   * @param string
+   * Deprecated. This field has no effect.
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -59,7 +70,12 @@ class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param string
+   * The storedInfoType ID can contain uppercase and lowercase letters, numbers,
+   * and hyphens; that is, it must match the regular expression:
+   * `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to
+   * allow the system to generate one.
+   *
+   * @param string $storedInfoTypeId
    */
   public function setStoredInfoTypeId($storedInfoTypeId)
   {

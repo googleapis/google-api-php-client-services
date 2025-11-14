@@ -21,16 +21,27 @@ class RegisterDomainRequest extends \Google\Collection
 {
   protected $collection_key = 'domainNotices';
   /**
+   * The list of contact notices that the caller acknowledges. The notices
+   * needed here depend on the values specified in
+   * `registration.contact_settings`.
+   *
    * @var string[]
    */
   public $contactNotices;
   /**
+   * The list of domain notices that you acknowledge. Call
+   * `RetrieveRegisterParameters` to see the notices that need acknowledgement.
+   *
    * @var string[]
    */
   public $domainNotices;
   protected $registrationType = Registration::class;
   protected $registrationDataType = '';
   /**
+   * When true, only validation is performed, without actually registering the
+   * domain. Follows:
+   * https://cloud.google.com/apis/design/design_patterns#request_validation
+   *
    * @var bool
    */
   public $validateOnly;
@@ -38,7 +49,11 @@ class RegisterDomainRequest extends \Google\Collection
   protected $yearlyPriceDataType = '';
 
   /**
-   * @param string[]
+   * The list of contact notices that the caller acknowledges. The notices
+   * needed here depend on the values specified in
+   * `registration.contact_settings`.
+   *
+   * @param string[] $contactNotices
    */
   public function setContactNotices($contactNotices)
   {
@@ -52,7 +67,10 @@ class RegisterDomainRequest extends \Google\Collection
     return $this->contactNotices;
   }
   /**
-   * @param string[]
+   * The list of domain notices that you acknowledge. Call
+   * `RetrieveRegisterParameters` to see the notices that need acknowledgement.
+   *
+   * @param string[] $domainNotices
    */
   public function setDomainNotices($domainNotices)
   {
@@ -66,7 +84,9 @@ class RegisterDomainRequest extends \Google\Collection
     return $this->domainNotices;
   }
   /**
-   * @param Registration
+   * Required. The complete `Registration` resource to be created.
+   *
+   * @param Registration $registration
    */
   public function setRegistration(Registration $registration)
   {
@@ -80,7 +100,11 @@ class RegisterDomainRequest extends \Google\Collection
     return $this->registration;
   }
   /**
-   * @param bool
+   * When true, only validation is performed, without actually registering the
+   * domain. Follows:
+   * https://cloud.google.com/apis/design/design_patterns#request_validation
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {
@@ -94,7 +118,11 @@ class RegisterDomainRequest extends \Google\Collection
     return $this->validateOnly;
   }
   /**
-   * @param Money
+   * Required. Yearly price to register or renew the domain. The value that
+   * should be put here can be obtained from RetrieveRegisterParameters or
+   * SearchDomains calls.
+   *
+   * @param Money $yearlyPrice
    */
   public function setYearlyPrice(Money $yearlyPrice)
   {

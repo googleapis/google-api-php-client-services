@@ -21,6 +21,8 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec extends \Google\C
 {
   protected $collection_key = 'safetySettings';
   /**
+   * Enable the safety filtering on the answer response. It is false by default.
+   *
    * @var bool
    */
   public $enable;
@@ -28,7 +30,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec extends \Google\C
   protected $safetySettingsDataType = 'array';
 
   /**
-   * @param bool
+   * Enable the safety filtering on the answer response. It is false by default.
+   *
+   * @param bool $enable
    */
   public function setEnable($enable)
   {
@@ -42,7 +46,10 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec extends \Google\C
     return $this->enable;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting[]
+   * Optional. Safety settings. This settings are effective only when the
+   * safety_spec.enable is true.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting[] $safetySettings
    */
   public function setSafetySettings($safetySettings)
   {

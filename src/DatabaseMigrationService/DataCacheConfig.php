@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class DataCacheConfig extends \Google\Model
 {
   /**
+   * Optional. Whether data cache is enabled for the instance.
+   *
    * @var bool
    */
   public $dataCacheEnabled;
 
   /**
-   * @param bool
+   * Optional. Whether data cache is enabled for the instance.
+   *
+   * @param bool $dataCacheEnabled
    */
   public function setDataCacheEnabled($dataCacheEnabled)
   {

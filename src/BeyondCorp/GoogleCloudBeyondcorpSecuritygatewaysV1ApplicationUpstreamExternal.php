@@ -24,7 +24,9 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal extends
   protected $endpointsDataType = 'array';
 
   /**
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1Endpoint[]
+   * Required. List of the endpoints to forward traffic to.
+   *
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1Endpoint[] $endpoints
    */
   public function setEndpoints($endpoints)
   {

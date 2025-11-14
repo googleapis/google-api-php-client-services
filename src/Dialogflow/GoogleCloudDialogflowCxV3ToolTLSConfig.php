@@ -24,7 +24,10 @@ class GoogleCloudDialogflowCxV3ToolTLSConfig extends \Google\Collection
   protected $caCertsDataType = 'array';
 
   /**
-   * @param GoogleCloudDialogflowCxV3ToolTLSConfigCACert[]
+   * Required. Specifies a list of allowed custom CA certificates for HTTPS
+   * verification.
+   *
+   * @param GoogleCloudDialogflowCxV3ToolTLSConfigCACert[] $caCerts
    */
   public function setCaCerts($caCerts)
   {

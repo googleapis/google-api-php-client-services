@@ -20,16 +20,23 @@ namespace Google\Service\DisplayVideo;
 class Site extends \Google\Model
 {
   /**
+   * Output only. The resource name of the site.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The app ID or URL of the site. Must be UTF-8 encoded with a
+   * maximum length of 240 bytes.
+   *
    * @var string
    */
   public $urlOrAppId;
 
   /**
-   * @param string
+   * Output only. The resource name of the site.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +50,10 @@ class Site extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The app ID or URL of the site. Must be UTF-8 encoded with a
+   * maximum length of 240 bytes.
+   *
+   * @param string $urlOrAppId
    */
   public function setUrlOrAppId($urlOrAppId)
   {

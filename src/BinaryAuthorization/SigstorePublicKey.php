@@ -20,12 +20,16 @@ namespace Google\Service\BinaryAuthorization;
 class SigstorePublicKey extends \Google\Model
 {
   /**
+   * The public key material in PEM format.
+   *
    * @var string
    */
   public $publicKeyPem;
 
   /**
-   * @param string
+   * The public key material in PEM format.
+   *
+   * @param string $publicKeyPem
    */
   public function setPublicKeyPem($publicKeyPem)
   {

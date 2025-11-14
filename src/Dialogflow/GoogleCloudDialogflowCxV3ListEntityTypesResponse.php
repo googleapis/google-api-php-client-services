@@ -23,12 +23,18 @@ class GoogleCloudDialogflowCxV3ListEntityTypesResponse extends \Google\Collectio
   protected $entityTypesType = GoogleCloudDialogflowCxV3EntityType::class;
   protected $entityTypesDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDialogflowCxV3EntityType[]
+   * The list of entity types. There will be a maximum number of items returned
+   * based on the page_size field in the request.
+   *
+   * @param GoogleCloudDialogflowCxV3EntityType[] $entityTypes
    */
   public function setEntityTypes($entityTypes)
   {
@@ -42,7 +48,10 @@ class GoogleCloudDialogflowCxV3ListEntityTypesResponse extends \Google\Collectio
     return $this->entityTypes;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

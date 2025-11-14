@@ -23,7 +23,10 @@ class CreateAdAssetRequest extends \Google\Model
   protected $adAssetDataType = '';
 
   /**
-   * @param AdAsset
+   * Required. The ad asset to create. Only supports assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
+   *
+   * @param AdAsset $adAsset
    */
   public function setAdAsset(AdAsset $adAsset)
   {

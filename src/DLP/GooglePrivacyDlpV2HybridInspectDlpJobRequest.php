@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2HybridInspectDlpJobRequest extends \Google\Model
   protected $hybridItemDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2HybridContentItem
+   * The item to inspect.
+   *
+   * @param GooglePrivacyDlpV2HybridContentItem $hybridItem
    */
   public function setHybridItem(GooglePrivacyDlpV2HybridContentItem $hybridItem)
   {

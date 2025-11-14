@@ -21,18 +21,30 @@ class ListTlsRoutesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $tlsRoutesType = TlsRoute::class;
   protected $tlsRoutesDataType = 'array';
   /**
+   * Unreachable resources. Populated when the request opts into
+   * return_partial_success and reading across collections e.g. when attempting
+   * to list all resources across all supported locations.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +58,9 @@ class ListTlsRoutesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TlsRoute[]
+   * List of TlsRoute resources.
+   *
+   * @param TlsRoute[] $tlsRoutes
    */
   public function setTlsRoutes($tlsRoutes)
   {
@@ -60,7 +74,11 @@ class ListTlsRoutesResponse extends \Google\Collection
     return $this->tlsRoutes;
   }
   /**
-   * @param string[]
+   * Unreachable resources. Populated when the request opts into
+   * return_partial_success and reading across collections e.g. when attempting
+   * to list all resources across all supported locations.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

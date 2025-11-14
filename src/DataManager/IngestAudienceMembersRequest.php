@@ -19,6 +19,18 @@ namespace Google\Service\DataManager;
 
 class IngestAudienceMembersRequest extends \Google\Collection
 {
+  /**
+   * Unspecified Encoding type. Should never be used.
+   */
+  public const ENCODING_ENCODING_UNSPECIFIED = 'ENCODING_UNSPECIFIED';
+  /**
+   * Hex encoding.
+   */
+  public const ENCODING_HEX = 'HEX';
+  /**
+   * Base 64 encoding.
+   */
+  public const ENCODING_BASE64 = 'BASE64';
   protected $collection_key = 'destinations';
   protected $audienceMembersType = AudienceMember::class;
   protected $audienceMembersDataType = 'array';
@@ -27,6 +39,14 @@ class IngestAudienceMembersRequest extends \Google\Collection
   protected $destinationsType = Destination::class;
   protected $destinationsDataType = 'array';
   /**
+   * Optional. Required for UserData uploads. The encoding type of the user
+   * identifiers. For hashed user identifiers, this is the encoding type of the
+   * hashed string. For encrypted hashed user identifiers, this is the encoding
+   * type of the outer encrypted string, but not necessarily the inner hashed
+   * string, meaning the inner hashed string could be encoded in a different way
+   * than the outer encrypted string. For non `UserData` uploads, this field is
+   * ignored.
+   *
    * @var string
    */
   public $encoding;
@@ -35,12 +55,18 @@ class IngestAudienceMembersRequest extends \Google\Collection
   protected $termsOfServiceType = TermsOfService::class;
   protected $termsOfServiceDataType = '';
   /**
+   * Optional. For testing purposes. If `true`, the request is validated but not
+   * executed. Only errors are returned, not results.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param AudienceMember[]
+   * Required. The list of users to send to the specified destinations. At most
+   * 10000 AudienceMember resources can be sent in a single request.
+   *
+   * @param AudienceMember[] $audienceMembers
    */
   public function setAudienceMembers($audienceMembers)
   {
@@ -54,7 +80,11 @@ class IngestAudienceMembersRequest extends \Google\Collection
     return $this->audienceMembers;
   }
   /**
-   * @param Consent
+   * Optional. Request-level consent to apply to all users in the request. User-
+   * level consent overrides request-level consent, and can be specified in each
+   * AudienceMember.
+   *
+   * @param Consent $consent
    */
   public function setConsent(Consent $consent)
   {
@@ -68,7 +98,9 @@ class IngestAudienceMembersRequest extends \Google\Collection
     return $this->consent;
   }
   /**
-   * @param Destination[]
+   * Required. The list of destinations to send the audience members to.
+   *
+   * @param Destination[] $destinations
    */
   public function setDestinations($destinations)
   {
@@ -82,21 +114,35 @@ class IngestAudienceMembersRequest extends \Google\Collection
     return $this->destinations;
   }
   /**
-   * @param string
+   * Optional. Required for UserData uploads. The encoding type of the user
+   * identifiers. For hashed user identifiers, this is the encoding type of the
+   * hashed string. For encrypted hashed user identifiers, this is the encoding
+   * type of the outer encrypted string, but not necessarily the inner hashed
+   * string, meaning the inner hashed string could be encoded in a different way
+   * than the outer encrypted string. For non `UserData` uploads, this field is
+   * ignored.
+   *
+   * Accepted values: ENCODING_UNSPECIFIED, HEX, BASE64
+   *
+   * @param self::ENCODING_* $encoding
    */
   public function setEncoding($encoding)
   {
     $this->encoding = $encoding;
   }
   /**
-   * @return string
+   * @return self::ENCODING_*
    */
   public function getEncoding()
   {
     return $this->encoding;
   }
   /**
-   * @param EncryptionInfo
+   * Optional. Encryption information for UserData uploads. If not set, it's
+   * assumed that uploaded identifying information is hashed but not encrypted.
+   * For non `UserData` uploads, this field is ignored.
+   *
+   * @param EncryptionInfo $encryptionInfo
    */
   public function setEncryptionInfo(EncryptionInfo $encryptionInfo)
   {
@@ -110,7 +156,9 @@ class IngestAudienceMembersRequest extends \Google\Collection
     return $this->encryptionInfo;
   }
   /**
-   * @param TermsOfService
+   * Optional. The terms of service that the user has accepted/rejected.
+   *
+   * @param TermsOfService $termsOfService
    */
   public function setTermsOfService(TermsOfService $termsOfService)
   {
@@ -124,7 +172,10 @@ class IngestAudienceMembersRequest extends \Google\Collection
     return $this->termsOfService;
   }
   /**
-   * @param bool
+   * Optional. For testing purposes. If `true`, the request is validated but not
+   * executed. Only errors are returned, not results.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

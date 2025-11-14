@@ -22,28 +22,53 @@ class SetNodePoolAutoscalingRequest extends \Google\Model
   protected $autoscalingType = NodePoolAutoscaling::class;
   protected $autoscalingDataType = '';
   /**
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $clusterId;
   /**
+   * The name (project, location, cluster, node pool) of the node pool to set
+   * autoscaler settings. Specified in the format
+   * `projects/locations/clusters/nodePools`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Deprecated. The name of the node pool to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $nodePoolId;
   /**
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $projectId;
   /**
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
    * @var string
    */
   public $zone;
 
   /**
-   * @param NodePoolAutoscaling
+   * Required. Autoscaling configuration for the node pool.
+   *
+   * @param NodePoolAutoscaling $autoscaling
    */
   public function setAutoscaling(NodePoolAutoscaling $autoscaling)
   {
@@ -57,13 +82,18 @@ class SetNodePoolAutoscalingRequest extends \Google\Model
     return $this->autoscaling;
   }
   /**
-   * @param string
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {
     $this->clusterId = $clusterId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getClusterId()
@@ -71,7 +101,11 @@ class SetNodePoolAutoscalingRequest extends \Google\Model
     return $this->clusterId;
   }
   /**
-   * @param string
+   * The name (project, location, cluster, node pool) of the node pool to set
+   * autoscaler settings. Specified in the format
+   * `projects/locations/clusters/nodePools`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -85,13 +119,18 @@ class SetNodePoolAutoscalingRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Deprecated. The name of the node pool to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $nodePoolId
    */
   public function setNodePoolId($nodePoolId)
   {
     $this->nodePoolId = $nodePoolId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getNodePoolId()
@@ -99,13 +138,19 @@ class SetNodePoolAutoscalingRequest extends \Google\Model
     return $this->nodePoolId;
   }
   /**
-   * @param string
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
     $this->projectId = $projectId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProjectId()
@@ -113,13 +158,20 @@ class SetNodePoolAutoscalingRequest extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
+   * @param string $zone
    */
   public function setZone($zone)
   {
     $this->zone = $zone;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getZone()

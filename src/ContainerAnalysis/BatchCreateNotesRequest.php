@@ -23,7 +23,9 @@ class BatchCreateNotesRequest extends \Google\Model
   protected $notesDataType = 'map';
 
   /**
-   * @param Note[]
+   * Required. The notes to create. Max allowed length is 1000.
+   *
+   * @param Note[] $notes
    */
   public function setNotes($notes)
   {

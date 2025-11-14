@@ -19,11 +19,35 @@ namespace Google\Service\BigtableAdmin;
 
 class TableProgress extends \Google\Model
 {
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
+   * The table has not yet begun copying to the new cluster.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The table is actively being copied to the new cluster.
+   */
+  public const STATE_COPYING = 'COPYING';
+  /**
+   * The table has been fully copied to the new cluster.
+   */
+  public const STATE_COMPLETED = 'COMPLETED';
+  /**
+   * The table was deleted before it finished copying to the new cluster. Note
+   * that tables deleted after completion will stay marked as COMPLETED, not
+   * CANCELLED.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Estimate of the number of bytes copied so far for this table. This will
+   * eventually reach 'estimated_size_bytes' unless the table copy is CANCELLED.
+   *
    * @var string
    */
   public $estimatedCopiedBytes;
   /**
+   * Estimate of the size of the table to be copied.
+   *
    * @var string
    */
   public $estimatedSizeBytes;
@@ -33,7 +57,10 @@ class TableProgress extends \Google\Model
   public $state;
 
   /**
-   * @param string
+   * Estimate of the number of bytes copied so far for this table. This will
+   * eventually reach 'estimated_size_bytes' unless the table copy is CANCELLED.
+   *
+   * @param string $estimatedCopiedBytes
    */
   public function setEstimatedCopiedBytes($estimatedCopiedBytes)
   {
@@ -47,7 +74,9 @@ class TableProgress extends \Google\Model
     return $this->estimatedCopiedBytes;
   }
   /**
-   * @param string
+   * Estimate of the size of the table to be copied.
+   *
+   * @param string $estimatedSizeBytes
    */
   public function setEstimatedSizeBytes($estimatedSizeBytes)
   {
@@ -61,14 +90,14 @@ class TableProgress extends \Google\Model
     return $this->estimatedSizeBytes;
   }
   /**
-   * @param string
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

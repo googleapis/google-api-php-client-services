@@ -21,10 +21,15 @@ class Config extends \Google\Collection
 {
   protected $collection_key = 'supportedVersions';
   /**
+   * Default Skaffold version that is assigned when a Release is created without
+   * specifying a Skaffold version.
+   *
    * @var string
    */
   public $defaultSkaffoldVersion;
   /**
+   * Name of the configuration.
+   *
    * @var string
    */
   public $name;
@@ -32,7 +37,10 @@ class Config extends \Google\Collection
   protected $supportedVersionsDataType = 'array';
 
   /**
-   * @param string
+   * Default Skaffold version that is assigned when a Release is created without
+   * specifying a Skaffold version.
+   *
+   * @param string $defaultSkaffoldVersion
    */
   public function setDefaultSkaffoldVersion($defaultSkaffoldVersion)
   {
@@ -46,7 +54,9 @@ class Config extends \Google\Collection
     return $this->defaultSkaffoldVersion;
   }
   /**
-   * @param string
+   * Name of the configuration.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -60,7 +70,9 @@ class Config extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param SkaffoldVersion[]
+   * All supported versions of Skaffold.
+   *
+   * @param SkaffoldVersion[] $supportedVersions
    */
   public function setSupportedVersions($supportedVersions)
   {

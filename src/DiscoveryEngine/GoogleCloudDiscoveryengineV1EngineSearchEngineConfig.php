@@ -19,18 +19,38 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends \Google\Collection
 {
+  /**
+   * Default value when the enum is unspecified. This is invalid to use.
+   */
+  public const SEARCH_TIER_SEARCH_TIER_UNSPECIFIED = 'SEARCH_TIER_UNSPECIFIED';
+  /**
+   * Standard tier.
+   */
+  public const SEARCH_TIER_SEARCH_TIER_STANDARD = 'SEARCH_TIER_STANDARD';
+  /**
+   * Enterprise tier.
+   */
+  public const SEARCH_TIER_SEARCH_TIER_ENTERPRISE = 'SEARCH_TIER_ENTERPRISE';
   protected $collection_key = 'searchAddOns';
   /**
+   * The add-on that this search engine enables.
+   *
    * @var string[]
    */
   public $searchAddOns;
   /**
+   * The search feature tier of this engine. Different tiers might have
+   * different pricing. To learn more, check the pricing documentation. Defaults
+   * to SearchTier.SEARCH_TIER_STANDARD if not specified.
+   *
    * @var string
    */
   public $searchTier;
 
   /**
-   * @param string[]
+   * The add-on that this search engine enables.
+   *
+   * @param string[] $searchAddOns
    */
   public function setSearchAddOns($searchAddOns)
   {
@@ -44,14 +64,21 @@ class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends \Google\Colle
     return $this->searchAddOns;
   }
   /**
-   * @param string
+   * The search feature tier of this engine. Different tiers might have
+   * different pricing. To learn more, check the pricing documentation. Defaults
+   * to SearchTier.SEARCH_TIER_STANDARD if not specified.
+   *
+   * Accepted values: SEARCH_TIER_UNSPECIFIED, SEARCH_TIER_STANDARD,
+   * SEARCH_TIER_ENTERPRISE
+   *
+   * @param self::SEARCH_TIER_* $searchTier
    */
   public function setSearchTier($searchTier)
   {
     $this->searchTier = $searchTier;
   }
   /**
-   * @return string
+   * @return self::SEARCH_TIER_*
    */
   public function getSearchTier()
   {

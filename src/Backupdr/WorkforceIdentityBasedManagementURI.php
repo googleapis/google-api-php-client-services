@@ -20,16 +20,22 @@ namespace Google\Service\Backupdr;
 class WorkforceIdentityBasedManagementURI extends \Google\Model
 {
   /**
+   * Output only. First party Management URI for Google Identities.
+   *
    * @var string
    */
   public $firstPartyManagementUri;
   /**
+   * Output only. Third party Management URI for External Identity Providers.
+   *
    * @var string
    */
   public $thirdPartyManagementUri;
 
   /**
-   * @param string
+   * Output only. First party Management URI for Google Identities.
+   *
+   * @param string $firstPartyManagementUri
    */
   public function setFirstPartyManagementUri($firstPartyManagementUri)
   {
@@ -43,7 +49,9 @@ class WorkforceIdentityBasedManagementURI extends \Google\Model
     return $this->firstPartyManagementUri;
   }
   /**
-   * @param string
+   * Output only. Third party Management URI for External Identity Providers.
+   *
+   * @param string $thirdPartyManagementUri
    */
   public function setThirdPartyManagementUri($thirdPartyManagementUri)
   {

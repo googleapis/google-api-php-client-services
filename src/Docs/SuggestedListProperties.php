@@ -25,7 +25,11 @@ class SuggestedListProperties extends \Google\Model
   protected $listPropertiesSuggestionStateDataType = '';
 
   /**
-   * @param ListProperties
+   * A ListProperties that only includes the changes made in this suggestion.
+   * This can be used along with the list_properties_suggestion_state to see
+   * which fields have changed and their new values.
+   *
+   * @param ListProperties $listProperties
    */
   public function setListProperties(ListProperties $listProperties)
   {
@@ -39,7 +43,10 @@ class SuggestedListProperties extends \Google\Model
     return $this->listProperties;
   }
   /**
-   * @param ListPropertiesSuggestionState
+   * A mask that indicates which of the fields on the base ListProperties have
+   * been changed in this suggestion.
+   *
+   * @param ListPropertiesSuggestionState $listPropertiesSuggestionState
    */
   public function setListPropertiesSuggestionState(ListPropertiesSuggestionState $listPropertiesSuggestionState)
   {

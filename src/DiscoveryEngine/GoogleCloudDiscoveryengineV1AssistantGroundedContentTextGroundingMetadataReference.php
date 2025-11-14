@@ -20,6 +20,8 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReference extends \Google\Model
 {
   /**
+   * Referenced text content.
+   *
    * @var string
    */
   public $content;
@@ -27,7 +29,9 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataR
   protected $documentMetadataDataType = '';
 
   /**
-   * @param string
+   * Referenced text content.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataR
     return $this->content;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata
+   * Document metadata.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata $documentMetadata
    */
   public function setDocumentMetadata(GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata $documentMetadata)
   {

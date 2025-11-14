@@ -19,34 +19,71 @@ namespace Google\Service\SQLAdmin;
 
 class SqlActiveDirectoryConfig extends \Google\Collection
 {
+  /**
+   * Unspecified mode. Will default to MANAGED_ACTIVE_DIRECTORY if the mode is
+   * not specified to maintain backward compatibility.
+   */
+  public const MODE_ACTIVE_DIRECTORY_MODE_UNSPECIFIED = 'ACTIVE_DIRECTORY_MODE_UNSPECIFIED';
+  /**
+   * Managed Active Directory mode.
+   */
+  public const MODE_MANAGED_ACTIVE_DIRECTORY = 'MANAGED_ACTIVE_DIRECTORY';
+  /**
+   * Deprecated: Use CUSTOMER_MANAGED_ACTIVE_DIRECTORY instead.
+   *
+   * @deprecated
+   */
+  public const MODE_SELF_MANAGED_ACTIVE_DIRECTORY = 'SELF_MANAGED_ACTIVE_DIRECTORY';
+  /**
+   * Customer-managed Active Directory mode.
+   */
+  public const MODE_CUSTOMER_MANAGED_ACTIVE_DIRECTORY = 'CUSTOMER_MANAGED_ACTIVE_DIRECTORY';
   protected $collection_key = 'dnsServers';
   /**
+   * Optional. The secret manager key storing the administrator credential.
+   * (e.g., projects/{project}/secrets/{secret}).
+   *
    * @var string
    */
   public $adminCredentialSecretName;
   /**
+   * Optional. Domain controller IPv4 addresses used to bootstrap Active
+   * Directory.
+   *
    * @var string[]
    */
   public $dnsServers;
   /**
+   * The name of the domain (e.g., mydomain.com).
+   *
    * @var string
    */
   public $domain;
   /**
+   * This is always sql#activeDirectoryConfig.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Optional. The mode of the Active Directory configuration.
+   *
    * @var string
    */
   public $mode;
   /**
+   * Optional. The organizational unit distinguished name. This is the full
+   * hierarchical path to the organizational unit.
+   *
    * @var string
    */
   public $organizationalUnit;
 
   /**
-   * @param string
+   * Optional. The secret manager key storing the administrator credential.
+   * (e.g., projects/{project}/secrets/{secret}).
+   *
+   * @param string $adminCredentialSecretName
    */
   public function setAdminCredentialSecretName($adminCredentialSecretName)
   {
@@ -60,7 +97,10 @@ class SqlActiveDirectoryConfig extends \Google\Collection
     return $this->adminCredentialSecretName;
   }
   /**
-   * @param string[]
+   * Optional. Domain controller IPv4 addresses used to bootstrap Active
+   * Directory.
+   *
+   * @param string[] $dnsServers
    */
   public function setDnsServers($dnsServers)
   {
@@ -74,7 +114,9 @@ class SqlActiveDirectoryConfig extends \Google\Collection
     return $this->dnsServers;
   }
   /**
-   * @param string
+   * The name of the domain (e.g., mydomain.com).
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -88,7 +130,9 @@ class SqlActiveDirectoryConfig extends \Google\Collection
     return $this->domain;
   }
   /**
-   * @param string
+   * This is always sql#activeDirectoryConfig.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -102,21 +146,30 @@ class SqlActiveDirectoryConfig extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Optional. The mode of the Active Directory configuration.
+   *
+   * Accepted values: ACTIVE_DIRECTORY_MODE_UNSPECIFIED,
+   * MANAGED_ACTIVE_DIRECTORY, SELF_MANAGED_ACTIVE_DIRECTORY,
+   * CUSTOMER_MANAGED_ACTIVE_DIRECTORY
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {
     return $this->mode;
   }
   /**
-   * @param string
+   * Optional. The organizational unit distinguished name. This is the full
+   * hierarchical path to the organizational unit.
+   *
+   * @param string $organizationalUnit
    */
   public function setOrganizationalUnit($organizationalUnit)
   {

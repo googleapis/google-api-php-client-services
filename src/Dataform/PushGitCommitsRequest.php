@@ -20,12 +20,20 @@ namespace Google\Service\Dataform;
 class PushGitCommitsRequest extends \Google\Model
 {
   /**
+   * Optional. The name of the branch in the Git remote to which commits should
+   * be pushed. If left unset, the repository's default branch name will be
+   * used.
+   *
    * @var string
    */
   public $remoteBranch;
 
   /**
-   * @param string
+   * Optional. The name of the branch in the Git remote to which commits should
+   * be pushed. If left unset, the repository's default branch name will be
+   * used.
+   *
+   * @param string $remoteBranch
    */
   public function setRemoteBranch($remoteBranch)
   {

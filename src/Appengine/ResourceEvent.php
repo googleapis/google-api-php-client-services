@@ -20,10 +20,15 @@ namespace Google\Service\Appengine;
 class ResourceEvent extends \Google\Model
 {
   /**
+   * The unique ID for this per-resource event. CLHs can use this value to dedup
+   * repeated calls. required
+   *
    * @var string
    */
   public $eventId;
   /**
+   * The name of the resource for which this event is. required
+   *
    * @var string
    */
   public $name;
@@ -31,7 +36,10 @@ class ResourceEvent extends \Google\Model
   protected $stateDataType = '';
 
   /**
-   * @param string
+   * The unique ID for this per-resource event. CLHs can use this value to dedup
+   * repeated calls. required
+   *
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {
@@ -45,7 +53,9 @@ class ResourceEvent extends \Google\Model
     return $this->eventId;
   }
   /**
-   * @param string
+   * The name of the resource for which this event is. required
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -59,7 +69,9 @@ class ResourceEvent extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ContainerState
+   * The state of the project that led to this event.
+   *
+   * @param ContainerState $state
    */
   public function setState(ContainerState $state)
   {

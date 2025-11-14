@@ -20,12 +20,20 @@ namespace Google\Service\CloudSearch;
 class DisplayedProperty extends \Google\Model
 {
   /**
+   * The name of the top-level property as defined in a property definition for
+   * the object. If the name is not a defined property in the schema, an error
+   * is given when attempting to update the schema.
+   *
    * @var string
    */
   public $propertyName;
 
   /**
-   * @param string
+   * The name of the top-level property as defined in a property definition for
+   * the object. If the name is not a defined property in the schema, an error
+   * is given when attempting to update the schema.
+   *
+   * @param string $propertyName
    */
   public function setPropertyName($propertyName)
   {

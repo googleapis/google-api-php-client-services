@@ -20,18 +20,26 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends \Google\Model
 {
   /**
+   * Optional. The condition that must be satisfied to trigger this handler.
+   *
    * @var string
    */
   public $condition;
   protected $fulfillmentType = GoogleCloudDialogflowCxV3Fulfillment::class;
   protected $fulfillmentDataType = '';
   /**
+   * Required. The name of the lifecycle stage that triggers this handler.
+   * Supported values: * `playbook-start` * `pre-action-selection` * `pre-
+   * action-execution`
+   *
    * @var string
    */
   public $lifecycleStage;
 
   /**
-   * @param string
+   * Optional. The condition that must be satisfied to trigger this handler.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -45,7 +53,9 @@ class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Fulfillment
+   * Required. The fulfillment to call when this handler is triggered.
+   *
+   * @param GoogleCloudDialogflowCxV3Fulfillment $fulfillment
    */
   public function setFulfillment(GoogleCloudDialogflowCxV3Fulfillment $fulfillment)
   {
@@ -59,7 +69,11 @@ class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends \Google\Model
     return $this->fulfillment;
   }
   /**
-   * @param string
+   * Required. The name of the lifecycle stage that triggers this handler.
+   * Supported values: * `playbook-start` * `pre-action-selection` * `pre-
+   * action-execution`
+   *
+   * @param string $lifecycleStage
    */
   public function setLifecycleStage($lifecycleStage)
   {

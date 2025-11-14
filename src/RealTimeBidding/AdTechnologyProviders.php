@@ -21,20 +21,40 @@ class AdTechnologyProviders extends \Google\Collection
 {
   protected $collection_key = 'unidentifiedProviderDomains';
   /**
+   * The detected IAB Global Vendor List (GVL) IDs for this creative. See the
+   * IAB Global Vendor List at https://vendor-list.consensu.org/v2/vendor-
+   * list.json for details about the vendors.
+   *
    * @var string[]
    */
   public $detectedGvlIds;
   /**
+   * The detected [Google Ad Tech Providers
+   * (ATP)](https://support.google.com/admanager/answer/9012903) for this
+   * creative. See https://storage.googleapis.com/adx-rtb-
+   * dictionaries/providers.csv for mapping of provider ID to provided name, a
+   * privacy policy URL, and a list of domains which can be attributed to the
+   * provider.
+   *
    * @var string[]
    */
   public $detectedProviderIds;
   /**
+   * Domains of detected unidentified ad technology providers (if any). You must
+   * ensure that the creatives used in bids placed for inventory that will serve
+   * to EEA or UK users does not contain unidentified ad technology providers.
+   * Google reserves the right to filter non-compliant bids.
+   *
    * @var string[]
    */
   public $unidentifiedProviderDomains;
 
   /**
-   * @param string[]
+   * The detected IAB Global Vendor List (GVL) IDs for this creative. See the
+   * IAB Global Vendor List at https://vendor-list.consensu.org/v2/vendor-
+   * list.json for details about the vendors.
+   *
+   * @param string[] $detectedGvlIds
    */
   public function setDetectedGvlIds($detectedGvlIds)
   {
@@ -48,7 +68,14 @@ class AdTechnologyProviders extends \Google\Collection
     return $this->detectedGvlIds;
   }
   /**
-   * @param string[]
+   * The detected [Google Ad Tech Providers
+   * (ATP)](https://support.google.com/admanager/answer/9012903) for this
+   * creative. See https://storage.googleapis.com/adx-rtb-
+   * dictionaries/providers.csv for mapping of provider ID to provided name, a
+   * privacy policy URL, and a list of domains which can be attributed to the
+   * provider.
+   *
+   * @param string[] $detectedProviderIds
    */
   public function setDetectedProviderIds($detectedProviderIds)
   {
@@ -62,7 +89,12 @@ class AdTechnologyProviders extends \Google\Collection
     return $this->detectedProviderIds;
   }
   /**
-   * @param string[]
+   * Domains of detected unidentified ad technology providers (if any). You must
+   * ensure that the creatives used in bids placed for inventory that will serve
+   * to EEA or UK users does not contain unidentified ad technology providers.
+   * Google reserves the right to filter non-compliant bids.
+   *
+   * @param string[] $unidentifiedProviderDomains
    */
   public function setUnidentifiedProviderDomains($unidentifiedProviderDomains)
   {

@@ -23,7 +23,11 @@ class RevertTriggerResponse extends \Google\Model
   protected $triggerDataType = '';
 
   /**
-   * @param Trigger
+   * Trigger as it appears in the latest container version since the last
+   * workspace synchronization operation. If no trigger is present, that means
+   * the trigger was deleted in the latest container version.
+   *
+   * @param Trigger $trigger
    */
   public function setTrigger(Trigger $trigger)
   {

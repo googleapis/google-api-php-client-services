@@ -20,28 +20,41 @@ namespace Google\Service\Dfareporting;
 class Size extends \Google\Model
 {
   /**
+   * Height of this size. Acceptable values are 0 to 32767, inclusive.
+   *
    * @var int
    */
   public $height;
   /**
+   * IAB standard size. This is a read-only, auto-generated field.
+   *
    * @var bool
    */
   public $iab;
   /**
+   * ID of this size. This is a read-only, auto-generated field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#size".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Width of this size. Acceptable values are 0 to 32767, inclusive.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * Height of this size. Acceptable values are 0 to 32767, inclusive.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -55,7 +68,9 @@ class Size extends \Google\Model
     return $this->height;
   }
   /**
-   * @param bool
+   * IAB standard size. This is a read-only, auto-generated field.
+   *
+   * @param bool $iab
    */
   public function setIab($iab)
   {
@@ -69,7 +84,9 @@ class Size extends \Google\Model
     return $this->iab;
   }
   /**
-   * @param string
+   * ID of this size. This is a read-only, auto-generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -83,7 +100,10 @@ class Size extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#size".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -97,7 +117,9 @@ class Size extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param int
+   * Width of this size. Acceptable values are 0 to 32767, inclusive.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

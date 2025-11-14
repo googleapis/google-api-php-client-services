@@ -20,52 +20,79 @@ namespace Google\Service\ShoppingContent;
 class LiasettingsCustomBatchRequestEntry extends \Google\Model
 {
   /**
+   * The ID of the account for which to get/update account LIA settings.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * An entry ID, unique within the batch request.
+   *
    * @var string
    */
   public $batchId;
   /**
+   * Inventory validation contact email. Required only for
+   * SetInventoryValidationContact.
+   *
    * @var string
    */
   public $contactEmail;
   /**
+   * Inventory validation contact name. Required only for
+   * SetInventoryValidationContact.
+   *
    * @var string
    */
   public $contactName;
   /**
+   * The country code. Required only for RequestInventoryVerification.
+   *
    * @var string
    */
   public $country;
   /**
+   * The Business Profile. Required only for RequestGmbAccess.
+   *
    * @var string
    */
   public $gmbEmail;
   protected $liaSettingsType = LiaSettings::class;
   protected $liaSettingsDataType = '';
   /**
+   * The ID of the managing account.
+   *
    * @var string
    */
   public $merchantId;
   /**
+   * The method of the batch entry. Acceptable values are: - "`get`" -
+   * "`getAccessibleGmbAccounts`" - "`requestGmbAccess`" -
+   * "`requestInventoryVerification`" - "`setInventoryVerificationContact`" -
+   * "`update`"
+   *
    * @var string
    */
   public $method;
   protected $omnichannelExperienceType = LiaOmnichannelExperience::class;
   protected $omnichannelExperienceDataType = '';
   /**
+   * The ID of POS data provider. Required only for SetPosProvider.
+   *
    * @var string
    */
   public $posDataProviderId;
   /**
+   * The account ID by which this merchant is known to the POS provider.
+   *
    * @var string
    */
   public $posExternalAccountId;
 
   /**
-   * @param string
+   * The ID of the account for which to get/update account LIA settings.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -79,7 +106,9 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * An entry ID, unique within the batch request.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -93,7 +122,10 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param string
+   * Inventory validation contact email. Required only for
+   * SetInventoryValidationContact.
+   *
+   * @param string $contactEmail
    */
   public function setContactEmail($contactEmail)
   {
@@ -107,7 +139,10 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->contactEmail;
   }
   /**
-   * @param string
+   * Inventory validation contact name. Required only for
+   * SetInventoryValidationContact.
+   *
+   * @param string $contactName
    */
   public function setContactName($contactName)
   {
@@ -121,7 +156,9 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->contactName;
   }
   /**
-   * @param string
+   * The country code. Required only for RequestInventoryVerification.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -135,7 +172,9 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->country;
   }
   /**
-   * @param string
+   * The Business Profile. Required only for RequestGmbAccess.
+   *
+   * @param string $gmbEmail
    */
   public function setGmbEmail($gmbEmail)
   {
@@ -149,7 +188,9 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->gmbEmail;
   }
   /**
-   * @param LiaSettings
+   * The account Lia settings to update. Only defined if the method is `update`.
+   *
+   * @param LiaSettings $liaSettings
    */
   public function setLiaSettings(LiaSettings $liaSettings)
   {
@@ -163,7 +204,9 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->liaSettings;
   }
   /**
-   * @param string
+   * The ID of the managing account.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -177,7 +220,12 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->merchantId;
   }
   /**
-   * @param string
+   * The method of the batch entry. Acceptable values are: - "`get`" -
+   * "`getAccessibleGmbAccounts`" - "`requestGmbAccess`" -
+   * "`requestInventoryVerification`" - "`setInventoryVerificationContact`" -
+   * "`update`"
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -191,7 +239,10 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->method;
   }
   /**
-   * @param LiaOmnichannelExperience
+   * The omnichannel experience for a country. Required only for
+   * SetOmnichannelExperience.
+   *
+   * @param LiaOmnichannelExperience $omnichannelExperience
    */
   public function setOmnichannelExperience(LiaOmnichannelExperience $omnichannelExperience)
   {
@@ -205,7 +256,9 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->omnichannelExperience;
   }
   /**
-   * @param string
+   * The ID of POS data provider. Required only for SetPosProvider.
+   *
+   * @param string $posDataProviderId
    */
   public function setPosDataProviderId($posDataProviderId)
   {
@@ -219,7 +272,9 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
     return $this->posDataProviderId;
   }
   /**
-   * @param string
+   * The account ID by which this merchant is known to the POS provider.
+   *
+   * @param string $posExternalAccountId
    */
   public function setPosExternalAccountId($posExternalAccountId)
   {

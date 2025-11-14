@@ -25,7 +25,9 @@ class AnalyzerOrgPolicyConstraint extends \Google\Model
   protected $googleDefinedConstraintDataType = '';
 
   /**
-   * @param GoogleCloudAssetV1CustomConstraint
+   * The definition of the custom constraint.
+   *
+   * @param GoogleCloudAssetV1CustomConstraint $customConstraint
    */
   public function setCustomConstraint(GoogleCloudAssetV1CustomConstraint $customConstraint)
   {
@@ -39,7 +41,9 @@ class AnalyzerOrgPolicyConstraint extends \Google\Model
     return $this->customConstraint;
   }
   /**
-   * @param GoogleCloudAssetV1Constraint
+   * The definition of the canned constraint defined by Google.
+   *
+   * @param GoogleCloudAssetV1Constraint $googleDefinedConstraint
    */
   public function setGoogleDefinedConstraint(GoogleCloudAssetV1Constraint $googleDefinedConstraint)
   {

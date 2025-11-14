@@ -21,16 +21,35 @@ class Source extends \Google\Collection
 {
   protected $collection_key = 'principals';
   /**
+   * Optional. List of CIDR ranges to match based on source IP address. At least
+   * one IP block should match. Single IP (e.g., "1.2.3.4") and CIDR (e.g.,
+   * "1.2.3.0/24") are supported. Authorization based on source IP alone should
+   * be avoided. The IP addresses of any load balancers or proxies should be
+   * considered untrusted.
+   *
    * @var string[]
    */
   public $ipBlocks;
   /**
+   * Optional. List of peer identities to match for authorization. At least one
+   * principal should match. Each peer can be an exact match, or a prefix match
+   * (example, "namespace") or a suffix match (example, "service-account") or a
+   * presence match "*". Authorization based on the principal name without
+   * certificate validation (configured by ServerTlsPolicy resource) is
+   * considered insecure.
+   *
    * @var string[]
    */
   public $principals;
 
   /**
-   * @param string[]
+   * Optional. List of CIDR ranges to match based on source IP address. At least
+   * one IP block should match. Single IP (e.g., "1.2.3.4") and CIDR (e.g.,
+   * "1.2.3.0/24") are supported. Authorization based on source IP alone should
+   * be avoided. The IP addresses of any load balancers or proxies should be
+   * considered untrusted.
+   *
+   * @param string[] $ipBlocks
    */
   public function setIpBlocks($ipBlocks)
   {
@@ -44,7 +63,14 @@ class Source extends \Google\Collection
     return $this->ipBlocks;
   }
   /**
-   * @param string[]
+   * Optional. List of peer identities to match for authorization. At least one
+   * principal should match. Each peer can be an exact match, or a prefix match
+   * (example, "namespace") or a suffix match (example, "service-account") or a
+   * presence match "*". Authorization based on the principal name without
+   * certificate validation (configured by ServerTlsPolicy resource) is
+   * considered insecure.
+   *
+   * @param string[] $principals
    */
   public function setPrincipals($principals)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Docs;
 class ShadingSuggestionState extends \Google\Model
 {
   /**
+   * Indicates if there was a suggested change to the Shading.
+   *
    * @var bool
    */
   public $backgroundColorSuggested;
 
   /**
-   * @param bool
+   * Indicates if there was a suggested change to the Shading.
+   *
+   * @param bool $backgroundColorSuggested
    */
   public function setBackgroundColorSuggested($backgroundColorSuggested)
   {

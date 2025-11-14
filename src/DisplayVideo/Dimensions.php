@@ -20,16 +20,22 @@ namespace Google\Service\DisplayVideo;
 class Dimensions extends \Google\Model
 {
   /**
+   * The height in pixels.
+   *
    * @var int
    */
   public $heightPixels;
   /**
+   * The width in pixels.
+   *
    * @var int
    */
   public $widthPixels;
 
   /**
-   * @param int
+   * The height in pixels.
+   *
+   * @param int $heightPixels
    */
   public function setHeightPixels($heightPixels)
   {
@@ -43,7 +49,9 @@ class Dimensions extends \Google\Model
     return $this->heightPixels;
   }
   /**
-   * @param int
+   * The width in pixels.
+   *
+   * @param int $widthPixels
    */
   public function setWidthPixels($widthPixels)
   {

@@ -20,58 +20,111 @@ namespace Google\Service\Dataflow;
 class MetricUpdate extends \Google\Model
 {
   /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only
+   * possible value type is a BoundedTrieNode. Introduced this field to avoid
+   * breaking older SDKs when Dataflow service starts to populate the
+   * `bounded_trie` field.
+   *
    * @var array
    */
   public $boundedTrie;
   /**
+   * True if this metric is reported as the total cumulative aggregate value
+   * accumulated since the worker started working on this WorkItem. By default
+   * this is false, indicating that this metric is reported as a delta that is
+   * not associated with any WorkItem.
+   *
    * @var bool
    */
   public $cumulative;
   /**
+   * A struct value describing properties of a distribution of numeric values.
+   *
    * @var array
    */
   public $distribution;
   /**
+   * A struct value describing properties of a Gauge. Metrics of gauge type show
+   * the value of a metric across time, and is aggregated based on the newest
+   * value.
+   *
    * @var array
    */
   public $gauge;
   /**
+   * Worker-computed aggregate value for internal use by the Dataflow service.
+   *
    * @var array
    */
   public $internal;
   /**
+   * Metric aggregation kind. The possible metric aggregation kinds are "Sum",
+   * "Max", "Min", "Mean", "Set", "And", "Or", and "Distribution". The specified
+   * aggregation kind is case-insensitive. If omitted, this is not an aggregated
+   * value but instead a single metric sample value.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Worker-computed aggregate value for the "Mean" aggregation kind. This holds
+   * the count of the aggregated values and is used in combination with mean_sum
+   * above to obtain the actual mean aggregate value. The only possible value
+   * type is Long.
+   *
    * @var array
    */
   public $meanCount;
   /**
+   * Worker-computed aggregate value for the "Mean" aggregation kind. This holds
+   * the sum of the aggregated values and is used in combination with mean_count
+   * below to obtain the actual mean aggregate value. The only possible value
+   * types are Long and Double.
+   *
    * @var array
    */
   public $meanSum;
   protected $nameType = MetricStructuredName::class;
   protected $nameDataType = '';
   /**
+   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min",
+   * "And", and "Or". The possible value types are Long, Double, and Boolean.
+   *
    * @var array
    */
   public $scalar;
   /**
+   * Worker-computed aggregate value for the "Set" aggregation kind. The only
+   * possible value type is a list of Values whose type can be Long, Double,
+   * String, or BoundedTrie according to the metric's type. All Values in the
+   * list must be of the same type.
+   *
    * @var array
    */
   public $set;
   /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only
+   * possible value type is a BoundedTrieNode.
+   *
    * @var array
    */
   public $trie;
   /**
+   * Timestamp associated with the metric value. Optional when workers are
+   * reporting work progress; it will be filled in responses from the metrics
+   * API.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param array
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only
+   * possible value type is a BoundedTrieNode. Introduced this field to avoid
+   * breaking older SDKs when Dataflow service starts to populate the
+   * `bounded_trie` field.
+   *
+   * @param array $boundedTrie
    */
   public function setBoundedTrie($boundedTrie)
   {
@@ -85,7 +138,12 @@ class MetricUpdate extends \Google\Model
     return $this->boundedTrie;
   }
   /**
-   * @param bool
+   * True if this metric is reported as the total cumulative aggregate value
+   * accumulated since the worker started working on this WorkItem. By default
+   * this is false, indicating that this metric is reported as a delta that is
+   * not associated with any WorkItem.
+   *
+   * @param bool $cumulative
    */
   public function setCumulative($cumulative)
   {
@@ -99,7 +157,9 @@ class MetricUpdate extends \Google\Model
     return $this->cumulative;
   }
   /**
-   * @param array
+   * A struct value describing properties of a distribution of numeric values.
+   *
+   * @param array $distribution
    */
   public function setDistribution($distribution)
   {
@@ -113,7 +173,11 @@ class MetricUpdate extends \Google\Model
     return $this->distribution;
   }
   /**
-   * @param array
+   * A struct value describing properties of a Gauge. Metrics of gauge type show
+   * the value of a metric across time, and is aggregated based on the newest
+   * value.
+   *
+   * @param array $gauge
    */
   public function setGauge($gauge)
   {
@@ -127,7 +191,9 @@ class MetricUpdate extends \Google\Model
     return $this->gauge;
   }
   /**
-   * @param array
+   * Worker-computed aggregate value for internal use by the Dataflow service.
+   *
+   * @param array $internal
    */
   public function setInternal($internal)
   {
@@ -141,7 +207,12 @@ class MetricUpdate extends \Google\Model
     return $this->internal;
   }
   /**
-   * @param string
+   * Metric aggregation kind. The possible metric aggregation kinds are "Sum",
+   * "Max", "Min", "Mean", "Set", "And", "Or", and "Distribution". The specified
+   * aggregation kind is case-insensitive. If omitted, this is not an aggregated
+   * value but instead a single metric sample value.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -155,7 +226,12 @@ class MetricUpdate extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param array
+   * Worker-computed aggregate value for the "Mean" aggregation kind. This holds
+   * the count of the aggregated values and is used in combination with mean_sum
+   * above to obtain the actual mean aggregate value. The only possible value
+   * type is Long.
+   *
+   * @param array $meanCount
    */
   public function setMeanCount($meanCount)
   {
@@ -169,7 +245,12 @@ class MetricUpdate extends \Google\Model
     return $this->meanCount;
   }
   /**
-   * @param array
+   * Worker-computed aggregate value for the "Mean" aggregation kind. This holds
+   * the sum of the aggregated values and is used in combination with mean_count
+   * below to obtain the actual mean aggregate value. The only possible value
+   * types are Long and Double.
+   *
+   * @param array $meanSum
    */
   public function setMeanSum($meanSum)
   {
@@ -183,7 +264,9 @@ class MetricUpdate extends \Google\Model
     return $this->meanSum;
   }
   /**
-   * @param MetricStructuredName
+   * Name of the metric.
+   *
+   * @param MetricStructuredName $name
    */
   public function setName(MetricStructuredName $name)
   {
@@ -197,7 +280,10 @@ class MetricUpdate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param array
+   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min",
+   * "And", and "Or". The possible value types are Long, Double, and Boolean.
+   *
+   * @param array $scalar
    */
   public function setScalar($scalar)
   {
@@ -211,7 +297,12 @@ class MetricUpdate extends \Google\Model
     return $this->scalar;
   }
   /**
-   * @param array
+   * Worker-computed aggregate value for the "Set" aggregation kind. The only
+   * possible value type is a list of Values whose type can be Long, Double,
+   * String, or BoundedTrie according to the metric's type. All Values in the
+   * list must be of the same type.
+   *
+   * @param array $set
    */
   public function setSet($set)
   {
@@ -225,7 +316,10 @@ class MetricUpdate extends \Google\Model
     return $this->set;
   }
   /**
-   * @param array
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only
+   * possible value type is a BoundedTrieNode.
+   *
+   * @param array $trie
    */
   public function setTrie($trie)
   {
@@ -239,7 +333,11 @@ class MetricUpdate extends \Google\Model
     return $this->trie;
   }
   /**
-   * @param string
+   * Timestamp associated with the metric value. Optional when workers are
+   * reporting work progress; it will be filled in responses from the metrics
+   * API.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

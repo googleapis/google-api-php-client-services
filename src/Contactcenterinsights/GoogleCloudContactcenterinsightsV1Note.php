@@ -22,16 +22,24 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
   protected $assessmentNoteType = GoogleCloudContactcenterinsightsV1NoteAssessmentNote::class;
   protected $assessmentNoteDataType = '';
   /**
+   * The note content.
+   *
    * @var string
    */
   public $content;
   protected $conversationTurnNoteType = GoogleCloudContactcenterinsightsV1NoteConversationTurnNote::class;
   protected $conversationTurnNoteDataType = '';
   /**
+   * Output only. The time at which the note was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Identifier. The resource name of the note. Format: projects/{project}/locat
+   * ions/{location}/conversations/{conversation}/assessments/{assessment}/notes
+   * /{note}
+   *
    * @var string
    */
   public $name;
@@ -40,12 +48,16 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
   protected $qaQuestionNoteType = GoogleCloudContactcenterinsightsV1NoteQaQuestionNote::class;
   protected $qaQuestionNoteDataType = '';
   /**
+   * Output only. The time at which the note was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1NoteAssessmentNote
+   * The note is associated to the entire parent assessment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1NoteAssessmentNote $assessmentNote
    */
   public function setAssessmentNote(GoogleCloudContactcenterinsightsV1NoteAssessmentNote $assessmentNote)
   {
@@ -59,7 +71,9 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
     return $this->assessmentNote;
   }
   /**
-   * @param string
+   * The note content.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -73,7 +87,9 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
     return $this->content;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1NoteConversationTurnNote
+   * The note is associated with a conversation turn.
+   *
+   * @param GoogleCloudContactcenterinsightsV1NoteConversationTurnNote $conversationTurnNote
    */
   public function setConversationTurnNote(GoogleCloudContactcenterinsightsV1NoteConversationTurnNote $conversationTurnNote)
   {
@@ -87,7 +103,9 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
     return $this->conversationTurnNote;
   }
   /**
-   * @param string
+   * Output only. The time at which the note was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -101,7 +119,11 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the note. Format: projects/{project}/locat
+   * ions/{location}/conversations/{conversation}/assessments/{assessment}/notes
+   * /{note}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -115,7 +137,9 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1UserInfo
+   * Output only. The user that created the note.
+   *
+   * @param GoogleCloudContactcenterinsightsV1UserInfo $noteCreator
    */
   public function setNoteCreator(GoogleCloudContactcenterinsightsV1UserInfo $noteCreator)
   {
@@ -129,7 +153,10 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
     return $this->noteCreator;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1NoteQaQuestionNote
+   * The note is associated with a QA question in one of the conversation's
+   * scorecard results.
+   *
+   * @param GoogleCloudContactcenterinsightsV1NoteQaQuestionNote $qaQuestionNote
    */
   public function setQaQuestionNote(GoogleCloudContactcenterinsightsV1NoteQaQuestionNote $qaQuestionNote)
   {
@@ -143,7 +170,9 @@ class GoogleCloudContactcenterinsightsV1Note extends \Google\Model
     return $this->qaQuestionNote;
   }
   /**
-   * @param string
+   * Output only. The time at which the note was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

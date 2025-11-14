@@ -25,7 +25,9 @@ class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent extend
   protected $messageDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3FulfillmentConditionalCases
+   * Additional cases to be evaluated.
+   *
+   * @param GoogleCloudDialogflowCxV3FulfillmentConditionalCases $additionalCases
    */
   public function setAdditionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCases $additionalCases)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent extend
     return $this->additionalCases;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ResponseMessage
+   * Returned message.
+   *
+   * @param GoogleCloudDialogflowCxV3ResponseMessage $message
    */
   public function setMessage(GoogleCloudDialogflowCxV3ResponseMessage $message)
   {

@@ -23,7 +23,9 @@ class GoogleCloudDocumentaiV1beta3FieldExtractionMetadata extends \Google\Model
   protected $summaryOptionsDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1beta3SummaryOptions
+   * Summary options config.
+   *
+   * @param GoogleCloudDocumentaiV1beta3SummaryOptions $summaryOptions
    */
   public function setSummaryOptions(GoogleCloudDocumentaiV1beta3SummaryOptions $summaryOptions)
   {

@@ -25,7 +25,9 @@ class GoogleBigtableAdminV2TypeInt64Encoding extends \Google\Model
   protected $orderedCodeBytesDataType = '';
 
   /**
-   * @param GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes
+   * Use `BigEndianBytes` encoding.
+   *
+   * @param GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes $bigEndianBytes
    */
   public function setBigEndianBytes(GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes $bigEndianBytes)
   {
@@ -39,7 +41,9 @@ class GoogleBigtableAdminV2TypeInt64Encoding extends \Google\Model
     return $this->bigEndianBytes;
   }
   /**
-   * @param GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes
+   * Use `OrderedCodeBytes` encoding.
+   *
+   * @param GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes $orderedCodeBytes
    */
   public function setOrderedCodeBytes(GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes $orderedCodeBytes)
   {

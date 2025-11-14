@@ -23,12 +23,19 @@ class BulkEditAssignedUserRolesRequest extends \Google\Collection
   protected $createdAssignedUserRolesType = AssignedUserRole::class;
   protected $createdAssignedUserRolesDataType = 'array';
   /**
+   * The assigned user roles to delete in batch, specified as a list of
+   * assigned_user_role_ids. The format of assigned_user_role_id is `entityType-
+   * entityid`, for example `partner-123`.
+   *
    * @var string[]
    */
   public $deletedAssignedUserRoles;
 
   /**
-   * @param AssignedUserRole[]
+   * The assigned user roles to create in batch, specified as a list of
+   * AssignedUserRoles.
+   *
+   * @param AssignedUserRole[] $createdAssignedUserRoles
    */
   public function setCreatedAssignedUserRoles($createdAssignedUserRoles)
   {
@@ -42,7 +49,11 @@ class BulkEditAssignedUserRolesRequest extends \Google\Collection
     return $this->createdAssignedUserRoles;
   }
   /**
-   * @param string[]
+   * The assigned user roles to delete in batch, specified as a list of
+   * assigned_user_role_ids. The format of assigned_user_role_id is `entityType-
+   * entityid`, for example `partner-123`.
+   *
+   * @param string[] $deletedAssignedUserRoles
    */
   public function setDeletedAssignedUserRoles($deletedAssignedUserRoles)
   {

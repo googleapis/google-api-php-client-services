@@ -20,12 +20,16 @@ namespace Google\Service\Monitoring;
 class LogMetadata extends \Google\Model
 {
   /**
+   * The labels extracted from the log.
+   *
    * @var string[]
    */
   public $extractedLabels;
 
   /**
-   * @param string[]
+   * The labels extracted from the log.
+   *
+   * @param string[] $extractedLabels
    */
   public function setExtractedLabels($extractedLabels)
   {

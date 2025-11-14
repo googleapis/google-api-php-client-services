@@ -20,26 +20,39 @@ namespace Google\Service\ContainerAnalysis;
 class Metadata extends \Google\Model
 {
   /**
+   * The timestamp of when the build completed.
+   *
    * @var string
    */
   public $buildFinishedOn;
   /**
+   * Identifies the particular build invocation, which can be useful for finding
+   * associated logs or other ad-hoc analysis. The value SHOULD be globally
+   * unique, per in-toto Provenance spec.
+   *
    * @var string
    */
   public $buildInvocationId;
   /**
+   * The timestamp of when the build started.
+   *
    * @var string
    */
   public $buildStartedOn;
   protected $completenessType = Completeness::class;
   protected $completenessDataType = '';
   /**
+   * If true, the builder claims that running the recipe on materials will
+   * produce bit-for-bit identical output.
+   *
    * @var bool
    */
   public $reproducible;
 
   /**
-   * @param string
+   * The timestamp of when the build completed.
+   *
+   * @param string $buildFinishedOn
    */
   public function setBuildFinishedOn($buildFinishedOn)
   {
@@ -53,7 +66,11 @@ class Metadata extends \Google\Model
     return $this->buildFinishedOn;
   }
   /**
-   * @param string
+   * Identifies the particular build invocation, which can be useful for finding
+   * associated logs or other ad-hoc analysis. The value SHOULD be globally
+   * unique, per in-toto Provenance spec.
+   *
+   * @param string $buildInvocationId
    */
   public function setBuildInvocationId($buildInvocationId)
   {
@@ -67,7 +84,9 @@ class Metadata extends \Google\Model
     return $this->buildInvocationId;
   }
   /**
-   * @param string
+   * The timestamp of when the build started.
+   *
+   * @param string $buildStartedOn
    */
   public function setBuildStartedOn($buildStartedOn)
   {
@@ -81,7 +100,10 @@ class Metadata extends \Google\Model
     return $this->buildStartedOn;
   }
   /**
-   * @param Completeness
+   * Indicates that the builder claims certain fields in this message to be
+   * complete.
+   *
+   * @param Completeness $completeness
    */
   public function setCompleteness(Completeness $completeness)
   {
@@ -95,7 +117,10 @@ class Metadata extends \Google\Model
     return $this->completeness;
   }
   /**
-   * @param bool
+   * If true, the builder claims that running the recipe on materials will
+   * produce bit-for-bit identical output.
+   *
+   * @param bool $reproducible
    */
   public function setReproducible($reproducible)
   {

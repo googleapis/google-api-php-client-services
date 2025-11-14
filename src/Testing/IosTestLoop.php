@@ -21,18 +21,25 @@ class IosTestLoop extends \Google\Collection
 {
   protected $collection_key = 'scenarios';
   /**
+   * Output only. The bundle id for the application under test.
+   *
    * @var string
    */
   public $appBundleId;
   protected $appIpaType = FileReference::class;
   protected $appIpaDataType = '';
   /**
+   * The list of scenarios that should be run during the test. Defaults to the
+   * single scenario 0 if unspecified.
+   *
    * @var int[]
    */
   public $scenarios;
 
   /**
-   * @param string
+   * Output only. The bundle id for the application under test.
+   *
+   * @param string $appBundleId
    */
   public function setAppBundleId($appBundleId)
   {
@@ -46,7 +53,9 @@ class IosTestLoop extends \Google\Collection
     return $this->appBundleId;
   }
   /**
-   * @param FileReference
+   * Required. The .ipa of the application to test.
+   *
+   * @param FileReference $appIpa
    */
   public function setAppIpa(FileReference $appIpa)
   {
@@ -60,7 +69,10 @@ class IosTestLoop extends \Google\Collection
     return $this->appIpa;
   }
   /**
-   * @param int[]
+   * The list of scenarios that should be run during the test. Defaults to the
+   * single scenario 0 if unspecified.
+   *
+   * @param int[] $scenarios
    */
   public function setScenarios($scenarios)
   {

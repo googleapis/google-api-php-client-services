@@ -19,30 +19,55 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
 {
+  /**
+   * Unspecified type.
+   */
+  public const ROUTINE_TYPE_ROUTINE_TYPE_UNSPECIFIED = 'ROUTINE_TYPE_UNSPECIFIED';
+  /**
+   * Non-builtin permanent scalar function.
+   */
+  public const ROUTINE_TYPE_SCALAR_FUNCTION = 'SCALAR_FUNCTION';
+  /**
+   * Stored procedure.
+   */
+  public const ROUTINE_TYPE_PROCEDURE = 'PROCEDURE';
   protected $collection_key = 'routineArguments';
   protected $bigqueryRoutineSpecType = GoogleCloudDatacatalogV1BigQueryRoutineSpec::class;
   protected $bigqueryRoutineSpecDataType = '';
   /**
+   * The body of the routine.
+   *
    * @var string
    */
   public $definitionBody;
   /**
+   * The language the routine is written in. The exact value depends on the
+   * source system. For BigQuery routines, possible values are: * `SQL` *
+   * `JAVASCRIPT`
+   *
    * @var string
    */
   public $language;
   /**
+   * Return type of the argument. The exact value depends on the source system
+   * and the language.
+   *
    * @var string
    */
   public $returnType;
   protected $routineArgumentsType = GoogleCloudDatacatalogV1RoutineSpecArgument::class;
   protected $routineArgumentsDataType = 'array';
   /**
+   * The type of the routine.
+   *
    * @var string
    */
   public $routineType;
 
   /**
-   * @param GoogleCloudDatacatalogV1BigQueryRoutineSpec
+   * Fields specific for BigQuery routines.
+   *
+   * @param GoogleCloudDatacatalogV1BigQueryRoutineSpec $bigqueryRoutineSpec
    */
   public function setBigqueryRoutineSpec(GoogleCloudDatacatalogV1BigQueryRoutineSpec $bigqueryRoutineSpec)
   {
@@ -56,7 +81,9 @@ class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
     return $this->bigqueryRoutineSpec;
   }
   /**
-   * @param string
+   * The body of the routine.
+   *
+   * @param string $definitionBody
    */
   public function setDefinitionBody($definitionBody)
   {
@@ -70,7 +97,11 @@ class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
     return $this->definitionBody;
   }
   /**
-   * @param string
+   * The language the routine is written in. The exact value depends on the
+   * source system. For BigQuery routines, possible values are: * `SQL` *
+   * `JAVASCRIPT`
+   *
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -84,7 +115,10 @@ class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
     return $this->language;
   }
   /**
-   * @param string
+   * Return type of the argument. The exact value depends on the source system
+   * and the language.
+   *
+   * @param string $returnType
    */
   public function setReturnType($returnType)
   {
@@ -98,7 +132,9 @@ class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
     return $this->returnType;
   }
   /**
-   * @param GoogleCloudDatacatalogV1RoutineSpecArgument[]
+   * Arguments of the routine.
+   *
+   * @param GoogleCloudDatacatalogV1RoutineSpecArgument[] $routineArguments
    */
   public function setRoutineArguments($routineArguments)
   {
@@ -112,14 +148,18 @@ class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
     return $this->routineArguments;
   }
   /**
-   * @param string
+   * The type of the routine.
+   *
+   * Accepted values: ROUTINE_TYPE_UNSPECIFIED, SCALAR_FUNCTION, PROCEDURE
+   *
+   * @param self::ROUTINE_TYPE_* $routineType
    */
   public function setRoutineType($routineType)
   {
     $this->routineType = $routineType;
   }
   /**
-   * @return string
+   * @return self::ROUTINE_TYPE_*
    */
   public function getRoutineType()
   {

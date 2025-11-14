@@ -19,9 +19,25 @@ namespace Google\Service\ShoppingContent;
 
 class ProductViewItemIssue extends \Google\Model
 {
+  /**
+   * Unknown resolution type.
+   */
+  public const RESOLUTION_UNKNOWN = 'UNKNOWN';
+  /**
+   * The merchant has to fix the issue.
+   */
+  public const RESOLUTION_MERCHANT_ACTION = 'MERCHANT_ACTION';
+  /**
+   * The issue will be resolved automatically (for example, image crawl), or
+   * Google review. No merchant action is required now. Resolution might lead to
+   * another issue (for example, if crawl fails).
+   */
+  public const RESOLUTION_PENDING_PROCESSING = 'PENDING_PROCESSING';
   protected $issueTypeType = ProductViewItemIssueItemIssueType::class;
   protected $issueTypeDataType = '';
   /**
+   * Item issue resolution.
+   *
    * @var string
    */
   public $resolution;
@@ -29,7 +45,9 @@ class ProductViewItemIssue extends \Google\Model
   protected $severityDataType = '';
 
   /**
-   * @param ProductViewItemIssueItemIssueType
+   * Item issue type.
+   *
+   * @param ProductViewItemIssueItemIssueType $issueType
    */
   public function setIssueType(ProductViewItemIssueItemIssueType $issueType)
   {
@@ -43,21 +61,27 @@ class ProductViewItemIssue extends \Google\Model
     return $this->issueType;
   }
   /**
-   * @param string
+   * Item issue resolution.
+   *
+   * Accepted values: UNKNOWN, MERCHANT_ACTION, PENDING_PROCESSING
+   *
+   * @param self::RESOLUTION_* $resolution
    */
   public function setResolution($resolution)
   {
     $this->resolution = $resolution;
   }
   /**
-   * @return string
+   * @return self::RESOLUTION_*
    */
   public function getResolution()
   {
     return $this->resolution;
   }
   /**
-   * @param ProductViewItemIssueItemIssueSeverity
+   * Item issue severity.
+   *
+   * @param ProductViewItemIssueItemIssueSeverity $severity
    */
   public function setSeverity(ProductViewItemIssueItemIssueSeverity $severity)
   {

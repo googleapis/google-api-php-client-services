@@ -20,12 +20,18 @@ namespace Google\Service\CloudDeploy;
 class CustomTarget extends \Google\Model
 {
   /**
+   * Required. The name of the CustomTargetType. Format must be `projects/{proje
+   * ct}/locations/{location}/customTargetTypes/{custom_target_type}`.
+   *
    * @var string
    */
   public $customTargetType;
 
   /**
-   * @param string
+   * Required. The name of the CustomTargetType. Format must be `projects/{proje
+   * ct}/locations/{location}/customTargetTypes/{custom_target_type}`.
+   *
+   * @param string $customTargetType
    */
   public function setCustomTargetType($customTargetType)
   {

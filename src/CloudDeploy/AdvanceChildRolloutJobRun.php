@@ -20,16 +20,26 @@ namespace Google\Service\CloudDeploy;
 class AdvanceChildRolloutJobRun extends \Google\Model
 {
   /**
+   * Output only. Name of the `ChildRollout`. Format is `projects/{project}/loca
+   * tions/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/ro
+   * llouts/{rollout}`.
+   *
    * @var string
    */
   public $rollout;
   /**
+   * Output only. the ID of the ChildRollout's Phase.
+   *
    * @var string
    */
   public $rolloutPhaseId;
 
   /**
-   * @param string
+   * Output only. Name of the `ChildRollout`. Format is `projects/{project}/loca
+   * tions/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/ro
+   * llouts/{rollout}`.
+   *
+   * @param string $rollout
    */
   public function setRollout($rollout)
   {
@@ -43,7 +53,9 @@ class AdvanceChildRolloutJobRun extends \Google\Model
     return $this->rollout;
   }
   /**
-   * @param string
+   * Output only. the ID of the ChildRollout's Phase.
+   *
+   * @param string $rolloutPhaseId
    */
   public function setRolloutPhaseId($rolloutPhaseId)
   {

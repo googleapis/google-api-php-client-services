@@ -20,32 +20,46 @@ namespace Google\Service\Bigquery;
 class ScriptStackFrame extends \Google\Model
 {
   /**
+   * Output only. One-based end column.
+   *
    * @var int
    */
   public $endColumn;
   /**
+   * Output only. One-based end line.
+   *
    * @var int
    */
   public $endLine;
   /**
+   * Output only. Name of the active procedure, empty if in a top-level script.
+   *
    * @var string
    */
   public $procedureId;
   /**
+   * Output only. One-based start column.
+   *
    * @var int
    */
   public $startColumn;
   /**
+   * Output only. One-based start line.
+   *
    * @var int
    */
   public $startLine;
   /**
+   * Output only. Text of the current statement/expression.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param int
+   * Output only. One-based end column.
+   *
+   * @param int $endColumn
    */
   public function setEndColumn($endColumn)
   {
@@ -59,7 +73,9 @@ class ScriptStackFrame extends \Google\Model
     return $this->endColumn;
   }
   /**
-   * @param int
+   * Output only. One-based end line.
+   *
+   * @param int $endLine
    */
   public function setEndLine($endLine)
   {
@@ -73,7 +89,9 @@ class ScriptStackFrame extends \Google\Model
     return $this->endLine;
   }
   /**
-   * @param string
+   * Output only. Name of the active procedure, empty if in a top-level script.
+   *
+   * @param string $procedureId
    */
   public function setProcedureId($procedureId)
   {
@@ -87,7 +105,9 @@ class ScriptStackFrame extends \Google\Model
     return $this->procedureId;
   }
   /**
-   * @param int
+   * Output only. One-based start column.
+   *
+   * @param int $startColumn
    */
   public function setStartColumn($startColumn)
   {
@@ -101,7 +121,9 @@ class ScriptStackFrame extends \Google\Model
     return $this->startColumn;
   }
   /**
-   * @param int
+   * Output only. One-based start line.
+   *
+   * @param int $startLine
    */
   public function setStartLine($startLine)
   {
@@ -115,7 +137,9 @@ class ScriptStackFrame extends \Google\Model
     return $this->startLine;
   }
   /**
-   * @param string
+   * Output only. Text of the current statement/expression.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

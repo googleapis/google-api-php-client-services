@@ -21,16 +21,28 @@ class StartEnvironmentRequest extends \Google\Collection
 {
   protected $collection_key = 'publicKeys';
   /**
+   * The initial access token passed to the environment. If this is present and
+   * valid, the environment will be pre-authenticated with gcloud so that the
+   * user can run gcloud commands in Cloud Shell without having to log in. This
+   * code can be updated later by calling AuthorizeEnvironment.
+   *
    * @var string
    */
   public $accessToken;
   /**
+   * Public keys that should be added to the environment before it is started.
+   *
    * @var string[]
    */
   public $publicKeys;
 
   /**
-   * @param string
+   * The initial access token passed to the environment. If this is present and
+   * valid, the environment will be pre-authenticated with gcloud so that the
+   * user can run gcloud commands in Cloud Shell without having to log in. This
+   * code can be updated later by calling AuthorizeEnvironment.
+   *
+   * @param string $accessToken
    */
   public function setAccessToken($accessToken)
   {
@@ -44,7 +56,9 @@ class StartEnvironmentRequest extends \Google\Collection
     return $this->accessToken;
   }
   /**
-   * @param string[]
+   * Public keys that should be added to the environment before it is started.
+   *
+   * @param string[] $publicKeys
    */
   public function setPublicKeys($publicKeys)
   {

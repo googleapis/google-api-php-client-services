@@ -20,16 +20,24 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall extends \Google\Model
 {
   /**
+   * Transfer the call to a phone number in [E.164
+   * format](https://en.wikipedia.org/wiki/E.164).
+   *
    * @var string
    */
   public $phoneNumber;
   /**
+   * Transfer the call to a SIP endpoint.
+   *
    * @var string
    */
   public $sipUri;
 
   /**
-   * @param string
+   * Transfer the call to a phone number in [E.164
+   * format](https://en.wikipedia.org/wiki/E.164).
+   *
+   * @param string $phoneNumber
    */
   public function setPhoneNumber($phoneNumber)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall extends \
     return $this->phoneNumber;
   }
   /**
-   * @param string
+   * Transfer the call to a SIP endpoint.
+   *
+   * @param string $sipUri
    */
   public function setSipUri($sipUri)
   {

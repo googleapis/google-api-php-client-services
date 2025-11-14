@@ -23,12 +23,17 @@ class ListKeyHandlesResponse extends \Google\Collection
   protected $keyHandlesType = KeyHandle::class;
   protected $keyHandlesDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass this value in
+   * ListKeyHandlesRequest.page_token to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param KeyHandle[]
+   * Resulting KeyHandles.
+   *
+   * @param KeyHandle[] $keyHandles
    */
   public function setKeyHandles($keyHandles)
   {
@@ -42,7 +47,10 @@ class ListKeyHandlesResponse extends \Google\Collection
     return $this->keyHandles;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass this value in
+   * ListKeyHandlesRequest.page_token to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

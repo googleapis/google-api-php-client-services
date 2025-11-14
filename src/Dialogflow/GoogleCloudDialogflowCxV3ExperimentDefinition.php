@@ -20,6 +20,11 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ExperimentDefinition extends \Google\Model
 {
   /**
+   * The condition defines which subset of sessions are selected for this
+   * experiment. If not specified, all sessions are eligible. E.g.
+   * "query_input.language_code=en" See the [conditions reference](https://cloud
+   * .google.com/dialogflow/cx/docs/reference/condition).
+   *
    * @var string
    */
   public $condition;
@@ -27,7 +32,12 @@ class GoogleCloudDialogflowCxV3ExperimentDefinition extends \Google\Model
   protected $versionVariantsDataType = '';
 
   /**
-   * @param string
+   * The condition defines which subset of sessions are selected for this
+   * experiment. If not specified, all sessions are eligible. E.g.
+   * "query_input.language_code=en" See the [conditions reference](https://cloud
+   * .google.com/dialogflow/cx/docs/reference/condition).
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -41,7 +51,9 @@ class GoogleCloudDialogflowCxV3ExperimentDefinition extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3VersionVariants
+   * The flow versions as the variants of this experiment.
+   *
+   * @param GoogleCloudDialogflowCxV3VersionVariants $versionVariants
    */
   public function setVersionVariants(GoogleCloudDialogflowCxV3VersionVariants $versionVariants)
   {

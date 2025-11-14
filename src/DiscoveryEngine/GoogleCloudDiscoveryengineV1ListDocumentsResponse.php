@@ -23,12 +23,17 @@ class GoogleCloudDiscoveryengineV1ListDocumentsResponse extends \Google\Collecti
   protected $documentsType = GoogleCloudDiscoveryengineV1Document::class;
   protected $documentsDataType = 'array';
   /**
+   * A token that can be sent as ListDocumentsRequest.page_token to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1Document[]
+   * The Documents.
+   *
+   * @param GoogleCloudDiscoveryengineV1Document[] $documents
    */
   public function setDocuments($documents)
   {
@@ -42,7 +47,10 @@ class GoogleCloudDiscoveryengineV1ListDocumentsResponse extends \Google\Collecti
     return $this->documents;
   }
   /**
-   * @param string
+   * A token that can be sent as ListDocumentsRequest.page_token to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

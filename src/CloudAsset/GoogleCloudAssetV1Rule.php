@@ -20,6 +20,9 @@ namespace Google\Service\CloudAsset;
 class GoogleCloudAssetV1Rule extends \Google\Model
 {
   /**
+   * Setting this to true means that all values are allowed. This field can be
+   * set only in Policies for list constraints.
+   *
    * @var bool
    */
   public $allowAll;
@@ -28,10 +31,17 @@ class GoogleCloudAssetV1Rule extends \Google\Model
   protected $conditionEvaluationType = ConditionEvaluation::class;
   protected $conditionEvaluationDataType = '';
   /**
+   * Setting this to true means that all values are denied. This field can be
+   * set only in Policies for list constraints.
+   *
    * @var bool
    */
   public $denyAll;
   /**
+   * If `true`, then the `Policy` is enforced. If `false`, then any
+   * configuration is acceptable. This field can be set only in Policies for
+   * boolean constraints.
+   *
    * @var bool
    */
   public $enforce;
@@ -39,7 +49,10 @@ class GoogleCloudAssetV1Rule extends \Google\Model
   protected $valuesDataType = '';
 
   /**
-   * @param bool
+   * Setting this to true means that all values are allowed. This field can be
+   * set only in Policies for list constraints.
+   *
+   * @param bool $allowAll
    */
   public function setAllowAll($allowAll)
   {
@@ -53,7 +66,9 @@ class GoogleCloudAssetV1Rule extends \Google\Model
     return $this->allowAll;
   }
   /**
-   * @param Expr
+   * The evaluating condition for this rule.
+   *
+   * @param Expr $condition
    */
   public function setCondition(Expr $condition)
   {
@@ -67,7 +82,15 @@ class GoogleCloudAssetV1Rule extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param ConditionEvaluation
+   * The condition evaluation result for this rule. Only populated if it meets
+   * all the following criteria: * There is a condition defined for this rule. *
+   * This rule is within AnalyzeOrgPolicyGovernedContainersResponse.GovernedCont
+   * ainer.consolidated_policy, or
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy
+   * when the AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset has
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource.
+   *
+   * @param ConditionEvaluation $conditionEvaluation
    */
   public function setConditionEvaluation(ConditionEvaluation $conditionEvaluation)
   {
@@ -81,7 +104,10 @@ class GoogleCloudAssetV1Rule extends \Google\Model
     return $this->conditionEvaluation;
   }
   /**
-   * @param bool
+   * Setting this to true means that all values are denied. This field can be
+   * set only in Policies for list constraints.
+   *
+   * @param bool $denyAll
    */
   public function setDenyAll($denyAll)
   {
@@ -95,7 +121,11 @@ class GoogleCloudAssetV1Rule extends \Google\Model
     return $this->denyAll;
   }
   /**
-   * @param bool
+   * If `true`, then the `Policy` is enforced. If `false`, then any
+   * configuration is acceptable. This field can be set only in Policies for
+   * boolean constraints.
+   *
+   * @param bool $enforce
    */
   public function setEnforce($enforce)
   {
@@ -109,7 +139,10 @@ class GoogleCloudAssetV1Rule extends \Google\Model
     return $this->enforce;
   }
   /**
-   * @param GoogleCloudAssetV1StringValues
+   * List of values to be used for this policy rule. This field can be set only
+   * in policies for list constraints.
+   *
+   * @param GoogleCloudAssetV1StringValues $values
    */
   public function setValues(GoogleCloudAssetV1StringValues $values)
   {

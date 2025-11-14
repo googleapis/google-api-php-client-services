@@ -20,12 +20,20 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2VertexDatasetResourceReference extends \Google\Model
 {
   /**
+   * Required. The name of the Vertex AI resource. If set within a project-level
+   * configuration, the specified resource must be within the project. Examples:
+   * * `projects/{project}/locations/{location}/datasets/{dataset}`
+   *
    * @var string
    */
   public $datasetResourceName;
 
   /**
-   * @param string
+   * Required. The name of the Vertex AI resource. If set within a project-level
+   * configuration, the specified resource must be within the project. Examples:
+   * * `projects/{project}/locations/{location}/datasets/{dataset}`
+   *
+   * @param string $datasetResourceName
    */
   public function setDatasetResourceName($datasetResourceName)
   {

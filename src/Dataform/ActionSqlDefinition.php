@@ -24,12 +24,17 @@ class ActionSqlDefinition extends \Google\Model
   protected $loadConfigType = ActionLoadConfig::class;
   protected $loadConfigDataType = '';
   /**
+   * The SQL query representing the data preparation steps. Formatted as a Pipe
+   * SQL query statement.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param ActionErrorTable
+   * Error table configuration,
+   *
+   * @param ActionErrorTable $errorTable
    */
   public function setErrorTable(ActionErrorTable $errorTable)
   {
@@ -43,7 +48,9 @@ class ActionSqlDefinition extends \Google\Model
     return $this->errorTable;
   }
   /**
-   * @param ActionLoadConfig
+   * Load configuration.
+   *
+   * @param ActionLoadConfig $loadConfig
    */
   public function setLoadConfig(ActionLoadConfig $loadConfig)
   {
@@ -57,7 +64,10 @@ class ActionSqlDefinition extends \Google\Model
     return $this->loadConfig;
   }
   /**
-   * @param string
+   * The SQL query representing the data preparation steps. Formatted as a Pipe
+   * SQL query statement.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

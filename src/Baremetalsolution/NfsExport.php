@@ -20,36 +20,67 @@ namespace Google\Service\Baremetalsolution;
 class NfsExport extends \Google\Model
 {
   /**
+   * Unspecified value.
+   */
+  public const PERMISSIONS_PERMISSIONS_UNSPECIFIED = 'PERMISSIONS_UNSPECIFIED';
+  /**
+   * Read-only permission.
+   */
+  public const PERMISSIONS_READ_ONLY = 'READ_ONLY';
+  /**
+   * Read-write permission.
+   */
+  public const PERMISSIONS_READ_WRITE = 'READ_WRITE';
+  /**
+   * Allow dev flag in NfsShare AllowedClientsRequest.
+   *
    * @var bool
    */
   public $allowDev;
   /**
+   * Allow the setuid flag.
+   *
    * @var bool
    */
   public $allowSuid;
   /**
+   * A CIDR range.
+   *
    * @var string
    */
   public $cidr;
   /**
+   * Either a single machine, identified by an ID, or a comma-separated list of
+   * machine IDs.
+   *
    * @var string
    */
   public $machineId;
   /**
+   * Network to use to publish the export.
+   *
    * @var string
    */
   public $networkId;
   /**
+   * Disable root squashing, which is a feature of NFS. Root squash is a special
+   * mapping of the remote superuser (root) identity when using identity
+   * authentication.
+   *
    * @var bool
    */
   public $noRootSquash;
   /**
+   * Export permissions.
+   *
    * @var string
    */
   public $permissions;
 
   /**
-   * @param bool
+   * Allow dev flag in NfsShare AllowedClientsRequest.
+   *
+   * @param bool $allowDev
    */
   public function setAllowDev($allowDev)
   {
@@ -63,7 +94,9 @@ class NfsExport extends \Google\Model
     return $this->allowDev;
   }
   /**
-   * @param bool
+   * Allow the setuid flag.
+   *
+   * @param bool $allowSuid
    */
   public function setAllowSuid($allowSuid)
   {
@@ -77,7 +110,9 @@ class NfsExport extends \Google\Model
     return $this->allowSuid;
   }
   /**
-   * @param string
+   * A CIDR range.
+   *
+   * @param string $cidr
    */
   public function setCidr($cidr)
   {
@@ -91,7 +126,10 @@ class NfsExport extends \Google\Model
     return $this->cidr;
   }
   /**
-   * @param string
+   * Either a single machine, identified by an ID, or a comma-separated list of
+   * machine IDs.
+   *
+   * @param string $machineId
    */
   public function setMachineId($machineId)
   {
@@ -105,7 +143,9 @@ class NfsExport extends \Google\Model
     return $this->machineId;
   }
   /**
-   * @param string
+   * Network to use to publish the export.
+   *
+   * @param string $networkId
    */
   public function setNetworkId($networkId)
   {
@@ -119,7 +159,11 @@ class NfsExport extends \Google\Model
     return $this->networkId;
   }
   /**
-   * @param bool
+   * Disable root squashing, which is a feature of NFS. Root squash is a special
+   * mapping of the remote superuser (root) identity when using identity
+   * authentication.
+   *
+   * @param bool $noRootSquash
    */
   public function setNoRootSquash($noRootSquash)
   {
@@ -133,14 +177,18 @@ class NfsExport extends \Google\Model
     return $this->noRootSquash;
   }
   /**
-   * @param string
+   * Export permissions.
+   *
+   * Accepted values: PERMISSIONS_UNSPECIFIED, READ_ONLY, READ_WRITE
+   *
+   * @param self::PERMISSIONS_* $permissions
    */
   public function setPermissions($permissions)
   {
     $this->permissions = $permissions;
   }
   /**
-   * @return string
+   * @return self::PERMISSIONS_*
    */
   public function getPermissions()
   {

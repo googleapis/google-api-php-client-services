@@ -20,24 +20,43 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ScheduleInfo extends \Google\Model
 {
   /**
+   * End time of the schedule. If not specified, will keep scheduling new
+   * pipelines for execution util the schedule is no longer active or deleted.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The groc expression. Format: `every number [synchronized]` Time units can
+   * be: minutes, hours Synchronized is optional and indicates that the schedule
+   * should be synchronized to the start of the interval: every 5 minutes
+   * synchronized means 00:00, 00:05 ... Otherwise the start time is random
+   * within the interval. Example: `every 5 minutes` could be 00:02, 00:07,
+   * 00:12, ...
+   *
    * @var string
    */
   public $schedule;
   /**
+   * Start time of the schedule. If not specified, will start as soon as the
+   * schedule is created.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The timezone to use for the groc expression. If not specified, defaults to
+   * UTC.
+   *
    * @var string
    */
   public $timeZone;
 
   /**
-   * @param string
+   * End time of the schedule. If not specified, will keep scheduling new
+   * pipelines for execution util the schedule is no longer active or deleted.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -51,7 +70,14 @@ class GoogleCloudContactcenterinsightsV1ScheduleInfo extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The groc expression. Format: `every number [synchronized]` Time units can
+   * be: minutes, hours Synchronized is optional and indicates that the schedule
+   * should be synchronized to the start of the interval: every 5 minutes
+   * synchronized means 00:00, 00:05 ... Otherwise the start time is random
+   * within the interval. Example: `every 5 minutes` could be 00:02, 00:07,
+   * 00:12, ...
+   *
+   * @param string $schedule
    */
   public function setSchedule($schedule)
   {
@@ -65,7 +91,10 @@ class GoogleCloudContactcenterinsightsV1ScheduleInfo extends \Google\Model
     return $this->schedule;
   }
   /**
-   * @param string
+   * Start time of the schedule. If not specified, will start as soon as the
+   * schedule is created.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -79,7 +108,10 @@ class GoogleCloudContactcenterinsightsV1ScheduleInfo extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The timezone to use for the groc expression. If not specified, defaults to
+   * UTC.
+   *
+   * @param string $timeZone
    */
   public function setTimeZone($timeZone)
   {

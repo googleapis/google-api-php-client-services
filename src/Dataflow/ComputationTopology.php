@@ -21,6 +21,8 @@ class ComputationTopology extends \Google\Collection
 {
   protected $collection_key = 'stateFamilies';
   /**
+   * The ID of the computation.
+   *
    * @var string
    */
   public $computationId;
@@ -33,12 +35,16 @@ class ComputationTopology extends \Google\Collection
   protected $stateFamiliesType = StateFamilyConfig::class;
   protected $stateFamiliesDataType = 'array';
   /**
+   * The system stage name.
+   *
    * @var string
    */
   public $systemStageName;
 
   /**
-   * @param string
+   * The ID of the computation.
+   *
+   * @param string $computationId
    */
   public function setComputationId($computationId)
   {
@@ -52,7 +58,9 @@ class ComputationTopology extends \Google\Collection
     return $this->computationId;
   }
   /**
-   * @param StreamLocation[]
+   * The inputs to the computation.
+   *
+   * @param StreamLocation[] $inputs
    */
   public function setInputs($inputs)
   {
@@ -66,7 +74,9 @@ class ComputationTopology extends \Google\Collection
     return $this->inputs;
   }
   /**
-   * @param KeyRangeLocation[]
+   * The key ranges processed by the computation.
+   *
+   * @param KeyRangeLocation[] $keyRanges
    */
   public function setKeyRanges($keyRanges)
   {
@@ -80,7 +90,9 @@ class ComputationTopology extends \Google\Collection
     return $this->keyRanges;
   }
   /**
-   * @param StreamLocation[]
+   * The outputs from the computation.
+   *
+   * @param StreamLocation[] $outputs
    */
   public function setOutputs($outputs)
   {
@@ -94,7 +106,9 @@ class ComputationTopology extends \Google\Collection
     return $this->outputs;
   }
   /**
-   * @param StateFamilyConfig[]
+   * The state family values.
+   *
+   * @param StateFamilyConfig[] $stateFamilies
    */
   public function setStateFamilies($stateFamilies)
   {
@@ -108,7 +122,9 @@ class ComputationTopology extends \Google\Collection
     return $this->stateFamilies;
   }
   /**
-   * @param string
+   * The system stage name.
+   *
+   * @param string $systemStageName
    */
   public function setSystemStageName($systemStageName)
   {

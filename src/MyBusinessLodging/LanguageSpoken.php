@@ -20,20 +20,49 @@ namespace Google\Service\MyBusinessLodging;
 class LanguageSpoken extends \Google\Model
 {
   /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const SPOKEN_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const SPOKEN_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const SPOKEN_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const SPOKEN_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Required. The BCP-47 language code for the spoken language. Currently
+   * accepted codes: ar, de, en, es, fil, fr, hi, id, it, ja, ko, nl, pt, ru,
+   * vi, yue, zh.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * At least one member of the staff can speak the language.
+   *
    * @var bool
    */
   public $spoken;
   /**
+   * Spoken exception.
+   *
    * @var string
    */
   public $spokenException;
 
   /**
-   * @param string
+   * Required. The BCP-47 language code for the spoken language. Currently
+   * accepted codes: ar, de, en, es, fil, fr, hi, id, it, ja, ko, nl, pt, ru,
+   * vi, yue, zh.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -47,7 +76,9 @@ class LanguageSpoken extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * At least one member of the staff can speak the language.
+   *
+   * @param bool $spoken
    */
   public function setSpoken($spoken)
   {
@@ -61,14 +92,19 @@ class LanguageSpoken extends \Google\Model
     return $this->spoken;
   }
   /**
-   * @param string
+   * Spoken exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::SPOKEN_EXCEPTION_* $spokenException
    */
   public function setSpokenException($spokenException)
   {
     $this->spokenException = $spokenException;
   }
   /**
-   * @return string
+   * @return self::SPOKEN_EXCEPTION_*
    */
   public function getSpokenException()
   {

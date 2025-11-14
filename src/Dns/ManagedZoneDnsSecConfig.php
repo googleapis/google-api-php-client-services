@@ -19,6 +19,28 @@ namespace Google\Service\Dns;
 
 class ManagedZoneDnsSecConfig extends \Google\Collection
 {
+  /**
+   * Indicates that Cloud DNS will sign records in the managed zone according to
+   * RFC 4034 and respond with NSEC records for names that do not exist.
+   */
+  public const NON_EXISTENCE_nsec = 'nsec';
+  /**
+   * Indicates that Cloud DNS will sign records in the managed zone according to
+   * RFC 5155 and respond with NSEC3 records for names that do not exist.
+   */
+  public const NON_EXISTENCE_nsec3 = 'nsec3';
+  /**
+   * DNSSEC is disabled; the zone is not signed.
+   */
+  public const STATE_off = 'off';
+  /**
+   * DNSSEC is enabled; the zone is signed and fully managed.
+   */
+  public const STATE_on = 'on';
+  /**
+   * DNSSEC is enabled, but in a "transfer" mode.
+   */
+  public const STATE_transfer = 'transfer';
   protected $collection_key = 'defaultKeySpecs';
   protected $defaultKeySpecsType = DnsKeySpec::class;
   protected $defaultKeySpecsDataType = 'array';
@@ -27,16 +49,24 @@ class ManagedZoneDnsSecConfig extends \Google\Collection
    */
   public $kind;
   /**
+   * Specifies the mechanism for authenticated denial-of-existence responses.
+   * Can only be changed while the state is OFF.
+   *
    * @var string
    */
   public $nonExistence;
   /**
+   * Specifies whether DNSSEC is enabled, and what mode it is in.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param DnsKeySpec[]
+   * Specifies parameters for generating initial DnsKeys for this ManagedZone.
+   * Can only be changed while the state is OFF.
+   *
+   * @param DnsKeySpec[] $defaultKeySpecs
    */
   public function setDefaultKeySpecs($defaultKeySpecs)
   {
@@ -50,7 +80,7 @@ class ManagedZoneDnsSecConfig extends \Google\Collection
     return $this->defaultKeySpecs;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -64,28 +94,37 @@ class ManagedZoneDnsSecConfig extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Specifies the mechanism for authenticated denial-of-existence responses.
+   * Can only be changed while the state is OFF.
+   *
+   * Accepted values: nsec, nsec3
+   *
+   * @param self::NON_EXISTENCE_* $nonExistence
    */
   public function setNonExistence($nonExistence)
   {
     $this->nonExistence = $nonExistence;
   }
   /**
-   * @return string
+   * @return self::NON_EXISTENCE_*
    */
   public function getNonExistence()
   {
     return $this->nonExistence;
   }
   /**
-   * @param string
+   * Specifies whether DNSSEC is enabled, and what mode it is in.
+   *
+   * Accepted values: off, on, transfer
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

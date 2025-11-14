@@ -19,48 +19,95 @@ namespace Google\Service\NetworkSecurity;
 
 class InterceptDeploymentGroup extends \Google\Collection
 {
+  /**
+   * State not set (this is not a valid state).
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The deployment group is ready.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The deployment group is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The deployment group is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
   protected $collection_key = 'nestedDeployments';
   protected $connectedEndpointGroupsType = InterceptDeploymentGroupConnectedEndpointGroup::class;
   protected $connectedEndpointGroupsDataType = 'array';
   /**
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. User-provided description of the deployment group. Used as
+   * additional context for the deployment group.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. Labels are key/value pairs that help to organize and filter
+   * resources.
+   *
    * @var string[]
    */
   public $labels;
   protected $locationsType = InterceptLocation::class;
   protected $locationsDataType = 'array';
   /**
+   * Immutable. Identifier. The resource name of this deployment group, for
+   * example: `projects/123456789/locations/global/interceptDeploymentGroups/my-
+   * dg`. See https://google.aip.dev/122 for more details.
+   *
    * @var string
    */
   public $name;
   protected $nestedDeploymentsType = InterceptDeploymentGroupDeployment::class;
   protected $nestedDeploymentsDataType = 'array';
   /**
+   * Required. Immutable. The network that will be used for all child
+   * deployments, for example: `projects/{project}/global/networks/{network}`.
+   * See https://google.aip.dev/124.
+   *
    * @var string
    */
   public $network;
   /**
+   * Output only. The current state of the resource does not match the user's
+   * intended state, and the system is working to reconcile them. This is part
+   * of the normal operation (e.g. adding a new deployment to the group) See
+   * https://google.aip.dev/128.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. The current state of the deployment group. See
+   * https://google.aip.dev/216.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param InterceptDeploymentGroupConnectedEndpointGroup[]
+   * Output only. The list of endpoint groups that are connected to this
+   * resource.
+   *
+   * @param InterceptDeploymentGroupConnectedEndpointGroup[] $connectedEndpointGroups
    */
   public function setConnectedEndpointGroups($connectedEndpointGroups)
   {
@@ -74,7 +121,10 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->connectedEndpointGroups;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -88,7 +138,10 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. User-provided description of the deployment group. Used as
+   * additional context for the deployment group.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -102,7 +155,10 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * Optional. Labels are key/value pairs that help to organize and filter
+   * resources.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -116,7 +172,9 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param InterceptLocation[]
+   * Output only. The list of locations where the deployment group is present.
+   *
+   * @param InterceptLocation[] $locations
    */
   public function setLocations($locations)
   {
@@ -130,7 +188,11 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param string
+   * Immutable. Identifier. The resource name of this deployment group, for
+   * example: `projects/123456789/locations/global/interceptDeploymentGroups/my-
+   * dg`. See https://google.aip.dev/122 for more details.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -144,13 +206,17 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param InterceptDeploymentGroupDeployment[]
+   * Output only. The list of Intercept Deployments that belong to this group.
+   *
+   * @deprecated
+   * @param InterceptDeploymentGroupDeployment[] $nestedDeployments
    */
   public function setNestedDeployments($nestedDeployments)
   {
     $this->nestedDeployments = $nestedDeployments;
   }
   /**
+   * @deprecated
    * @return InterceptDeploymentGroupDeployment[]
    */
   public function getNestedDeployments()
@@ -158,7 +224,11 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->nestedDeployments;
   }
   /**
-   * @param string
+   * Required. Immutable. The network that will be used for all child
+   * deployments, for example: `projects/{project}/global/networks/{network}`.
+   * See https://google.aip.dev/124.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -172,7 +242,12 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param bool
+   * Output only. The current state of the resource does not match the user's
+   * intended state, and the system is working to reconcile them. This is part
+   * of the normal operation (e.g. adding a new deployment to the group) See
+   * https://google.aip.dev/128.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -186,21 +261,29 @@ class InterceptDeploymentGroup extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. The current state of the deployment group. See
+   * https://google.aip.dev/216.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, DELETING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

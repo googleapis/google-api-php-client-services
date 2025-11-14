@@ -24,7 +24,9 @@ class LocalinventoryCustomBatchRequest extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param LocalinventoryCustomBatchRequestEntry[]
+   * The request entries to be processed in the batch.
+   *
+   * @param LocalinventoryCustomBatchRequestEntry[] $entries
    */
   public function setEntries($entries)
   {

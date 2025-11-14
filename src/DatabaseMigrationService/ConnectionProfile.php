@@ -19,27 +19,109 @@ namespace Google\Service\DatabaseMigrationService;
 
 class ConnectionProfile extends \Google\Model
 {
+  /**
+   * Use this value for on-premise source database instances and ORACLE.
+   */
+  public const PROVIDER_DATABASE_PROVIDER_UNSPECIFIED = 'DATABASE_PROVIDER_UNSPECIFIED';
+  /**
+   * Cloud SQL is the source instance provider.
+   */
+  public const PROVIDER_CLOUDSQL = 'CLOUDSQL';
+  /**
+   * Amazon RDS is the source instance provider.
+   */
+  public const PROVIDER_RDS = 'RDS';
+  /**
+   * Amazon Aurora is the source instance provider.
+   */
+  public const PROVIDER_AURORA = 'AURORA';
+  /**
+   * AlloyDB for PostgreSQL is the source instance provider.
+   */
+  public const PROVIDER_ALLOYDB = 'ALLOYDB';
+  /**
+   * Microsoft Azure Database for MySQL/PostgreSQL.
+   */
+  public const PROVIDER_AZURE_DATABASE = 'AZURE_DATABASE';
+  /**
+   * The role is unspecified.
+   */
+  public const ROLE_ROLE_UNSPECIFIED = 'ROLE_UNSPECIFIED';
+  /**
+   * The role is source.
+   */
+  public const ROLE_SOURCE = 'SOURCE';
+  /**
+   * The role is destination.
+   */
+  public const ROLE_DESTINATION = 'DESTINATION';
+  /**
+   * The state of the connection profile is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The connection profile is in draft mode and fully editable.
+   */
+  public const STATE_DRAFT = 'DRAFT';
+  /**
+   * The connection profile is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The connection profile is ready.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * The connection profile is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The connection profile is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The connection profile has been deleted.
+   */
+  public const STATE_DELETED = 'DELETED';
+  /**
+   * The last action on the connection profile failed.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $alloydbType = AlloyDbConnectionProfile::class;
   protected $alloydbDataType = '';
   protected $cloudsqlType = CloudSqlConnectionProfile::class;
   protected $cloudsqlDataType = '';
   /**
+   * Output only. The timestamp when the resource was created. A timestamp in
+   * RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
+   * "2014-10-02T15:01:23.045123456Z".
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The connection profile display name.
+   *
    * @var string
    */
   public $displayName;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * The resource labels for connection profile to use to annotate any related
+   * underlying resources such as Compute Engine VMs. An object containing a
+   * list of "key": "value" pairs. Example: `{ "name": "wrench", "mass":
+   * "1.3kg", "count": "3" }`.
+   *
    * @var string[]
    */
   public $labels;
   protected $mysqlType = MySqlConnectionProfile::class;
   protected $mysqlDataType = '';
   /**
+   * The name of this connection profile resource in the form of projects/{proje
+   * ct}/locations/{location}/connectionProfiles/{connectionProfile}.
+   *
    * @var string
    */
   public $name;
@@ -48,34 +130,50 @@ class ConnectionProfile extends \Google\Model
   protected $postgresqlType = PostgreSqlConnectionProfile::class;
   protected $postgresqlDataType = '';
   /**
+   * The database provider.
+   *
    * @var string
    */
   public $provider;
   /**
+   * Optional. The connection profile role.
+   *
    * @var string
    */
   public $role;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   protected $sqlserverType = SqlServerConnectionProfile::class;
   protected $sqlserverDataType = '';
   /**
+   * The current connection profile state (e.g. DRAFT, READY, or FAILED).
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The timestamp when the resource was last updated. A timestamp
+   * in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
+   * "2014-10-02T15:01:23.045123456Z".
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param AlloyDbConnectionProfile
+   * An AlloyDB cluster connection profile.
+   *
+   * @param AlloyDbConnectionProfile $alloydb
    */
   public function setAlloydb(AlloyDbConnectionProfile $alloydb)
   {
@@ -89,7 +187,9 @@ class ConnectionProfile extends \Google\Model
     return $this->alloydb;
   }
   /**
-   * @param CloudSqlConnectionProfile
+   * A CloudSQL database connection profile.
+   *
+   * @param CloudSqlConnectionProfile $cloudsql
    */
   public function setCloudsql(CloudSqlConnectionProfile $cloudsql)
   {
@@ -103,7 +203,11 @@ class ConnectionProfile extends \Google\Model
     return $this->cloudsql;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created. A timestamp in
+   * RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
+   * "2014-10-02T15:01:23.045123456Z".
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -117,7 +221,9 @@ class ConnectionProfile extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The connection profile display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -131,7 +237,9 @@ class ConnectionProfile extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param Status
+   * Output only. The error details in case of state FAILED.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -145,7 +253,12 @@ class ConnectionProfile extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string[]
+   * The resource labels for connection profile to use to annotate any related
+   * underlying resources such as Compute Engine VMs. An object containing a
+   * list of "key": "value" pairs. Example: `{ "name": "wrench", "mass":
+   * "1.3kg", "count": "3" }`.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -159,7 +272,9 @@ class ConnectionProfile extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param MySqlConnectionProfile
+   * A MySQL database connection profile.
+   *
+   * @param MySqlConnectionProfile $mysql
    */
   public function setMysql(MySqlConnectionProfile $mysql)
   {
@@ -173,7 +288,10 @@ class ConnectionProfile extends \Google\Model
     return $this->mysql;
   }
   /**
-   * @param string
+   * The name of this connection profile resource in the form of projects/{proje
+   * ct}/locations/{location}/connectionProfiles/{connectionProfile}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -187,7 +305,9 @@ class ConnectionProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * @param OracleConnectionProfile
+   * An Oracle database connection profile.
+   *
+   * @param OracleConnectionProfile $oracle
    */
   public function setOracle(OracleConnectionProfile $oracle)
   {
@@ -201,7 +321,9 @@ class ConnectionProfile extends \Google\Model
     return $this->oracle;
   }
   /**
-   * @param PostgreSqlConnectionProfile
+   * A PostgreSQL database connection profile.
+   *
+   * @param PostgreSqlConnectionProfile $postgresql
    */
   public function setPostgresql(PostgreSqlConnectionProfile $postgresql)
   {
@@ -215,35 +337,46 @@ class ConnectionProfile extends \Google\Model
     return $this->postgresql;
   }
   /**
-   * @param string
+   * The database provider.
+   *
+   * Accepted values: DATABASE_PROVIDER_UNSPECIFIED, CLOUDSQL, RDS, AURORA,
+   * ALLOYDB, AZURE_DATABASE
+   *
+   * @param self::PROVIDER_* $provider
    */
   public function setProvider($provider)
   {
     $this->provider = $provider;
   }
   /**
-   * @return string
+   * @return self::PROVIDER_*
    */
   public function getProvider()
   {
     return $this->provider;
   }
   /**
-   * @param string
+   * Optional. The connection profile role.
+   *
+   * Accepted values: ROLE_UNSPECIFIED, SOURCE, DESTINATION
+   *
+   * @param self::ROLE_* $role
    */
   public function setRole($role)
   {
     $this->role = $role;
   }
   /**
-   * @return string
+   * @return self::ROLE_*
    */
   public function getRole()
   {
     return $this->role;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -257,7 +390,9 @@ class ConnectionProfile extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -271,7 +406,9 @@ class ConnectionProfile extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param SqlServerConnectionProfile
+   * Connection profile for a SQL Server data source.
+   *
+   * @param SqlServerConnectionProfile $sqlserver
    */
   public function setSqlserver(SqlServerConnectionProfile $sqlserver)
   {
@@ -285,21 +422,30 @@ class ConnectionProfile extends \Google\Model
     return $this->sqlserver;
   }
   /**
-   * @param string
+   * The current connection profile state (e.g. DRAFT, READY, or FAILED).
+   *
+   * Accepted values: STATE_UNSPECIFIED, DRAFT, CREATING, READY, UPDATING,
+   * DELETING, DELETED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was last updated. A timestamp
+   * in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
+   * "2014-10-02T15:01:23.045123456Z".
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

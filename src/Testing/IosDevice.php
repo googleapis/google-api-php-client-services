@@ -20,24 +20,39 @@ namespace Google\Service\Testing;
 class IosDevice extends \Google\Model
 {
   /**
+   * Required. The id of the iOS device to be used. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
    * @var string
    */
   public $iosModelId;
   /**
+   * Required. The id of the iOS major software version to be used. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
    * @var string
    */
   public $iosVersionId;
   /**
+   * Required. The locale the test device used for testing. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
    * @var string
    */
   public $locale;
   /**
+   * Required. How the device is oriented during the test. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
    * @var string
    */
   public $orientation;
 
   /**
-   * @param string
+   * Required. The id of the iOS device to be used. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
+   * @param string $iosModelId
    */
   public function setIosModelId($iosModelId)
   {
@@ -51,7 +66,10 @@ class IosDevice extends \Google\Model
     return $this->iosModelId;
   }
   /**
-   * @param string
+   * Required. The id of the iOS major software version to be used. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
+   * @param string $iosVersionId
    */
   public function setIosVersionId($iosVersionId)
   {
@@ -65,7 +83,10 @@ class IosDevice extends \Google\Model
     return $this->iosVersionId;
   }
   /**
-   * @param string
+   * Required. The locale the test device used for testing. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
+   * @param string $locale
    */
   public function setLocale($locale)
   {
@@ -79,7 +100,10 @@ class IosDevice extends \Google\Model
     return $this->locale;
   }
   /**
-   * @param string
+   * Required. How the device is oriented during the test. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
+   *
+   * @param string $orientation
    */
   public function setOrientation($orientation)
   {

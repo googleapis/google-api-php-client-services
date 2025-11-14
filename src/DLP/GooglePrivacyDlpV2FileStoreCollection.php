@@ -25,7 +25,10 @@ class GooglePrivacyDlpV2FileStoreCollection extends \Google\Model
   protected $includeTagsDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2FileStoreRegexes
+   * Optional. A collection of regular expressions to match a file store
+   * against.
+   *
+   * @param GooglePrivacyDlpV2FileStoreRegexes $includeRegexes
    */
   public function setIncludeRegexes(GooglePrivacyDlpV2FileStoreRegexes $includeRegexes)
   {
@@ -39,7 +42,16 @@ class GooglePrivacyDlpV2FileStoreCollection extends \Google\Model
     return $this->includeRegexes;
   }
   /**
-   * @param GooglePrivacyDlpV2TagFilters
+   * Optional. To be included in the collection, a resource must meet all of the
+   * following requirements: - If tag filters are provided, match all provided
+   * tag filters. - If one or more patterns are specified, match at least one
+   * pattern. For a resource to match the tag filters, the resource must have
+   * all of the provided tags attached. Tags refer to Resource Manager tags
+   * bound to the resource or its ancestors. For more information, see [Manage
+   * schedules](https://cloud.google.com/sensitive-data-protection/docs/profile-
+   * project-cloud-storage#manage-schedules).
+   *
+   * @param GooglePrivacyDlpV2TagFilters $includeTags
    */
   public function setIncludeTags(GooglePrivacyDlpV2TagFilters $includeTags)
   {

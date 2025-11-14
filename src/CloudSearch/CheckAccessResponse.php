@@ -20,12 +20,16 @@ namespace Google\Service\CloudSearch;
 class CheckAccessResponse extends \Google\Model
 {
   /**
+   * Returns true if principal has access. Returns false otherwise.
+   *
    * @var bool
    */
   public $hasAccess;
 
   /**
-   * @param bool
+   * Returns true if principal has access. Returns false otherwise.
+   *
+   * @param bool $hasAccess
    */
   public function setHasAccess($hasAccess)
   {

@@ -23,6 +23,10 @@ class GoogleCloudDiscoveryengineV1alphaCondition extends \Google\Collection
   protected $activeTimeRangeType = GoogleCloudDiscoveryengineV1alphaConditionTimeRange::class;
   protected $activeTimeRangeDataType = 'array';
   /**
+   * Optional. Query regex to match the whole search query. Cannot be set when
+   * Condition.query_terms is set. Only supported for Basic Site Search
+   * promotion serving controls.
+   *
    * @var string
    */
   public $queryRegex;
@@ -30,7 +34,10 @@ class GoogleCloudDiscoveryengineV1alphaCondition extends \Google\Collection
   protected $queryTermsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaConditionTimeRange[]
+   * Range of time(s) specifying when condition is active. Maximum of 10 time
+   * ranges.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaConditionTimeRange[] $activeTimeRange
    */
   public function setActiveTimeRange($activeTimeRange)
   {
@@ -44,7 +51,11 @@ class GoogleCloudDiscoveryengineV1alphaCondition extends \Google\Collection
     return $this->activeTimeRange;
   }
   /**
-   * @param string
+   * Optional. Query regex to match the whole search query. Cannot be set when
+   * Condition.query_terms is set. Only supported for Basic Site Search
+   * promotion serving controls.
+   *
+   * @param string $queryRegex
    */
   public function setQueryRegex($queryRegex)
   {
@@ -58,7 +69,10 @@ class GoogleCloudDiscoveryengineV1alphaCondition extends \Google\Collection
     return $this->queryRegex;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaConditionQueryTerm[]
+   * Search only A list of terms to match the query on. Cannot be set when
+   * Condition.query_regex is set. Maximum of 10 query terms.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaConditionQueryTerm[] $queryTerms
    */
   public function setQueryTerms($queryTerms)
   {

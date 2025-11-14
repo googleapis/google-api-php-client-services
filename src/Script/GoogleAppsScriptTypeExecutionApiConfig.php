@@ -20,19 +20,47 @@ namespace Google\Service\Script;
 class GoogleAppsScriptTypeExecutionApiConfig extends \Google\Model
 {
   /**
+   * Default value, should not be used.
+   */
+  public const ACCESS_UNKNOWN_ACCESS = 'UNKNOWN_ACCESS';
+  /**
+   * Only the user who deployed the web app or executable can access it. Note
+   * that this is not necessarily the owner of the script project.
+   */
+  public const ACCESS_MYSELF = 'MYSELF';
+  /**
+   * Only users in the same domain as the user who deployed the web app or
+   * executable can access it.
+   */
+  public const ACCESS_DOMAIN = 'DOMAIN';
+  /**
+   * Any logged in user can access the web app or executable.
+   */
+  public const ACCESS_ANYONE = 'ANYONE';
+  /**
+   * Any user, logged in or not, can access the web app or executable.
+   */
+  public const ACCESS_ANYONE_ANONYMOUS = 'ANYONE_ANONYMOUS';
+  /**
+   * Who has permission to run the API executable.
+   *
    * @var string
    */
   public $access;
 
   /**
-   * @param string
+   * Who has permission to run the API executable.
+   *
+   * Accepted values: UNKNOWN_ACCESS, MYSELF, DOMAIN, ANYONE, ANYONE_ANONYMOUS
+   *
+   * @param self::ACCESS_* $access
    */
   public function setAccess($access)
   {
     $this->access = $access;
   }
   /**
-   * @return string
+   * @return self::ACCESS_*
    */
   public function getAccess()
   {

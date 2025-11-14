@@ -20,37 +20,93 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping extends \Google\Model
 {
   /**
+   * Unspecific value
+   */
+  public const HIGH_SENSITIVITY_MAPPING_RESOURCE_VALUE_UNSPECIFIED = 'RESOURCE_VALUE_UNSPECIFIED';
+  /**
+   * High resource value
+   */
+  public const HIGH_SENSITIVITY_MAPPING_HIGH = 'HIGH';
+  /**
+   * Medium resource value
+   */
+  public const HIGH_SENSITIVITY_MAPPING_MEDIUM = 'MEDIUM';
+  /**
+   * Low resource value
+   */
+  public const HIGH_SENSITIVITY_MAPPING_LOW = 'LOW';
+  /**
+   * No resource value, e.g. ignore these resources
+   */
+  public const HIGH_SENSITIVITY_MAPPING_NONE = 'NONE';
+  /**
+   * Unspecific value
+   */
+  public const MEDIUM_SENSITIVITY_MAPPING_RESOURCE_VALUE_UNSPECIFIED = 'RESOURCE_VALUE_UNSPECIFIED';
+  /**
+   * High resource value
+   */
+  public const MEDIUM_SENSITIVITY_MAPPING_HIGH = 'HIGH';
+  /**
+   * Medium resource value
+   */
+  public const MEDIUM_SENSITIVITY_MAPPING_MEDIUM = 'MEDIUM';
+  /**
+   * Low resource value
+   */
+  public const MEDIUM_SENSITIVITY_MAPPING_LOW = 'LOW';
+  /**
+   * No resource value, e.g. ignore these resources
+   */
+  public const MEDIUM_SENSITIVITY_MAPPING_NONE = 'NONE';
+  /**
+   * Resource value mapping for high-sensitivity Sensitive Data Protection
+   * findings
+   *
    * @var string
    */
   public $highSensitivityMapping;
   /**
+   * Resource value mapping for medium-sensitivity Sensitive Data Protection
+   * findings
+   *
    * @var string
    */
   public $mediumSensitivityMapping;
 
   /**
-   * @param string
+   * Resource value mapping for high-sensitivity Sensitive Data Protection
+   * findings
+   *
+   * Accepted values: RESOURCE_VALUE_UNSPECIFIED, HIGH, MEDIUM, LOW, NONE
+   *
+   * @param self::HIGH_SENSITIVITY_MAPPING_* $highSensitivityMapping
    */
   public function setHighSensitivityMapping($highSensitivityMapping)
   {
     $this->highSensitivityMapping = $highSensitivityMapping;
   }
   /**
-   * @return string
+   * @return self::HIGH_SENSITIVITY_MAPPING_*
    */
   public function getHighSensitivityMapping()
   {
     return $this->highSensitivityMapping;
   }
   /**
-   * @param string
+   * Resource value mapping for medium-sensitivity Sensitive Data Protection
+   * findings
+   *
+   * Accepted values: RESOURCE_VALUE_UNSPECIFIED, HIGH, MEDIUM, LOW, NONE
+   *
+   * @param self::MEDIUM_SENSITIVITY_MAPPING_* $mediumSensitivityMapping
    */
   public function setMediumSensitivityMapping($mediumSensitivityMapping)
   {
     $this->mediumSensitivityMapping = $mediumSensitivityMapping;
   }
   /**
-   * @return string
+   * @return self::MEDIUM_SENSITIVITY_MAPPING_*
    */
   public function getMediumSensitivityMapping()
   {
