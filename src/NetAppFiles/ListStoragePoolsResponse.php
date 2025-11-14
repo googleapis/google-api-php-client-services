@@ -21,18 +21,24 @@ class ListStoragePoolsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $storagePoolsType = StoragePool::class;
   protected $storagePoolsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListStoragePoolsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param StoragePool[]
+   * The list of StoragePools
+   *
+   * @param StoragePool[] $storagePools
    */
   public function setStoragePools($storagePools)
   {
@@ -60,7 +68,9 @@ class ListStoragePoolsResponse extends \Google\Collection
     return $this->storagePools;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
