@@ -20,30 +20,42 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaCitation extends \Google\Model
 {
   /**
+   * Output only. End index into the content.
+   *
    * @var int
    */
   public $endIndex;
   /**
+   * Output only. License of the attribution.
+   *
    * @var string
    */
   public $license;
   protected $publicationDateType = GoogleTypeDate::class;
   protected $publicationDateDataType = '';
   /**
+   * Output only. Start index into the content.
+   *
    * @var int
    */
   public $startIndex;
   /**
+   * Output only. Title of the attribution.
+   *
    * @var string
    */
   public $title;
   /**
+   * Output only. Url reference of the attribution.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param int
+   * Output only. End index into the content.
+   *
+   * @param int $endIndex
    */
   public function setEndIndex($endIndex)
   {
@@ -57,7 +69,9 @@ class GoogleCloudDiscoveryengineV1alphaCitation extends \Google\Model
     return $this->endIndex;
   }
   /**
-   * @param string
+   * Output only. License of the attribution.
+   *
+   * @param string $license
    */
   public function setLicense($license)
   {
@@ -71,7 +85,9 @@ class GoogleCloudDiscoveryengineV1alphaCitation extends \Google\Model
     return $this->license;
   }
   /**
-   * @param GoogleTypeDate
+   * Output only. Publication date of the attribution.
+   *
+   * @param GoogleTypeDate $publicationDate
    */
   public function setPublicationDate(GoogleTypeDate $publicationDate)
   {
@@ -85,7 +101,9 @@ class GoogleCloudDiscoveryengineV1alphaCitation extends \Google\Model
     return $this->publicationDate;
   }
   /**
-   * @param int
+   * Output only. Start index into the content.
+   *
+   * @param int $startIndex
    */
   public function setStartIndex($startIndex)
   {
@@ -99,7 +117,9 @@ class GoogleCloudDiscoveryengineV1alphaCitation extends \Google\Model
     return $this->startIndex;
   }
   /**
-   * @param string
+   * Output only. Title of the attribution.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -113,7 +133,9 @@ class GoogleCloudDiscoveryengineV1alphaCitation extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * Output only. Url reference of the attribution.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

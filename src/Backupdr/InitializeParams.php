@@ -21,16 +21,25 @@ class InitializeParams extends \Google\Collection
 {
   protected $collection_key = 'replicaZones';
   /**
+   * Optional. Specifies the disk name. If not specified, the default is to use
+   * the name of the instance.
+   *
    * @var string
    */
   public $diskName;
   /**
+   * Optional. URL of the zone where the disk should be created. Required for
+   * each regional disk associated with the instance.
+   *
    * @var string[]
    */
   public $replicaZones;
 
   /**
-   * @param string
+   * Optional. Specifies the disk name. If not specified, the default is to use
+   * the name of the instance.
+   *
+   * @param string $diskName
    */
   public function setDiskName($diskName)
   {
@@ -44,7 +53,10 @@ class InitializeParams extends \Google\Collection
     return $this->diskName;
   }
   /**
-   * @param string[]
+   * Optional. URL of the zone where the disk should be created. Required for
+   * each regional disk associated with the instance.
+   *
+   * @param string[] $replicaZones
    */
   public function setReplicaZones($replicaZones)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\ToolResults;
 class PerformedMonkeyActions extends \Google\Model
 {
   /**
+   * The total number of monkey actions performed during the crawl.
+   *
    * @var int
    */
   public $totalActions;
 
   /**
-   * @param int
+   * The total number of monkey actions performed during the crawl.
+   *
+   * @param int $totalActions
    */
   public function setTotalActions($totalActions)
   {

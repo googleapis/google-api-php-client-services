@@ -23,22 +23,30 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata extend
   protected $agentInfoType = GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo::class;
   protected $agentInfoDataType = 'array';
   /**
+   * An arbitrary integer value indicating the customer's satisfaction rating.
+   *
    * @var int
    */
   public $customerSatisfactionRating;
   protected $feedbackLabelsType = GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel::class;
   protected $feedbackLabelsDataType = 'array';
   /**
+   * An arbitrary string value specifying the menu path the customer took.
+   *
    * @var string
    */
   public $menuPath;
   /**
+   * The amount of time the customer waited to connect with an agent.
+   *
    * @var string
    */
   public $waitDuration;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo[]
+   * Information about agents involved in the call.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo[] $agentInfo
    */
   public function setAgentInfo($agentInfo)
   {
@@ -52,7 +60,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata extend
     return $this->agentInfo;
   }
   /**
-   * @param int
+   * An arbitrary integer value indicating the customer's satisfaction rating.
+   *
+   * @param int $customerSatisfactionRating
    */
   public function setCustomerSatisfactionRating($customerSatisfactionRating)
   {
@@ -66,7 +76,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata extend
     return $this->customerSatisfactionRating;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel[]
+   * Input only. The feedback labels associated with the conversation.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel[] $feedbackLabels
    */
   public function setFeedbackLabels($feedbackLabels)
   {
@@ -80,7 +92,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata extend
     return $this->feedbackLabels;
   }
   /**
-   * @param string
+   * An arbitrary string value specifying the menu path the customer took.
+   *
+   * @param string $menuPath
    */
   public function setMenuPath($menuPath)
   {
@@ -94,7 +108,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata extend
     return $this->menuPath;
   }
   /**
-   * @param string
+   * The amount of time the customer waited to connect with an agent.
+   *
+   * @param string $waitDuration
    */
   public function setWaitDuration($waitDuration)
   {

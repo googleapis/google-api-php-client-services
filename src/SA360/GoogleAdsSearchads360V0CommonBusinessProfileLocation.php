@@ -21,20 +21,32 @@ class GoogleAdsSearchads360V0CommonBusinessProfileLocation extends \Google\Colle
 {
   protected $collection_key = 'labels';
   /**
+   * Advertiser specified label for the location on the Business Profile
+   * account. This is synced from the Business Profile account.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Listing ID of this Business Profile location. This is synced from the
+   * linked Business Profile account.
+   *
    * @var string
    */
   public $listingId;
   /**
+   * Business Profile store code of this location. This is synced from the
+   * Business Profile account.
+   *
    * @var string
    */
   public $storeCode;
 
   /**
-   * @param string[]
+   * Advertiser specified label for the location on the Business Profile
+   * account. This is synced from the Business Profile account.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -48,7 +60,10 @@ class GoogleAdsSearchads360V0CommonBusinessProfileLocation extends \Google\Colle
     return $this->labels;
   }
   /**
-   * @param string
+   * Listing ID of this Business Profile location. This is synced from the
+   * linked Business Profile account.
+   *
+   * @param string $listingId
    */
   public function setListingId($listingId)
   {
@@ -62,7 +77,10 @@ class GoogleAdsSearchads360V0CommonBusinessProfileLocation extends \Google\Colle
     return $this->listingId;
   }
   /**
-   * @param string
+   * Business Profile store code of this location. This is synced from the
+   * Business Profile account.
+   *
+   * @param string $storeCode
    */
   public function setStoreCode($storeCode)
   {

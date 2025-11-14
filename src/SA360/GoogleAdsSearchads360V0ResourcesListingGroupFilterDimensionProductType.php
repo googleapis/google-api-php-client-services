@@ -20,30 +20,69 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductType extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const LEVEL_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const LEVEL_UNKNOWN = 'UNKNOWN';
+  /**
+   * Level 1.
+   */
+  public const LEVEL_LEVEL1 = 'LEVEL1';
+  /**
+   * Level 2.
+   */
+  public const LEVEL_LEVEL2 = 'LEVEL2';
+  /**
+   * Level 3.
+   */
+  public const LEVEL_LEVEL3 = 'LEVEL3';
+  /**
+   * Level 4.
+   */
+  public const LEVEL_LEVEL4 = 'LEVEL4';
+  /**
+   * Level 5.
+   */
+  public const LEVEL_LEVEL5 = 'LEVEL5';
+  /**
+   * Level of the type.
+   *
    * @var string
    */
   public $level;
   /**
+   * Value of the type.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Level of the type.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, LEVEL1, LEVEL2, LEVEL3, LEVEL4,
+   * LEVEL5
+   *
+   * @param self::LEVEL_* $level
    */
   public function setLevel($level)
   {
     $this->level = $level;
   }
   /**
-   * @return string
+   * @return self::LEVEL_*
    */
   public function getLevel()
   {
     return $this->level;
   }
   /**
-   * @param string
+   * Value of the type.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

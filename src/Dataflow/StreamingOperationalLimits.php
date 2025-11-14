@@ -20,40 +20,58 @@ namespace Google\Service\Dataflow;
 class StreamingOperationalLimits extends \Google\Model
 {
   /**
+   * The maximum size for an element in bag state.
+   *
    * @var string
    */
   public $maxBagElementBytes;
   /**
+   * The maximum size for an element in global data.
+   *
    * @var string
    */
   public $maxGlobalDataBytes;
   /**
+   * The maximum size allowed for a key.
+   *
    * @var string
    */
   public $maxKeyBytes;
   /**
+   * The maximum size for a single output element.
+   *
    * @var string
    */
   public $maxProductionOutputBytes;
   /**
+   * The maximum size for an element in sorted list state.
+   *
    * @var string
    */
   public $maxSortedListElementBytes;
   /**
+   * The maximum size for a source state update.
+   *
    * @var string
    */
   public $maxSourceStateBytes;
   /**
+   * The maximum size for a state tag.
+   *
    * @var string
    */
   public $maxTagBytes;
   /**
+   * The maximum size for a value state field.
+   *
    * @var string
    */
   public $maxValueBytes;
 
   /**
-   * @param string
+   * The maximum size for an element in bag state.
+   *
+   * @param string $maxBagElementBytes
    */
   public function setMaxBagElementBytes($maxBagElementBytes)
   {
@@ -67,7 +85,9 @@ class StreamingOperationalLimits extends \Google\Model
     return $this->maxBagElementBytes;
   }
   /**
-   * @param string
+   * The maximum size for an element in global data.
+   *
+   * @param string $maxGlobalDataBytes
    */
   public function setMaxGlobalDataBytes($maxGlobalDataBytes)
   {
@@ -81,7 +101,9 @@ class StreamingOperationalLimits extends \Google\Model
     return $this->maxGlobalDataBytes;
   }
   /**
-   * @param string
+   * The maximum size allowed for a key.
+   *
+   * @param string $maxKeyBytes
    */
   public function setMaxKeyBytes($maxKeyBytes)
   {
@@ -95,7 +117,9 @@ class StreamingOperationalLimits extends \Google\Model
     return $this->maxKeyBytes;
   }
   /**
-   * @param string
+   * The maximum size for a single output element.
+   *
+   * @param string $maxProductionOutputBytes
    */
   public function setMaxProductionOutputBytes($maxProductionOutputBytes)
   {
@@ -109,7 +133,9 @@ class StreamingOperationalLimits extends \Google\Model
     return $this->maxProductionOutputBytes;
   }
   /**
-   * @param string
+   * The maximum size for an element in sorted list state.
+   *
+   * @param string $maxSortedListElementBytes
    */
   public function setMaxSortedListElementBytes($maxSortedListElementBytes)
   {
@@ -123,7 +149,9 @@ class StreamingOperationalLimits extends \Google\Model
     return $this->maxSortedListElementBytes;
   }
   /**
-   * @param string
+   * The maximum size for a source state update.
+   *
+   * @param string $maxSourceStateBytes
    */
   public function setMaxSourceStateBytes($maxSourceStateBytes)
   {
@@ -137,7 +165,9 @@ class StreamingOperationalLimits extends \Google\Model
     return $this->maxSourceStateBytes;
   }
   /**
-   * @param string
+   * The maximum size for a state tag.
+   *
+   * @param string $maxTagBytes
    */
   public function setMaxTagBytes($maxTagBytes)
   {
@@ -151,7 +181,9 @@ class StreamingOperationalLimits extends \Google\Model
     return $this->maxTagBytes;
   }
   /**
-   * @param string
+   * The maximum size for a value state field.
+   *
+   * @param string $maxValueBytes
    */
   public function setMaxValueBytes($maxValueBytes)
   {

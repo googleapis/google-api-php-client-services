@@ -20,6 +20,9 @@ namespace Google\Service\CloudIdentity;
 class UpdateMembershipRolesParams extends \Google\Model
 {
   /**
+   * The fully-qualified names of fields to update. May only contain the field
+   * `expiry_detail.expire_time`.
+   *
    * @var string
    */
   public $fieldMask;
@@ -27,7 +30,10 @@ class UpdateMembershipRolesParams extends \Google\Model
   protected $membershipRoleDataType = '';
 
   /**
-   * @param string
+   * The fully-qualified names of fields to update. May only contain the field
+   * `expiry_detail.expire_time`.
+   *
+   * @param string $fieldMask
    */
   public function setFieldMask($fieldMask)
   {
@@ -41,7 +47,10 @@ class UpdateMembershipRolesParams extends \Google\Model
     return $this->fieldMask;
   }
   /**
-   * @param MembershipRole
+   * The `MembershipRole`s to be updated. Only `MEMBER` `MembershipRole` can
+   * currently be updated.
+   *
+   * @param MembershipRole $membershipRole
    */
   public function setMembershipRole(MembershipRole $membershipRole)
   {

@@ -21,12 +21,16 @@ class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeEnumValues extends \Go
 {
   protected $collection_key = 'values';
   /**
+   * The individual values that this enum values type can include.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * The individual values that this enum values type can include.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

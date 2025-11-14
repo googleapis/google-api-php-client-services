@@ -29,7 +29,9 @@ class Constraint extends \Google\Model
   protected $securityHealthAnalyticsModuleDataType = '';
 
   /**
-   * @param OrgPolicyConstraint
+   * Optional. A predefined organization policy constraint.
+   *
+   * @param OrgPolicyConstraint $orgPolicyConstraint
    */
   public function setOrgPolicyConstraint(OrgPolicyConstraint $orgPolicyConstraint)
   {
@@ -43,7 +45,9 @@ class Constraint extends \Google\Model
     return $this->orgPolicyConstraint;
   }
   /**
-   * @param OrgPolicyConstraintCustom
+   * Optional. A custom organization policy constraint.
+   *
+   * @param OrgPolicyConstraintCustom $orgPolicyConstraintCustom
    */
   public function setOrgPolicyConstraintCustom(OrgPolicyConstraintCustom $orgPolicyConstraintCustom)
   {
@@ -57,7 +61,9 @@ class Constraint extends \Google\Model
     return $this->orgPolicyConstraintCustom;
   }
   /**
-   * @param SecurityHealthAnalyticsCustomModule
+   * Optional. A custom module for Security Health Analytics.
+   *
+   * @param SecurityHealthAnalyticsCustomModule $securityHealthAnalyticsCustomModule
    */
   public function setSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsCustomModule $securityHealthAnalyticsCustomModule)
   {
@@ -71,7 +77,9 @@ class Constraint extends \Google\Model
     return $this->securityHealthAnalyticsCustomModule;
   }
   /**
-   * @param SecurityHealthAnalyticsModule
+   * Optional. A built-in detector for Security Health Analytics.
+   *
+   * @param SecurityHealthAnalyticsModule $securityHealthAnalyticsModule
    */
   public function setSecurityHealthAnalyticsModule(SecurityHealthAnalyticsModule $securityHealthAnalyticsModule)
   {

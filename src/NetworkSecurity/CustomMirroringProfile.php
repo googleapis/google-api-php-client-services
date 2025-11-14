@@ -20,12 +20,20 @@ namespace Google\Service\NetworkSecurity;
 class CustomMirroringProfile extends \Google\Model
 {
   /**
+   * Required. The target MirroringEndpointGroup. When a mirroring rule with
+   * this security profile attached matches a packet, a replica will be mirrored
+   * to the location-local target in this group.
+   *
    * @var string
    */
   public $mirroringEndpointGroup;
 
   /**
-   * @param string
+   * Required. The target MirroringEndpointGroup. When a mirroring rule with
+   * this security profile attached matches a packet, a replica will be mirrored
+   * to the location-local target in this group.
+   *
+   * @param string $mirroringEndpointGroup
    */
   public function setMirroringEndpointGroup($mirroringEndpointGroup)
   {

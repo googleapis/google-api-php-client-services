@@ -19,6 +19,86 @@ namespace Google\Service\DatabaseMigrationService;
 
 class DatabaseEntity extends \Google\Collection
 {
+  /**
+   * Unspecified database entity type.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_UNSPECIFIED = 'DATABASE_ENTITY_TYPE_UNSPECIFIED';
+  /**
+   * Schema.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_SCHEMA = 'DATABASE_ENTITY_TYPE_SCHEMA';
+  /**
+   * Table.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_TABLE = 'DATABASE_ENTITY_TYPE_TABLE';
+  /**
+   * Column.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_COLUMN = 'DATABASE_ENTITY_TYPE_COLUMN';
+  /**
+   * Constraint.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_CONSTRAINT = 'DATABASE_ENTITY_TYPE_CONSTRAINT';
+  /**
+   * Index.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_INDEX = 'DATABASE_ENTITY_TYPE_INDEX';
+  /**
+   * Trigger.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_TRIGGER = 'DATABASE_ENTITY_TYPE_TRIGGER';
+  /**
+   * View.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_VIEW = 'DATABASE_ENTITY_TYPE_VIEW';
+  /**
+   * Sequence.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_SEQUENCE = 'DATABASE_ENTITY_TYPE_SEQUENCE';
+  /**
+   * Stored Procedure.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_STORED_PROCEDURE = 'DATABASE_ENTITY_TYPE_STORED_PROCEDURE';
+  /**
+   * Function.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_FUNCTION = 'DATABASE_ENTITY_TYPE_FUNCTION';
+  /**
+   * Synonym.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_SYNONYM = 'DATABASE_ENTITY_TYPE_SYNONYM';
+  /**
+   * Package.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_DATABASE_PACKAGE = 'DATABASE_ENTITY_TYPE_DATABASE_PACKAGE';
+  /**
+   * UDT.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_UDT = 'DATABASE_ENTITY_TYPE_UDT';
+  /**
+   * Materialized View.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW = 'DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW';
+  /**
+   * Database.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_DATABASE = 'DATABASE_ENTITY_TYPE_DATABASE';
+  /**
+   * Tree type unspecified.
+   */
+  public const TREE_TREE_TYPE_UNSPECIFIED = 'TREE_TYPE_UNSPECIFIED';
+  /**
+   * Tree of entities loaded from a source database.
+   */
+  public const TREE_SOURCE = 'SOURCE';
+  /**
+   * Tree of entities converted from the source tree using the mapping rules.
+   */
+  public const TREE_DRAFT = 'DRAFT';
+  /**
+   * Tree of entities observed on the destination database.
+   */
+  public const TREE_DESTINATION = 'DESTINATION';
   protected $collection_key = 'mappings';
   protected $databaseType = DatabaseInstanceEntity::class;
   protected $databaseDataType = '';
@@ -29,6 +109,8 @@ class DatabaseEntity extends \Google\Collection
   protected $entityDdlType = EntityDdl::class;
   protected $entityDdlDataType = 'array';
   /**
+   * The type of the database entity (table, view, index, ...).
+   *
    * @var string
    */
   public $entityType;
@@ -39,6 +121,8 @@ class DatabaseEntity extends \Google\Collection
   protected $materializedViewType = MaterializedViewEntity::class;
   protected $materializedViewDataType = '';
   /**
+   * The full name of the parent entity (e.g. schema name).
+   *
    * @var string
    */
   public $parentEntity;
@@ -47,6 +131,8 @@ class DatabaseEntity extends \Google\Collection
   protected $sequenceType = SequenceEntity::class;
   protected $sequenceDataType = '';
   /**
+   * The short name (e.g. table name) of the entity.
+   *
    * @var string
    */
   public $shortName;
@@ -57,6 +143,8 @@ class DatabaseEntity extends \Google\Collection
   protected $tableType = TableEntity::class;
   protected $tableDataType = '';
   /**
+   * The type of tree the entity belongs to.
+   *
    * @var string
    */
   public $tree;
@@ -66,7 +154,9 @@ class DatabaseEntity extends \Google\Collection
   protected $viewDataType = '';
 
   /**
-   * @param DatabaseInstanceEntity
+   * Database.
+   *
+   * @param DatabaseInstanceEntity $database
    */
   public function setDatabase(DatabaseInstanceEntity $database)
   {
@@ -80,7 +170,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->database;
   }
   /**
-   * @param FunctionEntity
+   * Function.
+   *
+   * @param FunctionEntity $databaseFunction
    */
   public function setDatabaseFunction(FunctionEntity $databaseFunction)
   {
@@ -94,7 +186,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->databaseFunction;
   }
   /**
-   * @param PackageEntity
+   * Package.
+   *
+   * @param PackageEntity $databasePackage
    */
   public function setDatabasePackage(PackageEntity $databasePackage)
   {
@@ -108,7 +202,11 @@ class DatabaseEntity extends \Google\Collection
     return $this->databasePackage;
   }
   /**
-   * @param EntityDdl[]
+   * Details about the entity DDL script. Multiple DDL scripts are provided for
+   * child entities such as a table entity will have one DDL for the table with
+   * additional DDLs for each index, constraint and such.
+   *
+   * @param EntityDdl[] $entityDdl
    */
   public function setEntityDdl($entityDdl)
   {
@@ -122,21 +220,35 @@ class DatabaseEntity extends \Google\Collection
     return $this->entityDdl;
   }
   /**
-   * @param string
+   * The type of the database entity (table, view, index, ...).
+   *
+   * Accepted values: DATABASE_ENTITY_TYPE_UNSPECIFIED,
+   * DATABASE_ENTITY_TYPE_SCHEMA, DATABASE_ENTITY_TYPE_TABLE,
+   * DATABASE_ENTITY_TYPE_COLUMN, DATABASE_ENTITY_TYPE_CONSTRAINT,
+   * DATABASE_ENTITY_TYPE_INDEX, DATABASE_ENTITY_TYPE_TRIGGER,
+   * DATABASE_ENTITY_TYPE_VIEW, DATABASE_ENTITY_TYPE_SEQUENCE,
+   * DATABASE_ENTITY_TYPE_STORED_PROCEDURE, DATABASE_ENTITY_TYPE_FUNCTION,
+   * DATABASE_ENTITY_TYPE_SYNONYM, DATABASE_ENTITY_TYPE_DATABASE_PACKAGE,
+   * DATABASE_ENTITY_TYPE_UDT, DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW,
+   * DATABASE_ENTITY_TYPE_DATABASE
+   *
+   * @param self::ENTITY_TYPE_* $entityType
    */
   public function setEntityType($entityType)
   {
     $this->entityType = $entityType;
   }
   /**
-   * @return string
+   * @return self::ENTITY_TYPE_*
    */
   public function getEntityType()
   {
     return $this->entityType;
   }
   /**
-   * @param EntityIssue[]
+   * Details about the various issues found for the entity.
+   *
+   * @param EntityIssue[] $issues
    */
   public function setIssues($issues)
   {
@@ -150,7 +262,12 @@ class DatabaseEntity extends \Google\Collection
     return $this->issues;
   }
   /**
-   * @param EntityMapping[]
+   * Details about entity mappings. For source tree entities, this holds the
+   * draft entities which were generated by the mapping rules. For draft tree
+   * entities, this holds the source entities which were converted to form the
+   * draft entity. Destination entities will have no mapping details.
+   *
+   * @param EntityMapping[] $mappings
    */
   public function setMappings($mappings)
   {
@@ -164,7 +281,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->mappings;
   }
   /**
-   * @param MaterializedViewEntity
+   * Materialized view.
+   *
+   * @param MaterializedViewEntity $materializedView
    */
   public function setMaterializedView(MaterializedViewEntity $materializedView)
   {
@@ -178,7 +297,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->materializedView;
   }
   /**
-   * @param string
+   * The full name of the parent entity (e.g. schema name).
+   *
+   * @param string $parentEntity
    */
   public function setParentEntity($parentEntity)
   {
@@ -192,7 +313,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->parentEntity;
   }
   /**
-   * @param SchemaEntity
+   * Schema.
+   *
+   * @param SchemaEntity $schema
    */
   public function setSchema(SchemaEntity $schema)
   {
@@ -206,7 +329,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->schema;
   }
   /**
-   * @param SequenceEntity
+   * Sequence.
+   *
+   * @param SequenceEntity $sequence
    */
   public function setSequence(SequenceEntity $sequence)
   {
@@ -220,7 +345,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->sequence;
   }
   /**
-   * @param string
+   * The short name (e.g. table name) of the entity.
+   *
+   * @param string $shortName
    */
   public function setShortName($shortName)
   {
@@ -234,7 +361,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->shortName;
   }
   /**
-   * @param StoredProcedureEntity
+   * Stored procedure.
+   *
+   * @param StoredProcedureEntity $storedProcedure
    */
   public function setStoredProcedure(StoredProcedureEntity $storedProcedure)
   {
@@ -248,7 +377,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->storedProcedure;
   }
   /**
-   * @param SynonymEntity
+   * Synonym.
+   *
+   * @param SynonymEntity $synonym
    */
   public function setSynonym(SynonymEntity $synonym)
   {
@@ -262,7 +393,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->synonym;
   }
   /**
-   * @param TableEntity
+   * Table.
+   *
+   * @param TableEntity $table
    */
   public function setTable(TableEntity $table)
   {
@@ -276,21 +409,27 @@ class DatabaseEntity extends \Google\Collection
     return $this->table;
   }
   /**
-   * @param string
+   * The type of tree the entity belongs to.
+   *
+   * Accepted values: TREE_TYPE_UNSPECIFIED, SOURCE, DRAFT, DESTINATION
+   *
+   * @param self::TREE_* $tree
    */
   public function setTree($tree)
   {
     $this->tree = $tree;
   }
   /**
-   * @return string
+   * @return self::TREE_*
    */
   public function getTree()
   {
     return $this->tree;
   }
   /**
-   * @param UDTEntity
+   * UDT.
+   *
+   * @param UDTEntity $udt
    */
   public function setUdt(UDTEntity $udt)
   {
@@ -304,7 +443,9 @@ class DatabaseEntity extends \Google\Collection
     return $this->udt;
   }
   /**
-   * @param ViewEntity
+   * View.
+   *
+   * @param ViewEntity $view
    */
   public function setView(ViewEntity $view)
   {

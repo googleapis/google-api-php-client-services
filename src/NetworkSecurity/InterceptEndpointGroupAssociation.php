@@ -19,16 +19,61 @@ namespace Google\Service\NetworkSecurity;
 
 class InterceptEndpointGroupAssociation extends \Google\Collection
 {
+  /**
+   * Not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The association is ready and in sync with the linked endpoint group.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The association is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The association is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The association is disabled due to a breaking change in another resource.
+   */
+  public const STATE_CLOSED = 'CLOSED';
+  /**
+   * The association is out of sync with the linked endpoint group. In most
+   * cases, this is a result of a transient issue within the system (e.g. an
+   * inaccessible location) and the system is expected to recover automatically.
+   * Check the `locations_details` field for more details.
+   */
+  public const STATE_OUT_OF_SYNC = 'OUT_OF_SYNC';
+  /**
+   * An attempt to delete the association has failed. This is a terminal state
+   * and the association is not expected to be usable as some of its resources
+   * have been deleted. The only permitted operation is to retry deleting the
+   * association.
+   */
+  public const STATE_DELETE_FAILED = 'DELETE_FAILED';
   protected $collection_key = 'locationsDetails';
   /**
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Immutable. The endpoint group that this association is connected
+   * to, for example:
+   * `projects/123456789/locations/global/interceptEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
+   *
    * @var string
    */
   public $interceptEndpointGroup;
   /**
+   * Optional. Labels are key/value pairs that help to organize and filter
+   * resources.
+   *
    * @var string[]
    */
   public $labels;
@@ -37,28 +82,50 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
   protected $locationsDetailsType = InterceptEndpointGroupAssociationLocationDetails::class;
   protected $locationsDetailsDataType = 'array';
   /**
+   * Immutable. Identifier. The resource name of this endpoint group
+   * association, for example:
+   * `projects/123456789/locations/global/interceptEndpointGroupAssociations/my-
+   * eg-association`. See https://google.aip.dev/122 for more details.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Immutable. The VPC network that is associated. for example:
+   * `projects/123456789/global/networks/my-network`. See
+   * https://google.aip.dev/124.
+   *
    * @var string
    */
   public $network;
   /**
+   * Output only. The current state of the resource does not match the user's
+   * intended state, and the system is working to reconcile them. This part of
+   * the normal operation (e.g. adding a new location to the target deployment
+   * group). See https://google.aip.dev/128.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. Current state of the endpoint group association.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -72,7 +139,12 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Immutable. The endpoint group that this association is connected
+   * to, for example:
+   * `projects/123456789/locations/global/interceptEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
+   *
+   * @param string $interceptEndpointGroup
    */
   public function setInterceptEndpointGroup($interceptEndpointGroup)
   {
@@ -86,7 +158,10 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->interceptEndpointGroup;
   }
   /**
-   * @param string[]
+   * Optional. Labels are key/value pairs that help to organize and filter
+   * resources.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -100,7 +175,10 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param InterceptLocation[]
+   * Output only. The list of locations where the association is configured.
+   * This information is retrieved from the linked endpoint group.
+   *
+   * @param InterceptLocation[] $locations
    */
   public function setLocations($locations)
   {
@@ -114,13 +192,19 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param InterceptEndpointGroupAssociationLocationDetails[]
+   * Output only. The list of locations where the association is present. This
+   * information is retrieved from the linked endpoint group, and not configured
+   * as part of the association itself.
+   *
+   * @deprecated
+   * @param InterceptEndpointGroupAssociationLocationDetails[] $locationsDetails
    */
   public function setLocationsDetails($locationsDetails)
   {
     $this->locationsDetails = $locationsDetails;
   }
   /**
+   * @deprecated
    * @return InterceptEndpointGroupAssociationLocationDetails[]
    */
   public function getLocationsDetails()
@@ -128,7 +212,12 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->locationsDetails;
   }
   /**
-   * @param string
+   * Immutable. Identifier. The resource name of this endpoint group
+   * association, for example:
+   * `projects/123456789/locations/global/interceptEndpointGroupAssociations/my-
+   * eg-association`. See https://google.aip.dev/122 for more details.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -142,7 +231,11 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Immutable. The VPC network that is associated. for example:
+   * `projects/123456789/global/networks/my-network`. See
+   * https://google.aip.dev/124.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -156,7 +249,12 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param bool
+   * Output only. The current state of the resource does not match the user's
+   * intended state, and the system is working to reconcile them. This part of
+   * the normal operation (e.g. adding a new location to the target deployment
+   * group). See https://google.aip.dev/128.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -170,21 +268,29 @@ class InterceptEndpointGroupAssociation extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. Current state of the endpoint group association.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, DELETING, CLOSED,
+   * OUT_OF_SYNC, DELETE_FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

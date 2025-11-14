@@ -22,10 +22,17 @@ class GooglePrivacyDlpV2CreateDlpJobRequest extends \Google\Model
   protected $inspectJobType = GooglePrivacyDlpV2InspectJobConfig::class;
   protected $inspectJobDataType = '';
   /**
+   * The job id can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
    * @var string
    */
   public $jobId;
   /**
+   * Deprecated. This field has no effect.
+   *
    * @var string
    */
   public $locationId;
@@ -33,7 +40,9 @@ class GooglePrivacyDlpV2CreateDlpJobRequest extends \Google\Model
   protected $riskJobDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2InspectJobConfig
+   * An inspection job scans a storage repository for InfoTypes.
+   *
+   * @param GooglePrivacyDlpV2InspectJobConfig $inspectJob
    */
   public function setInspectJob(GooglePrivacyDlpV2InspectJobConfig $inspectJob)
   {
@@ -47,7 +56,12 @@ class GooglePrivacyDlpV2CreateDlpJobRequest extends \Google\Model
     return $this->inspectJob;
   }
   /**
-   * @param string
+   * The job id can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {
@@ -61,7 +75,9 @@ class GooglePrivacyDlpV2CreateDlpJobRequest extends \Google\Model
     return $this->jobId;
   }
   /**
-   * @param string
+   * Deprecated. This field has no effect.
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -75,7 +91,10 @@ class GooglePrivacyDlpV2CreateDlpJobRequest extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param GooglePrivacyDlpV2RiskAnalysisJobConfig
+   * A risk analysis job calculates re-identification risk metrics for a
+   * BigQuery table.
+   *
+   * @param GooglePrivacyDlpV2RiskAnalysisJobConfig $riskJob
    */
   public function setRiskJob(GooglePrivacyDlpV2RiskAnalysisJobConfig $riskJob)
   {

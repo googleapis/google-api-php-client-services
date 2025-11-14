@@ -20,32 +20,47 @@ namespace Google\Service\NetworkManagement;
 class CloudSQLInstanceInfo extends \Google\Model
 {
   /**
+   * Name of a Cloud SQL instance.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * External IP address of a Cloud SQL instance.
+   *
    * @var string
    */
   public $externalIp;
   /**
+   * Internal IP address of a Cloud SQL instance.
+   *
    * @var string
    */
   public $internalIp;
   /**
+   * URI of a Cloud SQL instance network or empty string if the instance does
+   * not have one.
+   *
    * @var string
    */
   public $networkUri;
   /**
+   * Region in which the Cloud SQL instance is running.
+   *
    * @var string
    */
   public $region;
   /**
+   * URI of a Cloud SQL instance.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Name of a Cloud SQL instance.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -59,7 +74,9 @@ class CloudSQLInstanceInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * External IP address of a Cloud SQL instance.
+   *
+   * @param string $externalIp
    */
   public function setExternalIp($externalIp)
   {
@@ -73,7 +90,9 @@ class CloudSQLInstanceInfo extends \Google\Model
     return $this->externalIp;
   }
   /**
-   * @param string
+   * Internal IP address of a Cloud SQL instance.
+   *
+   * @param string $internalIp
    */
   public function setInternalIp($internalIp)
   {
@@ -87,7 +106,10 @@ class CloudSQLInstanceInfo extends \Google\Model
     return $this->internalIp;
   }
   /**
-   * @param string
+   * URI of a Cloud SQL instance network or empty string if the instance does
+   * not have one.
+   *
+   * @param string $networkUri
    */
   public function setNetworkUri($networkUri)
   {
@@ -101,7 +123,9 @@ class CloudSQLInstanceInfo extends \Google\Model
     return $this->networkUri;
   }
   /**
-   * @param string
+   * Region in which the Cloud SQL instance is running.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -115,7 +139,9 @@ class CloudSQLInstanceInfo extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * URI of a Cloud SQL instance.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

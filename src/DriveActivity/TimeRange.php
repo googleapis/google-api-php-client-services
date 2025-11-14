@@ -20,16 +20,22 @@ namespace Google\Service\DriveActivity;
 class TimeRange extends \Google\Model
 {
   /**
+   * The end of the time range.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The start of the time range.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The end of the time range.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +49,9 @@ class TimeRange extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The start of the time range.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

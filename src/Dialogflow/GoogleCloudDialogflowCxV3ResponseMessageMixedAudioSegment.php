@@ -20,20 +20,34 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment extends \Google\Model
 {
   /**
+   * Output only. Whether the playback of this segment can be interrupted by the
+   * end user's speech and the client should then start the next Dialogflow
+   * request.
+   *
    * @var bool
    */
   public $allowPlaybackInterruption;
   /**
+   * Raw audio synthesized from the Dialogflow agent's response using the output
+   * config specified in the request.
+   *
    * @var string
    */
   public $audio;
   /**
+   * Client-specific URI that points to an audio clip accessible to the client.
+   * Dialogflow does not impose any validation on it.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param bool
+   * Output only. Whether the playback of this segment can be interrupted by the
+   * end user's speech and the client should then start the next Dialogflow
+   * request.
+   *
+   * @param bool $allowPlaybackInterruption
    */
   public function setAllowPlaybackInterruption($allowPlaybackInterruption)
   {
@@ -47,7 +61,10 @@ class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment extends \Google\
     return $this->allowPlaybackInterruption;
   }
   /**
-   * @param string
+   * Raw audio synthesized from the Dialogflow agent's response using the output
+   * config specified in the request.
+   *
+   * @param string $audio
    */
   public function setAudio($audio)
   {
@@ -61,7 +78,10 @@ class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment extends \Google\
     return $this->audio;
   }
   /**
-   * @param string
+   * Client-specific URI that points to an audio clip accessible to the client.
+   * Dialogflow does not impose any validation on it.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

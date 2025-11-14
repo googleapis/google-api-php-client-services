@@ -20,19 +20,54 @@ namespace Google\Service\DriveActivity;
 class Post extends \Google\Model
 {
   /**
+   * Subtype not available.
+   */
+  public const SUBTYPE_SUBTYPE_UNSPECIFIED = 'SUBTYPE_UNSPECIFIED';
+  /**
+   * A post was added.
+   */
+  public const SUBTYPE_ADDED = 'ADDED';
+  /**
+   * A post was deleted.
+   */
+  public const SUBTYPE_DELETED = 'DELETED';
+  /**
+   * A reply was added.
+   */
+  public const SUBTYPE_REPLY_ADDED = 'REPLY_ADDED';
+  /**
+   * A reply was deleted.
+   */
+  public const SUBTYPE_REPLY_DELETED = 'REPLY_DELETED';
+  /**
+   * A posted comment was resolved.
+   */
+  public const SUBTYPE_RESOLVED = 'RESOLVED';
+  /**
+   * A posted comment was reopened.
+   */
+  public const SUBTYPE_REOPENED = 'REOPENED';
+  /**
+   * The sub-type of this event.
+   *
    * @var string
    */
   public $subtype;
 
   /**
-   * @param string
+   * The sub-type of this event.
+   *
+   * Accepted values: SUBTYPE_UNSPECIFIED, ADDED, DELETED, REPLY_ADDED,
+   * REPLY_DELETED, RESOLVED, REOPENED
+   *
+   * @param self::SUBTYPE_* $subtype
    */
   public function setSubtype($subtype)
   {
     $this->subtype = $subtype;
   }
   /**
-   * @return string
+   * @return self::SUBTYPE_*
    */
   public function getSubtype()
   {

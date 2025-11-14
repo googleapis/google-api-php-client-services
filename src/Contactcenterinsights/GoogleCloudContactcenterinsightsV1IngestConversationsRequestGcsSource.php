@@ -19,34 +19,86 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource extends \Google\Collection
 {
+  /**
+   * The object type is unspecified and will default to `TRANSCRIPT`.
+   */
+  public const BUCKET_OBJECT_TYPE_BUCKET_OBJECT_TYPE_UNSPECIFIED = 'BUCKET_OBJECT_TYPE_UNSPECIFIED';
+  /**
+   * The object is a transcript.
+   */
+  public const BUCKET_OBJECT_TYPE_TRANSCRIPT = 'TRANSCRIPT';
+  /**
+   * The object is an audio file.
+   */
+  public const BUCKET_OBJECT_TYPE_AUDIO = 'AUDIO';
   protected $collection_key = 'customMetadataKeys';
   /**
+   * Optional. The Cloud Storage path to the conversation audio file. Note that:
+   * [1] Audio files will be transcribed if not already. [2] Audio files and
+   * transcript files must be in separate buckets / folders. [3] A source file
+   * and its corresponding audio file must share the same name to be properly
+   * ingested, E.g. `gs://bucket/transcript/conversation1.json` and
+   * `gs://bucket/audio/conversation1.mp3`.
+   *
    * @var string
    */
   public $audioBucketUri;
   /**
+   * Optional. Specifies the type of the objects in `bucket_uri`. Avoid passing
+   * this. This is inferred from the `transcript_bucket_uri`,
+   * `audio_bucket_uri`.
+   *
    * @var string
    */
   public $bucketObjectType;
   /**
+   * Optional. The Cloud Storage bucket containing source objects. Avoid passing
+   * this. Pass this through one of `transcript_bucket_uri` or
+   * `audio_bucket_uri`.
+   *
    * @var string
    */
   public $bucketUri;
   /**
+   * Optional. Custom keys to extract as conversation labels from metadata files
+   * in `metadata_bucket_uri`. Keys not included in this field will be ignored.
+   * Note that there is a limit of 100 labels per conversation.
+   *
    * @var string[]
    */
   public $customMetadataKeys;
   /**
+   * Optional. The Cloud Storage path to the conversation metadata. Note that:
+   * [1] Metadata files are expected to be in JSON format. [2] Metadata and
+   * source files (transcripts or audio) must be in separate buckets / folders.
+   * [3] A source file and its corresponding metadata file must share the same
+   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3`
+   * and `gs://bucket/metadata/conversation1.json`.
+   *
    * @var string
    */
   public $metadataBucketUri;
   /**
+   * Optional. The Cloud Storage path to the conversation transcripts. Note
+   * that: [1] Transcript files are expected to be in JSON format. [2]
+   * Transcript, audio, metadata files must be in separate buckets / folders.
+   * [3] A source file and its corresponding metadata file must share the same
+   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3`
+   * and `gs://bucket/metadata/conversation1.json`.
+   *
    * @var string
    */
   public $transcriptBucketUri;
 
   /**
-   * @param string
+   * Optional. The Cloud Storage path to the conversation audio file. Note that:
+   * [1] Audio files will be transcribed if not already. [2] Audio files and
+   * transcript files must be in separate buckets / folders. [3] A source file
+   * and its corresponding audio file must share the same name to be properly
+   * ingested, E.g. `gs://bucket/transcript/conversation1.json` and
+   * `gs://bucket/audio/conversation1.mp3`.
+   *
+   * @param string $audioBucketUri
    */
   public function setAudioBucketUri($audioBucketUri)
   {
@@ -60,21 +112,31 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource exte
     return $this->audioBucketUri;
   }
   /**
-   * @param string
+   * Optional. Specifies the type of the objects in `bucket_uri`. Avoid passing
+   * this. This is inferred from the `transcript_bucket_uri`,
+   * `audio_bucket_uri`.
+   *
+   * Accepted values: BUCKET_OBJECT_TYPE_UNSPECIFIED, TRANSCRIPT, AUDIO
+   *
+   * @param self::BUCKET_OBJECT_TYPE_* $bucketObjectType
    */
   public function setBucketObjectType($bucketObjectType)
   {
     $this->bucketObjectType = $bucketObjectType;
   }
   /**
-   * @return string
+   * @return self::BUCKET_OBJECT_TYPE_*
    */
   public function getBucketObjectType()
   {
     return $this->bucketObjectType;
   }
   /**
-   * @param string
+   * Optional. The Cloud Storage bucket containing source objects. Avoid passing
+   * this. Pass this through one of `transcript_bucket_uri` or
+   * `audio_bucket_uri`.
+   *
+   * @param string $bucketUri
    */
   public function setBucketUri($bucketUri)
   {
@@ -88,7 +150,11 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource exte
     return $this->bucketUri;
   }
   /**
-   * @param string[]
+   * Optional. Custom keys to extract as conversation labels from metadata files
+   * in `metadata_bucket_uri`. Keys not included in this field will be ignored.
+   * Note that there is a limit of 100 labels per conversation.
+   *
+   * @param string[] $customMetadataKeys
    */
   public function setCustomMetadataKeys($customMetadataKeys)
   {
@@ -102,7 +168,14 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource exte
     return $this->customMetadataKeys;
   }
   /**
-   * @param string
+   * Optional. The Cloud Storage path to the conversation metadata. Note that:
+   * [1] Metadata files are expected to be in JSON format. [2] Metadata and
+   * source files (transcripts or audio) must be in separate buckets / folders.
+   * [3] A source file and its corresponding metadata file must share the same
+   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3`
+   * and `gs://bucket/metadata/conversation1.json`.
+   *
+   * @param string $metadataBucketUri
    */
   public function setMetadataBucketUri($metadataBucketUri)
   {
@@ -116,7 +189,14 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource exte
     return $this->metadataBucketUri;
   }
   /**
-   * @param string
+   * Optional. The Cloud Storage path to the conversation transcripts. Note
+   * that: [1] Transcript files are expected to be in JSON format. [2]
+   * Transcript, audio, metadata files must be in separate buckets / folders.
+   * [3] A source file and its corresponding metadata file must share the same
+   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3`
+   * and `gs://bucket/metadata/conversation1.json`.
+   *
+   * @param string $transcriptBucketUri
    */
   public function setTranscriptBucketUri($transcriptBucketUri)
   {

@@ -23,12 +23,19 @@ class ListCloudLocationsResponse extends \Google\Collection
   protected $cloudLocationsType = CloudLocation::class;
   protected $cloudLocationsDataType = 'array';
   /**
+   * Output only. The continuation token, used to page through large result
+   * sets. Provide this value in a subsequent request as page_token in
+   * subsequent requests to retrieve the next page. If this field is not
+   * present, there are no subsequent results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CloudLocation[]
+   * Output only. List of cloud locations.
+   *
+   * @param CloudLocation[] $cloudLocations
    */
   public function setCloudLocations($cloudLocations)
   {
@@ -42,7 +49,12 @@ class ListCloudLocationsResponse extends \Google\Collection
     return $this->cloudLocations;
   }
   /**
-   * @param string
+   * Output only. The continuation token, used to page through large result
+   * sets. Provide this value in a subsequent request as page_token in
+   * subsequent requests to retrieve the next page. If this field is not
+   * present, there are no subsequent results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

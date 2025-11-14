@@ -20,6 +20,9 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends \Google\Model
 {
   /**
+   * The name of the answer record. Format: `projects//locations//answer
+   * Records/`.
+   *
    * @var string
    */
   public $answerRecord;
@@ -29,7 +32,10 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends \Google\Model
   protected $suggestedQueryAnswerDataType = '';
 
   /**
-   * @param string
+   * The name of the answer record. Format: `projects//locations//answer
+   * Records/`.
+   *
+   * @param string $answerRecord
    */
   public function setAnswerRecord($answerRecord)
   {
@@ -43,7 +49,10 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends \Google\Model
     return $this->answerRecord;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery
+   * The query suggested based on the context. Suggestion is made only if it is
+   * different from the previous suggestion.
+   *
+   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery $suggestedQuery
    */
   public function setSuggestedQuery(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery $suggestedQuery)
   {
@@ -57,7 +66,10 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends \Google\Model
     return $this->suggestedQuery;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer
+   * The answer generated for the suggested query. Whether or not an answer is
+   * generated depends on how confident we are about the generated query.
+   *
+   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer $suggestedQueryAnswer
    */
   public function setSuggestedQueryAnswer(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer $suggestedQueryAnswer)
   {

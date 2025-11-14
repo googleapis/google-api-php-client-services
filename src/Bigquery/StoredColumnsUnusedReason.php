@@ -19,36 +19,83 @@ namespace Google\Service\Bigquery;
 
 class StoredColumnsUnusedReason extends \Google\Collection
 {
+  /**
+   * Default value.
+   */
+  public const CODE_CODE_UNSPECIFIED = 'CODE_UNSPECIFIED';
+  /**
+   * If stored columns do not fully cover the columns.
+   */
+  public const CODE_STORED_COLUMNS_COVER_INSUFFICIENT = 'STORED_COLUMNS_COVER_INSUFFICIENT';
+  /**
+   * If the base table has RLS (Row Level Security).
+   */
+  public const CODE_BASE_TABLE_HAS_RLS = 'BASE_TABLE_HAS_RLS';
+  /**
+   * If the base table has CLS (Column Level Security).
+   */
+  public const CODE_BASE_TABLE_HAS_CLS = 'BASE_TABLE_HAS_CLS';
+  /**
+   * If the provided prefilter is not supported.
+   */
+  public const CODE_UNSUPPORTED_PREFILTER = 'UNSUPPORTED_PREFILTER';
+  /**
+   * If an internal error is preventing stored columns from being used.
+   */
+  public const CODE_INTERNAL_ERROR = 'INTERNAL_ERROR';
+  /**
+   * Indicates that the reason stored columns cannot be used in the query is not
+   * covered by any of the other StoredColumnsUnusedReason options.
+   */
+  public const CODE_OTHER_REASON = 'OTHER_REASON';
   protected $collection_key = 'uncoveredColumns';
   /**
+   * Specifies the high-level reason for the unused scenario, each reason must
+   * have a code associated.
+   *
    * @var string
    */
   public $code;
   /**
+   * Specifies the detailed description for the scenario.
+   *
    * @var string
    */
   public $message;
   /**
+   * Specifies which columns were not covered by the stored columns for the
+   * specified code up to 20 columns. This is populated when the code is
+   * STORED_COLUMNS_COVER_INSUFFICIENT and BASE_TABLE_HAS_CLS.
+   *
    * @var string[]
    */
   public $uncoveredColumns;
 
   /**
-   * @param string
+   * Specifies the high-level reason for the unused scenario, each reason must
+   * have a code associated.
+   *
+   * Accepted values: CODE_UNSPECIFIED, STORED_COLUMNS_COVER_INSUFFICIENT,
+   * BASE_TABLE_HAS_RLS, BASE_TABLE_HAS_CLS, UNSUPPORTED_PREFILTER,
+   * INTERNAL_ERROR, OTHER_REASON
+   *
+   * @param self::CODE_* $code
    */
   public function setCode($code)
   {
     $this->code = $code;
   }
   /**
-   * @return string
+   * @return self::CODE_*
    */
   public function getCode()
   {
     return $this->code;
   }
   /**
-   * @param string
+   * Specifies the detailed description for the scenario.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -62,7 +109,11 @@ class StoredColumnsUnusedReason extends \Google\Collection
     return $this->message;
   }
   /**
-   * @param string[]
+   * Specifies which columns were not covered by the stored columns for the
+   * specified code up to 20 columns. This is populated when the code is
+   * STORED_COLUMNS_COVER_INSUFFICIENT and BASE_TABLE_HAS_CLS.
+   *
+   * @param string[] $uncoveredColumns
    */
   public function setUncoveredColumns($uncoveredColumns)
   {

@@ -21,12 +21,20 @@ class AutoAccept extends \Google\Collection
 {
   protected $collection_key = 'autoAcceptProjects';
   /**
+   * Optional. A list of project ids or project numbers for which you want to
+   * enable auto-accept. The auto-accept setting is applied to spokes being
+   * created or updated in these projects.
+   *
    * @var string[]
    */
   public $autoAcceptProjects;
 
   /**
-   * @param string[]
+   * Optional. A list of project ids or project numbers for which you want to
+   * enable auto-accept. The auto-accept setting is applied to spokes being
+   * created or updated in these projects.
+   *
+   * @param string[] $autoAcceptProjects
    */
   public function setAutoAcceptProjects($autoAcceptProjects)
   {

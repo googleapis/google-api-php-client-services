@@ -24,6 +24,10 @@ class SynthesizeLongAudioRequest extends \Google\Model
   protected $inputType = SynthesisInput::class;
   protected $inputDataType = '';
   /**
+   * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
+   * specified in the format: `gs://bucket_name/object_name`, and the bucket
+   * must already exist.
+   *
    * @var string
    */
   public $outputGcsUri;
@@ -31,7 +35,9 @@ class SynthesizeLongAudioRequest extends \Google\Model
   protected $voiceDataType = '';
 
   /**
-   * @param AudioConfig
+   * Required. The configuration of the synthesized audio.
+   *
+   * @param AudioConfig $audioConfig
    */
   public function setAudioConfig(AudioConfig $audioConfig)
   {
@@ -45,7 +51,9 @@ class SynthesizeLongAudioRequest extends \Google\Model
     return $this->audioConfig;
   }
   /**
-   * @param SynthesisInput
+   * Required. The Synthesizer requires either plain text or SSML as input.
+   *
+   * @param SynthesisInput $input
    */
   public function setInput(SynthesisInput $input)
   {
@@ -59,7 +67,11 @@ class SynthesizeLongAudioRequest extends \Google\Model
     return $this->input;
   }
   /**
-   * @param string
+   * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
+   * specified in the format: `gs://bucket_name/object_name`, and the bucket
+   * must already exist.
+   *
+   * @param string $outputGcsUri
    */
   public function setOutputGcsUri($outputGcsUri)
   {
@@ -73,7 +85,9 @@ class SynthesizeLongAudioRequest extends \Google\Model
     return $this->outputGcsUri;
   }
   /**
-   * @param VoiceSelectionParams
+   * Required. The desired voice of the synthesized audio.
+   *
+   * @param VoiceSelectionParams $voice
    */
   public function setVoice(VoiceSelectionParams $voice)
   {

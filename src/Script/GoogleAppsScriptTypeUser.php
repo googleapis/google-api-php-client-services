@@ -20,24 +20,34 @@ namespace Google\Service\Script;
 class GoogleAppsScriptTypeUser extends \Google\Model
 {
   /**
+   * The user's domain.
+   *
    * @var string
    */
   public $domain;
   /**
+   * The user's identifying email address.
+   *
    * @var string
    */
   public $email;
   /**
+   * The user's display name.
+   *
    * @var string
    */
   public $name;
   /**
+   * The user's photo.
+   *
    * @var string
    */
   public $photoUrl;
 
   /**
-   * @param string
+   * The user's domain.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -51,7 +61,9 @@ class GoogleAppsScriptTypeUser extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * The user's identifying email address.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -65,7 +77,9 @@ class GoogleAppsScriptTypeUser extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The user's display name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +93,9 @@ class GoogleAppsScriptTypeUser extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The user's photo.
+   *
+   * @param string $photoUrl
    */
   public function setPhotoUrl($photoUrl)
   {

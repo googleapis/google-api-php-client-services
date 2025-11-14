@@ -24,7 +24,13 @@ class AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState exten
    */
   public const STATE_AVAILABLE = 'AVAILABLE';
   /**
-   * The accelerator topology is running.
+   * The accelerator topology is degraded. The underlying capacity is not in a
+   * healthy state and is not available.
+   */
+  public const STATE_DEGRADED = 'DEGRADED';
+  /**
+   * The accelerator topology is running. If there are both running and degraded
+   * hosts within a topology, DEGRADED state will be returned.
    */
   public const STATE_RUNNING = 'RUNNING';
   /**
@@ -32,7 +38,9 @@ class AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState exten
    */
   public const STATE_TOPOLOGY_STATE_UNSPECIFIED = 'TOPOLOGY_STATE_UNSPECIFIED';
   /**
-   * The accelerator topology is unhealthy.
+   * This value has been deprecated and is no longer used.
+   *
+   * @deprecated
    */
   public const STATE_UNHEALTHY = 'UNHEALTHY';
   /**
@@ -67,7 +75,8 @@ class AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState exten
   /**
    * The state of the accelerator topology.
    *
-   * Accepted values: AVAILABLE, RUNNING, TOPOLOGY_STATE_UNSPECIFIED, UNHEALTHY
+   * Accepted values: AVAILABLE, DEGRADED, RUNNING, TOPOLOGY_STATE_UNSPECIFIED,
+   * UNHEALTHY
    *
    * @param self::STATE_* $state
    */

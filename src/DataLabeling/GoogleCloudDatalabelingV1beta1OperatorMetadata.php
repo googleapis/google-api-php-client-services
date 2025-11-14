@@ -21,24 +21,36 @@ class GoogleCloudDatalabelingV1beta1OperatorMetadata extends \Google\Collection
 {
   protected $collection_key = 'comments';
   /**
+   * Comments from contributors.
+   *
    * @var string[]
    */
   public $comments;
   /**
+   * The total number of contributors that choose this label.
+   *
    * @var int
    */
   public $labelVotes;
   /**
+   * Confidence score corresponding to a label. For examle, if 3 contributors
+   * have answered the question and 2 of them agree on the final label, the
+   * confidence score will be 0.67 (2/3).
+   *
    * @var float
    */
   public $score;
   /**
+   * The total number of contributors that answer this question.
+   *
    * @var int
    */
   public $totalVotes;
 
   /**
-   * @param string[]
+   * Comments from contributors.
+   *
+   * @param string[] $comments
    */
   public function setComments($comments)
   {
@@ -52,7 +64,9 @@ class GoogleCloudDatalabelingV1beta1OperatorMetadata extends \Google\Collection
     return $this->comments;
   }
   /**
-   * @param int
+   * The total number of contributors that choose this label.
+   *
+   * @param int $labelVotes
    */
   public function setLabelVotes($labelVotes)
   {
@@ -66,7 +80,11 @@ class GoogleCloudDatalabelingV1beta1OperatorMetadata extends \Google\Collection
     return $this->labelVotes;
   }
   /**
-   * @param float
+   * Confidence score corresponding to a label. For examle, if 3 contributors
+   * have answered the question and 2 of them agree on the final label, the
+   * confidence score will be 0.67 (2/3).
+   *
+   * @param float $score
    */
   public function setScore($score)
   {
@@ -80,7 +98,9 @@ class GoogleCloudDatalabelingV1beta1OperatorMetadata extends \Google\Collection
     return $this->score;
   }
   /**
-   * @param int
+   * The total number of contributors that answer this question.
+   *
+   * @param int $totalVotes
    */
   public function setTotalVotes($totalVotes)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class LanguageTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The display name of the language (e.g., "French").
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * Output only. The display name of the language (e.g., "French").
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

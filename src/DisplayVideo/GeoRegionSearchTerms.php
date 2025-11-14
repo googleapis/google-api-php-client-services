@@ -20,12 +20,18 @@ namespace Google\Service\DisplayVideo;
 class GeoRegionSearchTerms extends \Google\Model
 {
   /**
+   * The search query for the desired geo region. The query can be a prefix,
+   * e.g. "New Yor", "Seattle", "USA", etc.
+   *
    * @var string
    */
   public $geoRegionQuery;
 
   /**
-   * @param string
+   * The search query for the desired geo region. The query can be a prefix,
+   * e.g. "New Yor", "Seattle", "USA", etc.
+   *
+   * @param string $geoRegionQuery
    */
   public function setGeoRegionQuery($geoRegionQuery)
   {

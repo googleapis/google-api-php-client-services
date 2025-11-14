@@ -20,12 +20,16 @@ namespace Google\Service\Dataform;
 class FetchFileDiffResponse extends \Google\Model
 {
   /**
+   * The raw formatted Git diff for the file.
+   *
    * @var string
    */
   public $formattedDiff;
 
   /**
-   * @param string
+   * The raw formatted Git diff for the file.
+   *
+   * @param string $formattedDiff
    */
   public function setFormattedDiff($formattedDiff)
   {

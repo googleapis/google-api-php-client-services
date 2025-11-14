@@ -21,12 +21,16 @@ class GoogleCloudFunctionsV2LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'environments';
   /**
+   * The Cloud Function environments this location supports.
+   *
    * @var string[]
    */
   public $environments;
 
   /**
-   * @param string[]
+   * The Cloud Function environments this location supports.
+   *
+   * @param string[] $environments
    */
   public function setEnvironments($environments)
   {

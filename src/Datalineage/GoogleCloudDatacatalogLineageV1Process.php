@@ -20,6 +20,10 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
 {
   /**
+   * Optional. The attributes of the process. Should only be used for the
+   * purpose of non-semantic management (classifying, describing or labeling the
+   * process). Up to 100 attributes are allowed.
+   *
    * @var array[]
    */
   public $attributes;
@@ -28,6 +32,11 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
    */
   public $displayName;
   /**
+   * Immutable. The resource name of the lineage process. Format:
+   * `projects/{project}/locations/{location}/processes/{process}`. Can be
+   * specified or auto-assigned. {process} must be not longer than 200
+   * characters and only contain characters in a set: `a-zA-Z0-9_-:.`
+   *
    * @var string
    */
   public $name;
@@ -35,7 +44,11 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
   protected $originDataType = '';
 
   /**
-   * @param array[]
+   * Optional. The attributes of the process. Should only be used for the
+   * purpose of non-semantic management (classifying, describing or labeling the
+   * process). Up to 100 attributes are allowed.
+   *
+   * @param array[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -49,7 +62,7 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
     return $this->attributes;
   }
   /**
-   * @param string
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -63,7 +76,12 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the lineage process. Format:
+   * `projects/{project}/locations/{location}/processes/{process}`. Can be
+   * specified or auto-assigned. {process} must be not longer than 200
+   * characters and only contain characters in a set: `a-zA-Z0-9_-:.`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -77,7 +95,9 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDatacatalogLineageV1Origin
+   * Optional. The origin of this process and its runs and lineage events.
+   *
+   * @param GoogleCloudDatacatalogLineageV1Origin $origin
    */
   public function setOrigin(GoogleCloudDatacatalogLineageV1Origin $origin)
   {

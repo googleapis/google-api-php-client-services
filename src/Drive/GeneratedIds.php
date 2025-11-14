@@ -21,20 +21,29 @@ class GeneratedIds extends \Google\Collection
 {
   protected $collection_key = 'ids';
   /**
+   * The IDs generated for the requesting user in the specified space.
+   *
    * @var string[]
    */
   public $ids;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#generatedIds"`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The type of file that can be created with these IDs.
+   *
    * @var string
    */
   public $space;
 
   /**
-   * @param string[]
+   * The IDs generated for the requesting user in the specified space.
+   *
+   * @param string[] $ids
    */
   public function setIds($ids)
   {
@@ -48,7 +57,10 @@ class GeneratedIds extends \Google\Collection
     return $this->ids;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#generatedIds"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -62,7 +74,9 @@ class GeneratedIds extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The type of file that can be created with these IDs.
+   *
+   * @param string $space
    */
   public function setSpace($space)
   {

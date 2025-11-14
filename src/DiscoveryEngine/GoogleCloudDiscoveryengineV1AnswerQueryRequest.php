@@ -22,6 +22,14 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
   protected $answerGenerationSpecType = GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec::class;
   protected $answerGenerationSpecDataType = '';
   /**
+   * Deprecated: This field is deprecated. Streaming Answer API will be
+   * supported. Asynchronous mode control. If enabled, the response will be
+   * returned with answer/session resource name without final answer. The API
+   * users need to do the polling to get the latest status of answer/session by
+   * calling ConversationalSearchService.GetAnswer or
+   * ConversationalSearchService.GetSession method.
+   *
+   * @deprecated
    * @var bool
    */
   public $asynchronousMode;
@@ -40,20 +48,48 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
   protected $searchSpecType = GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpec::class;
   protected $searchSpecDataType = '';
   /**
+   * The session resource name. Not required. When session field is not set, the
+   * API is in sessionless mode. We support auto session mode: users can use the
+   * wildcard symbol `-` as session ID. A new ID will be automatically generated
+   * and assigned.
+   *
    * @var string
    */
   public $session;
   /**
+   * The user labels applied to a resource must meet the following requirements:
+   * * Each resource can have multiple labels, up to a maximum of 64. * Each
+   * label must be a key-value pair. * Keys have a minimum length of 1 character
+   * and a maximum length of 63 characters and cannot be empty. Values can be
+   * empty and have a maximum length of 63 characters. * Keys and values can
+   * contain only lowercase letters, numeric characters, underscores, and
+   * dashes. All characters must use UTF-8 encoding, and international
+   * characters are allowed. * The key portion of a label must be unique.
+   * However, you can use the same key with multiple resources. * Keys must
+   * start with a lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * labels#requirements) for more details.
+   *
    * @var string[]
    */
   public $userLabels;
   /**
+   * A unique identifier for tracking visitors. For example, this could be
+   * implemented with an HTTP cookie, which should be able to uniquely identify
+   * a visitor on a single device. This unique identifier should not change if
+   * the visitor logs in or out of the website. This field should NOT have a
+   * fixed value such as `unknown_visitor`. The field must be a UTF-8 encoded
+   * string with a length limit of 128 characters. Otherwise, an
+   * `INVALID_ARGUMENT` error is returned.
+   *
    * @var string
    */
   public $userPseudoId;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec
+   * Answer generation specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec $answerGenerationSpec
    */
   public function setAnswerGenerationSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec $answerGenerationSpec)
   {
@@ -67,13 +103,22 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->answerGenerationSpec;
   }
   /**
-   * @param bool
+   * Deprecated: This field is deprecated. Streaming Answer API will be
+   * supported. Asynchronous mode control. If enabled, the response will be
+   * returned with answer/session resource name without final answer. The API
+   * users need to do the polling to get the latest status of answer/session by
+   * calling ConversationalSearchService.GetAnswer or
+   * ConversationalSearchService.GetSession method.
+   *
+   * @deprecated
+   * @param bool $asynchronousMode
    */
   public function setAsynchronousMode($asynchronousMode)
   {
     $this->asynchronousMode = $asynchronousMode;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getAsynchronousMode()
@@ -81,7 +126,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->asynchronousMode;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestEndUserSpec
+   * Optional. End user specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestEndUserSpec $endUserSpec
    */
   public function setEndUserSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestEndUserSpec $endUserSpec)
   {
@@ -95,7 +142,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->endUserSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestGroundingSpec
+   * Optional. Grounding specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestGroundingSpec $groundingSpec
    */
   public function setGroundingSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestGroundingSpec $groundingSpec)
   {
@@ -109,7 +158,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->groundingSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1Query
+   * Required. Current user query.
+   *
+   * @param GoogleCloudDiscoveryengineV1Query $query
    */
   public function setQuery(GoogleCloudDiscoveryengineV1Query $query)
   {
@@ -123,7 +174,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->query;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpec
+   * Query understanding specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpec $queryUnderstandingSpec
    */
   public function setQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpec $queryUnderstandingSpec)
   {
@@ -137,7 +190,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->queryUnderstandingSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestRelatedQuestionsSpec
+   * Related questions specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestRelatedQuestionsSpec $relatedQuestionsSpec
    */
   public function setRelatedQuestionsSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestRelatedQuestionsSpec $relatedQuestionsSpec)
   {
@@ -151,7 +206,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->relatedQuestionsSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec
+   * Model specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec $safetySpec
    */
   public function setSafetySpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec $safetySpec)
   {
@@ -165,7 +222,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->safetySpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpec
+   * Search specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpec $searchSpec
    */
   public function setSearchSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpec $searchSpec)
   {
@@ -179,7 +238,12 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->searchSpec;
   }
   /**
-   * @param string
+   * The session resource name. Not required. When session field is not set, the
+   * API is in sessionless mode. We support auto session mode: users can use the
+   * wildcard symbol `-` as session ID. A new ID will be automatically generated
+   * and assigned.
+   *
+   * @param string $session
    */
   public function setSession($session)
   {
@@ -193,7 +257,20 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->session;
   }
   /**
-   * @param string[]
+   * The user labels applied to a resource must meet the following requirements:
+   * * Each resource can have multiple labels, up to a maximum of 64. * Each
+   * label must be a key-value pair. * Keys have a minimum length of 1 character
+   * and a maximum length of 63 characters and cannot be empty. Values can be
+   * empty and have a maximum length of 63 characters. * Keys and values can
+   * contain only lowercase letters, numeric characters, underscores, and
+   * dashes. All characters must use UTF-8 encoding, and international
+   * characters are allowed. * The key portion of a label must be unique.
+   * However, you can use the same key with multiple resources. * Keys must
+   * start with a lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * labels#requirements) for more details.
+   *
+   * @param string[] $userLabels
    */
   public function setUserLabels($userLabels)
   {
@@ -207,7 +284,15 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
     return $this->userLabels;
   }
   /**
-   * @param string
+   * A unique identifier for tracking visitors. For example, this could be
+   * implemented with an HTTP cookie, which should be able to uniquely identify
+   * a visitor on a single device. This unique identifier should not change if
+   * the visitor logs in or out of the website. This field should NOT have a
+   * fixed value such as `unknown_visitor`. The field must be a UTF-8 encoded
+   * string with a length limit of 128 characters. Otherwise, an
+   * `INVALID_ARGUMENT` error is returned.
+   *
+   * @param string $userPseudoId
    */
   public function setUserPseudoId($userPseudoId)
   {

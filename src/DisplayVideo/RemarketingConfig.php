@@ -20,16 +20,23 @@ namespace Google\Service\DisplayVideo;
 class RemarketingConfig extends \Google\Model
 {
   /**
+   * Output only. The ID of the advertiser.
+   *
    * @var string
    */
   public $advertiserId;
   /**
+   * Output only. Whether the Floodlight activity remarketing user list is
+   * available to the identified advertiser.
+   *
    * @var bool
    */
   public $remarketingEnabled;
 
   /**
-   * @param string
+   * Output only. The ID of the advertiser.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -43,7 +50,10 @@ class RemarketingConfig extends \Google\Model
     return $this->advertiserId;
   }
   /**
-   * @param bool
+   * Output only. Whether the Floodlight activity remarketing user list is
+   * available to the identified advertiser.
+   *
+   * @param bool $remarketingEnabled
    */
   public function setRemarketingEnabled($remarketingEnabled)
   {

@@ -25,7 +25,9 @@ class KubernetesConfig extends \Google\Model
   protected $serviceNetworkingDataType = '';
 
   /**
-   * @param GatewayServiceMesh
+   * Optional. Kubernetes Gateway API service mesh configuration.
+   *
+   * @param GatewayServiceMesh $gatewayServiceMesh
    */
   public function setGatewayServiceMesh(GatewayServiceMesh $gatewayServiceMesh)
   {
@@ -39,7 +41,9 @@ class KubernetesConfig extends \Google\Model
     return $this->gatewayServiceMesh;
   }
   /**
-   * @param ServiceNetworking
+   * Optional. Kubernetes Service networking configuration.
+   *
+   * @param ServiceNetworking $serviceNetworking
    */
   public function setServiceNetworking(ServiceNetworking $serviceNetworking)
   {

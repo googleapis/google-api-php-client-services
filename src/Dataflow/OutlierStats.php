@@ -20,18 +20,37 @@ namespace Google\Service\Dataflow;
 class OutlierStats extends \Google\Model
 {
   /**
+   * Number of values that are larger than the upper bound of the largest
+   * bucket.
+   *
    * @var string
    */
   public $overflowCount;
+  /**
+   * Mean of values in the overflow bucket.
+   *
+   * @var 
+   */
   public $overflowMean;
   /**
+   * Number of values that are smaller than the lower bound of the smallest
+   * bucket.
+   *
    * @var string
    */
   public $underflowCount;
+  /**
+   * Mean of values in the undeflow bucket.
+   *
+   * @var 
+   */
   public $underflowMean;
 
   /**
-   * @param string
+   * Number of values that are larger than the upper bound of the largest
+   * bucket.
+   *
+   * @param string $overflowCount
    */
   public function setOverflowCount($overflowCount)
   {
@@ -53,7 +72,10 @@ class OutlierStats extends \Google\Model
     return $this->overflowMean;
   }
   /**
-   * @param string
+   * Number of values that are smaller than the lower bound of the smallest
+   * bucket.
+   *
+   * @param string $underflowCount
    */
   public function setUnderflowCount($underflowCount)
   {

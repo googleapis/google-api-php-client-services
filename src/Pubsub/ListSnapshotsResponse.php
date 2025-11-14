@@ -21,6 +21,10 @@ class ListSnapshotsResponse extends \Google\Collection
 {
   protected $collection_key = 'snapshots';
   /**
+   * Optional. If not empty, indicates that there may be more snapshot that
+   * match the request; this value should be passed in a new
+   * `ListSnapshotsRequest`.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListSnapshotsResponse extends \Google\Collection
   protected $snapshotsDataType = 'array';
 
   /**
-   * @param string
+   * Optional. If not empty, indicates that there may be more snapshot that
+   * match the request; this value should be passed in a new
+   * `ListSnapshotsRequest`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListSnapshotsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Snapshot[]
+   * Optional. The resulting snapshots.
+   *
+   * @param Snapshot[] $snapshots
    */
   public function setSnapshots($snapshots)
   {

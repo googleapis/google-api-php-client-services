@@ -20,20 +20,28 @@ namespace Google\Service\ShoppingContent;
 class AccountCustomerService extends \Google\Model
 {
   /**
+   * Customer service email.
+   *
    * @var string
    */
   public $email;
   /**
+   * Customer service phone number.
+   *
    * @var string
    */
   public $phoneNumber;
   /**
+   * Customer service URL.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Customer service email.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -47,7 +55,9 @@ class AccountCustomerService extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Customer service phone number.
+   *
+   * @param string $phoneNumber
    */
   public function setPhoneNumber($phoneNumber)
   {
@@ -61,7 +71,9 @@ class AccountCustomerService extends \Google\Model
     return $this->phoneNumber;
   }
   /**
-   * @param string
+   * Customer service URL.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

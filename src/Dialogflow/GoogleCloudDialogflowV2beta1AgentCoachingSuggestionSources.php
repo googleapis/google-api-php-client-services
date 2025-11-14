@@ -21,12 +21,18 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources extends \Google
 {
   protected $collection_key = 'instructionIndexes';
   /**
+   * Output only. Source instruction indexes for the suggestion. This is the
+   * index of the applicable_instructions field.
+   *
    * @var int[]
    */
   public $instructionIndexes;
 
   /**
-   * @param int[]
+   * Output only. Source instruction indexes for the suggestion. This is the
+   * index of the applicable_instructions field.
+   *
+   * @param int[] $instructionIndexes
    */
   public function setInstructionIndexes($instructionIndexes)
   {

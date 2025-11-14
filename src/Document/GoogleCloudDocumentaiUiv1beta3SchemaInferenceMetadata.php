@@ -20,12 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3SchemaInferenceMetadata extends \Google\Model
 {
   /**
+   * True if is inferred by schema inference.
+   *
    * @var bool
    */
   public $inferred;
 
   /**
-   * @param bool
+   * True if is inferred by schema inference.
+   *
+   * @param bool $inferred
    */
   public function setInferred($inferred)
   {

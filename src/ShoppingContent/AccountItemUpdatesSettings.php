@@ -20,24 +20,47 @@ namespace Google\Service\ShoppingContent;
 class AccountItemUpdatesSettings extends \Google\Model
 {
   /**
+   * If availability updates are enabled, any previous availability values get
+   * overwritten if Google finds an out-of-stock annotation on the offer's page.
+   * If additionally `allow_availability_updates` field is set to true, values
+   * get overwritten if Google finds an in-stock annotation on the offer’s page.
+   *
    * @var bool
    */
   public $allowAvailabilityUpdates;
   /**
+   * If condition updates are enabled, Google always updates item condition with
+   * the condition detected from the details of your product.
+   *
    * @var bool
    */
   public $allowConditionUpdates;
   /**
+   * If price updates are enabled, Google always updates the active price with
+   * the crawled information.
+   *
    * @var bool
    */
   public $allowPriceUpdates;
   /**
+   * If allow_availability_updates is enabled, items are automatically updated
+   * in all your Shopping target countries. By default, availability updates
+   * will only be applied to items that are 'out of stock' on your website but
+   * 'in stock' on Shopping. Set this to true to also update items that are 'in
+   * stock' on your website, but 'out of stock' on Google Shopping. In order for
+   * this field to have an effect, you must also allow availability updates.
+   *
    * @var bool
    */
   public $allowStrictAvailabilityUpdates;
 
   /**
-   * @param bool
+   * If availability updates are enabled, any previous availability values get
+   * overwritten if Google finds an out-of-stock annotation on the offer's page.
+   * If additionally `allow_availability_updates` field is set to true, values
+   * get overwritten if Google finds an in-stock annotation on the offer’s page.
+   *
+   * @param bool $allowAvailabilityUpdates
    */
   public function setAllowAvailabilityUpdates($allowAvailabilityUpdates)
   {
@@ -51,7 +74,10 @@ class AccountItemUpdatesSettings extends \Google\Model
     return $this->allowAvailabilityUpdates;
   }
   /**
-   * @param bool
+   * If condition updates are enabled, Google always updates item condition with
+   * the condition detected from the details of your product.
+   *
+   * @param bool $allowConditionUpdates
    */
   public function setAllowConditionUpdates($allowConditionUpdates)
   {
@@ -65,7 +91,10 @@ class AccountItemUpdatesSettings extends \Google\Model
     return $this->allowConditionUpdates;
   }
   /**
-   * @param bool
+   * If price updates are enabled, Google always updates the active price with
+   * the crawled information.
+   *
+   * @param bool $allowPriceUpdates
    */
   public function setAllowPriceUpdates($allowPriceUpdates)
   {
@@ -79,7 +108,14 @@ class AccountItemUpdatesSettings extends \Google\Model
     return $this->allowPriceUpdates;
   }
   /**
-   * @param bool
+   * If allow_availability_updates is enabled, items are automatically updated
+   * in all your Shopping target countries. By default, availability updates
+   * will only be applied to items that are 'out of stock' on your website but
+   * 'in stock' on Shopping. Set this to true to also update items that are 'in
+   * stock' on your website, but 'out of stock' on Google Shopping. In order for
+   * this field to have an effect, you must also allow availability updates.
+   *
+   * @param bool $allowStrictAvailabilityUpdates
    */
   public function setAllowStrictAvailabilityUpdates($allowStrictAvailabilityUpdates)
   {

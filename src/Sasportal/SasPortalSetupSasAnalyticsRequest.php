@@ -20,12 +20,18 @@ namespace Google\Service\Sasportal;
 class SasPortalSetupSasAnalyticsRequest extends \Google\Model
 {
   /**
+   * Optional. User id to setup analytics for, if not provided the user id
+   * associated with the project is used. optional
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param string
+   * Optional. User id to setup analytics for, if not provided the user id
+   * associated with the project is used. optional
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

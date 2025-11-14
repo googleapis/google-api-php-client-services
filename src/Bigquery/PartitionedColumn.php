@@ -20,12 +20,16 @@ namespace Google\Service\Bigquery;
 class PartitionedColumn extends \Google\Model
 {
   /**
+   * Required. The name of the partition column.
+   *
    * @var string
    */
   public $field;
 
   /**
-   * @param string
+   * Required. The name of the partition column.
+   *
+   * @param string $field
    */
   public function setField($field)
   {

@@ -21,12 +21,16 @@ class StringHparamSearchSpace extends \Google\Collection
 {
   protected $collection_key = 'candidates';
   /**
+   * Canididates for the string or enum parameter in lower case.
+   *
    * @var string[]
    */
   public $candidates;
 
   /**
-   * @param string[]
+   * Canididates for the string or enum parameter in lower case.
+   *
+   * @param string[] $candidates
    */
   public function setCandidates($candidates)
   {

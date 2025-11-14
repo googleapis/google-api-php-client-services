@@ -24,7 +24,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageSuggestions extends \Google\Colle
   protected $suggestionsDataType = 'array';
 
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageSuggestion[]
+   * Required. The list of suggested replies.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageSuggestion[] $suggestions
    */
   public function setSuggestions($suggestions)
   {

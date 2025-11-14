@@ -21,18 +21,26 @@ class ListPosturesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A pagination token. To retrieve the next page of results, call the method
+   * again with this token.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $posturesType = Posture::class;
   protected $posturesDataType = 'array';
   /**
+   * Locations that were temporarily unavailable and could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A pagination token. To retrieve the next page of results, call the method
+   * again with this token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListPosturesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Posture[]
+   * The list of Posture resources.
+   *
+   * @param Posture[] $postures
    */
   public function setPostures($postures)
   {
@@ -60,7 +70,9 @@ class ListPosturesResponse extends \Google\Collection
     return $this->postures;
   }
   /**
-   * @param string[]
+   * Locations that were temporarily unavailable and could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

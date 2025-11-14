@@ -20,20 +20,29 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class Label extends \Google\Model
 {
   /**
+   * Optional. Description of the price list, section, or item.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Display name for the price list, section, or item.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. The BCP-47 language code that these strings apply for. Only one
+   * set of labels may be set per language.
+   *
    * @var string
    */
   public $languageCode;
 
   /**
-   * @param string
+   * Optional. Description of the price list, section, or item.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +56,9 @@ class Label extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Display name for the price list, section, or item.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +72,10 @@ class Label extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Optional. The BCP-47 language code that these strings apply for. Only one
+   * set of labels may be set per language.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {

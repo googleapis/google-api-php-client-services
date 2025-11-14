@@ -20,20 +20,44 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantCustomerPolicyBannedPhrase extends \Google\Model
 {
   /**
+   * Defaults to SIMPLE_STRING_MATCH.
+   */
+  public const MATCH_TYPE_BANNED_PHRASE_MATCH_TYPE_UNSPECIFIED = 'BANNED_PHRASE_MATCH_TYPE_UNSPECIFIED';
+  /**
+   * The banned phrase matches if it is found anywhere in the text as an exact
+   * substring.
+   */
+  public const MATCH_TYPE_SIMPLE_STRING_MATCH = 'SIMPLE_STRING_MATCH';
+  /**
+   * Banned phrase only matches if the pattern found in the text is surrounded
+   * by word delimiters. The phrase itself may still contain word delimiters.
+   */
+  public const MATCH_TYPE_WORD_BOUNDARY_STRING_MATCH = 'WORD_BOUNDARY_STRING_MATCH';
+  /**
+   * Optional. If true, diacritical marks (e.g., accents, umlauts) are ignored
+   * when matching banned phrases. For example, "cafe" would match "café".
+   *
    * @var bool
    */
   public $ignoreDiacritics;
   /**
+   * Optional. Match type for the banned phrase.
+   *
    * @var string
    */
   public $matchType;
   /**
+   * Required. The raw string content to be banned.
+   *
    * @var string
    */
   public $phrase;
 
   /**
-   * @param bool
+   * Optional. If true, diacritical marks (e.g., accents, umlauts) are ignored
+   * when matching banned phrases. For example, "cafe" would match "café".
+   *
+   * @param bool $ignoreDiacritics
    */
   public function setIgnoreDiacritics($ignoreDiacritics)
   {
@@ -47,21 +71,28 @@ class GoogleCloudDiscoveryengineV1AssistantCustomerPolicyBannedPhrase extends \G
     return $this->ignoreDiacritics;
   }
   /**
-   * @param string
+   * Optional. Match type for the banned phrase.
+   *
+   * Accepted values: BANNED_PHRASE_MATCH_TYPE_UNSPECIFIED, SIMPLE_STRING_MATCH,
+   * WORD_BOUNDARY_STRING_MATCH
+   *
+   * @param self::MATCH_TYPE_* $matchType
    */
   public function setMatchType($matchType)
   {
     $this->matchType = $matchType;
   }
   /**
-   * @return string
+   * @return self::MATCH_TYPE_*
    */
   public function getMatchType()
   {
     return $this->matchType;
   }
   /**
-   * @param string
+   * Required. The raw string content to be banned.
+   *
+   * @param string $phrase
    */
   public function setPhrase($phrase)
   {

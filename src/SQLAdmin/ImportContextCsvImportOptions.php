@@ -21,32 +21,51 @@ class ImportContextCsvImportOptions extends \Google\Collection
 {
   protected $collection_key = 'columns';
   /**
+   * The columns to which CSV data is imported. If not specified, all columns of
+   * the database table are loaded with CSV data.
+   *
    * @var string[]
    */
   public $columns;
   /**
+   * Specifies the character that should appear before a data character that
+   * needs to be escaped.
+   *
    * @var string
    */
   public $escapeCharacter;
   /**
+   * Specifies the character that separates columns within each row (line) of
+   * the file.
+   *
    * @var string
    */
   public $fieldsTerminatedBy;
   /**
+   * This is used to separate lines. If a line does not contain all fields, the
+   * rest of the columns are set to their default values.
+   *
    * @var string
    */
   public $linesTerminatedBy;
   /**
+   * Specifies the quoting character to be used when a data value is quoted.
+   *
    * @var string
    */
   public $quoteCharacter;
   /**
+   * The table to which CSV data is imported.
+   *
    * @var string
    */
   public $table;
 
   /**
-   * @param string[]
+   * The columns to which CSV data is imported. If not specified, all columns of
+   * the database table are loaded with CSV data.
+   *
+   * @param string[] $columns
    */
   public function setColumns($columns)
   {
@@ -60,7 +79,10 @@ class ImportContextCsvImportOptions extends \Google\Collection
     return $this->columns;
   }
   /**
-   * @param string
+   * Specifies the character that should appear before a data character that
+   * needs to be escaped.
+   *
+   * @param string $escapeCharacter
    */
   public function setEscapeCharacter($escapeCharacter)
   {
@@ -74,7 +96,10 @@ class ImportContextCsvImportOptions extends \Google\Collection
     return $this->escapeCharacter;
   }
   /**
-   * @param string
+   * Specifies the character that separates columns within each row (line) of
+   * the file.
+   *
+   * @param string $fieldsTerminatedBy
    */
   public function setFieldsTerminatedBy($fieldsTerminatedBy)
   {
@@ -88,7 +113,10 @@ class ImportContextCsvImportOptions extends \Google\Collection
     return $this->fieldsTerminatedBy;
   }
   /**
-   * @param string
+   * This is used to separate lines. If a line does not contain all fields, the
+   * rest of the columns are set to their default values.
+   *
+   * @param string $linesTerminatedBy
    */
   public function setLinesTerminatedBy($linesTerminatedBy)
   {
@@ -102,7 +130,9 @@ class ImportContextCsvImportOptions extends \Google\Collection
     return $this->linesTerminatedBy;
   }
   /**
-   * @param string
+   * Specifies the quoting character to be used when a data value is quoted.
+   *
+   * @param string $quoteCharacter
    */
   public function setQuoteCharacter($quoteCharacter)
   {
@@ -116,7 +146,9 @@ class ImportContextCsvImportOptions extends \Google\Collection
     return $this->quoteCharacter;
   }
   /**
-   * @param string
+   * The table to which CSV data is imported.
+   *
+   * @param string $table
    */
   public function setTable($table)
   {

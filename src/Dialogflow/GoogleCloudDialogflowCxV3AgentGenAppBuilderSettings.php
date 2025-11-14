@@ -20,12 +20,20 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings extends \Google\Model
 {
   /**
+   * Required. The full name of the Gen App Builder engine related to this agent
+   * if there is one. Format: `projects/{Project ID}/locations/{Location
+   * ID}/collections/{Collection ID}/engines/{Engine ID}`
+   *
    * @var string
    */
   public $engine;
 
   /**
-   * @param string
+   * Required. The full name of the Gen App Builder engine related to this agent
+   * if there is one. Format: `projects/{Project ID}/locations/{Location
+   * ID}/collections/{Collection ID}/engines/{Engine ID}`
+   *
+   * @param string $engine
    */
   public function setEngine($engine)
   {

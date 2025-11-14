@@ -20,20 +20,28 @@ namespace Google\Service\Tasks;
 class TaskLinks extends \Google\Model
 {
   /**
+   * The description (might be empty).
+   *
    * @var string
    */
   public $description;
   /**
+   * The URL.
+   *
    * @var string
    */
   public $link;
   /**
+   * Type of the link, e.g. "email", "generic", "chat_message", "keep_note".
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The description (might be empty).
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +55,9 @@ class TaskLinks extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The URL.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {
@@ -61,7 +71,9 @@ class TaskLinks extends \Google\Model
     return $this->link;
   }
   /**
-   * @param string
+   * Type of the link, e.g. "email", "generic", "chat_message", "keep_note".
+   *
+   * @param string $type
    */
   public function setType($type)
   {

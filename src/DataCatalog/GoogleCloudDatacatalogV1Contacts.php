@@ -24,7 +24,9 @@ class GoogleCloudDatacatalogV1Contacts extends \Google\Collection
   protected $peopleDataType = 'array';
 
   /**
-   * @param GoogleCloudDatacatalogV1ContactsPerson[]
+   * The list of contact people for the entry.
+   *
+   * @param GoogleCloudDatacatalogV1ContactsPerson[] $people
    */
   public function setPeople($people)
   {

@@ -26,7 +26,7 @@ class TimestampValues extends \Google\Collection
   public $values;
 
   /**
-   * @param string[]
+   * @param string[] $values
    */
   public function setValues($values)
   {

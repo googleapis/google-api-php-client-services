@@ -23,34 +23,52 @@ class ClientTlsPolicy extends \Google\Collection
   protected $clientCertificateType = GoogleCloudNetworksecurityV1CertificateProvider::class;
   protected $clientCertificateDataType = '';
   /**
+   * Output only. The timestamp when the resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Free-text description of the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. Set of label tags associated with the resource.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. Name of the ClientTlsPolicy resource. It matches the pattern `pro
+   * jects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+   *
    * @var string
    */
   public $name;
   protected $serverValidationCaType = ValidationCA::class;
   protected $serverValidationCaDataType = 'array';
   /**
+   * Optional. Server Name Indication string to present to the server during TLS
+   * handshake. E.g: "secure.example.com".
+   *
    * @var string
    */
   public $sni;
   /**
+   * Output only. The timestamp when the resource was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudNetworksecurityV1CertificateProvider
+   * Optional. Defines a mechanism to provision client identity (public and
+   * private keys) for peer to peer authentication. The presence of this
+   * dictates mTLS.
+   *
+   * @param GoogleCloudNetworksecurityV1CertificateProvider $clientCertificate
    */
   public function setClientCertificate(GoogleCloudNetworksecurityV1CertificateProvider $clientCertificate)
   {
@@ -64,7 +82,9 @@ class ClientTlsPolicy extends \Google\Collection
     return $this->clientCertificate;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -78,7 +98,9 @@ class ClientTlsPolicy extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Free-text description of the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -92,7 +114,9 @@ class ClientTlsPolicy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * Optional. Set of label tags associated with the resource.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -106,7 +130,10 @@ class ClientTlsPolicy extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. Name of the ClientTlsPolicy resource. It matches the pattern `pro
+   * jects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -120,7 +147,11 @@ class ClientTlsPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ValidationCA[]
+   * Optional. Defines the mechanism to obtain the Certificate Authority
+   * certificate to validate the server certificate. If empty, client does not
+   * validate the server certificate.
+   *
+   * @param ValidationCA[] $serverValidationCa
    */
   public function setServerValidationCa($serverValidationCa)
   {
@@ -134,7 +165,10 @@ class ClientTlsPolicy extends \Google\Collection
     return $this->serverValidationCa;
   }
   /**
-   * @param string
+   * Optional. Server Name Indication string to present to the server during TLS
+   * handshake. E.g: "secure.example.com".
+   *
+   * @param string $sni
    */
   public function setSni($sni)
   {
@@ -148,7 +182,9 @@ class ClientTlsPolicy extends \Google\Collection
     return $this->sni;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

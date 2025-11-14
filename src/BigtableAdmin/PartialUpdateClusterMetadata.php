@@ -20,18 +20,24 @@ namespace Google\Service\BigtableAdmin;
 class PartialUpdateClusterMetadata extends \Google\Model
 {
   /**
+   * The time at which the operation failed or was completed successfully.
+   *
    * @var string
    */
   public $finishTime;
   protected $originalRequestType = PartialUpdateClusterRequest::class;
   protected $originalRequestDataType = '';
   /**
+   * The time at which the original request was received.
+   *
    * @var string
    */
   public $requestTime;
 
   /**
-   * @param string
+   * The time at which the operation failed or was completed successfully.
+   *
+   * @param string $finishTime
    */
   public function setFinishTime($finishTime)
   {
@@ -45,7 +51,9 @@ class PartialUpdateClusterMetadata extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * @param PartialUpdateClusterRequest
+   * The original request for PartialUpdateCluster.
+   *
+   * @param PartialUpdateClusterRequest $originalRequest
    */
   public function setOriginalRequest(PartialUpdateClusterRequest $originalRequest)
   {
@@ -59,7 +67,9 @@ class PartialUpdateClusterMetadata extends \Google\Model
     return $this->originalRequest;
   }
   /**
-   * @param string
+   * The time at which the original request was received.
+   *
+   * @param string $requestTime
    */
   public function setRequestTime($requestTime)
   {

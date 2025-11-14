@@ -20,20 +20,39 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonMaximizeConversions extends \Google\Model
 {
   /**
+   * Maximum bid limit that can be set by the bid strategy. The limit applies to
+   * all keywords managed by the strategy. Mutable for portfolio bidding
+   * strategies only.
+   *
    * @var string
    */
   public $cpcBidCeilingMicros;
   /**
+   * Minimum bid limit that can be set by the bid strategy. The limit applies to
+   * all keywords managed by the strategy. Mutable for portfolio bidding
+   * strategies only.
+   *
    * @var string
    */
   public $cpcBidFloorMicros;
   /**
+   * The target cost-per-action (CPA) option. This is the average amount that
+   * you would like to spend per conversion action specified in micro units of
+   * the bidding strategy's currency. If set, the bid strategy will get as many
+   * conversions as possible at or below the target cost-per-action. If the
+   * target CPA is not set, the bid strategy will aim to achieve the lowest
+   * possible CPA given the budget.
+   *
    * @var string
    */
   public $targetCpaMicros;
 
   /**
-   * @param string
+   * Maximum bid limit that can be set by the bid strategy. The limit applies to
+   * all keywords managed by the strategy. Mutable for portfolio bidding
+   * strategies only.
+   *
+   * @param string $cpcBidCeilingMicros
    */
   public function setCpcBidCeilingMicros($cpcBidCeilingMicros)
   {
@@ -47,7 +66,11 @@ class GoogleAdsSearchads360V0CommonMaximizeConversions extends \Google\Model
     return $this->cpcBidCeilingMicros;
   }
   /**
-   * @param string
+   * Minimum bid limit that can be set by the bid strategy. The limit applies to
+   * all keywords managed by the strategy. Mutable for portfolio bidding
+   * strategies only.
+   *
+   * @param string $cpcBidFloorMicros
    */
   public function setCpcBidFloorMicros($cpcBidFloorMicros)
   {
@@ -61,7 +84,14 @@ class GoogleAdsSearchads360V0CommonMaximizeConversions extends \Google\Model
     return $this->cpcBidFloorMicros;
   }
   /**
-   * @param string
+   * The target cost-per-action (CPA) option. This is the average amount that
+   * you would like to spend per conversion action specified in micro units of
+   * the bidding strategy's currency. If set, the bid strategy will get as many
+   * conversions as possible at or below the target cost-per-action. If the
+   * target CPA is not set, the bid strategy will aim to achieve the lowest
+   * possible CPA given the budget.
+   *
+   * @param string $targetCpaMicros
    */
   public function setTargetCpaMicros($targetCpaMicros)
   {

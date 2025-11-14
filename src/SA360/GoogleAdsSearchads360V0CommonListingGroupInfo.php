@@ -20,19 +20,43 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonListingGroupInfo extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Subdivision of products along some listing dimension. These nodes are not
+   * used by serving to target listing entries, but is purely to define the
+   * structure of the tree.
+   */
+  public const TYPE_SUBDIVISION = 'SUBDIVISION';
+  /**
+   * Listing group unit that defines a bid.
+   */
+  public const TYPE_UNIT = 'UNIT';
+  /**
+   * Type of the listing group.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Type of the listing group.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, SUBDIVISION, UNIT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

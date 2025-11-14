@@ -20,12 +20,22 @@ namespace Google\Service\SecurityPosture;
 class IaC extends \Google\Model
 {
   /**
+   * Optional. A Terraform plan file, formatted as a stringified JSON object. To
+   * learn how to generate a Terraform plan file in JSON format, see [JSON
+   * output format](https://developer.hashicorp.com/terraform/internals/json-
+   * format) in the Terraform documentation.
+   *
    * @var string
    */
   public $tfPlan;
 
   /**
-   * @param string
+   * Optional. A Terraform plan file, formatted as a stringified JSON object. To
+   * learn how to generate a Terraform plan file in JSON format, see [JSON
+   * output format](https://developer.hashicorp.com/terraform/internals/json-
+   * format) in the Terraform documentation.
+   *
+   * @param string $tfPlan
    */
   public function setTfPlan($tfPlan)
   {

@@ -20,52 +20,86 @@ namespace Google\Service\Eventarc;
 class Enrollment extends \Google\Model
 {
   /**
+   * Optional. Resource annotations.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Required. A CEL expression identifying which messages this enrollment
+   * applies to.
+   *
    * @var string
    */
   public $celMatch;
   /**
+   * Output only. The creation time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Destination is the Pipeline that the Enrollment is delivering to.
+   * It must point to the full resource name of a Pipeline. Format:
+   * "projects/{PROJECT_ID}/locations/{region}/pipelines/{PIPELINE_ID)"
+   *
    * @var string
    */
   public $destination;
   /**
+   * Optional. Resource display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and might be sent only on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. Resource labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. Immutable. Resource name of the message bus identifying the
+   * source of the messages. It matches the form
+   * projects/{project}/locations/{location}/messageBuses/{messageBus}.
+   *
    * @var string
    */
   public $messageBus;
   /**
+   * Identifier. Resource name of the form
+   * projects/{project}/locations/{location}/enrollments/{enrollment}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Server assigned unique identifier for the channel. The value
+   * is a UUID4 string and guaranteed to remain unchanged until the resource is
+   * deleted.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The last-modified time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. Resource annotations.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -79,7 +113,10 @@ class Enrollment extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * Required. A CEL expression identifying which messages this enrollment
+   * applies to.
+   *
+   * @param string $celMatch
    */
   public function setCelMatch($celMatch)
   {
@@ -93,7 +130,9 @@ class Enrollment extends \Google\Model
     return $this->celMatch;
   }
   /**
-   * @param string
+   * Output only. The creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -107,7 +146,11 @@ class Enrollment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Destination is the Pipeline that the Enrollment is delivering to.
+   * It must point to the full resource name of a Pipeline. Format:
+   * "projects/{PROJECT_ID}/locations/{region}/pipelines/{PIPELINE_ID)"
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -121,7 +164,9 @@ class Enrollment extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * Optional. Resource display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -135,7 +180,11 @@ class Enrollment extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and might be sent only on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -149,7 +198,9 @@ class Enrollment extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. Resource labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -163,7 +214,11 @@ class Enrollment extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. Immutable. Resource name of the message bus identifying the
+   * source of the messages. It matches the form
+   * projects/{project}/locations/{location}/messageBuses/{messageBus}.
+   *
+   * @param string $messageBus
    */
   public function setMessageBus($messageBus)
   {
@@ -177,7 +232,10 @@ class Enrollment extends \Google\Model
     return $this->messageBus;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the form
+   * projects/{project}/locations/{location}/enrollments/{enrollment}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -191,7 +249,11 @@ class Enrollment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Server assigned unique identifier for the channel. The value
+   * is a UUID4 string and guaranteed to remain unchanged until the resource is
+   * deleted.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -205,7 +267,9 @@ class Enrollment extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The last-modified time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

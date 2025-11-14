@@ -23,12 +23,16 @@ class AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirementsEntry extends
   protected $countryRestrictionsType = AdPolicyCriterionRestriction::class;
   protected $countryRestrictionsDataType = 'array';
   /**
+   * The legal policy that is being violated.
+   *
    * @var string
    */
   public $legalPolicy;
 
   /**
-   * @param AdPolicyCriterionRestriction[]
+   * The countries restricted due to the legal policy.
+   *
+   * @param AdPolicyCriterionRestriction[] $countryRestrictions
    */
   public function setCountryRestrictions($countryRestrictions)
   {
@@ -42,7 +46,9 @@ class AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirementsEntry extends
     return $this->countryRestrictions;
   }
   /**
-   * @param string
+   * The legal policy that is being violated.
+   *
+   * @param string $legalPolicy
    */
   public function setLegalPolicy($legalPolicy)
   {

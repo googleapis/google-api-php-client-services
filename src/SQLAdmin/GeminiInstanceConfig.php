@@ -20,32 +20,46 @@ namespace Google\Service\SQLAdmin;
 class GeminiInstanceConfig extends \Google\Model
 {
   /**
+   * Output only. Whether the active query is enabled.
+   *
    * @var bool
    */
   public $activeQueryEnabled;
   /**
+   * Output only. Whether Gemini is enabled.
+   *
    * @var bool
    */
   public $entitled;
   /**
+   * Output only. Whether the flag recommender is enabled.
+   *
    * @var bool
    */
   public $flagRecommenderEnabled;
   /**
+   * Output only. Whether the vacuum management is enabled.
+   *
    * @var bool
    */
   public $googleVacuumMgmtEnabled;
   /**
+   * Output only. Whether the index advisor is enabled.
+   *
    * @var bool
    */
   public $indexAdvisorEnabled;
   /**
+   * Output only. Whether canceling the out-of-memory (OOM) session is enabled.
+   *
    * @var bool
    */
   public $oomSessionCancelEnabled;
 
   /**
-   * @param bool
+   * Output only. Whether the active query is enabled.
+   *
+   * @param bool $activeQueryEnabled
    */
   public function setActiveQueryEnabled($activeQueryEnabled)
   {
@@ -59,7 +73,9 @@ class GeminiInstanceConfig extends \Google\Model
     return $this->activeQueryEnabled;
   }
   /**
-   * @param bool
+   * Output only. Whether Gemini is enabled.
+   *
+   * @param bool $entitled
    */
   public function setEntitled($entitled)
   {
@@ -73,7 +89,9 @@ class GeminiInstanceConfig extends \Google\Model
     return $this->entitled;
   }
   /**
-   * @param bool
+   * Output only. Whether the flag recommender is enabled.
+   *
+   * @param bool $flagRecommenderEnabled
    */
   public function setFlagRecommenderEnabled($flagRecommenderEnabled)
   {
@@ -87,7 +105,9 @@ class GeminiInstanceConfig extends \Google\Model
     return $this->flagRecommenderEnabled;
   }
   /**
-   * @param bool
+   * Output only. Whether the vacuum management is enabled.
+   *
+   * @param bool $googleVacuumMgmtEnabled
    */
   public function setGoogleVacuumMgmtEnabled($googleVacuumMgmtEnabled)
   {
@@ -101,7 +121,9 @@ class GeminiInstanceConfig extends \Google\Model
     return $this->googleVacuumMgmtEnabled;
   }
   /**
-   * @param bool
+   * Output only. Whether the index advisor is enabled.
+   *
+   * @param bool $indexAdvisorEnabled
    */
   public function setIndexAdvisorEnabled($indexAdvisorEnabled)
   {
@@ -115,7 +137,9 @@ class GeminiInstanceConfig extends \Google\Model
     return $this->indexAdvisorEnabled;
   }
   /**
-   * @param bool
+   * Output only. Whether canceling the out-of-memory (OOM) session is enabled.
+   *
+   * @param bool $oomSessionCancelEnabled
    */
   public function setOomSessionCancelEnabled($oomSessionCancelEnabled)
   {

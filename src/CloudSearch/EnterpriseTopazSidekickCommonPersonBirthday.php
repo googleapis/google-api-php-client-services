@@ -20,12 +20,16 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickCommonPersonBirthday extends \Google\Model
 {
   /**
+   * Unstructured birthday.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Unstructured birthday.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

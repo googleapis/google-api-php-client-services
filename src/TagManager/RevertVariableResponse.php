@@ -23,7 +23,11 @@ class RevertVariableResponse extends \Google\Model
   protected $variableDataType = '';
 
   /**
-   * @param Variable
+   * Variable as it appears in the latest container version since the last
+   * workspace synchronization operation. If no variable is present, that means
+   * the variable was deleted in the latest container version.
+   *
+   * @param Variable $variable
    */
   public function setVariable(Variable $variable)
   {

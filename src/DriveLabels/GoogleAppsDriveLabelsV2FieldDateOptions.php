@@ -20,10 +20,27 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2FieldDateOptions extends \Google\Model
 {
   /**
+   * Date format unspecified.
+   */
+  public const DATE_FORMAT_TYPE_DATE_FORMAT_UNSPECIFIED = 'DATE_FORMAT_UNSPECIFIED';
+  /**
+   * Includes full month name. For example, January 12, 1999 (MMMM d, y)
+   */
+  public const DATE_FORMAT_TYPE_LONG_DATE = 'LONG_DATE';
+  /**
+   * Short, numeric, representation. For example, 12/13/99 (M/d/yy)
+   */
+  public const DATE_FORMAT_TYPE_SHORT_DATE = 'SHORT_DATE';
+  /**
+   * Output only. ICU date format.
+   *
    * @var string
    */
   public $dateFormat;
   /**
+   * Localized date formatting option. Field values are rendered in this format
+   * according to their locale.
+   *
    * @var string
    */
   public $dateFormatType;
@@ -33,7 +50,9 @@ class GoogleAppsDriveLabelsV2FieldDateOptions extends \Google\Model
   protected $minValueDataType = '';
 
   /**
-   * @param string
+   * Output only. ICU date format.
+   *
+   * @param string $dateFormat
    */
   public function setDateFormat($dateFormat)
   {
@@ -47,21 +66,28 @@ class GoogleAppsDriveLabelsV2FieldDateOptions extends \Google\Model
     return $this->dateFormat;
   }
   /**
-   * @param string
+   * Localized date formatting option. Field values are rendered in this format
+   * according to their locale.
+   *
+   * Accepted values: DATE_FORMAT_UNSPECIFIED, LONG_DATE, SHORT_DATE
+   *
+   * @param self::DATE_FORMAT_TYPE_* $dateFormatType
    */
   public function setDateFormatType($dateFormatType)
   {
     $this->dateFormatType = $dateFormatType;
   }
   /**
-   * @return string
+   * @return self::DATE_FORMAT_TYPE_*
    */
   public function getDateFormatType()
   {
     return $this->dateFormatType;
   }
   /**
-   * @param GoogleTypeDate
+   * Output only. Maximum valid value (year, month, day).
+   *
+   * @param GoogleTypeDate $maxValue
    */
   public function setMaxValue(GoogleTypeDate $maxValue)
   {
@@ -75,7 +101,9 @@ class GoogleAppsDriveLabelsV2FieldDateOptions extends \Google\Model
     return $this->maxValue;
   }
   /**
-   * @param GoogleTypeDate
+   * Output only. Minimum valid value (year, month, day).
+   *
+   * @param GoogleTypeDate $minValue
    */
   public function setMinValue(GoogleTypeDate $minValue)
   {

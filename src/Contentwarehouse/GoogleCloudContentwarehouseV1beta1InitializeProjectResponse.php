@@ -20,16 +20,42 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1beta1InitializeProjectResponse extends \Google\Model
 {
   /**
+   * Clients should never see this.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Finished project initialization without error.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Finished project initialization with an error.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Client canceled the LRO.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Ask the customer to check the operation for results.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The message of the project initialization process.
+   *
    * @var string
    */
   public $message;
   /**
+   * The state of the project initialization process.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The message of the project initialization process.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -43,14 +69,18 @@ class GoogleCloudContentwarehouseV1beta1InitializeProjectResponse extends \Googl
     return $this->message;
   }
   /**
-   * @param string
+   * The state of the project initialization process.
+   *
+   * Accepted values: STATE_UNSPECIFIED, SUCCEEDED, FAILED, CANCELLED, RUNNING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

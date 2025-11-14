@@ -24,7 +24,9 @@ class AccountstatusesCustomBatchRequest extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param AccountstatusesCustomBatchRequestEntry[]
+   * The request entries to be processed in the batch.
+   *
+   * @param AccountstatusesCustomBatchRequestEntry[] $entries
    */
   public function setEntries($entries)
   {

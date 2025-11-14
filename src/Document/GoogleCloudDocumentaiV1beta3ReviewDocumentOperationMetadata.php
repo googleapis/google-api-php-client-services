@@ -19,31 +19,68 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends \Google\Model
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Operation is still running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * Operation is being cancelled.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * Operation succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Operation failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Operation is cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
   protected $commonMetadataType = GoogleCloudDocumentaiV1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
   /**
+   * The creation time of the operation.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The Crowd Compute question ID.
+   *
    * @var string
    */
   public $questionId;
   /**
+   * Used only when Operation.done is false.
+   *
    * @var string
    */
   public $state;
   /**
+   * A message providing more details about the current state of processing. For
+   * example, the error message if the operation is failed.
+   *
    * @var string
    */
   public $stateMessage;
   /**
+   * The last update time of the operation.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudDocumentaiV1beta3CommonOperationMetadata
+   * The basic metadata of the long-running operation.
+   *
+   * @param GoogleCloudDocumentaiV1beta3CommonOperationMetadata $commonMetadata
    */
   public function setCommonMetadata(GoogleCloudDocumentaiV1beta3CommonOperationMetadata $commonMetadata)
   {
@@ -57,7 +94,9 @@ class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends \Googl
     return $this->commonMetadata;
   }
   /**
-   * @param string
+   * The creation time of the operation.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +110,9 @@ class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends \Googl
     return $this->createTime;
   }
   /**
-   * @param string
+   * The Crowd Compute question ID.
+   *
+   * @param string $questionId
    */
   public function setQuestionId($questionId)
   {
@@ -85,21 +126,29 @@ class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends \Googl
     return $this->questionId;
   }
   /**
-   * @param string
+   * Used only when Operation.done is false.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, CANCELLING, SUCCEEDED, FAILED,
+   * CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * A message providing more details about the current state of processing. For
+   * example, the error message if the operation is failed.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {
@@ -113,7 +162,9 @@ class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends \Googl
     return $this->stateMessage;
   }
   /**
-   * @param string
+   * The last update time of the operation.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

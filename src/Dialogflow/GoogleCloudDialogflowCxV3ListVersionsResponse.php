@@ -21,6 +21,9 @@ class GoogleCloudDialogflowCxV3ListVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'versions';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudDialogflowCxV3ListVersionsResponse extends \Google\Collection
   protected $versionsDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,11 @@ class GoogleCloudDialogflowCxV3ListVersionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Version[]
+   * A list of versions. There will be a maximum number of items returned based
+   * on the page_size field in the request. The list may in some cases be empty
+   * or contain fewer entries than page_size even if this isn't the last page.
+   *
+   * @param GoogleCloudDialogflowCxV3Version[] $versions
    */
   public function setVersions($versions)
   {

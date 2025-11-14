@@ -20,26 +20,49 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1QaQuestionAnswerChoice extends \Google\Model
 {
   /**
+   * Boolean value.
+   *
    * @var bool
    */
   public $boolValue;
   /**
+   * A short string used as an identifier.
+   *
    * @var string
    */
   public $key;
   /**
+   * A value of "Not Applicable (N/A)". If provided, this field may only be set
+   * to `true`. If a question receives this answer, it will be excluded from any
+   * score calculations.
+   *
    * @var bool
    */
   public $naValue;
+  /**
+   * Numerical value.
+   *
+   * @var 
+   */
   public $numValue;
+  /**
+   * Numerical score of the answer, used for generating the overall score of a
+   * QaScorecardResult. If the answer uses na_value, this field is unused.
+   *
+   * @var 
+   */
   public $score;
   /**
+   * String value.
+   *
    * @var string
    */
   public $strValue;
 
   /**
-   * @param bool
+   * Boolean value.
+   *
+   * @param bool $boolValue
    */
   public function setBoolValue($boolValue)
   {
@@ -53,7 +76,9 @@ class GoogleCloudContactcenterinsightsV1QaQuestionAnswerChoice extends \Google\M
     return $this->boolValue;
   }
   /**
-   * @param string
+   * A short string used as an identifier.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -67,7 +92,11 @@ class GoogleCloudContactcenterinsightsV1QaQuestionAnswerChoice extends \Google\M
     return $this->key;
   }
   /**
-   * @param bool
+   * A value of "Not Applicable (N/A)". If provided, this field may only be set
+   * to `true`. If a question receives this answer, it will be excluded from any
+   * score calculations.
+   *
+   * @param bool $naValue
    */
   public function setNaValue($naValue)
   {
@@ -97,7 +126,9 @@ class GoogleCloudContactcenterinsightsV1QaQuestionAnswerChoice extends \Google\M
     return $this->score;
   }
   /**
-   * @param string
+   * String value.
+   *
+   * @param string $strValue
    */
   public function setStrValue($strValue)
   {

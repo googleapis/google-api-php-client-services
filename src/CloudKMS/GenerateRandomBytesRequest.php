@@ -20,16 +20,45 @@ namespace Google\Service\CloudKMS;
 class GenerateRandomBytesRequest extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const PROTECTION_LEVEL_PROTECTION_LEVEL_UNSPECIFIED = 'PROTECTION_LEVEL_UNSPECIFIED';
+  /**
+   * Crypto operations are performed in software.
+   */
+  public const PROTECTION_LEVEL_SOFTWARE = 'SOFTWARE';
+  /**
+   * Crypto operations are performed in a Hardware Security Module.
+   */
+  public const PROTECTION_LEVEL_HSM = 'HSM';
+  /**
+   * Crypto operations are performed by an external key manager.
+   */
+  public const PROTECTION_LEVEL_EXTERNAL = 'EXTERNAL';
+  /**
+   * Crypto operations are performed in an EKM-over-VPC backend.
+   */
+  public const PROTECTION_LEVEL_EXTERNAL_VPC = 'EXTERNAL_VPC';
+  /**
+   * The length in bytes of the amount of randomness to retrieve. Minimum 8
+   * bytes, maximum 1024 bytes.
+   *
    * @var int
    */
   public $lengthBytes;
   /**
+   * The ProtectionLevel to use when generating the random data. Currently, only
+   * HSM protection level is supported.
+   *
    * @var string
    */
   public $protectionLevel;
 
   /**
-   * @param int
+   * The length in bytes of the amount of randomness to retrieve. Minimum 8
+   * bytes, maximum 1024 bytes.
+   *
+   * @param int $lengthBytes
    */
   public function setLengthBytes($lengthBytes)
   {
@@ -43,14 +72,20 @@ class GenerateRandomBytesRequest extends \Google\Model
     return $this->lengthBytes;
   }
   /**
-   * @param string
+   * The ProtectionLevel to use when generating the random data. Currently, only
+   * HSM protection level is supported.
+   *
+   * Accepted values: PROTECTION_LEVEL_UNSPECIFIED, SOFTWARE, HSM, EXTERNAL,
+   * EXTERNAL_VPC
+   *
+   * @param self::PROTECTION_LEVEL_* $protectionLevel
    */
   public function setProtectionLevel($protectionLevel)
   {
     $this->protectionLevel = $protectionLevel;
   }
   /**
-   * @return string
+   * @return self::PROTECTION_LEVEL_*
    */
   public function getProtectionLevel()
   {

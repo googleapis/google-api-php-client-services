@@ -23,12 +23,17 @@ class QueryRepositoryDirectoryContentsResponse extends \Google\Collection
   protected $directoryEntriesType = DirectoryEntry::class;
   protected $directoryEntriesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DirectoryEntry[]
+   * List of entries in the directory.
+   *
+   * @param DirectoryEntry[] $directoryEntries
    */
   public function setDirectoryEntries($directoryEntries)
   {
@@ -42,7 +47,10 @@ class QueryRepositoryDirectoryContentsResponse extends \Google\Collection
     return $this->directoryEntries;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

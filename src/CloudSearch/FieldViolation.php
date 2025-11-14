@@ -20,16 +20,22 @@ namespace Google\Service\CloudSearch;
 class FieldViolation extends \Google\Model
 {
   /**
+   * The description of the error.
+   *
    * @var string
    */
   public $description;
   /**
+   * Path of field with violation.
+   *
    * @var string
    */
   public $field;
 
   /**
-   * @param string
+   * The description of the error.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +49,9 @@ class FieldViolation extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Path of field with violation.
+   *
+   * @param string $field
    */
   public function setField($field)
   {

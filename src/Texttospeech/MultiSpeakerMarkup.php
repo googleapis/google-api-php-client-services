@@ -24,7 +24,9 @@ class MultiSpeakerMarkup extends \Google\Collection
   protected $turnsDataType = 'array';
 
   /**
-   * @param Turn[]
+   * Required. Speaker turns.
+   *
+   * @param Turn[] $turns
    */
   public function setTurns($turns)
   {

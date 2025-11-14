@@ -20,20 +20,44 @@ namespace Google\Service\CloudDeploy;
 class Retry extends \Google\Model
 {
   /**
+   * No WaitMode is specified.
+   */
+  public const BACKOFF_MODE_BACKOFF_MODE_UNSPECIFIED = 'BACKOFF_MODE_UNSPECIFIED';
+  /**
+   * Increases the wait time linearly.
+   */
+  public const BACKOFF_MODE_BACKOFF_MODE_LINEAR = 'BACKOFF_MODE_LINEAR';
+  /**
+   * Increases the wait time exponentially.
+   */
+  public const BACKOFF_MODE_BACKOFF_MODE_EXPONENTIAL = 'BACKOFF_MODE_EXPONENTIAL';
+  /**
+   * Required. Total number of retries. Retry is skipped if set to 0; The
+   * minimum value is 1, and the maximum value is 10.
+   *
    * @var string
    */
   public $attempts;
   /**
+   * Optional. The pattern of how wait time will be increased. Default is
+   * linear. Backoff mode will be ignored if `wait` is 0.
+   *
    * @var string
    */
   public $backoffMode;
   /**
+   * Optional. How long to wait for the first retry. Default is 0, and the
+   * maximum value is 14d.
+   *
    * @var string
    */
   public $wait;
 
   /**
-   * @param string
+   * Required. Total number of retries. Retry is skipped if set to 0; The
+   * minimum value is 1, and the maximum value is 10.
+   *
+   * @param string $attempts
    */
   public function setAttempts($attempts)
   {
@@ -47,21 +71,30 @@ class Retry extends \Google\Model
     return $this->attempts;
   }
   /**
-   * @param string
+   * Optional. The pattern of how wait time will be increased. Default is
+   * linear. Backoff mode will be ignored if `wait` is 0.
+   *
+   * Accepted values: BACKOFF_MODE_UNSPECIFIED, BACKOFF_MODE_LINEAR,
+   * BACKOFF_MODE_EXPONENTIAL
+   *
+   * @param self::BACKOFF_MODE_* $backoffMode
    */
   public function setBackoffMode($backoffMode)
   {
     $this->backoffMode = $backoffMode;
   }
   /**
-   * @return string
+   * @return self::BACKOFF_MODE_*
    */
   public function getBackoffMode()
   {
     return $this->backoffMode;
   }
   /**
-   * @param string
+   * Optional. How long to wait for the first retry. Default is 0, and the
+   * maximum value is 14d.
+   *
+   * @param string $wait
    */
   public function setWait($wait)
   {

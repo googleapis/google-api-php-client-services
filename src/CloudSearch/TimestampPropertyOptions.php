@@ -23,7 +23,9 @@ class TimestampPropertyOptions extends \Google\Model
   protected $operatorOptionsDataType = '';
 
   /**
-   * @param TimestampOperatorOptions
+   * If set, describes how the timestamp should be used as a search operator.
+   *
+   * @param TimestampOperatorOptions $operatorOptions
    */
   public function setOperatorOptions(TimestampOperatorOptions $operatorOptions)
   {

@@ -20,34 +20,57 @@ namespace Google\Service\Bigquery;
 class IncrementalResultStats extends \Google\Model
 {
   /**
+   * Disabled reason not specified.
+   */
+  public const DISABLED_REASON_DISABLED_REASON_UNSPECIFIED = 'DISABLED_REASON_UNSPECIFIED';
+  /**
+   * Some other reason.
+   */
+  public const DISABLED_REASON_OTHER = 'OTHER';
+  /**
+   * Reason why incremental query results are/were not written by the query.
+   *
    * @var string
    */
   public $disabledReason;
   /**
+   * The time at which the result table's contents were modified. May be absent
+   * if no results have been written or the query has completed.
+   *
    * @var string
    */
   public $resultSetLastModifyTime;
   /**
+   * The time at which the result table's contents were completely replaced. May
+   * be absent if no results have been written or the query has completed.
+   *
    * @var string
    */
   public $resultSetLastReplaceTime;
 
   /**
-   * @param string
+   * Reason why incremental query results are/were not written by the query.
+   *
+   * Accepted values: DISABLED_REASON_UNSPECIFIED, OTHER
+   *
+   * @param self::DISABLED_REASON_* $disabledReason
    */
   public function setDisabledReason($disabledReason)
   {
     $this->disabledReason = $disabledReason;
   }
   /**
-   * @return string
+   * @return self::DISABLED_REASON_*
    */
   public function getDisabledReason()
   {
     return $this->disabledReason;
   }
   /**
-   * @param string
+   * The time at which the result table's contents were modified. May be absent
+   * if no results have been written or the query has completed.
+   *
+   * @param string $resultSetLastModifyTime
    */
   public function setResultSetLastModifyTime($resultSetLastModifyTime)
   {
@@ -61,7 +84,10 @@ class IncrementalResultStats extends \Google\Model
     return $this->resultSetLastModifyTime;
   }
   /**
-   * @param string
+   * The time at which the result table's contents were completely replaced. May
+   * be absent if no results have been written or the query has completed.
+   *
+   * @param string $resultSetLastReplaceTime
    */
   public function setResultSetLastReplaceTime($resultSetLastReplaceTime)
   {

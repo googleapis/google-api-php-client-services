@@ -19,53 +19,104 @@ namespace Google\Service\Sasportal;
 
 class SasPortalDeviceGrant extends \Google\Collection
 {
+  public const CHANNEL_TYPE_CHANNEL_TYPE_UNSPECIFIED = 'CHANNEL_TYPE_UNSPECIFIED';
+  public const CHANNEL_TYPE_CHANNEL_TYPE_GAA = 'CHANNEL_TYPE_GAA';
+  public const CHANNEL_TYPE_CHANNEL_TYPE_PAL = 'CHANNEL_TYPE_PAL';
+  public const STATE_GRANT_STATE_UNSPECIFIED = 'GRANT_STATE_UNSPECIFIED';
+  /**
+   * The grant has been granted but the device is not heartbeating on it.
+   */
+  public const STATE_GRANT_STATE_GRANTED = 'GRANT_STATE_GRANTED';
+  /**
+   * The grant has been terminated by the SAS.
+   */
+  public const STATE_GRANT_STATE_TERMINATED = 'GRANT_STATE_TERMINATED';
+  /**
+   * The grant has been suspended by the SAS.
+   */
+  public const STATE_GRANT_STATE_SUSPENDED = 'GRANT_STATE_SUSPENDED';
+  /**
+   * The device is currently transmitting.
+   */
+  public const STATE_GRANT_STATE_AUTHORIZED = 'GRANT_STATE_AUTHORIZED';
+  /**
+   * The grant has expired.
+   */
+  public const STATE_GRANT_STATE_EXPIRED = 'GRANT_STATE_EXPIRED';
   protected $collection_key = 'suspensionReason';
   /**
+   * Type of channel used.
+   *
    * @var string
    */
   public $channelType;
   /**
+   * The expiration time of the grant.
+   *
    * @var string
    */
   public $expireTime;
   protected $frequencyRangeType = SasPortalFrequencyRange::class;
   protected $frequencyRangeDataType = '';
   /**
+   * Grant Id.
+   *
    * @var string
    */
   public $grantId;
   /**
+   * The transmit expiration time of the last heartbeat.
+   *
    * @var string
    */
   public $lastHeartbeatTransmitExpireTime;
+  /**
+   * Maximum Equivalent Isotropically Radiated Power (EIRP) permitted by the
+   * grant. The maximum EIRP is in units of dBm/MHz. The value of `maxEirp`
+   * represents the average (RMS) EIRP that would be measured by the procedure
+   * defined in FCC part 96.41(e)(3).
+   *
+   * @var 
+   */
   public $maxEirp;
   protected $moveListType = SasPortalDpaMoveList::class;
   protected $moveListDataType = 'array';
   /**
+   * State of the grant.
+   *
    * @var string
    */
   public $state;
   /**
+   * If the grant is suspended, the reason(s) for suspension.
+   *
    * @var string[]
    */
   public $suspensionReason;
 
   /**
-   * @param string
+   * Type of channel used.
+   *
+   * Accepted values: CHANNEL_TYPE_UNSPECIFIED, CHANNEL_TYPE_GAA,
+   * CHANNEL_TYPE_PAL
+   *
+   * @param self::CHANNEL_TYPE_* $channelType
    */
   public function setChannelType($channelType)
   {
     $this->channelType = $channelType;
   }
   /**
-   * @return string
+   * @return self::CHANNEL_TYPE_*
    */
   public function getChannelType()
   {
     return $this->channelType;
   }
   /**
-   * @param string
+   * The expiration time of the grant.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -79,7 +130,9 @@ class SasPortalDeviceGrant extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param SasPortalFrequencyRange
+   * The transmission frequency range.
+   *
+   * @param SasPortalFrequencyRange $frequencyRange
    */
   public function setFrequencyRange(SasPortalFrequencyRange $frequencyRange)
   {
@@ -93,7 +146,9 @@ class SasPortalDeviceGrant extends \Google\Collection
     return $this->frequencyRange;
   }
   /**
-   * @param string
+   * Grant Id.
+   *
+   * @param string $grantId
    */
   public function setGrantId($grantId)
   {
@@ -107,7 +162,9 @@ class SasPortalDeviceGrant extends \Google\Collection
     return $this->grantId;
   }
   /**
-   * @param string
+   * The transmit expiration time of the last heartbeat.
+   *
+   * @param string $lastHeartbeatTransmitExpireTime
    */
   public function setLastHeartbeatTransmitExpireTime($lastHeartbeatTransmitExpireTime)
   {
@@ -129,7 +186,9 @@ class SasPortalDeviceGrant extends \Google\Collection
     return $this->maxEirp;
   }
   /**
-   * @param SasPortalDpaMoveList[]
+   * The DPA move lists on which this grant appears.
+   *
+   * @param SasPortalDpaMoveList[] $moveList
    */
   public function setMoveList($moveList)
   {
@@ -143,21 +202,29 @@ class SasPortalDeviceGrant extends \Google\Collection
     return $this->moveList;
   }
   /**
-   * @param string
+   * State of the grant.
+   *
+   * Accepted values: GRANT_STATE_UNSPECIFIED, GRANT_STATE_GRANTED,
+   * GRANT_STATE_TERMINATED, GRANT_STATE_SUSPENDED, GRANT_STATE_AUTHORIZED,
+   * GRANT_STATE_EXPIRED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string[]
+   * If the grant is suspended, the reason(s) for suspension.
+   *
+   * @param string[] $suspensionReason
    */
   public function setSuspensionReason($suspensionReason)
   {

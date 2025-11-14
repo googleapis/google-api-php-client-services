@@ -21,42 +21,76 @@ class DataSource extends \Google\Collection
 {
   protected $collection_key = 'operationIds';
   /**
+   * If true, sets the datasource to read-only mode. In read-only mode, the
+   * Indexing API rejects any requests to index or delete items in this source.
+   * Enabling read-only mode does not stop the processing of previously accepted
+   * data.
+   *
    * @var bool
    */
   public $disableModifications;
   /**
+   * Disable serving any search or assist results.
+   *
    * @var bool
    */
   public $disableServing;
   /**
+   * Required. Display name of the datasource The maximum length is 300
+   * characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * List of service accounts that have indexing access.
+   *
    * @var string[]
    */
   public $indexingServiceAccounts;
   protected $itemsVisibilityType = GSuitePrincipal::class;
   protected $itemsVisibilityDataType = 'array';
   /**
+   * The name of the datasource resource. Format: datasources/{source_id}. The
+   * name is ignored when creating a datasource.
+   *
    * @var string
    */
   public $name;
   /**
+   * IDs of the Long Running Operations (LROs) currently running for this
+   * schema.
+   *
    * @var string[]
    */
   public $operationIds;
   /**
+   * Can a user request to get thumbnail URI for Items indexed in this data
+   * source.
+   *
    * @var bool
    */
   public $returnThumbnailUrls;
   /**
+   * A short name or alias for the source. This value will be used to match the
+   * 'source' operator. For example, if the short name is ** then queries like
+   * *source:* will only return results for this source. The value must be
+   * unique across all datasources. The value must only contain alphanumeric
+   * characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
+   * one of the following: mail, gmail, docs, drive, groups, sites, calendar,
+   * hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+   *
    * @var string
    */
   public $shortName;
 
   /**
-   * @param bool
+   * If true, sets the datasource to read-only mode. In read-only mode, the
+   * Indexing API rejects any requests to index or delete items in this source.
+   * Enabling read-only mode does not stop the processing of previously accepted
+   * data.
+   *
+   * @param bool $disableModifications
    */
   public function setDisableModifications($disableModifications)
   {
@@ -70,7 +104,9 @@ class DataSource extends \Google\Collection
     return $this->disableModifications;
   }
   /**
-   * @param bool
+   * Disable serving any search or assist results.
+   *
+   * @param bool $disableServing
    */
   public function setDisableServing($disableServing)
   {
@@ -84,7 +120,10 @@ class DataSource extends \Google\Collection
     return $this->disableServing;
   }
   /**
-   * @param string
+   * Required. Display name of the datasource The maximum length is 300
+   * characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -98,7 +137,9 @@ class DataSource extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * List of service accounts that have indexing access.
+   *
+   * @param string[] $indexingServiceAccounts
    */
   public function setIndexingServiceAccounts($indexingServiceAccounts)
   {
@@ -112,7 +153,14 @@ class DataSource extends \Google\Collection
     return $this->indexingServiceAccounts;
   }
   /**
-   * @param GSuitePrincipal[]
+   * This field restricts visibility to items at the datasource level. Items
+   * within the datasource are restricted to the union of users and groups
+   * included in this field. Note that, this does not ensure access to a
+   * specific item, as users need to have ACL permissions on the contained
+   * items. This ensures a high level access on the entire datasource, and that
+   * the individual items are not shared outside this visibility.
+   *
+   * @param GSuitePrincipal[] $itemsVisibility
    */
   public function setItemsVisibility($itemsVisibility)
   {
@@ -126,7 +174,10 @@ class DataSource extends \Google\Collection
     return $this->itemsVisibility;
   }
   /**
-   * @param string
+   * The name of the datasource resource. Format: datasources/{source_id}. The
+   * name is ignored when creating a datasource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -140,7 +191,10 @@ class DataSource extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * IDs of the Long Running Operations (LROs) currently running for this
+   * schema.
+   *
+   * @param string[] $operationIds
    */
   public function setOperationIds($operationIds)
   {
@@ -154,7 +208,10 @@ class DataSource extends \Google\Collection
     return $this->operationIds;
   }
   /**
-   * @param bool
+   * Can a user request to get thumbnail URI for Items indexed in this data
+   * source.
+   *
+   * @param bool $returnThumbnailUrls
    */
   public function setReturnThumbnailUrls($returnThumbnailUrls)
   {
@@ -168,7 +225,15 @@ class DataSource extends \Google\Collection
     return $this->returnThumbnailUrls;
   }
   /**
-   * @param string
+   * A short name or alias for the source. This value will be used to match the
+   * 'source' operator. For example, if the short name is ** then queries like
+   * *source:* will only return results for this source. The value must be
+   * unique across all datasources. The value must only contain alphanumeric
+   * characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
+   * one of the following: mail, gmail, docs, drive, groups, sites, calendar,
+   * hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+   *
+   * @param string $shortName
    */
   public function setShortName($shortName)
   {

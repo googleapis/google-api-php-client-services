@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class DefaultComputeClassConfig extends \Google\Model
 {
   /**
+   * Enables default compute class.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Enables default compute class.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

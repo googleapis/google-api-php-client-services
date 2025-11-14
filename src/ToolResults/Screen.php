@@ -20,24 +20,34 @@ namespace Google\Service\ToolResults;
 class Screen extends \Google\Model
 {
   /**
+   * File reference of the png file. Required.
+   *
    * @var string
    */
   public $fileReference;
   /**
+   * Locale of the device that the screenshot was taken on. Required.
+   *
    * @var string
    */
   public $locale;
   /**
+   * Model of the device that the screenshot was taken on. Required.
+   *
    * @var string
    */
   public $model;
   /**
+   * OS version of the device that the screenshot was taken on. Required.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * File reference of the png file. Required.
+   *
+   * @param string $fileReference
    */
   public function setFileReference($fileReference)
   {
@@ -51,7 +61,9 @@ class Screen extends \Google\Model
     return $this->fileReference;
   }
   /**
-   * @param string
+   * Locale of the device that the screenshot was taken on. Required.
+   *
+   * @param string $locale
    */
   public function setLocale($locale)
   {
@@ -65,7 +77,9 @@ class Screen extends \Google\Model
     return $this->locale;
   }
   /**
-   * @param string
+   * Model of the device that the screenshot was taken on. Required.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -79,7 +93,9 @@ class Screen extends \Google\Model
     return $this->model;
   }
   /**
-   * @param string
+   * OS version of the device that the screenshot was taken on. Required.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

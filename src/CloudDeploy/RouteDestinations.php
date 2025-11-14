@@ -21,16 +21,30 @@ class RouteDestinations extends \Google\Collection
 {
   protected $collection_key = 'destinationIds';
   /**
+   * Required. The clusters where the Gateway API HTTPRoute resource will be
+   * deployed to. Valid entries include the associated entities IDs configured
+   * in the Target resource and "@self" to include the Target cluster.
+   *
    * @var string[]
    */
   public $destinationIds;
   /**
+   * Optional. Whether to propagate the Kubernetes Service to the route
+   * destination clusters. The Service will always be deployed to the Target
+   * cluster even if the HTTPRoute is not. This option may be used to facilitate
+   * successful DNS lookup in the route destination clusters. Can only be set to
+   * true if destinations are specified.
+   *
    * @var bool
    */
   public $propagateService;
 
   /**
-   * @param string[]
+   * Required. The clusters where the Gateway API HTTPRoute resource will be
+   * deployed to. Valid entries include the associated entities IDs configured
+   * in the Target resource and "@self" to include the Target cluster.
+   *
+   * @param string[] $destinationIds
    */
   public function setDestinationIds($destinationIds)
   {
@@ -44,7 +58,13 @@ class RouteDestinations extends \Google\Collection
     return $this->destinationIds;
   }
   /**
-   * @param bool
+   * Optional. Whether to propagate the Kubernetes Service to the route
+   * destination clusters. The Service will always be deployed to the Target
+   * cluster even if the HTTPRoute is not. This option may be used to facilitate
+   * successful DNS lookup in the route destination clusters. Can only be set to
+   * true if destinations are specified.
+   *
+   * @param bool $propagateService
    */
   public function setPropagateService($propagateService)
   {

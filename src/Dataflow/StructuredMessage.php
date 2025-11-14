@@ -21,10 +21,15 @@ class StructuredMessage extends \Google\Collection
 {
   protected $collection_key = 'parameters';
   /**
+   * Identifier for this message type. Used by external systems to
+   * internationalize or personalize message.
+   *
    * @var string
    */
   public $messageKey;
   /**
+   * Human-readable version of message.
+   *
    * @var string
    */
   public $messageText;
@@ -32,7 +37,10 @@ class StructuredMessage extends \Google\Collection
   protected $parametersDataType = 'array';
 
   /**
-   * @param string
+   * Identifier for this message type. Used by external systems to
+   * internationalize or personalize message.
+   *
+   * @param string $messageKey
    */
   public function setMessageKey($messageKey)
   {
@@ -46,7 +54,9 @@ class StructuredMessage extends \Google\Collection
     return $this->messageKey;
   }
   /**
-   * @param string
+   * Human-readable version of message.
+   *
+   * @param string $messageText
    */
   public function setMessageText($messageText)
   {
@@ -60,7 +70,9 @@ class StructuredMessage extends \Google\Collection
     return $this->messageText;
   }
   /**
-   * @param Parameter[]
+   * The structured data associated with this message.
+   *
+   * @param Parameter[] $parameters
    */
   public function setParameters($parameters)
   {

@@ -20,34 +20,59 @@ namespace Google\Service\BigLakeService;
 class Database extends \Google\Model
 {
   /**
+   * The type is not specified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Represents a database storing tables compatible with Hive Metastore tables.
+   */
+  public const TYPE_HIVE = 'HIVE';
+  /**
+   * Output only. The creation time of the database.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The deletion time of the database. Only set after the database
+   * is deleted.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * Output only. The time when this database is considered expired. Only set
+   * after the database is deleted.
+   *
    * @var string
    */
   public $expireTime;
   protected $hiveOptionsType = HiveDatabaseOptions::class;
   protected $hiveOptionsDataType = '';
   /**
+   * Output only. The resource name. Format: projects/{project_id_or_number}/loc
+   * ations/{location_id}/catalogs/{catalog_id}/databases/{database_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * The database type.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. The last modification time of the database.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The creation time of the database.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -61,7 +86,10 @@ class Database extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The deletion time of the database. Only set after the database
+   * is deleted.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -75,7 +103,10 @@ class Database extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * Output only. The time when this database is considered expired. Only set
+   * after the database is deleted.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -89,7 +120,9 @@ class Database extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param HiveDatabaseOptions
+   * Options of a Hive database.
+   *
+   * @param HiveDatabaseOptions $hiveOptions
    */
   public function setHiveOptions(HiveDatabaseOptions $hiveOptions)
   {
@@ -103,7 +136,10 @@ class Database extends \Google\Model
     return $this->hiveOptions;
   }
   /**
-   * @param string
+   * Output only. The resource name. Format: projects/{project_id_or_number}/loc
+   * ations/{location_id}/catalogs/{catalog_id}/databases/{database_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -117,21 +153,27 @@ class Database extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The database type.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, HIVE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. The last modification time of the database.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

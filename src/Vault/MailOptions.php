@@ -20,30 +20,61 @@ namespace Google\Service\Vault;
 class MailOptions extends \Google\Model
 {
   /**
+   * Encryption status unspecified. Results include both client-side encrypted
+   * and non-encrypted content.
+   */
+  public const CLIENT_SIDE_ENCRYPTED_OPTION_CLIENT_SIDE_ENCRYPTED_OPTION_UNSPECIFIED = 'CLIENT_SIDE_ENCRYPTED_OPTION_UNSPECIFIED';
+  /**
+   * Include both client-side encrypted and unencrypted content in results.
+   */
+  public const CLIENT_SIDE_ENCRYPTED_OPTION_CLIENT_SIDE_ENCRYPTED_OPTION_ANY = 'CLIENT_SIDE_ENCRYPTED_OPTION_ANY';
+  /**
+   * Include client-side encrypted content only.
+   */
+  public const CLIENT_SIDE_ENCRYPTED_OPTION_CLIENT_SIDE_ENCRYPTED_OPTION_ENCRYPTED = 'CLIENT_SIDE_ENCRYPTED_OPTION_ENCRYPTED';
+  /**
+   * Include unencrypted content only.
+   */
+  public const CLIENT_SIDE_ENCRYPTED_OPTION_CLIENT_SIDE_ENCRYPTED_OPTION_UNENCRYPTED = 'CLIENT_SIDE_ENCRYPTED_OPTION_UNENCRYPTED';
+  /**
+   * Specifies whether the results should include encrypted content, unencrypted
+   * content, or both. Defaults to including both.
+   *
    * @var string
    */
   public $clientSideEncryptedOption;
   /**
+   * Set to **true** to exclude drafts.
+   *
    * @var bool
    */
   public $excludeDrafts;
 
   /**
-   * @param string
+   * Specifies whether the results should include encrypted content, unencrypted
+   * content, or both. Defaults to including both.
+   *
+   * Accepted values: CLIENT_SIDE_ENCRYPTED_OPTION_UNSPECIFIED,
+   * CLIENT_SIDE_ENCRYPTED_OPTION_ANY, CLIENT_SIDE_ENCRYPTED_OPTION_ENCRYPTED,
+   * CLIENT_SIDE_ENCRYPTED_OPTION_UNENCRYPTED
+   *
+   * @param self::CLIENT_SIDE_ENCRYPTED_OPTION_* $clientSideEncryptedOption
    */
   public function setClientSideEncryptedOption($clientSideEncryptedOption)
   {
     $this->clientSideEncryptedOption = $clientSideEncryptedOption;
   }
   /**
-   * @return string
+   * @return self::CLIENT_SIDE_ENCRYPTED_OPTION_*
    */
   public function getClientSideEncryptedOption()
   {
     return $this->clientSideEncryptedOption;
   }
   /**
-   * @param bool
+   * Set to **true** to exclude drafts.
+   *
+   * @param bool $excludeDrafts
    */
   public function setExcludeDrafts($excludeDrafts)
   {

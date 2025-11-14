@@ -20,24 +20,35 @@ namespace Google\Service\Dataflow;
 class StageSource extends \Google\Model
 {
   /**
+   * Dataflow service generated name for this source.
+   *
    * @var string
    */
   public $name;
   /**
+   * User name for the original user transform or collection with which this
+   * source is most closely associated.
+   *
    * @var string
    */
   public $originalTransformOrCollection;
   /**
+   * Size of the source, if measurable.
+   *
    * @var string
    */
   public $sizeBytes;
   /**
+   * Human-readable name for this source; may be user or system generated.
+   *
    * @var string
    */
   public $userName;
 
   /**
-   * @param string
+   * Dataflow service generated name for this source.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -51,7 +62,10 @@ class StageSource extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * User name for the original user transform or collection with which this
+   * source is most closely associated.
+   *
+   * @param string $originalTransformOrCollection
    */
   public function setOriginalTransformOrCollection($originalTransformOrCollection)
   {
@@ -65,7 +79,9 @@ class StageSource extends \Google\Model
     return $this->originalTransformOrCollection;
   }
   /**
-   * @param string
+   * Size of the source, if measurable.
+   *
+   * @param string $sizeBytes
    */
   public function setSizeBytes($sizeBytes)
   {
@@ -79,7 +95,9 @@ class StageSource extends \Google\Model
     return $this->sizeBytes;
   }
   /**
-   * @param string
+   * Human-readable name for this source; may be user or system generated.
+   *
+   * @param string $userName
    */
   public function setUserName($userName)
   {

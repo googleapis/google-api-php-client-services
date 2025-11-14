@@ -21,28 +21,46 @@ class PrivateConfig extends \Google\Collection
 {
   protected $collection_key = 'pscAllowedProjects';
   /**
+   * Optional. Immutable. CA pool resource, resource must in the format of
+   * `projects/{project}/locations/{location}/caPools/{ca_pool}`.
+   *
    * @var string
    */
   public $caPool;
   /**
+   * Output only. Service Attachment for HTTP, resource is in the format of `pro
+   * jects/{project}/regions/{region}/serviceAttachments/{service_attachment}`.
+   *
    * @var string
    */
   public $httpServiceAttachment;
   /**
+   * Required. Immutable. Indicate if it's private instance.
+   *
    * @var bool
    */
   public $isPrivate;
   /**
+   * Optional. Additional allowed projects for setting up PSC connections.
+   * Instance host project is automatically allowed and does not need to be
+   * included in this list.
+   *
    * @var string[]
    */
   public $pscAllowedProjects;
   /**
+   * Output only. Service Attachment for SSH, resource is in the format of `proj
+   * ects/{project}/regions/{region}/serviceAttachments/{service_attachment}`.
+   *
    * @var string
    */
   public $sshServiceAttachment;
 
   /**
-   * @param string
+   * Optional. Immutable. CA pool resource, resource must in the format of
+   * `projects/{project}/locations/{location}/caPools/{ca_pool}`.
+   *
+   * @param string $caPool
    */
   public function setCaPool($caPool)
   {
@@ -56,7 +74,10 @@ class PrivateConfig extends \Google\Collection
     return $this->caPool;
   }
   /**
-   * @param string
+   * Output only. Service Attachment for HTTP, resource is in the format of `pro
+   * jects/{project}/regions/{region}/serviceAttachments/{service_attachment}`.
+   *
+   * @param string $httpServiceAttachment
    */
   public function setHttpServiceAttachment($httpServiceAttachment)
   {
@@ -70,7 +91,9 @@ class PrivateConfig extends \Google\Collection
     return $this->httpServiceAttachment;
   }
   /**
-   * @param bool
+   * Required. Immutable. Indicate if it's private instance.
+   *
+   * @param bool $isPrivate
    */
   public function setIsPrivate($isPrivate)
   {
@@ -84,7 +107,11 @@ class PrivateConfig extends \Google\Collection
     return $this->isPrivate;
   }
   /**
-   * @param string[]
+   * Optional. Additional allowed projects for setting up PSC connections.
+   * Instance host project is automatically allowed and does not need to be
+   * included in this list.
+   *
+   * @param string[] $pscAllowedProjects
    */
   public function setPscAllowedProjects($pscAllowedProjects)
   {
@@ -98,7 +125,10 @@ class PrivateConfig extends \Google\Collection
     return $this->pscAllowedProjects;
   }
   /**
-   * @param string
+   * Output only. Service Attachment for SSH, resource is in the format of `proj
+   * ects/{project}/regions/{region}/serviceAttachments/{service_attachment}`.
+   *
+   * @param string $sshServiceAttachment
    */
   public function setSshServiceAttachment($sshServiceAttachment)
   {

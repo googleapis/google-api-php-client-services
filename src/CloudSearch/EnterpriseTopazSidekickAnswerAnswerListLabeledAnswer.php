@@ -20,16 +20,22 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickAnswerAnswerListLabeledAnswer extends \Google\Model
 {
   /**
+   * The free text answer.
+   *
    * @var string
    */
   public $answer;
   /**
+   * A localized label for the answer (e.g. "Cell phone" vs "Desk phone").
+   *
    * @var string
    */
   public $label;
 
   /**
-   * @param string
+   * The free text answer.
+   *
+   * @param string $answer
    */
   public function setAnswer($answer)
   {
@@ -43,7 +49,9 @@ class EnterpriseTopazSidekickAnswerAnswerListLabeledAnswer extends \Google\Model
     return $this->answer;
   }
   /**
-   * @param string
+   * A localized label for the answer (e.g. "Cell phone" vs "Desk phone").
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {

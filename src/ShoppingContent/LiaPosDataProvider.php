@@ -20,16 +20,22 @@ namespace Google\Service\ShoppingContent;
 class LiaPosDataProvider extends \Google\Model
 {
   /**
+   * The ID of the POS data provider.
+   *
    * @var string
    */
   public $posDataProviderId;
   /**
+   * The account ID by which this merchant is known to the POS data provider.
+   *
    * @var string
    */
   public $posExternalAccountId;
 
   /**
-   * @param string
+   * The ID of the POS data provider.
+   *
+   * @param string $posDataProviderId
    */
   public function setPosDataProviderId($posDataProviderId)
   {
@@ -43,7 +49,9 @@ class LiaPosDataProvider extends \Google\Model
     return $this->posDataProviderId;
   }
   /**
-   * @param string
+   * The account ID by which this merchant is known to the POS data provider.
+   *
+   * @param string $posExternalAccountId
    */
   public function setPosExternalAccountId($posExternalAccountId)
   {

@@ -20,35 +20,63 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1AnalysisRule extends \Google\Model
 {
   /**
+   * If true, apply this rule to conversations. Otherwise, this rule is inactive
+   * and saved as a draft.
+   *
    * @var bool
    */
   public $active;
+  /**
+   * Percentage of conversations that we should apply this analysis setting
+   * automatically, between [0, 1]. For example, 0.1 means 10%. Conversations
+   * are sampled in a determenestic way. The original runtime_percentage &
+   * upload percentage will be replaced by defining filters on the conversation.
+   *
+   * @var 
+   */
   public $analysisPercentage;
   protected $annotatorSelectorType = GoogleCloudContactcenterinsightsV1AnnotatorSelector::class;
   protected $annotatorSelectorDataType = '';
   /**
+   * Filter for the conversations that should apply this analysis rule. An empty
+   * filter means this analysis rule applies to all conversations. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for
+   * details.
+   *
    * @var string
    */
   public $conversationFilter;
   /**
+   * Output only. The time at which this analysis rule was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Display Name of the analysis rule.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. The resource name of the analysis rule. Format:
+   * projects/{project}/locations/{location}/analysisRules/{analysis_rule}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The most recent time at which this analysis rule was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * If true, apply this rule to conversations. Otherwise, this rule is inactive
+   * and saved as a draft.
+   *
+   * @param bool $active
    */
   public function setActive($active)
   {
@@ -70,7 +98,11 @@ class GoogleCloudContactcenterinsightsV1AnalysisRule extends \Google\Model
     return $this->analysisPercentage;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1AnnotatorSelector
+   * Selector of annotators to run and the phrase matchers to use for
+   * conversations that matches the conversation_filter. If not specified, NO
+   * annotators will be run.
+   *
+   * @param GoogleCloudContactcenterinsightsV1AnnotatorSelector $annotatorSelector
    */
   public function setAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector $annotatorSelector)
   {
@@ -84,7 +116,12 @@ class GoogleCloudContactcenterinsightsV1AnalysisRule extends \Google\Model
     return $this->annotatorSelector;
   }
   /**
-   * @param string
+   * Filter for the conversations that should apply this analysis rule. An empty
+   * filter means this analysis rule applies to all conversations. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for
+   * details.
+   *
+   * @param string $conversationFilter
    */
   public function setConversationFilter($conversationFilter)
   {
@@ -98,7 +135,9 @@ class GoogleCloudContactcenterinsightsV1AnalysisRule extends \Google\Model
     return $this->conversationFilter;
   }
   /**
-   * @param string
+   * Output only. The time at which this analysis rule was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -112,7 +151,9 @@ class GoogleCloudContactcenterinsightsV1AnalysisRule extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Display Name of the analysis rule.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -126,7 +167,10 @@ class GoogleCloudContactcenterinsightsV1AnalysisRule extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the analysis rule. Format:
+   * projects/{project}/locations/{location}/analysisRules/{analysis_rule}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -140,7 +184,9 @@ class GoogleCloudContactcenterinsightsV1AnalysisRule extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The most recent time at which this analysis rule was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

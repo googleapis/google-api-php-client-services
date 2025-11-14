@@ -20,38 +20,73 @@ namespace Google\Service\Vault;
 class MailExportOptions extends \Google\Model
 {
   /**
+   * No export format specified.
+   */
+  public const EXPORT_FORMAT_EXPORT_FORMAT_UNSPECIFIED = 'EXPORT_FORMAT_UNSPECIFIED';
+  /**
+   * Export as MBOX. Only available for Gmail, Groups, Hangouts and Voice.
+   */
+  public const EXPORT_FORMAT_MBOX = 'MBOX';
+  /**
+   * Export as PST. Only available for Gmail, Groups, Hangouts, Voice and
+   * Calendar.
+   */
+  public const EXPORT_FORMAT_PST = 'PST';
+  /**
+   * Export as ICS. Only available for Calendar.
+   */
+  public const EXPORT_FORMAT_ICS = 'ICS';
+  /**
+   * Export as XML. Only available for Gemini.
+   */
+  public const EXPORT_FORMAT_XML = 'XML';
+  /**
+   * The file format for exported messages.
+   *
    * @var string
    */
   public $exportFormat;
   /**
+   * Optional. To enable exporting linked Drive files, set to **true**.
+   *
    * @var bool
    */
   public $exportLinkedDriveFiles;
   /**
+   * To export confidential mode content, set to **true**.
+   *
    * @var bool
    */
   public $showConfidentialModeContent;
   /**
+   * To use the new export system, set to **true**.
+   *
    * @var bool
    */
   public $useNewExport;
 
   /**
-   * @param string
+   * The file format for exported messages.
+   *
+   * Accepted values: EXPORT_FORMAT_UNSPECIFIED, MBOX, PST, ICS, XML
+   *
+   * @param self::EXPORT_FORMAT_* $exportFormat
    */
   public function setExportFormat($exportFormat)
   {
     $this->exportFormat = $exportFormat;
   }
   /**
-   * @return string
+   * @return self::EXPORT_FORMAT_*
    */
   public function getExportFormat()
   {
     return $this->exportFormat;
   }
   /**
-   * @param bool
+   * Optional. To enable exporting linked Drive files, set to **true**.
+   *
+   * @param bool $exportLinkedDriveFiles
    */
   public function setExportLinkedDriveFiles($exportLinkedDriveFiles)
   {
@@ -65,7 +100,9 @@ class MailExportOptions extends \Google\Model
     return $this->exportLinkedDriveFiles;
   }
   /**
-   * @param bool
+   * To export confidential mode content, set to **true**.
+   *
+   * @param bool $showConfidentialModeContent
    */
   public function setShowConfidentialModeContent($showConfidentialModeContent)
   {
@@ -79,7 +116,9 @@ class MailExportOptions extends \Google\Model
     return $this->showConfidentialModeContent;
   }
   /**
-   * @param bool
+   * To use the new export system, set to **true**.
+   *
+   * @param bool $useNewExport
    */
   public function setUseNewExport($useNewExport)
   {

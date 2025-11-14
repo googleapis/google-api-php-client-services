@@ -23,12 +23,17 @@ class Notifications extends \Google\Collection
   protected $itemsType = Notification::class;
   protected $itemsDataType = 'array';
   /**
+   * The kind of item this is. For lists of notifications, this is always
+   * storage#notifications.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param Notification[]
+   * The list of items.
+   *
+   * @param Notification[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +47,10 @@ class Notifications extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The kind of item this is. For lists of notifications, this is always
+   * storage#notifications.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

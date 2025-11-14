@@ -20,12 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1GcsPrefix extends \Google\Model
 {
   /**
+   * The URI prefix.
+   *
    * @var string
    */
   public $gcsUriPrefix;
 
   /**
-   * @param string
+   * The URI prefix.
+   *
+   * @param string $gcsUriPrefix
    */
   public function setGcsUriPrefix($gcsUriPrefix)
   {

@@ -27,7 +27,9 @@ class Canary extends \Google\Model
   protected $runtimeConfigDataType = '';
 
   /**
-   * @param CanaryDeployment
+   * Optional. Configures the progressive based deployment for a Target.
+   *
+   * @param CanaryDeployment $canaryDeployment
    */
   public function setCanaryDeployment(CanaryDeployment $canaryDeployment)
   {
@@ -41,7 +43,11 @@ class Canary extends \Google\Model
     return $this->canaryDeployment;
   }
   /**
-   * @param CustomCanaryDeployment
+   * Optional. Configures the progressive based deployment for a Target, but
+   * allows customizing at the phase level where a phase represents each of the
+   * percentage deployments.
+   *
+   * @param CustomCanaryDeployment $customCanaryDeployment
    */
   public function setCustomCanaryDeployment(CustomCanaryDeployment $customCanaryDeployment)
   {
@@ -55,7 +61,11 @@ class Canary extends \Google\Model
     return $this->customCanaryDeployment;
   }
   /**
-   * @param RuntimeConfig
+   * Optional. Runtime specific configurations for the deployment strategy. The
+   * runtime configuration is used to determine how Cloud Deploy will split
+   * traffic to enable a progressive deployment.
+   *
+   * @param RuntimeConfig $runtimeConfig
    */
   public function setRuntimeConfig(RuntimeConfig $runtimeConfig)
   {

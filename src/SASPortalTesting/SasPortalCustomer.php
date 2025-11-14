@@ -21,20 +21,28 @@ class SasPortalCustomer extends \Google\Collection
 {
   protected $collection_key = 'sasUserIds';
   /**
+   * Required. Name of the organization that the customer entity represents.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Resource name of the customer.
+   *
    * @var string
    */
   public $name;
   /**
+   * User IDs used by the devices belonging to this customer.
+   *
    * @var string[]
    */
   public $sasUserIds;
 
   /**
-   * @param string
+   * Required. Name of the organization that the customer entity represents.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -48,7 +56,9 @@ class SasPortalCustomer extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Resource name of the customer.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -62,7 +72,9 @@ class SasPortalCustomer extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * User IDs used by the devices belonging to this customer.
+   *
+   * @param string[] $sasUserIds
    */
   public function setSasUserIds($sasUserIds)
   {

@@ -24,7 +24,10 @@ class RemoveHeldAccountsResponse extends \Google\Collection
   protected $statusesDataType = 'array';
 
   /**
-   * @param Status[]
+   * A list of statuses for the deleted accounts. Results have the same order as
+   * the request.
+   *
+   * @param Status[] $statuses
    */
   public function setStatuses($statuses)
   {

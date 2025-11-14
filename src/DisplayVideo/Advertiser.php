@@ -19,15 +19,62 @@ namespace Google\Service\DisplayVideo;
 
 class Advertiser extends \Google\Model
 {
+  /**
+   * Unknown.
+   */
+  public const CONTAINS_EU_POLITICAL_ADS_EU_POLITICAL_ADVERTISING_STATUS_UNKNOWN = 'EU_POLITICAL_ADVERTISING_STATUS_UNKNOWN';
+  /**
+   * Contains EU political advertising.
+   */
+  public const CONTAINS_EU_POLITICAL_ADS_CONTAINS_EU_POLITICAL_ADVERTISING = 'CONTAINS_EU_POLITICAL_ADVERTISING';
+  /**
+   * Does not contain EU political advertising.
+   */
+  public const CONTAINS_EU_POLITICAL_ADS_DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING = 'DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING';
+  /**
+   * Default value when status is not specified or is unknown in this version.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_UNSPECIFIED = 'ENTITY_STATUS_UNSPECIFIED';
+  /**
+   * The entity is enabled to bid and spend budget.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_ACTIVE = 'ENTITY_STATUS_ACTIVE';
+  /**
+   * The entity is archived. Bidding and budget spending are disabled. An entity
+   * can be deleted after archived. Deleted entities cannot be retrieved.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_ARCHIVED = 'ENTITY_STATUS_ARCHIVED';
+  /**
+   * The entity is under draft. Bidding and budget spending are disabled.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_DRAFT = 'ENTITY_STATUS_DRAFT';
+  /**
+   * Bidding and budget spending are paused for the entity.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_PAUSED = 'ENTITY_STATUS_PAUSED';
+  /**
+   * The entity is scheduled for deletion.
+   */
+  public const ENTITY_STATUS_ENTITY_STATUS_SCHEDULED_FOR_DELETION = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION';
   protected $adServerConfigType = AdvertiserAdServerConfig::class;
   protected $adServerConfigDataType = '';
   /**
+   * Output only. The unique ID of the advertiser. Assigned by the system.
+   *
    * @var string
    */
   public $advertiserId;
   protected $billingConfigType = AdvertiserBillingConfig::class;
   protected $billingConfigDataType = '';
   /**
+   * Optional. Whether this advertiser contains line items that serve European
+   * Union political ads. If this field is set to
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING`, then the following will
+   * happen: * Any new line items created under this advertiser will be assigned
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified. *
+   * Any existing line items under this advertiser that do not have a set value
+   * be updated to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` within a day.
+   *
    * @var string
    */
   public $containsEuPoliticalAds;
@@ -36,10 +83,20 @@ class Advertiser extends \Google\Model
   protected $dataAccessConfigType = AdvertiserDataAccessConfig::class;
   protected $dataAccessConfigDataType = '';
   /**
+   * Required. The display name of the advertiser. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. Controls whether or not insertion orders and line items of the
+   * advertiser can spend their budgets and bid on inventory. * Accepted values
+   * are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_PAUSED` and
+   * `ENTITY_STATUS_SCHEDULED_FOR_DELETION`. * If set to
+   * `ENTITY_STATUS_SCHEDULED_FOR_DELETION`, the advertiser will be deleted 30
+   * days from when it was first scheduled for deletion.
+   *
    * @var string
    */
   public $entityStatus;
@@ -48,26 +105,43 @@ class Advertiser extends \Google\Model
   protected $integrationDetailsType = IntegrationDetails::class;
   protected $integrationDetailsDataType = '';
   /**
+   * Output only. The resource name of the advertiser.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Immutable. The unique ID of the partner that the advertiser
+   * belongs to.
+   *
    * @var string
    */
   public $partnerId;
   /**
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this,
+   * you agree to the following: On behalf of my company, I authorize Mediaocean
+   * (Prisma) to send budget segment plans to Google, and I authorize Google to
+   * send corresponding reporting and invoices from DV360 to Mediaocean for the
+   * purposes of budget planning, billing, and reconciliation for this
+   * advertiser.
+   *
    * @var bool
    */
   public $prismaEnabled;
   protected $servingConfigType = AdvertiserTargetingConfig::class;
   protected $servingConfigDataType = '';
   /**
+   * Output only. The timestamp when the advertiser was last updated. Assigned
+   * by the system.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param AdvertiserAdServerConfig
+   * Required. Immutable. Ad server related settings of the advertiser.
+   *
+   * @param AdvertiserAdServerConfig $adServerConfig
    */
   public function setAdServerConfig(AdvertiserAdServerConfig $adServerConfig)
   {
@@ -81,7 +155,9 @@ class Advertiser extends \Google\Model
     return $this->adServerConfig;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the advertiser. Assigned by the system.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -95,7 +171,9 @@ class Advertiser extends \Google\Model
     return $this->advertiserId;
   }
   /**
-   * @param AdvertiserBillingConfig
+   * Required. Billing related settings of the advertiser.
+   *
+   * @param AdvertiserBillingConfig $billingConfig
    */
   public function setBillingConfig(AdvertiserBillingConfig $billingConfig)
   {
@@ -109,21 +187,35 @@ class Advertiser extends \Google\Model
     return $this->billingConfig;
   }
   /**
-   * @param string
+   * Optional. Whether this advertiser contains line items that serve European
+   * Union political ads. If this field is set to
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING`, then the following will
+   * happen: * Any new line items created under this advertiser will be assigned
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified. *
+   * Any existing line items under this advertiser that do not have a set value
+   * be updated to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` within a day.
+   *
+   * Accepted values: EU_POLITICAL_ADVERTISING_STATUS_UNKNOWN,
+   * CONTAINS_EU_POLITICAL_ADVERTISING,
+   * DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING
+   *
+   * @param self::CONTAINS_EU_POLITICAL_ADS_* $containsEuPoliticalAds
    */
   public function setContainsEuPoliticalAds($containsEuPoliticalAds)
   {
     $this->containsEuPoliticalAds = $containsEuPoliticalAds;
   }
   /**
-   * @return string
+   * @return self::CONTAINS_EU_POLITICAL_ADS_*
    */
   public function getContainsEuPoliticalAds()
   {
     return $this->containsEuPoliticalAds;
   }
   /**
-   * @param AdvertiserCreativeConfig
+   * Required. Creative related settings of the advertiser.
+   *
+   * @param AdvertiserCreativeConfig $creativeConfig
    */
   public function setCreativeConfig(AdvertiserCreativeConfig $creativeConfig)
   {
@@ -137,7 +229,9 @@ class Advertiser extends \Google\Model
     return $this->creativeConfig;
   }
   /**
-   * @param AdvertiserDataAccessConfig
+   * Settings that control how advertiser data may be accessed.
+   *
+   * @param AdvertiserDataAccessConfig $dataAccessConfig
    */
   public function setDataAccessConfig(AdvertiserDataAccessConfig $dataAccessConfig)
   {
@@ -151,7 +245,10 @@ class Advertiser extends \Google\Model
     return $this->dataAccessConfig;
   }
   /**
-   * @param string
+   * Required. The display name of the advertiser. Must be UTF-8 encoded with a
+   * maximum size of 240 bytes.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -165,21 +262,34 @@ class Advertiser extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. Controls whether or not insertion orders and line items of the
+   * advertiser can spend their budgets and bid on inventory. * Accepted values
+   * are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_PAUSED` and
+   * `ENTITY_STATUS_SCHEDULED_FOR_DELETION`. * If set to
+   * `ENTITY_STATUS_SCHEDULED_FOR_DELETION`, the advertiser will be deleted 30
+   * days from when it was first scheduled for deletion.
+   *
+   * Accepted values: ENTITY_STATUS_UNSPECIFIED, ENTITY_STATUS_ACTIVE,
+   * ENTITY_STATUS_ARCHIVED, ENTITY_STATUS_DRAFT, ENTITY_STATUS_PAUSED,
+   * ENTITY_STATUS_SCHEDULED_FOR_DELETION
+   *
+   * @param self::ENTITY_STATUS_* $entityStatus
    */
   public function setEntityStatus($entityStatus)
   {
     $this->entityStatus = $entityStatus;
   }
   /**
-   * @return string
+   * @return self::ENTITY_STATUS_*
    */
   public function getEntityStatus()
   {
     return $this->entityStatus;
   }
   /**
-   * @param AdvertiserGeneralConfig
+   * Required. General settings of the advertiser.
+   *
+   * @param AdvertiserGeneralConfig $generalConfig
    */
   public function setGeneralConfig(AdvertiserGeneralConfig $generalConfig)
   {
@@ -193,7 +303,11 @@ class Advertiser extends \Google\Model
     return $this->generalConfig;
   }
   /**
-   * @param IntegrationDetails
+   * Integration details of the advertiser. Only integrationCode is currently
+   * applicable to advertiser. Other fields of IntegrationDetails are not
+   * supported and will be ignored if provided.
+   *
+   * @param IntegrationDetails $integrationDetails
    */
   public function setIntegrationDetails(IntegrationDetails $integrationDetails)
   {
@@ -207,7 +321,9 @@ class Advertiser extends \Google\Model
     return $this->integrationDetails;
   }
   /**
-   * @param string
+   * Output only. The resource name of the advertiser.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -221,7 +337,10 @@ class Advertiser extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Immutable. The unique ID of the partner that the advertiser
+   * belongs to.
+   *
+   * @param string $partnerId
    */
   public function setPartnerId($partnerId)
   {
@@ -235,7 +354,14 @@ class Advertiser extends \Google\Model
     return $this->partnerId;
   }
   /**
-   * @param bool
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this,
+   * you agree to the following: On behalf of my company, I authorize Mediaocean
+   * (Prisma) to send budget segment plans to Google, and I authorize Google to
+   * send corresponding reporting and invoices from DV360 to Mediaocean for the
+   * purposes of budget planning, billing, and reconciliation for this
+   * advertiser.
+   *
+   * @param bool $prismaEnabled
    */
   public function setPrismaEnabled($prismaEnabled)
   {
@@ -249,7 +375,9 @@ class Advertiser extends \Google\Model
     return $this->prismaEnabled;
   }
   /**
-   * @param AdvertiserTargetingConfig
+   * Targeting settings related to ad serving of the advertiser.
+   *
+   * @param AdvertiserTargetingConfig $servingConfig
    */
   public function setServingConfig(AdvertiserTargetingConfig $servingConfig)
   {
@@ -263,7 +391,10 @@ class Advertiser extends \Google\Model
     return $this->servingConfig;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the advertiser was last updated. Assigned
+   * by the system.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

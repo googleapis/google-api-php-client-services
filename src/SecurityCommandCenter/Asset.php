@@ -20,20 +20,35 @@ namespace Google\Service\SecurityCommandCenter;
 class Asset extends \Google\Model
 {
   /**
+   * The canonical name of the resource. It's either
+   * "organizations/{organization_id}/assets/{asset_id}",
+   * "folders/{folder_id}/assets/{asset_id}" or
+   * "projects/{project_number}/assets/{asset_id}", depending on the closest CRM
+   * ancestor of the resource.
+   *
    * @var string
    */
   public $canonicalName;
   /**
+   * The time at which the asset was created in Security Command Center.
+   *
    * @var string
    */
   public $createTime;
   protected $iamPolicyType = IamPolicy::class;
   protected $iamPolicyDataType = '';
   /**
+   * The relative resource name of this asset. See:
+   * https://cloud.google.com/apis/design/resource_names#relative_resource_name
+   * Example: "organizations/{organization_id}/assets/{asset_id}".
+   *
    * @var string
    */
   public $name;
   /**
+   * Resource managed properties. These properties are managed and defined by
+   * the Google Cloud resource and cannot be modified by the user.
+   *
    * @var array[]
    */
   public $resourceProperties;
@@ -42,12 +57,20 @@ class Asset extends \Google\Model
   protected $securityMarksType = SecurityMarks::class;
   protected $securityMarksDataType = '';
   /**
+   * The time at which the asset was last updated or added in Cloud SCC.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The canonical name of the resource. It's either
+   * "organizations/{organization_id}/assets/{asset_id}",
+   * "folders/{folder_id}/assets/{asset_id}" or
+   * "projects/{project_number}/assets/{asset_id}", depending on the closest CRM
+   * ancestor of the resource.
+   *
+   * @param string $canonicalName
    */
   public function setCanonicalName($canonicalName)
   {
@@ -61,7 +84,9 @@ class Asset extends \Google\Model
     return $this->canonicalName;
   }
   /**
-   * @param string
+   * The time at which the asset was created in Security Command Center.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -75,7 +100,12 @@ class Asset extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param IamPolicy
+   * Cloud IAM Policy information associated with the Google Cloud resource
+   * described by the Security Command Center asset. This information is managed
+   * and defined by the Google Cloud resource and cannot be modified by the
+   * user.
+   *
+   * @param IamPolicy $iamPolicy
    */
   public function setIamPolicy(IamPolicy $iamPolicy)
   {
@@ -89,7 +119,11 @@ class Asset extends \Google\Model
     return $this->iamPolicy;
   }
   /**
-   * @param string
+   * The relative resource name of this asset. See:
+   * https://cloud.google.com/apis/design/resource_names#relative_resource_name
+   * Example: "organizations/{organization_id}/assets/{asset_id}".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -103,7 +137,10 @@ class Asset extends \Google\Model
     return $this->name;
   }
   /**
-   * @param array[]
+   * Resource managed properties. These properties are managed and defined by
+   * the Google Cloud resource and cannot be modified by the user.
+   *
+   * @param array[] $resourceProperties
    */
   public function setResourceProperties($resourceProperties)
   {
@@ -117,7 +154,10 @@ class Asset extends \Google\Model
     return $this->resourceProperties;
   }
   /**
-   * @param SecurityCenterProperties
+   * Security Command Center managed properties. These properties are managed by
+   * Security Command Center and cannot be modified by the user.
+   *
+   * @param SecurityCenterProperties $securityCenterProperties
    */
   public function setSecurityCenterProperties(SecurityCenterProperties $securityCenterProperties)
   {
@@ -131,7 +171,10 @@ class Asset extends \Google\Model
     return $this->securityCenterProperties;
   }
   /**
-   * @param SecurityMarks
+   * User specified security marks. These marks are entirely managed by the user
+   * and come from the SecurityMarks resource that belongs to the asset.
+   *
+   * @param SecurityMarks $securityMarks
    */
   public function setSecurityMarks(SecurityMarks $securityMarks)
   {
@@ -145,7 +188,9 @@ class Asset extends \Google\Model
     return $this->securityMarks;
   }
   /**
-   * @param string
+   * The time at which the asset was last updated or added in Cloud SCC.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

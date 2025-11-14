@@ -23,7 +23,9 @@ class RollbackTargetResponse extends \Google\Model
   protected $rollbackConfigDataType = '';
 
   /**
-   * @param RollbackTargetConfig
+   * The config of the rollback `Rollout` created or will be created.
+   *
+   * @param RollbackTargetConfig $rollbackConfig
    */
   public function setRollbackConfig(RollbackTargetConfig $rollbackConfig)
   {

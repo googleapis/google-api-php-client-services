@@ -20,16 +20,29 @@ namespace Google\Service\CloudCommercePartnerProcurementService;
 class ApproveEntitlementRequest extends \Google\Model
 {
   /**
+   * Optional. The resource name of the entitlement that was migrated, with the
+   * format `providers/{provider_id}/entitlements/{entitlement_id}`. Should only
+   * be sent when resources have been migrated from entitlement_migrated to the
+   * new entitlement. Optional.
+   *
    * @var string
    */
   public $entitlementMigrated;
   /**
+   * Set of properties that should be associated with the entitlement. Optional.
+   *
+   * @deprecated
    * @var string[]
    */
   public $properties;
 
   /**
-   * @param string
+   * Optional. The resource name of the entitlement that was migrated, with the
+   * format `providers/{provider_id}/entitlements/{entitlement_id}`. Should only
+   * be sent when resources have been migrated from entitlement_migrated to the
+   * new entitlement. Optional.
+   *
+   * @param string $entitlementMigrated
    */
   public function setEntitlementMigrated($entitlementMigrated)
   {
@@ -43,13 +56,17 @@ class ApproveEntitlementRequest extends \Google\Model
     return $this->entitlementMigrated;
   }
   /**
-   * @param string[]
+   * Set of properties that should be associated with the entitlement. Optional.
+   *
+   * @deprecated
+   * @param string[] $properties
    */
   public function setProperties($properties)
   {
     $this->properties = $properties;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getProperties()

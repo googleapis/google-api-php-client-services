@@ -42,7 +42,7 @@ class BqmlTrainingRunTrainingOptions extends \Google\Model
   public $warmStart;
 
   /**
-   * @param bool
+   * @param bool $earlyStop
    */
   public function setEarlyStop($earlyStop)
   {
@@ -80,7 +80,7 @@ class BqmlTrainingRunTrainingOptions extends \Google\Model
     return $this->learnRate;
   }
   /**
-   * @param string
+   * @param string $learnRateStrategy
    */
   public function setLearnRateStrategy($learnRateStrategy)
   {
@@ -102,7 +102,7 @@ class BqmlTrainingRunTrainingOptions extends \Google\Model
     return $this->lineSearchInitLearnRate;
   }
   /**
-   * @param string
+   * @param string $maxIteration
    */
   public function setMaxIteration($maxIteration)
   {
@@ -124,7 +124,7 @@ class BqmlTrainingRunTrainingOptions extends \Google\Model
     return $this->minRelProgress;
   }
   /**
-   * @param bool
+   * @param bool $warmStart
    */
   public function setWarmStart($warmStart)
   {

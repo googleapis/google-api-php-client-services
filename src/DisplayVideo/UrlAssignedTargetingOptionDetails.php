@@ -20,16 +20,25 @@ namespace Google\Service\DisplayVideo;
 class UrlAssignedTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Indicates if this option is being negatively targeted.
+   *
    * @var bool
    */
   public $negative;
   /**
+   * Required. The URL, for example `example.com`. DV360 supports two levels of
+   * subdirectory targeting, for example `www.example.com/one-subdirectory-
+   * level/second-level`, and five levels of subdomain targeting, for example
+   * `five.four.three.two.one.example.com`.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param bool
+   * Indicates if this option is being negatively targeted.
+   *
+   * @param bool $negative
    */
   public function setNegative($negative)
   {
@@ -43,7 +52,12 @@ class UrlAssignedTargetingOptionDetails extends \Google\Model
     return $this->negative;
   }
   /**
-   * @param string
+   * Required. The URL, for example `example.com`. DV360 supports two levels of
+   * subdirectory targeting, for example `www.example.com/one-subdirectory-
+   * level/second-level`, and five levels of subdomain targeting, for example
+   * `five.four.three.two.one.example.com`.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

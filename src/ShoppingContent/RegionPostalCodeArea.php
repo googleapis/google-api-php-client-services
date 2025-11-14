@@ -23,12 +23,17 @@ class RegionPostalCodeArea extends \Google\Collection
   protected $postalCodesType = RegionPostalCodeAreaPostalCodeRange::class;
   protected $postalCodesDataType = 'array';
   /**
+   * Required. CLDR territory code or the country the postal code group applies
+   * to.
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param RegionPostalCodeAreaPostalCodeRange[]
+   * Required. A range of postal codes.
+   *
+   * @param RegionPostalCodeAreaPostalCodeRange[] $postalCodes
    */
   public function setPostalCodes($postalCodes)
   {
@@ -42,7 +47,10 @@ class RegionPostalCodeArea extends \Google\Collection
     return $this->postalCodes;
   }
   /**
-   * @param string
+   * Required. CLDR territory code or the country the postal code group applies
+   * to.
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

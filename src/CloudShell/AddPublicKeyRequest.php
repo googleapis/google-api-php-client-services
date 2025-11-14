@@ -20,12 +20,24 @@ namespace Google\Service\CloudShell;
 class AddPublicKeyRequest extends \Google\Model
 {
   /**
+   * Key that should be added to the environment. Supported formats are `ssh-
+   * dss` (see RFC4253), `ssh-rsa` (see RFC4253), `ecdsa-sha2-nistp256` (see
+   * RFC5656), `ecdsa-sha2-nistp384` (see RFC5656) and `ecdsa-sha2-nistp521`
+   * (see RFC5656). It should be structured as  , where  part is encoded with
+   * Base64.
+   *
    * @var string
    */
   public $key;
 
   /**
-   * @param string
+   * Key that should be added to the environment. Supported formats are `ssh-
+   * dss` (see RFC4253), `ssh-rsa` (see RFC4253), `ecdsa-sha2-nistp256` (see
+   * RFC5656), `ecdsa-sha2-nistp384` (see RFC5656) and `ecdsa-sha2-nistp521`
+   * (see RFC5656). It should be structured as  , where  part is encoded with
+   * Base64.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {

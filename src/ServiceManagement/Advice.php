@@ -20,12 +20,18 @@ namespace Google\Service\ServiceManagement;
 class Advice extends \Google\Model
 {
   /**
+   * Useful description for why this advice was applied and what actions should
+   * be taken to mitigate any implied risks.
+   *
    * @var string
    */
   public $description;
 
   /**
-   * @param string
+   * Useful description for why this advice was applied and what actions should
+   * be taken to mitigate any implied risks.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\ShoppingContent;
 class Brand extends \Google\Model
 {
   /**
+   * Name of the brand.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Name of the brand.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

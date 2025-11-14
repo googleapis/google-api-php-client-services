@@ -20,16 +20,26 @@ namespace Google\Service\BigtableAdmin;
 class SingleClusterRouting extends \Google\Model
 {
   /**
+   * Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are
+   * allowed by this app profile. It is unsafe to send these requests to the
+   * same table/row/column in multiple clusters.
+   *
    * @var bool
    */
   public $allowTransactionalWrites;
   /**
+   * The cluster to which read/write requests should be routed.
+   *
    * @var string
    */
   public $clusterId;
 
   /**
-   * @param bool
+   * Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are
+   * allowed by this app profile. It is unsafe to send these requests to the
+   * same table/row/column in multiple clusters.
+   *
+   * @param bool $allowTransactionalWrites
    */
   public function setAllowTransactionalWrites($allowTransactionalWrites)
   {
@@ -43,7 +53,9 @@ class SingleClusterRouting extends \Google\Model
     return $this->allowTransactionalWrites;
   }
   /**
-   * @param string
+   * The cluster to which read/write requests should be routed.
+   *
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {

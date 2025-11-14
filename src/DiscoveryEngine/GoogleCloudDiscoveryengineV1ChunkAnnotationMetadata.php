@@ -20,6 +20,9 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ChunkAnnotationMetadata extends \Google\Model
 {
   /**
+   * Output only. Image id is provided if the structured content is based on an
+   * image.
+   *
    * @var string
    */
   public $imageId;
@@ -27,7 +30,10 @@ class GoogleCloudDiscoveryengineV1ChunkAnnotationMetadata extends \Google\Model
   protected $structuredContentDataType = '';
 
   /**
-   * @param string
+   * Output only. Image id is provided if the structured content is based on an
+   * image.
+   *
+   * @param string $imageId
    */
   public function setImageId($imageId)
   {
@@ -41,7 +47,9 @@ class GoogleCloudDiscoveryengineV1ChunkAnnotationMetadata extends \Google\Model
     return $this->imageId;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ChunkStructuredContent
+   * Output only. The structured content information.
+   *
+   * @param GoogleCloudDiscoveryengineV1ChunkStructuredContent $structuredContent
    */
   public function setStructuredContent(GoogleCloudDiscoveryengineV1ChunkStructuredContent $structuredContent)
   {

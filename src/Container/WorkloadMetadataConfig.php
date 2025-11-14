@@ -20,19 +20,43 @@ namespace Google\Service\Container;
 class WorkloadMetadataConfig extends \Google\Model
 {
   /**
+   * Not set.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * Expose all Compute Engine metadata to pods.
+   */
+  public const MODE_GCE_METADATA = 'GCE_METADATA';
+  /**
+   * Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a
+   * metadata API to workloads that is compatible with the V1 Compute Metadata
+   * APIs exposed by the Compute Engine and App Engine Metadata Servers. This
+   * feature can only be enabled if Workload Identity is enabled at the cluster
+   * level.
+   */
+  public const MODE_GKE_METADATA = 'GKE_METADATA';
+  /**
+   * Mode is the configuration for how to expose metadata to workloads running
+   * on the node pool.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param string
+   * Mode is the configuration for how to expose metadata to workloads running
+   * on the node pool.
+   *
+   * Accepted values: MODE_UNSPECIFIED, GCE_METADATA, GKE_METADATA
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {

@@ -21,18 +21,26 @@ class ListPipelinesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A page token that can be sent to `ListPipelines` to request the next page.
+   * If this is empty, then there are no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $pipelinesType = Pipeline::class;
   protected $pipelinesDataType = 'array';
   /**
+   * Unreachable resources, if any.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A page token that can be sent to `ListPipelines` to request the next page.
+   * If this is empty, then there are no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListPipelinesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Pipeline[]
+   * The requested pipelines, up to the number specified in `page_size`.
+   *
+   * @param Pipeline[] $pipelines
    */
   public function setPipelines($pipelines)
   {
@@ -60,7 +70,9 @@ class ListPipelinesResponse extends \Google\Collection
     return $this->pipelines;
   }
   /**
-   * @param string[]
+   * Unreachable resources, if any.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

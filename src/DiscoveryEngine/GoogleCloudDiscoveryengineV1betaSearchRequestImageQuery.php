@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery extends \Google\Model
 {
   /**
+   * Base64 encoded image bytes. Supported image formats: JPEG, PNG, and BMP.
+   *
    * @var string
    */
   public $imageBytes;
 
   /**
-   * @param string
+   * Base64 encoded image bytes. Supported image formats: JPEG, PNG, and BMP.
+   *
+   * @param string $imageBytes
    */
   public function setImageBytes($imageBytes)
   {

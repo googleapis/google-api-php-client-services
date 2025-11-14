@@ -20,30 +20,66 @@ namespace Google\Service\DisplayVideo;
 class CustomLabel extends \Google\Model
 {
   /**
+   * Not specified or unknown.
+   */
+  public const KEY_CUSTOM_LABEL_KEY_UNSPECIFIED = 'CUSTOM_LABEL_KEY_UNSPECIFIED';
+  /**
+   * Key index 0.
+   */
+  public const KEY_CUSTOM_LABEL_KEY_0 = 'CUSTOM_LABEL_KEY_0';
+  /**
+   * Key index 1.
+   */
+  public const KEY_CUSTOM_LABEL_KEY_1 = 'CUSTOM_LABEL_KEY_1';
+  /**
+   * Key index 2.
+   */
+  public const KEY_CUSTOM_LABEL_KEY_2 = 'CUSTOM_LABEL_KEY_2';
+  /**
+   * Key index 3.
+   */
+  public const KEY_CUSTOM_LABEL_KEY_3 = 'CUSTOM_LABEL_KEY_3';
+  /**
+   * Key index 4.
+   */
+  public const KEY_CUSTOM_LABEL_KEY_4 = 'CUSTOM_LABEL_KEY_4';
+  /**
+   * The key of the label.
+   *
    * @var string
    */
   public $key;
   /**
+   * The value of the label.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The key of the label.
+   *
+   * Accepted values: CUSTOM_LABEL_KEY_UNSPECIFIED, CUSTOM_LABEL_KEY_0,
+   * CUSTOM_LABEL_KEY_1, CUSTOM_LABEL_KEY_2, CUSTOM_LABEL_KEY_3,
+   * CUSTOM_LABEL_KEY_4
+   *
+   * @param self::KEY_* $key
    */
   public function setKey($key)
   {
     $this->key = $key;
   }
   /**
-   * @return string
+   * @return self::KEY_*
    */
   public function getKey()
   {
     return $this->key;
   }
   /**
-   * @param string
+   * The value of the label.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

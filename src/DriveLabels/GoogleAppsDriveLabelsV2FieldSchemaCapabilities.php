@@ -20,24 +20,38 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends \Google\Model
 {
   /**
+   * Whether the user can delete this field. The user must have permission and
+   * the field must be deprecated.
+   *
    * @var bool
    */
   public $canDelete;
   /**
+   * Whether the user can disable this field. The user must have permission and
+   * this field must not already be disabled.
+   *
    * @var bool
    */
   public $canDisable;
   /**
+   * Whether the user can enable this field. The user must have permission and
+   * this field must be disabled.
+   *
    * @var bool
    */
   public $canEnable;
   /**
+   * Whether the user can change this field.
+   *
    * @var bool
    */
   public $canUpdate;
 
   /**
-   * @param bool
+   * Whether the user can delete this field. The user must have permission and
+   * the field must be deprecated.
+   *
+   * @param bool $canDelete
    */
   public function setCanDelete($canDelete)
   {
@@ -51,7 +65,10 @@ class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends \Google\Model
     return $this->canDelete;
   }
   /**
-   * @param bool
+   * Whether the user can disable this field. The user must have permission and
+   * this field must not already be disabled.
+   *
+   * @param bool $canDisable
    */
   public function setCanDisable($canDisable)
   {
@@ -65,7 +82,10 @@ class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends \Google\Model
     return $this->canDisable;
   }
   /**
-   * @param bool
+   * Whether the user can enable this field. The user must have permission and
+   * this field must be disabled.
+   *
+   * @param bool $canEnable
    */
   public function setCanEnable($canEnable)
   {
@@ -79,7 +99,9 @@ class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends \Google\Model
     return $this->canEnable;
   }
   /**
-   * @param bool
+   * Whether the user can change this field.
+   *
+   * @param bool $canUpdate
    */
   public function setCanUpdate($canUpdate)
   {

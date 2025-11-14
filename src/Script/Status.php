@@ -21,20 +21,35 @@ class Status extends \Google\Collection
 {
   protected $collection_key = 'details';
   /**
+   * The status code. For this API, this value either: - 10, indicating a
+   * `SCRIPT_TIMEOUT` error, - 3, indicating an `INVALID_ARGUMENT` error, or -
+   * 1, indicating a `CANCELLED` execution.
+   *
    * @var int
    */
   public $code;
   /**
+   * An array that contains a single ExecutionError object that provides
+   * information about the nature of the error.
+   *
    * @var array[]
    */
   public $details;
   /**
+   * A developer-facing error message, which is in English. Any user-facing
+   * error message is localized and sent in the details field, or localized by
+   * the client.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param int
+   * The status code. For this API, this value either: - 10, indicating a
+   * `SCRIPT_TIMEOUT` error, - 3, indicating an `INVALID_ARGUMENT` error, or -
+   * 1, indicating a `CANCELLED` execution.
+   *
+   * @param int $code
    */
   public function setCode($code)
   {
@@ -48,7 +63,10 @@ class Status extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param array[]
+   * An array that contains a single ExecutionError object that provides
+   * information about the nature of the error.
+   *
+   * @param array[] $details
    */
   public function setDetails($details)
   {
@@ -62,7 +80,11 @@ class Status extends \Google\Collection
     return $this->details;
   }
   /**
-   * @param string
+   * A developer-facing error message, which is in English. Any user-facing
+   * error message is localized and sent in the details field, or localized by
+   * the client.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

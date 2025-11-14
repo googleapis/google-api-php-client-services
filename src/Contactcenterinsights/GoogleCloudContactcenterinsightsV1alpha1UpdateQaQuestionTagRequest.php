@@ -22,12 +22,19 @@ class GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagRequest extends
   protected $qaQuestionTagType = GoogleCloudContactcenterinsightsV1alpha1QaQuestionTag::class;
   protected $qaQuestionTagDataType = '';
   /**
+   * Optional. The list of fields to be updated. All possible fields can be
+   * updated by passing `*`, or a subset of the following updateable fields can
+   * be provided: * `qa_question_tag_name` - the name of the tag *
+   * `qa_question_ids` - the list of questions the tag applies to
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1QaQuestionTag
+   * Required. The QaQuestionTag to update.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1QaQuestionTag $qaQuestionTag
    */
   public function setQaQuestionTag(GoogleCloudContactcenterinsightsV1alpha1QaQuestionTag $qaQuestionTag)
   {
@@ -41,7 +48,12 @@ class GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagRequest extends
     return $this->qaQuestionTag;
   }
   /**
-   * @param string
+   * Optional. The list of fields to be updated. All possible fields can be
+   * updated by passing `*`, or a subset of the following updateable fields can
+   * be provided: * `qa_question_tag_name` - the name of the tag *
+   * `qa_question_ids` - the list of questions the tag applies to
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

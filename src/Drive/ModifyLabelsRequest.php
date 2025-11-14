@@ -21,6 +21,8 @@ class ModifyLabelsRequest extends \Google\Collection
 {
   protected $collection_key = 'labelModifications';
   /**
+   * This is always `"drive#modifyLabelsRequest"`.
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +30,9 @@ class ModifyLabelsRequest extends \Google\Collection
   protected $labelModificationsDataType = 'array';
 
   /**
-   * @param string
+   * This is always `"drive#modifyLabelsRequest"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +46,9 @@ class ModifyLabelsRequest extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param LabelModification[]
+   * The list of modifications to apply to the labels on the file.
+   *
+   * @param LabelModification[] $labelModifications
    */
   public function setLabelModifications($labelModifications)
   {

@@ -20,24 +20,53 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesCustomerAssetSet extends \Google\Model
 {
   /**
+   * The status has not been specified.
+   */
+  public const STATUS_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * The received value is not known in this version. This is a response-only
+   * value.
+   */
+  public const STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * The linkage between asset set and its container is enabled.
+   */
+  public const STATUS_ENABLED = 'ENABLED';
+  /**
+   * The linkage between asset set and its container is removed.
+   */
+  public const STATUS_REMOVED = 'REMOVED';
+  /**
+   * Immutable. The asset set which is linked to the customer.
+   *
    * @var string
    */
   public $assetSet;
   /**
+   * Immutable. The customer to which this asset set is linked.
+   *
    * @var string
    */
   public $customer;
   /**
+   * Immutable. The resource name of the customer asset set. Asset set asset
+   * resource names have the form:
+   * `customers/{customer_id}/customerAssetSets/{asset_set_id}`
+   *
    * @var string
    */
   public $resourceName;
   /**
+   * Output only. The status of the customer asset set asset. Read-only.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * Immutable. The asset set which is linked to the customer.
+   *
+   * @param string $assetSet
    */
   public function setAssetSet($assetSet)
   {
@@ -51,7 +80,9 @@ class GoogleAdsSearchads360V0ResourcesCustomerAssetSet extends \Google\Model
     return $this->assetSet;
   }
   /**
-   * @param string
+   * Immutable. The customer to which this asset set is linked.
+   *
+   * @param string $customer
    */
   public function setCustomer($customer)
   {
@@ -65,7 +96,11 @@ class GoogleAdsSearchads360V0ResourcesCustomerAssetSet extends \Google\Model
     return $this->customer;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the customer asset set. Asset set asset
+   * resource names have the form:
+   * `customers/{customer_id}/customerAssetSets/{asset_set_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -79,14 +114,18 @@ class GoogleAdsSearchads360V0ResourcesCustomerAssetSet extends \Google\Model
     return $this->resourceName;
   }
   /**
-   * @param string
+   * Output only. The status of the customer asset set asset. Read-only.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, ENABLED, REMOVED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

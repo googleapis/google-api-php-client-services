@@ -19,6 +19,8 @@ namespace Google\Service\AppHub;
 
 class WorkloadProperties extends \Google\Model
 {
+  protected $extendedMetadataType = ExtendedMetadata::class;
+  protected $extendedMetadataDataType = 'map';
   protected $functionalTypeType = FunctionalType::class;
   protected $functionalTypeDataType = '';
   /**
@@ -43,6 +45,25 @@ class WorkloadProperties extends \Google\Model
    */
   public $zone;
 
+  /**
+   * Output only. Additional metadata specific to the resource type. The key is
+   * a string that identifies the type of metadata and the value is the metadata
+   * contents specific to that type. Key format:
+   * `apphub.googleapis.com/{metadataType}`
+   *
+   * @param ExtendedMetadata[] $extendedMetadata
+   */
+  public function setExtendedMetadata($extendedMetadata)
+  {
+    $this->extendedMetadata = $extendedMetadata;
+  }
+  /**
+   * @return ExtendedMetadata[]
+   */
+  public function getExtendedMetadata()
+  {
+    return $this->extendedMetadata;
+  }
   /**
    * Output only. The type of the workload.
    *

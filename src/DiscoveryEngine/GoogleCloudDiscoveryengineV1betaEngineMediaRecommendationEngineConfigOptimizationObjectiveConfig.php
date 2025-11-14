@@ -20,16 +20,24 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig extends \Google\Model
 {
   /**
+   * Required. The name of the field to target. Currently supported values:
+   * `watch-percentage`, `watch-time`.
+   *
    * @var string
    */
   public $targetField;
   /**
+   * Required. The threshold to be applied to the target (e.g., 0.5).
+   *
    * @var float
    */
   public $targetFieldValueFloat;
 
   /**
-   * @param string
+   * Required. The name of the field to target. Currently supported values:
+   * `watch-percentage`, `watch-time`.
+   *
+   * @param string $targetField
    */
   public function setTargetField($targetField)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigOptim
     return $this->targetField;
   }
   /**
-   * @param float
+   * Required. The threshold to be applied to the target (e.g., 0.5).
+   *
+   * @param float $targetFieldValueFloat
    */
   public function setTargetFieldValueFloat($targetFieldValueFloat)
   {

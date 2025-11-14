@@ -22,10 +22,15 @@ class GcRule extends \Google\Model
   protected $intersectionType = Intersection::class;
   protected $intersectionDataType = '';
   /**
+   * Delete cells in a column older than the given age. Values must be at least
+   * one millisecond, and will be truncated to microsecond granularity.
+   *
    * @var string
    */
   public $maxAge;
   /**
+   * Delete all cells in a column except the most recent N.
+   *
    * @var int
    */
   public $maxNumVersions;
@@ -33,7 +38,9 @@ class GcRule extends \Google\Model
   protected $unionDataType = '';
 
   /**
-   * @param Intersection
+   * Delete cells that would be deleted by every nested rule.
+   *
+   * @param Intersection $intersection
    */
   public function setIntersection(Intersection $intersection)
   {
@@ -47,7 +54,10 @@ class GcRule extends \Google\Model
     return $this->intersection;
   }
   /**
-   * @param string
+   * Delete cells in a column older than the given age. Values must be at least
+   * one millisecond, and will be truncated to microsecond granularity.
+   *
+   * @param string $maxAge
    */
   public function setMaxAge($maxAge)
   {
@@ -61,7 +71,9 @@ class GcRule extends \Google\Model
     return $this->maxAge;
   }
   /**
-   * @param int
+   * Delete all cells in a column except the most recent N.
+   *
+   * @param int $maxNumVersions
    */
   public function setMaxNumVersions($maxNumVersions)
   {
@@ -75,7 +87,9 @@ class GcRule extends \Google\Model
     return $this->maxNumVersions;
   }
   /**
-   * @param Union
+   * Delete cells that would be deleted by any nested rule.
+   *
+   * @param Union $union
    */
   public function setUnion(Union $union)
   {

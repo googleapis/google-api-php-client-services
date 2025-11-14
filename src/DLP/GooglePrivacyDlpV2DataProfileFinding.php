@@ -20,16 +20,41 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
 {
   /**
+   * Unused.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_UNSPECIFIED = 'RESOURCE_VISIBILITY_UNSPECIFIED';
+  /**
+   * Visible to any user.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_PUBLIC = 'RESOURCE_VISIBILITY_PUBLIC';
+  /**
+   * May contain public items. For example, if a Cloud Storage bucket has
+   * uniform bucket level access disabled, some objects inside it may be public,
+   * but none are known yet.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_INCONCLUSIVE = 'RESOURCE_VISIBILITY_INCONCLUSIVE';
+  /**
+   * Visible only to specific users.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_RESTRICTED = 'RESOURCE_VISIBILITY_RESTRICTED';
+  /**
+   * Resource name of the data profile associated with the finding.
+   *
    * @var string
    */
   public $dataProfileResourceName;
   protected $dataSourceTypeType = GooglePrivacyDlpV2DataSourceType::class;
   protected $dataSourceTypeDataType = '';
   /**
+   * A unique identifier for the finding.
+   *
    * @var string
    */
   public $findingId;
   /**
+   * The [full resource name](https://cloud.google.com/apis/design/resource_name
+   * s#full_resource_name) of the resource profiled for this finding.
+   *
    * @var string
    */
   public $fullResourceName;
@@ -38,22 +63,32 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
   protected $locationType = GooglePrivacyDlpV2DataProfileFindingLocation::class;
   protected $locationDataType = '';
   /**
+   * The content that was found. Even if the content is not textual, it may be
+   * converted to a textual representation here. If the finding exceeds 4096
+   * bytes in length, the quote may be omitted.
+   *
    * @var string
    */
   public $quote;
   protected $quoteInfoType = GooglePrivacyDlpV2QuoteInfo::class;
   protected $quoteInfoDataType = '';
   /**
+   * How broadly a resource has been shared.
+   *
    * @var string
    */
   public $resourceVisibility;
   /**
+   * Timestamp when the finding was detected.
+   *
    * @var string
    */
   public $timestamp;
 
   /**
-   * @param string
+   * Resource name of the data profile associated with the finding.
+   *
+   * @param string $dataProfileResourceName
    */
   public function setDataProfileResourceName($dataProfileResourceName)
   {
@@ -67,7 +102,9 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->dataProfileResourceName;
   }
   /**
-   * @param GooglePrivacyDlpV2DataSourceType
+   * The type of the resource that was profiled.
+   *
+   * @param GooglePrivacyDlpV2DataSourceType $dataSourceType
    */
   public function setDataSourceType(GooglePrivacyDlpV2DataSourceType $dataSourceType)
   {
@@ -81,7 +118,9 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->dataSourceType;
   }
   /**
-   * @param string
+   * A unique identifier for the finding.
+   *
+   * @param string $findingId
    */
   public function setFindingId($findingId)
   {
@@ -95,7 +134,10 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->findingId;
   }
   /**
-   * @param string
+   * The [full resource name](https://cloud.google.com/apis/design/resource_name
+   * s#full_resource_name) of the resource profiled for this finding.
+   *
+   * @param string $fullResourceName
    */
   public function setFullResourceName($fullResourceName)
   {
@@ -109,7 +151,10 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->fullResourceName;
   }
   /**
-   * @param GooglePrivacyDlpV2InfoType
+   * The [type of content](https://cloud.google.com/sensitive-data-
+   * protection/docs/infotypes-reference) that might have been found.
+   *
+   * @param GooglePrivacyDlpV2InfoType $infotype
    */
   public function setInfotype(GooglePrivacyDlpV2InfoType $infotype)
   {
@@ -123,7 +168,9 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->infotype;
   }
   /**
-   * @param GooglePrivacyDlpV2DataProfileFindingLocation
+   * Where the content was found.
+   *
+   * @param GooglePrivacyDlpV2DataProfileFindingLocation $location
    */
   public function setLocation(GooglePrivacyDlpV2DataProfileFindingLocation $location)
   {
@@ -137,7 +184,11 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The content that was found. Even if the content is not textual, it may be
+   * converted to a textual representation here. If the finding exceeds 4096
+   * bytes in length, the quote may be omitted.
+   *
+   * @param string $quote
    */
   public function setQuote($quote)
   {
@@ -151,7 +202,10 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->quote;
   }
   /**
-   * @param GooglePrivacyDlpV2QuoteInfo
+   * Contains data parsed from quotes. Currently supported infoTypes: DATE,
+   * DATE_OF_BIRTH, and TIME.
+   *
+   * @param GooglePrivacyDlpV2QuoteInfo $quoteInfo
    */
   public function setQuoteInfo(GooglePrivacyDlpV2QuoteInfo $quoteInfo)
   {
@@ -165,21 +219,29 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->quoteInfo;
   }
   /**
-   * @param string
+   * How broadly a resource has been shared.
+   *
+   * Accepted values: RESOURCE_VISIBILITY_UNSPECIFIED,
+   * RESOURCE_VISIBILITY_PUBLIC, RESOURCE_VISIBILITY_INCONCLUSIVE,
+   * RESOURCE_VISIBILITY_RESTRICTED
+   *
+   * @param self::RESOURCE_VISIBILITY_* $resourceVisibility
    */
   public function setResourceVisibility($resourceVisibility)
   {
     $this->resourceVisibility = $resourceVisibility;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_VISIBILITY_*
    */
   public function getResourceVisibility()
   {
     return $this->resourceVisibility;
   }
   /**
-   * @param string
+   * Timestamp when the finding was detected.
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {

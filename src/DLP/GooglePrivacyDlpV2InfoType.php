@@ -20,18 +20,34 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InfoType extends \Google\Model
 {
   /**
+   * Name of the information type. Either a name of your choosing when creating
+   * a CustomInfoType, or one of the names listed at
+   * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+   * when specifying a built-in type. When sending Cloud DLP results to Data
+   * Catalog, infoType names should conform to the pattern
+   * `[A-Za-z0-9$_-]{1,64}`.
+   *
    * @var string
    */
   public $name;
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**
+   * Optional version name for this InfoType.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Name of the information type. Either a name of your choosing when creating
+   * a CustomInfoType, or one of the names listed at
+   * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+   * when specifying a built-in type. When sending Cloud DLP results to Data
+   * Catalog, infoType names should conform to the pattern
+   * `[A-Za-z0-9$_-]{1,64}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +61,10 @@ class GooglePrivacyDlpV2InfoType extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GooglePrivacyDlpV2SensitivityScore
+   * Optional custom sensitivity for this InfoType. This only applies to data
+   * profiling.
+   *
+   * @param GooglePrivacyDlpV2SensitivityScore $sensitivityScore
    */
   public function setSensitivityScore(GooglePrivacyDlpV2SensitivityScore $sensitivityScore)
   {
@@ -59,7 +78,9 @@ class GooglePrivacyDlpV2InfoType extends \Google\Model
     return $this->sensitivityScore;
   }
   /**
-   * @param string
+   * Optional version name for this InfoType.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

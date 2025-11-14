@@ -20,28 +20,41 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2UserCapabilities extends \Google\Model
 {
   /**
+   * Output only. Whether the user is allowed access to the label manager.
+   *
    * @var bool
    */
   public $canAccessLabelManager;
   /**
+   * Output only. Whether the user is an administrator for the shared labels
+   * feature.
+   *
    * @var bool
    */
   public $canAdministrateLabels;
   /**
+   * Output only. Whether the user is allowed to create admin labels.
+   *
    * @var bool
    */
   public $canCreateAdminLabels;
   /**
+   * Output only. Whether the user is allowed to create shared labels.
+   *
    * @var bool
    */
   public $canCreateSharedLabels;
   /**
+   * Output only. Resource name for the user capabilities.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param bool
+   * Output only. Whether the user is allowed access to the label manager.
+   *
+   * @param bool $canAccessLabelManager
    */
   public function setCanAccessLabelManager($canAccessLabelManager)
   {
@@ -55,7 +68,10 @@ class GoogleAppsDriveLabelsV2UserCapabilities extends \Google\Model
     return $this->canAccessLabelManager;
   }
   /**
-   * @param bool
+   * Output only. Whether the user is an administrator for the shared labels
+   * feature.
+   *
+   * @param bool $canAdministrateLabels
    */
   public function setCanAdministrateLabels($canAdministrateLabels)
   {
@@ -69,7 +85,9 @@ class GoogleAppsDriveLabelsV2UserCapabilities extends \Google\Model
     return $this->canAdministrateLabels;
   }
   /**
-   * @param bool
+   * Output only. Whether the user is allowed to create admin labels.
+   *
+   * @param bool $canCreateAdminLabels
    */
   public function setCanCreateAdminLabels($canCreateAdminLabels)
   {
@@ -83,7 +101,9 @@ class GoogleAppsDriveLabelsV2UserCapabilities extends \Google\Model
     return $this->canCreateAdminLabels;
   }
   /**
-   * @param bool
+   * Output only. Whether the user is allowed to create shared labels.
+   *
+   * @param bool $canCreateSharedLabels
    */
   public function setCanCreateSharedLabels($canCreateSharedLabels)
   {
@@ -97,7 +117,9 @@ class GoogleAppsDriveLabelsV2UserCapabilities extends \Google\Model
     return $this->canCreateSharedLabels;
   }
   /**
-   * @param string
+   * Output only. Resource name for the user capabilities.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

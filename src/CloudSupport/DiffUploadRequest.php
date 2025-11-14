@@ -24,12 +24,16 @@ class DiffUploadRequest extends \Google\Model
   protected $objectInfoType = CompositeMedia::class;
   protected $objectInfoDataType = '';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $objectVersion;
 
   /**
-   * @param CompositeMedia
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param CompositeMedia $checksumsInfo
    */
   public function setChecksumsInfo(CompositeMedia $checksumsInfo)
   {
@@ -43,7 +47,9 @@ class DiffUploadRequest extends \Google\Model
     return $this->checksumsInfo;
   }
   /**
-   * @param CompositeMedia
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param CompositeMedia $objectInfo
    */
   public function setObjectInfo(CompositeMedia $objectInfo)
   {
@@ -57,7 +63,9 @@ class DiffUploadRequest extends \Google\Model
     return $this->objectInfo;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $objectVersion
    */
   public function setObjectVersion($objectVersion)
   {

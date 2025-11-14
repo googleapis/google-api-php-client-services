@@ -22,12 +22,17 @@ class GooglePrivacyDlpV2ProfileStatus extends \Google\Model
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
   /**
+   * Time when the profile generation status was updated
+   *
    * @var string
    */
   public $timestamp;
 
   /**
-   * @param GoogleRpcStatus
+   * Profiling status code and optional message. The `status.code` value is 0
+   * (default value) for OK.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {
@@ -41,7 +46,9 @@ class GooglePrivacyDlpV2ProfileStatus extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * Time when the profile generation status was updated
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {

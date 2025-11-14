@@ -20,12 +20,16 @@ namespace Google\Service\Storage;
 class FolderPendingRenameInfo extends \Google\Model
 {
   /**
+   * The ID of the rename folder operation.
+   *
    * @var string
    */
   public $operationId;
 
   /**
-   * @param string
+   * The ID of the rename folder operation.
+   *
+   * @param string $operationId
    */
   public function setOperationId($operationId)
   {

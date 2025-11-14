@@ -20,12 +20,44 @@ namespace Google\Service\Dataform;
 class WorkflowInvocation extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The workflow invocation is currently running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The workflow invocation succeeded. A terminal state.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The workflow invocation was cancelled. A terminal state.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The workflow invocation failed. A terminal state.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The workflow invocation is being cancelled, but some actions are still
+   * running.
+   */
+  public const STATE_CANCELING = 'CANCELING';
+  /**
+   * Immutable. The name of the compilation result to use for this invocation.
+   * Must be in the format `projects/locations/repositories/compilationResults`.
+   *
    * @var string
    */
   public $compilationResult;
   protected $dataEncryptionStateType = DataEncryptionState::class;
   protected $dataEncryptionStateDataType = '';
   /**
+   * Output only. All the metadata information that is used internally to serve
+   * the resource. For example: timestamps, flags, status fields, etc. The
+   * format of this field is a JSON string.
+   *
    * @var string
    */
   public $internalMetadata;
@@ -34,24 +66,38 @@ class WorkflowInvocation extends \Google\Model
   protected $invocationTimingType = Interval::class;
   protected $invocationTimingDataType = '';
   /**
+   * Output only. The workflow invocation's name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The resolved compilation result that was used to create this
+   * invocation. Will be in the format
+   * `projects/locations/repositories/compilationResults`.
+   *
    * @var string
    */
   public $resolvedCompilationResult;
   /**
+   * Output only. This workflow invocation's current state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Immutable. The name of the workflow config to invoke. Must be in the format
+   * `projects/locations/repositories/workflowConfigs`.
+   *
    * @var string
    */
   public $workflowConfig;
 
   /**
-   * @param string
+   * Immutable. The name of the compilation result to use for this invocation.
+   * Must be in the format `projects/locations/repositories/compilationResults`.
+   *
+   * @param string $compilationResult
    */
   public function setCompilationResult($compilationResult)
   {
@@ -65,7 +111,9 @@ class WorkflowInvocation extends \Google\Model
     return $this->compilationResult;
   }
   /**
-   * @param DataEncryptionState
+   * Output only. Only set if the repository has a KMS Key.
+   *
+   * @param DataEncryptionState $dataEncryptionState
    */
   public function setDataEncryptionState(DataEncryptionState $dataEncryptionState)
   {
@@ -79,7 +127,11 @@ class WorkflowInvocation extends \Google\Model
     return $this->dataEncryptionState;
   }
   /**
-   * @param string
+   * Output only. All the metadata information that is used internally to serve
+   * the resource. For example: timestamps, flags, status fields, etc. The
+   * format of this field is a JSON string.
+   *
+   * @param string $internalMetadata
    */
   public function setInternalMetadata($internalMetadata)
   {
@@ -93,7 +145,9 @@ class WorkflowInvocation extends \Google\Model
     return $this->internalMetadata;
   }
   /**
-   * @param InvocationConfig
+   * Immutable. If left unset, a default InvocationConfig will be used.
+   *
+   * @param InvocationConfig $invocationConfig
    */
   public function setInvocationConfig(InvocationConfig $invocationConfig)
   {
@@ -107,7 +161,9 @@ class WorkflowInvocation extends \Google\Model
     return $this->invocationConfig;
   }
   /**
-   * @param Interval
+   * Output only. This workflow invocation's timing details.
+   *
+   * @param Interval $invocationTiming
    */
   public function setInvocationTiming(Interval $invocationTiming)
   {
@@ -121,7 +177,9 @@ class WorkflowInvocation extends \Google\Model
     return $this->invocationTiming;
   }
   /**
-   * @param string
+   * Output only. The workflow invocation's name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -135,7 +193,11 @@ class WorkflowInvocation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The resolved compilation result that was used to create this
+   * invocation. Will be in the format
+   * `projects/locations/repositories/compilationResults`.
+   *
+   * @param string $resolvedCompilationResult
    */
   public function setResolvedCompilationResult($resolvedCompilationResult)
   {
@@ -149,21 +211,29 @@ class WorkflowInvocation extends \Google\Model
     return $this->resolvedCompilationResult;
   }
   /**
-   * @param string
+   * Output only. This workflow invocation's current state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, SUCCEEDED, CANCELLED, FAILED,
+   * CANCELING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Immutable. The name of the workflow config to invoke. Must be in the format
+   * `projects/locations/repositories/workflowConfigs`.
+   *
+   * @param string $workflowConfig
    */
   public function setWorkflowConfig($workflowConfig)
   {

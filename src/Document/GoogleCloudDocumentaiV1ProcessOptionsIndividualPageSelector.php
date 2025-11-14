@@ -21,12 +21,16 @@ class GoogleCloudDocumentaiV1ProcessOptionsIndividualPageSelector extends \Googl
 {
   protected $collection_key = 'pages';
   /**
+   * Optional. Indices of the pages (starting from 1).
+   *
    * @var int[]
    */
   public $pages;
 
   /**
-   * @param int[]
+   * Optional. Indices of the pages (starting from 1).
+   *
+   * @param int[] $pages
    */
   public function setPages($pages)
   {

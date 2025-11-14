@@ -23,16 +23,23 @@ class EventDefinitionListResponse extends \Google\Collection
   protected $itemsType = EventDefinition::class;
   protected $itemsDataType = 'array';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventDefinitionListResponse`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The pagination token for the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param EventDefinition[]
+   * The event definitions.
+   *
+   * @param EventDefinition[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +53,10 @@ class EventDefinitionListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventDefinitionListResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class EventDefinitionListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The pagination token for the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

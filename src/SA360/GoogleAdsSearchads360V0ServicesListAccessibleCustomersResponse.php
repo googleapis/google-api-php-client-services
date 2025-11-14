@@ -21,12 +21,18 @@ class GoogleAdsSearchads360V0ServicesListAccessibleCustomersResponse extends \Go
 {
   protected $collection_key = 'resourceNames';
   /**
+   * Resource name of customers directly accessible by the user authenticating
+   * the call.
+   *
    * @var string[]
    */
   public $resourceNames;
 
   /**
-   * @param string[]
+   * Resource name of customers directly accessible by the user authenticating
+   * the call.
+   *
+   * @param string[] $resourceNames
    */
   public function setResourceNames($resourceNames)
   {

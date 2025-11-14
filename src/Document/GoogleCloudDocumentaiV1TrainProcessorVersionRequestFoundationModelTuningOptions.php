@@ -20,16 +20,27 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOptions extends \Google\Model
 {
   /**
+   * Optional. The multiplier to apply to the recommended learning rate. Valid
+   * values are between 0.1 and 10. If not provided, recommended learning rate
+   * will be used.
+   *
    * @var float
    */
   public $learningRateMultiplier;
   /**
+   * Optional. The number of steps to run for model tuning. Valid values are
+   * between 1 and 400. If not provided, recommended steps will be used.
+   *
    * @var int
    */
   public $trainSteps;
 
   /**
-   * @param float
+   * Optional. The multiplier to apply to the recommended learning rate. Valid
+   * values are between 0.1 and 10. If not provided, recommended learning rate
+   * will be used.
+   *
+   * @param float $learningRateMultiplier
    */
   public function setLearningRateMultiplier($learningRateMultiplier)
   {
@@ -43,7 +54,10 @@ class GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOp
     return $this->learningRateMultiplier;
   }
   /**
-   * @param int
+   * Optional. The number of steps to run for model tuning. Valid values are
+   * between 1 and 400. If not provided, recommended steps will be used.
+   *
+   * @param int $trainSteps
    */
   public function setTrainSteps($trainSteps)
   {

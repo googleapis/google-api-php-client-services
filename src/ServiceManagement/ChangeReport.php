@@ -24,7 +24,12 @@ class ChangeReport extends \Google\Collection
   protected $configChangesDataType = 'array';
 
   /**
-   * @param ConfigChange[]
+   * List of changes between two service configurations. The changes will be
+   * alphabetically sorted based on the identifier of each change. A
+   * ConfigChange identifier is a dot separated path to the configuration.
+   * Example: visibility.rules[selector='LibraryService.CreateBook'].restriction
+   *
+   * @param ConfigChange[] $configChanges
    */
   public function setConfigChanges($configChanges)
   {

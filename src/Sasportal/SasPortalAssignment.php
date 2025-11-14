@@ -21,16 +21,28 @@ class SasPortalAssignment extends \Google\Collection
 {
   protected $collection_key = 'members';
   /**
+   * The identities the role is assigned to. It can have the following values: *
+   * `{user_email}`: An email address that represents a specific Google account.
+   * For example: `alice@gmail.com`. * `{group_email}`: An email address that
+   * represents a Google group. For example, `viewers@gmail.com`.
+   *
    * @var string[]
    */
   public $members;
   /**
+   * Required. Role that is assigned to `members`.
+   *
    * @var string
    */
   public $role;
 
   /**
-   * @param string[]
+   * The identities the role is assigned to. It can have the following values: *
+   * `{user_email}`: An email address that represents a specific Google account.
+   * For example: `alice@gmail.com`. * `{group_email}`: An email address that
+   * represents a Google group. For example, `viewers@gmail.com`.
+   *
+   * @param string[] $members
    */
   public function setMembers($members)
   {
@@ -44,7 +56,9 @@ class SasPortalAssignment extends \Google\Collection
     return $this->members;
   }
   /**
-   * @param string
+   * Required. Role that is assigned to `members`.
+   *
+   * @param string $role
    */
   public function setRole($role)
   {

@@ -20,20 +20,38 @@ namespace Google\Service\CloudAsset;
 class GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination extends \Google\Model
 {
   /**
+   * Required. The BigQuery dataset where the query results will be saved. It
+   * has the format of "projects/{projectId}/datasets/{datasetId}".
+   *
    * @var string
    */
   public $dataset;
   /**
+   * Required. The BigQuery table where the query results will be saved. If this
+   * table does not exist, a new table with the given name will be created.
+   *
    * @var string
    */
   public $table;
   /**
+   * Specifies the action that occurs if the destination table or partition
+   * already exists. The following values are supported: * WRITE_TRUNCATE: If
+   * the table or partition already exists, BigQuery overwrites the entire table
+   * or all the partitions data. * WRITE_APPEND: If the table or partition
+   * already exists, BigQuery appends the data to the table or the latest
+   * partition. * WRITE_EMPTY: If the table already exists and contains data, a
+   * 'duplicate' error is returned in the job result. The default value is
+   * WRITE_EMPTY.
+   *
    * @var string
    */
   public $writeDisposition;
 
   /**
-   * @param string
+   * Required. The BigQuery dataset where the query results will be saved. It
+   * has the format of "projects/{projectId}/datasets/{datasetId}".
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -47,7 +65,10 @@ class GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination extends \Goog
     return $this->dataset;
   }
   /**
-   * @param string
+   * Required. The BigQuery table where the query results will be saved. If this
+   * table does not exist, a new table with the given name will be created.
+   *
+   * @param string $table
    */
   public function setTable($table)
   {
@@ -61,7 +82,16 @@ class GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination extends \Goog
     return $this->table;
   }
   /**
-   * @param string
+   * Specifies the action that occurs if the destination table or partition
+   * already exists. The following values are supported: * WRITE_TRUNCATE: If
+   * the table or partition already exists, BigQuery overwrites the entire table
+   * or all the partitions data. * WRITE_APPEND: If the table or partition
+   * already exists, BigQuery appends the data to the table or the latest
+   * partition. * WRITE_EMPTY: If the table already exists and contains data, a
+   * 'duplicate' error is returned in the job result. The default value is
+   * WRITE_EMPTY.
+   *
+   * @param string $writeDisposition
    */
   public function setWriteDisposition($writeDisposition)
   {

@@ -20,30 +20,81 @@ namespace Google\Service\Dataflow;
 class NameAndKind extends \Google\Model
 {
   /**
+   * Counter aggregation kind was not set.
+   */
+  public const KIND_INVALID = 'INVALID';
+  /**
+   * Aggregated value is the sum of all contributed values.
+   */
+  public const KIND_SUM = 'SUM';
+  /**
+   * Aggregated value is the max of all contributed values.
+   */
+  public const KIND_MAX = 'MAX';
+  /**
+   * Aggregated value is the min of all contributed values.
+   */
+  public const KIND_MIN = 'MIN';
+  /**
+   * Aggregated value is the mean of all contributed values.
+   */
+  public const KIND_MEAN = 'MEAN';
+  /**
+   * Aggregated value represents the logical 'or' of all contributed values.
+   */
+  public const KIND_OR = 'OR';
+  /**
+   * Aggregated value represents the logical 'and' of all contributed values.
+   */
+  public const KIND_AND = 'AND';
+  /**
+   * Aggregated value is a set of unique contributed values.
+   */
+  public const KIND_SET = 'SET';
+  /**
+   * Aggregated value captures statistics about a distribution.
+   */
+  public const KIND_DISTRIBUTION = 'DISTRIBUTION';
+  /**
+   * Aggregated value tracks the latest value of a variable.
+   */
+  public const KIND_LATEST_VALUE = 'LATEST_VALUE';
+  /**
+   * Counter aggregation kind.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the counter.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Counter aggregation kind.
+   *
+   * Accepted values: INVALID, SUM, MAX, MIN, MEAN, OR, AND, SET, DISTRIBUTION,
+   * LATEST_VALUE
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the counter.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

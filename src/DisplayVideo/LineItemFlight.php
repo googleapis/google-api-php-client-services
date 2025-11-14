@@ -19,15 +19,37 @@ namespace Google\Service\DisplayVideo;
 
 class LineItemFlight extends \Google\Model
 {
+  /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const FLIGHT_DATE_TYPE_LINE_ITEM_FLIGHT_DATE_TYPE_UNSPECIFIED = 'LINE_ITEM_FLIGHT_DATE_TYPE_UNSPECIFIED';
+  /**
+   * The line item's flight dates are inherited from its parent insertion order.
+   */
+  public const FLIGHT_DATE_TYPE_LINE_ITEM_FLIGHT_DATE_TYPE_INHERITED = 'LINE_ITEM_FLIGHT_DATE_TYPE_INHERITED';
+  /**
+   * The line item uses its own custom flight dates.
+   */
+  public const FLIGHT_DATE_TYPE_LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM = 'LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM';
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
   /**
+   * Required. The type of the line item's flight dates.
+   *
    * @var string
    */
   public $flightDateType;
 
   /**
-   * @param DateRange
+   * The flight start and end dates of the line item. They are resolved relative
+   * to the parent advertiser's time zone. * Required when flight_date_type is
+   * `LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM`. Output only otherwise. * When creating
+   * a new flight, both `start_date` and `end_date` must be in the future. * An
+   * existing flight with a `start_date` in the past has a mutable `end_date`
+   * but an immutable `start_date`. * `end_date` must be the `start_date` or
+   * later, both before the year 2037.
+   *
+   * @param DateRange $dateRange
    */
   public function setDateRange(DateRange $dateRange)
   {
@@ -41,14 +63,19 @@ class LineItemFlight extends \Google\Model
     return $this->dateRange;
   }
   /**
-   * @param string
+   * Required. The type of the line item's flight dates.
+   *
+   * Accepted values: LINE_ITEM_FLIGHT_DATE_TYPE_UNSPECIFIED,
+   * LINE_ITEM_FLIGHT_DATE_TYPE_INHERITED, LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM
+   *
+   * @param self::FLIGHT_DATE_TYPE_* $flightDateType
    */
   public function setFlightDateType($flightDateType)
   {
     $this->flightDateType = $flightDateType;
   }
   /**
-   * @return string
+   * @return self::FLIGHT_DATE_TYPE_*
    */
   public function getFlightDateType()
   {

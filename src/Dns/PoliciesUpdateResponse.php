@@ -23,7 +23,7 @@ class PoliciesUpdateResponse extends \Google\Model
   protected $policyDataType = '';
 
   /**
-   * @param Policy
+   * @param Policy $policy
    */
   public function setPolicy(Policy $policy)
   {

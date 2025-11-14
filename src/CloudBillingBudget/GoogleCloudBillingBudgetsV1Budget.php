@@ -19,20 +19,45 @@ namespace Google\Service\CloudBillingBudget;
 
 class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
 {
+  /**
+   * Unspecified ownership scope, same as ALL_USERS.
+   */
+  public const OWNERSHIP_SCOPE_OWNERSHIP_SCOPE_UNSPECIFIED = 'OWNERSHIP_SCOPE_UNSPECIFIED';
+  /**
+   * Both billing account-level users and project-level users have full access
+   * to the budget, if the users have the required IAM permissions.
+   */
+  public const OWNERSHIP_SCOPE_ALL_USERS = 'ALL_USERS';
+  /**
+   * Only billing account-level users have full access to the budget. Project-
+   * level users have read-only access, even if they have the required IAM
+   * permissions.
+   */
+  public const OWNERSHIP_SCOPE_BILLING_ACCOUNT = 'BILLING_ACCOUNT';
   protected $collection_key = 'thresholdRules';
   protected $amountType = GoogleCloudBillingBudgetsV1BudgetAmount::class;
   protected $amountDataType = '';
   protected $budgetFilterType = GoogleCloudBillingBudgetsV1Filter::class;
   protected $budgetFilterDataType = '';
   /**
+   * User data for display name in UI. The name must be less than or equal to 60
+   * characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Etag to validate that the object is unchanged for a read-modify-
+   * write operation. An empty etag causes an update to overwrite other changes.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. Resource name of the budget. The resource name implies the
+   * scope of a budget. Values are of the form
+   * `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
+   *
    * @var string
    */
   public $name;
@@ -46,7 +71,9 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
   protected $thresholdRulesDataType = 'array';
 
   /**
-   * @param GoogleCloudBillingBudgetsV1BudgetAmount
+   * Required. Budgeted amount.
+   *
+   * @param GoogleCloudBillingBudgetsV1BudgetAmount $amount
    */
   public function setAmount(GoogleCloudBillingBudgetsV1BudgetAmount $amount)
   {
@@ -60,7 +87,11 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
     return $this->amount;
   }
   /**
-   * @param GoogleCloudBillingBudgetsV1Filter
+   * Optional. Filters that define which resources are used to compute the
+   * actual spend against the budget amount, such as projects, services, and the
+   * budget's time period, as well as other filters.
+   *
+   * @param GoogleCloudBillingBudgetsV1Filter $budgetFilter
    */
   public function setBudgetFilter(GoogleCloudBillingBudgetsV1Filter $budgetFilter)
   {
@@ -74,7 +105,10 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
     return $this->budgetFilter;
   }
   /**
-   * @param string
+   * User data for display name in UI. The name must be less than or equal to 60
+   * characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -88,7 +122,10 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Optional. Etag to validate that the object is unchanged for a read-modify-
+   * write operation. An empty etag causes an update to overwrite other changes.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -102,7 +139,11 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. Resource name of the budget. The resource name implies the
+   * scope of a budget. Values are of the form
+   * `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -116,7 +157,10 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudBillingBudgetsV1NotificationsRule
+   * Optional. Rules to apply to notifications sent based on budget spend and
+   * thresholds.
+   *
+   * @param GoogleCloudBillingBudgetsV1NotificationsRule $notificationsRule
    */
   public function setNotificationsRule(GoogleCloudBillingBudgetsV1NotificationsRule $notificationsRule)
   {
@@ -130,21 +174,26 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
     return $this->notificationsRule;
   }
   /**
-   * @param string
+   * @param self::OWNERSHIP_SCOPE_* $ownershipScope
    */
   public function setOwnershipScope($ownershipScope)
   {
     $this->ownershipScope = $ownershipScope;
   }
   /**
-   * @return string
+   * @return self::OWNERSHIP_SCOPE_*
    */
   public function getOwnershipScope()
   {
     return $this->ownershipScope;
   }
   /**
-   * @param GoogleCloudBillingBudgetsV1ThresholdRule[]
+   * Optional. Rules that trigger alerts (notifications of thresholds being
+   * crossed) when spend exceeds the specified percentages of the budget.
+   * Optional for `pubsubTopic` notifications. Required if using email
+   * notifications.
+   *
+   * @param GoogleCloudBillingBudgetsV1ThresholdRule[] $thresholdRules
    */
   public function setThresholdRules($thresholdRules)
   {

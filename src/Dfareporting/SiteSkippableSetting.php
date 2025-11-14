@@ -20,6 +20,9 @@ namespace Google\Service\Dfareporting;
 class SiteSkippableSetting extends \Google\Model
 {
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#siteSkippableSetting".
+   *
    * @var string
    */
   public $kind;
@@ -28,12 +31,18 @@ class SiteSkippableSetting extends \Google\Model
   protected $skipOffsetType = VideoOffset::class;
   protected $skipOffsetDataType = '';
   /**
+   * Whether the user can skip creatives served to this site. This will act as
+   * default for new placements created under this site.
+   *
    * @var bool
    */
   public $skippable;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#siteSkippableSetting".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -47,7 +56,10 @@ class SiteSkippableSetting extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param VideoOffset
+   * Amount of time to play videos served to this site template before counting
+   * a view. Applicable when skippable is true.
+   *
+   * @param VideoOffset $progressOffset
    */
   public function setProgressOffset(VideoOffset $progressOffset)
   {
@@ -61,7 +73,10 @@ class SiteSkippableSetting extends \Google\Model
     return $this->progressOffset;
   }
   /**
-   * @param VideoOffset
+   * Amount of time to play videos served to this site before the skip button
+   * should appear. Applicable when skippable is true.
+   *
+   * @param VideoOffset $skipOffset
    */
   public function setSkipOffset(VideoOffset $skipOffset)
   {
@@ -75,7 +90,10 @@ class SiteSkippableSetting extends \Google\Model
     return $this->skipOffset;
   }
   /**
-   * @param bool
+   * Whether the user can skip creatives served to this site. This will act as
+   * default for new placements created under this site.
+   *
+   * @param bool $skippable
    */
   public function setSkippable($skippable)
   {

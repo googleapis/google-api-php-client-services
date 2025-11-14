@@ -20,24 +20,34 @@ namespace Google\Service\DatabaseMigrationService;
 class Position extends \Google\Model
 {
   /**
+   * Issue column number
+   *
    * @var int
    */
   public $column;
   /**
+   * Issue length
+   *
    * @var int
    */
   public $length;
   /**
+   * Issue line number
+   *
    * @var int
    */
   public $line;
   /**
+   * Issue offset
+   *
    * @var int
    */
   public $offset;
 
   /**
-   * @param int
+   * Issue column number
+   *
+   * @param int $column
    */
   public function setColumn($column)
   {
@@ -51,7 +61,9 @@ class Position extends \Google\Model
     return $this->column;
   }
   /**
-   * @param int
+   * Issue length
+   *
+   * @param int $length
    */
   public function setLength($length)
   {
@@ -65,7 +77,9 @@ class Position extends \Google\Model
     return $this->length;
   }
   /**
-   * @param int
+   * Issue line number
+   *
+   * @param int $line
    */
   public function setLine($line)
   {
@@ -79,7 +93,9 @@ class Position extends \Google\Model
     return $this->line;
   }
   /**
-   * @param int
+   * Issue offset
+   *
+   * @param int $offset
    */
   public function setOffset($offset)
   {

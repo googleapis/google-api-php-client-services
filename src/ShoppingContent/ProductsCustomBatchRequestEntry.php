@@ -20,34 +20,58 @@ namespace Google\Service\ShoppingContent;
 class ProductsCustomBatchRequestEntry extends \Google\Model
 {
   /**
+   * An entry ID, unique within the batch request.
+   *
    * @var string
    */
   public $batchId;
   /**
+   * The Content API Supplemental Feed ID. If present then product insertion or
+   * deletion applies to a supplemental feed instead of primary Content API
+   * feed.
+   *
    * @var string
    */
   public $feedId;
   /**
+   * The ID of the managing account.
+   *
    * @var string
    */
   public $merchantId;
   /**
+   * The method of the batch entry. Acceptable values are: - "`delete`" -
+   * "`get`" - "`insert`" - "`update`"
+   *
    * @var string
    */
   public $method;
   protected $productType = Product::class;
   protected $productDataType = '';
   /**
+   * The ID of the product to get or mutate. Only defined if the method is
+   * `get`, `delete`, or `update`.
+   *
    * @var string
    */
   public $productId;
   /**
+   * The comma-separated list of product attributes to be updated. Example:
+   * `"title,salePrice"`. Attributes specified in the update mask without a
+   * value specified in the body will be deleted from the product. *You must
+   * specify the update mask to delete attributes.* Only top-level product
+   * attributes can be updated. If not defined, product attributes with set
+   * values will be updated and other attributes will stay unchanged. Only
+   * defined if the method is `update`.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param string
+   * An entry ID, unique within the batch request.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -61,7 +85,11 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param string
+   * The Content API Supplemental Feed ID. If present then product insertion or
+   * deletion applies to a supplemental feed instead of primary Content API
+   * feed.
+   *
+   * @param string $feedId
    */
   public function setFeedId($feedId)
   {
@@ -75,7 +103,9 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
     return $this->feedId;
   }
   /**
-   * @param string
+   * The ID of the managing account.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -89,7 +119,10 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
     return $this->merchantId;
   }
   /**
-   * @param string
+   * The method of the batch entry. Acceptable values are: - "`delete`" -
+   * "`get`" - "`insert`" - "`update`"
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -103,7 +136,13 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
     return $this->method;
   }
   /**
-   * @param Product
+   * The product to insert or update. Only required if the method is `insert` or
+   * `update`. If the `update` method is used with `updateMask` only to delete a
+   * field, then this isn't required. For example, setting `salePrice` on the
+   * `updateMask` and not providing a `product` will result in an existing sale
+   * price on the product specified by `productId` being deleted.
+   *
+   * @param Product $product
    */
   public function setProduct(Product $product)
   {
@@ -117,7 +156,10 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
     return $this->product;
   }
   /**
-   * @param string
+   * The ID of the product to get or mutate. Only defined if the method is
+   * `get`, `delete`, or `update`.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -131,7 +173,15 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
     return $this->productId;
   }
   /**
-   * @param string
+   * The comma-separated list of product attributes to be updated. Example:
+   * `"title,salePrice"`. Attributes specified in the update mask without a
+   * value specified in the body will be deleted from the product. *You must
+   * specify the update mask to delete attributes.* Only top-level product
+   * attributes can be updated. If not defined, product attributes with set
+   * values will be updated and other attributes will stay unchanged. Only
+   * defined if the method is `update`.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

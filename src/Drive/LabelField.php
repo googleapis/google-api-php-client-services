@@ -21,38 +21,58 @@ class LabelField extends \Google\Collection
 {
   protected $collection_key = 'user';
   /**
+   * Only present if valueType is dateString. RFC 3339 formatted date: YYYY-MM-
+   * DD.
+   *
    * @var string[]
    */
   public $dateString;
   /**
+   * The identifier of this label field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Only present if `valueType` is `integer`.
+   *
    * @var string[]
    */
   public $integer;
   /**
+   * This is always drive#labelField.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Only present if `valueType` is `selection`
+   *
    * @var string[]
    */
   public $selection;
   /**
+   * Only present if `valueType` is `text`.
+   *
    * @var string[]
    */
   public $text;
   protected $userType = User::class;
   protected $userDataType = 'array';
   /**
+   * The field type. While new values may be supported in the future, the
+   * following are currently allowed: * `dateString` * `integer` * `selection` *
+   * `text` * `user`
+   *
    * @var string
    */
   public $valueType;
 
   /**
-   * @param string[]
+   * Only present if valueType is dateString. RFC 3339 formatted date: YYYY-MM-
+   * DD.
+   *
+   * @param string[] $dateString
    */
   public function setDateString($dateString)
   {
@@ -66,7 +86,9 @@ class LabelField extends \Google\Collection
     return $this->dateString;
   }
   /**
-   * @param string
+   * The identifier of this label field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -80,7 +102,9 @@ class LabelField extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string[]
+   * Only present if `valueType` is `integer`.
+   *
+   * @param string[] $integer
    */
   public function setInteger($integer)
   {
@@ -94,7 +118,9 @@ class LabelField extends \Google\Collection
     return $this->integer;
   }
   /**
-   * @param string
+   * This is always drive#labelField.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -108,7 +134,9 @@ class LabelField extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * Only present if `valueType` is `selection`
+   *
+   * @param string[] $selection
    */
   public function setSelection($selection)
   {
@@ -122,7 +150,9 @@ class LabelField extends \Google\Collection
     return $this->selection;
   }
   /**
-   * @param string[]
+   * Only present if `valueType` is `text`.
+   *
+   * @param string[] $text
    */
   public function setText($text)
   {
@@ -136,7 +166,9 @@ class LabelField extends \Google\Collection
     return $this->text;
   }
   /**
-   * @param User[]
+   * Only present if `valueType` is `user`.
+   *
+   * @param User[] $user
    */
   public function setUser($user)
   {
@@ -150,7 +182,11 @@ class LabelField extends \Google\Collection
     return $this->user;
   }
   /**
-   * @param string
+   * The field type. While new values may be supported in the future, the
+   * following are currently allowed: * `dateString` * `integer` * `selection` *
+   * `text` * `user`
+   *
+   * @param string $valueType
    */
   public function setValueType($valueType)
   {

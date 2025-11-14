@@ -25,7 +25,7 @@ class PostImages extends \Google\Model
   public $url;
 
   /**
-   * @param string
+   * @param string $url
    */
   public function setUrl($url)
   {

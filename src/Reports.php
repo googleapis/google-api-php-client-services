@@ -36,10 +36,10 @@ use Google\Client;
  */
 class Reports extends \Google\Service
 {
-  /** View audit reports for your G Suite domain. */
+  /** View audit reports for your Google Workspace domain. */
   const ADMIN_REPORTS_AUDIT_READONLY =
       "https://www.googleapis.com/auth/admin.reports.audit.readonly";
-  /** View usage reports for your G Suite domain. */
+  /** View usage reports for your Google Workspace domain. */
   const ADMIN_REPORTS_USAGE_READONLY =
       "https://www.googleapis.com/auth/admin.reports.usage.readonly";
 

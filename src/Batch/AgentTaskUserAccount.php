@@ -20,16 +20,25 @@ namespace Google\Service\Batch;
 class AgentTaskUserAccount extends \Google\Model
 {
   /**
+   * gid id an unique identifier of the POSIX account group corresponding to the
+   * user account.
+   *
    * @var string
    */
   public $gid;
   /**
+   * uid is an unique identifier of the POSIX account corresponding to the user
+   * account.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string
+   * gid id an unique identifier of the POSIX account group corresponding to the
+   * user account.
+   *
+   * @param string $gid
    */
   public function setGid($gid)
   {
@@ -43,7 +52,10 @@ class AgentTaskUserAccount extends \Google\Model
     return $this->gid;
   }
   /**
-   * @param string
+   * uid is an unique identifier of the POSIX account corresponding to the user
+   * account.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

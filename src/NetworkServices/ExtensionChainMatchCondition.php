@@ -20,12 +20,24 @@ namespace Google\Service\NetworkServices;
 class ExtensionChainMatchCondition extends \Google\Model
 {
   /**
+   * Required. A Common Expression Language (CEL) expression that is used to
+   * match requests for which the extension chain is executed. For more
+   * information, see [CEL matcher language
+   * reference](https://cloud.google.com/service-extensions/docs/cel-matcher-
+   * language-reference).
+   *
    * @var string
    */
   public $celExpression;
 
   /**
-   * @param string
+   * Required. A Common Expression Language (CEL) expression that is used to
+   * match requests for which the extension chain is executed. For more
+   * information, see [CEL matcher language
+   * reference](https://cloud.google.com/service-extensions/docs/cel-matcher-
+   * language-reference).
+   *
+   * @param string $celExpression
    */
   public function setCelExpression($celExpression)
   {

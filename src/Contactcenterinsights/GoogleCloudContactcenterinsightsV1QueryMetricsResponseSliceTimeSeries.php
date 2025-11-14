@@ -24,7 +24,9 @@ class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceTimeSeries exte
   protected $dataPointsDataType = 'array';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPoint[]
+   * The data points that make up the time series .
+   *
+   * @param GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPoint[] $dataPoints
    */
   public function setDataPoints($dataPoints)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3HumanReviewValidationMetadata extends \Google\Model
 {
   /**
+   * The confidence threshold if human review validation is enabled.
+   *
    * @var float
    */
   public $confidenceThreshold;
   /**
+   * Whether to enable human review validation.
+   *
    * @var bool
    */
   public $enableValidation;
 
   /**
-   * @param float
+   * The confidence threshold if human review validation is enabled.
+   *
+   * @param float $confidenceThreshold
    */
   public function setConfidenceThreshold($confidenceThreshold)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDocumentaiUiv1beta3HumanReviewValidationMetadata extends \Googl
     return $this->confidenceThreshold;
   }
   /**
-   * @param bool
+   * Whether to enable human review validation.
+   *
+   * @param bool $enableValidation
    */
   public function setEnableValidation($enableValidation)
   {

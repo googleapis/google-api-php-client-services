@@ -19,16 +19,37 @@ namespace Google\Service\BinaryAuthorization;
 
 class EvaluateGkePolicyResponse extends \Google\Collection
 {
+  /**
+   * Not specified. This should never be used.
+   */
+  public const VERDICT_VERDICT_UNSPECIFIED = 'VERDICT_UNSPECIFIED';
+  /**
+   * All Pods in the request conform to the policy.
+   */
+  public const VERDICT_CONFORMANT = 'CONFORMANT';
+  /**
+   * At least one Pod does not conform to the policy.
+   */
+  public const VERDICT_NON_CONFORMANT = 'NON_CONFORMANT';
+  /**
+   * Encountered at least one error evaluating a Pod and all other Pods conform
+   * to the policy. Non-conformance has precedence over errors.
+   */
+  public const VERDICT_ERROR = 'ERROR';
   protected $collection_key = 'results';
   protected $resultsType = PodResult::class;
   protected $resultsDataType = 'array';
   /**
+   * The result of evaluating all Pods in the request.
+   *
    * @var string
    */
   public $verdict;
 
   /**
-   * @param PodResult[]
+   * Evaluation result for each Pod contained in the request.
+   *
+   * @param PodResult[] $results
    */
   public function setResults($results)
   {
@@ -42,14 +63,18 @@ class EvaluateGkePolicyResponse extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param string
+   * The result of evaluating all Pods in the request.
+   *
+   * Accepted values: VERDICT_UNSPECIFIED, CONFORMANT, NON_CONFORMANT, ERROR
+   *
+   * @param self::VERDICT_* $verdict
    */
   public function setVerdict($verdict)
   {
     $this->verdict = $verdict;
   }
   /**
-   * @return string
+   * @return self::VERDICT_*
    */
   public function getVerdict()
   {

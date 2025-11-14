@@ -23,12 +23,18 @@ class ListAdvertisersResponse extends \Google\Collection
   protected $advertisersType = Advertiser::class;
   protected $advertisersDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListAdvertisers` method to
+   * retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Advertiser[]
+   * The list of advertisers. This list will be absent if empty.
+   *
+   * @param Advertiser[] $advertisers
    */
   public function setAdvertisers($advertisers)
   {
@@ -42,7 +48,11 @@ class ListAdvertisersResponse extends \Google\Collection
     return $this->advertisers;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListAdvertisers` method to
+   * retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

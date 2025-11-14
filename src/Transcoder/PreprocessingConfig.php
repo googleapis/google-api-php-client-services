@@ -35,7 +35,9 @@ class PreprocessingConfig extends \Google\Model
   protected $padDataType = '';
 
   /**
-   * @param Audio
+   * Audio preprocessing configuration.
+   *
+   * @param Audio $audio
    */
   public function setAudio(Audio $audio)
   {
@@ -49,7 +51,9 @@ class PreprocessingConfig extends \Google\Model
     return $this->audio;
   }
   /**
-   * @param Color
+   * Color preprocessing configuration.
+   *
+   * @param Color $color
    */
   public function setColor(Color $color)
   {
@@ -63,7 +67,9 @@ class PreprocessingConfig extends \Google\Model
     return $this->color;
   }
   /**
-   * @param Crop
+   * Specify the video cropping configuration.
+   *
+   * @param Crop $crop
    */
   public function setCrop(Crop $crop)
   {
@@ -77,7 +83,9 @@ class PreprocessingConfig extends \Google\Model
     return $this->crop;
   }
   /**
-   * @param Deblock
+   * Deblock preprocessing configuration.
+   *
+   * @param Deblock $deblock
    */
   public function setDeblock(Deblock $deblock)
   {
@@ -91,7 +99,9 @@ class PreprocessingConfig extends \Google\Model
     return $this->deblock;
   }
   /**
-   * @param Deinterlace
+   * Specify the video deinterlace configuration.
+   *
+   * @param Deinterlace $deinterlace
    */
   public function setDeinterlace(Deinterlace $deinterlace)
   {
@@ -105,7 +115,9 @@ class PreprocessingConfig extends \Google\Model
     return $this->deinterlace;
   }
   /**
-   * @param Denoise
+   * Denoise preprocessing configuration.
+   *
+   * @param Denoise $denoise
    */
   public function setDenoise(Denoise $denoise)
   {
@@ -119,7 +131,9 @@ class PreprocessingConfig extends \Google\Model
     return $this->denoise;
   }
   /**
-   * @param Pad
+   * Specify the video pad filter configuration.
+   *
+   * @param Pad $pad
    */
   public function setPad(Pad $pad)
   {

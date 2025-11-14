@@ -27,7 +27,7 @@ class ErrorMessage extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param string
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -41,7 +41,7 @@ class ErrorMessage extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * @param Source
+   * @param Source $source
    */
   public function setSource(Source $source)
   {

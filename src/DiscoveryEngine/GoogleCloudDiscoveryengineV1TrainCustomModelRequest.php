@@ -24,16 +24,24 @@ class GoogleCloudDiscoveryengineV1TrainCustomModelRequest extends \Google\Model
   protected $gcsTrainingInputType = GoogleCloudDiscoveryengineV1TrainCustomModelRequestGcsTrainingInput::class;
   protected $gcsTrainingInputDataType = '';
   /**
+   * If not provided, a UUID will be generated.
+   *
    * @var string
    */
   public $modelId;
   /**
+   * Model to be trained. Supported values are: * **search-tuning**: Fine tuning
+   * the search system based on data provided.
+   *
    * @var string
    */
   public $modelType;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1ImportErrorConfig
+   * The desired location of errors incurred during the data ingestion and
+   * training.
+   *
+   * @param GoogleCloudDiscoveryengineV1ImportErrorConfig $errorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1ImportErrorConfig $errorConfig)
   {
@@ -47,7 +55,9 @@ class GoogleCloudDiscoveryengineV1TrainCustomModelRequest extends \Google\Model
     return $this->errorConfig;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1TrainCustomModelRequestGcsTrainingInput
+   * Cloud Storage training input.
+   *
+   * @param GoogleCloudDiscoveryengineV1TrainCustomModelRequestGcsTrainingInput $gcsTrainingInput
    */
   public function setGcsTrainingInput(GoogleCloudDiscoveryengineV1TrainCustomModelRequestGcsTrainingInput $gcsTrainingInput)
   {
@@ -61,7 +71,9 @@ class GoogleCloudDiscoveryengineV1TrainCustomModelRequest extends \Google\Model
     return $this->gcsTrainingInput;
   }
   /**
-   * @param string
+   * If not provided, a UUID will be generated.
+   *
+   * @param string $modelId
    */
   public function setModelId($modelId)
   {
@@ -75,7 +87,10 @@ class GoogleCloudDiscoveryengineV1TrainCustomModelRequest extends \Google\Model
     return $this->modelId;
   }
   /**
-   * @param string
+   * Model to be trained. Supported values are: * **search-tuning**: Fine tuning
+   * the search system based on data provided.
+   *
+   * @param string $modelType
    */
   public function setModelType($modelType)
   {

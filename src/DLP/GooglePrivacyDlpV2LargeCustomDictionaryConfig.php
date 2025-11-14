@@ -27,7 +27,9 @@ class GooglePrivacyDlpV2LargeCustomDictionaryConfig extends \Google\Model
   protected $outputPathDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2BigQueryField
+   * Field in a BigQuery table where each cell represents a dictionary phrase.
+   *
+   * @param GooglePrivacyDlpV2BigQueryField $bigQueryField
    */
   public function setBigQueryField(GooglePrivacyDlpV2BigQueryField $bigQueryField)
   {
@@ -41,7 +43,9 @@ class GooglePrivacyDlpV2LargeCustomDictionaryConfig extends \Google\Model
     return $this->bigQueryField;
   }
   /**
-   * @param GooglePrivacyDlpV2CloudStorageFileSet
+   * Set of files containing newline-delimited lists of dictionary phrases.
+   *
+   * @param GooglePrivacyDlpV2CloudStorageFileSet $cloudStorageFileSet
    */
   public function setCloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSet $cloudStorageFileSet)
   {
@@ -55,7 +59,12 @@ class GooglePrivacyDlpV2LargeCustomDictionaryConfig extends \Google\Model
     return $this->cloudStorageFileSet;
   }
   /**
-   * @param GooglePrivacyDlpV2CloudStoragePath
+   * Location to store dictionary artifacts in Cloud Storage. These files will
+   * only be accessible by project owners and the DLP API. If any of these
+   * artifacts are modified, the dictionary is considered invalid and can no
+   * longer be used.
+   *
+   * @param GooglePrivacyDlpV2CloudStoragePath $outputPath
    */
   public function setOutputPath(GooglePrivacyDlpV2CloudStoragePath $outputPath)
   {

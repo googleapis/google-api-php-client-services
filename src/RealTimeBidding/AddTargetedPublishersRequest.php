@@ -19,18 +19,51 @@ namespace Google\Service\RealTimeBidding;
 
 class AddTargetedPublishersRequest extends \Google\Collection
 {
+  /**
+   * Placeholder for undefined targeting mode.
+   */
+  public const TARGETING_MODE_TARGETING_MODE_UNSPECIFIED = 'TARGETING_MODE_UNSPECIFIED';
+  /**
+   * The inclusive list type. Inventory must match an item in this list to be
+   * targeted.
+   */
+  public const TARGETING_MODE_INCLUSIVE = 'INCLUSIVE';
+  /**
+   * The exclusive list type. Inventory must not match any item in this list to
+   * be targeted.
+   */
+  public const TARGETING_MODE_EXCLUSIVE = 'EXCLUSIVE';
   protected $collection_key = 'publisherIds';
   /**
+   * A list of publisher IDs to target in the pretargeting configuration. These
+   * values will be added to the list of targeted publisher IDs in
+   * PretargetingConfig.publisherTargeting.values. Publishers are identified by
+   * their publisher ID from ads.txt / app-ads.txt. See
+   * https://iabtechlab.com/ads-txt/ and https://iabtechlab.com/app-ads-txt/ for
+   * more details.
+   *
    * @var string[]
    */
   public $publisherIds;
   /**
+   * Required. The targeting mode that should be applied to the list of
+   * publisher IDs. If are existing publisher IDs, must be equal to the existing
+   * PretargetingConfig.publisherTargeting.targetingMode or a 400 bad request
+   * error will be returned.
+   *
    * @var string
    */
   public $targetingMode;
 
   /**
-   * @param string[]
+   * A list of publisher IDs to target in the pretargeting configuration. These
+   * values will be added to the list of targeted publisher IDs in
+   * PretargetingConfig.publisherTargeting.values. Publishers are identified by
+   * their publisher ID from ads.txt / app-ads.txt. See
+   * https://iabtechlab.com/ads-txt/ and https://iabtechlab.com/app-ads-txt/ for
+   * more details.
+   *
+   * @param string[] $publisherIds
    */
   public function setPublisherIds($publisherIds)
   {
@@ -44,14 +77,21 @@ class AddTargetedPublishersRequest extends \Google\Collection
     return $this->publisherIds;
   }
   /**
-   * @param string
+   * Required. The targeting mode that should be applied to the list of
+   * publisher IDs. If are existing publisher IDs, must be equal to the existing
+   * PretargetingConfig.publisherTargeting.targetingMode or a 400 bad request
+   * error will be returned.
+   *
+   * Accepted values: TARGETING_MODE_UNSPECIFIED, INCLUSIVE, EXCLUSIVE
+   *
+   * @param self::TARGETING_MODE_* $targetingMode
    */
   public function setTargetingMode($targetingMode)
   {
     $this->targetingMode = $targetingMode;
   }
   /**
-   * @return string
+   * @return self::TARGETING_MODE_*
    */
   public function getTargetingMode()
   {

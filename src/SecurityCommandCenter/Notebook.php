@@ -20,24 +20,34 @@ namespace Google\Service\SecurityCommandCenter;
 class Notebook extends \Google\Model
 {
   /**
+   * The user ID of the latest author to modify the notebook.
+   *
    * @var string
    */
   public $lastAuthor;
   /**
+   * The name of the notebook.
+   *
    * @var string
    */
   public $name;
   /**
+   * The most recent time the notebook was updated.
+   *
    * @var string
    */
   public $notebookUpdateTime;
   /**
+   * The source notebook service, for example, "Colab Enterprise".
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * The user ID of the latest author to modify the notebook.
+   *
+   * @param string $lastAuthor
    */
   public function setLastAuthor($lastAuthor)
   {
@@ -51,7 +61,9 @@ class Notebook extends \Google\Model
     return $this->lastAuthor;
   }
   /**
-   * @param string
+   * The name of the notebook.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +77,9 @@ class Notebook extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The most recent time the notebook was updated.
+   *
+   * @param string $notebookUpdateTime
    */
   public function setNotebookUpdateTime($notebookUpdateTime)
   {
@@ -79,7 +93,9 @@ class Notebook extends \Google\Model
     return $this->notebookUpdateTime;
   }
   /**
-   * @param string
+   * The source notebook service, for example, "Colab Enterprise".
+   *
+   * @param string $service
    */
   public function setService($service)
   {

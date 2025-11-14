@@ -20,20 +20,30 @@ namespace Google\Service\Dfareporting;
 class CreativeFieldValue extends \Google\Model
 {
   /**
+   * ID of this creative field value. This is a read-only, auto-generated field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#creativeFieldValue".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Value of this creative field value. It needs to be less than 256 characters
+   * in length and unique per creative field.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * ID of this creative field value. This is a read-only, auto-generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +57,10 @@ class CreativeFieldValue extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#creativeFieldValue".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +74,10 @@ class CreativeFieldValue extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Value of this creative field value. It needs to be less than 256 characters
+   * in length and unique per creative field.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

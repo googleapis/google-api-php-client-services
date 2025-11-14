@@ -29,7 +29,9 @@ class SynthesizeSpeechRequest extends \Google\Model
   protected $voiceDataType = '';
 
   /**
-   * @param AdvancedVoiceOptions
+   * Advanced voice options.
+   *
+   * @param AdvancedVoiceOptions $advancedVoiceOptions
    */
   public function setAdvancedVoiceOptions(AdvancedVoiceOptions $advancedVoiceOptions)
   {
@@ -43,7 +45,9 @@ class SynthesizeSpeechRequest extends \Google\Model
     return $this->advancedVoiceOptions;
   }
   /**
-   * @param AudioConfig
+   * Required. The configuration of the synthesized audio.
+   *
+   * @param AudioConfig $audioConfig
    */
   public function setAudioConfig(AudioConfig $audioConfig)
   {
@@ -57,7 +61,9 @@ class SynthesizeSpeechRequest extends \Google\Model
     return $this->audioConfig;
   }
   /**
-   * @param SynthesisInput
+   * Required. The Synthesizer requires either plain text or SSML as input.
+   *
+   * @param SynthesisInput $input
    */
   public function setInput(SynthesisInput $input)
   {
@@ -71,7 +77,9 @@ class SynthesizeSpeechRequest extends \Google\Model
     return $this->input;
   }
   /**
-   * @param VoiceSelectionParams
+   * Required. The desired voice of the synthesized audio.
+   *
+   * @param VoiceSelectionParams $voice
    */
   public function setVoice(VoiceSelectionParams $voice)
   {

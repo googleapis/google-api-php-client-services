@@ -26,7 +26,10 @@ class GetJSONWebKeysResponse extends \Google\Collection
   protected $keysDataType = 'array';
 
   /**
-   * @param HttpCacheControlResponseHeader
+   * For HTTP requests, this field is automatically extracted into the Cache-
+   * Control HTTP header.
+   *
+   * @param HttpCacheControlResponseHeader $cacheHeader
    */
   public function setCacheHeader(HttpCacheControlResponseHeader $cacheHeader)
   {
@@ -40,7 +43,10 @@ class GetJSONWebKeysResponse extends \Google\Collection
     return $this->cacheHeader;
   }
   /**
-   * @param Jwk[]
+   * The public component of the keys used by the cluster to sign token
+   * requests.
+   *
+   * @param Jwk[] $keys
    */
   public function setKeys($keys)
   {

@@ -23,12 +23,17 @@ class ListBigQueryExportsResponse extends \Google\Collection
   protected $bigQueryExportsType = GoogleCloudSecuritycenterV1BigQueryExport::class;
   protected $bigQueryExportsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudSecuritycenterV1BigQueryExport[]
+   * The BigQuery exports from the specified parent.
+   *
+   * @param GoogleCloudSecuritycenterV1BigQueryExport[] $bigQueryExports
    */
   public function setBigQueryExports($bigQueryExports)
   {
@@ -42,7 +47,10 @@ class ListBigQueryExportsResponse extends \Google\Collection
     return $this->bigQueryExports;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

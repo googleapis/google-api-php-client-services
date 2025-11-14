@@ -20,10 +20,43 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1AabInfo extends \Google\Model
 {
   /**
+   * Aab integration state unspecified
+   */
+  public const INTEGRATION_STATE_AAB_INTEGRATION_STATE_UNSPECIFIED = 'AAB_INTEGRATION_STATE_UNSPECIFIED';
+  /**
+   * App can receive app bundle uploads
+   */
+  public const INTEGRATION_STATE_INTEGRATED = 'INTEGRATED';
+  /**
+   * Firebase project is not linked to a Play developer account
+   */
+  public const INTEGRATION_STATE_PLAY_ACCOUNT_NOT_LINKED = 'PLAY_ACCOUNT_NOT_LINKED';
+  /**
+   * There is no app in linked Play developer account with the same bundle id
+   */
+  public const INTEGRATION_STATE_NO_APP_WITH_GIVEN_BUNDLE_ID_IN_PLAY_ACCOUNT = 'NO_APP_WITH_GIVEN_BUNDLE_ID_IN_PLAY_ACCOUNT';
+  /**
+   * The app in Play developer account is not in a published state
+   */
+  public const INTEGRATION_STATE_APP_NOT_PUBLISHED = 'APP_NOT_PUBLISHED';
+  /**
+   * Play App status is unavailable
+   */
+  public const INTEGRATION_STATE_AAB_STATE_UNAVAILABLE = 'AAB_STATE_UNAVAILABLE';
+  /**
+   * Play IAS terms not accepted
+   */
+  public const INTEGRATION_STATE_PLAY_IAS_TERMS_NOT_ACCEPTED = 'PLAY_IAS_TERMS_NOT_ACCEPTED';
+  /**
+   * App bundle integration state. Only valid for android apps.
+   *
    * @var string
    */
   public $integrationState;
   /**
+   * The name of the `AabInfo` resource. Format:
+   * `projects/{project_number}/apps/{app}/aabInfo`
+   *
    * @var string
    */
   public $name;
@@ -31,21 +64,30 @@ class GoogleFirebaseAppdistroV1AabInfo extends \Google\Model
   protected $testCertificateDataType = '';
 
   /**
-   * @param string
+   * App bundle integration state. Only valid for android apps.
+   *
+   * Accepted values: AAB_INTEGRATION_STATE_UNSPECIFIED, INTEGRATED,
+   * PLAY_ACCOUNT_NOT_LINKED, NO_APP_WITH_GIVEN_BUNDLE_ID_IN_PLAY_ACCOUNT,
+   * APP_NOT_PUBLISHED, AAB_STATE_UNAVAILABLE, PLAY_IAS_TERMS_NOT_ACCEPTED
+   *
+   * @param self::INTEGRATION_STATE_* $integrationState
    */
   public function setIntegrationState($integrationState)
   {
     $this->integrationState = $integrationState;
   }
   /**
-   * @return string
+   * @return self::INTEGRATION_STATE_*
    */
   public function getIntegrationState()
   {
     return $this->integrationState;
   }
   /**
-   * @param string
+   * The name of the `AabInfo` resource. Format:
+   * `projects/{project_number}/apps/{app}/aabInfo`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -59,7 +101,10 @@ class GoogleFirebaseAppdistroV1AabInfo extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleFirebaseAppdistroV1TestCertificate
+   * App bundle test certificate generated for the app. Set after the first app
+   * bundle is uploaded for this app.
+   *
+   * @param GoogleFirebaseAppdistroV1TestCertificate $testCertificate
    */
   public function setTestCertificate(GoogleFirebaseAppdistroV1TestCertificate $testCertificate)
   {

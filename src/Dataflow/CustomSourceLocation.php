@@ -20,12 +20,16 @@ namespace Google\Service\Dataflow;
 class CustomSourceLocation extends \Google\Model
 {
   /**
+   * Whether this source is stateful.
+   *
    * @var bool
    */
   public $stateful;
 
   /**
-   * @param bool
+   * Whether this source is stateful.
+   *
+   * @param bool $stateful
    */
   public function setStateful($stateful)
   {

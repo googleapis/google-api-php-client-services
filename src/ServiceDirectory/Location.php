@@ -20,28 +20,45 @@ namespace Google\Service\ServiceDirectory;
 class Location extends \Google\Model
 {
   /**
+   * The friendly name for this location, typically a nearby city name. For
+   * example, "Tokyo".
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Cross-service attributes for the location. For example
+   * {"cloud.googleapis.com/region": "us-east1"}
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The canonical id for this location. For example: `"us-east1"`.
+   *
    * @var string
    */
   public $locationId;
   /**
+   * Service-specific metadata. For example the available capacity at the given
+   * location.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Resource name for the location, which may vary between implementations. For
+   * example: `"projects/example-project/locations/us-east1"`
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The friendly name for this location, typically a nearby city name. For
+   * example, "Tokyo".
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -55,7 +72,10 @@ class Location extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Cross-service attributes for the location. For example
+   * {"cloud.googleapis.com/region": "us-east1"}
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -69,7 +89,9 @@ class Location extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * The canonical id for this location. For example: `"us-east1"`.
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -83,7 +105,10 @@ class Location extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param array[]
+   * Service-specific metadata. For example the available capacity at the given
+   * location.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -97,7 +122,10 @@ class Location extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * Resource name for the location, which may vary between implementations. For
+   * example: `"projects/example-project/locations/us-east1"`
+   *
+   * @param string $name
    */
   public function setName($name)
   {

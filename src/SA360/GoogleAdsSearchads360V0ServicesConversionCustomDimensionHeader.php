@@ -20,16 +20,22 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ServicesConversionCustomDimensionHeader extends \Google\Model
 {
   /**
+   * The conversion custom dimension ID.
+   *
    * @var string
    */
   public $id;
   /**
+   * The user defined name of the conversion custom dimension.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The conversion custom dimension ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class GoogleAdsSearchads360V0ServicesConversionCustomDimensionHeader extends \Go
     return $this->id;
   }
   /**
-   * @param string
+   * The user defined name of the conversion custom dimension.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

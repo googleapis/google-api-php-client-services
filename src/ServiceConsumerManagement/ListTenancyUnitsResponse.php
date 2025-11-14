@@ -21,6 +21,8 @@ class ListTenancyUnitsResponse extends \Google\Collection
 {
   protected $collection_key = 'tenancyUnits';
   /**
+   * Pagination token for large results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListTenancyUnitsResponse extends \Google\Collection
   protected $tenancyUnitsDataType = 'array';
 
   /**
-   * @param string
+   * Pagination token for large results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListTenancyUnitsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TenancyUnit[]
+   * Tenancy units matching the request.
+   *
+   * @param TenancyUnit[] $tenancyUnits
    */
   public function setTenancyUnits($tenancyUnits)
   {

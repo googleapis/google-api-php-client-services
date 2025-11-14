@@ -24,7 +24,9 @@ class PosCustomBatchRequest extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param PosCustomBatchRequestEntry[]
+   * The request entries to be processed in the batch.
+   *
+   * @param PosCustomBatchRequestEntry[] $entries
    */
   public function setEntries($entries)
   {

@@ -25,12 +25,25 @@ class ObjectOptions extends \Google\Collection
   protected $freshnessOptionsType = FreshnessOptions::class;
   protected $freshnessOptionsDataType = '';
   /**
+   * Operators that can be used to filter suggestions. For Suggest API, only
+   * operators mentioned here will be honored in the FilterOptions. Only TEXT
+   * and ENUM operators are supported. NOTE: "objecttype", "type" and "mimetype"
+   * are already supported. This property is to configure schema specific
+   * operators. Even though this is an array, only one operator can be
+   * specified. This is an array for future extensibility. Operators mapping to
+   * multiple properties within the same object are not supported. If the
+   * operator spans across different object types, this option has to be set
+   * once for each object definition.
+   *
    * @var string[]
    */
   public $suggestionFilteringOperators;
 
   /**
-   * @param ObjectDisplayOptions
+   * The options that determine how the object is displayed in the Cloud Search
+   * results page.
+   *
+   * @param ObjectDisplayOptions $displayOptions
    */
   public function setDisplayOptions(ObjectDisplayOptions $displayOptions)
   {
@@ -44,7 +57,9 @@ class ObjectOptions extends \Google\Collection
     return $this->displayOptions;
   }
   /**
-   * @param FreshnessOptions
+   * The freshness options for an object.
+   *
+   * @param FreshnessOptions $freshnessOptions
    */
   public function setFreshnessOptions(FreshnessOptions $freshnessOptions)
   {
@@ -58,7 +73,17 @@ class ObjectOptions extends \Google\Collection
     return $this->freshnessOptions;
   }
   /**
-   * @param string[]
+   * Operators that can be used to filter suggestions. For Suggest API, only
+   * operators mentioned here will be honored in the FilterOptions. Only TEXT
+   * and ENUM operators are supported. NOTE: "objecttype", "type" and "mimetype"
+   * are already supported. This property is to configure schema specific
+   * operators. Even though this is an array, only one operator can be
+   * specified. This is an array for future extensibility. Operators mapping to
+   * multiple properties within the same object are not supported. If the
+   * operator spans across different object types, this option has to be set
+   * once for each object definition.
+   *
+   * @param string[] $suggestionFilteringOperators
    */
   public function setSuggestionFilteringOperators($suggestionFilteringOperators)
   {

@@ -22,12 +22,16 @@ class SasPortalGcpProjectDeployment extends \Google\Model
   protected $deploymentType = SasPortalDeployment::class;
   protected $deploymentDataType = '';
   /**
+   * Whether SAS analytics has been enabled.
+   *
    * @var bool
    */
   public $hasEnabledAnalytics;
 
   /**
-   * @param SasPortalDeployment
+   * Deployment associated with the GCP project.
+   *
+   * @param SasPortalDeployment $deployment
    */
   public function setDeployment(SasPortalDeployment $deployment)
   {
@@ -41,7 +45,9 @@ class SasPortalGcpProjectDeployment extends \Google\Model
     return $this->deployment;
   }
   /**
-   * @param bool
+   * Whether SAS analytics has been enabled.
+   *
+   * @param bool $hasEnabledAnalytics
    */
   public function setHasEnabledAnalytics($hasEnabledAnalytics)
   {

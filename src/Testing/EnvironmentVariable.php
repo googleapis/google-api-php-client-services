@@ -20,16 +20,22 @@ namespace Google\Service\Testing;
 class EnvironmentVariable extends \Google\Model
 {
   /**
+   * Key for the environment variable.
+   *
    * @var string
    */
   public $key;
   /**
+   * Value for the environment variable.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Key for the environment variable.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -43,7 +49,9 @@ class EnvironmentVariable extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Value for the environment variable.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

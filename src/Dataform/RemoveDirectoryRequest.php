@@ -20,12 +20,18 @@ namespace Google\Service\Dataform;
 class RemoveDirectoryRequest extends \Google\Model
 {
   /**
+   * Required. The directory's full path including directory name, relative to
+   * the workspace root.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Required. The directory's full path including directory name, relative to
+   * the workspace root.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

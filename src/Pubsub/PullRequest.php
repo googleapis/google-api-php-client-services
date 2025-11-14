@@ -20,16 +20,33 @@ namespace Google\Service\Pubsub;
 class PullRequest extends \Google\Model
 {
   /**
+   * Required. The maximum number of messages to return for this request. Must
+   * be a positive integer. The Pub/Sub system may return fewer than the number
+   * specified.
+   *
    * @var int
    */
   public $maxMessages;
   /**
+   * Optional. If this field set to true, the system will respond immediately
+   * even if it there are no messages available to return in the `Pull`
+   * response. Otherwise, the system may wait (for a bounded amount of time)
+   * until at least one message is available, rather than returning no messages.
+   * Warning: setting this field to `true` is discouraged because it adversely
+   * impacts the performance of `Pull` operations. We recommend that users do
+   * not set this field.
+   *
+   * @deprecated
    * @var bool
    */
   public $returnImmediately;
 
   /**
-   * @param int
+   * Required. The maximum number of messages to return for this request. Must
+   * be a positive integer. The Pub/Sub system may return fewer than the number
+   * specified.
+   *
+   * @param int $maxMessages
    */
   public function setMaxMessages($maxMessages)
   {
@@ -43,13 +60,23 @@ class PullRequest extends \Google\Model
     return $this->maxMessages;
   }
   /**
-   * @param bool
+   * Optional. If this field set to true, the system will respond immediately
+   * even if it there are no messages available to return in the `Pull`
+   * response. Otherwise, the system may wait (for a bounded amount of time)
+   * until at least one message is available, rather than returning no messages.
+   * Warning: setting this field to `true` is discouraged because it adversely
+   * impacts the performance of `Pull` operations. We recommend that users do
+   * not set this field.
+   *
+   * @deprecated
+   * @param bool $returnImmediately
    */
   public function setReturnImmediately($returnImmediately)
   {
     $this->returnImmediately = $returnImmediately;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getReturnImmediately()

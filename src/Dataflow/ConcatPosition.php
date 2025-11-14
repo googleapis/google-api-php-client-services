@@ -20,6 +20,8 @@ namespace Google\Service\Dataflow;
 class ConcatPosition extends \Google\Model
 {
   /**
+   * Index of the inner source.
+   *
    * @var int
    */
   public $index;
@@ -27,7 +29,9 @@ class ConcatPosition extends \Google\Model
   protected $positionDataType = '';
 
   /**
-   * @param int
+   * Index of the inner source.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -41,7 +45,9 @@ class ConcatPosition extends \Google\Model
     return $this->index;
   }
   /**
-   * @param Position
+   * Position within the inner source.
+   *
+   * @param Position $position
    */
   public function setPosition(Position $position)
   {

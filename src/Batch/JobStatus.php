@@ -19,12 +19,58 @@ namespace Google\Service\Batch;
 
 class JobStatus extends \Google\Collection
 {
+  /**
+   * Job state unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Job is admitted (validated and persisted) and waiting for resources.
+   */
+  public const STATE_QUEUED = 'QUEUED';
+  /**
+   * Job is scheduled to run as soon as resource allocation is ready. The
+   * resource allocation may happen at a later time but with a high chance to
+   * succeed.
+   */
+  public const STATE_SCHEDULED = 'SCHEDULED';
+  /**
+   * Resource allocation has been successful. At least one Task in the Job is
+   * RUNNING.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * All Tasks in the Job have finished successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * At least one Task in the Job has failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The Job will be deleted, but has not been deleted yet. Typically this is
+   * because resources used by the Job are still being cleaned up.
+   */
+  public const STATE_DELETION_IN_PROGRESS = 'DELETION_IN_PROGRESS';
+  /**
+   * The Job cancellation is in progress, this is because the resources used by
+   * the Job are still being cleaned up.
+   */
+  public const STATE_CANCELLATION_IN_PROGRESS = 'CANCELLATION_IN_PROGRESS';
+  /**
+   * The Job has been cancelled, the task executions were stopped and the
+   * resources were cleaned up.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
   protected $collection_key = 'statusEvents';
   /**
+   * The duration of time that the Job spent in status RUNNING.
+   *
    * @var string
    */
   public $runDuration;
   /**
+   * Job state
+   *
    * @var string
    */
   public $state;
@@ -34,7 +80,9 @@ class JobStatus extends \Google\Collection
   protected $taskGroupsDataType = 'map';
 
   /**
-   * @param string
+   * The duration of time that the Job spent in status RUNNING.
+   *
+   * @param string $runDuration
    */
   public function setRunDuration($runDuration)
   {
@@ -48,21 +96,28 @@ class JobStatus extends \Google\Collection
     return $this->runDuration;
   }
   /**
-   * @param string
+   * Job state
+   *
+   * Accepted values: STATE_UNSPECIFIED, QUEUED, SCHEDULED, RUNNING, SUCCEEDED,
+   * FAILED, DELETION_IN_PROGRESS, CANCELLATION_IN_PROGRESS, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param StatusEvent[]
+   * Job status events
+   *
+   * @param StatusEvent[] $statusEvents
    */
   public function setStatusEvents($statusEvents)
   {
@@ -76,7 +131,10 @@ class JobStatus extends \Google\Collection
     return $this->statusEvents;
   }
   /**
-   * @param TaskGroupStatus[]
+   * Aggregated task status for each TaskGroup in the Job. The map key is
+   * TaskGroup ID.
+   *
+   * @param TaskGroupStatus[] $taskGroups
    */
   public function setTaskGroups($taskGroups)
   {

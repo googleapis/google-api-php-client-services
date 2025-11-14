@@ -24,7 +24,10 @@ class CustomCanaryDeployment extends \Google\Collection
   protected $phaseConfigsDataType = 'array';
 
   /**
-   * @param PhaseConfig[]
+   * Required. Configuration for each phase in the canary deployment in the
+   * order executed.
+   *
+   * @param PhaseConfig[] $phaseConfigs
    */
   public function setPhaseConfigs($phaseConfigs)
   {

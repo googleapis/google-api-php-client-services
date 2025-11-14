@@ -20,24 +20,34 @@ namespace Google\Service\NetworkManagement;
 class CloudFunctionInfo extends \Google\Model
 {
   /**
+   * Name of a Cloud Function.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Location in which the Cloud Function is deployed.
+   *
    * @var string
    */
   public $location;
   /**
+   * URI of a Cloud Function.
+   *
    * @var string
    */
   public $uri;
   /**
+   * Latest successfully deployed version id of the Cloud Function.
+   *
    * @var string
    */
   public $versionId;
 
   /**
-   * @param string
+   * Name of a Cloud Function.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -51,7 +61,9 @@ class CloudFunctionInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Location in which the Cloud Function is deployed.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -65,7 +77,9 @@ class CloudFunctionInfo extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * URI of a Cloud Function.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {
@@ -79,7 +93,9 @@ class CloudFunctionInfo extends \Google\Model
     return $this->uri;
   }
   /**
-   * @param string
+   * Latest successfully deployed version id of the Cloud Function.
+   *
+   * @param string $versionId
    */
   public function setVersionId($versionId)
   {

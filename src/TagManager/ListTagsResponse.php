@@ -21,6 +21,8 @@ class ListTagsResponse extends \Google\Collection
 {
   protected $collection_key = 'tag';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListTagsResponse extends \Google\Collection
   protected $tagDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListTagsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Tag[]
+   * All GTM Tags of a GTM Container.
+   *
+   * @param Tag[] $tag
    */
   public function setTag($tag)
   {

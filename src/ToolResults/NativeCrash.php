@@ -23,7 +23,9 @@ class NativeCrash extends \Google\Model
   protected $stackTraceDataType = '';
 
   /**
-   * @param StackTrace
+   * The stack trace of the native crash. Optional.
+   *
+   * @param StackTrace $stackTrace
    */
   public function setStackTrace(StackTrace $stackTrace)
   {

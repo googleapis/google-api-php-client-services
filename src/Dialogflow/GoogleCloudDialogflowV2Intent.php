@@ -19,48 +19,97 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2Intent extends \Google\Collection
 {
+  /**
+   * Webhook is disabled in the agent and in the intent.
+   */
+  public const WEBHOOK_STATE_WEBHOOK_STATE_UNSPECIFIED = 'WEBHOOK_STATE_UNSPECIFIED';
+  /**
+   * Webhook is enabled in the agent and in the intent.
+   */
+  public const WEBHOOK_STATE_WEBHOOK_STATE_ENABLED = 'WEBHOOK_STATE_ENABLED';
+  /**
+   * Webhook is enabled in the agent and in the intent. Also, each slot filling
+   * prompt is forwarded to the webhook.
+   */
+  public const WEBHOOK_STATE_WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING = 'WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING';
   protected $collection_key = 'trainingPhrases';
   /**
+   * Optional. The name of the action associated with the intent. Note: The
+   * action name must not contain whitespaces.
+   *
    * @var string
    */
   public $action;
   /**
+   * Optional. The list of platforms for which the first responses will be
+   * copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
+   *
    * @var string[]
    */
   public $defaultResponsePlatforms;
   /**
+   * Required. The name of this intent.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Indicates that this intent ends an interaction. Some integrations
+   * (e.g., Actions on Google or Dialogflow phone gateway) use this information
+   * to close interaction with an end user. Default is false.
+   *
    * @var bool
    */
   public $endInteraction;
   /**
+   * Optional. The collection of event names that trigger the intent. If the
+   * collection of input contexts is not empty, all of the contexts must be
+   * present in the active user session for an event to trigger this intent.
+   * Event names are limited to 150 characters.
+   *
    * @var string[]
    */
   public $events;
   protected $followupIntentInfoType = GoogleCloudDialogflowV2IntentFollowupIntentInfo::class;
   protected $followupIntentInfoDataType = 'array';
   /**
+   * Optional. The list of context names required for this intent to be
+   * triggered. Format: `projects//agent/sessions/-/contexts/`.
+   *
    * @var string[]
    */
   public $inputContextNames;
   /**
+   * Optional. Indicates whether this is a fallback intent.
+   *
    * @var bool
    */
   public $isFallback;
   /**
+   * Optional. Indicates that a live agent should be brought in to handle the
+   * interaction with the user. In most cases, when you set this flag to true,
+   * you would also want to set end_interaction to true as well. Default is
+   * false.
+   *
    * @var bool
    */
   public $liveAgentHandoff;
   protected $messagesType = GoogleCloudDialogflowV2IntentMessage::class;
   protected $messagesDataType = 'array';
   /**
+   * Optional. Indicates whether Machine Learning is disabled for the intent.
+   * Note: If `ml_disabled` setting is set to true, then this intent is not
+   * taken into account during inference in `ML ONLY` match mode. Also, auto-
+   * markup in the UI is turned off.
+   *
    * @var bool
    */
   public $mlDisabled;
   /**
+   * Optional. The unique identifier of this intent. Required for
+   * Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format:
+   * `projects//agent/intents/`.
+   *
    * @var string
    */
   public $name;
@@ -69,30 +118,55 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
   protected $parametersType = GoogleCloudDialogflowV2IntentParameter::class;
   protected $parametersDataType = 'array';
   /**
+   * Read-only after creation. The unique identifier of the parent intent in the
+   * chain of followup intents. You can set this field when creating an intent,
+   * for example with CreateIntent or BatchUpdateIntents, in order to make this
+   * intent a followup intent. It identifies the parent followup intent. Format:
+   * `projects//agent/intents/`.
+   *
    * @var string
    */
   public $parentFollowupIntentName;
   /**
+   * Optional. The priority of this intent. Higher numbers represent higher
+   * priorities. - If the supplied value is unspecified or 0, the service
+   * translates the value to 500,000, which corresponds to the `Normal` priority
+   * in the console. - If the supplied value is negative, the intent is ignored
+   * in runtime detect intent requests.
+   *
    * @var int
    */
   public $priority;
   /**
+   * Optional. Indicates whether to delete all contexts in the current session
+   * when this intent is matched.
+   *
    * @var bool
    */
   public $resetContexts;
   /**
+   * Output only. Read-only. The unique identifier of the root intent in the
+   * chain of followup intents. It identifies the correct followup intents chain
+   * for this intent. We populate this field only in the output. Format:
+   * `projects//agent/intents/`.
+   *
    * @var string
    */
   public $rootFollowupIntentName;
   protected $trainingPhrasesType = GoogleCloudDialogflowV2IntentTrainingPhrase::class;
   protected $trainingPhrasesDataType = 'array';
   /**
+   * Optional. Indicates whether webhooks are enabled for the intent.
+   *
    * @var string
    */
   public $webhookState;
 
   /**
-   * @param string
+   * Optional. The name of the action associated with the intent. Note: The
+   * action name must not contain whitespaces.
+   *
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -106,7 +180,10 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->action;
   }
   /**
-   * @param string[]
+   * Optional. The list of platforms for which the first responses will be
+   * copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
+   *
+   * @param string[] $defaultResponsePlatforms
    */
   public function setDefaultResponsePlatforms($defaultResponsePlatforms)
   {
@@ -120,7 +197,9 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->defaultResponsePlatforms;
   }
   /**
-   * @param string
+   * Required. The name of this intent.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -134,7 +213,11 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Optional. Indicates that this intent ends an interaction. Some integrations
+   * (e.g., Actions on Google or Dialogflow phone gateway) use this information
+   * to close interaction with an end user. Default is false.
+   *
+   * @param bool $endInteraction
    */
   public function setEndInteraction($endInteraction)
   {
@@ -148,7 +231,12 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->endInteraction;
   }
   /**
-   * @param string[]
+   * Optional. The collection of event names that trigger the intent. If the
+   * collection of input contexts is not empty, all of the contexts must be
+   * present in the active user session for an event to trigger this intent.
+   * Event names are limited to 150 characters.
+   *
+   * @param string[] $events
    */
   public function setEvents($events)
   {
@@ -162,7 +250,11 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->events;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentFollowupIntentInfo[]
+   * Output only. Read-only. Information about all followup intents that have
+   * this intent as a direct or indirect parent. We populate this field only in
+   * the output.
+   *
+   * @param GoogleCloudDialogflowV2IntentFollowupIntentInfo[] $followupIntentInfo
    */
   public function setFollowupIntentInfo($followupIntentInfo)
   {
@@ -176,7 +268,10 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->followupIntentInfo;
   }
   /**
-   * @param string[]
+   * Optional. The list of context names required for this intent to be
+   * triggered. Format: `projects//agent/sessions/-/contexts/`.
+   *
+   * @param string[] $inputContextNames
    */
   public function setInputContextNames($inputContextNames)
   {
@@ -190,7 +285,9 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->inputContextNames;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether this is a fallback intent.
+   *
+   * @param bool $isFallback
    */
   public function setIsFallback($isFallback)
   {
@@ -204,7 +301,12 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->isFallback;
   }
   /**
-   * @param bool
+   * Optional. Indicates that a live agent should be brought in to handle the
+   * interaction with the user. In most cases, when you set this flag to true,
+   * you would also want to set end_interaction to true as well. Default is
+   * false.
+   *
+   * @param bool $liveAgentHandoff
    */
   public function setLiveAgentHandoff($liveAgentHandoff)
   {
@@ -218,7 +320,10 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->liveAgentHandoff;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentMessage[]
+   * Optional. The collection of rich messages corresponding to the `Response`
+   * field in the Dialogflow console.
+   *
+   * @param GoogleCloudDialogflowV2IntentMessage[] $messages
    */
   public function setMessages($messages)
   {
@@ -232,7 +337,12 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->messages;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether Machine Learning is disabled for the intent.
+   * Note: If `ml_disabled` setting is set to true, then this intent is not
+   * taken into account during inference in `ML ONLY` match mode. Also, auto-
+   * markup in the UI is turned off.
+   *
+   * @param bool $mlDisabled
    */
   public function setMlDisabled($mlDisabled)
   {
@@ -246,7 +356,11 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->mlDisabled;
   }
   /**
-   * @param string
+   * Optional. The unique identifier of this intent. Required for
+   * Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format:
+   * `projects//agent/intents/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -260,7 +374,12 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDialogflowV2Context[]
+   * Optional. The collection of contexts that are activated when the intent is
+   * matched. Context messages in this collection should not set the parameters
+   * field. Setting the `lifespan_count` to 0 will reset the context when the
+   * intent is matched. Format: `projects//agent/sessions/-/contexts/`.
+   *
+   * @param GoogleCloudDialogflowV2Context[] $outputContexts
    */
   public function setOutputContexts($outputContexts)
   {
@@ -274,7 +393,9 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->outputContexts;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentParameter[]
+   * Optional. The collection of parameters associated with the intent.
+   *
+   * @param GoogleCloudDialogflowV2IntentParameter[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -288,7 +409,13 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->parameters;
   }
   /**
-   * @param string
+   * Read-only after creation. The unique identifier of the parent intent in the
+   * chain of followup intents. You can set this field when creating an intent,
+   * for example with CreateIntent or BatchUpdateIntents, in order to make this
+   * intent a followup intent. It identifies the parent followup intent. Format:
+   * `projects//agent/intents/`.
+   *
+   * @param string $parentFollowupIntentName
    */
   public function setParentFollowupIntentName($parentFollowupIntentName)
   {
@@ -302,7 +429,13 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->parentFollowupIntentName;
   }
   /**
-   * @param int
+   * Optional. The priority of this intent. Higher numbers represent higher
+   * priorities. - If the supplied value is unspecified or 0, the service
+   * translates the value to 500,000, which corresponds to the `Normal` priority
+   * in the console. - If the supplied value is negative, the intent is ignored
+   * in runtime detect intent requests.
+   *
+   * @param int $priority
    */
   public function setPriority($priority)
   {
@@ -316,7 +449,10 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->priority;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether to delete all contexts in the current session
+   * when this intent is matched.
+   *
+   * @param bool $resetContexts
    */
   public function setResetContexts($resetContexts)
   {
@@ -330,7 +466,12 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->resetContexts;
   }
   /**
-   * @param string
+   * Output only. Read-only. The unique identifier of the root intent in the
+   * chain of followup intents. It identifies the correct followup intents chain
+   * for this intent. We populate this field only in the output. Format:
+   * `projects//agent/intents/`.
+   *
+   * @param string $rootFollowupIntentName
    */
   public function setRootFollowupIntentName($rootFollowupIntentName)
   {
@@ -344,7 +485,9 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->rootFollowupIntentName;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentTrainingPhrase[]
+   * Optional. The collection of examples that the agent is trained on.
+   *
+   * @param GoogleCloudDialogflowV2IntentTrainingPhrase[] $trainingPhrases
    */
   public function setTrainingPhrases($trainingPhrases)
   {
@@ -358,14 +501,19 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
     return $this->trainingPhrases;
   }
   /**
-   * @param string
+   * Optional. Indicates whether webhooks are enabled for the intent.
+   *
+   * Accepted values: WEBHOOK_STATE_UNSPECIFIED, WEBHOOK_STATE_ENABLED,
+   * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING
+   *
+   * @param self::WEBHOOK_STATE_* $webhookState
    */
   public function setWebhookState($webhookState)
   {
     $this->webhookState = $webhookState;
   }
   /**
-   * @return string
+   * @return self::WEBHOOK_STATE_*
    */
   public function getWebhookState()
   {

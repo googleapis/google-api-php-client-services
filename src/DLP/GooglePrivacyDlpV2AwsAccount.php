@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2AwsAccount extends \Google\Model
 {
   /**
+   * Required. AWS account ID.
+   *
    * @var string
    */
   public $accountId;
 
   /**
-   * @param string
+   * Required. AWS account ID.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {

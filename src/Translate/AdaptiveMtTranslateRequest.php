@@ -21,10 +21,15 @@ class AdaptiveMtTranslateRequest extends \Google\Collection
 {
   protected $collection_key = 'content';
   /**
+   * Required. The content of the input in string format.
+   *
    * @var string[]
    */
   public $content;
   /**
+   * Required. The resource name for the dataset to use for adaptive MT.
+   * `projects/{project}/locations/{location-id}/adaptiveMtDatasets/{dataset}`
+   *
    * @var string
    */
   public $dataset;
@@ -34,7 +39,9 @@ class AdaptiveMtTranslateRequest extends \Google\Collection
   protected $referenceSentenceConfigDataType = '';
 
   /**
-   * @param string[]
+   * Required. The content of the input in string format.
+   *
+   * @param string[] $content
    */
   public function setContent($content)
   {
@@ -48,7 +55,10 @@ class AdaptiveMtTranslateRequest extends \Google\Collection
     return $this->content;
   }
   /**
-   * @param string
+   * Required. The resource name for the dataset to use for adaptive MT.
+   * `projects/{project}/locations/{location-id}/adaptiveMtDatasets/{dataset}`
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -62,7 +72,11 @@ class AdaptiveMtTranslateRequest extends \Google\Collection
     return $this->dataset;
   }
   /**
-   * @param GlossaryConfig
+   * Optional. Glossary to be applied. The glossary must be within the same
+   * region (have the same location-id) as the model, otherwise an
+   * INVALID_ARGUMENT (400) error is returned.
+   *
+   * @param GlossaryConfig $glossaryConfig
    */
   public function setGlossaryConfig(GlossaryConfig $glossaryConfig)
   {
@@ -76,7 +90,9 @@ class AdaptiveMtTranslateRequest extends \Google\Collection
     return $this->glossaryConfig;
   }
   /**
-   * @param ReferenceSentenceConfig
+   * Configuration for caller provided reference sentences.
+   *
+   * @param ReferenceSentenceConfig $referenceSentenceConfig
    */
   public function setReferenceSentenceConfig(ReferenceSentenceConfig $referenceSentenceConfig)
   {

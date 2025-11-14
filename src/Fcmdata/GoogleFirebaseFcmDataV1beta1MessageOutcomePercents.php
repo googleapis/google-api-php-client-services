@@ -20,36 +20,79 @@ namespace Google\Service\Fcmdata;
 class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends \Google\Model
 {
   /**
+   * The percentage of accepted messages that were
+   * [collapsed](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages) by another message.
+   *
    * @var float
    */
   public $collapsed;
   /**
+   * The percentage of all accepted messages that were successfully delivered to
+   * the device.
+   *
    * @var float
    */
   public $delivered;
   /**
+   * The percentage of accepted messages that were dropped because the
+   * application was force stopped on the device at the time of delivery and
+   * retries were unsuccessful.
+   *
    * @var float
    */
   public $droppedAppForceStopped;
   /**
+   * The percentage of accepted messages that were dropped because the target
+   * device is inactive. FCM will drop messages if the target device is deemed
+   * inactive by our servers. If a device does reconnect, we call
+   * [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
+   * messaging/android/receive#override-ondeletedmessages) in our SDK instead of
+   * delivering the messages.
+   *
    * @var float
    */
   public $droppedDeviceInactive;
   /**
+   * The percentage of accepted messages that were dropped due to [too many
+   * undelivered non-collapsible
+   * messages](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages). Specifically, each app
+   * instance can only have 100 pending messages stored on our servers for a
+   * device which is disconnected. When that device reconnects, those messages
+   * are delivered. When there are more than the maximum pending messages, we
+   * call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
+   * messaging/android/receive#override-ondeletedmessages) in our SDK instead of
+   * delivering the messages.
+   *
    * @var float
    */
   public $droppedTooManyPendingMessages;
   /**
+   * The percentage of accepted messages that expired because [Time To Live
+   * (TTL)](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#ttl) elapsed before the target device reconnected.
+   *
    * @var float
    */
   public $droppedTtlExpired;
   /**
+   * The percentage of messages accepted on this day that were not dropped and
+   * not delivered, due to the device being disconnected (as of the end of the
+   * America/Los_Angeles day when the message was sent to FCM). A portion of
+   * these messages will be delivered the next day when the device connects but
+   * others may be destined to devices that ultimately never reconnect.
+   *
    * @var float
    */
   public $pending;
 
   /**
-   * @param float
+   * The percentage of accepted messages that were
+   * [collapsed](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages) by another message.
+   *
+   * @param float $collapsed
    */
   public function setCollapsed($collapsed)
   {
@@ -63,7 +106,10 @@ class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends \Google\Model
     return $this->collapsed;
   }
   /**
-   * @param float
+   * The percentage of all accepted messages that were successfully delivered to
+   * the device.
+   *
+   * @param float $delivered
    */
   public function setDelivered($delivered)
   {
@@ -77,7 +123,11 @@ class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends \Google\Model
     return $this->delivered;
   }
   /**
-   * @param float
+   * The percentage of accepted messages that were dropped because the
+   * application was force stopped on the device at the time of delivery and
+   * retries were unsuccessful.
+   *
+   * @param float $droppedAppForceStopped
    */
   public function setDroppedAppForceStopped($droppedAppForceStopped)
   {
@@ -91,7 +141,14 @@ class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends \Google\Model
     return $this->droppedAppForceStopped;
   }
   /**
-   * @param float
+   * The percentage of accepted messages that were dropped because the target
+   * device is inactive. FCM will drop messages if the target device is deemed
+   * inactive by our servers. If a device does reconnect, we call
+   * [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
+   * messaging/android/receive#override-ondeletedmessages) in our SDK instead of
+   * delivering the messages.
+   *
+   * @param float $droppedDeviceInactive
    */
   public function setDroppedDeviceInactive($droppedDeviceInactive)
   {
@@ -105,7 +162,18 @@ class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends \Google\Model
     return $this->droppedDeviceInactive;
   }
   /**
-   * @param float
+   * The percentage of accepted messages that were dropped due to [too many
+   * undelivered non-collapsible
+   * messages](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages). Specifically, each app
+   * instance can only have 100 pending messages stored on our servers for a
+   * device which is disconnected. When that device reconnects, those messages
+   * are delivered. When there are more than the maximum pending messages, we
+   * call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
+   * messaging/android/receive#override-ondeletedmessages) in our SDK instead of
+   * delivering the messages.
+   *
+   * @param float $droppedTooManyPendingMessages
    */
   public function setDroppedTooManyPendingMessages($droppedTooManyPendingMessages)
   {
@@ -119,7 +187,11 @@ class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends \Google\Model
     return $this->droppedTooManyPendingMessages;
   }
   /**
-   * @param float
+   * The percentage of accepted messages that expired because [Time To Live
+   * (TTL)](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#ttl) elapsed before the target device reconnected.
+   *
+   * @param float $droppedTtlExpired
    */
   public function setDroppedTtlExpired($droppedTtlExpired)
   {
@@ -133,7 +205,13 @@ class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends \Google\Model
     return $this->droppedTtlExpired;
   }
   /**
-   * @param float
+   * The percentage of messages accepted on this day that were not dropped and
+   * not delivered, due to the device being disconnected (as of the end of the
+   * America/Los_Angeles day when the message was sent to FCM). A portion of
+   * these messages will be delivered the next day when the device connects but
+   * others may be destined to devices that ultimately never reconnect.
+   *
+   * @param float $pending
    */
   public function setPending($pending)
   {

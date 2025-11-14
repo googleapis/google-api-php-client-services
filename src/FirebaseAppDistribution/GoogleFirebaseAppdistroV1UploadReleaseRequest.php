@@ -23,7 +23,9 @@ class GoogleFirebaseAppdistroV1UploadReleaseRequest extends \Google\Model
   protected $blobDataType = '';
 
   /**
-   * @param GdataMedia
+   * Binary to upload
+   *
+   * @param GdataMedia $blob
    */
   public function setBlob(GdataMedia $blob)
   {

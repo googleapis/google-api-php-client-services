@@ -111,6 +111,8 @@ class Users extends \Google\Service\Resource
    * @param User $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string databaseRoles Optional. List of database roles to grant to
+   * the user. body.database_roles will be ignored for update request.
    * @opt_param string host Optional. Host of the user in the instance.
    * @opt_param string name Name of the user in the instance.
    * @return Operation

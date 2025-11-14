@@ -26,7 +26,9 @@ class EnterpriseTopazSidekickConflictingEventsCardProto extends \Google\Collecti
   protected $mainEventDataType = '';
 
   /**
-   * @param EnterpriseTopazSidekickAgendaEntry[]
+   * All the events that conflict with main_event.
+   *
+   * @param EnterpriseTopazSidekickAgendaEntry[] $conflictingEvent
    */
   public function setConflictingEvent($conflictingEvent)
   {
@@ -40,7 +42,9 @@ class EnterpriseTopazSidekickConflictingEventsCardProto extends \Google\Collecti
     return $this->conflictingEvent;
   }
   /**
-   * @param EnterpriseTopazSidekickAgendaEntry
+   * The event identified as being the most important.
+   *
+   * @param EnterpriseTopazSidekickAgendaEntry $mainEvent
    */
   public function setMainEvent(EnterpriseTopazSidekickAgendaEntry $mainEvent)
   {

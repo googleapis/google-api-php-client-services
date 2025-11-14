@@ -21,12 +21,16 @@ class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'locationFeatures';
   /**
+   * List of supported features
+   *
    * @var string[]
    */
   public $locationFeatures;
 
   /**
-   * @param string[]
+   * List of supported features
+   *
+   * @param string[] $locationFeatures
    */
   public function setLocationFeatures($locationFeatures)
   {

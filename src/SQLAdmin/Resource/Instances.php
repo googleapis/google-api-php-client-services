@@ -26,12 +26,14 @@ use Google\Service\SQLAdmin\InstancesDemoteRequest;
 use Google\Service\SQLAdmin\InstancesExportRequest;
 use Google\Service\SQLAdmin\InstancesFailoverRequest;
 use Google\Service\SQLAdmin\InstancesImportRequest;
+use Google\Service\SQLAdmin\InstancesListEntraIdCertificatesResponse;
 use Google\Service\SQLAdmin\InstancesListResponse;
 use Google\Service\SQLAdmin\InstancesListServerCasResponse;
 use Google\Service\SQLAdmin\InstancesListServerCertificatesResponse;
 use Google\Service\SQLAdmin\InstancesPreCheckMajorVersionUpgradeRequest;
 use Google\Service\SQLAdmin\InstancesReencryptRequest;
 use Google\Service\SQLAdmin\InstancesRestoreBackupRequest;
+use Google\Service\SQLAdmin\InstancesRotateEntraIdCertificateRequest;
 use Google\Service\SQLAdmin\InstancesRotateServerCaRequest;
 use Google\Service\SQLAdmin\InstancesRotateServerCertificateRequest;
 use Google\Service\SQLAdmin\InstancesTruncateLogRequest;
@@ -51,6 +53,27 @@ use Google\Service\SQLAdmin\SqlInstancesReleaseSsrsLeaseResponse;
  */
 class Instances extends \Google\Service\Resource
 {
+  /**
+   * Lists all versions of EntraID certificates for the specified instance. There
+   * can be up to three sets of certificates listed: the certificate that is
+   * currently in use, a future that has been added but not yet used to sign a
+   * certificate, and a certificate that has been rotated out.
+   * (instances.ListEntraIdCertificates)
+   *
+   * @param string $project Required. Project ID of the project that contains the
+   * instance.
+   * @param string $instance Required. Cloud SQL instance ID. This does not
+   * include the project ID.
+   * @param array $optParams Optional parameters.
+   * @return InstancesListEntraIdCertificatesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function ListEntraIdCertificates($project, $instance, $optParams = [])
+  {
+    $params = ['project' => $project, 'instance' => $instance];
+    $params = array_merge($params, $optParams);
+    return $this->call('ListEntraIdCertificates', [$params], InstancesListEntraIdCertificatesResponse::class);
+  }
   /**
    * Lists all versions of server certificates and certificate authorities (CAs)
    * for the specified instance. There can be up to three sets of certs listed:
@@ -72,6 +95,25 @@ class Instances extends \Google\Service\Resource
     $params = ['project' => $project, 'instance' => $instance];
     $params = array_merge($params, $optParams);
     return $this->call('ListServerCertificates', [$params], InstancesListServerCertificatesResponse::class);
+  }
+  /**
+   * Rotates the server certificate version to one previously added with the
+   * addEntraIdCertificate method. (instances.RotateEntraIdCertificate)
+   *
+   * @param string $project Required. Project ID of the project that contains the
+   * instance.
+   * @param string $instance Required. Cloud SQL instance ID. This does not
+   * include the project ID.
+   * @param InstancesRotateEntraIdCertificateRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function RotateEntraIdCertificate($project, $instance, InstancesRotateEntraIdCertificateRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('RotateEntraIdCertificate', [$params], Operation::class);
   }
   /**
    * Rotates the server certificate version to one previously added with the

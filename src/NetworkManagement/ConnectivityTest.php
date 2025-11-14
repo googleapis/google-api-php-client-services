@@ -21,58 +21,84 @@ class ConnectivityTest extends \Google\Collection
 {
   protected $collection_key = 'relatedProjects';
   /**
+   * Whether the analysis should skip firewall checking. Default value is false.
+   *
    * @var bool
    */
   public $bypassFirewallChecks;
   /**
+   * Output only. The time the test was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The user-supplied description of the Connectivity Test. Maximum of 512
+   * characters.
+   *
    * @var string
    */
   public $description;
   protected $destinationType = Endpoint::class;
   protected $destinationDataType = '';
   /**
+   * Output only. The display name of a Connectivity Test.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Resource labels to represent user-provided metadata.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. Unique name of the resource using the form:
+   * `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+   *
    * @var string
    */
   public $name;
   protected $probingDetailsType = ProbingDetails::class;
   protected $probingDetailsDataType = '';
   /**
+   * IP Protocol of the test. When not provided, "TCP" is assumed.
+   *
    * @var string
    */
   public $protocol;
   protected $reachabilityDetailsType = ReachabilityDetails::class;
   protected $reachabilityDetailsDataType = '';
   /**
+   * Other projects that may be relevant for reachability analysis. This is
+   * applicable to scenarios where a test can cross project boundaries.
+   *
    * @var string[]
    */
   public $relatedProjects;
   protected $returnReachabilityDetailsType = ReachabilityDetails::class;
   protected $returnReachabilityDetailsDataType = '';
   /**
+   * Whether run analysis for the return path from destination to source.
+   * Default value is false.
+   *
    * @var bool
    */
   public $roundTrip;
   protected $sourceType = Endpoint::class;
   protected $sourceDataType = '';
   /**
+   * Output only. The time the test's configuration was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * Whether the analysis should skip firewall checking. Default value is false.
+   *
+   * @param bool $bypassFirewallChecks
    */
   public function setBypassFirewallChecks($bypassFirewallChecks)
   {
@@ -86,7 +112,9 @@ class ConnectivityTest extends \Google\Collection
     return $this->bypassFirewallChecks;
   }
   /**
-   * @param string
+   * Output only. The time the test was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -100,7 +128,10 @@ class ConnectivityTest extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * The user-supplied description of the Connectivity Test. Maximum of 512
+   * characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -114,7 +145,14 @@ class ConnectivityTest extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param Endpoint
+   * Required. Destination specification of the Connectivity Test. You can use a
+   * combination of destination IP address, URI of a supported endpoint, project
+   * ID, or VPC network to identify the destination location. Reachability
+   * analysis proceeds even if the destination location is ambiguous. However,
+   * the test result might include endpoints or use a destination that you don't
+   * intend to test.
+   *
+   * @param Endpoint $destination
    */
   public function setDestination(Endpoint $destination)
   {
@@ -128,7 +166,9 @@ class ConnectivityTest extends \Google\Collection
     return $this->destination;
   }
   /**
-   * @param string
+   * Output only. The display name of a Connectivity Test.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -142,7 +182,9 @@ class ConnectivityTest extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Resource labels to represent user-provided metadata.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -156,7 +198,10 @@ class ConnectivityTest extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. Unique name of the resource using the form:
+   * `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -170,7 +215,12 @@ class ConnectivityTest extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ProbingDetails
+   * Output only. The probing details of this test from the latest run, present
+   * for applicable tests only. The details are updated when creating a new
+   * test, updating an existing test, or triggering a one-time rerun of an
+   * existing test.
+   *
+   * @param ProbingDetails $probingDetails
    */
   public function setProbingDetails(ProbingDetails $probingDetails)
   {
@@ -184,7 +234,9 @@ class ConnectivityTest extends \Google\Collection
     return $this->probingDetails;
   }
   /**
-   * @param string
+   * IP Protocol of the test. When not provided, "TCP" is assumed.
+   *
+   * @param string $protocol
    */
   public function setProtocol($protocol)
   {
@@ -198,7 +250,11 @@ class ConnectivityTest extends \Google\Collection
     return $this->protocol;
   }
   /**
-   * @param ReachabilityDetails
+   * Output only. The reachability details of this test from the latest run. The
+   * details are updated when creating a new test, updating an existing test, or
+   * triggering a one-time rerun of an existing test.
+   *
+   * @param ReachabilityDetails $reachabilityDetails
    */
   public function setReachabilityDetails(ReachabilityDetails $reachabilityDetails)
   {
@@ -212,7 +268,10 @@ class ConnectivityTest extends \Google\Collection
     return $this->reachabilityDetails;
   }
   /**
-   * @param string[]
+   * Other projects that may be relevant for reachability analysis. This is
+   * applicable to scenarios where a test can cross project boundaries.
+   *
+   * @param string[] $relatedProjects
    */
   public function setRelatedProjects($relatedProjects)
   {
@@ -226,7 +285,11 @@ class ConnectivityTest extends \Google\Collection
     return $this->relatedProjects;
   }
   /**
-   * @param ReachabilityDetails
+   * Output only. The reachability details of this test from the latest run for
+   * the return path. The details are updated when creating a new test, updating
+   * an existing test, or triggering a one-time rerun of an existing test.
+   *
+   * @param ReachabilityDetails $returnReachabilityDetails
    */
   public function setReturnReachabilityDetails(ReachabilityDetails $returnReachabilityDetails)
   {
@@ -240,7 +303,10 @@ class ConnectivityTest extends \Google\Collection
     return $this->returnReachabilityDetails;
   }
   /**
-   * @param bool
+   * Whether run analysis for the return path from destination to source.
+   * Default value is false.
+   *
+   * @param bool $roundTrip
    */
   public function setRoundTrip($roundTrip)
   {
@@ -254,7 +320,13 @@ class ConnectivityTest extends \Google\Collection
     return $this->roundTrip;
   }
   /**
-   * @param Endpoint
+   * Required. Source specification of the Connectivity Test. You can use a
+   * combination of source IP address, URI of a supported endpoint, project ID,
+   * or VPC network to identify the source location. Reachability analysis might
+   * proceed even if the source location is ambiguous. However, the test result
+   * might include endpoints or use a source that you don't intend to test.
+   *
+   * @param Endpoint $source
    */
   public function setSource(Endpoint $source)
   {
@@ -268,7 +340,9 @@ class ConnectivityTest extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param string
+   * Output only. The time the test's configuration was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1CreateTargetSiteRequest extends \Google\Model
 {
   /**
+   * Required. Parent resource name of TargetSite, such as `projects/{project}/l
+   * ocations/{location}/collections/{collection}/dataStores/{data_store}/siteSe
+   * archEngine`.
+   *
    * @var string
    */
   public $parent;
@@ -27,7 +31,11 @@ class GoogleCloudDiscoveryengineV1CreateTargetSiteRequest extends \Google\Model
   protected $targetSiteDataType = '';
 
   /**
-   * @param string
+   * Required. Parent resource name of TargetSite, such as `projects/{project}/l
+   * ocations/{location}/collections/{collection}/dataStores/{data_store}/siteSe
+   * archEngine`.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -41,7 +49,9 @@ class GoogleCloudDiscoveryengineV1CreateTargetSiteRequest extends \Google\Model
     return $this->parent;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1TargetSite
+   * Required. The TargetSite to create.
+   *
+   * @param GoogleCloudDiscoveryengineV1TargetSite $targetSite
    */
   public function setTargetSite(GoogleCloudDiscoveryengineV1TargetSite $targetSite)
   {

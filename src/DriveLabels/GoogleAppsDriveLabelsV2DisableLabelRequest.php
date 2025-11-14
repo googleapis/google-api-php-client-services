@@ -22,14 +22,24 @@ class GoogleAppsDriveLabelsV2DisableLabelRequest extends \Google\Model
   protected $disabledPolicyType = GoogleAppsDriveLabelsV2LifecycleDisabledPolicy::class;
   protected $disabledPolicyDataType = '';
   /**
+   * The BCP-47 language code to use for evaluating localized field labels. When
+   * not specified, values in the default configured language will be used.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `disabled_policy` is implied and should not be specified. A single
+   * `*` can be used as a short-hand for updating every field.
+   *
    * @var string
    */
   public $updateMask;
   /**
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
    * @var bool
    */
   public $useAdminAccess;
@@ -37,7 +47,9 @@ class GoogleAppsDriveLabelsV2DisableLabelRequest extends \Google\Model
   protected $writeControlDataType = '';
 
   /**
-   * @param GoogleAppsDriveLabelsV2LifecycleDisabledPolicy
+   * Disabled policy to use.
+   *
+   * @param GoogleAppsDriveLabelsV2LifecycleDisabledPolicy $disabledPolicy
    */
   public function setDisabledPolicy(GoogleAppsDriveLabelsV2LifecycleDisabledPolicy $disabledPolicy)
   {
@@ -51,7 +63,10 @@ class GoogleAppsDriveLabelsV2DisableLabelRequest extends \Google\Model
     return $this->disabledPolicy;
   }
   /**
-   * @param string
+   * The BCP-47 language code to use for evaluating localized field labels. When
+   * not specified, values in the default configured language will be used.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -65,7 +80,11 @@ class GoogleAppsDriveLabelsV2DisableLabelRequest extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `disabled_policy` is implied and should not be specified. A single
+   * `*` can be used as a short-hand for updating every field.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {
@@ -79,7 +98,10 @@ class GoogleAppsDriveLabelsV2DisableLabelRequest extends \Google\Model
     return $this->updateMask;
   }
   /**
-   * @param bool
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
+   * @param bool $useAdminAccess
    */
   public function setUseAdminAccess($useAdminAccess)
   {
@@ -93,7 +115,10 @@ class GoogleAppsDriveLabelsV2DisableLabelRequest extends \Google\Model
     return $this->useAdminAccess;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2WriteControl
+   * Provides control over how write requests are executed. Defaults to unset,
+   * which means the last write wins.
+   *
+   * @param GoogleAppsDriveLabelsV2WriteControl $writeControl
    */
   public function setWriteControl(GoogleAppsDriveLabelsV2WriteControl $writeControl)
   {

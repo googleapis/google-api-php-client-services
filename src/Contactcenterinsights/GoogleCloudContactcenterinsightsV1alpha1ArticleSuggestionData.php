@@ -20,32 +20,53 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData extends \Google\Model
 {
   /**
+   * The system's confidence score that this article is a good match for this
+   * conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely
+   * certain).
+   *
    * @var float
    */
   public $confidenceScore;
   /**
+   * Map that contains metadata about the Article Suggestion and the document
+   * that it originates from.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
+   *
    * @var string
    */
   public $queryRecord;
   /**
+   * The knowledge document that this answer was extracted from. Format:
+   * projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+   *
    * @var string
    */
   public $source;
   /**
+   * Article title.
+   *
    * @var string
    */
   public $title;
   /**
+   * Article URI.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param float
+   * The system's confidence score that this article is a good match for this
+   * conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely
+   * certain).
+   *
+   * @param float $confidenceScore
    */
   public function setConfidenceScore($confidenceScore)
   {
@@ -59,7 +80,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData extends \Goo
     return $this->confidenceScore;
   }
   /**
-   * @param string[]
+   * Map that contains metadata about the Article Suggestion and the document
+   * that it originates from.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -73,7 +97,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData extends \Goo
     return $this->metadata;
   }
   /**
-   * @param string
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
+   *
+   * @param string $queryRecord
    */
   public function setQueryRecord($queryRecord)
   {
@@ -87,7 +114,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData extends \Goo
     return $this->queryRecord;
   }
   /**
-   * @param string
+   * The knowledge document that this answer was extracted from. Format:
+   * projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -101,7 +131,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData extends \Goo
     return $this->source;
   }
   /**
-   * @param string
+   * Article title.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -115,7 +147,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData extends \Goo
     return $this->title;
   }
   /**
-   * @param string
+   * Article URI.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

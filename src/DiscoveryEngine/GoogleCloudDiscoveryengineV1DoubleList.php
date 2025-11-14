@@ -20,6 +20,11 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1DoubleList extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * Double values.
+   *
+   * @var []
+   */
   public $values;
 
   public function setValues($values)

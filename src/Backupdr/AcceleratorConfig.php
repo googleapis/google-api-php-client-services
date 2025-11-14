@@ -20,16 +20,25 @@ namespace Google\Service\Backupdr;
 class AcceleratorConfig extends \Google\Model
 {
   /**
+   * Optional. The number of the guest accelerator cards exposed to this
+   * instance.
+   *
    * @var int
    */
   public $acceleratorCount;
   /**
+   * Optional. Full or partial URL of the accelerator type resource to attach to
+   * this instance.
+   *
    * @var string
    */
   public $acceleratorType;
 
   /**
-   * @param int
+   * Optional. The number of the guest accelerator cards exposed to this
+   * instance.
+   *
+   * @param int $acceleratorCount
    */
   public function setAcceleratorCount($acceleratorCount)
   {
@@ -43,7 +52,10 @@ class AcceleratorConfig extends \Google\Model
     return $this->acceleratorCount;
   }
   /**
-   * @param string
+   * Optional. Full or partial URL of the accelerator type resource to attach to
+   * this instance.
+   *
+   * @param string $acceleratorType
    */
   public function setAcceleratorType($acceleratorType)
   {

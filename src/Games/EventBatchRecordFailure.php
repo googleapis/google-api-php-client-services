@@ -20,10 +20,41 @@ namespace Google\Service\Games;
 class EventBatchRecordFailure extends \Google\Model
 {
   /**
+   * A batch request was issued with more events than are allowed in a single
+   * batch.
+   */
+  public const FAILURE_CAUSE_TOO_LARGE = 'TOO_LARGE';
+  /**
+   * A batch was sent with data too far in the past to record.
+   */
+  public const FAILURE_CAUSE_TIME_PERIOD_EXPIRED = 'TIME_PERIOD_EXPIRED';
+  /**
+   * A batch was sent with a time range that was too short.
+   */
+  public const FAILURE_CAUSE_TIME_PERIOD_SHORT = 'TIME_PERIOD_SHORT';
+  /**
+   * A batch was sent with a time range that was too long.
+   */
+  public const FAILURE_CAUSE_TIME_PERIOD_LONG = 'TIME_PERIOD_LONG';
+  /**
+   * An attempt was made to record a batch of data which was already seen.
+   */
+  public const FAILURE_CAUSE_ALREADY_UPDATED = 'ALREADY_UPDATED';
+  /**
+   * An attempt was made to record data faster than the server will apply
+   * updates.
+   */
+  public const FAILURE_CAUSE_RECORD_RATE_HIGH = 'RECORD_RATE_HIGH';
+  /**
+   * The cause for the update failure.
+   *
    * @var string
    */
   public $failureCause;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventBatchRecordFailure`.
+   *
    * @var string
    */
   public $kind;
@@ -31,21 +62,29 @@ class EventBatchRecordFailure extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param string
+   * The cause for the update failure.
+   *
+   * Accepted values: TOO_LARGE, TIME_PERIOD_EXPIRED, TIME_PERIOD_SHORT,
+   * TIME_PERIOD_LONG, ALREADY_UPDATED, RECORD_RATE_HIGH
+   *
+   * @param self::FAILURE_CAUSE_* $failureCause
    */
   public function setFailureCause($failureCause)
   {
     $this->failureCause = $failureCause;
   }
   /**
-   * @return string
+   * @return self::FAILURE_CAUSE_*
    */
   public function getFailureCause()
   {
     return $this->failureCause;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventBatchRecordFailure`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -59,7 +98,9 @@ class EventBatchRecordFailure extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param EventPeriodRange
+   * The time range which was rejected; empty for a request-wide failure.
+   *
+   * @param EventPeriodRange $range
    */
   public function setRange(EventPeriodRange $range)
   {

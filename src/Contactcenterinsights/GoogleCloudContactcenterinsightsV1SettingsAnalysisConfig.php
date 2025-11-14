@@ -21,11 +21,26 @@ class GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig extends \Google\M
 {
   protected $annotatorSelectorType = GoogleCloudContactcenterinsightsV1AnnotatorSelector::class;
   protected $annotatorSelectorDataType = '';
+  /**
+   * Percentage of conversations created using Dialogflow runtime integration to
+   * analyze automatically, between [0, 100].
+   *
+   * @var 
+   */
   public $runtimeIntegrationAnalysisPercentage;
+  /**
+   * Percentage of conversations created using the UploadConversation endpoint
+   * to analyze automatically, between [0, 100].
+   *
+   * @var 
+   */
   public $uploadConversationAnalysisPercentage;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1AnnotatorSelector
+   * To select the annotators to run and the phrase matchers to use (if any). If
+   * not specified, all annotators will be run.
+   *
+   * @param GoogleCloudContactcenterinsightsV1AnnotatorSelector $annotatorSelector
    */
   public function setAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector $annotatorSelector)
   {

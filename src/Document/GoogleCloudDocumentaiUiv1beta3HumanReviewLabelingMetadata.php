@@ -20,12 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3HumanReviewLabelingMetadata extends \Google\Model
 {
   /**
+   * Whether to enable normalization editing.
+   *
    * @var bool
    */
   public $enableNormalizationEditing;
 
   /**
-   * @param bool
+   * Whether to enable normalization editing.
+   *
+   * @param bool $enableNormalizationEditing
    */
   public function setEnableNormalizationEditing($enableNormalizationEditing)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineLoggingHttpRequestContext extends \Google\Model
 {
   /**
+   * The HTTP response status code for the request.
+   *
    * @var int
    */
   public $responseStatusCode;
 
   /**
-   * @param int
+   * The HTTP response status code for the request.
+   *
+   * @param int $responseStatusCode
    */
   public function setResponseStatusCode($responseStatusCode)
   {

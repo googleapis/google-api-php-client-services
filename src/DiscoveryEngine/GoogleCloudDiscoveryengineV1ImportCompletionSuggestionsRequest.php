@@ -29,7 +29,9 @@ class GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequest extends \Go
   protected $inlineSourceDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1BigQuerySource
+   * BigQuery input source.
+   *
+   * @param GoogleCloudDiscoveryengineV1BigQuerySource $bigquerySource
    */
   public function setBigquerySource(GoogleCloudDiscoveryengineV1BigQuerySource $bigquerySource)
   {
@@ -43,7 +45,9 @@ class GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequest extends \Go
     return $this->bigquerySource;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ImportErrorConfig
+   * The desired location of errors incurred during the Import.
+   *
+   * @param GoogleCloudDiscoveryengineV1ImportErrorConfig $errorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1ImportErrorConfig $errorConfig)
   {
@@ -57,7 +61,9 @@ class GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequest extends \Go
     return $this->errorConfig;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1GcsSource
+   * Cloud Storage location for the input content.
+   *
+   * @param GoogleCloudDiscoveryengineV1GcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudDiscoveryengineV1GcsSource $gcsSource)
   {
@@ -71,7 +77,9 @@ class GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequest extends \Go
     return $this->gcsSource;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequestInlineSource
+   * The Inline source for suggestion entries.
+   *
+   * @param GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequestInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudDiscoveryengineV1ImportCompletionSuggestionsRequestInlineSource $inlineSource)
   {

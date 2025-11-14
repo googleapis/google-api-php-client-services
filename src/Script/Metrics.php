@@ -28,7 +28,9 @@ class Metrics extends \Google\Collection
   protected $totalExecutionsDataType = 'array';
 
   /**
-   * @param MetricsValue[]
+   * Number of active users.
+   *
+   * @param MetricsValue[] $activeUsers
    */
   public function setActiveUsers($activeUsers)
   {
@@ -42,7 +44,9 @@ class Metrics extends \Google\Collection
     return $this->activeUsers;
   }
   /**
-   * @param MetricsValue[]
+   * Number of failed executions.
+   *
+   * @param MetricsValue[] $failedExecutions
    */
   public function setFailedExecutions($failedExecutions)
   {
@@ -56,7 +60,9 @@ class Metrics extends \Google\Collection
     return $this->failedExecutions;
   }
   /**
-   * @param MetricsValue[]
+   * Number of total executions.
+   *
+   * @param MetricsValue[] $totalExecutions
    */
   public function setTotalExecutions($totalExecutions)
   {

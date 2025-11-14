@@ -23,12 +23,17 @@ class DynamicTargetingKeysListResponse extends \Google\Collection
   protected $dynamicTargetingKeysType = DynamicTargetingKey::class;
   protected $dynamicTargetingKeysDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#dynamicTargetingKeysListResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param DynamicTargetingKey[]
+   * Dynamic targeting key collection.
+   *
+   * @param DynamicTargetingKey[] $dynamicTargetingKeys
    */
   public function setDynamicTargetingKeys($dynamicTargetingKeys)
   {
@@ -42,7 +47,10 @@ class DynamicTargetingKeysListResponse extends \Google\Collection
     return $this->dynamicTargetingKeys;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#dynamicTargetingKeysListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

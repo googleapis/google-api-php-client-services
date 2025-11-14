@@ -19,8 +19,35 @@ namespace Google\Service\DatabaseMigrationService;
 
 class DoubleComparisonFilter extends \Google\Model
 {
+  /**
+   * Value comparison unspecified.
+   */
+  public const VALUE_COMPARISON_VALUE_COMPARISON_UNSPECIFIED = 'VALUE_COMPARISON_UNSPECIFIED';
+  /**
+   * Value is smaller than the Compare value.
+   */
+  public const VALUE_COMPARISON_VALUE_COMPARISON_IF_VALUE_SMALLER_THAN = 'VALUE_COMPARISON_IF_VALUE_SMALLER_THAN';
+  /**
+   * Value is smaller or equal than the Compare value.
+   */
+  public const VALUE_COMPARISON_VALUE_COMPARISON_IF_VALUE_SMALLER_EQUAL_THAN = 'VALUE_COMPARISON_IF_VALUE_SMALLER_EQUAL_THAN';
+  /**
+   * Value is larger than the Compare value.
+   */
+  public const VALUE_COMPARISON_VALUE_COMPARISON_IF_VALUE_LARGER_THAN = 'VALUE_COMPARISON_IF_VALUE_LARGER_THAN';
+  /**
+   * Value is larger or equal than the Compare value.
+   */
+  public const VALUE_COMPARISON_VALUE_COMPARISON_IF_VALUE_LARGER_EQUAL_THAN = 'VALUE_COMPARISON_IF_VALUE_LARGER_EQUAL_THAN';
+  /**
+   * Required. Double compare value to be used
+   *
+   * @var 
+   */
   public $value;
   /**
+   * Required. Relation between source value and compare value
+   *
    * @var string
    */
   public $valueComparison;
@@ -34,14 +61,22 @@ class DoubleComparisonFilter extends \Google\Model
     return $this->value;
   }
   /**
-   * @param string
+   * Required. Relation between source value and compare value
+   *
+   * Accepted values: VALUE_COMPARISON_UNSPECIFIED,
+   * VALUE_COMPARISON_IF_VALUE_SMALLER_THAN,
+   * VALUE_COMPARISON_IF_VALUE_SMALLER_EQUAL_THAN,
+   * VALUE_COMPARISON_IF_VALUE_LARGER_THAN,
+   * VALUE_COMPARISON_IF_VALUE_LARGER_EQUAL_THAN
+   *
+   * @param self::VALUE_COMPARISON_* $valueComparison
    */
   public function setValueComparison($valueComparison)
   {
     $this->valueComparison = $valueComparison;
   }
   /**
-   * @return string
+   * @return self::VALUE_COMPARISON_*
    */
   public function getValueComparison()
   {

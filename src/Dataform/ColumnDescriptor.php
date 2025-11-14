@@ -21,20 +21,29 @@ class ColumnDescriptor extends \Google\Collection
 {
   protected $collection_key = 'path';
   /**
+   * A list of BigQuery policy tags that will be applied to the column.
+   *
    * @var string[]
    */
   public $bigqueryPolicyTags;
   /**
+   * A textual description of the column.
+   *
    * @var string
    */
   public $description;
   /**
+   * The identifier for the column. Each entry in `path` represents one level of
+   * nesting.
+   *
    * @var string[]
    */
   public $path;
 
   /**
-   * @param string[]
+   * A list of BigQuery policy tags that will be applied to the column.
+   *
+   * @param string[] $bigqueryPolicyTags
    */
   public function setBigqueryPolicyTags($bigqueryPolicyTags)
   {
@@ -48,7 +57,9 @@ class ColumnDescriptor extends \Google\Collection
     return $this->bigqueryPolicyTags;
   }
   /**
-   * @param string
+   * A textual description of the column.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -62,7 +73,10 @@ class ColumnDescriptor extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * The identifier for the column. Each entry in `path` represents one level of
+   * nesting.
+   *
+   * @param string[] $path
    */
   public function setPath($path)
   {

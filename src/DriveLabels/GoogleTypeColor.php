@@ -20,24 +20,50 @@ namespace Google\Service\DriveLabels;
 class GoogleTypeColor extends \Google\Model
 {
   /**
+   * The fraction of this color that should be applied to the pixel. That is,
+   * the final pixel color is defined by the equation: `pixel color = alpha *
+   * (this color) + (1.0 - alpha) * (background color)` This means that a value
+   * of 1.0 corresponds to a solid color, whereas a value of 0.0 corresponds to
+   * a completely transparent color. This uses a wrapper message rather than a
+   * simple float scalar so that it is possible to distinguish between a default
+   * value and the value being unset. If omitted, this color object is rendered
+   * as a solid color (as if the alpha value had been explicitly given a value
+   * of 1.0).
+   *
    * @var float
    */
   public $alpha;
   /**
+   * The amount of blue in the color as a value in the interval [0, 1].
+   *
    * @var float
    */
   public $blue;
   /**
+   * The amount of green in the color as a value in the interval [0, 1].
+   *
    * @var float
    */
   public $green;
   /**
+   * The amount of red in the color as a value in the interval [0, 1].
+   *
    * @var float
    */
   public $red;
 
   /**
-   * @param float
+   * The fraction of this color that should be applied to the pixel. That is,
+   * the final pixel color is defined by the equation: `pixel color = alpha *
+   * (this color) + (1.0 - alpha) * (background color)` This means that a value
+   * of 1.0 corresponds to a solid color, whereas a value of 0.0 corresponds to
+   * a completely transparent color. This uses a wrapper message rather than a
+   * simple float scalar so that it is possible to distinguish between a default
+   * value and the value being unset. If omitted, this color object is rendered
+   * as a solid color (as if the alpha value had been explicitly given a value
+   * of 1.0).
+   *
+   * @param float $alpha
    */
   public function setAlpha($alpha)
   {
@@ -51,7 +77,9 @@ class GoogleTypeColor extends \Google\Model
     return $this->alpha;
   }
   /**
-   * @param float
+   * The amount of blue in the color as a value in the interval [0, 1].
+   *
+   * @param float $blue
    */
   public function setBlue($blue)
   {
@@ -65,7 +93,9 @@ class GoogleTypeColor extends \Google\Model
     return $this->blue;
   }
   /**
-   * @param float
+   * The amount of green in the color as a value in the interval [0, 1].
+   *
+   * @param float $green
    */
   public function setGreen($green)
   {
@@ -79,7 +109,9 @@ class GoogleTypeColor extends \Google\Model
     return $this->green;
   }
   /**
-   * @param float
+   * The amount of red in the color as a value in the interval [0, 1].
+   *
+   * @param float $red
    */
   public function setRed($red)
   {

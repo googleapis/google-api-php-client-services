@@ -20,20 +20,29 @@ namespace Google\Service\Dfareporting;
 class PlatformType extends \Google\Model
 {
   /**
+   * ID of this platform type.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#platformType".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of this platform type.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * ID of this platform type.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +56,10 @@ class PlatformType extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#platformType".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +73,9 @@ class PlatformType extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of this platform type.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

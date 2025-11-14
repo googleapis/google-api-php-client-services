@@ -20,16 +20,29 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonPercentCpc extends \Google\Model
 {
   /**
+   * Maximum bid limit that can be set by the bid strategy. This is an optional
+   * field entered by the advertiser and specified in local micros. Note: A zero
+   * value is interpreted in the same way as having bid_ceiling undefined.
+   *
    * @var string
    */
   public $cpcBidCeilingMicros;
   /**
+   * Adjusts the bid for each auction upward or downward, depending on the
+   * likelihood of a conversion. Individual bids may exceed
+   * cpc_bid_ceiling_micros, but the average bid amount for a campaign should
+   * not.
+   *
    * @var bool
    */
   public $enhancedCpcEnabled;
 
   /**
-   * @param string
+   * Maximum bid limit that can be set by the bid strategy. This is an optional
+   * field entered by the advertiser and specified in local micros. Note: A zero
+   * value is interpreted in the same way as having bid_ceiling undefined.
+   *
+   * @param string $cpcBidCeilingMicros
    */
   public function setCpcBidCeilingMicros($cpcBidCeilingMicros)
   {
@@ -43,7 +56,12 @@ class GoogleAdsSearchads360V0CommonPercentCpc extends \Google\Model
     return $this->cpcBidCeilingMicros;
   }
   /**
-   * @param bool
+   * Adjusts the bid for each auction upward or downward, depending on the
+   * likelihood of a conversion. Individual bids may exceed
+   * cpc_bid_ceiling_micros, but the average bid amount for a campaign should
+   * not.
+   *
+   * @param bool $enhancedCpcEnabled
    */
   public function setEnhancedCpcEnabled($enhancedCpcEnabled)
   {

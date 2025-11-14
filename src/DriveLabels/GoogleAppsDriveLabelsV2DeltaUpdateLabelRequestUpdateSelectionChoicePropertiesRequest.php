@@ -20,22 +20,32 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest extends \Google\Model
 {
   /**
+   * Required. The selection field to update.
+   *
    * @var string
    */
   public $fieldId;
   /**
+   * Required. The choice to update.
+   *
    * @var string
    */
   public $id;
   protected $propertiesType = GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties::class;
   protected $propertiesDataType = '';
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `properties` is implied and should not be specified. A single `*`
+   * can be used as a short-hand for updating every field.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param string
+   * Required. The selection field to update.
+   *
+   * @param string $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -49,7 +59,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropert
     return $this->fieldId;
   }
   /**
-   * @param string
+   * Required. The choice to update.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +75,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropert
     return $this->id;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties
+   * Required. The choice properties to update.
+   *
+   * @param GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties $properties
    */
   public function setProperties(GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties $properties)
   {
@@ -77,7 +91,11 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropert
     return $this->properties;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `properties` is implied and should not be specified. A single `*`
+   * can be used as a short-hand for updating every field.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

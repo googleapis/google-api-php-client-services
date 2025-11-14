@@ -20,12 +20,18 @@ namespace Google\Service\StreetViewPublish;
 class NotOutdoorsFailureDetails extends \Google\Model
 {
   /**
+   * Relative time (from the start of the video stream) when an indoor frame was
+   * found.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Relative time (from the start of the video stream) when an indoor frame was
+   * found.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

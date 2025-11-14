@@ -20,20 +20,31 @@ namespace Google\Service\RealTimeBidding;
 class HtmlContent extends \Google\Model
 {
   /**
+   * The height of the HTML snippet in pixels. Can be used to filter the
+   * response of the creatives.list method.
+   *
    * @var int
    */
   public $height;
   /**
+   * The HTML snippet that displays the ad when inserted in the web page.
+   *
    * @var string
    */
   public $snippet;
   /**
+   * The width of the HTML snippet in pixels. Can be used to filter the response
+   * of the creatives.list method.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * The height of the HTML snippet in pixels. Can be used to filter the
+   * response of the creatives.list method.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -47,7 +58,9 @@ class HtmlContent extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * The HTML snippet that displays the ad when inserted in the web page.
+   *
+   * @param string $snippet
    */
   public function setSnippet($snippet)
   {
@@ -61,7 +74,10 @@ class HtmlContent extends \Google\Model
     return $this->snippet;
   }
   /**
-   * @param int
+   * The width of the HTML snippet in pixels. Can be used to filter the response
+   * of the creatives.list method.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

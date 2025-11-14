@@ -24,7 +24,10 @@ class GooglePrivacyDlpV2SelectedInfoTypes extends \Google\Collection
   protected $infoTypesDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2InfoType[]
+   * Required. InfoTypes to apply the transformation to. Required. Provided
+   * InfoType must be unique within the ImageTransformations message.
+   *
+   * @param GooglePrivacyDlpV2InfoType[] $infoTypes
    */
   public function setInfoTypes($infoTypes)
   {

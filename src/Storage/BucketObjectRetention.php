@@ -20,12 +20,16 @@ namespace Google\Service\Storage;
 class BucketObjectRetention extends \Google\Model
 {
   /**
+   * The bucket's object retention mode. Can be Enabled.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param string
+   * The bucket's object retention mode. Can be Enabled.
+   *
+   * @param string $mode
    */
   public function setMode($mode)
   {

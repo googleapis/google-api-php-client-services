@@ -20,12 +20,24 @@ namespace Google\Service\Transcoder;
 class Output extends \Google\Model
 {
   /**
+   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. Must be
+   * a directory and not a top-level bucket. If empty, the value is populated
+   * from Job.output_uri. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-
+   * and-output-formats).
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. Must be
+   * a directory and not a top-level bucket. If empty, the value is populated
+   * from Job.output_uri. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-
+   * and-output-formats).
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

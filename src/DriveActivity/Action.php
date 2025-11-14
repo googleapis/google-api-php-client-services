@@ -28,12 +28,17 @@ class Action extends \Google\Model
   protected $timeRangeType = TimeRange::class;
   protected $timeRangeDataType = '';
   /**
+   * The action occurred at this specific time.
+   *
    * @var string
    */
   public $timestamp;
 
   /**
-   * @param Actor
+   * The actor responsible for this action (or empty if all actors are
+   * responsible).
+   *
+   * @param Actor $actor
    */
   public function setActor(Actor $actor)
   {
@@ -47,7 +52,9 @@ class Action extends \Google\Model
     return $this->actor;
   }
   /**
-   * @param ActionDetail
+   * The type and detailed information about the action.
+   *
+   * @param ActionDetail $detail
    */
   public function setDetail(ActionDetail $detail)
   {
@@ -61,7 +68,10 @@ class Action extends \Google\Model
     return $this->detail;
   }
   /**
-   * @param Target
+   * The target this action affects (or empty if affecting all targets). This
+   * represents the state of the target immediately after this action occurred.
+   *
+   * @param Target $target
    */
   public function setTarget(Target $target)
   {
@@ -75,7 +85,9 @@ class Action extends \Google\Model
     return $this->target;
   }
   /**
-   * @param TimeRange
+   * The action occurred over this time range.
+   *
+   * @param TimeRange $timeRange
    */
   public function setTimeRange(TimeRange $timeRange)
   {
@@ -89,7 +101,9 @@ class Action extends \Google\Model
     return $this->timeRange;
   }
   /**
-   * @param string
+   * The action occurred at this specific time.
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {

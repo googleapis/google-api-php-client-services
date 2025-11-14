@@ -26,7 +26,9 @@ class HttpRouteRouteRule extends \Google\Collection
   protected $matchesDataType = 'array';
 
   /**
-   * @param HttpRouteRouteAction
+   * The detailed rule defining how to route matched traffic.
+   *
+   * @param HttpRouteRouteAction $action
    */
   public function setAction(HttpRouteRouteAction $action)
   {
@@ -40,7 +42,14 @@ class HttpRouteRouteRule extends \Google\Collection
     return $this->action;
   }
   /**
-   * @param HttpRouteRouteMatch[]
+   * A list of matches define conditions used for matching the rule against
+   * incoming HTTP requests. Each match is independent, i.e. this rule will be
+   * matched if ANY one of the matches is satisfied. If no matches field is
+   * specified, this rule will unconditionally match traffic. If a default rule
+   * is desired to be configured, add a rule with no matches specified to the
+   * end of the rules list.
+   *
+   * @param HttpRouteRouteMatch[] $matches
    */
   public function setMatches($matches)
   {

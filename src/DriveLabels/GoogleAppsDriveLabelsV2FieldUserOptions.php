@@ -23,7 +23,10 @@ class GoogleAppsDriveLabelsV2FieldUserOptions extends \Google\Model
   protected $listOptionsDataType = '';
 
   /**
-   * @param GoogleAppsDriveLabelsV2FieldListOptions
+   * When specified, indicates that this field supports a list of values. Once
+   * the field is published, this cannot be changed.
+   *
+   * @param GoogleAppsDriveLabelsV2FieldListOptions $listOptions
    */
   public function setListOptions(GoogleAppsDriveLabelsV2FieldListOptions $listOptions)
   {

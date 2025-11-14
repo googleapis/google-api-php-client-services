@@ -24,10 +24,25 @@ class GoogleCloudOrgpolicyV2Policy extends \Google\Model
   protected $dryRunSpecType = GoogleCloudOrgpolicyV2PolicySpec::class;
   protected $dryRunSpecDataType = '';
   /**
+   * Optional. An opaque tag indicating the current state of the policy, used
+   * for concurrency control. This 'etag' is computed by the server based on the
+   * value of other fields, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Immutable. The resource name of the policy. Must be one of the following
+   * forms, where `constraint_name` is the name of the constraint which this
+   * policy configures: * `projects/{project_number}/policies/{constraint_name}`
+   * * `folders/{folder_id}/policies/{constraint_name}` *
+   * `organizations/{organization_id}/policies/{constraint_name}` For example,
+   * `projects/123/policies/compute.disableSerialPortAccess`. Note:
+   * `projects/{project_id}/policies/{constraint_name}` is also an acceptable
+   * name for API requests, but responses will return the name using the
+   * equivalent project number.
+   *
    * @var string
    */
   public $name;
@@ -35,13 +50,17 @@ class GoogleCloudOrgpolicyV2Policy extends \Google\Model
   protected $specDataType = '';
 
   /**
-   * @param GoogleCloudOrgpolicyV2AlternatePolicySpec
+   * Deprecated.
+   *
+   * @deprecated
+   * @param GoogleCloudOrgpolicyV2AlternatePolicySpec $alternate
    */
   public function setAlternate(GoogleCloudOrgpolicyV2AlternatePolicySpec $alternate)
   {
     $this->alternate = $alternate;
   }
   /**
+   * @deprecated
    * @return GoogleCloudOrgpolicyV2AlternatePolicySpec
    */
   public function getAlternate()
@@ -49,7 +68,10 @@ class GoogleCloudOrgpolicyV2Policy extends \Google\Model
     return $this->alternate;
   }
   /**
-   * @param GoogleCloudOrgpolicyV2PolicySpec
+   * Dry-run policy. Audit-only policy, can be used to monitor how the policy
+   * would have impacted the existing and future resources if it's enforced.
+   *
+   * @param GoogleCloudOrgpolicyV2PolicySpec $dryRunSpec
    */
   public function setDryRunSpec(GoogleCloudOrgpolicyV2PolicySpec $dryRunSpec)
   {
@@ -63,7 +85,12 @@ class GoogleCloudOrgpolicyV2Policy extends \Google\Model
     return $this->dryRunSpec;
   }
   /**
-   * @param string
+   * Optional. An opaque tag indicating the current state of the policy, used
+   * for concurrency control. This 'etag' is computed by the server based on the
+   * value of other fields, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -77,7 +104,17 @@ class GoogleCloudOrgpolicyV2Policy extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the policy. Must be one of the following
+   * forms, where `constraint_name` is the name of the constraint which this
+   * policy configures: * `projects/{project_number}/policies/{constraint_name}`
+   * * `folders/{folder_id}/policies/{constraint_name}` *
+   * `organizations/{organization_id}/policies/{constraint_name}` For example,
+   * `projects/123/policies/compute.disableSerialPortAccess`. Note:
+   * `projects/{project_id}/policies/{constraint_name}` is also an acceptable
+   * name for API requests, but responses will return the name using the
+   * equivalent project number.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -91,7 +128,9 @@ class GoogleCloudOrgpolicyV2Policy extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudOrgpolicyV2PolicySpec
+   * Basic information about the organization policy.
+   *
+   * @param GoogleCloudOrgpolicyV2PolicySpec $spec
    */
   public function setSpec(GoogleCloudOrgpolicyV2PolicySpec $spec)
   {

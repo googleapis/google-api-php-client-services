@@ -24,7 +24,9 @@ class SelectionList extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param Selection[]
+   * Selection values.
+   *
+   * @param Selection[] $values
    */
   public function setValues($values)
   {

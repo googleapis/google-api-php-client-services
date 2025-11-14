@@ -20,20 +20,28 @@ namespace Google\Service\DatabaseMigrationService;
 class UserPassword extends \Google\Model
 {
   /**
+   * The initial password for the user.
+   *
    * @var string
    */
   public $password;
   /**
+   * Output only. Indicates if the initial_user.password field has been set.
+   *
    * @var bool
    */
   public $passwordSet;
   /**
+   * The database username.
+   *
    * @var string
    */
   public $user;
 
   /**
-   * @param string
+   * The initial password for the user.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -47,7 +55,9 @@ class UserPassword extends \Google\Model
     return $this->password;
   }
   /**
-   * @param bool
+   * Output only. Indicates if the initial_user.password field has been set.
+   *
+   * @param bool $passwordSet
    */
   public function setPasswordSet($passwordSet)
   {
@@ -61,7 +71,9 @@ class UserPassword extends \Google\Model
     return $this->passwordSet;
   }
   /**
-   * @param string
+   * The database username.
+   *
+   * @param string $user
    */
   public function setUser($user)
   {

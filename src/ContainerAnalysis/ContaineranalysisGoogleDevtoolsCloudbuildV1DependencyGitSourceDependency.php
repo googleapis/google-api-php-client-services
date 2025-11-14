@@ -20,26 +20,38 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency extends \Google\Model
 {
   /**
+   * Optional. How much history should be fetched for the build (default 1, -1
+   * for all history).
+   *
    * @var string
    */
   public $depth;
   /**
+   * Required. Where should the files be placed on the worker.
+   *
    * @var string
    */
   public $destPath;
   /**
+   * Optional. True if submodules should be fetched too (default false).
+   *
    * @var bool
    */
   public $recurseSubmodules;
   protected $repositoryType = ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceRepository::class;
   protected $repositoryDataType = '';
   /**
+   * Required. The revision that we will fetch the repo at.
+   *
    * @var string
    */
   public $revision;
 
   /**
-   * @param string
+   * Optional. How much history should be fetched for the build (default 1, -1
+   * for all history).
+   *
+   * @param string $depth
    */
   public function setDepth($depth)
   {
@@ -53,7 +65,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency e
     return $this->depth;
   }
   /**
-   * @param string
+   * Required. Where should the files be placed on the worker.
+   *
+   * @param string $destPath
    */
   public function setDestPath($destPath)
   {
@@ -67,7 +81,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency e
     return $this->destPath;
   }
   /**
-   * @param bool
+   * Optional. True if submodules should be fetched too (default false).
+   *
+   * @param bool $recurseSubmodules
    */
   public function setRecurseSubmodules($recurseSubmodules)
   {
@@ -81,7 +97,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency e
     return $this->recurseSubmodules;
   }
   /**
-   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceRepository
+   * Required. The kind of repo (url or dev connect).
+   *
+   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceRepository $repository
    */
   public function setRepository(ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceRepository $repository)
   {
@@ -95,7 +113,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency e
     return $this->repository;
   }
   /**
-   * @param string
+   * Required. The revision that we will fetch the repo at.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {

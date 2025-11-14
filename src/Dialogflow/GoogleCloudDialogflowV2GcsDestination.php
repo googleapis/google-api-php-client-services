@@ -20,12 +20,22 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2GcsDestination extends \Google\Model
 {
   /**
+   * The Google Cloud Storage URIs for the output. A URI is of the form:
+   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used
+   * depends on the use case. The requesting user must have "write-permission"
+   * to the bucket.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The Google Cloud Storage URIs for the output. A URI is of the form:
+   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used
+   * depends on the use case. The requesting user must have "write-permission"
+   * to the bucket.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

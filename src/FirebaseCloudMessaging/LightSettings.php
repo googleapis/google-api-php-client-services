@@ -22,16 +22,29 @@ class LightSettings extends \Google\Model
   protected $colorType = Color::class;
   protected $colorDataType = '';
   /**
+   * Required. Along with `light_on_duration `, define the blink rate of LED
+   * flashes. Resolution defined by
+   * [proto.Duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.Duration)
+   *
    * @var string
    */
   public $lightOffDuration;
   /**
+   * Required. Along with `light_off_duration`, define the blink rate of LED
+   * flashes. Resolution defined by
+   * [proto.Duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.Duration)
+   *
    * @var string
    */
   public $lightOnDuration;
 
   /**
-   * @param Color
+   * Required. Set `color` of the LED with [google.type.Color](https://github.co
+   * m/googleapis/googleapis/blob/master/google/type/color.proto).
+   *
+   * @param Color $color
    */
   public function setColor(Color $color)
   {
@@ -45,7 +58,12 @@ class LightSettings extends \Google\Model
     return $this->color;
   }
   /**
-   * @param string
+   * Required. Along with `light_on_duration `, define the blink rate of LED
+   * flashes. Resolution defined by
+   * [proto.Duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.Duration)
+   *
+   * @param string $lightOffDuration
    */
   public function setLightOffDuration($lightOffDuration)
   {
@@ -59,7 +77,12 @@ class LightSettings extends \Google\Model
     return $this->lightOffDuration;
   }
   /**
-   * @param string
+   * Required. Along with `light_off_duration`, define the blink rate of LED
+   * flashes. Resolution defined by
+   * [proto.Duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.Duration)
+   *
+   * @param string $lightOnDuration
    */
   public function setLightOnDuration($lightOnDuration)
   {

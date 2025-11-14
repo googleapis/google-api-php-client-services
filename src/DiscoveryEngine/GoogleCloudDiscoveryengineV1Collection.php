@@ -20,20 +20,33 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1Collection extends \Google\Model
 {
   /**
+   * Output only. Timestamp the Collection was created at.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The Collection display name. This field must be a UTF-8 encoded
+   * string with a length limit of 128 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Immutable. The full resource name of the Collection. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. Timestamp the Collection was created at.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,7 +60,11 @@ class GoogleCloudDiscoveryengineV1Collection extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The Collection display name. This field must be a UTF-8 encoded
+   * string with a length limit of 128 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +78,12 @@ class GoogleCloudDiscoveryengineV1Collection extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Immutable. The full resource name of the Collection. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

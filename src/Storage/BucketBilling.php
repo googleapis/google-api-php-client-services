@@ -20,12 +20,16 @@ namespace Google\Service\Storage;
 class BucketBilling extends \Google\Model
 {
   /**
+   * When set to true, Requester Pays is enabled for this bucket.
+   *
    * @var bool
    */
   public $requesterPays;
 
   /**
-   * @param bool
+   * When set to true, Requester Pays is enabled for this bucket.
+   *
+   * @param bool $requesterPays
    */
   public function setRequesterPays($requesterPays)
   {

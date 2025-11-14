@@ -20,16 +20,30 @@ namespace Google\Service\CloudDeploy;
 class DefaultPool extends \Google\Model
 {
   /**
+   * Optional. Cloud Storage location where execution outputs should be stored.
+   * This can either be a bucket ("gs://my-bucket") or a path within a bucket
+   * ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the
+   * same region will be used.
+   *
    * @var string
    */
   public $artifactStorage;
   /**
+   * Optional. Google service account to use for execution. If unspecified, the
+   * project execution service account (-compute@developer.gserviceaccount.com)
+   * will be used.
+   *
    * @var string
    */
   public $serviceAccount;
 
   /**
-   * @param string
+   * Optional. Cloud Storage location where execution outputs should be stored.
+   * This can either be a bucket ("gs://my-bucket") or a path within a bucket
+   * ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the
+   * same region will be used.
+   *
+   * @param string $artifactStorage
    */
   public function setArtifactStorage($artifactStorage)
   {
@@ -43,7 +57,11 @@ class DefaultPool extends \Google\Model
     return $this->artifactStorage;
   }
   /**
-   * @param string
+   * Optional. Google service account to use for execution. If unspecified, the
+   * project execution service account (-compute@developer.gserviceaccount.com)
+   * will be used.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {

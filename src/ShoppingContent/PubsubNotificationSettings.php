@@ -21,20 +21,29 @@ class PubsubNotificationSettings extends \Google\Collection
 {
   protected $collection_key = 'registeredEvents';
   /**
+   * Cloud pub/sub topic to which notifications are sent (read-only).
+   *
    * @var string
    */
   public $cloudTopicName;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#pubsubNotificationSettings`"
+   *
    * @var string
    */
   public $kind;
   /**
+   * List of event types. Acceptable values are: - "`orderPendingShipment`"
+   *
    * @var string[]
    */
   public $registeredEvents;
 
   /**
-   * @param string
+   * Cloud pub/sub topic to which notifications are sent (read-only).
+   *
+   * @param string $cloudTopicName
    */
   public function setCloudTopicName($cloudTopicName)
   {
@@ -48,7 +57,10 @@ class PubsubNotificationSettings extends \Google\Collection
     return $this->cloudTopicName;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#pubsubNotificationSettings`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -62,7 +74,9 @@ class PubsubNotificationSettings extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * List of event types. Acceptable values are: - "`orderPendingShipment`"
+   *
+   * @param string[] $registeredEvents
    */
   public function setRegisteredEvents($registeredEvents)
   {

@@ -22,26 +22,38 @@ class OracleSourceConfig extends \Google\Model
   protected $binaryLogParserType = BinaryLogParser::class;
   protected $binaryLogParserDataType = '';
   /**
+   * Optional. The schema change number (SCN) to start CDC data migration from.
+   *
    * @var string
    */
   public $cdcStartPosition;
   protected $logMinerType = LogMiner::class;
   protected $logMinerDataType = '';
   /**
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for CDC phase.
+   *
    * @var int
    */
   public $maxConcurrentCdcConnections;
   /**
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for full dump phase.
+   *
    * @var int
    */
   public $maxConcurrentFullDumpConnections;
   /**
+   * Optional. Whether to skip full dump or not.
+   *
    * @var bool
    */
   public $skipFullDump;
 
   /**
-   * @param BinaryLogParser
+   * Use Binary Log Parser.
+   *
+   * @param BinaryLogParser $binaryLogParser
    */
   public function setBinaryLogParser(BinaryLogParser $binaryLogParser)
   {
@@ -55,7 +67,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->binaryLogParser;
   }
   /**
-   * @param string
+   * Optional. The schema change number (SCN) to start CDC data migration from.
+   *
+   * @param string $cdcStartPosition
    */
   public function setCdcStartPosition($cdcStartPosition)
   {
@@ -69,7 +83,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->cdcStartPosition;
   }
   /**
-   * @param LogMiner
+   * Use LogMiner.
+   *
+   * @param LogMiner $logMiner
    */
   public function setLogMiner(LogMiner $logMiner)
   {
@@ -83,7 +99,10 @@ class OracleSourceConfig extends \Google\Model
     return $this->logMiner;
   }
   /**
-   * @param int
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for CDC phase.
+   *
+   * @param int $maxConcurrentCdcConnections
    */
   public function setMaxConcurrentCdcConnections($maxConcurrentCdcConnections)
   {
@@ -97,7 +116,10 @@ class OracleSourceConfig extends \Google\Model
     return $this->maxConcurrentCdcConnections;
   }
   /**
-   * @param int
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the source for full dump phase.
+   *
+   * @param int $maxConcurrentFullDumpConnections
    */
   public function setMaxConcurrentFullDumpConnections($maxConcurrentFullDumpConnections)
   {
@@ -111,7 +133,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->maxConcurrentFullDumpConnections;
   }
   /**
-   * @param bool
+   * Optional. Whether to skip full dump or not.
+   *
+   * @param bool $skipFullDump
    */
   public function setSkipFullDump($skipFullDump)
   {

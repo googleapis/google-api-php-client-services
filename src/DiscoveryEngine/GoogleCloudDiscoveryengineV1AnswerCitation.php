@@ -21,18 +21,30 @@ class GoogleCloudDiscoveryengineV1AnswerCitation extends \Google\Collection
 {
   protected $collection_key = 'sources';
   /**
+   * End of the attributed segment, exclusive. Measured in bytes (UTF-8
+   * unicode). If there are multi-byte characters,such as non-ASCII characters,
+   * the index measurement is longer than the string length.
+   *
    * @var string
    */
   public $endIndex;
   protected $sourcesType = GoogleCloudDiscoveryengineV1AnswerCitationSource::class;
   protected $sourcesDataType = 'array';
   /**
+   * Index indicates the start of the segment, measured in bytes (UTF-8
+   * unicode). If there are multi-byte characters,such as non-ASCII characters,
+   * the index measurement is longer than the string length.
+   *
    * @var string
    */
   public $startIndex;
 
   /**
-   * @param string
+   * End of the attributed segment, exclusive. Measured in bytes (UTF-8
+   * unicode). If there are multi-byte characters,such as non-ASCII characters,
+   * the index measurement is longer than the string length.
+   *
+   * @param string $endIndex
    */
   public function setEndIndex($endIndex)
   {
@@ -46,7 +58,9 @@ class GoogleCloudDiscoveryengineV1AnswerCitation extends \Google\Collection
     return $this->endIndex;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerCitationSource[]
+   * Citation sources for the attributed segment.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerCitationSource[] $sources
    */
   public function setSources($sources)
   {
@@ -60,7 +74,11 @@ class GoogleCloudDiscoveryengineV1AnswerCitation extends \Google\Collection
     return $this->sources;
   }
   /**
-   * @param string
+   * Index indicates the start of the segment, measured in bytes (UTF-8
+   * unicode). If there are multi-byte characters,such as non-ASCII characters,
+   * the index measurement is longer than the string length.
+   *
+   * @param string $startIndex
    */
   public function setStartIndex($startIndex)
   {

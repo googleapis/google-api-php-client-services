@@ -22,16 +22,25 @@ class GooglePrivacyDlpV2CreateInspectTemplateRequest extends \Google\Model
   protected $inspectTemplateType = GooglePrivacyDlpV2InspectTemplate::class;
   protected $inspectTemplateDataType = '';
   /**
+   * Deprecated. This field has no effect.
+   *
    * @var string
    */
   public $locationId;
   /**
+   * The template id can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
    * @var string
    */
   public $templateId;
 
   /**
-   * @param GooglePrivacyDlpV2InspectTemplate
+   * Required. The InspectTemplate to create.
+   *
+   * @param GooglePrivacyDlpV2InspectTemplate $inspectTemplate
    */
   public function setInspectTemplate(GooglePrivacyDlpV2InspectTemplate $inspectTemplate)
   {
@@ -45,7 +54,9 @@ class GooglePrivacyDlpV2CreateInspectTemplateRequest extends \Google\Model
     return $this->inspectTemplate;
   }
   /**
-   * @param string
+   * Deprecated. This field has no effect.
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -59,7 +70,12 @@ class GooglePrivacyDlpV2CreateInspectTemplateRequest extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param string
+   * The template id can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
+   * @param string $templateId
    */
   public function setTemplateId($templateId)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\AIPlatformNotebooks;
 class ContainerImage extends \Google\Model
 {
   /**
+   * Required. The path to the container image repository. For example:
+   * `gcr.io/{project_id}/{image_name}`
+   *
    * @var string
    */
   public $repository;
   /**
+   * Optional. The tag of the container image. If not specified, this defaults
+   * to the latest tag.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * Required. The path to the container image repository. For example:
+   * `gcr.io/{project_id}/{image_name}`
+   *
+   * @param string $repository
    */
   public function setRepository($repository)
   {
@@ -43,7 +52,10 @@ class ContainerImage extends \Google\Model
     return $this->repository;
   }
   /**
-   * @param string
+   * Optional. The tag of the container image. If not specified, this defaults
+   * to the latest tag.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

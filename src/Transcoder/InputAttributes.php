@@ -24,7 +24,9 @@ class InputAttributes extends \Google\Collection
   protected $trackDefinitionsDataType = 'array';
 
   /**
-   * @param TrackDefinition[]
+   * Optional. A list of track definitions for the input asset.
+   *
+   * @param TrackDefinition[] $trackDefinitions
    */
   public function setTrackDefinitions($trackDefinitions)
   {

@@ -25,7 +25,11 @@ class RequestBasedSli extends \Google\Model
   protected $goodTotalRatioDataType = '';
 
   /**
-   * @param DistributionCut
+   * distribution_cut is used when good_service is a count of values aggregated
+   * in a Distribution that fall into a good range. The total_service is the
+   * total count of all values aggregated in the Distribution.
+   *
+   * @param DistributionCut $distributionCut
    */
   public function setDistributionCut(DistributionCut $distributionCut)
   {
@@ -39,7 +43,10 @@ class RequestBasedSli extends \Google\Model
     return $this->distributionCut;
   }
   /**
-   * @param TimeSeriesRatio
+   * good_total_ratio is used when the ratio of good_service to total_service is
+   * computed from two TimeSeries.
+   *
+   * @param TimeSeriesRatio $goodTotalRatio
    */
   public function setGoodTotalRatio(TimeSeriesRatio $goodTotalRatio)
   {

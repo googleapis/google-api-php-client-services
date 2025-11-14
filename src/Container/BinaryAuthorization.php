@@ -20,22 +20,50 @@ namespace Google\Service\Container;
 class BinaryAuthorization extends \Google\Model
 {
   /**
+   * Default value
+   */
+  public const EVALUATION_MODE_EVALUATION_MODE_UNSPECIFIED = 'EVALUATION_MODE_UNSPECIFIED';
+  /**
+   * Disable BinaryAuthorization
+   */
+  public const EVALUATION_MODE_DISABLED = 'DISABLED';
+  /**
+   * Enforce Kubernetes admission requests with BinaryAuthorization using the
+   * project's singleton policy. This is equivalent to setting the enabled
+   * boolean to true.
+   */
+  public const EVALUATION_MODE_PROJECT_SINGLETON_POLICY_ENFORCE = 'PROJECT_SINGLETON_POLICY_ENFORCE';
+  /**
+   * This field is deprecated. Leave this unset and instead configure
+   * BinaryAuthorization using evaluation_mode. If evaluation_mode is set to
+   * anything other than EVALUATION_MODE_UNSPECIFIED, this field is ignored.
+   *
+   * @deprecated
    * @var bool
    */
   public $enabled;
   /**
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults
+   * to DISABLED.
+   *
    * @var string
    */
   public $evaluationMode;
 
   /**
-   * @param bool
+   * This field is deprecated. Leave this unset and instead configure
+   * BinaryAuthorization using evaluation_mode. If evaluation_mode is set to
+   * anything other than EVALUATION_MODE_UNSPECIFIED, this field is ignored.
+   *
+   * @deprecated
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
     $this->enabled = $enabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnabled()
@@ -43,14 +71,20 @@ class BinaryAuthorization extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults
+   * to DISABLED.
+   *
+   * Accepted values: EVALUATION_MODE_UNSPECIFIED, DISABLED,
+   * PROJECT_SINGLETON_POLICY_ENFORCE
+   *
+   * @param self::EVALUATION_MODE_* $evaluationMode
    */
   public function setEvaluationMode($evaluationMode)
   {
     $this->evaluationMode = $evaluationMode;
   }
   /**
-   * @return string
+   * @return self::EVALUATION_MODE_*
    */
   public function getEvaluationMode()
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class DeviceMakeModelTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The display name of the device make and model.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * Output only. The display name of the device make and model.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

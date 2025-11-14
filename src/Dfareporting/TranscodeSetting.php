@@ -21,16 +21,25 @@ class TranscodeSetting extends \Google\Collection
 {
   protected $collection_key = 'enabledVideoFormats';
   /**
+   * Allowlist of video formats to be served to this placement. Set this list to
+   * null or empty to serve all video formats.
+   *
    * @var int[]
    */
   public $enabledVideoFormats;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#transcodeSetting".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param int[]
+   * Allowlist of video formats to be served to this placement. Set this list to
+   * null or empty to serve all video formats.
+   *
+   * @param int[] $enabledVideoFormats
    */
   public function setEnabledVideoFormats($enabledVideoFormats)
   {
@@ -44,7 +53,10 @@ class TranscodeSetting extends \Google\Collection
     return $this->enabledVideoFormats;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#transcodeSetting".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -20,23 +20,37 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleMonitoringV3TypedValue extends \Google\Model
 {
   /**
+   * A Boolean value: `true` or `false`.
+   *
    * @var bool
    */
   public $boolValue;
   protected $distributionValueType = GoogleApiDistribution::class;
   protected $distributionValueDataType = '';
+  /**
+   * A 64-bit double-precision floating-point number. Its magnitude is
+   * approximately ±10±300 and it has 16 significant digits of precision.
+   *
+   * @var 
+   */
   public $doubleValue;
   /**
+   * A 64-bit integer. Its range is approximately ±9.2x1018.
+   *
    * @var string
    */
   public $int64Value;
   /**
+   * A variable-length string value.
+   *
    * @var string
    */
   public $stringValue;
 
   /**
-   * @param bool
+   * A Boolean value: `true` or `false`.
+   *
+   * @param bool $boolValue
    */
   public function setBoolValue($boolValue)
   {
@@ -50,7 +64,9 @@ class GoogleMonitoringV3TypedValue extends \Google\Model
     return $this->boolValue;
   }
   /**
-   * @param GoogleApiDistribution
+   * A distribution value.
+   *
+   * @param GoogleApiDistribution $distributionValue
    */
   public function setDistributionValue(GoogleApiDistribution $distributionValue)
   {
@@ -72,7 +88,9 @@ class GoogleMonitoringV3TypedValue extends \Google\Model
     return $this->doubleValue;
   }
   /**
-   * @param string
+   * A 64-bit integer. Its range is approximately ±9.2x1018.
+   *
+   * @param string $int64Value
    */
   public function setInt64Value($int64Value)
   {
@@ -86,7 +104,9 @@ class GoogleMonitoringV3TypedValue extends \Google\Model
     return $this->int64Value;
   }
   /**
-   * @param string
+   * A variable-length string value.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Dataform;
 class RemoveFileRequest extends \Google\Model
 {
   /**
+   * Required. The file's full path including filename, relative to the
+   * workspace root.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Required. The file's full path including filename, relative to the
+   * workspace root.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

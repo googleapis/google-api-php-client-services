@@ -21,6 +21,9 @@ class BuiltInUserInputAction extends \Google\Collection
 {
   protected $collection_key = 'flows';
   /**
+   * Internal details. Not for display but need to be sent back when triggering
+   * the action.
+   *
    * @var string
    */
   public $actionContext;
@@ -28,7 +31,10 @@ class BuiltInUserInputAction extends \Google\Collection
   protected $flowsDataType = 'array';
 
   /**
-   * @param string
+   * Internal details. Not for display but need to be sent back when triggering
+   * the action.
+   *
+   * @param string $actionContext
    */
   public function setActionContext($actionContext)
   {
@@ -42,7 +48,12 @@ class BuiltInUserInputAction extends \Google\Collection
     return $this->actionContext;
   }
   /**
-   * @param ActionFlow[]
+   * Actions may provide multiple different flows. Merchant selects one that
+   * fits best to their intent. Selecting the flow is the first step in user's
+   * interaction with the action. It affects what input fields will be available
+   * and required and also how the request will be processed.
+   *
+   * @param ActionFlow[] $flows
    */
   public function setFlows($flows)
   {

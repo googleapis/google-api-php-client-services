@@ -33,7 +33,7 @@ class StepResult extends \Google\Model
   public $name;
 
   /**
-   * @param string
+   * @param string $attestationContentName
    */
   public function setAttestationContentName($attestationContentName)
   {
@@ -47,7 +47,7 @@ class StepResult extends \Google\Model
     return $this->attestationContentName;
   }
   /**
-   * @param string
+   * @param string $attestationType
    */
   public function setAttestationType($attestationType)
   {
@@ -61,7 +61,7 @@ class StepResult extends \Google\Model
     return $this->attestationType;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {

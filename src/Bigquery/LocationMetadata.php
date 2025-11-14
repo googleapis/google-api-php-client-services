@@ -20,12 +20,18 @@ namespace Google\Service\Bigquery;
 class LocationMetadata extends \Google\Model
 {
   /**
+   * The legacy BigQuery location ID, e.g. “EU” for the “europe” location. This
+   * is for any API consumers that need the legacy “US” and “EU” locations.
+   *
    * @var string
    */
   public $legacyLocationId;
 
   /**
-   * @param string
+   * The legacy BigQuery location ID, e.g. “EU” for the “europe” location. This
+   * is for any API consumers that need the legacy “US” and “EU” locations.
+   *
+   * @param string $legacyLocationId
    */
   public function setLegacyLocationId($legacyLocationId)
   {

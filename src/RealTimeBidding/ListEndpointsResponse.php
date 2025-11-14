@@ -23,12 +23,18 @@ class ListEndpointsResponse extends \Google\Collection
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
   /**
+   * A token which can be passed to a subsequent call to the `ListEndpoints`
+   * method to retrieve the next page of results in
+   * ListEndpointsRequest.pageToken.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Endpoint[]
+   * List of bidder endpoints.
+   *
+   * @param Endpoint[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -42,7 +48,11 @@ class ListEndpointsResponse extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param string
+   * A token which can be passed to a subsequent call to the `ListEndpoints`
+   * method to retrieve the next page of results in
+   * ListEndpointsRequest.pageToken.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

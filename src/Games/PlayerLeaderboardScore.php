@@ -19,46 +19,77 @@ namespace Google\Service\Games;
 
 class PlayerLeaderboardScore extends \Google\Model
 {
+  /**
+   * The score is an all-time score.
+   */
+  public const TIME_SPAN_ALL_TIME = 'ALL_TIME';
+  /**
+   * The score is a weekly score.
+   */
+  public const TIME_SPAN_WEEKLY = 'WEEKLY';
+  /**
+   * The score is a daily score.
+   */
+  public const TIME_SPAN_DAILY = 'DAILY';
   protected $internal_gapi_mappings = [
         "leaderboardId" => "leaderboard_id",
   ];
   protected $friendsRankType = LeaderboardScoreRank::class;
   protected $friendsRankDataType = '';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerLeaderboardScore`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The ID of the leaderboard this score is in.
+   *
    * @var string
    */
   public $leaderboardId;
   protected $publicRankType = LeaderboardScoreRank::class;
   protected $publicRankDataType = '';
   /**
+   * The formatted value of this score.
+   *
    * @var string
    */
   public $scoreString;
   /**
+   * Additional information about the score. Values must contain no more than 64
+   * URI-safe characters as defined by section 2.3 of RFC 3986.
+   *
    * @var string
    */
   public $scoreTag;
   /**
+   * The numerical value of this score.
+   *
    * @var string
    */
   public $scoreValue;
   protected $socialRankType = LeaderboardScoreRank::class;
   protected $socialRankDataType = '';
   /**
+   * The time span of this score.
+   *
    * @var string
    */
   public $timeSpan;
   /**
+   * The timestamp at which this score was recorded, in milliseconds since the
+   * epoch in UTC.
+   *
    * @var string
    */
   public $writeTimestamp;
 
   /**
-   * @param LeaderboardScoreRank
+   * The rank of the score in the friends collection for this leaderboard.
+   *
+   * @param LeaderboardScoreRank $friendsRank
    */
   public function setFriendsRank(LeaderboardScoreRank $friendsRank)
   {
@@ -72,7 +103,10 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->friendsRank;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerLeaderboardScore`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -86,7 +120,9 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The ID of the leaderboard this score is in.
+   *
+   * @param string $leaderboardId
    */
   public function setLeaderboardId($leaderboardId)
   {
@@ -100,7 +136,10 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->leaderboardId;
   }
   /**
-   * @param LeaderboardScoreRank
+   * The public rank of the score in this leaderboard. This object will not be
+   * present if the user is not sharing their scores publicly.
+   *
+   * @param LeaderboardScoreRank $publicRank
    */
   public function setPublicRank(LeaderboardScoreRank $publicRank)
   {
@@ -114,7 +153,9 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->publicRank;
   }
   /**
-   * @param string
+   * The formatted value of this score.
+   *
+   * @param string $scoreString
    */
   public function setScoreString($scoreString)
   {
@@ -128,7 +169,10 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->scoreString;
   }
   /**
-   * @param string
+   * Additional information about the score. Values must contain no more than 64
+   * URI-safe characters as defined by section 2.3 of RFC 3986.
+   *
+   * @param string $scoreTag
    */
   public function setScoreTag($scoreTag)
   {
@@ -142,7 +186,9 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->scoreTag;
   }
   /**
-   * @param string
+   * The numerical value of this score.
+   *
+   * @param string $scoreValue
    */
   public function setScoreValue($scoreValue)
   {
@@ -156,7 +202,9 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->scoreValue;
   }
   /**
-   * @param LeaderboardScoreRank
+   * The social rank of the score in this leaderboard.
+   *
+   * @param LeaderboardScoreRank $socialRank
    */
   public function setSocialRank(LeaderboardScoreRank $socialRank)
   {
@@ -170,21 +218,28 @@ class PlayerLeaderboardScore extends \Google\Model
     return $this->socialRank;
   }
   /**
-   * @param string
+   * The time span of this score.
+   *
+   * Accepted values: ALL_TIME, WEEKLY, DAILY
+   *
+   * @param self::TIME_SPAN_* $timeSpan
    */
   public function setTimeSpan($timeSpan)
   {
     $this->timeSpan = $timeSpan;
   }
   /**
-   * @return string
+   * @return self::TIME_SPAN_*
    */
   public function getTimeSpan()
   {
     return $this->timeSpan;
   }
   /**
-   * @param string
+   * The timestamp at which this score was recorded, in milliseconds since the
+   * epoch in UTC.
+   *
+   * @param string $writeTimestamp
    */
   public function setWriteTimestamp($writeTimestamp)
   {

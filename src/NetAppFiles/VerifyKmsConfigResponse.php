@@ -20,20 +20,30 @@ namespace Google\Service\NetAppFiles;
 class VerifyKmsConfigResponse extends \Google\Model
 {
   /**
+   * Output only. Error message if config is not healthy.
+   *
    * @var string
    */
   public $healthError;
   /**
+   * Output only. If the customer key configured correctly to the encrypt
+   * volume.
+   *
    * @var bool
    */
   public $healthy;
   /**
+   * Output only. Instructions for the customers to provide the access to the
+   * encryption key.
+   *
    * @var string
    */
   public $instructions;
 
   /**
-   * @param string
+   * Output only. Error message if config is not healthy.
+   *
+   * @param string $healthError
    */
   public function setHealthError($healthError)
   {
@@ -47,7 +57,10 @@ class VerifyKmsConfigResponse extends \Google\Model
     return $this->healthError;
   }
   /**
-   * @param bool
+   * Output only. If the customer key configured correctly to the encrypt
+   * volume.
+   *
+   * @param bool $healthy
    */
   public function setHealthy($healthy)
   {
@@ -61,7 +74,10 @@ class VerifyKmsConfigResponse extends \Google\Model
     return $this->healthy;
   }
   /**
-   * @param string
+   * Output only. Instructions for the customers to provide the access to the
+   * encryption key.
+   *
+   * @param string $instructions
    */
   public function setInstructions($instructions)
   {

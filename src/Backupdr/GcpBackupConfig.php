@@ -21,32 +21,46 @@ class GcpBackupConfig extends \Google\Collection
 {
   protected $collection_key = 'backupPlanRules';
   /**
+   * The name of the backup plan.
+   *
    * @var string
    */
   public $backupPlan;
   /**
+   * The name of the backup plan association.
+   *
    * @var string
    */
   public $backupPlanAssociation;
   /**
+   * The description of the backup plan.
+   *
    * @var string
    */
   public $backupPlanDescription;
   /**
+   * The user friendly id of the backup plan revision. E.g. v0, v1 etc.
+   *
    * @var string
    */
   public $backupPlanRevisionId;
   /**
+   * The name of the backup plan revision.
+   *
    * @var string
    */
   public $backupPlanRevisionName;
   /**
+   * The names of the backup plan rules which point to this backupvault
+   *
    * @var string[]
    */
   public $backupPlanRules;
 
   /**
-   * @param string
+   * The name of the backup plan.
+   *
+   * @param string $backupPlan
    */
   public function setBackupPlan($backupPlan)
   {
@@ -60,7 +74,9 @@ class GcpBackupConfig extends \Google\Collection
     return $this->backupPlan;
   }
   /**
-   * @param string
+   * The name of the backup plan association.
+   *
+   * @param string $backupPlanAssociation
    */
   public function setBackupPlanAssociation($backupPlanAssociation)
   {
@@ -74,7 +90,9 @@ class GcpBackupConfig extends \Google\Collection
     return $this->backupPlanAssociation;
   }
   /**
-   * @param string
+   * The description of the backup plan.
+   *
+   * @param string $backupPlanDescription
    */
   public function setBackupPlanDescription($backupPlanDescription)
   {
@@ -88,7 +106,9 @@ class GcpBackupConfig extends \Google\Collection
     return $this->backupPlanDescription;
   }
   /**
-   * @param string
+   * The user friendly id of the backup plan revision. E.g. v0, v1 etc.
+   *
+   * @param string $backupPlanRevisionId
    */
   public function setBackupPlanRevisionId($backupPlanRevisionId)
   {
@@ -102,7 +122,9 @@ class GcpBackupConfig extends \Google\Collection
     return $this->backupPlanRevisionId;
   }
   /**
-   * @param string
+   * The name of the backup plan revision.
+   *
+   * @param string $backupPlanRevisionName
    */
   public function setBackupPlanRevisionName($backupPlanRevisionName)
   {
@@ -116,7 +138,9 @@ class GcpBackupConfig extends \Google\Collection
     return $this->backupPlanRevisionName;
   }
   /**
-   * @param string[]
+   * The names of the backup plan rules which point to this backupvault
+   *
+   * @param string[] $backupPlanRules
    */
   public function setBackupPlanRules($backupPlanRules)
   {

@@ -25,6 +25,11 @@ class AuthzPolicyAuthzRuleToRequestOperation extends \Google\Collection
   protected $hostsType = AuthzPolicyAuthzRuleStringMatch::class;
   protected $hostsDataType = 'array';
   /**
+   * Optional. A list of HTTP methods to match against. Each entry must be a
+   * valid HTTP method name (GET, PUT, POST, HEAD, PATCH, DELETE, OPTIONS). It
+   * only allows exact match and is always case sensitive. Limited to 10 methods
+   * per Authorization Policy.
+   *
    * @var string[]
    */
   public $methods;
@@ -32,7 +37,9 @@ class AuthzPolicyAuthzRuleToRequestOperation extends \Google\Collection
   protected $pathsDataType = 'array';
 
   /**
-   * @param AuthzPolicyAuthzRuleToRequestOperationHeaderSet
+   * Optional. A list of headers to match against in http header.
+   *
+   * @param AuthzPolicyAuthzRuleToRequestOperationHeaderSet $headerSet
    */
   public function setHeaderSet(AuthzPolicyAuthzRuleToRequestOperationHeaderSet $headerSet)
   {
@@ -46,7 +53,12 @@ class AuthzPolicyAuthzRuleToRequestOperation extends \Google\Collection
     return $this->headerSet;
   }
   /**
-   * @param AuthzPolicyAuthzRuleStringMatch[]
+   * Optional. A list of HTTP Hosts to match against. The match can be one of
+   * exact, prefix, suffix, or contains (substring match). Matches are always
+   * case sensitive unless the ignoreCase is set. Limited to 10 hosts per
+   * Authorization Policy.
+   *
+   * @param AuthzPolicyAuthzRuleStringMatch[] $hosts
    */
   public function setHosts($hosts)
   {
@@ -60,7 +72,12 @@ class AuthzPolicyAuthzRuleToRequestOperation extends \Google\Collection
     return $this->hosts;
   }
   /**
-   * @param string[]
+   * Optional. A list of HTTP methods to match against. Each entry must be a
+   * valid HTTP method name (GET, PUT, POST, HEAD, PATCH, DELETE, OPTIONS). It
+   * only allows exact match and is always case sensitive. Limited to 10 methods
+   * per Authorization Policy.
+   *
+   * @param string[] $methods
    */
   public function setMethods($methods)
   {
@@ -74,7 +91,14 @@ class AuthzPolicyAuthzRuleToRequestOperation extends \Google\Collection
     return $this->methods;
   }
   /**
-   * @param AuthzPolicyAuthzRuleStringMatch[]
+   * Optional. A list of paths to match against. The match can be one of exact,
+   * prefix, suffix, or contains (substring match). Matches are always case
+   * sensitive unless the ignoreCase is set. Limited to 10 paths per
+   * Authorization Policy. Note that this path match includes the query
+   * parameters. For gRPC services, this should be a fully-qualified name of the
+   * form /package.service/method.
+   *
+   * @param AuthzPolicyAuthzRuleStringMatch[] $paths
    */
   public function setPaths($paths)
   {

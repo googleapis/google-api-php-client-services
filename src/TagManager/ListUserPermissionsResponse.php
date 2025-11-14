@@ -21,6 +21,8 @@ class ListUserPermissionsResponse extends \Google\Collection
 {
   protected $collection_key = 'userPermission';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListUserPermissionsResponse extends \Google\Collection
   protected $userPermissionDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListUserPermissionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param UserPermission[]
+   * All GTM UserPermissions of a GTM Account.
+   *
+   * @param UserPermission[] $userPermission
    */
   public function setUserPermission($userPermission)
   {

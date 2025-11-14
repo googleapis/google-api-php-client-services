@@ -19,6 +19,62 @@ namespace Google\Service\ContainerAnalysis;
 
 class Note extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const KIND_NOTE_KIND_UNSPECIFIED = 'NOTE_KIND_UNSPECIFIED';
+  /**
+   * The note and occurrence represent a package vulnerability.
+   */
+  public const KIND_VULNERABILITY = 'VULNERABILITY';
+  /**
+   * The note and occurrence assert build provenance.
+   */
+  public const KIND_BUILD = 'BUILD';
+  /**
+   * This represents an image basis relationship.
+   */
+  public const KIND_IMAGE = 'IMAGE';
+  /**
+   * This represents a package installed via a package manager.
+   */
+  public const KIND_PACKAGE = 'PACKAGE';
+  /**
+   * The note and occurrence track deployment events.
+   */
+  public const KIND_DEPLOYMENT = 'DEPLOYMENT';
+  /**
+   * The note and occurrence track the initial discovery status of a resource.
+   */
+  public const KIND_DISCOVERY = 'DISCOVERY';
+  /**
+   * This represents a logical "role" that can attest to artifacts.
+   */
+  public const KIND_ATTESTATION = 'ATTESTATION';
+  /**
+   * This represents an available package upgrade.
+   */
+  public const KIND_UPGRADE = 'UPGRADE';
+  /**
+   * This represents a Compliance Note
+   */
+  public const KIND_COMPLIANCE = 'COMPLIANCE';
+  /**
+   * This represents a DSSE attestation Note
+   */
+  public const KIND_DSSE_ATTESTATION = 'DSSE_ATTESTATION';
+  /**
+   * This represents a Vulnerability Assessment.
+   */
+  public const KIND_VULNERABILITY_ASSESSMENT = 'VULNERABILITY_ASSESSMENT';
+  /**
+   * This represents an SBOM Reference.
+   */
+  public const KIND_SBOM_REFERENCE = 'SBOM_REFERENCE';
+  /**
+   * This represents a secret.
+   */
+  public const KIND_SECRET = 'SECRET';
   protected $collection_key = 'relatedUrl';
   protected $attestationType = AttestationNote::class;
   protected $attestationDataType = '';
@@ -27,6 +83,9 @@ class Note extends \Google\Collection
   protected $complianceType = ComplianceNote::class;
   protected $complianceDataType = '';
   /**
+   * Output only. The time this note was created. This field can be used as a
+   * filter in list requests.
+   *
    * @var string
    */
   public $createTime;
@@ -37,26 +96,38 @@ class Note extends \Google\Collection
   protected $dsseAttestationType = DSSEAttestationNote::class;
   protected $dsseAttestationDataType = '';
   /**
+   * Time of expiration for this note. Empty if note does not expire.
+   *
    * @var string
    */
   public $expirationTime;
   protected $imageType = ImageNote::class;
   protected $imageDataType = '';
   /**
+   * Output only. The type of analysis. This field can be used as a filter in
+   * list requests.
+   *
    * @var string
    */
   public $kind;
   /**
+   * A detailed description of this note.
+   *
    * @var string
    */
   public $longDescription;
   /**
+   * Output only. The name of the note in the form of
+   * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+   *
    * @var string
    */
   public $name;
   protected $packageType = PackageNote::class;
   protected $packageDataType = '';
   /**
+   * Other notes related to this note.
+   *
    * @var string[]
    */
   public $relatedNoteNames;
@@ -67,10 +138,15 @@ class Note extends \Google\Collection
   protected $secretType = SecretNote::class;
   protected $secretDataType = '';
   /**
+   * A one sentence description of this note.
+   *
    * @var string
    */
   public $shortDescription;
   /**
+   * Output only. The time this note was last updated. This field can be used as
+   * a filter in list requests.
+   *
    * @var string
    */
   public $updateTime;
@@ -82,7 +158,9 @@ class Note extends \Google\Collection
   protected $vulnerabilityAssessmentDataType = '';
 
   /**
-   * @param AttestationNote
+   * A note describing an attestation role.
+   *
+   * @param AttestationNote $attestation
    */
   public function setAttestation(AttestationNote $attestation)
   {
@@ -96,7 +174,9 @@ class Note extends \Google\Collection
     return $this->attestation;
   }
   /**
-   * @param BuildNote
+   * A note describing build provenance for a verifiable build.
+   *
+   * @param BuildNote $build
    */
   public function setBuild(BuildNote $build)
   {
@@ -110,7 +190,9 @@ class Note extends \Google\Collection
     return $this->build;
   }
   /**
-   * @param ComplianceNote
+   * A note describing a compliance check.
+   *
+   * @param ComplianceNote $compliance
    */
   public function setCompliance(ComplianceNote $compliance)
   {
@@ -124,7 +206,10 @@ class Note extends \Google\Collection
     return $this->compliance;
   }
   /**
-   * @param string
+   * Output only. The time this note was created. This field can be used as a
+   * filter in list requests.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -138,7 +223,9 @@ class Note extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param DeploymentNote
+   * A note describing something that can be deployed.
+   *
+   * @param DeploymentNote $deployment
    */
   public function setDeployment(DeploymentNote $deployment)
   {
@@ -152,7 +239,9 @@ class Note extends \Google\Collection
     return $this->deployment;
   }
   /**
-   * @param DiscoveryNote
+   * A note describing the initial analysis of a resource.
+   *
+   * @param DiscoveryNote $discovery
    */
   public function setDiscovery(DiscoveryNote $discovery)
   {
@@ -166,7 +255,9 @@ class Note extends \Google\Collection
     return $this->discovery;
   }
   /**
-   * @param DSSEAttestationNote
+   * A note describing a dsse attestation note.
+   *
+   * @param DSSEAttestationNote $dsseAttestation
    */
   public function setDsseAttestation(DSSEAttestationNote $dsseAttestation)
   {
@@ -180,7 +271,9 @@ class Note extends \Google\Collection
     return $this->dsseAttestation;
   }
   /**
-   * @param string
+   * Time of expiration for this note. Empty if note does not expire.
+   *
+   * @param string $expirationTime
    */
   public function setExpirationTime($expirationTime)
   {
@@ -194,7 +287,9 @@ class Note extends \Google\Collection
     return $this->expirationTime;
   }
   /**
-   * @param ImageNote
+   * A note describing a base image.
+   *
+   * @param ImageNote $image
    */
   public function setImage(ImageNote $image)
   {
@@ -208,21 +303,30 @@ class Note extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param string
+   * Output only. The type of analysis. This field can be used as a filter in
+   * list requests.
+   *
+   * Accepted values: NOTE_KIND_UNSPECIFIED, VULNERABILITY, BUILD, IMAGE,
+   * PACKAGE, DEPLOYMENT, DISCOVERY, ATTESTATION, UPGRADE, COMPLIANCE,
+   * DSSE_ATTESTATION, VULNERABILITY_ASSESSMENT, SBOM_REFERENCE, SECRET
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * A detailed description of this note.
+   *
+   * @param string $longDescription
    */
   public function setLongDescription($longDescription)
   {
@@ -236,7 +340,10 @@ class Note extends \Google\Collection
     return $this->longDescription;
   }
   /**
-   * @param string
+   * Output only. The name of the note in the form of
+   * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -250,7 +357,9 @@ class Note extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PackageNote
+   * A note describing a package hosted by various package managers.
+   *
+   * @param PackageNote $package
    */
   public function setPackage(PackageNote $package)
   {
@@ -264,7 +373,9 @@ class Note extends \Google\Collection
     return $this->package;
   }
   /**
-   * @param string[]
+   * Other notes related to this note.
+   *
+   * @param string[] $relatedNoteNames
    */
   public function setRelatedNoteNames($relatedNoteNames)
   {
@@ -278,7 +389,9 @@ class Note extends \Google\Collection
     return $this->relatedNoteNames;
   }
   /**
-   * @param RelatedUrl[]
+   * URLs associated with this note.
+   *
+   * @param RelatedUrl[] $relatedUrl
    */
   public function setRelatedUrl($relatedUrl)
   {
@@ -292,7 +405,9 @@ class Note extends \Google\Collection
     return $this->relatedUrl;
   }
   /**
-   * @param SBOMReferenceNote
+   * A note describing an SBOM reference.
+   *
+   * @param SBOMReferenceNote $sbomReference
    */
   public function setSbomReference(SBOMReferenceNote $sbomReference)
   {
@@ -306,7 +421,9 @@ class Note extends \Google\Collection
     return $this->sbomReference;
   }
   /**
-   * @param SecretNote
+   * A note describing a secret.
+   *
+   * @param SecretNote $secret
    */
   public function setSecret(SecretNote $secret)
   {
@@ -320,7 +437,9 @@ class Note extends \Google\Collection
     return $this->secret;
   }
   /**
-   * @param string
+   * A one sentence description of this note.
+   *
+   * @param string $shortDescription
    */
   public function setShortDescription($shortDescription)
   {
@@ -334,7 +453,10 @@ class Note extends \Google\Collection
     return $this->shortDescription;
   }
   /**
-   * @param string
+   * Output only. The time this note was last updated. This field can be used as
+   * a filter in list requests.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -348,7 +470,9 @@ class Note extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param UpgradeNote
+   * A note describing available package upgrades.
+   *
+   * @param UpgradeNote $upgrade
    */
   public function setUpgrade(UpgradeNote $upgrade)
   {
@@ -362,7 +486,9 @@ class Note extends \Google\Collection
     return $this->upgrade;
   }
   /**
-   * @param VulnerabilityNote
+   * A note describing a package vulnerability.
+   *
+   * @param VulnerabilityNote $vulnerability
    */
   public function setVulnerability(VulnerabilityNote $vulnerability)
   {
@@ -376,7 +502,9 @@ class Note extends \Google\Collection
     return $this->vulnerability;
   }
   /**
-   * @param VulnerabilityAssessmentNote
+   * A note describing a vulnerability assessment.
+   *
+   * @param VulnerabilityAssessmentNote $vulnerabilityAssessment
    */
   public function setVulnerabilityAssessment(VulnerabilityAssessmentNote $vulnerabilityAssessment)
   {

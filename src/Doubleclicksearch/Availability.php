@@ -20,36 +20,55 @@ namespace Google\Service\Doubleclicksearch;
 class Availability extends \Google\Model
 {
   /**
+   * DS advertiser ID.
+   *
    * @var string
    */
   public $advertiserId;
   /**
+   * DS agency ID.
+   *
    * @var string
    */
   public $agencyId;
   /**
+   * The time by which all conversions have been uploaded, in epoch millis UTC.
+   *
    * @var string
    */
   public $availabilityTimestamp;
   /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   *
    * @var string
    */
   public $customerId;
   /**
+   * The numeric segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity ID).
+   *
    * @var string
    */
   public $segmentationId;
   /**
+   * The friendly segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity name).
+   *
    * @var string
    */
   public $segmentationName;
   /**
+   * The segmentation type that this availability is for (its default value is
+   * `FLOODLIGHT`).
+   *
    * @var string
    */
   public $segmentationType;
 
   /**
-   * @param string
+   * DS advertiser ID.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -63,7 +82,9 @@ class Availability extends \Google\Model
     return $this->advertiserId;
   }
   /**
-   * @param string
+   * DS agency ID.
+   *
+   * @param string $agencyId
    */
   public function setAgencyId($agencyId)
   {
@@ -77,7 +98,9 @@ class Availability extends \Google\Model
     return $this->agencyId;
   }
   /**
-   * @param string
+   * The time by which all conversions have been uploaded, in epoch millis UTC.
+   *
+   * @param string $availabilityTimestamp
    */
   public function setAvailabilityTimestamp($availabilityTimestamp)
   {
@@ -91,7 +114,9 @@ class Availability extends \Google\Model
     return $this->availabilityTimestamp;
   }
   /**
-   * @param string
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {
@@ -105,7 +130,10 @@ class Availability extends \Google\Model
     return $this->customerId;
   }
   /**
-   * @param string
+   * The numeric segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity ID).
+   *
+   * @param string $segmentationId
    */
   public function setSegmentationId($segmentationId)
   {
@@ -119,7 +147,10 @@ class Availability extends \Google\Model
     return $this->segmentationId;
   }
   /**
-   * @param string
+   * The friendly segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity name).
+   *
+   * @param string $segmentationName
    */
   public function setSegmentationName($segmentationName)
   {
@@ -133,7 +164,10 @@ class Availability extends \Google\Model
     return $this->segmentationName;
   }
   /**
-   * @param string
+   * The segmentation type that this availability is for (its default value is
+   * `FLOODLIGHT`).
+   *
+   * @param string $segmentationType
    */
   public function setSegmentationType($segmentationType)
   {

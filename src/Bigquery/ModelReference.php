@@ -20,20 +20,29 @@ namespace Google\Service\Bigquery;
 class ModelReference extends \Google\Model
 {
   /**
+   * Required. The ID of the dataset containing this model.
+   *
    * @var string
    */
   public $datasetId;
   /**
+   * Required. The ID of the model. The ID must contain only letters (a-z, A-Z),
+   * numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+   *
    * @var string
    */
   public $modelId;
   /**
+   * Required. The ID of the project containing this model.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * Required. The ID of the dataset containing this model.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -47,7 +56,10 @@ class ModelReference extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param string
+   * Required. The ID of the model. The ID must contain only letters (a-z, A-Z),
+   * numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+   *
+   * @param string $modelId
    */
   public function setModelId($modelId)
   {
@@ -61,7 +73,9 @@ class ModelReference extends \Google\Model
     return $this->modelId;
   }
   /**
-   * @param string
+   * Required. The ID of the project containing this model.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

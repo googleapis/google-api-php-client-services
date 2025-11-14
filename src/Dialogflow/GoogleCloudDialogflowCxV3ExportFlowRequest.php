@@ -20,16 +20,38 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ExportFlowRequest extends \Google\Model
 {
   /**
+   * Optional. The [Google Cloud
+   * Storage](https://cloud.google.com/storage/docs/) URI to export the flow to.
+   * The format of this URI must be `gs:`. If left unspecified, the serialized
+   * flow is returned inline. Dialogflow performs a write operation for the
+   * Cloud Storage object on the caller's behalf, so your request authentication
+   * must have write permissions for the object. For more information, see
+   * [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-
+   * control#storage).
+   *
    * @var string
    */
   public $flowUri;
   /**
+   * Optional. Whether to export flows referenced by the specified flow.
+   *
    * @var bool
    */
   public $includeReferencedFlows;
 
   /**
-   * @param string
+   * Optional. The [Google Cloud
+   * Storage](https://cloud.google.com/storage/docs/) URI to export the flow to.
+   * The format of this URI must be `gs:`. If left unspecified, the serialized
+   * flow is returned inline. Dialogflow performs a write operation for the
+   * Cloud Storage object on the caller's behalf, so your request authentication
+   * must have write permissions for the object. For more information, see
+   * [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-
+   * control#storage).
+   *
+   * @param string $flowUri
    */
   public function setFlowUri($flowUri)
   {
@@ -43,7 +65,9 @@ class GoogleCloudDialogflowCxV3ExportFlowRequest extends \Google\Model
     return $this->flowUri;
   }
   /**
-   * @param bool
+   * Optional. Whether to export flows referenced by the specified flow.
+   *
+   * @param bool $includeReferencedFlows
    */
   public function setIncludeReferencedFlows($includeReferencedFlows)
   {

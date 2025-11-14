@@ -20,26 +20,40 @@ namespace Google\Service\NetAppFiles;
 class DestinationVolumeParameters extends \Google\Model
 {
   /**
+   * Description for the destination volume.
+   *
    * @var string
    */
   public $description;
   /**
+   * Destination volume's share name. If not specified, source volume's share
+   * name will be used.
+   *
    * @var string
    */
   public $shareName;
   /**
+   * Required. Existing destination StoragePool name.
+   *
    * @var string
    */
   public $storagePool;
   protected $tieringPolicyType = TieringPolicy::class;
   protected $tieringPolicyDataType = '';
   /**
+   * Desired destination volume resource id. If not specified, source volume's
+   * resource id will be used. This value must start with a lowercase letter
+   * followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end
+   * with a hyphen.
+   *
    * @var string
    */
   public $volumeId;
 
   /**
-   * @param string
+   * Description for the destination volume.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -53,7 +67,10 @@ class DestinationVolumeParameters extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Destination volume's share name. If not specified, source volume's share
+   * name will be used.
+   *
+   * @param string $shareName
    */
   public function setShareName($shareName)
   {
@@ -67,7 +84,9 @@ class DestinationVolumeParameters extends \Google\Model
     return $this->shareName;
   }
   /**
-   * @param string
+   * Required. Existing destination StoragePool name.
+   *
+   * @param string $storagePool
    */
   public function setStoragePool($storagePool)
   {
@@ -81,7 +100,9 @@ class DestinationVolumeParameters extends \Google\Model
     return $this->storagePool;
   }
   /**
-   * @param TieringPolicy
+   * Optional. Tiering policy for the volume.
+   *
+   * @param TieringPolicy $tieringPolicy
    */
   public function setTieringPolicy(TieringPolicy $tieringPolicy)
   {
@@ -95,7 +116,12 @@ class DestinationVolumeParameters extends \Google\Model
     return $this->tieringPolicy;
   }
   /**
-   * @param string
+   * Desired destination volume resource id. If not specified, source volume's
+   * resource id will be used. This value must start with a lowercase letter
+   * followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end
+   * with a hyphen.
+   *
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

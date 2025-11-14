@@ -25,7 +25,10 @@ class AuthzPolicyCustomProvider extends \Google\Model
   protected $cloudIapDataType = '';
 
   /**
-   * @param AuthzPolicyCustomProviderAuthzExtension
+   * Optional. Delegate authorization decision to user authored Service
+   * Extension. Only one of cloudIap or authzExtension can be specified.
+   *
+   * @param AuthzPolicyCustomProviderAuthzExtension $authzExtension
    */
   public function setAuthzExtension(AuthzPolicyCustomProviderAuthzExtension $authzExtension)
   {
@@ -39,7 +42,13 @@ class AuthzPolicyCustomProvider extends \Google\Model
     return $this->authzExtension;
   }
   /**
-   * @param AuthzPolicyCustomProviderCloudIap
+   * Optional. Delegates authorization decisions to Cloud IAP. Applicable only
+   * for managed load balancers. Enabling Cloud IAP at the AuthzPolicy level is
+   * not compatible with Cloud IAP settings in the BackendService. Enabling IAP
+   * in both places will result in request failure. Ensure that IAP is enabled
+   * in either the AuthzPolicy or the BackendService but not in both places.
+   *
+   * @param AuthzPolicyCustomProviderCloudIap $cloudIap
    */
   public function setCloudIap(AuthzPolicyCustomProviderCloudIap $cloudIap)
   {

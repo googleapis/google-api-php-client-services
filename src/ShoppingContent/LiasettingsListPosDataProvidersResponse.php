@@ -21,6 +21,9 @@ class LiasettingsListPosDataProvidersResponse extends \Google\Collection
 {
   protected $collection_key = 'posDataProviders';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsListPosDataProvidersResponse`".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class LiasettingsListPosDataProvidersResponse extends \Google\Collection
   protected $posDataProvidersDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsListPosDataProvidersResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class LiasettingsListPosDataProvidersResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param PosDataProviders[]
+   * The list of POS data providers for each eligible country
+   *
+   * @param PosDataProviders[] $posDataProviders
    */
   public function setPosDataProviders($posDataProviders)
   {

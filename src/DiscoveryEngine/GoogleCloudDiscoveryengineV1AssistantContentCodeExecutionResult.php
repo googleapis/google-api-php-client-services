@@ -20,30 +20,61 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantContentCodeExecutionResult extends \Google\Model
 {
   /**
+   * Unspecified status. This value should not be used.
+   */
+  public const OUTCOME_OUTCOME_UNSPECIFIED = 'OUTCOME_UNSPECIFIED';
+  /**
+   * Code execution completed successfully.
+   */
+  public const OUTCOME_OUTCOME_OK = 'OUTCOME_OK';
+  /**
+   * Code execution finished but with a failure. `stderr` should contain the
+   * reason.
+   */
+  public const OUTCOME_OUTCOME_FAILED = 'OUTCOME_FAILED';
+  /**
+   * Code execution ran for too long, and was cancelled. There may or may not be
+   * a partial output present.
+   */
+  public const OUTCOME_OUTCOME_DEADLINE_EXCEEDED = 'OUTCOME_DEADLINE_EXCEEDED';
+  /**
+   * Required. Outcome of the code execution.
+   *
    * @var string
    */
   public $outcome;
   /**
+   * Optional. Contains stdout when code execution is successful, stderr or
+   * other description otherwise.
+   *
    * @var string
    */
   public $output;
 
   /**
-   * @param string
+   * Required. Outcome of the code execution.
+   *
+   * Accepted values: OUTCOME_UNSPECIFIED, OUTCOME_OK, OUTCOME_FAILED,
+   * OUTCOME_DEADLINE_EXCEEDED
+   *
+   * @param self::OUTCOME_* $outcome
    */
   public function setOutcome($outcome)
   {
     $this->outcome = $outcome;
   }
   /**
-   * @return string
+   * @return self::OUTCOME_*
    */
   public function getOutcome()
   {
     return $this->outcome;
   }
   /**
-   * @param string
+   * Optional. Contains stdout when code execution is successful, stderr or
+   * other description otherwise.
+   *
+   * @param string $output
    */
   public function setOutput($output)
   {

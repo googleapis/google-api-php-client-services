@@ -20,24 +20,36 @@ namespace Google\Service\Backupdr;
 class CloudSqlInstanceDataSourceReferenceProperties extends \Google\Model
 {
   /**
+   * Output only. The installed database version of the Cloud SQL instance.
+   *
    * @var string
    */
   public $databaseInstalledVersion;
   /**
+   * Output only. The instance creation timestamp.
+   *
    * @var string
    */
   public $instanceCreateTime;
   /**
+   * Output only. The tier (or machine type) for this instance. Example: `db-
+   * custom-1-3840`
+   *
    * @var string
    */
   public $instanceTier;
   /**
+   * Output only. Name of the Cloud SQL instance backed up by the datasource.
+   * Format: projects/{project}/instances/{instance}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The installed database version of the Cloud SQL instance.
+   *
+   * @param string $databaseInstalledVersion
    */
   public function setDatabaseInstalledVersion($databaseInstalledVersion)
   {
@@ -51,7 +63,9 @@ class CloudSqlInstanceDataSourceReferenceProperties extends \Google\Model
     return $this->databaseInstalledVersion;
   }
   /**
-   * @param string
+   * Output only. The instance creation timestamp.
+   *
+   * @param string $instanceCreateTime
    */
   public function setInstanceCreateTime($instanceCreateTime)
   {
@@ -65,7 +79,10 @@ class CloudSqlInstanceDataSourceReferenceProperties extends \Google\Model
     return $this->instanceCreateTime;
   }
   /**
-   * @param string
+   * Output only. The tier (or machine type) for this instance. Example: `db-
+   * custom-1-3840`
+   *
+   * @param string $instanceTier
    */
   public function setInstanceTier($instanceTier)
   {
@@ -79,7 +96,10 @@ class CloudSqlInstanceDataSourceReferenceProperties extends \Google\Model
     return $this->instanceTier;
   }
   /**
-   * @param string
+   * Output only. Name of the Cloud SQL instance backed up by the datasource.
+   * Format: projects/{project}/instances/{instance}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

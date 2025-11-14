@@ -21,10 +21,14 @@ class GoogleCloudDocumentaiUiv1beta3Schema extends \Google\Collection
 {
   protected $collection_key = 'entityTypes';
   /**
+   * Description of the schema.
+   *
    * @var string
    */
   public $description;
   /**
+   * Display name to show to users.
+   *
    * @var string
    */
   public $displayName;
@@ -32,7 +36,9 @@ class GoogleCloudDocumentaiUiv1beta3Schema extends \Google\Collection
   protected $entityTypesDataType = 'array';
 
   /**
-   * @param string
+   * Description of the schema.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -46,7 +52,9 @@ class GoogleCloudDocumentaiUiv1beta3Schema extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Display name to show to users.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -60,7 +68,9 @@ class GoogleCloudDocumentaiUiv1beta3Schema extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3SchemaEntityType[]
+   * Entity types of the schema.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3SchemaEntityType[] $entityTypes
    */
   public function setEntityTypes($entityTypes)
   {

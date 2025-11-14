@@ -19,25 +19,59 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig extends \Google\Model
 {
+  /**
+   * Unspecified training state.
+   */
+  public const TRAINING_STATE_TRAINING_STATE_UNSPECIFIED = 'TRAINING_STATE_UNSPECIFIED';
+  /**
+   * The engine training is paused.
+   */
+  public const TRAINING_STATE_PAUSED = 'PAUSED';
+  /**
+   * The engine is training.
+   */
+  public const TRAINING_STATE_TRAINING = 'TRAINING';
   protected $engineFeaturesConfigType = GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigEngineFeaturesConfig::class;
   protected $engineFeaturesConfigDataType = '';
   /**
+   * The optimization objective. e.g., `cvr`. This field together with
+   * optimization_objective describe engine metadata to use to control engine
+   * training and serving. Currently supported values: `ctr`, `cvr`. If not
+   * specified, we choose default based on engine type. Default depends on type
+   * of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` =>
+   * `ctr`
+   *
    * @var string
    */
   public $optimizationObjective;
   protected $optimizationObjectiveConfigType = GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigOptimizationObjectiveConfig::class;
   protected $optimizationObjectiveConfigDataType = '';
   /**
+   * The training state that the engine is in (e.g. `TRAINING` or `PAUSED`).
+   * Since part of the cost of running the service is frequency of training -
+   * this can be used to determine when to train engine in order to control
+   * cost. If not specified: the default value for `CreateEngine` method is
+   * `TRAINING`. The default value for `UpdateEngine` method is to keep the
+   * state the same as before.
+   *
    * @var string
    */
   public $trainingState;
   /**
+   * Required. The type of engine. e.g., `recommended-for-you`. This field
+   * together with optimization_objective describe engine metadata to use to
+   * control engine training and serving. Currently supported values:
+   * `recommended-for-you`, `others-you-may-like`, `more-like-this`, `most-
+   * popular-items`.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigEngineFeaturesConfig
+   * Optional. Additional engine features config.
+   *
+   * @param GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigEngineFeaturesConfig $engineFeaturesConfig
    */
   public function setEngineFeaturesConfig(GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigEngineFeaturesConfig $engineFeaturesConfig)
   {
@@ -51,7 +85,14 @@ class GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig extends 
     return $this->engineFeaturesConfig;
   }
   /**
-   * @param string
+   * The optimization objective. e.g., `cvr`. This field together with
+   * optimization_objective describe engine metadata to use to control engine
+   * training and serving. Currently supported values: `ctr`, `cvr`. If not
+   * specified, we choose default based on engine type. Default depends on type
+   * of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` =>
+   * `ctr`
+   *
+   * @param string $optimizationObjective
    */
   public function setOptimizationObjective($optimizationObjective)
   {
@@ -65,7 +106,14 @@ class GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig extends 
     return $this->optimizationObjective;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigOptimizationObjectiveConfig
+   * Name and value of the custom threshold for cvr optimization_objective. For
+   * target_field `watch-time`, target_field_value must be an integer value
+   * indicating the media progress time in seconds between (0, 86400] (excludes
+   * 0, includes 86400) (e.g., 90). For target_field `watch-percentage`, the
+   * target_field_value must be a valid float value between (0, 1.0] (excludes
+   * 0, includes 1.0) (e.g., 0.5).
+   *
+   * @param GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigOptimizationObjectiveConfig $optimizationObjectiveConfig
    */
   public function setOptimizationObjectiveConfig(GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigOptimizationObjectiveConfig $optimizationObjectiveConfig)
   {
@@ -79,21 +127,36 @@ class GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig extends 
     return $this->optimizationObjectiveConfig;
   }
   /**
-   * @param string
+   * The training state that the engine is in (e.g. `TRAINING` or `PAUSED`).
+   * Since part of the cost of running the service is frequency of training -
+   * this can be used to determine when to train engine in order to control
+   * cost. If not specified: the default value for `CreateEngine` method is
+   * `TRAINING`. The default value for `UpdateEngine` method is to keep the
+   * state the same as before.
+   *
+   * Accepted values: TRAINING_STATE_UNSPECIFIED, PAUSED, TRAINING
+   *
+   * @param self::TRAINING_STATE_* $trainingState
    */
   public function setTrainingState($trainingState)
   {
     $this->trainingState = $trainingState;
   }
   /**
-   * @return string
+   * @return self::TRAINING_STATE_*
    */
   public function getTrainingState()
   {
     return $this->trainingState;
   }
   /**
-   * @param string
+   * Required. The type of engine. e.g., `recommended-for-you`. This field
+   * together with optimization_objective describe engine metadata to use to
+   * control engine training and serving. Currently supported values:
+   * `recommended-for-you`, `others-you-may-like`, `more-like-this`, `most-
+   * popular-items`.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

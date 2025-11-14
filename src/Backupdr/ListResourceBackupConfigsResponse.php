@@ -21,6 +21,8 @@ class ListResourceBackupConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'resourceBackupConfigs';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListResourceBackupConfigsResponse extends \Google\Collection
   protected $resourceBackupConfigsDataType = 'array';
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListResourceBackupConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ResourceBackupConfig[]
+   * The list of ResourceBackupConfigs for the specified scope.
+   *
+   * @param ResourceBackupConfig[] $resourceBackupConfigs
    */
   public function setResourceBackupConfigs($resourceBackupConfigs)
   {

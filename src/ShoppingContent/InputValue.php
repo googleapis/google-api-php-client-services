@@ -24,6 +24,8 @@ class InputValue extends \Google\Model
   protected $choiceInputValueType = InputValueChoiceInputValue::class;
   protected $choiceInputValueDataType = '';
   /**
+   * Required. Id of the corresponding input field.
+   *
    * @var string
    */
   public $inputFieldId;
@@ -31,7 +33,9 @@ class InputValue extends \Google\Model
   protected $textInputValueDataType = '';
 
   /**
-   * @param InputValueCheckboxInputValue
+   * Value for checkbox input field.
+   *
+   * @param InputValueCheckboxInputValue $checkboxInputValue
    */
   public function setCheckboxInputValue(InputValueCheckboxInputValue $checkboxInputValue)
   {
@@ -45,7 +49,9 @@ class InputValue extends \Google\Model
     return $this->checkboxInputValue;
   }
   /**
-   * @param InputValueChoiceInputValue
+   * Value for choice input field.
+   *
+   * @param InputValueChoiceInputValue $choiceInputValue
    */
   public function setChoiceInputValue(InputValueChoiceInputValue $choiceInputValue)
   {
@@ -59,7 +65,9 @@ class InputValue extends \Google\Model
     return $this->choiceInputValue;
   }
   /**
-   * @param string
+   * Required. Id of the corresponding input field.
+   *
+   * @param string $inputFieldId
    */
   public function setInputFieldId($inputFieldId)
   {
@@ -73,7 +81,9 @@ class InputValue extends \Google\Model
     return $this->inputFieldId;
   }
   /**
-   * @param InputValueTextInputValue
+   * Value for text input field.
+   *
+   * @param InputValueTextInputValue $textInputValue
    */
   public function setTextInputValue(InputValueTextInputValue $textInputValue)
   {

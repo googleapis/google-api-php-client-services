@@ -19,12 +19,35 @@ namespace Google\Service\CloudDeploy;
 
 class Release extends \Google\Collection
 {
+  /**
+   * The render state is unspecified.
+   */
+  public const RENDER_STATE_RENDER_STATE_UNSPECIFIED = 'RENDER_STATE_UNSPECIFIED';
+  /**
+   * All rendering operations have completed successfully.
+   */
+  public const RENDER_STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * All rendering operations have completed, and one or more have failed.
+   */
+  public const RENDER_STATE_FAILED = 'FAILED';
+  /**
+   * Rendering has started and is not complete.
+   */
+  public const RENDER_STATE_IN_PROGRESS = 'IN_PROGRESS';
   protected $collection_key = 'targetSnapshots';
   /**
+   * Output only. Indicates whether this is an abandoned release.
+   *
    * @var bool
    */
   public $abandoned;
   /**
+   * Optional. User annotations. These attributes can only be set and used by
+   * the user, and not by Cloud Deploy. See
+   * https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
+   *
    * @var string[]
    */
   public $annotations;
@@ -33,6 +56,8 @@ class Release extends \Google\Collection
   protected $conditionType = ReleaseCondition::class;
   protected $conditionDataType = '';
   /**
+   * Output only. Time at which the `Release` was created.
+   *
    * @var string
    */
   public $createTime;
@@ -41,46 +66,83 @@ class Release extends \Google\Collection
   protected $deliveryPipelineSnapshotType = DeliveryPipeline::class;
   protected $deliveryPipelineSnapshotDataType = '';
   /**
+   * Optional. The deploy parameters to use for all targets in this release.
+   *
    * @var string[]
    */
   public $deployParameters;
   /**
+   * Optional. Description of the `Release`. Max length is 255 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Labels are attributes that can be set and used by both the user and by
+   * Cloud Deploy. Labels must meet the following constraints: * Keys and values
+   * can contain only lowercase letters, numeric characters, underscores, and
+   * dashes. * All characters must use UTF-8 encoding, and international
+   * characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64
+   * labels. Both keys and values are additionally constrained to be <= 128
+   * bytes.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. Name of the `Release`. Format is `projects/{project}/locations/
+   * {location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`. The
+   * `release` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Time at which the render completed.
+   *
    * @var string
    */
   public $renderEndTime;
   /**
+   * Output only. Time at which the render began.
+   *
    * @var string
    */
   public $renderStartTime;
   /**
+   * Output only. Current state of the render operation.
+   *
    * @var string
    */
   public $renderState;
   /**
+   * Optional. Filepath of the Skaffold config inside of the config URI.
+   *
    * @var string
    */
   public $skaffoldConfigPath;
   /**
+   * Optional. Cloud Storage URI of tar.gz archive containing Skaffold
+   * configuration.
+   *
    * @var string
    */
   public $skaffoldConfigUri;
   /**
+   * Optional. The Skaffold version to use when operating on this release, such
+   * as "1.20.0". Not all versions are valid; Cloud Deploy supports a specific
+   * set of versions. If unset, the most recent supported Skaffold version will
+   * be used.
+   *
    * @var string
    */
   public $skaffoldVersion;
@@ -90,13 +152,19 @@ class Release extends \Google\Collection
   protected $targetRendersDataType = 'map';
   protected $targetSnapshotsType = Target::class;
   protected $targetSnapshotsDataType = 'array';
+  protected $toolVersionsType = ToolVersions::class;
+  protected $toolVersionsDataType = '';
   /**
+   * Output only. Unique identifier of the `Release`.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param bool
+   * Output only. Indicates whether this is an abandoned release.
+   *
+   * @param bool $abandoned
    */
   public function setAbandoned($abandoned)
   {
@@ -110,7 +178,12 @@ class Release extends \Google\Collection
     return $this->abandoned;
   }
   /**
-   * @param string[]
+   * Optional. User annotations. These attributes can only be set and used by
+   * the user, and not by Cloud Deploy. See
+   * https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -124,7 +197,9 @@ class Release extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param BuildArtifact[]
+   * Optional. List of artifacts to pass through to Skaffold command.
+   *
+   * @param BuildArtifact[] $buildArtifacts
    */
   public function setBuildArtifacts($buildArtifacts)
   {
@@ -138,7 +213,9 @@ class Release extends \Google\Collection
     return $this->buildArtifacts;
   }
   /**
-   * @param ReleaseCondition
+   * Output only. Information around the state of the Release.
+   *
+   * @param ReleaseCondition $condition
    */
   public function setCondition(ReleaseCondition $condition)
   {
@@ -152,7 +229,9 @@ class Release extends \Google\Collection
     return $this->condition;
   }
   /**
-   * @param string
+   * Output only. Time at which the `Release` was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -166,7 +245,10 @@ class Release extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param CustomTargetType[]
+   * Output only. Snapshot of the custom target types referenced by the targets
+   * taken at release creation time.
+   *
+   * @param CustomTargetType[] $customTargetTypeSnapshots
    */
   public function setCustomTargetTypeSnapshots($customTargetTypeSnapshots)
   {
@@ -180,7 +262,10 @@ class Release extends \Google\Collection
     return $this->customTargetTypeSnapshots;
   }
   /**
-   * @param DeliveryPipeline
+   * Output only. Snapshot of the parent pipeline taken at release creation
+   * time.
+   *
+   * @param DeliveryPipeline $deliveryPipelineSnapshot
    */
   public function setDeliveryPipelineSnapshot(DeliveryPipeline $deliveryPipelineSnapshot)
   {
@@ -194,7 +279,9 @@ class Release extends \Google\Collection
     return $this->deliveryPipelineSnapshot;
   }
   /**
-   * @param string[]
+   * Optional. The deploy parameters to use for all targets in this release.
+   *
+   * @param string[] $deployParameters
    */
   public function setDeployParameters($deployParameters)
   {
@@ -208,7 +295,9 @@ class Release extends \Google\Collection
     return $this->deployParameters;
   }
   /**
-   * @param string
+   * Optional. Description of the `Release`. Max length is 255 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -222,7 +311,11 @@ class Release extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -236,7 +329,16 @@ class Release extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Labels are attributes that can be set and used by both the user and by
+   * Cloud Deploy. Labels must meet the following constraints: * Keys and values
+   * can contain only lowercase letters, numeric characters, underscores, and
+   * dashes. * All characters must use UTF-8 encoding, and international
+   * characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64
+   * labels. Both keys and values are additionally constrained to be <= 128
+   * bytes.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -250,7 +352,11 @@ class Release extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. Name of the `Release`. Format is `projects/{project}/locations/
+   * {location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`. The
+   * `release` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -264,7 +370,9 @@ class Release extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Time at which the render completed.
+   *
+   * @param string $renderEndTime
    */
   public function setRenderEndTime($renderEndTime)
   {
@@ -278,7 +386,9 @@ class Release extends \Google\Collection
     return $this->renderEndTime;
   }
   /**
-   * @param string
+   * Output only. Time at which the render began.
+   *
+   * @param string $renderStartTime
    */
   public function setRenderStartTime($renderStartTime)
   {
@@ -292,21 +402,27 @@ class Release extends \Google\Collection
     return $this->renderStartTime;
   }
   /**
-   * @param string
+   * Output only. Current state of the render operation.
+   *
+   * Accepted values: RENDER_STATE_UNSPECIFIED, SUCCEEDED, FAILED, IN_PROGRESS
+   *
+   * @param self::RENDER_STATE_* $renderState
    */
   public function setRenderState($renderState)
   {
     $this->renderState = $renderState;
   }
   /**
-   * @return string
+   * @return self::RENDER_STATE_*
    */
   public function getRenderState()
   {
     return $this->renderState;
   }
   /**
-   * @param string
+   * Optional. Filepath of the Skaffold config inside of the config URI.
+   *
+   * @param string $skaffoldConfigPath
    */
   public function setSkaffoldConfigPath($skaffoldConfigPath)
   {
@@ -320,7 +436,10 @@ class Release extends \Google\Collection
     return $this->skaffoldConfigPath;
   }
   /**
-   * @param string
+   * Optional. Cloud Storage URI of tar.gz archive containing Skaffold
+   * configuration.
+   *
+   * @param string $skaffoldConfigUri
    */
   public function setSkaffoldConfigUri($skaffoldConfigUri)
   {
@@ -334,7 +453,12 @@ class Release extends \Google\Collection
     return $this->skaffoldConfigUri;
   }
   /**
-   * @param string
+   * Optional. The Skaffold version to use when operating on this release, such
+   * as "1.20.0". Not all versions are valid; Cloud Deploy supports a specific
+   * set of versions. If unset, the most recent supported Skaffold version will
+   * be used.
+   *
+   * @param string $skaffoldVersion
    */
   public function setSkaffoldVersion($skaffoldVersion)
   {
@@ -348,7 +472,10 @@ class Release extends \Google\Collection
     return $this->skaffoldVersion;
   }
   /**
-   * @param TargetArtifact[]
+   * Output only. Map from target ID to the target artifacts created during the
+   * render operation.
+   *
+   * @param TargetArtifact[] $targetArtifacts
    */
   public function setTargetArtifacts($targetArtifacts)
   {
@@ -362,7 +489,10 @@ class Release extends \Google\Collection
     return $this->targetArtifacts;
   }
   /**
-   * @param TargetRender[]
+   * Output only. Map from target ID to details of the render operation for that
+   * target.
+   *
+   * @param TargetRender[] $targetRenders
    */
   public function setTargetRenders($targetRenders)
   {
@@ -376,7 +506,9 @@ class Release extends \Google\Collection
     return $this->targetRenders;
   }
   /**
-   * @param Target[]
+   * Output only. Snapshot of the targets taken at release creation time.
+   *
+   * @param Target[] $targetSnapshots
    */
   public function setTargetSnapshots($targetSnapshots)
   {
@@ -390,7 +522,27 @@ class Release extends \Google\Collection
     return $this->targetSnapshots;
   }
   /**
-   * @param string
+   * Optional. The tool versions to use for this release and all subsequent
+   * operations involving this release. If unset, then it will freeze the tool
+   * versions at the time of release creation.
+   *
+   * @param ToolVersions $toolVersions
+   */
+  public function setToolVersions(ToolVersions $toolVersions)
+  {
+    $this->toolVersions = $toolVersions;
+  }
+  /**
+   * @return ToolVersions
+   */
+  public function getToolVersions()
+  {
+    return $this->toolVersions;
+  }
+  /**
+   * Output only. Unique identifier of the `Release`.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

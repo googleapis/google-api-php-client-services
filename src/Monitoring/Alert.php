@@ -20,6 +20,20 @@ namespace Google\Service\Monitoring;
 class Alert extends \Google\Model
 {
   /**
+   * The alert state is unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The alert is open.
+   */
+  public const STATE_OPEN = 'OPEN';
+  /**
+   * The alert is closed.
+   */
+  public const STATE_CLOSED = 'CLOSED';
+  /**
+   * The time when the alert was closed.
+   *
    * @var string
    */
   public $closeTime;
@@ -30,10 +44,16 @@ class Alert extends \Google\Model
   protected $metricType = Metric::class;
   protected $metricDataType = '';
   /**
+   * Identifier. The name of the alert.The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/alerts/[ALERT_ID] The [ALERT_ID] is a
+   * system-assigned unique identifier for the alert.
+   *
    * @var string
    */
   public $name;
   /**
+   * The time when the alert was opened.
+   *
    * @var string
    */
   public $openTime;
@@ -42,12 +62,16 @@ class Alert extends \Google\Model
   protected $resourceType = MonitoredResource::class;
   protected $resourceDataType = '';
   /**
+   * Output only. The current state of the alert.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The time when the alert was closed.
+   *
+   * @param string $closeTime
    */
   public function setCloseTime($closeTime)
   {
@@ -61,7 +85,10 @@ class Alert extends \Google\Model
     return $this->closeTime;
   }
   /**
-   * @param LogMetadata
+   * The log information associated with the alert. This field is only populated
+   * for log-based alerts.
+   *
+   * @param LogMetadata $log
    */
   public function setLog(LogMetadata $log)
   {
@@ -75,7 +102,9 @@ class Alert extends \Google\Model
     return $this->log;
   }
   /**
-   * @param MonitoredResourceMetadata
+   * The metadata of the monitored resource.
+   *
+   * @param MonitoredResourceMetadata $metadata
    */
   public function setMetadata(MonitoredResourceMetadata $metadata)
   {
@@ -89,7 +118,10 @@ class Alert extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param Metric
+   * The metric type and any metric labels preserved from the incident's
+   * generating condition.
+   *
+   * @param Metric $metric
    */
   public function setMetric(Metric $metric)
   {
@@ -103,7 +135,11 @@ class Alert extends \Google\Model
     return $this->metric;
   }
   /**
-   * @param string
+   * Identifier. The name of the alert.The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/alerts/[ALERT_ID] The [ALERT_ID] is a
+   * system-assigned unique identifier for the alert.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -117,7 +153,9 @@ class Alert extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The time when the alert was opened.
+   *
+   * @param string $openTime
    */
   public function setOpenTime($openTime)
   {
@@ -131,7 +169,9 @@ class Alert extends \Google\Model
     return $this->openTime;
   }
   /**
-   * @param PolicySnapshot
+   * The snapshot of the alert policy that generated this alert.
+   *
+   * @param PolicySnapshot $policy
    */
   public function setPolicy(PolicySnapshot $policy)
   {
@@ -145,7 +185,10 @@ class Alert extends \Google\Model
     return $this->policy;
   }
   /**
-   * @param MonitoredResource
+   * The monitored resource type and any monitored resource labels preserved
+   * from the incident's generating condition.
+   *
+   * @param MonitoredResource $resource
    */
   public function setResource(MonitoredResource $resource)
   {
@@ -159,14 +202,18 @@ class Alert extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * Output only. The current state of the alert.
+   *
+   * Accepted values: STATE_UNSPECIFIED, OPEN, CLOSED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

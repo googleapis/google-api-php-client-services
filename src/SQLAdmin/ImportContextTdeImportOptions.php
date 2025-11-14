@@ -20,24 +20,40 @@ namespace Google\Service\SQLAdmin;
 class ImportContextTdeImportOptions extends \Google\Model
 {
   /**
+   * Required. Path to the TDE certificate public key in the form
+   * gs://bucketName/fileName. The instance must have read access to the file.
+   * Applicable only for SQL Server instances.
+   *
    * @var string
    */
   public $certificatePath;
   /**
+   * Required. Certificate name. Applicable only for SQL Server instances.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Password that encrypts the private key.
+   *
    * @var string
    */
   public $privateKeyPassword;
   /**
+   * Required. Path to the TDE certificate private key in the form
+   * gs://bucketName/fileName. The instance must have read access to the file.
+   * Applicable only for SQL Server instances.
+   *
    * @var string
    */
   public $privateKeyPath;
 
   /**
-   * @param string
+   * Required. Path to the TDE certificate public key in the form
+   * gs://bucketName/fileName. The instance must have read access to the file.
+   * Applicable only for SQL Server instances.
+   *
+   * @param string $certificatePath
    */
   public function setCertificatePath($certificatePath)
   {
@@ -51,7 +67,9 @@ class ImportContextTdeImportOptions extends \Google\Model
     return $this->certificatePath;
   }
   /**
-   * @param string
+   * Required. Certificate name. Applicable only for SQL Server instances.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +83,9 @@ class ImportContextTdeImportOptions extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Password that encrypts the private key.
+   *
+   * @param string $privateKeyPassword
    */
   public function setPrivateKeyPassword($privateKeyPassword)
   {
@@ -79,7 +99,11 @@ class ImportContextTdeImportOptions extends \Google\Model
     return $this->privateKeyPassword;
   }
   /**
-   * @param string
+   * Required. Path to the TDE certificate private key in the form
+   * gs://bucketName/fileName. The instance must have read access to the file.
+   * Applicable only for SQL Server instances.
+   *
+   * @param string $privateKeyPath
    */
   public function setPrivateKeyPath($privateKeyPath)
   {

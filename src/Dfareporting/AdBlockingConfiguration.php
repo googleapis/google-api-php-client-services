@@ -20,12 +20,22 @@ namespace Google\Service\Dfareporting;
 class AdBlockingConfiguration extends \Google\Model
 {
   /**
+   * Whether this campaign has enabled ad blocking. When true, ad blocking is
+   * enabled for placements in the campaign, but this may be overridden by site
+   * and placement settings. When false, ad blocking is disabled for all
+   * placements under the campaign, regardless of site and placement settings.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether this campaign has enabled ad blocking. When true, ad blocking is
+   * enabled for placements in the campaign, but this may be overridden by site
+   * and placement settings. When false, ad blocking is disabled for all
+   * placements under the campaign, regardless of site and placement settings.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

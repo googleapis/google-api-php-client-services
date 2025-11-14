@@ -23,12 +23,18 @@ class ListGroupsResponse extends \Google\Collection
   protected $groupType = Group::class;
   protected $groupDataType = 'array';
   /**
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Group[]
+   * The groups that match the specified filters.
+   *
+   * @param Group[] $group
    */
   public function setGroup($group)
   {
@@ -42,7 +48,11 @@ class ListGroupsResponse extends \Google\Collection
     return $this->group;
   }
   /**
-   * @param string
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

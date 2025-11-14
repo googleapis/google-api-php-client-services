@@ -20,12 +20,16 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonLocationInfo extends \Google\Model
 {
   /**
+   * The geo target constant resource name.
+   *
    * @var string
    */
   public $geoTargetConstant;
 
   /**
-   * @param string
+   * The geo target constant resource name.
+   *
+   * @param string $geoTargetConstant
    */
   public function setGeoTargetConstant($geoTargetConstant)
   {

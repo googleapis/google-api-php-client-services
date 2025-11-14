@@ -19,38 +19,71 @@ namespace Google\Service\ContainerAnalysis;
 
 class DeploymentOccurrence extends \Google\Collection
 {
+  /**
+   * Unknown.
+   */
+  public const PLATFORM_PLATFORM_UNSPECIFIED = 'PLATFORM_UNSPECIFIED';
+  /**
+   * Google Container Engine.
+   */
+  public const PLATFORM_GKE = 'GKE';
+  /**
+   * Google App Engine: Flexible Environment.
+   */
+  public const PLATFORM_FLEX = 'FLEX';
+  /**
+   * Custom user-defined platform.
+   */
+  public const PLATFORM_CUSTOM = 'CUSTOM';
   protected $collection_key = 'resourceUri';
   /**
+   * Address of the runtime element hosting this deployment.
+   *
    * @var string
    */
   public $address;
   /**
+   * Configuration used to create this deployment.
+   *
    * @var string
    */
   public $config;
   /**
+   * Required. Beginning of the lifetime of this deployment.
+   *
    * @var string
    */
   public $deployTime;
   /**
+   * Platform hosting this deployment.
+   *
    * @var string
    */
   public $platform;
   /**
+   * Output only. Resource URI for the artifact being deployed taken from the
+   * deployable field with the same name.
+   *
    * @var string[]
    */
   public $resourceUri;
   /**
+   * End of the lifetime of this deployment.
+   *
    * @var string
    */
   public $undeployTime;
   /**
+   * Identity of the user that triggered this deployment.
+   *
    * @var string
    */
   public $userEmail;
 
   /**
-   * @param string
+   * Address of the runtime element hosting this deployment.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -64,7 +97,9 @@ class DeploymentOccurrence extends \Google\Collection
     return $this->address;
   }
   /**
-   * @param string
+   * Configuration used to create this deployment.
+   *
+   * @param string $config
    */
   public function setConfig($config)
   {
@@ -78,7 +113,9 @@ class DeploymentOccurrence extends \Google\Collection
     return $this->config;
   }
   /**
-   * @param string
+   * Required. Beginning of the lifetime of this deployment.
+   *
+   * @param string $deployTime
    */
   public function setDeployTime($deployTime)
   {
@@ -92,21 +129,28 @@ class DeploymentOccurrence extends \Google\Collection
     return $this->deployTime;
   }
   /**
-   * @param string
+   * Platform hosting this deployment.
+   *
+   * Accepted values: PLATFORM_UNSPECIFIED, GKE, FLEX, CUSTOM
+   *
+   * @param self::PLATFORM_* $platform
    */
   public function setPlatform($platform)
   {
     $this->platform = $platform;
   }
   /**
-   * @return string
+   * @return self::PLATFORM_*
    */
   public function getPlatform()
   {
     return $this->platform;
   }
   /**
-   * @param string[]
+   * Output only. Resource URI for the artifact being deployed taken from the
+   * deployable field with the same name.
+   *
+   * @param string[] $resourceUri
    */
   public function setResourceUri($resourceUri)
   {
@@ -120,7 +164,9 @@ class DeploymentOccurrence extends \Google\Collection
     return $this->resourceUri;
   }
   /**
-   * @param string
+   * End of the lifetime of this deployment.
+   *
+   * @param string $undeployTime
    */
   public function setUndeployTime($undeployTime)
   {
@@ -134,7 +180,9 @@ class DeploymentOccurrence extends \Google\Collection
     return $this->undeployTime;
   }
   /**
-   * @param string
+   * Identity of the user that triggered this deployment.
+   *
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {

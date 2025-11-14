@@ -19,15 +19,51 @@ namespace Google\Service\DriveActivity;
 
 class Assignment extends \Google\Model
 {
+  /**
+   * Subtype not available.
+   */
+  public const SUBTYPE_SUBTYPE_UNSPECIFIED = 'SUBTYPE_UNSPECIFIED';
+  /**
+   * An assignment was added.
+   */
+  public const SUBTYPE_ADDED = 'ADDED';
+  /**
+   * An assignment was deleted.
+   */
+  public const SUBTYPE_DELETED = 'DELETED';
+  /**
+   * An assignment reply was added.
+   */
+  public const SUBTYPE_REPLY_ADDED = 'REPLY_ADDED';
+  /**
+   * An assignment reply was deleted.
+   */
+  public const SUBTYPE_REPLY_DELETED = 'REPLY_DELETED';
+  /**
+   * An assignment was resolved.
+   */
+  public const SUBTYPE_RESOLVED = 'RESOLVED';
+  /**
+   * A resolved assignment was reopened.
+   */
+  public const SUBTYPE_REOPENED = 'REOPENED';
+  /**
+   * An assignment was reassigned.
+   */
+  public const SUBTYPE_REASSIGNED = 'REASSIGNED';
   protected $assignedUserType = User::class;
   protected $assignedUserDataType = '';
   /**
+   * The sub-type of this event.
+   *
    * @var string
    */
   public $subtype;
 
   /**
-   * @param User
+   * The user to whom the comment was assigned.
+   *
+   * @param User $assignedUser
    */
   public function setAssignedUser(User $assignedUser)
   {
@@ -41,14 +77,19 @@ class Assignment extends \Google\Model
     return $this->assignedUser;
   }
   /**
-   * @param string
+   * The sub-type of this event.
+   *
+   * Accepted values: SUBTYPE_UNSPECIFIED, ADDED, DELETED, REPLY_ADDED,
+   * REPLY_DELETED, RESOLVED, REOPENED, REASSIGNED
+   *
+   * @param self::SUBTYPE_* $subtype
    */
   public function setSubtype($subtype)
   {
     $this->subtype = $subtype;
   }
   /**
-   * @return string
+   * @return self::SUBTYPE_*
    */
   public function getSubtype()
   {

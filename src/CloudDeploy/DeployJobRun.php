@@ -19,17 +19,59 @@ namespace Google\Service\CloudDeploy;
 
 class DeployJobRun extends \Google\Model
 {
+  /**
+   * No reason for failure is specified.
+   */
+  public const FAILURE_CAUSE_FAILURE_CAUSE_UNSPECIFIED = 'FAILURE_CAUSE_UNSPECIFIED';
+  /**
+   * Cloud Build is not available, either because it is not enabled or because
+   * Cloud Deploy has insufficient permissions. See [Required
+   * permission](https://cloud.google.com/deploy/docs/cloud-deploy-service-
+   * account#required_permissions).
+   */
+  public const FAILURE_CAUSE_CLOUD_BUILD_UNAVAILABLE = 'CLOUD_BUILD_UNAVAILABLE';
+  /**
+   * The deploy operation did not complete successfully; check Cloud Build logs.
+   */
+  public const FAILURE_CAUSE_EXECUTION_FAILED = 'EXECUTION_FAILED';
+  /**
+   * The deploy job run did not complete within the allotted time.
+   */
+  public const FAILURE_CAUSE_DEADLINE_EXCEEDED = 'DEADLINE_EXCEEDED';
+  /**
+   * There were missing resources in the runtime environment required for a
+   * canary deployment. Check the Cloud Build logs for more information.
+   */
+  public const FAILURE_CAUSE_MISSING_RESOURCES_FOR_CANARY = 'MISSING_RESOURCES_FOR_CANARY';
+  /**
+   * Cloud Build failed to fulfill Cloud Deploy's request. See failure_message
+   * for additional details.
+   */
+  public const FAILURE_CAUSE_CLOUD_BUILD_REQUEST_FAILED = 'CLOUD_BUILD_REQUEST_FAILED';
+  /**
+   * The deploy operation had a feature configured that is not supported.
+   */
+  public const FAILURE_CAUSE_DEPLOY_FEATURE_NOT_SUPPORTED = 'DEPLOY_FEATURE_NOT_SUPPORTED';
   protected $artifactType = DeployArtifact::class;
   protected $artifactDataType = '';
   /**
+   * Output only. The resource name of the Cloud Build `Build` object that is
+   * used to deploy. Format is
+   * `projects/{project}/locations/{location}/builds/{build}`.
+   *
    * @var string
    */
   public $build;
   /**
+   * Output only. The reason the deploy failed. This will always be unspecified
+   * while the deploy is in progress or if it succeeded.
+   *
    * @var string
    */
   public $failureCause;
   /**
+   * Output only. Additional information about the deploy failure, if available.
+   *
    * @var string
    */
   public $failureMessage;
@@ -37,7 +79,9 @@ class DeployJobRun extends \Google\Model
   protected $metadataDataType = '';
 
   /**
-   * @param DeployArtifact
+   * Output only. The artifact of a deploy job run, if available.
+   *
+   * @param DeployArtifact $artifact
    */
   public function setArtifact(DeployArtifact $artifact)
   {
@@ -51,7 +95,11 @@ class DeployJobRun extends \Google\Model
     return $this->artifact;
   }
   /**
-   * @param string
+   * Output only. The resource name of the Cloud Build `Build` object that is
+   * used to deploy. Format is
+   * `projects/{project}/locations/{location}/builds/{build}`.
+   *
+   * @param string $build
    */
   public function setBuild($build)
   {
@@ -65,21 +113,30 @@ class DeployJobRun extends \Google\Model
     return $this->build;
   }
   /**
-   * @param string
+   * Output only. The reason the deploy failed. This will always be unspecified
+   * while the deploy is in progress or if it succeeded.
+   *
+   * Accepted values: FAILURE_CAUSE_UNSPECIFIED, CLOUD_BUILD_UNAVAILABLE,
+   * EXECUTION_FAILED, DEADLINE_EXCEEDED, MISSING_RESOURCES_FOR_CANARY,
+   * CLOUD_BUILD_REQUEST_FAILED, DEPLOY_FEATURE_NOT_SUPPORTED
+   *
+   * @param self::FAILURE_CAUSE_* $failureCause
    */
   public function setFailureCause($failureCause)
   {
     $this->failureCause = $failureCause;
   }
   /**
-   * @return string
+   * @return self::FAILURE_CAUSE_*
    */
   public function getFailureCause()
   {
     return $this->failureCause;
   }
   /**
-   * @param string
+   * Output only. Additional information about the deploy failure, if available.
+   *
+   * @param string $failureMessage
    */
   public function setFailureMessage($failureMessage)
   {
@@ -93,7 +150,9 @@ class DeployJobRun extends \Google\Model
     return $this->failureMessage;
   }
   /**
-   * @param DeployJobRunMetadata
+   * Output only. Metadata containing information about the deploy job run.
+   *
+   * @param DeployJobRunMetadata $metadata
    */
   public function setMetadata(DeployJobRunMetadata $metadata)
   {

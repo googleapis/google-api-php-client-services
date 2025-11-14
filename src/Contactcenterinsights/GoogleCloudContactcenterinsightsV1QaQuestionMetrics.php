@@ -19,6 +19,12 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1QaQuestionMetrics extends \Google\Model
 {
+  /**
+   * Output only. Accuracy of the model. Measures the percentage of correct
+   * answers the model gave on the test set.
+   *
+   * @var 
+   */
   public $accuracy;
 
   public function setAccuracy($accuracy)

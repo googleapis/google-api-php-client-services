@@ -21,34 +21,54 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
 {
   protected $collection_key = 'dataStoreComponents';
   /**
+   * Output only. The icon link of the connector source.
+   *
    * @var string
    */
   public $connectorIconLink;
   /**
+   * The name of the data source, retrieved from
+   * `Collection.data_connector.data_source`.
+   *
    * @var string
    */
   public $dataSource;
   /**
+   * Output only. The display name of the data source.
+   *
    * @var string
    */
   public $dataSourceDisplayName;
   protected $dataStoreComponentsType = GoogleCloudDiscoveryengineV1WidgetConfigDataStoreComponent::class;
   protected $dataStoreComponentsDataType = 'array';
   /**
+   * The display name of the collection.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. the identifier of the collection, used for widget service. For
+   * now it refers to collection_id, in the future we will migrate the field to
+   * encrypted collection name UUID.
+   *
    * @var string
    */
   public $id;
   /**
+   * The name of the collection. It should be collection resource name. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}`. For
+   * APIs under WidgetService, such as WidgetService.LookUpWidgetConfig, the
+   * project number and location part is erased in this field.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The icon link of the connector source.
+   *
+   * @param string $connectorIconLink
    */
   public function setConnectorIconLink($connectorIconLink)
   {
@@ -62,7 +82,10 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
     return $this->connectorIconLink;
   }
   /**
-   * @param string
+   * The name of the data source, retrieved from
+   * `Collection.data_connector.data_source`.
+   *
+   * @param string $dataSource
    */
   public function setDataSource($dataSource)
   {
@@ -76,7 +99,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
     return $this->dataSource;
   }
   /**
-   * @param string
+   * Output only. The display name of the data source.
+   *
+   * @param string $dataSourceDisplayName
    */
   public function setDataSourceDisplayName($dataSourceDisplayName)
   {
@@ -90,7 +115,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
     return $this->dataSourceDisplayName;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigDataStoreComponent[]
+   * For the data store collection, list of the children data stores.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigDataStoreComponent[] $dataStoreComponents
    */
   public function setDataStoreComponents($dataStoreComponents)
   {
@@ -104,7 +131,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
     return $this->dataStoreComponents;
   }
   /**
-   * @param string
+   * The display name of the collection.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -118,7 +147,11 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. the identifier of the collection, used for widget service. For
+   * now it refers to collection_id, in the future we will migrate the field to
+   * encrypted collection name UUID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -132,7 +165,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
     return $this->id;
   }
   /**
-   * @param string
+   * The name of the collection. It should be collection resource name. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}`. For
+   * APIs under WidgetService, such as WidgetService.LookUpWidgetConfig, the
+   * project number and location part is erased in this field.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

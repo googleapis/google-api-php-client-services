@@ -23,16 +23,25 @@ class ReferenceSentenceConfig extends \Google\Collection
   protected $referenceSentencePairListsType = ReferenceSentencePairList::class;
   protected $referenceSentencePairListsDataType = 'array';
   /**
+   * Source language code.
+   *
    * @var string
    */
   public $sourceLanguageCode;
   /**
+   * Target language code.
+   *
    * @var string
    */
   public $targetLanguageCode;
 
   /**
-   * @param ReferenceSentencePairList[]
+   * Reference sentences pair lists. Each list will be used as the references to
+   * translate the sentence under "content" field at the corresponding index.
+   * Length of the list is required to be equal to the length of "content"
+   * field.
+   *
+   * @param ReferenceSentencePairList[] $referenceSentencePairLists
    */
   public function setReferenceSentencePairLists($referenceSentencePairLists)
   {
@@ -46,7 +55,9 @@ class ReferenceSentenceConfig extends \Google\Collection
     return $this->referenceSentencePairLists;
   }
   /**
-   * @param string
+   * Source language code.
+   *
+   * @param string $sourceLanguageCode
    */
   public function setSourceLanguageCode($sourceLanguageCode)
   {
@@ -60,7 +71,9 @@ class ReferenceSentenceConfig extends \Google\Collection
     return $this->sourceLanguageCode;
   }
   /**
-   * @param string
+   * Target language code.
+   *
+   * @param string $targetLanguageCode
    */
   public function setTargetLanguageCode($targetLanguageCode)
   {
