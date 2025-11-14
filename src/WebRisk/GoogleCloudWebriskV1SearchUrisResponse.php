@@ -23,7 +23,9 @@ class GoogleCloudWebriskV1SearchUrisResponse extends \Google\Model
   protected $threatDataType = '';
 
   /**
-   * @param GoogleCloudWebriskV1SearchUrisResponseThreatUri
+   * The threat list matches. This might be empty if the URI is on no list.
+   *
+   * @param GoogleCloudWebriskV1SearchUrisResponseThreatUri $threat
    */
   public function setThreat(GoogleCloudWebriskV1SearchUrisResponseThreatUri $threat)
   {
