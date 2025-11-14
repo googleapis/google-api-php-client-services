@@ -21,52 +21,84 @@ class SecurityBulletinEvent extends \Google\Collection
 {
   protected $collection_key = 'patchedVersions';
   /**
+   * The GKE minor versions affected by this vulnerability.
+   *
    * @var string[]
    */
   public $affectedSupportedMinors;
   /**
+   * A brief description of the bulletin. See the bulletin pointed to by the
+   * bulletin_uri field for an expanded description.
+   *
    * @var string
    */
   public $briefDescription;
   /**
+   * The ID of the bulletin corresponding to the vulnerability.
+   *
    * @var string
    */
   public $bulletinId;
   /**
+   * The URI link to the bulletin on the website for more information.
+   *
    * @var string
    */
   public $bulletinUri;
   /**
+   * The CVEs associated with this bulletin.
+   *
    * @var string[]
    */
   public $cveIds;
   /**
+   * If this field is specified, it means there are manual steps that the user
+   * must take to make their clusters safe.
+   *
    * @var bool
    */
   public $manualStepsRequired;
   /**
+   * The GKE versions where this vulnerability is mitigated.
+   *
    * @var string[]
    */
   public $mitigatedVersions;
   /**
+   * The GKE versions where this vulnerability is patched.
+   *
    * @var string[]
    */
   public $patchedVersions;
   /**
+   * The resource type (node/control plane) that has the vulnerability. Multiple
+   * notifications (1 notification per resource type) will be sent for a
+   * vulnerability that affects > 1 resource type.
+   *
    * @var string
    */
   public $resourceTypeAffected;
   /**
+   * The severity of this bulletin as it relates to GKE.
+   *
    * @var string
    */
   public $severity;
   /**
+   * This represents a version selected from the patched_versions field that the
+   * cluster receiving this notification should most likely want to upgrade to
+   * based on its current version. Note that if this notification is being
+   * received by a given cluster, it means that this version is currently
+   * available as an upgrade target in that cluster's location.
+   *
    * @var string
    */
   public $suggestedUpgradeTarget;
 
   /**
-   * @param string[]
+   * The GKE minor versions affected by this vulnerability.
+   *
+   * @param string[] $affectedSupportedMinors
    */
   public function setAffectedSupportedMinors($affectedSupportedMinors)
   {
@@ -80,7 +112,10 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->affectedSupportedMinors;
   }
   /**
-   * @param string
+   * A brief description of the bulletin. See the bulletin pointed to by the
+   * bulletin_uri field for an expanded description.
+   *
+   * @param string $briefDescription
    */
   public function setBriefDescription($briefDescription)
   {
@@ -94,7 +129,9 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->briefDescription;
   }
   /**
-   * @param string
+   * The ID of the bulletin corresponding to the vulnerability.
+   *
+   * @param string $bulletinId
    */
   public function setBulletinId($bulletinId)
   {
@@ -108,7 +145,9 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->bulletinId;
   }
   /**
-   * @param string
+   * The URI link to the bulletin on the website for more information.
+   *
+   * @param string $bulletinUri
    */
   public function setBulletinUri($bulletinUri)
   {
@@ -122,7 +161,9 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->bulletinUri;
   }
   /**
-   * @param string[]
+   * The CVEs associated with this bulletin.
+   *
+   * @param string[] $cveIds
    */
   public function setCveIds($cveIds)
   {
@@ -136,7 +177,10 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->cveIds;
   }
   /**
-   * @param bool
+   * If this field is specified, it means there are manual steps that the user
+   * must take to make their clusters safe.
+   *
+   * @param bool $manualStepsRequired
    */
   public function setManualStepsRequired($manualStepsRequired)
   {
@@ -150,7 +194,9 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->manualStepsRequired;
   }
   /**
-   * @param string[]
+   * The GKE versions where this vulnerability is mitigated.
+   *
+   * @param string[] $mitigatedVersions
    */
   public function setMitigatedVersions($mitigatedVersions)
   {
@@ -164,7 +210,9 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->mitigatedVersions;
   }
   /**
-   * @param string[]
+   * The GKE versions where this vulnerability is patched.
+   *
+   * @param string[] $patchedVersions
    */
   public function setPatchedVersions($patchedVersions)
   {
@@ -178,7 +226,11 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->patchedVersions;
   }
   /**
-   * @param string
+   * The resource type (node/control plane) that has the vulnerability. Multiple
+   * notifications (1 notification per resource type) will be sent for a
+   * vulnerability that affects > 1 resource type.
+   *
+   * @param string $resourceTypeAffected
    */
   public function setResourceTypeAffected($resourceTypeAffected)
   {
@@ -192,7 +244,9 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->resourceTypeAffected;
   }
   /**
-   * @param string
+   * The severity of this bulletin as it relates to GKE.
+   *
+   * @param string $severity
    */
   public function setSeverity($severity)
   {
@@ -206,7 +260,13 @@ class SecurityBulletinEvent extends \Google\Collection
     return $this->severity;
   }
   /**
-   * @param string
+   * This represents a version selected from the patched_versions field that the
+   * cluster receiving this notification should most likely want to upgrade to
+   * based on its current version. Note that if this notification is being
+   * received by a given cluster, it means that this version is currently
+   * available as an upgrade target in that cluster's location.
+   *
+   * @param string $suggestedUpgradeTarget
    */
   public function setSuggestedUpgradeTarget($suggestedUpgradeTarget)
   {

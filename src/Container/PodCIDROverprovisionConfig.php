@@ -20,12 +20,18 @@ namespace Google\Service\Container;
 class PodCIDROverprovisionConfig extends \Google\Model
 {
   /**
+   * Whether Pod CIDR overprovisioning is disabled. Note: Pod CIDR
+   * overprovisioning is enabled by default.
+   *
    * @var bool
    */
   public $disable;
 
   /**
-   * @param bool
+   * Whether Pod CIDR overprovisioning is disabled. Note: Pod CIDR
+   * overprovisioning is enabled by default.
+   *
+   * @param bool $disable
    */
   public function setDisable($disable)
   {

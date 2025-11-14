@@ -20,34 +20,59 @@ namespace Google\Service\Container;
 class StartIPRotationRequest extends \Google\Model
 {
   /**
+   * Deprecated. The name of the cluster. This field has been deprecated and
+   * replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $clusterId;
   /**
+   * The name (project, location, cluster name) of the cluster to start IP
+   * rotation. Specified in the format `projects/locations/clusters`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $projectId;
   /**
+   * Whether to rotate credentials during IP rotation.
+   *
    * @var bool
    */
   public $rotateCredentials;
   /**
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * Deprecated. The name of the cluster. This field has been deprecated and
+   * replaced by the name field.
+   *
+   * @deprecated
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {
     $this->clusterId = $clusterId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getClusterId()
@@ -55,7 +80,10 @@ class StartIPRotationRequest extends \Google\Model
     return $this->clusterId;
   }
   /**
-   * @param string
+   * The name (project, location, cluster name) of the cluster to start IP
+   * rotation. Specified in the format `projects/locations/clusters`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -69,13 +97,19 @@ class StartIPRotationRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
     $this->projectId = $projectId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProjectId()
@@ -83,7 +117,9 @@ class StartIPRotationRequest extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param bool
+   * Whether to rotate credentials during IP rotation.
+   *
+   * @param bool $rotateCredentials
    */
   public function setRotateCredentials($rotateCredentials)
   {
@@ -97,13 +133,20 @@ class StartIPRotationRequest extends \Google\Model
     return $this->rotateCredentials;
   }
   /**
-   * @param string
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
+   * @param string $zone
    */
   public function setZone($zone)
   {
     $this->zone = $zone;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getZone()

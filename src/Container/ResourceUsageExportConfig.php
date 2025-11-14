@@ -24,12 +24,17 @@ class ResourceUsageExportConfig extends \Google\Model
   protected $consumptionMeteringConfigType = ConsumptionMeteringConfig::class;
   protected $consumptionMeteringConfigDataType = '';
   /**
+   * Whether to enable network egress metering for this cluster. If enabled, a
+   * daemonset will be created in the cluster to meter network egress traffic.
+   *
    * @var bool
    */
   public $enableNetworkEgressMetering;
 
   /**
-   * @param BigQueryDestination
+   * Configuration to use BigQuery as usage export destination.
+   *
+   * @param BigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(BigQueryDestination $bigqueryDestination)
   {
@@ -43,7 +48,9 @@ class ResourceUsageExportConfig extends \Google\Model
     return $this->bigqueryDestination;
   }
   /**
-   * @param ConsumptionMeteringConfig
+   * Configuration to enable resource consumption metering.
+   *
+   * @param ConsumptionMeteringConfig $consumptionMeteringConfig
    */
   public function setConsumptionMeteringConfig(ConsumptionMeteringConfig $consumptionMeteringConfig)
   {
@@ -57,7 +64,10 @@ class ResourceUsageExportConfig extends \Google\Model
     return $this->consumptionMeteringConfig;
   }
   /**
-   * @param bool
+   * Whether to enable network egress metering for this cluster. If enabled, a
+   * daemonset will be created in the cluster to meter network egress traffic.
+   *
+   * @param bool $enableNetworkEgressMetering
    */
   public function setEnableNetworkEgressMetering($enableNetworkEgressMetering)
   {
