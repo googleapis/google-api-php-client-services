@@ -23,16 +23,23 @@ class InstanceNetworkConfig extends \Google\Collection
   protected $authorizedExternalNetworksType = AuthorizedNetwork::class;
   protected $authorizedExternalNetworksDataType = 'array';
   /**
+   * Optional. Enabling an outbound public IP address to support a database
+   * server sending requests out into the internet.
+   *
    * @var bool
    */
   public $enableOutboundPublicIp;
   /**
+   * Optional. Enabling public ip for the instance.
+   *
    * @var bool
    */
   public $enablePublicIp;
 
   /**
-   * @param AuthorizedNetwork[]
+   * Optional. A list of external network authorized to access this instance.
+   *
+   * @param AuthorizedNetwork[] $authorizedExternalNetworks
    */
   public function setAuthorizedExternalNetworks($authorizedExternalNetworks)
   {
@@ -46,7 +53,10 @@ class InstanceNetworkConfig extends \Google\Collection
     return $this->authorizedExternalNetworks;
   }
   /**
-   * @param bool
+   * Optional. Enabling an outbound public IP address to support a database
+   * server sending requests out into the internet.
+   *
+   * @param bool $enableOutboundPublicIp
    */
   public function setEnableOutboundPublicIp($enableOutboundPublicIp)
   {
@@ -60,7 +70,9 @@ class InstanceNetworkConfig extends \Google\Collection
     return $this->enableOutboundPublicIp;
   }
   /**
-   * @param bool
+   * Optional. Enabling public ip for the instance.
+   *
+   * @param bool $enablePublicIp
    */
   public function setEnablePublicIp($enablePublicIp)
   {
