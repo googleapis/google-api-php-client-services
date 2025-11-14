@@ -25,24 +25,39 @@ class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
   protected $matchesType = GoogleCloudDialogflowCxV3Match::class;
   protected $matchesDataType = 'array';
   /**
+   * If natural language text was provided as input, this field will contain a
+   * copy of the text.
+   *
    * @var string
    */
   public $text;
   /**
+   * If natural language speech audio was provided as input, this field will
+   * contain the transcript for the audio.
+   *
    * @var string
    */
   public $transcript;
   /**
+   * If an event was provided as input, this field will contain a copy of the
+   * event name.
+   *
    * @var string
    */
   public $triggerEvent;
   /**
+   * If an intent was provided as input, this field will contain a copy of the
+   * intent identifier. Format: `projects//locations//agents//intents/`.
+   *
    * @var string
    */
   public $triggerIntent;
 
   /**
-   * @param GoogleCloudDialogflowCxV3Page
+   * The current Page. Some, not all fields are filled in this message,
+   * including but not limited to `name` and `display_name`.
+   *
+   * @param GoogleCloudDialogflowCxV3Page $currentPage
    */
   public function setCurrentPage(GoogleCloudDialogflowCxV3Page $currentPage)
   {
@@ -56,7 +71,10 @@ class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
     return $this->currentPage;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Match[]
+   * Match results, if more than one, ordered descendingly by the confidence we
+   * have that the particular intent matches the query.
+   *
+   * @param GoogleCloudDialogflowCxV3Match[] $matches
    */
   public function setMatches($matches)
   {
@@ -70,7 +88,10 @@ class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
     return $this->matches;
   }
   /**
-   * @param string
+   * If natural language text was provided as input, this field will contain a
+   * copy of the text.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
@@ -84,7 +105,10 @@ class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
     return $this->text;
   }
   /**
-   * @param string
+   * If natural language speech audio was provided as input, this field will
+   * contain the transcript for the audio.
+   *
+   * @param string $transcript
    */
   public function setTranscript($transcript)
   {
@@ -98,7 +122,10 @@ class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
     return $this->transcript;
   }
   /**
-   * @param string
+   * If an event was provided as input, this field will contain a copy of the
+   * event name.
+   *
+   * @param string $triggerEvent
    */
   public function setTriggerEvent($triggerEvent)
   {
@@ -112,7 +139,10 @@ class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
     return $this->triggerEvent;
   }
   /**
-   * @param string
+   * If an intent was provided as input, this field will contain a copy of the
+   * intent identifier. Format: `projects//locations//agents//intents/`.
+   *
+   * @param string $triggerIntent
    */
   public function setTriggerIntent($triggerIntent)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3InlineSource extends \Google\Model
 {
   /**
+   * The uncompressed byte content for the objects.
+   *
    * @var string
    */
   public $content;
 
   /**
-   * @param string
+   * The uncompressed byte content for the objects.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {

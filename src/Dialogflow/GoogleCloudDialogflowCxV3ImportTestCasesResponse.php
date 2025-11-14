@@ -21,12 +21,18 @@ class GoogleCloudDialogflowCxV3ImportTestCasesResponse extends \Google\Collectio
 {
   protected $collection_key = 'names';
   /**
+   * The unique identifiers of the new test cases. Format:
+   * `projects//locations//agents//testCases/`.
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param string[]
+   * The unique identifiers of the new test cases. Format:
+   * `projects//locations//agents//testCases/`.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {

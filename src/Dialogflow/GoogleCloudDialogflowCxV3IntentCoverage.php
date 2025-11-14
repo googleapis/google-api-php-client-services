@@ -21,6 +21,8 @@ class GoogleCloudDialogflowCxV3IntentCoverage extends \Google\Collection
 {
   protected $collection_key = 'intents';
   /**
+   * The percent of intents in the agent that are covered.
+   *
    * @var float
    */
   public $coverageScore;
@@ -28,7 +30,9 @@ class GoogleCloudDialogflowCxV3IntentCoverage extends \Google\Collection
   protected $intentsDataType = 'array';
 
   /**
-   * @param float
+   * The percent of intents in the agent that are covered.
+   *
+   * @param float $coverageScore
    */
   public function setCoverageScore($coverageScore)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDialogflowCxV3IntentCoverage extends \Google\Collection
     return $this->coverageScore;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3IntentCoverageIntent[]
+   * The list of Intents present in the agent
+   *
+   * @param GoogleCloudDialogflowCxV3IntentCoverageIntent[] $intents
    */
   public function setIntents($intents)
   {
