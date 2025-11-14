@@ -20,24 +20,39 @@ namespace Google\Service\BeyondCorp;
 class GoogleTypeExpr extends \Google\Model
 {
   /**
+   * Optional. Description of the expression. This is a longer text which
+   * describes the expression, e.g. when hovered over it in a UI.
+   *
    * @var string
    */
   public $description;
   /**
+   * Textual representation of an expression in Common Expression Language
+   * syntax.
+   *
    * @var string
    */
   public $expression;
   /**
+   * Optional. String indicating the location of the expression for error
+   * reporting, e.g. a file name and a position in the file.
+   *
    * @var string
    */
   public $location;
   /**
+   * Optional. Title for the expression, i.e. a short string describing its
+   * purpose. This can be used e.g. in UIs which allow to enter the expression.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Optional. Description of the expression. This is a longer text which
+   * describes the expression, e.g. when hovered over it in a UI.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -51,7 +66,10 @@ class GoogleTypeExpr extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Textual representation of an expression in Common Expression Language
+   * syntax.
+   *
+   * @param string $expression
    */
   public function setExpression($expression)
   {
@@ -65,7 +83,10 @@ class GoogleTypeExpr extends \Google\Model
     return $this->expression;
   }
   /**
-   * @param string
+   * Optional. String indicating the location of the expression for error
+   * reporting, e.g. a file name and a position in the file.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -79,7 +100,10 @@ class GoogleTypeExpr extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Optional. Title for the expression, i.e. a short string describing its
+   * purpose. This can be used e.g. in UIs which allow to enter the expression.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
