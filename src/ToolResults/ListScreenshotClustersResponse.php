@@ -24,7 +24,9 @@ class ListScreenshotClustersResponse extends \Google\Collection
   protected $clustersDataType = 'array';
 
   /**
-   * @param ScreenshotCluster[]
+   * The set of clusters associated with an execution Always set
+   *
+   * @param ScreenshotCluster[] $clusters
    */
   public function setClusters($clusters)
   {

@@ -20,6 +20,9 @@ namespace Google\Service\ContainerAnalysis;
 class Subject extends \Google\Model
 {
   /**
+   * `"": ""` Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
+   *
    * @var string[]
    */
   public $digest;
@@ -29,7 +32,10 @@ class Subject extends \Google\Model
   public $name;
 
   /**
-   * @param string[]
+   * `"": ""` Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
+   *
+   * @param string[] $digest
    */
   public function setDigest($digest)
   {
@@ -43,7 +49,7 @@ class Subject extends \Google\Model
     return $this->digest;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {

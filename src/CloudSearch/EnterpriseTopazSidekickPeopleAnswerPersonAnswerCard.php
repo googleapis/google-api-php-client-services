@@ -19,6 +19,22 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collection
 {
+  /**
+   * Unknown.
+   */
+  public const RESPONSE_STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * Success.
+   */
+  public const RESPONSE_STATUS_SUCCESS = 'SUCCESS';
+  /**
+   * No such person was found in the user's domain.
+   */
+  public const RESPONSE_STATUS_MISSING_PERSON = 'MISSING_PERSON';
+  /**
+   * A person was found to match the query, but an answer could not be obtained.
+   */
+  public const RESPONSE_STATUS_MISSING_DATA = 'MISSING_DATA';
   protected $collection_key = 'answer';
   protected $answerType = SafeHtmlProto::class;
   protected $answerDataType = 'array';
@@ -29,10 +45,15 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
   protected $headerType = EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader::class;
   protected $headerDataType = '';
   /**
+   * The response status.
+   *
    * @var string
    */
   public $responseStatus;
   /**
+   * Localized user friendly message to display to the user in the case of
+   * missing data or an error.
+   *
    * @var string
    */
   public $statusMessage;
@@ -40,13 +61,17 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
   protected $subjectDataType = '';
 
   /**
-   * @param SafeHtmlProto[]
+   * List of answers.
+   *
+   * @deprecated
+   * @param SafeHtmlProto[] $answer
    */
   public function setAnswer($answer)
   {
     $this->answer = $answer;
   }
   /**
+   * @deprecated
    * @return SafeHtmlProto[]
    */
   public function getAnswer()
@@ -54,7 +79,9 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
     return $this->answer;
   }
   /**
-   * @param EnterpriseTopazSidekickAnswerAnswerList
+   * List of answers.
+   *
+   * @param EnterpriseTopazSidekickAnswerAnswerList $answerText
    */
   public function setAnswerText(EnterpriseTopazSidekickAnswerAnswerList $answerText)
   {
@@ -68,7 +95,9 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
     return $this->answerText;
   }
   /**
-   * @param EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo
+   * Disambiguation information.
+   *
+   * @param EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo $disambiguationInfo
    */
   public function setDisambiguationInfo(EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo $disambiguationInfo)
   {
@@ -82,7 +111,9 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
     return $this->disambiguationInfo;
   }
   /**
-   * @param EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader
+   * The header to display for the card.
+   *
+   * @param EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader $header
    */
   public function setHeader(EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader $header)
   {
@@ -96,21 +127,28 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
     return $this->header;
   }
   /**
-   * @param string
+   * The response status.
+   *
+   * Accepted values: UNKNOWN, SUCCESS, MISSING_PERSON, MISSING_DATA
+   *
+   * @param self::RESPONSE_STATUS_* $responseStatus
    */
   public function setResponseStatus($responseStatus)
   {
     $this->responseStatus = $responseStatus;
   }
   /**
-   * @return string
+   * @return self::RESPONSE_STATUS_*
    */
   public function getResponseStatus()
   {
     return $this->responseStatus;
   }
   /**
-   * @param string
+   * Localized user friendly message to display to the user in the case of
+   * missing data or an error.
+   *
+   * @param string $statusMessage
    */
   public function setStatusMessage($statusMessage)
   {
@@ -124,7 +162,9 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
     return $this->statusMessage;
   }
   /**
-   * @param EnterpriseTopazSidekickCommonPerson
+   * The profile of the person that was the subject of the query.
+   *
+   * @param EnterpriseTopazSidekickCommonPerson $subject
    */
   public function setSubject(EnterpriseTopazSidekickCommonPerson $subject)
   {

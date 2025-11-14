@@ -23,7 +23,10 @@ class UpdateContactPhotoResponse extends \Google\Model
   protected $personDataType = '';
 
   /**
-   * @param Person
+   * The updated person, if person_fields is set in the
+   * UpdateContactPhotoRequest; otherwise this will be unset.
+   *
+   * @param Person $person
    */
   public function setPerson(Person $person)
   {

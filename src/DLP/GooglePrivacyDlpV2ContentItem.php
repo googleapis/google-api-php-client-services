@@ -24,12 +24,16 @@ class GooglePrivacyDlpV2ContentItem extends \Google\Model
   protected $tableType = GooglePrivacyDlpV2Table::class;
   protected $tableDataType = '';
   /**
+   * String data to inspect or redact.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param GooglePrivacyDlpV2ByteContentItem
+   * Content data to inspect or redact. Replaces `type` and `data`.
+   *
+   * @param GooglePrivacyDlpV2ByteContentItem $byteItem
    */
   public function setByteItem(GooglePrivacyDlpV2ByteContentItem $byteItem)
   {
@@ -43,7 +47,10 @@ class GooglePrivacyDlpV2ContentItem extends \Google\Model
     return $this->byteItem;
   }
   /**
-   * @param GooglePrivacyDlpV2Table
+   * Structured content for inspection. See https://cloud.google.com/sensitive-
+   * data-protection/docs/inspecting-text#inspecting_a_table to learn more.
+   *
+   * @param GooglePrivacyDlpV2Table $table
    */
   public function setTable(GooglePrivacyDlpV2Table $table)
   {
@@ -57,7 +64,9 @@ class GooglePrivacyDlpV2ContentItem extends \Google\Model
     return $this->table;
   }
   /**
-   * @param string
+   * String data to inspect or redact.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

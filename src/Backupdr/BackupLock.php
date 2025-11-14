@@ -22,6 +22,9 @@ class BackupLock extends \Google\Model
   protected $backupApplianceLockInfoType = BackupApplianceLockInfo::class;
   protected $backupApplianceLockInfoDataType = '';
   /**
+   * Required. The time after which this lock is not considered valid and will
+   * no longer protect the Backup from deletion.
+   *
    * @var string
    */
   public $lockUntilTime;
@@ -29,7 +32,10 @@ class BackupLock extends \Google\Model
   protected $serviceLockInfoDataType = '';
 
   /**
-   * @param BackupApplianceLockInfo
+   * If the client is a backup and recovery appliance, this contains metadata
+   * about why the lock exists.
+   *
+   * @param BackupApplianceLockInfo $backupApplianceLockInfo
    */
   public function setBackupApplianceLockInfo(BackupApplianceLockInfo $backupApplianceLockInfo)
   {
@@ -43,7 +49,10 @@ class BackupLock extends \Google\Model
     return $this->backupApplianceLockInfo;
   }
   /**
-   * @param string
+   * Required. The time after which this lock is not considered valid and will
+   * no longer protect the Backup from deletion.
+   *
+   * @param string $lockUntilTime
    */
   public function setLockUntilTime($lockUntilTime)
   {
@@ -57,7 +66,10 @@ class BackupLock extends \Google\Model
     return $this->lockUntilTime;
   }
   /**
-   * @param ServiceLockInfo
+   * Output only. Contains metadata about the lock exist for Google Cloud native
+   * backups.
+   *
+   * @param ServiceLockInfo $serviceLockInfo
    */
   public function setServiceLockInfo(ServiceLockInfo $serviceLockInfo)
   {

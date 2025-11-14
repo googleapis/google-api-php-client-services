@@ -21,6 +21,8 @@ class GoogleCloudDiscoveryengineV1ListServingConfigsResponse extends \Google\Col
 {
   protected $collection_key = 'servingConfigs';
   /**
+   * Pagination token, if not returned indicates the last page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudDiscoveryengineV1ListServingConfigsResponse extends \Google\Col
   protected $servingConfigsDataType = 'array';
 
   /**
-   * @param string
+   * Pagination token, if not returned indicates the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDiscoveryengineV1ListServingConfigsResponse extends \Google\Col
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ServingConfig[]
+   * All the ServingConfigs for a given dataStore.
+   *
+   * @param GoogleCloudDiscoveryengineV1ServingConfig[] $servingConfigs
    */
   public function setServingConfigs($servingConfigs)
   {

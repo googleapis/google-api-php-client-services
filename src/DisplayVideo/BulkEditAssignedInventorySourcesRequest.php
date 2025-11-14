@@ -21,22 +21,34 @@ class BulkEditAssignedInventorySourcesRequest extends \Google\Collection
 {
   protected $collection_key = 'deletedAssignedInventorySources';
   /**
+   * The ID of the advertiser that owns the parent inventory source group. The
+   * parent partner does not have access to these assigned inventory sources.
+   *
    * @var string
    */
   public $advertiserId;
   protected $createdAssignedInventorySourcesType = AssignedInventorySource::class;
   protected $createdAssignedInventorySourcesDataType = 'array';
   /**
+   * The IDs of the assigned inventory sources to delete in bulk, specified as a
+   * list of assigned_inventory_source_ids.
+   *
    * @var string[]
    */
   public $deletedAssignedInventorySources;
   /**
+   * The ID of the partner that owns the inventory source group. Only this
+   * partner has write access to these assigned inventory sources.
+   *
    * @var string
    */
   public $partnerId;
 
   /**
-   * @param string
+   * The ID of the advertiser that owns the parent inventory source group. The
+   * parent partner does not have access to these assigned inventory sources.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -50,7 +62,10 @@ class BulkEditAssignedInventorySourcesRequest extends \Google\Collection
     return $this->advertiserId;
   }
   /**
-   * @param AssignedInventorySource[]
+   * The assigned inventory sources to create in bulk, specified as a list of
+   * AssignedInventorySources.
+   *
+   * @param AssignedInventorySource[] $createdAssignedInventorySources
    */
   public function setCreatedAssignedInventorySources($createdAssignedInventorySources)
   {
@@ -64,7 +79,10 @@ class BulkEditAssignedInventorySourcesRequest extends \Google\Collection
     return $this->createdAssignedInventorySources;
   }
   /**
-   * @param string[]
+   * The IDs of the assigned inventory sources to delete in bulk, specified as a
+   * list of assigned_inventory_source_ids.
+   *
+   * @param string[] $deletedAssignedInventorySources
    */
   public function setDeletedAssignedInventorySources($deletedAssignedInventorySources)
   {
@@ -78,7 +96,10 @@ class BulkEditAssignedInventorySourcesRequest extends \Google\Collection
     return $this->deletedAssignedInventorySources;
   }
   /**
-   * @param string
+   * The ID of the partner that owns the inventory source group. Only this
+   * partner has write access to these assigned inventory sources.
+   *
+   * @param string $partnerId
    */
   public function setPartnerId($partnerId)
   {

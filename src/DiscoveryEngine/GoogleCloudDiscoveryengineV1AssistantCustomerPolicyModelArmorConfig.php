@@ -20,34 +20,68 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantCustomerPolicyModelArmorConfig extends \Google\Model
 {
   /**
+   * Unspecified failure mode, default behavior is `FAIL_CLOSED`.
+   */
+  public const FAILURE_MODE_FAILURE_MODE_UNSPECIFIED = 'FAILURE_MODE_UNSPECIFIED';
+  /**
+   * In case of a Model Armor processing failure, the request is allowed to
+   * proceed without any changes.
+   */
+  public const FAILURE_MODE_FAIL_OPEN = 'FAIL_OPEN';
+  /**
+   * In case of a Model Armor processing failure, the request is rejected.
+   */
+  public const FAILURE_MODE_FAIL_CLOSED = 'FAIL_CLOSED';
+  /**
+   * Optional. Defines the failure mode for Model Armor sanitization.
+   *
    * @var string
    */
   public $failureMode;
   /**
+   * Optional. The resource name of the Model Armor template for sanitizing
+   * assistant responses. Format:
+   * `projects/{project}/locations/{location}/templates/{template_id}` If not
+   * specified, no sanitization will be applied to the assistant response.
+   *
    * @var string
    */
   public $responseTemplate;
   /**
+   * Optional. The resource name of the Model Armor template for sanitizing user
+   * prompts. Format:
+   * `projects/{project}/locations/{location}/templates/{template_id}` If not
+   * specified, no sanitization will be applied to the user prompt.
+   *
    * @var string
    */
   public $userPromptTemplate;
 
   /**
-   * @param string
+   * Optional. Defines the failure mode for Model Armor sanitization.
+   *
+   * Accepted values: FAILURE_MODE_UNSPECIFIED, FAIL_OPEN, FAIL_CLOSED
+   *
+   * @param self::FAILURE_MODE_* $failureMode
    */
   public function setFailureMode($failureMode)
   {
     $this->failureMode = $failureMode;
   }
   /**
-   * @return string
+   * @return self::FAILURE_MODE_*
    */
   public function getFailureMode()
   {
     return $this->failureMode;
   }
   /**
-   * @param string
+   * Optional. The resource name of the Model Armor template for sanitizing
+   * assistant responses. Format:
+   * `projects/{project}/locations/{location}/templates/{template_id}` If not
+   * specified, no sanitization will be applied to the assistant response.
+   *
+   * @param string $responseTemplate
    */
   public function setResponseTemplate($responseTemplate)
   {
@@ -61,7 +95,12 @@ class GoogleCloudDiscoveryengineV1AssistantCustomerPolicyModelArmorConfig extend
     return $this->responseTemplate;
   }
   /**
-   * @param string
+   * Optional. The resource name of the Model Armor template for sanitizing user
+   * prompts. Format:
+   * `projects/{project}/locations/{location}/templates/{template_id}` If not
+   * specified, no sanitization will be applied to the user prompt.
+   *
+   * @param string $userPromptTemplate
    */
   public function setUserPromptTemplate($userPromptTemplate)
   {

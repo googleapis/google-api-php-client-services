@@ -20,16 +20,24 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1CompletionInfo extends \Google\Model
 {
   /**
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion
+   * position, starting from 0.
+   *
    * @var int
    */
   public $selectedPosition;
   /**
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
+   *
    * @var string
    */
   public $selectedSuggestion;
 
   /**
-   * @param int
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion
+   * position, starting from 0.
+   *
+   * @param int $selectedPosition
    */
   public function setSelectedPosition($selectedPosition)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDiscoveryengineV1CompletionInfo extends \Google\Model
     return $this->selectedPosition;
   }
   /**
-   * @param string
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
+   *
+   * @param string $selectedSuggestion
    */
   public function setSelectedSuggestion($selectedSuggestion)
   {

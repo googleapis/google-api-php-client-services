@@ -23,12 +23,16 @@ class ListClientsResponse extends \Google\Collection
   protected $clientType = Client::class;
   protected $clientDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Client[]
+   * All GTM Clients of a GTM Container.
+   *
+   * @param Client[] $client
    */
   public function setClient($client)
   {
@@ -42,7 +46,9 @@ class ListClientsResponse extends \Google\Collection
     return $this->client;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

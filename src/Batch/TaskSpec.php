@@ -25,16 +25,31 @@ class TaskSpec extends \Google\Collection
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
   /**
+   * Deprecated: please use environment(non-plural) instead.
+   *
+   * @deprecated
    * @var string[]
    */
   public $environments;
   protected $lifecyclePoliciesType = LifecyclePolicy::class;
   protected $lifecyclePoliciesDataType = 'array';
   /**
+   * Maximum number of retries on failures. The default, 0, which means never
+   * retry. The valid value range is [0, 10].
+   *
    * @var int
    */
   public $maxRetryCount;
   /**
+   * Maximum duration the task should run before being automatically retried (if
+   * enabled) or automatically failed. Format the value of this field as a time
+   * limit in seconds followed by `s`—for example, `3600s` for 1 hour. The field
+   * accepts any value between 0 and the maximum listed for the `Duration` field
+   * type at https://protobuf.dev/reference/protobuf/google.protobuf/#duration;
+   * however, the actual maximum run time for a job will be limited to the
+   * maximum run time for a job listed at
+   * https://cloud.google.com/batch/quotas#max-job-duration.
+   *
    * @var string
    */
   public $maxRunDuration;
@@ -44,7 +59,9 @@ class TaskSpec extends \Google\Collection
   protected $volumesDataType = 'array';
 
   /**
-   * @param ComputeResource
+   * ComputeResource requirements.
+   *
+   * @param ComputeResource $computeResource
    */
   public function setComputeResource(ComputeResource $computeResource)
   {
@@ -58,7 +75,9 @@ class TaskSpec extends \Google\Collection
     return $this->computeResource;
   }
   /**
-   * @param Environment
+   * Environment variables to set before running the Task.
+   *
+   * @param Environment $environment
    */
   public function setEnvironment(Environment $environment)
   {
@@ -72,13 +91,17 @@ class TaskSpec extends \Google\Collection
     return $this->environment;
   }
   /**
-   * @param string[]
+   * Deprecated: please use environment(non-plural) instead.
+   *
+   * @deprecated
+   * @param string[] $environments
    */
   public function setEnvironments($environments)
   {
     $this->environments = $environments;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getEnvironments()
@@ -86,7 +109,14 @@ class TaskSpec extends \Google\Collection
     return $this->environments;
   }
   /**
-   * @param LifecyclePolicy[]
+   * Lifecycle management schema when any task in a task group is failed.
+   * Currently we only support one lifecycle policy. When the lifecycle policy
+   * condition is met, the action in the policy will execute. If task execution
+   * result does not meet with the defined lifecycle policy, we consider it as
+   * the default policy. Default policy means if the exit code is 0, exit task.
+   * If task ends with non-zero exit code, retry the task with max_retry_count.
+   *
+   * @param LifecyclePolicy[] $lifecyclePolicies
    */
   public function setLifecyclePolicies($lifecyclePolicies)
   {
@@ -100,7 +130,10 @@ class TaskSpec extends \Google\Collection
     return $this->lifecyclePolicies;
   }
   /**
-   * @param int
+   * Maximum number of retries on failures. The default, 0, which means never
+   * retry. The valid value range is [0, 10].
+   *
+   * @param int $maxRetryCount
    */
   public function setMaxRetryCount($maxRetryCount)
   {
@@ -114,7 +147,16 @@ class TaskSpec extends \Google\Collection
     return $this->maxRetryCount;
   }
   /**
-   * @param string
+   * Maximum duration the task should run before being automatically retried (if
+   * enabled) or automatically failed. Format the value of this field as a time
+   * limit in seconds followed by `s`—for example, `3600s` for 1 hour. The field
+   * accepts any value between 0 and the maximum listed for the `Duration` field
+   * type at https://protobuf.dev/reference/protobuf/google.protobuf/#duration;
+   * however, the actual maximum run time for a job will be limited to the
+   * maximum run time for a job listed at
+   * https://cloud.google.com/batch/quotas#max-job-duration.
+   *
+   * @param string $maxRunDuration
    */
   public function setMaxRunDuration($maxRunDuration)
   {
@@ -128,7 +170,16 @@ class TaskSpec extends \Google\Collection
     return $this->maxRunDuration;
   }
   /**
-   * @param Runnable[]
+   * Required. The sequence of one or more runnables (executable scripts,
+   * executable containers, and/or barriers) for each task in this task group to
+   * run. Each task runs this list of runnables in order. For a task to succeed,
+   * all of its script and container runnables each must meet at least one of
+   * the following conditions: + The runnable exited with a zero status. + The
+   * runnable didn't finish, but you enabled its `background` subfield. + The
+   * runnable exited with a non-zero status, but you enabled its
+   * `ignore_exit_status` subfield.
+   *
+   * @param Runnable[] $runnables
    */
   public function setRunnables($runnables)
   {
@@ -142,7 +193,9 @@ class TaskSpec extends \Google\Collection
     return $this->runnables;
   }
   /**
-   * @param Volume[]
+   * Volumes to mount before running Tasks using this TaskSpec.
+   *
+   * @param Volume[] $volumes
    */
   public function setVolumes($volumes)
   {

@@ -20,28 +20,43 @@ namespace Google\Service\ServiceConsumerManagement;
 class V1ServiceAccount extends \Google\Model
 {
   /**
+   * The email address of the service account.
+   *
    * @var string
    */
   public $email;
   /**
+   * Deprecated. See b/136209818.
+   *
+   * @deprecated
    * @var string
    */
   public $iamAccountName;
   /**
+   * P4 SA resource name. An example name would be: `services/serviceconsumerman
+   * agement.googleapis.com/projects/123/serviceAccounts/default`
+   *
    * @var string
    */
   public $name;
   /**
+   * The P4 SA configuration tag. This must be defined in activation_grants. If
+   * not specified when creating the account, the tag is set to "default".
+   *
    * @var string
    */
   public $tag;
   /**
+   * The unique and stable id of the service account.
+   *
    * @var string
    */
   public $uniqueId;
 
   /**
-   * @param string
+   * The email address of the service account.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -55,13 +70,17 @@ class V1ServiceAccount extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Deprecated. See b/136209818.
+   *
+   * @deprecated
+   * @param string $iamAccountName
    */
   public function setIamAccountName($iamAccountName)
   {
     $this->iamAccountName = $iamAccountName;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getIamAccountName()
@@ -69,7 +88,10 @@ class V1ServiceAccount extends \Google\Model
     return $this->iamAccountName;
   }
   /**
-   * @param string
+   * P4 SA resource name. An example name would be: `services/serviceconsumerman
+   * agement.googleapis.com/projects/123/serviceAccounts/default`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +105,10 @@ class V1ServiceAccount extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The P4 SA configuration tag. This must be defined in activation_grants. If
+   * not specified when creating the account, the tag is set to "default".
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {
@@ -97,7 +122,9 @@ class V1ServiceAccount extends \Google\Model
     return $this->tag;
   }
   /**
-   * @param string
+   * The unique and stable id of the service account.
+   *
+   * @param string $uniqueId
    */
   public function setUniqueId($uniqueId)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickCommonDebugInfo extends \Google\Model
 {
   /**
+   * Debug message.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * Debug message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

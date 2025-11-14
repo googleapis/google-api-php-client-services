@@ -25,7 +25,10 @@ class GoogleCloudNetworksecurityV1CertificateProvider extends \Google\Model
   protected $grpcEndpointDataType = '';
 
   /**
-   * @param CertificateProviderInstance
+   * The certificate provider instance specification that will be passed to the
+   * data plane, which will be used to load necessary credential information.
+   *
+   * @param CertificateProviderInstance $certificateProviderInstance
    */
   public function setCertificateProviderInstance(CertificateProviderInstance $certificateProviderInstance)
   {
@@ -39,7 +42,10 @@ class GoogleCloudNetworksecurityV1CertificateProvider extends \Google\Model
     return $this->certificateProviderInstance;
   }
   /**
-   * @param GoogleCloudNetworksecurityV1GrpcEndpoint
+   * gRPC specific configuration to access the gRPC server to obtain the cert
+   * and private key.
+   *
+   * @param GoogleCloudNetworksecurityV1GrpcEndpoint $grpcEndpoint
    */
   public function setGrpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpoint $grpcEndpoint)
   {

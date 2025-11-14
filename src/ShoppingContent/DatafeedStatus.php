@@ -21,40 +21,65 @@ class DatafeedStatus extends \Google\Collection
 {
   protected $collection_key = 'warnings';
   /**
+   * The country for which the status is reported, represented as a CLDR
+   * territory code.
+   *
    * @var string
    */
   public $country;
   /**
+   * The ID of the feed for which the status is reported.
+   *
    * @var string
    */
   public $datafeedId;
   protected $errorsType = DatafeedStatusError::class;
   protected $errorsDataType = 'array';
   /**
+   * The feed label status is reported for.
+   *
    * @var string
    */
   public $feedLabel;
   /**
+   * The number of items in the feed that were processed.
+   *
    * @var string
    */
   public $itemsTotal;
   /**
+   * The number of items in the feed that were valid.
+   *
    * @var string
    */
   public $itemsValid;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#datafeedStatus`"
+   *
    * @var string
    */
   public $kind;
   /**
+   * The two-letter ISO 639-1 language for which the status is reported.
+   *
    * @var string
    */
   public $language;
   /**
+   * The last date at which the feed was uploaded.
+   *
    * @var string
    */
   public $lastUploadDate;
   /**
+   * The processing status of the feed. Acceptable values are: - "`"`failure`":
+   * The feed could not be processed or all items had errors.`" - "`in
+   * progress`": The feed is being processed. - "`none`": The feed has not yet
+   * been processed. For example, a feed that has never been uploaded will have
+   * this processing status. - "`success`": The feed was processed successfully,
+   * though some items might have had errors.
+   *
    * @var string
    */
   public $processingStatus;
@@ -62,7 +87,10 @@ class DatafeedStatus extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * @param string
+   * The country for which the status is reported, represented as a CLDR
+   * territory code.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -76,7 +104,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->country;
   }
   /**
-   * @param string
+   * The ID of the feed for which the status is reported.
+   *
+   * @param string $datafeedId
    */
   public function setDatafeedId($datafeedId)
   {
@@ -90,7 +120,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->datafeedId;
   }
   /**
-   * @param DatafeedStatusError[]
+   * The list of errors occurring in the feed.
+   *
+   * @param DatafeedStatusError[] $errors
    */
   public function setErrors($errors)
   {
@@ -104,7 +136,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * The feed label status is reported for.
+   *
+   * @param string $feedLabel
    */
   public function setFeedLabel($feedLabel)
   {
@@ -118,7 +152,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->feedLabel;
   }
   /**
-   * @param string
+   * The number of items in the feed that were processed.
+   *
+   * @param string $itemsTotal
    */
   public function setItemsTotal($itemsTotal)
   {
@@ -132,7 +168,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->itemsTotal;
   }
   /**
-   * @param string
+   * The number of items in the feed that were valid.
+   *
+   * @param string $itemsValid
    */
   public function setItemsValid($itemsValid)
   {
@@ -146,7 +184,10 @@ class DatafeedStatus extends \Google\Collection
     return $this->itemsValid;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#datafeedStatus`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -160,7 +201,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The two-letter ISO 639-1 language for which the status is reported.
+   *
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -174,7 +217,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->language;
   }
   /**
-   * @param string
+   * The last date at which the feed was uploaded.
+   *
+   * @param string $lastUploadDate
    */
   public function setLastUploadDate($lastUploadDate)
   {
@@ -188,7 +233,14 @@ class DatafeedStatus extends \Google\Collection
     return $this->lastUploadDate;
   }
   /**
-   * @param string
+   * The processing status of the feed. Acceptable values are: - "`"`failure`":
+   * The feed could not be processed or all items had errors.`" - "`in
+   * progress`": The feed is being processed. - "`none`": The feed has not yet
+   * been processed. For example, a feed that has never been uploaded will have
+   * this processing status. - "`success`": The feed was processed successfully,
+   * though some items might have had errors.
+   *
+   * @param string $processingStatus
    */
   public function setProcessingStatus($processingStatus)
   {
@@ -202,7 +254,9 @@ class DatafeedStatus extends \Google\Collection
     return $this->processingStatus;
   }
   /**
-   * @param DatafeedStatusError[]
+   * The list of errors occurring in the feed.
+   *
+   * @param DatafeedStatusError[] $warnings
    */
   public function setWarnings($warnings)
   {

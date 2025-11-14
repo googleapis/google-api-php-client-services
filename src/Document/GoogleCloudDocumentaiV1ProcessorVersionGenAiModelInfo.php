@@ -25,7 +25,9 @@ class GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfo extends \Google\Mode
   protected $foundationGenAiModelInfoDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoCustomGenAiModelInfo
+   * Information for a custom Generative AI model created by the user.
+   *
+   * @param GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoCustomGenAiModelInfo $customGenAiModelInfo
    */
   public function setCustomGenAiModelInfo(GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoCustomGenAiModelInfo $customGenAiModelInfo)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfo extends \Google\Mode
     return $this->customGenAiModelInfo;
   }
   /**
-   * @param GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoFoundationGenAiModelInfo
+   * Information for a pretrained Google-managed foundation model.
+   *
+   * @param GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoFoundationGenAiModelInfo $foundationGenAiModelInfo
    */
   public function setFoundationGenAiModelInfo(GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoFoundationGenAiModelInfo $foundationGenAiModelInfo)
   {

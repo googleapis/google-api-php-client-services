@@ -20,28 +20,43 @@ namespace Google\Service\ShoppingContent;
 class AccountTaxTaxRule extends \Google\Model
 {
   /**
+   * Country code in which tax is applicable.
+   *
    * @var string
    */
   public $country;
   /**
+   * Required. State (or province) is which the tax is applicable, described by
+   * its location ID (also called criteria ID).
+   *
    * @var string
    */
   public $locationId;
   /**
+   * Explicit tax rate in percent, represented as a floating point number
+   * without the percentage character. Must not be negative.
+   *
    * @var string
    */
   public $ratePercent;
   /**
+   * If true, shipping charges are also taxed.
+   *
    * @var bool
    */
   public $shippingTaxed;
   /**
+   * Whether the tax rate is taken from a global tax table or specified
+   * explicitly.
+   *
    * @var bool
    */
   public $useGlobalRate;
 
   /**
-   * @param string
+   * Country code in which tax is applicable.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -55,7 +70,10 @@ class AccountTaxTaxRule extends \Google\Model
     return $this->country;
   }
   /**
-   * @param string
+   * Required. State (or province) is which the tax is applicable, described by
+   * its location ID (also called criteria ID).
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -69,7 +87,10 @@ class AccountTaxTaxRule extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param string
+   * Explicit tax rate in percent, represented as a floating point number
+   * without the percentage character. Must not be negative.
+   *
+   * @param string $ratePercent
    */
   public function setRatePercent($ratePercent)
   {
@@ -83,7 +104,9 @@ class AccountTaxTaxRule extends \Google\Model
     return $this->ratePercent;
   }
   /**
-   * @param bool
+   * If true, shipping charges are also taxed.
+   *
+   * @param bool $shippingTaxed
    */
   public function setShippingTaxed($shippingTaxed)
   {
@@ -97,7 +120,10 @@ class AccountTaxTaxRule extends \Google\Model
     return $this->shippingTaxed;
   }
   /**
-   * @param bool
+   * Whether the tax rate is taken from a global tax table or specified
+   * explicitly.
+   *
+   * @param bool $useGlobalRate
    */
   public function setUseGlobalRate($useGlobalRate)
   {

@@ -20,12 +20,24 @@ namespace Google\Service\BigQueryReservation;
 class ReservationGroup extends \Google\Model
 {
   /**
+   * Identifier. The resource name of the reservation group, e.g.,
+   * `projects/locations/reservationGroups/team1-prod`. The reservation_group_id
+   * must only contain lower case alphanumeric characters or dashes. It must
+   * start with a letter and must not end with a dash. Its maximum length is 64
+   * characters.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Identifier. The resource name of the reservation group, e.g.,
+   * `projects/locations/reservationGroups/team1-prod`. The reservation_group_id
+   * must only contain lower case alphanumeric characters or dashes. It must
+   * start with a letter and must not end with a dash. Its maximum length is 64
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

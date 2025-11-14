@@ -27,7 +27,9 @@ class GoogleApiDistributionBucketOptions extends \Google\Model
   protected $linearBucketsDataType = '';
 
   /**
-   * @param GoogleApiDistributionBucketOptionsExplicit
+   * The explicit buckets.
+   *
+   * @param GoogleApiDistributionBucketOptionsExplicit $explicitBuckets
    */
   public function setExplicitBuckets(GoogleApiDistributionBucketOptionsExplicit $explicitBuckets)
   {
@@ -41,7 +43,9 @@ class GoogleApiDistributionBucketOptions extends \Google\Model
     return $this->explicitBuckets;
   }
   /**
-   * @param GoogleApiDistributionBucketOptionsExponential
+   * The exponential buckets.
+   *
+   * @param GoogleApiDistributionBucketOptionsExponential $exponentialBuckets
    */
   public function setExponentialBuckets(GoogleApiDistributionBucketOptionsExponential $exponentialBuckets)
   {
@@ -55,7 +59,9 @@ class GoogleApiDistributionBucketOptions extends \Google\Model
     return $this->exponentialBuckets;
   }
   /**
-   * @param GoogleApiDistributionBucketOptionsLinear
+   * The linear bucket.
+   *
+   * @param GoogleApiDistributionBucketOptionsLinear $linearBuckets
    */
   public function setLinearBuckets(GoogleApiDistributionBucketOptionsLinear $linearBuckets)
   {

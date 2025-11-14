@@ -20,12 +20,18 @@ namespace Google\Service\Storagetransfer;
 class BandwidthLimit extends \Google\Model
 {
   /**
+   * Bandwidth rate in megabytes per second, distributed across all the agents
+   * in the pool.
+   *
    * @var string
    */
   public $limitMbps;
 
   /**
-   * @param string
+   * Bandwidth rate in megabytes per second, distributed across all the agents
+   * in the pool.
+   *
+   * @param string $limitMbps
    */
   public function setLimitMbps($limitMbps)
   {

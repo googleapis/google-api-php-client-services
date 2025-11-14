@@ -23,42 +23,64 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
   protected $accountType = Account::class;
   protected $accountDataType = '';
   /**
+   * The ID of the targeted account. Only defined if the method is not `insert`.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * An entry ID, unique within the batch request.
+   *
    * @var string
    */
   public $batchId;
   /**
+   * Whether the account should be deleted if the account has offers. Only
+   * applicable if the method is `delete`.
+   *
    * @var bool
    */
   public $force;
   /**
+   * Label IDs for the 'updatelabels' request.
+   *
    * @var string[]
    */
   public $labelIds;
   protected $linkRequestType = AccountsCustomBatchRequestEntryLinkRequest::class;
   protected $linkRequestDataType = '';
   /**
+   * The ID of the managing account.
+   *
    * @var string
    */
   public $merchantId;
   /**
+   * The method of the batch entry. Acceptable values are: - "`claimWebsite`" -
+   * "`delete`" - "`get`" - "`insert`" - "`link`" - "`update`"
+   *
    * @var string
    */
   public $method;
   /**
+   * Only applicable if the method is `claimwebsite`. Indicates whether or not
+   * to take the claim from another account in case there is a conflict.
+   *
    * @var bool
    */
   public $overwrite;
   /**
+   * Controls which fields are visible. Only applicable if the method is 'get'.
+   *
    * @var string
    */
   public $view;
 
   /**
-   * @param Account
+   * The account to create or update. Only defined if the method is `insert` or
+   * `update`.
+   *
+   * @param Account $account
    */
   public function setAccount(Account $account)
   {
@@ -72,7 +94,9 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->account;
   }
   /**
-   * @param string
+   * The ID of the targeted account. Only defined if the method is not `insert`.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -86,7 +110,9 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param string
+   * An entry ID, unique within the batch request.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -100,7 +126,10 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->batchId;
   }
   /**
-   * @param bool
+   * Whether the account should be deleted if the account has offers. Only
+   * applicable if the method is `delete`.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -114,7 +143,9 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->force;
   }
   /**
-   * @param string[]
+   * Label IDs for the 'updatelabels' request.
+   *
+   * @param string[] $labelIds
    */
   public function setLabelIds($labelIds)
   {
@@ -128,7 +159,9 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->labelIds;
   }
   /**
-   * @param AccountsCustomBatchRequestEntryLinkRequest
+   * Details about the `link` request.
+   *
+   * @param AccountsCustomBatchRequestEntryLinkRequest $linkRequest
    */
   public function setLinkRequest(AccountsCustomBatchRequestEntryLinkRequest $linkRequest)
   {
@@ -142,7 +175,9 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->linkRequest;
   }
   /**
-   * @param string
+   * The ID of the managing account.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -156,7 +191,10 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->merchantId;
   }
   /**
-   * @param string
+   * The method of the batch entry. Acceptable values are: - "`claimWebsite`" -
+   * "`delete`" - "`get`" - "`insert`" - "`link`" - "`update`"
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -170,7 +208,10 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->method;
   }
   /**
-   * @param bool
+   * Only applicable if the method is `claimwebsite`. Indicates whether or not
+   * to take the claim from another account in case there is a conflict.
+   *
+   * @param bool $overwrite
    */
   public function setOverwrite($overwrite)
   {
@@ -184,7 +225,9 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
     return $this->overwrite;
   }
   /**
-   * @param string
+   * Controls which fields are visible. Only applicable if the method is 'get'.
+   *
+   * @param string $view
    */
   public function setView($view)
   {

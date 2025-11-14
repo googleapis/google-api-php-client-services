@@ -21,12 +21,16 @@ class NetworkTags extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * List of network tags.
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string[]
+   * List of network tags.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

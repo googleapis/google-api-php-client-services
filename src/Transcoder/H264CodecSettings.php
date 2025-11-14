@@ -20,90 +20,206 @@ namespace Google\Service\Transcoder;
 class H264CodecSettings extends \Google\Model
 {
   /**
+   * Unspecified frame rate conversion strategy.
+   */
+  public const FRAME_RATE_CONVERSION_STRATEGY_FRAME_RATE_CONVERSION_STRATEGY_UNSPECIFIED = 'FRAME_RATE_CONVERSION_STRATEGY_UNSPECIFIED';
+  /**
+   * Selectively retain frames to reduce the output frame rate. Every _n_ th
+   * frame is kept, where `n = ceil(input frame rate / target frame rate)`. When
+   * _n_ = 1 (that is, the target frame rate is greater than the input frame
+   * rate), the output frame rate matches the input frame rate. When _n_ > 1,
+   * frames are dropped and the output frame rate is equal to `(input frame rate
+   * / n)`. For more information, see [Calculate frame
+   * rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate).
+   */
+  public const FRAME_RATE_CONVERSION_STRATEGY_DOWNSAMPLE = 'DOWNSAMPLE';
+  /**
+   * Drop or duplicate frames to match the specified frame rate.
+   */
+  public const FRAME_RATE_CONVERSION_STRATEGY_DROP_DUPLICATE = 'DROP_DUPLICATE';
+  /**
+   * Specifies whether an open Group of Pictures (GOP) structure should be
+   * allowed or not. The default is `false`.
+   *
    * @var bool
    */
   public $allowOpenGop;
+  /**
+   * Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and
+   * 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher
+   * value equals a lower bitrate but smoother image. The default is 0.
+   *
+   * @var 
+   */
   public $aqStrength;
   /**
+   * The number of consecutive B-frames. Must be greater than or equal to zero.
+   * Must be less than H264CodecSettings.gop_frame_count if set. The default is
+   * 0.
+   *
    * @var int
    */
   public $bFrameCount;
   /**
+   * Allow B-pyramid for reference frame selection. This may not be supported on
+   * all decoders. The default is `false`.
+   *
    * @var bool
    */
   public $bPyramid;
   /**
+   * Required. The video bitrate in bits per second. The minimum value is 1,000.
+   * The maximum value is 800,000,000.
+   *
    * @var int
    */
   public $bitrateBps;
   /**
+   * Target CRF level. Must be between 10 and 36, where 10 is the highest
+   * quality and 36 is the most efficient compression. The default is 21.
+   *
    * @var int
    */
   public $crfLevel;
   /**
+   * Use two-pass encoding strategy to achieve better video quality.
+   * H264CodecSettings.rate_control_mode must be `vbr`. The default is `false`.
+   *
    * @var bool
    */
   public $enableTwoPass;
   /**
+   * The entropy coder to use. The default is `cabac`. Supported entropy coders:
+   * - `cavlc` - `cabac`
+   *
    * @var string
    */
   public $entropyCoder;
+  /**
+   * Required. The target video frame rate in frames per second (FPS). Must be
+   * less than or equal to 120.
+   *
+   * @var 
+   */
   public $frameRate;
   /**
+   * Optional. Frame rate conversion strategy for desired frame rate. The
+   * default is `DOWNSAMPLE`.
+   *
    * @var string
    */
   public $frameRateConversionStrategy;
   /**
+   * Select the GOP size based on the specified duration. The default is `3s`.
+   * Note that `gopDuration` must be less than or equal to
+   * [`segmentDuration`](#SegmentSettings), and
+   * [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+   *
    * @var string
    */
   public $gopDuration;
   /**
+   * Select the GOP size based on the specified frame count. Must be greater
+   * than zero.
+   *
    * @var int
    */
   public $gopFrameCount;
   /**
+   * The height of the video in pixels. Must be an even integer. When not
+   * specified, the height is adjusted to match the specified width and input
+   * aspect ratio. If both are omitted, the input height is used. For portrait
+   * videos that contain horizontal ASR and rotation metadata, provide the
+   * height, in pixels, per the horizontal ASR. The API calculates the width per
+   * the horizontal ASR. The API detects any rotation metadata and swaps the
+   * requested height and width for the output.
+   *
    * @var int
    */
   public $heightPixels;
   protected $hlgType = H264ColorFormatHLG::class;
   protected $hlgDataType = '';
   /**
+   * Pixel format to use. The default is `yuv420p`. Supported pixel formats: -
+   * `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format -
+   * `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format -
+   * `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format -
+   * `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+   *
    * @var string
    */
   public $pixelFormat;
   /**
+   * Enforces the specified codec preset. The default is `veryfast`. The
+   * available options are [FFmpeg-
+   * compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that
+   * certain values for this field may cause the transcoder to override other
+   * fields you set in the `H264CodecSettings` message.
+   *
    * @var string
    */
   public $preset;
   /**
+   * Enforces the specified codec profile. The following profiles are supported:
+   * * `baseline` * `main` * `high` (default) The available options are [FFmpeg-
+   * compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that
+   * certain values for this field may cause the transcoder to override other
+   * fields you set in the `H264CodecSettings` message.
+   *
    * @var string
    */
   public $profile;
   /**
+   * Specify the mode. The default is `vbr`. Supported rate control modes: -
+   * `vbr` - variable bitrate - `crf` - constant rate factor
+   *
    * @var string
    */
   public $rateControlMode;
   protected $sdrType = H264ColorFormatSDR::class;
   protected $sdrDataType = '';
   /**
+   * Enforces the specified codec tune. The available options are [FFmpeg-
+   * compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that
+   * certain values for this field may cause the transcoder to override other
+   * fields you set in the `H264CodecSettings` message.
+   *
    * @var string
    */
   public $tune;
   /**
+   * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must
+   * be greater than zero. The default is equal to 90% of
+   * H264CodecSettings.vbv_size_bits.
+   *
    * @var int
    */
   public $vbvFullnessBits;
   /**
+   * Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater
+   * than zero. The default is equal to H264CodecSettings.bitrate_bps.
+   *
    * @var int
    */
   public $vbvSizeBits;
   /**
+   * The width of the video in pixels. Must be an even integer. When not
+   * specified, the width is adjusted to match the specified height and input
+   * aspect ratio. If both are omitted, the input width is used. For portrait
+   * videos that contain horizontal ASR and rotation metadata, provide the
+   * width, in pixels, per the horizontal ASR. The API calculates the height per
+   * the horizontal ASR. The API detects any rotation metadata and swaps the
+   * requested height and width for the output.
+   *
    * @var int
    */
   public $widthPixels;
 
   /**
-   * @param bool
+   * Specifies whether an open Group of Pictures (GOP) structure should be
+   * allowed or not. The default is `false`.
+   *
+   * @param bool $allowOpenGop
    */
   public function setAllowOpenGop($allowOpenGop)
   {
@@ -125,7 +241,11 @@ class H264CodecSettings extends \Google\Model
     return $this->aqStrength;
   }
   /**
-   * @param int
+   * The number of consecutive B-frames. Must be greater than or equal to zero.
+   * Must be less than H264CodecSettings.gop_frame_count if set. The default is
+   * 0.
+   *
+   * @param int $bFrameCount
    */
   public function setBFrameCount($bFrameCount)
   {
@@ -139,7 +259,10 @@ class H264CodecSettings extends \Google\Model
     return $this->bFrameCount;
   }
   /**
-   * @param bool
+   * Allow B-pyramid for reference frame selection. This may not be supported on
+   * all decoders. The default is `false`.
+   *
+   * @param bool $bPyramid
    */
   public function setBPyramid($bPyramid)
   {
@@ -153,7 +276,10 @@ class H264CodecSettings extends \Google\Model
     return $this->bPyramid;
   }
   /**
-   * @param int
+   * Required. The video bitrate in bits per second. The minimum value is 1,000.
+   * The maximum value is 800,000,000.
+   *
+   * @param int $bitrateBps
    */
   public function setBitrateBps($bitrateBps)
   {
@@ -167,7 +293,10 @@ class H264CodecSettings extends \Google\Model
     return $this->bitrateBps;
   }
   /**
-   * @param int
+   * Target CRF level. Must be between 10 and 36, where 10 is the highest
+   * quality and 36 is the most efficient compression. The default is 21.
+   *
+   * @param int $crfLevel
    */
   public function setCrfLevel($crfLevel)
   {
@@ -181,7 +310,10 @@ class H264CodecSettings extends \Google\Model
     return $this->crfLevel;
   }
   /**
-   * @param bool
+   * Use two-pass encoding strategy to achieve better video quality.
+   * H264CodecSettings.rate_control_mode must be `vbr`. The default is `false`.
+   *
+   * @param bool $enableTwoPass
    */
   public function setEnableTwoPass($enableTwoPass)
   {
@@ -195,7 +327,10 @@ class H264CodecSettings extends \Google\Model
     return $this->enableTwoPass;
   }
   /**
-   * @param string
+   * The entropy coder to use. The default is `cabac`. Supported entropy coders:
+   * - `cavlc` - `cabac`
+   *
+   * @param string $entropyCoder
    */
   public function setEntropyCoder($entropyCoder)
   {
@@ -217,21 +352,32 @@ class H264CodecSettings extends \Google\Model
     return $this->frameRate;
   }
   /**
-   * @param string
+   * Optional. Frame rate conversion strategy for desired frame rate. The
+   * default is `DOWNSAMPLE`.
+   *
+   * Accepted values: FRAME_RATE_CONVERSION_STRATEGY_UNSPECIFIED, DOWNSAMPLE,
+   * DROP_DUPLICATE
+   *
+   * @param self::FRAME_RATE_CONVERSION_STRATEGY_* $frameRateConversionStrategy
    */
   public function setFrameRateConversionStrategy($frameRateConversionStrategy)
   {
     $this->frameRateConversionStrategy = $frameRateConversionStrategy;
   }
   /**
-   * @return string
+   * @return self::FRAME_RATE_CONVERSION_STRATEGY_*
    */
   public function getFrameRateConversionStrategy()
   {
     return $this->frameRateConversionStrategy;
   }
   /**
-   * @param string
+   * Select the GOP size based on the specified duration. The default is `3s`.
+   * Note that `gopDuration` must be less than or equal to
+   * [`segmentDuration`](#SegmentSettings), and
+   * [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+   *
+   * @param string $gopDuration
    */
   public function setGopDuration($gopDuration)
   {
@@ -245,7 +391,10 @@ class H264CodecSettings extends \Google\Model
     return $this->gopDuration;
   }
   /**
-   * @param int
+   * Select the GOP size based on the specified frame count. Must be greater
+   * than zero.
+   *
+   * @param int $gopFrameCount
    */
   public function setGopFrameCount($gopFrameCount)
   {
@@ -259,7 +408,15 @@ class H264CodecSettings extends \Google\Model
     return $this->gopFrameCount;
   }
   /**
-   * @param int
+   * The height of the video in pixels. Must be an even integer. When not
+   * specified, the height is adjusted to match the specified width and input
+   * aspect ratio. If both are omitted, the input height is used. For portrait
+   * videos that contain horizontal ASR and rotation metadata, provide the
+   * height, in pixels, per the horizontal ASR. The API calculates the width per
+   * the horizontal ASR. The API detects any rotation metadata and swaps the
+   * requested height and width for the output.
+   *
+   * @param int $heightPixels
    */
   public function setHeightPixels($heightPixels)
   {
@@ -273,7 +430,9 @@ class H264CodecSettings extends \Google\Model
     return $this->heightPixels;
   }
   /**
-   * @param H264ColorFormatHLG
+   * Optional. HLG color format setting for H264.
+   *
+   * @param H264ColorFormatHLG $hlg
    */
   public function setHlg(H264ColorFormatHLG $hlg)
   {
@@ -287,7 +446,13 @@ class H264CodecSettings extends \Google\Model
     return $this->hlg;
   }
   /**
-   * @param string
+   * Pixel format to use. The default is `yuv420p`. Supported pixel formats: -
+   * `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format -
+   * `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format -
+   * `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format -
+   * `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+   *
+   * @param string $pixelFormat
    */
   public function setPixelFormat($pixelFormat)
   {
@@ -301,7 +466,13 @@ class H264CodecSettings extends \Google\Model
     return $this->pixelFormat;
   }
   /**
-   * @param string
+   * Enforces the specified codec preset. The default is `veryfast`. The
+   * available options are [FFmpeg-
+   * compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that
+   * certain values for this field may cause the transcoder to override other
+   * fields you set in the `H264CodecSettings` message.
+   *
+   * @param string $preset
    */
   public function setPreset($preset)
   {
@@ -315,7 +486,13 @@ class H264CodecSettings extends \Google\Model
     return $this->preset;
   }
   /**
-   * @param string
+   * Enforces the specified codec profile. The following profiles are supported:
+   * * `baseline` * `main` * `high` (default) The available options are [FFmpeg-
+   * compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that
+   * certain values for this field may cause the transcoder to override other
+   * fields you set in the `H264CodecSettings` message.
+   *
+   * @param string $profile
    */
   public function setProfile($profile)
   {
@@ -329,7 +506,10 @@ class H264CodecSettings extends \Google\Model
     return $this->profile;
   }
   /**
-   * @param string
+   * Specify the mode. The default is `vbr`. Supported rate control modes: -
+   * `vbr` - variable bitrate - `crf` - constant rate factor
+   *
+   * @param string $rateControlMode
    */
   public function setRateControlMode($rateControlMode)
   {
@@ -343,7 +523,9 @@ class H264CodecSettings extends \Google\Model
     return $this->rateControlMode;
   }
   /**
-   * @param H264ColorFormatSDR
+   * Optional. SDR color format setting for H264.
+   *
+   * @param H264ColorFormatSDR $sdr
    */
   public function setSdr(H264ColorFormatSDR $sdr)
   {
@@ -357,7 +539,12 @@ class H264CodecSettings extends \Google\Model
     return $this->sdr;
   }
   /**
-   * @param string
+   * Enforces the specified codec tune. The available options are [FFmpeg-
+   * compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that
+   * certain values for this field may cause the transcoder to override other
+   * fields you set in the `H264CodecSettings` message.
+   *
+   * @param string $tune
    */
   public function setTune($tune)
   {
@@ -371,7 +558,11 @@ class H264CodecSettings extends \Google\Model
     return $this->tune;
   }
   /**
-   * @param int
+   * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must
+   * be greater than zero. The default is equal to 90% of
+   * H264CodecSettings.vbv_size_bits.
+   *
+   * @param int $vbvFullnessBits
    */
   public function setVbvFullnessBits($vbvFullnessBits)
   {
@@ -385,7 +576,10 @@ class H264CodecSettings extends \Google\Model
     return $this->vbvFullnessBits;
   }
   /**
-   * @param int
+   * Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater
+   * than zero. The default is equal to H264CodecSettings.bitrate_bps.
+   *
+   * @param int $vbvSizeBits
    */
   public function setVbvSizeBits($vbvSizeBits)
   {
@@ -399,7 +593,15 @@ class H264CodecSettings extends \Google\Model
     return $this->vbvSizeBits;
   }
   /**
-   * @param int
+   * The width of the video in pixels. Must be an even integer. When not
+   * specified, the width is adjusted to match the specified height and input
+   * aspect ratio. If both are omitted, the input width is used. For portrait
+   * videos that contain horizontal ASR and rotation metadata, provide the
+   * width, in pixels, per the horizontal ASR. The API calculates the height per
+   * the horizontal ASR. The API detects any rotation metadata and swaps the
+   * requested height and width for the output.
+   *
+   * @param int $widthPixels
    */
   public function setWidthPixels($widthPixels)
   {

@@ -20,28 +20,41 @@ namespace Google\Service\ToolResults;
 class AndroidRoboTest extends \Google\Model
 {
   /**
+   * The initial activity that should be used to start the app. Optional
+   *
    * @var string
    */
   public $appInitialActivity;
   /**
+   * The java package for the bootstrap. Optional
+   *
    * @var string
    */
   public $bootstrapPackageId;
   /**
+   * The runner class for the bootstrap. Optional
+   *
    * @var string
    */
   public $bootstrapRunnerClass;
   /**
+   * The max depth of the traversal stack Robo can explore. Optional
+   *
    * @var int
    */
   public $maxDepth;
   /**
+   * The max number of steps/actions Robo can execute. Default is no limit (0).
+   * Optional
+   *
    * @var int
    */
   public $maxSteps;
 
   /**
-   * @param string
+   * The initial activity that should be used to start the app. Optional
+   *
+   * @param string $appInitialActivity
    */
   public function setAppInitialActivity($appInitialActivity)
   {
@@ -55,7 +68,9 @@ class AndroidRoboTest extends \Google\Model
     return $this->appInitialActivity;
   }
   /**
-   * @param string
+   * The java package for the bootstrap. Optional
+   *
+   * @param string $bootstrapPackageId
    */
   public function setBootstrapPackageId($bootstrapPackageId)
   {
@@ -69,7 +84,9 @@ class AndroidRoboTest extends \Google\Model
     return $this->bootstrapPackageId;
   }
   /**
-   * @param string
+   * The runner class for the bootstrap. Optional
+   *
+   * @param string $bootstrapRunnerClass
    */
   public function setBootstrapRunnerClass($bootstrapRunnerClass)
   {
@@ -83,7 +100,9 @@ class AndroidRoboTest extends \Google\Model
     return $this->bootstrapRunnerClass;
   }
   /**
-   * @param int
+   * The max depth of the traversal stack Robo can explore. Optional
+   *
+   * @param int $maxDepth
    */
   public function setMaxDepth($maxDepth)
   {
@@ -97,7 +116,10 @@ class AndroidRoboTest extends \Google\Model
     return $this->maxDepth;
   }
   /**
-   * @param int
+   * The max number of steps/actions Robo can execute. Default is no limit (0).
+   * Optional
+   *
+   * @param int $maxSteps
    */
   public function setMaxSteps($maxSteps)
   {

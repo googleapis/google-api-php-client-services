@@ -19,52 +19,102 @@ namespace Google\Service\SecurityPosture;
 
 class Posture extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The posture is deprecated and can no longer be deployed.
+   */
+  public const STATE_DEPRECATED = 'DEPRECATED';
+  /**
+   * The posture is a draft and is not ready to deploy.
+   */
+  public const STATE_DRAFT = 'DRAFT';
+  /**
+   * The posture is complete and ready to deploy.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
   protected $collection_key = 'policySets';
   /**
+   * Optional. The user-specified annotations for the posture. For details about
+   * the values you can use in an annotation, see [AIP-148: Standard
+   * fields](https://google.aip.dev/148#annotations).
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. The categories that the posture belongs to, as determined by
+   * the Security Posture API.
+   *
    * @var string[]
    */
   public $categories;
   /**
+   * Output only. The time at which the posture was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. A description of the posture.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. An opaque identifier for the current version of the posture at
+   * the specified `revision_id`. To prevent concurrent updates from overwriting
+   * each other, always provide the `etag` when you update a posture. You can
+   * also provide the `etag` when you delete a posture, to help ensure that
+   * you're deleting the intended version of the posture.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Required. Identifier. The name of the posture, in the format
+   * `organizations/{organization}/locations/global/postures/{posture_id}`.
+   *
    * @var string
    */
   public $name;
   protected $policySetsType = PolicySet::class;
   protected $policySetsDataType = 'array';
   /**
+   * Output only. Whether the posture is in the process of being updated.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. Immutable. An opaque eight-character string that identifies
+   * the revision of the posture. A posture can have multiple revisions; when
+   * you deploy a posture, you deploy a specific revision of the posture.
+   *
    * @var string
    */
   public $revisionId;
   /**
+   * Required. The state of the posture at the specified `revision_id`.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time at which the posture was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. The user-specified annotations for the posture. For details about
+   * the values you can use in an annotation, see [AIP-148: Standard
+   * fields](https://google.aip.dev/148#annotations).
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -78,7 +128,10 @@ class Posture extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param string[]
+   * Output only. The categories that the posture belongs to, as determined by
+   * the Security Posture API.
+   *
+   * @param string[] $categories
    */
   public function setCategories($categories)
   {
@@ -92,7 +145,9 @@ class Posture extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param string
+   * Output only. The time at which the posture was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -106,7 +161,9 @@ class Posture extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. A description of the posture.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -120,7 +177,13 @@ class Posture extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. An opaque identifier for the current version of the posture at
+   * the specified `revision_id`. To prevent concurrent updates from overwriting
+   * each other, always provide the `etag` when you update a posture. You can
+   * also provide the `etag` when you delete a posture, to help ensure that
+   * you're deleting the intended version of the posture.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -134,7 +197,10 @@ class Posture extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Required. Identifier. The name of the posture, in the format
+   * `organizations/{organization}/locations/global/postures/{posture_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -148,7 +214,9 @@ class Posture extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PolicySet[]
+   * Required. The PolicySet resources that the posture includes.
+   *
+   * @param PolicySet[] $policySets
    */
   public function setPolicySets($policySets)
   {
@@ -162,7 +230,9 @@ class Posture extends \Google\Collection
     return $this->policySets;
   }
   /**
-   * @param bool
+   * Output only. Whether the posture is in the process of being updated.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -176,7 +246,11 @@ class Posture extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. Immutable. An opaque eight-character string that identifies
+   * the revision of the posture. A posture can have multiple revisions; when
+   * you deploy a posture, you deploy a specific revision of the posture.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -190,21 +264,27 @@ class Posture extends \Google\Collection
     return $this->revisionId;
   }
   /**
-   * @param string
+   * Required. The state of the posture at the specified `revision_id`.
+   *
+   * Accepted values: STATE_UNSPECIFIED, DEPRECATED, DRAFT, ACTIVE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time at which the posture was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Tasks;
 class SpaceInfo extends \Google\Model
 {
   /**
+   * Output only. The Chat space where this task originates from. The format is
+   * "spaces/{space}".
+   *
    * @var string
    */
   public $space;
 
   /**
-   * @param string
+   * Output only. The Chat space where this task originates from. The format is
+   * "spaces/{space}".
+   *
+   * @param string $space
    */
   public function setSpace($space)
   {

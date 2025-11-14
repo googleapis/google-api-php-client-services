@@ -23,12 +23,19 @@ class ListCustomBiddingAlgorithmsResponse extends \Google\Collection
   protected $customBiddingAlgorithmsType = CustomBiddingAlgorithm::class;
   protected $customBiddingAlgorithmsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to
+   * `ListCustomBiddingAlgorithmsRequest` method to retrieve the next page of
+   * results. If this field is null, it means this is the last page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CustomBiddingAlgorithm[]
+   * The list of custom bidding algorithms. This list will be absent if empty.
+   *
+   * @param CustomBiddingAlgorithm[] $customBiddingAlgorithms
    */
   public function setCustomBiddingAlgorithms($customBiddingAlgorithms)
   {
@@ -42,7 +49,12 @@ class ListCustomBiddingAlgorithmsResponse extends \Google\Collection
     return $this->customBiddingAlgorithms;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to
+   * `ListCustomBiddingAlgorithmsRequest` method to retrieve the next page of
+   * results. If this field is null, it means this is the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

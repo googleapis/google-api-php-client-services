@@ -20,33 +20,74 @@ namespace Google\Service\SecurityCommandCenter;
 class AttackExposure extends \Google\Model
 {
   /**
+   * The state is not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The attack exposure has been calculated.
+   */
+  public const STATE_CALCULATED = 'CALCULATED';
+  /**
+   * The attack exposure has not been calculated.
+   */
+  public const STATE_NOT_CALCULATED = 'NOT_CALCULATED';
+  /**
+   * The resource name of the attack path simulation result that contains the
+   * details regarding this attack exposure score. Example:
+   * `organizations/123/simulations/456/attackExposureResults/789`
+   *
    * @var string
    */
   public $attackExposureResult;
   /**
+   * The number of high value resources that are exposed as a result of this
+   * finding.
+   *
    * @var int
    */
   public $exposedHighValueResourcesCount;
   /**
+   * The number of high value resources that are exposed as a result of this
+   * finding.
+   *
    * @var int
    */
   public $exposedLowValueResourcesCount;
   /**
+   * The number of medium value resources that are exposed as a result of this
+   * finding.
+   *
    * @var int
    */
   public $exposedMediumValueResourcesCount;
   /**
+   * The most recent time the attack exposure was updated on this finding.
+   *
    * @var string
    */
   public $latestCalculationTime;
+  /**
+   * A number between 0 (inclusive) and infinity that represents how important
+   * this finding is to remediate. The higher the score, the more important it
+   * is to remediate.
+   *
+   * @var 
+   */
   public $score;
   /**
+   * What state this AttackExposure is in. This captures whether or not an
+   * attack exposure has been calculated or not.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The resource name of the attack path simulation result that contains the
+   * details regarding this attack exposure score. Example:
+   * `organizations/123/simulations/456/attackExposureResults/789`
+   *
+   * @param string $attackExposureResult
    */
   public function setAttackExposureResult($attackExposureResult)
   {
@@ -60,7 +101,10 @@ class AttackExposure extends \Google\Model
     return $this->attackExposureResult;
   }
   /**
-   * @param int
+   * The number of high value resources that are exposed as a result of this
+   * finding.
+   *
+   * @param int $exposedHighValueResourcesCount
    */
   public function setExposedHighValueResourcesCount($exposedHighValueResourcesCount)
   {
@@ -74,7 +118,10 @@ class AttackExposure extends \Google\Model
     return $this->exposedHighValueResourcesCount;
   }
   /**
-   * @param int
+   * The number of high value resources that are exposed as a result of this
+   * finding.
+   *
+   * @param int $exposedLowValueResourcesCount
    */
   public function setExposedLowValueResourcesCount($exposedLowValueResourcesCount)
   {
@@ -88,7 +135,10 @@ class AttackExposure extends \Google\Model
     return $this->exposedLowValueResourcesCount;
   }
   /**
-   * @param int
+   * The number of medium value resources that are exposed as a result of this
+   * finding.
+   *
+   * @param int $exposedMediumValueResourcesCount
    */
   public function setExposedMediumValueResourcesCount($exposedMediumValueResourcesCount)
   {
@@ -102,7 +152,9 @@ class AttackExposure extends \Google\Model
     return $this->exposedMediumValueResourcesCount;
   }
   /**
-   * @param string
+   * The most recent time the attack exposure was updated on this finding.
+   *
+   * @param string $latestCalculationTime
    */
   public function setLatestCalculationTime($latestCalculationTime)
   {
@@ -124,14 +176,19 @@ class AttackExposure extends \Google\Model
     return $this->score;
   }
   /**
-   * @param string
+   * What state this AttackExposure is in. This captures whether or not an
+   * attack exposure has been calculated or not.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CALCULATED, NOT_CALCULATED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

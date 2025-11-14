@@ -20,20 +20,28 @@ namespace Google\Service\Dfareporting;
 class BillingRateTieredRate extends \Google\Model
 {
   /**
+   * The maximum for this tier range.
+   *
    * @var string
    */
   public $highValue;
   /**
+   * The minimum for this tier range.
+   *
    * @var string
    */
   public $lowValue;
   /**
+   * Rate in micros for this tier.
+   *
    * @var string
    */
   public $rateInMicros;
 
   /**
-   * @param string
+   * The maximum for this tier range.
+   *
+   * @param string $highValue
    */
   public function setHighValue($highValue)
   {
@@ -47,7 +55,9 @@ class BillingRateTieredRate extends \Google\Model
     return $this->highValue;
   }
   /**
-   * @param string
+   * The minimum for this tier range.
+   *
+   * @param string $lowValue
    */
   public function setLowValue($lowValue)
   {
@@ -61,7 +71,9 @@ class BillingRateTieredRate extends \Google\Model
     return $this->lowValue;
   }
   /**
-   * @param string
+   * Rate in micros for this tier.
+   *
+   * @param string $rateInMicros
    */
   public function setRateInMicros($rateInMicros)
   {

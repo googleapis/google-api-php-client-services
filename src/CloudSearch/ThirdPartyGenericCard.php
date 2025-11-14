@@ -20,10 +20,14 @@ namespace Google\Service\CloudSearch;
 class ThirdPartyGenericCard extends \Google\Model
 {
   /**
+   * Unique identifier for the card.
+   *
    * @var string
    */
   public $cardId;
   /**
+   * Category that the card belongs to.
+   *
    * @var string
    */
   public $category;
@@ -32,16 +36,22 @@ class ThirdPartyGenericCard extends \Google\Model
   protected $contextType = Context::class;
   protected $contextDataType = '';
   /**
+   * Whether the card can be dismissed.
+   *
    * @var bool
    */
   public $isDismissible;
   /**
+   * Priority of the card, where 0 is the highest priority.
+   *
    * @var int
    */
   public $priority;
 
   /**
-   * @param string
+   * Unique identifier for the card.
+   *
+   * @param string $cardId
    */
   public function setCardId($cardId)
   {
@@ -55,7 +65,9 @@ class ThirdPartyGenericCard extends \Google\Model
     return $this->cardId;
   }
   /**
-   * @param string
+   * Category that the card belongs to.
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -69,7 +81,9 @@ class ThirdPartyGenericCard extends \Google\Model
     return $this->category;
   }
   /**
-   * @param Content
+   * [Required] Card content.
+   *
+   * @param Content $content
    */
   public function setContent(Content $content)
   {
@@ -83,7 +97,9 @@ class ThirdPartyGenericCard extends \Google\Model
     return $this->content;
   }
   /**
-   * @param Context
+   * [Required] Context where the card should be triggered.
+   *
+   * @param Context $context
    */
   public function setContext(Context $context)
   {
@@ -97,7 +113,9 @@ class ThirdPartyGenericCard extends \Google\Model
     return $this->context;
   }
   /**
-   * @param bool
+   * Whether the card can be dismissed.
+   *
+   * @param bool $isDismissible
    */
   public function setIsDismissible($isDismissible)
   {
@@ -111,7 +129,9 @@ class ThirdPartyGenericCard extends \Google\Model
     return $this->isDismissible;
   }
   /**
-   * @param int
+   * Priority of the card, where 0 is the highest priority.
+   *
+   * @param int $priority
    */
   public function setPriority($priority)
   {

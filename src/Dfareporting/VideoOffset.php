@@ -20,16 +20,25 @@ namespace Google\Service\Dfareporting;
 class VideoOffset extends \Google\Model
 {
   /**
+   * Duration, as a percentage of video duration. Do not set when offsetSeconds
+   * is set. Acceptable values are 0 to 100, inclusive.
+   *
    * @var int
    */
   public $offsetPercentage;
   /**
+   * Duration, in seconds. Do not set when offsetPercentage is set. Acceptable
+   * values are 0 to 86399, inclusive.
+   *
    * @var int
    */
   public $offsetSeconds;
 
   /**
-   * @param int
+   * Duration, as a percentage of video duration. Do not set when offsetSeconds
+   * is set. Acceptable values are 0 to 100, inclusive.
+   *
+   * @param int $offsetPercentage
    */
   public function setOffsetPercentage($offsetPercentage)
   {
@@ -43,7 +52,10 @@ class VideoOffset extends \Google\Model
     return $this->offsetPercentage;
   }
   /**
-   * @param int
+   * Duration, in seconds. Do not set when offsetPercentage is set. Acceptable
+   * values are 0 to 86399, inclusive.
+   *
+   * @param int $offsetSeconds
    */
   public function setOffsetSeconds($offsetSeconds)
   {

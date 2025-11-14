@@ -20,16 +20,25 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3SentimentAnalysisResult extends \Google\Model
 {
   /**
+   * A non-negative number in the [0, +inf) range, which represents the absolute
+   * magnitude of sentiment, regardless of score (positive or negative).
+   *
    * @var float
    */
   public $magnitude;
   /**
+   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive
+   * sentiment).
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * A non-negative number in the [0, +inf) range, which represents the absolute
+   * magnitude of sentiment, regardless of score (positive or negative).
+   *
+   * @param float $magnitude
    */
   public function setMagnitude($magnitude)
   {
@@ -43,7 +52,10 @@ class GoogleCloudDialogflowCxV3SentimentAnalysisResult extends \Google\Model
     return $this->magnitude;
   }
   /**
-   * @param float
+   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive
+   * sentiment).
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

@@ -20,22 +20,52 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalNrqzValidation extends \Google\Model
 {
   /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Draft state.
+   */
+  public const STATE_DRAFT = 'DRAFT';
+  /**
+   * Final state.
+   */
+  public const STATE_FINAL = 'FINAL';
+  /**
+   * Validation case ID.
+   *
    * @var string
    */
   public $caseId;
   /**
+   * CPI who signed the validation.
+   *
    * @var string
    */
   public $cpiId;
+  /**
+   * Device latitude that's associated with the validation.
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * Device longitude that's associated with the validation.
+   *
+   * @var 
+   */
   public $longitude;
   /**
+   * State of the NRQZ validation info.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Validation case ID.
+   *
+   * @param string $caseId
    */
   public function setCaseId($caseId)
   {
@@ -49,7 +79,9 @@ class SasPortalNrqzValidation extends \Google\Model
     return $this->caseId;
   }
   /**
-   * @param string
+   * CPI who signed the validation.
+   *
+   * @param string $cpiId
    */
   public function setCpiId($cpiId)
   {
@@ -79,14 +111,18 @@ class SasPortalNrqzValidation extends \Google\Model
     return $this->longitude;
   }
   /**
-   * @param string
+   * State of the NRQZ validation info.
+   *
+   * Accepted values: STATE_UNSPECIFIED, DRAFT, FINAL
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

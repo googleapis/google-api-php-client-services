@@ -20,14 +20,21 @@ namespace Google\Service\BigLakeService;
 class StorageDescriptor extends \Google\Model
 {
   /**
+   * The fully qualified Java class name of the input format.
+   *
    * @var string
    */
   public $inputFormat;
   /**
+   * Cloud Storage folder URI where the table data is stored, starting with
+   * "gs://".
+   *
    * @var string
    */
   public $locationUri;
   /**
+   * The fully qualified Java class name of the output format.
+   *
    * @var string
    */
   public $outputFormat;
@@ -35,7 +42,9 @@ class StorageDescriptor extends \Google\Model
   protected $serdeInfoDataType = '';
 
   /**
-   * @param string
+   * The fully qualified Java class name of the input format.
+   *
+   * @param string $inputFormat
    */
   public function setInputFormat($inputFormat)
   {
@@ -49,7 +58,10 @@ class StorageDescriptor extends \Google\Model
     return $this->inputFormat;
   }
   /**
-   * @param string
+   * Cloud Storage folder URI where the table data is stored, starting with
+   * "gs://".
+   *
+   * @param string $locationUri
    */
   public function setLocationUri($locationUri)
   {
@@ -63,7 +75,9 @@ class StorageDescriptor extends \Google\Model
     return $this->locationUri;
   }
   /**
-   * @param string
+   * The fully qualified Java class name of the output format.
+   *
+   * @param string $outputFormat
    */
   public function setOutputFormat($outputFormat)
   {
@@ -77,7 +91,9 @@ class StorageDescriptor extends \Google\Model
     return $this->outputFormat;
   }
   /**
-   * @param SerDeInfo
+   * Serializer and deserializer information.
+   *
+   * @param SerDeInfo $serdeInfo
    */
   public function setSerdeInfo(SerDeInfo $serdeInfo)
   {

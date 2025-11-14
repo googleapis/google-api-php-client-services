@@ -20,16 +20,25 @@ namespace Google\Service\Storage;
 class BucketIamConfigurationUniformBucketLevelAccess extends \Google\Model
 {
   /**
+   * If set, access is controlled only by bucket-level or above IAM policies.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled
+   * from true to false in RFC 3339  format.
+   * iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true
+   * to false until the locked time, after which the field is immutable.
+   *
    * @var string
    */
   public $lockedTime;
 
   /**
-   * @param bool
+   * If set, access is controlled only by bucket-level or above IAM policies.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -43,7 +52,12 @@ class BucketIamConfigurationUniformBucketLevelAccess extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled
+   * from true to false in RFC 3339  format.
+   * iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true
+   * to false until the locked time, after which the field is immutable.
+   *
+   * @param string $lockedTime
    */
   public function setLockedTime($lockedTime)
   {

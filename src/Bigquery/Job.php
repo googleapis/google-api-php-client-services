@@ -26,10 +26,14 @@ class Job extends \Google\Model
   protected $configurationType = JobConfiguration::class;
   protected $configurationDataType = '';
   /**
+   * Output only. A hash of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. Opaque ID field of the job.
+   *
    * @var string
    */
   public $id;
@@ -38,14 +42,22 @@ class Job extends \Google\Model
   protected $jobReferenceType = JobReference::class;
   protected $jobReferenceDataType = '';
   /**
+   * Output only. The type of the resource.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Output only. [Full-projection-only] String representation of identity of
+   * requesting party. Populated for both first- and third-party identities.
+   * Only present for APIs that support third-party identities.
+   *
    * @var string
    */
   public $principalSubject;
   /**
+   * Output only. A URL that can be used to access the resource again.
+   *
    * @var string
    */
   public $selfLink;
@@ -54,12 +66,16 @@ class Job extends \Google\Model
   protected $statusType = JobStatus::class;
   protected $statusDataType = '';
   /**
+   * Output only. Email address of the user who ran the job.
+   *
    * @var string
    */
   public $userEmail;
 
   /**
-   * @param JobConfiguration
+   * Required. Describes the job configuration.
+   *
+   * @param JobConfiguration $configuration
    */
   public function setConfiguration(JobConfiguration $configuration)
   {
@@ -73,7 +89,9 @@ class Job extends \Google\Model
     return $this->configuration;
   }
   /**
-   * @param string
+   * Output only. A hash of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -87,7 +105,9 @@ class Job extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. Opaque ID field of the job.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -101,7 +121,9 @@ class Job extends \Google\Model
     return $this->id;
   }
   /**
-   * @param JobCreationReason
+   * Output only. The reason why a Job was created.
+   *
+   * @param JobCreationReason $jobCreationReason
    */
   public function setJobCreationReason(JobCreationReason $jobCreationReason)
   {
@@ -115,7 +137,9 @@ class Job extends \Google\Model
     return $this->jobCreationReason;
   }
   /**
-   * @param JobReference
+   * Optional. Reference describing the unique-per-user name of the job.
+   *
+   * @param JobReference $jobReference
    */
   public function setJobReference(JobReference $jobReference)
   {
@@ -129,7 +153,9 @@ class Job extends \Google\Model
     return $this->jobReference;
   }
   /**
-   * @param string
+   * Output only. The type of the resource.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -143,7 +169,11 @@ class Job extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Output only. [Full-projection-only] String representation of identity of
+   * requesting party. Populated for both first- and third-party identities.
+   * Only present for APIs that support third-party identities.
+   *
+   * @param string $principalSubject
    */
   public function setPrincipalSubject($principalSubject)
   {
@@ -157,7 +187,9 @@ class Job extends \Google\Model
     return $this->principalSubject;
   }
   /**
-   * @param string
+   * Output only. A URL that can be used to access the resource again.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -171,7 +203,10 @@ class Job extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param JobStatistics
+   * Output only. Information about the job, including starting time and ending
+   * time of the job.
+   *
+   * @param JobStatistics $statistics
    */
   public function setStatistics(JobStatistics $statistics)
   {
@@ -185,7 +220,10 @@ class Job extends \Google\Model
     return $this->statistics;
   }
   /**
-   * @param JobStatus
+   * Output only. The status of this job. Examine this value when polling an
+   * asynchronous job to see if the job is complete.
+   *
+   * @param JobStatus $status
    */
   public function setStatus(JobStatus $status)
   {
@@ -199,7 +237,9 @@ class Job extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * Output only. Email address of the user who ran the job.
+   *
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {

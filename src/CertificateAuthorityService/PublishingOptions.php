@@ -20,34 +20,77 @@ namespace Google\Service\CertificateAuthorityService;
 class PublishingOptions extends \Google\Model
 {
   /**
+   * Not specified. By default, PEM format will be used.
+   */
+  public const ENCODING_FORMAT_ENCODING_FORMAT_UNSPECIFIED = 'ENCODING_FORMAT_UNSPECIFIED';
+  /**
+   * The CertificateAuthority's CA certificate and CRLs will be published in PEM
+   * format.
+   */
+  public const ENCODING_FORMAT_PEM = 'PEM';
+  /**
+   * The CertificateAuthority's CA certificate and CRLs will be published in DER
+   * format.
+   */
+  public const ENCODING_FORMAT_DER = 'DER';
+  /**
+   * Optional. Specifies the encoding format of each CertificateAuthority
+   * resource's CA certificate and CRLs. If this is omitted, CA certificates and
+   * CRLs will be published in PEM.
+   *
    * @var string
    */
   public $encodingFormat;
   /**
+   * Optional. When true, publishes each CertificateAuthority's CA certificate
+   * and includes its URL in the "Authority Information Access" X.509 extension
+   * in all issued Certificates. If this is false, the CA certificate will not
+   * be published and the corresponding X.509 extension will not be written in
+   * issued certificates.
+   *
    * @var bool
    */
   public $publishCaCert;
   /**
+   * Optional. When true, publishes each CertificateAuthority's CRL and includes
+   * its URL in the "CRL Distribution Points" X.509 extension in all issued
+   * Certificates. If this is false, CRLs will not be published and the
+   * corresponding X.509 extension will not be written in issued certificates.
+   * CRLs will expire 7 days from their creation. However, we will rebuild
+   * daily. CRLs are also rebuilt shortly after a certificate is revoked.
+   *
    * @var bool
    */
   public $publishCrl;
 
   /**
-   * @param string
+   * Optional. Specifies the encoding format of each CertificateAuthority
+   * resource's CA certificate and CRLs. If this is omitted, CA certificates and
+   * CRLs will be published in PEM.
+   *
+   * Accepted values: ENCODING_FORMAT_UNSPECIFIED, PEM, DER
+   *
+   * @param self::ENCODING_FORMAT_* $encodingFormat
    */
   public function setEncodingFormat($encodingFormat)
   {
     $this->encodingFormat = $encodingFormat;
   }
   /**
-   * @return string
+   * @return self::ENCODING_FORMAT_*
    */
   public function getEncodingFormat()
   {
     return $this->encodingFormat;
   }
   /**
-   * @param bool
+   * Optional. When true, publishes each CertificateAuthority's CA certificate
+   * and includes its URL in the "Authority Information Access" X.509 extension
+   * in all issued Certificates. If this is false, the CA certificate will not
+   * be published and the corresponding X.509 extension will not be written in
+   * issued certificates.
+   *
+   * @param bool $publishCaCert
    */
   public function setPublishCaCert($publishCaCert)
   {
@@ -61,7 +104,14 @@ class PublishingOptions extends \Google\Model
     return $this->publishCaCert;
   }
   /**
-   * @param bool
+   * Optional. When true, publishes each CertificateAuthority's CRL and includes
+   * its URL in the "CRL Distribution Points" X.509 extension in all issued
+   * Certificates. If this is false, CRLs will not be published and the
+   * corresponding X.509 extension will not be written in issued certificates.
+   * CRLs will expire 7 days from their creation. However, we will rebuild
+   * daily. CRLs are also rebuilt shortly after a certificate is revoked.
+   *
+   * @param bool $publishCrl
    */
   public function setPublishCrl($publishCrl)
   {

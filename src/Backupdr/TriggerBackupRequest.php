@@ -20,20 +20,51 @@ namespace Google\Service\Backupdr;
 class TriggerBackupRequest extends \Google\Model
 {
   /**
+   * Optional. The duration for which backup data will be kept, while taking an
+   * on-demand backup with custom retention. It is defined in "days". It is
+   * mutually exclusive with rule_id. This field is required if rule_id is not
+   * provided.
+   *
    * @var int
    */
   public $customRetentionDays;
   /**
+   * Optional. Labels to be applied on the backup.
+   *
+   * @var string[]
+   */
+  public $labels;
+  /**
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server will know to
+   * ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Optional. backup rule_id for which a backup needs to be triggered. If not
+   * specified, on-demand backup with custom retention will be triggered.
+   *
    * @var string
    */
   public $ruleId;
 
   /**
-   * @param int
+   * Optional. The duration for which backup data will be kept, while taking an
+   * on-demand backup with custom retention. It is defined in "days". It is
+   * mutually exclusive with rule_id. This field is required if rule_id is not
+   * provided.
+   *
+   * @param int $customRetentionDays
    */
   public function setCustomRetentionDays($customRetentionDays)
   {
@@ -47,7 +78,35 @@ class TriggerBackupRequest extends \Google\Model
     return $this->customRetentionDays;
   }
   /**
-   * @param string
+   * Optional. Labels to be applied on the backup.
+   *
+   * @param string[] $labels
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
+  }
+  /**
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server will know to
+   * ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -61,7 +120,10 @@ class TriggerBackupRequest extends \Google\Model
     return $this->requestId;
   }
   /**
-   * @param string
+   * Optional. backup rule_id for which a backup needs to be triggered. If not
+   * specified, on-demand backup with custom retention will be triggered.
+   *
+   * @param string $ruleId
    */
   public function setRuleId($ruleId)
   {

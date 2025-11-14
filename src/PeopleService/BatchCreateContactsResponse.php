@@ -24,7 +24,9 @@ class BatchCreateContactsResponse extends \Google\Collection
   protected $createdPeopleDataType = 'array';
 
   /**
-   * @param PersonResponse[]
+   * The contacts that were created, unless the request `read_mask` is empty.
+   *
+   * @param PersonResponse[] $createdPeople
    */
   public function setCreatedPeople($createdPeople)
   {

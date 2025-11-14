@@ -19,15 +19,28 @@ namespace Google\Service\BigtableAdmin;
 
 class RestoreInfo extends \Google\Model
 {
+  /**
+   * No restore associated.
+   */
+  public const SOURCE_TYPE_RESTORE_SOURCE_TYPE_UNSPECIFIED = 'RESTORE_SOURCE_TYPE_UNSPECIFIED';
+  /**
+   * A backup was used as the source of the restore.
+   */
+  public const SOURCE_TYPE_BACKUP = 'BACKUP';
   protected $backupInfoType = BackupInfo::class;
   protected $backupInfoDataType = '';
   /**
+   * The type of the restore source.
+   *
    * @var string
    */
   public $sourceType;
 
   /**
-   * @param BackupInfo
+   * Information about the backup used to restore the table. The backup may no
+   * longer exist.
+   *
+   * @param BackupInfo $backupInfo
    */
   public function setBackupInfo(BackupInfo $backupInfo)
   {
@@ -41,14 +54,18 @@ class RestoreInfo extends \Google\Model
     return $this->backupInfo;
   }
   /**
-   * @param string
+   * The type of the restore source.
+   *
+   * Accepted values: RESTORE_SOURCE_TYPE_UNSPECIFIED, BACKUP
+   *
+   * @param self::SOURCE_TYPE_* $sourceType
    */
   public function setSourceType($sourceType)
   {
     $this->sourceType = $sourceType;
   }
   /**
-   * @return string
+   * @return self::SOURCE_TYPE_*
    */
   public function getSourceType()
   {

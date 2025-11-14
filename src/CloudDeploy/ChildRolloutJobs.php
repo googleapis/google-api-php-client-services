@@ -26,7 +26,9 @@ class ChildRolloutJobs extends \Google\Collection
   protected $createRolloutJobsDataType = 'array';
 
   /**
-   * @param Job[]
+   * Output only. List of AdvanceChildRolloutJobs
+   *
+   * @param Job[] $advanceRolloutJobs
    */
   public function setAdvanceRolloutJobs($advanceRolloutJobs)
   {
@@ -40,7 +42,9 @@ class ChildRolloutJobs extends \Google\Collection
     return $this->advanceRolloutJobs;
   }
   /**
-   * @param Job[]
+   * Output only. List of CreateChildRolloutJobs
+   *
+   * @param Job[] $createRolloutJobs
    */
   public function setCreateRolloutJobs($createRolloutJobs)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\BigQueryDataTransfer;
 class CheckValidCredsResponse extends \Google\Model
 {
   /**
+   * If set to `true`, the credentials exist and are valid.
+   *
    * @var bool
    */
   public $hasValidCreds;
 
   /**
-   * @param bool
+   * If set to `true`, the credentials exist and are valid.
+   *
+   * @param bool $hasValidCreds
    */
   public function setHasValidCreds($hasValidCreds)
   {

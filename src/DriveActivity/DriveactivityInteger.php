@@ -20,12 +20,16 @@ namespace Google\Service\DriveActivity;
 class DriveactivityInteger extends \Google\Model
 {
   /**
+   * Integer value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Integer value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

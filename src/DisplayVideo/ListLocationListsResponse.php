@@ -23,12 +23,18 @@ class ListLocationListsResponse extends \Google\Collection
   protected $locationListsType = LocationList::class;
   protected $locationListsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListLocationLists` method to
+   * retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param LocationList[]
+   * The list of location lists. This list will be absent if empty.
+   *
+   * @param LocationList[] $locationLists
    */
   public function setLocationLists($locationLists)
   {
@@ -42,7 +48,11 @@ class ListLocationListsResponse extends \Google\Collection
     return $this->locationLists;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListLocationLists` method to
+   * retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

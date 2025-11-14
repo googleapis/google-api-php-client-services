@@ -23,18 +23,29 @@ class CloudAiPlatformTenantresourceTenantProjectConfig extends \Google\Collectio
   protected $billingConfigType = GoogleApiServiceconsumermanagementV1BillingConfig::class;
   protected $billingConfigDataType = '';
   /**
+   * Input/Output [Required]. The folder that holds tenant projects and folder-
+   * level permissions will be automatically granted to all tenant projects
+   * under the folder. Note: the valid folder format is
+   * `folders/{folder_number}`.
+   *
    * @var string
    */
   public $folder;
   protected $policyBindingsType = GoogleApiServiceconsumermanagementV1PolicyBinding::class;
   protected $policyBindingsDataType = 'array';
   /**
+   * Input/Output [Required]. The API services that are enabled on the tenant
+   * project during creation.
+   *
    * @var string[]
    */
   public $services;
 
   /**
-   * @param GoogleApiServiceconsumermanagementV1BillingConfig
+   * Input/Output [Required]. The billing account properties to create the
+   * tenant project.
+   *
+   * @param GoogleApiServiceconsumermanagementV1BillingConfig $billingConfig
    */
   public function setBillingConfig(GoogleApiServiceconsumermanagementV1BillingConfig $billingConfig)
   {
@@ -48,7 +59,12 @@ class CloudAiPlatformTenantresourceTenantProjectConfig extends \Google\Collectio
     return $this->billingConfig;
   }
   /**
-   * @param string
+   * Input/Output [Required]. The folder that holds tenant projects and folder-
+   * level permissions will be automatically granted to all tenant projects
+   * under the folder. Note: the valid folder format is
+   * `folders/{folder_number}`.
+   *
+   * @param string $folder
    */
   public function setFolder($folder)
   {
@@ -62,7 +78,11 @@ class CloudAiPlatformTenantresourceTenantProjectConfig extends \Google\Collectio
     return $this->folder;
   }
   /**
-   * @param GoogleApiServiceconsumermanagementV1PolicyBinding[]
+   * Input/Output [Required]. The policy bindings that are applied to the tenant
+   * project during creation. At least one binding must have the role
+   * `roles/owner` with either `user` or `group` type.
+   *
+   * @param GoogleApiServiceconsumermanagementV1PolicyBinding[] $policyBindings
    */
   public function setPolicyBindings($policyBindings)
   {
@@ -76,7 +96,10 @@ class CloudAiPlatformTenantresourceTenantProjectConfig extends \Google\Collectio
     return $this->policyBindings;
   }
   /**
-   * @param string[]
+   * Input/Output [Required]. The API services that are enabled on the tenant
+   * project during creation.
+   *
+   * @param string[] $services
    */
   public function setServices($services)
   {

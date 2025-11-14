@@ -20,16 +20,22 @@ namespace Google\Service\TravelImpactModel;
 class Market extends \Google\Model
 {
   /**
+   * Required. IATA airport code for flight destination, e.g. "JFK".
+   *
    * @var string
    */
   public $destination;
   /**
+   * Required. IATA airport code for flight origin, e.g. "LHR".
+   *
    * @var string
    */
   public $origin;
 
   /**
-   * @param string
+   * Required. IATA airport code for flight destination, e.g. "JFK".
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -43,7 +49,9 @@ class Market extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * Required. IATA airport code for flight origin, e.g. "LHR".
+   *
+   * @param string $origin
    */
   public function setOrigin($origin)
   {

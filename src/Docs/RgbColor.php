@@ -20,20 +20,28 @@ namespace Google\Service\Docs;
 class RgbColor extends \Google\Model
 {
   /**
+   * The blue component of the color, from 0.0 to 1.0.
+   *
    * @var float
    */
   public $blue;
   /**
+   * The green component of the color, from 0.0 to 1.0.
+   *
    * @var float
    */
   public $green;
   /**
+   * The red component of the color, from 0.0 to 1.0.
+   *
    * @var float
    */
   public $red;
 
   /**
-   * @param float
+   * The blue component of the color, from 0.0 to 1.0.
+   *
+   * @param float $blue
    */
   public function setBlue($blue)
   {
@@ -47,7 +55,9 @@ class RgbColor extends \Google\Model
     return $this->blue;
   }
   /**
-   * @param float
+   * The green component of the color, from 0.0 to 1.0.
+   *
+   * @param float $green
    */
   public function setGreen($green)
   {
@@ -61,7 +71,9 @@ class RgbColor extends \Google\Model
     return $this->green;
   }
   /**
-   * @param float
+   * The red component of the color, from 0.0 to 1.0.
+   *
+   * @param float $red
    */
   public function setRed($red)
   {

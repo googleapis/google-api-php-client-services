@@ -21,22 +21,38 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
 {
   protected $collection_key = 'searchLinkPromotions';
   /**
+   * A unique search token. This should be included in the UserEvent logs
+   * resulting from this search, which enables accurate attribution of search
+   * model performance. This also helps to identify a request during the
+   * customer support scenarios.
+   *
    * @var string
    */
   public $attributionToken;
   /**
+   * Contains the spell corrected query, if found. If the spell correction type
+   * is AUTOMATIC, then the search results are based on corrected_query.
+   * Otherwise the original query is used for search.
+   *
    * @var string
    */
   public $correctedQuery;
   protected $facetsType = GoogleCloudDiscoveryengineV1SearchResponseFacet::class;
   protected $facetsDataType = 'array';
   /**
+   * A token that can be sent as SearchRequest.page_token to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $queryExpansionInfoType = GoogleCloudDiscoveryengineV1SearchResponseQueryExpansionInfo::class;
   protected $queryExpansionInfoDataType = '';
   /**
+   * The URI of a customer-defined redirect page. If redirect action is
+   * triggered, no search is performed, and only redirect_uri and
+   * attribution_token are set in the response.
+   *
    * @var string
    */
   public $redirectUri;
@@ -49,12 +65,21 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
   protected $summaryType = GoogleCloudDiscoveryengineV1SearchResponseSummary::class;
   protected $summaryDataType = '';
   /**
+   * The estimated total count of matched items irrespective of pagination. The
+   * count of results returned by pagination may be less than the total_size
+   * that matches.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param string
+   * A unique search token. This should be included in the UserEvent logs
+   * resulting from this search, which enables accurate attribution of search
+   * model performance. This also helps to identify a request during the
+   * customer support scenarios.
+   *
+   * @param string $attributionToken
    */
   public function setAttributionToken($attributionToken)
   {
@@ -68,7 +93,11 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->attributionToken;
   }
   /**
-   * @param string
+   * Contains the spell corrected query, if found. If the spell correction type
+   * is AUTOMATIC, then the search results are based on corrected_query.
+   * Otherwise the original query is used for search.
+   *
+   * @param string $correctedQuery
    */
   public function setCorrectedQuery($correctedQuery)
   {
@@ -82,7 +111,9 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->correctedQuery;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseFacet[]
+   * Results of facets requested by user.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseFacet[] $facets
    */
   public function setFacets($facets)
   {
@@ -96,7 +127,10 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->facets;
   }
   /**
-   * @param string
+   * A token that can be sent as SearchRequest.page_token to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -110,7 +144,9 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseQueryExpansionInfo
+   * Query expansion information for the returned results.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseQueryExpansionInfo $queryExpansionInfo
    */
   public function setQueryExpansionInfo(GoogleCloudDiscoveryengineV1SearchResponseQueryExpansionInfo $queryExpansionInfo)
   {
@@ -124,7 +160,11 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->queryExpansionInfo;
   }
   /**
-   * @param string
+   * The URI of a customer-defined redirect page. If redirect action is
+   * triggered, no search is performed, and only redirect_uri and
+   * attribution_token are set in the response.
+   *
+   * @param string $redirectUri
    */
   public function setRedirectUri($redirectUri)
   {
@@ -138,7 +178,9 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->redirectUri;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSearchResult[]
+   * A list of matched documents. The order represents the ranking.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSearchResult[] $results
    */
   public function setResults($results)
   {
@@ -152,7 +194,9 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchLinkPromotion[]
+   * Promotions for site search.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchLinkPromotion[] $searchLinkPromotions
    */
   public function setSearchLinkPromotions($searchLinkPromotions)
   {
@@ -166,7 +210,10 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->searchLinkPromotions;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSessionInfo
+   * Session information. Only set if SearchRequest.session is provided. See its
+   * description for more details.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSessionInfo $sessionInfo
    */
   public function setSessionInfo(GoogleCloudDiscoveryengineV1SearchResponseSessionInfo $sessionInfo)
   {
@@ -180,7 +227,10 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->sessionInfo;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSummary
+   * A summary as part of the search results. This field is only returned if
+   * SearchRequest.ContentSearchSpec.summary_spec is set.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSummary $summary
    */
   public function setSummary(GoogleCloudDiscoveryengineV1SearchResponseSummary $summary)
   {
@@ -194,7 +244,11 @@ class GoogleCloudDiscoveryengineV1SearchResponse extends \Google\Collection
     return $this->summary;
   }
   /**
-   * @param int
+   * The estimated total count of matched items irrespective of pagination. The
+   * count of results returned by pagination may be less than the total_size
+   * that matches.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

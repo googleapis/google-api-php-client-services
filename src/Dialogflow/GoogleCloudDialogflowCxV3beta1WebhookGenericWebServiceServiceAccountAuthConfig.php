@@ -20,12 +20,28 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig extends \Google\Model
 {
   /**
+   * Required. The email address of the service account used to authenticate the
+   * webhook call. Dialogflow uses this service account to exchange an access
+   * token and the access token is then sent in the `Authorization` header of
+   * the webhook request. The service account must have the
+   * `roles/iam.serviceAccountTokenCreator` role granted to the [Dialogflow
+   * service agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-
+   * service-agent).
+   *
    * @var string
    */
   public $serviceAccount;
 
   /**
-   * @param string
+   * Required. The email address of the service account used to authenticate the
+   * webhook call. Dialogflow uses this service account to exchange an access
+   * token and the access token is then sent in the `Authorization` header of
+   * the webhook request. The service account must have the
+   * `roles/iam.serviceAccountTokenCreator` role granted to the [Dialogflow
+   * service agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-
+   * service-agent).
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {

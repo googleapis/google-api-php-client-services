@@ -19,10 +19,40 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
 {
+  /**
+   * No importance specified. Default medium importance.
+   */
+  public const RETRIEVAL_IMPORTANCE_RETRIEVAL_IMPORTANCE_UNSPECIFIED = 'RETRIEVAL_IMPORTANCE_UNSPECIFIED';
+  /**
+   * Highest importance.
+   */
+  public const RETRIEVAL_IMPORTANCE_HIGHEST = 'HIGHEST';
+  /**
+   * Higher importance.
+   */
+  public const RETRIEVAL_IMPORTANCE_HIGHER = 'HIGHER';
+  /**
+   * High importance.
+   */
+  public const RETRIEVAL_IMPORTANCE_HIGH = 'HIGH';
+  /**
+   * Medium importance.
+   */
+  public const RETRIEVAL_IMPORTANCE_MEDIUM = 'MEDIUM';
+  /**
+   * Low importance (negative).
+   */
+  public const RETRIEVAL_IMPORTANCE_LOW = 'LOW';
+  /**
+   * Lowest importance (negative).
+   */
+  public const RETRIEVAL_IMPORTANCE_LOWEST = 'LOWEST';
   protected $collection_key = 'schemaSources';
   protected $dateTimeTypeOptionsType = GoogleCloudContentwarehouseV1DateTimeTypeOptions::class;
   protected $dateTimeTypeOptionsDataType = '';
   /**
+   * The display-name for the property, used for front-end.
+   *
    * @var string
    */
   public $displayName;
@@ -33,34 +63,56 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
   protected $integerTypeOptionsType = GoogleCloudContentwarehouseV1IntegerTypeOptions::class;
   protected $integerTypeOptionsDataType = '';
   /**
+   * Whether the property can be filtered. If this is a sub-property, all the
+   * parent properties must be marked filterable.
+   *
    * @var bool
    */
   public $isFilterable;
   /**
+   * Whether the property is user supplied metadata. This out-of-the box
+   * placeholder setting can be used to tag derived properties. Its value and
+   * interpretation logic should be implemented by API user.
+   *
    * @var bool
    */
   public $isMetadata;
   /**
+   * Whether the property can have multiple values.
+   *
    * @var bool
    */
   public $isRepeatable;
   /**
+   * Whether the property is mandatory. Default is 'false', i.e. populating
+   * property value can be skipped. If 'true' then user must populate the value
+   * for this property.
+   *
    * @var bool
    */
   public $isRequired;
   /**
+   * Indicates that the property should be included in a global search.
+   *
    * @var bool
    */
   public $isSearchable;
   protected $mapTypeOptionsType = GoogleCloudContentwarehouseV1MapTypeOptions::class;
   protected $mapTypeOptionsDataType = '';
   /**
+   * Required. The name of the metadata property. Must be unique within a
+   * document schema and is case insensitive. Names must be non-blank, start
+   * with a letter, and can contain alphanumeric characters and: /, :, -, _, and
+   * .
+   *
    * @var string
    */
   public $name;
   protected $propertyTypeOptionsType = GoogleCloudContentwarehouseV1PropertyTypeOptions::class;
   protected $propertyTypeOptionsDataType = '';
   /**
+   * The retrieval importance of the property during search.
+   *
    * @var string
    */
   public $retrievalImportance;
@@ -72,7 +124,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
   protected $timestampTypeOptionsDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1DateTimeTypeOptions
+   * Date time property. It is not supported by CMEK compliant deployment.
+   *
+   * @param GoogleCloudContentwarehouseV1DateTimeTypeOptions $dateTimeTypeOptions
    */
   public function setDateTimeTypeOptions(GoogleCloudContentwarehouseV1DateTimeTypeOptions $dateTimeTypeOptions)
   {
@@ -86,7 +140,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->dateTimeTypeOptions;
   }
   /**
-   * @param string
+   * The display-name for the property, used for front-end.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -100,7 +156,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1EnumTypeOptions
+   * Enum/categorical property.
+   *
+   * @param GoogleCloudContentwarehouseV1EnumTypeOptions $enumTypeOptions
    */
   public function setEnumTypeOptions(GoogleCloudContentwarehouseV1EnumTypeOptions $enumTypeOptions)
   {
@@ -114,7 +172,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->enumTypeOptions;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1FloatTypeOptions
+   * Float property.
+   *
+   * @param GoogleCloudContentwarehouseV1FloatTypeOptions $floatTypeOptions
    */
   public function setFloatTypeOptions(GoogleCloudContentwarehouseV1FloatTypeOptions $floatTypeOptions)
   {
@@ -128,7 +188,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->floatTypeOptions;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1IntegerTypeOptions
+   * Integer property.
+   *
+   * @param GoogleCloudContentwarehouseV1IntegerTypeOptions $integerTypeOptions
    */
   public function setIntegerTypeOptions(GoogleCloudContentwarehouseV1IntegerTypeOptions $integerTypeOptions)
   {
@@ -142,7 +204,10 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->integerTypeOptions;
   }
   /**
-   * @param bool
+   * Whether the property can be filtered. If this is a sub-property, all the
+   * parent properties must be marked filterable.
+   *
+   * @param bool $isFilterable
    */
   public function setIsFilterable($isFilterable)
   {
@@ -156,7 +221,11 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->isFilterable;
   }
   /**
-   * @param bool
+   * Whether the property is user supplied metadata. This out-of-the box
+   * placeholder setting can be used to tag derived properties. Its value and
+   * interpretation logic should be implemented by API user.
+   *
+   * @param bool $isMetadata
    */
   public function setIsMetadata($isMetadata)
   {
@@ -170,7 +239,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->isMetadata;
   }
   /**
-   * @param bool
+   * Whether the property can have multiple values.
+   *
+   * @param bool $isRepeatable
    */
   public function setIsRepeatable($isRepeatable)
   {
@@ -184,7 +255,11 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->isRepeatable;
   }
   /**
-   * @param bool
+   * Whether the property is mandatory. Default is 'false', i.e. populating
+   * property value can be skipped. If 'true' then user must populate the value
+   * for this property.
+   *
+   * @param bool $isRequired
    */
   public function setIsRequired($isRequired)
   {
@@ -198,7 +273,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->isRequired;
   }
   /**
-   * @param bool
+   * Indicates that the property should be included in a global search.
+   *
+   * @param bool $isSearchable
    */
   public function setIsSearchable($isSearchable)
   {
@@ -212,7 +289,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->isSearchable;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1MapTypeOptions
+   * Map property.
+   *
+   * @param GoogleCloudContentwarehouseV1MapTypeOptions $mapTypeOptions
    */
   public function setMapTypeOptions(GoogleCloudContentwarehouseV1MapTypeOptions $mapTypeOptions)
   {
@@ -226,7 +305,12 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->mapTypeOptions;
   }
   /**
-   * @param string
+   * Required. The name of the metadata property. Must be unique within a
+   * document schema and is case insensitive. Names must be non-blank, start
+   * with a letter, and can contain alphanumeric characters and: /, :, -, _, and
+   * .
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -240,7 +324,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1PropertyTypeOptions
+   * Nested structured data property.
+   *
+   * @param GoogleCloudContentwarehouseV1PropertyTypeOptions $propertyTypeOptions
    */
   public function setPropertyTypeOptions(GoogleCloudContentwarehouseV1PropertyTypeOptions $propertyTypeOptions)
   {
@@ -254,21 +340,28 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->propertyTypeOptions;
   }
   /**
-   * @param string
+   * The retrieval importance of the property during search.
+   *
+   * Accepted values: RETRIEVAL_IMPORTANCE_UNSPECIFIED, HIGHEST, HIGHER, HIGH,
+   * MEDIUM, LOW, LOWEST
+   *
+   * @param self::RETRIEVAL_IMPORTANCE_* $retrievalImportance
    */
   public function setRetrievalImportance($retrievalImportance)
   {
     $this->retrievalImportance = $retrievalImportance;
   }
   /**
-   * @return string
+   * @return self::RETRIEVAL_IMPORTANCE_*
    */
   public function getRetrievalImportance()
   {
     return $this->retrievalImportance;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource[]
+   * The mapping information between this property to another schema source.
+   *
+   * @param GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource[] $schemaSources
    */
   public function setSchemaSources($schemaSources)
   {
@@ -282,7 +375,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->schemaSources;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1TextTypeOptions
+   * Text/string property.
+   *
+   * @param GoogleCloudContentwarehouseV1TextTypeOptions $textTypeOptions
    */
   public function setTextTypeOptions(GoogleCloudContentwarehouseV1TextTypeOptions $textTypeOptions)
   {
@@ -296,7 +391,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
     return $this->textTypeOptions;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1TimestampTypeOptions
+   * Timestamp property. It is not supported by CMEK compliant deployment.
+   *
+   * @param GoogleCloudContentwarehouseV1TimestampTypeOptions $timestampTypeOptions
    */
   public function setTimestampTypeOptions(GoogleCloudContentwarehouseV1TimestampTypeOptions $timestampTypeOptions)
   {

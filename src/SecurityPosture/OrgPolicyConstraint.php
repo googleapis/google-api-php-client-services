@@ -21,6 +21,8 @@ class OrgPolicyConstraint extends \Google\Collection
 {
   protected $collection_key = 'policyRules';
   /**
+   * Required. A unique identifier for the constraint.
+   *
    * @var string
    */
   public $cannedConstraintId;
@@ -28,7 +30,9 @@ class OrgPolicyConstraint extends \Google\Collection
   protected $policyRulesDataType = 'array';
 
   /**
-   * @param string
+   * Required. A unique identifier for the constraint.
+   *
+   * @param string $cannedConstraintId
    */
   public function setCannedConstraintId($cannedConstraintId)
   {
@@ -42,7 +46,9 @@ class OrgPolicyConstraint extends \Google\Collection
     return $this->cannedConstraintId;
   }
   /**
-   * @param GoogleCloudSecuritypostureV1PolicyRule[]
+   * Required. The rules enforced by the constraint.
+   *
+   * @param GoogleCloudSecuritypostureV1PolicyRule[] $policyRules
    */
   public function setPolicyRules($policyRules)
   {

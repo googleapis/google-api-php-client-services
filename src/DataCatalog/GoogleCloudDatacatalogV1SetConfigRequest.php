@@ -20,37 +20,88 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1SetConfigRequest extends \Google\Model
 {
   /**
+   * Default value. The default UI is Dataplex Universal Catalog.
+   */
+  public const CATALOG_UI_EXPERIENCE_CATALOG_UI_EXPERIENCE_UNSPECIFIED = 'CATALOG_UI_EXPERIENCE_UNSPECIFIED';
+  /**
+   * The UI is Dataplex Universal Catalog.
+   */
+  public const CATALOG_UI_EXPERIENCE_CATALOG_UI_EXPERIENCE_ENABLED = 'CATALOG_UI_EXPERIENCE_ENABLED';
+  /**
+   * The UI is Data Catalog.
+   */
+  public const CATALOG_UI_EXPERIENCE_CATALOG_UI_EXPERIENCE_DISABLED = 'CATALOG_UI_EXPERIENCE_DISABLED';
+  /**
+   * Default value. Migration of Tag Templates from Data Catalog to Dataplex
+   * Universal Catalog is not performed. For projects that are under an
+   * organization, the project inherits the organization's configuration when
+   * you set the project-level configuration to unspecified
+   * (`TAG_TEMPLATE_MIGRATION_UNSPECIFIED`). This means that when migration is
+   * enabled at the organization level, and the project-level configuration is
+   * unspecified, the project is migrated. To explicitly opt-in or opt-out
+   * individual projects, set the project-level configuration to enabled
+   * (`TAG_TEMPLATE_MIGRATION_ENABLED`) or disabled
+   * (`TAG_TEMPLATE_MIGRATION_DISABLED`).
+   */
+  public const TAG_TEMPLATE_MIGRATION_TAG_TEMPLATE_MIGRATION_UNSPECIFIED = 'TAG_TEMPLATE_MIGRATION_UNSPECIFIED';
+  /**
+   * Migration of Tag Templates from Data Catalog to Dataplex Universal Catalog
+   * is enabled.
+   */
+  public const TAG_TEMPLATE_MIGRATION_TAG_TEMPLATE_MIGRATION_ENABLED = 'TAG_TEMPLATE_MIGRATION_ENABLED';
+  /**
+   * Migration of Tag Templates from Data Catalog to Dataplex Universal Catalog
+   * is disabled.
+   */
+  public const TAG_TEMPLATE_MIGRATION_TAG_TEMPLATE_MIGRATION_DISABLED = 'TAG_TEMPLATE_MIGRATION_DISABLED';
+  /**
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
+   *
    * @var string
    */
   public $catalogUiExperience;
   /**
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal
+   * Catalog.
+   *
    * @var string
    */
   public $tagTemplateMigration;
 
   /**
-   * @param string
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
+   *
+   * Accepted values: CATALOG_UI_EXPERIENCE_UNSPECIFIED,
+   * CATALOG_UI_EXPERIENCE_ENABLED, CATALOG_UI_EXPERIENCE_DISABLED
+   *
+   * @param self::CATALOG_UI_EXPERIENCE_* $catalogUiExperience
    */
   public function setCatalogUiExperience($catalogUiExperience)
   {
     $this->catalogUiExperience = $catalogUiExperience;
   }
   /**
-   * @return string
+   * @return self::CATALOG_UI_EXPERIENCE_*
    */
   public function getCatalogUiExperience()
   {
     return $this->catalogUiExperience;
   }
   /**
-   * @param string
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal
+   * Catalog.
+   *
+   * Accepted values: TAG_TEMPLATE_MIGRATION_UNSPECIFIED,
+   * TAG_TEMPLATE_MIGRATION_ENABLED, TAG_TEMPLATE_MIGRATION_DISABLED
+   *
+   * @param self::TAG_TEMPLATE_MIGRATION_* $tagTemplateMigration
    */
   public function setTagTemplateMigration($tagTemplateMigration)
   {
     $this->tagTemplateMigration = $tagTemplateMigration;
   }
   /**
-   * @return string
+   * @return self::TAG_TEMPLATE_MIGRATION_*
    */
   public function getTagTemplateMigration()
   {

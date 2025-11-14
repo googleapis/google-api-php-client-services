@@ -24,7 +24,10 @@ class ComputeTypicalFlightEmissionsRequest extends \Google\Collection
   protected $marketsDataType = 'array';
 
   /**
-   * @param Market[]
+   * Required. Request the typical flight emissions estimates for this market
+   * pair. A maximum of 1000 markets can be requested.
+   *
+   * @param Market[] $markets
    */
   public function setMarkets($markets)
   {

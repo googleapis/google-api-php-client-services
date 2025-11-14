@@ -20,16 +20,22 @@ namespace Google\Service\Docs;
 class SheetsChartReferenceSuggestionState extends \Google\Model
 {
   /**
+   * Indicates if there was a suggested change to chart_id.
+   *
    * @var bool
    */
   public $chartIdSuggested;
   /**
+   * Indicates if there was a suggested change to spreadsheet_id.
+   *
    * @var bool
    */
   public $spreadsheetIdSuggested;
 
   /**
-   * @param bool
+   * Indicates if there was a suggested change to chart_id.
+   *
+   * @param bool $chartIdSuggested
    */
   public function setChartIdSuggested($chartIdSuggested)
   {
@@ -43,7 +49,9 @@ class SheetsChartReferenceSuggestionState extends \Google\Model
     return $this->chartIdSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to spreadsheet_id.
+   *
+   * @param bool $spreadsheetIdSuggested
    */
   public function setSpreadsheetIdSuggested($spreadsheetIdSuggested)
   {

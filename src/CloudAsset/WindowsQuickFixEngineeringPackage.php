@@ -20,24 +20,34 @@ namespace Google\Service\CloudAsset;
 class WindowsQuickFixEngineeringPackage extends \Google\Model
 {
   /**
+   * A short textual description of the QFE update.
+   *
    * @var string
    */
   public $caption;
   /**
+   * A textual description of the QFE update.
+   *
    * @var string
    */
   public $description;
   /**
+   * Unique identifier associated with a particular QFE update.
+   *
    * @var string
    */
   public $hotFixId;
   /**
+   * Date that the QFE update was installed. Mapped from installed_on field.
+   *
    * @var string
    */
   public $installTime;
 
   /**
-   * @param string
+   * A short textual description of the QFE update.
+   *
+   * @param string $caption
    */
   public function setCaption($caption)
   {
@@ -51,7 +61,9 @@ class WindowsQuickFixEngineeringPackage extends \Google\Model
     return $this->caption;
   }
   /**
-   * @param string
+   * A textual description of the QFE update.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -65,7 +77,9 @@ class WindowsQuickFixEngineeringPackage extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Unique identifier associated with a particular QFE update.
+   *
+   * @param string $hotFixId
    */
   public function setHotFixId($hotFixId)
   {
@@ -79,7 +93,9 @@ class WindowsQuickFixEngineeringPackage extends \Google\Model
     return $this->hotFixId;
   }
   /**
-   * @param string
+   * Date that the QFE update was installed. Mapped from installed_on field.
+   *
+   * @param string $installTime
    */
   public function setInstallTime($installTime)
   {

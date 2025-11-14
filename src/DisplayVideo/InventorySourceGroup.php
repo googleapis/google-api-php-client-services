@@ -20,20 +20,31 @@ namespace Google\Service\DisplayVideo;
 class InventorySourceGroup extends \Google\Model
 {
   /**
+   * Required. The display name of the inventory source group. Must be UTF-8
+   * encoded with a maximum size of 240 bytes.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The unique ID of the inventory source group. Assigned by the
+   * system.
+   *
    * @var string
    */
   public $inventorySourceGroupId;
   /**
+   * Output only. The resource name of the inventory source group.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The display name of the inventory source group. Must be UTF-8
+   * encoded with a maximum size of 240 bytes.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +58,10 @@ class InventorySourceGroup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the inventory source group. Assigned by the
+   * system.
+   *
+   * @param string $inventorySourceGroupId
    */
   public function setInventorySourceGroupId($inventorySourceGroupId)
   {
@@ -61,7 +75,9 @@ class InventorySourceGroup extends \Google\Model
     return $this->inventorySourceGroupId;
   }
   /**
-   * @param string
+   * Output only. The resource name of the inventory source group.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

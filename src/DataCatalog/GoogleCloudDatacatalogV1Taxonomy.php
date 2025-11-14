@@ -21,22 +21,40 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
 {
   protected $collection_key = 'activatedPolicyTypes';
   /**
+   * Optional. A list of policy types that are activated for this taxonomy. If
+   * not set, defaults to an empty list.
+   *
    * @var string[]
    */
   public $activatedPolicyTypes;
   /**
+   * Optional. Description of this taxonomy. If not set, defaults to empty. The
+   * description must contain only Unicode characters, tabs, newlines, carriage
+   * returns, and page breaks, and be at most 2000 bytes long when encoded in
+   * UTF-8.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. User-defined name of this taxonomy. The name can't start or end
+   * with spaces, must contain only Unicode letters, numbers, underscores,
+   * dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
+   * The taxonomy display name must be unique within an organization.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. Resource name of this taxonomy in URL format. Note: Policy tag
+   * manager generates unique taxonomy IDs.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Number of policy tags in this taxonomy.
+   *
    * @var int
    */
   public $policyTagCount;
@@ -46,7 +64,10 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
   protected $taxonomyTimestampsDataType = '';
 
   /**
-   * @param string[]
+   * Optional. A list of policy types that are activated for this taxonomy. If
+   * not set, defaults to an empty list.
+   *
+   * @param string[] $activatedPolicyTypes
    */
   public function setActivatedPolicyTypes($activatedPolicyTypes)
   {
@@ -60,7 +81,12 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
     return $this->activatedPolicyTypes;
   }
   /**
-   * @param string
+   * Optional. Description of this taxonomy. If not set, defaults to empty. The
+   * description must contain only Unicode characters, tabs, newlines, carriage
+   * returns, and page breaks, and be at most 2000 bytes long when encoded in
+   * UTF-8.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -74,7 +100,12 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. User-defined name of this taxonomy. The name can't start or end
+   * with spaces, must contain only Unicode letters, numbers, underscores,
+   * dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
+   * The taxonomy display name must be unique within an organization.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -88,7 +119,10 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. Resource name of this taxonomy in URL format. Note: Policy tag
+   * manager generates unique taxonomy IDs.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -102,7 +136,9 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * Output only. Number of policy tags in this taxonomy.
+   *
+   * @param int $policyTagCount
    */
   public function setPolicyTagCount($policyTagCount)
   {
@@ -116,7 +152,11 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
     return $this->policyTagCount;
   }
   /**
-   * @param GoogleCloudDatacatalogV1TaxonomyService
+   * Output only. Identity of the service which owns the Taxonomy. This field is
+   * only populated when the taxonomy is created by a Google Cloud service.
+   * Currently only 'DATAPLEX' is supported.
+   *
+   * @param GoogleCloudDatacatalogV1TaxonomyService $service
    */
   public function setService(GoogleCloudDatacatalogV1TaxonomyService $service)
   {
@@ -130,7 +170,9 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
     return $this->service;
   }
   /**
-   * @param GoogleCloudDatacatalogV1SystemTimestamps
+   * Output only. Creation and modification timestamps of this taxonomy.
+   *
+   * @param GoogleCloudDatacatalogV1SystemTimestamps $taxonomyTimestamps
    */
   public function setTaxonomyTimestamps(GoogleCloudDatacatalogV1SystemTimestamps $taxonomyTimestamps)
   {

@@ -21,6 +21,8 @@ class GoogleCloudDialogflowV2MessageAnnotation extends \Google\Collection
 {
   protected $collection_key = 'parts';
   /**
+   * Indicates whether the text message contains entities.
+   *
    * @var bool
    */
   public $containEntities;
@@ -28,7 +30,9 @@ class GoogleCloudDialogflowV2MessageAnnotation extends \Google\Collection
   protected $partsDataType = 'array';
 
   /**
-   * @param bool
+   * Indicates whether the text message contains entities.
+   *
+   * @param bool $containEntities
    */
   public function setContainEntities($containEntities)
   {
@@ -42,7 +46,11 @@ class GoogleCloudDialogflowV2MessageAnnotation extends \Google\Collection
     return $this->containEntities;
   }
   /**
-   * @param GoogleCloudDialogflowV2AnnotatedMessagePart[]
+   * The collection of annotated message parts ordered by their position in the
+   * message. You can recover the annotated message by concatenating
+   * [AnnotatedMessagePart.text].
+   *
+   * @param GoogleCloudDialogflowV2AnnotatedMessagePart[] $parts
    */
   public function setParts($parts)
   {

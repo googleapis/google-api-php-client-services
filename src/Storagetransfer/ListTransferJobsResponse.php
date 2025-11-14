@@ -21,6 +21,8 @@ class ListTransferJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'transferJobs';
   /**
+   * The list next page token.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListTransferJobsResponse extends \Google\Collection
   protected $transferJobsDataType = 'array';
 
   /**
-   * @param string
+   * The list next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListTransferJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TransferJob[]
+   * A list of transfer jobs.
+   *
+   * @param TransferJob[] $transferJobs
    */
   public function setTransferJobs($transferJobs)
   {

@@ -20,32 +20,46 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
 {
   /**
+   * The tracking id of the ad.
+   *
    * @var string
    */
   public $adTrackingId;
   /**
+   * The first line of the ad's description.
+   *
    * @var string
    */
   public $description1;
   /**
+   * The second line of the ad's description.
+   *
    * @var string
    */
   public $description2;
   /**
+   * The displayed mobile URL of the ad.
+   *
    * @var string
    */
   public $displayMobileUrl;
   /**
+   * The displayed URL of the ad.
+   *
    * @var string
    */
   public $displayUrl;
   /**
+   * The headline of the ad.
+   *
    * @var string
    */
   public $headline;
 
   /**
-   * @param string
+   * The tracking id of the ad.
+   *
+   * @param string $adTrackingId
    */
   public function setAdTrackingId($adTrackingId)
   {
@@ -59,7 +73,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
     return $this->adTrackingId;
   }
   /**
-   * @param string
+   * The first line of the ad's description.
+   *
+   * @param string $description1
    */
   public function setDescription1($description1)
   {
@@ -73,7 +89,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
     return $this->description1;
   }
   /**
-   * @param string
+   * The second line of the ad's description.
+   *
+   * @param string $description2
    */
   public function setDescription2($description2)
   {
@@ -87,7 +105,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
     return $this->description2;
   }
   /**
-   * @param string
+   * The displayed mobile URL of the ad.
+   *
+   * @param string $displayMobileUrl
    */
   public function setDisplayMobileUrl($displayMobileUrl)
   {
@@ -101,7 +121,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
     return $this->displayMobileUrl;
   }
   /**
-   * @param string
+   * The displayed URL of the ad.
+   *
+   * @param string $displayUrl
    */
   public function setDisplayUrl($displayUrl)
   {
@@ -115,7 +137,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
     return $this->displayUrl;
   }
   /**
-   * @param string
+   * The headline of the ad.
+   *
+   * @param string $headline
    */
   public function setHeadline($headline)
   {

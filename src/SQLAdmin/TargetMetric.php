@@ -20,16 +20,22 @@ namespace Google\Service\SQLAdmin;
 class TargetMetric extends \Google\Model
 {
   /**
+   * The metric name to be used for auto scaling.
+   *
    * @var string
    */
   public $metric;
   /**
+   * The target value for the metric.
+   *
    * @var float
    */
   public $targetValue;
 
   /**
-   * @param string
+   * The metric name to be used for auto scaling.
+   *
+   * @param string $metric
    */
   public function setMetric($metric)
   {
@@ -43,7 +49,9 @@ class TargetMetric extends \Google\Model
     return $this->metric;
   }
   /**
-   * @param float
+   * The target value for the metric.
+   *
+   * @param float $targetValue
    */
   public function setTargetValue($targetValue)
   {

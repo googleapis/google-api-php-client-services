@@ -21,6 +21,11 @@ class Target extends \Google\Collection
 {
   protected $collection_key = 'executionConfigs';
   /**
+   * Optional. User annotations. These attributes can only be set and used by
+   * the user, and not by Cloud Deploy. See
+   * https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
+   *
    * @var string[]
    */
   public $annotations;
@@ -29,20 +34,30 @@ class Target extends \Google\Collection
   protected $associatedEntitiesType = AssociatedEntities::class;
   protected $associatedEntitiesDataType = 'map';
   /**
+   * Output only. Time at which the `Target` was created.
+   *
    * @var string
    */
   public $createTime;
   protected $customTargetType = CustomTarget::class;
   protected $customTargetDataType = '';
   /**
+   * Optional. The deploy parameters to use for this target.
+   *
    * @var string[]
    */
   public $deployParameters;
   /**
+   * Optional. Description of the `Target`. Max length is 255 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
@@ -51,36 +66,62 @@ class Target extends \Google\Collection
   protected $gkeType = GkeCluster::class;
   protected $gkeDataType = '';
   /**
+   * Optional. Labels are attributes that can be set and used by both the user
+   * and by Cloud Deploy. Labels must meet the following constraints: * Keys and
+   * values can contain only lowercase letters, numeric characters, underscores,
+   * and dashes. * All characters must use UTF-8 encoding, and international
+   * characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64
+   * labels. Both keys and values are additionally constrained to be <= 128
+   * bytes.
+   *
    * @var string[]
    */
   public $labels;
   protected $multiTargetType = MultiTarget::class;
   protected $multiTargetDataType = '';
   /**
+   * Identifier. Name of the `Target`. Format is
+   * `projects/{project}/locations/{location}/targets/{target}`. The `target`
+   * component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Whether or not the `Target` requires approval.
+   *
    * @var bool
    */
   public $requireApproval;
   protected $runType = CloudRunLocation::class;
   protected $runDataType = '';
   /**
+   * Output only. Resource id of the `Target`.
+   *
    * @var string
    */
   public $targetId;
   /**
+   * Output only. Unique identifier of the `Target`.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Most recent time at which the `Target` was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. User annotations. These attributes can only be set and used by
+   * the user, and not by Cloud Deploy. See
+   * https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -94,7 +135,9 @@ class Target extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param AnthosCluster
+   * Optional. Information specifying an Anthos Cluster.
+   *
+   * @param AnthosCluster $anthosCluster
    */
   public function setAnthosCluster(AnthosCluster $anthosCluster)
   {
@@ -108,7 +151,16 @@ class Target extends \Google\Collection
     return $this->anthosCluster;
   }
   /**
-   * @param AssociatedEntities[]
+   * Optional. Map of entity IDs to their associated entities. Associated
+   * entities allows specifying places other than the deployment target for
+   * specific features. For example, the Gateway API canary can be configured to
+   * deploy the HTTPRoute to a different cluster(s) than the deployment cluster
+   * using associated entities. An entity ID must consist of lower-case letters,
+   * numbers, and hyphens, start with a letter and end with a letter or a
+   * number, and have a max length of 63 characters. In other words, it must
+   * match the following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+   *
+   * @param AssociatedEntities[] $associatedEntities
    */
   public function setAssociatedEntities($associatedEntities)
   {
@@ -122,7 +174,9 @@ class Target extends \Google\Collection
     return $this->associatedEntities;
   }
   /**
-   * @param string
+   * Output only. Time at which the `Target` was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -136,7 +190,9 @@ class Target extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param CustomTarget
+   * Optional. Information specifying a Custom Target.
+   *
+   * @param CustomTarget $customTarget
    */
   public function setCustomTarget(CustomTarget $customTarget)
   {
@@ -150,7 +206,9 @@ class Target extends \Google\Collection
     return $this->customTarget;
   }
   /**
-   * @param string[]
+   * Optional. The deploy parameters to use for this target.
+   *
+   * @param string[] $deployParameters
    */
   public function setDeployParameters($deployParameters)
   {
@@ -164,7 +222,9 @@ class Target extends \Google\Collection
     return $this->deployParameters;
   }
   /**
-   * @param string
+   * Optional. Description of the `Target`. Max length is 255 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -178,7 +238,11 @@ class Target extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -192,7 +256,14 @@ class Target extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param ExecutionConfig[]
+   * Optional. Configurations for all execution that relates to this `Target`.
+   * Each `ExecutionEnvironmentUsage` value may only be used in a single
+   * configuration; using the same value multiple times is an error. When one or
+   * more configurations are specified, they must include the `RENDER` and
+   * `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are
+   * specified, execution will use the default specified in `DefaultPool`.
+   *
+   * @param ExecutionConfig[] $executionConfigs
    */
   public function setExecutionConfigs($executionConfigs)
   {
@@ -206,7 +277,9 @@ class Target extends \Google\Collection
     return $this->executionConfigs;
   }
   /**
-   * @param GkeCluster
+   * Optional. Information specifying a GKE Cluster.
+   *
+   * @param GkeCluster $gke
    */
   public function setGke(GkeCluster $gke)
   {
@@ -220,7 +293,16 @@ class Target extends \Google\Collection
     return $this->gke;
   }
   /**
-   * @param string[]
+   * Optional. Labels are attributes that can be set and used by both the user
+   * and by Cloud Deploy. Labels must meet the following constraints: * Keys and
+   * values can contain only lowercase letters, numeric characters, underscores,
+   * and dashes. * All characters must use UTF-8 encoding, and international
+   * characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64
+   * labels. Both keys and values are additionally constrained to be <= 128
+   * bytes.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -234,7 +316,9 @@ class Target extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param MultiTarget
+   * Optional. Information specifying a multiTarget.
+   *
+   * @param MultiTarget $multiTarget
    */
   public function setMultiTarget(MultiTarget $multiTarget)
   {
@@ -248,7 +332,11 @@ class Target extends \Google\Collection
     return $this->multiTarget;
   }
   /**
-   * @param string
+   * Identifier. Name of the `Target`. Format is
+   * `projects/{project}/locations/{location}/targets/{target}`. The `target`
+   * component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -262,7 +350,9 @@ class Target extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Optional. Whether or not the `Target` requires approval.
+   *
+   * @param bool $requireApproval
    */
   public function setRequireApproval($requireApproval)
   {
@@ -276,7 +366,9 @@ class Target extends \Google\Collection
     return $this->requireApproval;
   }
   /**
-   * @param CloudRunLocation
+   * Optional. Information specifying a Cloud Run deployment target.
+   *
+   * @param CloudRunLocation $run
    */
   public function setRun(CloudRunLocation $run)
   {
@@ -290,7 +382,9 @@ class Target extends \Google\Collection
     return $this->run;
   }
   /**
-   * @param string
+   * Output only. Resource id of the `Target`.
+   *
+   * @param string $targetId
    */
   public function setTargetId($targetId)
   {
@@ -304,7 +398,9 @@ class Target extends \Google\Collection
     return $this->targetId;
   }
   /**
-   * @param string
+   * Output only. Unique identifier of the `Target`.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -318,7 +414,9 @@ class Target extends \Google\Collection
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Most recent time at which the `Target` was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

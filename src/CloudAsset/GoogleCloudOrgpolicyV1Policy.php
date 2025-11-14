@@ -22,10 +22,26 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
   protected $booleanPolicyType = GoogleCloudOrgpolicyV1BooleanPolicy::class;
   protected $booleanPolicyDataType = '';
   /**
+   * The name of the `Constraint` the `Policy` is configuring, for example,
+   * `constraints/serviceuser.services`. A [list of available
+   * constraints](/resource-manager/docs/organization-policy/org-policy-
+   * constraints) is available. Immutable after creation.
+   *
    * @var string
    */
   public $constraint;
   /**
+   * An opaque tag indicating the current version of the `Policy`, used for
+   * concurrency control. When the `Policy` is returned from either a
+   * `GetPolicy` or a `ListOrgPolicy` request, this `etag` indicates the version
+   * of the current `Policy` to use when executing a read-modify-write loop.
+   * When the `Policy` is returned from a `GetEffectivePolicy` request, the
+   * `etag` will be unset. When the `Policy` is used in a `SetOrgPolicy` method,
+   * use the `etag` value that was returned from a `GetOrgPolicy` request as
+   * part of a read-modify-write loop for concurrency control. Not setting the
+   * `etag`in a `SetOrgPolicy` request will result in an unconditional write of
+   * the `Policy`.
+   *
    * @var string
    */
   public $etag;
@@ -34,16 +50,25 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
   protected $restoreDefaultType = GoogleCloudOrgpolicyV1RestoreDefault::class;
   protected $restoreDefaultDataType = '';
   /**
+   * The time stamp the `Policy` was previously updated. This is set by the
+   * server, not specified by the caller, and represents the last time a call to
+   * `SetOrgPolicy` was made for that `Policy`. Any value set by the client will
+   * be ignored.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Version of the `Policy`. Default version is 0;
+   *
    * @var int
    */
   public $version;
 
   /**
-   * @param GoogleCloudOrgpolicyV1BooleanPolicy
+   * For boolean `Constraints`, whether to enforce the `Constraint` or not.
+   *
+   * @param GoogleCloudOrgpolicyV1BooleanPolicy $booleanPolicy
    */
   public function setBooleanPolicy(GoogleCloudOrgpolicyV1BooleanPolicy $booleanPolicy)
   {
@@ -57,7 +82,12 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
     return $this->booleanPolicy;
   }
   /**
-   * @param string
+   * The name of the `Constraint` the `Policy` is configuring, for example,
+   * `constraints/serviceuser.services`. A [list of available
+   * constraints](/resource-manager/docs/organization-policy/org-policy-
+   * constraints) is available. Immutable after creation.
+   *
+   * @param string $constraint
    */
   public function setConstraint($constraint)
   {
@@ -71,7 +101,18 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
     return $this->constraint;
   }
   /**
-   * @param string
+   * An opaque tag indicating the current version of the `Policy`, used for
+   * concurrency control. When the `Policy` is returned from either a
+   * `GetPolicy` or a `ListOrgPolicy` request, this `etag` indicates the version
+   * of the current `Policy` to use when executing a read-modify-write loop.
+   * When the `Policy` is returned from a `GetEffectivePolicy` request, the
+   * `etag` will be unset. When the `Policy` is used in a `SetOrgPolicy` method,
+   * use the `etag` value that was returned from a `GetOrgPolicy` request as
+   * part of a read-modify-write loop for concurrency control. Not setting the
+   * `etag`in a `SetOrgPolicy` request will result in an unconditional write of
+   * the `Policy`.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -85,7 +126,9 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param GoogleCloudOrgpolicyV1ListPolicy
+   * List of values either allowed or disallowed.
+   *
+   * @param GoogleCloudOrgpolicyV1ListPolicy $listPolicy
    */
   public function setListPolicy(GoogleCloudOrgpolicyV1ListPolicy $listPolicy)
   {
@@ -99,7 +142,10 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
     return $this->listPolicy;
   }
   /**
-   * @param GoogleCloudOrgpolicyV1RestoreDefault
+   * Restores the default behavior of the constraint; independent of
+   * `Constraint` type.
+   *
+   * @param GoogleCloudOrgpolicyV1RestoreDefault $restoreDefault
    */
   public function setRestoreDefault(GoogleCloudOrgpolicyV1RestoreDefault $restoreDefault)
   {
@@ -113,7 +159,12 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
     return $this->restoreDefault;
   }
   /**
-   * @param string
+   * The time stamp the `Policy` was previously updated. This is set by the
+   * server, not specified by the caller, and represents the last time a call to
+   * `SetOrgPolicy` was made for that `Policy`. Any value set by the client will
+   * be ignored.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -127,7 +178,9 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param int
+   * Version of the `Policy`. Default version is 0;
+   *
+   * @param int $version
    */
   public function setVersion($version)
   {

@@ -23,7 +23,9 @@ class SqlInstancesRescheduleMaintenanceRequestBody extends \Google\Model
   protected $rescheduleDataType = '';
 
   /**
-   * @param Reschedule
+   * Required. The type of the reschedule the user wants.
+   *
+   * @param Reschedule $reschedule
    */
   public function setReschedule(Reschedule $reschedule)
   {

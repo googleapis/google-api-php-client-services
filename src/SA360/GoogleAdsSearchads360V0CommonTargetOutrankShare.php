@@ -20,12 +20,18 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonTargetOutrankShare extends \Google\Model
 {
   /**
+   * Maximum bid limit that can be set by the bid strategy. The limit applies to
+   * all keywords managed by the strategy.
+   *
    * @var string
    */
   public $cpcBidCeilingMicros;
 
   /**
-   * @param string
+   * Maximum bid limit that can be set by the bid strategy. The limit applies to
+   * all keywords managed by the strategy.
+   *
+   * @param string $cpcBidCeilingMicros
    */
   public function setCpcBidCeilingMicros($cpcBidCeilingMicros)
   {

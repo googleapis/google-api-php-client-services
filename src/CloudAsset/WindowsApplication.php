@@ -20,26 +20,36 @@ namespace Google\Service\CloudAsset;
 class WindowsApplication extends \Google\Model
 {
   /**
+   * The name of the application or product.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The version of the product or application in string format.
+   *
    * @var string
    */
   public $displayVersion;
   /**
+   * The internet address for technical support.
+   *
    * @var string
    */
   public $helpLink;
   protected $installDateType = Date::class;
   protected $installDateDataType = '';
   /**
+   * The name of the manufacturer for the product or application.
+   *
    * @var string
    */
   public $publisher;
 
   /**
-   * @param string
+   * The name of the application or product.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -53,7 +63,9 @@ class WindowsApplication extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The version of the product or application in string format.
+   *
+   * @param string $displayVersion
    */
   public function setDisplayVersion($displayVersion)
   {
@@ -67,7 +79,9 @@ class WindowsApplication extends \Google\Model
     return $this->displayVersion;
   }
   /**
-   * @param string
+   * The internet address for technical support.
+   *
+   * @param string $helpLink
    */
   public function setHelpLink($helpLink)
   {
@@ -81,7 +95,11 @@ class WindowsApplication extends \Google\Model
     return $this->helpLink;
   }
   /**
-   * @param Date
+   * The last time this product received service. The value of this property is
+   * replaced each time a patch is applied or removed from the product or the
+   * command-line option is used to repair the product.
+   *
+   * @param Date $installDate
    */
   public function setInstallDate(Date $installDate)
   {
@@ -95,7 +113,9 @@ class WindowsApplication extends \Google\Model
     return $this->installDate;
   }
   /**
-   * @param string
+   * The name of the manufacturer for the product or application.
+   *
+   * @param string $publisher
    */
   public function setPublisher($publisher)
   {

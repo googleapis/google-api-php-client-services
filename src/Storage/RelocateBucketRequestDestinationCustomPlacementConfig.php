@@ -21,12 +21,16 @@ class RelocateBucketRequestDestinationCustomPlacementConfig extends \Google\Coll
 {
   protected $collection_key = 'dataLocations';
   /**
+   * The list of regional locations in which data is placed.
+   *
    * @var string[]
    */
   public $dataLocations;
 
   /**
-   * @param string[]
+   * The list of regional locations in which data is placed.
+   *
+   * @param string[] $dataLocations
    */
   public function setDataLocations($dataLocations)
   {

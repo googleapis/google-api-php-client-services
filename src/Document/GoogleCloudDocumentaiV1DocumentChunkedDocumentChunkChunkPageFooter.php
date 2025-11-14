@@ -22,12 +22,16 @@ class GoogleCloudDocumentaiV1DocumentChunkedDocumentChunkChunkPageFooter extends
   protected $pageSpanType = GoogleCloudDocumentaiV1DocumentChunkedDocumentChunkChunkPageSpan::class;
   protected $pageSpanDataType = '';
   /**
+   * Footer in text format.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentChunkedDocumentChunkChunkPageSpan
+   * Page span of the footer.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentChunkedDocumentChunkChunkPageSpan $pageSpan
    */
   public function setPageSpan(GoogleCloudDocumentaiV1DocumentChunkedDocumentChunkChunkPageSpan $pageSpan)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDocumentaiV1DocumentChunkedDocumentChunkChunkPageFooter extends
     return $this->pageSpan;
   }
   /**
-   * @param string
+   * Footer in text format.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

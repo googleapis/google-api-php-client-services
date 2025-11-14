@@ -20,12 +20,16 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata extends \Google\Model
 {
   /**
+   * The project ID that the resource associated with the issue belongs to.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * The project ID that the resource associated with the issue belongs to.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

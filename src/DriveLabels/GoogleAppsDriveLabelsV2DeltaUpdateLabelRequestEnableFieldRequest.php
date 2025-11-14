@@ -20,12 +20,16 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableFieldRequest extends \Google\Model
 {
   /**
+   * Required. ID of the field to enable.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Required. ID of the field to enable.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

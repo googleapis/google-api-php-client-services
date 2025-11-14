@@ -20,16 +20,25 @@ namespace Google\Service\BigQueryDataTransfer;
 class ScheduleTransferRunsRequest extends \Google\Model
 {
   /**
+   * Required. End time of the range of transfer runs. For example,
+   * `"2017-05-30T00:00:00+00:00"`.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Required. Start time of the range of transfer runs. For example,
+   * `"2017-05-25T00:00:00+00:00"`.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Required. End time of the range of transfer runs. For example,
+   * `"2017-05-30T00:00:00+00:00"`.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +52,10 @@ class ScheduleTransferRunsRequest extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Required. Start time of the range of transfer runs. For example,
+   * `"2017-05-25T00:00:00+00:00"`.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

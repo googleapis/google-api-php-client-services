@@ -22,20 +22,37 @@ class ReplicationStatus extends \Google\Model
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * Output only. The time at which the last error was encountered while trying
+   * to replicate changes from the primary to the secondary. This field is only
+   * available if the replication has not succeeded since.
+   *
    * @var string
    */
   public $lastErrorTime;
   /**
+   * Output only. A timestamp corresponding to the last change on the primary
+   * that was successfully replicated to the secondary.
+   *
    * @var string
    */
   public $lastReplicationTime;
   /**
+   * Output only. The time at which a soft failover for the reservation and its
+   * associated datasets was initiated. After this field is set, all subsequent
+   * changes to the reservation will be rejected unless a hard failover
+   * overrides this operation. This field will be cleared once the failover is
+   * complete.
+   *
    * @var string
    */
   public $softFailoverStartTime;
 
   /**
-   * @param Status
+   * Output only. The last error encountered while trying to replicate changes
+   * from the primary to the secondary. This field is only available if the
+   * replication has not succeeded since.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -49,7 +66,11 @@ class ReplicationStatus extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * Output only. The time at which the last error was encountered while trying
+   * to replicate changes from the primary to the secondary. This field is only
+   * available if the replication has not succeeded since.
+   *
+   * @param string $lastErrorTime
    */
   public function setLastErrorTime($lastErrorTime)
   {
@@ -63,7 +84,10 @@ class ReplicationStatus extends \Google\Model
     return $this->lastErrorTime;
   }
   /**
-   * @param string
+   * Output only. A timestamp corresponding to the last change on the primary
+   * that was successfully replicated to the secondary.
+   *
+   * @param string $lastReplicationTime
    */
   public function setLastReplicationTime($lastReplicationTime)
   {
@@ -77,7 +101,13 @@ class ReplicationStatus extends \Google\Model
     return $this->lastReplicationTime;
   }
   /**
-   * @param string
+   * Output only. The time at which a soft failover for the reservation and its
+   * associated datasets was initiated. After this field is set, all subsequent
+   * changes to the reservation will be rejected unless a hard failover
+   * overrides this operation. This field will be cleared once the failover is
+   * complete.
+   *
+   * @param string $softFailoverStartTime
    */
   public function setSoftFailoverStartTime($softFailoverStartTime)
   {

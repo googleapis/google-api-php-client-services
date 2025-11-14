@@ -20,20 +20,37 @@ namespace Google\Service\Dataform;
 class PolicyName extends \Google\Model
 {
   /**
+   * Identifies an instance of the type. ID format varies by type. The ID format
+   * is defined in the IAM .service file that defines the type, either in
+   * path_mapping or in a comment.
+   *
    * @var string
    */
   public $id;
   /**
+   * For Cloud IAM: The location of the Policy. Must be empty or "global" for
+   * Policies owned by global IAM. Must name a region from prodspec/cloud-iam-
+   * cloudspec for Regional IAM Policies, see go/iam-faq#where-is-iam-currently-
+   * deployed. For Local IAM: This field should be set to "local".
+   *
    * @var string
    */
   public $region;
   /**
+   * Resource type. Types are defined in IAM's .service files. Valid values for
+   * type might be 'storage_buckets', 'compute_instances',
+   * 'resourcemanager_customers', 'billing_accounts', etc.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Identifies an instance of the type. ID format varies by type. The ID format
+   * is defined in the IAM .service file that defines the type, either in
+   * path_mapping or in a comment.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +64,12 @@ class PolicyName extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * For Cloud IAM: The location of the Policy. Must be empty or "global" for
+   * Policies owned by global IAM. Must name a region from prodspec/cloud-iam-
+   * cloudspec for Regional IAM Policies, see go/iam-faq#where-is-iam-currently-
+   * deployed. For Local IAM: This field should be set to "local".
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -61,7 +83,11 @@ class PolicyName extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * Resource type. Types are defined in IAM's .service files. Valid values for
+   * type might be 'storage_buckets', 'compute_instances',
+   * 'resourcemanager_customers', 'billing_accounts', etc.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

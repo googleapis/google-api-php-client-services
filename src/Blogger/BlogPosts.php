@@ -23,16 +23,22 @@ class BlogPosts extends \Google\Collection
   protected $itemsType = Post::class;
   protected $itemsDataType = 'array';
   /**
+   * The URL of the container for posts in this blog.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The count of posts in this blog.
+   *
    * @var int
    */
   public $totalItems;
 
   /**
-   * @param Post[]
+   * The List of Posts for this Blog.
+   *
+   * @param Post[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +52,9 @@ class BlogPosts extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The URL of the container for posts in this blog.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -60,7 +68,9 @@ class BlogPosts extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param int
+   * The count of posts in this blog.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {

@@ -24,7 +24,9 @@ class BatchUpdatePhotosRequest extends \Google\Collection
   protected $updatePhotoRequestsDataType = 'array';
 
   /**
-   * @param UpdatePhotoRequest[]
+   * Required. List of UpdatePhotoRequests.
+   *
+   * @param UpdatePhotoRequest[] $updatePhotoRequests
    */
   public function setUpdatePhotoRequests($updatePhotoRequests)
   {

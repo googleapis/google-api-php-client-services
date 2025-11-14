@@ -20,19 +20,44 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const FREQUENCY_UPDATE_FREQUENCY_UNSPECIFIED = 'UPDATE_FREQUENCY_UNSPECIFIED';
+  /**
+   * After the data profile is created, it will never be updated.
+   */
+  public const FREQUENCY_UPDATE_FREQUENCY_NEVER = 'UPDATE_FREQUENCY_NEVER';
+  /**
+   * The data profile can be updated up to once every 24 hours.
+   */
+  public const FREQUENCY_UPDATE_FREQUENCY_DAILY = 'UPDATE_FREQUENCY_DAILY';
+  /**
+   * The data profile can be updated up to once every 30 days. Default.
+   */
+  public const FREQUENCY_UPDATE_FREQUENCY_MONTHLY = 'UPDATE_FREQUENCY_MONTHLY';
+  /**
+   * How frequently data profiles can be updated when the template is modified.
+   * Defaults to never.
+   *
    * @var string
    */
   public $frequency;
 
   /**
-   * @param string
+   * How frequently data profiles can be updated when the template is modified.
+   * Defaults to never.
+   *
+   * Accepted values: UPDATE_FREQUENCY_UNSPECIFIED, UPDATE_FREQUENCY_NEVER,
+   * UPDATE_FREQUENCY_DAILY, UPDATE_FREQUENCY_MONTHLY
+   *
+   * @param self::FREQUENCY_* $frequency
    */
   public function setFrequency($frequency)
   {
     $this->frequency = $frequency;
   }
   /**
-   * @return string
+   * @return self::FREQUENCY_*
    */
   public function getFrequency()
   {

@@ -21,26 +21,37 @@ class RepairRolloutOperation extends \Google\Collection
 {
   protected $collection_key = 'repairPhases';
   /**
+   * Output only. The index of the current repair action in the repair sequence.
+   *
    * @var string
    */
   public $currentRepairPhaseIndex;
   /**
+   * Output only. The job ID for the Job to repair.
+   *
    * @var string
    */
   public $jobId;
   /**
+   * Output only. The phase ID of the phase that includes the job being
+   * repaired.
+   *
    * @var string
    */
   public $phaseId;
   protected $repairPhasesType = RepairPhase::class;
   protected $repairPhasesDataType = 'array';
   /**
+   * Output only. The name of the rollout that initiates the `AutomationRun`.
+   *
    * @var string
    */
   public $rollout;
 
   /**
-   * @param string
+   * Output only. The index of the current repair action in the repair sequence.
+   *
+   * @param string $currentRepairPhaseIndex
    */
   public function setCurrentRepairPhaseIndex($currentRepairPhaseIndex)
   {
@@ -54,7 +65,9 @@ class RepairRolloutOperation extends \Google\Collection
     return $this->currentRepairPhaseIndex;
   }
   /**
-   * @param string
+   * Output only. The job ID for the Job to repair.
+   *
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {
@@ -68,7 +81,10 @@ class RepairRolloutOperation extends \Google\Collection
     return $this->jobId;
   }
   /**
-   * @param string
+   * Output only. The phase ID of the phase that includes the job being
+   * repaired.
+   *
+   * @param string $phaseId
    */
   public function setPhaseId($phaseId)
   {
@@ -82,7 +98,10 @@ class RepairRolloutOperation extends \Google\Collection
     return $this->phaseId;
   }
   /**
-   * @param RepairPhase[]
+   * Output only. Records of the repair attempts. Each repair phase may have
+   * multiple retry attempts or single rollback attempt.
+   *
+   * @param RepairPhase[] $repairPhases
    */
   public function setRepairPhases($repairPhases)
   {
@@ -96,7 +115,9 @@ class RepairRolloutOperation extends \Google\Collection
     return $this->repairPhases;
   }
   /**
-   * @param string
+   * Output only. The name of the rollout that initiates the `AutomationRun`.
+   *
+   * @param string $rollout
    */
   public function setRollout($rollout)
   {

@@ -20,13 +20,24 @@ namespace Google\Service\Transcoder;
 class Deblock extends \Google\Model
 {
   /**
+   * Enable deblocker. The default is `false`.
+   *
    * @var bool
    */
   public $enabled;
+  /**
+   * Set strength of the deblocker. Enter a value between 0 and 1. The higher
+   * the value, the stronger the block removal. 0 is no deblocking. The default
+   * is 0.
+   *
+   * @var 
+   */
   public $strength;
 
   /**
-   * @param bool
+   * Enable deblocker. The default is `false`.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

@@ -19,41 +19,61 @@ namespace Google\Service\Dfareporting;
 
 class VideoFormat extends \Google\Model
 {
+  public const FILE_TYPE_FLV = 'FLV';
+  public const FILE_TYPE_THREEGPP = 'THREEGPP';
+  public const FILE_TYPE_MP4 = 'MP4';
+  public const FILE_TYPE_WEBM = 'WEBM';
+  public const FILE_TYPE_M3U8 = 'M3U8';
   /**
+   * File type of the video format.
+   *
    * @var string
    */
   public $fileType;
   /**
+   * ID of the video format.
+   *
    * @var int
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#videoFormat".
+   *
    * @var string
    */
   public $kind;
   protected $resolutionType = Size::class;
   protected $resolutionDataType = '';
   /**
+   * The target bit rate of this video format.
+   *
    * @var int
    */
   public $targetBitRate;
 
   /**
-   * @param string
+   * File type of the video format.
+   *
+   * Accepted values: FLV, THREEGPP, MP4, WEBM, M3U8
+   *
+   * @param self::FILE_TYPE_* $fileType
    */
   public function setFileType($fileType)
   {
     $this->fileType = $fileType;
   }
   /**
-   * @return string
+   * @return self::FILE_TYPE_*
    */
   public function getFileType()
   {
     return $this->fileType;
   }
   /**
-   * @param int
+   * ID of the video format.
+   *
+   * @param int $id
    */
   public function setId($id)
   {
@@ -67,7 +87,10 @@ class VideoFormat extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#videoFormat".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -81,7 +104,9 @@ class VideoFormat extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param Size
+   * The resolution of this video format.
+   *
+   * @param Size $resolution
    */
   public function setResolution(Size $resolution)
   {
@@ -95,7 +120,9 @@ class VideoFormat extends \Google\Model
     return $this->resolution;
   }
   /**
-   * @param int
+   * The target bit rate of this video format.
+   *
+   * @param int $targetBitRate
    */
   public function setTargetBitRate($targetBitRate)
   {

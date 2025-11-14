@@ -20,32 +20,49 @@ namespace Google\Service\BigtableAdmin;
 class CreateMaterializedViewMetadata extends \Google\Model
 {
   /**
+   * If set, the time at which this operation finished or was canceled.
+   * DEPRECATED: Use finish_time instead.
+   *
+   * @deprecated
    * @var string
    */
   public $endTime;
   /**
+   * The time at which the operation failed or was completed successfully.
+   *
    * @var string
    */
   public $finishTime;
   protected $originalRequestType = CreateMaterializedViewRequest::class;
   protected $originalRequestDataType = '';
   /**
+   * The time at which the original request was received.
+   *
    * @var string
    */
   public $requestTime;
   /**
+   * The time at which this operation started. DEPRECATED: Use request_time
+   * instead.
+   *
+   * @deprecated
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * If set, the time at which this operation finished or was canceled.
+   * DEPRECATED: Use finish_time instead.
+   *
+   * @deprecated
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
     $this->endTime = $endTime;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getEndTime()
@@ -53,7 +70,9 @@ class CreateMaterializedViewMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The time at which the operation failed or was completed successfully.
+   *
+   * @param string $finishTime
    */
   public function setFinishTime($finishTime)
   {
@@ -67,7 +86,10 @@ class CreateMaterializedViewMetadata extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * @param CreateMaterializedViewRequest
+   * The request that prompted the initiation of this CreateMaterializedView
+   * operation.
+   *
+   * @param CreateMaterializedViewRequest $originalRequest
    */
   public function setOriginalRequest(CreateMaterializedViewRequest $originalRequest)
   {
@@ -81,7 +103,9 @@ class CreateMaterializedViewMetadata extends \Google\Model
     return $this->originalRequest;
   }
   /**
-   * @param string
+   * The time at which the original request was received.
+   *
+   * @param string $requestTime
    */
   public function setRequestTime($requestTime)
   {
@@ -95,13 +119,18 @@ class CreateMaterializedViewMetadata extends \Google\Model
     return $this->requestTime;
   }
   /**
-   * @param string
+   * The time at which this operation started. DEPRECATED: Use request_time
+   * instead.
+   *
+   * @deprecated
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getStartTime()

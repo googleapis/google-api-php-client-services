@@ -21,12 +21,16 @@ class LabelIds extends \Google\Collection
 {
   protected $collection_key = 'labelIds';
   /**
+   * The list of label IDs.
+   *
    * @var string[]
    */
   public $labelIds;
 
   /**
-   * @param string[]
+   * The list of label IDs.
+   *
+   * @param string[] $labelIds
    */
   public function setLabelIds($labelIds)
   {

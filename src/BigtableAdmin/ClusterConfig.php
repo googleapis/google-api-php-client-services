@@ -23,7 +23,9 @@ class ClusterConfig extends \Google\Model
   protected $clusterAutoscalingConfigDataType = '';
 
   /**
-   * @param ClusterAutoscalingConfig
+   * Autoscaling configuration for this cluster.
+   *
+   * @param ClusterAutoscalingConfig $clusterAutoscalingConfig
    */
   public function setClusterAutoscalingConfig(ClusterAutoscalingConfig $clusterAutoscalingConfig)
   {

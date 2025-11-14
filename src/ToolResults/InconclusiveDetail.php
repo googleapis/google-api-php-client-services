@@ -20,20 +20,36 @@ namespace Google\Service\ToolResults;
 class InconclusiveDetail extends \Google\Model
 {
   /**
+   * If the end user aborted the test execution before a pass or fail could be
+   * determined. For example, the user pressed ctrl-c which sent a kill signal
+   * to the test runner while the test was running.
+   *
    * @var bool
    */
   public $abortedByUser;
   /**
+   * If results are being provided to the user in certain cases of
+   * infrastructure failures
+   *
    * @var bool
    */
   public $hasErrorLogs;
   /**
+   * If the test runner could not determine success or failure because the test
+   * depends on a component other than the system under test which failed. For
+   * example, a mobile test requires provisioning a device where the test
+   * executes, and that provisioning can fail.
+   *
    * @var bool
    */
   public $infrastructureFailure;
 
   /**
-   * @param bool
+   * If the end user aborted the test execution before a pass or fail could be
+   * determined. For example, the user pressed ctrl-c which sent a kill signal
+   * to the test runner while the test was running.
+   *
+   * @param bool $abortedByUser
    */
   public function setAbortedByUser($abortedByUser)
   {
@@ -47,7 +63,10 @@ class InconclusiveDetail extends \Google\Model
     return $this->abortedByUser;
   }
   /**
-   * @param bool
+   * If results are being provided to the user in certain cases of
+   * infrastructure failures
+   *
+   * @param bool $hasErrorLogs
    */
   public function setHasErrorLogs($hasErrorLogs)
   {
@@ -61,7 +80,12 @@ class InconclusiveDetail extends \Google\Model
     return $this->hasErrorLogs;
   }
   /**
-   * @param bool
+   * If the test runner could not determine success or failure because the test
+   * depends on a component other than the system under test which failed. For
+   * example, a mobile test requires provisioning a device where the test
+   * executes, and that provisioning can fail.
+   *
+   * @param bool $infrastructureFailure
    */
   public function setInfrastructureFailure($infrastructureFailure)
   {

@@ -20,32 +20,76 @@ namespace Google\Service\Monitoring;
 class InternalChecker extends \Google\Model
 {
   /**
+   * An internal checker should never be in the unspecified state.
+   */
+  public const STATE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * The checker is being created, provisioned, and configured. A checker in
+   * this state can be returned by ListInternalCheckers or GetInternalChecker,
+   * as well as by examining the long running Operation (https://cloud.google.co
+   * m/apis/design/design_patterns#long_running_operations) that created it.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The checker is running and available for use. A checker in this state can
+   * be returned by ListInternalCheckers or GetInternalChecker as well as by
+   * examining the long running Operation (https://cloud.google.com/apis/design/
+   * design_patterns#long_running_operations) that created it. If a checker is
+   * being torn down, it is neither visible nor usable, so there is no
+   * "deleting" or "down" state.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The checker's human-readable name. The display name should be unique within
+   * a Cloud Monitoring Metrics Scope in order to make it easier to identify;
+   * however, uniqueness is not enforced.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The GCP zone the Uptime check should egress from. Only respected for
+   * internal Uptime checks, where internal_network is specified.
+   *
    * @var string
    */
   public $gcpZone;
   /**
+   * A unique resource name for this InternalChecker. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID]
+   * [PROJECT_ID_OR_NUMBER] is the Cloud Monitoring Metrics Scope project for
+   * the Uptime check config associated with the internal checker.
+   *
    * @var string
    */
   public $name;
   /**
+   * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the
+   * internal resource lives (ex: "default").
+   *
    * @var string
    */
   public $network;
   /**
+   * The GCP project ID where the internal checker lives. Not necessary the same
+   * as the Metrics Scope project.
+   *
    * @var string
    */
   public $peerProjectId;
   /**
+   * The current operational state of the internal checker.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The checker's human-readable name. The display name should be unique within
+   * a Cloud Monitoring Metrics Scope in order to make it easier to identify;
+   * however, uniqueness is not enforced.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -59,7 +103,10 @@ class InternalChecker extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The GCP zone the Uptime check should egress from. Only respected for
+   * internal Uptime checks, where internal_network is specified.
+   *
+   * @param string $gcpZone
    */
   public function setGcpZone($gcpZone)
   {
@@ -73,7 +120,12 @@ class InternalChecker extends \Google\Model
     return $this->gcpZone;
   }
   /**
-   * @param string
+   * A unique resource name for this InternalChecker. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID]
+   * [PROJECT_ID_OR_NUMBER] is the Cloud Monitoring Metrics Scope project for
+   * the Uptime check config associated with the internal checker.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -87,7 +139,10 @@ class InternalChecker extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the
+   * internal resource lives (ex: "default").
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -101,7 +156,10 @@ class InternalChecker extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * The GCP project ID where the internal checker lives. Not necessary the same
+   * as the Metrics Scope project.
+   *
+   * @param string $peerProjectId
    */
   public function setPeerProjectId($peerProjectId)
   {
@@ -115,14 +173,18 @@ class InternalChecker extends \Google\Model
     return $this->peerProjectId;
   }
   /**
-   * @param string
+   * The current operational state of the internal checker.
+   *
+   * Accepted values: UNSPECIFIED, CREATING, RUNNING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

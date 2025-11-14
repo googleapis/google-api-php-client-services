@@ -20,18 +20,25 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class GoogleUpdatedLocation extends \Google\Model
 {
   /**
+   * The fields that Google updated.
+   *
    * @var string
    */
   public $diffMask;
   protected $locationType = Location::class;
   protected $locationDataType = '';
   /**
+   * The fields that have pending edits that haven't yet been pushed to Maps and
+   * Search.
+   *
    * @var string
    */
   public $pendingMask;
 
   /**
-   * @param string
+   * The fields that Google updated.
+   *
+   * @param string $diffMask
    */
   public function setDiffMask($diffMask)
   {
@@ -45,7 +52,9 @@ class GoogleUpdatedLocation extends \Google\Model
     return $this->diffMask;
   }
   /**
-   * @param Location
+   * The Google-updated version of this location.
+   *
+   * @param Location $location
    */
   public function setLocation(Location $location)
   {
@@ -59,7 +68,10 @@ class GoogleUpdatedLocation extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The fields that have pending edits that haven't yet been pushed to Maps and
+   * Search.
+   *
+   * @param string $pendingMask
    */
   public function setPendingMask($pendingMask)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\SecureSourceManager;
 class WorkforceIdentityFederationConfig extends \Google\Model
 {
   /**
+   * Optional. Immutable. Whether Workforce Identity Federation is enabled.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Optional. Immutable. Whether Workforce Identity Federation is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

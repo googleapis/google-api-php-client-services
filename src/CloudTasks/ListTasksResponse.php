@@ -21,6 +21,10 @@ class ListTasksResponse extends \Google\Collection
 {
   protected $collection_key = 'tasks';
   /**
+   * A token to retrieve next page of results. To return the next page of
+   * results, call ListTasks with this value as the page_token. If the
+   * next_page_token is empty, there are no more results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListTasksResponse extends \Google\Collection
   protected $tasksDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve next page of results. To return the next page of
+   * results, call ListTasks with this value as the page_token. If the
+   * next_page_token is empty, there are no more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListTasksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Task[]
+   * The list of tasks.
+   *
+   * @param Task[] $tasks
    */
   public function setTasks($tasks)
   {

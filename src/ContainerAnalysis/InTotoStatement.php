@@ -24,10 +24,14 @@ class InTotoStatement extends \Google\Collection
         "type" => "_type",
   ];
   /**
+   * Always `https://in-toto.io/Statement/v0.1`.
+   *
    * @var string
    */
   public $type;
   /**
+   * `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
+   *
    * @var string
    */
   public $predicateType;
@@ -41,7 +45,9 @@ class InTotoStatement extends \Google\Collection
   protected $subjectDataType = 'array';
 
   /**
-   * @param string
+   * Always `https://in-toto.io/Statement/v0.1`.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -55,7 +61,9 @@ class InTotoStatement extends \Google\Collection
     return $this->type;
   }
   /**
-   * @param string
+   * `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
+   *
+   * @param string $predicateType
    */
   public function setPredicateType($predicateType)
   {
@@ -69,7 +77,7 @@ class InTotoStatement extends \Google\Collection
     return $this->predicateType;
   }
   /**
-   * @param InTotoProvenance
+   * @param InTotoProvenance $provenance
    */
   public function setProvenance(InTotoProvenance $provenance)
   {
@@ -83,7 +91,7 @@ class InTotoStatement extends \Google\Collection
     return $this->provenance;
   }
   /**
-   * @param SlsaProvenance
+   * @param SlsaProvenance $slsaProvenance
    */
   public function setSlsaProvenance(SlsaProvenance $slsaProvenance)
   {
@@ -97,7 +105,7 @@ class InTotoStatement extends \Google\Collection
     return $this->slsaProvenance;
   }
   /**
-   * @param SlsaProvenanceZeroTwo
+   * @param SlsaProvenanceZeroTwo $slsaProvenanceZeroTwo
    */
   public function setSlsaProvenanceZeroTwo(SlsaProvenanceZeroTwo $slsaProvenanceZeroTwo)
   {
@@ -111,7 +119,7 @@ class InTotoStatement extends \Google\Collection
     return $this->slsaProvenanceZeroTwo;
   }
   /**
-   * @param Subject[]
+   * @param Subject[] $subject
    */
   public function setSubject($subject)
   {

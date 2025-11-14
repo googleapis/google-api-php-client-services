@@ -27,7 +27,9 @@ class ThirdPartyVerifierAssignedTargetingOptionDetails extends \Google\Model
   protected $integralAdScienceDataType = '';
 
   /**
-   * @param Adloox
+   * Third party brand verifier -- Scope3 (previously known as Adloox).
+   *
+   * @param Adloox $adloox
    */
   public function setAdloox(Adloox $adloox)
   {
@@ -41,7 +43,9 @@ class ThirdPartyVerifierAssignedTargetingOptionDetails extends \Google\Model
     return $this->adloox;
   }
   /**
-   * @param DoubleVerify
+   * Third party brand verifier -- DoubleVerify.
+   *
+   * @param DoubleVerify $doubleVerify
    */
   public function setDoubleVerify(DoubleVerify $doubleVerify)
   {
@@ -55,7 +59,9 @@ class ThirdPartyVerifierAssignedTargetingOptionDetails extends \Google\Model
     return $this->doubleVerify;
   }
   /**
-   * @param IntegralAdScience
+   * Third party brand verifier -- Integral Ad Science.
+   *
+   * @param IntegralAdScience $integralAdScience
    */
   public function setIntegralAdScience(IntegralAdScience $integralAdScience)
   {

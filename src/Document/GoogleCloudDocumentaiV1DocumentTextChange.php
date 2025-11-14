@@ -21,6 +21,8 @@ class GoogleCloudDocumentaiV1DocumentTextChange extends \Google\Collection
 {
   protected $collection_key = 'provenance';
   /**
+   * The text that replaces the text identified in the `text_anchor`.
+   *
    * @var string
    */
   public $changedText;
@@ -30,7 +32,9 @@ class GoogleCloudDocumentaiV1DocumentTextChange extends \Google\Collection
   protected $textAnchorDataType = '';
 
   /**
-   * @param string
+   * The text that replaces the text identified in the `text_anchor`.
+   *
+   * @param string $changedText
    */
   public function setChangedText($changedText)
   {
@@ -44,13 +48,17 @@ class GoogleCloudDocumentaiV1DocumentTextChange extends \Google\Collection
     return $this->changedText;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentProvenance[]
+   * The history of this annotation.
+   *
+   * @deprecated
+   * @param GoogleCloudDocumentaiV1DocumentProvenance[] $provenance
    */
   public function setProvenance($provenance)
   {
     $this->provenance = $provenance;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDocumentaiV1DocumentProvenance[]
    */
   public function getProvenance()
@@ -58,7 +66,12 @@ class GoogleCloudDocumentaiV1DocumentTextChange extends \Google\Collection
     return $this->provenance;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentTextAnchor
+   * Provenance of the correction. Text anchor indexing into the Document.text.
+   * There can only be a single `TextAnchor.text_segments` element. If the start
+   * and end index of the text segment are the same, the text change is inserted
+   * before that index.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentTextAnchor $textAnchor
    */
   public function setTextAnchor(GoogleCloudDocumentaiV1DocumentTextAnchor $textAnchor)
   {

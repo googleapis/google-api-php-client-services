@@ -20,24 +20,34 @@ namespace Google\Service\SQLAdmin;
 class SqlServerAuditConfig extends \Google\Model
 {
   /**
+   * The name of the destination bucket (e.g., gs://mybucket).
+   *
    * @var string
    */
   public $bucket;
   /**
+   * This is always sql#sqlServerAuditConfig
+   *
    * @var string
    */
   public $kind;
   /**
+   * How long to keep generated audit files.
+   *
    * @var string
    */
   public $retentionInterval;
   /**
+   * How often to upload generated audit files.
+   *
    * @var string
    */
   public $uploadInterval;
 
   /**
-   * @param string
+   * The name of the destination bucket (e.g., gs://mybucket).
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -51,7 +61,9 @@ class SqlServerAuditConfig extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * This is always sql#sqlServerAuditConfig
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -65,7 +77,9 @@ class SqlServerAuditConfig extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * How long to keep generated audit files.
+   *
+   * @param string $retentionInterval
    */
   public function setRetentionInterval($retentionInterval)
   {
@@ -79,7 +93,9 @@ class SqlServerAuditConfig extends \Google\Model
     return $this->retentionInterval;
   }
   /**
-   * @param string
+   * How often to upload generated audit files.
+   *
+   * @param string $uploadInterval
    */
   public function setUploadInterval($uploadInterval)
   {

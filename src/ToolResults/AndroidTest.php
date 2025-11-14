@@ -31,7 +31,9 @@ class AndroidTest extends \Google\Model
   protected $testTimeoutDataType = '';
 
   /**
-   * @param AndroidAppInfo
+   * Information about the application under test.
+   *
+   * @param AndroidAppInfo $androidAppInfo
    */
   public function setAndroidAppInfo(AndroidAppInfo $androidAppInfo)
   {
@@ -45,7 +47,9 @@ class AndroidTest extends \Google\Model
     return $this->androidAppInfo;
   }
   /**
-   * @param AndroidInstrumentationTest
+   * An Android instrumentation test.
+   *
+   * @param AndroidInstrumentationTest $androidInstrumentationTest
    */
   public function setAndroidInstrumentationTest(AndroidInstrumentationTest $androidInstrumentationTest)
   {
@@ -59,7 +63,9 @@ class AndroidTest extends \Google\Model
     return $this->androidInstrumentationTest;
   }
   /**
-   * @param AndroidRoboTest
+   * An Android robo test.
+   *
+   * @param AndroidRoboTest $androidRoboTest
    */
   public function setAndroidRoboTest(AndroidRoboTest $androidRoboTest)
   {
@@ -73,7 +79,9 @@ class AndroidTest extends \Google\Model
     return $this->androidRoboTest;
   }
   /**
-   * @param AndroidTestLoop
+   * An Android test loop.
+   *
+   * @param AndroidTestLoop $androidTestLoop
    */
   public function setAndroidTestLoop(AndroidTestLoop $androidTestLoop)
   {
@@ -87,7 +95,9 @@ class AndroidTest extends \Google\Model
     return $this->androidTestLoop;
   }
   /**
-   * @param Duration
+   * Max time a test is allowed to run before it is automatically cancelled.
+   *
+   * @param Duration $testTimeout
    */
   public function setTestTimeout(Duration $testTimeout)
   {

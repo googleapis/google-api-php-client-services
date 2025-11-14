@@ -20,6 +20,9 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1FetchAclRequest extends \Google\Model
 {
   /**
+   * For Get Project ACL only. Authorization check for end user will be ignored
+   * when project_owner=true.
+   *
    * @var bool
    */
   public $projectOwner;
@@ -27,7 +30,10 @@ class GoogleCloudContentwarehouseV1FetchAclRequest extends \Google\Model
   protected $requestMetadataDataType = '';
 
   /**
-   * @param bool
+   * For Get Project ACL only. Authorization check for end user will be ignored
+   * when project_owner=true.
+   *
+   * @param bool $projectOwner
    */
   public function setProjectOwner($projectOwner)
   {
@@ -41,7 +47,10 @@ class GoogleCloudContentwarehouseV1FetchAclRequest extends \Google\Model
     return $this->projectOwner;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1RequestMetadata
+   * The meta information collected about the end user, used to enforce access
+   * control for the service.
+   *
+   * @param GoogleCloudContentwarehouseV1RequestMetadata $requestMetadata
    */
   public function setRequestMetadata(GoogleCloudContentwarehouseV1RequestMetadata $requestMetadata)
   {

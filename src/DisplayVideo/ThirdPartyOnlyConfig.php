@@ -20,12 +20,18 @@ namespace Google\Service\DisplayVideo;
 class ThirdPartyOnlyConfig extends \Google\Model
 {
   /**
+   * Whether or not order ID reporting for pixels is enabled. This value cannot
+   * be changed once set to `true`.
+   *
    * @var bool
    */
   public $pixelOrderIdReportingEnabled;
 
   /**
-   * @param bool
+   * Whether or not order ID reporting for pixels is enabled. This value cannot
+   * be changed once set to `true`.
+   *
+   * @param bool $pixelOrderIdReportingEnabled
    */
   public function setPixelOrderIdReportingEnabled($pixelOrderIdReportingEnabled)
   {

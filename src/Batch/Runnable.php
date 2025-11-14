@@ -20,10 +20,28 @@ namespace Google\Service\Batch;
 class Runnable extends \Google\Model
 {
   /**
+   * By default, after a Runnable fails, no further Runnable are executed. This
+   * flag indicates that this Runnable must be run even if the Task has already
+   * failed. This is useful for Runnables that copy output files off of the VM
+   * or for debugging. The always_run flag does not override the Task's overall
+   * max_run_duration. If the max_run_duration has expired then no further
+   * Runnables will execute, not even always_run Runnables.
+   *
    * @var bool
    */
   public $alwaysRun;
   /**
+   * Normally, a runnable that doesn't exit causes its task to fail. However,
+   * you can set this field to `true` to configure a background runnable.
+   * Background runnables are allowed continue running in the background while
+   * the task executes subsequent runnables. For example, background runnables
+   * are useful for providing services to other runnables or providing
+   * debugging-support tools like SSH servers. Specifically, background
+   * runnables are killed automatically (if they have not already exited) a
+   * short time after all foreground runnables have completed. Even though this
+   * is likely to result in a non-zero exit status for the background runnable,
+   * these automatic kills are not treated as task failures.
+   *
    * @var bool
    */
   public $background;
@@ -32,28 +50,48 @@ class Runnable extends \Google\Model
   protected $containerType = Container::class;
   protected $containerDataType = '';
   /**
+   * Optional. DisplayName is an optional field that can be provided by the
+   * caller. If provided, it will be used in logs and other outputs to identify
+   * the script, making it easier for users to understand the logs. If not
+   * provided the index of the runnable will be used for outputs.
+   *
    * @var string
    */
   public $displayName;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
   /**
+   * Normally, a runnable that returns a non-zero exit status fails and causes
+   * the task to fail. However, you can set this field to `true` to allow the
+   * task to continue executing its other runnables even if this runnable fails.
+   *
    * @var bool
    */
   public $ignoreExitStatus;
   /**
+   * Labels for this Runnable.
+   *
    * @var string[]
    */
   public $labels;
   protected $scriptType = Script::class;
   protected $scriptDataType = '';
   /**
+   * Timeout for this Runnable.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param bool
+   * By default, after a Runnable fails, no further Runnable are executed. This
+   * flag indicates that this Runnable must be run even if the Task has already
+   * failed. This is useful for Runnables that copy output files off of the VM
+   * or for debugging. The always_run flag does not override the Task's overall
+   * max_run_duration. If the max_run_duration has expired then no further
+   * Runnables will execute, not even always_run Runnables.
+   *
+   * @param bool $alwaysRun
    */
   public function setAlwaysRun($alwaysRun)
   {
@@ -67,7 +105,18 @@ class Runnable extends \Google\Model
     return $this->alwaysRun;
   }
   /**
-   * @param bool
+   * Normally, a runnable that doesn't exit causes its task to fail. However,
+   * you can set this field to `true` to configure a background runnable.
+   * Background runnables are allowed continue running in the background while
+   * the task executes subsequent runnables. For example, background runnables
+   * are useful for providing services to other runnables or providing
+   * debugging-support tools like SSH servers. Specifically, background
+   * runnables are killed automatically (if they have not already exited) a
+   * short time after all foreground runnables have completed. Even though this
+   * is likely to result in a non-zero exit status for the background runnable,
+   * these automatic kills are not treated as task failures.
+   *
+   * @param bool $background
    */
   public function setBackground($background)
   {
@@ -81,7 +130,9 @@ class Runnable extends \Google\Model
     return $this->background;
   }
   /**
-   * @param Barrier
+   * Barrier runnable.
+   *
+   * @param Barrier $barrier
    */
   public function setBarrier(Barrier $barrier)
   {
@@ -95,7 +146,9 @@ class Runnable extends \Google\Model
     return $this->barrier;
   }
   /**
-   * @param Container
+   * Container runnable.
+   *
+   * @param Container $container
    */
   public function setContainer(Container $container)
   {
@@ -109,7 +162,12 @@ class Runnable extends \Google\Model
     return $this->container;
   }
   /**
-   * @param string
+   * Optional. DisplayName is an optional field that can be provided by the
+   * caller. If provided, it will be used in logs and other outputs to identify
+   * the script, making it easier for users to understand the logs. If not
+   * provided the index of the runnable will be used for outputs.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -123,7 +181,10 @@ class Runnable extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param Environment
+   * Environment variables for this Runnable (overrides variables set for the
+   * whole Task or TaskGroup).
+   *
+   * @param Environment $environment
    */
   public function setEnvironment(Environment $environment)
   {
@@ -137,7 +198,11 @@ class Runnable extends \Google\Model
     return $this->environment;
   }
   /**
-   * @param bool
+   * Normally, a runnable that returns a non-zero exit status fails and causes
+   * the task to fail. However, you can set this field to `true` to allow the
+   * task to continue executing its other runnables even if this runnable fails.
+   *
+   * @param bool $ignoreExitStatus
    */
   public function setIgnoreExitStatus($ignoreExitStatus)
   {
@@ -151,7 +216,9 @@ class Runnable extends \Google\Model
     return $this->ignoreExitStatus;
   }
   /**
-   * @param string[]
+   * Labels for this Runnable.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -165,7 +232,9 @@ class Runnable extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param Script
+   * Script runnable.
+   *
+   * @param Script $script
    */
   public function setScript(Script $script)
   {
@@ -179,7 +248,9 @@ class Runnable extends \Google\Model
     return $this->script;
   }
   /**
-   * @param string
+   * Timeout for this Runnable.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {

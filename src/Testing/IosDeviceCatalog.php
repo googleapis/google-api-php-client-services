@@ -30,7 +30,9 @@ class IosDeviceCatalog extends \Google\Collection
   protected $xcodeVersionsDataType = 'array';
 
   /**
-   * @param IosModel[]
+   * The set of supported iOS device models.
+   *
+   * @param IosModel[] $models
    */
   public function setModels($models)
   {
@@ -44,7 +46,9 @@ class IosDeviceCatalog extends \Google\Collection
     return $this->models;
   }
   /**
-   * @param IosRuntimeConfiguration
+   * The set of supported runtime configurations.
+   *
+   * @param IosRuntimeConfiguration $runtimeConfiguration
    */
   public function setRuntimeConfiguration(IosRuntimeConfiguration $runtimeConfiguration)
   {
@@ -58,7 +62,9 @@ class IosDeviceCatalog extends \Google\Collection
     return $this->runtimeConfiguration;
   }
   /**
-   * @param IosVersion[]
+   * The set of supported iOS software versions.
+   *
+   * @param IosVersion[] $versions
    */
   public function setVersions($versions)
   {
@@ -72,7 +78,9 @@ class IosDeviceCatalog extends \Google\Collection
     return $this->versions;
   }
   /**
-   * @param XcodeVersion[]
+   * The set of supported Xcode versions.
+   *
+   * @param XcodeVersion[] $xcodeVersions
    */
   public function setXcodeVersions($xcodeVersions)
   {

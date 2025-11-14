@@ -21,16 +21,22 @@ class EncounteredLoginScreen extends \Google\Collection
 {
   protected $collection_key = 'screenIds';
   /**
+   * Number of encountered distinct login screens.
+   *
    * @var int
    */
   public $distinctScreens;
   /**
+   * Subset of login screens.
+   *
    * @var string[]
    */
   public $screenIds;
 
   /**
-   * @param int
+   * Number of encountered distinct login screens.
+   *
+   * @param int $distinctScreens
    */
   public function setDistinctScreens($distinctScreens)
   {
@@ -44,7 +50,9 @@ class EncounteredLoginScreen extends \Google\Collection
     return $this->distinctScreens;
   }
   /**
-   * @param string[]
+   * Subset of login screens.
+   *
+   * @param string[] $screenIds
    */
   public function setScreenIds($screenIds)
   {

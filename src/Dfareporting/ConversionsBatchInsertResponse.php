@@ -21,10 +21,15 @@ class ConversionsBatchInsertResponse extends \Google\Collection
 {
   protected $collection_key = 'status';
   /**
+   * Indicates that some or all conversions failed to insert.
+   *
    * @var bool
    */
   public $hasFailures;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#conversionsBatchInsertResponse".
+   *
    * @var string
    */
   public $kind;
@@ -32,7 +37,9 @@ class ConversionsBatchInsertResponse extends \Google\Collection
   protected $statusDataType = 'array';
 
   /**
-   * @param bool
+   * Indicates that some or all conversions failed to insert.
+   *
+   * @param bool $hasFailures
    */
   public function setHasFailures($hasFailures)
   {
@@ -46,7 +53,10 @@ class ConversionsBatchInsertResponse extends \Google\Collection
     return $this->hasFailures;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#conversionsBatchInsertResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,10 @@ class ConversionsBatchInsertResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param ConversionStatus[]
+   * The insert status of each conversion. Statuses are returned in the same
+   * order that conversions are inserted.
+   *
+   * @param ConversionStatus[] $status
    */
   public function setStatus($status)
   {

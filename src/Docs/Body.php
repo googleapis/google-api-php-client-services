@@ -24,7 +24,9 @@ class Body extends \Google\Collection
   protected $contentDataType = 'array';
 
   /**
-   * @param StructuralElement[]
+   * The contents of the body. The indexes for the body's content begin at zero.
+   *
+   * @param StructuralElement[] $content
    */
   public function setContent($content)
   {

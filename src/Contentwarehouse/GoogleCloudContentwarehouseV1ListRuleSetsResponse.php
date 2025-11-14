@@ -21,6 +21,9 @@ class GoogleCloudContentwarehouseV1ListRuleSetsResponse extends \Google\Collecti
 {
   protected $collection_key = 'ruleSets';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudContentwarehouseV1ListRuleSetsResponse extends \Google\Collecti
   protected $ruleSetsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudContentwarehouseV1ListRuleSetsResponse extends \Google\Collecti
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1RuleSet[]
+   * The rule sets from the specified parent.
+   *
+   * @param GoogleCloudContentwarehouseV1RuleSet[] $ruleSets
    */
   public function setRuleSets($ruleSets)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\NetworkManagement;
 class CloudFunctionEndpoint extends \Google\Model
 {
   /**
+   * A [Cloud Function](https://cloud.google.com/functions) name.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * A [Cloud Function](https://cloud.google.com/functions) name.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1WidgetConfigFacetField extends \Google\Model
 {
   /**
+   * Optional. The field name that end users will see.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. Registered field name. The format is `field.abc`.
+   *
    * @var string
    */
   public $field;
 
   /**
-   * @param string
+   * Optional. The field name that end users will see.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigFacetField extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. Registered field name. The format is `field.abc`.
+   *
+   * @param string $field
    */
   public function setField($field)
   {

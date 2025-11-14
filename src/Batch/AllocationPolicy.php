@@ -23,6 +23,17 @@ class AllocationPolicy extends \Google\Collection
   protected $instancesType = InstancePolicyOrTemplate::class;
   protected $instancesDataType = 'array';
   /**
+   * Custom labels to apply to the job and all the Compute Engine resources that
+   * both are created by this allocation policy and support labels. Use labels
+   * to group and describe the resources they are applied to. Batch
+   * automatically applies predefined labels and supports multiple `labels`
+   * fields for each job, which each let you apply custom labels to various
+   * resources. Label names that start with "goog-" or "google-" are reserved
+   * for predefined labels. For more information about labels with Batch, see
+   * [Organize resources using
+   * labels](https://cloud.google.com/batch/docs/organize-resources-using-
+   * labels).
+   *
    * @var string[]
    */
   public $labels;
@@ -35,12 +46,19 @@ class AllocationPolicy extends \Google\Collection
   protected $serviceAccountType = ServiceAccount::class;
   protected $serviceAccountDataType = '';
   /**
+   * Optional. Tags applied to the VM instances. The tags identify valid sources
+   * or targets for network firewalls. Each tag must be 1-63 characters long,
+   * and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param InstancePolicyOrTemplate[]
+   * Describe instances that can be created by this AllocationPolicy. Only
+   * instances[0] is supported now.
+   *
+   * @param InstancePolicyOrTemplate[] $instances
    */
   public function setInstances($instances)
   {
@@ -54,7 +72,18 @@ class AllocationPolicy extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string[]
+   * Custom labels to apply to the job and all the Compute Engine resources that
+   * both are created by this allocation policy and support labels. Use labels
+   * to group and describe the resources they are applied to. Batch
+   * automatically applies predefined labels and supports multiple `labels`
+   * fields for each job, which each let you apply custom labels to various
+   * resources. Label names that start with "goog-" or "google-" are reserved
+   * for predefined labels. For more information about labels with Batch, see
+   * [Organize resources using
+   * labels](https://cloud.google.com/batch/docs/organize-resources-using-
+   * labels).
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -68,7 +97,9 @@ class AllocationPolicy extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param LocationPolicy
+   * Location where compute resources should be allocated for the Job.
+   *
+   * @param LocationPolicy $location
    */
   public function setLocation(LocationPolicy $location)
   {
@@ -82,7 +113,11 @@ class AllocationPolicy extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param NetworkPolicy
+   * The network policy. If you define an instance template in the
+   * `InstancePolicyOrTemplate` field, Batch will use the network settings in
+   * the instance template instead of this field.
+   *
+   * @param NetworkPolicy $network
    */
   public function setNetwork(NetworkPolicy $network)
   {
@@ -96,7 +131,9 @@ class AllocationPolicy extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param PlacementPolicy
+   * The placement policy.
+   *
+   * @param PlacementPolicy $placement
    */
   public function setPlacement(PlacementPolicy $placement)
   {
@@ -110,7 +147,17 @@ class AllocationPolicy extends \Google\Collection
     return $this->placement;
   }
   /**
-   * @param ServiceAccount
+   * Defines the service account for Batch-created VMs. If omitted, the [default
+   * Compute Engine service
+   * account](https://cloud.google.com/compute/docs/access/service-
+   * accounts#default_service_account) is used. Must match the service account
+   * specified in any used instance template configured in the Batch job.
+   * Includes the following fields: * email: The service account's email
+   * address. If not set, the default Compute Engine service account is used. *
+   * scopes: Additional OAuth scopes to grant the service account, beyond the
+   * default cloud-platform scope. (list of strings)
+   *
+   * @param ServiceAccount $serviceAccount
    */
   public function setServiceAccount(ServiceAccount $serviceAccount)
   {
@@ -124,7 +171,11 @@ class AllocationPolicy extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param string[]
+   * Optional. Tags applied to the VM instances. The tags identify valid sources
+   * or targets for network firewalls. Each tag must be 1-63 characters long,
+   * and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

@@ -23,12 +23,16 @@ class ListDomainMappingsResponse extends \Google\Collection
   protected $domainMappingsType = DomainMapping::class;
   protected $domainMappingsDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DomainMapping[]
+   * The domain mappings for the application.
+   *
+   * @param DomainMapping[] $domainMappings
    */
   public function setDomainMappings($domainMappings)
   {
@@ -42,7 +46,9 @@ class ListDomainMappingsResponse extends \Google\Collection
     return $this->domainMappings;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

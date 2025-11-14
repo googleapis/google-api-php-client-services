@@ -20,20 +20,37 @@ namespace Google\Service\Dataflow;
 class MetricStructuredName extends \Google\Model
 {
   /**
+   * Zero or more labeled fields which identify the part of the job this metric
+   * is associated with, such as the name of a step or collection. For example,
+   * built-in counters associated with steps will have context['step'] = .
+   * Counters associated with PCollections in the SDK will have
+   * context['pcollection'] = .
+   *
    * @var string[]
    */
   public $context;
   /**
+   * Worker-defined metric name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Origin (namespace) of metric name. May be blank for user-define metrics;
+   * will be "dataflow" for metrics defined by the Dataflow service or SDK.
+   *
    * @var string
    */
   public $origin;
 
   /**
-   * @param string[]
+   * Zero or more labeled fields which identify the part of the job this metric
+   * is associated with, such as the name of a step or collection. For example,
+   * built-in counters associated with steps will have context['step'] = .
+   * Counters associated with PCollections in the SDK will have
+   * context['pcollection'] = .
+   *
+   * @param string[] $context
    */
   public function setContext($context)
   {
@@ -47,7 +64,9 @@ class MetricStructuredName extends \Google\Model
     return $this->context;
   }
   /**
-   * @param string
+   * Worker-defined metric name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +80,10 @@ class MetricStructuredName extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Origin (namespace) of metric name. May be blank for user-define metrics;
+   * will be "dataflow" for metrics defined by the Dataflow service or SDK.
+   *
+   * @param string $origin
    */
   public function setOrigin($origin)
   {

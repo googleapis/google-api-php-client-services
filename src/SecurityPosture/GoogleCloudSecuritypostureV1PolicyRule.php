@@ -20,20 +20,34 @@ namespace Google\Service\SecurityPosture;
 class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
 {
   /**
+   * Whether to allow any value for a list constraint. Valid only for list
+   * constraints.
+   *
    * @var bool
    */
   public $allowAll;
   protected $conditionType = Expr::class;
   protected $conditionDataType = '';
   /**
+   * Whether to deny all values for a list constraint. Valid only for list
+   * constraints.
+   *
    * @var bool
    */
   public $denyAll;
   /**
+   * Whether to enforce the constraint. Valid only for boolean constraints.
+   *
    * @var bool
    */
   public $enforce;
   /**
+   * Optional. Required for managed constraints if parameters are defined.
+   * Passes parameter values when policy enforcement is enabled. Ensure that
+   * parameter value types match those defined in the constraint definition. For
+   * example: ``` { "allowedLocations": ["us-east1", "us-west1"], "allowAll":
+   * true } ```
+   *
    * @var array[]
    */
   public $parameters;
@@ -43,7 +57,10 @@ class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
   protected $valuesDataType = '';
 
   /**
-   * @param bool
+   * Whether to allow any value for a list constraint. Valid only for list
+   * constraints.
+   *
+   * @param bool $allowAll
    */
   public function setAllowAll($allowAll)
   {
@@ -57,7 +74,22 @@ class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
     return $this->allowAll;
   }
   /**
-   * @param Expr
+   * A condition that determines whether this rule is used to evaluate the
+   * policy. When set, the google.type.Expr.expression field must contain 1 to
+   * 10 subexpressions, joined by the `||` or `&&` operators. Each subexpression
+   * must use the `resource.matchTag()` or `resource.matchTagId()` Common
+   * Expression Language (CEL) function. The `resource.matchTag()` function
+   * takes the following arguments: * `key_name`: the namespaced name of the tag
+   * key, with the organization ID and a slash (`/`) as a prefix; for example,
+   * `123456789012/environment` * `value_name`: the short name of the tag value
+   * For example: `resource.matchTag('123456789012/environment, 'prod')` The
+   * `resource.matchTagId()` function takes the following arguments: * `key_id`:
+   * the permanent ID of the tag key; for example, `tagKeys/123456789012` *
+   * `value_id`: the permanent ID of the tag value; for example,
+   * `tagValues/567890123456` For example:
+   * `resource.matchTagId('tagKeys/123456789012', 'tagValues/567890123456')`
+   *
+   * @param Expr $condition
    */
   public function setCondition(Expr $condition)
   {
@@ -71,7 +103,10 @@ class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param bool
+   * Whether to deny all values for a list constraint. Valid only for list
+   * constraints.
+   *
+   * @param bool $denyAll
    */
   public function setDenyAll($denyAll)
   {
@@ -85,7 +120,9 @@ class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
     return $this->denyAll;
   }
   /**
-   * @param bool
+   * Whether to enforce the constraint. Valid only for boolean constraints.
+   *
+   * @param bool $enforce
    */
   public function setEnforce($enforce)
   {
@@ -99,7 +136,13 @@ class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
     return $this->enforce;
   }
   /**
-   * @param array[]
+   * Optional. Required for managed constraints if parameters are defined.
+   * Passes parameter values when policy enforcement is enabled. Ensure that
+   * parameter value types match those defined in the constraint definition. For
+   * example: ``` { "allowedLocations": ["us-east1", "us-west1"], "allowAll":
+   * true } ```
+   *
+   * @param array[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -113,7 +156,10 @@ class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
     return $this->parameters;
   }
   /**
-   * @param ResourceTypes
+   * Optional. The resource types policies can support, only used for managed
+   * constraints. Method type is `GOVERN_TAGS`.
+   *
+   * @param ResourceTypes $resourceTypes
    */
   public function setResourceTypes(ResourceTypes $resourceTypes)
   {
@@ -127,7 +173,10 @@ class GoogleCloudSecuritypostureV1PolicyRule extends \Google\Model
     return $this->resourceTypes;
   }
   /**
-   * @param GoogleCloudSecuritypostureV1PolicyRuleStringValues
+   * The allowed and denied values for a list constraint. Valid only for list
+   * constraints.
+   *
+   * @param GoogleCloudSecuritypostureV1PolicyRuleStringValues $values
    */
   public function setValues(GoogleCloudSecuritypostureV1PolicyRuleStringValues $values)
   {

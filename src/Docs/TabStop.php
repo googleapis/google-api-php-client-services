@@ -20,6 +20,24 @@ namespace Google\Service\Docs;
 class TabStop extends \Google\Model
 {
   /**
+   * The tab stop alignment is unspecified.
+   */
+  public const ALIGNMENT_TAB_STOP_ALIGNMENT_UNSPECIFIED = 'TAB_STOP_ALIGNMENT_UNSPECIFIED';
+  /**
+   * The tab stop is aligned to the start of the line. This is the default.
+   */
+  public const ALIGNMENT_START = 'START';
+  /**
+   * The tab stop is aligned to the center of the line.
+   */
+  public const ALIGNMENT_CENTER = 'CENTER';
+  /**
+   * The tab stop is aligned to the end of the line.
+   */
+  public const ALIGNMENT_END = 'END';
+  /**
+   * The alignment of this tab stop. If unset, the value defaults to START.
+   *
    * @var string
    */
   public $alignment;
@@ -27,21 +45,27 @@ class TabStop extends \Google\Model
   protected $offsetDataType = '';
 
   /**
-   * @param string
+   * The alignment of this tab stop. If unset, the value defaults to START.
+   *
+   * Accepted values: TAB_STOP_ALIGNMENT_UNSPECIFIED, START, CENTER, END
+   *
+   * @param self::ALIGNMENT_* $alignment
    */
   public function setAlignment($alignment)
   {
     $this->alignment = $alignment;
   }
   /**
-   * @return string
+   * @return self::ALIGNMENT_*
    */
   public function getAlignment()
   {
     return $this->alignment;
   }
   /**
-   * @param Dimension
+   * The offset between this tab stop and the start margin.
+   *
+   * @param Dimension $offset
    */
   public function setOffset(Dimension $offset)
   {

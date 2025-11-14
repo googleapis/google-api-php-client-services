@@ -20,24 +20,43 @@ namespace Google\Service\RealTimeBidding;
 class AdvertiserAndBrand extends \Google\Model
 {
   /**
+   * See https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt for
+   * the list of possible values. Can be used to filter the response of the
+   * creatives.list method.
+   *
    * @var string
    */
   public $advertiserId;
   /**
+   * Advertiser name. Can be used to filter the response of the creatives.list
+   * method.
+   *
    * @var string
    */
   public $advertiserName;
   /**
+   * Detected brand ID or zero if no brand has been detected. See
+   * https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt for the list
+   * of possible values. Can be used to filter the response of the
+   * creatives.list method.
+   *
    * @var string
    */
   public $brandId;
   /**
+   * Brand name. Can be used to filter the response of the creatives.list
+   * method.
+   *
    * @var string
    */
   public $brandName;
 
   /**
-   * @param string
+   * See https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt for
+   * the list of possible values. Can be used to filter the response of the
+   * creatives.list method.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -51,7 +70,10 @@ class AdvertiserAndBrand extends \Google\Model
     return $this->advertiserId;
   }
   /**
-   * @param string
+   * Advertiser name. Can be used to filter the response of the creatives.list
+   * method.
+   *
+   * @param string $advertiserName
    */
   public function setAdvertiserName($advertiserName)
   {
@@ -65,7 +87,12 @@ class AdvertiserAndBrand extends \Google\Model
     return $this->advertiserName;
   }
   /**
-   * @param string
+   * Detected brand ID or zero if no brand has been detected. See
+   * https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt for the list
+   * of possible values. Can be used to filter the response of the
+   * creatives.list method.
+   *
+   * @param string $brandId
    */
   public function setBrandId($brandId)
   {
@@ -79,7 +106,10 @@ class AdvertiserAndBrand extends \Google\Model
     return $this->brandId;
   }
   /**
-   * @param string
+   * Brand name. Can be used to filter the response of the creatives.list
+   * method.
+   *
+   * @param string $brandName
    */
   public function setBrandName($brandName)
   {

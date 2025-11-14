@@ -20,12 +20,16 @@ namespace Google\Service\Bigquery;
 class InputDataChange extends \Google\Model
 {
   /**
+   * Output only. Records read difference percentage compared to a previous run.
+   *
    * @var float
    */
   public $recordsReadDiffPercentage;
 
   /**
-   * @param float
+   * Output only. Records read difference percentage compared to a previous run.
+   *
+   * @param float $recordsReadDiffPercentage
    */
   public function setRecordsReadDiffPercentage($recordsReadDiffPercentage)
   {

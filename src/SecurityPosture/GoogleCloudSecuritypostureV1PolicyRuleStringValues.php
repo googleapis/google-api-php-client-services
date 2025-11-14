@@ -21,16 +21,22 @@ class GoogleCloudSecuritypostureV1PolicyRuleStringValues extends \Google\Collect
 {
   protected $collection_key = 'deniedValues';
   /**
+   * The allowed values for the constraint.
+   *
    * @var string[]
    */
   public $allowedValues;
   /**
+   * The denied values for the constraint.
+   *
    * @var string[]
    */
   public $deniedValues;
 
   /**
-   * @param string[]
+   * The allowed values for the constraint.
+   *
+   * @param string[] $allowedValues
    */
   public function setAllowedValues($allowedValues)
   {
@@ -44,7 +50,9 @@ class GoogleCloudSecuritypostureV1PolicyRuleStringValues extends \Google\Collect
     return $this->allowedValues;
   }
   /**
-   * @param string[]
+   * The denied values for the constraint.
+   *
+   * @param string[] $deniedValues
    */
   public function setDeniedValues($deniedValues)
   {

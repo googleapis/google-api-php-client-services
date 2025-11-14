@@ -21,32 +21,51 @@ class YoutubeSettings extends \Google\Collection
 {
   protected $collection_key = 'longHeadlines';
   /**
+   * Optional. The IDs of the creatives to use for the business logo. Currently
+   * only one creative is supported.
+   *
    * @var string[]
    */
   public $businessLogoCreativeIds;
   /**
+   * Optional. The business name.
+   *
    * @var string
    */
   public $businessName;
   /**
+   * Optional. The call to actions. Currently only one call to action is
+   * supported.
+   *
    * @var string[]
    */
   public $callToActions;
   /**
+   * Optional. The descriptions. Currently only one description is supported.
+   *
    * @var string[]
    */
   public $descriptions;
   /**
+   * Optional. The headlines associated with the call to actions. Currently only
+   * one headline is supported.
+   *
    * @var string[]
    */
   public $headlines;
   /**
+   * Optional. The long headlines. Currently only one long headline is
+   * supported.
+   *
    * @var string[]
    */
   public $longHeadlines;
 
   /**
-   * @param string[]
+   * Optional. The IDs of the creatives to use for the business logo. Currently
+   * only one creative is supported.
+   *
+   * @param string[] $businessLogoCreativeIds
    */
   public function setBusinessLogoCreativeIds($businessLogoCreativeIds)
   {
@@ -60,7 +79,9 @@ class YoutubeSettings extends \Google\Collection
     return $this->businessLogoCreativeIds;
   }
   /**
-   * @param string
+   * Optional. The business name.
+   *
+   * @param string $businessName
    */
   public function setBusinessName($businessName)
   {
@@ -74,7 +95,10 @@ class YoutubeSettings extends \Google\Collection
     return $this->businessName;
   }
   /**
-   * @param string[]
+   * Optional. The call to actions. Currently only one call to action is
+   * supported.
+   *
+   * @param string[] $callToActions
    */
   public function setCallToActions($callToActions)
   {
@@ -88,7 +112,9 @@ class YoutubeSettings extends \Google\Collection
     return $this->callToActions;
   }
   /**
-   * @param string[]
+   * Optional. The descriptions. Currently only one description is supported.
+   *
+   * @param string[] $descriptions
    */
   public function setDescriptions($descriptions)
   {
@@ -102,7 +128,10 @@ class YoutubeSettings extends \Google\Collection
     return $this->descriptions;
   }
   /**
-   * @param string[]
+   * Optional. The headlines associated with the call to actions. Currently only
+   * one headline is supported.
+   *
+   * @param string[] $headlines
    */
   public function setHeadlines($headlines)
   {
@@ -116,7 +145,10 @@ class YoutubeSettings extends \Google\Collection
     return $this->headlines;
   }
   /**
-   * @param string[]
+   * Optional. The long headlines. Currently only one long headline is
+   * supported.
+   *
+   * @param string[] $longHeadlines
    */
   public function setLongHeadlines($longHeadlines)
   {

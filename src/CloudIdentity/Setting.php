@@ -20,16 +20,22 @@ namespace Google\Service\CloudIdentity;
 class Setting extends \Google\Model
 {
   /**
+   * Required. Immutable. The type of the Setting. .
+   *
    * @var string
    */
   public $type;
   /**
+   * Required. The value of the Setting.
+   *
    * @var array[]
    */
   public $value;
 
   /**
-   * @param string
+   * Required. Immutable. The type of the Setting. .
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -43,7 +49,9 @@ class Setting extends \Google\Model
     return $this->type;
   }
   /**
-   * @param array[]
+   * Required. The value of the Setting.
+   *
+   * @param array[] $value
    */
   public function setValue($value)
   {

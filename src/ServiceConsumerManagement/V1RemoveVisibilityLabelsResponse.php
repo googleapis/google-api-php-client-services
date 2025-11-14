@@ -21,12 +21,16 @@ class V1RemoveVisibilityLabelsResponse extends \Google\Collection
 {
   protected $collection_key = 'labels';
   /**
+   * The updated set of visibility labels for this consumer on this service.
+   *
    * @var string[]
    */
   public $labels;
 
   /**
-   * @param string[]
+   * The updated set of visibility labels for this consumer on this service.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {

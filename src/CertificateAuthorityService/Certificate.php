@@ -19,60 +19,123 @@ namespace Google\Service\CertificateAuthorityService;
 
 class Certificate extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const SUBJECT_MODE_SUBJECT_REQUEST_MODE_UNSPECIFIED = 'SUBJECT_REQUEST_MODE_UNSPECIFIED';
+  /**
+   * The default mode used in most cases. Indicates that the certificate's
+   * Subject and/or SubjectAltNames are specified in the certificate request.
+   * This mode requires the caller to have the `privateca.certificates.create`
+   * permission.
+   */
+  public const SUBJECT_MODE_DEFAULT = 'DEFAULT';
+  /**
+   * A mode used to get an accurate representation of the Subject field's
+   * distinguished name. Indicates that the certificate's Subject and/or
+   * SubjectAltNames are specified in the certificate request. When parsing a
+   * PEM CSR this mode will maintain the sequence of RDNs found in the CSR's
+   * subject field in the issued Certificate. This mode requires the caller to
+   * have the `privateca.certificates.create` permission.
+   */
+  public const SUBJECT_MODE_RDN_SEQUENCE = 'RDN_SEQUENCE';
+  /**
+   * A mode reserved for special cases. Indicates that the certificate should
+   * have one SPIFFE SubjectAltNames set by the service based on the caller's
+   * identity. This mode will ignore any explicitly specified Subject and/or
+   * SubjectAltNames in the certificate request. This mode requires the caller
+   * to have the `privateca.certificates.createForSelf` permission.
+   */
+  public const SUBJECT_MODE_REFLECTED_SPIFFE = 'REFLECTED_SPIFFE';
   protected $collection_key = 'pemCertificateChain';
   protected $certificateDescriptionType = CertificateDescription::class;
   protected $certificateDescriptionDataType = '';
   /**
+   * Immutable. The resource name for a CertificateTemplate used to issue this
+   * certificate, in the format `projects/locations/certificateTemplates`. If
+   * this is specified, the caller must have the necessary permission to use
+   * this template. If this is omitted, no template will be used. This template
+   * must be in the same location as the Certificate.
+   *
    * @var string
    */
   public $certificateTemplate;
   protected $configType = CertificateConfig::class;
   protected $configDataType = '';
   /**
+   * Output only. The time at which this Certificate was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The resource name of the issuing CertificateAuthority in the
+   * format `projects/locations/caPools/certificateAuthorities`.
+   *
    * @var string
    */
   public $issuerCertificateAuthority;
   /**
+   * Optional. Labels with user-defined metadata.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. Immutable. The desired lifetime of a certificate. Used to create
+   * the "not_before_time" and "not_after_time" fields inside an X.509
+   * certificate. Note that the lifetime may be truncated if it would extend
+   * past the life of any certificate authority in the issuing chain.
+   *
    * @var string
    */
   public $lifetime;
   /**
+   * Identifier. The resource name for this Certificate in the format
+   * `projects/locations/caPools/certificates`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The pem-encoded, signed X.509 certificate.
+   *
    * @var string
    */
   public $pemCertificate;
   /**
+   * Output only. The chain that may be used to verify the X.509 certificate.
+   * Expected to be in issuer-to-root order according to RFC 5246.
+   *
    * @var string[]
    */
   public $pemCertificateChain;
   /**
+   * Immutable. A pem-encoded X.509 certificate signing request (CSR).
+   *
    * @var string
    */
   public $pemCsr;
   protected $revocationDetailsType = RevocationDetails::class;
   protected $revocationDetailsDataType = '';
   /**
+   * Immutable. Specifies how the Certificate's identity fields are to be
+   * decided. If this is omitted, the `DEFAULT` subject mode will be used.
+   *
    * @var string
    */
   public $subjectMode;
   /**
+   * Output only. The time at which this Certificate was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param CertificateDescription
+   * Output only. A structured description of the issued X.509 certificate.
+   *
+   * @param CertificateDescription $certificateDescription
    */
   public function setCertificateDescription(CertificateDescription $certificateDescription)
   {
@@ -86,7 +149,13 @@ class Certificate extends \Google\Collection
     return $this->certificateDescription;
   }
   /**
-   * @param string
+   * Immutable. The resource name for a CertificateTemplate used to issue this
+   * certificate, in the format `projects/locations/certificateTemplates`. If
+   * this is specified, the caller must have the necessary permission to use
+   * this template. If this is omitted, no template will be used. This template
+   * must be in the same location as the Certificate.
+   *
+   * @param string $certificateTemplate
    */
   public function setCertificateTemplate($certificateTemplate)
   {
@@ -100,7 +169,10 @@ class Certificate extends \Google\Collection
     return $this->certificateTemplate;
   }
   /**
-   * @param CertificateConfig
+   * Immutable. A description of the certificate and key that does not require
+   * X.509 or ASN.1.
+   *
+   * @param CertificateConfig $config
    */
   public function setConfig(CertificateConfig $config)
   {
@@ -114,7 +186,9 @@ class Certificate extends \Google\Collection
     return $this->config;
   }
   /**
-   * @param string
+   * Output only. The time at which this Certificate was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -128,7 +202,10 @@ class Certificate extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The resource name of the issuing CertificateAuthority in the
+   * format `projects/locations/caPools/certificateAuthorities`.
+   *
+   * @param string $issuerCertificateAuthority
    */
   public function setIssuerCertificateAuthority($issuerCertificateAuthority)
   {
@@ -142,7 +219,9 @@ class Certificate extends \Google\Collection
     return $this->issuerCertificateAuthority;
   }
   /**
-   * @param string[]
+   * Optional. Labels with user-defined metadata.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -156,7 +235,12 @@ class Certificate extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. Immutable. The desired lifetime of a certificate. Used to create
+   * the "not_before_time" and "not_after_time" fields inside an X.509
+   * certificate. Note that the lifetime may be truncated if it would extend
+   * past the life of any certificate authority in the issuing chain.
+   *
+   * @param string $lifetime
    */
   public function setLifetime($lifetime)
   {
@@ -170,7 +254,10 @@ class Certificate extends \Google\Collection
     return $this->lifetime;
   }
   /**
-   * @param string
+   * Identifier. The resource name for this Certificate in the format
+   * `projects/locations/caPools/certificates`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -184,7 +271,9 @@ class Certificate extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The pem-encoded, signed X.509 certificate.
+   *
+   * @param string $pemCertificate
    */
   public function setPemCertificate($pemCertificate)
   {
@@ -198,7 +287,10 @@ class Certificate extends \Google\Collection
     return $this->pemCertificate;
   }
   /**
-   * @param string[]
+   * Output only. The chain that may be used to verify the X.509 certificate.
+   * Expected to be in issuer-to-root order according to RFC 5246.
+   *
+   * @param string[] $pemCertificateChain
    */
   public function setPemCertificateChain($pemCertificateChain)
   {
@@ -212,7 +304,9 @@ class Certificate extends \Google\Collection
     return $this->pemCertificateChain;
   }
   /**
-   * @param string
+   * Immutable. A pem-encoded X.509 certificate signing request (CSR).
+   *
+   * @param string $pemCsr
    */
   public function setPemCsr($pemCsr)
   {
@@ -226,7 +320,10 @@ class Certificate extends \Google\Collection
     return $this->pemCsr;
   }
   /**
-   * @param RevocationDetails
+   * Output only. Details regarding the revocation of this Certificate. This
+   * Certificate is considered revoked if and only if this field is present.
+   *
+   * @param RevocationDetails $revocationDetails
    */
   public function setRevocationDetails(RevocationDetails $revocationDetails)
   {
@@ -240,21 +337,29 @@ class Certificate extends \Google\Collection
     return $this->revocationDetails;
   }
   /**
-   * @param string
+   * Immutable. Specifies how the Certificate's identity fields are to be
+   * decided. If this is omitted, the `DEFAULT` subject mode will be used.
+   *
+   * Accepted values: SUBJECT_REQUEST_MODE_UNSPECIFIED, DEFAULT, RDN_SEQUENCE,
+   * REFLECTED_SPIFFE
+   *
+   * @param self::SUBJECT_MODE_* $subjectMode
    */
   public function setSubjectMode($subjectMode)
   {
     $this->subjectMode = $subjectMode;
   }
   /**
-   * @return string
+   * @return self::SUBJECT_MODE_*
    */
   public function getSubjectMode()
   {
     return $this->subjectMode;
   }
   /**
-   * @param string
+   * Output only. The time at which this Certificate was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

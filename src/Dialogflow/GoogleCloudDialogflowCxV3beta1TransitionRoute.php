@@ -20,26 +20,49 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
 {
   /**
+   * The condition to evaluate against form parameters or session parameters.
+   * See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/
+   * reference/condition). At least one of `intent` or `condition` must be
+   * specified. When both `intent` and `condition` are specified, the transition
+   * can only happen when both are fulfilled.
+   *
    * @var string
    */
   public $condition;
   /**
+   * Optional. The description of the transition route. The maximum length is
+   * 500 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * The unique identifier of an Intent. Format:
+   * `projects//locations//agents//intents/`. Indicates that the transition can
+   * only happen when the given intent is matched. At least one of `intent` or
+   * `condition` must be specified. When both `intent` and `condition` are
+   * specified, the transition can only happen when both are fulfilled.
+   *
    * @var string
    */
   public $intent;
   /**
+   * Output only. The unique identifier of this transition route.
+   *
    * @var string
    */
   public $name;
   /**
+   * The target flow to transition to. Format:
+   * `projects//locations//agents//flows/`.
+   *
    * @var string
    */
   public $targetFlow;
   /**
+   * The target page to transition to. Format:
+   * `projects//locations//agents//flows//pages/`.
+   *
    * @var string
    */
   public $targetPage;
@@ -47,7 +70,13 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
   protected $triggerFulfillmentDataType = '';
 
   /**
-   * @param string
+   * The condition to evaluate against form parameters or session parameters.
+   * See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/
+   * reference/condition). At least one of `intent` or `condition` must be
+   * specified. When both `intent` and `condition` are specified, the transition
+   * can only happen when both are fulfilled.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -61,7 +90,10 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param string
+   * Optional. The description of the transition route. The maximum length is
+   * 500 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -75,7 +107,13 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The unique identifier of an Intent. Format:
+   * `projects//locations//agents//intents/`. Indicates that the transition can
+   * only happen when the given intent is matched. At least one of `intent` or
+   * `condition` must be specified. When both `intent` and `condition` are
+   * specified, the transition can only happen when both are fulfilled.
+   *
+   * @param string $intent
    */
   public function setIntent($intent)
   {
@@ -89,7 +127,9 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
     return $this->intent;
   }
   /**
-   * @param string
+   * Output only. The unique identifier of this transition route.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -103,7 +143,10 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The target flow to transition to. Format:
+   * `projects//locations//agents//flows/`.
+   *
+   * @param string $targetFlow
    */
   public function setTargetFlow($targetFlow)
   {
@@ -117,7 +160,10 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
     return $this->targetFlow;
   }
   /**
-   * @param string
+   * The target page to transition to. Format:
+   * `projects//locations//agents//flows//pages/`.
+   *
+   * @param string $targetPage
    */
   public function setTargetPage($targetPage)
   {
@@ -131,7 +177,11 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
     return $this->targetPage;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1Fulfillment
+   * The fulfillment to call when the condition is satisfied. At least one of
+   * `trigger_fulfillment` and `target` must be specified. When both are
+   * defined, `trigger_fulfillment` is executed first.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1Fulfillment $triggerFulfillment
    */
   public function setTriggerFulfillment(GoogleCloudDialogflowCxV3beta1Fulfillment $triggerFulfillment)
   {

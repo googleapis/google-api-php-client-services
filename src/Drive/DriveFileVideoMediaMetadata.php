@@ -20,20 +20,28 @@ namespace Google\Service\Drive;
 class DriveFileVideoMediaMetadata extends \Google\Model
 {
   /**
+   * Output only. The duration of the video in milliseconds.
+   *
    * @var string
    */
   public $durationMillis;
   /**
+   * Output only. The height of the video in pixels.
+   *
    * @var int
    */
   public $height;
   /**
+   * Output only. The width of the video in pixels.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param string
+   * Output only. The duration of the video in milliseconds.
+   *
+   * @param string $durationMillis
    */
   public function setDurationMillis($durationMillis)
   {
@@ -47,7 +55,9 @@ class DriveFileVideoMediaMetadata extends \Google\Model
     return $this->durationMillis;
   }
   /**
-   * @param int
+   * Output only. The height of the video in pixels.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -61,7 +71,9 @@ class DriveFileVideoMediaMetadata extends \Google\Model
     return $this->height;
   }
   /**
-   * @param int
+   * Output only. The width of the video in pixels.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

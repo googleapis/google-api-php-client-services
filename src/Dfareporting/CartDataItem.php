@@ -20,17 +20,32 @@ namespace Google\Service\Dfareporting;
 class CartDataItem extends \Google\Model
 {
   /**
+   * The shopping id of the item. Must be equal to the Merchant Center product
+   * identifier. This is a required field.
+   *
    * @var string
    */
   public $itemId;
   /**
+   * Number of items sold. This is a required field.
+   *
    * @var int
    */
   public $quantity;
+  /**
+   * Unit price excluding tax, shipping, and any transaction level discounts.
+   * Interpreted in CM360 Floodlight config parent advertiser's currency code.
+   * This is a required field.
+   *
+   * @var 
+   */
   public $unitPrice;
 
   /**
-   * @param string
+   * The shopping id of the item. Must be equal to the Merchant Center product
+   * identifier. This is a required field.
+   *
+   * @param string $itemId
    */
   public function setItemId($itemId)
   {
@@ -44,7 +59,9 @@ class CartDataItem extends \Google\Model
     return $this->itemId;
   }
   /**
-   * @param int
+   * Number of items sold. This is a required field.
+   *
+   * @param int $quantity
    */
   public function setQuantity($quantity)
   {

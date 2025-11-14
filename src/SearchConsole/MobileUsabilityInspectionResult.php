@@ -19,16 +19,40 @@ namespace Google\Service\SearchConsole;
 
 class MobileUsabilityInspectionResult extends \Google\Collection
 {
+  /**
+   * Unknown verdict.
+   */
+  public const VERDICT_VERDICT_UNSPECIFIED = 'VERDICT_UNSPECIFIED';
+  /**
+   * Equivalent to "Valid" for the page or item in Search Console.
+   */
+  public const VERDICT_PASS = 'PASS';
+  /**
+   * Reserved, no longer in use.
+   */
+  public const VERDICT_PARTIAL = 'PARTIAL';
+  /**
+   * Equivalent to "Error" or "Invalid" for the page or item in Search Console.
+   */
+  public const VERDICT_FAIL = 'FAIL';
+  /**
+   * Equivalent to "Excluded" for the page or item in Search Console.
+   */
+  public const VERDICT_NEUTRAL = 'NEUTRAL';
   protected $collection_key = 'issues';
   protected $issuesType = MobileUsabilityIssue::class;
   protected $issuesDataType = 'array';
   /**
+   * High-level mobile-usability inspection result for this URL.
+   *
    * @var string
    */
   public $verdict;
 
   /**
-   * @param MobileUsabilityIssue[]
+   * A list of zero or more mobile-usability issues detected for this URL.
+   *
+   * @param MobileUsabilityIssue[] $issues
    */
   public function setIssues($issues)
   {
@@ -42,14 +66,18 @@ class MobileUsabilityInspectionResult extends \Google\Collection
     return $this->issues;
   }
   /**
-   * @param string
+   * High-level mobile-usability inspection result for this URL.
+   *
+   * Accepted values: VERDICT_UNSPECIFIED, PASS, PARTIAL, FAIL, NEUTRAL
+   *
+   * @param self::VERDICT_* $verdict
    */
   public function setVerdict($verdict)
   {
     $this->verdict = $verdict;
   }
   /**
-   * @return string
+   * @return self::VERDICT_*
    */
   public function getVerdict()
   {

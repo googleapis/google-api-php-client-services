@@ -26,7 +26,9 @@ class Move extends \Google\Collection
   protected $removedParentsDataType = 'array';
 
   /**
-   * @param TargetReference[]
+   * The added parent object(s).
+   *
+   * @param TargetReference[] $addedParents
    */
   public function setAddedParents($addedParents)
   {
@@ -40,7 +42,9 @@ class Move extends \Google\Collection
     return $this->addedParents;
   }
   /**
-   * @param TargetReference[]
+   * The removed parent object(s).
+   *
+   * @param TargetReference[] $removedParents
    */
   public function setRemovedParents($removedParents)
   {

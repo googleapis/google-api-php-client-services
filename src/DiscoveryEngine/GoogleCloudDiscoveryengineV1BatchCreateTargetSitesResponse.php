@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1BatchCreateTargetSitesResponse extends \Google
   protected $targetSitesDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1TargetSite[]
+   * TargetSites created.
+   *
+   * @param GoogleCloudDiscoveryengineV1TargetSite[] $targetSites
    */
   public function setTargetSites($targetSites)
   {

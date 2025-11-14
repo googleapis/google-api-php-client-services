@@ -20,28 +20,41 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1PurgeDocumentsMetadata extends \Google\Model
 {
   /**
+   * Operation create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Count of entries that encountered errors while processing.
+   *
    * @var string
    */
   public $failureCount;
   /**
+   * Count of entries that were ignored as entries were not found.
+   *
    * @var string
    */
   public $ignoredCount;
   /**
+   * Count of entries that were deleted successfully.
+   *
    * @var string
    */
   public $successCount;
   /**
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Operation create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +68,9 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Count of entries that encountered errors while processing.
+   *
+   * @param string $failureCount
    */
   public function setFailureCount($failureCount)
   {
@@ -69,7 +84,9 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsMetadata extends \Google\Model
     return $this->failureCount;
   }
   /**
-   * @param string
+   * Count of entries that were ignored as entries were not found.
+   *
+   * @param string $ignoredCount
    */
   public function setIgnoredCount($ignoredCount)
   {
@@ -83,7 +100,9 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsMetadata extends \Google\Model
     return $this->ignoredCount;
   }
   /**
-   * @param string
+   * Count of entries that were deleted successfully.
+   *
+   * @param string $successCount
    */
   public function setSuccessCount($successCount)
   {
@@ -97,7 +116,10 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsMetadata extends \Google\Model
     return $this->successCount;
   }
   /**
-   * @param string
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

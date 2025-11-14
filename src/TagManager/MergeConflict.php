@@ -25,7 +25,11 @@ class MergeConflict extends \Google\Model
   protected $entityInWorkspaceDataType = '';
 
   /**
-   * @param Entity
+   * The base version entity (since the latest sync operation) that has
+   * conflicting changes compared to the workspace. If this field is missing, it
+   * means the workspace entity is deleted from the base version.
+   *
+   * @param Entity $entityInBaseVersion
    */
   public function setEntityInBaseVersion(Entity $entityInBaseVersion)
   {
@@ -39,7 +43,11 @@ class MergeConflict extends \Google\Model
     return $this->entityInBaseVersion;
   }
   /**
-   * @param Entity
+   * The workspace entity that has conflicting changes compared to the base
+   * version. If an entity is deleted in a workspace, it will still appear with
+   * a deleted change status.
+   *
+   * @param Entity $entityInWorkspace
    */
   public function setEntityInWorkspace(Entity $entityInWorkspace)
   {

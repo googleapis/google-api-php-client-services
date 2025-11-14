@@ -20,16 +20,22 @@ namespace Google\Service\Vault;
 class UserInfo extends \Google\Model
 {
   /**
+   * The displayed name of the user.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The email address of the user.
+   *
    * @var string
    */
   public $email;
 
   /**
-   * @param string
+   * The displayed name of the user.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +49,9 @@ class UserInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The email address of the user.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {

@@ -22,16 +22,24 @@ class CreateMaterializedViewRequest extends \Google\Model
   protected $materializedViewType = MaterializedView::class;
   protected $materializedViewDataType = '';
   /**
+   * Required. The ID to use for the materialized view, which will become the
+   * final component of the materialized view's resource name.
+   *
    * @var string
    */
   public $materializedViewId;
   /**
+   * Required. The parent instance where this materialized view will be created.
+   * Format: `projects/{project}/instances/{instance}`.
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param MaterializedView
+   * Required. The materialized view to create.
+   *
+   * @param MaterializedView $materializedView
    */
   public function setMaterializedView(MaterializedView $materializedView)
   {
@@ -45,7 +53,10 @@ class CreateMaterializedViewRequest extends \Google\Model
     return $this->materializedView;
   }
   /**
-   * @param string
+   * Required. The ID to use for the materialized view, which will become the
+   * final component of the materialized view's resource name.
+   *
+   * @param string $materializedViewId
    */
   public function setMaterializedViewId($materializedViewId)
   {
@@ -59,7 +70,10 @@ class CreateMaterializedViewRequest extends \Google\Model
     return $this->materializedViewId;
   }
   /**
-   * @param string
+   * Required. The parent instance where this materialized view will be created.
+   * Format: `projects/{project}/instances/{instance}`.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {

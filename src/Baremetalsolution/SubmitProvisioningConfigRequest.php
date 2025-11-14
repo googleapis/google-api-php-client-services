@@ -20,6 +20,9 @@ namespace Google\Service\Baremetalsolution;
 class SubmitProvisioningConfigRequest extends \Google\Model
 {
   /**
+   * Optional. Email provided to send a confirmation with provisioning config
+   * to.
+   *
    * @var string
    */
   public $email;
@@ -27,7 +30,10 @@ class SubmitProvisioningConfigRequest extends \Google\Model
   protected $provisioningConfigDataType = '';
 
   /**
-   * @param string
+   * Optional. Email provided to send a confirmation with provisioning config
+   * to.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -41,7 +47,9 @@ class SubmitProvisioningConfigRequest extends \Google\Model
     return $this->email;
   }
   /**
-   * @param ProvisioningConfig
+   * Required. The ProvisioningConfig to create.
+   *
+   * @param ProvisioningConfig $provisioningConfig
    */
   public function setProvisioningConfig(ProvisioningConfig $provisioningConfig)
   {

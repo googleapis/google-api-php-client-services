@@ -20,12 +20,16 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2FieldListOptions extends \Google\Model
 {
   /**
+   * Maximum number of entries permitted.
+   *
    * @var int
    */
   public $maxEntries;
 
   /**
-   * @param int
+   * Maximum number of entries permitted.
+   *
+   * @param int $maxEntries
    */
   public function setMaxEntries($maxEntries)
   {

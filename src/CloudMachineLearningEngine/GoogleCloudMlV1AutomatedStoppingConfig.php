@@ -25,7 +25,7 @@ class GoogleCloudMlV1AutomatedStoppingConfig extends \Google\Model
   protected $medianAutomatedStoppingConfigDataType = '';
 
   /**
-   * @param GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig
+   * @param GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig $decayCurveStoppingConfig
    */
   public function setDecayCurveStoppingConfig(GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig $decayCurveStoppingConfig)
   {
@@ -39,7 +39,7 @@ class GoogleCloudMlV1AutomatedStoppingConfig extends \Google\Model
     return $this->decayCurveStoppingConfig;
   }
   /**
-   * @param GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig
+   * @param GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig $medianAutomatedStoppingConfig
    */
   public function setMedianAutomatedStoppingConfig(GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig $medianAutomatedStoppingConfig)
   {

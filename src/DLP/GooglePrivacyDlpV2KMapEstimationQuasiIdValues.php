@@ -21,6 +21,8 @@ class GooglePrivacyDlpV2KMapEstimationQuasiIdValues extends \Google\Collection
 {
   protected $collection_key = 'quasiIdsValues';
   /**
+   * The estimated anonymity for these quasi-identifier values.
+   *
    * @var string
    */
   public $estimatedAnonymity;
@@ -28,7 +30,9 @@ class GooglePrivacyDlpV2KMapEstimationQuasiIdValues extends \Google\Collection
   protected $quasiIdsValuesDataType = 'array';
 
   /**
-   * @param string
+   * The estimated anonymity for these quasi-identifier values.
+   *
+   * @param string $estimatedAnonymity
    */
   public function setEstimatedAnonymity($estimatedAnonymity)
   {
@@ -42,7 +46,9 @@ class GooglePrivacyDlpV2KMapEstimationQuasiIdValues extends \Google\Collection
     return $this->estimatedAnonymity;
   }
   /**
-   * @param GooglePrivacyDlpV2Value[]
+   * The quasi-identifier values.
+   *
+   * @param GooglePrivacyDlpV2Value[] $quasiIdsValues
    */
   public function setQuasiIdsValues($quasiIdsValues)
   {

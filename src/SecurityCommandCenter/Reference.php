@@ -20,16 +20,23 @@ namespace Google\Service\SecurityCommandCenter;
 class Reference extends \Google\Model
 {
   /**
+   * Source of the reference e.g. NVD
+   *
    * @var string
    */
   public $source;
   /**
+   * Uri for the mentioned source e.g. https://cve.mitre.org/cgi-
+   * bin/cvename.cgi?name=CVE-2021-34527.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Source of the reference e.g. NVD
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -43,7 +50,10 @@ class Reference extends \Google\Model
     return $this->source;
   }
   /**
-   * @param string
+   * Uri for the mentioned source e.g. https://cve.mitre.org/cgi-
+   * bin/cvename.cgi?name=CVE-2021-34527.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

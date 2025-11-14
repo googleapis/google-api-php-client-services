@@ -19,35 +19,49 @@ namespace Google\Service\Dfareporting;
 
 class Recipient extends \Google\Model
 {
+  public const DELIVERY_TYPE_LINK = 'LINK';
+  public const DELIVERY_TYPE_ATTACHMENT = 'ATTACHMENT';
   /**
+   * The delivery type for the recipient.
+   *
    * @var string
    */
   public $deliveryType;
   /**
+   * The email address of the recipient.
+   *
    * @var string
    */
   public $email;
   /**
+   * The kind of resource this is, in this case dfareporting#recipient.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * The delivery type for the recipient.
+   *
+   * Accepted values: LINK, ATTACHMENT
+   *
+   * @param self::DELIVERY_TYPE_* $deliveryType
    */
   public function setDeliveryType($deliveryType)
   {
     $this->deliveryType = $deliveryType;
   }
   /**
-   * @return string
+   * @return self::DELIVERY_TYPE_*
    */
   public function getDeliveryType()
   {
     return $this->deliveryType;
   }
   /**
-   * @param string
+   * The email address of the recipient.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -61,7 +75,9 @@ class Recipient extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case dfareporting#recipient.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

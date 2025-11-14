@@ -23,16 +23,22 @@ class CreateTimeSeriesSummary extends \Google\Collection
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**
+   * The number of points that were successfully written.
+   *
    * @var int
    */
   public $successPointCount;
   /**
+   * The number of points in the request.
+   *
    * @var int
    */
   public $totalPointCount;
 
   /**
-   * @param Error[]
+   * The number of points that failed to be written. Order is not guaranteed.
+   *
+   * @param Error[] $errors
    */
   public function setErrors($errors)
   {
@@ -46,7 +52,9 @@ class CreateTimeSeriesSummary extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param int
+   * The number of points that were successfully written.
+   *
+   * @param int $successPointCount
    */
   public function setSuccessPointCount($successPointCount)
   {
@@ -60,7 +68,9 @@ class CreateTimeSeriesSummary extends \Google\Collection
     return $this->successPointCount;
   }
   /**
-   * @param int
+   * The number of points in the request.
+   *
+   * @param int $totalPointCount
    */
   public function setTotalPointCount($totalPointCount)
   {

@@ -20,16 +20,28 @@ namespace Google\Service\Pubsub;
 class AnalyticsHubSubscriptionInfo extends \Google\Model
 {
   /**
+   * Optional. The name of the associated Analytics Hub listing resource.
+   * Pattern: "projects/{project}/locations/{location}/dataExchanges/{data_excha
+   * nge}/listings/{listing}"
+   *
    * @var string
    */
   public $listing;
   /**
+   * Optional. The name of the associated Analytics Hub subscription resource.
+   * Pattern:
+   * "projects/{project}/locations/{location}/subscriptions/{subscription}"
+   *
    * @var string
    */
   public $subscription;
 
   /**
-   * @param string
+   * Optional. The name of the associated Analytics Hub listing resource.
+   * Pattern: "projects/{project}/locations/{location}/dataExchanges/{data_excha
+   * nge}/listings/{listing}"
+   *
+   * @param string $listing
    */
   public function setListing($listing)
   {
@@ -43,7 +55,11 @@ class AnalyticsHubSubscriptionInfo extends \Google\Model
     return $this->listing;
   }
   /**
-   * @param string
+   * Optional. The name of the associated Analytics Hub subscription resource.
+   * Pattern:
+   * "projects/{project}/locations/{location}/subscriptions/{subscription}"
+   *
+   * @param string $subscription
    */
   public function setSubscription($subscription)
   {

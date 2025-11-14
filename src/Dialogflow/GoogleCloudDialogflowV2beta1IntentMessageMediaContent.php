@@ -19,16 +19,28 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2beta1IntentMessageMediaContent extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const MEDIA_TYPE_RESPONSE_MEDIA_TYPE_UNSPECIFIED = 'RESPONSE_MEDIA_TYPE_UNSPECIFIED';
+  /**
+   * Response media type is audio.
+   */
+  public const MEDIA_TYPE_AUDIO = 'AUDIO';
   protected $collection_key = 'mediaObjects';
   protected $mediaObjectsType = GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject::class;
   protected $mediaObjectsDataType = 'array';
   /**
+   * Optional. What type of media is the content (ie "audio").
+   *
    * @var string
    */
   public $mediaType;
 
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject[]
+   * Required. List of media objects.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject[] $mediaObjects
    */
   public function setMediaObjects($mediaObjects)
   {
@@ -42,14 +54,18 @@ class GoogleCloudDialogflowV2beta1IntentMessageMediaContent extends \Google\Coll
     return $this->mediaObjects;
   }
   /**
-   * @param string
+   * Optional. What type of media is the content (ie "audio").
+   *
+   * Accepted values: RESPONSE_MEDIA_TYPE_UNSPECIFIED, AUDIO
+   *
+   * @param self::MEDIA_TYPE_* $mediaType
    */
   public function setMediaType($mediaType)
   {
     $this->mediaType = $mediaType;
   }
   /**
-   * @return string
+   * @return self::MEDIA_TYPE_*
    */
   public function getMediaType()
   {

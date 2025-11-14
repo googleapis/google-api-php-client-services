@@ -23,7 +23,9 @@ class GoogleCloudOrgpolicyV2ConstraintBooleanConstraint extends \Google\Model
   protected $customConstraintDefinitionDataType = '';
 
   /**
-   * @param GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition
+   * Custom constraint definition. Defines this as a managed constraint.
+   *
+   * @param GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition $customConstraintDefinition
    */
   public function setCustomConstraintDefinition(GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition $customConstraintDefinition)
   {

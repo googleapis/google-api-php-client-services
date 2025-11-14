@@ -21,20 +21,32 @@ class GoogleCloudContactcenterinsightsV1QaQuestionTuningMetadata extends \Google
 {
   protected $collection_key = 'datasetValidationWarnings';
   /**
+   * A list of any applicable data validation warnings about the question's
+   * feedback labels.
+   *
    * @var string[]
    */
   public $datasetValidationWarnings;
   /**
+   * Total number of valid labels provided for the question at the time of
+   * tuining.
+   *
    * @var string
    */
   public $totalValidLabelCount;
   /**
+   * Error status of the tuning operation for the question. Will only be set if
+   * the tuning operation failed.
+   *
    * @var string
    */
   public $tuningError;
 
   /**
-   * @param string[]
+   * A list of any applicable data validation warnings about the question's
+   * feedback labels.
+   *
+   * @param string[] $datasetValidationWarnings
    */
   public function setDatasetValidationWarnings($datasetValidationWarnings)
   {
@@ -48,7 +60,10 @@ class GoogleCloudContactcenterinsightsV1QaQuestionTuningMetadata extends \Google
     return $this->datasetValidationWarnings;
   }
   /**
-   * @param string
+   * Total number of valid labels provided for the question at the time of
+   * tuining.
+   *
+   * @param string $totalValidLabelCount
    */
   public function setTotalValidLabelCount($totalValidLabelCount)
   {
@@ -62,7 +77,10 @@ class GoogleCloudContactcenterinsightsV1QaQuestionTuningMetadata extends \Google
     return $this->totalValidLabelCount;
   }
   /**
-   * @param string
+   * Error status of the tuning operation for the question. Will only be set if
+   * the tuning operation failed.
+   *
+   * @param string $tuningError
    */
   public function setTuningError($tuningError)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Dfareporting;
 class FloodlightActivityDynamicTag extends \Google\Model
 {
   /**
+   * ID of this dynamic tag. This is a read-only, auto-generated field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of this tag.
+   *
    * @var string
    */
   public $name;
   /**
+   * Tag code.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * ID of this dynamic tag. This is a read-only, auto-generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +55,9 @@ class FloodlightActivityDynamicTag extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Name of this tag.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +71,9 @@ class FloodlightActivityDynamicTag extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Tag code.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

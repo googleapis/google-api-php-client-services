@@ -21,12 +21,18 @@ class BucketIpFilterPublicNetworkSource extends \Google\Collection
 {
   protected $collection_key = 'allowedIpCidrRanges';
   /**
+   * The list of public IPv4, IPv6 cidr ranges that are allowed to access the
+   * bucket.
+   *
    * @var string[]
    */
   public $allowedIpCidrRanges;
 
   /**
-   * @param string[]
+   * The list of public IPv4, IPv6 cidr ranges that are allowed to access the
+   * bucket.
+   *
+   * @param string[] $allowedIpCidrRanges
    */
   public function setAllowedIpCidrRanges($allowedIpCidrRanges)
   {

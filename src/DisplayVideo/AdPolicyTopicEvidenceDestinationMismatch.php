@@ -21,12 +21,24 @@ class AdPolicyTopicEvidenceDestinationMismatch extends \Google\Collection
 {
   protected $collection_key = 'uriTypes';
   /**
+   * The set of URLs that do not match. The list can include single or multiple
+   * uri types. Example 1: [`DISPLAY_URL`, `FINAL_URL`] means ad display URL
+   * does not match with the ad final URL. Example 2: [`FINAL_URL`] means ad
+   * final URL did not match the crawled url, which is also considered as
+   * destination mismatch.
+   *
    * @var string[]
    */
   public $uriTypes;
 
   /**
-   * @param string[]
+   * The set of URLs that do not match. The list can include single or multiple
+   * uri types. Example 1: [`DISPLAY_URL`, `FINAL_URL`] means ad display URL
+   * does not match with the ad final URL. Example 2: [`FINAL_URL`] means ad
+   * final URL did not match the crawled url, which is also considered as
+   * destination mismatch.
+   *
+   * @param string[] $uriTypes
    */
   public function setUriTypes($uriTypes)
   {

@@ -21,18 +21,30 @@ class FootnoteReference extends \Google\Collection
 {
   protected $collection_key = 'suggestedInsertionIds';
   /**
+   * The ID of the footnote that contains the content of this footnote
+   * reference.
+   *
    * @var string
    */
   public $footnoteId;
   /**
+   * The rendered number of this footnote.
+   *
    * @var string
    */
   public $footnoteNumber;
   /**
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
    * @var string[]
    */
   public $suggestedDeletionIds;
   /**
+   * The suggested insertion IDs. A FootnoteReference may have multiple
+   * insertion IDs if it's a nested suggested change. If empty, then this is not
+   * a suggested insertion.
+   *
    * @var string[]
    */
   public $suggestedInsertionIds;
@@ -42,7 +54,10 @@ class FootnoteReference extends \Google\Collection
   protected $textStyleDataType = '';
 
   /**
-   * @param string
+   * The ID of the footnote that contains the content of this footnote
+   * reference.
+   *
+   * @param string $footnoteId
    */
   public function setFootnoteId($footnoteId)
   {
@@ -56,7 +71,9 @@ class FootnoteReference extends \Google\Collection
     return $this->footnoteId;
   }
   /**
-   * @param string
+   * The rendered number of this footnote.
+   *
+   * @param string $footnoteNumber
    */
   public function setFootnoteNumber($footnoteNumber)
   {
@@ -70,7 +87,10 @@ class FootnoteReference extends \Google\Collection
     return $this->footnoteNumber;
   }
   /**
-   * @param string[]
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
+   * @param string[] $suggestedDeletionIds
    */
   public function setSuggestedDeletionIds($suggestedDeletionIds)
   {
@@ -84,7 +104,11 @@ class FootnoteReference extends \Google\Collection
     return $this->suggestedDeletionIds;
   }
   /**
-   * @param string[]
+   * The suggested insertion IDs. A FootnoteReference may have multiple
+   * insertion IDs if it's a nested suggested change. If empty, then this is not
+   * a suggested insertion.
+   *
+   * @param string[] $suggestedInsertionIds
    */
   public function setSuggestedInsertionIds($suggestedInsertionIds)
   {
@@ -98,7 +122,10 @@ class FootnoteReference extends \Google\Collection
     return $this->suggestedInsertionIds;
   }
   /**
-   * @param SuggestedTextStyle[]
+   * The suggested text style changes to this FootnoteReference, keyed by
+   * suggestion ID.
+   *
+   * @param SuggestedTextStyle[] $suggestedTextStyleChanges
    */
   public function setSuggestedTextStyleChanges($suggestedTextStyleChanges)
   {
@@ -112,7 +139,9 @@ class FootnoteReference extends \Google\Collection
     return $this->suggestedTextStyleChanges;
   }
   /**
-   * @param TextStyle
+   * The text style of this FootnoteReference.
+   *
+   * @param TextStyle $textStyle
    */
   public function setTextStyle(TextStyle $textStyle)
   {

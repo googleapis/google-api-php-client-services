@@ -25,7 +25,9 @@ class FileOperation extends \Google\Model
   protected $writeFileDataType = '';
 
   /**
-   * @param DeleteFile
+   * Represents the delete operation.
+   *
+   * @param DeleteFile $deleteFile
    */
   public function setDeleteFile(DeleteFile $deleteFile)
   {
@@ -39,7 +41,9 @@ class FileOperation extends \Google\Model
     return $this->deleteFile;
   }
   /**
-   * @param WriteFile
+   * Represents the write operation.
+   *
+   * @param WriteFile $writeFile
    */
   public function setWriteFile(WriteFile $writeFile)
   {

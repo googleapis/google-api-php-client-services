@@ -25,7 +25,10 @@ class GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode extends \Google\
   protected $pageDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3Flow
+   * Indicates a transition to a Flow. Only some fields such as name and
+   * displayname will be set.
+   *
+   * @param GoogleCloudDialogflowCxV3Flow $flow
    */
   public function setFlow(GoogleCloudDialogflowCxV3Flow $flow)
   {
@@ -39,7 +42,10 @@ class GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode extends \Google\
     return $this->flow;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Page
+   * Indicates a transition to a Page. Only some fields such as name and
+   * displayname will be set.
+   *
+   * @param GoogleCloudDialogflowCxV3Page $page
    */
   public function setPage(GoogleCloudDialogflowCxV3Page $page)
   {

@@ -19,9 +19,23 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2ProcessSignature extends \Google\Model
 {
+  /**
+   * The default signature type.
+   */
+  public const SIGNATURE_TYPE_SIGNATURE_TYPE_UNSPECIFIED = 'SIGNATURE_TYPE_UNSPECIFIED';
+  /**
+   * Used for signatures concerning processes.
+   */
+  public const SIGNATURE_TYPE_SIGNATURE_TYPE_PROCESS = 'SIGNATURE_TYPE_PROCESS';
+  /**
+   * Used for signatures concerning disks.
+   */
+  public const SIGNATURE_TYPE_SIGNATURE_TYPE_FILE = 'SIGNATURE_TYPE_FILE';
   protected $memoryHashSignatureType = GoogleCloudSecuritycenterV2MemoryHashSignature::class;
   protected $memoryHashSignatureDataType = '';
   /**
+   * Describes the type of resource associated with the signature.
+   *
    * @var string
    */
   public $signatureType;
@@ -29,7 +43,9 @@ class GoogleCloudSecuritycenterV2ProcessSignature extends \Google\Model
   protected $yaraRuleSignatureDataType = '';
 
   /**
-   * @param GoogleCloudSecuritycenterV2MemoryHashSignature
+   * Signature indicating that a binary family was matched.
+   *
+   * @param GoogleCloudSecuritycenterV2MemoryHashSignature $memoryHashSignature
    */
   public function setMemoryHashSignature(GoogleCloudSecuritycenterV2MemoryHashSignature $memoryHashSignature)
   {
@@ -43,21 +59,28 @@ class GoogleCloudSecuritycenterV2ProcessSignature extends \Google\Model
     return $this->memoryHashSignature;
   }
   /**
-   * @param string
+   * Describes the type of resource associated with the signature.
+   *
+   * Accepted values: SIGNATURE_TYPE_UNSPECIFIED, SIGNATURE_TYPE_PROCESS,
+   * SIGNATURE_TYPE_FILE
+   *
+   * @param self::SIGNATURE_TYPE_* $signatureType
    */
   public function setSignatureType($signatureType)
   {
     $this->signatureType = $signatureType;
   }
   /**
-   * @return string
+   * @return self::SIGNATURE_TYPE_*
    */
   public function getSignatureType()
   {
     return $this->signatureType;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2YaraRuleSignature
+   * Signature indicating that a YARA rule was matched.
+   *
+   * @param GoogleCloudSecuritycenterV2YaraRuleSignature $yaraRuleSignature
    */
   public function setYaraRuleSignature(GoogleCloudSecuritycenterV2YaraRuleSignature $yaraRuleSignature)
   {

@@ -20,6 +20,8 @@ namespace Google\Service\SecurityPosture;
 class Property extends \Google\Model
 {
   /**
+   * Required. The name of the custom source property.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +29,9 @@ class Property extends \Google\Model
   protected $valueExpressionDataType = '';
 
   /**
-   * @param string
+   * Required. The name of the custom source property.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +45,11 @@ class Property extends \Google\Model
     return $this->name;
   }
   /**
-   * @param Expr
+   * Optional. The CEL expression for the value of the custom source property.
+   * For resource properties, you can return the value of the property or a
+   * string enclosed in quotation marks.
+   *
+   * @param Expr $valueExpression
    */
   public function setValueExpression(Expr $valueExpression)
   {

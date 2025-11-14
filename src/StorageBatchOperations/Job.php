@@ -19,26 +19,57 @@ namespace Google\Service\StorageBatchOperations;
 
 class Job extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * In progress.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * Completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Cancelled by the user.
+   */
+  public const STATE_CANCELED = 'CANCELED';
+  /**
+   * Terminated due to an unrecoverable failure.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'errorSummaries';
   protected $bucketListType = BucketList::class;
   protected $bucketListDataType = '';
   /**
+   * Output only. The time that the job was completed.
+   *
    * @var string
    */
   public $completeTime;
   protected $countersType = Counters::class;
   protected $countersDataType = '';
   /**
+   * Output only. The time that the job was created.
+   *
    * @var string
    */
   public $createTime;
   protected $deleteObjectType = DeleteObject::class;
   protected $deleteObjectDataType = '';
   /**
+   * Optional. A description provided by the user for the job. Its max length is
+   * 1024 bytes when Unicode-encoded.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. If true, the job will run in dry run mode, returning the total
+   * object count and, if the object configuration is a prefix list, the bytes
+   * found from source. No transformations will be performed.
+   *
    * @var bool
    */
   public $dryRun;
@@ -47,6 +78,11 @@ class Job extends \Google\Collection
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
+   * Identifier. The resource name of the Job. job_id is unique within the
+   * project, that is either set by the customer or defined by the service.
+   * Format: projects/{project}/locations/global/jobs/{job_id} . For example:
+   * "projects/123456/locations/global/jobs/job01".
+   *
    * @var string
    */
   public $name;
@@ -57,16 +93,22 @@ class Job extends \Google\Collection
   protected $rewriteObjectType = RewriteObject::class;
   protected $rewriteObjectDataType = '';
   /**
+   * Output only. The time that the job was scheduled.
+   *
    * @var string
    */
   public $scheduleTime;
   /**
+   * Output only. State of the job.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param BucketList
+   * Specifies a list of buckets and their objects to be transformed.
+   *
+   * @param BucketList $bucketList
    */
   public function setBucketList(BucketList $bucketList)
   {
@@ -80,7 +122,9 @@ class Job extends \Google\Collection
     return $this->bucketList;
   }
   /**
-   * @param string
+   * Output only. The time that the job was completed.
+   *
+   * @param string $completeTime
    */
   public function setCompleteTime($completeTime)
   {
@@ -94,7 +138,9 @@ class Job extends \Google\Collection
     return $this->completeTime;
   }
   /**
-   * @param Counters
+   * Output only. Information about the progress of the job.
+   *
+   * @param Counters $counters
    */
   public function setCounters(Counters $counters)
   {
@@ -108,7 +154,9 @@ class Job extends \Google\Collection
     return $this->counters;
   }
   /**
-   * @param string
+   * Output only. The time that the job was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -122,7 +170,9 @@ class Job extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param DeleteObject
+   * Delete objects.
+   *
+   * @param DeleteObject $deleteObject
    */
   public function setDeleteObject(DeleteObject $deleteObject)
   {
@@ -136,7 +186,10 @@ class Job extends \Google\Collection
     return $this->deleteObject;
   }
   /**
-   * @param string
+   * Optional. A description provided by the user for the job. Its max length is
+   * 1024 bytes when Unicode-encoded.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -150,7 +203,11 @@ class Job extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param bool
+   * Optional. If true, the job will run in dry run mode, returning the total
+   * object count and, if the object configuration is a prefix list, the bytes
+   * found from source. No transformations will be performed.
+   *
+   * @param bool $dryRun
    */
   public function setDryRun($dryRun)
   {
@@ -164,7 +221,9 @@ class Job extends \Google\Collection
     return $this->dryRun;
   }
   /**
-   * @param ErrorSummary[]
+   * Output only. Summarizes errors encountered with sample error log entries.
+   *
+   * @param ErrorSummary[] $errorSummaries
    */
   public function setErrorSummaries($errorSummaries)
   {
@@ -178,7 +237,9 @@ class Job extends \Google\Collection
     return $this->errorSummaries;
   }
   /**
-   * @param LoggingConfig
+   * Optional. Logging configuration.
+   *
+   * @param LoggingConfig $loggingConfig
    */
   public function setLoggingConfig(LoggingConfig $loggingConfig)
   {
@@ -192,7 +253,12 @@ class Job extends \Google\Collection
     return $this->loggingConfig;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the Job. job_id is unique within the
+   * project, that is either set by the customer or defined by the service.
+   * Format: projects/{project}/locations/global/jobs/{job_id} . For example:
+   * "projects/123456/locations/global/jobs/job01".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -206,7 +272,11 @@ class Job extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PutMetadata
+   * Updates object metadata. Allows updating fixed-key and custom metadata and
+   * fixed-key metadata i.e. Cache-Control, Content-Disposition, Content-
+   * Encoding, Content-Language, Content-Type, Custom-Time.
+   *
+   * @param PutMetadata $putMetadata
    */
   public function setPutMetadata(PutMetadata $putMetadata)
   {
@@ -220,7 +290,9 @@ class Job extends \Google\Collection
     return $this->putMetadata;
   }
   /**
-   * @param PutObjectHold
+   * Changes object hold status.
+   *
+   * @param PutObjectHold $putObjectHold
    */
   public function setPutObjectHold(PutObjectHold $putObjectHold)
   {
@@ -234,7 +306,9 @@ class Job extends \Google\Collection
     return $this->putObjectHold;
   }
   /**
-   * @param RewriteObject
+   * Rewrite the object and updates metadata like KMS key.
+   *
+   * @param RewriteObject $rewriteObject
    */
   public function setRewriteObject(RewriteObject $rewriteObject)
   {
@@ -248,7 +322,9 @@ class Job extends \Google\Collection
     return $this->rewriteObject;
   }
   /**
-   * @param string
+   * Output only. The time that the job was scheduled.
+   *
+   * @param string $scheduleTime
    */
   public function setScheduleTime($scheduleTime)
   {
@@ -262,14 +338,18 @@ class Job extends \Google\Collection
     return $this->scheduleTime;
   }
   /**
-   * @param string
+   * Output only. State of the job.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, SUCCEEDED, CANCELED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -21,10 +21,15 @@ class PostalCodeGroup extends \Google\Collection
 {
   protected $collection_key = 'postalCodeRanges';
   /**
+   * The CLDR territory code of the country the postal code group applies to.
+   * Required.
+   *
    * @var string
    */
   public $country;
   /**
+   * The name of the postal code group, referred to in headers. Required.
+   *
    * @var string
    */
   public $name;
@@ -32,7 +37,10 @@ class PostalCodeGroup extends \Google\Collection
   protected $postalCodeRangesDataType = 'array';
 
   /**
-   * @param string
+   * The CLDR territory code of the country the postal code group applies to.
+   * Required.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -46,7 +54,9 @@ class PostalCodeGroup extends \Google\Collection
     return $this->country;
   }
   /**
-   * @param string
+   * The name of the postal code group, referred to in headers. Required.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -60,7 +70,9 @@ class PostalCodeGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PostalCodeRange[]
+   * A range of postal codes. Required.
+   *
+   * @param PostalCodeRange[] $postalCodeRanges
    */
   public function setPostalCodeRanges($postalCodeRanges)
   {

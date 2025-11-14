@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3EntityTypeExcludedPhrase extends \Google\Model
 {
   /**
+   * Required. The word or phrase to be excluded.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The word or phrase to be excluded.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

@@ -19,8 +19,43 @@ namespace Google\Service\Appengine;
 
 class TrafficSplit extends \Google\Model
 {
+  /**
+   * Diversion method unspecified.
+   */
+  public const SHARD_BY_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Diversion based on a specially named cookie, "GOOGAPPUID." The cookie must
+   * be set by the application itself or no diversion will occur.
+   */
+  public const SHARD_BY_COOKIE = 'COOKIE';
+  /**
+   * Diversion based on applying the modulus operation to a fingerprint of the
+   * IP address.
+   */
+  public const SHARD_BY_IP = 'IP';
+  /**
+   * Diversion based on weighted random assignment. An incoming request is
+   * randomly routed to a version in the traffic split, with probability
+   * proportional to the version's traffic share.
+   */
+  public const SHARD_BY_RANDOM = 'RANDOM';
+  /**
+   * Mapping from version IDs within the service to fractional (0.000, 1]
+   * allocations of traffic for that version. Each version can be specified only
+   * once, but some versions in the service may not have any traffic allocation.
+   * Services that have traffic allocated cannot be deleted until either the
+   * service is deleted or their traffic allocation is removed. Allocations must
+   * sum to 1. Up to two decimal place precision is supported for IP-based
+   * splits and up to three decimal places is supported for cookie-based splits.
+   *
+   * @var []
+   */
   public $allocations;
   /**
+   * Mechanism used to determine which version a request is sent to. The traffic
+   * selection algorithm will be stable for either type until allocations are
+   * changed.
+   *
    * @var string
    */
   public $shardBy;
@@ -34,14 +69,20 @@ class TrafficSplit extends \Google\Model
     return $this->allocations;
   }
   /**
-   * @param string
+   * Mechanism used to determine which version a request is sent to. The traffic
+   * selection algorithm will be stable for either type until allocations are
+   * changed.
+   *
+   * Accepted values: UNSPECIFIED, COOKIE, IP, RANDOM
+   *
+   * @param self::SHARD_BY_* $shardBy
    */
   public function setShardBy($shardBy)
   {
     $this->shardBy = $shardBy;
   }
   /**
-   * @return string
+   * @return self::SHARD_BY_*
    */
   public function getShardBy()
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2StorageMetadataLabel extends \Google\Model
 {
   /**
+   * Label name.
+   *
    * @var string
    */
   public $key;
 
   /**
-   * @param string
+   * Label name.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {

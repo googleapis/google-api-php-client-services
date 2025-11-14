@@ -24,7 +24,10 @@ class BulkEditAssignedInventorySourcesResponse extends \Google\Collection
   protected $assignedInventorySourcesDataType = 'array';
 
   /**
-   * @param AssignedInventorySource[]
+   * The list of assigned inventory sources that have been successfully created.
+   * This list will be absent if empty.
+   *
+   * @param AssignedInventorySource[] $assignedInventorySources
    */
   public function setAssignedInventorySources($assignedInventorySources)
   {

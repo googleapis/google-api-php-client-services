@@ -19,31 +19,51 @@ namespace Google\Service\Dfareporting;
 
 class UniversalAdId extends \Google\Model
 {
+  public const REGISTRY_OTHER = 'OTHER';
+  public const REGISTRY_AD_ID_OFFICIAL = 'AD_ID_OFFICIAL';
+  public const REGISTRY_CLEARCAST = 'CLEARCAST';
+  public const REGISTRY_DCM = 'DCM';
+  public const REGISTRY_ARPP = 'ARPP';
+  public const REGISTRY_CUSV = 'CUSV';
   /**
+   * Registry used for the Ad ID value.
+   *
    * @var string
    */
   public $registry;
   /**
+   * ID value for this creative. Only alphanumeric characters and the following
+   * symbols are valid: "_/\-". Maximum length is 64 characters. Read only when
+   * registry is DCM.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Registry used for the Ad ID value.
+   *
+   * Accepted values: OTHER, AD_ID_OFFICIAL, CLEARCAST, DCM, ARPP, CUSV
+   *
+   * @param self::REGISTRY_* $registry
    */
   public function setRegistry($registry)
   {
     $this->registry = $registry;
   }
   /**
-   * @return string
+   * @return self::REGISTRY_*
    */
   public function getRegistry()
   {
     return $this->registry;
   }
   /**
-   * @param string
+   * ID value for this creative. Only alphanumeric characters and the following
+   * symbols are valid: "_/\-". Maximum length is 64 characters. Read only when
+   * registry is DCM.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

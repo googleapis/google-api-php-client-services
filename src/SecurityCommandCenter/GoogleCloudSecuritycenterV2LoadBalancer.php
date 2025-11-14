@@ -20,12 +20,16 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2LoadBalancer extends \Google\Model
 {
   /**
+   * The name of the load balancer associated with the finding.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The name of the load balancer associated with the finding.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

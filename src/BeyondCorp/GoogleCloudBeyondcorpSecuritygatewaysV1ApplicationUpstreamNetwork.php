@@ -20,12 +20,18 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamNetwork extends \Google\Model
 {
   /**
+   * Required. Network name is of the format:
+   * `projects/{project}/global/networks/{network}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. Network name is of the format:
+   * `projects/{project}/global/networks/{network}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

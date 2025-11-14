@@ -20,32 +20,60 @@ namespace Google\Service\Bigquery;
 class LoadQueryStatistics extends \Google\Model
 {
   /**
+   * Output only. The number of bad records encountered while processing a LOAD
+   * query. Note that if the job has failed because of more bad records
+   * encountered than the maximum allowed in the load job configuration, then
+   * this number can be less than the total number of bad records present in the
+   * input data.
+   *
    * @var string
    */
   public $badRecords;
   /**
+   * Output only. This field is deprecated. The number of bytes of source data
+   * copied over the network for a `LOAD` query. `transferred_bytes` has the
+   * canonical value for physical transferred bytes, which is used for BigQuery
+   * Omni billing.
+   *
+   * @deprecated
    * @var string
    */
   public $bytesTransferred;
   /**
+   * Output only. Number of bytes of source data in a LOAD query.
+   *
    * @var string
    */
   public $inputFileBytes;
   /**
+   * Output only. Number of source files in a LOAD query.
+   *
    * @var string
    */
   public $inputFiles;
   /**
+   * Output only. Size of the loaded data in bytes. Note that while a LOAD query
+   * is in the running state, this value may change.
+   *
    * @var string
    */
   public $outputBytes;
   /**
+   * Output only. Number of rows imported in a LOAD query. Note that while a
+   * LOAD query is in the running state, this value may change.
+   *
    * @var string
    */
   public $outputRows;
 
   /**
-   * @param string
+   * Output only. The number of bad records encountered while processing a LOAD
+   * query. Note that if the job has failed because of more bad records
+   * encountered than the maximum allowed in the load job configuration, then
+   * this number can be less than the total number of bad records present in the
+   * input data.
+   *
+   * @param string $badRecords
    */
   public function setBadRecords($badRecords)
   {
@@ -59,13 +87,20 @@ class LoadQueryStatistics extends \Google\Model
     return $this->badRecords;
   }
   /**
-   * @param string
+   * Output only. This field is deprecated. The number of bytes of source data
+   * copied over the network for a `LOAD` query. `transferred_bytes` has the
+   * canonical value for physical transferred bytes, which is used for BigQuery
+   * Omni billing.
+   *
+   * @deprecated
+   * @param string $bytesTransferred
    */
   public function setBytesTransferred($bytesTransferred)
   {
     $this->bytesTransferred = $bytesTransferred;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getBytesTransferred()
@@ -73,7 +108,9 @@ class LoadQueryStatistics extends \Google\Model
     return $this->bytesTransferred;
   }
   /**
-   * @param string
+   * Output only. Number of bytes of source data in a LOAD query.
+   *
+   * @param string $inputFileBytes
    */
   public function setInputFileBytes($inputFileBytes)
   {
@@ -87,7 +124,9 @@ class LoadQueryStatistics extends \Google\Model
     return $this->inputFileBytes;
   }
   /**
-   * @param string
+   * Output only. Number of source files in a LOAD query.
+   *
+   * @param string $inputFiles
    */
   public function setInputFiles($inputFiles)
   {
@@ -101,7 +140,10 @@ class LoadQueryStatistics extends \Google\Model
     return $this->inputFiles;
   }
   /**
-   * @param string
+   * Output only. Size of the loaded data in bytes. Note that while a LOAD query
+   * is in the running state, this value may change.
+   *
+   * @param string $outputBytes
    */
   public function setOutputBytes($outputBytes)
   {
@@ -115,7 +157,10 @@ class LoadQueryStatistics extends \Google\Model
     return $this->outputBytes;
   }
   /**
-   * @param string
+   * Output only. Number of rows imported in a LOAD query. Note that while a
+   * LOAD query is in the running state, this value may change.
+   *
+   * @param string $outputRows
    */
   public function setOutputRows($outputRows)
   {

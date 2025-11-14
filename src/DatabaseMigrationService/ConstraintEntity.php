@@ -21,36 +21,61 @@ class ConstraintEntity extends \Google\Collection
 {
   protected $collection_key = 'tableColumns';
   /**
+   * Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
   /**
+   * The name of the table constraint.
+   *
    * @var string
    */
   public $name;
   /**
+   * Reference columns which may be associated with the constraint. For example,
+   * if the constraint is a FOREIGN_KEY, this represents the list of full names
+   * of referenced columns by the foreign key.
+   *
    * @var string[]
    */
   public $referenceColumns;
   /**
+   * Reference table which may be associated with the constraint. For example,
+   * if the constraint is a FOREIGN_KEY, this represents the list of full name
+   * of the referenced table by the foreign key.
+   *
    * @var string
    */
   public $referenceTable;
   /**
+   * Table columns used as part of the Constraint, for example primary key
+   * constraint should list the columns which constitutes the key.
+   *
    * @var string[]
    */
   public $tableColumns;
   /**
+   * Table which is associated with the constraint. In case the constraint is
+   * defined on a table, this field is left empty as this information is stored
+   * in parent_name. However, if constraint is defined on a view, this field
+   * stores the table name on which the view is defined.
+   *
    * @var string
    */
   public $tableName;
   /**
+   * Type of constraint, for example unique, primary key, foreign key (currently
+   * only primary key is supported).
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param array[]
+   * Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {
@@ -64,7 +89,9 @@ class ConstraintEntity extends \Google\Collection
     return $this->customFeatures;
   }
   /**
-   * @param string
+   * The name of the table constraint.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -78,7 +105,11 @@ class ConstraintEntity extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Reference columns which may be associated with the constraint. For example,
+   * if the constraint is a FOREIGN_KEY, this represents the list of full names
+   * of referenced columns by the foreign key.
+   *
+   * @param string[] $referenceColumns
    */
   public function setReferenceColumns($referenceColumns)
   {
@@ -92,7 +123,11 @@ class ConstraintEntity extends \Google\Collection
     return $this->referenceColumns;
   }
   /**
-   * @param string
+   * Reference table which may be associated with the constraint. For example,
+   * if the constraint is a FOREIGN_KEY, this represents the list of full name
+   * of the referenced table by the foreign key.
+   *
+   * @param string $referenceTable
    */
   public function setReferenceTable($referenceTable)
   {
@@ -106,7 +141,10 @@ class ConstraintEntity extends \Google\Collection
     return $this->referenceTable;
   }
   /**
-   * @param string[]
+   * Table columns used as part of the Constraint, for example primary key
+   * constraint should list the columns which constitutes the key.
+   *
+   * @param string[] $tableColumns
    */
   public function setTableColumns($tableColumns)
   {
@@ -120,7 +158,12 @@ class ConstraintEntity extends \Google\Collection
     return $this->tableColumns;
   }
   /**
-   * @param string
+   * Table which is associated with the constraint. In case the constraint is
+   * defined on a table, this field is left empty as this information is stored
+   * in parent_name. However, if constraint is defined on a view, this field
+   * stores the table name on which the view is defined.
+   *
+   * @param string $tableName
    */
   public function setTableName($tableName)
   {
@@ -134,7 +177,10 @@ class ConstraintEntity extends \Google\Collection
     return $this->tableName;
   }
   /**
-   * @param string
+   * Type of constraint, for example unique, primary key, foreign key (currently
+   * only primary key is supported).
+   *
+   * @param string $type
    */
   public function setType($type)
   {

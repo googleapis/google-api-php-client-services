@@ -20,16 +20,23 @@ namespace Google\Service\ShoppingContent;
 class Weight extends \Google\Model
 {
   /**
+   * Required. The weight unit. Acceptable values are: - "`kg`" - "`lb`"
+   *
    * @var string
    */
   public $unit;
   /**
+   * Required. The weight represented as a number. The weight can have a maximum
+   * precision of four decimal places.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The weight unit. Acceptable values are: - "`kg`" - "`lb`"
+   *
+   * @param string $unit
    */
   public function setUnit($unit)
   {
@@ -43,7 +50,10 @@ class Weight extends \Google\Model
     return $this->unit;
   }
   /**
-   * @param string
+   * Required. The weight represented as a number. The weight can have a maximum
+   * precision of four decimal places.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

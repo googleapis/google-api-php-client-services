@@ -22,66 +22,98 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
   protected $birthdayType = EnterpriseTopazSidekickCommonPersonBirthday::class;
   protected $birthdayDataType = '';
   /**
+   * Cell phone number.
+   *
    * @var string
    */
   public $cellPhone;
   /**
+   * The department the person works in (e.g. Engineering).
+   *
    * @var string
    */
   public $department;
   /**
+   * Desk location (e.g. US-MTV-PR55-5-5B1I).
+   *
    * @var string
    */
   public $deskLocation;
   /**
+   * Work desk phone number.
+   *
    * @var string
    */
   public $deskPhone;
   /**
+   * The full name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Email.
+   *
    * @var string
    */
   public $email;
   /**
+   * The last name.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * The fully formatted address (e.g. 1255 Pear Avenue, Mountain View 94043,
+   * United States).
+   *
    * @var string
    */
   public $fullAddress;
   /**
+   * This field is deprecated. The obfuscated_id should be used instead.
+   *
+   * @deprecated
    * @var string
    */
   public $gaiaId;
   /**
+   * The first name.
+   *
    * @var string
    */
   public $givenName;
   /**
+   * The person's job title (e.g. Software Engineer).
+   *
    * @var string
    */
   public $jobTitle;
   protected $managerType = EnterpriseTopazSidekickCommonPerson::class;
   protected $managerDataType = '';
   /**
+   * The obfuscated GAIA ID.
+   *
    * @var string
    */
   public $obfuscatedId;
   /**
+   * The URL for the Focus profile picture.
+   *
    * @var string
    */
   public $photoUrl;
   /**
+   * The street address (e.g. 1255 Pear Avenue).
+   *
    * @var string
    */
   public $streetAddress;
 
   /**
-   * @param EnterpriseTopazSidekickCommonPersonBirthday
+   * The birthday.
+   *
+   * @param EnterpriseTopazSidekickCommonPersonBirthday $birthday
    */
   public function setBirthday(EnterpriseTopazSidekickCommonPersonBirthday $birthday)
   {
@@ -95,7 +127,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->birthday;
   }
   /**
-   * @param string
+   * Cell phone number.
+   *
+   * @param string $cellPhone
    */
   public function setCellPhone($cellPhone)
   {
@@ -109,7 +143,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->cellPhone;
   }
   /**
-   * @param string
+   * The department the person works in (e.g. Engineering).
+   *
+   * @param string $department
    */
   public function setDepartment($department)
   {
@@ -123,7 +159,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->department;
   }
   /**
-   * @param string
+   * Desk location (e.g. US-MTV-PR55-5-5B1I).
+   *
+   * @param string $deskLocation
    */
   public function setDeskLocation($deskLocation)
   {
@@ -137,7 +175,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->deskLocation;
   }
   /**
-   * @param string
+   * Work desk phone number.
+   *
+   * @param string $deskPhone
    */
   public function setDeskPhone($deskPhone)
   {
@@ -151,7 +191,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->deskPhone;
   }
   /**
-   * @param string
+   * The full name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -165,7 +207,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Email.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -179,7 +223,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The last name.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -193,7 +239,10 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->familyName;
   }
   /**
-   * @param string
+   * The fully formatted address (e.g. 1255 Pear Avenue, Mountain View 94043,
+   * United States).
+   *
+   * @param string $fullAddress
    */
   public function setFullAddress($fullAddress)
   {
@@ -207,13 +256,17 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->fullAddress;
   }
   /**
-   * @param string
+   * This field is deprecated. The obfuscated_id should be used instead.
+   *
+   * @deprecated
+   * @param string $gaiaId
    */
   public function setGaiaId($gaiaId)
   {
     $this->gaiaId = $gaiaId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getGaiaId()
@@ -221,7 +274,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->gaiaId;
   }
   /**
-   * @param string
+   * The first name.
+   *
+   * @param string $givenName
    */
   public function setGivenName($givenName)
   {
@@ -235,7 +290,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->givenName;
   }
   /**
-   * @param string
+   * The person's job title (e.g. Software Engineer).
+   *
+   * @param string $jobTitle
    */
   public function setJobTitle($jobTitle)
   {
@@ -249,7 +306,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->jobTitle;
   }
   /**
-   * @param EnterpriseTopazSidekickCommonPerson
+   * The manager.
+   *
+   * @param EnterpriseTopazSidekickCommonPerson $manager
    */
   public function setManager(EnterpriseTopazSidekickCommonPerson $manager)
   {
@@ -263,7 +322,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->manager;
   }
   /**
-   * @param string
+   * The obfuscated GAIA ID.
+   *
+   * @param string $obfuscatedId
    */
   public function setObfuscatedId($obfuscatedId)
   {
@@ -277,7 +338,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->obfuscatedId;
   }
   /**
-   * @param string
+   * The URL for the Focus profile picture.
+   *
+   * @param string $photoUrl
    */
   public function setPhotoUrl($photoUrl)
   {
@@ -291,7 +354,9 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
     return $this->photoUrl;
   }
   /**
-   * @param string
+   * The street address (e.g. 1255 Pear Avenue).
+   *
+   * @param string $streetAddress
    */
   public function setStreetAddress($streetAddress)
   {

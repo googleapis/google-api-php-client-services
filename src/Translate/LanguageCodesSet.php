@@ -21,12 +21,20 @@ class LanguageCodesSet extends \Google\Collection
 {
   protected $collection_key = 'languageCodes';
   /**
+   * The ISO-639 language code(s) for terms defined in the glossary. All entries
+   * are unique. The list contains at least two entries. Expected to be an exact
+   * match for GlossaryTerm.language_code.
+   *
    * @var string[]
    */
   public $languageCodes;
 
   /**
-   * @param string[]
+   * The ISO-639 language code(s) for terms defined in the glossary. All entries
+   * are unique. The list contains at least two entries. Expected to be an exact
+   * match for GlossaryTerm.language_code.
+   *
+   * @param string[] $languageCodes
    */
   public function setLanguageCodes($languageCodes)
   {

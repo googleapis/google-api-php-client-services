@@ -20,12 +20,22 @@ namespace Google\Service\BigtableAdmin;
 class ChangeStreamConfig extends \Google\Model
 {
   /**
+   * How long the change stream should be retained. Change stream data older
+   * than the retention period will not be returned when reading the change
+   * stream from the table. Values must be at least 1 day and at most 7 days,
+   * and will be truncated to microsecond granularity.
+   *
    * @var string
    */
   public $retentionPeriod;
 
   /**
-   * @param string
+   * How long the change stream should be retained. Change stream data older
+   * than the retention period will not be returned when reading the change
+   * stream from the table. Values must be at least 1 day and at most 7 days,
+   * and will be truncated to microsecond granularity.
+   *
+   * @param string $retentionPeriod
    */
   public function setRetentionPeriod($retentionPeriod)
   {

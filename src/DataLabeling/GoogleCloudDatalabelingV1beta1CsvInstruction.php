@@ -20,12 +20,16 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1CsvInstruction extends \Google\Model
 {
   /**
+   * CSV file for the instruction. Only gcs path is allowed.
+   *
    * @var string
    */
   public $gcsFileUri;
 
   /**
-   * @param string
+   * CSV file for the instruction. Only gcs path is allowed.
+   *
+   * @param string $gcsFileUri
    */
   public function setGcsFileUri($gcsFileUri)
   {

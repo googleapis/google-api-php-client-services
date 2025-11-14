@@ -23,7 +23,10 @@ class TieredStorageConfig extends \Google\Model
   protected $infrequentAccessDataType = '';
 
   /**
-   * @param TieredStorageRule
+   * Rule to specify what data is stored in the infrequent access(IA) tier. The
+   * IA tier allows storing more data per node with reduced performance.
+   *
+   * @param TieredStorageRule $infrequentAccess
    */
   public function setInfrequentAccess(TieredStorageRule $infrequentAccess)
   {

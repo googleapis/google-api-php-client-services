@@ -20,26 +20,39 @@ namespace Google\Service\Drive;
 class AboutTeamDriveThemes extends \Google\Model
 {
   /**
+   * Deprecated: Use `driveThemes/backgroundImageLink` instead.
+   *
+   * @deprecated
    * @var string
    */
   public $backgroundImageLink;
   /**
+   * Deprecated: Use `driveThemes/colorRgb` instead.
+   *
+   * @deprecated
    * @var string
    */
   public $colorRgb;
   /**
+   * Deprecated: Use `driveThemes/id` instead.
+   *
+   * @deprecated
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Deprecated: Use `driveThemes/backgroundImageLink` instead.
+   *
+   * @deprecated
+   * @param string $backgroundImageLink
    */
   public function setBackgroundImageLink($backgroundImageLink)
   {
     $this->backgroundImageLink = $backgroundImageLink;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getBackgroundImageLink()
@@ -47,13 +60,17 @@ class AboutTeamDriveThemes extends \Google\Model
     return $this->backgroundImageLink;
   }
   /**
-   * @param string
+   * Deprecated: Use `driveThemes/colorRgb` instead.
+   *
+   * @deprecated
+   * @param string $colorRgb
    */
   public function setColorRgb($colorRgb)
   {
     $this->colorRgb = $colorRgb;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getColorRgb()
@@ -61,13 +78,17 @@ class AboutTeamDriveThemes extends \Google\Model
     return $this->colorRgb;
   }
   /**
-   * @param string
+   * Deprecated: Use `driveThemes/id` instead.
+   *
+   * @deprecated
+   * @param string $id
    */
   public function setId($id)
   {
     $this->id = $id;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getId()

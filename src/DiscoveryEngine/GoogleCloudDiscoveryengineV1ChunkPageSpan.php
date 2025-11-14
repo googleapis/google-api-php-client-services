@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ChunkPageSpan extends \Google\Model
 {
   /**
+   * The end page of the chunk.
+   *
    * @var int
    */
   public $pageEnd;
   /**
+   * The start page of the chunk.
+   *
    * @var int
    */
   public $pageStart;
 
   /**
-   * @param int
+   * The end page of the chunk.
+   *
+   * @param int $pageEnd
    */
   public function setPageEnd($pageEnd)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1ChunkPageSpan extends \Google\Model
     return $this->pageEnd;
   }
   /**
-   * @param int
+   * The start page of the chunk.
+   *
+   * @param int $pageStart
    */
   public function setPageStart($pageStart)
   {

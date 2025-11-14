@@ -20,24 +20,35 @@ namespace Google\Service\Script;
 class Version extends \Google\Model
 {
   /**
+   * When the version was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The description for this version.
+   *
    * @var string
    */
   public $description;
   /**
+   * The script project's Drive ID.
+   *
    * @var string
    */
   public $scriptId;
   /**
+   * The incremental ID that is created by Apps Script when a version is
+   * created. This is system assigned number and is immutable once created.
+   *
    * @var int
    */
   public $versionNumber;
 
   /**
-   * @param string
+   * When the version was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -51,7 +62,9 @@ class Version extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The description for this version.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -65,7 +78,9 @@ class Version extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The script project's Drive ID.
+   *
+   * @param string $scriptId
    */
   public function setScriptId($scriptId)
   {
@@ -79,7 +94,10 @@ class Version extends \Google\Model
     return $this->scriptId;
   }
   /**
-   * @param int
+   * The incremental ID that is created by Apps Script when a version is
+   * created. This is system assigned number and is immutable once created.
+   *
+   * @param int $versionNumber
    */
   public function setVersionNumber($versionNumber)
   {

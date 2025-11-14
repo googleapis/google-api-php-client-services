@@ -21,20 +21,28 @@ class InlineScopedRouteConfigs extends \Google\Collection
 {
   protected $collection_key = 'scopedRouteConfigs';
   /**
+   * The timestamp when the scoped route config set was last updated.
+   *
    * @var string
    */
   public $lastUpdated;
   /**
+   * The name assigned to the scoped route configurations.
+   *
    * @var string
    */
   public $name;
   /**
+   * The scoped route configurations.
+   *
    * @var array[]
    */
   public $scopedRouteConfigs;
 
   /**
-   * @param string
+   * The timestamp when the scoped route config set was last updated.
+   *
+   * @param string $lastUpdated
    */
   public function setLastUpdated($lastUpdated)
   {
@@ -48,7 +56,9 @@ class InlineScopedRouteConfigs extends \Google\Collection
     return $this->lastUpdated;
   }
   /**
-   * @param string
+   * The name assigned to the scoped route configurations.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -62,7 +72,9 @@ class InlineScopedRouteConfigs extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param array[]
+   * The scoped route configurations.
+   *
+   * @param array[] $scopedRouteConfigs
    */
   public function setScopedRouteConfigs($scopedRouteConfigs)
   {

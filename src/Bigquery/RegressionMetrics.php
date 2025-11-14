@@ -19,10 +19,35 @@ namespace Google\Service\Bigquery;
 
 class RegressionMetrics extends \Google\Model
 {
+  /**
+   * Mean absolute error.
+   *
+   * @var 
+   */
   public $meanAbsoluteError;
+  /**
+   * Mean squared error.
+   *
+   * @var 
+   */
   public $meanSquaredError;
+  /**
+   * Mean squared log error.
+   *
+   * @var 
+   */
   public $meanSquaredLogError;
+  /**
+   * Median absolute error.
+   *
+   * @var 
+   */
   public $medianAbsoluteError;
+  /**
+   * R^2 score. This corresponds to r2_score in ML.EVALUATE.
+   *
+   * @var 
+   */
   public $rSquared;
 
   public function setMeanAbsoluteError($meanAbsoluteError)

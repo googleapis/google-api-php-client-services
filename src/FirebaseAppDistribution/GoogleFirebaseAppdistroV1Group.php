@@ -20,28 +20,41 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1Group extends \Google\Model
 {
   /**
+   * Required. The display name of the group.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The number of invite links for this group.
+   *
    * @var int
    */
   public $inviteLinkCount;
   /**
+   * The name of the group resource. Format:
+   * `projects/{project_number}/groups/{group_alias}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The number of releases this group is permitted to access.
+   *
    * @var int
    */
   public $releaseCount;
   /**
+   * Output only. The number of testers who are members of this group.
+   *
    * @var int
    */
   public $testerCount;
 
   /**
-   * @param string
+   * Required. The display name of the group.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -55,7 +68,9 @@ class GoogleFirebaseAppdistroV1Group extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param int
+   * Output only. The number of invite links for this group.
+   *
+   * @param int $inviteLinkCount
    */
   public function setInviteLinkCount($inviteLinkCount)
   {
@@ -69,7 +84,10 @@ class GoogleFirebaseAppdistroV1Group extends \Google\Model
     return $this->inviteLinkCount;
   }
   /**
-   * @param string
+   * The name of the group resource. Format:
+   * `projects/{project_number}/groups/{group_alias}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +101,9 @@ class GoogleFirebaseAppdistroV1Group extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * Output only. The number of releases this group is permitted to access.
+   *
+   * @param int $releaseCount
    */
   public function setReleaseCount($releaseCount)
   {
@@ -97,7 +117,9 @@ class GoogleFirebaseAppdistroV1Group extends \Google\Model
     return $this->releaseCount;
   }
   /**
-   * @param int
+   * Output only. The number of testers who are members of this group.
+   *
+   * @param int $testerCount
    */
   public function setTesterCount($testerCount)
   {

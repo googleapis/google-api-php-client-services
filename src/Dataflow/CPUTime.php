@@ -19,12 +19,23 @@ namespace Google\Service\Dataflow;
 
 class CPUTime extends \Google\Model
 {
+  /**
+   * Average CPU utilization rate (% non-idle cpu / second) since previous
+   * sample.
+   *
+   * @var 
+   */
   public $rate;
   /**
+   * Timestamp of the measurement.
+   *
    * @var string
    */
   public $timestamp;
   /**
+   * Total active CPU time across all cores (ie., non-idle) in milliseconds
+   * since start-up.
+   *
    * @var string
    */
   public $totalMs;
@@ -38,7 +49,9 @@ class CPUTime extends \Google\Model
     return $this->rate;
   }
   /**
-   * @param string
+   * Timestamp of the measurement.
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {
@@ -52,7 +65,10 @@ class CPUTime extends \Google\Model
     return $this->timestamp;
   }
   /**
-   * @param string
+   * Total active CPU time across all cores (ie., non-idle) in milliseconds
+   * since start-up.
+   *
+   * @param string $totalMs
    */
   public function setTotalMs($totalMs)
   {

@@ -20,34 +20,63 @@ namespace Google\Service\Container;
 class NodeTaint extends \Google\Model
 {
   /**
+   * Not set
+   */
+  public const EFFECT_EFFECT_UNSPECIFIED = 'EFFECT_UNSPECIFIED';
+  /**
+   * NoSchedule
+   */
+  public const EFFECT_NO_SCHEDULE = 'NO_SCHEDULE';
+  /**
+   * PreferNoSchedule
+   */
+  public const EFFECT_PREFER_NO_SCHEDULE = 'PREFER_NO_SCHEDULE';
+  /**
+   * NoExecute
+   */
+  public const EFFECT_NO_EXECUTE = 'NO_EXECUTE';
+  /**
+   * Effect for taint.
+   *
    * @var string
    */
   public $effect;
   /**
+   * Key for taint.
+   *
    * @var string
    */
   public $key;
   /**
+   * Value for taint.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Effect for taint.
+   *
+   * Accepted values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE,
+   * NO_EXECUTE
+   *
+   * @param self::EFFECT_* $effect
    */
   public function setEffect($effect)
   {
     $this->effect = $effect;
   }
   /**
-   * @return string
+   * @return self::EFFECT_*
    */
   public function getEffect()
   {
     return $this->effect;
   }
   /**
-   * @param string
+   * Key for taint.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -61,7 +90,9 @@ class NodeTaint extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Value for taint.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

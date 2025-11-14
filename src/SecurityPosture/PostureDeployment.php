@@ -19,70 +19,153 @@ namespace Google\Service\SecurityPosture;
 
 class PostureDeployment extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The posture deployment is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The posture deployment is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The posture deployment is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The posture deployment is active and in use.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The posture deployment could not be created.
+   */
+  public const STATE_CREATE_FAILED = 'CREATE_FAILED';
+  /**
+   * The posture deployment could not be updated.
+   */
+  public const STATE_UPDATE_FAILED = 'UPDATE_FAILED';
+  /**
+   * The posture deployment could not be deleted.
+   */
+  public const STATE_DELETE_FAILED = 'DELETE_FAILED';
   protected $collection_key = 'categories';
   /**
+   * Optional. The user-specified annotations for the posture deployment. For
+   * details about the values you can use in an annotation, see [AIP-148:
+   * Standard fields](https://google.aip.dev/148#annotations).
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. The categories that the posture deployment belongs to, as
+   * determined by the Security Posture API.
+   *
    * @var string[]
    */
   public $categories;
   /**
+   * Output only. The time at which the posture deployment was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. A description of the posture deployment.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The posture ID that was specified for the deployment. Present
+   * only if the posture deployment is in a failed state.
+   *
    * @var string
    */
   public $desiredPostureId;
   /**
+   * Output only. The revision ID of the posture that was specified for the
+   * deployment. Present only if the deployment is in a failed state.
+   *
    * @var string
    */
   public $desiredPostureRevisionId;
   /**
+   * Optional. An opaque identifier for the current version of the posture
+   * deployment. To prevent concurrent updates from overwriting each other,
+   * always provide the `etag` when you update a posture deployment. You can
+   * also provide the `etag` when you delete a posture deployment, to help
+   * ensure that you're deleting the intended posture deployment.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. A description of why the posture deployment failed. Present
+   * only if the deployment is in a failed state.
+   *
    * @var string
    */
   public $failureMessage;
   /**
+   * Required. Identifier. The name of the posture deployment, in the format `or
+   * ganizations/{organization}/locations/global/postureDeployments/{deployment_
+   * id}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The posture used in the deployment, in the format
+   * `organizations/{organization}/locations/global/postures/{posture_id}`.
+   *
    * @var string
    */
   public $postureId;
   /**
+   * Required. The revision ID of the posture used in the deployment.
+   *
    * @var string
    */
   public $postureRevisionId;
   /**
+   * Output only. Whether the posture deployment is in the process of being
+   * updated.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. The state of the posture deployment.
+   *
    * @var string
    */
   public $state;
   /**
+   * Required. The organization, folder, or project where the posture is
+   * deployed. Uses one of the following formats: *
+   * `organizations/{organization_number}` * `folders/{folder_number}` *
+   * `projects/{project_number}`
+   *
    * @var string
    */
   public $targetResource;
   /**
+   * Output only. The time at which the posture deployment was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. The user-specified annotations for the posture deployment. For
+   * details about the values you can use in an annotation, see [AIP-148:
+   * Standard fields](https://google.aip.dev/148#annotations).
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -96,7 +179,10 @@ class PostureDeployment extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param string[]
+   * Output only. The categories that the posture deployment belongs to, as
+   * determined by the Security Posture API.
+   *
+   * @param string[] $categories
    */
   public function setCategories($categories)
   {
@@ -110,7 +196,9 @@ class PostureDeployment extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param string
+   * Output only. The time at which the posture deployment was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -124,7 +212,9 @@ class PostureDeployment extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. A description of the posture deployment.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -138,7 +228,10 @@ class PostureDeployment extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The posture ID that was specified for the deployment. Present
+   * only if the posture deployment is in a failed state.
+   *
+   * @param string $desiredPostureId
    */
   public function setDesiredPostureId($desiredPostureId)
   {
@@ -152,7 +245,10 @@ class PostureDeployment extends \Google\Collection
     return $this->desiredPostureId;
   }
   /**
-   * @param string
+   * Output only. The revision ID of the posture that was specified for the
+   * deployment. Present only if the deployment is in a failed state.
+   *
+   * @param string $desiredPostureRevisionId
    */
   public function setDesiredPostureRevisionId($desiredPostureRevisionId)
   {
@@ -166,7 +262,13 @@ class PostureDeployment extends \Google\Collection
     return $this->desiredPostureRevisionId;
   }
   /**
-   * @param string
+   * Optional. An opaque identifier for the current version of the posture
+   * deployment. To prevent concurrent updates from overwriting each other,
+   * always provide the `etag` when you update a posture deployment. You can
+   * also provide the `etag` when you delete a posture deployment, to help
+   * ensure that you're deleting the intended posture deployment.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -180,7 +282,10 @@ class PostureDeployment extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. A description of why the posture deployment failed. Present
+   * only if the deployment is in a failed state.
+   *
+   * @param string $failureMessage
    */
   public function setFailureMessage($failureMessage)
   {
@@ -194,7 +299,11 @@ class PostureDeployment extends \Google\Collection
     return $this->failureMessage;
   }
   /**
-   * @param string
+   * Required. Identifier. The name of the posture deployment, in the format `or
+   * ganizations/{organization}/locations/global/postureDeployments/{deployment_
+   * id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -208,7 +317,10 @@ class PostureDeployment extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The posture used in the deployment, in the format
+   * `organizations/{organization}/locations/global/postures/{posture_id}`.
+   *
+   * @param string $postureId
    */
   public function setPostureId($postureId)
   {
@@ -222,7 +334,9 @@ class PostureDeployment extends \Google\Collection
     return $this->postureId;
   }
   /**
-   * @param string
+   * Required. The revision ID of the posture used in the deployment.
+   *
+   * @param string $postureRevisionId
    */
   public function setPostureRevisionId($postureRevisionId)
   {
@@ -236,7 +350,10 @@ class PostureDeployment extends \Google\Collection
     return $this->postureRevisionId;
   }
   /**
-   * @param bool
+   * Output only. Whether the posture deployment is in the process of being
+   * updated.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -250,21 +367,31 @@ class PostureDeployment extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. The state of the posture deployment.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, DELETING, UPDATING, ACTIVE,
+   * CREATE_FAILED, UPDATE_FAILED, DELETE_FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Required. The organization, folder, or project where the posture is
+   * deployed. Uses one of the following formats: *
+   * `organizations/{organization_number}` * `folders/{folder_number}` *
+   * `projects/{project_number}`
+   *
+   * @param string $targetResource
    */
   public function setTargetResource($targetResource)
   {
@@ -278,7 +405,9 @@ class PostureDeployment extends \Google\Collection
     return $this->targetResource;
   }
   /**
-   * @param string
+   * Output only. The time at which the posture deployment was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

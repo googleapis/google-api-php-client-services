@@ -20,12 +20,24 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2PublishToDataplexCatalog extends \Google\Model
 {
   /**
+   * Whether creating a Dataplex Universal Catalog aspect for a profiled
+   * resource should lower the risk of the profile for that resource. This also
+   * lowers the data risk of resources at the lower levels of the resource
+   * hierarchy. For example, reducing the data risk of a table data profile also
+   * reduces the data risk of the constituent column data profiles.
+   *
    * @var bool
    */
   public $lowerDataRiskToLow;
 
   /**
-   * @param bool
+   * Whether creating a Dataplex Universal Catalog aspect for a profiled
+   * resource should lower the risk of the profile for that resource. This also
+   * lowers the data risk of resources at the lower levels of the resource
+   * hierarchy. For example, reducing the data risk of a table data profile also
+   * reduces the data risk of the constituent column data profiles.
+   *
+   * @param bool $lowerDataRiskToLow
    */
   public function setLowerDataRiskToLow($lowerDataRiskToLow)
   {

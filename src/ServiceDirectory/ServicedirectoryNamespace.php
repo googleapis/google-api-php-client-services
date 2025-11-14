@@ -20,20 +20,34 @@ namespace Google\Service\ServiceDirectory;
 class ServicedirectoryNamespace extends \Google\Model
 {
   /**
+   * Optional. Resource labels associated with this namespace. No more than 64
+   * user labels can be associated with a given resource. Label keys and values
+   * can be no longer than 63 characters.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Immutable. The resource name for the namespace in the format
+   * `projects/locations/namespaces`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The globally unique identifier of the namespace in the UUID4
+   * format.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string[]
+   * Optional. Resource labels associated with this namespace. No more than 64
+   * user labels can be associated with a given resource. Label keys and values
+   * can be no longer than 63 characters.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -47,7 +61,10 @@ class ServicedirectoryNamespace extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Immutable. The resource name for the namespace in the format
+   * `projects/locations/namespaces`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +78,10 @@ class ServicedirectoryNamespace extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The globally unique identifier of the namespace in the UUID4
+   * format.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Dataform;
 class Target extends \Google\Model
 {
   /**
+   * Optional. The action's database (Google Cloud project ID) .
+   *
    * @var string
    */
   public $database;
   /**
+   * Optional. The action's name, within `database` and `schema`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The action's schema (BigQuery dataset ID), within `database`.
+   *
    * @var string
    */
   public $schema;
 
   /**
-   * @param string
+   * Optional. The action's database (Google Cloud project ID) .
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -47,7 +55,9 @@ class Target extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Optional. The action's name, within `database` and `schema`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +71,9 @@ class Target extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The action's schema (BigQuery dataset ID), within `database`.
+   *
+   * @param string $schema
    */
   public function setSchema($schema)
   {

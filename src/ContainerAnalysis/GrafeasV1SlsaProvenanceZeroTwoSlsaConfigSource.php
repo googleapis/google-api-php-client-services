@@ -33,7 +33,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource extends \Google\Model
   public $uri;
 
   /**
-   * @param string[]
+   * @param string[] $digest
    */
   public function setDigest($digest)
   {
@@ -47,7 +47,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource extends \Google\Model
     return $this->digest;
   }
   /**
-   * @param string
+   * @param string $entryPoint
    */
   public function setEntryPoint($entryPoint)
   {
@@ -61,7 +61,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource extends \Google\Model
     return $this->entryPoint;
   }
   /**
-   * @param string
+   * @param string $uri
    */
   public function setUri($uri)
   {

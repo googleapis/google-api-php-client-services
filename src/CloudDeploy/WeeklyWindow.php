@@ -21,6 +21,9 @@ class WeeklyWindow extends \Google\Collection
 {
   protected $collection_key = 'daysOfWeek';
   /**
+   * Optional. Days of week. If left empty, all days of the week will be
+   * included.
+   *
    * @var string[]
    */
   public $daysOfWeek;
@@ -30,7 +33,10 @@ class WeeklyWindow extends \Google\Collection
   protected $startTimeDataType = '';
 
   /**
-   * @param string[]
+   * Optional. Days of week. If left empty, all days of the week will be
+   * included.
+   *
+   * @param string[] $daysOfWeek
    */
   public function setDaysOfWeek($daysOfWeek)
   {
@@ -44,7 +50,11 @@ class WeeklyWindow extends \Google\Collection
     return $this->daysOfWeek;
   }
   /**
-   * @param TimeOfDay
+   * Optional. End time (exclusive). Use 24:00 to indicate midnight. If you
+   * specify end_time you must also specify start_time. If left empty, this will
+   * block for the entire day for the days specified in days_of_week.
+   *
+   * @param TimeOfDay $endTime
    */
   public function setEndTime(TimeOfDay $endTime)
   {
@@ -58,7 +68,11 @@ class WeeklyWindow extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param TimeOfDay
+   * Optional. Start time (inclusive). Use 00:00 for the beginning of the day.
+   * If you specify start_time you must also specify end_time. If left empty,
+   * this will block for the entire day for the days specified in days_of_week.
+   *
+   * @param TimeOfDay $startTime
    */
   public function setStartTime(TimeOfDay $startTime)
   {

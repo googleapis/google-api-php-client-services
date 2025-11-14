@@ -20,6 +20,9 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends \Google\Model
 {
   /**
+   * The name of answer record, in the format of
+   * "projects//locations//answerRecords/"
+   *
    * @var string
    */
   public $answerRecord;
@@ -29,7 +32,10 @@ class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends \Google\Model
   protected $queryResultDataType = '';
 
   /**
-   * @param string
+   * The name of answer record, in the format of
+   * "projects//locations//answerRecords/"
+   *
+   * @param string $answerRecord
    */
   public function setAnswerRecord($answerRecord)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends \Google\Model
     return $this->answerRecord;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentSuggestion
+   * An intent suggestion generated from conversation.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentSuggestion $intentSuggestion
    */
   public function setIntentSuggestion(GoogleCloudDialogflowV2beta1IntentSuggestion $intentSuggestion)
   {
@@ -57,7 +65,9 @@ class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends \Google\Model
     return $this->intentSuggestion;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1QueryResult
+   * Result from v2 agent.
+   *
+   * @param GoogleCloudDialogflowV2beta1QueryResult $queryResult
    */
   public function setQueryResult(GoogleCloudDialogflowV2beta1QueryResult $queryResult)
   {

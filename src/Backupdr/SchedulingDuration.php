@@ -20,16 +20,24 @@ namespace Google\Service\Backupdr;
 class SchedulingDuration extends \Google\Model
 {
   /**
+   * Optional. Span of time that's a fraction of a second at nanosecond
+   * resolution.
+   *
    * @var int
    */
   public $nanos;
   /**
+   * Optional. Span of time at a resolution of a second.
+   *
    * @var string
    */
   public $seconds;
 
   /**
-   * @param int
+   * Optional. Span of time that's a fraction of a second at nanosecond
+   * resolution.
+   *
+   * @param int $nanos
    */
   public function setNanos($nanos)
   {
@@ -43,7 +51,9 @@ class SchedulingDuration extends \Google\Model
     return $this->nanos;
   }
   /**
-   * @param string
+   * Optional. Span of time at a resolution of a second.
+   *
+   * @param string $seconds
    */
   public function setSeconds($seconds)
   {

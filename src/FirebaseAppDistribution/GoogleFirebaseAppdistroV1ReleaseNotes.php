@@ -20,12 +20,16 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1ReleaseNotes extends \Google\Model
 {
   /**
+   * The text of the release notes.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * The text of the release notes.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

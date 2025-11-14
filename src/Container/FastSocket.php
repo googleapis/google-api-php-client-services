@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class FastSocket extends \Google\Model
 {
   /**
+   * Whether Fast Socket features are enabled in the node pool.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether Fast Socket features are enabled in the node pool.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

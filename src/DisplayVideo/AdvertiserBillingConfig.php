@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class AdvertiserBillingConfig extends \Google\Model
 {
   /**
+   * Required. The ID of a billing profile assigned to the advertiser.
+   *
    * @var string
    */
   public $billingProfileId;
 
   /**
-   * @param string
+   * Required. The ID of a billing profile assigned to the advertiser.
+   *
+   * @param string $billingProfileId
    */
   public function setBillingProfileId($billingProfileId)
   {

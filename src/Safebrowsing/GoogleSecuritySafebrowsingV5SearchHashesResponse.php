@@ -21,6 +21,19 @@ class GoogleSecuritySafebrowsingV5SearchHashesResponse extends \Google\Collectio
 {
   protected $collection_key = 'fullHashes';
   /**
+   * The client-side cache duration. The client MUST add this duration to the
+   * current time to determine the expiration time. The expiration time then
+   * applies to every hash prefix queried by the client in the request,
+   * regardless of how many full hashes are returned in the response. Even if
+   * the server returns no full hashes for a particular hash prefix, this fact
+   * MUST also be cached by the client. If and only if the field `full_hashes`
+   * is empty, the client MAY increase the `cache_duration` to determine a new
+   * expiration that is later than that specified by the server. In any case,
+   * the increased cache duration must not be longer than 24 hours. Important:
+   * the client MUST NOT assume that the server will return the same cache
+   * duration for all responses. The server MAY choose different cache durations
+   * for different responses depending on the situation.
+   *
    * @var string
    */
   public $cacheDuration;
@@ -28,7 +41,20 @@ class GoogleSecuritySafebrowsingV5SearchHashesResponse extends \Google\Collectio
   protected $fullHashesDataType = 'array';
 
   /**
-   * @param string
+   * The client-side cache duration. The client MUST add this duration to the
+   * current time to determine the expiration time. The expiration time then
+   * applies to every hash prefix queried by the client in the request,
+   * regardless of how many full hashes are returned in the response. Even if
+   * the server returns no full hashes for a particular hash prefix, this fact
+   * MUST also be cached by the client. If and only if the field `full_hashes`
+   * is empty, the client MAY increase the `cache_duration` to determine a new
+   * expiration that is later than that specified by the server. In any case,
+   * the increased cache duration must not be longer than 24 hours. Important:
+   * the client MUST NOT assume that the server will return the same cache
+   * duration for all responses. The server MAY choose different cache durations
+   * for different responses depending on the situation.
+   *
+   * @param string $cacheDuration
    */
   public function setCacheDuration($cacheDuration)
   {
@@ -42,7 +68,9 @@ class GoogleSecuritySafebrowsingV5SearchHashesResponse extends \Google\Collectio
     return $this->cacheDuration;
   }
   /**
-   * @param GoogleSecuritySafebrowsingV5FullHash[]
+   * Unordered list. The unordered list of full hashes found.
+   *
+   * @param GoogleSecuritySafebrowsingV5FullHash[] $fullHashes
    */
   public function setFullHashes($fullHashes)
   {

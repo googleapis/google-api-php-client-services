@@ -21,16 +21,30 @@ class ContextAttribute extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * The name of the attribute. It should not be empty. The maximum length is 32
+   * characters. The name must start with a letter and can only contain letters
+   * (A-Z, a-z) or numbers (0-9). The name will be normalized (lower-cased)
+   * before being matched.
+   *
    * @var string
    */
   public $name;
   /**
+   * Text values of the attribute. The maximum number of elements is 10. The
+   * maximum length of an element in the array is 32 characters. The value will
+   * be normalized (lower-cased) before being matched.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * The name of the attribute. It should not be empty. The maximum length is 32
+   * characters. The name must start with a letter and can only contain letters
+   * (A-Z, a-z) or numbers (0-9). The name will be normalized (lower-cased)
+   * before being matched.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -44,7 +58,11 @@ class ContextAttribute extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Text values of the attribute. The maximum number of elements is 10. The
+   * maximum length of an element in the array is 32 characters. The value will
+   * be normalized (lower-cased) before being matched.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

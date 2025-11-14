@@ -39,7 +39,10 @@ class SoftwarePackage extends \Google\Model
   protected $zypperPatchDataType = '';
 
   /**
-   * @param VersionedPackage
+   * Details of an APT package. For details about the apt package manager, see
+   * https://wiki.debian.org/Apt.
+   *
+   * @param VersionedPackage $aptPackage
    */
   public function setAptPackage(VersionedPackage $aptPackage)
   {
@@ -53,7 +56,9 @@ class SoftwarePackage extends \Google\Model
     return $this->aptPackage;
   }
   /**
-   * @param VersionedPackage
+   * Details of a COS package.
+   *
+   * @param VersionedPackage $cosPackage
    */
   public function setCosPackage(VersionedPackage $cosPackage)
   {
@@ -67,7 +72,10 @@ class SoftwarePackage extends \Google\Model
     return $this->cosPackage;
   }
   /**
-   * @param VersionedPackage
+   * Details of a Googet package. For details about the googet package manager,
+   * see https://github.com/google/googet.
+   *
+   * @param VersionedPackage $googetPackage
    */
   public function setGoogetPackage(VersionedPackage $googetPackage)
   {
@@ -81,7 +89,12 @@ class SoftwarePackage extends \Google\Model
     return $this->googetPackage;
   }
   /**
-   * @param WindowsQuickFixEngineeringPackage
+   * Details of a Windows Quick Fix engineering package. See
+   * https://docs.microsoft.com/en-
+   * us/windows/win32/cimwin32prov/win32-quickfixengineering for info in Windows
+   * Quick Fix Engineering.
+   *
+   * @param WindowsQuickFixEngineeringPackage $qfePackage
    */
   public function setQfePackage(WindowsQuickFixEngineeringPackage $qfePackage)
   {
@@ -95,7 +108,9 @@ class SoftwarePackage extends \Google\Model
     return $this->qfePackage;
   }
   /**
-   * @param WindowsApplication
+   * Details of Windows Application.
+   *
+   * @param WindowsApplication $windowsApplication
    */
   public function setWindowsApplication(WindowsApplication $windowsApplication)
   {
@@ -109,7 +124,10 @@ class SoftwarePackage extends \Google\Model
     return $this->windowsApplication;
   }
   /**
-   * @param WindowsUpdatePackage
+   * Details of a Windows Update package. See https://docs.microsoft.com/en-
+   * us/windows/win32/api/_wua/ for information about Windows Update.
+   *
+   * @param WindowsUpdatePackage $wuaPackage
    */
   public function setWuaPackage(WindowsUpdatePackage $wuaPackage)
   {
@@ -123,7 +141,11 @@ class SoftwarePackage extends \Google\Model
     return $this->wuaPackage;
   }
   /**
-   * @param VersionedPackage
+   * Yum package info. For details about the yum package manager, see
+   * https://access.redhat.com/documentation/en-
+   * us/red_hat_enterprise_linux/6/html/deployment_guide/ch-yum.
+   *
+   * @param VersionedPackage $yumPackage
    */
   public function setYumPackage(VersionedPackage $yumPackage)
   {
@@ -137,7 +159,10 @@ class SoftwarePackage extends \Google\Model
     return $this->yumPackage;
   }
   /**
-   * @param VersionedPackage
+   * Details of a Zypper package. For details about the Zypper package manager,
+   * see https://en.opensuse.org/SDB:Zypper_manual.
+   *
+   * @param VersionedPackage $zypperPackage
    */
   public function setZypperPackage(VersionedPackage $zypperPackage)
   {
@@ -151,7 +176,10 @@ class SoftwarePackage extends \Google\Model
     return $this->zypperPackage;
   }
   /**
-   * @param ZypperPatch
+   * Details of a Zypper patch. For details about the Zypper package manager,
+   * see https://en.opensuse.org/SDB:Zypper_manual.
+   *
+   * @param ZypperPatch $zypperPatch
    */
   public function setZypperPatch(ZypperPatch $zypperPatch)
   {

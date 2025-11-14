@@ -21,10 +21,15 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
 {
   protected $collection_key = 'transformation';
   /**
+   * The top level name of the container where the transformation is located
+   * (this will be the source file name or table name).
+   *
    * @var string
    */
   public $containerName;
   /**
+   * The name of the job that completed the transformation.
+   *
    * @var string
    */
   public $resourceName;
@@ -35,12 +40,19 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
   protected $transformationLocationType = GooglePrivacyDlpV2TransformationLocation::class;
   protected $transformationLocationDataType = '';
   /**
+   * The number of bytes that were transformed. If transformation was
+   * unsuccessful or did not take place because there was no content to
+   * transform, this will be zero.
+   *
    * @var string
    */
   public $transformedBytes;
 
   /**
-   * @param string
+   * The top level name of the container where the transformation is located
+   * (this will be the source file name or table name).
+   *
+   * @param string $containerName
    */
   public function setContainerName($containerName)
   {
@@ -54,7 +66,9 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
     return $this->containerName;
   }
   /**
-   * @param string
+   * The name of the job that completed the transformation.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -68,7 +82,11 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
     return $this->resourceName;
   }
   /**
-   * @param GooglePrivacyDlpV2TransformationResultStatus
+   * Status of the transformation, if transformation was not successful, this
+   * will specify what caused it to fail, otherwise it will show that the
+   * transformation was successful.
+   *
+   * @param GooglePrivacyDlpV2TransformationResultStatus $statusDetails
    */
   public function setStatusDetails(GooglePrivacyDlpV2TransformationResultStatus $statusDetails)
   {
@@ -82,7 +100,13 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
     return $this->statusDetails;
   }
   /**
-   * @param GooglePrivacyDlpV2TransformationDescription[]
+   * Description of transformation. This would only contain more than one
+   * element if there were multiple matching transformations and which one to
+   * apply was ambiguous. Not set for states that contain no transformation,
+   * currently only state that contains no transformation is
+   * TransformationResultStateType.METADATA_UNRETRIEVABLE.
+   *
+   * @param GooglePrivacyDlpV2TransformationDescription[] $transformation
    */
   public function setTransformation($transformation)
   {
@@ -96,7 +120,9 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
     return $this->transformation;
   }
   /**
-   * @param GooglePrivacyDlpV2TransformationLocation
+   * The precise location of the transformed content in the original container.
+   *
+   * @param GooglePrivacyDlpV2TransformationLocation $transformationLocation
    */
   public function setTransformationLocation(GooglePrivacyDlpV2TransformationLocation $transformationLocation)
   {
@@ -110,7 +136,11 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
     return $this->transformationLocation;
   }
   /**
-   * @param string
+   * The number of bytes that were transformed. If transformation was
+   * unsuccessful or did not take place because there was no content to
+   * transform, this will be zero.
+   *
+   * @param string $transformedBytes
    */
   public function setTransformedBytes($transformedBytes)
   {

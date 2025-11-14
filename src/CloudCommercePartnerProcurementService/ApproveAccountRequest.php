@@ -20,20 +20,35 @@ namespace Google\Service\CloudCommercePartnerProcurementService;
 class ApproveAccountRequest extends \Google\Model
 {
   /**
+   * The name of the approval being approved. If absent and there is only one
+   * approval possible, that approval will be granted. If absent and there are
+   * many approvals possible, the request will fail with a 400 Bad Request.
+   * Optional.
+   *
    * @var string
    */
   public $approvalName;
   /**
+   * Set of properties that should be associated with the account. Optional.
+   *
    * @var string[]
    */
   public $properties;
   /**
+   * Free form text string explaining the approval reason. Optional. Max allowed
+   * length: 256 bytes. Longer strings will be truncated.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * The name of the approval being approved. If absent and there is only one
+   * approval possible, that approval will be granted. If absent and there are
+   * many approvals possible, the request will fail with a 400 Bad Request.
+   * Optional.
+   *
+   * @param string $approvalName
    */
   public function setApprovalName($approvalName)
   {
@@ -47,7 +62,9 @@ class ApproveAccountRequest extends \Google\Model
     return $this->approvalName;
   }
   /**
-   * @param string[]
+   * Set of properties that should be associated with the account. Optional.
+   *
+   * @param string[] $properties
    */
   public function setProperties($properties)
   {
@@ -61,7 +78,10 @@ class ApproveAccountRequest extends \Google\Model
     return $this->properties;
   }
   /**
-   * @param string
+   * Free form text string explaining the approval reason. Optional. Max allowed
+   * length: 256 bytes. Longer strings will be truncated.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

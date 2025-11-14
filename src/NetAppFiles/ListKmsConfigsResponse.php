@@ -23,16 +23,22 @@ class ListKmsConfigsResponse extends \Google\Collection
   protected $kmsConfigsType = KmsConfig::class;
   protected $kmsConfigsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param KmsConfig[]
+   * The list of KmsConfigs
+   *
+   * @param KmsConfig[] $kmsConfigs
    */
   public function setKmsConfigs($kmsConfigs)
   {
@@ -46,7 +52,9 @@ class ListKmsConfigsResponse extends \Google\Collection
     return $this->kmsConfigs;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListKmsConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

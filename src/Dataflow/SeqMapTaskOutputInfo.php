@@ -22,12 +22,16 @@ class SeqMapTaskOutputInfo extends \Google\Model
   protected $sinkType = Sink::class;
   protected $sinkDataType = '';
   /**
+   * The id of the TupleTag the user code will tag the output value by.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param Sink
+   * The sink to write the output value to.
+   *
+   * @param Sink $sink
    */
   public function setSink(Sink $sink)
   {
@@ -41,7 +45,9 @@ class SeqMapTaskOutputInfo extends \Google\Model
     return $this->sink;
   }
   /**
-   * @param string
+   * The id of the TupleTag the user code will tag the output value by.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

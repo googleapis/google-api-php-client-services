@@ -20,22 +20,32 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput extends \Google\Model
 {
   /**
+   * Whether sentiment analysis is enabled.
+   *
    * @var bool
    */
   public $enableSentimentAnalysis;
   /**
+   * Parameters that need to be injected into the conversation during intent
+   * detection.
+   *
    * @var array[]
    */
   public $injectedParameters;
   protected $inputType = GoogleCloudDialogflowCxV3beta1QueryInput::class;
   protected $inputDataType = '';
   /**
+   * If webhooks should be allowed to trigger in response to the user utterance.
+   * Often if parameters are injected, webhooks should not be enabled.
+   *
    * @var bool
    */
   public $isWebhookEnabled;
 
   /**
-   * @param bool
+   * Whether sentiment analysis is enabled.
+   *
+   * @param bool $enableSentimentAnalysis
    */
   public function setEnableSentimentAnalysis($enableSentimentAnalysis)
   {
@@ -49,7 +59,10 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput extends \Google\Mo
     return $this->enableSentimentAnalysis;
   }
   /**
-   * @param array[]
+   * Parameters that need to be injected into the conversation during intent
+   * detection.
+   *
+   * @param array[] $injectedParameters
    */
   public function setInjectedParameters($injectedParameters)
   {
@@ -63,7 +76,9 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput extends \Google\Mo
     return $this->injectedParameters;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1QueryInput
+   * Supports text input, event input, dtmf input in the test case.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1QueryInput $input
    */
   public function setInput(GoogleCloudDialogflowCxV3beta1QueryInput $input)
   {
@@ -77,7 +92,10 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput extends \Google\Mo
     return $this->input;
   }
   /**
-   * @param bool
+   * If webhooks should be allowed to trigger in response to the user utterance.
+   * Often if parameters are injected, webhooks should not be enabled.
+   *
+   * @param bool $isWebhookEnabled
    */
   public function setIsWebhookEnabled($isWebhookEnabled)
   {

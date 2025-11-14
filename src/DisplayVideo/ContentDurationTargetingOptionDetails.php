@@ -20,19 +20,61 @@ namespace Google\Service\DisplayVideo;
 class ContentDurationTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Content duration is not specified in this version. This enum is a place
+   * holder for a default value and does not represent a real content duration.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_UNSPECIFIED = 'CONTENT_DURATION_UNSPECIFIED';
+  /**
+   * The content duration is unknown.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_UNKNOWN = 'CONTENT_DURATION_UNKNOWN';
+  /**
+   * Content is 0-1 minute long.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_0_TO_1_MIN = 'CONTENT_DURATION_0_TO_1_MIN';
+  /**
+   * Content is 1-5 minutes long.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_1_TO_5_MIN = 'CONTENT_DURATION_1_TO_5_MIN';
+  /**
+   * Content is 5-15 minutes long.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_5_TO_15_MIN = 'CONTENT_DURATION_5_TO_15_MIN';
+  /**
+   * Content is 15-30 minutes long.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_15_TO_30_MIN = 'CONTENT_DURATION_15_TO_30_MIN';
+  /**
+   * Content is 30-60 minutes long.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_30_TO_60_MIN = 'CONTENT_DURATION_30_TO_60_MIN';
+  /**
+   * Content is over 60 minutes long.
+   */
+  public const CONTENT_DURATION_CONTENT_DURATION_OVER_60_MIN = 'CONTENT_DURATION_OVER_60_MIN';
+  /**
+   * Output only. The content duration.
+   *
    * @var string
    */
   public $contentDuration;
 
   /**
-   * @param string
+   * Output only. The content duration.
+   *
+   * Accepted values: CONTENT_DURATION_UNSPECIFIED, CONTENT_DURATION_UNKNOWN,
+   * CONTENT_DURATION_0_TO_1_MIN, CONTENT_DURATION_1_TO_5_MIN,
+   * CONTENT_DURATION_5_TO_15_MIN, CONTENT_DURATION_15_TO_30_MIN,
+   * CONTENT_DURATION_30_TO_60_MIN, CONTENT_DURATION_OVER_60_MIN
+   *
+   * @param self::CONTENT_DURATION_* $contentDuration
    */
   public function setContentDuration($contentDuration)
   {
     $this->contentDuration = $contentDuration;
   }
   /**
-   * @return string
+   * @return self::CONTENT_DURATION_*
    */
   public function getContentDuration()
   {

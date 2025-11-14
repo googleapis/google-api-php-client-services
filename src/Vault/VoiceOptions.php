@@ -21,12 +21,16 @@ class VoiceOptions extends \Google\Collection
 {
   protected $collection_key = 'coveredData';
   /**
+   * Datatypes to search
+   *
    * @var string[]
    */
   public $coveredData;
 
   /**
-   * @param string[]
+   * Datatypes to search
+   *
+   * @param string[] $coveredData
    */
   public function setCoveredData($coveredData)
   {

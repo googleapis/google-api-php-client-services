@@ -19,7 +19,16 @@ namespace Google\Service\Dfareporting;
 
 class Report extends \Google\Model
 {
+  public const FORMAT_CSV = 'CSV';
+  public const FORMAT_EXCEL = 'EXCEL';
+  public const TYPE_STANDARD = 'STANDARD';
+  public const TYPE_REACH = 'REACH';
+  public const TYPE_PATH_TO_CONVERSION = 'PATH_TO_CONVERSION';
+  public const TYPE_FLOODLIGHT = 'FLOODLIGHT';
+  public const TYPE_CROSS_MEDIA_REACH = 'CROSS_MEDIA_REACH';
   /**
+   * The account ID to which this report belongs.
+   *
    * @var string
    */
   public $accountId;
@@ -30,36 +39,56 @@ class Report extends \Google\Model
   protected $deliveryType = ReportDelivery::class;
   protected $deliveryDataType = '';
   /**
+   * The eTag of this response for caching purposes.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The filename used when generating report files for this report.
+   *
    * @var string
    */
   public $fileName;
   protected $floodlightCriteriaType = ReportFloodlightCriteria::class;
   protected $floodlightCriteriaDataType = '';
   /**
+   * The output format of the report. If not specified, default format is "CSV".
+   * Note that the actual format in the completed report file might differ if
+   * for instance the report's size exceeds the format's capabilities. "CSV"
+   * will then be the fallback format.
+   *
    * @var string
    */
   public $format;
   /**
+   * The unique ID identifying this report resource.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of resource this is, in this case dfareporting#report.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The timestamp (in milliseconds since epoch) of when this report was last
+   * modified.
+   *
    * @var string
    */
   public $lastModifiedTime;
   /**
+   * The name of the report.
+   *
    * @var string
    */
   public $name;
   /**
+   * The user profile id of the owner of this report.
+   *
    * @var string
    */
   public $ownerProfileId;
@@ -70,16 +99,22 @@ class Report extends \Google\Model
   protected $scheduleType = ReportSchedule::class;
   protected $scheduleDataType = '';
   /**
+   * The subaccount ID to which this report belongs if applicable.
+   *
    * @var string
    */
   public $subAccountId;
   /**
+   * The type of the report.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The account ID to which this report belongs.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -93,7 +128,9 @@ class Report extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param ReportCriteria
+   * The report criteria for a report of type "STANDARD".
+   *
+   * @param ReportCriteria $criteria
    */
   public function setCriteria(ReportCriteria $criteria)
   {
@@ -107,7 +144,9 @@ class Report extends \Google\Model
     return $this->criteria;
   }
   /**
-   * @param ReportCrossMediaReachCriteria
+   * Optional. The report criteria for a report of type "CROSS_MEDIA_REACH".
+   *
+   * @param ReportCrossMediaReachCriteria $crossMediaReachCriteria
    */
   public function setCrossMediaReachCriteria(ReportCrossMediaReachCriteria $crossMediaReachCriteria)
   {
@@ -121,7 +160,9 @@ class Report extends \Google\Model
     return $this->crossMediaReachCriteria;
   }
   /**
-   * @param ReportDelivery
+   * The report's email delivery settings.
+   *
+   * @param ReportDelivery $delivery
    */
   public function setDelivery(ReportDelivery $delivery)
   {
@@ -135,7 +176,9 @@ class Report extends \Google\Model
     return $this->delivery;
   }
   /**
-   * @param string
+   * The eTag of this response for caching purposes.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -149,7 +192,9 @@ class Report extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The filename used when generating report files for this report.
+   *
+   * @param string $fileName
    */
   public function setFileName($fileName)
   {
@@ -163,7 +208,9 @@ class Report extends \Google\Model
     return $this->fileName;
   }
   /**
-   * @param ReportFloodlightCriteria
+   * The report criteria for a report of type "FLOODLIGHT".
+   *
+   * @param ReportFloodlightCriteria $floodlightCriteria
    */
   public function setFloodlightCriteria(ReportFloodlightCriteria $floodlightCriteria)
   {
@@ -177,21 +224,30 @@ class Report extends \Google\Model
     return $this->floodlightCriteria;
   }
   /**
-   * @param string
+   * The output format of the report. If not specified, default format is "CSV".
+   * Note that the actual format in the completed report file might differ if
+   * for instance the report's size exceeds the format's capabilities. "CSV"
+   * will then be the fallback format.
+   *
+   * Accepted values: CSV, EXCEL
+   *
+   * @param self::FORMAT_* $format
    */
   public function setFormat($format)
   {
     $this->format = $format;
   }
   /**
-   * @return string
+   * @return self::FORMAT_*
    */
   public function getFormat()
   {
     return $this->format;
   }
   /**
-   * @param string
+   * The unique ID identifying this report resource.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -205,7 +261,9 @@ class Report extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case dfareporting#report.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -219,7 +277,10 @@ class Report extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The timestamp (in milliseconds since epoch) of when this report was last
+   * modified.
+   *
+   * @param string $lastModifiedTime
    */
   public function setLastModifiedTime($lastModifiedTime)
   {
@@ -233,7 +294,9 @@ class Report extends \Google\Model
     return $this->lastModifiedTime;
   }
   /**
-   * @param string
+   * The name of the report.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -247,7 +310,9 @@ class Report extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The user profile id of the owner of this report.
+   *
+   * @param string $ownerProfileId
    */
   public function setOwnerProfileId($ownerProfileId)
   {
@@ -261,7 +326,9 @@ class Report extends \Google\Model
     return $this->ownerProfileId;
   }
   /**
-   * @param ReportPathToConversionCriteria
+   * The report criteria for a report of type "PATH_TO_CONVERSION".
+   *
+   * @param ReportPathToConversionCriteria $pathToConversionCriteria
    */
   public function setPathToConversionCriteria(ReportPathToConversionCriteria $pathToConversionCriteria)
   {
@@ -275,7 +342,9 @@ class Report extends \Google\Model
     return $this->pathToConversionCriteria;
   }
   /**
-   * @param ReportReachCriteria
+   * The report criteria for a report of type "REACH".
+   *
+   * @param ReportReachCriteria $reachCriteria
    */
   public function setReachCriteria(ReportReachCriteria $reachCriteria)
   {
@@ -289,7 +358,10 @@ class Report extends \Google\Model
     return $this->reachCriteria;
   }
   /**
-   * @param ReportSchedule
+   * The report's schedule. Can only be set if the report's 'dateRange' is a
+   * relative date range and the relative date range is not "TODAY".
+   *
+   * @param ReportSchedule $schedule
    */
   public function setSchedule(ReportSchedule $schedule)
   {
@@ -303,7 +375,9 @@ class Report extends \Google\Model
     return $this->schedule;
   }
   /**
-   * @param string
+   * The subaccount ID to which this report belongs if applicable.
+   *
+   * @param string $subAccountId
    */
   public function setSubAccountId($subAccountId)
   {
@@ -317,14 +391,19 @@ class Report extends \Google\Model
     return $this->subAccountId;
   }
   /**
-   * @param string
+   * The type of the report.
+   *
+   * Accepted values: STANDARD, REACH, PATH_TO_CONVERSION, FLOODLIGHT,
+   * CROSS_MEDIA_REACH
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

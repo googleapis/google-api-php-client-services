@@ -19,28 +19,115 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3ValidationMessage extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const RESOURCE_TYPE_RESOURCE_TYPE_UNSPECIFIED = 'RESOURCE_TYPE_UNSPECIFIED';
+  /**
+   * Agent.
+   */
+  public const RESOURCE_TYPE_AGENT = 'AGENT';
+  /**
+   * Intent.
+   */
+  public const RESOURCE_TYPE_INTENT = 'INTENT';
+  /**
+   * Intent training phrase.
+   */
+  public const RESOURCE_TYPE_INTENT_TRAINING_PHRASE = 'INTENT_TRAINING_PHRASE';
+  /**
+   * Intent parameter.
+   */
+  public const RESOURCE_TYPE_INTENT_PARAMETER = 'INTENT_PARAMETER';
+  /**
+   * Multiple intents.
+   */
+  public const RESOURCE_TYPE_INTENTS = 'INTENTS';
+  /**
+   * Multiple training phrases.
+   */
+  public const RESOURCE_TYPE_INTENT_TRAINING_PHRASES = 'INTENT_TRAINING_PHRASES';
+  /**
+   * Entity type.
+   */
+  public const RESOURCE_TYPE_ENTITY_TYPE = 'ENTITY_TYPE';
+  /**
+   * Multiple entity types.
+   */
+  public const RESOURCE_TYPE_ENTITY_TYPES = 'ENTITY_TYPES';
+  /**
+   * Webhook.
+   */
+  public const RESOURCE_TYPE_WEBHOOK = 'WEBHOOK';
+  /**
+   * Flow.
+   */
+  public const RESOURCE_TYPE_FLOW = 'FLOW';
+  /**
+   * Page.
+   */
+  public const RESOURCE_TYPE_PAGE = 'PAGE';
+  /**
+   * Multiple pages.
+   */
+  public const RESOURCE_TYPE_PAGES = 'PAGES';
+  /**
+   * Transition route group.
+   */
+  public const RESOURCE_TYPE_TRANSITION_ROUTE_GROUP = 'TRANSITION_ROUTE_GROUP';
+  /**
+   * Agent transition route group.
+   */
+  public const RESOURCE_TYPE_AGENT_TRANSITION_ROUTE_GROUP = 'AGENT_TRANSITION_ROUTE_GROUP';
+  /**
+   * Unspecified.
+   */
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * The agent doesn't follow Dialogflow best practices.
+   */
+  public const SEVERITY_INFO = 'INFO';
+  /**
+   * The agent may not behave as expected.
+   */
+  public const SEVERITY_WARNING = 'WARNING';
+  /**
+   * The agent may experience failures.
+   */
+  public const SEVERITY_ERROR = 'ERROR';
   protected $collection_key = 'resources';
   /**
+   * The message detail.
+   *
    * @var string
    */
   public $detail;
   protected $resourceNamesType = GoogleCloudDialogflowCxV3ResourceName::class;
   protected $resourceNamesDataType = 'array';
   /**
+   * The type of the resources where the message is found.
+   *
    * @var string
    */
   public $resourceType;
   /**
+   * The names of the resources where the message is found.
+   *
+   * @deprecated
    * @var string[]
    */
   public $resources;
   /**
+   * Indicates the severity of the message.
+   *
    * @var string
    */
   public $severity;
 
   /**
-   * @param string
+   * The message detail.
+   *
+   * @param string $detail
    */
   public function setDetail($detail)
   {
@@ -54,7 +141,9 @@ class GoogleCloudDialogflowCxV3ValidationMessage extends \Google\Collection
     return $this->detail;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ResourceName[]
+   * The resource names of the resources where the message is found.
+   *
+   * @param GoogleCloudDialogflowCxV3ResourceName[] $resourceNames
    */
   public function setResourceNames($resourceNames)
   {
@@ -68,27 +157,38 @@ class GoogleCloudDialogflowCxV3ValidationMessage extends \Google\Collection
     return $this->resourceNames;
   }
   /**
-   * @param string
+   * The type of the resources where the message is found.
+   *
+   * Accepted values: RESOURCE_TYPE_UNSPECIFIED, AGENT, INTENT,
+   * INTENT_TRAINING_PHRASE, INTENT_PARAMETER, INTENTS, INTENT_TRAINING_PHRASES,
+   * ENTITY_TYPE, ENTITY_TYPES, WEBHOOK, FLOW, PAGE, PAGES,
+   * TRANSITION_ROUTE_GROUP, AGENT_TRANSITION_ROUTE_GROUP
+   *
+   * @param self::RESOURCE_TYPE_* $resourceType
    */
   public function setResourceType($resourceType)
   {
     $this->resourceType = $resourceType;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_TYPE_*
    */
   public function getResourceType()
   {
     return $this->resourceType;
   }
   /**
-   * @param string[]
+   * The names of the resources where the message is found.
+   *
+   * @deprecated
+   * @param string[] $resources
    */
   public function setResources($resources)
   {
     $this->resources = $resources;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getResources()
@@ -96,14 +196,18 @@ class GoogleCloudDialogflowCxV3ValidationMessage extends \Google\Collection
     return $this->resources;
   }
   /**
-   * @param string
+   * Indicates the severity of the message.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, INFO, WARNING, ERROR
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {

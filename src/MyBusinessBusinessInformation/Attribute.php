@@ -19,8 +19,32 @@ namespace Google\Service\MyBusinessBusinessInformation;
 
 class Attribute extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const VALUE_TYPE_ATTRIBUTE_VALUE_TYPE_UNSPECIFIED = 'ATTRIBUTE_VALUE_TYPE_UNSPECIFIED';
+  /**
+   * The values for this attribute are boolean values.
+   */
+  public const VALUE_TYPE_BOOL = 'BOOL';
+  /**
+   * The attribute has a predetermined list of available values that can be
+   * used. Metadata for this attribute will list these values.
+   */
+  public const VALUE_TYPE_ENUM = 'ENUM';
+  /**
+   * The values for this attribute are URLs.
+   */
+  public const VALUE_TYPE_URL = 'URL';
+  /**
+   * The attribute value is an enum with multiple possible values that can be
+   * explicitly set or unset.
+   */
+  public const VALUE_TYPE_REPEATED_ENUM = 'REPEATED_ENUM';
   protected $collection_key = 'values';
   /**
+   * Required. The resource name for this attribute.
+   *
    * @var string
    */
   public $name;
@@ -29,16 +53,25 @@ class Attribute extends \Google\Collection
   protected $uriValuesType = UriAttributeValue::class;
   protected $uriValuesDataType = 'array';
   /**
+   * Output only. The type of value that this attribute contains. This should be
+   * used to determine how to interpret the value.
+   *
    * @var string
    */
   public $valueType;
   /**
+   * The values for this attribute. The type of the values supplied must match
+   * that expected for that attribute. This is a repeated field where multiple
+   * attribute values may be provided. Attribute types only support one value.
+   *
    * @var array[]
    */
   public $values;
 
   /**
-   * @param string
+   * Required. The resource name for this attribute.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -52,7 +85,10 @@ class Attribute extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param RepeatedEnumAttributeValue
+   * When the attribute value type is REPEATED_ENUM, this contains the attribute
+   * value, and the other values fields must be empty.
+   *
+   * @param RepeatedEnumAttributeValue $repeatedEnumValue
    */
   public function setRepeatedEnumValue(RepeatedEnumAttributeValue $repeatedEnumValue)
   {
@@ -66,7 +102,10 @@ class Attribute extends \Google\Collection
     return $this->repeatedEnumValue;
   }
   /**
-   * @param UriAttributeValue[]
+   * When the attribute value type is URL, this field contains the value(s) for
+   * this attribute, and the other values fields must be empty.
+   *
+   * @param UriAttributeValue[] $uriValues
    */
   public function setUriValues($uriValues)
   {
@@ -80,21 +119,31 @@ class Attribute extends \Google\Collection
     return $this->uriValues;
   }
   /**
-   * @param string
+   * Output only. The type of value that this attribute contains. This should be
+   * used to determine how to interpret the value.
+   *
+   * Accepted values: ATTRIBUTE_VALUE_TYPE_UNSPECIFIED, BOOL, ENUM, URL,
+   * REPEATED_ENUM
+   *
+   * @param self::VALUE_TYPE_* $valueType
    */
   public function setValueType($valueType)
   {
     $this->valueType = $valueType;
   }
   /**
-   * @return string
+   * @return self::VALUE_TYPE_*
    */
   public function getValueType()
   {
     return $this->valueType;
   }
   /**
-   * @param array[]
+   * The values for this attribute. The type of the values supplied must match
+   * that expected for that attribute. This is a repeated field where multiple
+   * attribute values may be provided. Attribute types only support one value.
+   *
+   * @param array[] $values
    */
   public function setValues($values)
   {

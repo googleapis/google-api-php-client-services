@@ -24,7 +24,9 @@ class AdPolicyTopicConstraintAdPolicyCountryConstraintList extends \Google\Colle
   protected $countriesDataType = 'array';
 
   /**
-   * @param AdPolicyCriterionRestriction[]
+   * Countries where the ad cannot serve.
+   *
+   * @param AdPolicyCriterionRestriction[] $countries
    */
   public function setCountries($countries)
   {

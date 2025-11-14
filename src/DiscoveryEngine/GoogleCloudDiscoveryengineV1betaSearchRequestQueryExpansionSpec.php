@@ -20,30 +20,60 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestQueryExpansionSpec extends \Google\Model
 {
   /**
+   * Unspecified query expansion condition. In this case, server behavior
+   * defaults to Condition.DISABLED.
+   */
+  public const CONDITION_CONDITION_UNSPECIFIED = 'CONDITION_UNSPECIFIED';
+  /**
+   * Disabled query expansion. Only the exact search query is used, even if
+   * SearchResponse.total_size is zero.
+   */
+  public const CONDITION_DISABLED = 'DISABLED';
+  /**
+   * Automatic query expansion built by the Search API.
+   */
+  public const CONDITION_AUTO = 'AUTO';
+  /**
+   * The condition under which query expansion should occur. Default to
+   * Condition.DISABLED.
+   *
    * @var string
    */
   public $condition;
   /**
+   * Whether to pin unexpanded results. If this field is set to true, unexpanded
+   * products are always at the top of the search results, followed by the
+   * expanded results.
+   *
    * @var bool
    */
   public $pinUnexpandedResults;
 
   /**
-   * @param string
+   * The condition under which query expansion should occur. Default to
+   * Condition.DISABLED.
+   *
+   * Accepted values: CONDITION_UNSPECIFIED, DISABLED, AUTO
+   *
+   * @param self::CONDITION_* $condition
    */
   public function setCondition($condition)
   {
     $this->condition = $condition;
   }
   /**
-   * @return string
+   * @return self::CONDITION_*
    */
   public function getCondition()
   {
     return $this->condition;
   }
   /**
-   * @param bool
+   * Whether to pin unexpanded results. If this field is set to true, unexpanded
+   * products are always at the top of the search results, followed by the
+   * expanded results.
+   *
+   * @param bool $pinUnexpandedResults
    */
   public function setPinUnexpandedResults($pinUnexpandedResults)
   {

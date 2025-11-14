@@ -27,7 +27,9 @@ class GooglePrivacyDlpV2DataProfileBigQueryRowSchema extends \Google\Model
   protected $tableProfileDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2ColumnDataProfile
+   * Column data profile column
+   *
+   * @param GooglePrivacyDlpV2ColumnDataProfile $columnProfile
    */
   public function setColumnProfile(GooglePrivacyDlpV2ColumnDataProfile $columnProfile)
   {
@@ -41,7 +43,9 @@ class GooglePrivacyDlpV2DataProfileBigQueryRowSchema extends \Google\Model
     return $this->columnProfile;
   }
   /**
-   * @param GooglePrivacyDlpV2FileStoreDataProfile
+   * File store data profile column.
+   *
+   * @param GooglePrivacyDlpV2FileStoreDataProfile $fileStoreProfile
    */
   public function setFileStoreProfile(GooglePrivacyDlpV2FileStoreDataProfile $fileStoreProfile)
   {
@@ -55,7 +59,9 @@ class GooglePrivacyDlpV2DataProfileBigQueryRowSchema extends \Google\Model
     return $this->fileStoreProfile;
   }
   /**
-   * @param GooglePrivacyDlpV2TableDataProfile
+   * Table data profile column
+   *
+   * @param GooglePrivacyDlpV2TableDataProfile $tableProfile
    */
   public function setTableProfile(GooglePrivacyDlpV2TableDataProfile $tableProfile)
   {

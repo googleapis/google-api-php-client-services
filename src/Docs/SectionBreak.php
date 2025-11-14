@@ -23,16 +23,25 @@ class SectionBreak extends \Google\Collection
   protected $sectionStyleType = SectionStyle::class;
   protected $sectionStyleDataType = '';
   /**
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
    * @var string[]
    */
   public $suggestedDeletionIds;
   /**
+   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs
+   * if it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
    * @var string[]
    */
   public $suggestedInsertionIds;
 
   /**
-   * @param SectionStyle
+   * The style of the section after this section break.
+   *
+   * @param SectionStyle $sectionStyle
    */
   public function setSectionStyle(SectionStyle $sectionStyle)
   {
@@ -46,7 +55,10 @@ class SectionBreak extends \Google\Collection
     return $this->sectionStyle;
   }
   /**
-   * @param string[]
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
+   * @param string[] $suggestedDeletionIds
    */
   public function setSuggestedDeletionIds($suggestedDeletionIds)
   {
@@ -60,7 +72,11 @@ class SectionBreak extends \Google\Collection
     return $this->suggestedDeletionIds;
   }
   /**
-   * @param string[]
+   * The suggested insertion IDs. A SectionBreak may have multiple insertion IDs
+   * if it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
+   * @param string[] $suggestedInsertionIds
    */
   public function setSuggestedInsertionIds($suggestedInsertionIds)
   {

@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1Reply extends \Google\Model
   protected $summaryDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSummary
+   * Summary based on search results.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSummary $summary
    */
   public function setSummary(GoogleCloudDiscoveryengineV1SearchResponseSummary $summary)
   {

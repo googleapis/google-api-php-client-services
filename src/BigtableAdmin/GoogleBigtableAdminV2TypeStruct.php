@@ -26,7 +26,9 @@ class GoogleBigtableAdminV2TypeStruct extends \Google\Collection
   protected $fieldsDataType = 'array';
 
   /**
-   * @param GoogleBigtableAdminV2TypeStructEncoding
+   * The encoding to use when converting to or from lower level types.
+   *
+   * @param GoogleBigtableAdminV2TypeStructEncoding $encoding
    */
   public function setEncoding(GoogleBigtableAdminV2TypeStructEncoding $encoding)
   {
@@ -40,7 +42,9 @@ class GoogleBigtableAdminV2TypeStruct extends \Google\Collection
     return $this->encoding;
   }
   /**
-   * @param GoogleBigtableAdminV2TypeStructField[]
+   * The names and types of the fields in this struct.
+   *
+   * @param GoogleBigtableAdminV2TypeStructField[] $fields
    */
   public function setFields($fields)
   {

@@ -23,16 +23,22 @@ class ListJobTemplatesResponse extends \Google\Collection
   protected $jobTemplatesType = JobTemplate::class;
   protected $jobTemplatesDataType = 'array';
   /**
+   * The pagination token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * List of regions that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param JobTemplate[]
+   * List of job templates in the specified region.
+   *
+   * @param JobTemplate[] $jobTemplates
    */
   public function setJobTemplates($jobTemplates)
   {
@@ -46,7 +52,9 @@ class ListJobTemplatesResponse extends \Google\Collection
     return $this->jobTemplates;
   }
   /**
-   * @param string
+   * The pagination token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListJobTemplatesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * List of regions that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

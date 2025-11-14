@@ -19,25 +19,38 @@ namespace Google\Service\Blogger;
 
 class Blog extends \Google\Model
 {
+  public const STATUS_LIVE = 'LIVE';
+  public const STATUS_DELETED = 'DELETED';
   /**
+   * The JSON custom meta-data for the Blog.
+   *
+   * @deprecated
    * @var string
    */
   public $customMetaData;
   /**
+   * The description of this blog. This is displayed underneath the title.
+   *
    * @var string
    */
   public $description;
   /**
+   * The identifier for this resource.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of this entry. Always blogger#blog.
+   *
    * @var string
    */
   public $kind;
   protected $localeType = BlogLocale::class;
   protected $localeDataType = '';
   /**
+   * The name of this blog. This is displayed as the title.
+   *
    * @var string
    */
   public $name;
@@ -46,34 +59,48 @@ class Blog extends \Google\Model
   protected $postsType = BlogPosts::class;
   protected $postsDataType = '';
   /**
+   * RFC 3339 date-time when this blog was published.
+   *
    * @var string
    */
   public $published;
   /**
+   * The API REST URL to fetch this resource from.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The status of the blog.
+   *
    * @var string
    */
   public $status;
   /**
+   * RFC 3339 date-time when this blog was last updated.
+   *
    * @var string
    */
   public $updated;
   /**
+   * The URL where this blog is published.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The JSON custom meta-data for the Blog.
+   *
+   * @deprecated
+   * @param string $customMetaData
    */
   public function setCustomMetaData($customMetaData)
   {
     $this->customMetaData = $customMetaData;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getCustomMetaData()
@@ -81,7 +108,9 @@ class Blog extends \Google\Model
     return $this->customMetaData;
   }
   /**
-   * @param string
+   * The description of this blog. This is displayed underneath the title.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -95,7 +124,9 @@ class Blog extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The identifier for this resource.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -109,7 +140,9 @@ class Blog extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of this entry. Always blogger#blog.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -123,7 +156,9 @@ class Blog extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param BlogLocale
+   * The locale this Blog is set to.
+   *
+   * @param BlogLocale $locale
    */
   public function setLocale(BlogLocale $locale)
   {
@@ -137,7 +172,9 @@ class Blog extends \Google\Model
     return $this->locale;
   }
   /**
-   * @param string
+   * The name of this blog. This is displayed as the title.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -151,7 +188,9 @@ class Blog extends \Google\Model
     return $this->name;
   }
   /**
-   * @param BlogPages
+   * The container of pages in this blog.
+   *
+   * @param BlogPages $pages
    */
   public function setPages(BlogPages $pages)
   {
@@ -165,7 +204,9 @@ class Blog extends \Google\Model
     return $this->pages;
   }
   /**
-   * @param BlogPosts
+   * The container of posts in this blog.
+   *
+   * @param BlogPosts $posts
    */
   public function setPosts(BlogPosts $posts)
   {
@@ -179,7 +220,9 @@ class Blog extends \Google\Model
     return $this->posts;
   }
   /**
-   * @param string
+   * RFC 3339 date-time when this blog was published.
+   *
+   * @param string $published
    */
   public function setPublished($published)
   {
@@ -193,7 +236,9 @@ class Blog extends \Google\Model
     return $this->published;
   }
   /**
-   * @param string
+   * The API REST URL to fetch this resource from.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -207,21 +252,27 @@ class Blog extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The status of the blog.
+   *
+   * Accepted values: LIVE, DELETED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * RFC 3339 date-time when this blog was last updated.
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {
@@ -235,7 +286,9 @@ class Blog extends \Google\Model
     return $this->updated;
   }
   /**
-   * @param string
+   * The URL where this blog is published.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

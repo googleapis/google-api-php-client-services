@@ -24,7 +24,9 @@ class GoogleCloudDocumentaiV1DocumentChunkedDocument extends \Google\Collection
   protected $chunksDataType = 'array';
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentChunkedDocumentChunk[]
+   * List of chunks.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentChunkedDocumentChunk[] $chunks
    */
   public function setChunks($chunks)
   {

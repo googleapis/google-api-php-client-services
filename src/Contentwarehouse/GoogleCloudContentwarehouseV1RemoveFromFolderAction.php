@@ -20,16 +20,23 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1RemoveFromFolderAction extends \Google\Model
 {
   /**
+   * Condition of the action to be executed.
+   *
    * @var string
    */
   public $condition;
   /**
+   * Name of the folder under which new document is to be added. Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
    * @var string
    */
   public $folder;
 
   /**
-   * @param string
+   * Condition of the action to be executed.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -43,7 +50,10 @@ class GoogleCloudContentwarehouseV1RemoveFromFolderAction extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param string
+   * Name of the folder under which new document is to be added. Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
+   * @param string $folder
    */
   public function setFolder($folder)
   {

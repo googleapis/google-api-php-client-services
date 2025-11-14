@@ -20,29 +20,49 @@ namespace Google\Service\Transcoder;
 class AudioMapping extends \Google\Model
 {
   /**
+   * Required. The EditAtom.key that references the atom with audio inputs in
+   * the JobConfig.edit_list.
+   *
    * @var string
    */
   public $atomKey;
+  /**
+   * Audio volume control in dB. Negative values decrease volume, positive
+   * values increase. The default is 0.
+   *
+   * @var 
+   */
   public $gainDb;
   /**
+   * Required. The zero-based index of the channel in the input audio stream.
+   *
    * @var int
    */
   public $inputChannel;
   /**
+   * Required. The Input.key that identifies the input file.
+   *
    * @var string
    */
   public $inputKey;
   /**
+   * Required. The zero-based index of the track in the input file.
+   *
    * @var int
    */
   public $inputTrack;
   /**
+   * Required. The zero-based index of the channel in the output audio stream.
+   *
    * @var int
    */
   public $outputChannel;
 
   /**
-   * @param string
+   * Required. The EditAtom.key that references the atom with audio inputs in
+   * the JobConfig.edit_list.
+   *
+   * @param string $atomKey
    */
   public function setAtomKey($atomKey)
   {
@@ -64,7 +84,9 @@ class AudioMapping extends \Google\Model
     return $this->gainDb;
   }
   /**
-   * @param int
+   * Required. The zero-based index of the channel in the input audio stream.
+   *
+   * @param int $inputChannel
    */
   public function setInputChannel($inputChannel)
   {
@@ -78,7 +100,9 @@ class AudioMapping extends \Google\Model
     return $this->inputChannel;
   }
   /**
-   * @param string
+   * Required. The Input.key that identifies the input file.
+   *
+   * @param string $inputKey
    */
   public function setInputKey($inputKey)
   {
@@ -92,7 +116,9 @@ class AudioMapping extends \Google\Model
     return $this->inputKey;
   }
   /**
-   * @param int
+   * Required. The zero-based index of the track in the input file.
+   *
+   * @param int $inputTrack
    */
   public function setInputTrack($inputTrack)
   {
@@ -106,7 +132,9 @@ class AudioMapping extends \Google\Model
     return $this->inputTrack;
   }
   /**
-   * @param int
+   * Required. The zero-based index of the channel in the output audio stream.
+   *
+   * @param int $outputChannel
    */
   public function setOutputChannel($outputChannel)
   {

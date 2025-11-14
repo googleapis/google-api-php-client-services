@@ -23,12 +23,16 @@ class CreateProfileRequest extends \Google\Collection
   protected $deploymentType = Deployment::class;
   protected $deploymentDataType = '';
   /**
+   * One or more profile types that the agent is capable of providing.
+   *
    * @var string[]
    */
   public $profileType;
 
   /**
-   * @param Deployment
+   * Deployment details.
+   *
+   * @param Deployment $deployment
    */
   public function setDeployment(Deployment $deployment)
   {
@@ -42,7 +46,9 @@ class CreateProfileRequest extends \Google\Collection
     return $this->deployment;
   }
   /**
-   * @param string[]
+   * One or more profile types that the agent is capable of providing.
+   *
+   * @param string[] $profileType
    */
   public function setProfileType($profileType)
   {

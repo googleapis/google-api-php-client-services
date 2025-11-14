@@ -21,16 +21,22 @@ class ExplainQueryStep extends \Google\Collection
 {
   protected $collection_key = 'substeps';
   /**
+   * Machine-readable operation type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Human-readable description of the step(s).
+   *
    * @var string[]
    */
   public $substeps;
 
   /**
-   * @param string
+   * Machine-readable operation type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -44,7 +50,9 @@ class ExplainQueryStep extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * Human-readable description of the step(s).
+   *
+   * @param string[] $substeps
    */
   public function setSubsteps($substeps)
   {

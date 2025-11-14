@@ -20,12 +20,18 @@ namespace Google\Service\DisplayVideo;
 class CreateAssetRequest extends \Google\Model
 {
   /**
+   * Required. The filename of the asset, including the file extension. The
+   * filename must be UTF-8 encoded with a maximum size of 240 bytes.
+   *
    * @var string
    */
   public $filename;
 
   /**
-   * @param string
+   * Required. The filename of the asset, including the file extension. The
+   * filename must be UTF-8 encoded with a maximum size of 240 bytes.
+   *
+   * @param string $filename
    */
   public function setFilename($filename)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\RapidMigrationAssessment;
 class GuestOsScan extends \Google\Model
 {
   /**
+   * reference to the corresponding Guest OS Scan in MC Source.
+   *
    * @var string
    */
   public $coreSource;
 
   /**
-   * @param string
+   * reference to the corresponding Guest OS Scan in MC Source.
+   *
+   * @param string $coreSource
    */
   public function setCoreSource($coreSource)
   {

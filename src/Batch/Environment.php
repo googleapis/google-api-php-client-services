@@ -22,16 +22,25 @@ class Environment extends \Google\Model
   protected $encryptedVariablesType = KMSEnvMap::class;
   protected $encryptedVariablesDataType = '';
   /**
+   * A map of environment variable names to Secret Manager secret names. The VM
+   * will access the named secrets to set the value of each environment
+   * variable.
+   *
    * @var string[]
    */
   public $secretVariables;
   /**
+   * A map of environment variable names to values.
+   *
    * @var string[]
    */
   public $variables;
 
   /**
-   * @param KMSEnvMap
+   * An encrypted JSON dictionary where the key/value pairs correspond to
+   * environment variable names and their values.
+   *
+   * @param KMSEnvMap $encryptedVariables
    */
   public function setEncryptedVariables(KMSEnvMap $encryptedVariables)
   {
@@ -45,7 +54,11 @@ class Environment extends \Google\Model
     return $this->encryptedVariables;
   }
   /**
-   * @param string[]
+   * A map of environment variable names to Secret Manager secret names. The VM
+   * will access the named secrets to set the value of each environment
+   * variable.
+   *
+   * @param string[] $secretVariables
    */
   public function setSecretVariables($secretVariables)
   {
@@ -59,7 +72,9 @@ class Environment extends \Google\Model
     return $this->secretVariables;
   }
   /**
-   * @param string[]
+   * A map of environment variable names to values.
+   *
+   * @param string[] $variables
    */
   public function setVariables($variables)
   {

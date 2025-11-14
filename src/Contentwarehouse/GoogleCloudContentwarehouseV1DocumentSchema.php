@@ -21,34 +21,51 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
 {
   protected $collection_key = 'propertyDefinitions';
   /**
+   * Output only. The time when the document schema is created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Schema description.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Name of the schema given by the user. Must be unique per project.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Document Type, true refers the document is a folder, otherwise it is a
+   * typical document.
+   *
    * @var bool
    */
   public $documentIsFolder;
   /**
+   * The resource name of the document schema. Format: projects/{project_number}
+   * /locations/{location}/documentSchemas/{document_schema_id}. The name is
+   * ignored when creating a document schema.
+   *
    * @var string
    */
   public $name;
   protected $propertyDefinitionsType = GoogleCloudContentwarehouseV1PropertyDefinition::class;
   protected $propertyDefinitionsDataType = 'array';
   /**
+   * Output only. The time when the document schema is last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time when the document schema is created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -62,7 +79,9 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Schema description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -76,7 +95,9 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Name of the schema given by the user. Must be unique per project.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -90,7 +111,10 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Document Type, true refers the document is a folder, otherwise it is a
+   * typical document.
+   *
+   * @param bool $documentIsFolder
    */
   public function setDocumentIsFolder($documentIsFolder)
   {
@@ -104,7 +128,11 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
     return $this->documentIsFolder;
   }
   /**
-   * @param string
+   * The resource name of the document schema. Format: projects/{project_number}
+   * /locations/{location}/documentSchemas/{document_schema_id}. The name is
+   * ignored when creating a document schema.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -118,7 +146,9 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1PropertyDefinition[]
+   * Document details.
+   *
+   * @param GoogleCloudContentwarehouseV1PropertyDefinition[] $propertyDefinitions
    */
   public function setPropertyDefinitions($propertyDefinitions)
   {
@@ -132,7 +162,9 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
     return $this->propertyDefinitions;
   }
   /**
-   * @param string
+   * Output only. The time when the document schema is last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

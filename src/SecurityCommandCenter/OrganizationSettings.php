@@ -22,16 +22,27 @@ class OrganizationSettings extends \Google\Model
   protected $assetDiscoveryConfigType = AssetDiscoveryConfig::class;
   protected $assetDiscoveryConfigDataType = '';
   /**
+   * A flag that indicates if Asset Discovery should be enabled. If the flag is
+   * set to `true`, then discovery of assets will occur. If it is set to
+   * `false`, all historical assets will remain, but discovery of future assets
+   * will not occur.
+   *
    * @var bool
    */
   public $enableAssetDiscovery;
   /**
+   * The relative resource name of the settings. See:
+   * https://cloud.google.com/apis/design/resource_names#relative_resource_name
+   * Example: "organizations/{organization_id}/organizationSettings".
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param AssetDiscoveryConfig
+   * The configuration used for Asset Discovery runs.
+   *
+   * @param AssetDiscoveryConfig $assetDiscoveryConfig
    */
   public function setAssetDiscoveryConfig(AssetDiscoveryConfig $assetDiscoveryConfig)
   {
@@ -45,7 +56,12 @@ class OrganizationSettings extends \Google\Model
     return $this->assetDiscoveryConfig;
   }
   /**
-   * @param bool
+   * A flag that indicates if Asset Discovery should be enabled. If the flag is
+   * set to `true`, then discovery of assets will occur. If it is set to
+   * `false`, all historical assets will remain, but discovery of future assets
+   * will not occur.
+   *
+   * @param bool $enableAssetDiscovery
    */
   public function setEnableAssetDiscovery($enableAssetDiscovery)
   {
@@ -59,7 +75,11 @@ class OrganizationSettings extends \Google\Model
     return $this->enableAssetDiscovery;
   }
   /**
-   * @param string
+   * The relative resource name of the settings. See:
+   * https://cloud.google.com/apis/design/resource_names#relative_resource_name
+   * Example: "organizations/{organization_id}/organizationSettings".
+   *
+   * @param string $name
    */
   public function setName($name)
   {

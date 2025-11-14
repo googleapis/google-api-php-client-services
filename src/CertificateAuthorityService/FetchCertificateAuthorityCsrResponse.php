@@ -20,12 +20,16 @@ namespace Google\Service\CertificateAuthorityService;
 class FetchCertificateAuthorityCsrResponse extends \Google\Model
 {
   /**
+   * Output only. The PEM-encoded signed certificate signing request (CSR).
+   *
    * @var string
    */
   public $pemCsr;
 
   /**
-   * @param string
+   * Output only. The PEM-encoded signed certificate signing request (CSR).
+   *
+   * @param string $pemCsr
    */
   public function setPemCsr($pemCsr)
   {

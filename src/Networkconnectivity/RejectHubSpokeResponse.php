@@ -23,7 +23,9 @@ class RejectHubSpokeResponse extends \Google\Model
   protected $spokeDataType = '';
 
   /**
-   * @param Spoke
+   * The spoke that was operated on.
+   *
+   * @param Spoke $spoke
    */
   public function setSpoke(Spoke $spoke)
   {

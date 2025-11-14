@@ -20,16 +20,34 @@ namespace Google\Service\SQLAdmin;
 class BackupRetentionSettings extends \Google\Model
 {
   /**
+   * Backup retention unit is unspecified, will be treated as COUNT.
+   */
+  public const RETENTION_UNIT_RETENTION_UNIT_UNSPECIFIED = 'RETENTION_UNIT_UNSPECIFIED';
+  /**
+   * Retention will be by count, eg. "retain the most recent 7 backups".
+   */
+  public const RETENTION_UNIT_COUNT = 'COUNT';
+  /**
+   * Depending on the value of retention_unit, this is used to determine if a
+   * backup needs to be deleted. If retention_unit is 'COUNT', we will retain
+   * this many backups.
+   *
    * @var int
    */
   public $retainedBackups;
   /**
+   * The unit that 'retained_backups' represents.
+   *
    * @var string
    */
   public $retentionUnit;
 
   /**
-   * @param int
+   * Depending on the value of retention_unit, this is used to determine if a
+   * backup needs to be deleted. If retention_unit is 'COUNT', we will retain
+   * this many backups.
+   *
+   * @param int $retainedBackups
    */
   public function setRetainedBackups($retainedBackups)
   {
@@ -43,14 +61,18 @@ class BackupRetentionSettings extends \Google\Model
     return $this->retainedBackups;
   }
   /**
-   * @param string
+   * The unit that 'retained_backups' represents.
+   *
+   * Accepted values: RETENTION_UNIT_UNSPECIFIED, COUNT
+   *
+   * @param self::RETENTION_UNIT_* $retentionUnit
    */
   public function setRetentionUnit($retentionUnit)
   {
     $this->retentionUnit = $retentionUnit;
   }
   /**
-   * @return string
+   * @return self::RETENTION_UNIT_*
    */
   public function getRetentionUnit()
   {

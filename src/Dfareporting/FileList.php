@@ -21,22 +21,34 @@ class FileList extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = DfareportingFile::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#fileList".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Continuation token used to page through files. To retrieve the next page of
+   * results, set the next request's "pageToken" to the value of this field. The
+   * page token is only valid for a limited amount of time and should not be
+   * persisted.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +62,9 @@ class FileList extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param DfareportingFile[]
+   * The files returned in this response.
+   *
+   * @param DfareportingFile[] $items
    */
   public function setItems($items)
   {
@@ -64,7 +78,10 @@ class FileList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#fileList".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +95,12 @@ class FileList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Continuation token used to page through files. To retrieve the next page of
+   * results, set the next request's "pageToken" to the value of this field. The
+   * page token is only valid for a limited amount of time and should not be
+   * persisted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

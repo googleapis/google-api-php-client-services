@@ -20,20 +20,33 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText extends \Google\Model
 {
   /**
+   * Output only. Whether the playback of this message can be interrupted by the
+   * end user's speech and the client can then starts the next Dialogflow
+   * request.
+   *
    * @var bool
    */
   public $allowPlaybackInterruption;
   /**
+   * The SSML text to be synthesized. For more information, see
+   * [SSML](/speech/text-to-speech/docs/ssml).
+   *
    * @var string
    */
   public $ssml;
   /**
+   * The raw text to be synthesized.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param bool
+   * Output only. Whether the playback of this message can be interrupted by the
+   * end user's speech and the client can then starts the next Dialogflow
+   * request.
+   *
+   * @param bool $allowPlaybackInterruption
    */
   public function setAllowPlaybackInterruption($allowPlaybackInterruption)
   {
@@ -47,7 +60,10 @@ class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText extends \Goog
     return $this->allowPlaybackInterruption;
   }
   /**
-   * @param string
+   * The SSML text to be synthesized. For more information, see
+   * [SSML](/speech/text-to-speech/docs/ssml).
+   *
+   * @param string $ssml
    */
   public function setSsml($ssml)
   {
@@ -61,7 +77,9 @@ class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText extends \Goog
     return $this->ssml;
   }
   /**
-   * @param string
+   * The raw text to be synthesized.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

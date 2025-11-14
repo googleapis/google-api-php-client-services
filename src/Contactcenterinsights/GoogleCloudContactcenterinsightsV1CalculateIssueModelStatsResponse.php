@@ -23,7 +23,10 @@ class GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse extends
   protected $currentStatsDataType = '';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1IssueModelLabelStats
+   * The latest label statistics for the queried issue model. Includes results
+   * on both training data and data labeled after deployment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1IssueModelLabelStats $currentStats
    */
   public function setCurrentStats(GoogleCloudContactcenterinsightsV1IssueModelLabelStats $currentStats)
   {

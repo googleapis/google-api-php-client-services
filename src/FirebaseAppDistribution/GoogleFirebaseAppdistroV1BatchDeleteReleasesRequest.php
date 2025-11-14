@@ -21,12 +21,20 @@ class GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest extends \Google\Collec
 {
   protected $collection_key = 'names';
   /**
+   * Required. The names of the release resources to delete. Format:
+   * `projects/{project_number}/apps/{app}/releases/{release}` A maximum of 100
+   * releases can be deleted per request.
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param string[]
+   * Required. The names of the release resources to delete. Format:
+   * `projects/{project_number}/apps/{app}/releases/{release}` A maximum of 100
+   * releases can be deleted per request.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {

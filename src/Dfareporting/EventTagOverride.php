@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class EventTagOverride extends \Google\Model
 {
   /**
+   * Whether this override is enabled.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * ID of this event tag override. This is a read-only, auto-generated field.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param bool
+   * Whether this override is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -43,7 +49,9 @@ class EventTagOverride extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * ID of this event tag override. This is a read-only, auto-generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

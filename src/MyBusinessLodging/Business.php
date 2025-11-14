@@ -20,32 +20,106 @@ namespace Google\Service\MyBusinessLodging;
 class Business extends \Google\Model
 {
   /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const BUSINESS_CENTER_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const BUSINESS_CENTER_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const BUSINESS_CENTER_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const BUSINESS_CENTER_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const MEETING_ROOMS_COUNT_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const MEETING_ROOMS_COUNT_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const MEETING_ROOMS_COUNT_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const MEETING_ROOMS_COUNT_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Default unspecified exception. Use this only if a more specific exception
+   * does not match.
+   */
+  public const MEETING_ROOMS_EXCEPTION_EXCEPTION_UNSPECIFIED = 'EXCEPTION_UNSPECIFIED';
+  /**
+   * Amenity or service is unavailable due to ongoing work orders.
+   */
+  public const MEETING_ROOMS_EXCEPTION_UNDER_CONSTRUCTION = 'UNDER_CONSTRUCTION';
+  /**
+   * Amenity or service availability is seasonal.
+   */
+  public const MEETING_ROOMS_EXCEPTION_DEPENDENT_ON_SEASON = 'DEPENDENT_ON_SEASON';
+  /**
+   * Amenity or service availability depends on the day of the week.
+   */
+  public const MEETING_ROOMS_EXCEPTION_DEPENDENT_ON_DAY_OF_WEEK = 'DEPENDENT_ON_DAY_OF_WEEK';
+  /**
+   * Business center. A designated room at the hotel with one or more desks and
+   * equipped with guest-use computers, printers, fax machines and/or
+   * photocopiers. May or may not be open 24/7. May or may not require a key to
+   * access. Not a meeting room or conference room.
+   *
    * @var bool
    */
   public $businessCenter;
   /**
+   * Business center exception.
+   *
    * @var string
    */
   public $businessCenterException;
   /**
+   * Meeting rooms. Rooms at the hotel designated for business-related
+   * gatherings. Rooms are usually equipped with tables or desks, office chairs
+   * and audio/visual facilities to allow for presentations and conference
+   * calls. Also known as conference rooms.
+   *
    * @var bool
    */
   public $meetingRooms;
   /**
+   * Meeting rooms count. The number of meeting rooms at the property.
+   *
    * @var int
    */
   public $meetingRoomsCount;
   /**
+   * Meeting rooms count exception.
+   *
    * @var string
    */
   public $meetingRoomsCountException;
   /**
+   * Meeting rooms exception.
+   *
    * @var string
    */
   public $meetingRoomsException;
 
   /**
-   * @param bool
+   * Business center. A designated room at the hotel with one or more desks and
+   * equipped with guest-use computers, printers, fax machines and/or
+   * photocopiers. May or may not be open 24/7. May or may not require a key to
+   * access. Not a meeting room or conference room.
+   *
+   * @param bool $businessCenter
    */
   public function setBusinessCenter($businessCenter)
   {
@@ -59,21 +133,31 @@ class Business extends \Google\Model
     return $this->businessCenter;
   }
   /**
-   * @param string
+   * Business center exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::BUSINESS_CENTER_EXCEPTION_* $businessCenterException
    */
   public function setBusinessCenterException($businessCenterException)
   {
     $this->businessCenterException = $businessCenterException;
   }
   /**
-   * @return string
+   * @return self::BUSINESS_CENTER_EXCEPTION_*
    */
   public function getBusinessCenterException()
   {
     return $this->businessCenterException;
   }
   /**
-   * @param bool
+   * Meeting rooms. Rooms at the hotel designated for business-related
+   * gatherings. Rooms are usually equipped with tables or desks, office chairs
+   * and audio/visual facilities to allow for presentations and conference
+   * calls. Also known as conference rooms.
+   *
+   * @param bool $meetingRooms
    */
   public function setMeetingRooms($meetingRooms)
   {
@@ -87,7 +171,9 @@ class Business extends \Google\Model
     return $this->meetingRooms;
   }
   /**
-   * @param int
+   * Meeting rooms count. The number of meeting rooms at the property.
+   *
+   * @param int $meetingRoomsCount
    */
   public function setMeetingRoomsCount($meetingRoomsCount)
   {
@@ -101,28 +187,38 @@ class Business extends \Google\Model
     return $this->meetingRoomsCount;
   }
   /**
-   * @param string
+   * Meeting rooms count exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::MEETING_ROOMS_COUNT_EXCEPTION_* $meetingRoomsCountException
    */
   public function setMeetingRoomsCountException($meetingRoomsCountException)
   {
     $this->meetingRoomsCountException = $meetingRoomsCountException;
   }
   /**
-   * @return string
+   * @return self::MEETING_ROOMS_COUNT_EXCEPTION_*
    */
   public function getMeetingRoomsCountException()
   {
     return $this->meetingRoomsCountException;
   }
   /**
-   * @param string
+   * Meeting rooms exception.
+   *
+   * Accepted values: EXCEPTION_UNSPECIFIED, UNDER_CONSTRUCTION,
+   * DEPENDENT_ON_SEASON, DEPENDENT_ON_DAY_OF_WEEK
+   *
+   * @param self::MEETING_ROOMS_EXCEPTION_* $meetingRoomsException
    */
   public function setMeetingRoomsException($meetingRoomsException)
   {
     $this->meetingRoomsException = $meetingRoomsException;
   }
   /**
-   * @return string
+   * @return self::MEETING_ROOMS_EXCEPTION_*
    */
   public function getMeetingRoomsException()
   {

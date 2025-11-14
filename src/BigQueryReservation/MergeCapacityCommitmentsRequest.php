@@ -21,16 +21,31 @@ class MergeCapacityCommitmentsRequest extends \Google\Collection
 {
   protected $collection_key = 'capacityCommitmentIds';
   /**
+   * Optional. The optional resulting capacity commitment ID. Capacity
+   * commitment name will be generated automatically if this field is empty.
+   * This field must only contain lower case alphanumeric characters or dashes.
+   * The first and last character cannot be a dash. Max length is 64 characters.
+   *
    * @var string
    */
   public $capacityCommitmentId;
   /**
+   * Ids of capacity commitments to merge. These capacity commitments must exist
+   * under admin project and location specified in the parent. ID is the last
+   * portion of capacity commitment name e.g., 'abc' for
+   * projects/myproject/locations/US/capacityCommitments/abc
+   *
    * @var string[]
    */
   public $capacityCommitmentIds;
 
   /**
-   * @param string
+   * Optional. The optional resulting capacity commitment ID. Capacity
+   * commitment name will be generated automatically if this field is empty.
+   * This field must only contain lower case alphanumeric characters or dashes.
+   * The first and last character cannot be a dash. Max length is 64 characters.
+   *
+   * @param string $capacityCommitmentId
    */
   public function setCapacityCommitmentId($capacityCommitmentId)
   {
@@ -44,7 +59,12 @@ class MergeCapacityCommitmentsRequest extends \Google\Collection
     return $this->capacityCommitmentId;
   }
   /**
-   * @param string[]
+   * Ids of capacity commitments to merge. These capacity commitments must exist
+   * under admin project and location specified in the parent. ID is the last
+   * portion of capacity commitment name e.g., 'abc' for
+   * projects/myproject/locations/US/capacityCommitments/abc
+   *
+   * @param string[] $capacityCommitmentIds
    */
   public function setCapacityCommitmentIds($capacityCommitmentIds)
   {

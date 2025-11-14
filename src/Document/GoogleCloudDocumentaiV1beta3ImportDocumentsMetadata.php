@@ -27,12 +27,16 @@ class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadata extends \Google\Collec
   protected $individualImportStatusesType = GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus::class;
   protected $individualImportStatusesDataType = 'array';
   /**
+   * Total number of the documents that are qualified for importing.
+   *
    * @var int
    */
   public $totalDocumentCount;
 
   /**
-   * @param GoogleCloudDocumentaiV1beta3CommonOperationMetadata
+   * The basic metadata of the long-running operation.
+   *
+   * @param GoogleCloudDocumentaiV1beta3CommonOperationMetadata $commonMetadata
    */
   public function setCommonMetadata(GoogleCloudDocumentaiV1beta3CommonOperationMetadata $commonMetadata)
   {
@@ -46,7 +50,9 @@ class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadata extends \Google\Collec
     return $this->commonMetadata;
   }
   /**
-   * @param GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataImportConfigValidationResult[]
+   * Validation statuses of the batch documents import config.
+   *
+   * @param GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataImportConfigValidationResult[] $importConfigValidationResults
    */
   public function setImportConfigValidationResults($importConfigValidationResults)
   {
@@ -60,7 +66,9 @@ class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadata extends \Google\Collec
     return $this->importConfigValidationResults;
   }
   /**
-   * @param GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus[]
+   * The list of response details of each document.
+   *
+   * @param GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus[] $individualImportStatuses
    */
   public function setIndividualImportStatuses($individualImportStatuses)
   {
@@ -74,7 +82,9 @@ class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadata extends \Google\Collec
     return $this->individualImportStatuses;
   }
   /**
-   * @param int
+   * Total number of the documents that are qualified for importing.
+   *
+   * @param int $totalDocumentCount
    */
   public function setTotalDocumentCount($totalDocumentCount)
   {

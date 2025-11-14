@@ -19,37 +19,83 @@ namespace Google\Service\CloudDomains;
 
 class LoadBalancerTarget extends \Google\Model
 {
+  public const IP_PROTOCOL_UNDEFINED = 'UNDEFINED';
   /**
+   * Indicates the load balancer is accessible via TCP.
+   */
+  public const IP_PROTOCOL_TCP = 'TCP';
+  /**
+   * Indicates the load balancer is accessible via UDP.
+   */
+  public const IP_PROTOCOL_UDP = 'UDP';
+  public const LOAD_BALANCER_TYPE_NONE = 'NONE';
+  /**
+   * Indicates the load balancer is a Cross-Region Application Load Balancer.
+   */
+  public const LOAD_BALANCER_TYPE_GLOBAL_L7ILB = 'GLOBAL_L7ILB';
+  /**
+   * Indicates the load balancer is a Regional Network Passthrough Load
+   * Balancer.
+   */
+  public const LOAD_BALANCER_TYPE_REGIONAL_L4ILB = 'REGIONAL_L4ILB';
+  /**
+   * Indicates the load balancer is a Regional Application Load Balancer.
+   */
+  public const LOAD_BALANCER_TYPE_REGIONAL_L7ILB = 'REGIONAL_L7ILB';
+  /**
+   * The frontend IP address of the load balancer to health check.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * The protocol of the load balancer to health check.
+   *
    * @var string
    */
   public $ipProtocol;
   /**
+   * The type of load balancer specified by this target. This value must match
+   * the configuration of the load balancer located at the LoadBalancerTarget's
+   * IP address, port, and region. Use the following: - *regionalL4ilb*: for a
+   * regional internal passthrough Network Load Balancer. - *regionalL7ilb*: for
+   * a regional internal Application Load Balancer. - *globalL7ilb*: for a
+   * global internal Application Load Balancer.
+   *
    * @var string
    */
   public $loadBalancerType;
   /**
+   * The fully qualified URL of the network that the load balancer is attached
+   * to. This should be formatted like `https://www.googleapis.com/compute/v1/pr
+   * ojects/{project}/global/networks/{network}`.
+   *
    * @var string
    */
   public $networkUrl;
   /**
+   * The configured port of the load balancer.
+   *
    * @var string
    */
   public $port;
   /**
+   * The project ID in which the load balancer is located.
+   *
    * @var string
    */
   public $project;
   /**
+   * The region in which the load balancer is located.
+   *
    * @var string
    */
   public $region;
 
   /**
-   * @param string
+   * The frontend IP address of the load balancer to health check.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -63,35 +109,52 @@ class LoadBalancerTarget extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * The protocol of the load balancer to health check.
+   *
+   * Accepted values: UNDEFINED, TCP, UDP
+   *
+   * @param self::IP_PROTOCOL_* $ipProtocol
    */
   public function setIpProtocol($ipProtocol)
   {
     $this->ipProtocol = $ipProtocol;
   }
   /**
-   * @return string
+   * @return self::IP_PROTOCOL_*
    */
   public function getIpProtocol()
   {
     return $this->ipProtocol;
   }
   /**
-   * @param string
+   * The type of load balancer specified by this target. This value must match
+   * the configuration of the load balancer located at the LoadBalancerTarget's
+   * IP address, port, and region. Use the following: - *regionalL4ilb*: for a
+   * regional internal passthrough Network Load Balancer. - *regionalL7ilb*: for
+   * a regional internal Application Load Balancer. - *globalL7ilb*: for a
+   * global internal Application Load Balancer.
+   *
+   * Accepted values: NONE, GLOBAL_L7ILB, REGIONAL_L4ILB, REGIONAL_L7ILB
+   *
+   * @param self::LOAD_BALANCER_TYPE_* $loadBalancerType
    */
   public function setLoadBalancerType($loadBalancerType)
   {
     $this->loadBalancerType = $loadBalancerType;
   }
   /**
-   * @return string
+   * @return self::LOAD_BALANCER_TYPE_*
    */
   public function getLoadBalancerType()
   {
     return $this->loadBalancerType;
   }
   /**
-   * @param string
+   * The fully qualified URL of the network that the load balancer is attached
+   * to. This should be formatted like `https://www.googleapis.com/compute/v1/pr
+   * ojects/{project}/global/networks/{network}`.
+   *
+   * @param string $networkUrl
    */
   public function setNetworkUrl($networkUrl)
   {
@@ -105,7 +168,9 @@ class LoadBalancerTarget extends \Google\Model
     return $this->networkUrl;
   }
   /**
-   * @param string
+   * The configured port of the load balancer.
+   *
+   * @param string $port
    */
   public function setPort($port)
   {
@@ -119,7 +184,9 @@ class LoadBalancerTarget extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * The project ID in which the load balancer is located.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {
@@ -133,7 +200,9 @@ class LoadBalancerTarget extends \Google\Model
     return $this->project;
   }
   /**
-   * @param string
+   * The region in which the load balancer is located.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {

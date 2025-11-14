@@ -20,16 +20,22 @@ namespace Google\Service\ContainerAnalysis;
 class RelatedUrl extends \Google\Model
 {
   /**
+   * Label to describe usage of the URL.
+   *
    * @var string
    */
   public $label;
   /**
+   * Specific URL associated with the resource.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Label to describe usage of the URL.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -43,7 +49,9 @@ class RelatedUrl extends \Google\Model
     return $this->label;
   }
   /**
-   * @param string
+   * Specific URL associated with the resource.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

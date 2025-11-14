@@ -24,7 +24,9 @@ class GoogleCloudContentwarehouseV1ActionExecutorOutput extends \Google\Collecti
   protected $ruleActionsPairsDataType = 'array';
 
   /**
-   * @param GoogleCloudContentwarehouseV1RuleActionsPair[]
+   * List of rule and corresponding actions result.
+   *
+   * @param GoogleCloudContentwarehouseV1RuleActionsPair[] $ruleActionsPairs
    */
   public function setRuleActionsPairs($ruleActionsPairs)
   {

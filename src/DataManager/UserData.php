@@ -24,7 +24,13 @@ class UserData extends \Google\Collection
   protected $userIdentifiersDataType = 'array';
 
   /**
-   * @param UserIdentifier[]
+   * Required. The identifiers for the user. It's possible to provide multiple
+   * instances of the same type of data (for example, multiple email addresses).
+   * To increase the likelihood of a match, provide as many identifiers as
+   * possible. At most 10 `userIdentifiers` can be provided in a single
+   * AudienceMember or Event.
+   *
+   * @param UserIdentifier[] $userIdentifiers
    */
   public function setUserIdentifiers($userIdentifiers)
   {

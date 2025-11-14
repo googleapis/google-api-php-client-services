@@ -20,16 +20,23 @@ namespace Google\Service\Dfareporting;
 class CampaignCreativeAssociation extends \Google\Model
 {
   /**
+   * ID of the creative associated with the campaign. This is a required field.
+   *
    * @var string
    */
   public $creativeId;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#campaignCreativeAssociation".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * ID of the creative associated with the campaign. This is a required field.
+   *
+   * @param string $creativeId
    */
   public function setCreativeId($creativeId)
   {
@@ -43,7 +50,10 @@ class CampaignCreativeAssociation extends \Google\Model
     return $this->creativeId;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#campaignCreativeAssociation".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

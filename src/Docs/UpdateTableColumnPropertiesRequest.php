@@ -21,10 +21,18 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
 {
   protected $collection_key = 'columnIndices';
   /**
+   * The list of zero-based column indices whose property should be updated. If
+   * no indices are specified, all columns will be updated.
+   *
    * @var int[]
    */
   public $columnIndices;
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `tableColumnProperties` is implied and should not be specified. A
+   * single `"*"` can be used as short-hand for listing every field. For example
+   * to update the column width, set `fields` to `"width"`.
+   *
    * @var string
    */
   public $fields;
@@ -34,7 +42,10 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
   protected $tableStartLocationDataType = '';
 
   /**
-   * @param int[]
+   * The list of zero-based column indices whose property should be updated. If
+   * no indices are specified, all columns will be updated.
+   *
+   * @param int[] $columnIndices
    */
   public function setColumnIndices($columnIndices)
   {
@@ -48,7 +59,12 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
     return $this->columnIndices;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `tableColumnProperties` is implied and should not be specified. A
+   * single `"*"` can be used as short-hand for listing every field. For example
+   * to update the column width, set `fields` to `"width"`.
+   *
+   * @param string $fields
    */
   public function setFields($fields)
   {
@@ -62,7 +78,11 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
     return $this->fields;
   }
   /**
-   * @param TableColumnProperties
+   * The table column properties to update. If the value of
+   * `table_column_properties#width` is less than 5 points (5/72 inch), a 400
+   * bad request error is returned.
+   *
+   * @param TableColumnProperties $tableColumnProperties
    */
   public function setTableColumnProperties(TableColumnProperties $tableColumnProperties)
   {
@@ -76,7 +96,9 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
     return $this->tableColumnProperties;
   }
   /**
-   * @param Location
+   * The location where the table starts in the document.
+   *
+   * @param Location $tableStartLocation
    */
   public function setTableStartLocation(Location $tableStartLocation)
   {

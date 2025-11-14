@@ -20,28 +20,41 @@ namespace Google\Service\Dfareporting;
 class OperatingSystem extends \Google\Model
 {
   /**
+   * DART ID of this operating system. This is the ID used for targeting.
+   *
    * @var string
    */
   public $dartId;
   /**
+   * Whether this operating system is for desktop.
+   *
    * @var bool
    */
   public $desktop;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#operatingSystem".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Whether this operating system is for mobile.
+   *
    * @var bool
    */
   public $mobile;
   /**
+   * Name of this operating system.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * DART ID of this operating system. This is the ID used for targeting.
+   *
+   * @param string $dartId
    */
   public function setDartId($dartId)
   {
@@ -55,7 +68,9 @@ class OperatingSystem extends \Google\Model
     return $this->dartId;
   }
   /**
-   * @param bool
+   * Whether this operating system is for desktop.
+   *
+   * @param bool $desktop
    */
   public function setDesktop($desktop)
   {
@@ -69,7 +84,10 @@ class OperatingSystem extends \Google\Model
     return $this->desktop;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#operatingSystem".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -83,7 +101,9 @@ class OperatingSystem extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param bool
+   * Whether this operating system is for mobile.
+   *
+   * @param bool $mobile
    */
   public function setMobile($mobile)
   {
@@ -97,7 +117,9 @@ class OperatingSystem extends \Google\Model
     return $this->mobile;
   }
   /**
-   * @param string
+   * Name of this operating system.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

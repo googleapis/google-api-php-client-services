@@ -20,20 +20,28 @@ namespace Google\Service\Css;
 class ProductDetail extends \Google\Model
 {
   /**
+   * The name of the product detail.
+   *
    * @var string
    */
   public $attributeName;
   /**
+   * The value of the product detail.
+   *
    * @var string
    */
   public $attributeValue;
   /**
+   * The section header used to group a set of product details.
+   *
    * @var string
    */
   public $sectionName;
 
   /**
-   * @param string
+   * The name of the product detail.
+   *
+   * @param string $attributeName
    */
   public function setAttributeName($attributeName)
   {
@@ -47,7 +55,9 @@ class ProductDetail extends \Google\Model
     return $this->attributeName;
   }
   /**
-   * @param string
+   * The value of the product detail.
+   *
+   * @param string $attributeValue
    */
   public function setAttributeValue($attributeValue)
   {
@@ -61,7 +71,9 @@ class ProductDetail extends \Google\Model
     return $this->attributeValue;
   }
   /**
-   * @param string
+   * The section header used to group a set of product details.
+   *
+   * @param string $sectionName
    */
   public function setSectionName($sectionName)
   {

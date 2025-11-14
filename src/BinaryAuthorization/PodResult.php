@@ -19,28 +19,56 @@ namespace Google\Service\BinaryAuthorization;
 
 class PodResult extends \Google\Collection
 {
+  /**
+   * Not specified. This should never be used.
+   */
+  public const VERDICT_POD_VERDICT_UNSPECIFIED = 'POD_VERDICT_UNSPECIFIED';
+  /**
+   * All images conform to the policy.
+   */
+  public const VERDICT_CONFORMANT = 'CONFORMANT';
+  /**
+   * At least one image does not conform to the policy.
+   */
+  public const VERDICT_NON_CONFORMANT = 'NON_CONFORMANT';
+  /**
+   * Encountered at least one error evaluating an image and all other images
+   * with non-error verdicts conform to the policy. Non-conformance has
+   * precedence over errors.
+   */
+  public const VERDICT_ERROR = 'ERROR';
   protected $collection_key = 'imageResults';
   protected $imageResultsType = ImageResult::class;
   protected $imageResultsDataType = 'array';
   /**
+   * The Kubernetes namespace of the Pod.
+   *
    * @var string
    */
   public $kubernetesNamespace;
   /**
+   * The Kubernetes service account of the Pod.
+   *
    * @var string
    */
   public $kubernetesServiceAccount;
   /**
+   * The name of the Pod.
+   *
    * @var string
    */
   public $podName;
   /**
+   * The result of evaluating this Pod.
+   *
    * @var string
    */
   public $verdict;
 
   /**
-   * @param ImageResult[]
+   * Per-image details.
+   *
+   * @param ImageResult[] $imageResults
    */
   public function setImageResults($imageResults)
   {
@@ -54,7 +82,9 @@ class PodResult extends \Google\Collection
     return $this->imageResults;
   }
   /**
-   * @param string
+   * The Kubernetes namespace of the Pod.
+   *
+   * @param string $kubernetesNamespace
    */
   public function setKubernetesNamespace($kubernetesNamespace)
   {
@@ -68,7 +98,9 @@ class PodResult extends \Google\Collection
     return $this->kubernetesNamespace;
   }
   /**
-   * @param string
+   * The Kubernetes service account of the Pod.
+   *
+   * @param string $kubernetesServiceAccount
    */
   public function setKubernetesServiceAccount($kubernetesServiceAccount)
   {
@@ -82,7 +114,9 @@ class PodResult extends \Google\Collection
     return $this->kubernetesServiceAccount;
   }
   /**
-   * @param string
+   * The name of the Pod.
+   *
+   * @param string $podName
    */
   public function setPodName($podName)
   {
@@ -96,14 +130,18 @@ class PodResult extends \Google\Collection
     return $this->podName;
   }
   /**
-   * @param string
+   * The result of evaluating this Pod.
+   *
+   * Accepted values: POD_VERDICT_UNSPECIFIED, CONFORMANT, NON_CONFORMANT, ERROR
+   *
+   * @param self::VERDICT_* $verdict
    */
   public function setVerdict($verdict)
   {
     $this->verdict = $verdict;
   }
   /**
-   * @return string
+   * @return self::VERDICT_*
    */
   public function getVerdict()
   {

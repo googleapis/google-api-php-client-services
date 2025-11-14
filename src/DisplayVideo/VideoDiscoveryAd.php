@@ -20,18 +20,46 @@ namespace Google\Service\DisplayVideo;
 class VideoDiscoveryAd extends \Google\Model
 {
   /**
+   * Unknown or unspecified.
+   */
+  public const THUMBNAIL_THUMBNAIL_UNSPECIFIED = 'THUMBNAIL_UNSPECIFIED';
+  /**
+   * The default thumbnail, can be auto-generated or user-uploaded.
+   */
+  public const THUMBNAIL_THUMBNAIL_DEFAULT = 'THUMBNAIL_DEFAULT';
+  /**
+   * Thumbnail 1, generated from the video.
+   */
+  public const THUMBNAIL_THUMBNAIL_1 = 'THUMBNAIL_1';
+  /**
+   * Thumbnail 2, generated from the video.
+   */
+  public const THUMBNAIL_THUMBNAIL_2 = 'THUMBNAIL_2';
+  /**
+   * Thumbnail 3, generated from the video.
+   */
+  public const THUMBNAIL_THUMBNAIL_3 = 'THUMBNAIL_3';
+  /**
+   * First text line for the ad.
+   *
    * @var string
    */
   public $description1;
   /**
+   * Second text line for the ad.
+   *
    * @var string
    */
   public $description2;
   /**
+   * The headline of ad.
+   *
    * @var string
    */
   public $headline;
   /**
+   * Thumbnail image used in the ad.
+   *
    * @var string
    */
   public $thumbnail;
@@ -39,7 +67,9 @@ class VideoDiscoveryAd extends \Google\Model
   protected $videoDataType = '';
 
   /**
-   * @param string
+   * First text line for the ad.
+   *
+   * @param string $description1
    */
   public function setDescription1($description1)
   {
@@ -53,7 +83,9 @@ class VideoDiscoveryAd extends \Google\Model
     return $this->description1;
   }
   /**
-   * @param string
+   * Second text line for the ad.
+   *
+   * @param string $description2
    */
   public function setDescription2($description2)
   {
@@ -67,7 +99,9 @@ class VideoDiscoveryAd extends \Google\Model
     return $this->description2;
   }
   /**
-   * @param string
+   * The headline of ad.
+   *
+   * @param string $headline
    */
   public function setHeadline($headline)
   {
@@ -81,21 +115,28 @@ class VideoDiscoveryAd extends \Google\Model
     return $this->headline;
   }
   /**
-   * @param string
+   * Thumbnail image used in the ad.
+   *
+   * Accepted values: THUMBNAIL_UNSPECIFIED, THUMBNAIL_DEFAULT, THUMBNAIL_1,
+   * THUMBNAIL_2, THUMBNAIL_3
+   *
+   * @param self::THUMBNAIL_* $thumbnail
    */
   public function setThumbnail($thumbnail)
   {
     $this->thumbnail = $thumbnail;
   }
   /**
-   * @return string
+   * @return self::THUMBNAIL_*
    */
   public function getThumbnail()
   {
     return $this->thumbnail;
   }
   /**
-   * @param YoutubeVideoDetails
+   * The YouTube video the ad promotes.
+   *
+   * @param YoutubeVideoDetails $video
    */
   public function setVideo(YoutubeVideoDetails $video)
   {

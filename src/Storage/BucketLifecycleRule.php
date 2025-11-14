@@ -25,7 +25,9 @@ class BucketLifecycleRule extends \Google\Model
   protected $conditionDataType = '';
 
   /**
-   * @param BucketLifecycleRuleAction
+   * The action to take.
+   *
+   * @param BucketLifecycleRuleAction $action
    */
   public function setAction(BucketLifecycleRuleAction $action)
   {
@@ -39,7 +41,9 @@ class BucketLifecycleRule extends \Google\Model
     return $this->action;
   }
   /**
-   * @param BucketLifecycleRuleCondition
+   * The condition(s) under which the action will be taken.
+   *
+   * @param BucketLifecycleRuleCondition $condition
    */
   public function setCondition(BucketLifecycleRuleCondition $condition)
   {

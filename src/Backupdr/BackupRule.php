@@ -20,10 +20,23 @@ namespace Google\Service\Backupdr;
 class BackupRule extends \Google\Model
 {
   /**
+   * Required. Configures the duration for which backup data will be kept. It is
+   * defined in “days”. The value should be greater than or equal to minimum
+   * enforced retention of the backup vault. Minimum value is 1 and maximum
+   * value is 36159 for custom retention on-demand backup. Minimum and maximum
+   * values are workload specific for all other rules. Note: Longer retention
+   * can lead to higher storage costs post introductory trial. We recommend
+   * starting with a short duration of 3 days or less.
+   *
    * @var int
    */
   public $backupRetentionDays;
   /**
+   * Required. Immutable. The unique id of this `BackupRule`. The `rule_id` is
+   * unique per `BackupPlan`.The `rule_id` must start with a lowercase letter
+   * followed by up to 62 lowercase letters, numbers, or hyphens. Pattern,
+   * /a-z{,62}/.
+   *
    * @var string
    */
   public $ruleId;
@@ -31,7 +44,15 @@ class BackupRule extends \Google\Model
   protected $standardScheduleDataType = '';
 
   /**
-   * @param int
+   * Required. Configures the duration for which backup data will be kept. It is
+   * defined in “days”. The value should be greater than or equal to minimum
+   * enforced retention of the backup vault. Minimum value is 1 and maximum
+   * value is 36159 for custom retention on-demand backup. Minimum and maximum
+   * values are workload specific for all other rules. Note: Longer retention
+   * can lead to higher storage costs post introductory trial. We recommend
+   * starting with a short duration of 3 days or less.
+   *
+   * @param int $backupRetentionDays
    */
   public function setBackupRetentionDays($backupRetentionDays)
   {
@@ -45,7 +66,12 @@ class BackupRule extends \Google\Model
     return $this->backupRetentionDays;
   }
   /**
-   * @param string
+   * Required. Immutable. The unique id of this `BackupRule`. The `rule_id` is
+   * unique per `BackupPlan`.The `rule_id` must start with a lowercase letter
+   * followed by up to 62 lowercase letters, numbers, or hyphens. Pattern,
+   * /a-z{,62}/.
+   *
+   * @param string $ruleId
    */
   public function setRuleId($ruleId)
   {
@@ -59,7 +85,10 @@ class BackupRule extends \Google\Model
     return $this->ruleId;
   }
   /**
-   * @param StandardSchedule
+   * Optional. Defines a schedule that runs within the confines of a defined
+   * window of time.
+   *
+   * @param StandardSchedule $standardSchedule
    */
   public function setStandardSchedule(StandardSchedule $standardSchedule)
   {

@@ -23,16 +23,25 @@ class ListInstancesResponse extends \Google\Collection
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**
+   * Page token that can be used to continue listing from the last result in the
+   * next list call.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached. For example, ['us-west1-a', 'us-
+   * central1-b']. A ListInstancesResponse will only contain either instances or
+   * unreachables,
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Instance[]
+   * A list of returned instances.
+   *
+   * @param Instance[] $instances
    */
   public function setInstances($instances)
   {
@@ -46,7 +55,10 @@ class ListInstancesResponse extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string
+   * Page token that can be used to continue listing from the last result in the
+   * next list call.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,11 @@ class ListInstancesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached. For example, ['us-west1-a', 'us-
+   * central1-b']. A ListInstancesResponse will only contain either instances or
+   * unreachables,
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

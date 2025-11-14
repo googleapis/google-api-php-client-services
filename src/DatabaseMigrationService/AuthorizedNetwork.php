@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class AuthorizedNetwork extends \Google\Model
 {
   /**
+   * Optional. CIDR range for one authorzied network of the instance.
+   *
    * @var string
    */
   public $cidrRange;
 
   /**
-   * @param string
+   * Optional. CIDR range for one authorzied network of the instance.
+   *
+   * @param string $cidrRange
    */
   public function setCidrRange($cidrRange)
   {

@@ -21,24 +21,33 @@ class GoogleCloudDialogflowCxV3PlaybookVersion extends \Google\Collection
 {
   protected $collection_key = 'examples';
   /**
+   * Optional. The description of the playbook version.
+   *
    * @var string
    */
   public $description;
   protected $examplesType = GoogleCloudDialogflowCxV3Example::class;
   protected $examplesDataType = 'array';
   /**
+   * The unique identifier of the playbook version. Format:
+   * `projects//locations//agents//playbooks//versions/`.
+   *
    * @var string
    */
   public $name;
   protected $playbookType = GoogleCloudDialogflowCxV3Playbook::class;
   protected $playbookDataType = '';
   /**
+   * Output only. Last time the playbook version was created or modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Optional. The description of the playbook version.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -52,7 +61,10 @@ class GoogleCloudDialogflowCxV3PlaybookVersion extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Example[]
+   * Output only. Snapshot of the examples belonging to the playbook when the
+   * playbook version is created.
+   *
+   * @param GoogleCloudDialogflowCxV3Example[] $examples
    */
   public function setExamples($examples)
   {
@@ -66,7 +78,10 @@ class GoogleCloudDialogflowCxV3PlaybookVersion extends \Google\Collection
     return $this->examples;
   }
   /**
-   * @param string
+   * The unique identifier of the playbook version. Format:
+   * `projects//locations//agents//playbooks//versions/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +95,9 @@ class GoogleCloudDialogflowCxV3PlaybookVersion extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Playbook
+   * Output only. Snapshot of the playbook when the playbook version is created.
+   *
+   * @param GoogleCloudDialogflowCxV3Playbook $playbook
    */
   public function setPlaybook(GoogleCloudDialogflowCxV3Playbook $playbook)
   {
@@ -94,7 +111,9 @@ class GoogleCloudDialogflowCxV3PlaybookVersion extends \Google\Collection
     return $this->playbook;
   }
   /**
-   * @param string
+   * Output only. Last time the playbook version was created or modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

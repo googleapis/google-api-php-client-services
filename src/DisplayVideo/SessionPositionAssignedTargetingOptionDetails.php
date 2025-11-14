@@ -20,19 +20,34 @@ namespace Google\Service\DisplayVideo;
 class SessionPositionAssignedTargetingOptionDetails extends \Google\Model
 {
   /**
+   * This is a placeholder, does not indicate any positions.
+   */
+  public const SESSION_POSITION_SESSION_POSITION_UNSPECIFIED = 'SESSION_POSITION_UNSPECIFIED';
+  /**
+   * The first impression of the session.
+   */
+  public const SESSION_POSITION_SESSION_POSITION_FIRST_IMPRESSION = 'SESSION_POSITION_FIRST_IMPRESSION';
+  /**
+   * The position where the ad will show in a session.
+   *
    * @var string
    */
   public $sessionPosition;
 
   /**
-   * @param string
+   * The position where the ad will show in a session.
+   *
+   * Accepted values: SESSION_POSITION_UNSPECIFIED,
+   * SESSION_POSITION_FIRST_IMPRESSION
+   *
+   * @param self::SESSION_POSITION_* $sessionPosition
    */
   public function setSessionPosition($sessionPosition)
   {
     $this->sessionPosition = $sessionPosition;
   }
   /**
-   * @return string
+   * @return self::SESSION_POSITION_*
    */
   public function getSessionPosition()
   {

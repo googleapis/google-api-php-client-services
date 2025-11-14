@@ -20,16 +20,28 @@ namespace Google\Service\TPU;
 class MultisliceParams extends \Google\Model
 {
   /**
+   * Required. Number of nodes with this spec. The system will attempt to
+   * provision "node_count" nodes as part of the request. This needs to be > 1.
+   *
    * @var int
    */
   public $nodeCount;
   /**
+   * Optional. Prefix of node_ids in case of multislice request. Should follow
+   * the `^[A-Za-z0-9_.~+%-]+$` regex format. If node_count = 3 and
+   * node_id_prefix = "np", node ids of nodes created will be "np-0", "np-1",
+   * "np-2". If this field is not provided we use queued_resource_id as the
+   * node_id_prefix.
+   *
    * @var string
    */
   public $nodeIdPrefix;
 
   /**
-   * @param int
+   * Required. Number of nodes with this spec. The system will attempt to
+   * provision "node_count" nodes as part of the request. This needs to be > 1.
+   *
+   * @param int $nodeCount
    */
   public function setNodeCount($nodeCount)
   {
@@ -43,7 +55,13 @@ class MultisliceParams extends \Google\Model
     return $this->nodeCount;
   }
   /**
-   * @param string
+   * Optional. Prefix of node_ids in case of multislice request. Should follow
+   * the `^[A-Za-z0-9_.~+%-]+$` regex format. If node_count = 3 and
+   * node_id_prefix = "np", node ids of nodes created will be "np-0", "np-1",
+   * "np-2". If this field is not provided we use queued_resource_id as the
+   * node_id_prefix.
+   *
+   * @param string $nodeIdPrefix
    */
   public function setNodeIdPrefix($nodeIdPrefix)
   {

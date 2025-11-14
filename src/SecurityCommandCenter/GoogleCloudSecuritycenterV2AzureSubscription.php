@@ -20,16 +20,23 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2AzureSubscription extends \Google\Model
 {
   /**
+   * The display name of the Azure subscription.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The UUID of the Azure subscription, for example,
+   * `291bba3f-e0a5-47bc-a099-3bdcb2a50a05`.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * The display name of the Azure subscription.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +50,10 @@ class GoogleCloudSecuritycenterV2AzureSubscription extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The UUID of the Azure subscription, for example,
+   * `291bba3f-e0a5-47bc-a099-3bdcb2a50a05`.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

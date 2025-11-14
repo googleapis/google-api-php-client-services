@@ -20,44 +20,65 @@ namespace Google\Service\TagManager;
 class Folder extends \Google\Model
 {
   /**
+   * GTM Account ID.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * GTM Container ID.
+   *
    * @var string
    */
   public $containerId;
   /**
+   * The fingerprint of the GTM Folder as computed at storage time. This value
+   * is recomputed whenever the folder is modified.
+   *
    * @var string
    */
   public $fingerprint;
   /**
+   * The Folder ID uniquely identifies the GTM Folder.
+   *
    * @var string
    */
   public $folderId;
   /**
+   * Folder display name.
+   *
    * @var string
    */
   public $name;
   /**
+   * User notes on how to apply this folder in the container.
+   *
    * @var string
    */
   public $notes;
   /**
+   * GTM Folder's API relative path.
+   *
    * @var string
    */
   public $path;
   /**
+   * Auto generated link to the tag manager UI
+   *
    * @var string
    */
   public $tagManagerUrl;
   /**
+   * GTM Workspace ID.
+   *
    * @var string
    */
   public $workspaceId;
 
   /**
-   * @param string
+   * GTM Account ID.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -71,7 +92,9 @@ class Folder extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * GTM Container ID.
+   *
+   * @param string $containerId
    */
   public function setContainerId($containerId)
   {
@@ -85,7 +108,10 @@ class Folder extends \Google\Model
     return $this->containerId;
   }
   /**
-   * @param string
+   * The fingerprint of the GTM Folder as computed at storage time. This value
+   * is recomputed whenever the folder is modified.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -99,7 +125,9 @@ class Folder extends \Google\Model
     return $this->fingerprint;
   }
   /**
-   * @param string
+   * The Folder ID uniquely identifies the GTM Folder.
+   *
+   * @param string $folderId
    */
   public function setFolderId($folderId)
   {
@@ -113,7 +141,9 @@ class Folder extends \Google\Model
     return $this->folderId;
   }
   /**
-   * @param string
+   * Folder display name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -127,7 +157,9 @@ class Folder extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * User notes on how to apply this folder in the container.
+   *
+   * @param string $notes
    */
   public function setNotes($notes)
   {
@@ -141,7 +173,9 @@ class Folder extends \Google\Model
     return $this->notes;
   }
   /**
-   * @param string
+   * GTM Folder's API relative path.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -155,7 +189,9 @@ class Folder extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Auto generated link to the tag manager UI
+   *
+   * @param string $tagManagerUrl
    */
   public function setTagManagerUrl($tagManagerUrl)
   {
@@ -169,7 +205,9 @@ class Folder extends \Google\Model
     return $this->tagManagerUrl;
   }
   /**
-   * @param string
+   * GTM Workspace ID.
+   *
+   * @param string $workspaceId
    */
   public function setWorkspaceId($workspaceId)
   {

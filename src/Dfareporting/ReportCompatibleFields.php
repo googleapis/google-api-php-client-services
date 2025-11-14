@@ -25,6 +25,9 @@ class ReportCompatibleFields extends \Google\Collection
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
+   * The kind of resource this is, in this case
+   * dfareporting#reportCompatibleFields.
+   *
    * @var string
    */
   public $kind;
@@ -34,7 +37,10 @@ class ReportCompatibleFields extends \Google\Collection
   protected $pivotedActivityMetricsDataType = 'array';
 
   /**
-   * @param Dimension[]
+   * Dimensions which are compatible to be selected in the "dimensionFilters"
+   * section of the report.
+   *
+   * @param Dimension[] $dimensionFilters
    */
   public function setDimensionFilters($dimensionFilters)
   {
@@ -48,7 +54,10 @@ class ReportCompatibleFields extends \Google\Collection
     return $this->dimensionFilters;
   }
   /**
-   * @param Dimension[]
+   * Dimensions which are compatible to be selected in the "dimensions" section
+   * of the report.
+   *
+   * @param Dimension[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -62,7 +71,10 @@ class ReportCompatibleFields extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case
+   * dfareporting#reportCompatibleFields.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -76,7 +88,10 @@ class ReportCompatibleFields extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Metric[]
+   * Metrics which are compatible to be selected in the "metricNames" section of
+   * the report.
+   *
+   * @param Metric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -90,7 +105,10 @@ class ReportCompatibleFields extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param Metric[]
+   * Metrics which are compatible to be selected as activity metrics to pivot on
+   * in the "activities" section of the report.
+   *
+   * @param Metric[] $pivotedActivityMetrics
    */
   public function setPivotedActivityMetrics($pivotedActivityMetrics)
   {

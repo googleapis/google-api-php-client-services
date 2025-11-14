@@ -20,12 +20,18 @@ namespace Google\Service\Backupdr;
 class ConfidentialInstanceConfig extends \Google\Model
 {
   /**
+   * Optional. Defines whether the instance should have confidential compute
+   * enabled.
+   *
    * @var bool
    */
   public $enableConfidentialCompute;
 
   /**
-   * @param bool
+   * Optional. Defines whether the instance should have confidential compute
+   * enabled.
+   *
+   * @param bool $enableConfidentialCompute
    */
   public function setEnableConfidentialCompute($enableConfidentialCompute)
   {

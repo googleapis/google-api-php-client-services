@@ -25,7 +25,10 @@ class DynamicSourceSplit extends \Google\Model
   protected $residualDataType = '';
 
   /**
-   * @param DerivedSource
+   * Primary part (continued to be processed by worker). Specified relative to
+   * the previously-current source. Becomes current.
+   *
+   * @param DerivedSource $primary
    */
   public function setPrimary(DerivedSource $primary)
   {
@@ -39,7 +42,10 @@ class DynamicSourceSplit extends \Google\Model
     return $this->primary;
   }
   /**
-   * @param DerivedSource
+   * Residual part (returned to the pool of work). Specified relative to the
+   * previously-current source.
+   *
+   * @param DerivedSource $residual
    */
   public function setResidual(DerivedSource $residual)
   {

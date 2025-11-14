@@ -20,12 +20,16 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1DeleteQaQuestionTagRequest extends \Google\Model
 {
   /**
+   * Required. The name of the QaQuestionTag to delete.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The name of the QaQuestionTag to delete.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

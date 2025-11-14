@@ -20,20 +20,34 @@ namespace Google\Service\ContainerAnalysis;
 class Publisher extends \Google\Model
 {
   /**
+   * Provides information about the authority of the issuing party to release
+   * the document, in particular, the party's constituency and responsibilities
+   * or other obligations.
+   *
    * @var string
    */
   public $issuingAuthority;
   /**
+   * Name of the publisher. Examples: 'Google', 'Google Cloud Platform'.
+   *
    * @var string
    */
   public $name;
   /**
+   * The context or namespace. Contains a URL which is under control of the
+   * issuing party and can be used as a globally unique identifier for that
+   * issuing party. Example: https://csaf.io
+   *
    * @var string
    */
   public $publisherNamespace;
 
   /**
-   * @param string
+   * Provides information about the authority of the issuing party to release
+   * the document, in particular, the party's constituency and responsibilities
+   * or other obligations.
+   *
+   * @param string $issuingAuthority
    */
   public function setIssuingAuthority($issuingAuthority)
   {
@@ -47,7 +61,9 @@ class Publisher extends \Google\Model
     return $this->issuingAuthority;
   }
   /**
-   * @param string
+   * Name of the publisher. Examples: 'Google', 'Google Cloud Platform'.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +77,11 @@ class Publisher extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The context or namespace. Contains a URL which is under control of the
+   * issuing party and can be used as a globally unique identifier for that
+   * issuing party. Example: https://csaf.io
+   *
+   * @param string $publisherNamespace
    */
   public function setPublisherNamespace($publisherNamespace)
   {

@@ -23,16 +23,22 @@ class BulkEditAssignedTargetingOptionsResponse extends \Google\Collection
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
   /**
+   * Output only. The IDs of the line items which failed.
+   *
    * @var string[]
    */
   public $failedLineItemIds;
   /**
+   * Output only. The IDs of the line items which successfully updated.
+   *
    * @var string[]
    */
   public $updatedLineItemIds;
 
   /**
-   * @param Status[]
+   * The error information for each line item that failed to update.
+   *
+   * @param Status[] $errors
    */
   public function setErrors($errors)
   {
@@ -46,7 +52,9 @@ class BulkEditAssignedTargetingOptionsResponse extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string[]
+   * Output only. The IDs of the line items which failed.
+   *
+   * @param string[] $failedLineItemIds
    */
   public function setFailedLineItemIds($failedLineItemIds)
   {
@@ -60,7 +68,9 @@ class BulkEditAssignedTargetingOptionsResponse extends \Google\Collection
     return $this->failedLineItemIds;
   }
   /**
-   * @param string[]
+   * Output only. The IDs of the line items which successfully updated.
+   *
+   * @param string[] $updatedLineItemIds
    */
   public function setUpdatedLineItemIds($updatedLineItemIds)
   {

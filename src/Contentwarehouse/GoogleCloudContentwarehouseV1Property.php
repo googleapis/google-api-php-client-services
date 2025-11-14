@@ -30,6 +30,9 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
   protected $mapPropertyType = GoogleCloudContentwarehouseV1MapProperty::class;
   protected $mapPropertyDataType = '';
   /**
+   * Required. Must match the name of a PropertyDefinition in the
+   * DocumentSchema.
+   *
    * @var string
    */
   public $name;
@@ -41,7 +44,10 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
   protected $timestampValuesDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1DateTimeArray
+   * Date time property values. It is not supported by CMEK compliant
+   * deployment.
+   *
+   * @param GoogleCloudContentwarehouseV1DateTimeArray $dateTimeValues
    */
   public function setDateTimeValues(GoogleCloudContentwarehouseV1DateTimeArray $dateTimeValues)
   {
@@ -55,7 +61,9 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->dateTimeValues;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1EnumArray
+   * Enum property values.
+   *
+   * @param GoogleCloudContentwarehouseV1EnumArray $enumValues
    */
   public function setEnumValues(GoogleCloudContentwarehouseV1EnumArray $enumValues)
   {
@@ -69,7 +77,9 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->enumValues;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1FloatArray
+   * Float property values.
+   *
+   * @param GoogleCloudContentwarehouseV1FloatArray $floatValues
    */
   public function setFloatValues(GoogleCloudContentwarehouseV1FloatArray $floatValues)
   {
@@ -83,7 +93,9 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->floatValues;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1IntegerArray
+   * Integer property values.
+   *
+   * @param GoogleCloudContentwarehouseV1IntegerArray $integerValues
    */
   public function setIntegerValues(GoogleCloudContentwarehouseV1IntegerArray $integerValues)
   {
@@ -97,7 +109,9 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->integerValues;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1MapProperty
+   * Map property values.
+   *
+   * @param GoogleCloudContentwarehouseV1MapProperty $mapProperty
    */
   public function setMapProperty(GoogleCloudContentwarehouseV1MapProperty $mapProperty)
   {
@@ -111,7 +125,10 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->mapProperty;
   }
   /**
-   * @param string
+   * Required. Must match the name of a PropertyDefinition in the
+   * DocumentSchema.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -125,7 +142,9 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1PropertyArray
+   * Nested structured data property values.
+   *
+   * @param GoogleCloudContentwarehouseV1PropertyArray $propertyValues
    */
   public function setPropertyValues(GoogleCloudContentwarehouseV1PropertyArray $propertyValues)
   {
@@ -139,7 +158,9 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->propertyValues;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1TextArray
+   * String/text property values.
+   *
+   * @param GoogleCloudContentwarehouseV1TextArray $textValues
    */
   public function setTextValues(GoogleCloudContentwarehouseV1TextArray $textValues)
   {
@@ -153,7 +174,10 @@ class GoogleCloudContentwarehouseV1Property extends \Google\Model
     return $this->textValues;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1TimestampArray
+   * Timestamp property values. It is not supported by CMEK compliant
+   * deployment.
+   *
+   * @param GoogleCloudContentwarehouseV1TimestampArray $timestampValues
    */
   public function setTimestampValues(GoogleCloudContentwarehouseV1TimestampArray $timestampValues)
   {

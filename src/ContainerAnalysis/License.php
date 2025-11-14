@@ -20,16 +20,25 @@ namespace Google\Service\ContainerAnalysis;
 class License extends \Google\Model
 {
   /**
+   * Comments
+   *
    * @var string
    */
   public $comments;
   /**
+   * Often a single license can be used to represent the licensing terms.
+   * Sometimes it is necessary to include a choice of one or more licenses or
+   * some combination of license identifiers. Examples: "LGPL-2.1-only OR MIT",
+   * "LGPL-2.1-only AND MIT", "GPL-2.0-or-later WITH Bison-exception-2.2".
+   *
    * @var string
    */
   public $expression;
 
   /**
-   * @param string
+   * Comments
+   *
+   * @param string $comments
    */
   public function setComments($comments)
   {
@@ -43,7 +52,12 @@ class License extends \Google\Model
     return $this->comments;
   }
   /**
-   * @param string
+   * Often a single license can be used to represent the licensing terms.
+   * Sometimes it is necessary to include a choice of one or more licenses or
+   * some combination of license identifiers. Examples: "LGPL-2.1-only OR MIT",
+   * "LGPL-2.1-only AND MIT", "GPL-2.0-or-later WITH Bison-exception-2.2".
+   *
+   * @param string $expression
    */
   public function setExpression($expression)
   {

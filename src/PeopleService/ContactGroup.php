@@ -19,42 +19,82 @@ namespace Google\Service\PeopleService;
 
 class ContactGroup extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const GROUP_TYPE_GROUP_TYPE_UNSPECIFIED = 'GROUP_TYPE_UNSPECIFIED';
+  /**
+   * User defined contact group.
+   */
+  public const GROUP_TYPE_USER_CONTACT_GROUP = 'USER_CONTACT_GROUP';
+  /**
+   * System defined contact group.
+   */
+  public const GROUP_TYPE_SYSTEM_CONTACT_GROUP = 'SYSTEM_CONTACT_GROUP';
   protected $collection_key = 'memberResourceNames';
   protected $clientDataType = GroupClientData::class;
   protected $clientDataDataType = 'array';
   /**
+   * The [HTTP entity tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the
+   * resource. Used for web cache validation.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. The name translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale for system groups names.
+   * Group names set by the owner are the same as name.
+   *
    * @var string
    */
   public $formattedName;
   /**
+   * Output only. The contact group type.
+   *
    * @var string
    */
   public $groupType;
   /**
+   * Output only. The total number of contacts in the group irrespective of max
+   * members in specified in the request.
+   *
    * @var int
    */
   public $memberCount;
   /**
+   * Output only. The list of contact person resource names that are members of
+   * the contact group. The field is only populated for GET requests and will
+   * only return as many members as `maxMembers` in the get request.
+   *
    * @var string[]
    */
   public $memberResourceNames;
   protected $metadataType = ContactGroupMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The contact group name set by the group owner or a system provided name for
+   * system groups. For
+   * [`contactGroups.create`](/people/api/rest/v1/contactGroups/create) or
+   * [`contactGroups.update`](/people/api/rest/v1/contactGroups/update) the name
+   * must be unique to the users contact groups. Attempting to create a group
+   * with a duplicate name will return a HTTP 409 error.
+   *
    * @var string
    */
   public $name;
   /**
+   * The resource name for the contact group, assigned by the server. An ASCII
+   * string, in the form of `contactGroups/{contact_group_id}`.
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param GroupClientData[]
+   * The group's client data.
+   *
+   * @param GroupClientData[] $clientData
    */
   public function setClientData($clientData)
   {
@@ -68,7 +108,10 @@ class ContactGroup extends \Google\Collection
     return $this->clientData;
   }
   /**
-   * @param string
+   * The [HTTP entity tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the
+   * resource. Used for web cache validation.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -82,7 +125,11 @@ class ContactGroup extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. The name translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale for system groups names.
+   * Group names set by the owner are the same as name.
+   *
+   * @param string $formattedName
    */
   public function setFormattedName($formattedName)
   {
@@ -96,21 +143,29 @@ class ContactGroup extends \Google\Collection
     return $this->formattedName;
   }
   /**
-   * @param string
+   * Output only. The contact group type.
+   *
+   * Accepted values: GROUP_TYPE_UNSPECIFIED, USER_CONTACT_GROUP,
+   * SYSTEM_CONTACT_GROUP
+   *
+   * @param self::GROUP_TYPE_* $groupType
    */
   public function setGroupType($groupType)
   {
     $this->groupType = $groupType;
   }
   /**
-   * @return string
+   * @return self::GROUP_TYPE_*
    */
   public function getGroupType()
   {
     return $this->groupType;
   }
   /**
-   * @param int
+   * Output only. The total number of contacts in the group irrespective of max
+   * members in specified in the request.
+   *
+   * @param int $memberCount
    */
   public function setMemberCount($memberCount)
   {
@@ -124,7 +179,11 @@ class ContactGroup extends \Google\Collection
     return $this->memberCount;
   }
   /**
-   * @param string[]
+   * Output only. The list of contact person resource names that are members of
+   * the contact group. The field is only populated for GET requests and will
+   * only return as many members as `maxMembers` in the get request.
+   *
+   * @param string[] $memberResourceNames
    */
   public function setMemberResourceNames($memberResourceNames)
   {
@@ -138,7 +197,9 @@ class ContactGroup extends \Google\Collection
     return $this->memberResourceNames;
   }
   /**
-   * @param ContactGroupMetadata
+   * Output only. Metadata about the contact group.
+   *
+   * @param ContactGroupMetadata $metadata
    */
   public function setMetadata(ContactGroupMetadata $metadata)
   {
@@ -152,7 +213,14 @@ class ContactGroup extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * The contact group name set by the group owner or a system provided name for
+   * system groups. For
+   * [`contactGroups.create`](/people/api/rest/v1/contactGroups/create) or
+   * [`contactGroups.update`](/people/api/rest/v1/contactGroups/update) the name
+   * must be unique to the users contact groups. Attempting to create a group
+   * with a duplicate name will return a HTTP 409 error.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -166,7 +234,10 @@ class ContactGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The resource name for the contact group, assigned by the server. An ASCII
+   * string, in the form of `contactGroups/{contact_group_id}`.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

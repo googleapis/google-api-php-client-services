@@ -20,24 +20,39 @@ namespace Google\Service\Dfareporting;
 class ContentCategory extends \Google\Model
 {
   /**
+   * Account ID of this content category. This is a read-only field that can be
+   * left blank.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * ID of this content category. This is a read-only, auto-generated field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#contentCategory".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of this content category. This is a required field and must be less
+   * than 256 characters long and unique among content categories of the same
+   * account.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Account ID of this content category. This is a read-only field that can be
+   * left blank.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -51,7 +66,9 @@ class ContentCategory extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * ID of this content category. This is a read-only, auto-generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -65,7 +82,10 @@ class ContentCategory extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#contentCategory".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -79,7 +99,11 @@ class ContentCategory extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of this content category. This is a required field and must be less
+   * than 256 characters long and unique among content categories of the same
+   * account.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -23,16 +23,23 @@ class GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse extends \G
   protected $appConnectionsType = GoogleCloudBeyondcorpAppconnectionsV1AppConnection::class;
   protected $appConnectionsDataType = 'array';
   /**
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * A list of locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param GoogleCloudBeyondcorpAppconnectionsV1AppConnection[]
+   * A list of BeyondCorp AppConnections in the project.
+   *
+   * @param GoogleCloudBeyondcorpAppconnectionsV1AppConnection[] $appConnections
    */
   public function setAppConnections($appConnections)
   {
@@ -46,7 +53,10 @@ class GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse extends \G
     return $this->appConnections;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse extends \G
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * A list of locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

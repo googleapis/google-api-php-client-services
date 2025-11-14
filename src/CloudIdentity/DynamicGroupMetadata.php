@@ -26,7 +26,11 @@ class DynamicGroupMetadata extends \Google\Collection
   protected $statusDataType = '';
 
   /**
-   * @param DynamicGroupQuery[]
+   * Memberships will be the union of all queries. Only one entry with USER
+   * resource is currently supported. Customers can create up to 500 dynamic
+   * groups.
+   *
+   * @param DynamicGroupQuery[] $queries
    */
   public function setQueries($queries)
   {
@@ -40,7 +44,9 @@ class DynamicGroupMetadata extends \Google\Collection
     return $this->queries;
   }
   /**
-   * @param DynamicGroupStatus
+   * Output only. Status of the dynamic group.
+   *
+   * @param DynamicGroupStatus $status
    */
   public function setStatus(DynamicGroupStatus $status)
   {
