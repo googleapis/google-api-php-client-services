@@ -208,9 +208,9 @@ class Route extends \Google\Collection
    */
   public $priority;
   /**
-   * [Output only] The status of the route. This status applies to dynamic
-   * routes learned by Cloud Routers. It is also applicable to routes undergoing
-   * migration.
+   * [Output only] The status of the route. This status only applies to dynamic
+   * routes learned by Cloud Routers. This status is not applicable to static
+   * routes.
    *
    * @var string
    */
@@ -623,9 +623,9 @@ class Route extends \Google\Collection
     return $this->priority;
   }
   /**
-   * [Output only] The status of the route. This status applies to dynamic
-   * routes learned by Cloud Routers. It is also applicable to routes undergoing
-   * migration.
+   * [Output only] The status of the route. This status only applies to dynamic
+   * routes learned by Cloud Routers. This status is not applicable to static
+   * routes.
    *
    * Accepted values: ACTIVE, DROPPED, INACTIVE, PENDING
    *
