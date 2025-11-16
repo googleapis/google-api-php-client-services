@@ -51,6 +51,8 @@ class ProjectsLocationsVmwareAdminClusters extends \Google\Service\Resource
    * during standalone preflight checks. In that case the subsequent create call
    * will fail with "cluster already exists" error and hence a update cluster is
    * required to fix the cluster.
+   * @opt_param string skipValidations Optional. If set, skip the specified
+   * validations.
    * @opt_param bool validateOnly Validate the request without actually doing any
    * updates.
    * @opt_param string vmwareAdminClusterId Required. User provided identifier
@@ -177,6 +179,8 @@ class ProjectsLocationsVmwareAdminClusters extends \Google\Service\Resource
    * @param VmwareAdminCluster $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string skipValidations Optional. If set, the server-side preflight
+   * checks will be skipped.
    * @opt_param string updateMask Required. Field mask is used to specify the
    * fields to be overwritten in the VMwareAdminCluster resource by the update.
    * The fields specified in the update_mask are relative to the resource, not the

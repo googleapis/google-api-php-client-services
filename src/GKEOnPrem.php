@@ -921,6 +921,11 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'skipValidations' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1006,6 +1011,11 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'skipValidations' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
                 'updateMask' => [
                   'location' => 'query',
@@ -1131,6 +1141,11 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'skipValidations' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1250,6 +1265,11 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'skipValidations' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
                 'updateMask' => [
                   'location' => 'query',

@@ -19,6 +19,8 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalAdminLoadBalancerConfig extends \Google\Model
 {
+  protected $bgpLbConfigType = BareMetalAdminBgpLbConfig::class;
+  protected $bgpLbConfigDataType = '';
   protected $manualLbConfigType = BareMetalAdminManualLbConfig::class;
   protected $manualLbConfigDataType = '';
   protected $portConfigType = BareMetalAdminPortConfig::class;
@@ -26,6 +28,22 @@ class BareMetalAdminLoadBalancerConfig extends \Google\Model
   protected $vipConfigType = BareMetalAdminVipConfig::class;
   protected $vipConfigDataType = '';
 
+  /**
+   * Configuration for BGP typed load balancers.
+   *
+   * @param BareMetalAdminBgpLbConfig $bgpLbConfig
+   */
+  public function setBgpLbConfig(BareMetalAdminBgpLbConfig $bgpLbConfig)
+  {
+    $this->bgpLbConfig = $bgpLbConfig;
+  }
+  /**
+   * @return BareMetalAdminBgpLbConfig
+   */
+  public function getBgpLbConfig()
+  {
+    return $this->bgpLbConfig;
+  }
   /**
    * Manually configured load balancers.
    *

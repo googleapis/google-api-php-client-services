@@ -51,6 +51,8 @@ class ProjectsLocationsVmwareClusters extends \Google\Service\Resource
    * during standalone preflight checks. In that case the subsequent create call
    * will fail with "cluster already exists" error and hence a update cluster is
    * required to fix the cluster.
+   * @opt_param string skipValidations Optional. List of validations to skip
+   * during cluster creation.
    * @opt_param bool validateOnly Validate the request without actually doing any
    * updates.
    * @opt_param string vmwareClusterId User provided identifier that is used as
@@ -212,6 +214,7 @@ class ProjectsLocationsVmwareClusters extends \Google\Service\Resource
    * @param VmwareCluster $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string skipValidations
    * @opt_param string updateMask Required. Field mask is used to specify the
    * fields to be overwritten in the VMwareCluster resource by the update. The
    * fields specified in the update_mask are relative to the resource, not the

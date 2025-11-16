@@ -19,9 +19,37 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalAdminNetworkConfig extends \Google\Model
 {
+  /**
+   * Enables the use of advanced Anthos networking features, such as Bundled
+   * Load Balancing with BGP or the egress NAT gateway. Setting configuration
+   * for advanced networking features will automatically set this flag.
+   *
+   * @var bool
+   */
+  public $advancedNetworking;
   protected $islandModeCidrType = BareMetalAdminIslandModeCidrConfig::class;
   protected $islandModeCidrDataType = '';
+  protected $multipleNetworkInterfacesConfigType = BareMetalAdminMultipleNetworkInterfacesConfig::class;
+  protected $multipleNetworkInterfacesConfigDataType = '';
 
+  /**
+   * Enables the use of advanced Anthos networking features, such as Bundled
+   * Load Balancing with BGP or the egress NAT gateway. Setting configuration
+   * for advanced networking features will automatically set this flag.
+   *
+   * @param bool $advancedNetworking
+   */
+  public function setAdvancedNetworking($advancedNetworking)
+  {
+    $this->advancedNetworking = $advancedNetworking;
+  }
+  /**
+   * @return bool
+   */
+  public function getAdvancedNetworking()
+  {
+    return $this->advancedNetworking;
+  }
   /**
    * Configuration for Island mode CIDR.
    *
@@ -37,6 +65,22 @@ class BareMetalAdminNetworkConfig extends \Google\Model
   public function getIslandModeCidr()
   {
     return $this->islandModeCidr;
+  }
+  /**
+   * Configuration for multiple network interfaces.
+   *
+   * @param BareMetalAdminMultipleNetworkInterfacesConfig $multipleNetworkInterfacesConfig
+   */
+  public function setMultipleNetworkInterfacesConfig(BareMetalAdminMultipleNetworkInterfacesConfig $multipleNetworkInterfacesConfig)
+  {
+    $this->multipleNetworkInterfacesConfig = $multipleNetworkInterfacesConfig;
+  }
+  /**
+   * @return BareMetalAdminMultipleNetworkInterfacesConfig
+   */
+  public function getMultipleNetworkInterfacesConfig()
+  {
+    return $this->multipleNetworkInterfacesConfig;
   }
 }
 
