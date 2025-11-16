@@ -20,7 +20,7 @@ namespace Google\Service\PaymentsResellerSubscription;
 class ResumeSubscriptionRequest extends \Google\Model
 {
   /**
-   * Reserved value for invalid or unexpected value.
+   * Reserved for invalid or unexpected value. Do not use.
    */
   public const RESUME_MODE_RESUME_MODE_UNSPECIFIED = 'RESUME_MODE_UNSPECIFIED';
   /**
@@ -36,7 +36,7 @@ class ResumeSubscriptionRequest extends \Google\Model
   protected $cycleOptionsType = CycleOptions::class;
   protected $cycleOptionsDataType = '';
   /**
-   * Optional. The mode to resume the subscription.
+   * Required. The mode to resume the subscription.
    *
    * @var string
    */
@@ -59,7 +59,7 @@ class ResumeSubscriptionRequest extends \Google\Model
     return $this->cycleOptions;
   }
   /**
-   * Optional. The mode to resume the subscription.
+   * Required. The mode to resume the subscription.
    *
    * Accepted values: RESUME_MODE_UNSPECIFIED, RESUME_MODE_CYCLE_OPTIONS,
    * RESUME_MODE_RESTORE_EXISTING_BILLING_SCHEDULE
