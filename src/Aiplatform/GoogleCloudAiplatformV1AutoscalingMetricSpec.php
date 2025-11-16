@@ -24,7 +24,8 @@ class GoogleCloudAiplatformV1AutoscalingMetricSpec extends \Google\Model
    * Prediction: *
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
    * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
-   * `aiplatform.googleapis.com/prediction/online/request_count`
+   * `aiplatform.googleapis.com/prediction/online/request_count` *
+   * `pubsub.googleapis.com/subscription/num_undelivered_messages`
    *
    * @var string
    */
@@ -44,7 +45,8 @@ class GoogleCloudAiplatformV1AutoscalingMetricSpec extends \Google\Model
    * Prediction: *
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
    * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
-   * `aiplatform.googleapis.com/prediction/online/request_count`
+   * `aiplatform.googleapis.com/prediction/online/request_count` *
+   * `pubsub.googleapis.com/subscription/num_undelivered_messages`
    *
    * @param string $metricName
    */

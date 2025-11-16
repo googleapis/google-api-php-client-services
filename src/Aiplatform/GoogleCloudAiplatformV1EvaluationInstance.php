@@ -99,7 +99,7 @@ class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
     return $this->reference;
   }
   /**
-   * Required. Data used to populate placeholder `response` in a metric prompt
+   * Optional. Data used to populate placeholder `response` in a metric prompt
    * template.
    *
    * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData $response

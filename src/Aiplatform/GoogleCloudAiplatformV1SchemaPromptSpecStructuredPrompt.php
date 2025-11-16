@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Collection
 {
   protected $collection_key = 'predictionInputs';
+  protected $appBuilderDataType = GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData::class;
+  protected $appBuilderDataDataType = '';
   protected $contextType = GoogleCloudAiplatformV1Content::class;
   protected $contextDataType = '';
   protected $examplesType = GoogleCloudAiplatformV1SchemaPromptSpecPartList::class;
@@ -53,6 +55,22 @@ class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Co
   protected $promptMessageType = GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage::class;
   protected $promptMessageDataType = '';
 
+  /**
+   * Data for app builder use case.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData $appBuilderData
+   */
+  public function setAppBuilderData(GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData $appBuilderData)
+  {
+    $this->appBuilderData = $appBuilderData;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData
+   */
+  public function getAppBuilderData()
+  {
+    return $this->appBuilderData;
+  }
   /**
    * Preamble: The context of the prompt.
    *

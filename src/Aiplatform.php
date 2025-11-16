@@ -105,6 +105,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_endpoints;
   public $projects_locations_endpoints_chat;
   public $projects_locations_endpoints_deployedModels_invoke;
+  public $projects_locations_endpoints_google_science;
   public $projects_locations_endpoints_invoke;
   public $projects_locations_endpoints_openapi;
   public $projects_locations_endpoints_operations;
@@ -5162,6 +5163,30 @@ class Aiplatform extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_endpoints_google_science = new Aiplatform\Resource\ProjectsLocationsEndpointsGoogleScience(
+        $this,
+        $this->serviceName,
+        'science',
+        [
+          'methods' => [
+            'inference' => [
+              'path' => 'v1/{+endpoint}/science/inference',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deployedModelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
