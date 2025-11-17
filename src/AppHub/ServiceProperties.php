@@ -30,6 +30,8 @@ class ServiceProperties extends \Google\Model
    * @var string
    */
   public $gcpProject;
+  protected $identityType = Identity::class;
+  protected $identityDataType = '';
   /**
    * Output only. The location that the underlying resource resides in, for
    * example, us-west1.
@@ -98,6 +100,22 @@ class ServiceProperties extends \Google\Model
   public function getGcpProject()
   {
     return $this->gcpProject;
+  }
+  /**
+   * Output only. The identity associated with the service.
+   *
+   * @param Identity $identity
+   */
+  public function setIdentity(Identity $identity)
+  {
+    $this->identity = $identity;
+  }
+  /**
+   * @return Identity
+   */
+  public function getIdentity()
+  {
+    return $this->identity;
   }
   /**
    * Output only. The location that the underlying resource resides in, for
