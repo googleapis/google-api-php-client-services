@@ -21,6 +21,8 @@ class GoogleCloudDataplexV1Trigger extends \Google\Model
 {
   protected $onDemandType = GoogleCloudDataplexV1TriggerOnDemand::class;
   protected $onDemandDataType = '';
+  protected $oneTimeType = GoogleCloudDataplexV1TriggerOneTime::class;
+  protected $oneTimeDataType = '';
   protected $scheduleType = GoogleCloudDataplexV1TriggerSchedule::class;
   protected $scheduleDataType = '';
 
@@ -39,6 +41,23 @@ class GoogleCloudDataplexV1Trigger extends \Google\Model
   public function getOnDemand()
   {
     return $this->onDemand;
+  }
+  /**
+   * The scan runs once, and does not create an associated ScanJob child
+   * resource.
+   *
+   * @param GoogleCloudDataplexV1TriggerOneTime $oneTime
+   */
+  public function setOneTime(GoogleCloudDataplexV1TriggerOneTime $oneTime)
+  {
+    $this->oneTime = $oneTime;
+  }
+  /**
+   * @return GoogleCloudDataplexV1TriggerOneTime
+   */
+  public function getOneTime()
+  {
+    return $this->oneTime;
   }
   /**
    * The scan is scheduled to run periodically.
