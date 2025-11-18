@@ -20,6 +20,14 @@ namespace Google\Service\Dataform;
 class Relation extends \Google\Collection
 {
   /**
+   * Default value.
+   */
+  public const FILE_FORMAT_FILE_FORMAT_UNSPECIFIED = 'FILE_FORMAT_UNSPECIFIED';
+  /**
+   * Apache Parquet format.
+   */
+  public const FILE_FORMAT_PARQUET = 'PARQUET';
+  /**
    * Default value. This value is unused.
    */
   public const RELATION_TYPE_RELATION_TYPE_UNSPECIFIED = 'RELATION_TYPE_UNSPECIFIED';
@@ -39,6 +47,14 @@ class Relation extends \Google\Collection
    * The relation is a materialized view.
    */
   public const RELATION_TYPE_MATERIALIZED_VIEW = 'MATERIALIZED_VIEW';
+  /**
+   * Default value.
+   */
+  public const TABLE_FORMAT_TABLE_FORMAT_UNSPECIFIED = 'TABLE_FORMAT_UNSPECIFIED';
+  /**
+   * Apache Iceberg format.
+   */
+  public const TABLE_FORMAT_ICEBERG = 'ICEBERG';
   protected $collection_key = 'tags';
   /**
    * Additional options that will be provided as key/value pairs into the
@@ -55,6 +71,16 @@ class Relation extends \Google\Collection
    * @var string[]
    */
   public $clusterExpressions;
+  /**
+   * Optional. The connection specifying the credentials to be used to read and
+   * write to external storage, such as Cloud Storage. The connection can have
+   * the form `{project}.{location}.{connection_id}` or
+   * `projects/{project}/locations/{location}/connections/{connection_id}", or
+   * be set to DEFAULT.
+   *
+   * @var string
+   */
+  public $connection;
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
@@ -63,6 +89,12 @@ class Relation extends \Google\Collection
    * @var bool
    */
   public $disabled;
+  /**
+   * Optional. The file format for the BigQuery table.
+   *
+   * @var string
+   */
+  public $fileFormat;
   protected $incrementalTableConfigType = IncrementalTableConfig::class;
   protected $incrementalTableConfigDataType = '';
   /**
@@ -111,6 +143,20 @@ class Relation extends \Google\Collection
    */
   public $selectQuery;
   /**
+   * Optional. The fully qualified location prefix of the external folder where
+   * table data is stored. The URI should be in the format
+   * `gs://bucket/path_to_table/`.
+   *
+   * @var string
+   */
+  public $storageUri;
+  /**
+   * Optional. The table format for the BigQuery table.
+   *
+   * @var string
+   */
+  public $tableFormat;
+  /**
    * Arbitrary, user-defined tags on this action.
    *
    * @var string[]
@@ -153,6 +199,26 @@ class Relation extends \Google\Collection
     return $this->clusterExpressions;
   }
   /**
+   * Optional. The connection specifying the credentials to be used to read and
+   * write to external storage, such as Cloud Storage. The connection can have
+   * the form `{project}.{location}.{connection_id}` or
+   * `projects/{project}/locations/{location}/connections/{connection_id}", or
+   * be set to DEFAULT.
+   *
+   * @param string $connection
+   */
+  public function setConnection($connection)
+  {
+    $this->connection = $connection;
+  }
+  /**
+   * @return string
+   */
+  public function getConnection()
+  {
+    return $this->connection;
+  }
+  /**
    * A list of actions that this action depends on.
    *
    * @param Target[] $dependencyTargets
@@ -183,6 +249,24 @@ class Relation extends \Google\Collection
   public function getDisabled()
   {
     return $this->disabled;
+  }
+  /**
+   * Optional. The file format for the BigQuery table.
+   *
+   * Accepted values: FILE_FORMAT_UNSPECIFIED, PARQUET
+   *
+   * @param self::FILE_FORMAT_* $fileFormat
+   */
+  public function setFileFormat($fileFormat)
+  {
+    $this->fileFormat = $fileFormat;
+  }
+  /**
+   * @return self::FILE_FORMAT_*
+   */
+  public function getFileFormat()
+  {
+    return $this->fileFormat;
   }
   /**
    * Configures `INCREMENTAL_TABLE` settings for this relation. Only set if
@@ -332,6 +416,42 @@ class Relation extends \Google\Collection
   public function getSelectQuery()
   {
     return $this->selectQuery;
+  }
+  /**
+   * Optional. The fully qualified location prefix of the external folder where
+   * table data is stored. The URI should be in the format
+   * `gs://bucket/path_to_table/`.
+   *
+   * @param string $storageUri
+   */
+  public function setStorageUri($storageUri)
+  {
+    $this->storageUri = $storageUri;
+  }
+  /**
+   * @return string
+   */
+  public function getStorageUri()
+  {
+    return $this->storageUri;
+  }
+  /**
+   * Optional. The table format for the BigQuery table.
+   *
+   * Accepted values: TABLE_FORMAT_UNSPECIFIED, ICEBERG
+   *
+   * @param self::TABLE_FORMAT_* $tableFormat
+   */
+  public function setTableFormat($tableFormat)
+  {
+    $this->tableFormat = $tableFormat;
+  }
+  /**
+   * @return self::TABLE_FORMAT_*
+   */
+  public function getTableFormat()
+  {
+    return $this->tableFormat;
   }
   /**
    * Arbitrary, user-defined tags on this action.
