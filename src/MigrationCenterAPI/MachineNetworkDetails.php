@@ -22,6 +22,12 @@ class MachineNetworkDetails extends \Google\Model
   protected $adaptersType = NetworkAdapterList::class;
   protected $adaptersDataType = '';
   /**
+   * Optional. Default gateway address.
+   *
+   * @var string
+   */
+  public $defaultGateway;
+  /**
    * The primary IP address of the machine.
    *
    * @var string
@@ -56,6 +62,22 @@ class MachineNetworkDetails extends \Google\Model
   public function getAdapters()
   {
     return $this->adapters;
+  }
+  /**
+   * Optional. Default gateway address.
+   *
+   * @param string $defaultGateway
+   */
+  public function setDefaultGateway($defaultGateway)
+  {
+    $this->defaultGateway = $defaultGateway;
+  }
+  /**
+   * @return string
+   */
+  public function getDefaultGateway()
+  {
+    return $this->defaultGateway;
   }
   /**
    * The primary IP address of the machine.
