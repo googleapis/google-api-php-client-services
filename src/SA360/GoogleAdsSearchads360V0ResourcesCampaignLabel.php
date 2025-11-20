@@ -39,7 +39,8 @@ class GoogleAdsSearchads360V0ResourcesCampaignLabel extends \Google\Model
   public $ownerCustomerId;
   /**
    * Immutable. Name of the resource. Campaign label resource names have the
-   * form: `customers/{customer_id}/campaignLabels/{campaign_id}~{label_id}`
+   * form:
+   * `customers/{owner_customer_id}/campaignLabels/{campaign_id}~{label_id}`
    *
    * @var string
    */
@@ -95,7 +96,8 @@ class GoogleAdsSearchads360V0ResourcesCampaignLabel extends \Google\Model
   }
   /**
    * Immutable. Name of the resource. Campaign label resource names have the
-   * form: `customers/{customer_id}/campaignLabels/{campaign_id}~{label_id}`
+   * form:
+   * `customers/{owner_customer_id}/campaignLabels/{campaign_id}~{label_id}`
    *
    * @param string $resourceName
    */

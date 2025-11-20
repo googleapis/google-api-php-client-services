@@ -39,8 +39,8 @@ class GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel extends \Google\Mode
   public $ownerCustomerId;
   /**
    * Immutable. The resource name of the ad group effective label. Ad group
-   * effective label resource names have the form:
-   * `customers/{customer_id}/adGroupEffectiveLabels/{ad_group_id}~{label_id}`
+   * effective label resource names have the form: `customers/{owner_customer_id
+   * }/adGroupEffectiveLabels/{ad_group_id}~{label_id}`
    *
    * @var string
    */
@@ -96,8 +96,8 @@ class GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel extends \Google\Mode
   }
   /**
    * Immutable. The resource name of the ad group effective label. Ad group
-   * effective label resource names have the form:
-   * `customers/{customer_id}/adGroupEffectiveLabels/{ad_group_id}~{label_id}`
+   * effective label resource names have the form: `customers/{owner_customer_id
+   * }/adGroupEffectiveLabels/{ad_group_id}~{label_id}`
    *
    * @param string $resourceName
    */

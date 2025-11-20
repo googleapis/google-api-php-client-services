@@ -599,6 +599,12 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
    */
   public $excludedParentAssetFieldTypes;
   /**
+   * Output only. Types of feeds that are attached directly to this campaign.
+   *
+   * @var string[]
+   */
+  public $feedTypes;
+  /**
    * Suffix used to append query parameters to landing pages that are served
    * with parallel tracking.
    *
@@ -1019,6 +1025,22 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
   public function getExcludedParentAssetFieldTypes()
   {
     return $this->excludedParentAssetFieldTypes;
+  }
+  /**
+   * Output only. Types of feeds that are attached directly to this campaign.
+   *
+   * @param string[] $feedTypes
+   */
+  public function setFeedTypes($feedTypes)
+  {
+    $this->feedTypes = $feedTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFeedTypes()
+  {
+    return $this->feedTypes;
   }
   /**
    * Suffix used to append query parameters to landing pages that are served

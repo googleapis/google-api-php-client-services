@@ -188,7 +188,7 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * Hotel property asset.
    */
   public const TYPE_HOTEL_PROPERTY = 'HOTEL_PROPERTY';
-  protected $collection_key = 'finalUrls';
+  protected $collection_key = 'urlCustomParameters';
   protected $callAssetType = GoogleAdsSearchads360V0CommonUnifiedCallAsset::class;
   protected $callAssetDataType = '';
   protected $callToActionAssetType = GoogleAdsSearchads360V0CommonCallToActionAsset::class;
@@ -208,6 +208,19 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $engineStatus;
+  /**
+   * A list of possible final mobile URLs after all cross domain redirects.
+   *
+   * @var string[]
+   */
+  public $finalMobileUrls;
+  /**
+   * URL template for appending params to landing page URLs served with parallel
+   * tracking.
+   *
+   * @var string
+   */
+  public $finalUrlSuffix;
   /**
    * A list of possible final URLs after all cross domain redirects.
    *
@@ -270,6 +283,8 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $type;
+  protected $urlCustomParametersType = GoogleAdsSearchads360V0CommonCustomParameter::class;
+  protected $urlCustomParametersDataType = 'array';
   protected $youtubeVideoAssetType = GoogleAdsSearchads360V0CommonYoutubeVideoAsset::class;
   protected $youtubeVideoAssetDataType = '';
 
@@ -356,6 +371,39 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   public function getEngineStatus()
   {
     return $this->engineStatus;
+  }
+  /**
+   * A list of possible final mobile URLs after all cross domain redirects.
+   *
+   * @param string[] $finalMobileUrls
+   */
+  public function setFinalMobileUrls($finalMobileUrls)
+  {
+    $this->finalMobileUrls = $finalMobileUrls;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFinalMobileUrls()
+  {
+    return $this->finalMobileUrls;
+  }
+  /**
+   * URL template for appending params to landing page URLs served with parallel
+   * tracking.
+   *
+   * @param string $finalUrlSuffix
+   */
+  public function setFinalUrlSuffix($finalUrlSuffix)
+  {
+    $this->finalUrlSuffix = $finalUrlSuffix;
+  }
+  /**
+   * @return string
+   */
+  public function getFinalUrlSuffix()
+  {
+    return $this->finalUrlSuffix;
   }
   /**
    * A list of possible final URLs after all cross domain redirects.
@@ -592,6 +640,23 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   public function getType()
   {
     return $this->type;
+  }
+  /**
+   * A list of mappings to be used for substituting URL custom parameter tags in
+   * the tracking_url_template, final_urls, and/or final_mobile_urls.
+   *
+   * @param GoogleAdsSearchads360V0CommonCustomParameter[] $urlCustomParameters
+   */
+  public function setUrlCustomParameters($urlCustomParameters)
+  {
+    $this->urlCustomParameters = $urlCustomParameters;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonCustomParameter[]
+   */
+  public function getUrlCustomParameters()
+  {
+    return $this->urlCustomParameters;
   }
   /**
    * Immutable. A YouTube video asset.

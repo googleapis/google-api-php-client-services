@@ -292,7 +292,7 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
    * Life Event
    */
   public const TYPE_LIFE_EVENT = 'LIFE_EVENT';
-  protected $collection_key = 'labels';
+  protected $collection_key = 'urlCustomParameters';
   /**
    * Immutable. The ad group to which the criterion belongs.
    *
@@ -357,6 +357,12 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
    * @var string
    */
   public $engineStatus;
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects.
+   *
+   * @var string[]
+   */
+  public $finalMobileUrls;
   /**
    * URL template for appending params to final URL.
    *
@@ -438,6 +444,8 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
    * @var string
    */
   public $type;
+  protected $urlCustomParametersType = GoogleAdsSearchads360V0CommonCustomParameter::class;
+  protected $urlCustomParametersDataType = 'array';
   protected $userListType = GoogleAdsSearchads360V0CommonUserListInfo::class;
   protected $userListDataType = '';
   protected $webpageType = GoogleAdsSearchads360V0CommonWebpageInfo::class;
@@ -614,6 +622,22 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
   public function getEngineStatus()
   {
     return $this->engineStatus;
+  }
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects.
+   *
+   * @param string[] $finalMobileUrls
+   */
+  public function setFinalMobileUrls($finalMobileUrls)
+  {
+    $this->finalMobileUrls = $finalMobileUrls;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFinalMobileUrls()
+  {
+    return $this->finalMobileUrls;
   }
   /**
    * URL template for appending params to final URL.
@@ -881,6 +905,23 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
   public function getType()
   {
     return $this->type;
+  }
+  /**
+   * The list of mappings used to substitute custom parameter tags in a
+   * `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   *
+   * @param GoogleAdsSearchads360V0CommonCustomParameter[] $urlCustomParameters
+   */
+  public function setUrlCustomParameters($urlCustomParameters)
+  {
+    $this->urlCustomParameters = $urlCustomParameters;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonCustomParameter[]
+   */
+  public function getUrlCustomParameters()
+  {
+    return $this->urlCustomParameters;
   }
   /**
    * Immutable. User List.

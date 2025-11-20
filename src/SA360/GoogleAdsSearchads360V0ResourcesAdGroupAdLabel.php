@@ -39,8 +39,8 @@ class GoogleAdsSearchads360V0ResourcesAdGroupAdLabel extends \Google\Model
   public $ownerCustomerId;
   /**
    * Immutable. The resource name of the ad group ad label. Ad group ad label
-   * resource names have the form:
-   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}~{label_id}`
+   * resource names have the form: `customers/{owner_customer_id}/adGroupAdLabel
+   * s/{ad_group_id}~{ad_id}~{label_id}`
    *
    * @var string
    */
@@ -96,8 +96,8 @@ class GoogleAdsSearchads360V0ResourcesAdGroupAdLabel extends \Google\Model
   }
   /**
    * Immutable. The resource name of the ad group ad label. Ad group ad label
-   * resource names have the form:
-   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}~{label_id}`
+   * resource names have the form: `customers/{owner_customer_id}/adGroupAdLabel
+   * s/{ad_group_id}~{ad_id}~{label_id}`
    *
    * @param string $resourceName
    */

@@ -39,9 +39,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel extends \Go
   public $ownerCustomerId;
   /**
    * Immutable. The resource name of the ad group criterion effective label. Ad
-   * group criterion effective label resource names have the form: `customers/{c
-   * ustomer_id}/adGroupCriterionEffectiveLabels/{ad_group_id}~{criterion_id}~{l
-   * abel_id}`
+   * group criterion effective label resource names have the form: `customers/{o
+   * wner_customer_id}/adGroupCriterionEffectiveLabels/{ad_group_id}~{criterion_
+   * id}~{label_id}`
    *
    * @var string
    */
@@ -97,9 +97,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel extends \Go
   }
   /**
    * Immutable. The resource name of the ad group criterion effective label. Ad
-   * group criterion effective label resource names have the form: `customers/{c
-   * ustomer_id}/adGroupCriterionEffectiveLabels/{ad_group_id}~{criterion_id}~{l
-   * abel_id}`
+   * group criterion effective label resource names have the form: `customers/{o
+   * wner_customer_id}/adGroupCriterionEffectiveLabels/{ad_group_id}~{criterion_
+   * id}~{label_id}`
    *
    * @param string $resourceName
    */

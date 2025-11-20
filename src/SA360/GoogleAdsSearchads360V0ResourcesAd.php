@@ -172,6 +172,21 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   protected $expandedDynamicSearchAdDataType = '';
   protected $expandedTextAdType = GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo::class;
   protected $expandedTextAdDataType = '';
+  protected $finalAppUrlsType = GoogleAdsSearchads360V0CommonFinalAppUrl::class;
+  protected $finalAppUrlsDataType = 'array';
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects for
+   * the ad.
+   *
+   * @var string[]
+   */
+  public $finalMobileUrls;
+  /**
+   * The suffix to use when constructing a final URL.
+   *
+   * @var string
+   */
+  public $finalUrlSuffix;
   /**
    * The list of possible final URLs after all cross-domain redirects for the
    * ad.
@@ -205,6 +220,12 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   protected $responsiveSearchAdDataType = '';
   protected $textAdType = GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo::class;
   protected $textAdDataType = '';
+  /**
+   * The URL template for constructing a tracking URL.
+   *
+   * @var string
+   */
+  public $trackingUrlTemplate;
   /**
    * Output only. The type of ad.
    *
@@ -259,6 +280,56 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   public function getExpandedTextAd()
   {
     return $this->expandedTextAd;
+  }
+  /**
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   *
+   * @param GoogleAdsSearchads360V0CommonFinalAppUrl[] $finalAppUrls
+   */
+  public function setFinalAppUrls($finalAppUrls)
+  {
+    $this->finalAppUrls = $finalAppUrls;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonFinalAppUrl[]
+   */
+  public function getFinalAppUrls()
+  {
+    return $this->finalAppUrls;
+  }
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects for
+   * the ad.
+   *
+   * @param string[] $finalMobileUrls
+   */
+  public function setFinalMobileUrls($finalMobileUrls)
+  {
+    $this->finalMobileUrls = $finalMobileUrls;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFinalMobileUrls()
+  {
+    return $this->finalMobileUrls;
+  }
+  /**
+   * The suffix to use when constructing a final URL.
+   *
+   * @param string $finalUrlSuffix
+   */
+  public function setFinalUrlSuffix($finalUrlSuffix)
+  {
+    $this->finalUrlSuffix = $finalUrlSuffix;
+  }
+  /**
+   * @return string
+   */
+  public function getFinalUrlSuffix()
+  {
+    return $this->finalUrlSuffix;
   }
   /**
    * The list of possible final URLs after all cross-domain redirects for the
@@ -374,6 +445,22 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   public function getTextAd()
   {
     return $this->textAd;
+  }
+  /**
+   * The URL template for constructing a tracking URL.
+   *
+   * @param string $trackingUrlTemplate
+   */
+  public function setTrackingUrlTemplate($trackingUrlTemplate)
+  {
+    $this->trackingUrlTemplate = $trackingUrlTemplate;
+  }
+  /**
+   * @return string
+   */
+  public function getTrackingUrlTemplate()
+  {
+    return $this->trackingUrlTemplate;
   }
   /**
    * Output only. The type of ad.

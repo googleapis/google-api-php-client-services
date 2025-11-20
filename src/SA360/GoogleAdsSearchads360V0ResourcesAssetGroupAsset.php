@@ -142,6 +142,14 @@ class GoogleAdsSearchads360V0ResourcesAssetGroupAsset extends \Google\Model
    */
   public const FIELD_TYPE_DISCOVERY_CAROUSEL_CARD = 'DISCOVERY_CAROUSEL_CARD';
   /**
+   * The asset is linked for use as a long description.
+   */
+  public const FIELD_TYPE_LONG_DESCRIPTION = 'LONG_DESCRIPTION';
+  /**
+   * The asset is linked for use as a call-to-action.
+   */
+  public const FIELD_TYPE_CALL_TO_ACTION = 'CALL_TO_ACTION';
+  /**
    * Not specified.
    */
   public const STATUS_UNSPECIFIED = 'UNSPECIFIED';
@@ -237,7 +245,7 @@ class GoogleAdsSearchads360V0ResourcesAssetGroupAsset extends \Google\Model
    * SITELINK, MOBILE_APP, HOTEL_CALLOUT, CALL, PRICE, LONG_HEADLINE,
    * BUSINESS_NAME, SQUARE_MARKETING_IMAGE, PORTRAIT_MARKETING_IMAGE, LOGO,
    * LANDSCAPE_LOGO, VIDEO, CALL_TO_ACTION_SELECTION, AD_IMAGE, BUSINESS_LOGO,
-   * HOTEL_PROPERTY, DISCOVERY_CAROUSEL_CARD
+   * HOTEL_PROPERTY, DISCOVERY_CAROUSEL_CARD, LONG_DESCRIPTION, CALL_TO_ACTION
    *
    * @param self::FIELD_TYPE_* $fieldType
    */

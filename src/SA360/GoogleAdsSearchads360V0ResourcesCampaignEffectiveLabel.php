@@ -39,8 +39,8 @@ class GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel extends \Google\Mod
   public $ownerCustomerId;
   /**
    * Immutable. Name of the resource. CampaignEffectivelabel resource names have
-   * the form:
-   * `customers/{customer_id}/campaignEffectiveLabels/{campaign_id}~{label_id}`
+   * the form: `customers/{owner_customer_id}/campaignEffectiveLabels/{campaign_
+   * id}~{label_id}`
    *
    * @var string
    */
@@ -96,8 +96,8 @@ class GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel extends \Google\Mod
   }
   /**
    * Immutable. Name of the resource. CampaignEffectivelabel resource names have
-   * the form:
-   * `customers/{customer_id}/campaignEffectiveLabels/{campaign_id}~{label_id}`
+   * the form: `customers/{owner_customer_id}/campaignEffectiveLabels/{campaign_
+   * id}~{label_id}`
    *
    * @param string $resourceName
    */

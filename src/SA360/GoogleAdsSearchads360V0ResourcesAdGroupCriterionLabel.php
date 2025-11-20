@@ -39,8 +39,8 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel extends \Google\Mode
   public $ownerCustomerId;
   /**
    * Immutable. The resource name of the ad group criterion label. Ad group
-   * criterion label resource names have the form: `customers/{customer_id}/adGr
-   * oupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
+   * criterion label resource names have the form: `customers/{owner_customer_id
+   * }/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    *
    * @var string
    */
@@ -96,8 +96,8 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel extends \Google\Mode
   }
   /**
    * Immutable. The resource name of the ad group criterion label. Ad group
-   * criterion label resource names have the form: `customers/{customer_id}/adGr
-   * oupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
+   * criterion label resource names have the form: `customers/{owner_customer_id
+   * }/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    *
    * @param string $resourceName
    */

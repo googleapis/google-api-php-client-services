@@ -193,6 +193,18 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
    */
   public $allConversionsValuePerCost;
   /**
+   * Average cart size is the average number of products in each order
+   * attributed to your ads. How it works: You report conversions with cart data
+   * for completed purchases on your website. Average cart size is the total
+   * number of products sold divided by the total number of orders you received.
+   * Example: You received 2 orders, the first included 3 products and the
+   * second included 2. The average cart size is 2.5 products = (3+2)/2. This
+   * metric is only available if you report conversions with cart data.
+   *
+   * @var 
+   */
+  public $averageCartSize;
+  /**
    * The average amount you pay per interaction. This amount is the total cost
    * of your ads divided by the total number of interactions.
    *
@@ -218,6 +230,27 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
    * @var 
    */
   public $averageCpm;
+  /**
+   * The average number of times a unique user saw your ad during the requested
+   * time period. This metric cannot be aggregated, and can only be requested
+   * for date ranges of 92 days or less. This metric is available for following
+   * campaign types - Display, Video, Discovery and App.
+   *
+   * @var 
+   */
+  public $averageImpressionFrequencyPerUser;
+  /**
+   * Average order value is the average revenue you made per order attributed to
+   * your ads. How it works: You report conversions with cart data for completed
+   * purchases on your website. Average order value is the total revenue from
+   * your orders divided by the total number of orders. Example: You received 3
+   * orders which made $10, $15 and $20 worth of revenue. The average order
+   * value is $15 = ($10 + $15 + $20)/3. This metric is only available if you
+   * report conversions with cart data.
+   *
+   * @var string
+   */
+  public $averageOrderValueMicros;
   /**
    * The average quality score.
    *
@@ -510,6 +543,21 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
    */
   public $costMicros;
   /**
+   * Cost of goods sold (COGS) is the total cost of the products you sold in
+   * orders attributed to your ads. How it works: You can add a cost of goods
+   * sold value to every product in Merchant Center. If you report conversions
+   * with cart data, the products you sold are matched with their cost of goods
+   * sold value and this can be used to calculate the gross profit you made on
+   * each order. Example: Someone clicked on a Shopping ad for a hat then bought
+   * the same hat and a shirt. The hat has a cost of goods sold value of $3, the
+   * shirt has a cost of goods sold value of $5. The cost of goods sold for this
+   * order is $8 = $3 + $5. This metric is only available if you report
+   * conversions with cart data.
+   *
+   * @var string
+   */
+  public $costOfGoodsSoldMicros;
+  /**
    * The cost of ad interactions divided by all conversions.
    *
    * @var 
@@ -672,6 +720,39 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
    */
   public $generalInvalidClicks;
   /**
+   * Gross profit margin is the percentage gross profit you made from orders
+   * attributed to your ads, after taking out the cost of goods sold (COGS). How
+   * it works: You report conversions with cart data for completed purchases on
+   * your website. Gross profit margin is the gross profit you made divided by
+   * your total revenue and multiplied by 100%. Gross profit margin calculations
+   * only include products that have a cost of goods sold value in Merchant
+   * Center. Example: Someone bought a hat and a shirt in an order on your
+   * website. The hat is priced $10 and has a cost of goods sold value of $3.
+   * The shirt is priced $20 but has no cost of goods sold value. Gross profit
+   * margin for this order will only take into account the hat because it has a
+   * cost of goods sold value, so it's 70% = ($10 - $3)/$10 x 100%. This metric
+   * is only available if you report conversions with cart data.
+   *
+   * @var 
+   */
+  public $grossProfitMargin;
+  /**
+   * Gross profit is the profit you made from orders attributed to your ads
+   * minus the cost of goods sold (COGS). How it works: Gross profit is the
+   * revenue you made from sales attributed to your ads minus cost of goods
+   * sold. Gross profit calculations only include products that have a cost of
+   * goods sold value in Merchant Center. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt in an order from your
+   * website. The hat is priced $10 and the shirt is priced $20. The hat has a
+   * cost of goods sold value of $3, but the shirt has no cost of goods sold
+   * value. Gross profit for this order will only take into account the hat, so
+   * it's $7 = $10 - $3. This metric is only available if you report conversions
+   * with cart data.
+   *
+   * @var string
+   */
+  public $grossProfitMicros;
+  /**
    * The creative historical quality score.
    *
    * @var string
@@ -819,8 +900,35 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
    * @var 
    */
   public $mobileFriendlyClicksPercentage;
+  /**
+   * Orders is the total number of purchase conversions you received attributed
+   * to your ads. How it works: You report conversions with cart data for
+   * completed purchases on your website. If a conversion is attributed to
+   * previous interactions with your ads (clicks for text or Shopping ads, views
+   * for video ads etc.) it's counted as an order. Example: Someone clicked on a
+   * Shopping ad for a hat then bought the same hat and a shirt in an order on
+   * your website. Even though they bought 2 products, this would count as 1
+   * order. This metric is only available if you report conversions with cart
+   * data.
+   *
+   * @var 
+   */
+  public $orders;
   protected $rawEventConversionMetricsType = GoogleAdsSearchads360V0CommonValue::class;
   protected $rawEventConversionMetricsDataType = 'array';
+  /**
+   * Revenue is the total amount you made from orders attributed to your ads.
+   * How it works: You report conversions with cart data for completed purchases
+   * on your website. Revenue is the total value of all the orders you received
+   * attributed to your ads, minus any discount. Example: Someone clicked on a
+   * Shopping ad for a hat then bought the same hat and a shirt in an order from
+   * your website. The hat is priced $10 and the shirt is priced $20. The entire
+   * order has a $5 discount. The revenue from this order is $25 = ($10 + $20) -
+   * $5. This metric is only available if you report conversions with cart data.
+   *
+   * @var string
+   */
+  public $revenueMicros;
   /**
    * The percentage of the customer's Shopping or Search ad impressions that are
    * shown in the most prominent Shopping position. See
@@ -931,6 +1039,27 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
    * @var 
    */
   public $topImpressionPercentage;
+  /**
+   * The number of unique users who saw your ad during the requested time
+   * period. This metric cannot be aggregated, and can only be requested for
+   * date ranges of 92 days or less. This metric is available for following
+   * campaign types - Display, Video, Discovery and App.
+   *
+   * @var string
+   */
+  public $uniqueUsers;
+  /**
+   * Units sold is the total number of products sold from orders attributed to
+   * your ads. How it works: You report conversions with cart data for completed
+   * purchases on your website. Units sold is the total number of products sold
+   * from all orders attributed to your ads. Example: Someone clicked on a
+   * Shopping ad for a hat then bought the same hat, a shirt and a jacket. The
+   * units sold in this order is 3. This metric is only available if you report
+   * conversions with cart data.
+   *
+   * @var 
+   */
+  public $unitsSold;
   /**
    * The value of all conversions divided by the number of all conversions.
    *
@@ -1091,6 +1220,14 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   {
     return $this->allConversionsValuePerCost;
   }
+  public function setAverageCartSize($averageCartSize)
+  {
+    $this->averageCartSize = $averageCartSize;
+  }
+  public function getAverageCartSize()
+  {
+    return $this->averageCartSize;
+  }
   public function setAverageCost($averageCost)
   {
     $this->averageCost = $averageCost;
@@ -1114,6 +1251,36 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public function getAverageCpm()
   {
     return $this->averageCpm;
+  }
+  public function setAverageImpressionFrequencyPerUser($averageImpressionFrequencyPerUser)
+  {
+    $this->averageImpressionFrequencyPerUser = $averageImpressionFrequencyPerUser;
+  }
+  public function getAverageImpressionFrequencyPerUser()
+  {
+    return $this->averageImpressionFrequencyPerUser;
+  }
+  /**
+   * Average order value is the average revenue you made per order attributed to
+   * your ads. How it works: You report conversions with cart data for completed
+   * purchases on your website. Average order value is the total revenue from
+   * your orders divided by the total number of orders. Example: You received 3
+   * orders which made $10, $15 and $20 worth of revenue. The average order
+   * value is $15 = ($10 + $15 + $20)/3. This metric is only available if you
+   * report conversions with cart data.
+   *
+   * @param string $averageOrderValueMicros
+   */
+  public function setAverageOrderValueMicros($averageOrderValueMicros)
+  {
+    $this->averageOrderValueMicros = $averageOrderValueMicros;
+  }
+  /**
+   * @return string
+   */
+  public function getAverageOrderValueMicros()
+  {
+    return $this->averageOrderValueMicros;
   }
   public function setAverageQualityScore($averageQualityScore)
   {
@@ -1489,6 +1656,31 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   {
     return $this->costMicros;
   }
+  /**
+   * Cost of goods sold (COGS) is the total cost of the products you sold in
+   * orders attributed to your ads. How it works: You can add a cost of goods
+   * sold value to every product in Merchant Center. If you report conversions
+   * with cart data, the products you sold are matched with their cost of goods
+   * sold value and this can be used to calculate the gross profit you made on
+   * each order. Example: Someone clicked on a Shopping ad for a hat then bought
+   * the same hat and a shirt. The hat has a cost of goods sold value of $3, the
+   * shirt has a cost of goods sold value of $5. The cost of goods sold for this
+   * order is $8 = $3 + $5. This metric is only available if you report
+   * conversions with cart data.
+   *
+   * @param string $costOfGoodsSoldMicros
+   */
+  public function setCostOfGoodsSoldMicros($costOfGoodsSoldMicros)
+  {
+    $this->costOfGoodsSoldMicros = $costOfGoodsSoldMicros;
+  }
+  /**
+   * @return string
+   */
+  public function getCostOfGoodsSoldMicros()
+  {
+    return $this->costOfGoodsSoldMicros;
+  }
   public function setCostPerAllConversions($costPerAllConversions)
   {
     $this->costPerAllConversions = $costPerAllConversions;
@@ -1681,6 +1873,40 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public function getGeneralInvalidClicks()
   {
     return $this->generalInvalidClicks;
+  }
+  public function setGrossProfitMargin($grossProfitMargin)
+  {
+    $this->grossProfitMargin = $grossProfitMargin;
+  }
+  public function getGrossProfitMargin()
+  {
+    return $this->grossProfitMargin;
+  }
+  /**
+   * Gross profit is the profit you made from orders attributed to your ads
+   * minus the cost of goods sold (COGS). How it works: Gross profit is the
+   * revenue you made from sales attributed to your ads minus cost of goods
+   * sold. Gross profit calculations only include products that have a cost of
+   * goods sold value in Merchant Center. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt in an order from your
+   * website. The hat is priced $10 and the shirt is priced $20. The hat has a
+   * cost of goods sold value of $3, but the shirt has no cost of goods sold
+   * value. Gross profit for this order will only take into account the hat, so
+   * it's $7 = $10 - $3. This metric is only available if you report conversions
+   * with cart data.
+   *
+   * @param string $grossProfitMicros
+   */
+  public function setGrossProfitMicros($grossProfitMicros)
+  {
+    $this->grossProfitMicros = $grossProfitMicros;
+  }
+  /**
+   * @return string
+   */
+  public function getGrossProfitMicros()
+  {
+    return $this->grossProfitMicros;
   }
   /**
    * The creative historical quality score.
@@ -1945,6 +2171,14 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   {
     return $this->mobileFriendlyClicksPercentage;
   }
+  public function setOrders($orders)
+  {
+    $this->orders = $orders;
+  }
+  public function getOrders()
+  {
+    return $this->orders;
+  }
   /**
    * The raw event conversion metrics.
    *
@@ -1960,6 +2194,29 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public function getRawEventConversionMetrics()
   {
     return $this->rawEventConversionMetrics;
+  }
+  /**
+   * Revenue is the total amount you made from orders attributed to your ads.
+   * How it works: You report conversions with cart data for completed purchases
+   * on your website. Revenue is the total value of all the orders you received
+   * attributed to your ads, minus any discount. Example: Someone clicked on a
+   * Shopping ad for a hat then bought the same hat and a shirt in an order from
+   * your website. The hat is priced $10 and the shirt is priced $20. The entire
+   * order has a $5 discount. The revenue from this order is $25 = ($10 + $20) -
+   * $5. This metric is only available if you report conversions with cart data.
+   *
+   * @param string $revenueMicros
+   */
+  public function setRevenueMicros($revenueMicros)
+  {
+    $this->revenueMicros = $revenueMicros;
+  }
+  /**
+   * @return string
+   */
+  public function getRevenueMicros()
+  {
+    return $this->revenueMicros;
   }
   public function setSearchAbsoluteTopImpressionShare($searchAbsoluteTopImpressionShare)
   {
@@ -2056,6 +2313,33 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public function getTopImpressionPercentage()
   {
     return $this->topImpressionPercentage;
+  }
+  /**
+   * The number of unique users who saw your ad during the requested time
+   * period. This metric cannot be aggregated, and can only be requested for
+   * date ranges of 92 days or less. This metric is available for following
+   * campaign types - Display, Video, Discovery and App.
+   *
+   * @param string $uniqueUsers
+   */
+  public function setUniqueUsers($uniqueUsers)
+  {
+    $this->uniqueUsers = $uniqueUsers;
+  }
+  /**
+   * @return string
+   */
+  public function getUniqueUsers()
+  {
+    return $this->uniqueUsers;
+  }
+  public function setUnitsSold($unitsSold)
+  {
+    $this->unitsSold = $unitsSold;
+  }
+  public function getUnitsSold()
+  {
+    return $this->unitsSold;
   }
   public function setValuePerAllConversions($valuePerAllConversions)
   {

@@ -240,6 +240,12 @@ class GoogleAdsSearchads360V0ResourcesAdGroup extends \Google\Collection
    */
   public $engineStatus;
   /**
+   * URL template for appending params to Final URL.
+   *
+   * @var string
+   */
+  public $finalUrlSuffix;
+  /**
    * Output only. The ID of the ad group.
    *
    * @var string
@@ -303,6 +309,12 @@ class GoogleAdsSearchads360V0ResourcesAdGroup extends \Google\Collection
   public $status;
   protected $targetingSettingType = GoogleAdsSearchads360V0CommonTargetingSetting::class;
   protected $targetingSettingDataType = '';
+  /**
+   * The URL template for constructing a tracking URL.
+   *
+   * @var string
+   */
+  public $trackingUrlTemplate;
   /**
    * Immutable. The type of the ad group.
    *
@@ -436,6 +448,22 @@ class GoogleAdsSearchads360V0ResourcesAdGroup extends \Google\Collection
   public function getEngineStatus()
   {
     return $this->engineStatus;
+  }
+  /**
+   * URL template for appending params to Final URL.
+   *
+   * @param string $finalUrlSuffix
+   */
+  public function setFinalUrlSuffix($finalUrlSuffix)
+  {
+    $this->finalUrlSuffix = $finalUrlSuffix;
+  }
+  /**
+   * @return string
+   */
+  public function getFinalUrlSuffix()
+  {
+    return $this->finalUrlSuffix;
   }
   /**
    * Output only. The ID of the ad group.
@@ -596,6 +624,22 @@ class GoogleAdsSearchads360V0ResourcesAdGroup extends \Google\Collection
   public function getTargetingSetting()
   {
     return $this->targetingSetting;
+  }
+  /**
+   * The URL template for constructing a tracking URL.
+   *
+   * @param string $trackingUrlTemplate
+   */
+  public function setTrackingUrlTemplate($trackingUrlTemplate)
+  {
+    $this->trackingUrlTemplate = $trackingUrlTemplate;
+  }
+  /**
+   * @return string
+   */
+  public function getTrackingUrlTemplate()
+  {
+    return $this->trackingUrlTemplate;
   }
   /**
    * Immutable. The type of the ad group.
