@@ -217,6 +217,8 @@ class Instance extends \Google\Model
   public $name;
   protected $oauthConfigType = OAuthConfig::class;
   protected $oauthConfigDataType = '';
+  protected $periodicExportConfigType = PeriodicExportConfig::class;
+  protected $periodicExportConfigDataType = '';
   /**
    * Platform edition.
    *
@@ -640,6 +642,22 @@ class Instance extends \Google\Model
   public function getOauthConfig()
   {
     return $this->oauthConfig;
+  }
+  /**
+   * Optional. Configuration for periodic export.
+   *
+   * @param PeriodicExportConfig $periodicExportConfig
+   */
+  public function setPeriodicExportConfig(PeriodicExportConfig $periodicExportConfig)
+  {
+    $this->periodicExportConfig = $periodicExportConfig;
+  }
+  /**
+   * @return PeriodicExportConfig
+   */
+  public function getPeriodicExportConfig()
+  {
+    return $this->periodicExportConfig;
   }
   /**
    * Platform edition.
