@@ -32,6 +32,8 @@ class SubscriptionPurchaseLineItem extends \Google\Model
    * @var string
    */
   public $expiryTime;
+  protected $itemReplacementType = ItemReplacement::class;
+  protected $itemReplacementDataType = '';
   /**
    * The order id of the latest successful order associated with this item. Not
    * present if the item is not owned by the user yet (e.g. the item being
@@ -117,6 +119,24 @@ class SubscriptionPurchaseLineItem extends \Google\Model
   public function getExpiryTime()
   {
     return $this->expiryTime;
+  }
+  /**
+   * Details of the item being replaced. This field is only populated if this
+   * item replaced another item in a previous subscription and is only available
+   * for 60 days after the purchase time.
+   *
+   * @param ItemReplacement $itemReplacement
+   */
+  public function setItemReplacement(ItemReplacement $itemReplacement)
+  {
+    $this->itemReplacement = $itemReplacement;
+  }
+  /**
+   * @return ItemReplacement
+   */
+  public function getItemReplacement()
+  {
+    return $this->itemReplacement;
   }
   /**
    * The order id of the latest successful order associated with this item. Not

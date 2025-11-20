@@ -121,6 +121,8 @@ class SubscriptionPurchaseV2 extends \Google\Collection
    * @var string
    */
   public $linkedPurchaseToken;
+  protected $outOfAppPurchaseContextType = OutOfAppPurchaseContext::class;
+  protected $outOfAppPurchaseContextDataType = '';
   protected $pausedStateContextType = PausedStateContext::class;
   protected $pausedStateContextDataType = '';
   /**
@@ -278,6 +280,26 @@ class SubscriptionPurchaseV2 extends \Google\Collection
   public function getLinkedPurchaseToken()
   {
     return $this->linkedPurchaseToken;
+  }
+  /**
+   * Additional context for out of app purchases. This information is only
+   * present for re-subscription purchases (subscription purchases made after
+   * the previous subscription of the same product has expired) made through the
+   * Google Play subscriptions center. This field will be removed after you
+   * acknowledge the subscription.
+   *
+   * @param OutOfAppPurchaseContext $outOfAppPurchaseContext
+   */
+  public function setOutOfAppPurchaseContext(OutOfAppPurchaseContext $outOfAppPurchaseContext)
+  {
+    $this->outOfAppPurchaseContext = $outOfAppPurchaseContext;
+  }
+  /**
+   * @return OutOfAppPurchaseContext
+   */
+  public function getOutOfAppPurchaseContext()
+  {
+    return $this->outOfAppPurchaseContext;
   }
   /**
    * Additional context around paused subscriptions. Only present if the
