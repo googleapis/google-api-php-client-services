@@ -37,6 +37,20 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
   public const WEB_GROUNDING_TYPE_WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH = 'WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH';
   protected $customerPolicyType = GoogleCloudDiscoveryengineV1AssistantCustomerPolicy::class;
   protected $customerPolicyDataType = '';
+  /**
+   * Optional. Description for additional information. Expected to be shown on
+   * the configuration UI, not to the users of the assistant.
+   *
+   * @var string
+   */
+  public $description;
+  /**
+   * Required. The assistant display name. It must be a UTF-8 encoded string
+   * with a length limit of 128 characters.
+   *
+   * @var string
+   */
+  public $displayName;
   protected $enabledToolsType = GoogleCloudDiscoveryengineV1AssistantToolList::class;
   protected $enabledToolsDataType = 'map';
   protected $generationConfigType = GoogleCloudDiscoveryengineV1AssistantGenerationConfig::class;
@@ -72,6 +86,40 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
   public function getCustomerPolicy()
   {
     return $this->customerPolicy;
+  }
+  /**
+   * Optional. Description for additional information. Expected to be shown on
+   * the configuration UI, not to the users of the assistant.
+   *
+   * @param string $description
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
+  }
+  /**
+   * Required. The assistant display name. It must be a UTF-8 encoded string
+   * with a length limit of 128 characters.
+   *
+   * @param string $displayName
+   */
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  /**
+   * @return string
+   */
+  public function getDisplayName()
+  {
+    return $this->displayName;
   }
   /**
    * Optional. Note: not implemented yet. Use enabled_actions instead. The

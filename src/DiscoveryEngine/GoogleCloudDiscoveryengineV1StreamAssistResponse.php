@@ -17,8 +17,9 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Model
+class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Collection
 {
+  protected $collection_key = 'invocationTools';
   protected $answerType = GoogleCloudDiscoveryengineV1AssistAnswer::class;
   protected $answerDataType = '';
   /**
@@ -28,6 +29,12 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Model
    * @var string
    */
   public $assistToken;
+  /**
+   * The tool names of the tools that were invoked.
+   *
+   * @var string[]
+   */
+  public $invocationTools;
   protected $sessionInfoType = GoogleCloudDiscoveryengineV1StreamAssistResponseSessionInfo::class;
   protected $sessionInfoDataType = '';
 
@@ -71,6 +78,22 @@ class GoogleCloudDiscoveryengineV1StreamAssistResponse extends \Google\Model
   public function getAssistToken()
   {
     return $this->assistToken;
+  }
+  /**
+   * The tool names of the tools that were invoked.
+   *
+   * @param string[] $invocationTools
+   */
+  public function setInvocationTools($invocationTools)
+  {
+    $this->invocationTools = $invocationTools;
+  }
+  /**
+   * @return string[]
+   */
+  public function getInvocationTools()
+  {
+    return $this->invocationTools;
   }
   /**
    * Session information. Only included in the final StreamAssistResponse of the
