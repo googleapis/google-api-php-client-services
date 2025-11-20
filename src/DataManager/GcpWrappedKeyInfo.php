@@ -36,8 +36,9 @@ class GcpWrappedKeyInfo extends \Google\Model
   /**
    * Required. Google Cloud Platform [Cloud Key Management Service resource
    * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the
-   * format of "projects/{project}/locations/{location}/keyRings/{key_ring}/cryp
-   * toKeys/{key}".
+   * format of `projects/{project}/locations/{location}/keyRings/{key_ring}/cryp
+   * toKeys/{key}` or `gcp-kms://projects/{project}/locations/{location}/keyRing
+   * s/{key_ring}/cryptoKeys/{key}`
    *
    * @var string
    */
@@ -75,8 +76,9 @@ class GcpWrappedKeyInfo extends \Google\Model
   /**
    * Required. Google Cloud Platform [Cloud Key Management Service resource
    * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the
-   * format of "projects/{project}/locations/{location}/keyRings/{key_ring}/cryp
-   * toKeys/{key}".
+   * format of `projects/{project}/locations/{location}/keyRings/{key_ring}/cryp
+   * toKeys/{key}` or `gcp-kms://projects/{project}/locations/{location}/keyRing
+   * s/{key_ring}/cryptoKeys/{key}`
    *
    * @param string $kekUri
    */

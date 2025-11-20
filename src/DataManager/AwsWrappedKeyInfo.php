@@ -35,7 +35,8 @@ class AwsWrappedKeyInfo extends \Google\Model
   public $encryptedDek;
   /**
    * Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in
-   * the format of "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+   * the format of `arn:{partition}:kms:{region}:{account_id}:key/{key_id}` or
+   * `aws-kms://arn:{partition}:kms:{region}:{account_id}:key/{key_id}`
    *
    * @var string
    */
@@ -49,7 +50,7 @@ class AwsWrappedKeyInfo extends \Google\Model
   /**
    * Required. The Amazon Resource Name of the IAM Role to assume for KMS
    * decryption access. Should be in the format of
-   * "arn:{partition}:iam::{account_id}:role/{role_name}"
+   * `arn:{partition}:iam::{account_id}:role/{role_name}`
    *
    * @var string
    */
@@ -73,7 +74,8 @@ class AwsWrappedKeyInfo extends \Google\Model
   }
   /**
    * Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in
-   * the format of "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+   * the format of `arn:{partition}:kms:{region}:{account_id}:key/{key_id}` or
+   * `aws-kms://arn:{partition}:kms:{region}:{account_id}:key/{key_id}`
    *
    * @param string $kekUri
    */
@@ -109,7 +111,7 @@ class AwsWrappedKeyInfo extends \Google\Model
   /**
    * Required. The Amazon Resource Name of the IAM Role to assume for KMS
    * decryption access. Should be in the format of
-   * "arn:{partition}:iam::{account_id}:role/{role_name}"
+   * `arn:{partition}:iam::{account_id}:role/{role_name}`
    *
    * @param string $roleArn
    */
