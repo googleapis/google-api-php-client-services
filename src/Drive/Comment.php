@@ -30,8 +30,8 @@ class Comment extends \Google\Collection
    */
   public $anchor;
   /**
-   * Output only. The email of the user who is assigned to this comment, if none
-   * is assigned this will be unset.
+   * Output only. The email address of the user assigned to this comment. If no
+   * user is assigned, the field is unset.
    *
    * @var string
    */
@@ -78,8 +78,8 @@ class Comment extends \Google\Collection
    */
   public $kind;
   /**
-   * Output only. The emails of the users who were mentioned in this comment, if
-   * none were mentioned this will be an empty list.
+   * Output only. A list of email addresses for users mentioned in this comment.
+   * If no users are mentioned, the list is empty.
    *
    * @var string[]
    */
@@ -122,8 +122,8 @@ class Comment extends \Google\Collection
     return $this->anchor;
   }
   /**
-   * Output only. The email of the user who is assigned to this comment, if none
-   * is assigned this will be unset.
+   * Output only. The email address of the user assigned to this comment. If no
+   * user is assigned, the field is unset.
    *
    * @param string $assigneeEmailAddress
    */
@@ -255,8 +255,8 @@ class Comment extends \Google\Collection
     return $this->kind;
   }
   /**
-   * Output only. The emails of the users who were mentioned in this comment, if
-   * none were mentioned this will be an empty list.
+   * Output only. A list of email addresses for users mentioned in this comment.
+   * If no users are mentioned, the list is empty.
    *
    * @param string[] $mentionedEmailAddresses
    */
