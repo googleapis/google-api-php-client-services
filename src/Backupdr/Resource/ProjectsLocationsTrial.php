@@ -17,6 +17,7 @@
 
 namespace Google\Service\Backupdr\Resource;
 
+use Google\Service\Backupdr\EndTrialRequest;
 use Google\Service\Backupdr\SubscribeTrialRequest;
 use Google\Service\Backupdr\Trial;
 
@@ -30,6 +31,22 @@ use Google\Service\Backupdr\Trial;
  */
 class ProjectsLocationsTrial extends \Google\Service\Resource
 {
+  /**
+   * Ends the trial for a project (trial.end)
+   *
+   * @param string $parent Required. The parent resource where this trial will be
+   * ended.
+   * @param EndTrialRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Trial
+   * @throws \Google\Service\Exception
+   */
+  public function end($parent, EndTrialRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('end', [$params], Trial::class);
+  }
   /**
    * Subscribes to a trial for a project (trial.subscribe)
    *

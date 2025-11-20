@@ -1153,7 +1153,17 @@ class Backupdr extends \Google\Service
         'trial',
         [
           'methods' => [
-            'subscribe' => [
+            'end' => [
+              'path' => 'v1/{+parent}/trial:end',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'subscribe' => [
               'path' => 'v1/{+parent}/trial:subscribe',
               'httpMethod' => 'POST',
               'parameters' => [

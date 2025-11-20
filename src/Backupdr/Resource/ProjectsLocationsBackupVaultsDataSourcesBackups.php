@@ -70,9 +70,13 @@ class ProjectsLocationsBackupVaultsDataSourcesBackups extends \Google\Service\Re
    * @opt_param string filter Optional. A filter expression that filters the
    * results fetched in the response. The expression must specify the field name,
    * a comparison operator, and the value that you want to use for filtering.
-   * Supported fields:
+   * Supported fields: * name * state * backup_type * create_time * expire_time *
+   * enforced_retention_end_time * gcp_backup_plan_info.backup_plan *
+   * cloud_sql_instance_backup_properties.instance_tier *
+   * cloud_sql_instance_backup_properties.database_installed_version
    * @opt_param string orderBy Optional. A comma-separated list of fields to order
    * by, sorted in ascending order. Use "desc" after a field name for descending.
+   * Supported fields: * name
    * @opt_param int pageSize Optional. The maximum number of Backups to return.
    * The service may return fewer than this value. If unspecified, at most 50
    * Backups will be returned. The maximum value is 100; values above 100 will be
