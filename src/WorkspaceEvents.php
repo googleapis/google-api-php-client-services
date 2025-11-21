@@ -98,7 +98,6 @@ class WorkspaceEvents extends \Google\Service
   public $subscriptions;
   public $tasks;
   public $tasks_pushNotificationConfigs;
-  public $v1;
   public $rootUrlTemplate;
 
   /**
@@ -350,20 +349,6 @@ class WorkspaceEvents extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->v1 = new WorkspaceEvents\Resource\V1(
-        $this,
-        $this->serviceName,
-        'v1',
-        [
-          'methods' => [
-            'getCard' => [
-              'path' => 'v1/card',
-              'httpMethod' => 'GET',
-              'parameters' => [],
             ],
           ]
         ]
