@@ -64,7 +64,7 @@ class FloodlightGroupsFloodlightActivities extends \Google\Service\Resource
    * a suffix "desc" should be added to the field name. Example: `displayName
    * desc`.
    * @opt_param int pageSize Optional. Requested page size. Must be between `1`
-   * and `100`. If unspecified will default to `100`. Returns error code
+   * and `200`. If unspecified will default to `100`. Returns error code
    * `INVALID_ARGUMENT` if an invalid value is specified.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return. Typically, this is the value of next_page_token

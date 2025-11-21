@@ -92,6 +92,8 @@ class SdfDownloadTaskMetadata extends \Google\Model
   /**
    * SDF version 7. Read the [v7 migration guide](/display-video/api/structured-
    * data-file/v7-migration-guide) before migrating to this version.
+   *
+   * @deprecated
    */
   public const VERSION_SDF_VERSION_7 = 'SDF_VERSION_7';
   /**

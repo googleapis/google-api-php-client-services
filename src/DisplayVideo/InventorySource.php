@@ -396,6 +396,10 @@ class InventorySource extends \Google\Collection
    */
   public const EXCHANGE_EXCHANGE_SNAP = 'EXCHANGE_SNAP';
   /**
+   * Cadent.
+   */
+  public const EXCHANGE_EXCHANGE_CADENT = 'EXCHANGE_CADENT';
+  /**
    * The product type is not specified or is unknown in this version. Modifying
    * inventory sources of this product type are not supported via API.
    */
@@ -686,7 +690,8 @@ class InventorySource extends \Google\Collection
    * EXCHANGE_HIVESTACK, EXCHANGE_DRAX, EXCHANGE_APPLOVIN_GBID,
    * EXCHANGE_FYBER_GBID, EXCHANGE_UNITY_GBID, EXCHANGE_CHARTBOOST_GBID,
    * EXCHANGE_ADMOST_GBID, EXCHANGE_TOPON_GBID, EXCHANGE_NETFLIX, EXCHANGE_CORE,
-   * EXCHANGE_COMMERCE_GRID, EXCHANGE_SPOTIFY, EXCHANGE_TUBI, EXCHANGE_SNAP
+   * EXCHANGE_COMMERCE_GRID, EXCHANGE_SPOTIFY, EXCHANGE_TUBI, EXCHANGE_SNAP,
+   * EXCHANGE_CADENT
    *
    * @param self::EXCHANGE_* $exchange
    */

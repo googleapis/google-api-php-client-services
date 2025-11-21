@@ -473,6 +473,10 @@ class AlgorithmRulesComparisonValue extends \Google\Model
    */
   public const EXCHANGE_VALUE_EXCHANGE_SNAP = 'EXCHANGE_SNAP';
   /**
+   * Cadent.
+   */
+  public const EXCHANGE_VALUE_EXCHANGE_CADENT = 'EXCHANGE_CADENT';
+  /**
    * On screen position is not specified in this version. This enum is a place
    * holder for a default value and does not represent a real on screen
    * position.
@@ -772,7 +776,8 @@ class AlgorithmRulesComparisonValue extends \Google\Model
    * EXCHANGE_HIVESTACK, EXCHANGE_DRAX, EXCHANGE_APPLOVIN_GBID,
    * EXCHANGE_FYBER_GBID, EXCHANGE_UNITY_GBID, EXCHANGE_CHARTBOOST_GBID,
    * EXCHANGE_ADMOST_GBID, EXCHANGE_TOPON_GBID, EXCHANGE_NETFLIX, EXCHANGE_CORE,
-   * EXCHANGE_COMMERCE_GRID, EXCHANGE_SPOTIFY, EXCHANGE_TUBI, EXCHANGE_SNAP
+   * EXCHANGE_COMMERCE_GRID, EXCHANGE_SPOTIFY, EXCHANGE_TUBI, EXCHANGE_SNAP,
+   * EXCHANGE_CADENT
    *
    * @param self::EXCHANGE_VALUE_* $exchangeValue
    */

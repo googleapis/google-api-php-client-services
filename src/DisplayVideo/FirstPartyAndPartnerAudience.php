@@ -138,7 +138,7 @@ class FirstPartyAndPartnerAudience extends \Google\Model
    */
   public $audienceSource;
   /**
-   * Output only. The type of the audience.
+   * Immutable. The type of the audience.
    *
    * @var string
    */
@@ -146,8 +146,8 @@ class FirstPartyAndPartnerAudience extends \Google\Model
   protected $contactInfoListType = ContactInfoList::class;
   protected $contactInfoListDataType = '';
   /**
-   * Output only. The user-provided description of the audience. Only applicable
-   * to first party audiences.
+   * Optional. The user-provided description of the audience. Only applicable to
+   * first party audiences.
    *
    * @var string
    */
@@ -192,7 +192,7 @@ class FirstPartyAndPartnerAudience extends \Google\Model
    */
   public $displayMobileWebAudienceSize;
   /**
-   * Output only. The display name of the first party and partner audience.
+   * Optional. The display name of the first party and partner audience.
    *
    * @var string
    */
@@ -221,10 +221,10 @@ class FirstPartyAndPartnerAudience extends \Google\Model
    */
   public $gmailAudienceSize;
   /**
-   * Output only. The duration in days that an entry remains in the audience
-   * after the qualifying event. The set value must be greater than 0 and less
-   * than or equal to 540. Only applicable to first party audiences. This field
-   * is required if one of the following audience_type is used: *
+   * Optional. The duration in days that an entry remains in the audience after
+   * the qualifying event. The set value must be greater than 0 and less than or
+   * equal to 540. Only applicable to first party audiences. This field is
+   * required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    *
    * @var string
@@ -305,7 +305,7 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->audienceSource;
   }
   /**
-   * Output only. The type of the audience.
+   * Immutable. The type of the audience.
    *
    * Accepted values: AUDIENCE_TYPE_UNSPECIFIED, CUSTOMER_MATCH_CONTACT_INFO,
    * CUSTOMER_MATCH_DEVICE_ID, CUSTOMER_MATCH_USER_ID, ACTIVITY_BASED,
@@ -343,8 +343,8 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->contactInfoList;
   }
   /**
-   * Output only. The user-provided description of the audience. Only applicable
-   * to first party audiences.
+   * Optional. The user-provided description of the audience. Only applicable to
+   * first party audiences.
    *
    * @param string $description
    */
@@ -439,7 +439,7 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->displayMobileWebAudienceSize;
   }
   /**
-   * Output only. The display name of the first party and partner audience.
+   * Optional. The display name of the first party and partner audience.
    *
    * @param string $displayName
    */
@@ -511,10 +511,10 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->gmailAudienceSize;
   }
   /**
-   * Output only. The duration in days that an entry remains in the audience
-   * after the qualifying event. The set value must be greater than 0 and less
-   * than or equal to 540. Only applicable to first party audiences. This field
-   * is required if one of the following audience_type is used: *
+   * Optional. The duration in days that an entry remains in the audience after
+   * the qualifying event. The set value must be greater than 0 and less than or
+   * equal to 540. Only applicable to first party audiences. This field is
+   * required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    *
    * @param string $membershipDurationDays

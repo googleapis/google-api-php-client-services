@@ -371,6 +371,10 @@ class GuaranteedOrder extends \Google\Collection
    * Snap.
    */
   public const EXCHANGE_EXCHANGE_SNAP = 'EXCHANGE_SNAP';
+  /**
+   * Cadent.
+   */
+  public const EXCHANGE_EXCHANGE_CADENT = 'EXCHANGE_CADENT';
   protected $collection_key = 'readAdvertiserIds';
   /**
    * Output only. The ID of default advertiser of the guaranteed order. The
@@ -551,7 +555,8 @@ class GuaranteedOrder extends \Google\Collection
    * EXCHANGE_HIVESTACK, EXCHANGE_DRAX, EXCHANGE_APPLOVIN_GBID,
    * EXCHANGE_FYBER_GBID, EXCHANGE_UNITY_GBID, EXCHANGE_CHARTBOOST_GBID,
    * EXCHANGE_ADMOST_GBID, EXCHANGE_TOPON_GBID, EXCHANGE_NETFLIX, EXCHANGE_CORE,
-   * EXCHANGE_COMMERCE_GRID, EXCHANGE_SPOTIFY, EXCHANGE_TUBI, EXCHANGE_SNAP
+   * EXCHANGE_COMMERCE_GRID, EXCHANGE_SPOTIFY, EXCHANGE_TUBI, EXCHANGE_SNAP,
+   * EXCHANGE_CADENT
    *
    * @param self::EXCHANGE_* $exchange
    */
