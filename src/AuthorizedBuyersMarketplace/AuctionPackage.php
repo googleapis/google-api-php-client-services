@@ -61,6 +61,8 @@ class AuctionPackage extends \Google\Collection
    * @var string[]
    */
   public $eligibleSeatIds;
+  protected $floorPriceCpmType = Money::class;
+  protected $floorPriceCpmDataType = '';
   /**
    * Immutable. The unique identifier for the auction package. Format:
    * `buyers/{accountId}/auctionPackages/{auctionPackageId}` The
@@ -199,6 +201,24 @@ class AuctionPackage extends \Google\Collection
   public function getEligibleSeatIds()
   {
     return $this->eligibleSeatIds;
+  }
+  /**
+   * Output only. The minimum price a buyer has to bid to compete in this
+   * auction package. If this is field is not populated, there is no floor
+   * price.
+   *
+   * @param Money $floorPriceCpm
+   */
+  public function setFloorPriceCpm(Money $floorPriceCpm)
+  {
+    $this->floorPriceCpm = $floorPriceCpm;
+  }
+  /**
+   * @return Money
+   */
+  public function getFloorPriceCpm()
+  {
+    return $this->floorPriceCpm;
   }
   /**
    * Immutable. The unique identifier for the auction package. Format:
