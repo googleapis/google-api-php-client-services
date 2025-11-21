@@ -17,11 +17,14 @@
 
 namespace Google\Service\BackupforGKE\Resource;
 
+use Google\Service\BackupforGKE\GetTagsResponse;
 use Google\Service\BackupforGKE\GoogleLongrunningOperation;
 use Google\Service\BackupforGKE\ListRestorePlansResponse;
 use Google\Service\BackupforGKE\Policy;
 use Google\Service\BackupforGKE\RestorePlan;
 use Google\Service\BackupforGKE\SetIamPolicyRequest;
+use Google\Service\BackupforGKE\SetTagsRequest;
+use Google\Service\BackupforGKE\SetTagsResponse;
 use Google\Service\BackupforGKE\TestIamPermissionsRequest;
 use Google\Service\BackupforGKE\TestIamPermissionsResponse;
 
@@ -126,6 +129,20 @@ class ProjectsLocationsRestorePlans extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
+   * Returns tags directly bound to a GCP resource. (restorePlans.getTags)
+   *
+   * @param string $name Required. The full resource name of the service resource.
+   * @param array $optParams Optional parameters.
+   * @return GetTagsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function getTags($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getTags', [$params], GetTagsResponse::class);
+  }
+  /**
    * Lists RestorePlans in a given location.
    * (restorePlans.listProjectsLocationsRestorePlans)
    *
@@ -199,6 +216,21 @@ class ProjectsLocationsRestorePlans extends \Google\Service\Resource
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Updates tags directly bound to a GCP resource. (restorePlans.setTags)
+   *
+   * @param string $name Required. The full resource name of the service resource.
+   * @param SetTagsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return SetTagsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function setTags($name, SetTagsRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setTags', [$params], SetTagsResponse::class);
   }
   /**
    * Returns permissions that a caller has on the specified resource. If the
