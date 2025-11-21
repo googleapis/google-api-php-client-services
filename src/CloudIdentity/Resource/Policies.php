@@ -34,7 +34,7 @@ class Policies extends \Google\Service\Resource
    * Get a policy. (policies.get)
    *
    * @param string $name Required. The name of the policy to retrieve. Format:
-   * "policies/{policy}".
+   * `policies/{policy}`.
    * @param array $optParams Optional parameters.
    * @return Policy
    * @throws \Google\Service\Exception
