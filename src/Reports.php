@@ -123,6 +123,10 @@ class Reports extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'resourceDetailsFilter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'startTime' => [
                   'location' => 'query',
                   'type' => 'string',

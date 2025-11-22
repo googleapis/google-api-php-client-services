@@ -132,6 +132,47 @@ class Activities extends \Google\Service\Resource
    * multiple pages has a `nextPageToken` property in the response. In your
    * follow-on request getting the next page of the report, enter the
    * `nextPageToken` value in the `pageToken` query string.
+   * @opt_param string resourceDetailsFilter Optional. The `resourceDetailsFilter`
+   * query string is an AND separated list composed of [Resource
+   * Details](#resourcedetails) fields manipulated by relational operators.
+   * Resource Details Filters are in the form `{resourceDetails.field1}{relational
+   * operator}{field1 value} AND {resourceDetails.field2}{relational
+   * operator}{field2 value}...` All the inner fields are traversed using the `.`
+   * operator, as shown in the following example: ``` resourceDetails.id =
+   * "resourceId" AND resourceDetails.appliedLabels.id = "appliedLabelId" AND
+   * resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ```
+   * `resourceDetailsFilter` query supports these relational operators: *
+   * `=`—'equal to'. * `!=`—'not equal to'. * `:`—'exists'. This is used for
+   * filtering on repeated fields. [`FieldValue`](#fieldvalue) types that are
+   * repeated in nature uses `exists` operator for filtering. The following
+   * [`FieldValue`](#fieldvalue) types are repeated: *
+   * [`TextListValue`](#textlistvalue) *
+   * [`SelectionListValue`](#selectionlistvalue) *
+   * [`UserListValue`](#userlistvalue) For example, in the following filter,
+   * [`SelectionListValue`](#selectionlistvalue), is a repeated field. The filter
+   * checks whether [`SelectionListValue`](#selectionlistvalue) contains
+   * `selection_id`: ``` resourceDetails.id = "resourceId" AND
+   * resourceDetails.appliedLabels.id = "appliedLabelId" AND
+   * resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" AND
+   * resourceDetails.appliedLabels.fieldValue.type = "SELECTION_LIST_VALUE" AND
+   * resourceDetails.appliedLabels.fieldValue.selectionListValue.id: "id" ```
+   * **Usage** ``` GET...&resourceDetailsFilter=resourceDetails.id = "resourceId"
+   * AND resourceDetails.appliedLabels.id = "appliedLabelId" GET...&resourceDetail
+   * sFilter=resourceDetails.id=%22resourceId%22%20AND%20resourceDetails.appliedLa
+   * bels.id=%22appliedLabelId%22 ``` **Note the following**: * You must URL
+   * encode the query string before sending the request. * The API supports a
+   * maximum of 5 fields separated by the AND operator. - When filtering on deeper
+   * levels (e.g., [`AppliedLabel`](#appliedlabel), [`FieldValue`](#fieldvalue)),
+   * the IDs of all preceding levels in the hierarchy must be included in the
+   * filter. For example: Filtering on [`FieldValue`](#fieldvalue) requires
+   * [`AppliedLabel`](#appliedlabel) ID and resourceDetails ID to be present.
+   * *Sample Query*: ``` resourceDetails.id = "resourceId" AND
+   * resourceDetails.appliedLabels.id = "appliedLabelId" AND
+   * resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ``` * Filtering
+   * on inner [`FieldValue`](#fieldvalue) types like `longTextValue` and
+   * `textValue` requires `resourceDetails.appliedLabels.fieldValue.type` to be
+   * present. * Only Filtering on a single [`AppliedLabel`](#appliedlabel) id and
+   * [`FieldValue`](#fieldvalue) id is supported.
    * @opt_param string startTime Sets the beginning of the range of time shown in
    * the report. The date is in the RFC 3339 format, for example
    * 2010-10-28T10:26:35.000Z. The report returns all activities from `startTime`
