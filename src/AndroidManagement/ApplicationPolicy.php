@@ -158,12 +158,16 @@ class ApplicationPolicy extends \Google\Collection
    * fields minimumVersionCode, accessibleTrackIds, autoUpdateMode,
    * installConstraint and installPriority cannot be set for the app. The app
    * isn't available in the Play Store. The app installed on the device has
-   * applicationSource set to CUSTOM. The signing key certificate fingerprint of
-   * the app on the device must match one of the entries in
-   * ApplicationPolicy.signingKeyCerts . Otherwise, a NonComplianceDetail with
-   * APP_SIGNING_CERT_MISMATCH is reported. Changing the installType to and from
-   * CUSTOM uninstalls the existing app if its signing key certificate
-   * fingerprint doesn't match the one from the new app source. Removing the app
+   * applicationSource set to CUSTOM. When the current installType is CUSTOM,
+   * the signing key certificate fingerprint of the existing custom app on the
+   * device must match one of the entries in ApplicationPolicy.signingKeyCerts .
+   * Otherwise, a NonComplianceDetail with APP_SIGNING_CERT_MISMATCH is
+   * reported. Changing the installType from CUSTOM to another value must match
+   * the playstore version of the application signing key certificate
+   * fingerprint. Otherwise a NonComplianceDetail with APP_SIGNING_CERT_MISMATCH
+   * is reported. Changing the installType to CUSTOM uninstalls the existing app
+   * if its signing key certificate fingerprint of the installed app doesn't
+   * match the one from the ApplicationPolicy.signingKeyCerts . Removing the app
    * from applications doesn't uninstall the existing app if it conforms to
    * playStoreMode. See also customAppConfig. This is different from the Google
    * Play Custom App Publishing
