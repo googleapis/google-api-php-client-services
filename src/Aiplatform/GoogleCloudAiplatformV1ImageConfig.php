@@ -48,6 +48,13 @@ class GoogleCloudAiplatformV1ImageConfig extends \Google\Model
   protected $imageOutputOptionsType = GoogleCloudAiplatformV1ImageConfigImageOutputOptions::class;
   protected $imageOutputOptionsDataType = '';
   /**
+   * Optional. Specifies the size of generated images. Supported values are
+   * `1K`, `2K`, `4K`. If not specified, the model will use default value `1K`.
+   *
+   * @var string
+   */
+  public $imageSize;
+  /**
    * Optional. Controls whether the model can generate people.
    *
    * @var string
@@ -87,6 +94,23 @@ class GoogleCloudAiplatformV1ImageConfig extends \Google\Model
   public function getImageOutputOptions()
   {
     return $this->imageOutputOptions;
+  }
+  /**
+   * Optional. Specifies the size of generated images. Supported values are
+   * `1K`, `2K`, `4K`. If not specified, the model will use default value `1K`.
+   *
+   * @param string $imageSize
+   */
+  public function setImageSize($imageSize)
+  {
+    $this->imageSize = $imageSize;
+  }
+  /**
+   * @return string
+   */
+  public function getImageSize()
+  {
+    return $this->imageSize;
   }
   /**
    * Optional. Controls whether the model can generate people.

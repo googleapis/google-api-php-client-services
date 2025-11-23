@@ -31,6 +31,8 @@ class GoogleCloudAiplatformV1Part extends \Google\Model
   protected $functionResponseDataType = '';
   protected $inlineDataType = GoogleCloudAiplatformV1Blob::class;
   protected $inlineDataDataType = '';
+  protected $mediaResolutionType = GoogleCloudAiplatformV1PartMediaResolution::class;
+  protected $mediaResolutionDataType = '';
   /**
    * Optional. The text content of the part.
    *
@@ -153,6 +155,22 @@ class GoogleCloudAiplatformV1Part extends \Google\Model
   public function getInlineData()
   {
     return $this->inlineData;
+  }
+  /**
+   * per part media resolution. Media resolution for the input media.
+   *
+   * @param GoogleCloudAiplatformV1PartMediaResolution $mediaResolution
+   */
+  public function setMediaResolution(GoogleCloudAiplatformV1PartMediaResolution $mediaResolution)
+  {
+    $this->mediaResolution = $mediaResolution;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PartMediaResolution
+   */
+  public function getMediaResolution()
+  {
+    return $this->mediaResolution;
   }
   /**
    * Optional. The text content of the part.

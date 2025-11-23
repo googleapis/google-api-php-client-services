@@ -55,6 +55,14 @@ class GoogleCloudAiplatformV1FunctionCallingConfig extends \Google\Collection
    * @var string
    */
   public $mode;
+  /**
+   * Optional. When set to true, arguments of a single function call will be
+   * streamed out in multiple parts/contents/responses. Partial parameter
+   * results will be returned in the [FunctionCall.partial_args] field.
+   *
+   * @var bool
+   */
+  public $streamFunctionCallArguments;
 
   /**
    * Optional. Function names to call. Only set when the Mode is ANY. Function
@@ -91,6 +99,24 @@ class GoogleCloudAiplatformV1FunctionCallingConfig extends \Google\Collection
   public function getMode()
   {
     return $this->mode;
+  }
+  /**
+   * Optional. When set to true, arguments of a single function call will be
+   * streamed out in multiple parts/contents/responses. Partial parameter
+   * results will be returned in the [FunctionCall.partial_args] field.
+   *
+   * @param bool $streamFunctionCallArguments
+   */
+  public function setStreamFunctionCallArguments($streamFunctionCallArguments)
+  {
+    $this->streamFunctionCallArguments = $streamFunctionCallArguments;
+  }
+  /**
+   * @return bool
+   */
+  public function getStreamFunctionCallArguments()
+  {
+    return $this->streamFunctionCallArguments;
   }
 }
 

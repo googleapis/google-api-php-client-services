@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ReasoningEngine extends \Google\Model
 {
+  protected $contextSpecType = GoogleCloudAiplatformV1ReasoningEngineContextSpec::class;
+  protected $contextSpecDataType = '';
   /**
    * Output only. Timestamp when this ReasoningEngine was created.
    *
@@ -68,6 +70,23 @@ class GoogleCloudAiplatformV1ReasoningEngine extends \Google\Model
    */
   public $updateTime;
 
+  /**
+   * Optional. Configuration for how Agent Engine sub-resources should manage
+   * context.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineContextSpec $contextSpec
+   */
+  public function setContextSpec(GoogleCloudAiplatformV1ReasoningEngineContextSpec $contextSpec)
+  {
+    $this->contextSpec = $contextSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineContextSpec
+   */
+  public function getContextSpec()
+  {
+    return $this->contextSpec;
+  }
   /**
    * Output only. Timestamp when this ReasoningEngine was created.
    *
