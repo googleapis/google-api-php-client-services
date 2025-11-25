@@ -36,6 +36,12 @@ class GdataBlobstore2Info extends \Google\Model
    *
    * @var string
    */
+  public $downloadExternalReadToken;
+  /**
+   * gdata
+   *
+   * @var string
+   */
   public $downloadReadHandle;
   /**
    * gdata
@@ -81,6 +87,22 @@ class GdataBlobstore2Info extends \Google\Model
   public function getBlobId()
   {
     return $this->blobId;
+  }
+  /**
+   * gdata
+   *
+   * @param string $downloadExternalReadToken
+   */
+  public function setDownloadExternalReadToken($downloadExternalReadToken)
+  {
+    $this->downloadExternalReadToken = $downloadExternalReadToken;
+  }
+  /**
+   * @return string
+   */
+  public function getDownloadExternalReadToken()
+  {
+    return $this->downloadExternalReadToken;
   }
   /**
    * gdata
