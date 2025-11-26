@@ -20,6 +20,30 @@ namespace Google\Service\AndroidPublisher;
 class Order extends \Google\Collection
 {
   /**
+   * Sales channel unspecified. This value is not used.
+   */
+  public const SALES_CHANNEL_SALES_CHANNEL_UNSPECIFIED = 'SALES_CHANNEL_UNSPECIFIED';
+  /**
+   * Standard orders that initiated from in-app.
+   */
+  public const SALES_CHANNEL_IN_APP = 'IN_APP';
+  /**
+   * Orders initiated from a PC emulator for in-app purchases.
+   */
+  public const SALES_CHANNEL_PC_EMULATOR = 'PC_EMULATOR';
+  /**
+   * Orders initiated from a native PC app for in-app purchases.
+   */
+  public const SALES_CHANNEL_NATIVE_PC = 'NATIVE_PC';
+  /**
+   * Orders initiated from the Google Play store.
+   */
+  public const SALES_CHANNEL_PLAY_STORE = 'PLAY_STORE';
+  /**
+   * Orders initiated outside the Google Play store.
+   */
+  public const SALES_CHANNEL_OUTSIDE_PLAY_STORE = 'OUTSIDE_PLAY_STORE';
+  /**
    * State unspecified. This value is not used.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -85,6 +109,12 @@ class Order extends \Google\Collection
    * @var string
    */
   public $purchaseToken;
+  /**
+   * The originating sales channel of the order.
+   *
+   * @var string
+   */
+  public $salesChannel;
   /**
    * The state of the order.
    *
@@ -260,6 +290,25 @@ class Order extends \Google\Collection
   public function getPurchaseToken()
   {
     return $this->purchaseToken;
+  }
+  /**
+   * The originating sales channel of the order.
+   *
+   * Accepted values: SALES_CHANNEL_UNSPECIFIED, IN_APP, PC_EMULATOR, NATIVE_PC,
+   * PLAY_STORE, OUTSIDE_PLAY_STORE
+   *
+   * @param self::SALES_CHANNEL_* $salesChannel
+   */
+  public function setSalesChannel($salesChannel)
+  {
+    $this->salesChannel = $salesChannel;
+  }
+  /**
+   * @return self::SALES_CHANNEL_*
+   */
+  public function getSalesChannel()
+  {
+    return $this->salesChannel;
   }
   /**
    * The state of the order.
