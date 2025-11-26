@@ -199,6 +199,9 @@ class DataPortability extends \Google\Service
   /** Move a copy of your YouTube comments. */
   const DATAPORTABILITY_YOUTUBE_COMMENTS =
       "https://www.googleapis.com/auth/dataportability.youtube.comments";
+  /** Move a copy of all your YouTube messages. */
+  const DATAPORTABILITY_YOUTUBE_CONVERSATIONS =
+      "https://www.googleapis.com/auth/dataportability.youtube.conversations";
   /** Move a copy of your YouTube messages in live chat. */
   const DATAPORTABILITY_YOUTUBE_LIVE_CHAT =
       "https://www.googleapis.com/auth/dataportability.youtube.live_chat";
