@@ -110,6 +110,8 @@ class User extends \Google\Collection
    * @var array
    */
   public $gender;
+  protected $guestAccountInfoType = GuestAccountInfo::class;
+  protected $guestAccountInfoDataType = '';
   /**
    * Stores the hash format of the `password` property. The following
    * `hashFunction` values are allowed: * `MD5` - Accepts simple hex-encoded
@@ -191,6 +193,12 @@ class User extends \Google\Collection
    * @var bool
    */
   public $isEnrolledIn2Sv;
+  /**
+   * Immutable. Indicates if the inserted user is a guest.
+   *
+   * @var bool
+   */
+  public $isGuestUser;
   /**
    * Output only. Indicates if the user's Google mailbox is created. This
    * property is only applicable if the user has been assigned a Gmail license.
@@ -569,6 +577,22 @@ class User extends \Google\Collection
     return $this->gender;
   }
   /**
+   * Immutable. Additional guest-related metadata fields
+   *
+   * @param GuestAccountInfo $guestAccountInfo
+   */
+  public function setGuestAccountInfo(GuestAccountInfo $guestAccountInfo)
+  {
+    $this->guestAccountInfo = $guestAccountInfo;
+  }
+  /**
+   * @return GuestAccountInfo
+   */
+  public function getGuestAccountInfo()
+  {
+    return $this->guestAccountInfo;
+  }
+  /**
    * Stores the hash format of the `password` property. The following
    * `hashFunction` values are allowed: * `MD5` - Accepts simple hex-encoded
    * values. * `SHA-1` - Accepts simple hex-encoded values. * `crypt` -
@@ -738,6 +762,22 @@ class User extends \Google\Collection
   public function getIsEnrolledIn2Sv()
   {
     return $this->isEnrolledIn2Sv;
+  }
+  /**
+   * Immutable. Indicates if the inserted user is a guest.
+   *
+   * @param bool $isGuestUser
+   */
+  public function setIsGuestUser($isGuestUser)
+  {
+    $this->isGuestUser = $isGuestUser;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsGuestUser()
+  {
+    return $this->isGuestUser;
   }
   /**
    * Output only. Indicates if the user's Google mailbox is created. This

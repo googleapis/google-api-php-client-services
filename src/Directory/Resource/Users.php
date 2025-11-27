@@ -18,6 +18,7 @@
 namespace Google\Service\Directory\Resource;
 
 use Google\Service\Directory\Channel;
+use Google\Service\Directory\DirectoryUsersCreateGuestRequest;
 use Google\Service\Directory\User;
 use Google\Service\Directory\UserMakeAdmin;
 use Google\Service\Directory\UserUndelete;
@@ -33,6 +34,23 @@ use Google\Service\Directory\Users as UsersModel;
  */
 class Users extends \Google\Service\Resource
 {
+  /**
+   * Create a guest user with access to a [subset of Workspace
+   * capabilities](https://support.google.com/a/answer/16558545?hl=en). This
+   * feature is currently in Alpha. Please reach out to support if you are
+   * interested in trying this feature. (users.createGuest)
+   *
+   * @param DirectoryUsersCreateGuestRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return User
+   * @throws \Google\Service\Exception
+   */
+  public function createGuest(DirectoryUsersCreateGuestRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('createGuest', [$params], User::class);
+  }
   /**
    * Deletes a user. (users.delete)
    *
