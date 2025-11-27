@@ -52,6 +52,8 @@ class Operation extends \Google\Collection
   public $endTime;
   protected $errorType = OperationError::class;
   protected $errorDataType = '';
+  protected $firewallPolicyRuleOperationMetadataType = FirewallPolicyRuleOperationMetadata::class;
+  protected $firewallPolicyRuleOperationMetadataDataType = '';
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error
    * message that was returned, such as `NOT FOUND`.
@@ -280,6 +282,20 @@ class Operation extends \Google\Collection
   public function getError()
   {
     return $this->error;
+  }
+  /**
+   * @param FirewallPolicyRuleOperationMetadata $firewallPolicyRuleOperationMetadata
+   */
+  public function setFirewallPolicyRuleOperationMetadata(FirewallPolicyRuleOperationMetadata $firewallPolicyRuleOperationMetadata)
+  {
+    $this->firewallPolicyRuleOperationMetadata = $firewallPolicyRuleOperationMetadata;
+  }
+  /**
+   * @return FirewallPolicyRuleOperationMetadata
+   */
+  public function getFirewallPolicyRuleOperationMetadata()
+  {
+    return $this->firewallPolicyRuleOperationMetadata;
   }
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error
