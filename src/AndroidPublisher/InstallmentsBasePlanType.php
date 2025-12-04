@@ -59,10 +59,11 @@ class InstallmentsBasePlanType extends \Google\Model
    */
   public const RESUBSCRIBE_STATE_RESUBSCRIBE_STATE_INACTIVE = 'RESUBSCRIBE_STATE_INACTIVE';
   /**
-   * Optional. Account hold period of the subscription, specified in ISO 8601
-   * format. Acceptable values must be in days and between P0D and P60D. If not
-   * specified, the default value is P30D. The sum of gracePeriodDuration and
-   * accountHoldDuration must be between P30D and P60D days, inclusive.
+   * Optional. Custom account hold period of the subscription, specified in ISO
+   * 8601 format. Acceptable values must be in days and between P0D and P60D. An
+   * empty field represents a recommended account hold, calculated as 60 days
+   * minus grace period. The sum of gracePeriodDuration and accountHoldDuration
+   * must be between P30D and P60D days, inclusive.
    *
    * @var string
    */
@@ -117,10 +118,11 @@ class InstallmentsBasePlanType extends \Google\Model
   public $resubscribeState;
 
   /**
-   * Optional. Account hold period of the subscription, specified in ISO 8601
-   * format. Acceptable values must be in days and between P0D and P60D. If not
-   * specified, the default value is P30D. The sum of gracePeriodDuration and
-   * accountHoldDuration must be between P30D and P60D days, inclusive.
+   * Optional. Custom account hold period of the subscription, specified in ISO
+   * 8601 format. Acceptable values must be in days and between P0D and P60D. An
+   * empty field represents a recommended account hold, calculated as 60 days
+   * minus grace period. The sum of gracePeriodDuration and accountHoldDuration
+   * must be between P30D and P60D days, inclusive.
    *
    * @param string $accountHoldDuration
    */
