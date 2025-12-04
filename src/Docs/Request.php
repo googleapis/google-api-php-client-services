@@ -45,6 +45,8 @@ class Request extends \Google\Model
   protected $deleteTableColumnDataType = '';
   protected $deleteTableRowType = DeleteTableRowRequest::class;
   protected $deleteTableRowDataType = '';
+  protected $insertDateType = InsertDateRequest::class;
+  protected $insertDateDataType = '';
   protected $insertInlineImageType = InsertInlineImageRequest::class;
   protected $insertInlineImageDataType = '';
   protected $insertPageBreakType = InsertPageBreakRequest::class;
@@ -295,6 +297,22 @@ class Request extends \Google\Model
   public function getDeleteTableRow()
   {
     return $this->deleteTableRow;
+  }
+  /**
+   * Inserts a date.
+   *
+   * @param InsertDateRequest $insertDate
+   */
+  public function setInsertDate(InsertDateRequest $insertDate)
+  {
+    $this->insertDate = $insertDate;
+  }
+  /**
+   * @return InsertDateRequest
+   */
+  public function getInsertDate()
+  {
+    return $this->insertDate;
   }
   /**
    * Inserts an inline image at the specified location.
