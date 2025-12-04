@@ -19,6 +19,13 @@ namespace Google\Service\Calendar;
 
 class Calendar extends \Google\Model
 {
+  /**
+   * Whether this calendar automatically accepts invitations. Only valid for
+   * resource calendars.
+   *
+   * @var bool
+   */
+  public $autoAcceptInvitations;
   protected $conferencePropertiesType = ConferenceProperties::class;
   protected $conferencePropertiesDataType = '';
   /**
@@ -73,6 +80,23 @@ class Calendar extends \Google\Model
    */
   public $timeZone;
 
+  /**
+   * Whether this calendar automatically accepts invitations. Only valid for
+   * resource calendars.
+   *
+   * @param bool $autoAcceptInvitations
+   */
+  public function setAutoAcceptInvitations($autoAcceptInvitations)
+  {
+    $this->autoAcceptInvitations = $autoAcceptInvitations;
+  }
+  /**
+   * @return bool
+   */
+  public function getAutoAcceptInvitations()
+  {
+    return $this->autoAcceptInvitations;
+  }
   /**
    * Conferencing properties for this calendar, for example what types of
    * conferences are allowed.
