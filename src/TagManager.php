@@ -549,7 +549,17 @@ class TagManager extends \Google\Service
         'workspaces',
         [
           'methods' => [
-            'create' => [
+            'bulk_update' => [
+              'path' => 'tagmanager/v2/{+path}/bulk_update',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'path' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'tagmanager/v2/{+parent}/workspaces',
               'httpMethod' => 'POST',
               'parameters' => [

@@ -17,11 +17,13 @@
 
 namespace Google\Service\TagManager\Resource;
 
+use Google\Service\TagManager\BulkUpdateWorkspaceResponse;
 use Google\Service\TagManager\CreateContainerVersionRequestVersionOptions;
 use Google\Service\TagManager\CreateContainerVersionResponse;
 use Google\Service\TagManager\Entity;
 use Google\Service\TagManager\GetWorkspaceStatusResponse;
 use Google\Service\TagManager\ListWorkspacesResponse;
+use Google\Service\TagManager\ProposedChange;
 use Google\Service\TagManager\QuickPreviewResponse;
 use Google\Service\TagManager\SyncWorkspaceResponse;
 use Google\Service\TagManager\Workspace;
@@ -36,6 +38,28 @@ use Google\Service\TagManager\Workspace;
  */
 class AccountsContainersWorkspaces extends \Google\Service\Resource
 {
+  /**
+   * Applies multiple entity changes to a workspace in one call. When creating new
+   * entities, their entity IDs must be unique and in correct format. That is,
+   * they must start with "new_" and followed by number, e.g. "new_1", "new_2".
+   * Example body snippet to create myNewTag under myNewFolder is: ``` "changes":
+   * [ { "folder": { "folderId": "new_1", "name": "myNewFolder", ... },
+   * "changeStatus": "ADDED" }, { "tag": { "tagId": "new_2", "name": "myNewTag",
+   * "parentFolderId": "new_1", ... }, "changeStatus": "ADDED" } ] ```
+   * (workspaces.bulk_update)
+   *
+   * @param string $path GTM Workspace's API relative path.
+   * @param ProposedChange $postBody
+   * @param array $optParams Optional parameters.
+   * @return BulkUpdateWorkspaceResponse
+   * @throws \Google\Service\Exception
+   */
+  public function bulk_update($path, ProposedChange $postBody, $optParams = [])
+  {
+    $params = ['path' => $path, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('bulk_update', [$params], BulkUpdateWorkspaceResponse::class);
+  }
   /**
    * Creates a Workspace. (workspaces.create)
    *
