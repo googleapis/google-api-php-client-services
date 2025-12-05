@@ -27,6 +27,12 @@ class GoogleCloudDiscoveryengineV1IdentityMappingEntry extends \Google\Model
    */
   public $externalIdentity;
   /**
+   * Optional. The name of the external identity.
+   *
+   * @var string
+   */
+  public $externalIdentityName;
+  /**
    * Group identifier. For Google Workspace user account, group_id should be the
    * google workspace group email. For non-google identity provider, group_id is
    * the mapped group identifier configured during the workforcepool config.
@@ -59,6 +65,22 @@ class GoogleCloudDiscoveryengineV1IdentityMappingEntry extends \Google\Model
   public function getExternalIdentity()
   {
     return $this->externalIdentity;
+  }
+  /**
+   * Optional. The name of the external identity.
+   *
+   * @param string $externalIdentityName
+   */
+  public function setExternalIdentityName($externalIdentityName)
+  {
+    $this->externalIdentityName = $externalIdentityName;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalIdentityName()
+  {
+    return $this->externalIdentityName;
   }
   /**
    * Group identifier. For Google Workspace user account, group_id should be the

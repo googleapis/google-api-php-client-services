@@ -20,6 +20,61 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig extends \Google\Collection
 {
   /**
+   * Default value.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_UNSPECIFIED = 'SUBSCRIPTION_TIER_UNSPECIFIED';
+  /**
+   * Search tier. Search tier can access VAIS search features and NotebookLM
+   * features.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_SEARCH = 'SUBSCRIPTION_TIER_SEARCH';
+  /**
+   * Search + assistant tier. Search + assistant tier can access VAIS search
+   * features, NotebookLM features and assistant features.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT = 'SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT';
+  /**
+   * NotebookLM tier. NotebookLM is a subscription tier can only access
+   * NotebookLM features.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_NOTEBOOK_LM = 'SUBSCRIPTION_TIER_NOTEBOOK_LM';
+  /**
+   * Frontline worker tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_FRONTLINE_WORKER = 'SUBSCRIPTION_TIER_FRONTLINE_WORKER';
+  /**
+   * Agentspace Starter tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_AGENTSPACE_STARTER = 'SUBSCRIPTION_TIER_AGENTSPACE_STARTER';
+  /**
+   * Agentspace Business tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS = 'SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS';
+  /**
+   * Enterprise tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_ENTERPRISE = 'SUBSCRIPTION_TIER_ENTERPRISE';
+  /**
+   * EDU tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU = 'SUBSCRIPTION_TIER_EDU';
+  /**
+   * EDU Pro tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO = 'SUBSCRIPTION_TIER_EDU_PRO';
+  /**
+   * EDU emerging market tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_EMERGING = 'SUBSCRIPTION_TIER_EDU_EMERGING';
+  /**
+   * EDU Pro emerging market tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO_EMERGING = 'SUBSCRIPTION_TIER_EDU_PRO_EMERGING';
+  /**
+   * Frontline starter tier.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_FRONTLINE_STARTER = 'SUBSCRIPTION_TIER_FRONTLINE_STARTER';
+  /**
    * Default value when the enum is unspecified. This is invalid to use.
    */
   public const SEARCH_TIER_SEARCH_TIER_UNSPECIFIED = 'SEARCH_TIER_UNSPECIFIED';
@@ -32,6 +87,15 @@ class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig extends \Google\
    */
   public const SEARCH_TIER_SEARCH_TIER_ENTERPRISE = 'SEARCH_TIER_ENTERPRISE';
   protected $collection_key = 'searchAddOns';
+  /**
+   * Optional. The required subscription tier of this engine. They cannot be
+   * modified after engine creation. If the required subscription tier is
+   * search, user with higher license tier like assist can still access the
+   * standalone app associated with this engine.
+   *
+   * @var string
+   */
+  public $requiredSubscriptionTier;
   /**
    * The add-on that this search engine enables.
    *
@@ -47,6 +111,33 @@ class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig extends \Google\
    */
   public $searchTier;
 
+  /**
+   * Optional. The required subscription tier of this engine. They cannot be
+   * modified after engine creation. If the required subscription tier is
+   * search, user with higher license tier like assist can still access the
+   * standalone app associated with this engine.
+   *
+   * Accepted values: SUBSCRIPTION_TIER_UNSPECIFIED, SUBSCRIPTION_TIER_SEARCH,
+   * SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT, SUBSCRIPTION_TIER_NOTEBOOK_LM,
+   * SUBSCRIPTION_TIER_FRONTLINE_WORKER, SUBSCRIPTION_TIER_AGENTSPACE_STARTER,
+   * SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS, SUBSCRIPTION_TIER_ENTERPRISE,
+   * SUBSCRIPTION_TIER_EDU, SUBSCRIPTION_TIER_EDU_PRO,
+   * SUBSCRIPTION_TIER_EDU_EMERGING, SUBSCRIPTION_TIER_EDU_PRO_EMERGING,
+   * SUBSCRIPTION_TIER_FRONTLINE_STARTER
+   *
+   * @param self::REQUIRED_SUBSCRIPTION_TIER_* $requiredSubscriptionTier
+   */
+  public function setRequiredSubscriptionTier($requiredSubscriptionTier)
+  {
+    $this->requiredSubscriptionTier = $requiredSubscriptionTier;
+  }
+  /**
+   * @return self::REQUIRED_SUBSCRIPTION_TIER_*
+   */
+  public function getRequiredSubscriptionTier()
+  {
+    return $this->requiredSubscriptionTier;
+  }
   /**
    * The add-on that this search engine enables.
    *

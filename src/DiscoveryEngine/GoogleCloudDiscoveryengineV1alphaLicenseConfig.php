@@ -103,6 +103,10 @@ class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends \Google\Model
    * EDU Pro emerging market tier.
    */
   public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO_EMERGING = 'SUBSCRIPTION_TIER_EDU_PRO_EMERGING';
+  /**
+   * Frontline starter tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_FRONTLINE_STARTER = 'SUBSCRIPTION_TIER_FRONTLINE_STARTER';
   protected $alertPolicyResourceConfigType = GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig::class;
   protected $alertPolicyResourceConfigDataType = '';
   /**
@@ -338,7 +342,8 @@ class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends \Google\Model
    * SUBSCRIPTION_TIER_FRONTLINE_WORKER, SUBSCRIPTION_TIER_AGENTSPACE_STARTER,
    * SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS, SUBSCRIPTION_TIER_ENTERPRISE,
    * SUBSCRIPTION_TIER_EDU, SUBSCRIPTION_TIER_EDU_PRO,
-   * SUBSCRIPTION_TIER_EDU_EMERGING, SUBSCRIPTION_TIER_EDU_PRO_EMERGING
+   * SUBSCRIPTION_TIER_EDU_EMERGING, SUBSCRIPTION_TIER_EDU_PRO_EMERGING,
+   * SUBSCRIPTION_TIER_FRONTLINE_STARTER
    *
    * @param self::SUBSCRIPTION_TIER_* $subscriptionTier
    */

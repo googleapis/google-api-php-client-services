@@ -104,6 +104,10 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
    */
   public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO_EMERGING = 'SUBSCRIPTION_TIER_EDU_PRO_EMERGING';
   /**
+   * Frontline starter tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_FRONTLINE_STARTER = 'SUBSCRIPTION_TIER_FRONTLINE_STARTER';
+  /**
    * Optional. Whether the license config should be auto renewed when it reaches
    * the end date.
    *
@@ -320,7 +324,8 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
    * SUBSCRIPTION_TIER_FRONTLINE_WORKER, SUBSCRIPTION_TIER_AGENTSPACE_STARTER,
    * SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS, SUBSCRIPTION_TIER_ENTERPRISE,
    * SUBSCRIPTION_TIER_EDU, SUBSCRIPTION_TIER_EDU_PRO,
-   * SUBSCRIPTION_TIER_EDU_EMERGING, SUBSCRIPTION_TIER_EDU_PRO_EMERGING
+   * SUBSCRIPTION_TIER_EDU_EMERGING, SUBSCRIPTION_TIER_EDU_PRO_EMERGING,
+   * SUBSCRIPTION_TIER_FRONTLINE_STARTER
    *
    * @param self::SUBSCRIPTION_TIER_* $subscriptionTier
    */
