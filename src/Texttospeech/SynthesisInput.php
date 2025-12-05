@@ -22,8 +22,8 @@ class SynthesisInput extends \Google\Model
   protected $customPronunciationsType = CustomPronunciations::class;
   protected $customPronunciationsDataType = '';
   /**
-   * Markup for HD voices specifically. This field may not be used with any
-   * other voices.
+   * Markup for Chirp 3: HD voices specifically. This field may not be used with
+   * any other voices.
    *
    * @var string
    */
@@ -78,8 +78,8 @@ class SynthesisInput extends \Google\Model
     return $this->customPronunciations;
   }
   /**
-   * Markup for HD voices specifically. This field may not be used with any
-   * other voices.
+   * Markup for Chirp 3: HD voices specifically. This field may not be used with
+   * any other voices.
    *
    * @param string $markup
    */
