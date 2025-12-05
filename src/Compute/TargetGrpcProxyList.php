@@ -29,8 +29,8 @@ class TargetGrpcProxyList extends \Google\Collection
   protected $itemsType = TargetGrpcProxy::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for
-   * target grpc proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetGrpcProxy for target grpc proxies.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class TargetGrpcProxyList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for
-   * target grpc proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetGrpcProxy for target grpc proxies.
    *
    * @param string $kind
    */

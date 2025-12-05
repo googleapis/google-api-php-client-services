@@ -29,7 +29,8 @@ class VpnGatewayList extends \Google\Collection
   protected $itemsType = VpnGateway::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
+   * Output only. [Output Only] Type of resource. Always compute#vpnGateway for
+   * VPN gateways.
    *
    * @var string
    */
@@ -45,7 +46,7 @@ class VpnGatewayList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -86,7 +87,8 @@ class VpnGatewayList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
+   * Output only. [Output Only] Type of resource. Always compute#vpnGateway for
+   * VPN gateways.
    *
    * @param string $kind
    */
@@ -122,7 +124,7 @@ class VpnGatewayList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

@@ -29,8 +29,9 @@ class TargetPoolAggregatedList extends \Google\Collection
   protected $itemsType = TargetPoolsScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource. Alwayscompute#targetPoolAggregatedList for
-   * aggregated lists of target pools.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#targetPoolAggregatedList for aggregated lists of target
+   * pools.
    *
    * @var string
    */
@@ -46,13 +47,13 @@ class TargetPoolAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -93,8 +94,9 @@ class TargetPoolAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#targetPoolAggregatedList for
-   * aggregated lists of target pools.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#targetPoolAggregatedList for aggregated lists of target
+   * pools.
    *
    * @param string $kind
    */
@@ -130,7 +132,7 @@ class TargetPoolAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -146,7 +148,7 @@ class TargetPoolAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

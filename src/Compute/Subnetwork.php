@@ -108,7 +108,32 @@ class Subnetwork extends \Google\Collection
   public const STATE_READY = 'READY';
   protected $collection_key = 'systemReservedInternalIpv6Ranges';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Whether this subnetwork's ranges can conflict with existing static routes.
+   * Setting this to true allows this subnetwork's primary and secondary ranges
+   * to overlap with (and contain) static routes that have already been
+   * configured on the corresponding network.
+   *
+   * For example if a static route has range 10.1.0.0/16, a subnet range
+   * 10.0.0.0/8 could only be created if allow_conflicting_routes=true.
+   *
+   * Overlapping is only allowed on subnetwork operations; routes whose ranges
+   * conflict with this subnetwork's ranges won't be allowed unless
+   * route.allow_conflicting_subnetworks is set to true.
+   *
+   * Typically packets destined to IPs within the subnetwork (which may contain
+   * private/sensitive data) are prevented from leaving the virtual network.
+   * Setting this field to true will disable this feature.
+   *
+   * The default value is false and applies to all existing subnetworks and
+   * automatically created subnetworks.
+   *
+   * This field cannot be set to true at resource creation time.
+   *
+   * @var bool
+   */
+  public $allowSubnetCidrRoutesOverlap;
+  /**
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -150,15 +175,15 @@ class Subnetwork extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] The gateway address for default routes to reach destination
-   * addresses outside this subnetwork.
+   * Output only. [Output Only] The gateway address for default routes to reach
+   * destination addresses outside this subnetwork.
    *
    * @var string
    */
   public $gatewayAddress;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
@@ -205,27 +230,27 @@ class Subnetwork extends \Google\Collection
    */
   public $ipv6AccessType;
   /**
-   * [Output Only] This field is for internal use.
+   * Output only. [Output Only] This field is for internal use.
    *
    * @var string
    */
   public $ipv6CidrRange;
   /**
-   * [Output Only] Possible endpoints of this subnetwork. It can be one of the
-   * following:        - VM_ONLY: The subnetwork can be used for creating
-   * instances and    IPv6 addresses with VM endpoint type. Such a subnetwork
-   * gets external IPv6    ranges from a public delegated prefix and cannot be
-   * used to create NetLb.    - VM_AND_FR: The subnetwork can be used for
-   * creating both VM    instances and Forwarding Rules. It can also be used to
-   * reserve IPv6    addresses with both VM and FR endpoint types. Such a
+   * Output only. [Output Only] Possible endpoints of this subnetwork. It can be
+   * one of the following:        - VM_ONLY: The subnetwork can be used for
+   * creating instances and    IPv6 addresses with VM endpoint type. Such a
+   * subnetwork gets external IPv6    ranges from a public delegated prefix and
+   * cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used
+   * for creating both VM    instances and Forwarding Rules. It can also be used
+   * to reserve IPv6    addresses with both VM and FR endpoint types. Such a
    * subnetwork gets its    IPv6 range from Google IP Pool directly.
    *
    * @var string
    */
   public $ipv6GceEndpoint;
   /**
-   * [Output Only] Type of the resource. Always compute#subnetwork for
-   * Subnetwork resources.
+   * Output only. [Output Only] Type of the resource. Always compute#subnetwork
+   * for Subnetwork resources.
    *
    * @var string
    */
@@ -320,8 +345,8 @@ class Subnetwork extends \Google\Collection
    */
   public $stackType;
   /**
-   * [Output Only] The state of the subnetwork, which can be one of the
-   * following values:READY: Subnetwork is created and ready to useDRAINING:
+   * Output only. [Output Only] The state of the subnetwork, which can be one of
+   * the following values:READY: Subnetwork is created and ready to useDRAINING:
    * only applicable to subnetworks that have the purpose set to
    * INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
    * balancer are being drained. A subnetwork that is draining cannot be used or
@@ -348,7 +373,42 @@ class Subnetwork extends \Google\Collection
   protected $utilizationDetailsDataType = '';
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Whether this subnetwork's ranges can conflict with existing static routes.
+   * Setting this to true allows this subnetwork's primary and secondary ranges
+   * to overlap with (and contain) static routes that have already been
+   * configured on the corresponding network.
+   *
+   * For example if a static route has range 10.1.0.0/16, a subnet range
+   * 10.0.0.0/8 could only be created if allow_conflicting_routes=true.
+   *
+   * Overlapping is only allowed on subnetwork operations; routes whose ranges
+   * conflict with this subnetwork's ranges won't be allowed unless
+   * route.allow_conflicting_subnetworks is set to true.
+   *
+   * Typically packets destined to IPs within the subnetwork (which may contain
+   * private/sensitive data) are prevented from leaving the virtual network.
+   * Setting this field to true will disable this feature.
+   *
+   * The default value is false and applies to all existing subnetworks and
+   * automatically created subnetworks.
+   *
+   * This field cannot be set to true at resource creation time.
+   *
+   * @param bool $allowSubnetCidrRoutesOverlap
+   */
+  public function setAllowSubnetCidrRoutesOverlap($allowSubnetCidrRoutesOverlap)
+  {
+    $this->allowSubnetCidrRoutesOverlap = $allowSubnetCidrRoutesOverlap;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowSubnetCidrRoutesOverlap()
+  {
+    return $this->allowSubnetCidrRoutesOverlap;
+  }
+  /**
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -440,8 +500,8 @@ class Subnetwork extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The gateway address for default routes to reach destination
-   * addresses outside this subnetwork.
+   * Output only. [Output Only] The gateway address for default routes to reach
+   * destination addresses outside this subnetwork.
    *
    * @param string $gatewayAddress
    */
@@ -457,8 +517,8 @@ class Subnetwork extends \Google\Collection
     return $this->gatewayAddress;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -557,7 +617,7 @@ class Subnetwork extends \Google\Collection
     return $this->ipv6AccessType;
   }
   /**
-   * [Output Only] This field is for internal use.
+   * Output only. [Output Only] This field is for internal use.
    *
    * @param string $ipv6CidrRange
    */
@@ -573,13 +633,13 @@ class Subnetwork extends \Google\Collection
     return $this->ipv6CidrRange;
   }
   /**
-   * [Output Only] Possible endpoints of this subnetwork. It can be one of the
-   * following:        - VM_ONLY: The subnetwork can be used for creating
-   * instances and    IPv6 addresses with VM endpoint type. Such a subnetwork
-   * gets external IPv6    ranges from a public delegated prefix and cannot be
-   * used to create NetLb.    - VM_AND_FR: The subnetwork can be used for
-   * creating both VM    instances and Forwarding Rules. It can also be used to
-   * reserve IPv6    addresses with both VM and FR endpoint types. Such a
+   * Output only. [Output Only] Possible endpoints of this subnetwork. It can be
+   * one of the following:        - VM_ONLY: The subnetwork can be used for
+   * creating instances and    IPv6 addresses with VM endpoint type. Such a
+   * subnetwork gets external IPv6    ranges from a public delegated prefix and
+   * cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used
+   * for creating both VM    instances and Forwarding Rules. It can also be used
+   * to reserve IPv6    addresses with both VM and FR endpoint types. Such a
    * subnetwork gets its    IPv6 range from Google IP Pool directly.
    *
    * Accepted values: VM_AND_FR, VM_ONLY
@@ -598,8 +658,8 @@ class Subnetwork extends \Google\Collection
     return $this->ipv6GceEndpoint;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#subnetwork for
-   * Subnetwork resources.
+   * Output only. [Output Only] Type of the resource. Always compute#subnetwork
+   * for Subnetwork resources.
    *
    * @param string $kind
    */
@@ -858,8 +918,8 @@ class Subnetwork extends \Google\Collection
     return $this->stackType;
   }
   /**
-   * [Output Only] The state of the subnetwork, which can be one of the
-   * following values:READY: Subnetwork is created and ready to useDRAINING:
+   * Output only. [Output Only] The state of the subnetwork, which can be one of
+   * the following values:READY: Subnetwork is created and ready to useDRAINING:
    * only applicable to subnetworks that have the purpose set to
    * INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
    * balancer are being drained. A subnetwork that is draining cannot be used or

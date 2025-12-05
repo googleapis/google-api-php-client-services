@@ -29,8 +29,8 @@ class SubnetworkAggregatedList extends \Google\Collection
   protected $itemsType = SubnetworksScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource. Alwayscompute#subnetworkAggregatedList for
-   * aggregated lists of subnetworks.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#subnetworkAggregatedList for aggregated lists of subnetworks.
    *
    * @var string
    */
@@ -46,13 +46,13 @@ class SubnetworkAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -93,8 +93,8 @@ class SubnetworkAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#subnetworkAggregatedList for
-   * aggregated lists of subnetworks.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#subnetworkAggregatedList for aggregated lists of subnetworks.
    *
    * @param string $kind
    */
@@ -130,7 +130,7 @@ class SubnetworkAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -146,7 +146,7 @@ class SubnetworkAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

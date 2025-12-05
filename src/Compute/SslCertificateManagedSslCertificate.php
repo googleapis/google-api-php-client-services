@@ -53,8 +53,8 @@ class SslCertificateManagedSslCertificate extends \Google\Collection
   public const STATUS_RENEWAL_FAILED = 'RENEWAL_FAILED';
   protected $collection_key = 'domains';
   /**
-   * [Output only] Detailed statuses of the domains specified for managed
-   * certificate resource.
+   * Output only. [Output only] Detailed statuses of the domains specified for
+   * managed certificate resource.
    *
    * @var string[]
    */
@@ -69,15 +69,15 @@ class SslCertificateManagedSslCertificate extends \Google\Collection
    */
   public $domains;
   /**
-   * [Output only] Status of the managed certificate resource.
+   * Output only. [Output only] Status of the managed certificate resource.
    *
    * @var string
    */
   public $status;
 
   /**
-   * [Output only] Detailed statuses of the domains specified for managed
-   * certificate resource.
+   * Output only. [Output only] Detailed statuses of the domains specified for
+   * managed certificate resource.
    *
    * @param string[] $domainStatus
    */
@@ -112,7 +112,7 @@ class SslCertificateManagedSslCertificate extends \Google\Collection
     return $this->domains;
   }
   /**
-   * [Output only] Status of the managed certificate resource.
+   * Output only. [Output only] Status of the managed certificate resource.
    *
    * Accepted values: ACTIVE, MANAGED_CERTIFICATE_STATUS_UNSPECIFIED,
    * PROVISIONING, PROVISIONING_FAILED, PROVISIONING_FAILED_PERMANENTLY,

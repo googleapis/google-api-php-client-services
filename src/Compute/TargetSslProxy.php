@@ -34,7 +34,7 @@ class TargetSslProxy extends \Google\Collection
    */
   public $certificateMap;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -54,8 +54,8 @@ class TargetSslProxy extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target
-   * SSL proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetSslProxy for target SSL proxies.
    *
    * @var string
    */
@@ -131,7 +131,7 @@ class TargetSslProxy extends \Google\Collection
     return $this->certificateMap;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -181,8 +181,8 @@ class TargetSslProxy extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target
-   * SSL proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetSslProxy for target SSL proxies.
    *
    * @param string $kind
    */

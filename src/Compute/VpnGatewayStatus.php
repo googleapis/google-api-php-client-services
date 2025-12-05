@@ -24,7 +24,7 @@ class VpnGatewayStatus extends \Google\Collection
   protected $vpnConnectionsDataType = 'array';
 
   /**
-   * List of VPN connection for this VpnGateway.
+   * Output only. List of VPN connection for this VpnGateway.
    *
    * @param VpnGatewayStatusVpnConnection[] $vpnConnections
    */

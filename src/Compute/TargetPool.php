@@ -92,7 +92,7 @@ class TargetPool extends \Google\Collection
    */
   public $backupPool;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -145,8 +145,8 @@ class TargetPool extends \Google\Collection
    */
   public $instances;
   /**
-   * [Output Only] Type of the resource. Always compute#targetPool for target
-   * pools.
+   * Output only. [Output Only] Type of the resource. Always compute#targetPool
+   * for target pools.
    *
    * @var string
    */
@@ -164,7 +164,7 @@ class TargetPool extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] URL of the region where the target pool resides.
+   * Output only. [Output Only] URL of the region where the target pool resides.
    *
    * @var string
    */
@@ -224,7 +224,7 @@ class TargetPool extends \Google\Collection
     return $this->backupPool;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -337,8 +337,8 @@ class TargetPool extends \Google\Collection
     return $this->instances;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#targetPool for target
-   * pools.
+   * Output only. [Output Only] Type of the resource. Always compute#targetPool
+   * for target pools.
    *
    * @param string $kind
    */
@@ -376,7 +376,7 @@ class TargetPool extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] URL of the region where the target pool resides.
+   * Output only. [Output Only] URL of the region where the target pool resides.
    *
    * @param string $region
    */

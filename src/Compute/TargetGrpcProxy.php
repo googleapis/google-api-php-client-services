@@ -20,7 +20,7 @@ namespace Google\Service\Compute;
 class TargetGrpcProxy extends \Google\Model
 {
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -44,15 +44,15 @@ class TargetGrpcProxy extends \Google\Model
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for
-   * target grpc proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetGrpcProxy for target grpc proxies.
    *
    * @var string
    */
@@ -70,13 +70,13 @@ class TargetGrpcProxy extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL with id for the resource.
+   * Output only. [Output Only] Server-defined URL with id for the resource.
    *
    * @var string
    */
@@ -104,7 +104,7 @@ class TargetGrpcProxy extends \Google\Model
   public $validateForProxyless;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -158,8 +158,8 @@ class TargetGrpcProxy extends \Google\Model
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -175,8 +175,8 @@ class TargetGrpcProxy extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for
-   * target grpc proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetGrpcProxy for target grpc proxies.
    *
    * @param string $kind
    */
@@ -214,7 +214,7 @@ class TargetGrpcProxy extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -230,7 +230,7 @@ class TargetGrpcProxy extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL with id for the resource.
+   * Output only. [Output Only] Server-defined URL with id for the resource.
    *
    * @param string $selfLinkWithId
    */

@@ -29,8 +29,8 @@ class XpnHostList extends \Google\Collection
   protected $itemsType = Project::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Always compute#xpnHostList for lists of
-   * shared VPC hosts.
+   * Output only. [Output Only] Type of resource. Always compute#xpnHostList for
+   * lists of shared VPC hosts.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class XpnHostList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class XpnHostList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Always compute#xpnHostList for lists of
-   * shared VPC hosts.
+   * Output only. [Output Only] Type of resource. Always compute#xpnHostList for
+   * lists of shared VPC hosts.
    *
    * @param string $kind
    */
@@ -124,7 +124,7 @@ class XpnHostList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

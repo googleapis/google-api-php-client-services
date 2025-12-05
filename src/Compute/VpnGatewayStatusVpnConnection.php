@@ -21,17 +21,17 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
 {
   protected $collection_key = 'tunnels';
   /**
-   * URL reference to the peer external VPN gateways to which the VPN tunnels in
-   * this VPN connection are connected. This field is mutually exclusive with
-   * peer_gcp_gateway.
+   * Output only. URL reference to the peer external VPN gateways to which the
+   * VPN tunnels in this VPN connection are connected. This field is mutually
+   * exclusive with peer_gcp_gateway.
    *
    * @var string
    */
   public $peerExternalGateway;
   /**
-   * URL reference to the peer side VPN gateways to which the VPN tunnels in
-   * this VPN connection are connected. This field is mutually exclusive with
-   * peer_gcp_gateway.
+   * Output only. URL reference to the peer side VPN gateways to which the VPN
+   * tunnels in this VPN connection are connected. This field is mutually
+   * exclusive with peer_gcp_gateway.
    *
    * @var string
    */
@@ -42,9 +42,9 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
   protected $tunnelsDataType = 'array';
 
   /**
-   * URL reference to the peer external VPN gateways to which the VPN tunnels in
-   * this VPN connection are connected. This field is mutually exclusive with
-   * peer_gcp_gateway.
+   * Output only. URL reference to the peer external VPN gateways to which the
+   * VPN tunnels in this VPN connection are connected. This field is mutually
+   * exclusive with peer_gcp_gateway.
    *
    * @param string $peerExternalGateway
    */
@@ -60,9 +60,9 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
     return $this->peerExternalGateway;
   }
   /**
-   * URL reference to the peer side VPN gateways to which the VPN tunnels in
-   * this VPN connection are connected. This field is mutually exclusive with
-   * peer_gcp_gateway.
+   * Output only. URL reference to the peer side VPN gateways to which the VPN
+   * tunnels in this VPN connection are connected. This field is mutually
+   * exclusive with peer_gcp_gateway.
    *
    * @param string $peerGcpGateway
    */

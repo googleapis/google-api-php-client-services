@@ -51,7 +51,7 @@ class SslCertificate extends \Google\Collection
    */
   public $description;
   /**
-   * [Output Only] Expire time of the certificate. RFC3339
+   * Output only. [Output Only] Expire time of the certificate. RFC3339
    *
    * @var string
    */
@@ -64,8 +64,8 @@ class SslCertificate extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL
-   * certificates.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#sslCertificate for SSL certificates.
    *
    * @var string
    */
@@ -93,8 +93,9 @@ class SslCertificate extends \Google\Collection
    */
   public $privateKey;
   /**
-   * [Output Only] URL of the region where the regional SSL Certificate resides.
-   * This field is not applicable to global SSL Certificate.
+   * Output only. [Output Only] URL of the region where the regional SSL
+   * Certificate resides. This field is not applicable to global SSL
+   * Certificate.
    *
    * @var string
    */
@@ -108,8 +109,8 @@ class SslCertificate extends \Google\Collection
   protected $selfManagedType = SslCertificateSelfManagedSslCertificate::class;
   protected $selfManagedDataType = '';
   /**
-   * [Output Only] Domains associated with the certificate via Subject
-   * Alternative Name.
+   * Output only. [Output Only] Domains associated with the certificate via
+   * Subject Alternative Name.
    *
    * @var string[]
    */
@@ -175,7 +176,7 @@ class SslCertificate extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] Expire time of the certificate. RFC3339
+   * Output only. [Output Only] Expire time of the certificate. RFC3339
    *
    * @param string $expireTime
    */
@@ -208,8 +209,8 @@ class SslCertificate extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL
-   * certificates.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#sslCertificate for SSL certificates.
    *
    * @param string $kind
    */
@@ -281,8 +282,9 @@ class SslCertificate extends \Google\Collection
     return $this->privateKey;
   }
   /**
-   * [Output Only] URL of the region where the regional SSL Certificate resides.
-   * This field is not applicable to global SSL Certificate.
+   * Output only. [Output Only] URL of the region where the regional SSL
+   * Certificate resides. This field is not applicable to global SSL
+   * Certificate.
    *
    * @param string $region
    */
@@ -330,8 +332,8 @@ class SslCertificate extends \Google\Collection
     return $this->selfManaged;
   }
   /**
-   * [Output Only] Domains associated with the certificate via Subject
-   * Alternative Name.
+   * Output only. [Output Only] Domains associated with the certificate via
+   * Subject Alternative Name.
    *
    * @param string[] $subjectAlternativeNames
    */

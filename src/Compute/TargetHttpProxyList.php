@@ -29,8 +29,8 @@ class TargetHttpProxyList extends \Google\Collection
   protected $itemsType = TargetHttpProxy::class;
   protected $itemsDataType = 'array';
   /**
-   * Type of resource. Always compute#targetHttpProxyList for lists of target
-   * HTTP proxies.
+   * Output only. Type of resource. Always compute#targetHttpProxyList for lists
+   * of target HTTP proxies.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class TargetHttpProxyList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class TargetHttpProxyList extends \Google\Collection
     return $this->items;
   }
   /**
-   * Type of resource. Always compute#targetHttpProxyList for lists of target
-   * HTTP proxies.
+   * Output only. Type of resource. Always compute#targetHttpProxyList for lists
+   * of target HTTP proxies.
    *
    * @param string $kind
    */
@@ -124,7 +124,7 @@ class TargetHttpProxyList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

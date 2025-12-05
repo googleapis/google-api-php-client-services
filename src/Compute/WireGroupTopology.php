@@ -24,7 +24,7 @@ class WireGroupTopology extends \Google\Collection
   protected $endpointsDataType = 'array';
 
   /**
-   * Topology details for all endpoints in the wire group.
+   * Output only. Topology details for all endpoints in the wire group.
    *
    * @param WireGroupTopologyEndpoint[] $endpoints
    */

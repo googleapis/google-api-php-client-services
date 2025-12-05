@@ -28,7 +28,7 @@ class StoragePoolTypeAggregatedList extends \Google\Model
   protected $itemsType = StoragePoolTypesScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource.
+   * Output only. [Output Only] Type of resource.
    * Alwayscompute#storagePoolTypeAggregatedList.
    *
    * @var string
@@ -45,7 +45,7 @@ class StoragePoolTypeAggregatedList extends \Google\Model
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -86,7 +86,7 @@ class StoragePoolTypeAggregatedList extends \Google\Model
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource.
+   * Output only. [Output Only] Type of resource.
    * Alwayscompute#storagePoolTypeAggregatedList.
    *
    * @param string $kind
@@ -123,7 +123,7 @@ class StoragePoolTypeAggregatedList extends \Google\Model
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

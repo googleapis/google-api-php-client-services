@@ -25,7 +25,7 @@ class TargetVpnGateway extends \Google\Collection
   public const STATUS_READY = 'READY';
   protected $collection_key = 'tunnels';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -53,8 +53,8 @@ class TargetVpnGateway extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target
-   * VPN gateways.
+   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway
+   * for target VPN gateways.
    *
    * @var string
    */
@@ -131,7 +131,7 @@ class TargetVpnGateway extends \Google\Collection
   public $tunnels;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -199,8 +199,8 @@ class TargetVpnGateway extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target
-   * VPN gateways.
+   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway
+   * for target VPN gateways.
    *
    * @param string $kind
    */

@@ -78,7 +78,7 @@ class VpnTunnel extends \Google\Collection
   protected $cipherSuiteType = VpnTunnelCipherSuite::class;
   protected $cipherSuiteDataType = '';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -111,7 +111,8 @@ class VpnTunnel extends \Google\Collection
    */
   public $ikeVersion;
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for
+   * VPN tunnels.
    *
    * @var string
    */
@@ -303,7 +304,7 @@ class VpnTunnel extends \Google\Collection
     return $this->cipherSuite;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -386,7 +387,8 @@ class VpnTunnel extends \Google\Collection
     return $this->ikeVersion;
   }
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for
+   * VPN tunnels.
    *
    * @param string $kind
    */

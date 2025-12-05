@@ -28,8 +28,9 @@ class VmEndpointNatMappingsList extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for
-   * lists of Nat mappings of VM endpoints.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#vmEndpointNatMappingsList for lists of Nat mappings of VM
+   * endpoints.
    *
    * @var string
    */
@@ -47,7 +48,7 @@ class VmEndpointNatMappingsList extends \Google\Collection
   protected $resultType = VmEndpointNatMappings::class;
   protected $resultDataType = 'array';
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -73,8 +74,9 @@ class VmEndpointNatMappingsList extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for
-   * lists of Nat mappings of VM endpoints.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#vmEndpointNatMappingsList for lists of Nat mappings of VM
+   * endpoints.
    *
    * @param string $kind
    */
@@ -126,7 +128,7 @@ class VmEndpointNatMappingsList extends \Google\Collection
     return $this->result;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

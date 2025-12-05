@@ -50,7 +50,8 @@ class Zone extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#zone for zones.
+   * Output only. [Output Only] Type of the resource. Always compute#zone for
+   * zones.
    *
    * @var string
    */
@@ -80,7 +81,7 @@ class Zone extends \Google\Collection
    */
   public $status;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
@@ -168,7 +169,8 @@ class Zone extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#zone for zones.
+   * Output only. [Output Only] Type of the resource. Always compute#zone for
+   * zones.
    *
    * @param string $kind
    */
@@ -250,7 +252,7 @@ class Zone extends \Google\Collection
     return $this->status;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $supportsPzs
    */

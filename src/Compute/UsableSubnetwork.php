@@ -86,15 +86,15 @@ class UsableSubnetwork extends \Google\Collection
   public const STACK_TYPE_IPV6_ONLY = 'IPV6_ONLY';
   protected $collection_key = 'secondaryIpRanges';
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this
-   * subnetwork.
+   * Output only. [Output Only] The external IPv6 address range that is assigned
+   * to this subnetwork.
    *
    * @var string
    */
   public $externalIpv6Prefix;
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this
-   * subnetwork.
+   * Output only. [Output Only] The internal IPv6 address range that is assigned
+   * to this subnetwork.
    *
    * @var string
    */
@@ -156,8 +156,8 @@ class UsableSubnetwork extends \Google\Collection
   public $subnetwork;
 
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this
-   * subnetwork.
+   * Output only. [Output Only] The external IPv6 address range that is assigned
+   * to this subnetwork.
    *
    * @param string $externalIpv6Prefix
    */
@@ -173,8 +173,8 @@ class UsableSubnetwork extends \Google\Collection
     return $this->externalIpv6Prefix;
   }
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this
-   * subnetwork.
+   * Output only. [Output Only] The internal IPv6 address range that is assigned
+   * to this subnetwork.
    *
    * @param string $internalIpv6Prefix
    */

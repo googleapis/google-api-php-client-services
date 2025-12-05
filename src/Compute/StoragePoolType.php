@@ -42,8 +42,8 @@ class StoragePoolType extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for
-   * storage pool types.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#storagePoolType for storage pool types.
    *
    * @var string
    */
@@ -104,7 +104,8 @@ class StoragePoolType extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
@@ -191,8 +192,8 @@ class StoragePoolType extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for
-   * storage pool types.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#storagePoolType for storage pool types.
    *
    * @param string $kind
    */
@@ -353,7 +354,8 @@ class StoragePoolType extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */

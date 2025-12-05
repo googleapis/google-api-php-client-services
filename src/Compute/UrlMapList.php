@@ -29,7 +29,7 @@ class UrlMapList extends \Google\Collection
   protected $itemsType = UrlMap::class;
   protected $itemsDataType = 'array';
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @var string
    */
@@ -45,7 +45,7 @@ class UrlMapList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -86,7 +86,7 @@ class UrlMapList extends \Google\Collection
     return $this->items;
   }
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @param string $kind
    */
@@ -122,7 +122,7 @@ class UrlMapList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

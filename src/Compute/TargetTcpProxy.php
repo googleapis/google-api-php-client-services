@@ -22,7 +22,7 @@ class TargetTcpProxy extends \Google\Model
   public const PROXY_HEADER_NONE = 'NONE';
   public const PROXY_HEADER_PROXY_V1 = 'PROXY_V1';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -42,8 +42,8 @@ class TargetTcpProxy extends \Google\Model
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target
-   * TCP proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetTcpProxy for target TCP proxies.
    *
    * @var string
    */
@@ -84,8 +84,8 @@ class TargetTcpProxy extends \Google\Model
    */
   public $proxyHeader;
   /**
-   * [Output Only] URL of the region where the regional TCP proxy resides. This
-   * field is not applicable to global TCP proxy.
+   * Output only. [Output Only] URL of the region where the regional TCP proxy
+   * resides. This field is not applicable to global TCP proxy.
    *
    * @var string
    */
@@ -104,7 +104,7 @@ class TargetTcpProxy extends \Google\Model
   public $service;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -154,8 +154,8 @@ class TargetTcpProxy extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target
-   * TCP proxies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#targetTcpProxy for target TCP proxies.
    *
    * @param string $kind
    */
@@ -238,8 +238,8 @@ class TargetTcpProxy extends \Google\Model
     return $this->proxyHeader;
   }
   /**
-   * [Output Only] URL of the region where the regional TCP proxy resides. This
-   * field is not applicable to global TCP proxy.
+   * Output only. [Output Only] URL of the region where the regional TCP proxy
+   * resides. This field is not applicable to global TCP proxy.
    *
    * @param string $region
    */

@@ -30,7 +30,7 @@ class WireGroup extends \Google\Collection
    */
   public $adminEnabled;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -44,15 +44,15 @@ class WireGroup extends \Google\Collection
   protected $endpointsType = WireGroupEndpoint::class;
   protected $endpointsDataType = 'map';
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire
-   * groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups
+   * for wire groups.
    *
    * @var string
    */
@@ -70,13 +70,14 @@ class WireGroup extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * Output only. [Output Only] Indicates whether there are wire changes yet to
+   * be processed.
    *
    * @var bool
    */
   public $reconciling;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -108,7 +109,7 @@ class WireGroup extends \Google\Collection
     return $this->adminEnabled;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -158,8 +159,8 @@ class WireGroup extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -175,8 +176,8 @@ class WireGroup extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire
-   * groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups
+   * for wire groups.
    *
    * @param string $kind
    */
@@ -214,7 +215,8 @@ class WireGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * Output only. [Output Only] Indicates whether there are wire changes yet to
+   * be processed.
    *
    * @param bool $reconciling
    */
@@ -230,7 +232,7 @@ class WireGroup extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -246,7 +248,7 @@ class WireGroup extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * Topology details for the wire group configuration.
+   * Output only. Topology details for the wire group configuration.
    *
    * @param WireGroupTopology $topology
    */
@@ -278,7 +280,7 @@ class WireGroup extends \Google\Collection
     return $this->wireProperties;
   }
   /**
-   * The single/redundant wire(s) managed by the wire group.
+   * Output only. The single/redundant wire(s) managed by the wire group.
    *
    * @param Wire[] $wires
    */

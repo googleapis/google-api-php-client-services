@@ -26,8 +26,9 @@ class ShieldedInstanceIdentity extends \Google\Model
   protected $encryptionKeyType = ShieldedInstanceIdentityEntry::class;
   protected $encryptionKeyDataType = '';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity
-   * for shielded Instance identity entry.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#shieldedInstanceIdentity for shielded Instance identity
+   * entry.
    *
    * @var string
    */
@@ -87,8 +88,9 @@ class ShieldedInstanceIdentity extends \Google\Model
     return $this->encryptionKey;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity
-   * for shielded Instance identity entry.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#shieldedInstanceIdentity for shielded Instance identity
+   * entry.
    *
    * @param string $kind
    */

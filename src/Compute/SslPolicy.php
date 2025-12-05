@@ -62,7 +62,7 @@ class SslPolicy extends \Google\Collection
   public const PROFILE_RESTRICTED = 'RESTRICTED';
   protected $collection_key = 'warnings';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -83,7 +83,7 @@ class SslPolicy extends \Google\Collection
    */
   public $description;
   /**
-   * [Output Only] The list of features enabled in the SSL policy.
+   * Output only. [Output Only] The list of features enabled in the SSL policy.
    *
    * @var string[]
    */
@@ -102,15 +102,15 @@ class SslPolicy extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL
-   * policies.
+   * Output only. [Output only] Type of the resource. Alwayscompute#sslPolicyfor
+   * SSL policies.
    *
    * @var string
    */
@@ -145,14 +145,14 @@ class SslPolicy extends \Google\Collection
    */
   public $profile;
   /**
-   * [Output Only] URL of the region where the regional SSL policy resides. This
-   * field is not applicable to global SSL policies.
+   * Output only. [Output Only] URL of the region where the regional SSL policy
+   * resides. This field is not applicable to global SSL policies.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -161,7 +161,7 @@ class SslPolicy extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -212,7 +212,7 @@ class SslPolicy extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] The list of features enabled in the SSL policy.
+   * Output only. [Output Only] The list of features enabled in the SSL policy.
    *
    * @param string[] $enabledFeatures
    */
@@ -251,8 +251,8 @@ class SslPolicy extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -268,8 +268,8 @@ class SslPolicy extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL
-   * policies.
+   * Output only. [Output only] Type of the resource. Alwayscompute#sslPolicyfor
+   * SSL policies.
    *
    * @param string $kind
    */
@@ -348,8 +348,8 @@ class SslPolicy extends \Google\Collection
     return $this->profile;
   }
   /**
-   * [Output Only] URL of the region where the regional SSL policy resides. This
-   * field is not applicable to global SSL policies.
+   * Output only. [Output Only] URL of the region where the regional SSL policy
+   * resides. This field is not applicable to global SSL policies.
    *
    * @param string $region
    */
@@ -365,7 +365,7 @@ class SslPolicy extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -381,8 +381,8 @@ class SslPolicy extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] If potential misconfigurations are detected for this SSL
-   * policy, this field will be populated with warning messages.
+   * Output only. [Output Only] If potential misconfigurations are detected for
+   * this SSL policy, this field will be populated with warning messages.
    *
    * @param SslPolicyWarnings[] $warnings
    */

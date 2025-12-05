@@ -30,7 +30,7 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
   protected $itemsType = UsableSubnetwork::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource.
+   * Output only. [Output Only] Type of resource.
    * Alwayscompute#usableSubnetworksAggregatedList for aggregated lists of
    * usable subnetworks.
    *
@@ -52,13 +52,13 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
   protected $scopedWarningsType = SubnetworksScopedWarning::class;
   protected $scopedWarningsDataType = 'array';
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -100,7 +100,7 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource.
+   * Output only. [Output Only] Type of resource.
    * Alwayscompute#usableSubnetworksAggregatedList for aggregated lists of
    * usable subnetworks.
    *
@@ -140,8 +140,8 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Informational warning messages for failures encountered from
-   * scopes.
+   * Output only. [Output Only] Informational warning messages for failures
+   * encountered from scopes.
    *
    * @param SubnetworksScopedWarning[] $scopedWarnings
    */
@@ -157,7 +157,7 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->scopedWarnings;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -173,7 +173,7 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

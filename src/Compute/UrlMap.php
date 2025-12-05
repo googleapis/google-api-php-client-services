@@ -21,7 +21,7 @@ class UrlMap extends \Google\Collection
 {
   protected $collection_key = 'tests';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -78,7 +78,8 @@ class UrlMap extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#urlMaps for url maps.
+   * Output only. [Output Only] Type of the resource. Always compute#urlMaps for
+   * url maps.
    *
    * @var string
    */
@@ -98,10 +99,10 @@ class UrlMap extends \Google\Collection
   protected $pathMatchersType = PathMatcher::class;
   protected $pathMatchersDataType = 'array';
   /**
-   * [Output Only] URL of the region where the regional URL map resides. This
-   * field is not applicable to global URL maps. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request
-   * body.
+   * Output only. [Output Only] URL of the region where the regional URL map
+   * resides. This field is not applicable to global URL maps. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
    *
    * @var string
    */
@@ -116,7 +117,7 @@ class UrlMap extends \Google\Collection
   protected $testsDataType = 'array';
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -348,7 +349,8 @@ class UrlMap extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#urlMaps for url maps.
+   * Output only. [Output Only] Type of the resource. Always compute#urlMaps for
+   * url maps.
    *
    * @param string $kind
    */
@@ -402,10 +404,10 @@ class UrlMap extends \Google\Collection
     return $this->pathMatchers;
   }
   /**
-   * [Output Only] URL of the region where the regional URL map resides. This
-   * field is not applicable to global URL maps. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request
-   * body.
+   * Output only. [Output Only] URL of the region where the regional URL map
+   * resides. This field is not applicable to global URL maps. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
    *
    * @param string $region
    */

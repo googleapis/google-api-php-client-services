@@ -20,8 +20,8 @@ namespace Google\Service\Compute;
 class VpnGatewayVpnGatewayInterface extends \Google\Model
 {
   /**
-   * [Output Only] Numeric identifier for this VPN interface associated with the
-   * VPN gateway.
+   * Output only. [Output Only] Numeric identifier for this VPN interface
+   * associated with the VPN gateway.
    *
    * @var string
    */
@@ -37,31 +37,32 @@ class VpnGatewayVpnGatewayInterface extends \Google\Model
    */
   public $interconnectAttachment;
   /**
-   * [Output Only] IP address for this VPN interface associated with the VPN
-   * gateway. The IP address could be either a regional external IP address or a
-   * regional internal IP address. The two IP addresses for a VPN gateway must
-   * be all regional external or regional internal IP addresses. There cannot be
-   * a mix of regional external IP addresses and regional internal IP addresses.
-   * For HA VPN over Cloud Interconnect, the IP addresses for both interfaces
-   * could either be regional internal IP addresses or regional external IP
-   * addresses. For regular (non HA VPN over Cloud Interconnect) HA VPN tunnels,
-   * the IP address must be a regional external IP address.
+   * Output only. [Output Only] IP address for this VPN interface associated
+   * with the VPN gateway. The IP address could be either a regional external IP
+   * address or a regional internal IP address. The two IP addresses for a VPN
+   * gateway must be all regional external or regional internal IP addresses.
+   * There cannot be a mix of regional external IP addresses and regional
+   * internal IP addresses. For HA VPN over Cloud Interconnect, the IP addresses
+   * for both interfaces could either be regional internal IP addresses or
+   * regional external IP addresses. For regular (non HA VPN over Cloud
+   * Interconnect) HA VPN tunnels, the IP address must be a regional external IP
+   * address.
    *
    * @var string
    */
   public $ipAddress;
   /**
-   * [Output Only] IPv6 address for this VPN interface associated with the VPN
-   * gateway. The IPv6 address must be a regional external IPv6 address. The
-   * format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+   * Output only. [Output Only] IPv6 address for this VPN interface associated
+   * with the VPN gateway. The IPv6 address must be a regional external IPv6
+   * address. The format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
    *
    * @var string
    */
   public $ipv6Address;
 
   /**
-   * [Output Only] Numeric identifier for this VPN interface associated with the
-   * VPN gateway.
+   * Output only. [Output Only] Numeric identifier for this VPN interface
+   * associated with the VPN gateway.
    *
    * @param string $id
    */
@@ -97,15 +98,16 @@ class VpnGatewayVpnGatewayInterface extends \Google\Model
     return $this->interconnectAttachment;
   }
   /**
-   * [Output Only] IP address for this VPN interface associated with the VPN
-   * gateway. The IP address could be either a regional external IP address or a
-   * regional internal IP address. The two IP addresses for a VPN gateway must
-   * be all regional external or regional internal IP addresses. There cannot be
-   * a mix of regional external IP addresses and regional internal IP addresses.
-   * For HA VPN over Cloud Interconnect, the IP addresses for both interfaces
-   * could either be regional internal IP addresses or regional external IP
-   * addresses. For regular (non HA VPN over Cloud Interconnect) HA VPN tunnels,
-   * the IP address must be a regional external IP address.
+   * Output only. [Output Only] IP address for this VPN interface associated
+   * with the VPN gateway. The IP address could be either a regional external IP
+   * address or a regional internal IP address. The two IP addresses for a VPN
+   * gateway must be all regional external or regional internal IP addresses.
+   * There cannot be a mix of regional external IP addresses and regional
+   * internal IP addresses. For HA VPN over Cloud Interconnect, the IP addresses
+   * for both interfaces could either be regional internal IP addresses or
+   * regional external IP addresses. For regular (non HA VPN over Cloud
+   * Interconnect) HA VPN tunnels, the IP address must be a regional external IP
+   * address.
    *
    * @param string $ipAddress
    */
@@ -121,9 +123,9 @@ class VpnGatewayVpnGatewayInterface extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * [Output Only] IPv6 address for this VPN interface associated with the VPN
-   * gateway. The IPv6 address must be a regional external IPv6 address. The
-   * format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+   * Output only. [Output Only] IPv6 address for this VPN interface associated
+   * with the VPN gateway. The IPv6 address must be a regional external IPv6
+   * address. The format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
    *
    * @param string $ipv6Address
    */

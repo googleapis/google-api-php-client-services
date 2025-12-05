@@ -92,7 +92,7 @@ class TargetHttpsProxy extends \Google\Collection
    */
   public $certificateMap;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -136,8 +136,8 @@ class TargetHttpsProxy extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of resource. Alwayscompute#targetHttpsProxy for target
-   * HTTPS proxies.
+   * Output only. [Output Only] Type of resource. Alwayscompute#targetHttpsProxy
+   * for target HTTPS proxies.
    *
    * @var string
    */
@@ -184,8 +184,9 @@ class TargetHttpsProxy extends \Google\Collection
    */
   public $quicOverride;
   /**
-   * [Output Only] URL of the region where the regional TargetHttpsProxy
-   * resides. This field is not applicable to global TargetHttpsProxies.
+   * Output only. [Output Only] URL of the region where the regional
+   * TargetHttpsProxy resides. This field is not applicable to global
+   * TargetHttpsProxies.
    *
    * @var string
    */
@@ -336,7 +337,7 @@ class TargetHttpsProxy extends \Google\Collection
     return $this->certificateMap;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -430,8 +431,8 @@ class TargetHttpsProxy extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#targetHttpsProxy for target
-   * HTTPS proxies.
+   * Output only. [Output Only] Type of resource. Alwayscompute#targetHttpsProxy
+   * for target HTTPS proxies.
    *
    * @param string $kind
    */
@@ -520,8 +521,9 @@ class TargetHttpsProxy extends \Google\Collection
     return $this->quicOverride;
   }
   /**
-   * [Output Only] URL of the region where the regional TargetHttpsProxy
-   * resides. This field is not applicable to global TargetHttpsProxies.
+   * Output only. [Output Only] URL of the region where the regional
+   * TargetHttpsProxy resides. This field is not applicable to global
+   * TargetHttpsProxies.
    *
    * @param string $region
    */

@@ -29,8 +29,8 @@ class StoragePoolTypeList extends \Google\Collection
   protected $itemsType = StoragePoolType::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Alwayscompute#storagePoolTypeList for
-   * storage pool types.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#storagePoolTypeList for storage pool types.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class StoragePoolTypeList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class StoragePoolTypeList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#storagePoolTypeList for
-   * storage pool types.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#storagePoolTypeList for storage pool types.
    *
    * @param string $kind
    */
@@ -124,7 +124,7 @@ class StoragePoolTypeList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

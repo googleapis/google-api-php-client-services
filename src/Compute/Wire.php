@@ -21,9 +21,9 @@ class Wire extends \Google\Collection
 {
   protected $collection_key = 'endpoints';
   /**
-   * [Output Only] Indicates whether the wire is enabled. When false, the wire
-   * is disabled. When true and when the wire group of the wire is also enabled,
-   * the wire is enabled. Defaults to true.
+   * Output only. [Output Only] Indicates whether the wire is enabled. When
+   * false, the wire is disabled. When true and when the wire group of the wire
+   * is also enabled, the wire is enabled. Defaults to true.
    *
    * @var bool
    */
@@ -31,11 +31,11 @@ class Wire extends \Google\Collection
   protected $endpointsType = WireEndpoint::class;
   protected $endpointsDataType = 'array';
   /**
-   * [Output Only] A label that identifies the wire. The format of this label
-   * combines the existing labels of the wire group endpoints and Interconnect
-   * connections used by this wire in alphabetical order as follows:
-   * `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:        -
-   * ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys
+   * Output only. [Output Only] A label that identifies the wire. The format of
+   * this label combines the existing labels of the wire group endpoints and
+   * Interconnect connections used by this wire in alphabetical order as
+   * follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys
    * when you specified the wire group endpoint    objects.    - CONNECTION_A1
    * and CONNECTION_B1: are the    labels that you entered as map keys when you
    * specified the wire group    Interconnect objects.
@@ -47,9 +47,9 @@ class Wire extends \Google\Collection
   protected $wirePropertiesDataType = '';
 
   /**
-   * [Output Only] Indicates whether the wire is enabled. When false, the wire
-   * is disabled. When true and when the wire group of the wire is also enabled,
-   * the wire is enabled. Defaults to true.
+   * Output only. [Output Only] Indicates whether the wire is enabled. When
+   * false, the wire is disabled. When true and when the wire group of the wire
+   * is also enabled, the wire is enabled. Defaults to true.
    *
    * @param bool $adminEnabled
    */
@@ -65,7 +65,7 @@ class Wire extends \Google\Collection
     return $this->adminEnabled;
   }
   /**
-   * Wire endpoints are specific Interconnect connections.
+   * Output only. Wire endpoints are specific Interconnect connections.
    *
    * @param WireEndpoint[] $endpoints
    */
@@ -81,11 +81,11 @@ class Wire extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * [Output Only] A label that identifies the wire. The format of this label
-   * combines the existing labels of the wire group endpoints and Interconnect
-   * connections used by this wire in alphabetical order as follows:
-   * `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:        -
-   * ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys
+   * Output only. [Output Only] A label that identifies the wire. The format of
+   * this label combines the existing labels of the wire group endpoints and
+   * Interconnect connections used by this wire in alphabetical order as
+   * follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys
    * when you specified the wire group endpoint    objects.    - CONNECTION_A1
    * and CONNECTION_B1: are the    labels that you entered as map keys when you
    * specified the wire group    Interconnect objects.
@@ -104,7 +104,7 @@ class Wire extends \Google\Collection
     return $this->label;
   }
   /**
-   * [Output Only] Properties of the wire.
+   * Output only. [Output Only] Properties of the wire.
    *
    * @param WireProperties $wireProperties
    */

@@ -33,8 +33,8 @@ class SslPoliciesAggregatedList extends \Google\Collection
   protected $itemsType = SslPoliciesScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for
-   * lists of SSL Policies.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#sslPolicyAggregatedList for lists of SSL Policies.
    *
    * @var string
    */
@@ -50,13 +50,13 @@ class SslPoliciesAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -111,8 +111,8 @@ class SslPoliciesAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for
-   * lists of SSL Policies.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#sslPolicyAggregatedList for lists of SSL Policies.
    *
    * @param string $kind
    */
@@ -148,7 +148,7 @@ class SslPoliciesAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -164,7 +164,7 @@ class SslPoliciesAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

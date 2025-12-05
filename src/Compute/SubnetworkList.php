@@ -29,8 +29,8 @@ class SubnetworkList extends \Google\Collection
   protected $itemsType = Subnetwork::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Always compute#subnetworkList for lists of
-   * subnetworks.
+   * Output only. [Output Only] Type of resource. Always compute#subnetworkList
+   * for lists of subnetworks.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class SubnetworkList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class SubnetworkList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Always compute#subnetworkList for lists of
-   * subnetworks.
+   * Output only. [Output Only] Type of resource. Always compute#subnetworkList
+   * for lists of subnetworks.
    *
    * @param string $kind
    */
@@ -124,7 +124,7 @@ class SubnetworkList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

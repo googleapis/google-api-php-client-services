@@ -20,7 +20,7 @@ namespace Google\Service\Compute;
 class TargetHttpProxy extends \Google\Model
 {
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -64,8 +64,8 @@ class TargetHttpProxy extends \Google\Model
    */
   public $id;
   /**
-   * [Output Only] Type of resource. Always compute#targetHttpProxy for target
-   * HTTP proxies.
+   * Output only. [Output Only] Type of resource. Always compute#targetHttpProxy
+   * for target HTTP proxies.
    *
    * @var string
    */
@@ -99,8 +99,8 @@ class TargetHttpProxy extends \Google\Model
    */
   public $proxyBind;
   /**
-   * [Output Only] URL of the region where the regional Target HTTP Proxy
-   * resides. This field is not applicable to global Target HTTP Proxies.
+   * Output only. [Output Only] URL of the region where the regional Target HTTP
+   * Proxy resides. This field is not applicable to global Target HTTP Proxies.
    *
    * @var string
    */
@@ -120,7 +120,7 @@ class TargetHttpProxy extends \Google\Model
   public $urlMap;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -214,8 +214,8 @@ class TargetHttpProxy extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of resource. Always compute#targetHttpProxy for target
-   * HTTP proxies.
+   * Output only. [Output Only] Type of resource. Always compute#targetHttpProxy
+   * for target HTTP proxies.
    *
    * @param string $kind
    */
@@ -279,8 +279,8 @@ class TargetHttpProxy extends \Google\Model
     return $this->proxyBind;
   }
   /**
-   * [Output Only] URL of the region where the regional Target HTTP Proxy
-   * resides. This field is not applicable to global Target HTTP Proxies.
+   * Output only. [Output Only] URL of the region where the regional Target HTTP
+   * Proxy resides. This field is not applicable to global Target HTTP Proxies.
    *
    * @param string $region
    */

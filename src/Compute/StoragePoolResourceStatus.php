@@ -26,8 +26,8 @@ class StoragePoolResourceStatus extends \Google\Model
    */
   public $diskCount;
   /**
-   * [Output Only] Timestamp of the last successful resize inRFC3339 text
-   * format.
+   * Output only. [Output Only] Timestamp of the last successful resize
+   * inRFC3339 text format.
    *
    * @var string
    */
@@ -107,8 +107,8 @@ class StoragePoolResourceStatus extends \Google\Model
     return $this->diskCount;
   }
   /**
-   * [Output Only] Timestamp of the last successful resize inRFC3339 text
-   * format.
+   * Output only. [Output Only] Timestamp of the last successful resize
+   * inRFC3339 text format.
    *
    * @param string $lastResizeTimestamp
    */

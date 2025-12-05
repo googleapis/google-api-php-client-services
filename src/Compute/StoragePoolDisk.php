@@ -45,75 +45,75 @@ class StoragePoolDisk extends \Google\Collection
   public const STATUS_UNAVAILABLE = 'UNAVAILABLE';
   protected $collection_key = 'resourcePolicies';
   /**
-   * [Output Only] Instances this disk is attached to.
+   * Output only. [Output Only] Instances this disk is attached to.
    *
    * @var string[]
    */
   public $attachedInstances;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
   public $creationTimestamp;
   /**
-   * [Output Only] The URL of the disk.
+   * Output only. [Output Only] The URL of the disk.
    *
    * @var string
    */
   public $disk;
   /**
-   * [Output Only] The name of the disk.
+   * Output only. [Output Only] The name of the disk.
    *
    * @var string
    */
   public $name;
   /**
-   * [Output Only] The number of IOPS provisioned for the disk.
+   * Output only. [Output Only] The number of IOPS provisioned for the disk.
    *
    * @var string
    */
   public $provisionedIops;
   /**
-   * [Output Only] The throughput provisioned for the disk.
+   * Output only. [Output Only] The throughput provisioned for the disk.
    *
    * @var string
    */
   public $provisionedThroughput;
   /**
-   * [Output Only] Resource policies applied to disk for automatic snapshot
-   * creations.
+   * Output only. [Output Only] Resource policies applied to disk for automatic
+   * snapshot creations.
    *
    * @var string[]
    */
   public $resourcePolicies;
   /**
-   * [Output Only] The disk size, in GB.
+   * Output only. [Output Only] The disk size, in GB.
    *
    * @var string
    */
   public $sizeGb;
   /**
-   * [Output Only] The disk status.
+   * Output only. [Output Only] The disk status.
    *
    * @var string
    */
   public $status;
   /**
-   * [Output Only] The disk type.
+   * Output only. [Output Only] The disk type.
    *
    * @var string
    */
   public $type;
   /**
-   * [Output Only] Amount of disk space used.
+   * Output only. [Output Only] Amount of disk space used.
    *
    * @var string
    */
   public $usedBytes;
 
   /**
-   * [Output Only] Instances this disk is attached to.
+   * Output only. [Output Only] Instances this disk is attached to.
    *
    * @param string[] $attachedInstances
    */
@@ -129,7 +129,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->attachedInstances;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -145,7 +145,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * [Output Only] The URL of the disk.
+   * Output only. [Output Only] The URL of the disk.
    *
    * @param string $disk
    */
@@ -161,7 +161,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->disk;
   }
   /**
-   * [Output Only] The name of the disk.
+   * Output only. [Output Only] The name of the disk.
    *
    * @param string $name
    */
@@ -177,7 +177,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] The number of IOPS provisioned for the disk.
+   * Output only. [Output Only] The number of IOPS provisioned for the disk.
    *
    * @param string $provisionedIops
    */
@@ -193,7 +193,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->provisionedIops;
   }
   /**
-   * [Output Only] The throughput provisioned for the disk.
+   * Output only. [Output Only] The throughput provisioned for the disk.
    *
    * @param string $provisionedThroughput
    */
@@ -209,8 +209,8 @@ class StoragePoolDisk extends \Google\Collection
     return $this->provisionedThroughput;
   }
   /**
-   * [Output Only] Resource policies applied to disk for automatic snapshot
-   * creations.
+   * Output only. [Output Only] Resource policies applied to disk for automatic
+   * snapshot creations.
    *
    * @param string[] $resourcePolicies
    */
@@ -226,7 +226,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->resourcePolicies;
   }
   /**
-   * [Output Only] The disk size, in GB.
+   * Output only. [Output Only] The disk size, in GB.
    *
    * @param string $sizeGb
    */
@@ -242,7 +242,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->sizeGb;
   }
   /**
-   * [Output Only] The disk status.
+   * Output only. [Output Only] The disk status.
    *
    * Accepted values: CREATING, DELETING, FAILED, READY, RESTORING, UNAVAILABLE
    *
@@ -260,7 +260,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->status;
   }
   /**
-   * [Output Only] The disk type.
+   * Output only. [Output Only] The disk type.
    *
    * @param string $type
    */
@@ -276,7 +276,7 @@ class StoragePoolDisk extends \Google\Collection
     return $this->type;
   }
   /**
-   * [Output Only] Amount of disk space used.
+   * Output only. [Output Only] Amount of disk space used.
    *
    * @param string $usedBytes
    */

@@ -20,22 +20,22 @@ namespace Google\Service\Compute;
 class WireGroupTopologyEndpoint extends \Google\Model
 {
   /**
-   * The InterconnectLocation.city (metropolitan area designator) that all
-   * interconnects are located in.
+   * Output only. The InterconnectLocation.city (metropolitan area designator)
+   * that all interconnects are located in.
    *
    * @var string
    */
   public $city;
   /**
-   * Endpoint label from the wire group.
+   * Output only. Endpoint label from the wire group.
    *
    * @var string
    */
   public $label;
 
   /**
-   * The InterconnectLocation.city (metropolitan area designator) that all
-   * interconnects are located in.
+   * Output only. The InterconnectLocation.city (metropolitan area designator)
+   * that all interconnects are located in.
    *
    * @param string $city
    */
@@ -51,7 +51,7 @@ class WireGroupTopologyEndpoint extends \Google\Model
     return $this->city;
   }
   /**
-   * Endpoint label from the wire group.
+   * Output only. Endpoint label from the wire group.
    *
    * @param string $label
    */

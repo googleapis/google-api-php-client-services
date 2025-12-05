@@ -29,7 +29,8 @@ class VpnGatewayAggregatedList extends \Google\Collection
   protected $itemsType = VpnGatewaysScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
+   * Output only. [Output Only] Type of resource. Always compute#vpnGateway for
+   * VPN gateways.
    *
    * @var string
    */
@@ -45,13 +46,13 @@ class VpnGatewayAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -92,7 +93,8 @@ class VpnGatewayAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
+   * Output only. [Output Only] Type of resource. Always compute#vpnGateway for
+   * VPN gateways.
    *
    * @param string $kind
    */
@@ -128,7 +130,7 @@ class VpnGatewayAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -144,7 +146,7 @@ class VpnGatewayAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

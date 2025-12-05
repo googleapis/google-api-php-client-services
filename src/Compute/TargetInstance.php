@@ -24,7 +24,7 @@ class TargetInstance extends \Google\Model
    */
   public const NAT_POLICY_NO_NAT = 'NO_NAT';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -56,8 +56,8 @@ class TargetInstance extends \Google\Model
    */
   public $instance;
   /**
-   * [Output Only] The type of the resource. Alwayscompute#targetInstance for
-   * target instances.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#targetInstance for target instances.
    *
    * @var string
    */
@@ -104,16 +104,16 @@ class TargetInstance extends \Google\Model
    */
   public $selfLink;
   /**
-   * [Output Only] URL of the zone where the target instance resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the zone where the target instance
+   * resides. You must specify this field as part of the HTTP request URL. It is
+   * not settable as a field in the request body.
    *
    * @var string
    */
   public $zone;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -185,8 +185,8 @@ class TargetInstance extends \Google\Model
     return $this->instance;
   }
   /**
-   * [Output Only] The type of the resource. Alwayscompute#targetInstance for
-   * target instances.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#targetInstance for target instances.
    *
    * @param string $kind
    */
@@ -295,9 +295,9 @@ class TargetInstance extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output Only] URL of the zone where the target instance resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the zone where the target instance
+   * resides. You must specify this field as part of the HTTP request URL. It is
+   * not settable as a field in the request body.
    *
    * @param string $zone
    */

@@ -57,15 +57,15 @@ class Snapshot extends \Google\Collection
   public const STORAGE_BYTES_STATUS_UP_TO_DATE = 'UP_TO_DATE';
   protected $collection_key = 'storageLocations';
   /**
-   * [Output Only] The architecture of the snapshot. Valid values are ARM64 or
-   * X86_64.
+   * Output only. [Output Only] The architecture of the snapshot. Valid values
+   * are ARM64 or X86_64.
    *
    * @var string
    */
   public $architecture;
   /**
-   * [Output Only] Set to true if snapshots are automatically created by
-   * applying resource policy on the target disk.
+   * Output only. [Output Only] Set to true if snapshots are automatically
+   * created by applying resource policy on the target disk.
    *
    * @var bool
    */
@@ -82,13 +82,13 @@ class Snapshot extends \Google\Collection
    */
   public $chainName;
   /**
-   * [Output Only] Size in bytes of the snapshot at creation time.
+   * Output only. [Output Only] Size in bytes of the snapshot at creation time.
    *
    * @var string
    */
   public $creationSizeBytes;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -101,20 +101,22 @@ class Snapshot extends \Google\Collection
    */
   public $description;
   /**
-   * [Output Only] Size of the source disk, specified in GB.
+   * Output only. [Output Only] Size of the source disk, specified in GB.
    *
    * @var string
    */
   public $diskSizeGb;
   /**
-   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * Output only. [Output Only] Number of bytes downloaded to restore a snapshot
+   * to a disk.
    *
    * @var string
    */
   public $downloadBytes;
   /**
-   * Whether this snapshot is created from a confidential compute mode disk.
-   * [Output Only]: This field is not set by user, but from source disk.
+   * Output only. Whether this snapshot is created from a confidential compute
+   * mode disk. [Output Only]: This field is not set by user, but from source
+   * disk.
    *
    * @var bool
    */
@@ -129,15 +131,15 @@ class Snapshot extends \Google\Collection
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#snapshot for Snapshot
-   * resources.
+   * Output only. [Output Only] Type of the resource. Always compute#snapshot
+   * for Snapshot resources.
    *
    * @var string
    */
@@ -163,15 +165,15 @@ class Snapshot extends \Google\Collection
    */
   public $labels;
   /**
-   * [Output Only] Integer license codes indicating which licenses are attached
-   * to this snapshot.
+   * Output only. [Output Only] Integer license codes indicating which licenses
+   * are attached to this snapshot.
    *
    * @var string[]
    */
   public $licenseCodes;
   /**
-   * [Output Only] A list of public visible licenses that apply to this
-   * snapshot. This can be because the original image had licenses attached
+   * Output only. [Output Only] A list of public visible licenses that apply to
+   * this snapshot. This can be because the original image had licenses attached
    * (such as a Windows image).
    *
    * @var string[]
@@ -205,13 +207,13 @@ class Snapshot extends \Google\Collection
    */
   public $satisfiesPzi;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzs;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -240,9 +242,9 @@ class Snapshot extends \Google\Collection
    */
   public $sourceDiskForRecoveryCheckpoint;
   /**
-   * [Output Only] The ID value of the disk used to create this snapshot. This
-   * value may be used to determine whether the snapshot was taken from the
-   * current or a previous instance of a given disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this
+   * snapshot. This value may be used to determine whether the snapshot was
+   * taken from the current or a previous instance of a given disk name.
    *
    * @var string
    */
@@ -261,50 +263,51 @@ class Snapshot extends \Google\Collection
   protected $sourceInstantSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceInstantSnapshotEncryptionKeyDataType = '';
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this
-   * snapshot. This value identifies the exact instant snapshot that was used to
-   * create this snapshot. For example, if you created the snapshot from an
-   * instant snapshot that was later deleted and recreated under the same name,
-   * the source instant snapshot ID would identify the exact instant snapshot
-   * that was used.
+   * Output only. [Output Only] The unique ID of the instant snapshot used to
+   * create this snapshot. This value identifies the exact instant snapshot that
+   * was used to create this snapshot. For example, if you created the snapshot
+   * from an instant snapshot that was later deleted and recreated under the
+   * same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
    *
    * @var string
    */
   public $sourceInstantSnapshotId;
   /**
-   * [Output Only] URL of the resource policy which created this scheduled
-   * snapshot.
+   * Output only. [Output Only] URL of the resource policy which created this
+   * scheduled snapshot.
    *
    * @var string
    */
   public $sourceSnapshotSchedulePolicy;
   /**
-   * [Output Only] ID of the resource policy which created this scheduled
-   * snapshot.
+   * Output only. [Output Only] ID of the resource policy which created this
+   * scheduled snapshot.
    *
    * @var string
    */
   public $sourceSnapshotSchedulePolicyId;
   /**
-   * [Output Only] The status of the snapshot. This can beCREATING, DELETING,
-   * FAILED,READY, or UPLOADING.
+   * Output only. [Output Only] The status of the snapshot. This can beCREATING,
+   * DELETING, FAILED,READY, or UPLOADING.
    *
    * @var string
    */
   public $status;
   /**
-   * [Output Only] A size of the storage used by the snapshot. As snapshots
-   * share storage, this number is expected to change with snapshot
+   * Output only. [Output Only] A size of the storage used by the snapshot. As
+   * snapshots share storage, this number is expected to change with snapshot
    * creation/deletion.
    *
    * @var string
    */
   public $storageBytes;
   /**
-   * [Output Only] An indicator whether storageBytes is in a stable state or it
-   * is being adjusted as a result of shared storage reallocation. This status
-   * can either be UPDATING, meaning the size of the snapshot is being updated,
-   * or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+   * Output only. [Output Only] An indicator whether storageBytes is in a stable
+   * state or it is being adjusted as a result of shared storage reallocation.
+   * This status can either be UPDATING, meaning the size of the snapshot is
+   * being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
+   * date.
    *
    * @var string
    */
@@ -318,8 +321,8 @@ class Snapshot extends \Google\Collection
   public $storageLocations;
 
   /**
-   * [Output Only] The architecture of the snapshot. Valid values are ARM64 or
-   * X86_64.
+   * Output only. [Output Only] The architecture of the snapshot. Valid values
+   * are ARM64 or X86_64.
    *
    * Accepted values: ARCHITECTURE_UNSPECIFIED, ARM64, X86_64
    *
@@ -337,8 +340,8 @@ class Snapshot extends \Google\Collection
     return $this->architecture;
   }
   /**
-   * [Output Only] Set to true if snapshots are automatically created by
-   * applying resource policy on the target disk.
+   * Output only. [Output Only] Set to true if snapshots are automatically
+   * created by applying resource policy on the target disk.
    *
    * @param bool $autoCreated
    */
@@ -375,7 +378,7 @@ class Snapshot extends \Google\Collection
     return $this->chainName;
   }
   /**
-   * [Output Only] Size in bytes of the snapshot at creation time.
+   * Output only. [Output Only] Size in bytes of the snapshot at creation time.
    *
    * @param string $creationSizeBytes
    */
@@ -391,7 +394,7 @@ class Snapshot extends \Google\Collection
     return $this->creationSizeBytes;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -424,7 +427,7 @@ class Snapshot extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] Size of the source disk, specified in GB.
+   * Output only. [Output Only] Size of the source disk, specified in GB.
    *
    * @param string $diskSizeGb
    */
@@ -440,7 +443,8 @@ class Snapshot extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * Output only. [Output Only] Number of bytes downloaded to restore a snapshot
+   * to a disk.
    *
    * @param string $downloadBytes
    */
@@ -456,8 +460,9 @@ class Snapshot extends \Google\Collection
     return $this->downloadBytes;
   }
   /**
-   * Whether this snapshot is created from a confidential compute mode disk.
-   * [Output Only]: This field is not set by user, but from source disk.
+   * Output only. Whether this snapshot is created from a confidential compute
+   * mode disk. [Output Only]: This field is not set by user, but from source
+   * disk.
    *
    * @param bool $enableConfidentialCompute
    */
@@ -490,9 +495,9 @@ class Snapshot extends \Google\Collection
     return $this->guestFlush;
   }
   /**
-   * [Output Only] A list of features to enable on the guest operating system.
-   * Applicable only for bootable images. Read  Enabling guest operating system
-   * features to see a list of available options.
+   * Output only. [Output Only] A list of features to enable on the guest
+   * operating system. Applicable only for bootable images. Read  Enabling guest
+   * operating system features to see a list of available options.
    *
    * @param GuestOsFeature[] $guestOsFeatures
    */
@@ -508,8 +513,8 @@ class Snapshot extends \Google\Collection
     return $this->guestOsFeatures;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -525,8 +530,8 @@ class Snapshot extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#snapshot for Snapshot
-   * resources.
+   * Output only. [Output Only] Type of the resource. Always compute#snapshot
+   * for Snapshot resources.
    *
    * @param string $kind
    */
@@ -582,8 +587,8 @@ class Snapshot extends \Google\Collection
     return $this->labels;
   }
   /**
-   * [Output Only] Integer license codes indicating which licenses are attached
-   * to this snapshot.
+   * Output only. [Output Only] Integer license codes indicating which licenses
+   * are attached to this snapshot.
    *
    * @param string[] $licenseCodes
    */
@@ -599,8 +604,8 @@ class Snapshot extends \Google\Collection
     return $this->licenseCodes;
   }
   /**
-   * [Output Only] A list of public visible licenses that apply to this
-   * snapshot. This can be because the original image had licenses attached
+   * Output only. [Output Only] A list of public visible licenses that apply to
+   * this snapshot. This can be because the original image had licenses attached
    * (such as a Windows image).
    *
    * @param string[] $licenses
@@ -689,7 +694,7 @@ class Snapshot extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -705,7 +710,7 @@ class Snapshot extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -817,9 +822,9 @@ class Snapshot extends \Google\Collection
     return $this->sourceDiskForRecoveryCheckpoint;
   }
   /**
-   * [Output Only] The ID value of the disk used to create this snapshot. This
-   * value may be used to determine whether the snapshot was taken from the
-   * current or a previous instance of a given disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this
+   * snapshot. This value may be used to determine whether the snapshot was
+   * taken from the current or a previous instance of a given disk name.
    *
    * @param string $sourceDiskId
    */
@@ -873,12 +878,12 @@ class Snapshot extends \Google\Collection
     return $this->sourceInstantSnapshotEncryptionKey;
   }
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this
-   * snapshot. This value identifies the exact instant snapshot that was used to
-   * create this snapshot. For example, if you created the snapshot from an
-   * instant snapshot that was later deleted and recreated under the same name,
-   * the source instant snapshot ID would identify the exact instant snapshot
-   * that was used.
+   * Output only. [Output Only] The unique ID of the instant snapshot used to
+   * create this snapshot. This value identifies the exact instant snapshot that
+   * was used to create this snapshot. For example, if you created the snapshot
+   * from an instant snapshot that was later deleted and recreated under the
+   * same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
    *
    * @param string $sourceInstantSnapshotId
    */
@@ -894,8 +899,8 @@ class Snapshot extends \Google\Collection
     return $this->sourceInstantSnapshotId;
   }
   /**
-   * [Output Only] URL of the resource policy which created this scheduled
-   * snapshot.
+   * Output only. [Output Only] URL of the resource policy which created this
+   * scheduled snapshot.
    *
    * @param string $sourceSnapshotSchedulePolicy
    */
@@ -911,8 +916,8 @@ class Snapshot extends \Google\Collection
     return $this->sourceSnapshotSchedulePolicy;
   }
   /**
-   * [Output Only] ID of the resource policy which created this scheduled
-   * snapshot.
+   * Output only. [Output Only] ID of the resource policy which created this
+   * scheduled snapshot.
    *
    * @param string $sourceSnapshotSchedulePolicyId
    */
@@ -928,8 +933,8 @@ class Snapshot extends \Google\Collection
     return $this->sourceSnapshotSchedulePolicyId;
   }
   /**
-   * [Output Only] The status of the snapshot. This can beCREATING, DELETING,
-   * FAILED,READY, or UPLOADING.
+   * Output only. [Output Only] The status of the snapshot. This can beCREATING,
+   * DELETING, FAILED,READY, or UPLOADING.
    *
    * Accepted values: CREATING, DELETING, FAILED, READY, UPLOADING
    *
@@ -947,8 +952,8 @@ class Snapshot extends \Google\Collection
     return $this->status;
   }
   /**
-   * [Output Only] A size of the storage used by the snapshot. As snapshots
-   * share storage, this number is expected to change with snapshot
+   * Output only. [Output Only] A size of the storage used by the snapshot. As
+   * snapshots share storage, this number is expected to change with snapshot
    * creation/deletion.
    *
    * @param string $storageBytes
@@ -965,10 +970,11 @@ class Snapshot extends \Google\Collection
     return $this->storageBytes;
   }
   /**
-   * [Output Only] An indicator whether storageBytes is in a stable state or it
-   * is being adjusted as a result of shared storage reallocation. This status
-   * can either be UPDATING, meaning the size of the snapshot is being updated,
-   * or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+   * Output only. [Output Only] An indicator whether storageBytes is in a stable
+   * state or it is being adjusted as a result of shared storage reallocation.
+   * This status can either be UPDATING, meaning the size of the snapshot is
+   * being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
+   * date.
    *
    * Accepted values: UPDATING, UP_TO_DATE
    *

@@ -33,8 +33,8 @@ class WireGroupList extends \Google\Collection
   protected $itemsType = WireGroup::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire
-   * groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups
+   * for wire groups.
    *
    * @var string
    */
@@ -56,7 +56,7 @@ class WireGroupList extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @var string[]
@@ -112,8 +112,8 @@ class WireGroupList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire
-   * groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups
+   * for wire groups.
    *
    * @param string $kind
    */
@@ -165,7 +165,7 @@ class WireGroupList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @param string[] $unreachables
