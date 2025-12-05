@@ -23,7 +23,7 @@ class FirewallPoliciesListAssociationsResponse extends \Google\Collection
   protected $associationsType = FirewallPolicyAssociation::class;
   protected $associationsDataType = 'array';
   /**
-   * [Output Only] Type of firewallPolicy associations.
+   * Output only. [Output Only] Type of firewallPolicy associations.
    * Alwayscompute#FirewallPoliciesListAssociations for lists of firewallPolicy
    * associations.
    *
@@ -48,7 +48,7 @@ class FirewallPoliciesListAssociationsResponse extends \Google\Collection
     return $this->associations;
   }
   /**
-   * [Output Only] Type of firewallPolicy associations.
+   * Output only. [Output Only] Type of firewallPolicy associations.
    * Alwayscompute#FirewallPoliciesListAssociations for lists of firewallPolicy
    * associations.
    *

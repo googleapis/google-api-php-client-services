@@ -34,8 +34,9 @@ class FutureReservationsListResponse extends \Google\Collection
   protected $itemsType = FutureReservation::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource.Alwayscompute#FutureReservationsListResponse
-   * for lists of reservations
+   * Output only. [Output Only] Type of
+   * resource.Alwayscompute#FutureReservationsListResponse for lists of
+   * reservations
    *
    * @var string
    */
@@ -51,13 +52,13 @@ class FutureReservationsListResponse extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -113,8 +114,9 @@ class FutureReservationsListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource.Alwayscompute#FutureReservationsListResponse
-   * for lists of reservations
+   * Output only. [Output Only] Type of
+   * resource.Alwayscompute#FutureReservationsListResponse for lists of
+   * reservations
    *
    * @param string $kind
    */
@@ -150,7 +152,7 @@ class FutureReservationsListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -166,7 +168,7 @@ class FutureReservationsListResponse extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

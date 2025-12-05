@@ -29,8 +29,8 @@ class BackendServiceList extends \Google\Collection
   protected $itemsType = BackendService::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Alwayscompute#backendServiceList for lists
-   * of backend services.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#backendServiceList for lists of backend services.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class BackendServiceList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class BackendServiceList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#backendServiceList for lists
-   * of backend services.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#backendServiceList for lists of backend services.
    *
    * @param string $kind
    */
@@ -124,7 +124,7 @@ class BackendServiceList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

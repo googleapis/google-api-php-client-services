@@ -43,7 +43,8 @@ class BackendServiceIAP extends \Google\Model
    */
   public $oauth2ClientSecret;
   /**
-   * [Output Only] SHA256 hash value for the field oauth2_client_secret above.
+   * Output only. [Output Only] SHA256 hash value for the field
+   * oauth2_client_secret above.
    *
    * @var string
    */
@@ -103,7 +104,8 @@ class BackendServiceIAP extends \Google\Model
     return $this->oauth2ClientSecret;
   }
   /**
-   * [Output Only] SHA256 hash value for the field oauth2_client_secret above.
+   * Output only. [Output Only] SHA256 hash value for the field
+   * oauth2_client_secret above.
    *
    * @param string $oauth2ClientSecretSha256
    */

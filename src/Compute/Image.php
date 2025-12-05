@@ -62,7 +62,7 @@ class Image extends \Google\Collection
    */
   public $archiveSizeBytes;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -83,8 +83,8 @@ class Image extends \Google\Collection
    */
   public $diskSizeGb;
   /**
-   * Whether this image is created from a confidential compute mode disk.
-   * [Output Only]: This field is not set by user, but from source disk.
+   * Output only. Whether this image is created from a confidential compute mode
+   * disk. [Output Only]: This field is not set by user, but from source disk.
    *
    * @var bool
    */
@@ -106,8 +106,8 @@ class Image extends \Google\Collection
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
@@ -115,7 +115,8 @@ class Image extends \Google\Collection
   protected $imageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $imageEncryptionKeyDataType = '';
   /**
-   * [Output Only] Type of the resource. Always compute#image for images.
+   * Output only. [Output Only] Type of the resource. Always compute#image for
+   * images.
    *
    * @var string
    */
@@ -175,13 +176,13 @@ class Image extends \Google\Collection
    */
   public $satisfiesPzi;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzs;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -204,9 +205,9 @@ class Image extends \Google\Collection
   protected $sourceDiskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceDiskEncryptionKeyDataType = '';
   /**
-   * [Output Only] The ID value of the disk used to create this image. This
-   * value may be used to determine whether the image was taken from the current
-   * or a previous instance of a given disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this
+   * image. This value may be used to determine whether the image was taken from
+   * the current or a previous instance of a given disk name.
    *
    * @var string
    */
@@ -227,9 +228,9 @@ class Image extends \Google\Collection
   protected $sourceImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceImageEncryptionKeyDataType = '';
   /**
-   * [Output Only] The ID value of the image used to create this image. This
-   * value may be used to determine whether the image was taken from the current
-   * or a previous instance of a given image name.
+   * Output only. [Output Only] The ID value of the image used to create this
+   * image. This value may be used to determine whether the image was taken from
+   * the current or a previous instance of a given image name.
    *
    * @var string
    */
@@ -251,9 +252,9 @@ class Image extends \Google\Collection
   protected $sourceSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceSnapshotEncryptionKeyDataType = '';
   /**
-   * [Output Only] The ID value of the snapshot used to create this image. This
-   * value may be used to determine whether the snapshot was taken from the
-   * current or a previous instance of a given snapshot name.
+   * Output only. [Output Only] The ID value of the snapshot used to create this
+   * image. This value may be used to determine whether the snapshot was taken
+   * from the current or a previous instance of a given snapshot name.
    *
    * @var string
    */
@@ -266,10 +267,10 @@ class Image extends \Google\Collection
    */
   public $sourceType;
   /**
-   * [Output Only] The status of the image. An image can be used to create other
-   * resources, such as instances, only after the image has been successfully
-   * created and the status is set to READY. Possible values are FAILED,
-   * PENDING, orREADY.
+   * Output only. [Output Only] The status of the image. An image can be used to
+   * create other resources, such as instances, only after the image has been
+   * successfully created and the status is set to READY. Possible values are
+   * FAILED, PENDING, orREADY.
    *
    * @var string
    */
@@ -317,7 +318,7 @@ class Image extends \Google\Collection
     return $this->archiveSizeBytes;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -333,7 +334,7 @@ class Image extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * The deprecation status associated with this image.
+   * Output only. The deprecation status associated with this image.
    *
    * @param DeprecationStatus $deprecated
    */
@@ -382,8 +383,8 @@ class Image extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * Whether this image is created from a confidential compute mode disk.
-   * [Output Only]: This field is not set by user, but from source disk.
+   * Output only. Whether this image is created from a confidential compute mode
+   * disk. [Output Only]: This field is not set by user, but from source disk.
    *
    * @param bool $enableConfidentialCompute
    */
@@ -441,8 +442,8 @@ class Image extends \Google\Collection
     return $this->guestOsFeatures;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -485,7 +486,8 @@ class Image extends \Google\Collection
     return $this->imageEncryptionKey;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#image for images.
+   * Output only. [Output Only] Type of the resource. Always compute#image for
+   * images.
    *
    * @param string $kind
    */
@@ -644,7 +646,7 @@ class Image extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -660,7 +662,7 @@ class Image extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -732,9 +734,9 @@ class Image extends \Google\Collection
     return $this->sourceDiskEncryptionKey;
   }
   /**
-   * [Output Only] The ID value of the disk used to create this image. This
-   * value may be used to determine whether the image was taken from the current
-   * or a previous instance of a given disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this
+   * image. This value may be used to determine whether the image was taken from
+   * the current or a previous instance of a given disk name.
    *
    * @param string $sourceDiskId
    */
@@ -790,9 +792,9 @@ class Image extends \Google\Collection
     return $this->sourceImageEncryptionKey;
   }
   /**
-   * [Output Only] The ID value of the image used to create this image. This
-   * value may be used to determine whether the image was taken from the current
-   * or a previous instance of a given image name.
+   * Output only. [Output Only] The ID value of the image used to create this
+   * image. This value may be used to determine whether the image was taken from
+   * the current or a previous instance of a given image name.
    *
    * @param string $sourceImageId
    */
@@ -849,9 +851,9 @@ class Image extends \Google\Collection
     return $this->sourceSnapshotEncryptionKey;
   }
   /**
-   * [Output Only] The ID value of the snapshot used to create this image. This
-   * value may be used to determine whether the snapshot was taken from the
-   * current or a previous instance of a given snapshot name.
+   * Output only. [Output Only] The ID value of the snapshot used to create this
+   * image. This value may be used to determine whether the snapshot was taken
+   * from the current or a previous instance of a given snapshot name.
    *
    * @param string $sourceSnapshotId
    */
@@ -886,10 +888,10 @@ class Image extends \Google\Collection
     return $this->sourceType;
   }
   /**
-   * [Output Only] The status of the image. An image can be used to create other
-   * resources, such as instances, only after the image has been successfully
-   * created and the status is set to READY. Possible values are FAILED,
-   * PENDING, orREADY.
+   * Output only. [Output Only] The status of the image. An image can be used to
+   * create other resources, such as instances, only after the image has been
+   * successfully created and the status is set to READY. Possible values are
+   * FAILED, PENDING, orREADY.
    *
    * Accepted values: DELETING, FAILED, PENDING, READY
    *

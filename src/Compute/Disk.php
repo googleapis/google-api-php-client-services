@@ -95,7 +95,7 @@ class Disk extends \Google\Collection
   protected $asyncSecondaryDisksType = DiskAsyncReplicationList::class;
   protected $asyncSecondaryDisksDataType = 'map';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -118,14 +118,15 @@ class Disk extends \Google\Collection
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#disk for disks.
+   * Output only. [Output Only] Type of the resource. Always compute#disk for
+   * disks.
    *
    * @var string
    */
@@ -151,13 +152,13 @@ class Disk extends \Google\Collection
    */
   public $labels;
   /**
-   * [Output Only] Last attach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last attach timestamp inRFC3339 text format.
    *
    * @var string
    */
   public $lastAttachTimestamp;
   /**
-   * [Output Only] Last detach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last detach timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -229,9 +230,9 @@ class Disk extends \Google\Collection
    */
   public $provisionedThroughput;
   /**
-   * [Output Only] URL of the region where the disk resides. Only applicable for
-   * regional resources. You must specify this field as part of the HTTP request
-   * URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the disk resides. Only
+   * applicable for regional resources. You must specify this field as part of
+   * the HTTP request URL. It is not settable as a field in the request body.
    *
    * @var string
    */
@@ -258,13 +259,14 @@ class Disk extends \Google\Collection
    */
   public $satisfiesPzi;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzs;
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @var string
    */
@@ -282,15 +284,15 @@ class Disk extends \Google\Collection
    */
   public $sizeGb;
   /**
-   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk
-   * that was created using a consistency group.
+   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy for a
+   * secondary disk that was created using a consistency group.
    *
    * @var string
    */
   public $sourceConsistencyGroupPolicy;
   /**
-   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk
-   * that was created using a consistency group.
+   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy for a
+   * secondary disk that was created using a consistency group.
    *
    * @var string
    */
@@ -309,11 +311,11 @@ class Disk extends \Google\Collection
    */
   public $sourceDisk;
   /**
-   * [Output Only] The unique ID of the disk used to create this disk. This
-   * value identifies the exact disk that was used to create this persistent
-   * disk. For example, if you created the persistent disk from a disk that was
-   * later deleted and recreated under the same name, the source disk ID would
-   * identify the exact version of the disk that was used.
+   * Output only. [Output Only] The unique ID of the disk used to create this
+   * disk. This value identifies the exact disk that was used to create this
+   * persistent disk. For example, if you created the persistent disk from a
+   * disk that was later deleted and recreated under the same name, the source
+   * disk ID would identify the exact version of the disk that was used.
    *
    * @var string
    */
@@ -349,11 +351,11 @@ class Disk extends \Google\Collection
   protected $sourceImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceImageEncryptionKeyDataType = '';
   /**
-   * [Output Only] The ID value of the image used to create this disk. This
-   * value identifies the exact image that was used to create this persistent
-   * disk. For example, if you created the persistent disk from an image that
-   * was later deleted and recreated under the same name, the source image ID
-   * would identify the exact version of the image that was used.
+   * Output only. [Output Only] The ID value of the image used to create this
+   * disk. This value identifies the exact image that was used to create this
+   * persistent disk. For example, if you created the persistent disk from an
+   * image that was later deleted and recreated under the same name, the source
+   * image ID would identify the exact version of the image that was used.
    *
    * @var string
    */
@@ -370,12 +372,12 @@ class Disk extends \Google\Collection
    */
   public $sourceInstantSnapshot;
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this
-   * disk. This value identifies the exact instant snapshot that was used to
-   * create this persistent disk. For example, if you created the persistent
-   * disk from an instant snapshot that was later deleted and recreated under
-   * the same name, the source instant snapshot ID would identify the exact
-   * version of the instant snapshot that was used.
+   * Output only. [Output Only] The unique ID of the instant snapshot used to
+   * create this disk. This value identifies the exact instant snapshot that was
+   * used to create this persistent disk. For example, if you created the
+   * persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would
+   * identify the exact version of the instant snapshot that was used.
    *
    * @var string
    */
@@ -393,11 +395,12 @@ class Disk extends \Google\Collection
   protected $sourceSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceSnapshotEncryptionKeyDataType = '';
   /**
-   * [Output Only] The unique ID of the snapshot used to create this disk. This
-   * value identifies the exact snapshot that was used to create this persistent
-   * disk. For example, if you created the persistent disk from a snapshot that
-   * was later deleted and recreated under the same name, the source snapshot ID
-   * would identify the exact version of the snapshot that was used.
+   * Output only. [Output Only] The unique ID of the snapshot used to create
+   * this disk. This value identifies the exact snapshot that was used to create
+   * this persistent disk. For example, if you created the persistent disk from
+   * a snapshot that was later deleted and recreated under the same name, the
+   * source snapshot ID would identify the exact version of the snapshot that
+   * was used.
    *
    * @var string
    */
@@ -414,10 +417,10 @@ class Disk extends \Google\Collection
    */
   public $sourceStorageObject;
   /**
-   * [Output Only] The status of disk creation.              - CREATING: Disk is
-   * provisioning.      - RESTORING: Source data is being copied into the
-   * disk.      - FAILED: Disk creation failed.      - READY: Disk is ready for
-   * use.      - DELETING: Disk is deleting.
+   * Output only. [Output Only] The status of disk creation.              -
+   * CREATING: Disk is provisioning.      - RESTORING: Source data is being
+   * copied into the      disk.      - FAILED: Disk creation failed.      -
+   * READY: Disk is ready for use.      - DELETING: Disk is deleting.
    *
    * @var string
    */
@@ -443,16 +446,16 @@ class Disk extends \Google\Collection
    */
   public $type;
   /**
-   * [Output Only] Links to the users of the disk (attached instances) in
-   * form:projects/project/zones/zone/instances/instance
+   * Output only. [Output Only] Links to the users of the disk (attached
+   * instances) in form:projects/project/zones/zone/instances/instance
    *
    * @var string[]
    */
   public $users;
   /**
-   * [Output Only] URL of the zone where the disk resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the zone where the disk resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
    *
    * @var string
    */
@@ -518,7 +521,8 @@ class Disk extends \Google\Collection
     return $this->asyncPrimaryDisk;
   }
   /**
-   * [Output Only] A list of disks this disk is asynchronously replicated to.
+   * Output only. [Output Only] A list of disks this disk is asynchronously
+   * replicated to.
    *
    * @param DiskAsyncReplicationList[] $asyncSecondaryDisks
    */
@@ -534,7 +538,7 @@ class Disk extends \Google\Collection
     return $this->asyncSecondaryDisks;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -638,8 +642,8 @@ class Disk extends \Google\Collection
     return $this->guestOsFeatures;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -655,7 +659,8 @@ class Disk extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#disk for disks.
+   * Output only. [Output Only] Type of the resource. Always compute#disk for
+   * disks.
    *
    * @param string $kind
    */
@@ -711,7 +716,7 @@ class Disk extends \Google\Collection
     return $this->labels;
   }
   /**
-   * [Output Only] Last attach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last attach timestamp inRFC3339 text format.
    *
    * @param string $lastAttachTimestamp
    */
@@ -727,7 +732,7 @@ class Disk extends \Google\Collection
     return $this->lastAttachTimestamp;
   }
   /**
-   * [Output Only] Last detach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last detach timestamp inRFC3339 text format.
    *
    * @param string $lastDetachTimestamp
    */
@@ -904,9 +909,9 @@ class Disk extends \Google\Collection
     return $this->provisionedThroughput;
   }
   /**
-   * [Output Only] URL of the region where the disk resides. Only applicable for
-   * regional resources. You must specify this field as part of the HTTP request
-   * URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the disk resides. Only
+   * applicable for regional resources. You must specify this field as part of
+   * the HTTP request URL. It is not settable as a field in the request body.
    *
    * @param string $region
    */
@@ -955,7 +960,7 @@ class Disk extends \Google\Collection
     return $this->resourcePolicies;
   }
   /**
-   * [Output Only] Status information for the disk resource.
+   * Output only. [Output Only] Status information for the disk resource.
    *
    * @param DiskResourceStatus $resourceStatus
    */
@@ -987,7 +992,7 @@ class Disk extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -1003,7 +1008,8 @@ class Disk extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @param string $selfLink
    */
@@ -1041,8 +1047,8 @@ class Disk extends \Google\Collection
     return $this->sizeGb;
   }
   /**
-   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk
-   * that was created using a consistency group.
+   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy for a
+   * secondary disk that was created using a consistency group.
    *
    * @param string $sourceConsistencyGroupPolicy
    */
@@ -1058,8 +1064,8 @@ class Disk extends \Google\Collection
     return $this->sourceConsistencyGroupPolicy;
   }
   /**
-   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk
-   * that was created using a consistency group.
+   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy for a
+   * secondary disk that was created using a consistency group.
    *
    * @param string $sourceConsistencyGroupPolicyId
    */
@@ -1098,11 +1104,11 @@ class Disk extends \Google\Collection
     return $this->sourceDisk;
   }
   /**
-   * [Output Only] The unique ID of the disk used to create this disk. This
-   * value identifies the exact disk that was used to create this persistent
-   * disk. For example, if you created the persistent disk from a disk that was
-   * later deleted and recreated under the same name, the source disk ID would
-   * identify the exact version of the disk that was used.
+   * Output only. [Output Only] The unique ID of the disk used to create this
+   * disk. This value identifies the exact disk that was used to create this
+   * persistent disk. For example, if you created the persistent disk from a
+   * disk that was later deleted and recreated under the same name, the source
+   * disk ID would identify the exact version of the disk that was used.
    *
    * @param string $sourceDiskId
    */
@@ -1173,11 +1179,11 @@ class Disk extends \Google\Collection
     return $this->sourceImageEncryptionKey;
   }
   /**
-   * [Output Only] The ID value of the image used to create this disk. This
-   * value identifies the exact image that was used to create this persistent
-   * disk. For example, if you created the persistent disk from an image that
-   * was later deleted and recreated under the same name, the source image ID
-   * would identify the exact version of the image that was used.
+   * Output only. [Output Only] The ID value of the image used to create this
+   * disk. This value identifies the exact image that was used to create this
+   * persistent disk. For example, if you created the persistent disk from an
+   * image that was later deleted and recreated under the same name, the source
+   * image ID would identify the exact version of the image that was used.
    *
    * @param string $sourceImageId
    */
@@ -1214,12 +1220,12 @@ class Disk extends \Google\Collection
     return $this->sourceInstantSnapshot;
   }
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this
-   * disk. This value identifies the exact instant snapshot that was used to
-   * create this persistent disk. For example, if you created the persistent
-   * disk from an instant snapshot that was later deleted and recreated under
-   * the same name, the source instant snapshot ID would identify the exact
-   * version of the instant snapshot that was used.
+   * Output only. [Output Only] The unique ID of the instant snapshot used to
+   * create this disk. This value identifies the exact instant snapshot that was
+   * used to create this persistent disk. For example, if you created the
+   * persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would
+   * identify the exact version of the instant snapshot that was used.
    *
    * @param string $sourceInstantSnapshotId
    */
@@ -1272,11 +1278,12 @@ class Disk extends \Google\Collection
     return $this->sourceSnapshotEncryptionKey;
   }
   /**
-   * [Output Only] The unique ID of the snapshot used to create this disk. This
-   * value identifies the exact snapshot that was used to create this persistent
-   * disk. For example, if you created the persistent disk from a snapshot that
-   * was later deleted and recreated under the same name, the source snapshot ID
-   * would identify the exact version of the snapshot that was used.
+   * Output only. [Output Only] The unique ID of the snapshot used to create
+   * this disk. This value identifies the exact snapshot that was used to create
+   * this persistent disk. For example, if you created the persistent disk from
+   * a snapshot that was later deleted and recreated under the same name, the
+   * source snapshot ID would identify the exact version of the snapshot that
+   * was used.
    *
    * @param string $sourceSnapshotId
    */
@@ -1313,10 +1320,10 @@ class Disk extends \Google\Collection
     return $this->sourceStorageObject;
   }
   /**
-   * [Output Only] The status of disk creation.              - CREATING: Disk is
-   * provisioning.      - RESTORING: Source data is being copied into the
-   * disk.      - FAILED: Disk creation failed.      - READY: Disk is ready for
-   * use.      - DELETING: Disk is deleting.
+   * Output only. [Output Only] The status of disk creation.              -
+   * CREATING: Disk is provisioning.      - RESTORING: Source data is being
+   * copied into the      disk.      - FAILED: Disk creation failed.      -
+   * READY: Disk is ready for use.      - DELETING: Disk is deleting.
    *
    * Accepted values: CREATING, DELETING, FAILED, READY, RESTORING, UNAVAILABLE
    *
@@ -1374,8 +1381,8 @@ class Disk extends \Google\Collection
     return $this->type;
   }
   /**
-   * [Output Only] Links to the users of the disk (attached instances) in
-   * form:projects/project/zones/zone/instances/instance
+   * Output only. [Output Only] Links to the users of the disk (attached
+   * instances) in form:projects/project/zones/zone/instances/instance
    *
    * @param string[] $users
    */
@@ -1391,9 +1398,9 @@ class Disk extends \Google\Collection
     return $this->users;
   }
   /**
-   * [Output Only] URL of the zone where the disk resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the zone where the disk resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
    *
    * @param string $zone
    */

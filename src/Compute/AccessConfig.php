@@ -59,8 +59,8 @@ class AccessConfig extends \Google\Model
    */
   public $externalIpv6PrefixLength;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access
-   * configs.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#accessConfig
+   * for access configs.
    *
    * @var string
    */
@@ -173,8 +173,8 @@ class AccessConfig extends \Google\Model
     return $this->externalIpv6PrefixLength;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access
-   * configs.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#accessConfig
+   * for access configs.
    *
    * @param string $kind
    */

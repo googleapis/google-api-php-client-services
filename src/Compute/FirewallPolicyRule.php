@@ -61,8 +61,9 @@ class FirewallPolicyRule extends \Google\Collection
    */
   public $enableLogging;
   /**
-   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for
-   * firewall rules andcompute#packetMirroringRule for packet mirroring rules.
+   * Output only. [Output only] Type of the resource.
+   * Returnscompute#firewallPolicyRule for firewall rules
+   * andcompute#packetMirroringRule for packet mirroring rules.
    *
    * @var string
    */
@@ -86,8 +87,8 @@ class FirewallPolicyRule extends \Google\Collection
    */
   public $ruleName;
   /**
-   * [Output Only] Calculation of the complexity of a single firewall policy
-   * rule.
+   * Output only. [Output Only] Calculation of the complexity of a single
+   * firewall policy rule.
    *
    * @var int
    */
@@ -219,8 +220,9 @@ class FirewallPolicyRule extends \Google\Collection
     return $this->enableLogging;
   }
   /**
-   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for
-   * firewall rules andcompute#packetMirroringRule for packet mirroring rules.
+   * Output only. [Output only] Type of the resource.
+   * Returnscompute#firewallPolicyRule for firewall rules
+   * andcompute#packetMirroringRule for packet mirroring rules.
    *
    * @param string $kind
    */
@@ -289,8 +291,8 @@ class FirewallPolicyRule extends \Google\Collection
     return $this->ruleName;
   }
   /**
-   * [Output Only] Calculation of the complexity of a single firewall policy
-   * rule.
+   * Output only. [Output Only] Calculation of the complexity of a single
+   * firewall policy rule.
    *
    * @param int $ruleTupleCount
    */

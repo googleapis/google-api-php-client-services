@@ -33,8 +33,8 @@ class CrossSiteNetworkList extends \Google\Collection
   protected $itemsType = CrossSiteNetwork::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for
-   * cross-site networks.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#crossSiteNetwork for cross-site networks.
    *
    * @var string
    */
@@ -56,7 +56,7 @@ class CrossSiteNetworkList extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @var string[]
@@ -112,8 +112,8 @@ class CrossSiteNetworkList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for
-   * cross-site networks.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#crossSiteNetwork for cross-site networks.
    *
    * @param string $kind
    */
@@ -165,7 +165,7 @@ class CrossSiteNetworkList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @param string[] $unreachables

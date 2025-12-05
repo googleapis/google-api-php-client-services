@@ -32,7 +32,7 @@ class HealthCheckService extends \Google\Collection
   public const HEALTH_STATUS_AGGREGATION_POLICY_NO_AGGREGATION = 'NO_AGGREGATION';
   protected $collection_key = 'notificationEndpoints';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -88,15 +88,15 @@ class HealthCheckService extends \Google\Collection
    */
   public $healthStatusAggregationPolicy;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output only] Type of the resource. Alwayscompute#healthCheckServicefor
-   * health check services.
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#healthCheckServicefor health check services.
    *
    * @var string
    */
@@ -132,23 +132,23 @@ class HealthCheckService extends \Google\Collection
    */
   public $notificationEndpoints;
   /**
-   * [Output Only] URL of the region where the health check service resides.
-   * This field is not applicable to global health check services. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the region where the health check service
+   * resides. This field is not applicable to global health check services. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -256,8 +256,8 @@ class HealthCheckService extends \Google\Collection
     return $this->healthStatusAggregationPolicy;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -273,8 +273,8 @@ class HealthCheckService extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output only] Type of the resource. Alwayscompute#healthCheckServicefor
-   * health check services.
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#healthCheckServicefor health check services.
    *
    * @param string $kind
    */
@@ -350,10 +350,10 @@ class HealthCheckService extends \Google\Collection
     return $this->notificationEndpoints;
   }
   /**
-   * [Output Only] URL of the region where the health check service resides.
-   * This field is not applicable to global health check services. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the region where the health check service
+   * resides. This field is not applicable to global health check services. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @param string $region
    */
@@ -369,7 +369,7 @@ class HealthCheckService extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

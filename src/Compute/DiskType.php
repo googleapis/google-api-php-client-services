@@ -47,7 +47,8 @@ class DiskType extends \Google\Model
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * Output only. [Output Only] Type of the resource. Always compute#diskType
+   * for disk types.
    *
    * @var string
    */
@@ -170,7 +171,8 @@ class DiskType extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * Output only. [Output Only] Type of the resource. Always compute#diskType
+   * for disk types.
    *
    * @param string $kind
    */

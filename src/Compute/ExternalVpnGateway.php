@@ -51,7 +51,7 @@ class ExternalVpnGateway extends \Google\Collection
   public const REDUNDANCY_TYPE_TWO_IPS_REDUNDANCY = 'TWO_IPS_REDUNDANCY';
   protected $collection_key = 'interfaces';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -64,8 +64,8 @@ class ExternalVpnGateway extends \Google\Collection
    */
   public $description;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
@@ -73,8 +73,8 @@ class ExternalVpnGateway extends \Google\Collection
   protected $interfacesType = ExternalVpnGatewayInterface::class;
   protected $interfacesDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for
-   * externalVpnGateways.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#externalVpnGateway for externalVpnGateways.
    *
    * @var string
    */
@@ -120,14 +120,14 @@ class ExternalVpnGateway extends \Google\Collection
    */
   public $redundancyType;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -160,8 +160,8 @@ class ExternalVpnGateway extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -198,8 +198,8 @@ class ExternalVpnGateway extends \Google\Collection
     return $this->interfaces;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for
-   * externalVpnGateways.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#externalVpnGateway for externalVpnGateways.
    *
    * @param string $kind
    */
@@ -298,7 +298,7 @@ class ExternalVpnGateway extends \Google\Collection
     return $this->redundancyType;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

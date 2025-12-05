@@ -111,13 +111,13 @@ class Instance extends \Google\Collection
   protected $confidentialInstanceConfigType = ConfidentialInstanceConfig::class;
   protected $confidentialInstanceConfigDataType = '';
   /**
-   * [Output Only] The CPU platform used by this instance.
+   * Output only. [Output Only] The CPU platform used by this instance.
    *
    * @var string
    */
   public $cpuPlatform;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -163,8 +163,8 @@ class Instance extends \Google\Collection
    */
   public $hostname;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
@@ -179,7 +179,8 @@ class Instance extends \Google\Collection
    */
   public $keyRevocationActionType;
   /**
-   * [Output Only] Type of the resource. Always compute#instance for instances.
+   * Output only. [Output Only] Type of the resource. Always compute#instance
+   * for instances.
    *
    * @var string
    */
@@ -204,19 +205,19 @@ class Instance extends \Google\Collection
    */
   public $labels;
   /**
-   * [Output Only] Last start timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last start timestamp inRFC3339 text format.
    *
    * @var string
    */
   public $lastStartTimestamp;
   /**
-   * [Output Only] Last stop timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last stop timestamp inRFC3339 text format.
    *
    * @var string
    */
   public $lastStopTimestamp;
   /**
-   * [Output Only] Last suspended timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last suspended timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -289,13 +290,13 @@ class Instance extends \Google\Collection
   protected $resourceStatusType = ResourceStatus::class;
   protected $resourceStatusDataType = '';
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzi;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
@@ -303,7 +304,7 @@ class Instance extends \Google\Collection
   protected $schedulingType = Scheduling::class;
   protected $schedulingDataType = '';
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -323,23 +324,24 @@ class Instance extends \Google\Collection
   protected $sourceMachineImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceMachineImageEncryptionKeyDataType = '';
   /**
-   * [Output Only] Whether a VM has been restricted for start because Compute
-   * Engine has detected suspicious activity.
+   * Output only. [Output Only] Whether a VM has been restricted for start
+   * because Compute Engine has detected suspicious activity.
    *
    * @var bool
    */
   public $startRestricted;
   /**
-   * [Output Only] The status of the instance. One of the following values:
-   * PROVISIONING, STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING,
-   * andTERMINATED. For more information about the status of the instance, see
-   * Instance life cycle.
+   * Output only. [Output Only] The status of the instance. One of the following
+   * values: PROVISIONING, STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED,
+   * REPAIRING, andTERMINATED. For more information about the status of the
+   * instance, see  Instance life cycle.
    *
    * @var string
    */
   public $status;
   /**
-   * [Output Only] An optional, human-readable explanation of the status.
+   * Output only. [Output Only] An optional, human-readable explanation of the
+   * status.
    *
    * @var string
    */
@@ -347,9 +349,9 @@ class Instance extends \Google\Collection
   protected $tagsType = Tags::class;
   protected $tagsDataType = '';
   /**
-   * [Output Only] URL of the zone where the instance resides. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field
-   * in the request body.
+   * Output only. [Output Only] URL of the zone where the instance resides. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @var string
    */
@@ -405,7 +407,7 @@ class Instance extends \Google\Collection
     return $this->confidentialInstanceConfig;
   }
   /**
-   * [Output Only] The CPU platform used by this instance.
+   * Output only. [Output Only] The CPU platform used by this instance.
    *
    * @param string $cpuPlatform
    */
@@ -421,7 +423,7 @@ class Instance extends \Google\Collection
     return $this->cpuPlatform;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -560,8 +562,8 @@ class Instance extends \Google\Collection
     return $this->hostname;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -620,7 +622,8 @@ class Instance extends \Google\Collection
     return $this->keyRevocationActionType;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#instance for instances.
+   * Output only. [Output Only] Type of the resource. Always compute#instance
+   * for instances.
    *
    * @param string $kind
    */
@@ -675,7 +678,7 @@ class Instance extends \Google\Collection
     return $this->labels;
   }
   /**
-   * [Output Only] Last start timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last start timestamp inRFC3339 text format.
    *
    * @param string $lastStartTimestamp
    */
@@ -691,7 +694,7 @@ class Instance extends \Google\Collection
     return $this->lastStartTimestamp;
   }
   /**
-   * [Output Only] Last stop timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last stop timestamp inRFC3339 text format.
    *
    * @param string $lastStopTimestamp
    */
@@ -707,7 +710,7 @@ class Instance extends \Google\Collection
     return $this->lastStopTimestamp;
   }
   /**
-   * [Output Only] Last suspended timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last suspended timestamp inRFC3339 text format.
    *
    * @param string $lastSuspendedTimestamp
    */
@@ -913,8 +916,9 @@ class Instance extends \Google\Collection
     return $this->resourcePolicies;
   }
   /**
-   * [Output Only] Specifies values set for instance attributes as compared to
-   * the values requested by user in the corresponding input only field.
+   * Output only. [Output Only] Specifies values set for instance attributes as
+   * compared to the values requested by user in the corresponding input only
+   * field.
    *
    * @param ResourceStatus $resourceStatus
    */
@@ -930,7 +934,7 @@ class Instance extends \Google\Collection
     return $this->resourceStatus;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzi
    */
@@ -946,7 +950,7 @@ class Instance extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -978,7 +982,7 @@ class Instance extends \Google\Collection
     return $this->scheduling;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -1076,8 +1080,8 @@ class Instance extends \Google\Collection
     return $this->sourceMachineImageEncryptionKey;
   }
   /**
-   * [Output Only] Whether a VM has been restricted for start because Compute
-   * Engine has detected suspicious activity.
+   * Output only. [Output Only] Whether a VM has been restricted for start
+   * because Compute Engine has detected suspicious activity.
    *
    * @param bool $startRestricted
    */
@@ -1093,10 +1097,10 @@ class Instance extends \Google\Collection
     return $this->startRestricted;
   }
   /**
-   * [Output Only] The status of the instance. One of the following values:
-   * PROVISIONING, STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING,
-   * andTERMINATED. For more information about the status of the instance, see
-   * Instance life cycle.
+   * Output only. [Output Only] The status of the instance. One of the following
+   * values: PROVISIONING, STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED,
+   * REPAIRING, andTERMINATED. For more information about the status of the
+   * instance, see  Instance life cycle.
    *
    * Accepted values: DEPROVISIONING, PENDING, PROVISIONING, REPAIRING, RUNNING,
    * STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING, TERMINATED
@@ -1115,7 +1119,8 @@ class Instance extends \Google\Collection
     return $this->status;
   }
   /**
-   * [Output Only] An optional, human-readable explanation of the status.
+   * Output only. [Output Only] An optional, human-readable explanation of the
+   * status.
    *
    * @param string $statusMessage
    */
@@ -1151,9 +1156,9 @@ class Instance extends \Google\Collection
     return $this->tags;
   }
   /**
-   * [Output Only] URL of the zone where the instance resides. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field
-   * in the request body.
+   * Output only. [Output Only] URL of the zone where the instance resides. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @param string $zone
    */

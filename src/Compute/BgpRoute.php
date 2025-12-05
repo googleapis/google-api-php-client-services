@@ -26,7 +26,7 @@ class BgpRoute extends \Google\Collection
   protected $asPathsType = BgpRouteAsPath::class;
   protected $asPathsDataType = 'array';
   /**
-   * [Output only] BGP communities in human-readable A:B format.
+   * Output only. [Output only] BGP communities in human-readable A:B format.
    *
    * @var string[]
    */
@@ -34,20 +34,20 @@ class BgpRoute extends \Google\Collection
   protected $destinationType = BgpRouteNetworkLayerReachabilityInformation::class;
   protected $destinationDataType = '';
   /**
-   * [Output only] BGP multi-exit discriminator
+   * Output only. [Output only] BGP multi-exit discriminator
    *
    * @var string
    */
   public $med;
   /**
-   * [Output only] BGP origin (EGP, IGP or INCOMPLETE)
+   * Output only. [Output only] BGP origin (EGP, IGP or INCOMPLETE)
    *
    * @var string
    */
   public $origin;
 
   /**
-   * [Output only] AS-PATH for the route
+   * Output only. [Output only] AS-PATH for the route
    *
    * @param BgpRouteAsPath[] $asPaths
    */
@@ -63,7 +63,7 @@ class BgpRoute extends \Google\Collection
     return $this->asPaths;
   }
   /**
-   * [Output only] BGP communities in human-readable A:B format.
+   * Output only. [Output only] BGP communities in human-readable A:B format.
    *
    * @param string[] $communities
    */
@@ -79,8 +79,8 @@ class BgpRoute extends \Google\Collection
     return $this->communities;
   }
   /**
-   * [Output only] Destination IP range for the route, in human-readable CIDR
-   * format
+   * Output only. [Output only] Destination IP range for the route, in human-
+   * readable CIDR format
    *
    * @param BgpRouteNetworkLayerReachabilityInformation $destination
    */
@@ -96,7 +96,7 @@ class BgpRoute extends \Google\Collection
     return $this->destination;
   }
   /**
-   * [Output only] BGP multi-exit discriminator
+   * Output only. [Output only] BGP multi-exit discriminator
    *
    * @param string $med
    */
@@ -112,7 +112,7 @@ class BgpRoute extends \Google\Collection
     return $this->med;
   }
   /**
-   * [Output only] BGP origin (EGP, IGP or INCOMPLETE)
+   * Output only. [Output only] BGP origin (EGP, IGP or INCOMPLETE)
    *
    * Accepted values: BGP_ORIGIN_EGP, BGP_ORIGIN_IGP, BGP_ORIGIN_INCOMPLETE
    *

@@ -55,6 +55,7 @@ class Compute extends \Google\Service
 
   public $acceleratorTypes;
   public $addresses;
+  public $advice;
   public $autoscalers;
   public $backendBuckets;
   public $backendServices;
@@ -490,6 +491,31 @@ class Compute extends \Google\Service
                   'required' => true,
                 ],
                 'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->advice = new Compute\Resource\Advice(
+        $this,
+        $this->serviceName,
+        'advice',
+        [
+          'methods' => [
+            'calendarMode' => [
+              'path' => 'projects/{project}/regions/{region}/advice/calendarMode',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

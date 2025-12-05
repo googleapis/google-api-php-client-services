@@ -31,7 +31,7 @@ class Firewall extends \Google\Collection
   protected $allowedType = FirewallAllowed::class;
   protected $allowedDataType = 'array';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -70,15 +70,15 @@ class Firewall extends \Google\Collection
    */
   public $disabled;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#firewall for firewall
-   * rules.
+   * Output only. [Output Only] Type of the resource. Always compute#firewall
+   * for firewall rules.
    *
    * @var string
    */
@@ -217,7 +217,7 @@ class Firewall extends \Google\Collection
     return $this->allowed;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -323,8 +323,8 @@ class Firewall extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -340,8 +340,8 @@ class Firewall extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#firewall for firewall
-   * rules.
+   * Output only. [Output Only] Type of the resource. Always compute#firewall
+   * for firewall rules.
    *
    * @param string $kind
    */

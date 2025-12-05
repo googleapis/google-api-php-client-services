@@ -20,15 +20,15 @@ namespace Google\Service\Compute;
 class DiskAsyncReplication extends \Google\Model
 {
   /**
-   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was
-   * started on the disk as a member of a group.
+   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy if
+   * replication was started on the disk as a member of a group.
    *
    * @var string
    */
   public $consistencyGroupPolicy;
   /**
-   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was
-   * started on the disk as a member of a group.
+   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy if
+   * replication was started on the disk as a member of a group.
    *
    * @var string
    */
@@ -44,20 +44,20 @@ class DiskAsyncReplication extends \Google\Model
    */
   public $disk;
   /**
-   * [Output Only] The unique ID of the other disk asynchronously replicated to
-   * or from the current disk. This value identifies the exact disk that was
-   * used to create this replication. For example, if you started replicating
-   * the persistent disk from a disk that was later deleted and recreated under
-   * the same name, the disk ID would identify the exact version of the disk
-   * that was used.
+   * Output only. [Output Only] The unique ID of the other disk asynchronously
+   * replicated to or from the current disk. This value identifies the exact
+   * disk that was used to create this replication. For example, if you started
+   * replicating the persistent disk from a disk that was later deleted and
+   * recreated under the same name, the disk ID would identify the exact version
+   * of the disk that was used.
    *
    * @var string
    */
   public $diskId;
 
   /**
-   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was
-   * started on the disk as a member of a group.
+   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy if
+   * replication was started on the disk as a member of a group.
    *
    * @param string $consistencyGroupPolicy
    */
@@ -73,8 +73,8 @@ class DiskAsyncReplication extends \Google\Model
     return $this->consistencyGroupPolicy;
   }
   /**
-   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was
-   * started on the disk as a member of a group.
+   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy if
+   * replication was started on the disk as a member of a group.
    *
    * @param string $consistencyGroupPolicyId
    */
@@ -110,12 +110,12 @@ class DiskAsyncReplication extends \Google\Model
     return $this->disk;
   }
   /**
-   * [Output Only] The unique ID of the other disk asynchronously replicated to
-   * or from the current disk. This value identifies the exact disk that was
-   * used to create this replication. For example, if you started replicating
-   * the persistent disk from a disk that was later deleted and recreated under
-   * the same name, the disk ID would identify the exact version of the disk
-   * that was used.
+   * Output only. [Output Only] The unique ID of the other disk asynchronously
+   * replicated to or from the current disk. This value identifies the exact
+   * disk that was used to create this replication. For example, if you started
+   * replicating the persistent disk from a disk that was later deleted and
+   * recreated under the same name, the disk ID would identify the exact version
+   * of the disk that was used.
    *
    * @param string $diskId
    */

@@ -77,8 +77,8 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
    */
   public const PROCUREMENT_STATUS_PROVISIONING = 'PROVISIONING';
   /**
-   * [Output Only] The description of the FutureReservation before an amendment
-   * was requested.
+   * Output only. [Output Only] The description of the FutureReservation before
+   * an amendment was requested.
    *
    * @var string
    */
@@ -88,30 +88,30 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
   protected $futureReservationSpecsType = FutureReservationStatusLastKnownGoodStateFutureReservationSpecs::class;
   protected $futureReservationSpecsDataType = '';
   /**
-   * [Output Only] The lock time of the FutureReservation before an amendment
-   * was requested.
+   * Output only. [Output Only] The lock time of the FutureReservation before an
+   * amendment was requested.
    *
    * @var string
    */
   public $lockTime;
   /**
-   * [Output Only] The name prefix of the Future Reservation before an amendment
-   * was requested.
+   * Output only. [Output Only] The name prefix of the Future Reservation before
+   * an amendment was requested.
    *
    * @var string
    */
   public $namePrefix;
   /**
-   * [Output Only] The status of the last known good state for the Future
-   * Reservation.
+   * Output only. [Output Only] The status of the last known good state for the
+   * Future Reservation.
    *
    * @var string
    */
   public $procurementStatus;
 
   /**
-   * [Output Only] The description of the FutureReservation before an amendment
-   * was requested.
+   * Output only. [Output Only] The description of the FutureReservation before
+   * an amendment was requested.
    *
    * @param string $description
    */
@@ -127,8 +127,8 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->description;
   }
   /**
-   * [Output Only] Represents the matching usage for the future reservation
-   * before an amendment was requested.
+   * Output only. [Output Only] Represents the matching usage for the future
+   * reservation before an amendment was requested.
    *
    * @param FutureReservationStatusExistingMatchingUsageInfo $existingMatchingUsageInfo
    */
@@ -158,8 +158,8 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->futureReservationSpecs;
   }
   /**
-   * [Output Only] The lock time of the FutureReservation before an amendment
-   * was requested.
+   * Output only. [Output Only] The lock time of the FutureReservation before an
+   * amendment was requested.
    *
    * @param string $lockTime
    */
@@ -175,8 +175,8 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->lockTime;
   }
   /**
-   * [Output Only] The name prefix of the Future Reservation before an amendment
-   * was requested.
+   * Output only. [Output Only] The name prefix of the Future Reservation before
+   * an amendment was requested.
    *
    * @param string $namePrefix
    */
@@ -192,8 +192,8 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->namePrefix;
   }
   /**
-   * [Output Only] The status of the last known good state for the Future
-   * Reservation.
+   * Output only. [Output Only] The status of the last known good state for the
+   * Future Reservation.
    *
    * Accepted values: APPROVED, CANCELLED, COMMITTED, DECLINED, DRAFTING,
    * FAILED, FAILED_PARTIALLY_FULFILLED, FULFILLED, PENDING_AMENDMENT_APPROVAL,

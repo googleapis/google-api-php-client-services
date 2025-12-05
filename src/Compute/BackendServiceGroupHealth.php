@@ -29,8 +29,8 @@ class BackendServiceGroupHealth extends \Google\Collection
   protected $healthStatusType = HealthStatus::class;
   protected $healthStatusDataType = 'array';
   /**
-   * [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for
-   * the health of backend services.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#backendServiceGroupHealth for the health of backend services.
    *
    * @var string
    */
@@ -70,8 +70,8 @@ class BackendServiceGroupHealth extends \Google\Collection
     return $this->healthStatus;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for
-   * the health of backend services.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#backendServiceGroupHealth for the health of backend services.
    *
    * @param string $kind
    */

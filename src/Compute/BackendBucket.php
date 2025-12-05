@@ -88,7 +88,7 @@ class BackendBucket extends \Google\Collection
    */
   public $id;
   /**
-   * Type of the resource.
+   * Output only. Type of the resource.
    *
    * @var string
    */
@@ -277,7 +277,7 @@ class BackendBucket extends \Google\Collection
     return $this->id;
   }
   /**
-   * Type of the resource.
+   * Output only. Type of the resource.
    *
    * @param string $kind
    */
@@ -371,7 +371,8 @@ class BackendBucket extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] List of resources referencing that backend bucket.
+   * Output only. [Output Only] List of resources referencing that backend
+   * bucket.
    *
    * @param BackendBucketUsedBy[] $usedBy
    */

@@ -23,30 +23,30 @@ class BgpRouteAsPath extends \Google\Collection
   public const TYPE_AS_PATH_TYPE_SET = 'AS_PATH_TYPE_SET';
   protected $collection_key = 'asns32';
   /**
-   * [Output only] ASNs in the path segment. When type is SEQUENCE, these are
-   * ordered.
+   * Output only. [Output only] ASNs in the path segment. When type is SEQUENCE,
+   * these are ordered.
    *
    * @var int[]
    */
   public $asns;
   /**
-   * [Output only] ASNs in the path segment. This field is for better support of
-   * 32 bit ASNs as the other asns field suffers from overflow when the ASN is
-   * larger. When type is SEQUENCE, these are ordered.
+   * Output only. [Output only] ASNs in the path segment. This field is for
+   * better support of 32 bit ASNs as the other asns field suffers from overflow
+   * when the ASN is larger. When type is SEQUENCE, these are ordered.
    *
    * @var string[]
    */
   public $asns32;
   /**
-   * [Output only] Type of AS-PATH segment (SEQUENCE or SET)
+   * Output only. [Output only] Type of AS-PATH segment (SEQUENCE or SET)
    *
    * @var string
    */
   public $type;
 
   /**
-   * [Output only] ASNs in the path segment. When type is SEQUENCE, these are
-   * ordered.
+   * Output only. [Output only] ASNs in the path segment. When type is SEQUENCE,
+   * these are ordered.
    *
    * @param int[] $asns
    */
@@ -62,9 +62,9 @@ class BgpRouteAsPath extends \Google\Collection
     return $this->asns;
   }
   /**
-   * [Output only] ASNs in the path segment. This field is for better support of
-   * 32 bit ASNs as the other asns field suffers from overflow when the ASN is
-   * larger. When type is SEQUENCE, these are ordered.
+   * Output only. [Output only] ASNs in the path segment. This field is for
+   * better support of 32 bit ASNs as the other asns field suffers from overflow
+   * when the ASN is larger. When type is SEQUENCE, these are ordered.
    *
    * @param string[] $asns32
    */
@@ -80,7 +80,7 @@ class BgpRouteAsPath extends \Google\Collection
     return $this->asns32;
   }
   /**
-   * [Output only] Type of AS-PATH segment (SEQUENCE or SET)
+   * Output only. [Output only] Type of AS-PATH segment (SEQUENCE or SET)
    *
    * Accepted values: AS_PATH_TYPE_SEQUENCE, AS_PATH_TYPE_SET
    *

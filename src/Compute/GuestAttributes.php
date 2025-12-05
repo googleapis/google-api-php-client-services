@@ -20,8 +20,8 @@ namespace Google\Service\Compute;
 class GuestAttributes extends \Google\Model
 {
   /**
-   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest
-   * attributes entry.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#guestAttributes for guest attributes entry.
    *
    * @var string
    */
@@ -36,7 +36,7 @@ class GuestAttributes extends \Google\Model
   protected $queryValueType = GuestAttributesValue::class;
   protected $queryValueDataType = '';
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -48,15 +48,15 @@ class GuestAttributes extends \Google\Model
    */
   public $variableKey;
   /**
-   * [Output Only] The value found for the requested key.
+   * Output only. [Output Only] The value found for the requested key.
    *
    * @var string
    */
   public $variableValue;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest
-   * attributes entry.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#guestAttributes for guest attributes entry.
    *
    * @param string $kind
    */
@@ -89,7 +89,7 @@ class GuestAttributes extends \Google\Model
     return $this->queryPath;
   }
   /**
-   * [Output Only] The value of the requested queried path.
+   * Output only. [Output Only] The value of the requested queried path.
    *
    * @param GuestAttributesValue $queryValue
    */
@@ -105,7 +105,7 @@ class GuestAttributes extends \Google\Model
     return $this->queryValue;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -137,7 +137,7 @@ class GuestAttributes extends \Google\Model
     return $this->variableKey;
   }
   /**
-   * [Output Only] The value found for the requested key.
+   * Output only. [Output Only] The value found for the requested key.
    *
    * @param string $variableValue
    */

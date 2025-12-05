@@ -29,7 +29,8 @@ class DiskList extends \Google\Collection
   protected $itemsType = Disk::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Always compute#diskList for lists of disks.
+   * Output only. [Output Only] Type of resource. Always compute#diskList for
+   * lists of disks.
    *
    * @var string
    */
@@ -45,7 +46,7 @@ class DiskList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -86,7 +87,8 @@ class DiskList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Always compute#diskList for lists of disks.
+   * Output only. [Output Only] Type of resource. Always compute#diskList for
+   * lists of disks.
    *
    * @param string $kind
    */
@@ -122,7 +124,7 @@ class DiskList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

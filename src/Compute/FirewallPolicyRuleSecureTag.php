@@ -28,8 +28,9 @@ class FirewallPolicyRuleSecureTag extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`.
-   * A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+   * Output only. [Output Only] State of the secure tag, either `EFFECTIVE` or
+   * `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its
+   * network is deleted.
    *
    * @var string
    */
@@ -52,8 +53,9 @@ class FirewallPolicyRuleSecureTag extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`.
-   * A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+   * Output only. [Output Only] State of the secure tag, either `EFFECTIVE` or
+   * `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its
+   * network is deleted.
    *
    * Accepted values: EFFECTIVE, INEFFECTIVE
    *

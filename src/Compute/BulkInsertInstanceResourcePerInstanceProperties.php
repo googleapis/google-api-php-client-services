@@ -28,7 +28,8 @@ class BulkInsertInstanceResourcePerInstanceProperties extends \Google\Model
    */
   public $hostname;
   /**
-   * This field is only temporary. It will be removed. Do not use it.
+   * Output only. This field is only temporary. It will be removed. Do not use
+   * it.
    *
    * @var string
    */
@@ -53,7 +54,8 @@ class BulkInsertInstanceResourcePerInstanceProperties extends \Google\Model
     return $this->hostname;
   }
   /**
-   * This field is only temporary. It will be removed. Do not use it.
+   * Output only. This field is only temporary. It will be removed. Do not use
+   * it.
    *
    * @param string $name
    */

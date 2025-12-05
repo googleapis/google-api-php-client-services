@@ -29,8 +29,8 @@ class FirewallPolicyList extends \Google\Collection
   protected $itemsType = FirewallPolicy::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Alwayscompute#firewallPolicyList for
-   * listsof FirewallPolicies
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#firewallPolicyList for listsof FirewallPolicies
    *
    * @var string
    */
@@ -81,8 +81,8 @@ class FirewallPolicyList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#firewallPolicyList for
-   * listsof FirewallPolicies
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#firewallPolicyList for listsof FirewallPolicies
    *
    * @param string $kind
    */

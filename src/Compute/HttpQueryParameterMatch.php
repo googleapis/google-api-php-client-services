@@ -52,7 +52,8 @@ class HttpQueryParameterMatch extends \Google\Model
    * Only one of presentMatch, exactMatch, orregexMatch must be set.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED (regional scope) or
+   * INTERNAL_MANAGED.
    *
    * @var string
    */
@@ -121,7 +122,8 @@ class HttpQueryParameterMatch extends \Google\Model
    * Only one of presentMatch, exactMatch, orregexMatch must be set.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED (regional scope) or
+   * INTERNAL_MANAGED.
    *
    * @param string $regexMatch
    */

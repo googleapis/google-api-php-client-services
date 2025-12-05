@@ -84,8 +84,8 @@ class FutureReservation extends \Google\Model
   protected $commitmentInfoType = FutureReservationCommitmentInfo::class;
   protected $commitmentInfoDataType = '';
   /**
-   * [Output Only] The creation timestamp for this future reservation inRFC3339
-   * text format.
+   * Output only. [Output Only] The creation timestamp for this future
+   * reservation inRFC3339 text format.
    *
    * @var string
    */
@@ -110,15 +110,15 @@ class FutureReservation extends \Google\Model
    */
   public $enableEmergentMaintenance;
   /**
-   * [Output Only] A unique identifier for this future reservation. The server
-   * defines this identifier.
+   * Output only. [Output Only] A unique identifier for this future reservation.
+   * The server defines this identifier.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#futureReservation for
-   * future reservations.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#futureReservation for future reservations.
    *
    * @var string
    */
@@ -174,13 +174,15 @@ class FutureReservation extends \Google\Model
    */
   public $schedulingType;
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
@@ -202,7 +204,8 @@ class FutureReservation extends \Google\Model
   protected $timeWindowType = FutureReservationTimeWindow::class;
   protected $timeWindowDataType = '';
   /**
-   * [Output Only] URL of the Zone where this future reservation resides.
+   * Output only. [Output Only] URL of the Zone where this future reservation
+   * resides.
    *
    * @var string
    */
@@ -301,8 +304,8 @@ class FutureReservation extends \Google\Model
     return $this->commitmentInfo;
   }
   /**
-   * [Output Only] The creation timestamp for this future reservation inRFC3339
-   * text format.
+   * Output only. [Output Only] The creation timestamp for this future
+   * reservation inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -369,8 +372,8 @@ class FutureReservation extends \Google\Model
     return $this->enableEmergentMaintenance;
   }
   /**
-   * [Output Only] A unique identifier for this future reservation. The server
-   * defines this identifier.
+   * Output only. [Output Only] A unique identifier for this future reservation.
+   * The server defines this identifier.
    *
    * @param string $id
    */
@@ -386,8 +389,8 @@ class FutureReservation extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#futureReservation for
-   * future reservations.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#futureReservation for future reservations.
    *
    * @param string $kind
    */
@@ -519,7 +522,8 @@ class FutureReservation extends \Google\Model
     return $this->schedulingType;
   }
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @param string $selfLink
    */
@@ -535,7 +539,8 @@ class FutureReservation extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */
@@ -602,7 +607,7 @@ class FutureReservation extends \Google\Model
     return $this->specificSkuProperties;
   }
   /**
-   * [Output only] Status of the Future Reservation
+   * Output only. [Output only] Status of the Future Reservation
    *
    * @param FutureReservationStatus $status
    */
@@ -634,7 +639,8 @@ class FutureReservation extends \Google\Model
     return $this->timeWindow;
   }
   /**
-   * [Output Only] URL of the Zone where this future reservation resides.
+   * Output only. [Output Only] URL of the Zone where this future reservation
+   * resides.
    *
    * @param string $zone
    */

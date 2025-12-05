@@ -58,7 +58,7 @@ class AllocationAggregateReservation extends \Google\Collection
   public $workloadType;
 
   /**
-   * [Output only] List of resources currently in use.
+   * Output only. [Output only] List of resources currently in use.
    *
    * @param AllocationAggregateReservationReservedResourceInfo[] $inUseResources
    */

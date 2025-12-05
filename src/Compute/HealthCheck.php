@@ -36,7 +36,7 @@ class HealthCheck extends \Google\Collection
    */
   public $checkIntervalSec;
   /**
-   * [Output Only] Creation timestamp in3339 text format.
+   * Output only. [Output Only] Creation timestamp in3339 text format.
    *
    * @var string
    */
@@ -73,7 +73,7 @@ class HealthCheck extends \Google\Collection
    */
   public $id;
   /**
-   * Type of the resource.
+   * Output only. Type of the resource.
    *
    * @var string
    */
@@ -93,8 +93,8 @@ class HealthCheck extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] Region where the health check resides.  Not applicable to
-   * global health checks.
+   * Output only. [Output Only] Region where the health check resides.  Not
+   * applicable to global health checks.
    *
    * @var string
    */
@@ -167,7 +167,7 @@ class HealthCheck extends \Google\Collection
     return $this->checkIntervalSec;
   }
   /**
-   * [Output Only] Creation timestamp in3339 text format.
+   * Output only. [Output Only] Creation timestamp in3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -304,7 +304,7 @@ class HealthCheck extends \Google\Collection
     return $this->id;
   }
   /**
-   * Type of the resource.
+   * Output only. Type of the resource.
    *
    * @param string $kind
    */
@@ -358,8 +358,8 @@ class HealthCheck extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] Region where the health check resides.  Not applicable to
-   * global health checks.
+   * Output only. [Output Only] Region where the health check resides.  Not
+   * applicable to global health checks.
    *
    * @param string $region
    */

@@ -39,7 +39,7 @@ class Autoscaler extends \Google\Collection
   protected $autoscalingPolicyType = AutoscalingPolicy::class;
   protected $autoscalingPolicyDataType = '';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -52,15 +52,15 @@ class Autoscaler extends \Google\Collection
    */
   public $description;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#autoscaler for
-   * autoscalers.
+   * Output only. [Output Only] Type of the resource. Always compute#autoscaler
+   * for autoscalers.
    *
    * @var string
    */
@@ -78,18 +78,18 @@ class Autoscaler extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] Target recommended MIG size (number of instances) computed by
-   * autoscaler. Autoscaler calculates the recommended MIG size even when the
-   * autoscaling policy mode is different from ON. This field is empty when
-   * autoscaler is not connected to an existing managed instance group or
-   * autoscaler did not generate its prediction.
+   * Output only. [Output Only] Target recommended MIG size (number of
+   * instances) computed by autoscaler. Autoscaler calculates the recommended
+   * MIG size even when the autoscaling policy mode is different from ON. This
+   * field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    *
    * @var int
    */
   public $recommendedSize;
   /**
-   * [Output Only] URL of theregion where the instance group resides (for
-   * autoscalers living in regional scope).
+   * Output only. [Output Only] URL of theregion where the instance group
+   * resides (for autoscalers living in regional scope).
    *
    * @var string
    */
@@ -126,8 +126,8 @@ class Autoscaler extends \Google\Collection
    */
   public $target;
   /**
-   * [Output Only] URL of thezone where the instance group resides (for
-   * autoscalers living in zonal scope).
+   * Output only. [Output Only] URL of thezone where the instance group resides
+   * (for autoscalers living in zonal scope).
    *
    * @var string
    */
@@ -155,7 +155,7 @@ class Autoscaler extends \Google\Collection
     return $this->autoscalingPolicy;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -188,8 +188,8 @@ class Autoscaler extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -205,8 +205,8 @@ class Autoscaler extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#autoscaler for
-   * autoscalers.
+   * Output only. [Output Only] Type of the resource. Always compute#autoscaler
+   * for autoscalers.
    *
    * @param string $kind
    */
@@ -244,11 +244,11 @@ class Autoscaler extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] Target recommended MIG size (number of instances) computed by
-   * autoscaler. Autoscaler calculates the recommended MIG size even when the
-   * autoscaling policy mode is different from ON. This field is empty when
-   * autoscaler is not connected to an existing managed instance group or
-   * autoscaler did not generate its prediction.
+   * Output only. [Output Only] Target recommended MIG size (number of
+   * instances) computed by autoscaler. Autoscaler calculates the recommended
+   * MIG size even when the autoscaling policy mode is different from ON. This
+   * field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    *
    * @param int $recommendedSize
    */
@@ -264,8 +264,8 @@ class Autoscaler extends \Google\Collection
     return $this->recommendedSize;
   }
   /**
-   * [Output Only] URL of theregion where the instance group resides (for
-   * autoscalers living in regional scope).
+   * Output only. [Output Only] URL of theregion where the instance group
+   * resides (for autoscalers living in regional scope).
    *
    * @param string $region
    */
@@ -281,7 +281,8 @@ class Autoscaler extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Status information of existing scaling schedules.
+   * Output only. [Output Only] Status information of existing scaling
+   * schedules.
    *
    * @param ScalingScheduleStatus[] $scalingScheduleStatus
    */
@@ -374,8 +375,8 @@ class Autoscaler extends \Google\Collection
     return $this->target;
   }
   /**
-   * [Output Only] URL of thezone where the instance group resides (for
-   * autoscalers living in zonal scope).
+   * Output only. [Output Only] URL of thezone where the instance group resides
+   * (for autoscalers living in zonal scope).
    *
    * @param string $zone
    */

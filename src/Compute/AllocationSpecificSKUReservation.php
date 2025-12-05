@@ -20,7 +20,8 @@ namespace Google\Service\Compute;
 class AllocationSpecificSKUReservation extends \Google\Model
 {
   /**
-   * [Output Only] Indicates how many instances are actually usable currently.
+   * Output only. [Output Only] Indicates how many instances are actually usable
+   * currently.
    *
    * @var string
    */
@@ -32,7 +33,7 @@ class AllocationSpecificSKUReservation extends \Google\Model
    */
   public $count;
   /**
-   * [Output Only] Indicates how many instances are in use.
+   * Output only. [Output Only] Indicates how many instances are in use.
    *
    * @var string
    */
@@ -55,7 +56,8 @@ class AllocationSpecificSKUReservation extends \Google\Model
   public $sourceInstanceTemplate;
 
   /**
-   * [Output Only] Indicates how many instances are actually usable currently.
+   * Output only. [Output Only] Indicates how many instances are actually usable
+   * currently.
    *
    * @param string $assuredCount
    */
@@ -87,7 +89,7 @@ class AllocationSpecificSKUReservation extends \Google\Model
     return $this->count;
   }
   /**
-   * [Output Only] Indicates how many instances are in use.
+   * Output only. [Output Only] Indicates how many instances are in use.
    *
    * @param string $inUseCount
    */

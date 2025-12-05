@@ -34,7 +34,7 @@ class FirewallPolicyAssociation extends \Google\Model
    */
   public $displayName;
   /**
-   * [Output Only] The firewall policy ID of the association.
+   * Output only. [Output Only] The firewall policy ID of the association.
    *
    * @var string
    */
@@ -46,7 +46,8 @@ class FirewallPolicyAssociation extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] The short name of the firewall policy of the association.
+   * Output only. [Output Only] The short name of the firewall policy of the
+   * association.
    *
    * @var string
    */
@@ -88,7 +89,7 @@ class FirewallPolicyAssociation extends \Google\Model
     return $this->displayName;
   }
   /**
-   * [Output Only] The firewall policy ID of the association.
+   * Output only. [Output Only] The firewall policy ID of the association.
    *
    * @param string $firewallPolicyId
    */
@@ -120,7 +121,8 @@ class FirewallPolicyAssociation extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] The short name of the firewall policy of the association.
+   * Output only. [Output Only] The short name of the firewall policy of the
+   * association.
    *
    * @param string $shortName
    */

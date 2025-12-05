@@ -62,8 +62,8 @@ class HttpHealthCheck extends \Google\Model
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP
-   * health checks.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#httpHealthCheck for HTTP health checks.
    *
    * @var string
    */
@@ -219,8 +219,8 @@ class HttpHealthCheck extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP
-   * health checks.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#httpHealthCheck for HTTP health checks.
    *
    * @param string $kind
    */

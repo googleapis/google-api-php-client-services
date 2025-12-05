@@ -41,8 +41,8 @@ class AcceleratorType extends \Google\Model
    */
   public $id;
   /**
-   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for
-   * accelerator types.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#acceleratorType for accelerator types.
    *
    * @var string
    */
@@ -60,7 +60,8 @@ class AcceleratorType extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] Server-defined, fully qualified URL for this resource.
+   * Output only. [Output Only] Server-defined, fully qualified URL for this
+   * resource.
    *
    * @var string
    */
@@ -140,8 +141,8 @@ class AcceleratorType extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for
-   * accelerator types.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#acceleratorType for accelerator types.
    *
    * @param string $kind
    */
@@ -189,7 +190,8 @@ class AcceleratorType extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] Server-defined, fully qualified URL for this resource.
+   * Output only. [Output Only] Server-defined, fully qualified URL for this
+   * resource.
    *
    * @param string $selfLink
    */

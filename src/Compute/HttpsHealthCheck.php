@@ -62,7 +62,7 @@ class HttpsHealthCheck extends \Google\Model
    */
   public $id;
   /**
-   * Type of the resource.
+   * Output only. Type of the resource.
    *
    * @var string
    */
@@ -218,7 +218,7 @@ class HttpsHealthCheck extends \Google\Model
     return $this->id;
   }
   /**
-   * Type of the resource.
+   * Output only. Type of the resource.
    *
    * @param string $kind
    */

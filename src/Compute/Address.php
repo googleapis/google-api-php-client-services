@@ -127,7 +127,7 @@ class Address extends \Google\Collection
    */
   public $addressType;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -140,12 +140,27 @@ class Address extends \Google\Collection
    */
   public $description;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
+  /**
+   * Reference to the source of external IPv4 addresses, like a
+   * PublicDelegatedPrefix (PDP) for BYOIP. The PDP must support enhanced IPv4
+   * allocations.
+   *
+   * Use one of the following formats to specify a PDP when reserving an
+   * external IPv4 address using BYOIP.        -     Full resource URL, as inhtt
+   * ps://www.googleapis.com/compute/v1/projects/projectId/regions/region/public
+   * DelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name
+   * - regions/region/publicDelegatedPrefixes/pdp-name
+   *
+   * @var string
+   */
+  public $ipCollection;
   /**
    * The IP version that will be used by this address. Valid options areIPV4 or
    * IPV6.
@@ -162,7 +177,8 @@ class Address extends \Google\Collection
    */
   public $ipv6EndpointType;
   /**
-   * [Output Only] Type of the resource. Always compute#address for addresses.
+   * Output only. [Output Only] Type of the resource. Always compute#address for
+   * addresses.
    *
    * @var string
    */
@@ -247,9 +263,10 @@ class Address extends \Google\Collection
    */
   public $purpose;
   /**
-   * [Output Only] The URL of the region where a regional address resides. For
-   * regional addresses, you must specify the region as a path parameter in the
-   * HTTP request URL. *This field is not applicable to global addresses.*
+   * Output only. [Output Only] The URL of the region where a regional address
+   * resides. For regional addresses, you must specify the region as a path
+   * parameter in the HTTP request URL. *This field is not applicable to global
+   * addresses.*
    *
    * @var string
    */
@@ -261,10 +278,10 @@ class Address extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] The status of the address, which can be one ofRESERVING,
-   * RESERVED, or IN_USE. An address that is RESERVING is currently in the
-   * process of being reserved. A RESERVED address is currently reserved and
-   * available to use. An IN_USE address is currently being used by another
+   * Output only. [Output Only] The status of the address, which can be one
+   * ofRESERVING, RESERVED, or IN_USE. An address that is RESERVING is currently
+   * in the process of being reserved. A RESERVED address is currently reserved
+   * and available to use. An IN_USE address is currently being used by another
    * resource and is not available.
    *
    * @var string
@@ -321,7 +338,7 @@ class Address extends \Google\Collection
     return $this->addressType;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -354,8 +371,8 @@ class Address extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -369,6 +386,31 @@ class Address extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * Reference to the source of external IPv4 addresses, like a
+   * PublicDelegatedPrefix (PDP) for BYOIP. The PDP must support enhanced IPv4
+   * allocations.
+   *
+   * Use one of the following formats to specify a PDP when reserving an
+   * external IPv4 address using BYOIP.        -     Full resource URL, as inhtt
+   * ps://www.googleapis.com/compute/v1/projects/projectId/regions/region/public
+   * DelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name
+   * - regions/region/publicDelegatedPrefixes/pdp-name
+   *
+   * @param string $ipCollection
+   */
+  public function setIpCollection($ipCollection)
+  {
+    $this->ipCollection = $ipCollection;
+  }
+  /**
+   * @return string
+   */
+  public function getIpCollection()
+  {
+    return $this->ipCollection;
   }
   /**
    * The IP version that will be used by this address. Valid options areIPV4 or
@@ -410,7 +452,8 @@ class Address extends \Google\Collection
     return $this->ipv6EndpointType;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#address for addresses.
+   * Output only. [Output Only] Type of the resource. Always compute#address for
+   * addresses.
    *
    * @param string $kind
    */
@@ -581,9 +624,10 @@ class Address extends \Google\Collection
     return $this->purpose;
   }
   /**
-   * [Output Only] The URL of the region where a regional address resides. For
-   * regional addresses, you must specify the region as a path parameter in the
-   * HTTP request URL. *This field is not applicable to global addresses.*
+   * Output only. [Output Only] The URL of the region where a regional address
+   * resides. For regional addresses, you must specify the region as a path
+   * parameter in the HTTP request URL. *This field is not applicable to global
+   * addresses.*
    *
    * @param string $region
    */
@@ -615,10 +659,10 @@ class Address extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] The status of the address, which can be one ofRESERVING,
-   * RESERVED, or IN_USE. An address that is RESERVING is currently in the
-   * process of being reserved. A RESERVED address is currently reserved and
-   * available to use. An IN_USE address is currently being used by another
+   * Output only. [Output Only] The status of the address, which can be one
+   * ofRESERVING, RESERVED, or IN_USE. An address that is RESERVING is currently
+   * in the process of being reserved. A RESERVED address is currently reserved
+   * and available to use. An IN_USE address is currently being used by another
    * resource and is not available.
    *
    * Accepted values: IN_USE, RESERVED, RESERVING

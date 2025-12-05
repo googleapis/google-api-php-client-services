@@ -55,8 +55,8 @@ class AttachedDisk extends \Google\Collection
   public const TYPE_SCRATCH = 'SCRATCH';
   protected $collection_key = 'licenses';
   /**
-   * [Output Only] The architecture of the attached disk. Valid values are ARM64
-   * or X86_64.
+   * Output only. [Output Only] The architecture of the attached disk. Valid
+   * values are ARM64 or X86_64.
    *
    * @var string
    */
@@ -107,9 +107,9 @@ class AttachedDisk extends \Google\Collection
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
-   * [Output Only] A zero-based index to this disk, where 0 is reserved for the
-   * boot disk. If you have many disks attached to an instance, each disk would
-   * have a unique index number.
+   * Output only. [Output Only] A zero-based index to this disk, where 0 is
+   * reserved for the boot disk. If you have many disks attached to an instance,
+   * each disk would have a unique index number.
    *
    * @var int
    */
@@ -126,14 +126,14 @@ class AttachedDisk extends \Google\Collection
    */
   public $interface;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached
-   * disks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk
+   * for attached disks.
    *
    * @var string
    */
   public $kind;
   /**
-   * [Output Only] Any valid publicly visible licenses.
+   * Output only. [Output Only] Any valid publicly visible licenses.
    *
    * @var string[]
    */
@@ -146,10 +146,10 @@ class AttachedDisk extends \Google\Collection
    */
   public $mode;
   /**
-   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this
-   * field is set to PRESERVED if the LocalSSD data has been saved to a
-   * persistent location by customer request.  (see the discard_local_ssd option
-   * on Stop/Suspend). Read-only in the api.
+   * Output only. For LocalSSD disks on VM Instances in STOPPED or SUSPENDED
+   * state, this field is set to PRESERVED if the LocalSSD data has been saved
+   * to a persistent location by customer request.  (see the discard_local_ssd
+   * option on Stop/Suspend). Read-only in the api.
    *
    * @var string
    */
@@ -180,8 +180,8 @@ class AttachedDisk extends \Google\Collection
   public $type;
 
   /**
-   * [Output Only] The architecture of the attached disk. Valid values are ARM64
-   * or X86_64.
+   * Output only. [Output Only] The architecture of the attached disk. Valid
+   * values are ARM64 or X86_64.
    *
    * Accepted values: ARCHITECTURE_UNSPECIFIED, ARM64, X86_64
    *
@@ -346,9 +346,9 @@ class AttachedDisk extends \Google\Collection
     return $this->guestOsFeatures;
   }
   /**
-   * [Output Only] A zero-based index to this disk, where 0 is reserved for the
-   * boot disk. If you have many disks attached to an instance, each disk would
-   * have a unique index number.
+   * Output only. [Output Only] A zero-based index to this disk, where 0 is
+   * reserved for the boot disk. If you have many disks attached to an instance,
+   * each disk would have a unique index number.
    *
    * @param int $index
    */
@@ -406,8 +406,8 @@ class AttachedDisk extends \Google\Collection
     return $this->interface;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached
-   * disks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk
+   * for attached disks.
    *
    * @param string $kind
    */
@@ -423,7 +423,7 @@ class AttachedDisk extends \Google\Collection
     return $this->kind;
   }
   /**
-   * [Output Only] Any valid publicly visible licenses.
+   * Output only. [Output Only] Any valid publicly visible licenses.
    *
    * @param string[] $licenses
    */
@@ -458,10 +458,10 @@ class AttachedDisk extends \Google\Collection
     return $this->mode;
   }
   /**
-   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this
-   * field is set to PRESERVED if the LocalSSD data has been saved to a
-   * persistent location by customer request.  (see the discard_local_ssd option
-   * on Stop/Suspend). Read-only in the api.
+   * Output only. For LocalSSD disks on VM Instances in STOPPED or SUSPENDED
+   * state, this field is set to PRESERVED if the LocalSSD data has been saved
+   * to a persistent location by customer request.  (see the discard_local_ssd
+   * option on Stop/Suspend). Read-only in the api.
    *
    * Accepted values: DISK_SAVED_STATE_UNSPECIFIED, PRESERVED
    *
@@ -479,7 +479,7 @@ class AttachedDisk extends \Google\Collection
     return $this->savedState;
   }
   /**
-   * [Output Only] shielded vm initial state stored on disk
+   * Output only. [Output Only] shielded vm initial state stored on disk
    *
    * @param InitialStateConfig $shieldedInstanceInitialState
    */

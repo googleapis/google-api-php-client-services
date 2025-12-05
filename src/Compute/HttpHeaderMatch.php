@@ -92,7 +92,8 @@ class HttpHeaderMatch extends \Google\Model
    * rangeMatch must be set.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED (regional scope) or
+   * INTERNAL_MANAGED.
    *
    * @var string
    */
@@ -256,7 +257,8 @@ class HttpHeaderMatch extends \Google\Model
    * rangeMatch must be set.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED (regional scope) or
+   * INTERNAL_MANAGED.
    *
    * @param string $regexMatch
    */

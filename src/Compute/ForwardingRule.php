@@ -181,17 +181,17 @@ class ForwardingRule extends \Google\Collection
    */
   public $backendService;
   /**
-   * [Output Only] The URL for the corresponding base forwarding rule. By base
-   * forwarding rule, we mean the forwarding rule that has the same IP address,
-   * protocol, and port settings with the current forwarding rule, but without
-   * sourceIPRanges specified. Always empty if the current forwarding rule does
-   * not have sourceIPRanges specified.
+   * Output only. [Output Only] The URL for the corresponding base forwarding
+   * rule. By base forwarding rule, we mean the forwarding rule that has the
+   * same IP address, protocol, and port settings with the current forwarding
+   * rule, but without sourceIPRanges specified. Always empty if the current
+   * forwarding rule does not have sourceIPRanges specified.
    *
    * @var string
    */
   public $baseForwardingRule;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -289,8 +289,8 @@ class ForwardingRule extends \Google\Collection
    */
   public $isMirroringCollector;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for
-   * forwarding rule resources.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#forwardingRule for forwarding rule resources.
    *
    * @var string
    */
@@ -441,10 +441,10 @@ class ForwardingRule extends \Google\Collection
    */
   public $pscConnectionStatus;
   /**
-   * [Output Only] URL of the region where the regional forwarding rule resides.
-   * This field is not applicable to global forwarding rules. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field
-   * in the request body.
+   * Output only. [Output Only] URL of the region where the regional forwarding
+   * rule resides. This field is not applicable to global forwarding rules. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @var string
    */
@@ -456,7 +456,8 @@ class ForwardingRule extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
@@ -692,11 +693,11 @@ class ForwardingRule extends \Google\Collection
     return $this->backendService;
   }
   /**
-   * [Output Only] The URL for the corresponding base forwarding rule. By base
-   * forwarding rule, we mean the forwarding rule that has the same IP address,
-   * protocol, and port settings with the current forwarding rule, but without
-   * sourceIPRanges specified. Always empty if the current forwarding rule does
-   * not have sourceIPRanges specified.
+   * Output only. [Output Only] The URL for the corresponding base forwarding
+   * rule. By base forwarding rule, we mean the forwarding rule that has the
+   * same IP address, protocol, and port settings with the current forwarding
+   * rule, but without sourceIPRanges specified. Always empty if the current
+   * forwarding rule does not have sourceIPRanges specified.
    *
    * @param string $baseForwardingRule
    */
@@ -712,7 +713,7 @@ class ForwardingRule extends \Google\Collection
     return $this->baseForwardingRule;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -904,8 +905,8 @@ class ForwardingRule extends \Google\Collection
     return $this->isMirroringCollector;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for
-   * forwarding rule resources.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#forwardingRule for forwarding rule resources.
    *
    * @param string $kind
    */
@@ -1214,10 +1215,10 @@ class ForwardingRule extends \Google\Collection
     return $this->pscConnectionStatus;
   }
   /**
-   * [Output Only] URL of the region where the regional forwarding rule resides.
-   * This field is not applicable to global forwarding rules. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field
-   * in the request body.
+   * Output only. [Output Only] URL of the region where the regional forwarding
+   * rule resides. This field is not applicable to global forwarding rules. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @param string $region
    */
@@ -1249,7 +1250,8 @@ class ForwardingRule extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */

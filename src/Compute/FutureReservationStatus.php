@@ -94,14 +94,14 @@ class FutureReservationStatus extends \Google\Collection
   public const PROCUREMENT_STATUS_PROVISIONING = 'PROVISIONING';
   protected $collection_key = 'autoCreatedReservations';
   /**
-   * [Output Only] The current status of the requested amendment.
+   * Output only. [Output Only] The current status of the requested amendment.
    *
    * @var string
    */
   public $amendmentStatus;
   /**
-   * Fully qualified urls of the automatically created reservations at
-   * start_time.
+   * Output only. Fully qualified urls of the automatically created reservations
+   * at start_time.
    *
    * @var string[]
    */
@@ -109,9 +109,9 @@ class FutureReservationStatus extends \Google\Collection
   protected $existingMatchingUsageInfoType = FutureReservationStatusExistingMatchingUsageInfo::class;
   protected $existingMatchingUsageInfoDataType = '';
   /**
-   * This count indicates the fulfilled capacity so far. This is set during
-   * "PROVISIONING" state. This count also includes capacity delivered as part
-   * of existing matching reservations.
+   * Output only. This count indicates the fulfilled capacity so far. This is
+   * set during "PROVISIONING" state. This count also includes capacity
+   * delivered as part of existing matching reservations.
    *
    * @var string
    */
@@ -119,9 +119,9 @@ class FutureReservationStatus extends \Google\Collection
   protected $lastKnownGoodStateType = FutureReservationStatusLastKnownGoodState::class;
   protected $lastKnownGoodStateDataType = '';
   /**
-   * Time when Future Reservation would become LOCKED, after which no
-   * modifications to Future Reservation will be allowed. Applicable only after
-   * the Future Reservation is in the APPROVED state. The lock_time is an
+   * Output only. Time when Future Reservation would become LOCKED, after which
+   * no modifications to Future Reservation will be allowed. Applicable only
+   * after the Future Reservation is in the APPROVED state. The lock_time is an
    * RFC3339 string. The procurement_status will transition to PROCURING state
    * at this time.
    *
@@ -129,7 +129,7 @@ class FutureReservationStatus extends \Google\Collection
    */
   public $lockTime;
   /**
-   * Current state of this Future Reservation
+   * Output only. Current state of this Future Reservation
    *
    * @var string
    */
@@ -138,7 +138,7 @@ class FutureReservationStatus extends \Google\Collection
   protected $specificSkuPropertiesDataType = '';
 
   /**
-   * [Output Only] The current status of the requested amendment.
+   * Output only. [Output Only] The current status of the requested amendment.
    *
    * Accepted values: AMENDMENT_APPROVED, AMENDMENT_DECLINED,
    * AMENDMENT_IN_REVIEW, AMENDMENT_STATUS_UNSPECIFIED
@@ -157,8 +157,8 @@ class FutureReservationStatus extends \Google\Collection
     return $this->amendmentStatus;
   }
   /**
-   * Fully qualified urls of the automatically created reservations at
-   * start_time.
+   * Output only. Fully qualified urls of the automatically created reservations
+   * at start_time.
    *
    * @param string[] $autoCreatedReservations
    */
@@ -174,8 +174,8 @@ class FutureReservationStatus extends \Google\Collection
     return $this->autoCreatedReservations;
   }
   /**
-   * [Output Only] Represents the existing matching usage for the future
-   * reservation.
+   * Output only. [Output Only] Represents the existing matching usage for the
+   * future reservation.
    *
    * @param FutureReservationStatusExistingMatchingUsageInfo $existingMatchingUsageInfo
    */
@@ -191,9 +191,9 @@ class FutureReservationStatus extends \Google\Collection
     return $this->existingMatchingUsageInfo;
   }
   /**
-   * This count indicates the fulfilled capacity so far. This is set during
-   * "PROVISIONING" state. This count also includes capacity delivered as part
-   * of existing matching reservations.
+   * Output only. This count indicates the fulfilled capacity so far. This is
+   * set during "PROVISIONING" state. This count also includes capacity
+   * delivered as part of existing matching reservations.
    *
    * @param string $fulfilledCount
    */
@@ -209,8 +209,8 @@ class FutureReservationStatus extends \Google\Collection
     return $this->fulfilledCount;
   }
   /**
-   * [Output Only] This field represents the future reservation before an
-   * amendment was requested. If the amendment is declined, the Future
+   * Output only. [Output Only] This field represents the future reservation
+   * before an amendment was requested. If the amendment is declined, the Future
    * Reservation will be reverted to the last known good state. The last known
    * good state is not set when updating a future reservation whose Procurement
    * Status is DRAFTING.
@@ -229,9 +229,9 @@ class FutureReservationStatus extends \Google\Collection
     return $this->lastKnownGoodState;
   }
   /**
-   * Time when Future Reservation would become LOCKED, after which no
-   * modifications to Future Reservation will be allowed. Applicable only after
-   * the Future Reservation is in the APPROVED state. The lock_time is an
+   * Output only. Time when Future Reservation would become LOCKED, after which
+   * no modifications to Future Reservation will be allowed. Applicable only
+   * after the Future Reservation is in the APPROVED state. The lock_time is an
    * RFC3339 string. The procurement_status will transition to PROCURING state
    * at this time.
    *
@@ -249,7 +249,7 @@ class FutureReservationStatus extends \Google\Collection
     return $this->lockTime;
   }
   /**
-   * Current state of this Future Reservation
+   * Output only. Current state of this Future Reservation
    *
    * Accepted values: APPROVED, CANCELLED, COMMITTED, DECLINED, DRAFTING,
    * FAILED, FAILED_PARTIALLY_FULFILLED, FULFILLED, PENDING_AMENDMENT_APPROVAL,

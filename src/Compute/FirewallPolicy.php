@@ -25,7 +25,7 @@ class FirewallPolicy extends \Google\Collection
   protected $associationsType = FirewallPolicyAssociation::class;
   protected $associationsDataType = 'array';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -74,8 +74,8 @@ class FirewallPolicy extends \Google\Collection
    */
   public $id;
   /**
-   * [Output only] Type of the resource. Alwayscompute#firewallPolicyfor
-   * firewall policies
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#firewallPolicyfor firewall policies
    *
    * @var string
    */
@@ -91,8 +91,8 @@ class FirewallPolicy extends \Google\Collection
   protected $packetMirroringRulesType = FirewallPolicyRule::class;
   protected $packetMirroringRulesDataType = 'array';
   /**
-   * [Output Only] The parent of the firewall policy. This field is not
-   * applicable to network firewall policies.
+   * Output only. [Output Only] The parent of the firewall policy. This field is
+   * not applicable to network firewall policies.
    *
    * @var string
    */
@@ -107,17 +107,17 @@ class FirewallPolicy extends \Google\Collection
    */
   public $policyType;
   /**
-   * [Output Only] URL of the region where the regional firewall policy resides.
-   * This field is not applicable to global firewall policies. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field
-   * in the request body.
+   * Output only. [Output Only] URL of the region where the regional firewall
+   * policy resides. This field is not applicable to global firewall policies.
+   * You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Total count of all firewall policy rule tuples. A firewall
-   * policy can not exceed a set number of tuples.
+   * Output only. [Output Only] Total count of all firewall policy rule tuples.
+   * A firewall policy can not exceed a set number of tuples.
    *
    * @var int
    */
@@ -131,7 +131,8 @@ class FirewallPolicy extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
@@ -168,7 +169,7 @@ class FirewallPolicy extends \Google\Collection
     return $this->associations;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -268,8 +269,8 @@ class FirewallPolicy extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output only] Type of the resource. Alwayscompute#firewallPolicyfor
-   * firewall policies
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#firewallPolicyfor firewall policies
    *
    * @param string $kind
    */
@@ -319,8 +320,8 @@ class FirewallPolicy extends \Google\Collection
     return $this->packetMirroringRules;
   }
   /**
-   * [Output Only] The parent of the firewall policy. This field is not
-   * applicable to network firewall policies.
+   * Output only. [Output Only] The parent of the firewall policy. This field is
+   * not applicable to network firewall policies.
    *
    * @param string $parent
    */
@@ -357,10 +358,10 @@ class FirewallPolicy extends \Google\Collection
     return $this->policyType;
   }
   /**
-   * [Output Only] URL of the region where the regional firewall policy resides.
-   * This field is not applicable to global firewall policies. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field
-   * in the request body.
+   * Output only. [Output Only] URL of the region where the regional firewall
+   * policy resides. This field is not applicable to global firewall policies.
+   * You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    *
    * @param string $region
    */
@@ -376,8 +377,8 @@ class FirewallPolicy extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Total count of all firewall policy rule tuples. A firewall
-   * policy can not exceed a set number of tuples.
+   * Output only. [Output Only] Total count of all firewall policy rule tuples.
+   * A firewall policy can not exceed a set number of tuples.
    *
    * @param int $ruleTupleCount
    */
@@ -428,7 +429,8 @@ class FirewallPolicy extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */

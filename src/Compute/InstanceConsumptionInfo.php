@@ -20,32 +20,35 @@ namespace Google\Service\Compute;
 class InstanceConsumptionInfo extends \Google\Model
 {
   /**
-   * The number of virtual CPUs that are available to the instance.
+   * Output only. The number of virtual CPUs that are available to the instance.
    *
    * @var int
    */
   public $guestCpus;
   /**
-   * The amount of local SSD storage available to the instance, defined in GiB.
+   * Output only. The amount of local SSD storage available to the instance,
+   * defined in GiB.
    *
    * @var int
    */
   public $localSsdGb;
   /**
-   * The amount of physical memory available to the instance, defined in MiB.
+   * Output only. The amount of physical memory available to the instance,
+   * defined in MiB.
    *
    * @var int
    */
   public $memoryMb;
   /**
-   * The minimal guaranteed number of virtual CPUs that are reserved.
+   * Output only. The minimal guaranteed number of virtual CPUs that are
+   * reserved.
    *
    * @var int
    */
   public $minNodeCpus;
 
   /**
-   * The number of virtual CPUs that are available to the instance.
+   * Output only. The number of virtual CPUs that are available to the instance.
    *
    * @param int $guestCpus
    */
@@ -61,7 +64,8 @@ class InstanceConsumptionInfo extends \Google\Model
     return $this->guestCpus;
   }
   /**
-   * The amount of local SSD storage available to the instance, defined in GiB.
+   * Output only. The amount of local SSD storage available to the instance,
+   * defined in GiB.
    *
    * @param int $localSsdGb
    */
@@ -77,7 +81,8 @@ class InstanceConsumptionInfo extends \Google\Model
     return $this->localSsdGb;
   }
   /**
-   * The amount of physical memory available to the instance, defined in MiB.
+   * Output only. The amount of physical memory available to the instance,
+   * defined in MiB.
    *
    * @param int $memoryMb
    */
@@ -93,7 +98,8 @@ class InstanceConsumptionInfo extends \Google\Model
     return $this->memoryMb;
   }
   /**
-   * The minimal guaranteed number of virtual CPUs that are reserved.
+   * Output only. The minimal guaranteed number of virtual CPUs that are
+   * reserved.
    *
    * @param int $minNodeCpus
    */
