@@ -28,6 +28,8 @@ class StreamObject extends \Google\Collection
    * @var string
    */
   public $createTime;
+  protected $customizationRulesType = CustomizationRule::class;
+  protected $customizationRulesDataType = 'array';
   /**
    * Required. Display name.
    *
@@ -82,6 +84,24 @@ class StreamObject extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Output only. The customization rules for the object. These rules are
+   * derived from the parent Stream's `rule_sets` and represent the intended
+   * configuration for the object.
+   *
+   * @param CustomizationRule[] $customizationRules
+   */
+  public function setCustomizationRules($customizationRules)
+  {
+    $this->customizationRules = $customizationRules;
+  }
+  /**
+   * @return CustomizationRule[]
+   */
+  public function getCustomizationRules()
+  {
+    return $this->customizationRules;
   }
   /**
    * Required. Display name.

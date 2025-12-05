@@ -58,7 +58,7 @@ class Stream extends \Google\Collection
    * buffer.
    */
   public const STATE_DRAINING = 'DRAINING';
-  protected $collection_key = 'errors';
+  protected $collection_key = 'ruleSets';
   protected $backfillAllType = BackfillAllStrategy::class;
   protected $backfillAllDataType = '';
   protected $backfillNoneType = BackfillNoneStrategy::class;
@@ -106,6 +106,8 @@ class Stream extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $ruleSetsType = RuleSet::class;
+  protected $ruleSetsDataType = 'array';
   /**
    * Output only. Reserved for future use.
    *
@@ -296,6 +298,22 @@ class Stream extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Rule sets to apply to the stream.
+   *
+   * @param RuleSet[] $ruleSets
+   */
+  public function setRuleSets($ruleSets)
+  {
+    $this->ruleSets = $ruleSets;
+  }
+  /**
+   * @return RuleSet[]
+   */
+  public function getRuleSets()
+  {
+    return $this->ruleSets;
   }
   /**
    * Output only. Reserved for future use.
