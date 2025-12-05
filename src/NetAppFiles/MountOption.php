@@ -36,6 +36,10 @@ class MountOption extends \Google\Model
    */
   public const PROTOCOL_SMB = 'SMB';
   /**
+   * ISCSI protocol
+   */
+  public const PROTOCOL_ISCSI = 'ISCSI';
+  /**
    * Export string
    *
    * @var string
@@ -133,7 +137,7 @@ class MountOption extends \Google\Model
   /**
    * Protocol to mount with.
    *
-   * Accepted values: PROTOCOLS_UNSPECIFIED, NFSV3, NFSV4, SMB
+   * Accepted values: PROTOCOLS_UNSPECIFIED, NFSV3, NFSV4, SMB, ISCSI
    *
    * @param self::PROTOCOL_* $protocol
    */

@@ -114,6 +114,8 @@ class Volume extends \Google\Collection
   public $activeDirectory;
   protected $backupConfigType = BackupConfig::class;
   protected $backupConfigDataType = '';
+  protected $blockDevicesType = BlockDevice::class;
+  protected $blockDevicesDataType = 'array';
   protected $cacheParametersType = CacheParameters::class;
   protected $cacheParametersDataType = '';
   /**
@@ -366,6 +368,23 @@ class Volume extends \Google\Collection
   public function getBackupConfig()
   {
     return $this->backupConfig;
+  }
+  /**
+   * Optional. Block devices for the volume. Currently, only one block device is
+   * permitted per Volume.
+   *
+   * @param BlockDevice[] $blockDevices
+   */
+  public function setBlockDevices($blockDevices)
+  {
+    $this->blockDevices = $blockDevices;
+  }
+  /**
+   * @return BlockDevice[]
+   */
+  public function getBlockDevices()
+  {
+    return $this->blockDevices;
   }
   /**
    * Optional. Cache parameters for the volume.

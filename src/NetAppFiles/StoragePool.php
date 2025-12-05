@@ -96,6 +96,18 @@ class StoragePool extends \Google\Model
    */
   public const STATE_ERROR = 'ERROR';
   /**
+   * Storage pool type is not specified.
+   */
+  public const TYPE_STORAGE_POOL_TYPE_UNSPECIFIED = 'STORAGE_POOL_TYPE_UNSPECIFIED';
+  /**
+   * Storage pool type is file.
+   */
+  public const TYPE_FILE = 'FILE';
+  /**
+   * Storage pool type is unified.
+   */
+  public const TYPE_UNIFIED = 'UNIFIED';
+  /**
    * Optional. Specifies the Active Directory to be used for creating a SMB
    * volume.
    *
@@ -280,6 +292,14 @@ class StoragePool extends \Google\Model
    * @var string
    */
   public $totalThroughputMibps;
+  /**
+   * Optional. Type of the storage pool. This field is used to control whether
+   * the pool supports FILE based volumes only or UNIFIED (both FILE and BLOCK)
+   * volumes. If not specified during creation, it defaults to FILE.
+   *
+   * @var string
+   */
+  public $type;
   /**
    * Output only. Allocated size of all volumes in GIB in the storage pool
    *
@@ -766,6 +786,26 @@ class StoragePool extends \Google\Model
   public function getTotalThroughputMibps()
   {
     return $this->totalThroughputMibps;
+  }
+  /**
+   * Optional. Type of the storage pool. This field is used to control whether
+   * the pool supports FILE based volumes only or UNIFIED (both FILE and BLOCK)
+   * volumes. If not specified during creation, it defaults to FILE.
+   *
+   * Accepted values: STORAGE_POOL_TYPE_UNSPECIFIED, FILE, UNIFIED
+   *
+   * @param self::TYPE_* $type
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return self::TYPE_*
+   */
+  public function getType()
+  {
+    return $this->type;
   }
   /**
    * Output only. Allocated size of all volumes in GIB in the storage pool
