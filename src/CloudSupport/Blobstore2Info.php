@@ -36,6 +36,12 @@ class Blobstore2Info extends \Google\Model
    *
    * @var string
    */
+  public $downloadExternalReadToken;
+  /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @var string
+   */
   public $downloadReadHandle;
   /**
    * # gdata.* are outside protos with mising documentation
@@ -81,6 +87,22 @@ class Blobstore2Info extends \Google\Model
   public function getBlobId()
   {
     return $this->blobId;
+  }
+  /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $downloadExternalReadToken
+   */
+  public function setDownloadExternalReadToken($downloadExternalReadToken)
+  {
+    $this->downloadExternalReadToken = $downloadExternalReadToken;
+  }
+  /**
+   * @return string
+   */
+  public function getDownloadExternalReadToken()
+  {
+    return $this->downloadExternalReadToken;
   }
   /**
    * # gdata.* are outside protos with mising documentation
