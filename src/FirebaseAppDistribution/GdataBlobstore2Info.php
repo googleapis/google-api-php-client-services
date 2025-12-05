@@ -32,6 +32,14 @@ class GdataBlobstore2Info extends \Google\Model
    */
   public $blobId;
   /**
+   * A serialized External Read Token passed from Bigstore -> Scotty for a GCS
+   * download. This field must never be consumed outside of Bigstore, and is not
+   * applicable to non-GCS media uploads.
+   *
+   * @var string
+   */
+  public $downloadExternalReadToken;
+  /**
    * Read handle passed from Bigstore -> Scotty for a GCS download. This is a
    * signed, serialized blobstore2.ReadHandle proto which must never be set
    * outside of Bigstore, and is not applicable to non-GCS media downloads.
@@ -87,6 +95,24 @@ class GdataBlobstore2Info extends \Google\Model
   public function getBlobId()
   {
     return $this->blobId;
+  }
+  /**
+   * A serialized External Read Token passed from Bigstore -> Scotty for a GCS
+   * download. This field must never be consumed outside of Bigstore, and is not
+   * applicable to non-GCS media uploads.
+   *
+   * @param string $downloadExternalReadToken
+   */
+  public function setDownloadExternalReadToken($downloadExternalReadToken)
+  {
+    $this->downloadExternalReadToken = $downloadExternalReadToken;
+  }
+  /**
+   * @return string
+   */
+  public function getDownloadExternalReadToken()
+  {
+    return $this->downloadExternalReadToken;
   }
   /**
    * Read handle passed from Bigstore -> Scotty for a GCS download. This is a
