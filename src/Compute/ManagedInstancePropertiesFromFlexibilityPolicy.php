@@ -20,14 +20,14 @@ namespace Google\Service\Compute;
 class ManagedInstancePropertiesFromFlexibilityPolicy extends \Google\Model
 {
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    *
    * @var string
    */
   public $machineType;
 
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    *
    * @param string $machineType
    */

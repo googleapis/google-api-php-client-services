@@ -29,8 +29,8 @@ class InterconnectLocationList extends \Google\Collection
   protected $itemsType = InterconnectLocation::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Alwayscompute#interconnectLocationList for
-   * lists of interconnect locations.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#interconnectLocationList for lists of interconnect locations.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class InterconnectLocationList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class InterconnectLocationList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#interconnectLocationList for
-   * lists of interconnect locations.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#interconnectLocationList for lists of interconnect locations.
    *
    * @param string $kind
    */
@@ -124,7 +124,7 @@ class InterconnectLocationList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

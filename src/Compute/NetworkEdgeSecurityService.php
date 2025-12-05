@@ -20,7 +20,7 @@ namespace Google\Service\Compute;
 class NetworkEdgeSecurityService extends \Google\Model
 {
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -46,14 +46,14 @@ class NetworkEdgeSecurityService extends \Google\Model
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output only] Type of the resource.
+   * Output only. [Output only] Type of the resource.
    * Alwayscompute#networkEdgeSecurityService for NetworkEdgeSecurityServices
    *
    * @var string
@@ -72,9 +72,9 @@ class NetworkEdgeSecurityService extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] URL of the region where the resource resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the region where the resource resides.
+   * You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    *
    * @var string
    */
@@ -87,20 +87,21 @@ class NetworkEdgeSecurityService extends \Google\Model
    */
   public $securityPolicy;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
   public $selfLinkWithId;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -156,8 +157,8 @@ class NetworkEdgeSecurityService extends \Google\Model
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -173,7 +174,7 @@ class NetworkEdgeSecurityService extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output only] Type of the resource.
+   * Output only. [Output only] Type of the resource.
    * Alwayscompute#networkEdgeSecurityService for NetworkEdgeSecurityServices
    *
    * @param string $kind
@@ -212,9 +213,9 @@ class NetworkEdgeSecurityService extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] URL of the region where the resource resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the region where the resource resides.
+   * You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    *
    * @param string $region
    */
@@ -247,7 +248,7 @@ class NetworkEdgeSecurityService extends \Google\Model
     return $this->securityPolicy;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -263,7 +264,8 @@ class NetworkEdgeSecurityService extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */

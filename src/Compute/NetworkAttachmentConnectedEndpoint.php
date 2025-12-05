@@ -83,8 +83,8 @@ class NetworkAttachmentConnectedEndpoint extends \Google\Collection
    */
   public $subnetwork;
   /**
-   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP
-   * was allocated from.
+   * Output only. [Output Only] The CIDR range of the subnet from which the IPv4
+   * internal IP was allocated from.
    *
    * @var string
    */
@@ -194,8 +194,8 @@ class NetworkAttachmentConnectedEndpoint extends \Google\Collection
     return $this->subnetwork;
   }
   /**
-   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP
-   * was allocated from.
+   * Output only. [Output Only] The CIDR range of the subnet from which the IPv4
+   * internal IP was allocated from.
    *
    * @param string $subnetworkCidrRange
    */

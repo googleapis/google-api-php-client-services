@@ -24,15 +24,15 @@ class InstanceManagedByIgmError extends \Google\Model
   protected $instanceActionDetailsType = InstanceManagedByIgmErrorInstanceActionDetails::class;
   protected $instanceActionDetailsDataType = '';
   /**
-   * [Output Only] The time that this error occurred. This value is in RFC3339
-   * text format.
+   * Output only. [Output Only] The time that this error occurred. This value is
+   * in RFC3339 text format.
    *
    * @var string
    */
   public $timestamp;
 
   /**
-   * [Output Only] Contents of the error.
+   * Output only. [Output Only] Contents of the error.
    *
    * @param InstanceManagedByIgmErrorManagedInstanceError $error
    */
@@ -48,9 +48,9 @@ class InstanceManagedByIgmError extends \Google\Model
     return $this->error;
   }
   /**
-   * [Output Only] Details of the instance action that triggered this error. May
-   * be null, if the error was not caused by an action on an instance. This
-   * field is optional.
+   * Output only. [Output Only] Details of the instance action that triggered
+   * this error. May be null, if the error was not caused by an action on an
+   * instance. This field is optional.
    *
    * @param InstanceManagedByIgmErrorInstanceActionDetails $instanceActionDetails
    */
@@ -66,8 +66,8 @@ class InstanceManagedByIgmError extends \Google\Model
     return $this->instanceActionDetails;
   }
   /**
-   * [Output Only] The time that this error occurred. This value is in RFC3339
-   * text format.
+   * Output only. [Output Only] The time that this error occurred. This value is
+   * in RFC3339 text format.
    *
    * @param string $timestamp
    */

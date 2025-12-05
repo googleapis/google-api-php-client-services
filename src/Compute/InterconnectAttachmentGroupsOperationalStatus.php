@@ -29,7 +29,7 @@ class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
   protected $configuredType = InterconnectAttachmentGroupConfigured::class;
   protected $configuredDataType = '';
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    *
    * @var string
    */
@@ -68,7 +68,7 @@ class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
     return $this->configured;
   }
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    *
    * Accepted values: DEGRADED, FULLY_DOWN, FULLY_UP, UNSPECIFIED
    *
@@ -100,7 +100,8 @@ class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
     return $this->intent;
   }
   /**
-   * The operational state of the group, including only active Attachments.
+   * Output only. The operational state of the group, including only active
+   * Attachments.
    *
    * @param InterconnectAttachmentGroupConfigured $operational
    */

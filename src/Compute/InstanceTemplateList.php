@@ -29,7 +29,7 @@ class InstanceTemplateList extends \Google\Collection
   protected $itemsType = InstanceTemplate::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#instanceTemplatesListResponse for instance template lists.
    *
    * @var string
@@ -46,7 +46,7 @@ class InstanceTemplateList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,7 +87,7 @@ class InstanceTemplateList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#instanceTemplatesListResponse for instance template lists.
    *
    * @param string $kind
@@ -124,7 +124,7 @@ class InstanceTemplateList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

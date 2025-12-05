@@ -21,7 +21,7 @@ class InterconnectAttachmentGroupLogicalStructureRegionMetroFacility extends \Go
 {
   protected $collection_key = 'zones';
   /**
-   * [Output Only] The name of a facility, like "iad-1234".
+   * Output only. [Output Only] The name of a facility, like "iad-1234".
    *
    * @var string
    */
@@ -30,7 +30,7 @@ class InterconnectAttachmentGroupLogicalStructureRegionMetroFacility extends \Go
   protected $zonesDataType = 'array';
 
   /**
-   * [Output Only] The name of a facility, like "iad-1234".
+   * Output only. [Output Only] The name of a facility, like "iad-1234".
    *
    * @param string $facility
    */

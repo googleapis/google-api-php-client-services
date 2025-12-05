@@ -26,8 +26,8 @@ class MachineImage extends \Google\Collection
   public const STATUS_UPLOADING = 'UPLOADING';
   protected $collection_key = 'storageLocations';
   /**
-   * [Output Only] The creation timestamp for this machine image inRFC3339 text
-   * format.
+   * Output only. [Output Only] The creation timestamp for this machine image
+   * inRFC3339 text format.
    *
    * @var string
    */
@@ -47,8 +47,8 @@ class MachineImage extends \Google\Collection
    */
   public $guestFlush;
   /**
-   * [Output Only] A unique identifier for this machine image. The server
-   * defines this identifier.
+   * Output only. [Output Only] A unique identifier for this machine image. The
+   * server defines this identifier.
    *
    * @var string
    */
@@ -56,8 +56,8 @@ class MachineImage extends \Google\Collection
   protected $instancePropertiesType = InstanceProperties::class;
   protected $instancePropertiesDataType = '';
   /**
-   * [Output Only] The resource type, which is alwayscompute#machineImage for
-   * machine image.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#machineImage for machine image.
    *
    * @var string
    */
@@ -102,7 +102,7 @@ class MachineImage extends \Google\Collection
    */
   public $satisfiesPzi;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
@@ -110,7 +110,8 @@ class MachineImage extends \Google\Collection
   protected $savedDisksType = SavedDisk::class;
   protected $savedDisksDataType = 'array';
   /**
-   * [Output Only] The URL for this machine image. The server defines this URL.
+   * Output only. [Output Only] The URL for this machine image. The server
+   * defines this URL.
    *
    * @var string
    */
@@ -130,8 +131,8 @@ class MachineImage extends \Google\Collection
   protected $sourceInstancePropertiesType = SourceInstanceProperties::class;
   protected $sourceInstancePropertiesDataType = '';
   /**
-   * [Output Only] The status of the machine image. One of the following
-   * values:INVALID, CREATING, READY,DELETING, and UPLOADING.
+   * Output only. [Output Only] The status of the machine image. One of the
+   * following values:INVALID, CREATING, READY,DELETING, and UPLOADING.
    *
    * @var string
    */
@@ -144,15 +145,16 @@ class MachineImage extends \Google\Collection
    */
   public $storageLocations;
   /**
-   * [Output Only] Total size of the storage used by the machine image.
+   * Output only. [Output Only] Total size of the storage used by the machine
+   * image.
    *
    * @var string
    */
   public $totalStorageBytes;
 
   /**
-   * [Output Only] The creation timestamp for this machine image inRFC3339 text
-   * format.
+   * Output only. [Output Only] The creation timestamp for this machine image
+   * inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -202,8 +204,8 @@ class MachineImage extends \Google\Collection
     return $this->guestFlush;
   }
   /**
-   * [Output Only] A unique identifier for this machine image. The server
-   * defines this identifier.
+   * Output only. [Output Only] A unique identifier for this machine image. The
+   * server defines this identifier.
    *
    * @param string $id
    */
@@ -235,8 +237,8 @@ class MachineImage extends \Google\Collection
     return $this->instanceProperties;
   }
   /**
-   * [Output Only] The resource type, which is alwayscompute#machineImage for
-   * machine image.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#machineImage for machine image.
    *
    * @param string $kind
    */
@@ -357,7 +359,7 @@ class MachineImage extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -373,8 +375,8 @@ class MachineImage extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * An array of Machine Image specific properties for disks attached to the
-   * source instance
+   * Output only. An array of Machine Image specific properties for disks
+   * attached to the source instance
    *
    * @param SavedDisk[] $savedDisks
    */
@@ -390,7 +392,8 @@ class MachineImage extends \Google\Collection
     return $this->savedDisks;
   }
   /**
-   * [Output Only] The URL for this machine image. The server defines this URL.
+   * Output only. [Output Only] The URL for this machine image. The server
+   * defines this URL.
    *
    * @param string $selfLink
    */
@@ -444,9 +447,9 @@ class MachineImage extends \Google\Collection
     return $this->sourceInstance;
   }
   /**
-   * [Output Only] DEPRECATED: Please use instance_properties instead for source
-   * instance related properties. New properties will not be added to this
-   * field.
+   * Output only. [Output Only] DEPRECATED: Please use instance_properties
+   * instead for source instance related properties. New properties will not be
+   * added to this field.
    *
    * @param SourceInstanceProperties $sourceInstanceProperties
    */
@@ -462,8 +465,8 @@ class MachineImage extends \Google\Collection
     return $this->sourceInstanceProperties;
   }
   /**
-   * [Output Only] The status of the machine image. One of the following
-   * values:INVALID, CREATING, READY,DELETING, and UPLOADING.
+   * Output only. [Output Only] The status of the machine image. One of the
+   * following values:INVALID, CREATING, READY,DELETING, and UPLOADING.
    *
    * Accepted values: CREATING, DELETING, INVALID, READY, UPLOADING
    *
@@ -498,7 +501,8 @@ class MachineImage extends \Google\Collection
     return $this->storageLocations;
   }
   /**
-   * [Output Only] Total size of the storage used by the machine image.
+   * Output only. [Output Only] Total size of the storage used by the machine
+   * image.
    *
    * @param string $totalStorageBytes
    */

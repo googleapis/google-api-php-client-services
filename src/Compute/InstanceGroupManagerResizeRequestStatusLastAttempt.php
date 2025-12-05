@@ -23,7 +23,7 @@ class InstanceGroupManagerResizeRequestStatusLastAttempt extends \Google\Model
   protected $errorDataType = '';
 
   /**
-   * Errors that prevented the ResizeRequest to be fulfilled.
+   * Output only. Errors that prevented the ResizeRequest to be fulfilled.
    *
    * @param InstanceGroupManagerResizeRequestStatusLastAttemptError $error
    */

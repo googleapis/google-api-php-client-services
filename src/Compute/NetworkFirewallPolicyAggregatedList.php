@@ -29,7 +29,7 @@ class NetworkFirewallPolicyAggregatedList extends \Google\Collection
   protected $itemsType = FirewallPoliciesScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource.
+   * Output only. [Output Only] Type of resource.
    * Alwayscompute#networkFirewallPoliciesAggregatedList for lists of network
    * firewall policies.
    *
@@ -47,13 +47,13 @@ class NetworkFirewallPolicyAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -94,7 +94,7 @@ class NetworkFirewallPolicyAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource.
+   * Output only. [Output Only] Type of resource.
    * Alwayscompute#networkFirewallPoliciesAggregatedList for lists of network
    * firewall policies.
    *
@@ -132,7 +132,7 @@ class NetworkFirewallPolicyAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -148,7 +148,7 @@ class NetworkFirewallPolicyAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

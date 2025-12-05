@@ -20,16 +20,16 @@ namespace Google\Service\Compute;
 class InterconnectRemoteLocationPermittedConnections extends \Google\Model
 {
   /**
-   * [Output Only] URL of an Interconnect location that is permitted to connect
-   * to this Interconnect remote location.
+   * Output only. [Output Only] URL of an Interconnect location that is
+   * permitted to connect to this Interconnect remote location.
    *
    * @var string
    */
   public $interconnectLocation;
 
   /**
-   * [Output Only] URL of an Interconnect location that is permitted to connect
-   * to this Interconnect remote location.
+   * Output only. [Output Only] URL of an Interconnect location that is
+   * permitted to connect to this Interconnect remote location.
    *
    * @param string $interconnectLocation
    */

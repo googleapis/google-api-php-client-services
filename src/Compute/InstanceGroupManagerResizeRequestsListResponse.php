@@ -21,7 +21,8 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by
+   * the server.
    *
    * @var string
    */
@@ -29,7 +30,7 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
   protected $itemsType = InstanceGroupManagerResizeRequest::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource.
+   * Output only. [Output Only] Type of the resource.
    * Alwayscompute#instanceGroupManagerResizeRequestList for a list of resize
    * requests.
    *
@@ -37,17 +38,17 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
    */
   public $kind;
   /**
-   * [Output Only] This token allows you to get the next page of results for
-   * list requests. If the number of results is larger thanmaxResults, use the
-   * nextPageToken as a value for the query parameter pageToken in the next list
-   * request. Subsequent list requests will have their own nextPageToken to
-   * continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of
+   * results for list requests. If the number of results is larger
+   * thanmaxResults, use the nextPageToken as a value for the query parameter
+   * pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    *
    * @var string
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -56,7 +57,8 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by
+   * the server.
    *
    * @param string $id
    */
@@ -88,7 +90,7 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource.
+   * Output only. [Output Only] Type of the resource.
    * Alwayscompute#instanceGroupManagerResizeRequestList for a list of resize
    * requests.
    *
@@ -106,11 +108,11 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * [Output Only] This token allows you to get the next page of results for
-   * list requests. If the number of results is larger thanmaxResults, use the
-   * nextPageToken as a value for the query parameter pageToken in the next list
-   * request. Subsequent list requests will have their own nextPageToken to
-   * continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of
+   * results for list requests. If the number of results is larger
+   * thanmaxResults, use the nextPageToken as a value for the query parameter
+   * pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    *
    * @param string $nextPageToken
    */
@@ -126,7 +128,7 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -142,7 +144,7 @@ class InstanceGroupManagerResizeRequestsListResponse extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    *
    * @param InstanceGroupManagerResizeRequestsListResponseWarning $warning
    */

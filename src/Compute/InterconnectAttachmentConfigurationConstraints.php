@@ -34,7 +34,7 @@ class InterconnectAttachmentConfigurationConstraints extends \Google\Collection
   public const BGP_MD5_MD5_UNSUPPORTED = 'MD5_UNSUPPORTED';
   protected $collection_key = 'bgpPeerAsnRanges';
   /**
-   * [Output Only] Whether the attachment's BGP session
+   * Output only. [Output Only] Whether the attachment's BGP session
    * requires/allows/disallows BGP MD5 authentication. This can take one of the
    * following values: MD5_OPTIONAL, MD5_REQUIRED, MD5_UNSUPPORTED.
    *
@@ -52,7 +52,7 @@ class InterconnectAttachmentConfigurationConstraints extends \Google\Collection
   protected $bgpPeerAsnRangesDataType = 'array';
 
   /**
-   * [Output Only] Whether the attachment's BGP session
+   * Output only. [Output Only] Whether the attachment's BGP session
    * requires/allows/disallows BGP MD5 authentication. This can take one of the
    * following values: MD5_OPTIONAL, MD5_REQUIRED, MD5_UNSUPPORTED.
    *
@@ -79,10 +79,11 @@ class InterconnectAttachmentConfigurationConstraints extends \Google\Collection
     return $this->bgpMd5;
   }
   /**
-   * [Output Only] List of ASN ranges that the remote location is known to
-   * support. Formatted as an array of inclusive ranges {min: min-value, max:
-   * max-value}. For example, [{min: 123, max: 123}, {min: 64512, max: 65534}]
-   * allows the peer ASN to be 123 or anything in the range 64512-65534.
+   * Output only. [Output Only] List of ASN ranges that the remote location is
+   * known to support. Formatted as an array of inclusive ranges {min: min-
+   * value, max: max-value}. For example, [{min: 123, max: 123}, {min: 64512,
+   * max: 65534}] allows the peer ASN to be 123 or anything in the range
+   * 64512-65534.
    *
    * This field is only advisory. Although the API accepts other ranges, these
    * are the ranges that we recommend.

@@ -27,7 +27,8 @@ class InstanceSettingsMetadata extends \Google\Model
    */
   public $items;
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata
+   * for metadata.
    *
    * @var string
    */
@@ -51,7 +52,8 @@ class InstanceSettingsMetadata extends \Google\Model
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata
+   * for metadata.
    *
    * @param string $kind
    */

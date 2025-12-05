@@ -83,8 +83,8 @@ class MachineType extends \Google\Collection
    */
   public $isSharedCpu;
   /**
-   * [Output Only] The type of the resource. Alwayscompute#machineType for
-   * machine types.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#machineType for machine types.
    *
    * @var string
    */
@@ -281,8 +281,8 @@ class MachineType extends \Google\Collection
     return $this->isSharedCpu;
   }
   /**
-   * [Output Only] The type of the resource. Alwayscompute#machineType for
-   * machine types.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#machineType for machine types.
    *
    * @param string $kind
    */

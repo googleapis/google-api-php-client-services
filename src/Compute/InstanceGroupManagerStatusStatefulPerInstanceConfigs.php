@@ -20,18 +20,18 @@ namespace Google\Service\Compute;
 class InstanceGroupManagerStatusStatefulPerInstanceConfigs extends \Google\Model
 {
   /**
-   * A bit indicating if all of the group's per-instance configurations (listed
-   * in the output of a listPerInstanceConfigs API call) have status EFFECTIVE
-   * or there are no per-instance-configs.
+   * Output only. A bit indicating if all of the group's per-instance
+   * configurations (listed in the output of a listPerInstanceConfigs API call)
+   * have status EFFECTIVE or there are no per-instance-configs.
    *
    * @var bool
    */
   public $allEffective;
 
   /**
-   * A bit indicating if all of the group's per-instance configurations (listed
-   * in the output of a listPerInstanceConfigs API call) have status EFFECTIVE
-   * or there are no per-instance-configs.
+   * Output only. A bit indicating if all of the group's per-instance
+   * configurations (listed in the output of a listPerInstanceConfigs API call)
+   * have status EFFECTIVE or there are no per-instance-configs.
    *
    * @param bool $allEffective
    */

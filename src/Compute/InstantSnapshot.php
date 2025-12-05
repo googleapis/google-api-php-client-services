@@ -53,14 +53,14 @@ class InstantSnapshot extends \Google\Model
    */
   public const STATUS_UNAVAILABLE = 'UNAVAILABLE';
   /**
-   * [Output Only] The architecture of the instant snapshot. Valid values are
-   * ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the instant snapshot. Valid
+   * values are ARM64 or X86_64.
    *
    * @var string
    */
   public $architecture;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -73,21 +73,21 @@ class InstantSnapshot extends \Google\Model
    */
   public $description;
   /**
-   * [Output Only] Size of the source disk, specified in GB.
+   * Output only. [Output Only] Size of the source disk, specified in GB.
    *
    * @var string
    */
   public $diskSizeGb;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#instantSnapshot for
-   * InstantSnapshot resources.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#instantSnapshot for InstantSnapshot resources.
    *
    * @var string
    */
@@ -126,9 +126,9 @@ class InstantSnapshot extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] URL of the region where the instant snapshot resides. You
-   * must specify this field as part of the HTTP request URL. It is not settable
-   * as a field in the request body.
+   * Output only. [Output Only] URL of the region where the instant snapshot
+   * resides. You must specify this field as part of the HTTP request URL. It is
+   * not settable as a field in the request body.
    *
    * @var string
    */
@@ -142,19 +142,20 @@ class InstantSnapshot extends \Google\Model
    */
   public $satisfiesPzi;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzs;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource
+   * id.
    *
    * @var string
    */
@@ -174,32 +175,33 @@ class InstantSnapshot extends \Google\Model
    */
   public $sourceDisk;
   /**
-   * [Output Only] The ID value of the disk used to create this InstantSnapshot.
-   * This value may be used to determine whether the InstantSnapshot was taken
-   * from the current or a previous instance of a given disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this
+   * InstantSnapshot. This value may be used to determine whether the
+   * InstantSnapshot was taken from the current or a previous instance of a
+   * given disk name.
    *
    * @var string
    */
   public $sourceDiskId;
   /**
-   * [Output Only] The status of the instantSnapshot. This can beCREATING,
-   * DELETING, FAILED, orREADY.
+   * Output only. [Output Only] The status of the instantSnapshot. This can
+   * beCREATING, DELETING, FAILED, orREADY.
    *
    * @var string
    */
   public $status;
   /**
-   * [Output Only] URL of the zone where the instant snapshot resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the zone where the instant snapshot
+   * resides. You must specify this field as part of the HTTP request URL. It is
+   * not settable as a field in the request body.
    *
    * @var string
    */
   public $zone;
 
   /**
-   * [Output Only] The architecture of the instant snapshot. Valid values are
-   * ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the instant snapshot. Valid
+   * values are ARM64 or X86_64.
    *
    * Accepted values: ARCHITECTURE_UNSPECIFIED, ARM64, X86_64
    *
@@ -217,7 +219,7 @@ class InstantSnapshot extends \Google\Model
     return $this->architecture;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -250,7 +252,7 @@ class InstantSnapshot extends \Google\Model
     return $this->description;
   }
   /**
-   * [Output Only] Size of the source disk, specified in GB.
+   * Output only. [Output Only] Size of the source disk, specified in GB.
    *
    * @param string $diskSizeGb
    */
@@ -266,8 +268,8 @@ class InstantSnapshot extends \Google\Model
     return $this->diskSizeGb;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -283,8 +285,8 @@ class InstantSnapshot extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#instantSnapshot for
-   * InstantSnapshot resources.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#instantSnapshot for InstantSnapshot resources.
    *
    * @param string $kind
    */
@@ -363,9 +365,9 @@ class InstantSnapshot extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] URL of the region where the instant snapshot resides. You
-   * must specify this field as part of the HTTP request URL. It is not settable
-   * as a field in the request body.
+   * Output only. [Output Only] URL of the region where the instant snapshot
+   * resides. You must specify this field as part of the HTTP request URL. It is
+   * not settable as a field in the request body.
    *
    * @param string $region
    */
@@ -381,7 +383,8 @@ class InstantSnapshot extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] Status information for the instant snapshot resource.
+   * Output only. [Output Only] Status information for the instant snapshot
+   * resource.
    *
    * @param InstantSnapshotResourceStatus $resourceStatus
    */
@@ -413,7 +416,7 @@ class InstantSnapshot extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -429,7 +432,7 @@ class InstantSnapshot extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -445,7 +448,8 @@ class InstantSnapshot extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource
+   * id.
    *
    * @param string $selfLinkWithId
    */
@@ -485,9 +489,10 @@ class InstantSnapshot extends \Google\Model
     return $this->sourceDisk;
   }
   /**
-   * [Output Only] The ID value of the disk used to create this InstantSnapshot.
-   * This value may be used to determine whether the InstantSnapshot was taken
-   * from the current or a previous instance of a given disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this
+   * InstantSnapshot. This value may be used to determine whether the
+   * InstantSnapshot was taken from the current or a previous instance of a
+   * given disk name.
    *
    * @param string $sourceDiskId
    */
@@ -503,8 +508,8 @@ class InstantSnapshot extends \Google\Model
     return $this->sourceDiskId;
   }
   /**
-   * [Output Only] The status of the instantSnapshot. This can beCREATING,
-   * DELETING, FAILED, orREADY.
+   * Output only. [Output Only] The status of the instantSnapshot. This can
+   * beCREATING, DELETING, FAILED, orREADY.
    *
    * Accepted values: CREATING, DELETING, FAILED, READY, UNAVAILABLE
    *
@@ -522,9 +527,9 @@ class InstantSnapshot extends \Google\Model
     return $this->status;
   }
   /**
-   * [Output Only] URL of the zone where the instant snapshot resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a
-   * field in the request body.
+   * Output only. [Output Only] URL of the zone where the instant snapshot
+   * resides. You must specify this field as part of the HTTP request URL. It is
+   * not settable as a field in the request body.
    *
    * @param string $zone
    */

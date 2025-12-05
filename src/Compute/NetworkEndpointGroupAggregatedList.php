@@ -29,7 +29,7 @@ class NetworkEndpointGroupAggregatedList extends \Google\Collection
   protected $itemsType = NetworkEndpointGroupsScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#networkEndpointGroupAggregatedList for aggregated lists of
    * network endpoint groups.
    *
@@ -47,13 +47,13 @@ class NetworkEndpointGroupAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -94,7 +94,7 @@ class NetworkEndpointGroupAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#networkEndpointGroupAggregatedList for aggregated lists of
    * network endpoint groups.
    *
@@ -132,7 +132,7 @@ class NetworkEndpointGroupAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -148,7 +148,7 @@ class NetworkEndpointGroupAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

@@ -42,7 +42,7 @@ class License extends \Google\Collection
    */
   public $chargesUseFee;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -70,7 +70,8 @@ class License extends \Google\Collection
    */
   public $incompatibleLicenses;
   /**
-   * [Output Only] Type of resource. Always compute#license for licenses.
+   * Output only. [Output Only] Type of resource. Always compute#license for
+   * licenses.
    *
    * @var string
    */
@@ -122,13 +123,14 @@ class License extends \Google\Collection
   protected $resourceRequirementsType = LicenseResourceRequirements::class;
   protected $resourceRequirementsDataType = '';
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
@@ -147,7 +149,7 @@ class License extends \Google\Collection
    */
   public $transferable;
   /**
-   * [Output Only] Last update timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -205,7 +207,7 @@ class License extends \Google\Collection
     return $this->chargesUseFee;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -273,7 +275,8 @@ class License extends \Google\Collection
     return $this->incompatibleLicenses;
   }
   /**
-   * [Output Only] Type of resource. Always compute#license for licenses.
+   * Output only. [Output Only] Type of resource. Always compute#license for
+   * licenses.
    *
    * @param string $kind
    */
@@ -424,7 +427,7 @@ class License extends \Google\Collection
     return $this->resourceRequirements;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -440,7 +443,8 @@ class License extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */
@@ -489,7 +493,7 @@ class License extends \Google\Collection
     return $this->transferable;
   }
   /**
-   * [Output Only] Last update timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
    *
    * @param string $updateTimestamp
    */

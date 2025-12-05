@@ -43,9 +43,9 @@ class NetworkEndpointGroupPscData extends \Google\Model
   public const PSC_CONNECTION_STATUS_REJECTED = 'REJECTED';
   public const PSC_CONNECTION_STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
   /**
-   * [Output Only] Address allocated from given subnetwork for PSC. This IP
-   * address acts as a VIP for a PSC NEG, allowing it to act as an endpoint in
-   * L7 PSC-XLB.
+   * Output only. [Output Only] Address allocated from given subnetwork for PSC.
+   * This IP address acts as a VIP for a PSC NEG, allowing it to act as an
+   * endpoint in L7 PSC-XLB.
    *
    * @var string
    */
@@ -59,23 +59,24 @@ class NetworkEndpointGroupPscData extends \Google\Model
    */
   public $producerPort;
   /**
-   * [Output Only] The PSC connection id of the PSC Network Endpoint Group
-   * Consumer.
+   * Output only. [Output Only] The PSC connection id of the PSC Network
+   * Endpoint Group Consumer.
    *
    * @var string
    */
   public $pscConnectionId;
   /**
-   * [Output Only] The connection status of the PSC Forwarding Rule.
+   * Output only. [Output Only] The connection status of the PSC Forwarding
+   * Rule.
    *
    * @var string
    */
   public $pscConnectionStatus;
 
   /**
-   * [Output Only] Address allocated from given subnetwork for PSC. This IP
-   * address acts as a VIP for a PSC NEG, allowing it to act as an endpoint in
-   * L7 PSC-XLB.
+   * Output only. [Output Only] Address allocated from given subnetwork for PSC.
+   * This IP address acts as a VIP for a PSC NEG, allowing it to act as an
+   * endpoint in L7 PSC-XLB.
    *
    * @param string $consumerPscAddress
    */
@@ -109,8 +110,8 @@ class NetworkEndpointGroupPscData extends \Google\Model
     return $this->producerPort;
   }
   /**
-   * [Output Only] The PSC connection id of the PSC Network Endpoint Group
-   * Consumer.
+   * Output only. [Output Only] The PSC connection id of the PSC Network
+   * Endpoint Group Consumer.
    *
    * @param string $pscConnectionId
    */
@@ -126,7 +127,8 @@ class NetworkEndpointGroupPscData extends \Google\Model
     return $this->pscConnectionId;
   }
   /**
-   * [Output Only] The connection status of the PSC Forwarding Rule.
+   * Output only. [Output Only] The connection status of the PSC Forwarding
+   * Rule.
    *
    * Accepted values: ACCEPTED, CLOSED, NEEDS_ATTENTION, PENDING, REJECTED,
    * STATUS_UNSPECIFIED

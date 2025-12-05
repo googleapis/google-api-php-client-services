@@ -27,15 +27,15 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
   public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
   protected $collection_key = 'rules';
   /**
-   * [Output Only] Deprecated, please use short name instead. The display name
-   * of the firewall policy.
+   * Output only. [Output Only] Deprecated, please use short name instead. The
+   * display name of the firewall policy.
    *
    * @deprecated
    * @var string
    */
   public $displayName;
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    *
    * @var string
    */
@@ -43,8 +43,8 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
   protected $packetMirroringRulesType = FirewallPolicyRule::class;
   protected $packetMirroringRulesDataType = 'array';
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for
-   * type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not
+   * applicable for type=HIERARCHY.
    *
    * @var int
    */
@@ -52,22 +52,22 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
   protected $rulesType = FirewallPolicyRule::class;
   protected $rulesDataType = 'array';
   /**
-   * [Output Only] The short name of the firewall policy.
+   * Output only. [Output Only] The short name of the firewall policy.
    *
    * @var string
    */
   public $shortName;
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY,
-   * NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
+   * Output only. [Output Only] The type of the firewall policy. Can be one of
+   * HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    *
    * @var string
    */
   public $type;
 
   /**
-   * [Output Only] Deprecated, please use short name instead. The display name
-   * of the firewall policy.
+   * Output only. [Output Only] Deprecated, please use short name instead. The
+   * display name of the firewall policy.
    *
    * @deprecated
    * @param string $displayName
@@ -85,7 +85,7 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
     return $this->displayName;
   }
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    *
    * @param string $name
    */
@@ -101,7 +101,8 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
     return $this->name;
   }
   /**
-   * [Output Only] The packet mirroring rules that apply to the instance.
+   * Output only. [Output Only] The packet mirroring rules that apply to the
+   * instance.
    *
    * @param FirewallPolicyRule[] $packetMirroringRules
    */
@@ -117,8 +118,8 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
     return $this->packetMirroringRules;
   }
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for
-   * type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not
+   * applicable for type=HIERARCHY.
    *
    * @param int $priority
    */
@@ -152,7 +153,7 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
     return $this->rules;
   }
   /**
-   * [Output Only] The short name of the firewall policy.
+   * Output only. [Output Only] The short name of the firewall policy.
    *
    * @param string $shortName
    */
@@ -168,8 +169,8 @@ class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goo
     return $this->shortName;
   }
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY,
-   * NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
+   * Output only. [Output Only] The type of the firewall policy. Can be one of
+   * HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    *
    * Accepted values: HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL,
    * SYSTEM_REGIONAL, UNSPECIFIED

@@ -21,24 +21,24 @@ class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone extends
 {
   protected $collection_key = 'attachments';
   /**
-   * [Output Only] URLs of Attachments in the given zone, to the given region,
-   * on Interconnects in the given facility and metro. Every Attachment in the
-   * AG has such an entry.
+   * Output only. [Output Only] URLs of Attachments in the given zone, to the
+   * given region, on Interconnects in the given facility and metro. Every
+   * Attachment in the AG has such an entry.
    *
    * @var string[]
    */
   public $attachments;
   /**
-   * [Output Only] The name of a zone, either "zone1" or "zone2".
+   * Output only. [Output Only] The name of a zone, either "zone1" or "zone2".
    *
    * @var string
    */
   public $zone;
 
   /**
-   * [Output Only] URLs of Attachments in the given zone, to the given region,
-   * on Interconnects in the given facility and metro. Every Attachment in the
-   * AG has such an entry.
+   * Output only. [Output Only] URLs of Attachments in the given zone, to the
+   * given region, on Interconnects in the given facility and metro. Every
+   * Attachment in the AG has such an entry.
    *
    * @param string[] $attachments
    */
@@ -54,7 +54,7 @@ class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone extends
     return $this->attachments;
   }
   /**
-   * [Output Only] The name of a zone, either "zone1" or "zone2".
+   * Output only. [Output Only] The name of a zone, either "zone1" or "zone2".
    *
    * @param string $zone
    */

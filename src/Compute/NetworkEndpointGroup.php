@@ -69,7 +69,7 @@ class NetworkEndpointGroup extends \Google\Model
   protected $cloudRunType = NetworkEndpointGroupCloudRun::class;
   protected $cloudRunDataType = '';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -92,15 +92,15 @@ class NetworkEndpointGroup extends \Google\Model
    */
   public $description;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for
-   * network endpoint group.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#networkEndpointGroup for network endpoint group.
    *
    * @var string
    */
@@ -146,20 +146,21 @@ class NetworkEndpointGroup extends \Google\Model
    */
   public $pscTargetService;
   /**
-   * [Output Only] The URL of theregion where the network endpoint group is
-   * located.
+   * Output only. [Output Only] The URL of theregion where the network endpoint
+   * group is located.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output only] Number of network endpoints in the network endpoint group.
+   * Output only. [Output only] Number of network endpoints in the network
+   * endpoint group.
    *
    * @var int
    */
@@ -172,8 +173,8 @@ class NetworkEndpointGroup extends \Google\Model
    */
   public $subnetwork;
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is
-   * located.
+   * Output only. [Output Only] The URL of thezone where the network endpoint
+   * group is located.
    *
    * @var string
    */
@@ -247,7 +248,7 @@ class NetworkEndpointGroup extends \Google\Model
     return $this->cloudRun;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -300,8 +301,8 @@ class NetworkEndpointGroup extends \Google\Model
     return $this->description;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -317,8 +318,8 @@ class NetworkEndpointGroup extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for
-   * network endpoint group.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#networkEndpointGroup for network endpoint group.
    *
    * @param string $kind
    */
@@ -432,8 +433,8 @@ class NetworkEndpointGroup extends \Google\Model
     return $this->pscTargetService;
   }
   /**
-   * [Output Only] The URL of theregion where the network endpoint group is
-   * located.
+   * Output only. [Output Only] The URL of theregion where the network endpoint
+   * group is located.
    *
    * @param string $region
    */
@@ -449,7 +450,7 @@ class NetworkEndpointGroup extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -465,7 +466,8 @@ class NetworkEndpointGroup extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output only] Number of network endpoints in the network endpoint group.
+   * Output only. [Output only] Number of network endpoints in the network
+   * endpoint group.
    *
    * @param int $size
    */
@@ -498,8 +500,8 @@ class NetworkEndpointGroup extends \Google\Model
     return $this->subnetwork;
   }
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is
-   * located.
+   * Output only. [Output Only] The URL of thezone where the network endpoint
+   * group is located.
    *
    * @param string $zone
    */

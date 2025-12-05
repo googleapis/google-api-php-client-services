@@ -103,9 +103,9 @@ class NetworkInterface extends \Google\Collection
   protected $ipv6AccessConfigsType = AccessConfig::class;
   protected $ipv6AccessConfigsDataType = 'array';
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be
-   * accessed from the Internet. This field is always inherited from its
-   * subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether
+   * the IP can be accessed from the Internet. This field is always inherited
+   * from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    *
@@ -122,8 +122,8 @@ class NetworkInterface extends \Google\Collection
    */
   public $ipv6Address;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for
-   * network interfaces.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#networkInterface for network interfaces.
    *
    * @var string
    */
@@ -333,9 +333,9 @@ class NetworkInterface extends \Google\Collection
     return $this->ipv6AccessConfigs;
   }
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be
-   * accessed from the Internet. This field is always inherited from its
-   * subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether
+   * the IP can be accessed from the Internet. This field is always inherited
+   * from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    *
@@ -374,8 +374,8 @@ class NetworkInterface extends \Google\Collection
     return $this->ipv6Address;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for
-   * network interfaces.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#networkInterface for network interfaces.
    *
    * @param string $kind
    */

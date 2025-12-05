@@ -23,14 +23,14 @@ class NatIpInfo extends \Google\Collection
   protected $natIpInfoMappingsType = NatIpInfoNatIpInfoMapping::class;
   protected $natIpInfoMappingsDataType = 'array';
   /**
-   * Name of the NAT config which the NAT IP belongs to.
+   * Output only. Name of the NAT config which the NAT IP belongs to.
    *
    * @var string
    */
   public $natName;
 
   /**
-   * A list of all NAT IPs assigned to this NAT config.
+   * Output only. A list of all NAT IPs assigned to this NAT config.
    *
    * @param NatIpInfoNatIpInfoMapping[] $natIpInfoMappings
    */
@@ -46,7 +46,7 @@ class NatIpInfo extends \Google\Collection
     return $this->natIpInfoMappings;
   }
   /**
-   * Name of the NAT config which the NAT IP belongs to.
+   * Output only. Name of the NAT config which the NAT IP belongs to.
    *
    * @param string $natName
    */

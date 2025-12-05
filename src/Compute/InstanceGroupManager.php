@@ -52,8 +52,8 @@ class InstanceGroupManager extends \Google\Collection
    */
   public $baseInstanceName;
   /**
-   * [Output Only] The creation timestamp for this managed instance group
-   * inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this managed instance
+   * group inRFC3339 text format.
    *
    * @var string
    */
@@ -81,8 +81,8 @@ class InstanceGroupManager extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] A unique identifier for this resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
@@ -90,7 +90,7 @@ class InstanceGroupManager extends \Google\Collection
   protected $instanceFlexibilityPolicyType = InstanceGroupManagerInstanceFlexibilityPolicy::class;
   protected $instanceFlexibilityPolicyDataType = '';
   /**
-   * [Output Only] The URL of the Instance Group resource.
+   * Output only. [Output Only] The URL of the Instance Group resource.
    *
    * @var string
    */
@@ -109,7 +109,7 @@ class InstanceGroupManager extends \Google\Collection
    */
   public $instanceTemplate;
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#instanceGroupManager for managed instance groups.
    *
    * @var string
@@ -132,8 +132,8 @@ class InstanceGroupManager extends \Google\Collection
   protected $namedPortsType = NamedPort::class;
   protected $namedPortsDataType = 'array';
   /**
-   * [Output Only] The URL of theregion where the managed instance group resides
-   * (for regional resources).
+   * Output only. [Output Only] The URL of theregion where the managed instance
+   * group resides (for regional resources).
    *
    * @var string
    */
@@ -141,20 +141,20 @@ class InstanceGroupManager extends \Google\Collection
   protected $resourcePoliciesType = InstanceGroupManagerResourcePolicies::class;
   protected $resourcePoliciesDataType = '';
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzi;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzs;
   /**
-   * [Output Only] The URL for this managed instance group. The server defines
-   * this URL.
+   * Output only. [Output Only] The URL for this managed instance group. The
+   * server defines this URL.
    *
    * @var string
    */
@@ -206,8 +206,8 @@ class InstanceGroupManager extends \Google\Collection
   protected $versionsType = InstanceGroupManagerVersion::class;
   protected $versionsDataType = 'array';
   /**
-   * [Output Only] The URL of azone where the managed instance group is located
-   * (for zonal resources).
+   * Output only. [Output Only] The URL of azone where the managed instance
+   * group is located (for zonal resources).
    *
    * @var string
    */
@@ -274,8 +274,8 @@ class InstanceGroupManager extends \Google\Collection
     return $this->baseInstanceName;
   }
   /**
-   * [Output Only] The creation timestamp for this managed instance group
-   * inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this managed instance
+   * group inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -291,8 +291,9 @@ class InstanceGroupManager extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * [Output Only] The list of instance actions and the number of instances in
-   * this managed instance group that are scheduled for each of those actions.
+   * Output only. [Output Only] The list of instance actions and the number of
+   * instances in this managed instance group that are scheduled for each of
+   * those actions.
    *
    * @param InstanceGroupManagerActionsSummary $currentActions
    */
@@ -363,8 +364,8 @@ class InstanceGroupManager extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] A unique identifier for this resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -398,7 +399,7 @@ class InstanceGroupManager extends \Google\Collection
     return $this->instanceFlexibilityPolicy;
   }
   /**
-   * [Output Only] The URL of the Instance Group resource.
+   * Output only. [Output Only] The URL of the Instance Group resource.
    *
    * @param string $instanceGroup
    */
@@ -451,7 +452,7 @@ class InstanceGroupManager extends \Google\Collection
     return $this->instanceTemplate;
   }
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#instanceGroupManager for managed instance groups.
    *
    * @param string $kind
@@ -521,8 +522,8 @@ class InstanceGroupManager extends \Google\Collection
     return $this->namedPorts;
   }
   /**
-   * [Output Only] The URL of theregion where the managed instance group resides
-   * (for regional resources).
+   * Output only. [Output Only] The URL of theregion where the managed instance
+   * group resides (for regional resources).
    *
    * @param string $region
    */
@@ -554,7 +555,7 @@ class InstanceGroupManager extends \Google\Collection
     return $this->resourcePolicies;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzi
    */
@@ -570,7 +571,7 @@ class InstanceGroupManager extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -586,8 +587,8 @@ class InstanceGroupManager extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * [Output Only] The URL for this managed instance group. The server defines
-   * this URL.
+   * Output only. [Output Only] The URL for this managed instance group. The
+   * server defines this URL.
    *
    * @param string $selfLink
    */
@@ -635,7 +636,7 @@ class InstanceGroupManager extends \Google\Collection
     return $this->statefulPolicy;
   }
   /**
-   * [Output Only] The status of this managed instance group.
+   * Output only. [Output Only] The status of this managed instance group.
    *
    * @param InstanceGroupManagerStatus $status
    */
@@ -767,8 +768,8 @@ class InstanceGroupManager extends \Google\Collection
     return $this->versions;
   }
   /**
-   * [Output Only] The URL of azone where the managed instance group is located
-   * (for zonal resources).
+   * Output only. [Output Only] The URL of azone where the managed instance
+   * group is located (for zonal resources).
    *
    * @param string $zone
    */

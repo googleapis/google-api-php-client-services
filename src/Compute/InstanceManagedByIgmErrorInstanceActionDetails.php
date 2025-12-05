@@ -85,15 +85,15 @@ class InstanceManagedByIgmErrorInstanceActionDetails extends \Google\Model
    */
   public const ACTION_VERIFYING = 'VERIFYING';
   /**
-   * [Output Only] Action that managed instance group was executing on the
-   * instance when the error occurred. Possible values:
+   * Output only. [Output Only] Action that managed instance group was executing
+   * on the instance when the error occurred. Possible values:
    *
    * @var string
    */
   public $action;
   /**
-   * [Output Only] The URL of the instance. The URL can be set even if the
-   * instance has not yet been created.
+   * Output only. [Output Only] The URL of the instance. The URL can be set even
+   * if the instance has not yet been created.
    *
    * @var string
    */
@@ -102,8 +102,8 @@ class InstanceManagedByIgmErrorInstanceActionDetails extends \Google\Model
   protected $versionDataType = '';
 
   /**
-   * [Output Only] Action that managed instance group was executing on the
-   * instance when the error occurred. Possible values:
+   * Output only. [Output Only] Action that managed instance group was executing
+   * on the instance when the error occurred. Possible values:
    *
    * Accepted values: ABANDONING, CREATING, CREATING_WITHOUT_RETRIES, DELETING,
    * NONE, RECREATING, REFRESHING, RESTARTING, RESUMING, STARTING, STOPPING,
@@ -123,8 +123,8 @@ class InstanceManagedByIgmErrorInstanceActionDetails extends \Google\Model
     return $this->action;
   }
   /**
-   * [Output Only] The URL of the instance. The URL can be set even if the
-   * instance has not yet been created.
+   * Output only. [Output Only] The URL of the instance. The URL can be set even
+   * if the instance has not yet been created.
    *
    * @param string $instance
    */
@@ -140,10 +140,10 @@ class InstanceManagedByIgmErrorInstanceActionDetails extends \Google\Model
     return $this->instance;
   }
   /**
-   * [Output Only] Version this instance was created from, or was being created
-   * from, but the creation failed. Corresponds to one of the versions that were
-   * set on the Instance Group Manager resource at the time this instance was
-   * being created.
+   * Output only. [Output Only] Version this instance was created from, or was
+   * being created from, but the creation failed. Corresponds to one of the
+   * versions that were set on the Instance Group Manager resource at the time
+   * this instance was being created.
    *
    * @param ManagedInstanceVersion $version
    */

@@ -29,8 +29,9 @@ class MachineTypeAggregatedList extends \Google\Collection
   protected $itemsType = MachineTypesScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource. Alwayscompute#machineTypeAggregatedList for
-   * aggregated lists of machine types.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#machineTypeAggregatedList for aggregated lists of machine
+   * types.
    *
    * @var string
    */
@@ -46,13 +47,13 @@ class MachineTypeAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -93,8 +94,9 @@ class MachineTypeAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#machineTypeAggregatedList for
-   * aggregated lists of machine types.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#machineTypeAggregatedList for aggregated lists of machine
+   * types.
    *
    * @param string $kind
    */
@@ -130,7 +132,7 @@ class MachineTypeAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -146,7 +148,7 @@ class MachineTypeAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

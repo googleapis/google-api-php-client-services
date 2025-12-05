@@ -44,8 +44,8 @@ class InterconnectRemoteLocationConstraints extends \Google\Model
    */
   public const PORT_PAIR_VLAN_PORT_PAIR_UNCONSTRAINED_VLAN = 'PORT_PAIR_UNCONSTRAINED_VLAN';
   /**
-   * [Output Only] Port pair remote location constraints, which can take one of
-   * the following values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION,
+   * Output only. [Output Only] Port pair remote location constraints, which can
+   * take one of the following values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION,
    * PORT_PAIR_MATCHING_REMOTE_LOCATION.
    *
    * Google Cloud API refers only to individual ports, but the UI uses this
@@ -60,8 +60,9 @@ class InterconnectRemoteLocationConstraints extends \Google\Model
    */
   public $portPairRemoteLocation;
   /**
-   * [Output Only] Port pair VLAN constraints, which can take one of the
-   * following values: PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
+   * Output only. [Output Only] Port pair VLAN constraints, which can take one
+   * of the following values: PORT_PAIR_UNCONSTRAINED_VLAN,
+   * PORT_PAIR_MATCHING_VLAN
    *
    * @var string
    */
@@ -70,8 +71,8 @@ class InterconnectRemoteLocationConstraints extends \Google\Model
   protected $subnetLengthRangeDataType = '';
 
   /**
-   * [Output Only] Port pair remote location constraints, which can take one of
-   * the following values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION,
+   * Output only. [Output Only] Port pair remote location constraints, which can
+   * take one of the following values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION,
    * PORT_PAIR_MATCHING_REMOTE_LOCATION.
    *
    * Google Cloud API refers only to individual ports, but the UI uses this
@@ -99,8 +100,9 @@ class InterconnectRemoteLocationConstraints extends \Google\Model
     return $this->portPairRemoteLocation;
   }
   /**
-   * [Output Only] Port pair VLAN constraints, which can take one of the
-   * following values: PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
+   * Output only. [Output Only] Port pair VLAN constraints, which can take one
+   * of the following values: PORT_PAIR_UNCONSTRAINED_VLAN,
+   * PORT_PAIR_MATCHING_VLAN
    *
    * Accepted values: PORT_PAIR_MATCHING_VLAN, PORT_PAIR_UNCONSTRAINED_VLAN
    *
@@ -118,7 +120,7 @@ class InterconnectRemoteLocationConstraints extends \Google\Model
     return $this->portPairVlan;
   }
   /**
-   * [Output Only]
+   * Output only. [Output Only]
    *
    * [min-length, max-length]
    *

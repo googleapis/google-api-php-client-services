@@ -39,8 +39,8 @@ class InterconnectLocation extends \Google\Collection
   public const STATUS_CLOSED = 'CLOSED';
   protected $collection_key = 'singleRegionProductionCriticalPeerLocations';
   /**
-   * [Output Only] The postal address of the Point of Presence, each line in the
-   * address is separated by a newline character.
+   * Output only. [Output Only] The postal address of the Point of Presence,
+   * each line in the address is separated by a newline character.
    *
    * @var string
    */
@@ -87,7 +87,7 @@ class InterconnectLocation extends \Google\Collection
    */
   public $continent;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -95,47 +95,48 @@ class InterconnectLocation extends \Google\Collection
   protected $crossSiteInterconnectInfosType = InterconnectLocationCrossSiteInterconnectInfo::class;
   protected $crossSiteInterconnectInfosDataType = 'array';
   /**
-   * [Output Only] An optional description of the resource.
+   * Output only. [Output Only] An optional description of the resource.
    *
    * @var string
    */
   public $description;
   /**
-   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * Output only. [Output Only] The name of the provider for this facility
+   * (e.g., EQUINIX).
    *
    * @var string
    */
   public $facilityProvider;
   /**
-   * [Output Only] A provider-assigned Identifier for this facility (e.g.,
-   * Ashburn-DC1).
+   * Output only. [Output Only] A provider-assigned Identifier for this facility
+   * (e.g., Ashburn-DC1).
    *
    * @var string
    */
   public $facilityProviderFacilityId;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for
-   * interconnect locations.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#interconnectLocation for interconnect locations.
    *
    * @var string
    */
   public $kind;
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    *
    * @var string
    */
   public $name;
   /**
-   * [Output Only] The peeringdb identifier for this facility (corresponding
-   * with a netfac type in peeringdb).
+   * Output only. [Output Only] The peeringdb identifier for this facility
+   * (corresponding with a netfac type in peeringdb).
    *
    * @var string
    */
@@ -143,15 +144,15 @@ class InterconnectLocation extends \Google\Collection
   protected $regionInfosType = InterconnectLocationRegionInfo::class;
   protected $regionInfosDataType = 'array';
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] URLs of the other locations that can pair up with this
-   * location to support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-
-   * zone2-5467 are Single-Region 99.99% peer locations of each other.
+   * Output only. [Output Only] URLs of the other locations that can pair up
+   * with this location to support Single-Region 99.99% SLA. E.g. iad-zone1-1
+   * and iad-zone2-5467 are Single-Region 99.99% peer locations of each other.
    *
    * @var string[]
    */
@@ -167,15 +168,15 @@ class InterconnectLocation extends \Google\Collection
    */
   public $status;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $supportsPzs;
 
   /**
-   * [Output Only] The postal address of the Point of Presence, each line in the
-   * address is separated by a newline character.
+   * Output only. [Output Only] The postal address of the Point of Presence,
+   * each line in the address is separated by a newline character.
    *
    * @param string $address
    */
@@ -285,7 +286,7 @@ class InterconnectLocation extends \Google\Collection
     return $this->continent;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -320,7 +321,7 @@ class InterconnectLocation extends \Google\Collection
     return $this->crossSiteInterconnectInfos;
   }
   /**
-   * [Output Only] An optional description of the resource.
+   * Output only. [Output Only] An optional description of the resource.
    *
    * @param string $description
    */
@@ -336,7 +337,8 @@ class InterconnectLocation extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * Output only. [Output Only] The name of the provider for this facility
+   * (e.g., EQUINIX).
    *
    * @param string $facilityProvider
    */
@@ -352,8 +354,8 @@ class InterconnectLocation extends \Google\Collection
     return $this->facilityProvider;
   }
   /**
-   * [Output Only] A provider-assigned Identifier for this facility (e.g.,
-   * Ashburn-DC1).
+   * Output only. [Output Only] A provider-assigned Identifier for this facility
+   * (e.g., Ashburn-DC1).
    *
    * @param string $facilityProviderFacilityId
    */
@@ -369,8 +371,8 @@ class InterconnectLocation extends \Google\Collection
     return $this->facilityProviderFacilityId;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -386,8 +388,8 @@ class InterconnectLocation extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for
-   * interconnect locations.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#interconnectLocation for interconnect locations.
    *
    * @param string $kind
    */
@@ -403,7 +405,7 @@ class InterconnectLocation extends \Google\Collection
     return $this->kind;
   }
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    *
    * @param string $name
    */
@@ -419,8 +421,8 @@ class InterconnectLocation extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] The peeringdb identifier for this facility (corresponding
-   * with a netfac type in peeringdb).
+   * Output only. [Output Only] The peeringdb identifier for this facility
+   * (corresponding with a netfac type in peeringdb).
    *
    * @param string $peeringdbFacilityId
    */
@@ -436,8 +438,8 @@ class InterconnectLocation extends \Google\Collection
     return $this->peeringdbFacilityId;
   }
   /**
-   * [Output Only] A list of InterconnectLocation.RegionInfo objects, that
-   * describe parameters pertaining to the relation between this
+   * Output only. [Output Only] A list of InterconnectLocation.RegionInfo
+   * objects, that describe parameters pertaining to the relation between this
    * InterconnectLocation and various Google Cloud regions.
    *
    * @param InterconnectLocationRegionInfo[] $regionInfos
@@ -454,7 +456,7 @@ class InterconnectLocation extends \Google\Collection
     return $this->regionInfos;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -470,9 +472,9 @@ class InterconnectLocation extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] URLs of the other locations that can pair up with this
-   * location to support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-
-   * zone2-5467 are Single-Region 99.99% peer locations of each other.
+   * Output only. [Output Only] URLs of the other locations that can pair up
+   * with this location to support Single-Region 99.99% SLA. E.g. iad-zone1-1
+   * and iad-zone2-5467 are Single-Region 99.99% peer locations of each other.
    *
    * @param string[] $singleRegionProductionCriticalPeerLocations
    */
@@ -510,7 +512,7 @@ class InterconnectLocation extends \Google\Collection
     return $this->status;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $supportsPzs
    */

@@ -20,8 +20,8 @@ namespace Google\Service\Compute;
 class InstanceTemplate extends \Google\Model
 {
   /**
-   * [Output Only] The creation timestamp for this instance template inRFC3339
-   * text format.
+   * Output only. [Output Only] The creation timestamp for this instance
+   * template inRFC3339 text format.
    *
    * @var string
    */
@@ -34,15 +34,15 @@ class InstanceTemplate extends \Google\Model
    */
   public $description;
   /**
-   * [Output Only] A unique identifier for this instance template. The server
-   * defines this identifier.
+   * Output only. [Output Only] A unique identifier for this instance template.
+   * The server defines this identifier.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceTemplate
-   * for instance templates.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceTemplate for instance templates.
    *
    * @var string
    */
@@ -62,15 +62,15 @@ class InstanceTemplate extends \Google\Model
   protected $propertiesType = InstanceProperties::class;
   protected $propertiesDataType = '';
   /**
-   * [Output Only] URL of the region where the instance template resides. Only
-   * applicable for regional resources.
+   * Output only. [Output Only] URL of the region where the instance template
+   * resides. Only applicable for regional resources.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] The URL for this instance template. The server defines this
-   * URL.
+   * Output only. [Output Only] The URL for this instance template. The server
+   * defines this URL.
    *
    * @var string
    */
@@ -89,8 +89,8 @@ class InstanceTemplate extends \Google\Model
   protected $sourceInstanceParamsDataType = '';
 
   /**
-   * [Output Only] The creation timestamp for this instance template inRFC3339
-   * text format.
+   * Output only. [Output Only] The creation timestamp for this instance
+   * template inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -123,8 +123,8 @@ class InstanceTemplate extends \Google\Model
     return $this->description;
   }
   /**
-   * [Output Only] A unique identifier for this instance template. The server
-   * defines this identifier.
+   * Output only. [Output Only] A unique identifier for this instance template.
+   * The server defines this identifier.
    *
    * @param string $id
    */
@@ -140,8 +140,8 @@ class InstanceTemplate extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceTemplate
-   * for instance templates.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceTemplate for instance templates.
    *
    * @param string $kind
    */
@@ -195,8 +195,8 @@ class InstanceTemplate extends \Google\Model
     return $this->properties;
   }
   /**
-   * [Output Only] URL of the region where the instance template resides. Only
-   * applicable for regional resources.
+   * Output only. [Output Only] URL of the region where the instance template
+   * resides. Only applicable for regional resources.
    *
    * @param string $region
    */
@@ -212,8 +212,8 @@ class InstanceTemplate extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] The URL for this instance template. The server defines this
-   * URL.
+   * Output only. [Output Only] The URL for this instance template. The server
+   * defines this URL.
    *
    * @param string $selfLink
    */

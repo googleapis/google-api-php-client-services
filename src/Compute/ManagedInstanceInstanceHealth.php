@@ -47,21 +47,21 @@ class ManagedInstanceInstanceHealth extends \Google\Model
    */
   public const DETAILED_HEALTH_STATE_UNKNOWN = 'UNKNOWN';
   /**
-   * [Output Only] The current detailed instance health state.
+   * Output only. [Output Only] The current detailed instance health state.
    *
    * @var string
    */
   public $detailedHealthState;
   /**
-   * [Output Only] The URL for the health check that verifies whether the
-   * instance is healthy.
+   * Output only. [Output Only] The URL for the health check that verifies
+   * whether the instance is healthy.
    *
    * @var string
    */
   public $healthCheck;
 
   /**
-   * [Output Only] The current detailed instance health state.
+   * Output only. [Output Only] The current detailed instance health state.
    *
    * Accepted values: DRAINING, HEALTHY, TIMEOUT, UNHEALTHY, UNKNOWN
    *
@@ -79,8 +79,8 @@ class ManagedInstanceInstanceHealth extends \Google\Model
     return $this->detailedHealthState;
   }
   /**
-   * [Output Only] The URL for the health check that verifies whether the
-   * instance is healthy.
+   * Output only. [Output Only] The URL for the health check that verifies
+   * whether the instance is healthy.
    *
    * @param string $healthCheck
    */

@@ -37,7 +37,8 @@ class Metadata extends \Google\Collection
   protected $itemsType = MetadataItems::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata
+   * for metadata.
    *
    * @var string
    */
@@ -85,7 +86,8 @@ class Metadata extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata
+   * for metadata.
    *
    * @param string $kind
    */

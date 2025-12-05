@@ -68,7 +68,7 @@ class InstanceWithNamedPorts extends \Google\Collection
   public const STATUS_TERMINATED = 'TERMINATED';
   protected $collection_key = 'namedPorts';
   /**
-   * [Output Only] The URL of the instance.
+   * Output only. [Output Only] The URL of the instance.
    *
    * @var string
    */
@@ -76,14 +76,14 @@ class InstanceWithNamedPorts extends \Google\Collection
   protected $namedPortsType = NamedPort::class;
   protected $namedPortsDataType = 'array';
   /**
-   * [Output Only] The status of the instance.
+   * Output only. [Output Only] The status of the instance.
    *
    * @var string
    */
   public $status;
 
   /**
-   * [Output Only] The URL of the instance.
+   * Output only. [Output Only] The URL of the instance.
    *
    * @param string $instance
    */
@@ -99,7 +99,8 @@ class InstanceWithNamedPorts extends \Google\Collection
     return $this->instance;
   }
   /**
-   * [Output Only] The named ports that belong to this instance group.
+   * Output only. [Output Only] The named ports that belong to this instance
+   * group.
    *
    * @param NamedPort[] $namedPorts
    */
@@ -115,7 +116,7 @@ class InstanceWithNamedPorts extends \Google\Collection
     return $this->namedPorts;
   }
   /**
-   * [Output Only] The status of the instance.
+   * Output only. [Output Only] The status of the instance.
    *
    * Accepted values: DEPROVISIONING, PENDING, PROVISIONING, REPAIRING, RUNNING,
    * STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING, TERMINATED

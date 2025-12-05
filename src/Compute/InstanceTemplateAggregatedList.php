@@ -28,7 +28,7 @@ class InstanceTemplateAggregatedList extends \Google\Model
   protected $itemsType = InstanceTemplatesScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @var string
    */
@@ -44,7 +44,7 @@ class InstanceTemplateAggregatedList extends \Google\Model
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -85,7 +85,7 @@ class InstanceTemplateAggregatedList extends \Google\Model
     return $this->items;
   }
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @param string $kind
    */
@@ -121,7 +121,7 @@ class InstanceTemplateAggregatedList extends \Google\Model
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

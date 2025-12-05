@@ -21,9 +21,9 @@ class InterconnectGroupPhysicalStructureMetrosFacilities extends \Google\Collect
 {
   protected $collection_key = 'zones';
   /**
-   * [Output Only] The ID of this facility, as a numeric string like "5467".
-   * This is the third component of the location of Interconnects in this
-   * facility.
+   * Output only. [Output Only] The ID of this facility, as a numeric string
+   * like "5467". This is the third component of the location of Interconnects
+   * in this facility.
    *
    * @var string
    */
@@ -32,9 +32,9 @@ class InterconnectGroupPhysicalStructureMetrosFacilities extends \Google\Collect
   protected $zonesDataType = 'array';
 
   /**
-   * [Output Only] The ID of this facility, as a numeric string like "5467".
-   * This is the third component of the location of Interconnects in this
-   * facility.
+   * Output only. [Output Only] The ID of this facility, as a numeric string
+   * like "5467". This is the third component of the location of Interconnects
+   * in this facility.
    *
    * @param string $facility
    */

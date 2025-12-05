@@ -108,7 +108,7 @@ class Interconnect extends \Google\Collection
   protected $circuitInfosType = InterconnectCircuitInfo::class;
   protected $circuitInfosDataType = 'array';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -130,36 +130,37 @@ class Interconnect extends \Google\Collection
   protected $expectedOutagesType = InterconnectOutageNotification::class;
   protected $expectedOutagesDataType = 'array';
   /**
-   * [Output Only] IP address configured on the Google side of the Interconnect
-   * link. This can be used only for ping tests.
+   * Output only. [Output Only] IP address configured on the Google side of the
+   * Interconnect link. This can be used only for ping tests.
    *
    * @var string
    */
   public $googleIpAddress;
   /**
-   * [Output Only] Google reference ID to be used when raising support tickets
-   * with Google or otherwise to debug backend connectivity issues.
+   * Output only. [Output Only] Google reference ID to be used when raising
+   * support tickets with Google or otherwise to debug backend connectivity
+   * issues.
    *
    * @var string
    */
   public $googleReferenceId;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] A list of the URLs of all InterconnectAttachments configured
-   * to use  this Interconnect.
+   * Output only. [Output Only] A list of the URLs of all
+   * InterconnectAttachments configured to use  this Interconnect.
    *
    * @var string[]
    */
   public $interconnectAttachments;
   /**
-   * [Output Only] URLs of InterconnectGroups that include this Interconnect.
-   * Order is arbitrary and items are unique.
+   * Output only. [Output Only] URLs of InterconnectGroups that include this
+   * Interconnect. Order is arbitrary and items are unique.
    *
    * @var string[]
    */
@@ -176,8 +177,8 @@ class Interconnect extends \Google\Collection
    */
   public $interconnectType;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnect for
-   * interconnects.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnect
+   * for interconnects.
    *
    * @var string
    */
@@ -256,10 +257,10 @@ class Interconnect extends \Google\Collection
    */
   public $nocContactEmail;
   /**
-   * [Output Only] The current status of this Interconnect's functionality,
-   * which can take one of the following values:        - OS_ACTIVE: A valid
-   * Interconnect, which is turned up and is ready to    use. Attachments may be
-   * provisioned on this Interconnect.
+   * Output only. [Output Only] The current status of this Interconnect's
+   * functionality, which can take one of the following values:        -
+   * OS_ACTIVE: A valid Interconnect, which is turned up and is ready to    use.
+   * Attachments may be provisioned on this Interconnect.
    *
    * - OS_UNPROVISIONED: An Interconnect that has not completed turnup. No
    * attachments may be provisioned on this Interconnect. -
@@ -273,15 +274,16 @@ class Interconnect extends \Google\Collection
   protected $paramsType = InterconnectParams::class;
   protected $paramsDataType = '';
   /**
-   * [Output Only] IP address configured on the customer side of the
-   * Interconnect link. The customer should configure this IP address during
+   * Output only. [Output Only] IP address configured on the customer side of
+   * the Interconnect link. The customer should configure this IP address during
    * turnup when prompted by Google NOC. This can be used only for ping tests.
    *
    * @var string
    */
   public $peerIpAddress;
   /**
-   * [Output Only] Number of links actually provisioned in this interconnect.
+   * Output only. [Output Only] Number of links actually provisioned in this
+   * interconnect.
    *
    * @var int
    */
@@ -315,25 +317,26 @@ class Interconnect extends \Google\Collection
    */
   public $requestedLinkCount;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzs;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] The current state of Interconnect functionality, which can
-   * take one of the following values:        - ACTIVE: The Interconnect is
-   * valid, turned up and ready to use.    Attachments may be provisioned on
-   * this Interconnect.    - UNPROVISIONED: The Interconnect has not completed
-   * turnup. No    attachments may be provisioned on this Interconnect.    -
-   * UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.
-   * No attachments may be provisioned or updated on this    Interconnect.
+   * Output only. [Output Only] The current state of Interconnect functionality,
+   * which can take one of the following values:        - ACTIVE: The
+   * Interconnect is valid, turned up and ready to use.    Attachments may be
+   * provisioned on this Interconnect.    - UNPROVISIONED: The Interconnect has
+   * not completed turnup. No    attachments may be provisioned on this
+   * Interconnect.    - UNDER_MAINTENANCE: The Interconnect is undergoing
+   * internal maintenance.    No attachments may be provisioned or updated on
+   * this    Interconnect.
    *
    * @var string
    */
@@ -346,9 +349,9 @@ class Interconnect extends \Google\Collection
    */
   public $subzone;
   /**
-   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups
-   * configured to use this Interconnect. The Interconnect cannot be deleted if
-   * this list is non-empty.
+   * Output only. [Output Only] A list of the URLs of all CrossSiteNetwork
+   * WireGroups configured to use this Interconnect. The Interconnect cannot be
+   * deleted if this list is non-empty.
    *
    * @var string[]
    */
@@ -433,8 +436,8 @@ class Interconnect extends \Google\Collection
     return $this->availableFeatures;
   }
   /**
-   * [Output Only] A list of CircuitInfo objects, that describe the individual
-   * circuits in this LAG.
+   * Output only. [Output Only] A list of CircuitInfo objects, that describe the
+   * individual circuits in this LAG.
    *
    * @param InterconnectCircuitInfo[] $circuitInfos
    */
@@ -450,7 +453,7 @@ class Interconnect extends \Google\Collection
     return $this->circuitInfos;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -500,7 +503,8 @@ class Interconnect extends \Google\Collection
     return $this->description;
   }
   /**
-   * [Output Only] A list of outages expected for this Interconnect.
+   * Output only. [Output Only] A list of outages expected for this
+   * Interconnect.
    *
    * @param InterconnectOutageNotification[] $expectedOutages
    */
@@ -516,8 +520,8 @@ class Interconnect extends \Google\Collection
     return $this->expectedOutages;
   }
   /**
-   * [Output Only] IP address configured on the Google side of the Interconnect
-   * link. This can be used only for ping tests.
+   * Output only. [Output Only] IP address configured on the Google side of the
+   * Interconnect link. This can be used only for ping tests.
    *
    * @param string $googleIpAddress
    */
@@ -533,8 +537,9 @@ class Interconnect extends \Google\Collection
     return $this->googleIpAddress;
   }
   /**
-   * [Output Only] Google reference ID to be used when raising support tickets
-   * with Google or otherwise to debug backend connectivity issues.
+   * Output only. [Output Only] Google reference ID to be used when raising
+   * support tickets with Google or otherwise to debug backend connectivity
+   * issues.
    *
    * @param string $googleReferenceId
    */
@@ -550,8 +555,8 @@ class Interconnect extends \Google\Collection
     return $this->googleReferenceId;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -567,8 +572,8 @@ class Interconnect extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] A list of the URLs of all InterconnectAttachments configured
-   * to use  this Interconnect.
+   * Output only. [Output Only] A list of the URLs of all
+   * InterconnectAttachments configured to use  this Interconnect.
    *
    * @param string[] $interconnectAttachments
    */
@@ -584,8 +589,8 @@ class Interconnect extends \Google\Collection
     return $this->interconnectAttachments;
   }
   /**
-   * [Output Only] URLs of InterconnectGroups that include this Interconnect.
-   * Order is arbitrary and items are unique.
+   * Output only. [Output Only] URLs of InterconnectGroups that include this
+   * Interconnect. Order is arbitrary and items are unique.
    *
    * @param string[] $interconnectGroups
    */
@@ -624,8 +629,8 @@ class Interconnect extends \Google\Collection
     return $this->interconnectType;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnect for
-   * interconnects.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnect
+   * for interconnects.
    *
    * @param string $kind
    */
@@ -802,10 +807,10 @@ class Interconnect extends \Google\Collection
     return $this->nocContactEmail;
   }
   /**
-   * [Output Only] The current status of this Interconnect's functionality,
-   * which can take one of the following values:        - OS_ACTIVE: A valid
-   * Interconnect, which is turned up and is ready to    use. Attachments may be
-   * provisioned on this Interconnect.
+   * Output only. [Output Only] The current status of this Interconnect's
+   * functionality, which can take one of the following values:        -
+   * OS_ACTIVE: A valid Interconnect, which is turned up and is ready to    use.
+   * Attachments may be provisioned on this Interconnect.
    *
    * - OS_UNPROVISIONED: An Interconnect that has not completed turnup. No
    * attachments may be provisioned on this Interconnect. -
@@ -846,8 +851,8 @@ class Interconnect extends \Google\Collection
     return $this->params;
   }
   /**
-   * [Output Only] IP address configured on the customer side of the
-   * Interconnect link. The customer should configure this IP address during
+   * Output only. [Output Only] IP address configured on the customer side of
+   * the Interconnect link. The customer should configure this IP address during
    * turnup when prompted by Google NOC. This can be used only for ping tests.
    *
    * @param string $peerIpAddress
@@ -864,7 +869,8 @@ class Interconnect extends \Google\Collection
     return $this->peerIpAddress;
   }
   /**
-   * [Output Only] Number of links actually provisioned in this interconnect.
+   * Output only. [Output Only] Number of links actually provisioned in this
+   * interconnect.
    *
    * @param int $provisionedLinkCount
    */
@@ -938,7 +944,7 @@ class Interconnect extends \Google\Collection
     return $this->requestedLinkCount;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -954,7 +960,7 @@ class Interconnect extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -970,13 +976,14 @@ class Interconnect extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] The current state of Interconnect functionality, which can
-   * take one of the following values:        - ACTIVE: The Interconnect is
-   * valid, turned up and ready to use.    Attachments may be provisioned on
-   * this Interconnect.    - UNPROVISIONED: The Interconnect has not completed
-   * turnup. No    attachments may be provisioned on this Interconnect.    -
-   * UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.
-   * No attachments may be provisioned or updated on this    Interconnect.
+   * Output only. [Output Only] The current state of Interconnect functionality,
+   * which can take one of the following values:        - ACTIVE: The
+   * Interconnect is valid, turned up and ready to use.    Attachments may be
+   * provisioned on this Interconnect.    - UNPROVISIONED: The Interconnect has
+   * not completed turnup. No    attachments may be provisioned on this
+   * Interconnect.    - UNDER_MAINTENANCE: The Interconnect is undergoing
+   * internal maintenance.    No attachments may be provisioned or updated on
+   * this    Interconnect.
    *
    * Accepted values: ACTIVE, UNPROVISIONED
    *
@@ -1013,9 +1020,9 @@ class Interconnect extends \Google\Collection
     return $this->subzone;
   }
   /**
-   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups
-   * configured to use this Interconnect. The Interconnect cannot be deleted if
-   * this list is non-empty.
+   * Output only. [Output Only] A list of the URLs of all CrossSiteNetwork
+   * WireGroups configured to use this Interconnect. The Interconnect cannot be
+   * deleted if this list is non-empty.
    *
    * @param string[] $wireGroups
    */

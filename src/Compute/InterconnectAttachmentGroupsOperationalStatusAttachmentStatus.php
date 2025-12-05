@@ -38,37 +38,38 @@ class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus extends \Goo
   public const STATUS_ROUTER_CONFIGURATION_BROKEN = 'ROUTER_CONFIGURATION_BROKEN';
   public const STATUS_UNPROVISIONED = 'UNPROVISIONED';
   /**
-   * Whether this Attachment is enabled. This becomes false when the customer
-   * drains their Attachment.
+   * Output only. Whether this Attachment is enabled. This becomes false when
+   * the customer drains their Attachment.
    *
    * @var bool
    */
   public $adminEnabled;
   /**
-   * The URL of the Attachment being described.
+   * Output only. The URL of the Attachment being described.
    *
    * @var string
    */
   public $attachment;
   /**
-   * Whether this Attachment is participating in the redundant configuration.
-   * This will be ACTIVE if and only if the status below is CONNECTION_UP. Any
-   * INACTIVE Attachments are excluded from the analysis that generates
-   * operational.availabilitySLA.
+   * Output only. Whether this Attachment is participating in the redundant
+   * configuration. This will be ACTIVE if and only if the status below is
+   * CONNECTION_UP. Any INACTIVE Attachments are excluded from the analysis that
+   * generates operational.availabilitySLA.
    *
    * @var string
    */
   public $isActive;
   /**
-   * Whether this Attachment is active, and if so, whether BGP is up.
+   * Output only. Whether this Attachment is active, and if so, whether BGP is
+   * up.
    *
    * @var string
    */
   public $status;
 
   /**
-   * Whether this Attachment is enabled. This becomes false when the customer
-   * drains their Attachment.
+   * Output only. Whether this Attachment is enabled. This becomes false when
+   * the customer drains their Attachment.
    *
    * @param bool $adminEnabled
    */
@@ -84,7 +85,7 @@ class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus extends \Goo
     return $this->adminEnabled;
   }
   /**
-   * The URL of the Attachment being described.
+   * Output only. The URL of the Attachment being described.
    *
    * @param string $attachment
    */
@@ -100,10 +101,10 @@ class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus extends \Goo
     return $this->attachment;
   }
   /**
-   * Whether this Attachment is participating in the redundant configuration.
-   * This will be ACTIVE if and only if the status below is CONNECTION_UP. Any
-   * INACTIVE Attachments are excluded from the analysis that generates
-   * operational.availabilitySLA.
+   * Output only. Whether this Attachment is participating in the redundant
+   * configuration. This will be ACTIVE if and only if the status below is
+   * CONNECTION_UP. Any INACTIVE Attachments are excluded from the analysis that
+   * generates operational.availabilitySLA.
    *
    * Accepted values: ACTIVE, INACTIVE, UNSPECIFIED
    *
@@ -121,7 +122,8 @@ class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus extends \Goo
     return $this->isActive;
   }
   /**
-   * Whether this Attachment is active, and if so, whether BGP is up.
+   * Output only. Whether this Attachment is active, and if so, whether BGP is
+   * up.
    *
    * Accepted values: ATTACHMENT_STATUS_UNKNOWN, CONNECTION_DISABLED,
    * CONNECTION_DOWN, CONNECTION_UP, DEFUNCT, IPSEC_CONFIGURATION_NEEDED_STATUS,

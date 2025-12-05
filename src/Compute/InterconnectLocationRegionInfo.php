@@ -40,35 +40,35 @@ class InterconnectLocationRegionInfo extends \Google\Model
    */
   public const LOCATION_PRESENCE_LP_LOCAL_REGION = 'LP_LOCAL_REGION';
   /**
-   * Expected round-trip time in milliseconds, from this InterconnectLocation to
-   * a VM in this region.
+   * Output only. Expected round-trip time in milliseconds, from this
+   * InterconnectLocation to a VM in this region.
    *
    * @var string
    */
   public $expectedRttMs;
   /**
-   * Identifies whether L2 Interconnect Attachments can be created in this
-   * region for interconnects that are in this location.
+   * Output only. Identifies whether L2 Interconnect Attachments can be created
+   * in this region for interconnects that are in this location.
    *
    * @var bool
    */
   public $l2ForwardingEnabled;
   /**
-   * Identifies the network presence of this location.
+   * Output only. Identifies the network presence of this location.
    *
    * @var string
    */
   public $locationPresence;
   /**
-   * URL for the region of this location.
+   * Output only. URL for the region of this location.
    *
    * @var string
    */
   public $region;
 
   /**
-   * Expected round-trip time in milliseconds, from this InterconnectLocation to
-   * a VM in this region.
+   * Output only. Expected round-trip time in milliseconds, from this
+   * InterconnectLocation to a VM in this region.
    *
    * @param string $expectedRttMs
    */
@@ -84,8 +84,8 @@ class InterconnectLocationRegionInfo extends \Google\Model
     return $this->expectedRttMs;
   }
   /**
-   * Identifies whether L2 Interconnect Attachments can be created in this
-   * region for interconnects that are in this location.
+   * Output only. Identifies whether L2 Interconnect Attachments can be created
+   * in this region for interconnects that are in this location.
    *
    * @param bool $l2ForwardingEnabled
    */
@@ -101,7 +101,7 @@ class InterconnectLocationRegionInfo extends \Google\Model
     return $this->l2ForwardingEnabled;
   }
   /**
-   * Identifies the network presence of this location.
+   * Output only. Identifies the network presence of this location.
    *
    * Accepted values: GLOBAL, LOCAL_REGION, LP_GLOBAL, LP_LOCAL_REGION
    *
@@ -119,7 +119,7 @@ class InterconnectLocationRegionInfo extends \Google\Model
     return $this->locationPresence;
   }
   /**
-   * URL for the region of this location.
+   * Output only. URL for the region of this location.
    *
    * @param string $region
    */

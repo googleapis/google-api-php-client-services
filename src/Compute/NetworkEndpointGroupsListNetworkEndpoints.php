@@ -29,7 +29,7 @@ class NetworkEndpointGroupsListNetworkEndpoints extends \Google\Collection
   protected $itemsType = NetworkEndpointWithHealthStatus::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#networkEndpointGroupsListNetworkEndpoints for the list of
    * network endpoints in the specified network endpoint group.
    *
@@ -82,7 +82,7 @@ class NetworkEndpointGroupsListNetworkEndpoints extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] The resource type, which is
+   * Output only. [Output Only] The resource type, which is
    * alwayscompute#networkEndpointGroupsListNetworkEndpoints for the list of
    * network endpoints in the specified network endpoint group.
    *

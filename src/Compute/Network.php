@@ -52,7 +52,7 @@ class Network extends \Google\Collection
    */
   public $autoCreateSubnetworks;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -72,7 +72,8 @@ class Network extends \Google\Collection
    */
   public $enableUlaInternalIpv6;
   /**
-   * [Output Only] URL of the firewall policy the network is associated with.
+   * Output only. [Output Only] URL of the firewall policy the network is
+   * associated with.
    *
    * @var string
    */
@@ -85,8 +86,8 @@ class Network extends \Google\Collection
    */
   public $gatewayIPv4;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
@@ -103,7 +104,8 @@ class Network extends \Google\Collection
    */
   public $internalIpv6Range;
   /**
-   * [Output Only] Type of the resource. Always compute#network for networks.
+   * Output only. [Output Only] Type of the resource. Always compute#network for
+   * networks.
    *
    * @var string
    */
@@ -160,7 +162,8 @@ class Network extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
@@ -221,7 +224,7 @@ class Network extends \Google\Collection
     return $this->autoCreateSubnetworks;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -271,7 +274,8 @@ class Network extends \Google\Collection
     return $this->enableUlaInternalIpv6;
   }
   /**
-   * [Output Only] URL of the firewall policy the network is associated with.
+   * Output only. [Output Only] URL of the firewall policy the network is
+   * associated with.
    *
    * @param string $firewallPolicy
    */
@@ -304,8 +308,8 @@ class Network extends \Google\Collection
     return $this->gatewayIPv4;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -342,7 +346,8 @@ class Network extends \Google\Collection
     return $this->internalIpv6Range;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#network for networks.
+   * Output only. [Output Only] Type of the resource. Always compute#network for
+   * networks.
    *
    * @param string $kind
    */
@@ -456,7 +461,7 @@ class Network extends \Google\Collection
     return $this->params;
   }
   /**
-   * [Output Only] A list of network peerings for the resource.
+   * Output only. [Output Only] A list of network peerings for the resource.
    *
    * @param NetworkPeering[] $peerings
    */
@@ -505,7 +510,8 @@ class Network extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */

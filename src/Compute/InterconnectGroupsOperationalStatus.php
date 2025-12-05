@@ -27,7 +27,7 @@ class InterconnectGroupsOperationalStatus extends \Google\Collection
   protected $configuredType = InterconnectGroupConfigured::class;
   protected $configuredDataType = '';
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    *
    * @var string
    */
@@ -40,7 +40,7 @@ class InterconnectGroupsOperationalStatus extends \Google\Collection
   protected $operationalDataType = '';
 
   /**
-   * The configuration analysis, as returned by Get.
+   * Output only. The configuration analysis, as returned by Get.
    *
    * @param InterconnectGroupConfigured $configured
    */
@@ -56,7 +56,7 @@ class InterconnectGroupsOperationalStatus extends \Google\Collection
     return $this->configured;
   }
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    *
    * Accepted values: DEGRADED, FULLY_DOWN, FULLY_UP, GROUPS_STATUS_UNSPECIFIED
    *
@@ -74,7 +74,7 @@ class InterconnectGroupsOperationalStatus extends \Google\Collection
     return $this->groupStatus;
   }
   /**
-   * The intent of the resource, as returned by Get.
+   * Output only. The intent of the resource, as returned by Get.
    *
    * @param InterconnectGroupIntent $intent
    */
@@ -104,7 +104,8 @@ class InterconnectGroupsOperationalStatus extends \Google\Collection
     return $this->interconnectStatuses;
   }
   /**
-   * The operational state of the group, including only active Interconnects.
+   * Output only. The operational state of the group, including only active
+   * Interconnects.
    *
    * @param InterconnectGroupConfigured $operational
    */

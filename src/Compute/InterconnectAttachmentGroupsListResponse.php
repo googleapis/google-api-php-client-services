@@ -53,7 +53,7 @@ class InterconnectAttachmentGroupsListResponse extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @var string[]
@@ -159,7 +159,7 @@ class InterconnectAttachmentGroupsListResponse extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @param string[] $unreachables

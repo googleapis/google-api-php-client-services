@@ -24,7 +24,7 @@ class InterconnectAttachmentGroup extends \Google\Model
   protected $configuredType = InterconnectAttachmentGroupConfigured::class;
   protected $configuredDataType = '';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -47,8 +47,8 @@ class InterconnectAttachmentGroup extends \Google\Model
    */
   public $etag;
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
@@ -64,7 +64,7 @@ class InterconnectAttachmentGroup extends \Google\Model
    */
   public $interconnectGroup;
   /**
-   * [Output Only] Type of the resource. Always
+   * Output only. [Output Only] Type of the resource. Always
    * compute#interconnectAttachmentGroup.
    *
    * @var string
@@ -85,7 +85,7 @@ class InterconnectAttachmentGroup extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -126,7 +126,7 @@ class InterconnectAttachmentGroup extends \Google\Model
     return $this->configured;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -179,8 +179,8 @@ class InterconnectAttachmentGroup extends \Google\Model
     return $this->etag;
   }
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -228,7 +228,7 @@ class InterconnectAttachmentGroup extends \Google\Model
     return $this->interconnectGroup;
   }
   /**
-   * [Output Only] Type of the resource. Always
+   * Output only. [Output Only] Type of the resource. Always
    * compute#interconnectAttachmentGroup.
    *
    * @param string $kind
@@ -281,7 +281,7 @@ class InterconnectAttachmentGroup extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

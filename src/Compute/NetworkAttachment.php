@@ -30,7 +30,7 @@ class NetworkAttachment extends \Google\Collection
    */
   public $connectionPreference;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -51,14 +51,14 @@ class NetworkAttachment extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource.
+   * Output only. [Output Only] Type of the resource.
    *
    * @var string
    */
@@ -76,11 +76,11 @@ class NetworkAttachment extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] The URL of the network which the Network Attachment belongs
-   * to. Practically it is inferred by fetching the network of the first
-   * subnetwork associated. Because it is required that all the subnetworks must
-   * be from the same network, it is assured that the Network Attachment belongs
-   * to the same network as all the subnetworks.
+   * Output only. [Output Only] The URL of the network which the Network
+   * Attachment belongs to. Practically it is inferred by fetching the network
+   * of the first subnetwork associated. Because it is required that all the
+   * subnetworks must be from the same network, it is assured that the Network
+   * Attachment belongs to the same network as all the subnetworks.
    *
    * @var string
    */
@@ -100,22 +100,23 @@ class NetworkAttachment extends \Google\Collection
    */
   public $producerRejectLists;
   /**
-   * [Output Only] URL of the region where the network attachment resides. This
-   * field applies only to the region resource. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request
-   * body.
+   * Output only. [Output Only] URL of the region where the network attachment
+   * resides. This field applies only to the region resource. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource
+   * id.
    *
    * @var string
    */
@@ -130,8 +131,8 @@ class NetworkAttachment extends \Google\Collection
   public $subnetworks;
 
   /**
-   * [Output Only] An array of connections for all the producers connected to
-   * this network attachment.
+   * Output only. [Output Only] An array of connections for all the producers
+   * connected to this network attachment.
    *
    * @param NetworkAttachmentConnectedEndpoint[] $connectionEndpoints
    */
@@ -161,7 +162,7 @@ class NetworkAttachment extends \Google\Collection
     return $this->connectionPreference;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -212,8 +213,8 @@ class NetworkAttachment extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -229,7 +230,7 @@ class NetworkAttachment extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource.
+   * Output only. [Output Only] Type of the resource.
    *
    * @param string $kind
    */
@@ -267,11 +268,11 @@ class NetworkAttachment extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] The URL of the network which the Network Attachment belongs
-   * to. Practically it is inferred by fetching the network of the first
-   * subnetwork associated. Because it is required that all the subnetworks must
-   * be from the same network, it is assured that the Network Attachment belongs
-   * to the same network as all the subnetworks.
+   * Output only. [Output Only] The URL of the network which the Network
+   * Attachment belongs to. Practically it is inferred by fetching the network
+   * of the first subnetwork associated. Because it is required that all the
+   * subnetworks must be from the same network, it is assured that the Network
+   * Attachment belongs to the same network as all the subnetworks.
    *
    * @param string $network
    */
@@ -321,10 +322,10 @@ class NetworkAttachment extends \Google\Collection
     return $this->producerRejectLists;
   }
   /**
-   * [Output Only] URL of the region where the network attachment resides. This
-   * field applies only to the region resource. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request
-   * body.
+   * Output only. [Output Only] URL of the region where the network attachment
+   * resides. This field applies only to the region resource. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
    *
    * @param string $region
    */
@@ -340,7 +341,7 @@ class NetworkAttachment extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -356,7 +357,8 @@ class NetworkAttachment extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource
+   * id.
    *
    * @param string $selfLinkWithId
    */
