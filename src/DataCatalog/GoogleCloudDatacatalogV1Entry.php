@@ -189,6 +189,8 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public $fullyQualifiedName;
   protected $gcsFilesetSpecType = GoogleCloudDatacatalogV1GcsFilesetSpec::class;
   protected $gcsFilesetSpecDataType = '';
+  protected $graphSpecType = GoogleCloudDatacatalogV1GraphSpec::class;
+  protected $graphSpecDataType = '';
   /**
    * Output only. Indicates the entry's source system that Data Catalog
    * integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
@@ -517,6 +519,22 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getGcsFilesetSpec()
   {
     return $this->gcsFilesetSpec;
+  }
+  /**
+   * Spec for graph.
+   *
+   * @param GoogleCloudDatacatalogV1GraphSpec $graphSpec
+   */
+  public function setGraphSpec(GoogleCloudDatacatalogV1GraphSpec $graphSpec)
+  {
+    $this->graphSpec = $graphSpec;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1GraphSpec
+   */
+  public function getGraphSpec()
+  {
+    return $this->graphSpec;
   }
   /**
    * Output only. Indicates the entry's source system that Data Catalog
