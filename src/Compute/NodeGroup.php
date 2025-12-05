@@ -62,7 +62,7 @@ class NodeGroup extends \Google\Model
   protected $autoscalingPolicyType = NodeGroupAutoscalingPolicy::class;
   protected $autoscalingPolicyDataType = '';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -79,15 +79,15 @@ class NodeGroup extends \Google\Model
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node
-   * group.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#nodeGroup for node group.
    *
    * @var string
    */
@@ -138,7 +138,7 @@ class NodeGroup extends \Google\Model
    */
   public $nodeTemplate;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -146,7 +146,7 @@ class NodeGroup extends \Google\Model
   protected $shareSettingsType = ShareSettings::class;
   protected $shareSettingsDataType = '';
   /**
-   * [Output Only] The total number of nodes in the node group.
+   * Output only. [Output Only] The total number of nodes in the node group.
    *
    * @var int
    */
@@ -156,8 +156,8 @@ class NodeGroup extends \Google\Model
    */
   public $status;
   /**
-   * [Output Only] The name of the zone where the node group resides, such as
-   * us-central1-a.
+   * Output only. [Output Only] The name of the zone where the node group
+   * resides, such as us-central1-a.
    *
    * @var string
    */
@@ -180,7 +180,7 @@ class NodeGroup extends \Google\Model
     return $this->autoscalingPolicy;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -227,8 +227,8 @@ class NodeGroup extends \Google\Model
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -244,8 +244,8 @@ class NodeGroup extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node
-   * group.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#nodeGroup for node group.
    *
    * @param string $kind
    */
@@ -373,7 +373,7 @@ class NodeGroup extends \Google\Model
     return $this->nodeTemplate;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -405,7 +405,7 @@ class NodeGroup extends \Google\Model
     return $this->shareSettings;
   }
   /**
-   * [Output Only] The total number of nodes in the node group.
+   * Output only. [Output Only] The total number of nodes in the node group.
    *
    * @param int $size
    */
@@ -435,8 +435,8 @@ class NodeGroup extends \Google\Model
     return $this->status;
   }
   /**
-   * [Output Only] The name of the zone where the node group resides, such as
-   * us-central1-a.
+   * Output only. [Output Only] The name of the zone where the node group
+   * resides, such as us-central1-a.
    *
    * @param string $zone
    */

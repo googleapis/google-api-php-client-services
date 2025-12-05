@@ -24,7 +24,7 @@ class PacketMirroring extends \Google\Model
   protected $collectorIlbType = PacketMirroringForwardingRuleInfo::class;
   protected $collectorIlbDataType = '';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -48,15 +48,15 @@ class PacketMirroring extends \Google\Model
   protected $filterType = PacketMirroringFilter::class;
   protected $filterDataType = '';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for
-   * packet mirrorings.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#packetMirroring for packet mirrorings.
    *
    * @var string
    */
@@ -95,7 +95,7 @@ class PacketMirroring extends \Google\Model
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -120,7 +120,7 @@ class PacketMirroring extends \Google\Model
     return $this->collectorIlb;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -190,8 +190,8 @@ class PacketMirroring extends \Google\Model
     return $this->filter;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -207,8 +207,8 @@ class PacketMirroring extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for
-   * packet mirrorings.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#packetMirroring for packet mirrorings.
    *
    * @param string $kind
    */
@@ -319,7 +319,7 @@ class PacketMirroring extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

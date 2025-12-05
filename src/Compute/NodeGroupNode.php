@@ -61,7 +61,7 @@ class NodeGroupNode extends \Google\Collection
    */
   public $nodeType;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
@@ -100,7 +100,7 @@ class NodeGroupNode extends \Google\Collection
     return $this->accelerators;
   }
   /**
-   * Node resources that are reserved by all instances.
+   * Output only. Node resources that are reserved by all instances.
    *
    * @param InstanceConsumptionInfo $consumedResources
    */
@@ -150,7 +150,7 @@ class NodeGroupNode extends \Google\Collection
     return $this->disks;
   }
   /**
-   * Instance data that shows consumed resources on the node.
+   * Output only. Instance data that shows consumed resources on the node.
    *
    * @param InstanceConsumptionData[] $instanceConsumptionData
    */
@@ -214,7 +214,7 @@ class NodeGroupNode extends \Google\Collection
     return $this->nodeType;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -276,7 +276,7 @@ class NodeGroupNode extends \Google\Collection
     return $this->status;
   }
   /**
-   * Total amount of available resources on the node.
+   * Output only. Total amount of available resources on the node.
    *
    * @param InstanceConsumptionInfo $totalResources
    */
@@ -292,7 +292,8 @@ class NodeGroupNode extends \Google\Collection
     return $this->totalResources;
   }
   /**
-   * [Output Only] The information about an upcoming maintenance event.
+   * Output only. [Output Only] The information about an upcoming maintenance
+   * event.
    *
    * @param UpcomingMaintenance $upcomingMaintenance
    */

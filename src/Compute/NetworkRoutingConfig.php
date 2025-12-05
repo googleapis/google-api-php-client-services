@@ -52,13 +52,15 @@ class NetworkRoutingConfig extends \Google\Model
    */
   public $bgpInterRegionCost;
   /**
-   * [Output Only] Effective value of the bgp_always_compare_med field.
+   * Output only. [Output Only] Effective value of the bgp_always_compare_med
+   * field.
    *
    * @var bool
    */
   public $effectiveBgpAlwaysCompareMed;
   /**
-   * [Output Only] Effective value of the bgp_inter_region_cost field.
+   * Output only. [Output Only] Effective value of the bgp_inter_region_cost
+   * field.
    *
    * @var string
    */
@@ -133,7 +135,8 @@ class NetworkRoutingConfig extends \Google\Model
     return $this->bgpInterRegionCost;
   }
   /**
-   * [Output Only] Effective value of the bgp_always_compare_med field.
+   * Output only. [Output Only] Effective value of the bgp_always_compare_med
+   * field.
    *
    * @param bool $effectiveBgpAlwaysCompareMed
    */
@@ -149,7 +152,8 @@ class NetworkRoutingConfig extends \Google\Model
     return $this->effectiveBgpAlwaysCompareMed;
   }
   /**
-   * [Output Only] Effective value of the bgp_inter_region_cost field.
+   * Output only. [Output Only] Effective value of the bgp_inter_region_cost
+   * field.
    *
    * Accepted values: ADD_COST_TO_MED, DEFAULT
    *

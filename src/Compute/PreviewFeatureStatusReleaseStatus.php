@@ -24,7 +24,7 @@ class PreviewFeatureStatusReleaseStatus extends \Google\Model
   public const STAGE_PREVIEW = 'PREVIEW';
   public const STAGE_STAGE_UNSPECIFIED = 'STAGE_UNSPECIFIED';
   /**
-   * [Output Only] The stage of the feature.
+   * Output only. [Output Only] The stage of the feature.
    *
    * @var string
    */
@@ -33,7 +33,7 @@ class PreviewFeatureStatusReleaseStatus extends \Google\Model
   protected $updateDateDataType = '';
 
   /**
-   * [Output Only] The stage of the feature.
+   * Output only. [Output Only] The stage of the feature.
    *
    * Accepted values: DEPRECATED, GA, PREVIEW, STAGE_UNSPECIFIED
    *

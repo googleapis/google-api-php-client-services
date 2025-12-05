@@ -48,7 +48,7 @@ class NodeTemplate extends \Google\Collection
    */
   public $cpuOvercommitType;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -63,15 +63,15 @@ class NodeTemplate extends \Google\Collection
   protected $disksType = LocalDisk::class;
   protected $disksDataType = 'array';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node
-   * templates.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#nodeTemplate for node templates.
    *
    * @var string
    */
@@ -103,14 +103,14 @@ class NodeTemplate extends \Google\Collection
   protected $nodeTypeFlexibilityType = NodeTemplateNodeTypeFlexibility::class;
   protected $nodeTypeFlexibilityDataType = '';
   /**
-   * [Output Only] The name of the region where the node template resides, such
-   * as us-central1.
+   * Output only. [Output Only] The name of the region where the node template
+   * resides, such as us-central1.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -118,14 +118,15 @@ class NodeTemplate extends \Google\Collection
   protected $serverBindingType = ServerBinding::class;
   protected $serverBindingDataType = '';
   /**
-   * [Output Only] The status of the node template. One of the following
-   * values:CREATING, READY, and DELETING.
+   * Output only. [Output Only] The status of the node template. One of the
+   * following values:CREATING, READY, and DELETING.
    *
    * @var string
    */
   public $status;
   /**
-   * [Output Only] An optional, human-readable explanation of the status.
+   * Output only. [Output Only] An optional, human-readable explanation of the
+   * status.
    *
    * @var string
    */
@@ -164,7 +165,7 @@ class NodeTemplate extends \Google\Collection
     return $this->cpuOvercommitType;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -211,8 +212,8 @@ class NodeTemplate extends \Google\Collection
     return $this->disks;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -228,8 +229,8 @@ class NodeTemplate extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node
-   * templates.
+   * Output only. [Output Only] The type of the resource.
+   * Alwayscompute#nodeTemplate for node templates.
    *
    * @param string $kind
    */
@@ -315,8 +316,8 @@ class NodeTemplate extends \Google\Collection
     return $this->nodeTypeFlexibility;
   }
   /**
-   * [Output Only] The name of the region where the node template resides, such
-   * as us-central1.
+   * Output only. [Output Only] The name of the region where the node template
+   * resides, such as us-central1.
    *
    * @param string $region
    */
@@ -332,7 +333,7 @@ class NodeTemplate extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -369,8 +370,8 @@ class NodeTemplate extends \Google\Collection
     return $this->serverBinding;
   }
   /**
-   * [Output Only] The status of the node template. One of the following
-   * values:CREATING, READY, and DELETING.
+   * Output only. [Output Only] The status of the node template. One of the
+   * following values:CREATING, READY, and DELETING.
    *
    * Accepted values: CREATING, DELETING, INVALID, READY
    *
@@ -388,7 +389,8 @@ class NodeTemplate extends \Google\Collection
     return $this->status;
   }
   /**
-   * [Output Only] An optional, human-readable explanation of the status.
+   * Output only. [Output Only] An optional, human-readable explanation of the
+   * status.
    *
    * @param string $statusMessage
    */

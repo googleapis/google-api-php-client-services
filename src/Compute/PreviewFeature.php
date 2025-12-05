@@ -29,27 +29,27 @@ class PreviewFeature extends \Google\Model
    */
   public $activationStatus;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
   public $creationTimestamp;
   /**
-   * [Output Only] Description of the feature.
+   * Output only. [Output Only] Description of the feature.
    *
    * @var string
    */
   public $description;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output only] The type of the feature. Always "compute#previewFeature" for
-   * preview features.
+   * Output only. [Output only] The type of the feature. Always
+   * "compute#previewFeature" for preview features.
    *
    * @var string
    */
@@ -63,7 +63,7 @@ class PreviewFeature extends \Google\Model
   protected $rolloutOperationType = PreviewFeatureRolloutOperation::class;
   protected $rolloutOperationDataType = '';
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -90,7 +90,7 @@ class PreviewFeature extends \Google\Model
     return $this->activationStatus;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -106,7 +106,7 @@ class PreviewFeature extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * [Output Only] Description of the feature.
+   * Output only. [Output Only] Description of the feature.
    *
    * @param string $description
    */
@@ -122,8 +122,8 @@ class PreviewFeature extends \Google\Model
     return $this->description;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -139,8 +139,8 @@ class PreviewFeature extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output only] The type of the feature. Always "compute#previewFeature" for
-   * preview features.
+   * Output only. [Output only] The type of the feature. Always
+   * "compute#previewFeature" for preview features.
    *
    * @param string $kind
    */
@@ -188,7 +188,7 @@ class PreviewFeature extends \Google\Model
     return $this->rolloutOperation;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -204,7 +204,7 @@ class PreviewFeature extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output only] Status of the feature.
+   * Output only. [Output only] Status of the feature.
    *
    * @param PreviewFeatureStatus $status
    */

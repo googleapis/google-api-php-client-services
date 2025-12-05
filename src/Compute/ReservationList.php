@@ -30,8 +30,8 @@ class ReservationList extends \Google\Collection
   protected $itemsType = Reservation::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource.Always compute#reservationsList for listsof
-   * reservations
+   * Output only. [Output Only] Type of resource.Always compute#reservationsList
+   * for listsof reservations
    *
    * @var string
    */
@@ -47,7 +47,7 @@ class ReservationList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -89,8 +89,8 @@ class ReservationList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource.Always compute#reservationsList for listsof
-   * reservations
+   * Output only. [Output Only] Type of resource.Always compute#reservationsList
+   * for listsof reservations
    *
    * @param string $kind
    */
@@ -126,7 +126,7 @@ class ReservationList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

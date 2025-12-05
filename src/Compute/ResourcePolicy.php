@@ -37,7 +37,7 @@ class ResourcePolicy extends \Google\Model
    */
   public const STATUS_READY = 'READY';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -51,8 +51,8 @@ class ResourcePolicy extends \Google\Model
   protected $groupPlacementPolicyType = ResourcePolicyGroupPlacementPolicy::class;
   protected $groupPlacementPolicyDataType = '';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
@@ -60,8 +60,8 @@ class ResourcePolicy extends \Google\Model
   protected $instanceSchedulePolicyType = ResourcePolicyInstanceSchedulePolicy::class;
   protected $instanceSchedulePolicyDataType = '';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#resource_policies for
-   * resource policies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#resource_policies for resource policies.
    *
    * @var string
    */
@@ -85,7 +85,8 @@ class ResourcePolicy extends \Google\Model
   protected $resourceStatusType = ResourcePolicyResourceStatus::class;
   protected $resourceStatusDataType = '';
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @var string
    */
@@ -93,7 +94,7 @@ class ResourcePolicy extends \Google\Model
   protected $snapshotSchedulePolicyType = ResourcePolicySnapshotSchedulePolicy::class;
   protected $snapshotSchedulePolicyDataType = '';
   /**
-   * [Output Only] The status of resource policy creation.
+   * Output only. [Output Only] The status of resource policy creation.
    *
    * @var string
    */
@@ -102,7 +103,7 @@ class ResourcePolicy extends \Google\Model
   protected $workloadPolicyDataType = '';
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -164,8 +165,8 @@ class ResourcePolicy extends \Google\Model
     return $this->groupPlacementPolicy;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -197,8 +198,8 @@ class ResourcePolicy extends \Google\Model
     return $this->instanceSchedulePolicy;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#resource_policies for
-   * resource policies.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#resource_policies for resource policies.
    *
    * @param string $kind
    */
@@ -250,7 +251,7 @@ class ResourcePolicy extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] The system status of the resource policy.
+   * Output only. [Output Only] The system status of the resource policy.
    *
    * @param ResourcePolicyResourceStatus $resourceStatus
    */
@@ -266,7 +267,8 @@ class ResourcePolicy extends \Google\Model
     return $this->resourceStatus;
   }
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @param string $selfLink
    */
@@ -298,7 +300,7 @@ class ResourcePolicy extends \Google\Model
     return $this->snapshotSchedulePolicy;
   }
   /**
-   * [Output Only] The status of resource policy creation.
+   * Output only. [Output Only] The status of resource policy creation.
    *
    * Accepted values: CREATING, DELETING, EXPIRED, INVALID, READY
    *

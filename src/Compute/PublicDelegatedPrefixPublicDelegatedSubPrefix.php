@@ -76,6 +76,13 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
    */
   public $description;
   /**
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4
+   * allocations. Applicable for IPv4 PDPs only.
+   *
+   * @var bool
+   */
+  public $enableEnhancedIpv4Allocation;
+  /**
    * The IP address range, in CIDR format, represented by this sub public
    * delegated prefix.
    *
@@ -83,8 +90,8 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
    */
   public $ipCidrRange;
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Sub
-   * Prefixes. Inherited from parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public
+   * Delegated Sub Prefixes. Inherited from parent prefix.
    *
    * @var string
    */
@@ -109,14 +116,14 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] The region of the sub public delegated prefix if it is
-   * regional. If absent, the sub prefix is global.
+   * Output only. [Output Only] The region of the sub public delegated prefix if
+   * it is regional. If absent, the sub prefix is global.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] The status of the sub public delegated prefix.
+   * Output only. [Output Only] The status of the sub public delegated prefix.
    *
    * @var string
    */
@@ -172,6 +179,23 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
     return $this->description;
   }
   /**
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4
+   * allocations. Applicable for IPv4 PDPs only.
+   *
+   * @param bool $enableEnhancedIpv4Allocation
+   */
+  public function setEnableEnhancedIpv4Allocation($enableEnhancedIpv4Allocation)
+  {
+    $this->enableEnhancedIpv4Allocation = $enableEnhancedIpv4Allocation;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableEnhancedIpv4Allocation()
+  {
+    return $this->enableEnhancedIpv4Allocation;
+  }
+  /**
    * The IP address range, in CIDR format, represented by this sub public
    * delegated prefix.
    *
@@ -189,8 +213,8 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
     return $this->ipCidrRange;
   }
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Sub
-   * Prefixes. Inherited from parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public
+   * Delegated Sub Prefixes. Inherited from parent prefix.
    *
    * Accepted values: EXTERNAL, INTERNAL
    *
@@ -260,8 +284,8 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] The region of the sub public delegated prefix if it is
-   * regional. If absent, the sub prefix is global.
+   * Output only. [Output Only] The region of the sub public delegated prefix if
+   * it is regional. If absent, the sub prefix is global.
    *
    * @param string $region
    */
@@ -277,7 +301,7 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] The status of the sub public delegated prefix.
+   * Output only. [Output Only] The status of the sub public delegated prefix.
    *
    * Accepted values: ACTIVE, INACTIVE
    *

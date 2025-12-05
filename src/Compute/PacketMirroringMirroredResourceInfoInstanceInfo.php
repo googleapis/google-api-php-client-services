@@ -20,7 +20,8 @@ namespace Google\Service\Compute;
 class PacketMirroringMirroredResourceInfoInstanceInfo extends \Google\Model
 {
   /**
-   * [Output Only] Unique identifier for the instance; defined by the server.
+   * Output only. [Output Only] Unique identifier for the instance; defined by
+   * the server.
    *
    * @var string
    */
@@ -33,7 +34,8 @@ class PacketMirroringMirroredResourceInfoInstanceInfo extends \Google\Model
   public $url;
 
   /**
-   * [Output Only] Unique identifier for the instance; defined by the server.
+   * Output only. [Output Only] Unique identifier for the instance; defined by
+   * the server.
    *
    * @param string $canonicalUrl
    */

@@ -81,14 +81,14 @@ class Reservation extends \Google\Collection
   protected $aggregateReservationType = AllocationAggregateReservation::class;
   protected $aggregateReservationDataType = '';
   /**
-   * [Output Only] Full or partial URL to a parent commitment. This field
-   * displays for reservations that are tied to a commitment.
+   * Output only. [Output Only] Full or partial URL to a parent commitment. This
+   * field displays for reservations that are tied to a commitment.
    *
    * @var string
    */
   public $commitment;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -123,22 +123,22 @@ class Reservation extends \Google\Collection
    */
   public $enableEmergentMaintenance;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#reservations for
-   * reservations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#reservations
+   * for reservations.
    *
    * @var string
    */
   public $kind;
   /**
-   * [Output Only] Full or partial URL to parent commitments. This field
-   * displays for reservations that are tied to multiple commitments.
+   * Output only. [Output Only] Full or partial URL to parent commitments. This
+   * field displays for reservations that are tied to multiple commitments.
    *
    * @var string[]
    */
@@ -176,7 +176,7 @@ class Reservation extends \Google\Collection
   protected $resourceStatusType = AllocationResourceStatus::class;
   protected $resourceStatusDataType = '';
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
@@ -188,7 +188,8 @@ class Reservation extends \Google\Collection
    */
   public $schedulingType;
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @var string
    */
@@ -206,11 +207,11 @@ class Reservation extends \Google\Collection
    */
   public $specificReservationRequired;
   /**
-   * [Output Only] The status of the reservation.              - CREATING:
-   * Reservation resources are being        allocated.      - READY: Reservation
-   * resources have been allocated,        and the reservation is ready for use.
-   * - DELETING: Reservation deletion is in progress.      - UPDATING:
-   * Reservation update is in progress.
+   * Output only. [Output Only] The status of the reservation.              -
+   * CREATING: Reservation resources are being        allocated.      - READY:
+   * Reservation resources have been allocated,        and the reservation is
+   * ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    *
    * @var string
    */
@@ -257,8 +258,8 @@ class Reservation extends \Google\Collection
     return $this->aggregateReservation;
   }
   /**
-   * [Output Only] Full or partial URL to a parent commitment. This field
-   * displays for reservations that are tied to a commitment.
+   * Output only. [Output Only] Full or partial URL to a parent commitment. This
+   * field displays for reservations that are tied to a commitment.
    *
    * @param string $commitment
    */
@@ -274,7 +275,7 @@ class Reservation extends \Google\Collection
     return $this->commitment;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -376,8 +377,8 @@ class Reservation extends \Google\Collection
     return $this->enableEmergentMaintenance;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -393,8 +394,8 @@ class Reservation extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#reservations for
-   * reservations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#reservations
+   * for reservations.
    *
    * @param string $kind
    */
@@ -410,8 +411,8 @@ class Reservation extends \Google\Collection
     return $this->kind;
   }
   /**
-   * [Output Only] Full or partial URL to parent commitments. This field
-   * displays for reservations that are tied to multiple commitments.
+   * Output only. [Output Only] Full or partial URL to parent commitments. This
+   * field displays for reservations that are tied to multiple commitments.
    *
    * @param string[] $linkedCommitments
    */
@@ -504,7 +505,7 @@ class Reservation extends \Google\Collection
     return $this->resourcePolicies;
   }
   /**
-   * [Output Only] Status information for Reservation resource.
+   * Output only. [Output Only] Status information for Reservation resource.
    *
    * @param AllocationResourceStatus $resourceStatus
    */
@@ -520,7 +521,7 @@ class Reservation extends \Google\Collection
     return $this->resourceStatus;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -554,7 +555,8 @@ class Reservation extends \Google\Collection
     return $this->schedulingType;
   }
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this
+   * resource.
    *
    * @param string $selfLink
    */
@@ -622,11 +624,11 @@ class Reservation extends \Google\Collection
     return $this->specificReservationRequired;
   }
   /**
-   * [Output Only] The status of the reservation.              - CREATING:
-   * Reservation resources are being        allocated.      - READY: Reservation
-   * resources have been allocated,        and the reservation is ready for use.
-   * - DELETING: Reservation deletion is in progress.      - UPDATING:
-   * Reservation update is in progress.
+   * Output only. [Output Only] The status of the reservation.              -
+   * CREATING: Reservation resources are being        allocated.      - READY:
+   * Reservation resources have been allocated,        and the reservation is
+   * ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    *
    * Accepted values: CREATING, DELETING, INVALID, READY, UPDATING
    *

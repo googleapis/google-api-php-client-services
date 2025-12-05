@@ -25,7 +25,7 @@ class Router extends \Google\Collection
   protected $bgpPeersType = RouterBgpPeer::class;
   protected $bgpPeersDataType = 'array';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -54,7 +54,8 @@ class Router extends \Google\Collection
   protected $interfacesType = RouterInterface::class;
   protected $interfacesDataType = 'array';
   /**
-   * [Output Only] Type of resource. Always compute#router for routers.
+   * Output only. [Output Only] Type of resource. Always compute#router for
+   * routers.
    *
    * @var string
    */
@@ -133,7 +134,7 @@ class Router extends \Google\Collection
     return $this->bgpPeers;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -221,7 +222,8 @@ class Router extends \Google\Collection
     return $this->interfaces;
   }
   /**
-   * [Output Only] Type of resource. Always compute#router for routers.
+   * Output only. [Output Only] Type of resource. Always compute#router for
+   * routers.
    *
    * @param string $kind
    */

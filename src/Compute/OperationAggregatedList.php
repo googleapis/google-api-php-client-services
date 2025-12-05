@@ -30,8 +30,8 @@ class OperationAggregatedList extends \Google\Collection
   protected $itemsType = OperationsScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of resource. Always `compute#operationAggregatedList`
-   * for aggregated lists of operations.
+   * Output only. [Output Only] Type of resource. Always
+   * `compute#operationAggregatedList` for aggregated lists of operations.
    *
    * @var string
    */
@@ -53,7 +53,7 @@ class OperationAggregatedList extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -95,8 +95,8 @@ class OperationAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Always `compute#operationAggregatedList`
-   * for aggregated lists of operations.
+   * Output only. [Output Only] Type of resource. Always
+   * `compute#operationAggregatedList` for aggregated lists of operations.
    *
    * @param string $kind
    */
@@ -148,7 +148,7 @@ class OperationAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

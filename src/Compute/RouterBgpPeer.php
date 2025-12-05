@@ -147,13 +147,13 @@ class RouterBgpPeer extends \Google\Collection
    */
   public $ipv6NexthopAddress;
   /**
-   * [Output Only] The resource that configures and manages this BGP peer.
-   * -  MANAGED_BY_USER is the default value and can be managed by you    or
-   * other users    - MANAGED_BY_ATTACHMENT is a BGP peer that is configured and
-   * managed    by Cloud Interconnect, specifically by an InterconnectAttachment
-   * of type    PARTNER. Google automatically creates, updates, and deletes this
-   * type of    BGP peer when the PARTNER InterconnectAttachment is created,
-   * updated,    or deleted.
+   * Output only. [Output Only] The resource that configures and manages this
+   * BGP peer.        -  MANAGED_BY_USER is the default value and can be managed
+   * by you    or other users    - MANAGED_BY_ATTACHMENT is a BGP peer that is
+   * configured and managed    by Cloud Interconnect, specifically by an
+   * InterconnectAttachment of type    PARTNER. Google automatically creates,
+   * updates, and deletes this type of    BGP peer when the PARTNER
+   * InterconnectAttachment is created, updated,    or deleted.
    *
    * @var string
    */
@@ -502,13 +502,13 @@ class RouterBgpPeer extends \Google\Collection
     return $this->ipv6NexthopAddress;
   }
   /**
-   * [Output Only] The resource that configures and manages this BGP peer.
-   * -  MANAGED_BY_USER is the default value and can be managed by you    or
-   * other users    - MANAGED_BY_ATTACHMENT is a BGP peer that is configured and
-   * managed    by Cloud Interconnect, specifically by an InterconnectAttachment
-   * of type    PARTNER. Google automatically creates, updates, and deletes this
-   * type of    BGP peer when the PARTNER InterconnectAttachment is created,
-   * updated,    or deleted.
+   * Output only. [Output Only] The resource that configures and manages this
+   * BGP peer.        -  MANAGED_BY_USER is the default value and can be managed
+   * by you    or other users    - MANAGED_BY_ATTACHMENT is a BGP peer that is
+   * configured and managed    by Cloud Interconnect, specifically by an
+   * InterconnectAttachment of type    PARTNER. Google automatically creates,
+   * updates, and deletes this type of    BGP peer when the PARTNER
+   * InterconnectAttachment is created, updated,    or deleted.
    *
    * Accepted values: MANAGED_BY_ATTACHMENT, MANAGED_BY_USER
    *

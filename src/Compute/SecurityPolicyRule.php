@@ -52,8 +52,8 @@ class SecurityPolicyRule extends \Google\Model
   protected $headerActionType = SecurityPolicyRuleHttpHeaderAction::class;
   protected $headerActionDataType = '';
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for
-   * security policy rules
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#securityPolicyRule for security policy rules
    *
    * @var string
    */
@@ -152,8 +152,8 @@ class SecurityPolicyRule extends \Google\Model
     return $this->headerAction;
   }
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for
-   * security policy rules
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#securityPolicyRule for security policy rules
    *
    * @param string $kind
    */

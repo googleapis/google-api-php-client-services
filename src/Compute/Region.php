@@ -44,7 +44,8 @@ class Region extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#region for regions.
+   * Output only. [Output Only] Type of the resource. Always compute#region for
+   * regions.
    *
    * @var string
    */
@@ -72,7 +73,7 @@ class Region extends \Google\Collection
    */
   public $status;
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @var bool
    */
@@ -151,7 +152,8 @@ class Region extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#region for regions.
+   * Output only. [Output Only] Type of the resource. Always compute#region for
+   * regions.
    *
    * @param string $kind
    */
@@ -183,8 +185,9 @@ class Region extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] Warning of fetching the `quotas` field for this region. This
-   * field is populated only if fetching of the `quotas` field fails.
+   * Output only. [Output Only] Warning of fetching the `quotas` field for this
+   * region. This field is populated only if fetching of the `quotas` field
+   * fails.
    *
    * @param RegionQuotaStatusWarning $quotaStatusWarning
    */
@@ -250,7 +253,7 @@ class Region extends \Google\Collection
     return $this->status;
   }
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    *
    * @param bool $supportsPzs
    */

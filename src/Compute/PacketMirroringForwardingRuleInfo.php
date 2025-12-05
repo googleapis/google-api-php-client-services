@@ -20,8 +20,8 @@ namespace Google\Service\Compute;
 class PacketMirroringForwardingRuleInfo extends \Google\Model
 {
   /**
-   * [Output Only] Unique identifier for the forwarding rule; defined by the
-   * server.
+   * Output only. [Output Only] Unique identifier for the forwarding rule;
+   * defined by the server.
    *
    * @var string
    */
@@ -35,8 +35,8 @@ class PacketMirroringForwardingRuleInfo extends \Google\Model
   public $url;
 
   /**
-   * [Output Only] Unique identifier for the forwarding rule; defined by the
-   * server.
+   * Output only. [Output Only] Unique identifier for the forwarding rule;
+   * defined by the server.
    *
    * @param string $canonicalUrl
    */

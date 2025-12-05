@@ -95,13 +95,13 @@ class PublicAdvertisedPrefix extends \Google\Collection
   public const STATUS_VALIDATED = 'VALIDATED';
   protected $collection_key = 'publicDelegatedPrefixs';
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    *
    * @var string
    */
   public $byoipApiVersion;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -133,8 +133,8 @@ class PublicAdvertisedPrefix extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
@@ -153,8 +153,8 @@ class PublicAdvertisedPrefix extends \Google\Collection
    */
   public $ipv6AccessType;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix
-   * for public advertised prefixes.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#publicAdvertisedPrefix for public advertised prefixes.
    *
    * @var string
    */
@@ -186,7 +186,7 @@ class PublicAdvertisedPrefix extends \Google\Collection
   protected $publicDelegatedPrefixsType = PublicAdvertisedPrefixPublicDelegatedPrefix::class;
   protected $publicDelegatedPrefixsDataType = 'array';
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -211,7 +211,7 @@ class PublicAdvertisedPrefix extends \Google\Collection
   public $status;
 
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    *
    * Accepted values: V1, V2
    *
@@ -229,7 +229,7 @@ class PublicAdvertisedPrefix extends \Google\Collection
     return $this->byoipApiVersion;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -301,8 +301,8 @@ class PublicAdvertisedPrefix extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -353,8 +353,8 @@ class PublicAdvertisedPrefix extends \Google\Collection
     return $this->ipv6AccessType;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix
-   * for public advertised prefixes.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#publicAdvertisedPrefix for public advertised prefixes.
    *
    * @param string $kind
    */
@@ -416,8 +416,8 @@ class PublicAdvertisedPrefix extends \Google\Collection
     return $this->pdpScope;
   }
   /**
-   * [Output Only] The list of public delegated prefixes that exist for this
-   * public advertised prefix.
+   * Output only. [Output Only] The list of public delegated prefixes that exist
+   * for this public advertised prefix.
    *
    * @param PublicAdvertisedPrefixPublicDelegatedPrefix[] $publicDelegatedPrefixs
    */
@@ -433,7 +433,7 @@ class PublicAdvertisedPrefix extends \Google\Collection
     return $this->publicDelegatedPrefixs;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

@@ -68,7 +68,7 @@ class ReservationBlockPhysicalTopology extends \Google\Collection
     return $this->cluster;
   }
   /**
-   * The detailed instances information for a given Block
+   * Output only. The detailed instances information for a given Block
    *
    * @param ReservationBlockPhysicalTopologyInstance[] $instances
    */

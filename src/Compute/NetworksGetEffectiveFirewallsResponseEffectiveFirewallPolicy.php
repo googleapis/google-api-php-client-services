@@ -25,15 +25,15 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
   public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
   protected $collection_key = 'rules';
   /**
-   * [Output Only] Deprecated, please use short name instead. The display name
-   * of the firewall policy.
+   * Output only. [Output Only] Deprecated, please use short name instead. The
+   * display name of the firewall policy.
    *
    * @deprecated
    * @var string
    */
   public $displayName;
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    *
    * @var string
    */
@@ -41,8 +41,8 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
   protected $packetMirroringRulesType = FirewallPolicyRule::class;
   protected $packetMirroringRulesDataType = 'array';
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for
-   * type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not
+   * applicable for type=HIERARCHY.
    *
    * @var int
    */
@@ -50,21 +50,21 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
   protected $rulesType = FirewallPolicyRule::class;
   protected $rulesDataType = 'array';
   /**
-   * [Output Only] The short name of the firewall policy.
+   * Output only. [Output Only] The short name of the firewall policy.
    *
    * @var string
    */
   public $shortName;
   /**
-   * [Output Only] The type of the firewall policy.
+   * Output only. [Output Only] The type of the firewall policy.
    *
    * @var string
    */
   public $type;
 
   /**
-   * [Output Only] Deprecated, please use short name instead. The display name
-   * of the firewall policy.
+   * Output only. [Output Only] Deprecated, please use short name instead. The
+   * display name of the firewall policy.
    *
    * @deprecated
    * @param string $displayName
@@ -82,7 +82,7 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
     return $this->displayName;
   }
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    *
    * @param string $name
    */
@@ -98,7 +98,8 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
     return $this->name;
   }
   /**
-   * [Output Only] The packet mirroring rules that apply to the network.
+   * Output only. [Output Only] The packet mirroring rules that apply to the
+   * network.
    *
    * @param FirewallPolicyRule[] $packetMirroringRules
    */
@@ -114,8 +115,8 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
     return $this->packetMirroringRules;
   }
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for
-   * type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not
+   * applicable for type=HIERARCHY.
    *
    * @param int $priority
    */
@@ -147,7 +148,7 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
     return $this->rules;
   }
   /**
-   * [Output Only] The short name of the firewall policy.
+   * Output only. [Output Only] The short name of the firewall policy.
    *
    * @param string $shortName
    */
@@ -163,7 +164,7 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
     return $this->shortName;
   }
   /**
-   * [Output Only] The type of the firewall policy.
+   * Output only. [Output Only] The type of the firewall policy.
    *
    * Accepted values: HIERARCHY, NETWORK, SYSTEM, UNSPECIFIED
    *

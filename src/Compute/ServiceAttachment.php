@@ -47,7 +47,7 @@ class ServiceAttachment extends \Google\Collection
    */
   public $consumerRejectLists;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -88,15 +88,15 @@ class ServiceAttachment extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for
-   * service attachments.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#serviceAttachment for service attachments.
    *
    * @var string
    */
@@ -170,16 +170,16 @@ class ServiceAttachment extends \Google\Collection
    */
   public $reconcileConnections;
   /**
-   * [Output Only] URL of the region where the service attachment resides. This
-   * field applies only to the region resource. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request
-   * body.
+   * Output only. [Output Only] URL of the region where the service attachment
+   * resides. This field applies only to the region resource. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -193,8 +193,8 @@ class ServiceAttachment extends \Google\Collection
   public $targetService;
 
   /**
-   * [Output Only] An array of connections for all the consumers connected to
-   * this service attachment.
+   * Output only. [Output Only] An array of connections for all the consumers
+   * connected to this service attachment.
    *
    * @param ServiceAttachmentConnectedEndpoint[] $connectedEndpoints
    */
@@ -273,7 +273,7 @@ class ServiceAttachment extends \Google\Collection
     return $this->consumerRejectLists;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -364,8 +364,8 @@ class ServiceAttachment extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -381,8 +381,8 @@ class ServiceAttachment extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for
-   * service attachments.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#serviceAttachment for service attachments.
    *
    * @param string $kind
    */
@@ -500,7 +500,8 @@ class ServiceAttachment extends \Google\Collection
     return $this->propagatedConnectionLimit;
   }
   /**
-   * [Output Only] An 128-bit global unique ID of the PSC service attachment.
+   * Output only. [Output Only] An 128-bit global unique ID of the PSC service
+   * attachment.
    *
    * @param Uint128 $pscServiceAttachmentId
    */
@@ -541,10 +542,10 @@ class ServiceAttachment extends \Google\Collection
     return $this->reconcileConnections;
   }
   /**
-   * [Output Only] URL of the region where the service attachment resides. This
-   * field applies only to the region resource. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request
-   * body.
+   * Output only. [Output Only] URL of the region where the service attachment
+   * resides. This field applies only to the region resource. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
    *
    * @param string $region
    */
@@ -560,7 +561,7 @@ class ServiceAttachment extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

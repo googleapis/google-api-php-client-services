@@ -22,9 +22,9 @@ class ResourceStatus extends \Google\Model
   protected $effectiveInstanceMetadataType = ResourceStatusEffectiveInstanceMetadata::class;
   protected $effectiveInstanceMetadataDataType = '';
   /**
-   * [Output Only] The precise location of your instance within the zone's data
-   * center, including the block, sub-block, and host. The field is formatted as
-   * follows: blockId/subBlockId/hostId.
+   * Output only. [Output Only] The precise location of your instance within the
+   * zone's data center, including the block, sub-block, and host. The field is
+   * formatted as follows: blockId/subBlockId/hostId.
    *
    * @var string
    */
@@ -39,9 +39,10 @@ class ResourceStatus extends \Google\Model
   protected $upcomingMaintenanceDataType = '';
 
   /**
-   * [Output Only] Effective metadata is a field that consolidates project,
-   * zonal instance settings, and instance-level predefined metadata keys to
-   * provide the overridden value for those metadata keys at the instance level.
+   * Output only. [Output Only] Effective metadata is a field that consolidates
+   * project, zonal instance settings, and instance-level predefined metadata
+   * keys to provide the overridden value for those metadata keys at the
+   * instance level.
    *
    * @param ResourceStatusEffectiveInstanceMetadata $effectiveInstanceMetadata
    */
@@ -57,9 +58,9 @@ class ResourceStatus extends \Google\Model
     return $this->effectiveInstanceMetadata;
   }
   /**
-   * [Output Only] The precise location of your instance within the zone's data
-   * center, including the block, sub-block, and host. The field is formatted as
-   * follows: blockId/subBlockId/hostId.
+   * Output only. [Output Only] The precise location of your instance within the
+   * zone's data center, including the block, sub-block, and host. The field is
+   * formatted as follows: blockId/subBlockId/hostId.
    *
    * @param string $physicalHost
    */
@@ -75,9 +76,9 @@ class ResourceStatus extends \Google\Model
     return $this->physicalHost;
   }
   /**
-   * [Output Only] A series of fields containing the global name of the Compute
-   * Engine cluster, as well as the ID of the block, sub-block, and host on
-   * which the running instance is located.
+   * Output only. [Output Only] A series of fields containing the global name of
+   * the Compute Engine cluster, as well as the ID of the block, sub-block, and
+   * host on which the running instance is located.
    *
    * @param ResourceStatusPhysicalHostTopology $physicalHostTopology
    */
@@ -93,7 +94,8 @@ class ResourceStatus extends \Google\Model
     return $this->physicalHostTopology;
   }
   /**
-   * [Output Only] Reservation information that the instance is consuming from.
+   * Output only. [Output Only] Reservation information that the instance is
+   * consuming from.
    *
    * @param ResourceStatusReservationConsumptionInfo $reservationConsumptionInfo
    */

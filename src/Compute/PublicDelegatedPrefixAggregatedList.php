@@ -29,7 +29,7 @@ class PublicDelegatedPrefixAggregatedList extends \Google\Collection
   protected $itemsType = PublicDelegatedPrefixesScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * [Output Only] Type of the resource.
+   * Output only. [Output Only] Type of the resource.
    * Alwayscompute#publicDelegatedPrefixAggregatedList for aggregated lists of
    * public delegated prefixes.
    *
@@ -53,7 +53,7 @@ class PublicDelegatedPrefixAggregatedList extends \Google\Collection
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -94,7 +94,7 @@ class PublicDelegatedPrefixAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource.
+   * Output only. [Output Only] Type of the resource.
    * Alwayscompute#publicDelegatedPrefixAggregatedList for aggregated lists of
    * public delegated prefixes.
    *
@@ -148,7 +148,7 @@ class PublicDelegatedPrefixAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

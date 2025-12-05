@@ -32,8 +32,8 @@ class RoutersListBgpRoutes extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for
-   * lists of bgp routes.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#routersListBgpRoutes for lists of bgp routes.
    *
    * @var string
    */
@@ -51,13 +51,13 @@ class RoutersListBgpRoutes extends \Google\Collection
   protected $resultType = BgpRoute::class;
   protected $resultDataType = 'array';
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -97,8 +97,8 @@ class RoutersListBgpRoutes extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for
-   * lists of bgp routes.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#routersListBgpRoutes for lists of bgp routes.
    *
    * @param string $kind
    */
@@ -150,7 +150,7 @@ class RoutersListBgpRoutes extends \Google\Collection
     return $this->result;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -166,7 +166,7 @@ class RoutersListBgpRoutes extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

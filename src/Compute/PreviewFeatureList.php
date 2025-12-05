@@ -43,13 +43,13 @@ class PreviewFeatureList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @var string[]
@@ -125,7 +125,7 @@ class PreviewFeatureList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -141,7 +141,7 @@ class PreviewFeatureList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @param string[] $unreachables

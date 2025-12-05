@@ -20,7 +20,7 @@ namespace Google\Service\Compute;
 class NotificationEndpoint extends \Google\Model
 {
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -35,15 +35,15 @@ class NotificationEndpoint extends \Google\Model
   protected $grpcSettingsType = NotificationEndpointGrpcSettings::class;
   protected $grpcSettingsDataType = '';
   /**
-   * [Output Only] A unique identifier for this resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
-   * notification endpoints.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#notificationEndpoint for notification endpoints.
    *
    * @var string
    */
@@ -61,23 +61,23 @@ class NotificationEndpoint extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] URL of the region where the notification endpoint resides.
-   * This field applies only to the regional resource. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the region where the notification
+   * endpoint resides. This field applies only to the regional resource. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -127,8 +127,8 @@ class NotificationEndpoint extends \Google\Model
     return $this->grpcSettings;
   }
   /**
-   * [Output Only] A unique identifier for this resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -144,8 +144,8 @@ class NotificationEndpoint extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
-   * notification endpoints.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#notificationEndpoint for notification endpoints.
    *
    * @param string $kind
    */
@@ -183,10 +183,10 @@ class NotificationEndpoint extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] URL of the region where the notification endpoint resides.
-   * This field applies only to the regional resource. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the region where the notification
+   * endpoint resides. This field applies only to the regional resource. You
+   * must specify this field as part of the HTTP request URL. It is not settable
+   * as a field in the request body.
    *
    * @param string $region
    */
@@ -202,7 +202,7 @@ class NotificationEndpoint extends \Google\Model
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

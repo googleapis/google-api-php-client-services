@@ -29,8 +29,8 @@ class NotificationEndpointList extends \Google\Collection
   protected $itemsType = NotificationEndpoint::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
-   * notification endpoints.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#notificationEndpoint for notification endpoints.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class NotificationEndpointList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
-   * notification endpoints.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#notificationEndpoint for notification endpoints.
    *
    * @param string $kind
    */

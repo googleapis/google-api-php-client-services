@@ -20,7 +20,8 @@ namespace Google\Service\Compute;
 class PacketMirroringMirroredResourceInfoSubnetInfo extends \Google\Model
 {
   /**
-   * [Output Only] Unique identifier for the subnetwork; defined by the server.
+   * Output only. [Output Only] Unique identifier for the subnetwork; defined by
+   * the server.
    *
    * @var string
    */
@@ -34,7 +35,8 @@ class PacketMirroringMirroredResourceInfoSubnetInfo extends \Google\Model
   public $url;
 
   /**
-   * [Output Only] Unique identifier for the subnetwork; defined by the server.
+   * Output only. [Output Only] Unique identifier for the subnetwork; defined by
+   * the server.
    *
    * @param string $canonicalUrl
    */

@@ -51,7 +51,7 @@ class ReservationBlockPhysicalTopologyInstance extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * The PhysicalHostTopology of instances within a Block resource.
+   * Output only. The PhysicalHostTopology of instances within a Block resource.
    *
    * @param ReservationBlockPhysicalTopologyInstancePhysicalHostTopology $physicalHostTopology
    */

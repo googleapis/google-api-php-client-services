@@ -235,13 +235,13 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    */
   public $subnetStackTypes;
   /**
-   * Specifies which subnetwork purposes are supported.
+   * Output only. Specifies which subnetwork purposes are supported.
    *
    * @var string[]
    */
   public $subnetworkPurposes;
   /**
-   * Specifies which subnetwork stack types are supported.
+   * Output only. Specifies which subnetwork stack types are supported.
    *
    * @var string[]
    */
@@ -739,7 +739,7 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
     return $this->subnetStackTypes;
   }
   /**
-   * Specifies which subnetwork purposes are supported.
+   * Output only. Specifies which subnetwork purposes are supported.
    *
    * @param string[] $subnetworkPurposes
    */
@@ -755,7 +755,7 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
     return $this->subnetworkPurposes;
   }
   /**
-   * Specifies which subnetwork stack types are supported.
+   * Output only. Specifies which subnetwork stack types are supported.
    *
    * @param string[] $subnetworkStackTypes
    */

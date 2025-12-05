@@ -29,7 +29,7 @@ class ReservationAggregatedList extends \Google\Collection
   protected $itemsType = ReservationsScopedList::class;
   protected $itemsDataType = 'map';
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @var string
    */
@@ -45,13 +45,13 @@ class ReservationAggregatedList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -92,7 +92,7 @@ class ReservationAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @param string $kind
    */
@@ -128,7 +128,7 @@ class ReservationAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -144,7 +144,7 @@ class ReservationAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

@@ -20,7 +20,7 @@ namespace Google\Service\Compute;
 class RouterStatusResponse extends \Google\Model
 {
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @var string
    */
@@ -29,7 +29,7 @@ class RouterStatusResponse extends \Google\Model
   protected $resultDataType = '';
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    *
    * @param string $kind
    */

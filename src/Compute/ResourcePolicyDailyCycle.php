@@ -27,8 +27,8 @@ class ResourcePolicyDailyCycle extends \Google\Model
    */
   public $daysInCycle;
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen
-   * to be the smallest possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window,
+   * automatically chosen to be the smallest possible in the given scenario.
    *
    * @var string
    */
@@ -60,8 +60,8 @@ class ResourcePolicyDailyCycle extends \Google\Model
     return $this->daysInCycle;
   }
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen
-   * to be the smallest possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window,
+   * automatically chosen to be the smallest possible in the given scenario.
    *
    * @param string $duration
    */

@@ -29,8 +29,8 @@ class PublicAdvertisedPrefixList extends \Google\Collection
   protected $itemsType = PublicAdvertisedPrefix::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix
-   * for public advertised prefixes.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#publicAdvertisedPrefix for public advertised prefixes.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class PublicAdvertisedPrefixList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix
-   * for public advertised prefixes.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#publicAdvertisedPrefix for public advertised prefixes.
    *
    * @param string $kind
    */

@@ -20,8 +20,8 @@ namespace Google\Service\Compute;
 class Reference extends \Google\Model
 {
   /**
-   * [Output Only] Type of the resource. Always compute#reference for
-   * references.
+   * Output only. [Output Only] Type of the resource. Always compute#reference
+   * for references.
    *
    * @var string
    */
@@ -47,8 +47,8 @@ class Reference extends \Google\Model
   public $target;
 
   /**
-   * [Output Only] Type of the resource. Always compute#reference for
-   * references.
+   * Output only. [Output Only] Type of the resource. Always compute#reference
+   * for references.
    *
    * @param string $kind
    */

@@ -29,8 +29,8 @@ class NodeTemplateList extends \Google\Collection
   protected $itemsType = NodeTemplate::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource.Always compute#nodeTemplateList for lists of
-   * node templates.
+   * Output only. [Output Only] Type of resource.Always compute#nodeTemplateList
+   * for lists of node templates.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class NodeTemplateList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class NodeTemplateList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource.Always compute#nodeTemplateList for lists of
-   * node templates.
+   * Output only. [Output Only] Type of resource.Always compute#nodeTemplateList
+   * for lists of node templates.
    *
    * @param string $kind
    */
@@ -124,7 +124,7 @@ class NodeTemplateList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

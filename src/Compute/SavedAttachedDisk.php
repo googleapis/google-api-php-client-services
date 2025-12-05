@@ -65,7 +65,7 @@ class SavedAttachedDisk extends \Google\Collection
    */
   public $diskSizeGb;
   /**
-   * [Output Only] URL of the disk type resource. For
+   * Output only. [Output Only] URL of the disk type resource. For
    * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    *
    * @var string
@@ -74,8 +74,8 @@ class SavedAttachedDisk extends \Google\Collection
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
-   * Specifies zero-based index of the disk that is attached to the source
-   * instance.
+   * Output only. Specifies zero-based index of the disk that is attached to the
+   * source instance.
    *
    * @var int
    */
@@ -88,14 +88,14 @@ class SavedAttachedDisk extends \Google\Collection
    */
   public $interface;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached
-   * disks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk
+   * for attached disks.
    *
    * @var string
    */
   public $kind;
   /**
-   * [Output Only] Any valid publicly visible licenses.
+   * Output only. [Output Only] Any valid publicly visible licenses.
    *
    * @var string[]
    */
@@ -114,17 +114,18 @@ class SavedAttachedDisk extends \Google\Collection
    */
   public $source;
   /**
-   * [Output Only] A size of the storage used by the disk's snapshot by this
-   * machine image.
+   * Output only. [Output Only] A size of the storage used by the disk's
+   * snapshot by this machine image.
    *
    * @var string
    */
   public $storageBytes;
   /**
-   * [Output Only] An indicator whether storageBytes is in a stable state or it
-   * is being adjusted as a result of shared storage reallocation. This status
-   * can either be UPDATING, meaning the size of the snapshot is being updated,
-   * or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+   * Output only. [Output Only] An indicator whether storageBytes is in a stable
+   * state or it is being adjusted as a result of shared storage reallocation.
+   * This status can either be UPDATING, meaning the size of the snapshot is
+   * being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
+   * date.
    *
    * @var string
    */
@@ -219,7 +220,7 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * [Output Only] URL of the disk type resource. For
+   * Output only. [Output Only] URL of the disk type resource. For
    * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    *
    * @param string $diskType
@@ -254,8 +255,8 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->guestOsFeatures;
   }
   /**
-   * Specifies zero-based index of the disk that is attached to the source
-   * instance.
+   * Output only. Specifies zero-based index of the disk that is attached to the
+   * source instance.
    *
    * @param int $index
    */
@@ -290,8 +291,8 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->interface;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached
-   * disks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk
+   * for attached disks.
    *
    * @param string $kind
    */
@@ -307,7 +308,7 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->kind;
   }
   /**
-   * [Output Only] Any valid publicly visible licenses.
+   * Output only. [Output Only] Any valid publicly visible licenses.
    *
    * @param string[] $licenses
    */
@@ -358,8 +359,8 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->source;
   }
   /**
-   * [Output Only] A size of the storage used by the disk's snapshot by this
-   * machine image.
+   * Output only. [Output Only] A size of the storage used by the disk's
+   * snapshot by this machine image.
    *
    * @param string $storageBytes
    */
@@ -375,10 +376,11 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->storageBytes;
   }
   /**
-   * [Output Only] An indicator whether storageBytes is in a stable state or it
-   * is being adjusted as a result of shared storage reallocation. This status
-   * can either be UPDATING, meaning the size of the snapshot is being updated,
-   * or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+   * Output only. [Output Only] An indicator whether storageBytes is in a stable
+   * state or it is being adjusted as a result of shared storage reallocation.
+   * This status can either be UPDATING, meaning the size of the snapshot is
+   * being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
+   * date.
    *
    * Accepted values: UPDATING, UP_TO_DATE
    *

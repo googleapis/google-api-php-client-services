@@ -20,8 +20,8 @@ namespace Google\Service\Compute;
 class ResourcePolicyHourlyCycle extends \Google\Model
 {
   /**
-   * [Output only] Duration of the time window, automatically chosen to be
-   * smallest possible in the given scenario.
+   * Output only. [Output only] Duration of the time window, automatically
+   * chosen to be smallest possible in the given scenario.
    *
    * @var string
    */
@@ -42,8 +42,8 @@ class ResourcePolicyHourlyCycle extends \Google\Model
   public $startTime;
 
   /**
-   * [Output only] Duration of the time window, automatically chosen to be
-   * smallest possible in the given scenario.
+   * Output only. [Output only] Duration of the time window, automatically
+   * chosen to be smallest possible in the given scenario.
    *
    * @param string $duration
    */

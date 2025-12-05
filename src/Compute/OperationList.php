@@ -30,8 +30,8 @@ class OperationList extends \Google\Collection
   protected $itemsType = Operation::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Always `compute#operations` for Operations
-   * resource.
+   * Output only. [Output Only] Type of resource. Always `compute#operations`
+   * for Operations resource.
    *
    * @var string
    */
@@ -89,8 +89,8 @@ class OperationList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Always `compute#operations` for Operations
-   * resource.
+   * Output only. [Output Only] Type of resource. Always `compute#operations`
+   * for Operations resource.
    *
    * @param string $kind
    */

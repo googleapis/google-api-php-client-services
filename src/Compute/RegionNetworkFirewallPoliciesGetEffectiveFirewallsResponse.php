@@ -26,10 +26,10 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponse extends \Google
   protected $firewallsDataType = 'array';
 
   /**
-   * [Output only] Effective firewalls from firewall policy. It applies to
-   * Regional Network Firewall Policies in the specified region, Global Network
-   * Firewall Policies and Hierachial Firewall Policies which are associated
-   * with the network.
+   * Output only. [Output only] Effective firewalls from firewall policy. It
+   * applies to Regional Network Firewall Policies in the specified region,
+   * Global Network Firewall Policies and Hierachial Firewall Policies which are
+   * associated with the network.
    *
    * @param RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy[] $firewallPolicys
    */

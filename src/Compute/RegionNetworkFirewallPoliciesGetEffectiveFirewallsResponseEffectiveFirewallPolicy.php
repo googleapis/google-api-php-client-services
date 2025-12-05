@@ -27,13 +27,13 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
   public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
   protected $collection_key = 'rules';
   /**
-   * [Output Only] The display name of the firewall policy.
+   * Output only. [Output Only] The display name of the firewall policy.
    *
    * @var string
    */
   public $displayName;
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    *
    * @var string
    */
@@ -41,8 +41,8 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
   protected $packetMirroringRulesType = FirewallPolicyRule::class;
   protected $packetMirroringRulesDataType = 'array';
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for
-   * type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not
+   * applicable for type=HIERARCHY.
    *
    * @var int
    */
@@ -50,15 +50,15 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
   protected $rulesType = FirewallPolicyRule::class;
   protected $rulesDataType = 'array';
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY,
-   * NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
+   * Output only. [Output Only] The type of the firewall policy. Can be one of
+   * HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    *
    * @var string
    */
   public $type;
 
   /**
-   * [Output Only] The display name of the firewall policy.
+   * Output only. [Output Only] The display name of the firewall policy.
    *
    * @param string $displayName
    */
@@ -74,7 +74,7 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
     return $this->displayName;
   }
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    *
    * @param string $name
    */
@@ -90,7 +90,8 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
     return $this->name;
   }
   /**
-   * [Output only] The packet mirroring rules that apply to the network.
+   * Output only. [Output only] The packet mirroring rules that apply to the
+   * network.
    *
    * @param FirewallPolicyRule[] $packetMirroringRules
    */
@@ -106,8 +107,8 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
     return $this->packetMirroringRules;
   }
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for
-   * type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not
+   * applicable for type=HIERARCHY.
    *
    * @param int $priority
    */
@@ -123,7 +124,7 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
     return $this->priority;
   }
   /**
-   * [Output only] The rules that apply to the network.
+   * Output only. [Output only] The rules that apply to the network.
    *
    * @param FirewallPolicyRule[] $rules
    */
@@ -139,8 +140,8 @@ class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewal
     return $this->rules;
   }
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY,
-   * NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
+   * Output only. [Output Only] The type of the firewall policy. Can be one of
+   * HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    *
    * Accepted values: HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL,
    * SYSTEM_REGIONAL, UNSPECIFIED

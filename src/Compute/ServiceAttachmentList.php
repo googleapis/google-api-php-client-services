@@ -29,8 +29,8 @@ class ServiceAttachmentList extends \Google\Collection
   protected $itemsType = ServiceAttachment::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for
-   * service attachments.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#serviceAttachment for service attachments.
    *
    * @var string
    */
@@ -87,8 +87,8 @@ class ServiceAttachmentList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for
-   * service attachments.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#serviceAttachment for service attachments.
    *
    * @param string $kind
    */

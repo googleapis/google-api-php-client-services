@@ -31,8 +31,8 @@ class NodeGroupMaintenanceWindow extends \Google\Model
   public $startTime;
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen
-   * to be the smallest possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window,
+   * automatically chosen to be the smallest possible in the given scenario.
    *
    * @param Duration $maintenanceDuration
    */

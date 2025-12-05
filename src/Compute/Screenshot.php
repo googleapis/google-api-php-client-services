@@ -26,8 +26,8 @@ class Screenshot extends \Google\Model
    */
   public $contents;
   /**
-   * [Output Only] Type of the resource. Always compute#screenshot for the
-   * screenshots.
+   * Output only. [Output Only] Type of the resource. Always compute#screenshot
+   * for the screenshots.
    *
    * @var string
    */
@@ -50,8 +50,8 @@ class Screenshot extends \Google\Model
     return $this->contents;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#screenshot for the
-   * screenshots.
+   * Output only. [Output Only] Type of the resource. Always compute#screenshot
+   * for the screenshots.
    *
    * @param string $kind
    */

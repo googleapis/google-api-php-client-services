@@ -33,8 +33,8 @@ class NetworkProfilesListResponse extends \Google\Collection
   protected $itemsType = NetworkProfile::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Alwayscompute#networkProfileList for
-   * network profiles.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#networkProfileList for network profiles.
    *
    * @var string
    */
@@ -50,13 +50,13 @@ class NetworkProfilesListResponse extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @var string[]
@@ -112,8 +112,8 @@ class NetworkProfilesListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#networkProfileList for
-   * network profiles.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#networkProfileList for network profiles.
    *
    * @param string $kind
    */
@@ -149,7 +149,7 @@ class NetworkProfilesListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -165,7 +165,7 @@ class NetworkProfilesListResponse extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources. end_interface:
+   * Output only. [Output Only] Unreachable resources. end_interface:
    * MixerListResponseWithEtagBuilder
    *
    * @param string[] $unreachables

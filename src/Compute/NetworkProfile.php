@@ -20,13 +20,13 @@ namespace Google\Service\Compute;
 class NetworkProfile extends \Google\Model
 {
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
   public $creationTimestamp;
   /**
-   * [Output Only] An optional description of this resource.
+   * Output only. [Output Only] An optional description of this resource.
    *
    * @var string
    */
@@ -34,15 +34,15 @@ class NetworkProfile extends \Google\Model
   protected $featuresType = NetworkProfileNetworkFeatures::class;
   protected $featuresDataType = '';
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkProfile for
-   * network profiles.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#networkProfile for network profiles.
    *
    * @var string
    */
@@ -50,7 +50,7 @@ class NetworkProfile extends \Google\Model
   protected $locationType = NetworkProfileLocation::class;
   protected $locationDataType = '';
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    *
    * @var string
    */
@@ -58,20 +58,21 @@ class NetworkProfile extends \Google\Model
   protected $profileTypeType = NetworkProfileProfileType::class;
   protected $profileTypeDataType = '';
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @var string
    */
   public $selfLinkWithId;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -87,7 +88,7 @@ class NetworkProfile extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * [Output Only] An optional description of this resource.
+   * Output only. [Output Only] An optional description of this resource.
    *
    * @param string $description
    */
@@ -103,7 +104,7 @@ class NetworkProfile extends \Google\Model
     return $this->description;
   }
   /**
-   * [Output Only] Features supported by the network.
+   * Output only. [Output Only] Features supported by the network.
    *
    * @param NetworkProfileNetworkFeatures $features
    */
@@ -119,8 +120,8 @@ class NetworkProfile extends \Google\Model
     return $this->features;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -136,8 +137,8 @@ class NetworkProfile extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkProfile for
-   * network profiles.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#networkProfile for network profiles.
    *
    * @param string $kind
    */
@@ -153,7 +154,7 @@ class NetworkProfile extends \Google\Model
     return $this->kind;
   }
   /**
-   * [Output Only] Location to which the network is restricted.
+   * Output only. [Output Only] Location to which the network is restricted.
    *
    * @param NetworkProfileLocation $location
    */
@@ -169,7 +170,7 @@ class NetworkProfile extends \Google\Model
     return $this->location;
   }
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    *
    * @param string $name
    */
@@ -185,7 +186,7 @@ class NetworkProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] Type of the network profile.
+   * Output only. [Output Only] Type of the network profile.
    *
    * @param NetworkProfileProfileType $profileType
    */
@@ -201,7 +202,7 @@ class NetworkProfile extends \Google\Model
     return $this->profileType;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -217,7 +218,8 @@ class NetworkProfile extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the
+   * resource id.
    *
    * @param string $selfLinkWithId
    */

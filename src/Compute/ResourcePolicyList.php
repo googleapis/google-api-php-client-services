@@ -34,8 +34,8 @@ class ResourcePolicyList extends \Google\Collection
   protected $itemsType = ResourcePolicy::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for
-   * listsof resourcePolicies
+   * Output only. [Output Only] Type of
+   * resource.Alwayscompute#resourcePoliciesList for listsof resourcePolicies
    *
    * @var string
    */
@@ -51,7 +51,7 @@ class ResourcePolicyList extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -107,8 +107,8 @@ class ResourcePolicyList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for
-   * listsof resourcePolicies
+   * Output only. [Output Only] Type of
+   * resource.Alwayscompute#resourcePoliciesList for listsof resourcePolicies
    *
    * @param string $kind
    */
@@ -144,7 +144,7 @@ class ResourcePolicyList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

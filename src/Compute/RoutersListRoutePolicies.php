@@ -32,8 +32,8 @@ class RoutersListRoutePolicies extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of resource. Alwayscompute#routersListRoutePolicies for
-   * lists of route policies.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#routersListRoutePolicies for lists of route policies.
    *
    * @var string
    */
@@ -51,13 +51,13 @@ class RoutersListRoutePolicies extends \Google\Collection
   protected $resultType = RoutePolicy::class;
   protected $resultDataType = 'array';
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @var string[]
    */
@@ -97,8 +97,8 @@ class RoutersListRoutePolicies extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#routersListRoutePolicies for
-   * lists of route policies.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#routersListRoutePolicies for lists of route policies.
    *
    * @param string $kind
    */
@@ -150,7 +150,7 @@ class RoutersListRoutePolicies extends \Google\Collection
     return $this->result;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */
@@ -166,7 +166,7 @@ class RoutersListRoutePolicies extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    *
    * @param string[] $unreachables
    */

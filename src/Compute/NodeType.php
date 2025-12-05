@@ -54,8 +54,8 @@ class NodeType extends \Google\Model
    */
   public $id;
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeType for node
-   * types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeType
+   * for node types.
    *
    * @var string
    */
@@ -67,7 +67,8 @@ class NodeType extends \Google\Model
    */
   public $localSsdGb;
   /**
-   * [Output Only] Maximum number of VMs that can be created for this node type.
+   * Output only. [Output Only] Maximum number of VMs that can be created for
+   * this node type.
    *
    * @var int
    */
@@ -86,14 +87,14 @@ class NodeType extends \Google\Model
    */
   public $name;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
   public $selfLink;
   /**
-   * [Output Only] The name of the zone where the node type resides, such as us-
-   * central1-a.
+   * Output only. [Output Only] The name of the zone where the node type
+   * resides, such as us-central1-a.
    *
    * @var string
    */
@@ -198,8 +199,8 @@ class NodeType extends \Google\Model
     return $this->id;
   }
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeType for node
-   * types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeType
+   * for node types.
    *
    * @param string $kind
    */
@@ -231,7 +232,8 @@ class NodeType extends \Google\Model
     return $this->localSsdGb;
   }
   /**
-   * [Output Only] Maximum number of VMs that can be created for this node type.
+   * Output only. [Output Only] Maximum number of VMs that can be created for
+   * this node type.
    *
    * @param int $maxVms
    */
@@ -280,7 +282,7 @@ class NodeType extends \Google\Model
     return $this->name;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */
@@ -296,8 +298,8 @@ class NodeType extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * [Output Only] The name of the zone where the node type resides, such as us-
-   * central1-a.
+   * Output only. [Output Only] The name of the zone where the node type
+   * resides, such as us-central1-a.
    *
    * @param string $zone
    */

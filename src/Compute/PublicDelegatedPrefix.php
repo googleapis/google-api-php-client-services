@@ -105,13 +105,13 @@ class PublicDelegatedPrefix extends \Google\Collection
    */
   public $allocatablePrefixLength;
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    *
    * @var string
    */
   public $byoipApiVersion;
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -123,6 +123,13 @@ class PublicDelegatedPrefix extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4
+   * allocations. Applicable for IPv4 PDPs only.
+   *
+   * @var bool
+   */
+  public $enableEnhancedIpv4Allocation;
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object.
    * This field is used in optimistic locking. This field will be ignored when
@@ -137,8 +144,8 @@ class PublicDelegatedPrefix extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @var string
    */
@@ -151,8 +158,8 @@ class PublicDelegatedPrefix extends \Google\Collection
    */
   public $ipCidrRange;
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes.
-   * Inherited from parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public
+   * Delegated Prefixes. Inherited from parent prefix.
    *
    * @var string
    */
@@ -164,8 +171,8 @@ class PublicDelegatedPrefix extends \Google\Collection
    */
   public $isLiveMigration;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for
-   * public delegated prefixes.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#publicDelegatedPrefix for public delegated prefixes.
    *
    * @var string
    */
@@ -198,16 +205,16 @@ class PublicDelegatedPrefix extends \Google\Collection
   protected $publicDelegatedSubPrefixsType = PublicDelegatedPrefixPublicDelegatedSubPrefix::class;
   protected $publicDelegatedSubPrefixsDataType = 'array';
   /**
-   * [Output Only] URL of the region where the public delegated prefix resides.
-   * This field applies only to the region resource. You must specify this field
-   * as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the region where the public delegated
+   * prefix resides. This field applies only to the region resource. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
    *
    * @var string
    */
   public $region;
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -245,7 +252,7 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->allocatablePrefixLength;
   }
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    *
    * Accepted values: V1, V2
    *
@@ -263,7 +270,7 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->byoipApiVersion;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -296,6 +303,23 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->description;
   }
   /**
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4
+   * allocations. Applicable for IPv4 PDPs only.
+   *
+   * @param bool $enableEnhancedIpv4Allocation
+   */
+  public function setEnableEnhancedIpv4Allocation($enableEnhancedIpv4Allocation)
+  {
+    $this->enableEnhancedIpv4Allocation = $enableEnhancedIpv4Allocation;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableEnhancedIpv4Allocation()
+  {
+    return $this->enableEnhancedIpv4Allocation;
+  }
+  /**
    * Fingerprint of this resource. A hash of the contents stored in this object.
    * This field is used in optimistic locking. This field will be ignored when
    * inserting a new PublicDelegatedPrefix. An up-to-date fingerprint must be
@@ -319,8 +343,8 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource type. The server
-   * generates this identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The
+   * server generates this identifier.
    *
    * @param string $id
    */
@@ -353,8 +377,8 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->ipCidrRange;
   }
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes.
-   * Inherited from parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public
+   * Delegated Prefixes. Inherited from parent prefix.
    *
    * Accepted values: EXTERNAL, INTERNAL
    *
@@ -388,8 +412,8 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->isLiveMigration;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for
-   * public delegated prefixes.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#publicDelegatedPrefix for public delegated prefixes.
    *
    * @param string $kind
    */
@@ -480,10 +504,10 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->publicDelegatedSubPrefixs;
   }
   /**
-   * [Output Only] URL of the region where the public delegated prefix resides.
-   * This field applies only to the region resource. You must specify this field
-   * as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the region where the public delegated
+   * prefix resides. This field applies only to the region resource. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
    *
    * @param string $region
    */
@@ -499,7 +523,7 @@ class PublicDelegatedPrefix extends \Google\Collection
     return $this->region;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

@@ -27,7 +27,8 @@ class SecurityPolicyAssociation extends \Google\Collection
    */
   public $attachmentId;
   /**
-   * [Output Only] The display name of the security policy of the association.
+   * Output only. [Output Only] The display name of the security policy of the
+   * association.
    *
    * @deprecated
    * @var string
@@ -52,13 +53,14 @@ class SecurityPolicyAssociation extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] The security policy ID of the association.
+   * Output only. [Output Only] The security policy ID of the association.
    *
    * @var string
    */
   public $securityPolicyId;
   /**
-   * [Output Only] The short name of the security policy of the association.
+   * Output only. [Output Only] The short name of the security policy of the
+   * association.
    *
    * @var string
    */
@@ -81,7 +83,8 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->attachmentId;
   }
   /**
-   * [Output Only] The display name of the security policy of the association.
+   * Output only. [Output Only] The display name of the security policy of the
+   * association.
    *
    * @deprecated
    * @param string $displayName
@@ -147,7 +150,7 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] The security policy ID of the association.
+   * Output only. [Output Only] The security policy ID of the association.
    *
    * @param string $securityPolicyId
    */
@@ -163,7 +166,8 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->securityPolicyId;
   }
   /**
-   * [Output Only] The short name of the security policy of the association.
+   * Output only. [Output Only] The short name of the security policy of the
+   * association.
    *
    * @param string $shortName
    */

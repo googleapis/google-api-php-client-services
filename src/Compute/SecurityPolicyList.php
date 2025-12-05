@@ -29,8 +29,8 @@ class SecurityPolicyList extends \Google\Collection
   protected $itemsType = SecurityPolicy::class;
   protected $itemsDataType = 'array';
   /**
-   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for
-   * listsof securityPolicies
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#securityPolicyList for listsof securityPolicies
    *
    * @var string
    */
@@ -81,8 +81,8 @@ class SecurityPolicyList extends \Google\Collection
     return $this->items;
   }
   /**
-   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for
-   * listsof securityPolicies
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#securityPolicyList for listsof securityPolicies
    *
    * @param string $kind
    */

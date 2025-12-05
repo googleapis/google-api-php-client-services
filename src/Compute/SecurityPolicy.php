@@ -30,7 +30,7 @@ class SecurityPolicy extends \Google\Collection
   protected $associationsType = SecurityPolicyAssociation::class;
   protected $associationsDataType = 'array';
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @var string
    */
@@ -58,15 +58,15 @@ class SecurityPolicy extends \Google\Collection
    */
   public $fingerprint;
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @var string
    */
   public $id;
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyfor
-   * security policies
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#securityPolicyfor security policies
    *
    * @var string
    */
@@ -104,7 +104,7 @@ class SecurityPolicy extends \Google\Collection
    */
   public $name;
   /**
-   * [Output Only] The parent of the security policy.
+   * Output only. [Output Only] The parent of the security policy.
    *
    * @var string
    */
@@ -112,8 +112,8 @@ class SecurityPolicy extends \Google\Collection
   protected $recaptchaOptionsConfigType = SecurityPolicyRecaptchaOptionsConfig::class;
   protected $recaptchaOptionsConfigDataType = '';
   /**
-   * [Output Only] URL of the region where the regional security policy resides.
-   * This field is not applicable to global security policies.
+   * Output only. [Output Only] URL of the region where the regional security
+   * policy resides. This field is not applicable to global security policies.
    *
    * @var string
    */
@@ -121,7 +121,7 @@ class SecurityPolicy extends \Google\Collection
   protected $rulesType = SecurityPolicyRule::class;
   protected $rulesDataType = 'array';
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @var string
    */
@@ -212,7 +212,7 @@ class SecurityPolicy extends \Google\Collection
     return $this->associations;
   }
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
    * @param string $creationTimestamp
    */
@@ -282,8 +282,8 @@ class SecurityPolicy extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is
-   * defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This
+   * identifier is defined by the server.
    *
    * @param string $id
    */
@@ -299,8 +299,8 @@ class SecurityPolicy extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyfor
-   * security policies
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#securityPolicyfor security policies
    *
    * @param string $kind
    */
@@ -378,7 +378,7 @@ class SecurityPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * [Output Only] The parent of the security policy.
+   * Output only. [Output Only] The parent of the security policy.
    *
    * @param string $parent
    */
@@ -408,8 +408,8 @@ class SecurityPolicy extends \Google\Collection
     return $this->recaptchaOptionsConfig;
   }
   /**
-   * [Output Only] URL of the region where the regional security policy resides.
-   * This field is not applicable to global security policies.
+   * Output only. [Output Only] URL of the region where the regional security
+   * policy resides. This field is not applicable to global security policies.
    *
    * @param string $region
    */
@@ -446,7 +446,7 @@ class SecurityPolicy extends \Google\Collection
     return $this->rules;
   }
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    *
    * @param string $selfLink
    */

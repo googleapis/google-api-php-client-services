@@ -36,8 +36,8 @@ class ResourcePolicyWeeklyCycleDayOfWeek extends \Google\Model
    */
   public $day;
   /**
-   * [Output only] Duration of the time window, automatically chosen to be
-   * smallest possible in the given scenario.
+   * Output only. [Output only] Duration of the time window, automatically
+   * chosen to be smallest possible in the given scenario.
    *
    * @var string
    */
@@ -72,8 +72,8 @@ class ResourcePolicyWeeklyCycleDayOfWeek extends \Google\Model
     return $this->day;
   }
   /**
-   * [Output only] Duration of the time window, automatically chosen to be
-   * smallest possible in the given scenario.
+   * Output only. [Output only] Duration of the time window, automatically
+   * chosen to be smallest possible in the given scenario.
    *
    * @param string $duration
    */

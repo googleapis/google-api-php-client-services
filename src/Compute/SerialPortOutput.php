@@ -26,8 +26,8 @@ class SerialPortOutput extends \Google\Model
    */
   public $contents;
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serialPortOutput for
-   * serial port output.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#serialPortOutput for serial port output.
    *
    * @var string
    */
@@ -41,7 +41,7 @@ class SerialPortOutput extends \Google\Model
    */
   public $next;
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @var string
    */
@@ -75,8 +75,8 @@ class SerialPortOutput extends \Google\Model
     return $this->contents;
   }
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serialPortOutput for
-   * serial port output.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#serialPortOutput for serial port output.
    *
    * @param string $kind
    */
@@ -110,7 +110,7 @@ class SerialPortOutput extends \Google\Model
     return $this->next;
   }
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    *
    * @param string $selfLink
    */

@@ -58,8 +58,8 @@ class Project extends \Google\Collection
   public const XPN_PROJECT_STATUS_UNSPECIFIED_XPN_PROJECT_STATUS = 'UNSPECIFIED_XPN_PROJECT_STATUS';
   protected $collection_key = 'quotas';
   /**
-   * [Output Only] The Cloud Armor tier for this project. It can be one of the
-   * following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   * Output only. [Output Only] The Cloud Armor tier for this project. It can be
+   * one of the following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    *
@@ -109,7 +109,8 @@ class Project extends \Google\Collection
    */
   public $id;
   /**
-   * [Output Only] Type of the resource. Always compute#project for projects.
+   * Output only. [Output Only] Type of the resource. Always compute#project for
+   * projects.
    *
    * @var string
    */
@@ -132,8 +133,8 @@ class Project extends \Google\Collection
   protected $usageExportLocationType = UsageExportLocation::class;
   protected $usageExportLocationDataType = '';
   /**
-   * [Output Only] Default internal DNS setting used by VMs running in this
-   * project.
+   * Output only. [Output Only] Default internal DNS setting used by VMs running
+   * in this project.
    *
    * @var string
    */
@@ -148,8 +149,8 @@ class Project extends \Google\Collection
   public $xpnProjectStatus;
 
   /**
-   * [Output Only] The Cloud Armor tier for this project. It can be one of the
-   * following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   * Output only. [Output Only] The Cloud Armor tier for this project. It can be
+   * one of the following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    *
@@ -289,7 +290,8 @@ class Project extends \Google\Collection
     return $this->id;
   }
   /**
-   * [Output Only] Type of the resource. Always compute#project for projects.
+   * Output only. [Output Only] Type of the resource. Always compute#project for
+   * projects.
    *
    * @param string $kind
    */
@@ -371,8 +373,8 @@ class Project extends \Google\Collection
     return $this->usageExportLocation;
   }
   /**
-   * [Output Only] Default internal DNS setting used by VMs running in this
-   * project.
+   * Output only. [Output Only] Default internal DNS setting used by VMs running
+   * in this project.
    *
    * Accepted values: GLOBAL_DEFAULT, UNSPECIFIED_VM_DNS_SETTING, ZONAL_DEFAULT,
    * ZONAL_ONLY
