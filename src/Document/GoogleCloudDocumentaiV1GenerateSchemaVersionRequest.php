@@ -105,7 +105,8 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends \Google\Model
     return $this->generateSchemaVersionParams;
   }
   /**
-   * The set of documents specified inline.
+   * The set of documents specified inline. For each document, its `uri` or
+   * `content` field must be set.
    *
    * @param GoogleCloudDocumentaiV1Documents $inlineDocuments
    */

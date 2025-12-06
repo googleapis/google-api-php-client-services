@@ -39,6 +39,7 @@ class GoogleCloudDocumentaiV1BatchProcessRequest extends \Google\Model
    * Whether human review should be skipped for this request. Default to
    * `false`.
    *
+   * @deprecated
    * @var bool
    */
   public $skipHumanReview;
@@ -115,6 +116,7 @@ class GoogleCloudDocumentaiV1BatchProcessRequest extends \Google\Model
    * Whether human review should be skipped for this request. Default to
    * `false`.
    *
+   * @deprecated
    * @param bool $skipHumanReview
    */
   public function setSkipHumanReview($skipHumanReview)
@@ -122,6 +124,7 @@ class GoogleCloudDocumentaiV1BatchProcessRequest extends \Google\Model
     $this->skipHumanReview = $skipHumanReview;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getSkipHumanReview()
