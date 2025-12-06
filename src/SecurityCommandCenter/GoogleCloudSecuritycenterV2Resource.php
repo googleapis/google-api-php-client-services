@@ -35,6 +35,8 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
    * The cloud provider is Microsoft Azure.
    */
   public const CLOUD_PROVIDER_MICROSOFT_AZURE = 'MICROSOFT_AZURE';
+  protected $applicationType = GoogleCloudSecuritycenterV2ResourceApplication::class;
+  protected $applicationDataType = '';
   protected $awsMetadataType = GoogleCloudSecuritycenterV2AwsMetadata::class;
   protected $awsMetadataDataType = '';
   protected $azureMetadataType = GoogleCloudSecuritycenterV2AzureMetadata::class;
@@ -95,6 +97,22 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
    */
   public $type;
 
+  /**
+   * The App Hub application this resource belongs to.
+   *
+   * @param GoogleCloudSecuritycenterV2ResourceApplication $application
+   */
+  public function setApplication(GoogleCloudSecuritycenterV2ResourceApplication $application)
+  {
+    $this->application = $application;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2ResourceApplication
+   */
+  public function getApplication()
+  {
+    return $this->application;
+  }
   /**
    * The AWS metadata associated with the finding.
    *

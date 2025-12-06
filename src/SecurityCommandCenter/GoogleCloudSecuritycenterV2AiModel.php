@@ -81,6 +81,12 @@ class GoogleCloudSecuritycenterV2AiModel extends \Google\Model
    * @var string
    */
   public $publisher;
+  /**
+   * The purpose of the model, for example, "Inteference" or "Training".
+   *
+   * @var string
+   */
+  public $usageCategory;
 
   /**
    * The platform on which the model is deployed.
@@ -196,6 +202,22 @@ class GoogleCloudSecuritycenterV2AiModel extends \Google\Model
   public function getPublisher()
   {
     return $this->publisher;
+  }
+  /**
+   * The purpose of the model, for example, "Inteference" or "Training".
+   *
+   * @param string $usageCategory
+   */
+  public function setUsageCategory($usageCategory)
+  {
+    $this->usageCategory = $usageCategory;
+  }
+  /**
+   * @return string
+   */
+  public function getUsageCategory()
+  {
+    return $this->usageCategory;
   }
 }
 

@@ -36,6 +36,8 @@ class GoogleCloudSecuritycenterV1Resource extends \Google\Collection
    */
   public const CLOUD_PROVIDER_MICROSOFT_AZURE = 'MICROSOFT_AZURE';
   protected $collection_key = 'folders';
+  protected $applicationType = GoogleCloudSecuritycenterV1ResourceApplication::class;
+  protected $applicationDataType = '';
   protected $awsMetadataType = AwsMetadata::class;
   protected $awsMetadataDataType = '';
   protected $azureMetadataType = AzureMetadata::class;
@@ -128,6 +130,22 @@ class GoogleCloudSecuritycenterV1Resource extends \Google\Collection
    */
   public $type;
 
+  /**
+   * The App Hub application this resource belongs to.
+   *
+   * @param GoogleCloudSecuritycenterV1ResourceApplication $application
+   */
+  public function setApplication(GoogleCloudSecuritycenterV1ResourceApplication $application)
+  {
+    $this->application = $application;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV1ResourceApplication
+   */
+  public function getApplication()
+  {
+    return $this->application;
+  }
   /**
    * The AWS metadata associated with the finding.
    *
