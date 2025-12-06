@@ -117,6 +117,8 @@ class NodePool extends \Google\Collection
   public $name;
   protected $networkConfigType = NodeNetworkConfig::class;
   protected $networkConfigDataType = '';
+  protected $nodeDrainConfigType = NodeDrainConfig::class;
+  protected $nodeDrainConfigDataType = '';
   protected $placementPolicyType = PlacementPolicy::class;
   protected $placementPolicyDataType = '';
   /**
@@ -387,6 +389,22 @@ class NodePool extends \Google\Collection
   public function getNetworkConfig()
   {
     return $this->networkConfig;
+  }
+  /**
+   * Specifies the node drain configuration for this node pool.
+   *
+   * @param NodeDrainConfig $nodeDrainConfig
+   */
+  public function setNodeDrainConfig(NodeDrainConfig $nodeDrainConfig)
+  {
+    $this->nodeDrainConfig = $nodeDrainConfig;
+  }
+  /**
+   * @return NodeDrainConfig
+   */
+  public function getNodeDrainConfig()
+  {
+    return $this->nodeDrainConfig;
   }
   /**
    * Specifies the node placement policy.

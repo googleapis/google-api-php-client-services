@@ -39,6 +39,10 @@ class UpgradeInfoEvent extends \Google\Model
    */
   public const EVENT_TYPE_UPGRADE_LIFECYCLE = 'UPGRADE_LIFECYCLE';
   /**
+   * DISRUPTION_EVENT indicates the event is about the disruption.
+   */
+  public const EVENT_TYPE_DISRUPTION_EVENT = 'DISRUPTION_EVENT';
+  /**
    * Default value. This shouldn't be used.
    */
   public const RESOURCE_TYPE_UPGRADE_RESOURCE_TYPE_UNSPECIFIED = 'UPGRADE_RESOURCE_TYPE_UNSPECIFIED';
@@ -82,6 +86,8 @@ class UpgradeInfoEvent extends \Google\Model
    * @var string
    */
   public $description;
+  protected $disruptionEventType = DisruptionEvent::class;
+  protected $disruptionEventDataType = '';
   /**
    * The time when the operation ended.
    *
@@ -177,6 +183,23 @@ class UpgradeInfoEvent extends \Google\Model
     return $this->description;
   }
   /**
+   * The information about the disruption event. This field is only populated
+   * when event_type is DISRUPTION_EVENT.
+   *
+   * @param DisruptionEvent $disruptionEvent
+   */
+  public function setDisruptionEvent(DisruptionEvent $disruptionEvent)
+  {
+    $this->disruptionEvent = $disruptionEvent;
+  }
+  /**
+   * @return DisruptionEvent
+   */
+  public function getDisruptionEvent()
+  {
+    return $this->disruptionEvent;
+  }
+  /**
    * The time when the operation ended.
    *
    * @param string $endTime
@@ -196,7 +219,7 @@ class UpgradeInfoEvent extends \Google\Model
    * The type of the event.
    *
    * Accepted values: EVENT_TYPE_UNSPECIFIED, END_OF_SUPPORT,
-   * COS_MILESTONE_VERSION_UPDATE, UPGRADE_LIFECYCLE
+   * COS_MILESTONE_VERSION_UPDATE, UPGRADE_LIFECYCLE, DISRUPTION_EVENT
    *
    * @param self::EVENT_TYPE_* $eventType
    */

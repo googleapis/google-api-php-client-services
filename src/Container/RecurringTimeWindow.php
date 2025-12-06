@@ -21,7 +21,7 @@ class RecurringTimeWindow extends \Google\Model
 {
   /**
    * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this
-   * window reccurs. They go on for the span of time between the start and end
+   * window recurs. They go on for the span of time between the start and end
    * time. For example, to have something repeat every weekday, you'd use:
    * `FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR` To repeat some window daily (equivalent
    * to the DailyMaintenanceWindow): `FREQ=DAILY` For the first weekend of every
@@ -45,7 +45,7 @@ class RecurringTimeWindow extends \Google\Model
 
   /**
    * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this
-   * window reccurs. They go on for the span of time between the start and end
+   * window recurs. They go on for the span of time between the start and end
    * time. For example, to have something repeat every weekday, you'd use:
    * `FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR` To repeat some window daily (equivalent
    * to the DailyMaintenanceWindow): `FREQ=DAILY` For the first weekend of every
