@@ -124,6 +124,32 @@ class GoogleCloudApigeeV1ApiProduct extends \Google\Collection
    * @var string
    */
   public $lastModifiedAt;
+  protected $llmOperationGroupType = GoogleCloudApigeeV1LlmOperationGroup::class;
+  protected $llmOperationGroupDataType = '';
+  /**
+   * Optional. Number of LLM tokens permitted per app by this API product for
+   * the specified `llm_quota_interval` and `llm_quota_time_unit`. For example,
+   * an `llm_quota` of 50,000, for an `llm_quota_interval` of 12 and an
+   * `llm_quota_time_unit` of hours means 50,000 llm tokens are allowed to be
+   * used every 12 hours.
+   *
+   * @var string
+   */
+  public $llmQuota;
+  /**
+   * Optional. Time interval over which the number of tokens from LLM responses
+   * is calculated.
+   *
+   * @var string
+   */
+  public $llmQuotaInterval;
+  /**
+   * Optional. Time unit defined for the `llm_quota_interval`. Valid values
+   * include `minute`, `hour`, `day`, or `month`.
+   *
+   * @var string
+   */
+  public $llmQuotaTimeUnit;
   /**
    * Internal name of the API product. Characters you can use in the name are
    * restricted to: `A-Z0-9._\-$ %`. **Note:** The internal name cannot be
@@ -406,6 +432,83 @@ class GoogleCloudApigeeV1ApiProduct extends \Google\Collection
   public function getLastModifiedAt()
   {
     return $this->lastModifiedAt;
+  }
+  /**
+   * Optional. Configuration used to group Apigee proxies with resources, method
+   * types, LLM model and quotas. The resource refers to the resource URI
+   * (excluding the base path). With this grouping, the API product creator is
+   * able to fine-tune and give precise control over which REST methods have
+   * access to specific resources, specific LLM model and how many calls can be
+   * made (using the `quota` setting). **Note:** The `api_resources` setting
+   * cannot be specified for both the API product and llm operation group;
+   * otherwise the call will fail.
+   *
+   * @param GoogleCloudApigeeV1LlmOperationGroup $llmOperationGroup
+   */
+  public function setLlmOperationGroup(GoogleCloudApigeeV1LlmOperationGroup $llmOperationGroup)
+  {
+    $this->llmOperationGroup = $llmOperationGroup;
+  }
+  /**
+   * @return GoogleCloudApigeeV1LlmOperationGroup
+   */
+  public function getLlmOperationGroup()
+  {
+    return $this->llmOperationGroup;
+  }
+  /**
+   * Optional. Number of LLM tokens permitted per app by this API product for
+   * the specified `llm_quota_interval` and `llm_quota_time_unit`. For example,
+   * an `llm_quota` of 50,000, for an `llm_quota_interval` of 12 and an
+   * `llm_quota_time_unit` of hours means 50,000 llm tokens are allowed to be
+   * used every 12 hours.
+   *
+   * @param string $llmQuota
+   */
+  public function setLlmQuota($llmQuota)
+  {
+    $this->llmQuota = $llmQuota;
+  }
+  /**
+   * @return string
+   */
+  public function getLlmQuota()
+  {
+    return $this->llmQuota;
+  }
+  /**
+   * Optional. Time interval over which the number of tokens from LLM responses
+   * is calculated.
+   *
+   * @param string $llmQuotaInterval
+   */
+  public function setLlmQuotaInterval($llmQuotaInterval)
+  {
+    $this->llmQuotaInterval = $llmQuotaInterval;
+  }
+  /**
+   * @return string
+   */
+  public function getLlmQuotaInterval()
+  {
+    return $this->llmQuotaInterval;
+  }
+  /**
+   * Optional. Time unit defined for the `llm_quota_interval`. Valid values
+   * include `minute`, `hour`, `day`, or `month`.
+   *
+   * @param string $llmQuotaTimeUnit
+   */
+  public function setLlmQuotaTimeUnit($llmQuotaTimeUnit)
+  {
+    $this->llmQuotaTimeUnit = $llmQuotaTimeUnit;
+  }
+  /**
+   * @return string
+   */
+  public function getLlmQuotaTimeUnit()
+  {
+    return $this->llmQuotaTimeUnit;
   }
   /**
    * Internal name of the API product. Characters you can use in the name are

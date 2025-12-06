@@ -57,8 +57,8 @@ class OrganizationsEnvironmentsSecurityActions extends \Google\Service\Resource
   /**
    * Delete a SecurityAction. (securityActions.delete)
    *
-   * @param string $name Required. The name of the security monitoring condition
-   * to delete. Format:
+   * @param string $name Required. The name of the security action to delete.
+   * Format:
    * `organizations/{org}/environment/{env}/securityActions/{security_action}`
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty

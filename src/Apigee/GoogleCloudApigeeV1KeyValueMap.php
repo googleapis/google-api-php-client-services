@@ -29,6 +29,13 @@ class GoogleCloudApigeeV1KeyValueMap extends \Google\Model
    */
   public $encrypted;
   /**
+   * Optional. Flag that specifies whether entry values will be masked when
+   * returned.
+   *
+   * @var bool
+   */
+  public $maskedValues;
+  /**
    * Required. ID of the key value map.
    *
    * @var string
@@ -53,6 +60,23 @@ class GoogleCloudApigeeV1KeyValueMap extends \Google\Model
   public function getEncrypted()
   {
     return $this->encrypted;
+  }
+  /**
+   * Optional. Flag that specifies whether entry values will be masked when
+   * returned.
+   *
+   * @param bool $maskedValues
+   */
+  public function setMaskedValues($maskedValues)
+  {
+    $this->maskedValues = $maskedValues;
+  }
+  /**
+   * @return bool
+   */
+  public function getMaskedValues()
+  {
+    return $this->maskedValues;
   }
   /**
    * Required. ID of the key value map.
