@@ -34,8 +34,8 @@ class ProjectsLocationsTrial extends \Google\Service\Resource
   /**
    * Ends the trial for a project (trial.end)
    *
-   * @param string $parent Required. The parent resource where this trial will be
-   * ended.
+   * @param string $parent Required. The parent resource where the trial has been
+   * created. Format: projects/{project}/locations/{location}
    * @param EndTrialRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Trial
