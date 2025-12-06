@@ -71,6 +71,8 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $retryPolicyType = RetryPolicy::class;
+  protected $retryPolicyDataType = '';
   /**
    * Output only. Whether or not this Trigger satisfies the requirements of
    * physical zone separation
@@ -260,6 +262,24 @@ class Trigger extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. The retry policy to use in the Trigger. If unset, event delivery
+   * will be retried for up to 24 hours by default:
+   * https://cloud.google.com/eventarc/docs/retry-events
+   *
+   * @param RetryPolicy $retryPolicy
+   */
+  public function setRetryPolicy(RetryPolicy $retryPolicy)
+  {
+    $this->retryPolicy = $retryPolicy;
+  }
+  /**
+   * @return RetryPolicy
+   */
+  public function getRetryPolicy()
+  {
+    return $this->retryPolicy;
   }
   /**
    * Output only. Whether or not this Trigger satisfies the requirements of
