@@ -67,6 +67,7 @@ class Drive extends \Google\Service
 
   public $about;
   public $accessproposals;
+  public $approvals;
   public $apps;
   public $changes;
   public $channels;
@@ -163,6 +164,49 @@ class Drive extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->approvals = new Drive\Resource\Approvals(
+        $this,
+        $this->serviceName,
+        'approvals',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'files/{fileId}/approvals/{approvalId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'fileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'approvalId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'files/{fileId}/approvals',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'fileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
