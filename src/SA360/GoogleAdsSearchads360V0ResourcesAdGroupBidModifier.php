@@ -21,8 +21,7 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
 {
   /**
    * The modifier for the bid when the criterion matches. The modifier must be
-   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent. Use
-   * 0 to opt out of a Device type.
+   * in the range: 0.1 - 10.0. Use 0 to opt out of a Device type.
    *
    * @var 
    */

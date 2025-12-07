@@ -366,6 +366,12 @@ class GoogleAdsSearchads360V0CommonSegments extends \Google\Collection
    */
   public $geoTargetMetro;
   /**
+   * Resource name of the geo target constant that represents a postal code.
+   *
+   * @var string
+   */
+  public $geoTargetPostalCode;
+  /**
    * Resource name of the geo target constant that represents a region.
    *
    * @var string
@@ -883,6 +889,22 @@ class GoogleAdsSearchads360V0CommonSegments extends \Google\Collection
   public function getGeoTargetMetro()
   {
     return $this->geoTargetMetro;
+  }
+  /**
+   * Resource name of the geo target constant that represents a postal code.
+   *
+   * @param string $geoTargetPostalCode
+   */
+  public function setGeoTargetPostalCode($geoTargetPostalCode)
+  {
+    $this->geoTargetPostalCode = $geoTargetPostalCode;
+  }
+  /**
+   * @return string
+   */
+  public function getGeoTargetPostalCode()
+  {
+    return $this->geoTargetPostalCode;
   }
   /**
    * Resource name of the geo target constant that represents a region.
