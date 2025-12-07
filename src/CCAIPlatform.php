@@ -66,7 +66,17 @@ class CCAIPlatform extends \Google\Service
         'locations',
         [
           'methods' => [
-            'get' => [
+            'generateShifts' => [
+              'path' => 'v1alpha1/{+parent}:generateShifts',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1alpha1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [

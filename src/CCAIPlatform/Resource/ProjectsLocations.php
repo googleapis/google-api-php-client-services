@@ -18,8 +18,10 @@
 namespace Google\Service\CCAIPlatform\Resource;
 
 use Google\Service\CCAIPlatform\ContactCenterQuota;
+use Google\Service\CCAIPlatform\GenerateShiftsRequest;
 use Google\Service\CCAIPlatform\ListLocationsResponse;
 use Google\Service\CCAIPlatform\Location;
+use Google\Service\CCAIPlatform\Operation;
 
 /**
  * The "locations" collection of methods.
@@ -31,6 +33,23 @@ use Google\Service\CCAIPlatform\Location;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Generates shifts constrained by various parameters.
+   * (locations.generateShifts)
+   *
+   * @param string $parent Required. Name of the parent resource associated with
+   * the request. Format: projects/{project}/locations/{location}
+   * @param GenerateShiftsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function generateShifts($parent, GenerateShiftsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateShifts', [$params], Operation::class);
+  }
   /**
    * Gets information about a location. (locations.get)
    *
