@@ -20,6 +20,12 @@ namespace Google\Service\Storage;
 class ComposeRequest extends \Google\Collection
 {
   protected $collection_key = 'sourceObjects';
+  /**
+   * If true, the source objects will be deleted.
+   *
+   * @var bool
+   */
+  public $deleteSourceObjects;
   protected $destinationType = StorageObject::class;
   protected $destinationDataType = '';
   /**
@@ -31,6 +37,22 @@ class ComposeRequest extends \Google\Collection
   protected $sourceObjectsType = ComposeRequestSourceObjects::class;
   protected $sourceObjectsDataType = 'array';
 
+  /**
+   * If true, the source objects will be deleted.
+   *
+   * @param bool $deleteSourceObjects
+   */
+  public function setDeleteSourceObjects($deleteSourceObjects)
+  {
+    $this->deleteSourceObjects = $deleteSourceObjects;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeleteSourceObjects()
+  {
+    return $this->deleteSourceObjects;
+  }
   /**
    * Properties of the resulting object.
    *
