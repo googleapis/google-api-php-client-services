@@ -27,6 +27,15 @@ class GoogleDevtoolsCloudbuildV1MavenArtifact extends \Google\Model
    */
   public $artifactId;
   /**
+   * Optional. Path to a folder containing the files to upload to Artifact
+   * Registry. This can be either an absolute path, e.g. `/workspace/my-
+   * app/target/`, or a relative path from /workspace, e.g. `my-app/target/`.
+   * This field is mutually exclusive with the `path` field.
+   *
+   * @var string
+   */
+  public $deployFolder;
+  /**
    * Maven `groupId` value used when uploading the artifact to Artifact
    * Registry.
    *
@@ -74,6 +83,25 @@ class GoogleDevtoolsCloudbuildV1MavenArtifact extends \Google\Model
   public function getArtifactId()
   {
     return $this->artifactId;
+  }
+  /**
+   * Optional. Path to a folder containing the files to upload to Artifact
+   * Registry. This can be either an absolute path, e.g. `/workspace/my-
+   * app/target/`, or a relative path from /workspace, e.g. `my-app/target/`.
+   * This field is mutually exclusive with the `path` field.
+   *
+   * @param string $deployFolder
+   */
+  public function setDeployFolder($deployFolder)
+  {
+    $this->deployFolder = $deployFolder;
+  }
+  /**
+   * @return string
+   */
+  public function getDeployFolder()
+  {
+    return $this->deployFolder;
   }
   /**
    * Maven `groupId` value used when uploading the artifact to Artifact

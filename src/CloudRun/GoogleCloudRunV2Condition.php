@@ -45,6 +45,10 @@ class GoogleCloudRunV2Condition extends \Google\Model
    */
   public const EXECUTION_REASON_DELETED = 'DELETED';
   /**
+   * A Flex priority execution is waiting for a start time.
+   */
+  public const EXECUTION_REASON_FLEX_START_PENDING = 'FLEX_START_PENDING';
+  /**
    * Default value.
    */
   public const REASON_COMMON_REASON_UNDEFINED = 'COMMON_REASON_UNDEFINED';
@@ -260,7 +264,7 @@ class GoogleCloudRunV2Condition extends \Google\Model
    *
    * Accepted values: EXECUTION_REASON_UNDEFINED,
    * JOB_STATUS_SERVICE_POLLING_ERROR, NON_ZERO_EXIT_CODE, CANCELLED,
-   * CANCELLING, DELETED
+   * CANCELLING, DELETED, FLEX_START_PENDING
    *
    * @param self::EXECUTION_REASON_* $executionReason
    */

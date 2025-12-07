@@ -115,11 +115,7 @@ class GoogleCloudRunV2WorkerPool extends \Google\Collection
    */
   public $creator;
   /**
-   * One or more custom audiences that you want this worker pool to support.
-   * Specify each custom audience as the full URL in a string. The custom
-   * audiences are encoded in the token and used to authenticate requests. For
-   * more information, see https://cloud.google.com/run/docs/configuring/custom-
-   * audiences.
+   * Not supported, and ignored by Cloud Run.
    *
    * @var string[]
    */
@@ -270,6 +266,13 @@ class GoogleCloudRunV2WorkerPool extends \Google\Collection
   protected $terminalConditionType = GoogleCloudRunV2Condition::class;
   protected $terminalConditionDataType = '';
   /**
+   * Output only. Indicates whether Cloud Run Threat Detection monitoring is
+   * enabled for the parent project of this worker pool.
+   *
+   * @var bool
+   */
+  public $threatDetectionEnabled;
+  /**
    * Output only. Server assigned unique identifier for the trigger. The value
    * is a UUID4 string and guaranteed to remain unchanged until the resource is
    * deleted.
@@ -407,11 +410,7 @@ class GoogleCloudRunV2WorkerPool extends \Google\Collection
     return $this->creator;
   }
   /**
-   * One or more custom audiences that you want this worker pool to support.
-   * Specify each custom audience as the full URL in a string. The custom
-   * audiences are encoded in the token and used to authenticate requests. For
-   * more information, see https://cloud.google.com/run/docs/configuring/custom-
-   * audiences.
+   * Not supported, and ignored by Cloud Run.
    *
    * @param string[] $customAudiences
    */
@@ -791,6 +790,23 @@ class GoogleCloudRunV2WorkerPool extends \Google\Collection
   public function getTerminalCondition()
   {
     return $this->terminalCondition;
+  }
+  /**
+   * Output only. Indicates whether Cloud Run Threat Detection monitoring is
+   * enabled for the parent project of this worker pool.
+   *
+   * @param bool $threatDetectionEnabled
+   */
+  public function setThreatDetectionEnabled($threatDetectionEnabled)
+  {
+    $this->threatDetectionEnabled = $threatDetectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getThreatDetectionEnabled()
+  {
+    return $this->threatDetectionEnabled;
   }
   /**
    * Output only. Server assigned unique identifier for the trigger. The value
