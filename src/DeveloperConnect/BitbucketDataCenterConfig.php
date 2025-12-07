@@ -47,8 +47,9 @@ class BitbucketDataCenterConfig extends \Google\Model
   public $sslCaCertificate;
   /**
    * Required. Immutable. SecretManager resource containing the webhook secret
-   * used to verify webhook events, formatted as `projects/secrets/versions`.
-   * This is used to validate webhooks.
+   * used to verify webhook events, formatted as `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in
+   * that location). This is used to validate webhooks.
    *
    * @var string
    */
@@ -161,8 +162,9 @@ class BitbucketDataCenterConfig extends \Google\Model
   }
   /**
    * Required. Immutable. SecretManager resource containing the webhook secret
-   * used to verify webhook events, formatted as `projects/secrets/versions`.
-   * This is used to validate webhooks.
+   * used to verify webhook events, formatted as `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in
+   * that location). This is used to validate webhooks.
    *
    * @param string $webhookSecretSecretVersion
    */

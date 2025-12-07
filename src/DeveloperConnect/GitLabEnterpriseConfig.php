@@ -47,8 +47,9 @@ class GitLabEnterpriseConfig extends \Google\Model
   public $sslCaCertificate;
   /**
    * Required. Immutable. SecretManager resource containing the webhook secret
-   * of a GitLab project, formatted as `projects/secrets/versions`. This is used
-   * to validate webhooks.
+   * of a GitLab project, formatted as `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in
+   * that location). This is used to validate webhooks.
    *
    * @var string
    */
@@ -164,8 +165,9 @@ class GitLabEnterpriseConfig extends \Google\Model
   }
   /**
    * Required. Immutable. SecretManager resource containing the webhook secret
-   * of a GitLab project, formatted as `projects/secrets/versions`. This is used
-   * to validate webhooks.
+   * of a GitLab project, formatted as `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in
+   * that location). This is used to validate webhooks.
    *
    * @param string $webhookSecretSecretVersion
    */

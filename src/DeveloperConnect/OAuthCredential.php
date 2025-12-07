@@ -21,7 +21,9 @@ class OAuthCredential extends \Google\Model
 {
   /**
    * Required. A SecretManager resource containing the OAuth token that
-   * authorizes the connection. Format: `projects/secrets/versions`.
+   * authorizes the connection. Format: `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in
+   * that location).
    *
    * @var string
    */
@@ -35,7 +37,9 @@ class OAuthCredential extends \Google\Model
 
   /**
    * Required. A SecretManager resource containing the OAuth token that
-   * authorizes the connection. Format: `projects/secrets/versions`.
+   * authorizes the connection. Format: `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in
+   * that location).
    *
    * @param string $oauthTokenSecretVersion
    */

@@ -22,7 +22,8 @@ class UserCredential extends \Google\Model
   /**
    * Required. A SecretManager resource containing the user token that
    * authorizes the Developer Connect connection. Format:
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if
+   * regional secrets are supported in that location).
    *
    * @var string
    */
@@ -37,7 +38,8 @@ class UserCredential extends \Google\Model
   /**
    * Required. A SecretManager resource containing the user token that
    * authorizes the Developer Connect connection. Format:
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if
+   * regional secrets are supported in that location).
    *
    * @param string $userTokenSecretVersion
    */
