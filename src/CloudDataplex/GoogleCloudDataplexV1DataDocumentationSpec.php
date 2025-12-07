@@ -19,6 +19,29 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataDocumentationSpec extends \Google\Model
 {
+  /**
+   * Optional. Whether to publish result to Dataplex Catalog.
+   *
+   * @var bool
+   */
+  public $catalogPublishingEnabled;
+
+  /**
+   * Optional. Whether to publish result to Dataplex Catalog.
+   *
+   * @param bool $catalogPublishingEnabled
+   */
+  public function setCatalogPublishingEnabled($catalogPublishingEnabled)
+  {
+    $this->catalogPublishingEnabled = $catalogPublishingEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getCatalogPublishingEnabled()
+  {
+    return $this->catalogPublishingEnabled;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
