@@ -49,7 +49,9 @@ class PasswordValidationPolicy extends \Google\Model
    */
   public $disallowUsernameSubstring;
   /**
-   * Whether the password policy is enabled or not.
+   * Whether to enable the password policy or not. When enabled, passwords must
+   * meet complexity requirements. Keep this policy enabled to help prevent
+   * unauthorized access. Disabling this policy allows weak passwords.
    *
    * @var bool
    */
@@ -128,7 +130,9 @@ class PasswordValidationPolicy extends \Google\Model
     return $this->disallowUsernameSubstring;
   }
   /**
-   * Whether the password policy is enabled or not.
+   * Whether to enable the password policy or not. When enabled, passwords must
+   * meet complexity requirements. Keep this policy enabled to help prevent
+   * unauthorized access. Disabling this policy allows weak passwords.
    *
    * @param bool $enablePasswordPolicy
    */

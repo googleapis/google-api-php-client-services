@@ -503,6 +503,21 @@ class SQLAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'addEntraIdCertificate' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/addEntraIdCertificate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'addServerCa' => [
               'path' => 'v1/projects/{project}/instances/{instance}/addServerCa',
               'httpMethod' => 'POST',

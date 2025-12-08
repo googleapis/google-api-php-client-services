@@ -59,7 +59,7 @@ class PoolNodeConfig extends \Google\Collection
    * repaired. The database might be unavailable.
    */
   public const STATE_REPAIRING = 'REPAIRING';
-  protected $collection_key = 'ipAddresses';
+  protected $collection_key = 'pscAutoConnections';
   /**
    * Output only. The DNS name of the read pool node.
    *
@@ -83,6 +83,15 @@ class PoolNodeConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $pscAutoConnectionsType = PscAutoConnectionConfig::class;
+  protected $pscAutoConnectionsDataType = 'array';
+  /**
+   * Output only. The Private Service Connect (PSC) service attachment of the
+   * read pool node.
+   *
+   * @var string
+   */
+  public $pscServiceAttachmentLink;
   /**
    * Output only. The current state of the read pool node.
    *
@@ -171,6 +180,41 @@ class PoolNodeConfig extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The list of settings for requested automatically-setup Private
+   * Service Connect (PSC) consumer endpoints that can be used to connect to
+   * this read pool node.
+   *
+   * @param PscAutoConnectionConfig[] $pscAutoConnections
+   */
+  public function setPscAutoConnections($pscAutoConnections)
+  {
+    $this->pscAutoConnections = $pscAutoConnections;
+  }
+  /**
+   * @return PscAutoConnectionConfig[]
+   */
+  public function getPscAutoConnections()
+  {
+    return $this->pscAutoConnections;
+  }
+  /**
+   * Output only. The Private Service Connect (PSC) service attachment of the
+   * read pool node.
+   *
+   * @param string $pscServiceAttachmentLink
+   */
+  public function setPscServiceAttachmentLink($pscServiceAttachmentLink)
+  {
+    $this->pscServiceAttachmentLink = $pscServiceAttachmentLink;
+  }
+  /**
+   * @return string
+   */
+  public function getPscServiceAttachmentLink()
+  {
+    return $this->pscServiceAttachmentLink;
   }
   /**
    * Output only. The current state of the read pool node.

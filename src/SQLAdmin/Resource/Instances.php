@@ -158,6 +158,25 @@ class Instances extends \Google\Service\Resource
     return $this->call('acquireSsrsLease', [$params], SqlInstancesAcquireSsrsLeaseResponse::class);
   }
   /**
+   * Adds a new Entra ID certificate for the specified instance. If an Entra ID
+   * certificate was previously added but never used in a certificate rotation,
+   * this operation replaces that version. (instances.addEntraIdCertificate)
+   *
+   * @param string $project Required. Project ID of the project that contains the
+   * instance.
+   * @param string $instance Required. Cloud SQL instance ID. This does not
+   * include the project ID.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function addEntraIdCertificate($project, $instance, $optParams = [])
+  {
+    $params = ['project' => $project, 'instance' => $instance];
+    $params = array_merge($params, $optParams);
+    return $this->call('addEntraIdCertificate', [$params], Operation::class);
+  }
+  /**
    * Adds a new trusted Certificate Authority (CA) version for the specified
    * instance. Required to prepare for a certificate rotation. If a CA version was
    * previously added but never used in a certificate rotation, this operation

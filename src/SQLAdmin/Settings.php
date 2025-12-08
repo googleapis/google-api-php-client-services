@@ -311,6 +311,8 @@ class Settings extends \Google\Collection
   protected $maintenanceWindowDataType = '';
   protected $passwordValidationPolicyType = PasswordValidationPolicy::class;
   protected $passwordValidationPolicyDataType = '';
+  protected $performanceCaptureConfigType = PerformanceCaptureConfig::class;
+  protected $performanceCaptureConfigDataType = '';
   /**
    * The pricing plan for this instance. This can be either `PER_USE` or
    * `PACKAGE`. Only `PER_USE` is supported for Second Generation instances.
@@ -960,6 +962,23 @@ class Settings extends \Google\Collection
   public function getPasswordValidationPolicy()
   {
     return $this->passwordValidationPolicy;
+  }
+  /**
+   * Optional. Configuration for Performance Capture, provides diagnostic
+   * metrics during high load situations.
+   *
+   * @param PerformanceCaptureConfig $performanceCaptureConfig
+   */
+  public function setPerformanceCaptureConfig(PerformanceCaptureConfig $performanceCaptureConfig)
+  {
+    $this->performanceCaptureConfig = $performanceCaptureConfig;
+  }
+  /**
+   * @return PerformanceCaptureConfig
+   */
+  public function getPerformanceCaptureConfig()
+  {
+    return $this->performanceCaptureConfig;
   }
   /**
    * The pricing plan for this instance. This can be either `PER_USE` or
