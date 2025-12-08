@@ -71,6 +71,8 @@ class WorkflowInvocation extends \Google\Model
    * @var string
    */
   public $name;
+  protected $privateResourceMetadataType = PrivateResourceMetadata::class;
+  protected $privateResourceMetadataDataType = '';
   /**
    * Output only. The resolved compilation result that was used to create this
    * invocation. Will be in the format
@@ -191,6 +193,24 @@ class WorkflowInvocation extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped.
+   * `WorkflowInvocation` resource is `user_scoped` only if it is sourced from a
+   * compilation result and the compilation result is user-scoped.
+   *
+   * @param PrivateResourceMetadata $privateResourceMetadata
+   */
+  public function setPrivateResourceMetadata(PrivateResourceMetadata $privateResourceMetadata)
+  {
+    $this->privateResourceMetadata = $privateResourceMetadata;
+  }
+  /**
+   * @return PrivateResourceMetadata
+   */
+  public function getPrivateResourceMetadata()
+  {
+    return $this->privateResourceMetadata;
   }
   /**
    * Output only. The resolved compilation result that was used to create this

@@ -60,6 +60,8 @@ class CompilationResult extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $privateResourceMetadataType = PrivateResourceMetadata::class;
+  protected $privateResourceMetadataDataType = '';
   /**
    * Immutable. The name of the release config to compile. Must be in the format
    * `projects/locations/repositories/releaseConfigs`.
@@ -214,6 +216,24 @@ class CompilationResult extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped.
+   * `CompilationResult` resource is `user_scoped` only if it is sourced from a
+   * workspace.
+   *
+   * @param PrivateResourceMetadata $privateResourceMetadata
+   */
+  public function setPrivateResourceMetadata(PrivateResourceMetadata $privateResourceMetadata)
+  {
+    $this->privateResourceMetadata = $privateResourceMetadata;
+  }
+  /**
+   * @return PrivateResourceMetadata
+   */
+  public function getPrivateResourceMetadata()
+  {
+    return $this->privateResourceMetadata;
   }
   /**
    * Immutable. The name of the release config to compile. Must be in the format

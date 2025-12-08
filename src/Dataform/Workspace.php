@@ -41,6 +41,8 @@ class Workspace extends \Google\Model
    * @var string
    */
   public $name;
+  protected $privateResourceMetadataType = PrivateResourceMetadata::class;
+  protected $privateResourceMetadataDataType = '';
 
   /**
    * Output only. The timestamp of when the workspace was created.
@@ -108,6 +110,23 @@ class Workspace extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped. For
+   * `Workspace` resources, the `user_scoped` field is always `true`.
+   *
+   * @param PrivateResourceMetadata $privateResourceMetadata
+   */
+  public function setPrivateResourceMetadata(PrivateResourceMetadata $privateResourceMetadata)
+  {
+    $this->privateResourceMetadata = $privateResourceMetadata;
+  }
+  /**
+   * @return PrivateResourceMetadata
+   */
+  public function getPrivateResourceMetadata()
+  {
+    return $this->privateResourceMetadata;
   }
 }
 
