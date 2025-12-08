@@ -192,6 +192,8 @@ class Instance extends \Google\Collection
   protected $maintenanceEventsDataType = 'array';
   protected $maintenancePolicyType = MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
+  protected $monitoringConfigType = MonitoringConfig::class;
+  protected $monitoringConfigDataType = '';
   /**
    * Output only. The name of this instance is in the form of
    * projects/{project}/locations/{location}/instances/{instance}.
@@ -643,6 +645,22 @@ class Instance extends \Google\Collection
   public function getMaintenancePolicy()
   {
     return $this->maintenancePolicy;
+  }
+  /**
+   * Optional. The monitoring configuration for this instance.
+   *
+   * @param MonitoringConfig $monitoringConfig
+   */
+  public function setMonitoringConfig(MonitoringConfig $monitoringConfig)
+  {
+    $this->monitoringConfig = $monitoringConfig;
+  }
+  /**
+   * @return MonitoringConfig
+   */
+  public function getMonitoringConfig()
+  {
+    return $this->monitoringConfig;
   }
   /**
    * Output only. The name of this instance is in the form of
