@@ -131,6 +131,20 @@ class GceInstance extends \Google\Collection
   protected $shieldedInstanceConfigType = GceShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
   /**
+   * Optional. Link to the startup script stored in Cloud Storage. This script
+   * will be run on the host workstation VM when the VM is created. The URI must
+   * be of the form gs://{bucket-name}/{object-name}. If specifying a startup
+   * script, the service account must have [Permission to access the bucket and
+   * script file in Cloud Storage](https://cloud.google.com/storage/docs/access-
+   * control/iam-permissions). Otherwise, the script must be publicly
+   * accessible. Note that the service regularly updates the OS version used,
+   * and it is the responsibility of the user to ensure the script stays
+   * compatible with the OS version.
+   *
+   * @var string
+   */
+  public $startupScriptUri;
+  /**
    * Optional. Network tags to add to the Compute Engine VMs backing the
    * workstations. This option applies [network
    * tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
@@ -411,6 +425,30 @@ class GceInstance extends \Google\Collection
   public function getShieldedInstanceConfig()
   {
     return $this->shieldedInstanceConfig;
+  }
+  /**
+   * Optional. Link to the startup script stored in Cloud Storage. This script
+   * will be run on the host workstation VM when the VM is created. The URI must
+   * be of the form gs://{bucket-name}/{object-name}. If specifying a startup
+   * script, the service account must have [Permission to access the bucket and
+   * script file in Cloud Storage](https://cloud.google.com/storage/docs/access-
+   * control/iam-permissions). Otherwise, the script must be publicly
+   * accessible. Note that the service regularly updates the OS version used,
+   * and it is the responsibility of the user to ensure the script stays
+   * compatible with the OS version.
+   *
+   * @param string $startupScriptUri
+   */
+  public function setStartupScriptUri($startupScriptUri)
+  {
+    $this->startupScriptUri = $startupScriptUri;
+  }
+  /**
+   * @return string
+   */
+  public function getStartupScriptUri()
+  {
+    return $this->startupScriptUri;
   }
   /**
    * Optional. Network tags to add to the Compute Engine VMs backing the

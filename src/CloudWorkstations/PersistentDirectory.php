@@ -19,6 +19,8 @@ namespace Google\Service\CloudWorkstations;
 
 class PersistentDirectory extends \Google\Model
 {
+  protected $gceHdType = GceHyperdiskBalancedHighAvailability::class;
+  protected $gceHdDataType = '';
   protected $gcePdType = GceRegionalPersistentDisk::class;
   protected $gcePdDataType = '';
   /**
@@ -28,6 +30,23 @@ class PersistentDirectory extends \Google\Model
    */
   public $mountPath;
 
+  /**
+   * A PersistentDirectory backed by a Compute Engine hyperdisk high
+   * availability disk.
+   *
+   * @param GceHyperdiskBalancedHighAvailability $gceHd
+   */
+  public function setGceHd(GceHyperdiskBalancedHighAvailability $gceHd)
+  {
+    $this->gceHd = $gceHd;
+  }
+  /**
+   * @return GceHyperdiskBalancedHighAvailability
+   */
+  public function getGceHd()
+  {
+    return $this->gceHd;
+  }
   /**
    * A PersistentDirectory backed by a Compute Engine persistent disk.
    *
