@@ -52,6 +52,10 @@ class BootDisk extends \Google\Model
    */
   public const DISK_TYPE_PD_EXTREME = 'PD_EXTREME';
   /**
+   * Hyperdisk Balanced persistent disk type.
+   */
+  public const DISK_TYPE_HYPERDISK_BALANCED = 'HYPERDISK_BALANCED';
+  /**
    * Optional. Input only. Disk encryption method used on the boot and data
    * disks, defaults to GMEK.
    *
@@ -123,7 +127,7 @@ class BootDisk extends \Google\Model
    * Optional. Indicates the type of the disk.
    *
    * Accepted values: DISK_TYPE_UNSPECIFIED, PD_STANDARD, PD_SSD, PD_BALANCED,
-   * PD_EXTREME
+   * PD_EXTREME, HYPERDISK_BALANCED
    *
    * @param self::DISK_TYPE_* $diskType
    */

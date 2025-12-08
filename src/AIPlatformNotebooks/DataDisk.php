@@ -51,6 +51,10 @@ class DataDisk extends \Google\Collection
    * Extreme persistent disk type.
    */
   public const DISK_TYPE_PD_EXTREME = 'PD_EXTREME';
+  /**
+   * Hyperdisk Balanced persistent disk type.
+   */
+  public const DISK_TYPE_HYPERDISK_BALANCED = 'HYPERDISK_BALANCED';
   protected $collection_key = 'resourcePolicies';
   /**
    * Optional. Input only. Disk encryption method used on the boot and data
@@ -128,7 +132,7 @@ class DataDisk extends \Google\Collection
    * Optional. Input only. Indicates the type of the disk.
    *
    * Accepted values: DISK_TYPE_UNSPECIFIED, PD_STANDARD, PD_SSD, PD_BALANCED,
-   * PD_EXTREME
+   * PD_EXTREME, HYPERDISK_BALANCED
    *
    * @param self::DISK_TYPE_* $diskType
    */

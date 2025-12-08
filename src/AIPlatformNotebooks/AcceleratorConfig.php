@@ -60,6 +60,10 @@ class AcceleratorConfig extends \Google\Model
    */
   public const TYPE_NVIDIA_H100_MEGA_80GB = 'NVIDIA_H100_MEGA_80GB';
   /**
+   * Accelerator type is Nvidia Tesla H200 - 141GB.
+   */
+  public const TYPE_NVIDIA_H200_141GB = 'NVIDIA_H200_141GB';
+  /**
    * Accelerator type is NVIDIA Tesla T4 Virtual Workstations.
    */
   public const TYPE_NVIDIA_TESLA_T4_VWS = 'NVIDIA_TESLA_T4_VWS';
@@ -71,6 +75,10 @@ class AcceleratorConfig extends \Google\Model
    * Accelerator type is NVIDIA Tesla P4 Virtual Workstations.
    */
   public const TYPE_NVIDIA_TESLA_P4_VWS = 'NVIDIA_TESLA_P4_VWS';
+  /**
+   * Accelerator type is NVIDIA B200.
+   */
+  public const TYPE_NVIDIA_B200 = 'NVIDIA_B200';
   /**
    * Optional. Count of cores of this accelerator.
    *
@@ -106,7 +114,8 @@ class AcceleratorConfig extends \Google\Model
    * Accepted values: ACCELERATOR_TYPE_UNSPECIFIED, NVIDIA_TESLA_P100,
    * NVIDIA_TESLA_V100, NVIDIA_TESLA_P4, NVIDIA_TESLA_T4, NVIDIA_TESLA_A100,
    * NVIDIA_A100_80GB, NVIDIA_L4, NVIDIA_H100_80GB, NVIDIA_H100_MEGA_80GB,
-   * NVIDIA_TESLA_T4_VWS, NVIDIA_TESLA_P100_VWS, NVIDIA_TESLA_P4_VWS
+   * NVIDIA_H200_141GB, NVIDIA_TESLA_T4_VWS, NVIDIA_TESLA_P100_VWS,
+   * NVIDIA_TESLA_P4_VWS, NVIDIA_B200
    *
    * @param self::TYPE_* $type
    */
