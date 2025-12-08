@@ -32,6 +32,18 @@ class ProgressCounter extends \Google\Model
    */
   public $pending;
   /**
+   * The number of secondary units that failed in the operation.
+   *
+   * @var string
+   */
+  public $secondaryFailure;
+  /**
+   * The number of secondary units that succeeded in the operation.
+   *
+   * @var string
+   */
+  public $secondarySuccess;
+  /**
    * The number of units that succeeded in the operation.
    *
    * @var string
@@ -69,6 +81,38 @@ class ProgressCounter extends \Google\Model
   public function getPending()
   {
     return $this->pending;
+  }
+  /**
+   * The number of secondary units that failed in the operation.
+   *
+   * @param string $secondaryFailure
+   */
+  public function setSecondaryFailure($secondaryFailure)
+  {
+    $this->secondaryFailure = $secondaryFailure;
+  }
+  /**
+   * @return string
+   */
+  public function getSecondaryFailure()
+  {
+    return $this->secondaryFailure;
+  }
+  /**
+   * The number of secondary units that succeeded in the operation.
+   *
+   * @param string $secondarySuccess
+   */
+  public function setSecondarySuccess($secondarySuccess)
+  {
+    $this->secondarySuccess = $secondarySuccess;
+  }
+  /**
+   * @return string
+   */
+  public function getSecondarySuccess()
+  {
+    return $this->secondarySuccess;
   }
   /**
    * The number of units that succeeded in the operation.

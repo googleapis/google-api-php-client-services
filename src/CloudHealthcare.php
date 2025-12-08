@@ -1940,6 +1940,10 @@ class CloudHealthcare extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'resourceType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'search-type' => [
               'path' => 'v1/{+parent}/fhir/{resourceType}/_search',

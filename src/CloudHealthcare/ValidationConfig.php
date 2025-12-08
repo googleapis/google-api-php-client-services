@@ -73,9 +73,10 @@ class ValidationConfig extends \Google\Collection
    * Healthcare API does not currently enforce all of the rules in a
    * StructureDefinition. The following rules are supported: - min/max -
    * minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple
-   * types - slicing, when using "value" as the discriminator type When a URL
-   * cannot be resolved (for example, in a type assertion), the server does not
-   * return an error.
+   * types - slicing, when using "value" as the discriminator type - FHIRPath
+   * constraints (only when `enable_fhirpath_profile_validation` is true) When a
+   * URL cannot be resolved (for example, in a type assertion), the server does
+   * not return an error.
    *
    * @var string[]
    */
@@ -174,9 +175,10 @@ class ValidationConfig extends \Google\Collection
    * Healthcare API does not currently enforce all of the rules in a
    * StructureDefinition. The following rules are supported: - min/max -
    * minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple
-   * types - slicing, when using "value" as the discriminator type When a URL
-   * cannot be resolved (for example, in a type assertion), the server does not
-   * return an error.
+   * types - slicing, when using "value" as the discriminator type - FHIRPath
+   * constraints (only when `enable_fhirpath_profile_validation` is true) When a
+   * URL cannot be resolved (for example, in a type assertion), the server does
+   * not return an error.
    *
    * @param string[] $enabledImplementationGuides
    */

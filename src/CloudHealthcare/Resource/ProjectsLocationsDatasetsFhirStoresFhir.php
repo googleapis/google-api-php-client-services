@@ -19,7 +19,6 @@ namespace Google\Service\CloudHealthcare\Resource;
 
 use Google\Service\CloudHealthcare\HealthcareEmpty;
 use Google\Service\CloudHealthcare\HttpBody;
-use Google\Service\CloudHealthcare\SearchResourcesRequest;
 
 /**
  * The "fhir" collection of methods.
@@ -353,7 +352,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * Bulk exports all resources from the FHIR store to the specified destination.
    * Implements the FHIR implementation guide [system level
    * $export](https://build.fhir.org/ig/HL7/bulk-data/export.html#endpoint---
-   * system-level-export. The following headers must be set in the request: *
+   * system-level-export). The following headers must be set in the request: *
    * `Accept`: specifies the format of the `OperationOutcome` response. Only
    * `application/fhir+json` is supported. * `Prefer`: specifies whether the
    * response is immediate or asynchronous. Must be to `respond-async` because
@@ -857,12 +856,19 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    *
    * @param string $parent Required. Name of the FHIR store to retrieve resources
    * from.
-   * @param SearchResourcesRequest $postBody
+   * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string resourceType Optional. The FHIR resource type to search,
+   * such as Patient or Observation. For a complete list, see the FHIR Resource
+   * Index ([DSTU2](https://hl7.org/fhir/DSTU2/resourcelist.html),
+   * [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
+   * [R4](https://hl7.org/fhir/R4/resourcelist.html)),
+   * [R5](https://hl7.org/fhir/R5/resourcelist.html)).
    * @return HttpBody
    * @throws \Google\Service\Exception
    */
-  public function search($parent, SearchResourcesRequest $postBody, $optParams = [])
+  public function search($parent, HttpBody $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
@@ -944,12 +950,12 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
    * [R4](https://hl7.org/fhir/R4/resourcelist.html)),
    * [R5](https://hl7.org/fhir/R5/resourcelist.html)).
-   * @param SearchResourcesRequest $postBody
+   * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
    * @throws \Google\Service\Exception
    */
-  public function searchType($parent, $resourceType, SearchResourcesRequest $postBody, $optParams = [])
+  public function searchType($parent, $resourceType, HttpBody $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'resourceType' => $resourceType, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);

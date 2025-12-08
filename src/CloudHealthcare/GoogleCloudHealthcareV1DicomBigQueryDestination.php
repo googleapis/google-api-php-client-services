@@ -46,6 +46,17 @@ class GoogleCloudHealthcareV1DicomBigQueryDestination extends \Google\Model
    */
   public $force;
   /**
+   * Optional. If true, the source store name will be included as a column in
+   * the BigQuery schema.
+   *
+   * @var bool
+   */
+  public $includeSourceStore;
+  protected $schemaFlattenedType = SchemaFlattened::class;
+  protected $schemaFlattenedDataType = '';
+  protected $schemaJsonType = SchemaJSON::class;
+  protected $schemaJsonDataType = '';
+  /**
    * Optional. BigQuery URI to a table, up to 2000 characters long, in the
    * format `bq://projectId.bqDatasetId.tableId`
    *
@@ -79,6 +90,58 @@ class GoogleCloudHealthcareV1DicomBigQueryDestination extends \Google\Model
   public function getForce()
   {
     return $this->force;
+  }
+  /**
+   * Optional. If true, the source store name will be included as a column in
+   * the BigQuery schema.
+   *
+   * @param bool $includeSourceStore
+   */
+  public function setIncludeSourceStore($includeSourceStore)
+  {
+    $this->includeSourceStore = $includeSourceStore;
+  }
+  /**
+   * @return bool
+   */
+  public function getIncludeSourceStore()
+  {
+    return $this->includeSourceStore;
+  }
+  /**
+   * Optional. Setting this field will use flattened DICOM instances schema for
+   * the BigQuery table. The flattened schema will have one column for each
+   * DICOM tag.
+   *
+   * @param SchemaFlattened $schemaFlattened
+   */
+  public function setSchemaFlattened(SchemaFlattened $schemaFlattened)
+  {
+    $this->schemaFlattened = $schemaFlattened;
+  }
+  /**
+   * @return SchemaFlattened
+   */
+  public function getSchemaFlattened()
+  {
+    return $this->schemaFlattened;
+  }
+  /**
+   * Optional. Setting this field will store all the DICOM tags as a JSON type
+   * in a single column.
+   *
+   * @param SchemaJSON $schemaJson
+   */
+  public function setSchemaJson(SchemaJSON $schemaJson)
+  {
+    $this->schemaJson = $schemaJson;
+  }
+  /**
+   * @return SchemaJSON
+   */
+  public function getSchemaJson()
+  {
+    return $this->schemaJson;
   }
   /**
    * Optional. BigQuery URI to a table, up to 2000 characters long, in the
