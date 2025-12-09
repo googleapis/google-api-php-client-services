@@ -33,6 +33,13 @@ class LocationMetadata extends \Google\Model
    * @var bool
    */
   public $hsmAvailable;
+  /**
+   * Indicates whether CryptoKeys with protection_level HSM_SINGLE_TENANT can be
+   * created in this location.
+   *
+   * @var bool
+   */
+  public $hsmSingleTenantAvailable;
 
   /**
    * Indicates whether CryptoKeys with protection_level EXTERNAL can be created
@@ -67,6 +74,23 @@ class LocationMetadata extends \Google\Model
   public function getHsmAvailable()
   {
     return $this->hsmAvailable;
+  }
+  /**
+   * Indicates whether CryptoKeys with protection_level HSM_SINGLE_TENANT can be
+   * created in this location.
+   *
+   * @param bool $hsmSingleTenantAvailable
+   */
+  public function setHsmSingleTenantAvailable($hsmSingleTenantAvailable)
+  {
+    $this->hsmSingleTenantAvailable = $hsmSingleTenantAvailable;
+  }
+  /**
+   * @return bool
+   */
+  public function getHsmSingleTenantAvailable()
+  {
+    return $this->hsmSingleTenantAvailable;
   }
 }
 

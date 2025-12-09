@@ -40,6 +40,10 @@ class RawEncryptResponse extends \Google\Model
    */
   public const PROTECTION_LEVEL_EXTERNAL_VPC = 'EXTERNAL_VPC';
   /**
+   * Crypto operations are performed in a single-tenant HSM.
+   */
+  public const PROTECTION_LEVEL_HSM_SINGLE_TENANT = 'HSM_SINGLE_TENANT';
+  /**
    * The encrypted data. In the case of AES-GCM, the authentication tag is the
    * tag_length bytes at the end of this field.
    *
@@ -249,7 +253,7 @@ class RawEncryptResponse extends \Google\Model
    * The ProtectionLevel of the CryptoKeyVersion used in encryption.
    *
    * Accepted values: PROTECTION_LEVEL_UNSPECIFIED, SOFTWARE, HSM, EXTERNAL,
-   * EXTERNAL_VPC
+   * EXTERNAL_VPC, HSM_SINGLE_TENANT
    *
    * @param self::PROTECTION_LEVEL_* $protectionLevel
    */

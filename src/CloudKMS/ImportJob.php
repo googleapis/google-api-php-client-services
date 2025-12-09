@@ -94,6 +94,10 @@ class ImportJob extends \Google\Model
    */
   public const PROTECTION_LEVEL_EXTERNAL_VPC = 'EXTERNAL_VPC';
   /**
+   * Crypto operations are performed in a single-tenant HSM.
+   */
+  public const PROTECTION_LEVEL_HSM_SINGLE_TENANT = 'HSM_SINGLE_TENANT';
+  /**
    * Not specified.
    */
   public const STATE_IMPORT_JOB_STATE_UNSPECIFIED = 'IMPORT_JOB_STATE_UNSPECIFIED';
@@ -120,6 +124,16 @@ class ImportJob extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * Immutable. The resource name of the backend environment where the key
+   * material for the wrapping key resides and where all related cryptographic
+   * operations are performed. Currently, this field is only populated for keys
+   * stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and may
+   * apply to additional ProtectionLevels in the future.
+   *
+   * @var string
+   */
+  public $cryptoKeyBackend;
   /**
    * Output only. The time this ImportJob expired. Only present if state is
    * EXPIRED.
@@ -206,6 +220,26 @@ class ImportJob extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Immutable. The resource name of the backend environment where the key
+   * material for the wrapping key resides and where all related cryptographic
+   * operations are performed. Currently, this field is only populated for keys
+   * stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and may
+   * apply to additional ProtectionLevels in the future.
+   *
+   * @param string $cryptoKeyBackend
+   */
+  public function setCryptoKeyBackend($cryptoKeyBackend)
+  {
+    $this->cryptoKeyBackend = $cryptoKeyBackend;
+  }
+  /**
+   * @return string
+   */
+  public function getCryptoKeyBackend()
+  {
+    return $this->cryptoKeyBackend;
   }
   /**
    * Output only. The time this ImportJob expired. Only present if state is
@@ -301,7 +335,7 @@ class ImportJob extends \Google\Model
    * to import into.
    *
    * Accepted values: PROTECTION_LEVEL_UNSPECIFIED, SOFTWARE, HSM, EXTERNAL,
-   * EXTERNAL_VPC
+   * EXTERNAL_VPC, HSM_SINGLE_TENANT
    *
    * @param self::PROTECTION_LEVEL_* $protectionLevel
    */

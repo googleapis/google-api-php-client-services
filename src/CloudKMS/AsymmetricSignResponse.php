@@ -40,6 +40,10 @@ class AsymmetricSignResponse extends \Google\Model
    */
   public const PROTECTION_LEVEL_EXTERNAL_VPC = 'EXTERNAL_VPC';
   /**
+   * Crypto operations are performed in a single-tenant HSM.
+   */
+  public const PROTECTION_LEVEL_HSM_SINGLE_TENANT = 'HSM_SINGLE_TENANT';
+  /**
    * The resource name of the CryptoKeyVersion used for signing. Check this
    * field to verify that the intended resource was used for signing.
    *
@@ -119,7 +123,7 @@ class AsymmetricSignResponse extends \Google\Model
    * The ProtectionLevel of the CryptoKeyVersion used for signing.
    *
    * Accepted values: PROTECTION_LEVEL_UNSPECIFIED, SOFTWARE, HSM, EXTERNAL,
-   * EXTERNAL_VPC
+   * EXTERNAL_VPC, HSM_SINGLE_TENANT
    *
    * @param self::PROTECTION_LEVEL_* $protectionLevel
    */

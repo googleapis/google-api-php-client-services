@@ -209,6 +209,24 @@ class CryptoKeyVersionTemplate extends \Google\Model
    */
   public const ALGORITHM_PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256 = 'PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256';
   /**
+   * The post-quantum Module-Lattice-Based Digital Signature Algorithm, at
+   * security level 1. Randomized version supporting externally-computed message
+   * representatives.
+   */
+  public const ALGORITHM_PQ_SIGN_ML_DSA_44_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_44_EXTERNAL_MU';
+  /**
+   * The post-quantum Module-Lattice-Based Digital Signature Algorithm, at
+   * security level 3. Randomized version supporting externally-computed message
+   * representatives.
+   */
+  public const ALGORITHM_PQ_SIGN_ML_DSA_65_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_65_EXTERNAL_MU';
+  /**
+   * The post-quantum Module-Lattice-Based Digital Signature Algorithm, at
+   * security level 5. Randomized version supporting externally-computed message
+   * representatives.
+   */
+  public const ALGORITHM_PQ_SIGN_ML_DSA_87_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_87_EXTERNAL_MU';
+  /**
    * Not specified.
    */
   public const PROTECTION_LEVEL_PROTECTION_LEVEL_UNSPECIFIED = 'PROTECTION_LEVEL_UNSPECIFIED';
@@ -228,6 +246,10 @@ class CryptoKeyVersionTemplate extends \Google\Model
    * Crypto operations are performed in an EKM-over-VPC backend.
    */
   public const PROTECTION_LEVEL_EXTERNAL_VPC = 'EXTERNAL_VPC';
+  /**
+   * Crypto operations are performed in a single-tenant HSM.
+   */
+  public const PROTECTION_LEVEL_HSM_SINGLE_TENANT = 'HSM_SINGLE_TENANT';
   /**
    * Required. Algorithm to use when creating a CryptoKeyVersion based on this
    * template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is
@@ -267,7 +289,8 @@ class CryptoKeyVersionTemplate extends \Google\Model
    * HMAC_SHA384, HMAC_SHA512, HMAC_SHA224, EXTERNAL_SYMMETRIC_ENCRYPTION,
    * ML_KEM_768, ML_KEM_1024, KEM_XWING, PQ_SIGN_ML_DSA_44, PQ_SIGN_ML_DSA_65,
    * PQ_SIGN_ML_DSA_87, PQ_SIGN_SLH_DSA_SHA2_128S,
-   * PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256
+   * PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256, PQ_SIGN_ML_DSA_44_EXTERNAL_MU,
+   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU
    *
    * @param self::ALGORITHM_* $algorithm
    */
@@ -287,7 +310,7 @@ class CryptoKeyVersionTemplate extends \Google\Model
    * template. Immutable. Defaults to SOFTWARE.
    *
    * Accepted values: PROTECTION_LEVEL_UNSPECIFIED, SOFTWARE, HSM, EXTERNAL,
-   * EXTERNAL_VPC
+   * EXTERNAL_VPC, HSM_SINGLE_TENANT
    *
    * @param self::PROTECTION_LEVEL_* $protectionLevel
    */

@@ -209,6 +209,24 @@ class ImportCryptoKeyVersionRequest extends \Google\Model
    */
   public const ALGORITHM_PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256 = 'PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256';
   /**
+   * The post-quantum Module-Lattice-Based Digital Signature Algorithm, at
+   * security level 1. Randomized version supporting externally-computed message
+   * representatives.
+   */
+  public const ALGORITHM_PQ_SIGN_ML_DSA_44_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_44_EXTERNAL_MU';
+  /**
+   * The post-quantum Module-Lattice-Based Digital Signature Algorithm, at
+   * security level 3. Randomized version supporting externally-computed message
+   * representatives.
+   */
+  public const ALGORITHM_PQ_SIGN_ML_DSA_65_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_65_EXTERNAL_MU';
+  /**
+   * The post-quantum Module-Lattice-Based Digital Signature Algorithm, at
+   * security level 5. Randomized version supporting externally-computed message
+   * representatives.
+   */
+  public const ALGORITHM_PQ_SIGN_ML_DSA_87_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_87_EXTERNAL_MU';
+  /**
    * Required. The algorithm of the key being imported. This does not need to
    * match the version_template of the CryptoKey this version imports into.
    *
@@ -286,7 +304,8 @@ class ImportCryptoKeyVersionRequest extends \Google\Model
    * HMAC_SHA384, HMAC_SHA512, HMAC_SHA224, EXTERNAL_SYMMETRIC_ENCRYPTION,
    * ML_KEM_768, ML_KEM_1024, KEM_XWING, PQ_SIGN_ML_DSA_44, PQ_SIGN_ML_DSA_65,
    * PQ_SIGN_ML_DSA_87, PQ_SIGN_SLH_DSA_SHA2_128S,
-   * PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256
+   * PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256, PQ_SIGN_ML_DSA_44_EXTERNAL_MU,
+   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU
    *
    * @param self::ALGORITHM_* $algorithm
    */

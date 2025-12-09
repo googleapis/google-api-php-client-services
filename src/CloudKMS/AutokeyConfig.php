@@ -63,7 +63,6 @@ class AutokeyConfig extends \Google\Model
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
    * `folders/{FOLDER_NUMBER}/autokeyConfig`
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    *
    * @var string
    */
@@ -121,7 +120,6 @@ class AutokeyConfig extends \Google\Model
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
    * `folders/{FOLDER_NUMBER}/autokeyConfig`
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    *
    * @param string $name
    */
