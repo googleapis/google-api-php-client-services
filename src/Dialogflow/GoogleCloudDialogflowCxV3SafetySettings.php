@@ -42,8 +42,12 @@ class GoogleCloudDialogflowCxV3SafetySettings extends \Google\Collection
    * @var string
    */
   public $defaultBannedPhraseMatchStrategy;
+  protected $defaultRaiSettingsType = GoogleCloudDialogflowCxV3SafetySettingsRaiSettings::class;
+  protected $defaultRaiSettingsDataType = '';
   protected $promptSecuritySettingsType = GoogleCloudDialogflowCxV3SafetySettingsPromptSecuritySettings::class;
   protected $promptSecuritySettingsDataType = '';
+  protected $raiSettingsType = GoogleCloudDialogflowCxV3SafetySettingsRaiSettings::class;
+  protected $raiSettingsDataType = '';
 
   /**
    * Banned phrases for generated text.
@@ -81,6 +85,24 @@ class GoogleCloudDialogflowCxV3SafetySettings extends \Google\Collection
     return $this->defaultBannedPhraseMatchStrategy;
   }
   /**
+   * Optional. Immutable. Default RAI settings to be annotated on the agent, so
+   * that users will be able to restore their RAI configurations to the default
+   * settings. Read-only field for the API proto only.
+   *
+   * @param GoogleCloudDialogflowCxV3SafetySettingsRaiSettings $defaultRaiSettings
+   */
+  public function setDefaultRaiSettings(GoogleCloudDialogflowCxV3SafetySettingsRaiSettings $defaultRaiSettings)
+  {
+    $this->defaultRaiSettings = $defaultRaiSettings;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3SafetySettingsRaiSettings
+   */
+  public function getDefaultRaiSettings()
+  {
+    return $this->defaultRaiSettings;
+  }
+  /**
    * Optional. Settings for prompt security checks.
    *
    * @param GoogleCloudDialogflowCxV3SafetySettingsPromptSecuritySettings $promptSecuritySettings
@@ -95,6 +117,22 @@ class GoogleCloudDialogflowCxV3SafetySettings extends \Google\Collection
   public function getPromptSecuritySettings()
   {
     return $this->promptSecuritySettings;
+  }
+  /**
+   * Optional. Settings for Responsible AI checks.
+   *
+   * @param GoogleCloudDialogflowCxV3SafetySettingsRaiSettings $raiSettings
+   */
+  public function setRaiSettings(GoogleCloudDialogflowCxV3SafetySettingsRaiSettings $raiSettings)
+  {
+    $this->raiSettings = $raiSettings;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3SafetySettingsRaiSettings
+   */
+  public function getRaiSettings()
+  {
+    return $this->raiSettings;
   }
 }
 
