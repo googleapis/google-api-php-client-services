@@ -18,6 +18,7 @@
 namespace Google\Service\APIhub\Resource;
 
 use Google\Service\APIhub\ApihubEmpty;
+use Google\Service\APIhub\GoogleCloudApihubV1FetchAdditionalSpecContentResponse;
 use Google\Service\APIhub\GoogleCloudApihubV1LintSpecRequest;
 use Google\Service\APIhub\GoogleCloudApihubV1ListSpecsResponse;
 use Google\Service\APIhub\GoogleCloudApihubV1Spec;
@@ -86,6 +87,25 @@ class ProjectsLocationsApisVersionsSpecs extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], ApihubEmpty::class);
+  }
+  /**
+   * Fetch additional spec content. (specs.fetchAdditionalSpecContent)
+   *
+   * @param string $name Required. The name of the spec whose contents need to be
+   * retrieved. Format: `projects/{project}/locations/{location}/apis/{api}/versio
+   * ns/{version}/specs/{spec}`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string specContentType Optional. The type of the spec contents to
+   * be retrieved.
+   * @return GoogleCloudApihubV1FetchAdditionalSpecContentResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchAdditionalSpecContent($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchAdditionalSpecContent', [$params], GoogleCloudApihubV1FetchAdditionalSpecContentResponse::class);
   }
   /**
    * Get details about the information parsed from a spec. Note that this method

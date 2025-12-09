@@ -160,19 +160,21 @@ class ProjectsLocationsPluginsInstances extends \Google\Service\Resource
    * comparison operator must be one of: `<`, `>` or `=`. Filters are not case
    * sensitive. The following fields in the `PluginInstances` are eligible for
    * filtering: * `state` - The state of the Plugin Instance. Allowed comparison
-   * operators: `=`. A filter function is also supported in the filter string. The
-   * filter function is `id(name)`. The `id(name)` function returns the id of the
-   * resource name. For example, `id(name) = \"plugin-instance-1\"` is equivalent
-   * to `name = \"projects/test-project-id/locations/test-location-
-   * id/plugins/plugin-1/instances/plugin-instance-1\"` provided the parent is
-   * `projects/test-project-id/locations/test-location-id/plugins/plugin-1`.
-   * Expressions are combined with either `AND` logic operator or `OR` logical
-   * operator but not both of them together i.e. only one of the `AND` or `OR`
-   * operator can be used throughout the filter string and both the operators
-   * cannot be used together. No other logical operators are supported. At most
-   * three filter fields are allowed in the filter string and if provided more
-   * than that then `INVALID_ARGUMENT` error is returned by the API. Here are a
-   * few examples: * `state = ENABLED` - The plugin instance is in enabled state.
+   * operators: `=`. * `source_project_id` - The source project id of the Plugin
+   * Instance. Allowed comparison operators: `=`. A filter function is also
+   * supported in the filter string. The filter function is `id(name)`. The
+   * `id(name)` function returns the id of the resource name. For example,
+   * `id(name) = \"plugin-instance-1\"` is equivalent to `name = \"projects/test-
+   * project-id/locations/test-location-id/plugins/plugin-1/instances/plugin-
+   * instance-1\"` provided the parent is `projects/test-project-
+   * id/locations/test-location-id/plugins/plugin-1`. Expressions are combined
+   * with either `AND` logic operator or `OR` logical operator but not both of
+   * them together i.e. only one of the `AND` or `OR` operator can be used
+   * throughout the filter string and both the operators cannot be used together.
+   * No other logical operators are supported. At most three filter fields are
+   * allowed in the filter string and if provided more than that then
+   * `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: *
+   * `state = ENABLED` - The plugin instance is in enabled state.
    * @opt_param int pageSize Optional. The maximum number of hub plugins to
    * return. The service may return fewer than this value. If unspecified, at most
    * 50 hub plugins will be returned. The maximum value is 1000; values above 1000

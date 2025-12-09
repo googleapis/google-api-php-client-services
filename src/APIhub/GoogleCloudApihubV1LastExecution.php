@@ -51,6 +51,14 @@ class GoogleCloudApihubV1LastExecution extends \Google\Model
    */
   public $result;
   /**
+   * Output only. The result metadata of the last execution of the plugin
+   * instance. This will be a string representation of a JSON object and will be
+   * available on successful execution.
+   *
+   * @var string
+   */
+  public $resultMetadata;
+  /**
    * Output only. The last execution start time of the plugin instance.
    *
    * @var string
@@ -107,6 +115,24 @@ class GoogleCloudApihubV1LastExecution extends \Google\Model
   public function getResult()
   {
     return $this->result;
+  }
+  /**
+   * Output only. The result metadata of the last execution of the plugin
+   * instance. This will be a string representation of a JSON object and will be
+   * available on successful execution.
+   *
+   * @param string $resultMetadata
+   */
+  public function setResultMetadata($resultMetadata)
+  {
+    $this->resultMetadata = $resultMetadata;
+  }
+  /**
+   * @return string
+   */
+  public function getResultMetadata()
+  {
+    return $this->resultMetadata;
   }
   /**
    * Output only. The last execution start time of the plugin instance.

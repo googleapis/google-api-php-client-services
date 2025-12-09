@@ -141,6 +141,32 @@ class APIhub extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'retrieveApiViews' => [
+              'path' => 'v1/{+parent}:retrieveApiViews',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'searchResources' => [
               'path' => 'v1/{+location}:searchResources',
               'httpMethod' => 'POST',
@@ -557,6 +583,20 @@ class APIhub extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'fetchAdditionalSpecContent' => [
+              'path' => 'v1/{+name}:fetchAdditionalSpecContent',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'specContentType' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'get' => [

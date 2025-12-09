@@ -38,6 +38,8 @@ class GoogleCloudApihubV1OperationDetails extends \Google\Model
   protected $documentationDataType = '';
   protected $httpOperationType = GoogleCloudApihubV1HttpOperation::class;
   protected $httpOperationDataType = '';
+  protected $mcpToolType = GoogleCloudApihubV1McpTool::class;
+  protected $mcpToolDataType = '';
 
   /**
    * Optional. For OpenAPI spec, this will be set if `operation.deprecated`is
@@ -106,6 +108,22 @@ class GoogleCloudApihubV1OperationDetails extends \Google\Model
   public function getHttpOperation()
   {
     return $this->httpOperation;
+  }
+  /**
+   * The MCP Tool Operation.
+   *
+   * @param GoogleCloudApihubV1McpTool $mcpTool
+   */
+  public function setMcpTool(GoogleCloudApihubV1McpTool $mcpTool)
+  {
+    $this->mcpTool = $mcpTool;
+  }
+  /**
+   * @return GoogleCloudApihubV1McpTool
+   */
+  public function getMcpTool()
+  {
+    return $this->mcpTool;
   }
 }
 

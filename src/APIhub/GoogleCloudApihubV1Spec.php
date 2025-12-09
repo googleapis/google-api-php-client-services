@@ -34,6 +34,8 @@ class GoogleCloudApihubV1Spec extends \Google\Collection
    */
   public const PARSING_MODE_STRICT = 'STRICT';
   protected $collection_key = 'sourceMetadata';
+  protected $additionalSpecContentsType = GoogleCloudApihubV1AdditionalSpecContent::class;
+  protected $additionalSpecContentsDataType = 'array';
   protected $attributesType = GoogleCloudApihubV1AttributeValues::class;
   protected $attributesDataType = 'map';
   protected $contentsType = GoogleCloudApihubV1SpecContents::class;
@@ -89,6 +91,22 @@ class GoogleCloudApihubV1Spec extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Output only. The additional spec contents for the spec.
+   *
+   * @param GoogleCloudApihubV1AdditionalSpecContent[] $additionalSpecContents
+   */
+  public function setAdditionalSpecContents($additionalSpecContents)
+  {
+    $this->additionalSpecContents = $additionalSpecContents;
+  }
+  /**
+   * @return GoogleCloudApihubV1AdditionalSpecContent[]
+   */
+  public function getAdditionalSpecContents()
+  {
+    return $this->additionalSpecContents;
+  }
   /**
    * Optional. The list of user defined attributes associated with the spec. The
    * key is the attribute name. It will be of the format:

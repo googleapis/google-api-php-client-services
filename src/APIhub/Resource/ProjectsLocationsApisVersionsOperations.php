@@ -178,8 +178,10 @@ class ProjectsLocationsApisVersionsOperations extends \Google\Service\Resource
    * ApiOperation resource can be updated: * details.description *
    * details.documentation * details.http_operation.path *
    * details.http_operation.method * details.deprecated * attributes *
-   * details.mcp_tool.title * details.mcp_tool.description * details.input_schema
-   * * details.output_schema * details.mcp_tool.annotations.title *
+   * details.mcp_tool.title * details.mcp_tool.description *
+   * details.mcp_tool.input_schema * details.mcp_tool.output_schema *
+   * details.input_schema * details.output_schema *
+   * details.mcp_tool.annotations.title *
    * details.mcp_tool.annotations.read_only_hint *
    * details.mcp_tool.annotations.destructive_hint *
    * details.mcp_tool.annotations.idempotent_hint *
