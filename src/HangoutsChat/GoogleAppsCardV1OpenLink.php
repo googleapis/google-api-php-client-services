@@ -55,7 +55,7 @@ class GoogleAppsCardV1OpenLink extends \Google\Model
    */
   public $openAs;
   /**
-   * The URL to open.
+   * The URL to open. HTTP URLs are converted to HTTPS.
    *
    * @var string
    */
@@ -101,7 +101,7 @@ class GoogleAppsCardV1OpenLink extends \Google\Model
     return $this->openAs;
   }
   /**
-   * The URL to open.
+   * The URL to open. HTTP URLs are converted to HTTPS.
    *
    * @param string $url
    */
