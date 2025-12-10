@@ -63,8 +63,10 @@ class GoogleCloudKmsV1CryptoKey extends \Google\Model
    * and where all related cryptographic operations are performed. Only
    * applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC,
    * with the resource name in the format `projects/locations/ekmConnections`.
-   * Note, this list is non-exhaustive and may apply to additional
-   * ProtectionLevels in the future.
+   * Only applicable if CryptoKeyVersions have a ProtectionLevel of
+   * HSM_SINGLE_TENANT, with the resource name in the format
+   * `projects/locations/singleTenantHsmInstances`. Note, this list is non-
+   * exhaustive and may apply to additional ProtectionLevels in the future.
    *
    * @var string
    */
@@ -153,8 +155,10 @@ class GoogleCloudKmsV1CryptoKey extends \Google\Model
    * and where all related cryptographic operations are performed. Only
    * applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC,
    * with the resource name in the format `projects/locations/ekmConnections`.
-   * Note, this list is non-exhaustive and may apply to additional
-   * ProtectionLevels in the future.
+   * Only applicable if CryptoKeyVersions have a ProtectionLevel of
+   * HSM_SINGLE_TENANT, with the resource name in the format
+   * `projects/locations/singleTenantHsmInstances`. Note, this list is non-
+   * exhaustive and may apply to additional ProtectionLevels in the future.
    *
    * @param string $cryptoKeyBackend
    */
