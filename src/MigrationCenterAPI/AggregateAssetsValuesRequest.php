@@ -30,7 +30,7 @@ class AggregateAssetsValuesRequest extends \Google\Collection
    */
   public $filter;
   /**
-   * Optional. When this value is set to 'true,' the response will include all
+   * Optional. When this value is set to 'true' the response will include all
    * assets, including those that are hidden.
    *
    * @var bool
@@ -71,7 +71,7 @@ class AggregateAssetsValuesRequest extends \Google\Collection
     return $this->filter;
   }
   /**
-   * Optional. When this value is set to 'true,' the response will include all
+   * Optional. When this value is set to 'true' the response will include all
    * assets, including those that are hidden.
    *
    * @param bool $showHidden

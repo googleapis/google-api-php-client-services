@@ -67,7 +67,7 @@ class ImportDataFile extends \Google\Model
    */
   public $createTime;
   /**
-   * User-friendly display name. Maximum length is 63 characters.
+   * Optional. User-friendly display name. Maximum length is 63 characters.
    *
    * @var string
    */
@@ -110,7 +110,7 @@ class ImportDataFile extends \Google\Model
     return $this->createTime;
   }
   /**
-   * User-friendly display name. Maximum length is 63 characters.
+   * Optional. User-friendly display name. Maximum length is 63 characters.
    *
    * @param string $displayName
    */

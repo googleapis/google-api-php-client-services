@@ -1000,17 +1000,7 @@ class MigrationCenterAPI extends \Google\Service
         'reports',
         [
           'methods' => [
-            'artifactLink' => [
-              'path' => 'v1/{+name}:artifactLink',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v1/{+parent}/reports',
               'httpMethod' => 'POST',
               'parameters' => [

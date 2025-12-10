@@ -27,6 +27,8 @@ class ReportSummaryAssetAggregateStats extends \Google\Model
   protected $memoryUtilizationChartDataType = '';
   protected $operatingSystemType = ReportSummaryChartData::class;
   protected $operatingSystemDataType = '';
+  protected $softwareInstancesType = ReportSummaryChartData::class;
+  protected $softwareInstancesDataType = '';
   protected $storageBytesHistogramType = ReportSummaryHistogramChartData::class;
   protected $storageBytesHistogramDataType = '';
   protected $storageUtilizationChartType = ReportSummaryUtilizationChartData::class;
@@ -119,6 +121,23 @@ class ReportSummaryAssetAggregateStats extends \Google\Model
   public function getOperatingSystem()
   {
     return $this->operatingSystem;
+  }
+  /**
+   * Output only. Count of assets grouped by software name. Only present for
+   * virtual machines.
+   *
+   * @param ReportSummaryChartData $softwareInstances
+   */
+  public function setSoftwareInstances(ReportSummaryChartData $softwareInstances)
+  {
+    $this->softwareInstances = $softwareInstances;
+  }
+  /**
+   * @return ReportSummaryChartData
+   */
+  public function getSoftwareInstances()
+  {
+    return $this->softwareInstances;
   }
   /**
    * Histogram showing a distribution of storage sizes.
