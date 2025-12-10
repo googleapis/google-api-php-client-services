@@ -52,11 +52,10 @@ class Session extends \Google\Model
   public $labels;
   /**
    * Optional. If `true`, specifies a multiplexed session. Use a multiplexed
-   * session for multiple, concurrent read-only operations. Don't use them for
-   * read-write transactions, partitioned reads, or partitioned queries. Use
-   * `sessions.create` to create multiplexed sessions. Don't use
-   * BatchCreateSessions to create a multiplexed session. You can't delete or
-   * list multiplexed sessions.
+   * session for multiple, concurrent operations including any combination of
+   * read-only and read-write transactions. Use `sessions.create` to create
+   * multiplexed sessions. Don't use BatchCreateSessions to create a multiplexed
+   * session. You can't delete or list multiplexed sessions.
    *
    * @var bool
    */
@@ -141,11 +140,10 @@ class Session extends \Google\Model
   }
   /**
    * Optional. If `true`, specifies a multiplexed session. Use a multiplexed
-   * session for multiple, concurrent read-only operations. Don't use them for
-   * read-write transactions, partitioned reads, or partitioned queries. Use
-   * `sessions.create` to create multiplexed sessions. Don't use
-   * BatchCreateSessions to create a multiplexed session. You can't delete or
-   * list multiplexed sessions.
+   * session for multiple, concurrent operations including any combination of
+   * read-only and read-write transactions. Use `sessions.create` to create
+   * multiplexed sessions. Don't use BatchCreateSessions to create a multiplexed
+   * session. You can't delete or list multiplexed sessions.
    *
    * @param bool $multiplexed
    */
