@@ -274,6 +274,10 @@ class AndroidPublisher extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'inProgressReviewBehaviour' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'delete' => [
               'path' => 'androidpublisher/v3/applications/{packageName}/edits/{editId}',
