@@ -19,6 +19,7 @@ namespace Google\Service\CloudFunctions\Resource;
 
 use Google\Service\CloudFunctions\AbortFunctionUpgradeRequest;
 use Google\Service\CloudFunctions\CloudfunctionsFunction;
+use Google\Service\CloudFunctions\CommitFunctionUpgradeAsGen2Request;
 use Google\Service\CloudFunctions\CommitFunctionUpgradeRequest;
 use Google\Service\CloudFunctions\DetachFunctionRequest;
 use Google\Service\CloudFunctions\GenerateDownloadUrlRequest;
@@ -82,6 +83,24 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('commitFunctionUpgrade', [$params], Operation::class);
+  }
+  /**
+   * Commits a function upgrade from GCF Gen1 to GCF Gen2. This action deletes the
+   * Gen1 function, leaving the Gen2 function active and manageable by the GCFv2
+   * API. (functions.commitFunctionUpgradeAsGen2)
+   *
+   * @param string $name Required. The name of the function for which upgrade
+   * should be committed to Gen2.
+   * @param CommitFunctionUpgradeAsGen2Request $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function commitFunctionUpgradeAsGen2($name, CommitFunctionUpgradeAsGen2Request $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('commitFunctionUpgradeAsGen2', [$params], Operation::class);
   }
   /**
    * Creates a new function. If a function with the given name already exists in

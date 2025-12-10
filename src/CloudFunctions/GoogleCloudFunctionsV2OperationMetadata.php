@@ -59,6 +59,10 @@ class GoogleCloudFunctionsV2OperationMetadata extends \Google\Collection
    * DetachFunction
    */
   public const OPERATION_TYPE_DETACH_FUNCTION = 'DETACH_FUNCTION';
+  /**
+   * CommitFunctionUpgradeAsGen2
+   */
+  public const OPERATION_TYPE_COMMIT_FUNCTION_UPGRADE_AS_GEN2 = 'COMMIT_FUNCTION_UPGRADE_AS_GEN2';
   protected $collection_key = 'stages';
   /**
    * API version used to start the operation.
@@ -246,7 +250,8 @@ class GoogleCloudFunctionsV2OperationMetadata extends \Google\Collection
    * Accepted values: OPERATIONTYPE_UNSPECIFIED, CREATE_FUNCTION,
    * UPDATE_FUNCTION, DELETE_FUNCTION, REDIRECT_FUNCTION_UPGRADE_TRAFFIC,
    * ROLLBACK_FUNCTION_UPGRADE_TRAFFIC, SETUP_FUNCTION_UPGRADE_CONFIG,
-   * ABORT_FUNCTION_UPGRADE, COMMIT_FUNCTION_UPGRADE, DETACH_FUNCTION
+   * ABORT_FUNCTION_UPGRADE, COMMIT_FUNCTION_UPGRADE, DETACH_FUNCTION,
+   * COMMIT_FUNCTION_UPGRADE_AS_GEN2
    *
    * @param self::OPERATION_TYPE_* $operationType
    */
