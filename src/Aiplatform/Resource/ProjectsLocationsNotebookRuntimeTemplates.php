@@ -168,8 +168,12 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    *
    * @opt_param string updateMask Required. The update mask applies to the
    * resource. For the `FieldMask` definition, see google.protobuf.FieldMask.
-   * Input format: `{paths: "${updated_filed}"}` Updatable fields: *
-   * `encryption_spec.kms_key_name`
+   * Input format: `{paths: "${updated_field}"}` Updatable fields: *
+   * `encryption_spec.kms_key_name` * `display_name` *
+   * `software_config.post_startup_script_config.post_startup_script` *
+   * `software_config.post_startup_script_config.post_startup_script_url` *
+   * `software_config.post_startup_script_config.post_startup_script_behavior` *
+   * `software_config.env` * `software_config.colab_image.release_name`
    * @return GoogleCloudAiplatformV1NotebookRuntimeTemplate
    * @throws \Google\Service\Exception
    */

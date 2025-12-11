@@ -17,34 +17,32 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource extends \Google\Model
+class GoogleCloudAiplatformV1IntermediateExtractedMemory extends \Google\Model
 {
   /**
-   * Required. Input only. The application source code archive. It must be a
-   * compressed tarball (.tar.gz) file.
+   * Output only. The fact of the extracted memory.
    *
    * @var string
    */
-  public $sourceArchive;
+  public $fact;
 
   /**
-   * Required. Input only. The application source code archive. It must be a
-   * compressed tarball (.tar.gz) file.
+   * Output only. The fact of the extracted memory.
    *
-   * @param string $sourceArchive
+   * @param string $fact
    */
-  public function setSourceArchive($sourceArchive)
+  public function setFact($fact)
   {
-    $this->sourceArchive = $sourceArchive;
+    $this->fact = $fact;
   }
   /**
    * @return string
    */
-  public function getSourceArchive()
+  public function getFact()
   {
-    return $this->sourceArchive;
+    return $this->fact;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource');
+class_alias(GoogleCloudAiplatformV1IntermediateExtractedMemory::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1IntermediateExtractedMemory');

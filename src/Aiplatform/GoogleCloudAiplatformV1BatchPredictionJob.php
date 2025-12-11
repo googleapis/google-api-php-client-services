@@ -143,8 +143,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
    * The name of the Model resource that produces the predictions via this job,
    * must share the same ancestor Location. Starting this job has no impact on
    * any existing deployments of the Model and their resources. Exactly one of
-   * model and unmanaged_container_model must be set. The model resource name
-   * may contain version id or version alias to specify the version. Example:
+   * model, unmanaged_container_model, or endpoint must be set. The model
+   * resource name may contain version id or version alias to specify the
+   * version. Example:
    * `projects/{project}/locations/{location}/models/{model}@2` or
    * `projects/{project}/locations/{location}/models/{model}@golden` if no
    * version is specified, the default version will be deployed. The model
@@ -489,8 +490,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
    * The name of the Model resource that produces the predictions via this job,
    * must share the same ancestor Location. Starting this job has no impact on
    * any existing deployments of the Model and their resources. Exactly one of
-   * model and unmanaged_container_model must be set. The model resource name
-   * may contain version id or version alias to specify the version. Example:
+   * model, unmanaged_container_model, or endpoint must be set. The model
+   * resource name may contain version id or version alias to specify the
+   * version. Example:
    * `projects/{project}/locations/{location}/models/{model}@2` or
    * `projects/{project}/locations/{location}/models/{model}@golden` if no
    * version is specified, the default version will be deployed. The model
@@ -727,8 +729,8 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
   }
   /**
    * Contains model information necessary to perform batch prediction without
-   * requiring uploading to model registry. Exactly one of model and
-   * unmanaged_container_model must be set.
+   * requiring uploading to model registry. Exactly one of model,
+   * unmanaged_container_model, or endpoint must be set.
    *
    * @param GoogleCloudAiplatformV1UnmanagedContainerModel $unmanagedContainerModel
    */

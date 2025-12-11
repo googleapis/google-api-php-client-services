@@ -29,6 +29,14 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends \Google\Model
    * @var bool
    */
   public $enableDirectBigtableAccess;
+  /**
+   * Optional. The zone where the underlying Bigtable cluster for the primary
+   * Bigtable instance will be provisioned. Only the zone must be provided. For
+   * example, only "us-central1-a" should be provided.
+   *
+   * @var string
+   */
+  public $zone;
 
   /**
    * Required. Autoscaling config applied to Bigtable Instance.
@@ -77,6 +85,24 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends \Google\Model
   public function getEnableDirectBigtableAccess()
   {
     return $this->enableDirectBigtableAccess;
+  }
+  /**
+   * Optional. The zone where the underlying Bigtable cluster for the primary
+   * Bigtable instance will be provisioned. Only the zone must be provided. For
+   * example, only "us-central1-a" should be provided.
+   *
+   * @param string $zone
+   */
+  public function setZone($zone)
+  {
+    $this->zone = $zone;
+  }
+  /**
+   * @return string
+   */
+  public function getZone()
+  {
+    return $this->zone;
   }
 }
 

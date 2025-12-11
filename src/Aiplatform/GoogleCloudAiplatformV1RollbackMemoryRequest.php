@@ -17,34 +17,32 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource extends \Google\Model
+class GoogleCloudAiplatformV1RollbackMemoryRequest extends \Google\Model
 {
   /**
-   * Required. Input only. The application source code archive. It must be a
-   * compressed tarball (.tar.gz) file.
+   * Required. The ID of the revision to rollback to.
    *
    * @var string
    */
-  public $sourceArchive;
+  public $targetRevisionId;
 
   /**
-   * Required. Input only. The application source code archive. It must be a
-   * compressed tarball (.tar.gz) file.
+   * Required. The ID of the revision to rollback to.
    *
-   * @param string $sourceArchive
+   * @param string $targetRevisionId
    */
-  public function setSourceArchive($sourceArchive)
+  public function setTargetRevisionId($targetRevisionId)
   {
-    $this->sourceArchive = $sourceArchive;
+    $this->targetRevisionId = $targetRevisionId;
   }
   /**
    * @return string
    */
-  public function getSourceArchive()
+  public function getTargetRevisionId()
   {
-    return $this->sourceArchive;
+    return $this->targetRevisionId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource');
+class_alias(GoogleCloudAiplatformV1RollbackMemoryRequest::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RollbackMemoryRequest');
