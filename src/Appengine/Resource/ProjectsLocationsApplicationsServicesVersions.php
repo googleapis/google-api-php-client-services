@@ -17,6 +17,7 @@
 
 namespace Google\Service\Appengine\Resource;
 
+use Google\Service\Appengine\ExportAppImageRequest;
 use Google\Service\Appengine\Operation;
 use Google\Service\Appengine\Version;
 
@@ -49,6 +50,27 @@ class ProjectsLocationsApplicationsServicesVersions extends \Google\Service\Reso
     $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'servicesId' => $servicesId, 'versionsId' => $versionsId];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Exports a user image to Artifact Registry. (versions.exportAppImage)
+   *
+   * @param string $projectsId Part of `name`. Required. Name of the App Engine
+   * version resource. Format: apps/{app}/services/{service}/versions/{version}
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
+   * @param string $servicesId Part of `name`. See documentation of `projectsId`.
+   * @param string $versionsId Part of `name`. See documentation of `projectsId`.
+   * @param ExportAppImageRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function exportAppImage($projectsId, $locationsId, $applicationsId, $servicesId, $versionsId, ExportAppImageRequest $postBody, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'servicesId' => $servicesId, 'versionsId' => $versionsId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('exportAppImage', [$params], Operation::class);
   }
   /**
    * Updates the specified Version resource. You can specify the following fields

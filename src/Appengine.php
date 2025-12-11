@@ -685,6 +685,26 @@ class Appengine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'exportAppImage' => [
+              'path' => 'v1/apps/{appsId}/services/{servicesId}/versions/{versionsId}:exportAppImage',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'appsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'servicesId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'versionsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/apps/{appsId}/services/{servicesId}/versions/{versionsId}',
               'httpMethod' => 'GET',
@@ -1312,6 +1332,36 @@ class Appengine extends \Google\Service
             'delete' => [
               'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}',
               'httpMethod' => 'DELETE',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'servicesId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'versionsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'exportAppImage' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}:exportAppImage',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'projectsId' => [
                   'location' => 'path',
