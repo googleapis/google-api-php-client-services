@@ -40,7 +40,7 @@ class GoogleCloudAssetV1CustomConstraint extends \Google\Collection
   public $actionType;
   /**
    * Organization Policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")'` or,
    * `resource.management.auto_upgrade == true`
    *
    * @var string
@@ -101,7 +101,7 @@ class GoogleCloudAssetV1CustomConstraint extends \Google\Collection
   }
   /**
    * Organization Policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")'` or,
    * `resource.management.auto_upgrade == true`
    *
    * @param string $condition
