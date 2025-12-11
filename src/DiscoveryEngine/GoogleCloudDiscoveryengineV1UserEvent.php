@@ -109,10 +109,10 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
    */
   public $eventType;
   /**
-   * The filter syntax consists of an expression language for constructing a
-   * predicate from one or more fields of the documents being filtered. One
-   * example is for `search` events, the associated SearchRequest may contain a
-   * filter expression in SearchRequest.filter conforming to
+   * Optional. The filter syntax consists of an expression language for
+   * constructing a predicate from one or more fields of the documents being
+   * filtered. One example is for `search` events, the associated SearchRequest
+   * may contain a filter expression in SearchRequest.filter conforming to
    * https://google.aip.dev/160#filtering. Similarly, for `view-item-list`
    * events that are generated from a RecommendRequest, this field may be
    * populated directly from RecommendRequest.filter conforming to
@@ -407,10 +407,10 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
     return $this->eventType;
   }
   /**
-   * The filter syntax consists of an expression language for constructing a
-   * predicate from one or more fields of the documents being filtered. One
-   * example is for `search` events, the associated SearchRequest may contain a
-   * filter expression in SearchRequest.filter conforming to
+   * Optional. The filter syntax consists of an expression language for
+   * constructing a predicate from one or more fields of the documents being
+   * filtered. One example is for `search` events, the associated SearchRequest
+   * may contain a filter expression in SearchRequest.filter conforming to
    * https://google.aip.dev/160#filtering. Similarly, for `view-item-list`
    * events that are generated from a RecommendRequest, this field may be
    * populated directly from RecommendRequest.filter conforming to

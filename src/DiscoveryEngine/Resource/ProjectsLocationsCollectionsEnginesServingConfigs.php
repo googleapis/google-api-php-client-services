@@ -25,6 +25,7 @@ use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1RecommendResponse
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1SearchRequest;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1SearchResponse;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1ServingConfig;
+use Google\Service\DiscoveryEngine\GoogleProtobufEmpty;
 
 /**
  * The "servingConfigs" collection of methods.
@@ -55,6 +56,23 @@ class ProjectsLocationsCollectionsEnginesServingConfigs extends \Google\Service\
     $params = ['servingConfig' => $servingConfig, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('answer', [$params], GoogleCloudDiscoveryengineV1AnswerQueryResponse::class);
+  }
+  /**
+   * Deletes a ServingConfig. Returns a NOT_FOUND error if the ServingConfig does
+   * not exist. (servingConfigs.delete)
+   *
+   * @param string $name Required. The resource name of the ServingConfig to
+   * delete. Format: `projects/{project}/locations/{location}/collections/{collect
+   * ion}/engines/{engine}/servingConfigs/{serving_config_id}`
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
   }
   /**
    * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not

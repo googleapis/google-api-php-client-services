@@ -173,11 +173,12 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * should be the same as UserEvent.PageInfo.page_category. This field is the
    * equivalent of the query for browse (navigation) queries. It's used by the
    * browse model when the query is empty. If the field is empty, it will not be
-   * used by the browse model. To represent full path of a category, use '>'
-   * character to separate different hierarchies. If '>' is part of the category
-   * name, replace it with other character(s). For example, `Graphics Cards >
-   * RTX>4090 > Founders Edition` where "RTX > 4090" represents one level, can
-   * be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
+   * used by the browse model. If the field contains more than one element, only
+   * the first element will be used. To represent full path of a category, use
+   * '>' character to separate different hierarchies. If '>' is part of the
+   * category name, replace it with other character(s). For example, `Graphics
+   * Cards > RTX>4090 > Founders Edition` where "RTX > 4090" represents one
+   * level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
    *
    * @var string[]
    */
@@ -714,11 +715,12 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * should be the same as UserEvent.PageInfo.page_category. This field is the
    * equivalent of the query for browse (navigation) queries. It's used by the
    * browse model when the query is empty. If the field is empty, it will not be
-   * used by the browse model. To represent full path of a category, use '>'
-   * character to separate different hierarchies. If '>' is part of the category
-   * name, replace it with other character(s). For example, `Graphics Cards >
-   * RTX>4090 > Founders Edition` where "RTX > 4090" represents one level, can
-   * be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
+   * used by the browse model. If the field contains more than one element, only
+   * the first element will be used. To represent full path of a category, use
+   * '>' character to separate different hierarchies. If '>' is part of the
+   * category name, replace it with other character(s). For example, `Graphics
+   * Cards > RTX>4090 > Founders Edition` where "RTX > 4090" represents one
+   * level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
    *
    * @param string[] $pageCategories
    */
