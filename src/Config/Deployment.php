@@ -50,6 +50,10 @@ class Deployment extends \Google\Collection
    */
   public const ERROR_CODE_BUCKET_CREATION_FAILED = 'BUCKET_CREATION_FAILED';
   /**
+   * Failed to import values from an external source.
+   */
+  public const ERROR_CODE_EXTERNAL_VALUE_SOURCE_IMPORT_FAILED = 'EXTERNAL_VALUE_SOURCE_IMPORT_FAILED';
+  /**
    * The default value. This value is used if the lock state is omitted.
    */
   public const LOCK_STATE_LOCK_STATE_UNSPECIFIED = 'LOCK_STATE_UNSPECIFIED';
@@ -396,7 +400,7 @@ class Deployment extends \Google\Collection
    * Accepted values: ERROR_CODE_UNSPECIFIED, REVISION_FAILED,
    * CLOUD_BUILD_PERMISSION_DENIED, DELETE_BUILD_API_FAILED,
    * DELETE_BUILD_RUN_FAILED, BUCKET_CREATION_PERMISSION_DENIED,
-   * BUCKET_CREATION_FAILED
+   * BUCKET_CREATION_FAILED, EXTERNAL_VALUE_SOURCE_IMPORT_FAILED
    *
    * @param self::ERROR_CODE_* $errorCode
    */

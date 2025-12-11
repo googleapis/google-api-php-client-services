@@ -48,6 +48,10 @@ class Preview extends \Google\Collection
    */
   public const ERROR_CODE_PREVIEW_BUILD_RUN_FAILED = 'PREVIEW_BUILD_RUN_FAILED';
   /**
+   * Failed to import values from an external source.
+   */
+  public const ERROR_CODE_EXTERNAL_VALUE_SOURCE_IMPORT_FAILED = 'EXTERNAL_VALUE_SOURCE_IMPORT_FAILED';
+  /**
    * Unspecified policy, default mode will be used.
    */
   public const PREVIEW_MODE_PREVIEW_MODE_UNSPECIFIED = 'PREVIEW_MODE_UNSPECIFIED';
@@ -324,7 +328,7 @@ class Preview extends \Google\Collection
    * Accepted values: ERROR_CODE_UNSPECIFIED, CLOUD_BUILD_PERMISSION_DENIED,
    * BUCKET_CREATION_PERMISSION_DENIED, BUCKET_CREATION_FAILED,
    * DEPLOYMENT_LOCK_ACQUIRE_FAILED, PREVIEW_BUILD_API_FAILED,
-   * PREVIEW_BUILD_RUN_FAILED
+   * PREVIEW_BUILD_RUN_FAILED, EXTERNAL_VALUE_SOURCE_IMPORT_FAILED
    *
    * @param self::ERROR_CODE_* $errorCode
    */

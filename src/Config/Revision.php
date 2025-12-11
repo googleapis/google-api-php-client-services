@@ -59,6 +59,10 @@ class Revision extends \Google\Collection
    */
   public const ERROR_CODE_QUOTA_VALIDATION_FAILED = 'QUOTA_VALIDATION_FAILED';
   /**
+   * Failed to import values from an external source.
+   */
+  public const ERROR_CODE_EXTERNAL_VALUE_SOURCE_IMPORT_FAILED = 'EXTERNAL_VALUE_SOURCE_IMPORT_FAILED';
+  /**
    * The default value. QuotaValidation on terraform configuration files will be
    * disabled in this case.
    */
@@ -292,7 +296,8 @@ class Revision extends \Google\Collection
    * Output only. Code describing any errors that may have occurred.
    *
    * Accepted values: ERROR_CODE_UNSPECIFIED, CLOUD_BUILD_PERMISSION_DENIED,
-   * APPLY_BUILD_API_FAILED, APPLY_BUILD_RUN_FAILED, QUOTA_VALIDATION_FAILED
+   * APPLY_BUILD_API_FAILED, APPLY_BUILD_RUN_FAILED, QUOTA_VALIDATION_FAILED,
+   * EXTERNAL_VALUE_SOURCE_IMPORT_FAILED
    *
    * @param self::ERROR_CODE_* $errorCode
    */
