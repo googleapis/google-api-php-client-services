@@ -140,6 +140,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
    * Feature Group resource in Vertex AI Feature Store.
    */
   public const TYPE_FEATURE_GROUP = 'FEATURE_GROUP';
+  /**
+   * An entry type for a graph.
+   */
+  public const TYPE_GRAPH = 'GRAPH';
   protected $bigqueryDateShardedSpecType = GoogleCloudDatacatalogV1BigQueryDateShardedSpec::class;
   protected $bigqueryDateShardedSpecDataType = '';
   protected $bigqueryTableSpecType = GoogleCloudDatacatalogV1BigQueryTableSpec::class;
@@ -760,7 +764,7 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
    * Accepted values: ENTRY_TYPE_UNSPECIFIED, TABLE, MODEL, DATA_STREAM,
    * FILESET, CLUSTER, DATABASE, DATA_SOURCE_CONNECTION, ROUTINE, LAKE, ZONE,
    * SERVICE, DATABASE_SCHEMA, DASHBOARD, EXPLORE, LOOK, FEATURE_ONLINE_STORE,
-   * FEATURE_VIEW, FEATURE_GROUP
+   * FEATURE_VIEW, FEATURE_GROUP, GRAPH
    *
    * @param self::TYPE_* $type
    */

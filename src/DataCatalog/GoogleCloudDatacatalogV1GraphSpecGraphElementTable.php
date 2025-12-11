@@ -58,26 +58,22 @@ class GoogleCloudDatacatalogV1GraphSpecGraphElementTable extends \Google\Collect
    * @var string
    */
   public $dataSource;
+  protected $destinationNodeReferenceType = GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference::class;
+  protected $destinationNodeReferenceDataType = '';
   /**
-   * Optional. Only applies to `kind = EDGE`.
+   * Optional. If set, this is the input column for dynamic label in schemaless
+   * data model.
    *
    * @var string
    */
-  public $destinationNodeReference;
+  public $dynamicLabelColumn;
   /**
-   * Optional. If true, the graph element has a dynamic label in schemaless
-   * model.
+   * Optional. If set, this is the input column for dynamic properties in
+   * schemaless data model.
    *
-   * @var bool
+   * @var string
    */
-  public $dynamicLabelEnabled;
-  /**
-   * Optional. If true, the graph element has dynamic properties in schemaless
-   * model.
-   *
-   * @var bool
-   */
-  public $dynamicPropertiesEnabled;
+  public $dynamicPropertiesColumn;
   /**
    * Required. The name of the keys of the elements in the table.
    *
@@ -98,15 +94,8 @@ class GoogleCloudDatacatalogV1GraphSpecGraphElementTable extends \Google\Collect
   public $kind;
   protected $labelAndPropertiesType = GoogleCloudDatacatalogV1GraphSpecGraphElementTableLabelAndProperties::class;
   protected $labelAndPropertiesDataType = 'array';
-  /**
-   * Optional. Only applies to `kind = EDGE`. The reference to the source node
-   * of the edge. This name must be a valid `alias` of a node element in the
-   * same graph. Example, `Person` node can be a source node of an edge element
-   * `Person_to_Address`. Similar rule applies to `destination_node_reference`.
-   *
-   * @var string
-   */
-  public $sourceNodeReference;
+  protected $sourceNodeReferenceType = GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference::class;
+  protected $sourceNodeReferenceDataType = '';
 
   /**
    * Required. The alias name of the graph element.
@@ -143,54 +132,54 @@ class GoogleCloudDatacatalogV1GraphSpecGraphElementTable extends \Google\Collect
     return $this->dataSource;
   }
   /**
-   * Optional. Only applies to `kind = EDGE`.
+   * Optional. The destination node reference of the edge.
    *
-   * @param string $destinationNodeReference
+   * @param GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference $destinationNodeReference
    */
-  public function setDestinationNodeReference($destinationNodeReference)
+  public function setDestinationNodeReference(GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference $destinationNodeReference)
   {
     $this->destinationNodeReference = $destinationNodeReference;
   }
   /**
-   * @return string
+   * @return GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference
    */
   public function getDestinationNodeReference()
   {
     return $this->destinationNodeReference;
   }
   /**
-   * Optional. If true, the graph element has a dynamic label in schemaless
-   * model.
+   * Optional. If set, this is the input column for dynamic label in schemaless
+   * data model.
    *
-   * @param bool $dynamicLabelEnabled
+   * @param string $dynamicLabelColumn
    */
-  public function setDynamicLabelEnabled($dynamicLabelEnabled)
+  public function setDynamicLabelColumn($dynamicLabelColumn)
   {
-    $this->dynamicLabelEnabled = $dynamicLabelEnabled;
+    $this->dynamicLabelColumn = $dynamicLabelColumn;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getDynamicLabelEnabled()
+  public function getDynamicLabelColumn()
   {
-    return $this->dynamicLabelEnabled;
+    return $this->dynamicLabelColumn;
   }
   /**
-   * Optional. If true, the graph element has dynamic properties in schemaless
-   * model.
+   * Optional. If set, this is the input column for dynamic properties in
+   * schemaless data model.
    *
-   * @param bool $dynamicPropertiesEnabled
+   * @param string $dynamicPropertiesColumn
    */
-  public function setDynamicPropertiesEnabled($dynamicPropertiesEnabled)
+  public function setDynamicPropertiesColumn($dynamicPropertiesColumn)
   {
-    $this->dynamicPropertiesEnabled = $dynamicPropertiesEnabled;
+    $this->dynamicPropertiesColumn = $dynamicPropertiesColumn;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getDynamicPropertiesEnabled()
+  public function getDynamicPropertiesColumn()
   {
-    return $this->dynamicPropertiesEnabled;
+    return $this->dynamicPropertiesColumn;
   }
   /**
    * Required. The name of the keys of the elements in the table.
@@ -261,19 +250,16 @@ class GoogleCloudDatacatalogV1GraphSpecGraphElementTable extends \Google\Collect
     return $this->labelAndProperties;
   }
   /**
-   * Optional. Only applies to `kind = EDGE`. The reference to the source node
-   * of the edge. This name must be a valid `alias` of a node element in the
-   * same graph. Example, `Person` node can be a source node of an edge element
-   * `Person_to_Address`. Similar rule applies to `destination_node_reference`.
+   * Optional. The source node reference of the edge.
    *
-   * @param string $sourceNodeReference
+   * @param GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference $sourceNodeReference
    */
-  public function setSourceNodeReference($sourceNodeReference)
+  public function setSourceNodeReference(GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference $sourceNodeReference)
   {
     $this->sourceNodeReference = $sourceNodeReference;
   }
   /**
-   * @return string
+   * @return GoogleCloudDatacatalogV1GraphSpecGraphElementTableGraphNodeReference
    */
   public function getSourceNodeReference()
   {
