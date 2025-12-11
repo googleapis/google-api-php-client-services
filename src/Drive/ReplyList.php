@@ -80,7 +80,7 @@ class ReplyList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The list of replies. If nextPageToken is populated, then this list may be
+   * The list of replies. If `nextPageToken` is populated, then this list may be
    * incomplete and an additional page of results should be fetched.
    *
    * @param Reply[] $replies

@@ -21,8 +21,8 @@ class Reply extends \Google\Collection
 {
   protected $collection_key = 'mentionedEmailAddresses';
   /**
-   * The action the reply performed to the parent comment. Valid values are: *
-   * `resolve` * `reopen`
+   * The action the reply performed to the parent comment. The supported values
+   * are: * `resolve` * `reopen`
    *
    * @var string
    */
@@ -38,8 +38,8 @@ class Reply extends \Google\Collection
   protected $authorDataType = '';
   /**
    * The plain text content of the reply. This field is used for setting the
-   * content, while `htmlContent` should be displayed. This is required on
-   * creates if no `action` is specified.
+   * content, while `htmlContent` should be displayed. This field is required by
+   * the `create` method if no `action` value is specified.
    *
    * @var string
    */
@@ -91,8 +91,8 @@ class Reply extends \Google\Collection
   public $modifiedTime;
 
   /**
-   * The action the reply performed to the parent comment. Valid values are: *
-   * `resolve` * `reopen`
+   * The action the reply performed to the parent comment. The supported values
+   * are: * `resolve` * `reopen`
    *
    * @param string $action
    */
@@ -126,7 +126,7 @@ class Reply extends \Google\Collection
   }
   /**
    * Output only. The author of the reply. The author's email address and
-   * permission ID will not be populated.
+   * permission ID won't be populated.
    *
    * @param User $author
    */
@@ -143,8 +143,8 @@ class Reply extends \Google\Collection
   }
   /**
    * The plain text content of the reply. This field is used for setting the
-   * content, while `htmlContent` should be displayed. This is required on
-   * creates if no `action` is specified.
+   * content, while `htmlContent` should be displayed. This field is required by
+   * the `create` method if no `action` value is specified.
    *
    * @param string $content
    */
