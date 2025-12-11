@@ -17,8 +17,6 @@
 
 namespace Google\Service\CloudObservability\Resource;
 
-use Google\Service\CloudObservability\ListLocationsResponse;
-use Google\Service\CloudObservability\Location;
 use Google\Service\CloudObservability\Operation;
 use Google\Service\CloudObservability\Settings;
 
@@ -27,25 +25,11 @@ use Google\Service\CloudObservability\Settings;
  * Typical usage is:
  *  <code>
  *   $observabilityService = new Google\Service\CloudObservability(...);
- *   $locations = $observabilityService->projects_locations;
+ *   $locations = $observabilityService->organizations_locations;
  *  </code>
  */
-class ProjectsLocations extends \Google\Service\Resource
+class OrganizationsLocations extends \Google\Service\Resource
 {
-  /**
-   * Gets information about a location. (locations.get)
-   *
-   * @param string $name Resource name for the location.
-   * @param array $optParams Optional parameters.
-   * @return Location
-   * @throws \Google\Service\Exception
-   */
-  public function get($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], Location::class);
-  }
   /**
    * Get Settings (locations.getSettings)
    *
@@ -62,33 +46,6 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('getSettings', [$params], Settings::class);
-  }
-  /**
-   * Lists information about the supported locations for this service.
-   * (locations.listProjectsLocations)
-   *
-   * @param string $name The resource that owns the locations collection, if
-   * applicable.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
-   * unsupported and is ignored unless explicitly documented otherwise. This is
-   * primarily for internal usage.
-   * @opt_param string filter A filter to narrow down results to a preferred
-   * subset. The filtering language accepts strings like `"displayName=tokyo"`,
-   * and is documented in more detail in [AIP-160](https://google.aip.dev/160).
-   * @opt_param int pageSize The maximum number of results to return. If not set,
-   * the service selects a default.
-   * @opt_param string pageToken A page token received from the `next_page_token`
-   * field in the response. Send that page token to receive the subsequent page.
-   * @return ListLocationsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function listProjectsLocations($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ListLocationsResponse::class);
   }
   /**
    * Update Settings (locations.updateSettings)
@@ -111,4 +68,4 @@ class ProjectsLocations extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_CloudObservability_Resource_ProjectsLocations');
+class_alias(OrganizationsLocations::class, 'Google_Service_CloudObservability_Resource_OrganizationsLocations');
