@@ -19,11 +19,13 @@ namespace Google\Service\VMwareEngine\Resource;
 
 use Google\Service\VMwareEngine\Cluster;
 use Google\Service\VMwareEngine\ListClustersResponse;
+use Google\Service\VMwareEngine\MountDatastoreRequest;
 use Google\Service\VMwareEngine\Operation;
 use Google\Service\VMwareEngine\Policy;
 use Google\Service\VMwareEngine\SetIamPolicyRequest;
 use Google\Service\VMwareEngine\TestIamPermissionsRequest;
 use Google\Service\VMwareEngine\TestIamPermissionsResponse;
+use Google\Service\VMwareEngine\UnmountDatastoreRequest;
 
 /**
  * The "clusters" collection of methods.
@@ -180,6 +182,26 @@ class ProjectsLocationsPrivateCloudsClusters extends \Google\Service\Resource
     return $this->call('list', [$params], ListClustersResponse::class);
   }
   /**
+   * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+   * (clusters.mountDatastore)
+   *
+   * @param string $name Required. The resource name of the cluster to mount the
+   * datastore. Resource names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-
+   * cloud/clusters/my-cluster`
+   * @param MountDatastoreRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function mountDatastore($name, MountDatastoreRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('mountDatastore', [$params], Operation::class);
+  }
+  /**
    * Modifies a `Cluster` resource. Only fields specified in `updateMask` are
    * applied. During operation processing, the resource is temporarily in the
    * `ACTIVE` state before the operation fully completes. For that period of time,
@@ -254,6 +276,26 @@ class ProjectsLocationsPrivateCloudsClusters extends \Google\Service\Resource
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
+  }
+  /**
+   * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+   * (clusters.unmountDatastore)
+   *
+   * @param string $name Required. The resource name of the cluster to unmount the
+   * datastore. Resource names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-
+   * cloud/clusters/my-cluster`
+   * @param UnmountDatastoreRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function unmountDatastore($name, UnmountDatastoreRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('unmountDatastore', [$params], Operation::class);
   }
 }
 

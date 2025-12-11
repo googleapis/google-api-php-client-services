@@ -17,7 +17,7 @@
 
 namespace Google\Service\VMwareEngine;
 
-class Cluster extends \Google\Model
+class Cluster extends \Google\Collection
 {
   /**
    * The default value. This value should never be used.
@@ -45,6 +45,7 @@ class Cluster extends \Google\Model
    * getting replaced.
    */
   public const STATE_REPAIRING = 'REPAIRING';
+  protected $collection_key = 'datastoreMountConfig';
   protected $autoscalingSettingsType = AutoscalingSettings::class;
   protected $autoscalingSettingsDataType = '';
   /**
@@ -53,6 +54,8 @@ class Cluster extends \Google\Model
    * @var string
    */
   public $createTime;
+  protected $datastoreMountConfigType = DatastoreMountConfig::class;
+  protected $datastoreMountConfigDataType = 'array';
   /**
    * Output only. True if the cluster is a management cluster; false otherwise.
    * There can only be one management cluster in a private cloud and it has to
@@ -125,6 +128,22 @@ class Cluster extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Output only. Configuration of a mounted datastore.
+   *
+   * @param DatastoreMountConfig[] $datastoreMountConfig
+   */
+  public function setDatastoreMountConfig($datastoreMountConfig)
+  {
+    $this->datastoreMountConfig = $datastoreMountConfig;
+  }
+  /**
+   * @return DatastoreMountConfig[]
+   */
+  public function getDatastoreMountConfig()
+  {
+    return $this->datastoreMountConfig;
   }
   /**
    * Output only. True if the cluster is a management cluster; false otherwise.
