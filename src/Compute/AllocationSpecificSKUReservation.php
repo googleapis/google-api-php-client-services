@@ -45,7 +45,7 @@ class AllocationSpecificSKUReservation extends \Google\Model
    * field, you must exclude the instanceProperties field.
    *
    * This field is optional, and it can be a full or partial URL. For example,
-   * the following are all valid URLs to an instance template:                - 
+   * the following are all valid URLs to an instance template:                -
    * https://www.googleapis.com/compute/v1/projects/project/global/instanceTempl
    * ates/instanceTemplate       -
    * projects/project/global/instanceTemplates/instanceTemplate       -
@@ -125,7 +125,7 @@ class AllocationSpecificSKUReservation extends \Google\Model
    * field, you must exclude the instanceProperties field.
    *
    * This field is optional, and it can be a full or partial URL. For example,
-   * the following are all valid URLs to an instance template:                - 
+   * the following are all valid URLs to an instance template:                -
    * https://www.googleapis.com/compute/v1/projects/project/global/instanceTempl
    * ates/instanceTemplate       -
    * projects/project/global/instanceTemplates/instanceTemplate       -
