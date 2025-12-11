@@ -20,6 +20,17 @@ namespace Google\Service\Datastream;
 class MongodbProfile extends \Google\Collection
 {
   protected $collection_key = 'hostAddresses';
+  /**
+   * Optional. Specifies additional options for the MongoDB connection. The
+   * options should be sent as key-value pairs, for example: `additional_options
+   * = {"serverSelectionTimeoutMS": "10000", "directConnection": "true"}`. Keys
+   * are case-sensitive and should match the official MongoDB connection string
+   * options: https://www.mongodb.com/docs/manual/reference/connection-string-
+   * options/ The server will not modify the values provided by the user.
+   *
+   * @var string[]
+   */
+  public $additionalOptions;
   protected $hostAddressesType = HostAddress::class;
   protected $hostAddressesDataType = 'array';
   /**
@@ -58,6 +69,27 @@ class MongodbProfile extends \Google\Collection
    */
   public $username;
 
+  /**
+   * Optional. Specifies additional options for the MongoDB connection. The
+   * options should be sent as key-value pairs, for example: `additional_options
+   * = {"serverSelectionTimeoutMS": "10000", "directConnection": "true"}`. Keys
+   * are case-sensitive and should match the official MongoDB connection string
+   * options: https://www.mongodb.com/docs/manual/reference/connection-string-
+   * options/ The server will not modify the values provided by the user.
+   *
+   * @param string[] $additionalOptions
+   */
+  public function setAdditionalOptions($additionalOptions)
+  {
+    $this->additionalOptions = $additionalOptions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAdditionalOptions()
+  {
+    return $this->additionalOptions;
+  }
   /**
    * Required. List of host addresses for a MongoDB cluster. For SRV connection
    * format, this list must contain exactly one DNS host without a port. For
