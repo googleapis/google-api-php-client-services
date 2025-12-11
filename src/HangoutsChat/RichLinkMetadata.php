@@ -32,6 +32,12 @@ class RichLinkMetadata extends \Google\Model
    */
   public const RICH_LINK_TYPE_CHAT_SPACE = 'CHAT_SPACE';
   /**
+   * A Gmail message rich link type. Specifically, a Gmail chip from [Share to
+   * Chat](https://support.google.com/chat?p=chat_gmail). The API only supports
+   * reading messages with GMAIL_MESSAGE rich links.
+   */
+  public const RICH_LINK_TYPE_GMAIL_MESSAGE = 'GMAIL_MESSAGE';
+  /**
    * A Meet message rich link type. For example, a Meet chip.
    */
   public const RICH_LINK_TYPE_MEET_SPACE = 'MEET_SPACE';
@@ -128,7 +134,7 @@ class RichLinkMetadata extends \Google\Model
    * The rich link type.
    *
    * Accepted values: RICH_LINK_TYPE_UNSPECIFIED, DRIVE_FILE, CHAT_SPACE,
-   * MEET_SPACE, CALENDAR_EVENT
+   * GMAIL_MESSAGE, MEET_SPACE, CALENDAR_EVENT
    *
    * @param self::RICH_LINK_TYPE_* $richLinkType
    */

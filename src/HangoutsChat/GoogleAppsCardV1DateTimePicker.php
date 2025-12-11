@@ -82,10 +82,8 @@ class GoogleAppsCardV1DateTimePicker extends \Google\Model
   /**
    * A data source that's unique to a Google Workspace host application, such as
    * Gmail emails, Google Calendar events, or Google Chat messages. Available
-   * for Google Workspace add-ons that extend Google Workspace flows, which is
-   * available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for
-   * Google Chat apps.
+   * for Google Workspace add-ons that extend Google Workspace Studio.
+   * Unavailable for Google Chat apps.
    *
    * @param HostAppDataSourceMarkup $hostAppDataSource
    */

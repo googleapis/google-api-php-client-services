@@ -129,9 +129,7 @@ class GoogleAppsCardV1Card extends \Google\Collection
   }
   /**
    * The expression data for the card. Available for Google Workspace add-ons
-   * that extend Google Workspace flows, which is available as part of the
-   * [Gemini Alpha program](https://support.google.com/a/answer/14170809).
-   * Unavailable for Google Chat apps.
+   * that extend Google Workspace Studio. Unavailable for Google Chat apps.
    *
    * @param GoogleAppsCardV1ExpressionData[] $expressionData
    */

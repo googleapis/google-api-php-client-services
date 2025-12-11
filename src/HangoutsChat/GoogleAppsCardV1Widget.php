@@ -79,10 +79,8 @@ class GoogleAppsCardV1Widget extends \Google\Collection
   /**
    * A unique ID assigned to the widget that's used to identify the widget to be
    * mutated. The ID has a character limit of 64 characters and should be in the
-   * format of `[a-zA-Z0-9-]+` and. Available for Google Workspace add-ons that
-   * extend Google Workspace flows, which is available as part of the [Gemini
-   * Alpha program](https://support.google.com/a/answer/14170809). Unavailable
-   * for Google Chat apps.
+   * format of `[a-zA-Z0-9-]+`. Available for Google Workspace add-ons that
+   * extend Google Workspace Studio. Unavailable for Google Chat apps.
    *
    * @var string
    */
@@ -98,9 +96,7 @@ class GoogleAppsCardV1Widget extends \Google\Collection
   /**
    * Specifies whether the widget is visible or hidden. The default value is
    * `VISIBLE`. Available for Google Workspace add-ons that extend Google
-   * Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for
-   * Google Chat apps.
+   * Workspace Studio. Unavailable for Google Chat apps.
    *
    * @var string
    */
@@ -251,10 +247,8 @@ class GoogleAppsCardV1Widget extends \Google\Collection
   }
   /**
    * Specifies the event actions that can be performed on the widget. Available
-   * for Google Workspace add-ons that extend Google Workspace flows, which is
-   * available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for
-   * Google Chat apps.
+   * for Google Workspace add-ons that extend Google Workspace Studio.
+   * Unavailable for Google Chat apps.
    *
    * @param GoogleAppsCardV1EventAction[] $eventActions
    */
@@ -318,10 +312,8 @@ class GoogleAppsCardV1Widget extends \Google\Collection
   /**
    * A unique ID assigned to the widget that's used to identify the widget to be
    * mutated. The ID has a character limit of 64 characters and should be in the
-   * format of `[a-zA-Z0-9-]+` and. Available for Google Workspace add-ons that
-   * extend Google Workspace flows, which is available as part of the [Gemini
-   * Alpha program](https://support.google.com/a/answer/14170809). Unavailable
-   * for Google Chat apps.
+   * format of `[a-zA-Z0-9-]+`. Available for Google Workspace add-ons that
+   * extend Google Workspace Studio. Unavailable for Google Chat apps.
    *
    * @param string $id
    */
@@ -426,9 +418,7 @@ class GoogleAppsCardV1Widget extends \Google\Collection
   /**
    * Specifies whether the widget is visible or hidden. The default value is
    * `VISIBLE`. Available for Google Workspace add-ons that extend Google
-   * Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for
-   * Google Chat apps.
+   * Workspace Studio. Unavailable for Google Chat apps.
    *
    * Accepted values: VISIBILITY_UNSPECIFIED, VISIBLE, HIDDEN
    *
