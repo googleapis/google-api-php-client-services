@@ -40,6 +40,10 @@ class AlloyDbSettings extends \Google\Model
    */
   public const DATABASE_VERSION_POSTGRES_17 = 'POSTGRES_17';
   /**
+   * The database version is Postgres 18.
+   */
+  public const DATABASE_VERSION_POSTGRES_18 = 'POSTGRES_18';
+  /**
    * Optional. The database engine major version. This is an optional field. If
    * a database version is not supplied at cluster creation time, then a default
    * database version will be used.
@@ -77,7 +81,7 @@ class AlloyDbSettings extends \Google\Model
    * database version will be used.
    *
    * Accepted values: DATABASE_VERSION_UNSPECIFIED, POSTGRES_14, POSTGRES_15,
-   * POSTGRES_16, POSTGRES_17
+   * POSTGRES_16, POSTGRES_17, POSTGRES_18
    *
    * @param self::DATABASE_VERSION_* $databaseVersion
    */
