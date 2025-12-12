@@ -42,6 +42,8 @@ class ExternalTransaction extends \Google\Model
   protected $currentPreTaxAmountDataType = '';
   protected $currentTaxAmountType = Price::class;
   protected $currentTaxAmountDataType = '';
+  protected $externalOfferDetailsType = ExternalOfferDetails::class;
+  protected $externalOfferDetailsDataType = '';
   /**
    * Output only. The id of this transaction. All transaction ids under the same
    * package name must be unique. Set when creating the external transaction.
@@ -146,6 +148,23 @@ class ExternalTransaction extends \Google\Model
   public function getCurrentTaxAmount()
   {
     return $this->currentTaxAmount;
+  }
+  /**
+   * Optional. Details necessary to accurately report external offers
+   * transactions.
+   *
+   * @param ExternalOfferDetails $externalOfferDetails
+   */
+  public function setExternalOfferDetails(ExternalOfferDetails $externalOfferDetails)
+  {
+    $this->externalOfferDetails = $externalOfferDetails;
+  }
+  /**
+   * @return ExternalOfferDetails
+   */
+  public function getExternalOfferDetails()
+  {
+    return $this->externalOfferDetails;
   }
   /**
    * Output only. The id of this transaction. All transaction ids under the same
