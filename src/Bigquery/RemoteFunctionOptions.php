@@ -21,7 +21,7 @@ class RemoteFunctionOptions extends \Google\Model
 {
   /**
    * Fully qualified name of the user-provided connection object which holds the
-   * authentication information to send requests to the remote service. Format: 
+   * authentication information to send requests to the remote service. Format:
    * ```"projects/{projectId}/locations/{locationId}/connections/{connectionId}"
    * ```
    *
@@ -54,7 +54,7 @@ class RemoteFunctionOptions extends \Google\Model
 
   /**
    * Fully qualified name of the user-provided connection object which holds the
-   * authentication information to send requests to the remote service. Format: 
+   * authentication information to send requests to the remote service. Format:
    * ```"projects/{projectId}/locations/{locationId}/connections/{connectionId}"
    * ```
    *

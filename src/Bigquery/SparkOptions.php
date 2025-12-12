@@ -29,7 +29,7 @@ class SparkOptions extends \Google\Collection
    */
   public $archiveUris;
   /**
-   * Fully qualified name of the user-provided Spark connection object. Format: 
+   * Fully qualified name of the user-provided Spark connection object. Format:
    * ```"projects/{project_id}/locations/{location_id}/connections/{connection_i
    * d}"```
    *
@@ -120,7 +120,7 @@ class SparkOptions extends \Google\Collection
     return $this->archiveUris;
   }
   /**
-   * Fully qualified name of the user-provided Spark connection object. Format: 
+   * Fully qualified name of the user-provided Spark connection object. Format:
    * ```"projects/{project_id}/locations/{location_id}/connections/{connection_i
    * d}"```
    *
