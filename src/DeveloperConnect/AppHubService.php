@@ -20,7 +20,7 @@ namespace Google\Service\DeveloperConnect;
 class AppHubService extends \Google\Model
 {
   /**
-   * Required. Output only. Immutable. The name of the App Hub Service. Format: 
+   * Required. Output only. Immutable. The name of the App Hub Service. Format:
    * `projects/{project}/locations/{location}/applications/{application}/service
    * s/{service}`.
    *
@@ -41,7 +41,7 @@ class AppHubService extends \Google\Model
   public $environment;
 
   /**
-   * Required. Output only. Immutable. The name of the App Hub Service. Format: 
+   * Required. Output only. Immutable. The name of the App Hub Service. Format:
    * `projects/{project}/locations/{location}/applications/{application}/service
    * s/{service}`.
    *
