@@ -107,7 +107,7 @@ class LogEntry extends \Google\Collection
    * "folders/[FOLDER_ID]/logs/[LOG_ID]" A project number may be used in place
    * of PROJECT_ID. The project number is translated to its corresponding
    * PROJECT_ID internally and the log_name field will contain PROJECT_ID in
-   * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example: 
+   * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivi
    * ty".[LOG_ID] must be less than 512 characters long and can only include the
    * following characters: upper and lower case alphanumeric characters,
@@ -369,7 +369,7 @@ class LogEntry extends \Google\Collection
    * "folders/[FOLDER_ID]/logs/[LOG_ID]" A project number may be used in place
    * of PROJECT_ID. The project number is translated to its corresponding
    * PROJECT_ID internally and the log_name field will contain PROJECT_ID in
-   * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example: 
+   * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivi
    * ty".[LOG_ID] must be less than 512 characters long and can only include the
    * following characters: upper and lower case alphanumeric characters,
