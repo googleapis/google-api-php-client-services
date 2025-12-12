@@ -55,6 +55,8 @@ class TrustConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $spiffeTrustStoresType = TrustStore::class;
+  protected $spiffeTrustStoresDataType = 'map';
   protected $trustStoresType = TrustStore::class;
   protected $trustStoresDataType = 'array';
   /**
@@ -165,6 +167,23 @@ class TrustConfig extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Defines a mapping from a trust domain to a TrustStore. This is
+   * used for SPIFFE certificate validation.
+   *
+   * @param TrustStore[] $spiffeTrustStores
+   */
+  public function setSpiffeTrustStores($spiffeTrustStores)
+  {
+    $this->spiffeTrustStores = $spiffeTrustStores;
+  }
+  /**
+   * @return TrustStore[]
+   */
+  public function getSpiffeTrustStores()
+  {
+    return $this->spiffeTrustStores;
   }
   /**
    * Optional. Set of trust stores to perform validation against. This field is

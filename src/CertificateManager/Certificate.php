@@ -69,6 +69,8 @@ class Certificate extends \Google\Collection
   public $labels;
   protected $managedType = ManagedCertificate::class;
   protected $managedDataType = '';
+  protected $managedIdentityType = ManagedIdentityCertificate::class;
+  protected $managedIdentityDataType = '';
   /**
    * Identifier. A user-defined name of the certificate. Certificate names must
    * be unique globally and match pattern `projects/locations/certificates`.
@@ -187,6 +189,22 @@ class Certificate extends \Google\Collection
   public function getManaged()
   {
     return $this->managed;
+  }
+  /**
+   * If set, contains configuration and state of a managed identity certificate.
+   *
+   * @param ManagedIdentityCertificate $managedIdentity
+   */
+  public function setManagedIdentity(ManagedIdentityCertificate $managedIdentity)
+  {
+    $this->managedIdentity = $managedIdentity;
+  }
+  /**
+   * @return ManagedIdentityCertificate
+   */
+  public function getManagedIdentity()
+  {
+    return $this->managedIdentity;
   }
   /**
    * Identifier. A user-defined name of the certificate. Certificate names must
