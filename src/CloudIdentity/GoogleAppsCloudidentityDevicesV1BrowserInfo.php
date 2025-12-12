@@ -103,9 +103,11 @@ class GoogleAppsCloudidentityDevicesV1BrowserInfo extends \Google\Model
    */
   public $isBulkDataEntryAnalysisEnabled;
   /**
+   * Deprecated: This field is not used for Chrome version 118 and later.
    * Current state of [Chrome
    * Cleanup](https://chromeenterprise.google/policies/#ChromeCleanupEnabled).
    *
+   * @deprecated
    * @var bool
    */
   public $isChromeCleanupEnabled;
@@ -248,9 +250,11 @@ class GoogleAppsCloudidentityDevicesV1BrowserInfo extends \Google\Model
     return $this->isBulkDataEntryAnalysisEnabled;
   }
   /**
+   * Deprecated: This field is not used for Chrome version 118 and later.
    * Current state of [Chrome
    * Cleanup](https://chromeenterprise.google/policies/#ChromeCleanupEnabled).
    *
+   * @deprecated
    * @param bool $isChromeCleanupEnabled
    */
   public function setIsChromeCleanupEnabled($isChromeCleanupEnabled)
@@ -258,6 +262,7 @@ class GoogleAppsCloudidentityDevicesV1BrowserInfo extends \Google\Model
     $this->isChromeCleanupEnabled = $isChromeCleanupEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getIsChromeCleanupEnabled()
