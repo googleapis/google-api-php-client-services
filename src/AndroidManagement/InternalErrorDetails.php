@@ -180,7 +180,7 @@ class InternalErrorDetails extends \Google\Model
    * See EuiccManager.OPERATION_SMDX_SUBJECT_REASON_CODE (https://developer.andr
    * oid.com/reference/android/telephony/euicc/EuiccManager#OPERATION_SMDX_SUBJE
    * CT_REASON_CODE) for details. Note that, in this case, error_code is the
-   * least significant 3 bytes of the EXTRA_EMBEDDED_SUBSCRIPTION_DETAILED_CODE 
+   * least significant 3 bytes of the EXTRA_EMBEDDED_SUBSCRIPTION_DETAILED_CODE
    * (https://developer.android.com/reference/android/telephony/euicc/EuiccManag
    * er#EXTRA_EMBEDDED_SUBSCRIPTION_DETAILED_CODE) specifying the subject code
    * and the reason code as indicated here (https://developer.android.com/refere
