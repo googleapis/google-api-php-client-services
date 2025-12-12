@@ -280,6 +280,8 @@ class Cluster extends \Google\Collection
   public $loggingService;
   protected $maintenancePolicyType = MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
+  protected $managedOpentelemetryConfigType = ManagedOpenTelemetryConfig::class;
+  protected $managedOpentelemetryConfigDataType = '';
   protected $masterAuthType = MasterAuth::class;
   protected $masterAuthDataType = '';
   protected $masterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
@@ -1188,6 +1190,22 @@ class Cluster extends \Google\Collection
   public function getMaintenancePolicy()
   {
     return $this->maintenancePolicy;
+  }
+  /**
+   * Configuration for Managed OpenTelemetry pipeline.
+   *
+   * @param ManagedOpenTelemetryConfig $managedOpentelemetryConfig
+   */
+  public function setManagedOpentelemetryConfig(ManagedOpenTelemetryConfig $managedOpentelemetryConfig)
+  {
+    $this->managedOpentelemetryConfig = $managedOpentelemetryConfig;
+  }
+  /**
+   * @return ManagedOpenTelemetryConfig
+   */
+  public function getManagedOpentelemetryConfig()
+  {
+    return $this->managedOpentelemetryConfig;
   }
   /**
    * The authentication information for accessing the master endpoint. If

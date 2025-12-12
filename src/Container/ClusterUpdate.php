@@ -210,6 +210,8 @@ class ClusterUpdate extends \Google\Collection
    * @var string
    */
   public $desiredLoggingService;
+  protected $desiredManagedOpentelemetryConfigType = ManagedOpenTelemetryConfig::class;
+  protected $desiredManagedOpentelemetryConfigDataType = '';
   protected $desiredMasterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $desiredMasterAuthorizedNetworksConfigDataType = '';
   /**
@@ -948,6 +950,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredLoggingService()
   {
     return $this->desiredLoggingService;
+  }
+  /**
+   * The desired managed open telemetry configuration.
+   *
+   * @param ManagedOpenTelemetryConfig $desiredManagedOpentelemetryConfig
+   */
+  public function setDesiredManagedOpentelemetryConfig(ManagedOpenTelemetryConfig $desiredManagedOpentelemetryConfig)
+  {
+    $this->desiredManagedOpentelemetryConfig = $desiredManagedOpentelemetryConfig;
+  }
+  /**
+   * @return ManagedOpenTelemetryConfig
+   */
+  public function getDesiredManagedOpentelemetryConfig()
+  {
+    return $this->desiredManagedOpentelemetryConfig;
   }
   /**
    * The desired configuration options for master authorized networks feature.
