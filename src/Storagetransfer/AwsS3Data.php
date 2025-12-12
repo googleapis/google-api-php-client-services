@@ -78,7 +78,7 @@ class AwsS3Data extends \Google\Model
   public $privateNetworkService;
   /**
    * The Amazon Resource Name (ARN) of the role to support temporary credentials
-   * via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM 
+   * via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM
    * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifier
    * s.html#identifiers-arns). When a role ARN is provided, Transfer Service
    * fetches temporary credentials for the session using a
@@ -226,7 +226,7 @@ class AwsS3Data extends \Google\Model
   }
   /**
    * The Amazon Resource Name (ARN) of the role to support temporary credentials
-   * via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM 
+   * via `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM
    * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifier
    * s.html#identifiers-arns). When a role ARN is provided, Transfer Service
    * fetches temporary credentials for the session using a
