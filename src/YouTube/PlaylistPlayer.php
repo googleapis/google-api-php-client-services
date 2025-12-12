@@ -20,14 +20,14 @@ namespace Google\Service\YouTube;
 class PlaylistPlayer extends \Google\Model
 {
   /**
-   * An  tag that embeds a player that will play the playlist.
+   * An
    *
    * @var string
    */
   public $embedHtml;
 
   /**
-   * An  tag that embeds a player that will play the playlist.
+   * An
    *
    * @param string $embedHtml
    */

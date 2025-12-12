@@ -24,7 +24,7 @@ class VideoPlayer extends \Google\Model
    */
   public $embedHeight;
   /**
-   * An  tag that embeds a player that will play the video.
+   * An
    *
    * @var string
    */
@@ -51,7 +51,7 @@ class VideoPlayer extends \Google\Model
     return $this->embedHeight;
   }
   /**
-   * An  tag that embeds a player that will play the video.
+   * An
    *
    * @param string $embedHtml
    */
