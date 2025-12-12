@@ -27,6 +27,12 @@ class ProductStatusDestinationStatus extends \Google\Collection
    */
   public $approvedCountries;
   /**
+   * The channel of the destination.
+   *
+   * @var string
+   */
+  public $channel;
+  /**
    * The name of the destination
    *
    * @var string
@@ -68,6 +74,22 @@ class ProductStatusDestinationStatus extends \Google\Collection
   public function getApprovedCountries()
   {
     return $this->approvedCountries;
+  }
+  /**
+   * The channel of the destination.
+   *
+   * @param string $channel
+   */
+  public function setChannel($channel)
+  {
+    $this->channel = $channel;
+  }
+  /**
+   * @return string
+   */
+  public function getChannel()
+  {
+    return $this->channel;
   }
   /**
    * The name of the destination
