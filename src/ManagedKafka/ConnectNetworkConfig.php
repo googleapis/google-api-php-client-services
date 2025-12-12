@@ -21,11 +21,13 @@ class ConnectNetworkConfig extends \Google\Collection
 {
   protected $collection_key = 'dnsDomainNames';
   /**
-   * Optional. Additional subnets may be specified. They may be in another
-   * region, but must be in the same VPC network. The Connect workers can
-   * communicate with network endpoints in either the primary or additional
-   * subnets.
+   * Optional. Deprecated: Managed Kafka Connect clusters can now reach any
+   * endpoint accessible from the primary subnet without the need to define
+   * additional subnets. Please see https://cloud.google.com/managed-service-
+   * for-apache-kafka/docs/connect-cluster/create-connect-cluster#worker-subnet
+   * for more information.
    *
+   * @deprecated
    * @var string[]
    */
   public $additionalSubnets;
@@ -54,11 +56,13 @@ class ConnectNetworkConfig extends \Google\Collection
   public $primarySubnet;
 
   /**
-   * Optional. Additional subnets may be specified. They may be in another
-   * region, but must be in the same VPC network. The Connect workers can
-   * communicate with network endpoints in either the primary or additional
-   * subnets.
+   * Optional. Deprecated: Managed Kafka Connect clusters can now reach any
+   * endpoint accessible from the primary subnet without the need to define
+   * additional subnets. Please see https://cloud.google.com/managed-service-
+   * for-apache-kafka/docs/connect-cluster/create-connect-cluster#worker-subnet
+   * for more information.
    *
+   * @deprecated
    * @param string[] $additionalSubnets
    */
   public function setAdditionalSubnets($additionalSubnets)
@@ -66,6 +70,7 @@ class ConnectNetworkConfig extends \Google\Collection
     $this->additionalSubnets = $additionalSubnets;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getAdditionalSubnets()

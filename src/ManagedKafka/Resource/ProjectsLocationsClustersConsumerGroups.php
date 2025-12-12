@@ -79,6 +79,8 @@ class ProjectsLocationsClustersConsumerGroups extends \Google\Service\Resource
    * `ListConsumerGroups` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListConsumerGroups` must match
    * the call that provided the page token.
+   * @opt_param string view Optional. Specifies the view (BASIC or FULL) of the
+   * ConsumerGroup resource to be returned in the response. Defaults to FULL view.
    * @return ListConsumerGroupsResponse
    * @throws \Google\Service\Exception
    */
