@@ -45,7 +45,7 @@ class AuthzExtension extends \Google\Collection
   public const WIRE_FORMAT_EXT_PROC_GRPC = 'EXT_PROC_GRPC';
   /**
    * The extension service uses Envoy's `ext_authz` gRPC API. The backend
-   * service for the extension must use HTTP2, or H2C as the protocol.
+   * service for the extension must use HTTP2 or H2C as the protocol.
    * `EXT_AUTHZ_GRPC` is only supported for regional `AuthzExtension` resources.
    */
   public const WIRE_FORMAT_EXT_AUTHZ_GRPC = 'EXT_AUTHZ_GRPC';
@@ -156,7 +156,9 @@ class AuthzExtension extends \Google\Collection
   public $updateTime;
   /**
    * Optional. The format of communication supported by the callout extension.
-   * If not specified, the default value `EXT_PROC_GRPC` is used.
+   * This field is supported only for regional `AuthzExtension` resources. If
+   * not specified, the default value `EXT_PROC_GRPC` is used. Global
+   * `AuthzExtension` resources use the `EXT_PROC_GRPC` wire format.
    *
    * @var string
    */
@@ -391,7 +393,9 @@ class AuthzExtension extends \Google\Collection
   }
   /**
    * Optional. The format of communication supported by the callout extension.
-   * If not specified, the default value `EXT_PROC_GRPC` is used.
+   * This field is supported only for regional `AuthzExtension` resources. If
+   * not specified, the default value `EXT_PROC_GRPC` is used. Global
+   * `AuthzExtension` resources use the `EXT_PROC_GRPC` wire format.
    *
    * Accepted values: WIRE_FORMAT_UNSPECIFIED, EXT_PROC_GRPC, EXT_AUTHZ_GRPC
    *

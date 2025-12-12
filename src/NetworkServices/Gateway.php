@@ -29,8 +29,8 @@ class Gateway extends \Google\Collection
   public const ENVOY_HEADERS_NONE = 'NONE';
   /**
    * Envoy will insert default internal debug headers into upstream requests:
-   * x-envoy-attempt-count x-envoy-is-timeout-retry x-envoy-expected-rq-timeout-
-   * ms x-envoy-original-path x-envoy-upstream-stream-duration-ms
+   * x-envoy-attempt-count, x-envoy-is-timeout-retry, x-envoy-expected-rq-
+   * timeout-ms, x-envoy-original-path, x-envoy-upstream-stream-duration-ms
    */
   public const ENVOY_HEADERS_DEBUG_HEADERS = 'DEBUG_HEADERS';
   /**
