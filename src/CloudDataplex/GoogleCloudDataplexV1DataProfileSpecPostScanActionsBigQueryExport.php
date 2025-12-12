@@ -20,7 +20,7 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataProfileSpecPostScanActionsBigQueryExport extends \Google\Model
 {
   /**
-   * Optional. The BigQuery table to export DataProfileScan results to. Format: 
+   * Optional. The BigQuery table to export DataProfileScan results to. Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TA
    * BLE_ID
    *
@@ -29,7 +29,7 @@ class GoogleCloudDataplexV1DataProfileSpecPostScanActionsBigQueryExport extends 
   public $resultsTable;
 
   /**
-   * Optional. The BigQuery table to export DataProfileScan results to. Format: 
+   * Optional. The BigQuery table to export DataProfileScan results to. Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TA
    * BLE_ID
    *

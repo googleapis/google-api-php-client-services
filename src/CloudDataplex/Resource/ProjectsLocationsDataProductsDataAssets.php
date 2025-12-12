@@ -17,10 +17,9 @@
 
 namespace Google\Service\CloudDataplex\Resource;
 
-use Google\Service\CloudDataplex\GoogleIamV1Policy;
-use Google\Service\CloudDataplex\GoogleIamV1SetIamPolicyRequest;
-use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsRequest;
-use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1DataAsset;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1ListDataAssetsResponse;
+use Google\Service\CloudDataplex\GoogleLongrunningOperation;
 
 /**
  * The "dataAssets" collection of methods.
@@ -33,47 +32,123 @@ use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
 class ProjectsLocationsDataProductsDataAssets extends \Google\Service\Resource
 {
   /**
-   * Sets the access control policy on the specified resource. Replaces any
-   * existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED
-   * errors. (dataAssets.setIamPolicy)
+   * Creates a Data Asset. (dataAssets.create)
    *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * specified. See Resource names
-   * (https://cloud.google.com/apis/design/resource_names) for the appropriate
-   * value for this field.
-   * @param GoogleIamV1SetIamPolicyRequest $postBody
+   * @param string $parent Required. The parent resource where this Data Asset
+   * will be created. Format: projects/{project_id_or_number}/locations/{location_
+   * id}/dataProducts/{data_product_id}
+   * @param GoogleCloudDataplexV1DataAsset $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleIamV1Policy
+   *
+   * @opt_param string dataAssetId Optional. The ID of the Data Asset to
+   * create.The ID must conform to RFC-1034 and contain only lower-case letters
+   * (a-z), numbers (0-9), or hyphens, with the first character a letter, the last
+   * a letter or a number, and a 63 character maximum. Characters outside of ASCII
+   * are not permitted. Valid format regex: (^a-z?$) If not provided, a system
+   * generated ID will be used.
+   * @opt_param bool validateOnly Optional. Validates the request without actually
+   * creating the Data Asset. Defaults to false.
+   * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
-  public function setIamPolicy($resource, GoogleIamV1SetIamPolicyRequest $postBody, $optParams = [])
+  public function create($parent, GoogleCloudDataplexV1DataAsset $postBody, $optParams = [])
   {
-    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', [$params], GoogleIamV1Policy::class);
+    return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Returns permissions that a caller has on the specified resource. If the
-   * resource does not exist, this will return an empty set of permissions, not a
-   * NOT_FOUND error.Note: This operation is designed to be used for building
-   * permission-aware UIs and command-line tools, not for authorization checking.
-   * This operation may "fail open" without warning.
-   * (dataAssets.testIamPermissions)
+   * Deletes a Data Asset. (dataAssets.delete)
    *
-   * @param string $resource REQUIRED: The resource for which the policy detail is
-   * being requested. See Resource names
-   * (https://cloud.google.com/apis/design/resource_names) for the appropriate
-   * value for this field.
-   * @param GoogleIamV1TestIamPermissionsRequest $postBody
+   * @param string $name Required. The name of the Data Asset to delete. Format: p
+   * rojects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_pro
+   * duct_id}/dataAssets/{data_asset_id}
    * @param array $optParams Optional parameters.
-   * @return GoogleIamV1TestIamPermissionsResponse
+   *
+   * @opt_param string etag Optional. The etag of the Data Asset. If this is
+   * provided, it must match the server's etag. If the etag is provided and does
+   * not match the server-computed etag, the request must fail with a ABORTED
+   * error code.
+   * @opt_param bool validateOnly Optional. Validates the request without actually
+   * deleting the Data Asset. Defaults to false.
+   * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
-  public function testIamPermissions($resource, GoogleIamV1TestIamPermissionsRequest $postBody, $optParams = [])
+  public function delete($name, $optParams = [])
   {
-    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', [$params], GoogleIamV1TestIamPermissionsResponse::class);
+    return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Gets a Data Asset. (dataAssets.get)
+   *
+   * @param string $name Required. The name of the Data Asset to retrieve. Format:
+   * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_pr
+   * oduct_id}/dataAssets/{data_asset_id}
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1DataAsset
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudDataplexV1DataAsset::class);
+  }
+  /**
+   * Lists Data Assets for a given Data Product.
+   * (dataAssets.listProjectsLocationsDataProductsDataAssets)
+   *
+   * @param string $parent Required. The parent, which has this collection of Data
+   * Assets. Format: projects/{project_id_or_number}/locations/{location_id}/dataP
+   * roducts/{data_product_id}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Filter expression that filters DataAssets
+   * listed in the response.
+   * @opt_param string orderBy Optional. Order by expression that orders
+   * DataAssets listed in the response.Supported Order by fields are: name or
+   * create_time.If not specified, the ordering is undefined.
+   * @opt_param int pageSize Optional. The maximum number of Data Assets to
+   * return. The service may return fewer than this value. If unspecified, at most
+   * 50 Data Assets will be returned. The maximum value is 1000; values above 1000
+   * will be coerced to 1000.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * ListDataAssets call. Provide this to retrieve the subsequent page.When
+   * paginating, all other parameters provided to ListDataAssets must match the
+   * call that provided the page token.
+   * @return GoogleCloudDataplexV1ListDataAssetsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsDataProductsDataAssets($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudDataplexV1ListDataAssetsResponse::class);
+  }
+  /**
+   * Updates a Data Asset. (dataAssets.patch)
+   *
+   * @param string $name Identifier. Resource name of the Data Asset. Format: proj
+   * ects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_produc
+   * t_id}/dataAssets/{data_asset_id}
+   * @param GoogleCloudDataplexV1DataAsset $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The list of fields to update. If this
+   * is empty or not set, then all fields that are populated (have a non-empty
+   * value) in data_asset above will be updated.
+   * @opt_param bool validateOnly Optional. Validates the request without actually
+   * updating the Data Asset. Defaults to false.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudDataplexV1DataAsset $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleLongrunningOperation::class);
   }
 }
 

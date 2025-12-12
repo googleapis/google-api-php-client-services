@@ -60,7 +60,7 @@ class GoogleCloudDataplexV1DataAttribute extends \Google\Model
    */
   public $labels;
   /**
-   * Output only. The relative resource name of the dataAttribute, of the form: 
+   * Output only. The relative resource name of the dataAttribute, of the form:
    * projects/{project_number}/locations/{location_id}/dataTaxonomies/{dataTaxon
    * omy}/attributes/{data_attribute_id}.
    *
@@ -209,7 +209,7 @@ class GoogleCloudDataplexV1DataAttribute extends \Google\Model
     return $this->labels;
   }
   /**
-   * Output only. The relative resource name of the dataAttribute, of the form: 
+   * Output only. The relative resource name of the dataAttribute, of the form:
    * projects/{project_number}/locations/{location_id}/dataTaxonomies/{dataTaxon
    * omy}/attributes/{data_attribute_id}.
    *

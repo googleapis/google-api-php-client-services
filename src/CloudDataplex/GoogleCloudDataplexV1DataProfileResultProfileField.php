@@ -37,7 +37,7 @@ class GoogleCloudDataplexV1DataProfileResultProfileField extends \Google\Model
   protected $profileDataType = '';
   /**
    * Output only. The data type retrieved from the schema of the data source.
-   * For instance, for a BigQuery native table, it is the BigQuery Table Schema 
+   * For instance, for a BigQuery native table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefield
    * schema). For a Dataplex Universal Catalog Entity, it is the Entity Schema (
    * https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.
@@ -99,7 +99,7 @@ class GoogleCloudDataplexV1DataProfileResultProfileField extends \Google\Model
   }
   /**
    * Output only. The data type retrieved from the schema of the data source.
-   * For instance, for a BigQuery native table, it is the BigQuery Table Schema 
+   * For instance, for a BigQuery native table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefield
    * schema). For a Dataplex Universal Catalog Entity, it is the Entity Schema (
    * https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.
