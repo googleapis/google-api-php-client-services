@@ -48,7 +48,7 @@ class GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity extends \Google
    */
   public const MIN_DEVICE_RECOGNITION_LEVEL_MEETS_BASIC_INTEGRITY = 'MEETS_BASIC_INTEGRITY';
   /**
-   * This level corresponds to the `MEETS_DEVICE_INTEGRITY` [device recognition 
+   * This level corresponds to the `MEETS_DEVICE_INTEGRITY` [device recognition
    * verdict](https://developer.android.com/google/play/integrity/verdicts#devic
    * e-integrity-field). Any app integrated with Play Integrity will
    * automatically be eligible to receive this label without any additional

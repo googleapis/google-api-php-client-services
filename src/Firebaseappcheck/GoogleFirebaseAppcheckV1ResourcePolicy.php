@@ -89,7 +89,7 @@ class GoogleFirebaseAppcheckV1ResourcePolicy extends \Google\Model
   public $name;
   /**
    * Required. Service specific name of the resource object to which this policy
-   * applies, in the format: * **iOS OAuth clients** (Google Identity for iOS): 
+   * applies, in the format: * **iOS OAuth clients** (Google Identity for iOS):
    * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_clie
    * nt_id}` Note that the resource must belong to the service specified in the
    * `name` and be from the same project as this policy, but the resource is
@@ -169,7 +169,7 @@ class GoogleFirebaseAppcheckV1ResourcePolicy extends \Google\Model
   }
   /**
    * Required. Service specific name of the resource object to which this policy
-   * applies, in the format: * **iOS OAuth clients** (Google Identity for iOS): 
+   * applies, in the format: * **iOS OAuth clients** (Google Identity for iOS):
    * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_clie
    * nt_id}` Note that the resource must belong to the service specified in the
    * `name` and be from the same project as this policy, but the resource is
