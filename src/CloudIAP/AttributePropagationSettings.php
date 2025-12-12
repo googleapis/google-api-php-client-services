@@ -41,7 +41,7 @@ class AttributePropagationSettings extends \Google\Collection
    * `.strict()`: Ignores the `x-goog-iap-attr-` prefix for the provided `` when
    * propagating with the `HEADER` output credential, such as request headers. -
    * append `.append()` OR `.append()`: Appends the provided `` or `` to the end
-   * of ``. Example expression: `attributes.saml_attributes.filter(x, x.name in 
+   * of ``. Example expression: `attributes.saml_attributes.filter(x, x.name in
    * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('cu
    * stom').strict())`
    *
@@ -88,7 +88,7 @@ class AttributePropagationSettings extends \Google\Collection
    * `.strict()`: Ignores the `x-goog-iap-attr-` prefix for the provided `` when
    * propagating with the `HEADER` output credential, such as request headers. -
    * append `.append()` OR `.append()`: Appends the provided `` or `` to the end
-   * of ``. Example expression: `attributes.saml_attributes.filter(x, x.name in 
+   * of ``. Example expression: `attributes.saml_attributes.filter(x, x.name in
    * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('cu
    * stom').strict())`
    *
