@@ -23,7 +23,7 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
   protected $dataStoreSpecsType = GoogleCloudAiplatformV1VertexAISearchDataStoreSpec::class;
   protected $dataStoreSpecsDataType = 'array';
   /**
-   * Optional. Fully-qualified Vertex AI Search data store resource ID. Format: 
+   * Optional. Fully-qualified Vertex AI Search data store resource ID. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStore
    * s/{dataStore}`
    *
@@ -71,7 +71,7 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
     return $this->dataStoreSpecs;
   }
   /**
-   * Optional. Fully-qualified Vertex AI Search data store resource ID. Format: 
+   * Optional. Fully-qualified Vertex AI Search data store resource ID. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStore
    * s/{dataStore}`
    *

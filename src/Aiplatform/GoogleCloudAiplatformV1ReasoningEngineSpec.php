@@ -57,7 +57,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
    * Output only. The identity to use for the Reasoning Engine. It can contain
    * one of the following values: * service-{project}@gcp-sa-aiplatform-
    * re.googleapis.com (for SERVICE_AGENT identity type) *
-   * {name}@{project}.gserviceaccount.com (for SERVICE_ACCOUNT identity type) * 
+   * {name}@{project}.gserviceaccount.com (for SERVICE_ACCOUNT identity type) *
    * agents.global.{org}.system.id.goog/resources/aiplatform/projects/{project}/
    * locations/{location}/reasoningEngines/{reasoning_engine} (for
    * AGENT_IDENTITY identity type)
@@ -144,7 +144,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
    * Output only. The identity to use for the Reasoning Engine. It can contain
    * one of the following values: * service-{project}@gcp-sa-aiplatform-
    * re.googleapis.com (for SERVICE_AGENT identity type) *
-   * {name}@{project}.gserviceaccount.com (for SERVICE_ACCOUNT identity type) * 
+   * {name}@{project}.gserviceaccount.com (for SERVICE_ACCOUNT identity type) *
    * agents.global.{org}.system.id.goog/resources/aiplatform/projects/{project}/
    * locations/{location}/reasoningEngines/{reasoning_engine} (for
    * AGENT_IDENTITY identity type)

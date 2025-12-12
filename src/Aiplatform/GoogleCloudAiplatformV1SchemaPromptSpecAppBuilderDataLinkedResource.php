@@ -36,7 +36,7 @@ class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderDataLinkedResource extend
   public $name;
   /**
    * The type of the linked resource. e.g., "SAVED_PROMPT", "AI_AGENT" This
-   * string corresponds to the name of the LinkedResourceType enum member. See: 
+   * string corresponds to the name of the LinkedResourceType enum member. See:
    * google3/cloud/console/web/ai/platform/llm/prompts/build/services/specs_repo
    * sitory_service/linked_resources/linked_resource.ts
    *
@@ -81,7 +81,7 @@ class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderDataLinkedResource extend
   }
   /**
    * The type of the linked resource. e.g., "SAVED_PROMPT", "AI_AGENT" This
-   * string corresponds to the name of the LinkedResourceType enum member. See: 
+   * string corresponds to the name of the LinkedResourceType enum member. See:
    * google3/cloud/console/web/ai/platform/llm/prompts/build/services/specs_repo
    * sitory_service/linked_resources/linked_resource.ts
    *
