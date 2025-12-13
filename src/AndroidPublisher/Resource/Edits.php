@@ -41,8 +41,6 @@ class Edits extends \Google\Service\Resource
    * until they are explicitly sent for review from within the Google Play Console
    * UI. These changes will be added to any other changes that are not yet sent
    * for review.
-   * @opt_param string inProgressReviewBehaviour Optional. The behavior of
-   * committing a new edit while a submission is already in review.
    * @return AppEdit
    * @throws \Google\Service\Exception
    */

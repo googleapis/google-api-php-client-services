@@ -39,6 +39,15 @@ class ManagedProductTaxAndComplianceSettings extends \Google\Model
    * @var bool
    */
   public $isTokenizedDigitalAsset;
+  /**
+   * Product tax category code to assign to the in-app product. Product tax
+   * category determines the transaction tax rates applied to the product. Refer
+   * to the [Help Center article](https://support.google.com/googleplay/android-
+   * developer/answer/16408159) for more information.
+   *
+   * @var string
+   */
+  public $productTaxCategoryCode;
   protected $taxRateInfoByRegionCodeType = RegionalTaxRateInfo::class;
   protected $taxRateInfoByRegionCodeDataType = 'map';
 
@@ -81,6 +90,25 @@ class ManagedProductTaxAndComplianceSettings extends \Google\Model
   public function getIsTokenizedDigitalAsset()
   {
     return $this->isTokenizedDigitalAsset;
+  }
+  /**
+   * Product tax category code to assign to the in-app product. Product tax
+   * category determines the transaction tax rates applied to the product. Refer
+   * to the [Help Center article](https://support.google.com/googleplay/android-
+   * developer/answer/16408159) for more information.
+   *
+   * @param string $productTaxCategoryCode
+   */
+  public function setProductTaxCategoryCode($productTaxCategoryCode)
+  {
+    $this->productTaxCategoryCode = $productTaxCategoryCode;
+  }
+  /**
+   * @return string
+   */
+  public function getProductTaxCategoryCode()
+  {
+    return $this->productTaxCategoryCode;
   }
   /**
    * A mapping from region code to tax rate details. The keys are region codes
