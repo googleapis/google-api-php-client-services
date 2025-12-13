@@ -74,6 +74,8 @@ class InsightsConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $projectsType = Projects::class;
+  protected $projectsDataType = '';
   /**
    * Output only. Reconciling (https://google.aip.dev/128#reconciliation). Set
    * to true if the current state of InsightsConfig does not match the user's
@@ -217,6 +219,22 @@ class InsightsConfig extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. The GCP projects to track with the InsightsConfig.
+   *
+   * @param Projects $projects
+   */
+  public function setProjects(Projects $projects)
+  {
+    $this->projects = $projects;
+  }
+  /**
+   * @return Projects
+   */
+  public function getProjects()
+  {
+    return $this->projects;
   }
   /**
    * Output only. Reconciling (https://google.aip.dev/128#reconciliation). Set

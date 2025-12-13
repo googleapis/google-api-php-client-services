@@ -19,8 +19,10 @@ namespace Google\Service\DeveloperConnect\Resource;
 
 use Google\Service\DeveloperConnect\FetchAccessTokenRequest;
 use Google\Service\DeveloperConnect\FetchAccessTokenResponse;
+use Google\Service\DeveloperConnect\FinishOAuthResponse;
 use Google\Service\DeveloperConnect\ListUsersResponse;
 use Google\Service\DeveloperConnect\Operation;
+use Google\Service\DeveloperConnect\StartOAuthResponse;
 use Google\Service\DeveloperConnect\User;
 
 /**
@@ -110,6 +112,32 @@ class ProjectsLocationsAccountConnectorsUsers extends \Google\Service\Resource
     return $this->call('fetchSelf', [$params], User::class);
   }
   /**
+   * Finishes OAuth flow for an account connector. (users.finishOAuthFlow)
+   *
+   * @param string $accountConnector Required. The resource name of the
+   * AccountConnector in the format `projects/locations/accountConnectors`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string googleOauthParams.scopes Required. The scopes returned by
+   * Google OAuth flow.
+   * @opt_param string googleOauthParams.ticket Required. The ticket to be used
+   * for post processing the callback from Google OAuth flow.
+   * @opt_param string googleOauthParams.versionInfo Optional. The version info
+   * returned by Google OAuth flow.
+   * @opt_param string oauthParams.code Required. The code to be used for getting
+   * the token from SCM provider.
+   * @opt_param string oauthParams.ticket Required. The ticket to be used for post
+   * processing the callback from SCM provider.
+   * @return FinishOAuthResponse
+   * @throws \Google\Service\Exception
+   */
+  public function finishOAuthFlow($accountConnector, $optParams = [])
+  {
+    $params = ['accountConnector' => $accountConnector];
+    $params = array_merge($params, $optParams);
+    return $this->call('finishOAuthFlow', [$params], FinishOAuthResponse::class);
+  }
+  /**
    * Lists Users in a given project, location, and account_connector.
    * (users.listProjectsLocationsAccountConnectorsUsers)
    *
@@ -131,6 +159,21 @@ class ProjectsLocationsAccountConnectorsUsers extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListUsersResponse::class);
+  }
+  /**
+   * Starts OAuth flow for an account connector. (users.startOAuthFlow)
+   *
+   * @param string $accountConnector Required. The resource name of the
+   * AccountConnector in the format `projects/locations/accountConnectors`.
+   * @param array $optParams Optional parameters.
+   * @return StartOAuthResponse
+   * @throws \Google\Service\Exception
+   */
+  public function startOAuthFlow($accountConnector, $optParams = [])
+  {
+    $params = ['accountConnector' => $accountConnector];
+    $params = array_merge($params, $optParams);
+    return $this->call('startOAuthFlow', [$params], StartOAuthResponse::class);
   }
 }
 
