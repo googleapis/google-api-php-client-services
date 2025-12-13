@@ -38,6 +38,13 @@ class CalendarListEntry extends \Google\Collection
    */
   public $accessRole;
   /**
+   * Whether this calendar automatically accepts invitations. Only valid for
+   * resource calendars. Read-only.
+   *
+   * @var bool
+   */
+  public $autoAcceptInvitations;
+  /**
    * The main color of the calendar in the hexadecimal format "#0088aa". This
    * property supersedes the index-based colorId property. To set or change this
    * property, you need to specify colorRgbFormat=true in the parameters of the
@@ -182,6 +189,23 @@ class CalendarListEntry extends \Google\Collection
   public function getAccessRole()
   {
     return $this->accessRole;
+  }
+  /**
+   * Whether this calendar automatically accepts invitations. Only valid for
+   * resource calendars. Read-only.
+   *
+   * @param bool $autoAcceptInvitations
+   */
+  public function setAutoAcceptInvitations($autoAcceptInvitations)
+  {
+    $this->autoAcceptInvitations = $autoAcceptInvitations;
+  }
+  /**
+   * @return bool
+   */
+  public function getAutoAcceptInvitations()
+  {
+    return $this->autoAcceptInvitations;
   }
   /**
    * The main color of the calendar in the hexadecimal format "#0088aa". This
