@@ -58,8 +58,7 @@ class CacheParameters extends \Google\Collection
    */
   public $command;
   /**
-   * Optional. Field indicating whether cache volume as global file lock
-   * enabled.
+   * Optional. Indicates whether the cache volume has global file lock enabled.
    *
    * @var bool
    */
@@ -162,8 +161,7 @@ class CacheParameters extends \Google\Collection
     return $this->command;
   }
   /**
-   * Optional. Field indicating whether cache volume as global file lock
-   * enabled.
+   * Optional. Indicates whether the cache volume has global file lock enabled.
    *
    * @param bool $enableGlobalFileLock
    */

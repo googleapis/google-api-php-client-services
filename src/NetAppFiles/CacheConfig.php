@@ -20,13 +20,89 @@ namespace Google\Service\NetAppFiles;
 class CacheConfig extends \Google\Model
 {
   /**
+   * Default unspecified state.
+   */
+  public const CACHE_PRE_POPULATE_STATE_CACHE_PRE_POPULATE_STATE_UNSPECIFIED = 'CACHE_PRE_POPULATE_STATE_UNSPECIFIED';
+  /**
+   * State representing when the most recent create or update request did not
+   * require a prepopulation job.
+   */
+  public const CACHE_PRE_POPULATE_STATE_NOT_NEEDED = 'NOT_NEEDED';
+  /**
+   * State representing when the most recent update request requested a
+   * prepopulation job but it has not yet completed.
+   */
+  public const CACHE_PRE_POPULATE_STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * State representing when the most recent update request requested a
+   * prepopulation job and it has completed successfully.
+   */
+  public const CACHE_PRE_POPULATE_STATE_COMPLETE = 'COMPLETE';
+  /**
+   * State representing when the most recent update request requested a
+   * prepopulation job but the prepopulate job failed.
+   */
+  public const CACHE_PRE_POPULATE_STATE_ERROR = 'ERROR';
+  protected $cachePrePopulateType = CachePrePopulate::class;
+  protected $cachePrePopulateDataType = '';
+  /**
+   * Output only. State of the prepopulation job indicating how the
+   * prepopulation is progressing.
+   *
+   * @var string
+   */
+  public $cachePrePopulateState;
+  /**
    * Optional. Flag indicating whether a CIFS change notification is enabled for
    * the FlexCache volume.
    *
    * @var bool
    */
   public $cifsChangeNotifyEnabled;
+  /**
+   * Optional. Flag indicating whether writeback is enabled for the FlexCache
+   * volume.
+   *
+   * @var bool
+   */
+  public $writebackEnabled;
 
+  /**
+   * Optional. Pre-populate cache volume with data from the origin volume.
+   *
+   * @param CachePrePopulate $cachePrePopulate
+   */
+  public function setCachePrePopulate(CachePrePopulate $cachePrePopulate)
+  {
+    $this->cachePrePopulate = $cachePrePopulate;
+  }
+  /**
+   * @return CachePrePopulate
+   */
+  public function getCachePrePopulate()
+  {
+    return $this->cachePrePopulate;
+  }
+  /**
+   * Output only. State of the prepopulation job indicating how the
+   * prepopulation is progressing.
+   *
+   * Accepted values: CACHE_PRE_POPULATE_STATE_UNSPECIFIED, NOT_NEEDED,
+   * IN_PROGRESS, COMPLETE, ERROR
+   *
+   * @param self::CACHE_PRE_POPULATE_STATE_* $cachePrePopulateState
+   */
+  public function setCachePrePopulateState($cachePrePopulateState)
+  {
+    $this->cachePrePopulateState = $cachePrePopulateState;
+  }
+  /**
+   * @return self::CACHE_PRE_POPULATE_STATE_*
+   */
+  public function getCachePrePopulateState()
+  {
+    return $this->cachePrePopulateState;
+  }
   /**
    * Optional. Flag indicating whether a CIFS change notification is enabled for
    * the FlexCache volume.
@@ -43,6 +119,23 @@ class CacheConfig extends \Google\Model
   public function getCifsChangeNotifyEnabled()
   {
     return $this->cifsChangeNotifyEnabled;
+  }
+  /**
+   * Optional. Flag indicating whether writeback is enabled for the FlexCache
+   * volume.
+   *
+   * @param bool $writebackEnabled
+   */
+  public function setWritebackEnabled($writebackEnabled)
+  {
+    $this->writebackEnabled = $writebackEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getWritebackEnabled()
+  {
+    return $this->writebackEnabled;
   }
 }
 

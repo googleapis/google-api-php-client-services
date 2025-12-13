@@ -28,14 +28,15 @@ class RestoreBackupFilesRequest extends \Google\Collection
    */
   public $backup;
   /**
-   * Required. List of files to be restored in the form of their absolute path
-   * as in source volume.
+   * Required. List of files to be restored, specified by their absolute path in
+   * the source volume.
    *
    * @var string[]
    */
   public $fileList;
   /**
-   * Optional. Absolute directory path in the destination volume.
+   * Optional. Absolute directory path in the destination volume. This is
+   * required if the `file_list` is provided.
    *
    * @var string
    */
@@ -59,8 +60,8 @@ class RestoreBackupFilesRequest extends \Google\Collection
     return $this->backup;
   }
   /**
-   * Required. List of files to be restored in the form of their absolute path
-   * as in source volume.
+   * Required. List of files to be restored, specified by their absolute path in
+   * the source volume.
    *
    * @param string[] $fileList
    */
@@ -76,7 +77,8 @@ class RestoreBackupFilesRequest extends \Google\Collection
     return $this->fileList;
   }
   /**
-   * Optional. Absolute directory path in the destination volume.
+   * Optional. Absolute directory path in the destination volume. This is
+   * required if the `file_list` is provided.
    *
    * @param string $restoreDestinationPath
    */

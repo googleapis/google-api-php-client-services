@@ -36,7 +36,7 @@ class SimpleExportPolicyRule extends \Google\Model
    */
   public const ACCESS_TYPE_READ_NONE = 'READ_NONE';
   /**
-   * Defaults to NO_ROOT_SQUASH.
+   * Defaults to `NO_ROOT_SQUASH`.
    */
   public const SQUASH_MODE_SQUASH_MODE_UNSPECIFIED = 'SQUASH_MODE_UNSPECIFIED';
   /**
@@ -66,7 +66,7 @@ class SimpleExportPolicyRule extends \Google\Model
   public $allowedClients;
   /**
    * Optional. An integer representing the anonymous user ID. Range is 0 to
-   * 4294967295. Required when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+   * 4294967295. Required when `squash_mode` is `ROOT_SQUASH` or `ALL_SQUASH`.
    *
    * @var string
    */
@@ -185,7 +185,7 @@ class SimpleExportPolicyRule extends \Google\Model
   }
   /**
    * Optional. An integer representing the anonymous user ID. Range is 0 to
-   * 4294967295. Required when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+   * 4294967295. Required when `squash_mode` is `ROOT_SQUASH` or `ALL_SQUASH`.
    *
    * @param string $anonUid
    */

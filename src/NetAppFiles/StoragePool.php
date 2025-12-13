@@ -108,6 +108,10 @@ class StoragePool extends \Google\Model
    */
   public const TYPE_UNIFIED = 'UNIFIED';
   /**
+   * Storage pool type is unified large capacity.
+   */
+  public const TYPE_UNIFIED_LARGE_CAPACITY = 'UNIFIED_LARGE_CAPACITY';
+  /**
    * Optional. Specifies the Active Directory to be used for creating a SMB
    * volume.
    *
@@ -294,8 +298,10 @@ class StoragePool extends \Google\Model
   public $totalThroughputMibps;
   /**
    * Optional. Type of the storage pool. This field is used to control whether
-   * the pool supports FILE based volumes only or UNIFIED (both FILE and BLOCK)
-   * volumes. If not specified during creation, it defaults to FILE.
+   * the pool supports `FILE` based volumes only or `UNIFIED` (both `FILE` and
+   * `BLOCK`) volumes or `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`)
+   * volumes with large capacity. If not specified during creation, it defaults
+   * to `FILE`.
    *
    * @var string
    */
@@ -789,10 +795,13 @@ class StoragePool extends \Google\Model
   }
   /**
    * Optional. Type of the storage pool. This field is used to control whether
-   * the pool supports FILE based volumes only or UNIFIED (both FILE and BLOCK)
-   * volumes. If not specified during creation, it defaults to FILE.
+   * the pool supports `FILE` based volumes only or `UNIFIED` (both `FILE` and
+   * `BLOCK`) volumes or `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`)
+   * volumes with large capacity. If not specified during creation, it defaults
+   * to `FILE`.
    *
-   * Accepted values: STORAGE_POOL_TYPE_UNSPECIFIED, FILE, UNIFIED
+   * Accepted values: STORAGE_POOL_TYPE_UNSPECIFIED, FILE, UNIFIED,
+   * UNIFIED_LARGE_CAPACITY
    *
    * @param self::TYPE_* $type
    */

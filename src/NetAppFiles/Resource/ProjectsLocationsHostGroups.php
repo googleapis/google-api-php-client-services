@@ -82,8 +82,9 @@ class ProjectsLocationsHostGroups extends \Google\Service\Resource
     return $this->call('get', [$params], HostGroup::class);
   }
   /**
-   * Returns a list of host groups in a location. Use '-' as location to list host
-   * groups across all locations. (hostGroups.listProjectsLocationsHostGroups)
+   * Returns a list of host groups in a `location`. Use `-` as location to list
+   * host groups across all locations.
+   * (hostGroups.listProjectsLocationsHostGroups)
    *
    * @param string $parent Required. Parent value for ListHostGroupsRequest
    * @param array $optParams Optional parameters.
