@@ -26,7 +26,7 @@ class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
    */
   public $createTime;
   /**
-   * Optional. The user-defined name of the SchemaVersion.
+   * Required. The user-defined name of the SchemaVersion.
    *
    * @var string
    */
@@ -64,7 +64,7 @@ class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. The user-defined name of the SchemaVersion.
+   * Required. The user-defined name of the SchemaVersion.
    *
    * @param string $displayName
    */
