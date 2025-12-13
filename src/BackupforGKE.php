@@ -313,16 +313,6 @@ class BackupforGKE extends \Google\Service
                   'type' => 'integer',
                 ],
               ],
-            ],'getTags' => [
-              'path' => 'v1/{+name}:getTags',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v1/{+parent}/backupPlans',
               'httpMethod' => 'GET',
@@ -368,16 +358,6 @@ class BackupforGKE extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'setTags' => [
-              'path' => 'v1/{+name}:setTags',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -879,16 +859,6 @@ class BackupforGKE extends \Google\Service
                   'type' => 'integer',
                 ],
               ],
-            ],'getTags' => [
-              'path' => 'v1/{+name}:getTags',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v1/{+parent}/restorePlans',
               'httpMethod' => 'GET',
@@ -934,16 +904,6 @@ class BackupforGKE extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'setTags' => [
-              'path' => 'v1/{+name}:setTags',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
