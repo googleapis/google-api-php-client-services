@@ -27,6 +27,8 @@ class Config extends \Google\Collection
    * @var string
    */
   public $defaultSkaffoldVersion;
+  protected $defaultToolVersionsType = ToolVersions::class;
+  protected $defaultToolVersionsDataType = '';
   /**
    * Name of the configuration.
    *
@@ -52,6 +54,23 @@ class Config extends \Google\Collection
   public function getDefaultSkaffoldVersion()
   {
     return $this->defaultSkaffoldVersion;
+  }
+  /**
+   * Output only. Default tool versions. These tool versions are assigned when a
+   * Release is created without specifying tool versions.
+   *
+   * @param ToolVersions $defaultToolVersions
+   */
+  public function setDefaultToolVersions(ToolVersions $defaultToolVersions)
+  {
+    $this->defaultToolVersions = $defaultToolVersions;
+  }
+  /**
+   * @return ToolVersions
+   */
+  public function getDefaultToolVersions()
+  {
+    return $this->defaultToolVersions;
   }
   /**
    * Name of the configuration.
