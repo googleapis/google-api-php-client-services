@@ -87,8 +87,11 @@ class GooglePrivacyDlpV2Action extends \Google\Model
     return $this->pubSub;
   }
   /**
-   * Publish findings to Cloud Datahub.
+   * Deprecated because Data Catalog is being turned down. Use
+   * publish_findings_to_dataplex_catalog to publish findings to Dataplex
+   * Universal Catalog.
    *
+   * @deprecated
    * @param GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog $publishFindingsToCloudDataCatalog
    */
   public function setPublishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog $publishFindingsToCloudDataCatalog)
@@ -96,6 +99,7 @@ class GooglePrivacyDlpV2Action extends \Google\Model
     $this->publishFindingsToCloudDataCatalog = $publishFindingsToCloudDataCatalog;
   }
   /**
+   * @deprecated
    * @return GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog
    */
   public function getPublishFindingsToCloudDataCatalog()
