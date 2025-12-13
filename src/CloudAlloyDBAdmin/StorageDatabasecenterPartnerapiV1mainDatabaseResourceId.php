@@ -64,9 +64,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId extends \Google\Mo
   /**
    * Required. The type of resource this ID is identifying. Ex go/keep-sorted
    * start alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
-   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
+   * bigquery.googleapis.com/Dataset, bigtableadmin.googleapis.com/Cluster,
+   * bigtableadmin.googleapis.com/Instance compute.googleapis.com/Instance
+   * firestore.googleapis.com/Database, redis.googleapis.com/Instance,
+   * redis.googleapis.com/Cluster,
    * oracledatabase.googleapis.com/CloudExadataInfrastructure
    * oracledatabase.googleapis.com/CloudVmCluster
    * oracledatabase.googleapis.com/AutonomousDatabase
@@ -123,9 +124,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId extends \Google\Mo
   /**
    * Required. The type of resource this ID is identifying. Ex go/keep-sorted
    * start alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
-   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
+   * bigquery.googleapis.com/Dataset, bigtableadmin.googleapis.com/Cluster,
+   * bigtableadmin.googleapis.com/Instance compute.googleapis.com/Instance
+   * firestore.googleapis.com/Database, redis.googleapis.com/Instance,
+   * redis.googleapis.com/Cluster,
    * oracledatabase.googleapis.com/CloudExadataInfrastructure
    * oracledatabase.googleapis.com/CloudVmCluster
    * oracledatabase.googleapis.com/AutonomousDatabase

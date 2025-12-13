@@ -328,6 +328,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
   /**
    * Represents if the cross_db_ownership_chaining database flag for a Cloud SQL
    * for SQL Server instance is not set to off.
+   *
+   * @deprecated
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXPOSED_BY_OWNERSHIP_CHAINING = 'SIGNAL_TYPE_EXPOSED_BY_OWNERSHIP_CHAINING';
   /**
@@ -543,6 +545,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
   public const SIGNAL_TYPE_SIGNAL_TYPE_SCHEMA_NOT_OPTIMIZED = 'SIGNAL_TYPE_SCHEMA_NOT_OPTIMIZED';
   /**
    * High number of idle connections.
+   *
+   * @deprecated
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_MANY_IDLE_CONNECTIONS = 'SIGNAL_TYPE_MANY_IDLE_CONNECTIONS';
   /**

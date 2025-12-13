@@ -50,6 +50,10 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXTENDED_SUPPORT = 'SIGNAL_TYPE_EXTENDED_SUPPORT';
   /**
+   * Represents if a resource has no automated backup policy.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY = 'SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY';
+  /**
    * Required. Full Resource name of the source resource.
    *
    * @var string
@@ -146,7 +150,8 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
    * Accepted values: SIGNAL_TYPE_UNSPECIFIED,
    * SIGNAL_TYPE_OUTDATED_MINOR_VERSION, SIGNAL_TYPE_DATABASE_AUDITING_DISABLED,
    * SIGNAL_TYPE_NO_ROOT_PASSWORD, SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS,
-   * SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS, SIGNAL_TYPE_EXTENDED_SUPPORT
+   * SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS, SIGNAL_TYPE_EXTENDED_SUPPORT,
+   * SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY
    *
    * @param self::SIGNAL_TYPE_* $signalType
    */

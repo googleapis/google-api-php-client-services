@@ -48,8 +48,14 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
    * Database resource signal data
    */
   public const FEED_TYPE_DATABASE_RESOURCE_SIGNAL_DATA = 'DATABASE_RESOURCE_SIGNAL_DATA';
+  /**
+   * BigQuery resource metadata
+   */
+  public const FEED_TYPE_BIGQUERY_RESOURCE_METADATA = 'BIGQUERY_RESOURCE_METADATA';
   protected $backupdrMetadataType = StorageDatabasecenterPartnerapiV1mainBackupDRMetadata::class;
   protected $backupdrMetadataDataType = '';
+  protected $bigqueryResourceMetadataType = StorageDatabasecenterPartnerapiV1mainBigQueryResourceMetadata::class;
+  protected $bigqueryResourceMetadataDataType = '';
   protected $configBasedSignalDataType = StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData::class;
   protected $configBasedSignalDataDataType = '';
   protected $databaseResourceSignalDataType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData::class;
@@ -102,6 +108,22 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
   public function getBackupdrMetadata()
   {
     return $this->backupdrMetadata;
+  }
+  /**
+   * For BigQuery resource metadata.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainBigQueryResourceMetadata $bigqueryResourceMetadata
+   */
+  public function setBigqueryResourceMetadata(StorageDatabasecenterPartnerapiV1mainBigQueryResourceMetadata $bigqueryResourceMetadata)
+  {
+    $this->bigqueryResourceMetadata = $bigqueryResourceMetadata;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainBigQueryResourceMetadata
+   */
+  public function getBigqueryResourceMetadata()
+  {
+    return $this->bigqueryResourceMetadata;
   }
   /**
    * Config based signal data is used to ingest signals that are generated based
@@ -158,7 +180,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
    *
    * Accepted values: FEEDTYPE_UNSPECIFIED, RESOURCE_METADATA,
    * OBSERVABILITY_DATA, SECURITY_FINDING_DATA, RECOMMENDATION_SIGNAL_DATA,
-   * CONFIG_BASED_SIGNAL_DATA, BACKUPDR_METADATA, DATABASE_RESOURCE_SIGNAL_DATA
+   * CONFIG_BASED_SIGNAL_DATA, BACKUPDR_METADATA, DATABASE_RESOURCE_SIGNAL_DATA,
+   * BIGQUERY_RESOURCE_METADATA
    *
    * @param self::FEED_TYPE_* $feedType
    */
