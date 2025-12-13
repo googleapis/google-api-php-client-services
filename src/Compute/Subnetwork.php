@@ -150,7 +150,8 @@ class Subnetwork extends \Google\Collection
    * explicitly set, it will not appear in get listings. If not set the default
    * behavior is determined by the org policy, if there is no org policy
    * specified, then it will default to disabled. This field isn't supported if
-   * the subnet purpose field is set toREGIONAL_MANAGED_PROXY.
+   * the subnet purpose field is set toREGIONAL_MANAGED_PROXY. It is recommended
+   * to uselogConfig.enable field instead.
    *
    * @var bool
    */
@@ -445,7 +446,8 @@ class Subnetwork extends \Google\Collection
    * explicitly set, it will not appear in get listings. If not set the default
    * behavior is determined by the org policy, if there is no org policy
    * specified, then it will default to disabled. This field isn't supported if
-   * the subnet purpose field is set toREGIONAL_MANAGED_PROXY.
+   * the subnet purpose field is set toREGIONAL_MANAGED_PROXY. It is recommended
+   * to uselogConfig.enable field instead.
    *
    * @param bool $enableFlowLogs
    */

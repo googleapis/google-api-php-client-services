@@ -26,6 +26,32 @@ class StoragePoolResourceStatus extends \Google\Model
    */
   public $diskCount;
   /**
+   * Output only. [Output Only] Maximum allowed read IOPS for this Exapool.
+   *
+   * @var string
+   */
+  public $exapoolMaxReadIops;
+  /**
+   * Output only. [Output Only] Maximum allowed read throughput in MiB/s for
+   * this Exapool.
+   *
+   * @var string
+   */
+  public $exapoolMaxReadThroughput;
+  /**
+   * Output only. [Output Only] Maximum allowed write IOPS for this Exapool.
+   *
+   * @var string
+   */
+  public $exapoolMaxWriteIops;
+  /**
+   * Output only. [Output Only] Maximum allowed write throughput in MiB/s for
+   * this Exapool.
+   *
+   * @var string
+   */
+  public $exapoolMaxWriteThroughput;
+  /**
    * Output only. [Output Only] Timestamp of the last successful resize
    * inRFC3339 text format.
    *
@@ -105,6 +131,72 @@ class StoragePoolResourceStatus extends \Google\Model
   public function getDiskCount()
   {
     return $this->diskCount;
+  }
+  /**
+   * Output only. [Output Only] Maximum allowed read IOPS for this Exapool.
+   *
+   * @param string $exapoolMaxReadIops
+   */
+  public function setExapoolMaxReadIops($exapoolMaxReadIops)
+  {
+    $this->exapoolMaxReadIops = $exapoolMaxReadIops;
+  }
+  /**
+   * @return string
+   */
+  public function getExapoolMaxReadIops()
+  {
+    return $this->exapoolMaxReadIops;
+  }
+  /**
+   * Output only. [Output Only] Maximum allowed read throughput in MiB/s for
+   * this Exapool.
+   *
+   * @param string $exapoolMaxReadThroughput
+   */
+  public function setExapoolMaxReadThroughput($exapoolMaxReadThroughput)
+  {
+    $this->exapoolMaxReadThroughput = $exapoolMaxReadThroughput;
+  }
+  /**
+   * @return string
+   */
+  public function getExapoolMaxReadThroughput()
+  {
+    return $this->exapoolMaxReadThroughput;
+  }
+  /**
+   * Output only. [Output Only] Maximum allowed write IOPS for this Exapool.
+   *
+   * @param string $exapoolMaxWriteIops
+   */
+  public function setExapoolMaxWriteIops($exapoolMaxWriteIops)
+  {
+    $this->exapoolMaxWriteIops = $exapoolMaxWriteIops;
+  }
+  /**
+   * @return string
+   */
+  public function getExapoolMaxWriteIops()
+  {
+    return $this->exapoolMaxWriteIops;
+  }
+  /**
+   * Output only. [Output Only] Maximum allowed write throughput in MiB/s for
+   * this Exapool.
+   *
+   * @param string $exapoolMaxWriteThroughput
+   */
+  public function setExapoolMaxWriteThroughput($exapoolMaxWriteThroughput)
+  {
+    $this->exapoolMaxWriteThroughput = $exapoolMaxWriteThroughput;
+  }
+  /**
+   * @return string
+   */
+  public function getExapoolMaxWriteThroughput()
+  {
+    return $this->exapoolMaxWriteThroughput;
   }
   /**
    * Output only. [Output Only] Timestamp of the last successful resize

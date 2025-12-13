@@ -74,6 +74,8 @@ class StoragePool extends \Google\Model
    * @var string
    */
   public $description;
+  protected $exapoolProvisionedCapacityGbType = StoragePoolExapoolProvisionedCapacityGb::class;
+  protected $exapoolProvisionedCapacityGbDataType = '';
   /**
    * Output only. [Output Only] The unique identifier for the resource. This
    * identifier is defined by the server.
@@ -241,6 +243,23 @@ class StoragePool extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * Output only. [Output Only] Provisioned capacities for each SKU for this
+   * Exapool in GiB
+   *
+   * @param StoragePoolExapoolProvisionedCapacityGb $exapoolProvisionedCapacityGb
+   */
+  public function setExapoolProvisionedCapacityGb(StoragePoolExapoolProvisionedCapacityGb $exapoolProvisionedCapacityGb)
+  {
+    $this->exapoolProvisionedCapacityGb = $exapoolProvisionedCapacityGb;
+  }
+  /**
+   * @return StoragePoolExapoolProvisionedCapacityGb
+   */
+  public function getExapoolProvisionedCapacityGb()
+  {
+    return $this->exapoolProvisionedCapacityGb;
   }
   /**
    * Output only. [Output Only] The unique identifier for the resource. This
