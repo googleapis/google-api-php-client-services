@@ -128,7 +128,8 @@ class Instance extends \Google\Collection
   public const TIER_REGIONAL = 'REGIONAL';
   protected $collection_key = 'suspensionReasons';
   /**
-   * Output only. The increase/decrease capacity step size in GB.
+   * Output only. The incremental increase or decrease in capacity, designated
+   * in some number of GB.
    *
    * @var string
    */
@@ -189,13 +190,13 @@ class Instance extends \Google\Collection
    */
   public $labels;
   /**
-   * Output only. The max capacity of the instance in GB.
+   * Output only. The maximum capacity of the instance in GB.
    *
    * @var string
    */
   public $maxCapacityGb;
   /**
-   * Output only. The min capacity of the instance in GB.
+   * Output only. The minimum capacity of the instance in GB.
    *
    * @var string
    */
@@ -275,7 +276,8 @@ class Instance extends \Google\Collection
   public $tier;
 
   /**
-   * Output only. The increase/decrease capacity step size in GB.
+   * Output only. The incremental increase or decrease in capacity, designated
+   * in some number of GB.
    *
    * @param string $capacityStepSizeGb
    */
@@ -456,7 +458,7 @@ class Instance extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Output only. The max capacity of the instance in GB.
+   * Output only. The maximum capacity of the instance in GB.
    *
    * @param string $maxCapacityGb
    */
@@ -472,7 +474,7 @@ class Instance extends \Google\Collection
     return $this->maxCapacityGb;
   }
   /**
-   * Output only. The min capacity of the instance in GB.
+   * Output only. The minimum capacity of the instance in GB.
    *
    * @param string $minCapacityGb
    */

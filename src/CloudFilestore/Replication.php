@@ -37,7 +37,8 @@ class Replication extends \Google\Collection
   protected $replicasType = ReplicaConfig::class;
   protected $replicasDataType = 'array';
   /**
-   * Optional. The replication role.
+   * Optional. The replication role. When creating a new replica, this field
+   * must be set to `STANDBY`.
    *
    * @var string
    */
@@ -61,7 +62,8 @@ class Replication extends \Google\Collection
     return $this->replicas;
   }
   /**
-   * Optional. The replication role.
+   * Optional. The replication role. When creating a new replica, this field
+   * must be set to `STANDBY`.
    *
    * Accepted values: ROLE_UNSPECIFIED, ACTIVE, STANDBY
    *

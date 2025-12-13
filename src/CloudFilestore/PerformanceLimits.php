@@ -20,38 +20,38 @@ namespace Google\Service\CloudFilestore;
 class PerformanceLimits extends \Google\Model
 {
   /**
-   * Output only. The max IOPS.
+   * Output only. The maximum IOPS.
    *
    * @var string
    */
   public $maxIops;
   /**
-   * Output only. The max read IOPS.
+   * Output only. The maximum read IOPS.
    *
    * @var string
    */
   public $maxReadIops;
   /**
-   * Output only. The max read throughput in bytes per second.
+   * Output only. The maximum read throughput in bytes per second.
    *
    * @var string
    */
   public $maxReadThroughputBps;
   /**
-   * Output only. The max write IOPS.
+   * Output only. The maximum write IOPS.
    *
    * @var string
    */
   public $maxWriteIops;
   /**
-   * Output only. The max write throughput in bytes per second.
+   * Output only. The maximum write throughput in bytes per second.
    *
    * @var string
    */
   public $maxWriteThroughputBps;
 
   /**
-   * Output only. The max IOPS.
+   * Output only. The maximum IOPS.
    *
    * @param string $maxIops
    */
@@ -67,7 +67,7 @@ class PerformanceLimits extends \Google\Model
     return $this->maxIops;
   }
   /**
-   * Output only. The max read IOPS.
+   * Output only. The maximum read IOPS.
    *
    * @param string $maxReadIops
    */
@@ -83,7 +83,7 @@ class PerformanceLimits extends \Google\Model
     return $this->maxReadIops;
   }
   /**
-   * Output only. The max read throughput in bytes per second.
+   * Output only. The maximum read throughput in bytes per second.
    *
    * @param string $maxReadThroughputBps
    */
@@ -99,7 +99,7 @@ class PerformanceLimits extends \Google\Model
     return $this->maxReadThroughputBps;
   }
   /**
-   * Output only. The max write IOPS.
+   * Output only. The maximum write IOPS.
    *
    * @param string $maxWriteIops
    */
@@ -115,7 +115,7 @@ class PerformanceLimits extends \Google\Model
     return $this->maxWriteIops;
   }
   /**
-   * Output only. The max write throughput in bytes per second.
+   * Output only. The maximum write throughput in bytes per second.
    *
    * @param string $maxWriteThroughputBps
    */

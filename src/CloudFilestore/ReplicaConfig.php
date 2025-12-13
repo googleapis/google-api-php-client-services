@@ -66,7 +66,9 @@ class ReplicaConfig extends \Google\Collection
    */
   public $lastActiveSyncTime;
   /**
-   * Optional. The peer instance.
+   * Optional. The name of the source instance for the replica, in the format
+   * `projects/{project}/locations/{location}/instances/{instance}`. This field
+   * is required when creating a replica.
    *
    * @var string
    */
@@ -109,7 +111,9 @@ class ReplicaConfig extends \Google\Collection
     return $this->lastActiveSyncTime;
   }
   /**
-   * Optional. The peer instance.
+   * Optional. The name of the source instance for the replica, in the format
+   * `projects/{project}/locations/{location}/instances/{instance}`. This field
+   * is required when creating a replica.
    *
    * @param string $peerInstance
    */
