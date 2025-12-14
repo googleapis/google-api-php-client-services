@@ -22,6 +22,30 @@ class NatInfo extends \Google\Model
   /**
    * Type is unspecified.
    */
+  public const CLOUD_NAT_GATEWAY_TYPE_CLOUD_NAT_GATEWAY_TYPE_UNSPECIFIED = 'CLOUD_NAT_GATEWAY_TYPE_UNSPECIFIED';
+  /**
+   * Public NAT gateway.
+   */
+  public const CLOUD_NAT_GATEWAY_TYPE_PUBLIC_NAT44 = 'PUBLIC_NAT44';
+  /**
+   * Public NAT64 gateway.
+   */
+  public const CLOUD_NAT_GATEWAY_TYPE_PUBLIC_NAT64 = 'PUBLIC_NAT64';
+  /**
+   * Private NAT gateway for NCC.
+   */
+  public const CLOUD_NAT_GATEWAY_TYPE_PRIVATE_NAT_NCC = 'PRIVATE_NAT_NCC';
+  /**
+   * Private NAT gateway for hybrid connectivity.
+   */
+  public const CLOUD_NAT_GATEWAY_TYPE_PRIVATE_NAT_HYBRID = 'PRIVATE_NAT_HYBRID';
+  /**
+   * Private NAT64 gateway.
+   */
+  public const CLOUD_NAT_GATEWAY_TYPE_PRIVATE_NAT64 = 'PRIVATE_NAT64';
+  /**
+   * Type is unspecified.
+   */
   public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**
    * From Compute Engine instance's internal address to external address.
@@ -43,6 +67,12 @@ class NatInfo extends \Google\Model
    * GKE Pod IP address masquerading.
    */
   public const TYPE_GKE_POD_IP_MASQUERADING = 'GKE_POD_IP_MASQUERADING';
+  /**
+   * Type of Cloud NAT gateway. Only valid when `type` is CLOUD_NAT.
+   *
+   * @var string
+   */
+  public $cloudNatGatewayType;
   /**
    * The name of Cloud NAT Gateway. Only valid when type is CLOUD_NAT.
    *
@@ -124,6 +154,25 @@ class NatInfo extends \Google\Model
    */
   public $type;
 
+  /**
+   * Type of Cloud NAT gateway. Only valid when `type` is CLOUD_NAT.
+   *
+   * Accepted values: CLOUD_NAT_GATEWAY_TYPE_UNSPECIFIED, PUBLIC_NAT44,
+   * PUBLIC_NAT64, PRIVATE_NAT_NCC, PRIVATE_NAT_HYBRID, PRIVATE_NAT64
+   *
+   * @param self::CLOUD_NAT_GATEWAY_TYPE_* $cloudNatGatewayType
+   */
+  public function setCloudNatGatewayType($cloudNatGatewayType)
+  {
+    $this->cloudNatGatewayType = $cloudNatGatewayType;
+  }
+  /**
+   * @return self::CLOUD_NAT_GATEWAY_TYPE_*
+   */
+  public function getCloudNatGatewayType()
+  {
+    return $this->cloudNatGatewayType;
+  }
   /**
    * The name of Cloud NAT Gateway. Only valid when type is CLOUD_NAT.
    *
