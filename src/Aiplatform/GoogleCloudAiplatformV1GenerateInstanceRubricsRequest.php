@@ -24,6 +24,13 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Coll
   protected $agentConfigDataType = '';
   protected $contentsType = GoogleCloudAiplatformV1Content::class;
   protected $contentsDataType = 'array';
+  /**
+   * Required. The resource name of the Location to generate rubrics from.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @var string
+   */
+  public $location;
   protected $predefinedRubricGenerationSpecType = GoogleCloudAiplatformV1PredefinedMetricSpec::class;
   protected $predefinedRubricGenerationSpecDataType = '';
   protected $rubricGenerationSpecType = GoogleCloudAiplatformV1RubricGenerationSpec::class;
@@ -62,6 +69,23 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Coll
   public function getContents()
   {
     return $this->contents;
+  }
+  /**
+   * Required. The resource name of the Location to generate rubrics from.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @param string $location
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
   }
   /**
    * Optional. Specification for using the rubric generation configs of a pre-

@@ -20,6 +20,15 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Collection
 {
   protected $collection_key = 'scopeKeys';
+  /**
+   * Optional. If true, then the memories will be generated in the third person
+   * (i.e. "The user generates memories with Memory Bank."). By default, the
+   * memories will be generated in the first person (i.e. "I generate memories
+   * with Memory Bank.")
+   *
+   * @var bool
+   */
+  public $enableThirdPersonMemories;
   protected $generateMemoriesExamplesType = GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExample::class;
   protected $generateMemoriesExamplesDataType = 'array';
   protected $memoryTopicsType = GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopic::class;
@@ -35,6 +44,25 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
    */
   public $scopeKeys;
 
+  /**
+   * Optional. If true, then the memories will be generated in the third person
+   * (i.e. "The user generates memories with Memory Bank."). By default, the
+   * memories will be generated in the first person (i.e. "I generate memories
+   * with Memory Bank.")
+   *
+   * @param bool $enableThirdPersonMemories
+   */
+  public function setEnableThirdPersonMemories($enableThirdPersonMemories)
+  {
+    $this->enableThirdPersonMemories = $enableThirdPersonMemories;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableThirdPersonMemories()
+  {
+    return $this->enableThirdPersonMemories;
+  }
   /**
    * Optional. Examples of how to generate memories for a particular scope.
    *

@@ -38,6 +38,13 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
   protected $groundednessInputDataType = '';
   protected $instanceType = GoogleCloudAiplatformV1EvaluationInstance::class;
   protected $instanceDataType = '';
+  /**
+   * Required. The resource name of the Location to evaluate the instances.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @var string
+   */
+  public $location;
   protected $metricsType = GoogleCloudAiplatformV1Metric::class;
   protected $metricsDataType = 'array';
   protected $metricxInputType = GoogleCloudAiplatformV1MetricxInput::class;
@@ -235,6 +242,23 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
   public function getInstance()
   {
     return $this->instance;
+  }
+  /**
+   * Required. The resource name of the Location to evaluate the instances.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @param string $location
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
   }
   /**
    * The metrics used for evaluation. Currently, we only support evaluating a

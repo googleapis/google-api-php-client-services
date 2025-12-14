@@ -24,6 +24,13 @@ class GoogleCloudAiplatformV1EvaluateDatasetRequest extends \Google\Collection
   protected $autoraterConfigDataType = '';
   protected $datasetType = GoogleCloudAiplatformV1EvaluationDataset::class;
   protected $datasetDataType = '';
+  /**
+   * Required. The resource name of the Location to evaluate the dataset.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @var string
+   */
+  public $location;
   protected $metricsType = GoogleCloudAiplatformV1Metric::class;
   protected $metricsDataType = 'array';
   protected $outputConfigType = GoogleCloudAiplatformV1OutputConfig::class;
@@ -62,6 +69,23 @@ class GoogleCloudAiplatformV1EvaluateDatasetRequest extends \Google\Collection
   public function getDataset()
   {
     return $this->dataset;
+  }
+  /**
+   * Required. The resource name of the Location to evaluate the dataset.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @param string $location
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
   }
   /**
    * Required. The metrics used for evaluation.

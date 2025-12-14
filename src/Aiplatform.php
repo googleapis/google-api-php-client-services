@@ -216,6 +216,7 @@ class Aiplatform extends \Google\Service
   public $tensorboards_operations;
   public $trainingPipelines_operations;
   public $tuningJobs_operations;
+  public $v1;
   public $rootUrlTemplate;
 
   /**
@@ -14719,6 +14720,28 @@ class Aiplatform extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],
+          ]
+        ]
+    );
+    $this->v1 = new Aiplatform\Resource\V1(
+        $this,
+        $this->serviceName,
+        'v1',
+        [
+          'methods' => [
+            'evaluateDataset' => [
+              'path' => 'v1:evaluateDataset',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'evaluateInstances' => [
+              'path' => 'v1:evaluateInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'generateInstanceRubrics' => [
+              'path' => 'v1:generateInstanceRubrics',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]
