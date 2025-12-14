@@ -52,7 +52,7 @@ class GoogleChromeManagementV1RiskAssessmentEntry extends \Google\Model
    */
   public const RISK_LEVEL_RISK_LEVEL_HIGH = 'RISK_LEVEL_HIGH';
   /**
-   * The risk assessment provider from which this entry comes from.
+   * Output only. The risk assessment provider from which this entry comes from.
    *
    * @var string
    */
@@ -60,14 +60,14 @@ class GoogleChromeManagementV1RiskAssessmentEntry extends \Google\Model
   protected $riskAssessmentType = GoogleChromeManagementV1RiskAssessment::class;
   protected $riskAssessmentDataType = '';
   /**
-   * The bucketed risk level for the risk assessment.
+   * Output only. The bucketed risk level for the risk assessment.
    *
    * @var string
    */
   public $riskLevel;
 
   /**
-   * The risk assessment provider from which this entry comes from.
+   * Output only. The risk assessment provider from which this entry comes from.
    *
    * Accepted values: RISK_ASSESSMENT_PROVIDER_UNSPECIFIED,
    * RISK_ASSESSMENT_PROVIDER_CRXCAVATOR, RISK_ASSESSMENT_PROVIDER_SPIN_AI,
@@ -87,7 +87,7 @@ class GoogleChromeManagementV1RiskAssessmentEntry extends \Google\Model
     return $this->provider;
   }
   /**
-   * The details of the provider's risk assessment.
+   * Output only. The details of the provider's risk assessment.
    *
    * @param GoogleChromeManagementV1RiskAssessment $riskAssessment
    */
@@ -103,7 +103,7 @@ class GoogleChromeManagementV1RiskAssessmentEntry extends \Google\Model
     return $this->riskAssessment;
   }
   /**
-   * The bucketed risk level for the risk assessment.
+   * Output only. The bucketed risk level for the risk assessment.
    *
    * Accepted values: RISK_LEVEL_UNSPECIFIED, RISK_LEVEL_LOW, RISK_LEVEL_MEDIUM,
    * RISK_LEVEL_HIGH
