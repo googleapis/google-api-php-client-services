@@ -75,7 +75,7 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Exports an artifact. (repositories.exportArtifact)
+   * Exports an artifact to a Cloud Storage bucket. (repositories.exportArtifact)
    *
    * @param string $repository Required. The repository of the artifact to export.
    * Format: projects/{project}/locations/{location}/repositories/{repository}

@@ -21,6 +21,15 @@ class DockerImage extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * ArtifactType of this image, e.g. "application/vnd.example+type". If the
+   * `subject_digest` is set and no `artifact_type` is given, the `media_type`
+   * will be considered as the `artifact_type`. This field is returned as the
+   * `metadata.artifactType` field in the Version resource.
+   *
+   * @var string
+   */
+  public $artifactType;
+  /**
    * The time this image was built. This field is returned as the
    * 'metadata.buildTime' field in the Version resource. The build time is
    * returned to the client as an RFC 3339 string, which can be easily used with
@@ -29,6 +38,8 @@ class DockerImage extends \Google\Collection
    * @var string
    */
   public $buildTime;
+  protected $imageManifestsType = ImageManifest::class;
+  protected $imageManifestsDataType = 'array';
   /**
    * Calculated size of the image. This field is returned as the
    * 'metadata.imageSizeBytes' field in the Version resource.
@@ -85,6 +96,25 @@ class DockerImage extends \Google\Collection
   public $uri;
 
   /**
+   * ArtifactType of this image, e.g. "application/vnd.example+type". If the
+   * `subject_digest` is set and no `artifact_type` is given, the `media_type`
+   * will be considered as the `artifact_type`. This field is returned as the
+   * `metadata.artifactType` field in the Version resource.
+   *
+   * @param string $artifactType
+   */
+  public function setArtifactType($artifactType)
+  {
+    $this->artifactType = $artifactType;
+  }
+  /**
+   * @return string
+   */
+  public function getArtifactType()
+  {
+    return $this->artifactType;
+  }
+  /**
    * The time this image was built. This field is returned as the
    * 'metadata.buildTime' field in the Version resource. The build time is
    * returned to the client as an RFC 3339 string, which can be easily used with
@@ -102,6 +132,23 @@ class DockerImage extends \Google\Collection
   public function getBuildTime()
   {
     return $this->buildTime;
+  }
+  /**
+   * Optional. For multi-arch images (manifest lists), this field contains the
+   * list of image manifests.
+   *
+   * @param ImageManifest[] $imageManifests
+   */
+  public function setImageManifests($imageManifests)
+  {
+    $this->imageManifests = $imageManifests;
+  }
+  /**
+   * @return ImageManifest[]
+   */
+  public function getImageManifests()
+  {
+    return $this->imageManifests;
   }
   /**
    * Calculated size of the image. This field is returned as the
