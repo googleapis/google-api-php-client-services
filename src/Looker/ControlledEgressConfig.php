@@ -19,7 +19,7 @@ namespace Google\Service\Looker;
 
 class ControlledEgressConfig extends \Google\Collection
 {
-  protected $collection_key = 'egressFqdns';
+  protected $collection_key = 'webProxyIps';
   /**
    * Optional. List of fully qualified domain names to be added to the allowlist
    * for outbound traffic.
@@ -33,6 +33,13 @@ class ControlledEgressConfig extends \Google\Collection
    * @var bool
    */
   public $marketplaceEnabled;
+  /**
+   * Output only. The list of IP addresses used by Secure Web Proxy for outbound
+   * traffic.
+   *
+   * @var string[]
+   */
+  public $webProxyIps;
 
   /**
    * Optional. List of fully qualified domain names to be added to the allowlist
@@ -66,6 +73,23 @@ class ControlledEgressConfig extends \Google\Collection
   public function getMarketplaceEnabled()
   {
     return $this->marketplaceEnabled;
+  }
+  /**
+   * Output only. The list of IP addresses used by Secure Web Proxy for outbound
+   * traffic.
+   *
+   * @param string[] $webProxyIps
+   */
+  public function setWebProxyIps($webProxyIps)
+  {
+    $this->webProxyIps = $webProxyIps;
+  }
+  /**
+   * @return string[]
+   */
+  public function getWebProxyIps()
+  {
+    return $this->webProxyIps;
   }
 }
 
