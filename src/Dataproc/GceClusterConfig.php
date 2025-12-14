@@ -40,6 +40,21 @@ class GceClusterConfig extends \Google\Collection
    */
   public const PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL = 'BIDIRECTIONAL';
   protected $collection_key = 'tags';
+  /**
+   * Optional. An optional list of Compute Engine zones where the Dataproc
+   * cluster will not be located when Auto Zone is enabled. Only one of zone_uri
+   * or auto_zone_exclude_zone_uris can be set. If both are omitted, the service
+   * will pick a zone in the cluster Compute Engine region. If
+   * auto_zone_exclude_zone_uris is set and there is more than one non-excluded
+   * zone, the service will pick one of the non-excluded zones. Otherwise,
+   * cluster creation will fail with INVALID_ARGUMENT error.A full URL, partial
+   * URI, or short name are valid. Examples:
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
+   * projects/[project_id]/zones/[zone] [zone]
+   *
+   * @var string[]
+   */
+  public $autoZoneExcludeZoneUris;
   protected $confidentialInstanceConfigType = ConfidentialInstanceConfig::class;
   protected $confidentialInstanceConfigDataType = '';
   /**
@@ -157,6 +172,31 @@ class GceClusterConfig extends \Google\Collection
    */
   public $zoneUri;
 
+  /**
+   * Optional. An optional list of Compute Engine zones where the Dataproc
+   * cluster will not be located when Auto Zone is enabled. Only one of zone_uri
+   * or auto_zone_exclude_zone_uris can be set. If both are omitted, the service
+   * will pick a zone in the cluster Compute Engine region. If
+   * auto_zone_exclude_zone_uris is set and there is more than one non-excluded
+   * zone, the service will pick one of the non-excluded zones. Otherwise,
+   * cluster creation will fail with INVALID_ARGUMENT error.A full URL, partial
+   * URI, or short name are valid. Examples:
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
+   * projects/[project_id]/zones/[zone] [zone]
+   *
+   * @param string[] $autoZoneExcludeZoneUris
+   */
+  public function setAutoZoneExcludeZoneUris($autoZoneExcludeZoneUris)
+  {
+    $this->autoZoneExcludeZoneUris = $autoZoneExcludeZoneUris;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAutoZoneExcludeZoneUris()
+  {
+    return $this->autoZoneExcludeZoneUris;
+  }
   /**
    * Optional. Confidential Instance Config for clusters using Confidential VMs
    * (https://cloud.google.com/compute/confidential-vm/docs).
