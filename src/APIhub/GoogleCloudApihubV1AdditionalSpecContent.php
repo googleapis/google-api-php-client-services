@@ -29,6 +29,11 @@ class GoogleCloudApihubV1AdditionalSpecContent extends \Google\Model
    */
   public const SPEC_CONTENT_TYPE_BOOSTED_SPEC_CONTENT = 'BOOSTED_SPEC_CONTENT';
   /**
+   * The spec content type for OpenAPI spec. This enum is used for OpenAPI specs
+   * ingested via APIGEE X Gateway.
+   */
+  public const SPEC_CONTENT_TYPE_GATEWAY_OPEN_API_SPEC = 'GATEWAY_OPEN_API_SPEC';
+  /**
    * Output only. The time at which the spec content was created.
    *
    * @var string
@@ -90,7 +95,8 @@ class GoogleCloudApihubV1AdditionalSpecContent extends \Google\Model
   /**
    * Required. The type of the spec content.
    *
-   * Accepted values: SPEC_CONTENT_TYPE_UNSPECIFIED, BOOSTED_SPEC_CONTENT
+   * Accepted values: SPEC_CONTENT_TYPE_UNSPECIFIED, BOOSTED_SPEC_CONTENT,
+   * GATEWAY_OPEN_API_SPEC
    *
    * @param self::SPEC_CONTENT_TYPE_* $specContentType
    */
