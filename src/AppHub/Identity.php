@@ -20,20 +20,20 @@ namespace Google\Service\AppHub;
 class Identity extends \Google\Model
 {
   /**
-   * Output only. Principal of the identity. Supported formats: * `sa://my-
-   * sa@xxxx.iam.gserviceaccount.com` for GCP Service Account * `principal://POO
-   * L_ID.global.PROJECT_NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDEN
-   * TITY_ID` for Managed Workload Identity
+   * Output only. The principal of the identity. Supported formats: * `sa://my-
+   * sa@PROJECT_ID.iam.gserviceaccount.com` for GCP Service Account * `principal
+   * ://POOL_ID.global.PROJECT_NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGE
+   * D_IDENTITY_ID` for Managed Workload Identity
    *
    * @var string
    */
   public $principal;
 
   /**
-   * Output only. Principal of the identity. Supported formats: * `sa://my-
-   * sa@xxxx.iam.gserviceaccount.com` for GCP Service Account * `principal://POO
-   * L_ID.global.PROJECT_NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDEN
-   * TITY_ID` for Managed Workload Identity
+   * Output only. The principal of the identity. Supported formats: * `sa://my-
+   * sa@PROJECT_ID.iam.gserviceaccount.com` for GCP Service Account * `principal
+   * ://POOL_ID.global.PROJECT_NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGE
+   * D_IDENTITY_ID` for Managed Workload Identity
    *
    * @param string $principal
    */
