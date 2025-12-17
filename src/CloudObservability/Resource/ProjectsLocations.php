@@ -19,8 +19,6 @@ namespace Google\Service\CloudObservability\Resource;
 
 use Google\Service\CloudObservability\ListLocationsResponse;
 use Google\Service\CloudObservability\Location;
-use Google\Service\CloudObservability\Operation;
-use Google\Service\CloudObservability\Settings;
 
 /**
  * The "locations" collection of methods.
@@ -45,23 +43,6 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Location::class);
-  }
-  /**
-   * Get Settings (locations.getSettings)
-   *
-   * @param string $name Required. Name of the settings to retrieve. Name format:
-   * "projects/[PROJECT_ID]/locations/[LOCATION]/settings"
-   * "folders/[FOLDER_ID]/locations/[LOCATION]/settings"
-   * "organizations/[ORGANIZATION_ID]/locations/[LOCATION]/settings"
-   * @param array $optParams Optional parameters.
-   * @return Settings
-   * @throws \Google\Service\Exception
-   */
-  public function getSettings($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('getSettings', [$params], Settings::class);
   }
   /**
    * Lists information about the supported locations for this service.
@@ -89,24 +70,6 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListLocationsResponse::class);
-  }
-  /**
-   * Update Settings (locations.updateSettings)
-   *
-   * @param string $name Identifier. The resource name of the settings.
-   * @param Settings $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string updateMask Optional. The field mask specifying which fields
-   * of the settings are to be updated.
-   * @return Operation
-   * @throws \Google\Service\Exception
-   */
-  public function updateSettings($name, Settings $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('updateSettings', [$params], Operation::class);
   }
 }
 
