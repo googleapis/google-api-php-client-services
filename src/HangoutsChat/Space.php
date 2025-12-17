@@ -53,8 +53,8 @@ class Space extends \Google\Model
    */
   public const SPACE_THREADING_STATE_SPACE_THREADING_STATE_UNSPECIFIED = 'SPACE_THREADING_STATE_UNSPECIFIED';
   /**
-   * Named spaces that support message threads. When users respond to a message,
-   * they can reply in-thread, which keeps their response in the context of the
+   * Spaces that support message threads. When users respond to a message, they
+   * can reply in-thread, which keeps their response in the context of the
    * original message.
    */
   public const SPACE_THREADING_STATE_THREADED_MESSAGES = 'THREADED_MESSAGES';
@@ -64,8 +64,10 @@ class Space extends \Google\Model
    */
   public const SPACE_THREADING_STATE_GROUPED_MESSAGES = 'GROUPED_MESSAGES';
   /**
-   * Direct messages (DMs) between two people and group conversations between 3
-   * or more people.
+   * Spaces that don't support message threading. This space threading state is
+   * only used for special cases including: * Continuous meeting chat where
+   * threading is intentionally turned off. * Legacy group conversations that
+   * were created prior to 2022.
    */
   public const SPACE_THREADING_STATE_UNTHREADED_MESSAGES = 'UNTHREADED_MESSAGES';
   /**
