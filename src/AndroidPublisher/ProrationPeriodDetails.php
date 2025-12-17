@@ -36,15 +36,6 @@ class ProrationPeriodDetails extends \Google\Model
    */
   public const ORIGINAL_OFFER_PHASE_FREE_TRIAL = 'FREE_TRIAL';
   /**
-   * The last order id of the original subscription purchase prior to the plan
-   * change. This is only populated if this proration period is from an
-   * ugrade/downgrade from a previous subscription and carries the remaining
-   * offer phase from the linked order of the previous subscription.
-   *
-   * @var string
-   */
-  public $linkedOrderId;
-  /**
    * Represent the original offer phase from the purchased the line item if the
    * proration period contains any of them. For example, a proration period from
    * CHARGE_FULL_PRICE plan change may merge the 1st offer phase of the
@@ -55,25 +46,6 @@ class ProrationPeriodDetails extends \Google\Model
    */
   public $originalOfferPhase;
 
-  /**
-   * The last order id of the original subscription purchase prior to the plan
-   * change. This is only populated if this proration period is from an
-   * ugrade/downgrade from a previous subscription and carries the remaining
-   * offer phase from the linked order of the previous subscription.
-   *
-   * @param string $linkedOrderId
-   */
-  public function setLinkedOrderId($linkedOrderId)
-  {
-    $this->linkedOrderId = $linkedOrderId;
-  }
-  /**
-   * @return string
-   */
-  public function getLinkedOrderId()
-  {
-    return $this->linkedOrderId;
-  }
   /**
    * Represent the original offer phase from the purchased the line item if the
    * proration period contains any of them. For example, a proration period from
