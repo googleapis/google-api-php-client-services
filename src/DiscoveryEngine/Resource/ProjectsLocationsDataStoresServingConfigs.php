@@ -58,6 +58,30 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
     return $this->call('answer', [$params], GoogleCloudDiscoveryengineV1AnswerQueryResponse::class);
   }
   /**
+   * Creates a ServingConfig. Note: The Google Cloud console works only with the
+   * default serving config. Additional ServingConfigs can be created and managed
+   * only via the API. A maximum of 100 ServingConfigs are allowed in an Engine,
+   * otherwise a RESOURCE_EXHAUSTED error is returned. (servingConfigs.create)
+   *
+   * @param string $parent Required. Full resource name of parent. Format: `projec
+   * ts/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+   * @param GoogleCloudDiscoveryengineV1ServingConfig $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string servingConfigId Required. The ID to use for the
+   * ServingConfig, which will become the final component of the ServingConfig's
+   * resource name. This value should be 4-63 characters, and valid characters are
+   * /a-zA-Z0-9+/.
+   * @return GoogleCloudDiscoveryengineV1ServingConfig
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, GoogleCloudDiscoveryengineV1ServingConfig $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GoogleCloudDiscoveryengineV1ServingConfig::class);
+  }
+  /**
    * Deletes a ServingConfig. Returns a NOT_FOUND error if the ServingConfig does
    * not exist. (servingConfigs.delete)
    *
