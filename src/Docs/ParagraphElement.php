@@ -23,6 +23,8 @@ class ParagraphElement extends \Google\Model
   protected $autoTextDataType = '';
   protected $columnBreakType = ColumnBreak::class;
   protected $columnBreakDataType = '';
+  protected $dateElementType = DateElement::class;
+  protected $dateElementDataType = '';
   /**
    * The zero-base end index of this paragraph element, exclusive, in UTF-16
    * code units.
@@ -84,6 +86,22 @@ class ParagraphElement extends \Google\Model
   public function getColumnBreak()
   {
     return $this->columnBreak;
+  }
+  /**
+   * A paragraph element that represents a date.
+   *
+   * @param DateElement $dateElement
+   */
+  public function setDateElement(DateElement $dateElement)
+  {
+    $this->dateElement = $dateElement;
+  }
+  /**
+   * @return DateElement
+   */
+  public function getDateElement()
+  {
+    return $this->dateElement;
   }
   /**
    * The zero-base end index of this paragraph element, exclusive, in UTF-16
