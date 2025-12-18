@@ -181,6 +181,10 @@ class ManagedKafka extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/clusters',

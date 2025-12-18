@@ -17,7 +17,7 @@
 
 namespace Google\Service\ManagedKafka;
 
-class Cluster extends \Google\Model
+class Cluster extends \Google\Collection
 {
   /**
    * A state was not specified.
@@ -35,6 +35,9 @@ class Cluster extends \Google\Model
    * The cluster is being deleted.
    */
   public const STATE_DELETING = 'DELETING';
+  protected $collection_key = 'brokerDetails';
+  protected $brokerDetailsType = BrokerDetails::class;
+  protected $brokerDetailsDataType = 'array';
   protected $capacityConfigType = CapacityConfig::class;
   protected $capacityConfigDataType = '';
   /**
@@ -45,6 +48,13 @@ class Cluster extends \Google\Model
   public $createTime;
   protected $gcpConfigType = GcpConfig::class;
   protected $gcpConfigDataType = '';
+  /**
+   * Output only. Only populated when FULL view is requested. The Kafka version
+   * of the cluster.
+   *
+   * @var string
+   */
+  public $kafkaVersion;
   /**
    * Optional. Labels as key value pairs.
    *
@@ -89,6 +99,23 @@ class Cluster extends \Google\Model
    */
   public $updateTime;
 
+  /**
+   * Output only. Only populated when FULL view is requested. Details of each
+   * broker in the cluster.
+   *
+   * @param BrokerDetails[] $brokerDetails
+   */
+  public function setBrokerDetails($brokerDetails)
+  {
+    $this->brokerDetails = $brokerDetails;
+  }
+  /**
+   * @return BrokerDetails[]
+   */
+  public function getBrokerDetails()
+  {
+    return $this->brokerDetails;
+  }
   /**
    * Required. Capacity configuration for the Kafka cluster.
    *
@@ -137,6 +164,23 @@ class Cluster extends \Google\Model
   public function getGcpConfig()
   {
     return $this->gcpConfig;
+  }
+  /**
+   * Output only. Only populated when FULL view is requested. The Kafka version
+   * of the cluster.
+   *
+   * @param string $kafkaVersion
+   */
+  public function setKafkaVersion($kafkaVersion)
+  {
+    $this->kafkaVersion = $kafkaVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getKafkaVersion()
+  {
+    return $this->kafkaVersion;
   }
   /**
    * Optional. Labels as key value pairs.

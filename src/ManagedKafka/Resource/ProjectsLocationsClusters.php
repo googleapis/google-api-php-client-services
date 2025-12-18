@@ -96,6 +96,10 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @param string $name Required. The name of the cluster whose configuration to
    * return.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. Specifies the view of the Cluster resource
+   * to be returned. Defaults to CLUSTER_VIEW_BASIC. See the ClusterView enum for
+   * possible values.
    * @return Cluster
    * @throws \Google\Service\Exception
    */
