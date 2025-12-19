@@ -36,30 +36,45 @@ class StartOAuthResponse extends \Google\Collection
    */
   public const SYSTEM_PROVIDER_ID_GITLAB = 'GITLAB';
   /**
-   * Google provider. Recommended scopes:
-   * "https://www.googleapis.com/auth/drive.readonly",
+   * Deprecated: This provider is no longer supported. Google provider.
+   * Recommended scopes: "https://www.googleapis.com/auth/drive.readonly",
    * "https://www.googleapis.com/auth/documents.readonly"
+   *
+   * @deprecated
    */
   public const SYSTEM_PROVIDER_ID_GOOGLE = 'GOOGLE';
   /**
-   * Sentry provider. Scopes can be found at
-   * https://docs.sentry.io/api/permissions/
+   * Deprecated: This provider is no longer supported. Sentry provider. Scopes
+   * can be found at https://docs.sentry.io/api/permissions/
+   *
+   * @deprecated
    */
   public const SYSTEM_PROVIDER_ID_SENTRY = 'SENTRY';
   /**
-   * Rovo provider. Must select the "rovo" scope.
+   * Deprecated: This provider is no longer supported. Rovo provider. Must
+   * select the "rovo" scope.
+   *
+   * @deprecated
    */
   public const SYSTEM_PROVIDER_ID_ROVO = 'ROVO';
   /**
-   * New Relic provider. No scopes are allowed.
+   * Deprecated: This provider is no longer supported. New Relic provider. No
+   * scopes are allowed.
+   *
+   * @deprecated
    */
   public const SYSTEM_PROVIDER_ID_NEW_RELIC = 'NEW_RELIC';
   /**
-   * Datastax provider. No scopes are allowed.
+   * Deprecated: This provider is no longer supported. Datastax provider. No
+   * scopes are allowed.
+   *
+   * @deprecated
    */
   public const SYSTEM_PROVIDER_ID_DATASTAX = 'DATASTAX';
   /**
-   * Dynatrace provider.
+   * Deprecated: This provider is no longer supported. Dynatrace provider.
+   *
+   * @deprecated
    */
   public const SYSTEM_PROVIDER_ID_DYNATRACE = 'DYNATRACE';
   protected $collection_key = 'scopes';
