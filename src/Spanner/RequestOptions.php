@@ -35,8 +35,6 @@ class RequestOptions extends \Google\Model
    * This specifies that the request is high priority.
    */
   public const PRIORITY_PRIORITY_HIGH = 'PRIORITY_HIGH';
-  protected $clientContextType = ClientContext::class;
-  protected $clientContextDataType = '';
   /**
    * Priority for the request.
    *
@@ -71,22 +69,6 @@ class RequestOptions extends \Google\Model
    */
   public $transactionTag;
 
-  /**
-   * Optional. Optional context that may be needed for some requests.
-   *
-   * @param ClientContext $clientContext
-   */
-  public function setClientContext(ClientContext $clientContext)
-  {
-    $this->clientContext = $clientContext;
-  }
-  /**
-   * @return ClientContext
-   */
-  public function getClientContext()
-  {
-    return $this->clientContext;
-  }
   /**
    * Priority for the request.
    *

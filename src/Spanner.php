@@ -41,7 +41,7 @@ class Spanner extends \Google\Service
   /** Administer your Spanner databases. */
   const SPANNER_ADMIN =
       "https://www.googleapis.com/auth/spanner.admin";
-  /** View and manage the contents of your Spanner databases. */
+  /** See, edit, configure, and delete your Google Cloud Spanner data and see the email address for your Google Account. */
   const SPANNER_DATA =
       "https://www.googleapis.com/auth/spanner.data";
 

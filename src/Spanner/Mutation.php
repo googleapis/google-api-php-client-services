@@ -19,6 +19,8 @@ namespace Google\Service\Spanner;
 
 class Mutation extends \Google\Model
 {
+  protected $ackType = Ack::class;
+  protected $ackDataType = '';
   protected $deleteType = Delete::class;
   protected $deleteDataType = '';
   protected $insertType = Write::class;
@@ -27,9 +29,27 @@ class Mutation extends \Google\Model
   protected $insertOrUpdateDataType = '';
   protected $replaceType = Write::class;
   protected $replaceDataType = '';
+  protected $sendType = Send::class;
+  protected $sendDataType = '';
   protected $updateType = Write::class;
   protected $updateDataType = '';
 
+  /**
+   * Ack a message from a queue.
+   *
+   * @param Ack $ack
+   */
+  public function setAck(Ack $ack)
+  {
+    $this->ack = $ack;
+  }
+  /**
+   * @return Ack
+   */
+  public function getAck()
+  {
+    return $this->ack;
+  }
   /**
    * Delete rows from a table. Succeeds whether or not the named rows were
    * present.
@@ -106,6 +126,22 @@ class Mutation extends \Google\Model
   public function getReplace()
   {
     return $this->replace;
+  }
+  /**
+   * Send a message to a queue.
+   *
+   * @param Send $send
+   */
+  public function setSend(Send $send)
+  {
+    $this->send = $send;
+  }
+  /**
+   * @return Send
+   */
+  public function getSend()
+  {
+    return $this->send;
   }
   /**
    * Update existing rows in a table. If any of the rows does not already exist,
