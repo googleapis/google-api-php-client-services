@@ -291,10 +291,12 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   protected $relevanceScoreSpecType = GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec::class;
   protected $relevanceScoreSpecDataType = '';
   /**
-   * The relevance threshold of the search results. Default to Google defined
-   * threshold, leveraging a balance of precision and recall to deliver both
-   * highly accurate results and comprehensive coverage of relevant information.
-   * This feature is not supported for healthcare search.
+   * The global relevance threshold of the search results. Defaults to Google
+   * defined threshold, leveraging a balance of precision and recall to deliver
+   * both highly accurate results and comprehensive coverage of relevant
+   * information. If more granular relevance filtering is required, use the
+   * `relevance_filter_spec` instead. This feature is not supported for
+   * healthcare search.
    *
    * @var string
    */
@@ -889,10 +891,12 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
     return $this->relevanceScoreSpec;
   }
   /**
-   * The relevance threshold of the search results. Default to Google defined
-   * threshold, leveraging a balance of precision and recall to deliver both
-   * highly accurate results and comprehensive coverage of relevant information.
-   * This feature is not supported for healthcare search.
+   * The global relevance threshold of the search results. Defaults to Google
+   * defined threshold, leveraging a balance of precision and recall to deliver
+   * both highly accurate results and comprehensive coverage of relevant
+   * information. If more granular relevance filtering is required, use the
+   * `relevance_filter_spec` instead. This feature is not supported for
+   * healthcare search.
    *
    * Accepted values: RELEVANCE_THRESHOLD_UNSPECIFIED, LOWEST, LOW, MEDIUM, HIGH
    *

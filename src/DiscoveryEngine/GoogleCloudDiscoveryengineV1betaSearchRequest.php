@@ -301,13 +301,17 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var string
    */
   public $regionCode;
+  protected $relevanceFilterSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceFilterSpec::class;
+  protected $relevanceFilterSpecDataType = '';
   protected $relevanceScoreSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceScoreSpec::class;
   protected $relevanceScoreSpecDataType = '';
   /**
-   * The relevance threshold of the search results. Default to Google defined
-   * threshold, leveraging a balance of precision and recall to deliver both
-   * highly accurate results and comprehensive coverage of relevant information.
-   * This feature is not supported for healthcare search.
+   * The global relevance threshold of the search results. Defaults to Google
+   * defined threshold, leveraging a balance of precision and recall to deliver
+   * both highly accurate results and comprehensive coverage of relevant
+   * information. If more granular relevance filtering is required, use the
+   * `relevance_filter_spec` instead. This feature is not supported for
+   * healthcare search.
    *
    * @var string
    */
@@ -959,6 +963,26 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->regionCode;
   }
   /**
+   * Optional. The granular relevance filtering specification. If not specified,
+   * the global `relevance_threshold` will be used for all sub-searches. If
+   * specified, this overrides the global `relevance_threshold` to use
+   * thresholds on a per sub-search basis. This feature is currently supported
+   * only for custom and site search.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceFilterSpec $relevanceFilterSpec
+   */
+  public function setRelevanceFilterSpec(GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceFilterSpec $relevanceFilterSpec)
+  {
+    $this->relevanceFilterSpec = $relevanceFilterSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceFilterSpec
+   */
+  public function getRelevanceFilterSpec()
+  {
+    return $this->relevanceFilterSpec;
+  }
+  /**
    * Optional. The specification for returning the relevance score.
    *
    * @param GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceScoreSpec $relevanceScoreSpec
@@ -975,10 +999,12 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->relevanceScoreSpec;
   }
   /**
-   * The relevance threshold of the search results. Default to Google defined
-   * threshold, leveraging a balance of precision and recall to deliver both
-   * highly accurate results and comprehensive coverage of relevant information.
-   * This feature is not supported for healthcare search.
+   * The global relevance threshold of the search results. Defaults to Google
+   * defined threshold, leveraging a balance of precision and recall to deliver
+   * both highly accurate results and comprehensive coverage of relevant
+   * information. If more granular relevance filtering is required, use the
+   * `relevance_filter_spec` instead. This feature is not supported for
+   * healthcare search.
    *
    * Accepted values: RELEVANCE_THRESHOLD_UNSPECIFIED, LOWEST, LOW, MEDIUM, HIGH
    *
