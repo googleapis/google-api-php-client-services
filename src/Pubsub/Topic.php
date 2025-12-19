@@ -70,7 +70,7 @@ class Topic extends \Google\Collection
   protected $messageTransformsType = MessageTransform::class;
   protected $messageTransformsDataType = 'array';
   /**
-   * Required. The name of the topic. It must have the format
+   * Required. Identifier. The name of the topic. It must have the format
    * `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
    * underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs
@@ -215,7 +215,7 @@ class Topic extends \Google\Collection
     return $this->messageTransforms;
   }
   /**
-   * Required. The name of the topic. It must have the format
+   * Required. Identifier. The name of the topic. It must have the format
    * `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
    * underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs

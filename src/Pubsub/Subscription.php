@@ -127,7 +127,7 @@ class Subscription extends \Google\Collection
   protected $messageTransformsType = MessageTransform::class;
   protected $messageTransformsDataType = 'array';
   /**
-   * Required. The name of the subscription. It must have the format
+   * Required. Identifier. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
    * start with a letter, and contain only letters (`[A-Za-z]`), numbers
    * (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -168,9 +168,10 @@ class Subscription extends \Google\Collection
    */
   public $tags;
   /**
-   * Required. The name of the topic from which this subscription is receiving
-   * messages. Format is `projects/{project}/topics/{topic}`. The value of this
-   * field will be `_deleted-topic_` if the topic has been deleted.
+   * Required. Identifier. The name of the topic from which this subscription is
+   * receiving messages. Format is `projects/{project}/topics/{topic}`. The
+   * value of this field will be `_deleted-topic_` if the topic has been
+   * deleted.
    *
    * @var string
    */
@@ -449,7 +450,7 @@ class Subscription extends \Google\Collection
     return $this->messageTransforms;
   }
   /**
-   * Required. The name of the subscription. It must have the format
+   * Required. Identifier. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
    * start with a letter, and contain only letters (`[A-Za-z]`), numbers
    * (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -565,9 +566,10 @@ class Subscription extends \Google\Collection
     return $this->tags;
   }
   /**
-   * Required. The name of the topic from which this subscription is receiving
-   * messages. Format is `projects/{project}/topics/{topic}`. The value of this
-   * field will be `_deleted-topic_` if the topic has been deleted.
+   * Required. Identifier. The name of the topic from which this subscription is
+   * receiving messages. Format is `projects/{project}/topics/{topic}`. The
+   * value of this field will be `_deleted-topic_` if the topic has been
+   * deleted.
    *
    * @param string $topic
    */

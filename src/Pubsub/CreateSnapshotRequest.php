@@ -27,7 +27,7 @@ class CreateSnapshotRequest extends \Google\Model
    */
   public $labels;
   /**
-   * Required. The subscription whose backlog the snapshot retains.
+   * Required. Identifier. The subscription whose backlog the snapshot retains.
    * Specifically, the created snapshot is guaranteed to retain: (a) The
    * existing backlog on the subscription. More precisely, this is defined as
    * the messages in the subscription's backlog that are unacknowledged upon the
@@ -66,7 +66,7 @@ class CreateSnapshotRequest extends \Google\Model
     return $this->labels;
   }
   /**
-   * Required. The subscription whose backlog the snapshot retains.
+   * Required. Identifier. The subscription whose backlog the snapshot retains.
    * Specifically, the created snapshot is guaranteed to retain: (a) The
    * existing backlog on the subscription. More precisely, this is defined as
    * the messages in the subscription's backlog that are unacknowledged upon the

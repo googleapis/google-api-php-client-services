@@ -77,12 +77,12 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * for REST API requests, you must specify a name in the request.
    * (subscriptions.create)
    *
-   * @param string $name Required. The name of the subscription. It must have the
-   * format `"projects/{project}/subscriptions/{subscription}"`. `{subscription}`
-   * must start with a letter, and contain only letters (`[A-Za-z]`), numbers
-   * (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus
-   * (`+`) or percent signs (`%`). It must be between 3 and 255 characters in
-   * length, and it must not start with `"goog"`.
+   * @param string $name Required. Identifier. The name of the subscription. It
+   * must have the format `"projects/{project}/subscriptions/{subscription}"`.
+   * `{subscription}` must start with a letter, and contain only letters
+   * (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods
+   * (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3
+   * and 255 characters in length, and it must not start with `"goog"`.
    * @param Subscription $postBody
    * @param array $optParams Optional parameters.
    * @return Subscription
@@ -101,8 +101,8 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * the same name, but the new one has no association with the old subscription
    * or its topic unless the same topic is specified. (subscriptions.delete)
    *
-   * @param string $subscription Required. The subscription to delete. Format is
-   * `projects/{project}/subscriptions/{sub}`.
+   * @param string $subscription Required. Identifier. The subscription to delete.
+   * Format is `projects/{project}/subscriptions/{sub}`.
    * @param array $optParams Optional parameters.
    * @return PubsubEmpty
    * @throws \Google\Service\Exception
@@ -134,8 +134,8 @@ class ProjectsSubscriptions extends \Google\Service\Resource
   /**
    * Gets the configuration details of a subscription. (subscriptions.get)
    *
-   * @param string $subscription Required. The name of the subscription to get.
-   * Format is `projects/{project}/subscriptions/{sub}`.
+   * @param string $subscription Required. Identifier. The name of the
+   * subscription to get. Format is `projects/{project}/subscriptions/{sub}`.
    * @param array $optParams Optional parameters.
    * @return Subscription
    * @throws \Google\Service\Exception
@@ -180,8 +180,8 @@ class ProjectsSubscriptions extends \Google\Service\Resource
   /**
    * Lists matching subscriptions. (subscriptions.listProjectsSubscriptions)
    *
-   * @param string $project Required. The name of the project in which to list
-   * subscriptions. Format is `projects/{project-id}`.
+   * @param string $project Required. Identifier. The name of the project in which
+   * to list subscriptions. Format is `projects/{project-id}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. Maximum number of subscriptions to return.
@@ -245,12 +245,12 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * update mask. Note that certain properties of a subscription, such as its
    * topic, are not modifiable. (subscriptions.patch)
    *
-   * @param string $name Required. The name of the subscription. It must have the
-   * format `"projects/{project}/subscriptions/{subscription}"`. `{subscription}`
-   * must start with a letter, and contain only letters (`[A-Za-z]`), numbers
-   * (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus
-   * (`+`) or percent signs (`%`). It must be between 3 and 255 characters in
-   * length, and it must not start with `"goog"`.
+   * @param string $name Required. Identifier. The name of the subscription. It
+   * must have the format `"projects/{project}/subscriptions/{subscription}"`.
+   * `{subscription}` must start with a letter, and contain only letters
+   * (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods
+   * (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3
+   * and 255 characters in length, and it must not start with `"goog"`.
    * @param UpdateSubscriptionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Subscription
