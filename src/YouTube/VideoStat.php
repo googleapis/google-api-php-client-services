@@ -28,29 +28,22 @@ class VideoStat extends \Google\Model
    */
   public $etag;
   /**
+   * Output only. The ID that YouTube uses to uniquely identify the video.
+   *
+   * @var string
+   */
+  public $id;
+  /**
    * Output only. Identifies what kind of resource this is. Value: the fixed
    * string "youtube#videoStats".
    *
    * @var string
    */
   public $kind;
-  /**
-   * Output only. Identifier. The resource name for the `VideoStats` resource,
-   * in the format `videoStats/{video_stat}`.
-   *
-   * @var string
-   */
-  public $name;
   protected $snippetType = VideoStatsSnippet::class;
   protected $snippetDataType = '';
   protected $statisticsType = VideoStatsStatistics::class;
   protected $statisticsDataType = '';
-  /**
-   * Output only. The ID that YouTube uses to uniquely identify the video.
-   *
-   * @var string
-   */
-  public $videoId;
 
   /**
    * Output only. The VideoStatsContentDetails object contains information about
@@ -86,6 +79,22 @@ class VideoStat extends \Google\Model
     return $this->etag;
   }
   /**
+   * Output only. The ID that YouTube uses to uniquely identify the video.
+   *
+   * @param string $id
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
+  }
+  /**
    * Output only. Identifies what kind of resource this is. Value: the fixed
    * string "youtube#videoStats".
    *
@@ -101,23 +110,6 @@ class VideoStat extends \Google\Model
   public function getKind()
   {
     return $this->kind;
-  }
-  /**
-   * Output only. Identifier. The resource name for the `VideoStats` resource,
-   * in the format `videoStats/{video_stat}`.
-   *
-   * @param string $name
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
   }
   /**
    * Output only. The VideoStatsSnippet object contains basic details about the
@@ -152,22 +144,6 @@ class VideoStat extends \Google\Model
   public function getStatistics()
   {
     return $this->statistics;
-  }
-  /**
-   * Output only. The ID that YouTube uses to uniquely identify the video.
-   *
-   * @param string $videoId
-   */
-  public function setVideoId($videoId)
-  {
-    $this->videoId = $videoId;
-  }
-  /**
-   * @return string
-   */
-  public function getVideoId()
-  {
-    return $this->videoId;
   }
 }
 

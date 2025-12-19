@@ -2288,16 +2288,16 @@ class YouTube extends \Google\Service
               'path' => 'youtube/v3/videos:batchGetStats',
               'httpMethod' => 'GET',
               'parameters' => [
+                'id' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'onBehalfOfContentOwner' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
                 'part' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'videoIds' => [
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,

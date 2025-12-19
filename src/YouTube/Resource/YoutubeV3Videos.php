@@ -35,6 +35,7 @@ class YoutubeV3Videos extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string id Required. Return videos with the given ids.
    * @opt_param string onBehalfOfContentOwner Optional. **Note:** This parameter
    * is intended exclusively for YouTube content partners. The
    * `onBehalfOfContentOwner` parameter indicates that the request's authorization
@@ -52,7 +53,6 @@ class YoutubeV3Videos extends \Google\Service\Resource
    * example, in a `videoStat` resource, the `statistics` property contains
    * `view_count` and `like_count`. As such, if you set `**part=snippet**`, the
    * API response will contain all of those properties.
-   * @opt_param string videoIds Required. Return videos with the given ids.
    * @return BatchGetStatsResponse
    * @throws \Google\Service\Exception
    */
