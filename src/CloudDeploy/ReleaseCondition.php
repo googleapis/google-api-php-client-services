@@ -71,7 +71,7 @@ class ReleaseCondition extends \Google\Model
     return $this->helmVersionSupportedCondition;
   }
   /**
-   * Output only. Details around the support state of the release's Kpt version.
+   * Output only. Details around the support state of the release's kpt version.
    *
    * @param ToolVersionSupportedCondition $kptVersionSupportedCondition
    */

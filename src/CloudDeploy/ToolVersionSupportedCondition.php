@@ -24,19 +24,19 @@ class ToolVersionSupportedCondition extends \Google\Model
    */
   public const TOOL_VERSION_SUPPORT_STATE_TOOL_VERSION_SUPPORT_STATE_UNSPECIFIED = 'TOOL_VERSION_SUPPORT_STATE_UNSPECIFIED';
   /**
-   * This Tool version is currently supported.
+   * This tool version is currently supported.
    */
   public const TOOL_VERSION_SUPPORT_STATE_TOOL_VERSION_SUPPORT_STATE_SUPPORTED = 'TOOL_VERSION_SUPPORT_STATE_SUPPORTED';
   /**
-   * This Tool version is in maintenance mode.
+   * This tool version is in maintenance mode.
    */
   public const TOOL_VERSION_SUPPORT_STATE_TOOL_VERSION_SUPPORT_STATE_MAINTENANCE_MODE = 'TOOL_VERSION_SUPPORT_STATE_MAINTENANCE_MODE';
   /**
-   * This Tool version is no longer supported.
+   * This tool version is no longer supported.
    */
   public const TOOL_VERSION_SUPPORT_STATE_TOOL_VERSION_SUPPORT_STATE_UNSUPPORTED = 'TOOL_VERSION_SUPPORT_STATE_UNSUPPORTED';
   /**
-   * Output only. The time at which this release's version of the Tool will
+   * Output only. The time at which this release's version of the tool will
    * enter maintenance mode.
    *
    * @var string
@@ -49,21 +49,21 @@ class ToolVersionSupportedCondition extends \Google\Model
    */
   public $status;
   /**
-   * Output only. The time at which this release's version of the Tool will no
+   * Output only. The time at which this release's version of the tool will no
    * longer be supported.
    *
    * @var string
    */
   public $supportExpirationTime;
   /**
-   * Output only. The Tool support state for this release's version of the Tool.
+   * Output only. The tool support state for this release's version of the tool.
    *
    * @var string
    */
   public $toolVersionSupportState;
 
   /**
-   * Output only. The time at which this release's version of the Tool will
+   * Output only. The time at which this release's version of the tool will
    * enter maintenance mode.
    *
    * @param string $maintenanceModeTime
@@ -96,7 +96,7 @@ class ToolVersionSupportedCondition extends \Google\Model
     return $this->status;
   }
   /**
-   * Output only. The time at which this release's version of the Tool will no
+   * Output only. The time at which this release's version of the tool will no
    * longer be supported.
    *
    * @param string $supportExpirationTime
@@ -113,7 +113,7 @@ class ToolVersionSupportedCondition extends \Google\Model
     return $this->supportExpirationTime;
   }
   /**
-   * Output only. The Tool support state for this release's version of the Tool.
+   * Output only. The tool support state for this release's version of the tool.
    *
    * Accepted values: TOOL_VERSION_SUPPORT_STATE_UNSPECIFIED,
    * TOOL_VERSION_SUPPORT_STATE_SUPPORTED,

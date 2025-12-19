@@ -523,8 +523,8 @@ class Release extends \Google\Collection
   }
   /**
    * Optional. The tool versions to use for this release and all subsequent
-   * operations involving this release. If unset, then it will freeze the tool
-   * versions at the time of release creation.
+   * operations involving this release. If unset, tool versions are frozen when
+   * the release is created.
    *
    * @param ToolVersions $toolVersions
    */

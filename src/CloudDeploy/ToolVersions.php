@@ -20,13 +20,13 @@ namespace Google\Service\CloudDeploy;
 class ToolVersions extends \Google\Model
 {
   /**
-   * Optional. The docker version to use for Cloud Deploy operations.
+   * Optional. The Docker version to use for Cloud Deploy operations.
    *
    * @var string
    */
   public $docker;
   /**
-   * Optional. The helm version to use for Cloud Deploy operations.
+   * Optional. The Helm version to use for Cloud Deploy operations.
    *
    * @var string
    */
@@ -38,26 +38,26 @@ class ToolVersions extends \Google\Model
    */
   public $kpt;
   /**
-   * Optional. The kubectl version to use for Cloud Deploy operations.
+   * Optional. The Kubectl version to use for Cloud Deploy operations.
    *
    * @var string
    */
   public $kubectl;
   /**
-   * Optional. The kustomize version to use for Cloud Deploy operations.
+   * Optional. The Kustomize version to use for Cloud Deploy operations.
    *
    * @var string
    */
   public $kustomize;
   /**
-   * Optional. The skaffold version to use for Cloud Deploy operations.
+   * Optional. The Skaffold version to use for Cloud Deploy operations.
    *
    * @var string
    */
   public $skaffold;
 
   /**
-   * Optional. The docker version to use for Cloud Deploy operations.
+   * Optional. The Docker version to use for Cloud Deploy operations.
    *
    * @param string $docker
    */
@@ -73,7 +73,7 @@ class ToolVersions extends \Google\Model
     return $this->docker;
   }
   /**
-   * Optional. The helm version to use for Cloud Deploy operations.
+   * Optional. The Helm version to use for Cloud Deploy operations.
    *
    * @param string $helm
    */
@@ -105,7 +105,7 @@ class ToolVersions extends \Google\Model
     return $this->kpt;
   }
   /**
-   * Optional. The kubectl version to use for Cloud Deploy operations.
+   * Optional. The Kubectl version to use for Cloud Deploy operations.
    *
    * @param string $kubectl
    */
@@ -121,7 +121,7 @@ class ToolVersions extends \Google\Model
     return $this->kubectl;
   }
   /**
-   * Optional. The kustomize version to use for Cloud Deploy operations.
+   * Optional. The Kustomize version to use for Cloud Deploy operations.
    *
    * @param string $kustomize
    */
@@ -137,7 +137,7 @@ class ToolVersions extends \Google\Model
     return $this->kustomize;
   }
   /**
-   * Optional. The skaffold version to use for Cloud Deploy operations.
+   * Optional. The Skaffold version to use for Cloud Deploy operations.
    *
    * @param string $skaffold
    */
