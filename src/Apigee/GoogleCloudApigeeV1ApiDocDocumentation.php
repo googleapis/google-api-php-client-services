@@ -19,11 +19,29 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1ApiDocDocumentation extends \Google\Model
 {
+  protected $asyncApiDocumentationType = GoogleCloudApigeeV1AsyncApiDocumentation::class;
+  protected $asyncApiDocumentationDataType = '';
   protected $graphqlDocumentationType = GoogleCloudApigeeV1GraphqlDocumentation::class;
   protected $graphqlDocumentationDataType = '';
   protected $oasDocumentationType = GoogleCloudApigeeV1OASDocumentation::class;
   protected $oasDocumentationDataType = '';
 
+  /**
+   * Optional. AsyncAPI Specification documentation.
+   *
+   * @param GoogleCloudApigeeV1AsyncApiDocumentation $asyncApiDocumentation
+   */
+  public function setAsyncApiDocumentation(GoogleCloudApigeeV1AsyncApiDocumentation $asyncApiDocumentation)
+  {
+    $this->asyncApiDocumentation = $asyncApiDocumentation;
+  }
+  /**
+   * @return GoogleCloudApigeeV1AsyncApiDocumentation
+   */
+  public function getAsyncApiDocumentation()
+  {
+    return $this->asyncApiDocumentation;
+  }
   /**
    * Optional. GraphQL documentation.
    *

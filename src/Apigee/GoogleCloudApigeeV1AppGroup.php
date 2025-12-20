@@ -53,6 +53,12 @@ class GoogleCloudApigeeV1AppGroup extends \Google\Collection
    */
   public $displayName;
   /**
+   * Optional. Email of the AppGroup.
+   *
+   * @var string
+   */
+  public $email;
+  /**
    * Output only. Modified time as milliseconds since epoch.
    *
    * @var string
@@ -175,6 +181,22 @@ class GoogleCloudApigeeV1AppGroup extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * Optional. Email of the AppGroup.
+   *
+   * @param string $email
+   */
+  public function setEmail($email)
+  {
+    $this->email = $email;
+  }
+  /**
+   * @return string
+   */
+  public function getEmail()
+  {
+    return $this->email;
   }
   /**
    * Output only. Modified time as milliseconds since epoch.

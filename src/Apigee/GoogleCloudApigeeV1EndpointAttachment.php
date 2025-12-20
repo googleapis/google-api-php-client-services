@@ -56,6 +56,12 @@ class GoogleCloudApigeeV1EndpointAttachment extends \Google\Model
    */
   public const CONNECTION_STATE_NEEDS_ATTENTION = 'NEEDS_ATTENTION';
   /**
+   * The connection has been accepted by the PSC producer, but it will only
+   * serve capacity limited traffic. The producer needs to take further actions
+   * to increase capacity for this connection.
+   */
+  public const CONNECTION_STATE_ACCEPTED_LIMITED_CAPACITY = 'ACCEPTED_LIMITED_CAPACITY';
+  /**
    * Resource is in an unspecified state.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -121,7 +127,8 @@ class GoogleCloudApigeeV1EndpointAttachment extends \Google\Model
    * attachment.
    *
    * Accepted values: CONNECTION_STATE_UNSPECIFIED, UNAVAILABLE, PENDING,
-   * ACCEPTED, REJECTED, CLOSED, FROZEN, NEEDS_ATTENTION
+   * ACCEPTED, REJECTED, CLOSED, FROZEN, NEEDS_ATTENTION,
+   * ACCEPTED_LIMITED_CAPACITY
    *
    * @param self::CONNECTION_STATE_* $connectionState
    */
