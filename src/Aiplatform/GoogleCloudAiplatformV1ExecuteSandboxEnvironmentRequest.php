@@ -17,38 +17,29 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SchemaVertex extends \Google\Model
+class GoogleCloudAiplatformV1ExecuteSandboxEnvironmentRequest extends \Google\Collection
 {
-  /**
-   * X coordinate of the vertex, normalized to [0.0, 1.0].
-   *
-   * @var 
-   */
-  public $x;
-  /**
-   * Y coordinate of the vertex, normalized to [0.0, 1.0].
-   *
-   * @var 
-   */
-  public $y;
+  protected $collection_key = 'inputs';
+  protected $inputsType = GoogleCloudAiplatformV1Chunk::class;
+  protected $inputsDataType = 'array';
 
-  public function setX($x)
+  /**
+   * Required. The inputs to the sandbox environment.
+   *
+   * @param GoogleCloudAiplatformV1Chunk[] $inputs
+   */
+  public function setInputs($inputs)
   {
-    $this->x = $x;
+    $this->inputs = $inputs;
   }
-  public function getX()
+  /**
+   * @return GoogleCloudAiplatformV1Chunk[]
+   */
+  public function getInputs()
   {
-    return $this->x;
-  }
-  public function setY($y)
-  {
-    $this->y = $y;
-  }
-  public function getY()
-  {
-    return $this->y;
+    return $this->inputs;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1SchemaVertex::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SchemaVertex');
+class_alias(GoogleCloudAiplatformV1ExecuteSandboxEnvironmentRequest::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ExecuteSandboxEnvironmentRequest');

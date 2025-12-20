@@ -19,6 +19,18 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData extends \Google\Collection
 {
+  /**
+   * Unspecified framework.
+   */
+  public const FRAMEWORK_FRAMEWORK_UNSPECIFIED = 'FRAMEWORK_UNSPECIFIED';
+  /**
+   * React framework.
+   */
+  public const FRAMEWORK_REACT = 'REACT';
+  /**
+   * Angular framework.
+   */
+  public const FRAMEWORK_ANGULAR = 'ANGULAR';
   protected $collection_key = 'linkedResources';
   /**
    * Serialized state of the code repository. This string will typically contain
@@ -29,6 +41,12 @@ class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData extends \Google\Coll
    * @var string
    */
   public $codeRepositoryState;
+  /**
+   * Optional. Framework used to build the application.
+   *
+   * @var string
+   */
+  public $framework;
   protected $linkedResourcesType = GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderDataLinkedResource::class;
   protected $linkedResourcesDataType = 'array';
 
@@ -50,6 +68,24 @@ class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData extends \Google\Coll
   public function getCodeRepositoryState()
   {
     return $this->codeRepositoryState;
+  }
+  /**
+   * Optional. Framework used to build the application.
+   *
+   * Accepted values: FRAMEWORK_UNSPECIFIED, REACT, ANGULAR
+   *
+   * @param self::FRAMEWORK_* $framework
+   */
+  public function setFramework($framework)
+  {
+    $this->framework = $framework;
+  }
+  /**
+   * @return self::FRAMEWORK_*
+   */
+  public function getFramework()
+  {
+    return $this->framework;
   }
   /**
    * Linked resources attached to the application by the user.

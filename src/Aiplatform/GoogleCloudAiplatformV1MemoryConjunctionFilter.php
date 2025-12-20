@@ -17,38 +17,29 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SchemaVertex extends \Google\Model
+class GoogleCloudAiplatformV1MemoryConjunctionFilter extends \Google\Collection
 {
-  /**
-   * X coordinate of the vertex, normalized to [0.0, 1.0].
-   *
-   * @var 
-   */
-  public $x;
-  /**
-   * Y coordinate of the vertex, normalized to [0.0, 1.0].
-   *
-   * @var 
-   */
-  public $y;
+  protected $collection_key = 'filters';
+  protected $filtersType = GoogleCloudAiplatformV1MemoryFilter::class;
+  protected $filtersDataType = 'array';
 
-  public function setX($x)
+  /**
+   * Filters that will combined using AND logic.
+   *
+   * @param GoogleCloudAiplatformV1MemoryFilter[] $filters
+   */
+  public function setFilters($filters)
   {
-    $this->x = $x;
+    $this->filters = $filters;
   }
-  public function getX()
+  /**
+   * @return GoogleCloudAiplatformV1MemoryFilter[]
+   */
+  public function getFilters()
   {
-    return $this->x;
-  }
-  public function setY($y)
-  {
-    $this->y = $y;
-  }
-  public function getY()
-  {
-    return $this->y;
+    return $this->filters;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1SchemaVertex::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SchemaVertex');
+class_alias(GoogleCloudAiplatformV1MemoryConjunctionFilter::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1MemoryConjunctionFilter');

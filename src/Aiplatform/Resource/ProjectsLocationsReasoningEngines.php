@@ -18,6 +18,8 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleApiHttpBody;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExecuteCodeRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExecuteCodeResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListReasoningEnginesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1QueryReasoningEngineRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1QueryReasoningEngineResponse;
@@ -71,6 +73,23 @@ class ProjectsLocationsReasoningEngines extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Executes code statelessly. (reasoningEngines.executeCode)
+   *
+   * @param string $name Required. The resource name of the sandbox environment to
+   * execute. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1ExecuteCodeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1ExecuteCodeResponse
+   * @throws \Google\Service\Exception
+   */
+  public function executeCode($name, GoogleCloudAiplatformV1ExecuteCodeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('executeCode', [$params], GoogleCloudAiplatformV1ExecuteCodeResponse::class);
   }
   /**
    * Gets a reasoning engine. (reasoningEngines.get)

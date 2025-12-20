@@ -17,38 +17,29 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SchemaVertex extends \Google\Model
+class GoogleCloudAiplatformV1ExecuteCodeResponse extends \Google\Collection
 {
-  /**
-   * X coordinate of the vertex, normalized to [0.0, 1.0].
-   *
-   * @var 
-   */
-  public $x;
-  /**
-   * Y coordinate of the vertex, normalized to [0.0, 1.0].
-   *
-   * @var 
-   */
-  public $y;
+  protected $collection_key = 'outputs';
+  protected $outputsType = GoogleCloudAiplatformV1Chunk::class;
+  protected $outputsDataType = 'array';
 
-  public function setX($x)
+  /**
+   * The outputs from the sandbox environment.
+   *
+   * @param GoogleCloudAiplatformV1Chunk[] $outputs
+   */
+  public function setOutputs($outputs)
   {
-    $this->x = $x;
+    $this->outputs = $outputs;
   }
-  public function getX()
+  /**
+   * @return GoogleCloudAiplatformV1Chunk[]
+   */
+  public function getOutputs()
   {
-    return $this->x;
-  }
-  public function setY($y)
-  {
-    $this->y = $y;
-  }
-  public function getY()
-  {
-    return $this->y;
+    return $this->outputs;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1SchemaVertex::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SchemaVertex');
+class_alias(GoogleCloudAiplatformV1ExecuteCodeResponse::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ExecuteCodeResponse');

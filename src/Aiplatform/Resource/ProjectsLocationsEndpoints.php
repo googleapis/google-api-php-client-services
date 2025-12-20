@@ -435,7 +435,8 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
    * the prediction. Format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}` or `projects/{
+   * project}/locations/{location}/publishers/{publisher}/models/{model}`
    * @param GoogleCloudAiplatformV1StreamRawPredictRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleApiHttpBody

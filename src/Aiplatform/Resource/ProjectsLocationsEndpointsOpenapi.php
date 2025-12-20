@@ -32,6 +32,28 @@ class ProjectsLocationsEndpointsOpenapi extends \Google\Service\Resource
   /**
    * Forwards arbitrary HTTP requests for both streaming and non-streaming cases.
    * To use this method, invoke_route_prefix must be set to allow the paths that
+   * will be specified in the request. (openapi.completions)
+   *
+   * @param string $endpoint Required. The name of the Endpoint requested to serve
+   * the prediction. Format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * @param GoogleApiHttpBody $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string deployedModelId ID of the DeployedModel that serves the
+   * invoke request.
+   * @return GoogleApiHttpBody
+   * @throws \Google\Service\Exception
+   */
+  public function completions($endpoint, GoogleApiHttpBody $postBody, $optParams = [])
+  {
+    $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('completions', [$params], GoogleApiHttpBody::class);
+  }
+  /**
+   * Forwards arbitrary HTTP requests for both streaming and non-streaming cases.
+   * To use this method, invoke_route_prefix must be set to allow the paths that
    * will be specified in the request. (openapi.embeddings)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
