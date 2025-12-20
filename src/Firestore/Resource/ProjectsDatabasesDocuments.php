@@ -26,6 +26,8 @@ use Google\Service\Firestore\BeginTransactionResponse;
 use Google\Service\Firestore\CommitRequest;
 use Google\Service\Firestore\CommitResponse;
 use Google\Service\Firestore\Document;
+use Google\Service\Firestore\ExecutePipelineRequest;
+use Google\Service\Firestore\ExecutePipelineResponse;
 use Google\Service\Firestore\FirestoreEmpty;
 use Google\Service\Firestore\ListCollectionIdsRequest;
 use Google\Service\Firestore\ListCollectionIdsResponse;
@@ -169,6 +171,22 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], FirestoreEmpty::class);
+  }
+  /**
+   * Executes a pipeline query. (documents.executePipeline)
+   *
+   * @param string $database Required. Database identifier, in the form
+   * `projects/{project}/databases/{database}`.
+   * @param ExecutePipelineRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ExecutePipelineResponse
+   * @throws \Google\Service\Exception
+   */
+  public function executePipeline($database, ExecutePipelineRequest $postBody, $optParams = [])
+  {
+    $params = ['database' => $database, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('executePipeline', [$params], ExecutePipelineResponse::class);
   }
   /**
    * Gets a single document. (documents.get)

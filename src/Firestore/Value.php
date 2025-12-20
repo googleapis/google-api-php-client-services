@@ -44,6 +44,17 @@ class Value extends \Google\Model
    * @var 
    */
   public $doubleValue;
+  /**
+   * Value which references a field. This is considered relative (vs absolute)
+   * since it only refers to a field and not a field within a particular
+   * document. **Requires:** * Must follow field reference limitations. * Not
+   * allowed to be used when writing documents.
+   *
+   * @var string
+   */
+  public $fieldReferenceValue;
+  protected $functionValueType = FirestoreFunction::class;
+  protected $functionValueDataType = '';
   protected $geoPointValueType = LatLng::class;
   protected $geoPointValueDataType = '';
   /**
@@ -60,6 +71,8 @@ class Value extends \Google\Model
    * @var string
    */
   public $nullValue;
+  protected $pipelineValueType = Pipeline::class;
+  protected $pipelineValueDataType = '';
   /**
    * A reference to a document. For example:
    * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
@@ -142,6 +155,42 @@ class Value extends \Google\Model
     return $this->doubleValue;
   }
   /**
+   * Value which references a field. This is considered relative (vs absolute)
+   * since it only refers to a field and not a field within a particular
+   * document. **Requires:** * Must follow field reference limitations. * Not
+   * allowed to be used when writing documents.
+   *
+   * @param string $fieldReferenceValue
+   */
+  public function setFieldReferenceValue($fieldReferenceValue)
+  {
+    $this->fieldReferenceValue = $fieldReferenceValue;
+  }
+  /**
+   * @return string
+   */
+  public function getFieldReferenceValue()
+  {
+    return $this->fieldReferenceValue;
+  }
+  /**
+   * A value that represents an unevaluated expression. **Requires:** * Not
+   * allowed to be used when writing documents.
+   *
+   * @param FirestoreFunction $functionValue
+   */
+  public function setFunctionValue(FirestoreFunction $functionValue)
+  {
+    $this->functionValue = $functionValue;
+  }
+  /**
+   * @return FirestoreFunction
+   */
+  public function getFunctionValue()
+  {
+    return $this->functionValue;
+  }
+  /**
    * A geo point value representing a point on the surface of Earth.
    *
    * @param LatLng $geoPointValue
@@ -206,6 +255,23 @@ class Value extends \Google\Model
   public function getNullValue()
   {
     return $this->nullValue;
+  }
+  /**
+   * A value that represents an unevaluated pipeline. **Requires:** * Not
+   * allowed to be used when writing documents.
+   *
+   * @param Pipeline $pipelineValue
+   */
+  public function setPipelineValue(Pipeline $pipelineValue)
+  {
+    $this->pipelineValue = $pipelineValue;
+  }
+  /**
+   * @return Pipeline
+   */
+  public function getPipelineValue()
+  {
+    return $this->pipelineValue;
   }
   /**
    * A reference to a document. For example:

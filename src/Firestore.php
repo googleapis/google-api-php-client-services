@@ -466,6 +466,16 @@ class Firestore extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'executePipeline' => [
+              'path' => 'v1/{+database}/documents:executePipeline',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'database' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',

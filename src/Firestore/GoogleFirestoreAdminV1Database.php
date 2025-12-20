@@ -40,18 +40,21 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   public const CONCURRENCY_MODE_CONCURRENCY_MODE_UNSPECIFIED = 'CONCURRENCY_MODE_UNSPECIFIED';
   /**
    * Use optimistic concurrency control by default. This mode is available for
-   * Cloud Firestore databases.
+   * Cloud Firestore databases. This is the default setting for Cloud Firestore
+   * Enterprise Edition databases.
    */
   public const CONCURRENCY_MODE_OPTIMISTIC = 'OPTIMISTIC';
   /**
    * Use pessimistic concurrency control by default. This mode is available for
-   * Cloud Firestore databases. This is the default setting for Cloud Firestore.
+   * Cloud Firestore databases. This is the default setting for Cloud Firestore
+   * Standard Edition databases.
    */
   public const CONCURRENCY_MODE_PESSIMISTIC = 'PESSIMISTIC';
   /**
-   * Use optimistic concurrency control with entity groups by default. This is
-   * the only available mode for Cloud Datastore. This mode is also available
-   * for Cloud Firestore with Datastore Mode but is not recommended.
+   * Use optimistic concurrency control with entity groups by default. This mode
+   * is enabled for some databases that were automatically upgraded from Cloud
+   * Datastore to Cloud Firestore with Datastore Mode. It is not recommended for
+   * any new databases, and not supported for Firestore Native databases.
    */
   public const CONCURRENCY_MODE_OPTIMISTIC_WITH_ENTITY_GROUPS = 'OPTIMISTIC_WITH_ENTITY_GROUPS';
   /**
@@ -152,7 +155,9 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   protected $cmekConfigType = GoogleFirestoreAdminV1CmekConfig::class;
   protected $cmekConfigDataType = '';
   /**
-   * The concurrency control mode to use for this database.
+   * The concurrency control mode to use for this database. If unspecified in a
+   * CreateDatabase request, this will default based on the database edition:
+   * Optimistic for Enterprise and Pessimistic for all other databases.
    *
    * @var string
    */
@@ -355,7 +360,9 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
     return $this->cmekConfig;
   }
   /**
-   * The concurrency control mode to use for this database.
+   * The concurrency control mode to use for this database. If unspecified in a
+   * CreateDatabase request, this will default based on the database edition:
+   * Optimistic for Enterprise and Pessimistic for all other databases.
    *
    * Accepted values: CONCURRENCY_MODE_UNSPECIFIED, OPTIMISTIC, PESSIMISTIC,
    * OPTIMISTIC_WITH_ENTITY_GROUPS
