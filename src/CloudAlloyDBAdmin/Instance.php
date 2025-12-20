@@ -102,6 +102,11 @@ class Instance extends \Google\Collection
    * The instance is being promoted.
    */
   public const STATE_PROMOTING = 'PROMOTING';
+  /**
+   * The instance has entered switchover state. All updates on instance are
+   * restricted while the instance is in this state.
+   */
+  public const STATE_SWITCHOVER = 'SWITCHOVER';
   protected $collection_key = 'outboundPublicIpAddresses';
   /**
    * Optional. Specifies whether an instance needs to spin up. Once the instance
@@ -780,7 +785,7 @@ class Instance extends \Google\Collection
    * Output only. The current serving state of the instance.
    *
    * Accepted values: STATE_UNSPECIFIED, READY, STOPPED, CREATING, DELETING,
-   * MAINTENANCE, FAILED, BOOTSTRAPPING, PROMOTING
+   * MAINTENANCE, FAILED, BOOTSTRAPPING, PROMOTING, SWITCHOVER
    *
    * @param self::STATE_* $state
    */

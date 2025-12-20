@@ -116,6 +116,11 @@ class Cluster extends \Google\Model
    */
   public const STATE_PROMOTING = 'PROMOTING';
   /**
+   * The cluster has entered switchover state. All updates on cluster and its
+   * associated instances are restricted while the cluster is in this state.
+   */
+  public const STATE_SWITCHOVER = 'SWITCHOVER';
+  /**
    * This is an unknown subscription type. By default, the subscription type is
    * STANDARD.
    */
@@ -862,7 +867,7 @@ class Cluster extends \Google\Model
    * Output only. The current serving state of the cluster.
    *
    * Accepted values: STATE_UNSPECIFIED, READY, STOPPED, EMPTY, CREATING,
-   * DELETING, FAILED, BOOTSTRAPPING, MAINTENANCE, PROMOTING
+   * DELETING, FAILED, BOOTSTRAPPING, MAINTENANCE, PROMOTING, SWITCHOVER
    *
    * @param self::STATE_* $state
    */
