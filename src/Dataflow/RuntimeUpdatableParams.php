@@ -20,6 +20,13 @@ namespace Google\Service\Dataflow;
 class RuntimeUpdatableParams extends \Google\Model
 {
   /**
+   * Optional. The backlog threshold duration in seconds for autoscaling. Value
+   * must be non-negative.
+   *
+   * @var string
+   */
+  public $acceptableBacklogDuration;
+  /**
    * The maximum number of workers to cap autoscaling at. This field is
    * currently only supported for Streaming Engine jobs.
    *
@@ -45,6 +52,23 @@ class RuntimeUpdatableParams extends \Google\Model
    */
   public $workerUtilizationHint;
 
+  /**
+   * Optional. The backlog threshold duration in seconds for autoscaling. Value
+   * must be non-negative.
+   *
+   * @param string $acceptableBacklogDuration
+   */
+  public function setAcceptableBacklogDuration($acceptableBacklogDuration)
+  {
+    $this->acceptableBacklogDuration = $acceptableBacklogDuration;
+  }
+  /**
+   * @return string
+   */
+  public function getAcceptableBacklogDuration()
+  {
+    return $this->acceptableBacklogDuration;
+  }
   /**
    * The maximum number of workers to cap autoscaling at. This field is
    * currently only supported for Streaming Engine jobs.
