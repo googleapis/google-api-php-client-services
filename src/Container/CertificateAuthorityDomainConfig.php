@@ -50,7 +50,7 @@ class CertificateAuthorityDomainConfig extends \Google\Collection
     return $this->fqdns;
   }
   /**
-   * Google Secret Manager (GCP) certificate configuration.
+   * Secret Manager certificate configuration.
    *
    * @param GCPSecretManagerCertificateConfig $gcpSecretManagerCertificateConfig
    */
