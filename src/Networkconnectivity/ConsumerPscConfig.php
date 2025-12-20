@@ -109,9 +109,9 @@ class ConsumerPscConfig extends \Google\Model
    */
   public $project;
   /**
-   * Output only. A map to store mapping between customer vip and target service
-   * attachment. Only service attachment with producer specified ip addresses
-   * are stored here.
+   * Optional. A map to store mapping between customer vip and target service
+   * attachment. This field can be used to specify a static IP address for a PSC
+   * connection.
    *
    * @var string[]
    */
@@ -250,9 +250,9 @@ class ConsumerPscConfig extends \Google\Model
     return $this->project;
   }
   /**
-   * Output only. A map to store mapping between customer vip and target service
-   * attachment. Only service attachment with producer specified ip addresses
-   * are stored here.
+   * Optional. A map to store mapping between customer vip and target service
+   * attachment. This field can be used to specify a static IP address for a PSC
+   * connection.
    *
    * @param string[] $serviceAttachmentIpAddressMap
    */
