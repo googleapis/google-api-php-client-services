@@ -639,6 +639,16 @@ class Contactcenterinsights extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'generateSignedAudio' => [
+              'path' => 'v1/{+name}:generateSignedAudio',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -1047,6 +1057,16 @@ class Contactcenterinsights extends \Google\Service
                 'force' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'generateSignedAudio' => [
+              'path' => 'v1/{+name}:generateSignedAudio',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'get' => [
@@ -1635,6 +1655,16 @@ class Contactcenterinsights extends \Google\Service
                 'force' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'generateSignedAudio' => [
+              'path' => 'v1/{+name}:generateSignedAudio',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'get' => [

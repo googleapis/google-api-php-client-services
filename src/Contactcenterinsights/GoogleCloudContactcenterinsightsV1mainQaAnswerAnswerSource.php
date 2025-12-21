@@ -41,7 +41,9 @@ class GoogleCloudContactcenterinsightsV1mainQaAnswerAnswerSource extends \Google
   public $sourceType;
 
   /**
-   * The answer value from this source.
+   * The answer value from this source. This field is populated by default,
+   * unless the question has a selection strategy configured to return multiple
+   * answer values, in which case `answer_values` will be populated instead.
    *
    * @param GoogleCloudContactcenterinsightsV1mainQaAnswerAnswerValue $answerValue
    */

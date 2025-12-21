@@ -52,7 +52,9 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
   public $tags;
 
   /**
-   * List of all individual answers given to the question.
+   * Lists all answer sources containing one or more answer values of a specific
+   * source type, e.g., all system-generated answer sources, or all manual edit
+   * answer sources.
    *
    * @param GoogleCloudContactcenterinsightsV1QaAnswerAnswerSource[] $answerSources
    */
@@ -68,7 +70,9 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
     return $this->answerSources;
   }
   /**
-   * The main answer value, incorporating any manual edits if they exist.
+   * The answer value from this source. This field is populated by default,
+   * unless the question has a selection strategy configured to return multiple
+   * answer values, in which case `answer_values` will be populated instead.
    *
    * @param GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue $answerValue
    */

@@ -20,6 +20,14 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1mainSpeechConfig extends \Google\Model
 {
   /**
+   * Whether to disable word time offsets. If true, the
+   * `enable_word_time_offsets` field in the recognition config will be set to
+   * false.
+   *
+   * @var bool
+   */
+  public $disableWordTimeOffsets;
+  /**
    * The fully-qualified Speech Recognizer resource name. Format:
    * `projects/{project_id}/locations/{location}/recognizer/{recognizer}`
    *
@@ -27,6 +35,24 @@ class GoogleCloudContactcenterinsightsV1mainSpeechConfig extends \Google\Model
    */
   public $speechRecognizer;
 
+  /**
+   * Whether to disable word time offsets. If true, the
+   * `enable_word_time_offsets` field in the recognition config will be set to
+   * false.
+   *
+   * @param bool $disableWordTimeOffsets
+   */
+  public function setDisableWordTimeOffsets($disableWordTimeOffsets)
+  {
+    $this->disableWordTimeOffsets = $disableWordTimeOffsets;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableWordTimeOffsets()
+  {
+    return $this->disableWordTimeOffsets;
+  }
   /**
    * The fully-qualified Speech Recognizer resource name. Format:
    * `projects/{project_id}/locations/{location}/recognizer/{recognizer}`
