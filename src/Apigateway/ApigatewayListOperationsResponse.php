@@ -30,8 +30,9 @@ class ApigatewayListOperationsResponse extends \Google\Collection
   protected $operationsDataType = 'array';
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections
-   * e.g. when attempting to list all resources across all supported locations.
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections. For example, when attempting to list all resources across all
+   * supported locations.
    *
    * @var string[]
    */
@@ -71,8 +72,9 @@ class ApigatewayListOperationsResponse extends \Google\Collection
   }
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections
-   * e.g. when attempting to list all resources across all supported locations.
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections. For example, when attempting to list all resources across all
+   * supported locations.
    *
    * @param string[] $unreachable
    */
