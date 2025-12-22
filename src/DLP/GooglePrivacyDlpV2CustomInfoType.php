@@ -214,8 +214,7 @@ class GooglePrivacyDlpV2CustomInfoType extends \Google\Collection
     return $this->sensitivityScore;
   }
   /**
-   * Load an existing `StoredInfoType` resource for use in `InspectDataSource`.
-   * Not currently supported in `InspectContent`.
+   * Loads an existing `StoredInfoType` resource.
    *
    * @param GooglePrivacyDlpV2StoredType $storedType
    */
