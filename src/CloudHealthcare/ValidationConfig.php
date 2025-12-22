@@ -62,6 +62,16 @@ class ValidationConfig extends \Google\Collection
    */
   public $disableRequiredFieldValidation;
   /**
+   * Optional. Whether to enable FHIRPath validation for incoming resource types
+   * that have profiles configured for them in the
+   * `enabled_implementation_guides` list. Set this to true to enable checking
+   * incoming resources for conformance against FHIRPath requirements defined in
+   * the configured profiles.
+   *
+   * @var bool
+   */
+  public $enableFhirpathProfileValidation;
+  /**
    * Optional. A list of implementation guide URLs in this FHIR store that are
    * used to configure the profiles to use for validation. For example, to use
    * the US Core profiles for validation, set `enabled_implementation_guides` to
@@ -162,6 +172,26 @@ class ValidationConfig extends \Google\Collection
   public function getDisableRequiredFieldValidation()
   {
     return $this->disableRequiredFieldValidation;
+  }
+  /**
+   * Optional. Whether to enable FHIRPath validation for incoming resource types
+   * that have profiles configured for them in the
+   * `enabled_implementation_guides` list. Set this to true to enable checking
+   * incoming resources for conformance against FHIRPath requirements defined in
+   * the configured profiles.
+   *
+   * @param bool $enableFhirpathProfileValidation
+   */
+  public function setEnableFhirpathProfileValidation($enableFhirpathProfileValidation)
+  {
+    $this->enableFhirpathProfileValidation = $enableFhirpathProfileValidation;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableFhirpathProfileValidation()
+  {
+    return $this->enableFhirpathProfileValidation;
   }
   /**
    * Optional. A list of implementation guide URLs in this FHIR store that are
