@@ -75,14 +75,15 @@ class ProjectsLocationsCollections extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Indicates which fields in the provided
-   * DataConnector to update. Supported field paths include: - refresh_interval -
-   * params - auto_run_disabled - action_config - action_config.action_params -
-   * action_config.service_name - destination_configs - blocking_reasons -
-   * sync_mode - incremental_sync_disabled - incremental_refresh_interval Note:
-   * Support for these fields may vary depending on the connector type. For
-   * example, not all connectors support `destination_configs`. If an unsupported
-   * or unknown field path is provided, the request will return an
-   * INVALID_ARGUMENT error.
+   * DataConnector to update. Supported field paths include: - `refresh_interval`
+   * - `params` - `auto_run_disabled` - `action_config` -
+   * `action_config.action_params` - `action_config.service_name` -
+   * `destination_configs` - `blocking_reasons` - `sync_mode` -
+   * `incremental_sync_disabled` - `incremental_refresh_interval` -
+   * `data_protection_policy` Note: Support for these fields may vary depending on
+   * the connector type. For example, not all connectors support
+   * `destination_configs`. If an unsupported or unknown field path is provided,
+   * the request will return an INVALID_ARGUMENT error.
    * @return GoogleCloudDiscoveryengineV1DataConnector
    * @throws \Google\Service\Exception
    */
