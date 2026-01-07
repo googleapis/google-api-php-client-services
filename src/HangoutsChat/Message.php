@@ -522,9 +522,7 @@ class Message extends \Google\Collection
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) and omit the following: * [Attachments](https://develop
    * ers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachm
-   * ents) * [Accessory widgets](https://developers.google.com/workspace/chat/ap
-   * i/reference/rest/v1/spaces.messages#Message.AccessoryWidget) For details,
-   * see [Send a message
+   * ents) For details, see [Send a message
    * privately](https://developers.google.com/workspace/chat/create-
    * messages#private).
    *
