@@ -24,11 +24,11 @@ class BackupServiceToggledEvent extends \Google\Model
    */
   public const BACKUP_SERVICE_STATE_BACKUP_SERVICE_STATE_UNSPECIFIED = 'BACKUP_SERVICE_STATE_UNSPECIFIED';
   /**
-   * Backup service is enabled
+   * Backup service is disabled
    */
   public const BACKUP_SERVICE_STATE_BACKUP_SERVICE_DISABLED = 'BACKUP_SERVICE_DISABLED';
   /**
-   * Backup service is disabled
+   * Backup service is enabled
    */
   public const BACKUP_SERVICE_STATE_BACKUP_SERVICE_ENABLED = 'BACKUP_SERVICE_ENABLED';
   /**
