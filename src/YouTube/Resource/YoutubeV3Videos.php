@@ -35,7 +35,8 @@ class YoutubeV3Videos extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string id Required. Return videos with the given ids.
+   * @opt_param string id Required. Return videos with the given ids. The number
+   * of IDs specified cannot exceed 50.
    * @opt_param string onBehalfOfContentOwner Optional. **Note:** This parameter
    * is intended exclusively for YouTube content partners. The
    * `onBehalfOfContentOwner` parameter indicates that the request's authorization
