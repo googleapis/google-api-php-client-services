@@ -152,6 +152,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   protected $aiModelDataType = '';
   protected $applicationType = GoogleCloudSecuritycenterV2Application::class;
   protected $applicationDataType = '';
+  protected $artifactGuardPoliciesType = GoogleCloudSecuritycenterV2ArtifactGuardPolicies::class;
+  protected $artifactGuardPoliciesDataType = '';
   protected $attackExposureType = GoogleCloudSecuritycenterV2AttackExposure::class;
   protected $attackExposureDataType = '';
   protected $backupDisasterRecoveryType = GoogleCloudSecuritycenterV2BackupDisasterRecovery::class;
@@ -370,6 +372,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $resourceName;
+  protected $secretType = GoogleCloudSecuritycenterV2Secret::class;
+  protected $secretDataType = '';
   protected $securityMarksType = GoogleCloudSecuritycenterV2SecurityMarks::class;
   protected $securityMarksDataType = '';
   protected $securityPostureType = GoogleCloudSecuritycenterV2SecurityPosture::class;
@@ -467,6 +471,22 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getApplication()
   {
     return $this->application;
+  }
+  /**
+   * ArtifactGuardPolicies associated with the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2ArtifactGuardPolicies $artifactGuardPolicies
+   */
+  public function setArtifactGuardPolicies(GoogleCloudSecuritycenterV2ArtifactGuardPolicies $artifactGuardPolicies)
+  {
+    $this->artifactGuardPolicies = $artifactGuardPolicies;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2ArtifactGuardPolicies
+   */
+  public function getArtifactGuardPolicies()
+  {
+    return $this->artifactGuardPolicies;
   }
   /**
    * The results of an attack path simulation relevant to this finding.
@@ -1357,6 +1377,22 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * Secret associated with the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2Secret $secret
+   */
+  public function setSecret(GoogleCloudSecuritycenterV2Secret $secret)
+  {
+    $this->secret = $secret;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2Secret
+   */
+  public function getSecret()
+  {
+    return $this->secret;
   }
   /**
    * Output only. User specified security marks. These marks are entirely

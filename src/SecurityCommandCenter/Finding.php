@@ -153,6 +153,8 @@ class Finding extends \Google\Collection
   protected $aiModelDataType = '';
   protected $applicationType = Application::class;
   protected $applicationDataType = '';
+  protected $artifactGuardPoliciesType = ArtifactGuardPolicies::class;
+  protected $artifactGuardPoliciesDataType = '';
   protected $attackExposureType = AttackExposure::class;
   protected $attackExposureDataType = '';
   protected $backupDisasterRecoveryType = BackupDisasterRecovery::class;
@@ -350,6 +352,8 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $resourceName;
+  protected $secretType = Secret::class;
+  protected $secretDataType = '';
   protected $securityMarksType = SecurityMarks::class;
   protected $securityMarksDataType = '';
   protected $securityPostureType = SecurityPosture::class;
@@ -447,6 +451,22 @@ class Finding extends \Google\Collection
   public function getApplication()
   {
     return $this->application;
+  }
+  /**
+   * ArtifactGuardPolicies associated with the finding.
+   *
+   * @param ArtifactGuardPolicies $artifactGuardPolicies
+   */
+  public function setArtifactGuardPolicies(ArtifactGuardPolicies $artifactGuardPolicies)
+  {
+    $this->artifactGuardPolicies = $artifactGuardPolicies;
+  }
+  /**
+   * @return ArtifactGuardPolicies
+   */
+  public function getArtifactGuardPolicies()
+  {
+    return $this->artifactGuardPolicies;
   }
   /**
    * The results of an attack path simulation relevant to this finding.
@@ -1306,6 +1326,22 @@ class Finding extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * Secret associated with the finding.
+   *
+   * @param Secret $secret
+   */
+  public function setSecret(Secret $secret)
+  {
+    $this->secret = $secret;
+  }
+  /**
+   * @return Secret
+   */
+  public function getSecret()
+  {
+    return $this->secret;
   }
   /**
    * Output only. User specified security marks. These marks are entirely

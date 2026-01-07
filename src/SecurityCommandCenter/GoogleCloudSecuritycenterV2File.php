@@ -19,6 +19,18 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2File extends \Google\Collection
 {
+  /**
+   * The file state is unspecified.
+   */
+  public const FILE_LOAD_STATE_FILE_LOAD_STATE_UNSPECIFIED = 'FILE_LOAD_STATE_UNSPECIFIED';
+  /**
+   * The file is being used by an active process at the time of scanning.
+   */
+  public const FILE_LOAD_STATE_LOADED_BY_PROCESS = 'LOADED_BY_PROCESS';
+  /**
+   * The file is not being used by any active process at the time of scanning.
+   */
+  public const FILE_LOAD_STATE_NOT_LOADED_BY_PROCESS = 'NOT_LOADED_BY_PROCESS';
   protected $collection_key = 'operations';
   /**
    * Prefix of the file contents as a JSON-encoded string.
@@ -28,6 +40,12 @@ class GoogleCloudSecuritycenterV2File extends \Google\Collection
   public $contents;
   protected $diskPathType = GoogleCloudSecuritycenterV2DiskPath::class;
   protected $diskPathDataType = '';
+  /**
+   * The load state of the file.
+   *
+   * @var string
+   */
+  public $fileLoadState;
   /**
    * The length in bytes of the file prefix that was hashed. If hashed_size ==
    * size, any hashes reported represent the entire file.
@@ -95,6 +113,25 @@ class GoogleCloudSecuritycenterV2File extends \Google\Collection
   public function getDiskPath()
   {
     return $this->diskPath;
+  }
+  /**
+   * The load state of the file.
+   *
+   * Accepted values: FILE_LOAD_STATE_UNSPECIFIED, LOADED_BY_PROCESS,
+   * NOT_LOADED_BY_PROCESS
+   *
+   * @param self::FILE_LOAD_STATE_* $fileLoadState
+   */
+  public function setFileLoadState($fileLoadState)
+  {
+    $this->fileLoadState = $fileLoadState;
+  }
+  /**
+   * @return self::FILE_LOAD_STATE_*
+   */
+  public function getFileLoadState()
+  {
+    return $this->fileLoadState;
   }
   /**
    * The length in bytes of the file prefix that was hashed. If hashed_size ==
