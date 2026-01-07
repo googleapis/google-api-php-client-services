@@ -19,6 +19,8 @@ namespace Google\Service\Docs;
 
 class Response extends \Google\Model
 {
+  protected $addDocumentTabType = AddDocumentTabResponse::class;
+  protected $addDocumentTabDataType = '';
   protected $createFooterType = CreateFooterResponse::class;
   protected $createFooterDataType = '';
   protected $createFootnoteType = CreateFootnoteResponse::class;
@@ -34,6 +36,22 @@ class Response extends \Google\Model
   protected $replaceAllTextType = ReplaceAllTextResponse::class;
   protected $replaceAllTextDataType = '';
 
+  /**
+   * The result of adding a document tab.
+   *
+   * @param AddDocumentTabResponse $addDocumentTab
+   */
+  public function setAddDocumentTab(AddDocumentTabResponse $addDocumentTab)
+  {
+    $this->addDocumentTab = $addDocumentTab;
+  }
+  /**
+   * @return AddDocumentTabResponse
+   */
+  public function getAddDocumentTab()
+  {
+    return $this->addDocumentTab;
+  }
   /**
    * The result of creating a footer.
    *

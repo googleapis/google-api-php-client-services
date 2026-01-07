@@ -50,7 +50,7 @@ class TabProperties extends \Google\Model
    */
   public $parentTabId;
   /**
-   * Output only. The ID of the tab. This field can't be changed.
+   * The immutable ID of the tab.
    *
    * @var string
    */
@@ -133,7 +133,7 @@ class TabProperties extends \Google\Model
     return $this->parentTabId;
   }
   /**
-   * Output only. The ID of the tab. This field can't be changed.
+   * The immutable ID of the tab.
    *
    * @param string $tabId
    */
