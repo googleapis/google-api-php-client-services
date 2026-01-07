@@ -36,6 +36,8 @@ class OneTimeProductTaxAndComplianceSettings extends \Google\Collection
    * @var string
    */
   public $productTaxCategoryCode;
+  protected $regionalProductAgeRatingInfosType = RegionalProductAgeRatingInfo::class;
+  protected $regionalProductAgeRatingInfosDataType = 'array';
   protected $regionalTaxConfigsType = RegionalTaxConfig::class;
   protected $regionalTaxConfigsDataType = 'array';
 
@@ -74,6 +76,23 @@ class OneTimeProductTaxAndComplianceSettings extends \Google\Collection
   public function getProductTaxCategoryCode()
   {
     return $this->productTaxCategoryCode;
+  }
+  /**
+   * Regional age rating information. Currently this field is only supported for
+   * region code `US`.
+   *
+   * @param RegionalProductAgeRatingInfo[] $regionalProductAgeRatingInfos
+   */
+  public function setRegionalProductAgeRatingInfos($regionalProductAgeRatingInfos)
+  {
+    $this->regionalProductAgeRatingInfos = $regionalProductAgeRatingInfos;
+  }
+  /**
+   * @return RegionalProductAgeRatingInfo[]
+   */
+  public function getRegionalProductAgeRatingInfos()
+  {
+    return $this->regionalProductAgeRatingInfos;
   }
   /**
    * Regional tax configuration.

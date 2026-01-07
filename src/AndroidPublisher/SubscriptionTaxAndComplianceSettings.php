@@ -17,11 +17,12 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class SubscriptionTaxAndComplianceSettings extends \Google\Model
+class SubscriptionTaxAndComplianceSettings extends \Google\Collection
 {
   public const EEA_WITHDRAWAL_RIGHT_TYPE_WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED = 'WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED';
   public const EEA_WITHDRAWAL_RIGHT_TYPE_WITHDRAWAL_RIGHT_DIGITAL_CONTENT = 'WITHDRAWAL_RIGHT_DIGITAL_CONTENT';
   public const EEA_WITHDRAWAL_RIGHT_TYPE_WITHDRAWAL_RIGHT_SERVICE = 'WITHDRAWAL_RIGHT_SERVICE';
+  protected $collection_key = 'regionalProductAgeRatingInfos';
   /**
    * Digital content or service classification for products distributed to users
    * in the European Economic Area (EEA). The withdrawal regime under EEA
@@ -49,6 +50,8 @@ class SubscriptionTaxAndComplianceSettings extends \Google\Model
    * @var string
    */
   public $productTaxCategoryCode;
+  protected $regionalProductAgeRatingInfosType = RegionalProductAgeRatingInfo::class;
+  protected $regionalProductAgeRatingInfosDataType = 'array';
   protected $taxRateInfoByRegionCodeType = RegionalTaxRateInfo::class;
   protected $taxRateInfoByRegionCodeDataType = 'map';
 
@@ -111,6 +114,23 @@ class SubscriptionTaxAndComplianceSettings extends \Google\Model
   public function getProductTaxCategoryCode()
   {
     return $this->productTaxCategoryCode;
+  }
+  /**
+   * Regional age rating information. Currently this field is only supported for
+   * region code `US`.
+   *
+   * @param RegionalProductAgeRatingInfo[] $regionalProductAgeRatingInfos
+   */
+  public function setRegionalProductAgeRatingInfos($regionalProductAgeRatingInfos)
+  {
+    $this->regionalProductAgeRatingInfos = $regionalProductAgeRatingInfos;
+  }
+  /**
+   * @return RegionalProductAgeRatingInfo[]
+   */
+  public function getRegionalProductAgeRatingInfos()
+  {
+    return $this->regionalProductAgeRatingInfos;
   }
   /**
    * A mapping from region code to tax rate details. The keys are region codes
