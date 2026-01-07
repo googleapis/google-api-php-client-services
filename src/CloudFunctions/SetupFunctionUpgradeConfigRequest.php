@@ -19,6 +19,10 @@ namespace Google\Service\CloudFunctions;
 
 class SetupFunctionUpgradeConfigRequest extends \Google\Model
 {
+  protected $buildConfigOverridesType = BuildConfigOverrides::class;
+  protected $buildConfigOverridesDataType = '';
+  protected $serviceConfigOverridesType = ServiceConfigOverrides::class;
+  protected $serviceConfigOverridesDataType = '';
   /**
    * Optional. The trigger's service account. The service account must have
    * permission to invoke Cloud Run services, the permission is
@@ -29,6 +33,38 @@ class SetupFunctionUpgradeConfigRequest extends \Google\Model
    */
   public $triggerServiceAccount;
 
+  /**
+   * Optional. Specifies overrides for the build process.
+   *
+   * @param BuildConfigOverrides $buildConfigOverrides
+   */
+  public function setBuildConfigOverrides(BuildConfigOverrides $buildConfigOverrides)
+  {
+    $this->buildConfigOverrides = $buildConfigOverrides;
+  }
+  /**
+   * @return BuildConfigOverrides
+   */
+  public function getBuildConfigOverrides()
+  {
+    return $this->buildConfigOverrides;
+  }
+  /**
+   * Optional. Specifies overrides for the service configuration.
+   *
+   * @param ServiceConfigOverrides $serviceConfigOverrides
+   */
+  public function setServiceConfigOverrides(ServiceConfigOverrides $serviceConfigOverrides)
+  {
+    $this->serviceConfigOverrides = $serviceConfigOverrides;
+  }
+  /**
+   * @return ServiceConfigOverrides
+   */
+  public function getServiceConfigOverrides()
+  {
+    return $this->serviceConfigOverrides;
+  }
   /**
    * Optional. The trigger's service account. The service account must have
    * permission to invoke Cloud Run services, the permission is

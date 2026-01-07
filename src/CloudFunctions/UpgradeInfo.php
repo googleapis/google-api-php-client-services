@@ -72,6 +72,16 @@ class UpgradeInfo extends \Google\Model
    * abort.
    */
   public const UPGRADE_STATE_COMMIT_FUNCTION_UPGRADE_ERROR_ROLLBACK_SAFE = 'COMMIT_FUNCTION_UPGRADE_ERROR_ROLLBACK_SAFE';
+  /**
+   * Indicates that the `CommitFunctionUpgradeAsGen2` API call succeeded and the
+   * function was successfully migrated to the 2nd Gen stack.
+   */
+  public const UPGRADE_STATE_COMMIT_FUNCTION_UPGRADE_AS_GEN2_SUCCESSFUL = 'COMMIT_FUNCTION_UPGRADE_AS_GEN2_SUCCESSFUL';
+  /**
+   * CommitFunctionUpgradeAsGen2 API was un-successful and 1st gen function
+   * might have broken.
+   */
+  public const UPGRADE_STATE_COMMIT_FUNCTION_UPGRADE_AS_GEN2_ERROR = 'COMMIT_FUNCTION_UPGRADE_AS_GEN2_ERROR';
   protected $buildConfigType = BuildConfig::class;
   protected $buildConfigDataType = '';
   protected $eventTriggerType = EventTrigger::class;
@@ -146,7 +156,9 @@ class UpgradeInfo extends \Google\Model
    * REDIRECT_FUNCTION_UPGRADE_TRAFFIC_SUCCESSFUL,
    * REDIRECT_FUNCTION_UPGRADE_TRAFFIC_ERROR,
    * ROLLBACK_FUNCTION_UPGRADE_TRAFFIC_ERROR, COMMIT_FUNCTION_UPGRADE_ERROR,
-   * COMMIT_FUNCTION_UPGRADE_ERROR_ROLLBACK_SAFE
+   * COMMIT_FUNCTION_UPGRADE_ERROR_ROLLBACK_SAFE,
+   * COMMIT_FUNCTION_UPGRADE_AS_GEN2_SUCCESSFUL,
+   * COMMIT_FUNCTION_UPGRADE_AS_GEN2_ERROR
    *
    * @param self::UPGRADE_STATE_* $upgradeState
    */
