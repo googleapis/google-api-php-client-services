@@ -86,8 +86,8 @@ class ProjectsLocationsBackupVaultsDataSourcesBackups extends \Google\Service\Re
    * subsequent page. When paginating, all other parameters provided to
    * `FetchBackupsForResourceType` must match the call that provided the page
    * token.
-   * @opt_param string resourceType Required. The type of the GCP resource. Ex:
-   * sqladmin.googleapis.com/Instance
+   * @opt_param string resourceType Required. The type of the Google Cloud
+   * resource. Ex: sqladmin.googleapis.com/Instance
    * @opt_param string view Optional. This parameter is used to specify the view
    * of the backup. If not specified, the default view is BASIC.
    * @return FetchBackupsForResourceTypeResponse

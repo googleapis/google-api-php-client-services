@@ -44,6 +44,8 @@ class BackupPlanAssociation extends \Google\Collection
    */
   public const STATE_UPDATING = 'UPDATING';
   protected $collection_key = 'rulesConfigInfo';
+  protected $alloydbClusterBackupPlanAssociationPropertiesType = AlloyDBClusterBackupPlanAssociationProperties::class;
+  protected $alloydbClusterBackupPlanAssociationPropertiesDataType = '';
   /**
    * Required. Resource name of backup plan which needs to be applied on
    * workload. Format:
@@ -83,6 +85,8 @@ class BackupPlanAssociation extends \Google\Collection
    * @var string
    */
   public $dataSource;
+  protected $filestoreInstanceBackupPlanAssociationPropertiesType = FilestoreInstanceBackupPlanAssociationProperties::class;
+  protected $filestoreInstanceBackupPlanAssociationPropertiesDataType = '';
   /**
    * Output only. Identifier. The resource name of BackupPlanAssociation in
    * below format Format : projects/{project}/locations/{location}/backupPlanAss
@@ -123,6 +127,22 @@ class BackupPlanAssociation extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Output only. AlloyDB cluster's backup plan association properties.
+   *
+   * @param AlloyDBClusterBackupPlanAssociationProperties $alloydbClusterBackupPlanAssociationProperties
+   */
+  public function setAlloydbClusterBackupPlanAssociationProperties(AlloyDBClusterBackupPlanAssociationProperties $alloydbClusterBackupPlanAssociationProperties)
+  {
+    $this->alloydbClusterBackupPlanAssociationProperties = $alloydbClusterBackupPlanAssociationProperties;
+  }
+  /**
+   * @return AlloyDBClusterBackupPlanAssociationProperties
+   */
+  public function getAlloydbClusterBackupPlanAssociationProperties()
+  {
+    return $this->alloydbClusterBackupPlanAssociationProperties;
+  }
   /**
    * Required. Resource name of backup plan which needs to be applied on
    * workload. Format:
@@ -225,6 +245,22 @@ class BackupPlanAssociation extends \Google\Collection
   public function getDataSource()
   {
     return $this->dataSource;
+  }
+  /**
+   * Output only. Filestore instance's backup plan association properties.
+   *
+   * @param FilestoreInstanceBackupPlanAssociationProperties $filestoreInstanceBackupPlanAssociationProperties
+   */
+  public function setFilestoreInstanceBackupPlanAssociationProperties(FilestoreInstanceBackupPlanAssociationProperties $filestoreInstanceBackupPlanAssociationProperties)
+  {
+    $this->filestoreInstanceBackupPlanAssociationProperties = $filestoreInstanceBackupPlanAssociationProperties;
+  }
+  /**
+   * @return FilestoreInstanceBackupPlanAssociationProperties
+   */
+  public function getFilestoreInstanceBackupPlanAssociationProperties()
+  {
+    return $this->filestoreInstanceBackupPlanAssociationProperties;
   }
   /**
    * Output only. Identifier. The resource name of BackupPlanAssociation in

@@ -35,8 +35,8 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * Create a BackupPlan (backupPlans.create)
    *
    * @param string $parent Required. The `BackupPlan` project and location in the
-   * format `projects/{project}/locations/{location}`. In Cloud BackupDR locations
-   * map to GCP regions, for example **us-central1**.
+   * format `projects/{project}/locations/{location}`. In Google Cloud Backup and
+   * DR locations map to Google Cloud regions, for example **us-central1**.
    * @param BackupPlan $postBody
    * @param array $optParams Optional parameters.
    *
@@ -114,9 +114,9 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location for which to
    * retrieve `BackupPlans` information. Format:
-   * `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map
-   * to GCP regions, for e.g. **us-central1**. To retrieve backup plans for all
-   * locations, use "-" for the `{location}` value.
+   * `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+   * locations map to Google Cloud regions, for example **us-central1**. To
+   * retrieve backup plans for all locations, use "-" for the `{location}` value.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Field match expression used to filter the

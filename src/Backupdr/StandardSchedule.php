@@ -97,7 +97,7 @@ class StandardSchedule extends \Google\Collection
    * Required. The time zone to be used when interpreting the schedule. The
    * value of this field must be a time zone name from the IANA tz database. See
    * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the list
-   * of valid timezone names. For e.g., Europe/Paris.
+   * of valid timezone names. For example, Europe/Paris.
    *
    * @var string
    */
@@ -228,7 +228,7 @@ class StandardSchedule extends \Google\Collection
    * Required. The time zone to be used when interpreting the schedule. The
    * value of this field must be a time zone name from the IANA tz database. See
    * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the list
-   * of valid timezone names. For e.g., Europe/Paris.
+   * of valid timezone names. For example, Europe/Paris.
    *
    * @param string $timeZone
    */

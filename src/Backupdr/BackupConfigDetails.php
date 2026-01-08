@@ -52,11 +52,11 @@ class BackupConfigDetails extends \Google\Collection
    */
   public const TYPE_COMPUTE_ENGINE_RESOURCE_POLICY = 'COMPUTE_ENGINE_RESOURCE_POLICY';
   /**
-   * Backup config is Backup and DR's Backup Plan.
+   * Backup config is Google Cloud Backup and DR's Backup Plan.
    */
   public const TYPE_BACKUPDR_BACKUP_PLAN = 'BACKUPDR_BACKUP_PLAN';
   /**
-   * Backup config is Backup and DR's Template.
+   * Backup config is Google Cloud Backup and DR's Template.
    */
   public const TYPE_BACKUPDR_TEMPLATE = 'BACKUPDR_TEMPLATE';
   protected $collection_key = 'backupLocations';
@@ -177,7 +177,7 @@ class BackupConfigDetails extends \Google\Collection
     return $this->backupConfigSourceDisplayName;
   }
   /**
-   * Backup and DR's Backup Plan specific data.
+   * Google Cloud Backup and DR's Backup Plan specific data.
    *
    * @param BackupDrPlanConfig $backupDrPlanConfig
    */
@@ -193,7 +193,7 @@ class BackupConfigDetails extends \Google\Collection
     return $this->backupDrPlanConfig;
   }
   /**
-   * Backup and DR's Template specific data.
+   * Google Cloud Backup and DR's Template specific data.
    *
    * @param BackupDrTemplateConfig $backupDrTemplateConfig
    */

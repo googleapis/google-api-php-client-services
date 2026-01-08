@@ -150,9 +150,10 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location for which to
    * retrieve management servers information, in the format
-   * 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
-   * map to Google Cloud regions, for example **us-central1**. To retrieve
-   * management servers for all locations, use "-" for the '{location}' value.
+   * 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+   * locations map to Google Cloud regions, for example **us-central1**. To
+   * retrieve management servers for all locations, use "-" for the '{location}'
+   * value.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filtering results.
@@ -177,8 +178,8 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location to be used to check
    * CSS metadata for target project information, in the format
-   * 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
-   * map to Google Cloud regions, for example **us-central1**.
+   * 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+   * locations map to Google Cloud regions, for example **us-central1**.
    * @param FetchMsComplianceMetadataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return FetchMsComplianceMetadataResponse

@@ -17,34 +17,32 @@
 
 namespace Google\Service\Backupdr;
 
-class FetchMsComplianceMetadataResponse extends \Google\Model
+class FilestoreInstanceBackupPlanAssociationProperties extends \Google\Model
 {
   /**
-   * The ms compliance metadata of the target project, if the project is an
-   * Assured Workloads project, values will be true, otherwise false.
+   * Output only. The time when the instance was created.
    *
-   * @var bool
+   * @var string
    */
-  public $isAssuredWorkload;
+  public $instanceCreateTime;
 
   /**
-   * The ms compliance metadata of the target project, if the project is an
-   * Assured Workloads project, values will be true, otherwise false.
+   * Output only. The time when the instance was created.
    *
-   * @param bool $isAssuredWorkload
+   * @param string $instanceCreateTime
    */
-  public function setIsAssuredWorkload($isAssuredWorkload)
+  public function setInstanceCreateTime($instanceCreateTime)
   {
-    $this->isAssuredWorkload = $isAssuredWorkload;
+    $this->instanceCreateTime = $instanceCreateTime;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getIsAssuredWorkload()
+  public function getInstanceCreateTime()
   {
-    return $this->isAssuredWorkload;
+    return $this->instanceCreateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FetchMsComplianceMetadataResponse::class, 'Google_Service_Backupdr_FetchMsComplianceMetadataResponse');
+class_alias(FilestoreInstanceBackupPlanAssociationProperties::class, 'Google_Service_Backupdr_FilestoreInstanceBackupPlanAssociationProperties');

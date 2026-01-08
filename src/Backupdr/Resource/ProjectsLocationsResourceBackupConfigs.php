@@ -35,7 +35,7 @@ class ProjectsLocationsResourceBackupConfigs extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location for which to
    * retrieve resource backup configs. Format:
-   * 'projects/{project_id}/locations/{location}'. In Cloud Backup and DR,
+   * 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
    * locations map to Google Cloud regions, for example **us-central1**.
    * @param array $optParams Optional parameters.
    *

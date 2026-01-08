@@ -160,7 +160,8 @@ class DataSourceReference extends \Google\Model
     return $this->dataSourceBackupCount;
   }
   /**
-   * Output only. The GCP resource that the DataSource is associated with.
+   * Output only. The Google Cloud resource that the DataSource is associated
+   * with.
    *
    * @param DataSourceGcpResourceInfo $dataSourceGcpResourceInfo
    */

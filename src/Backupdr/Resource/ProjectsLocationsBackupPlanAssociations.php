@@ -37,8 +37,9 @@ class ProjectsLocationsBackupPlanAssociations extends \Google\Service\Resource
    * Create a BackupPlanAssociation (backupPlanAssociations.create)
    *
    * @param string $parent Required. The backup plan association project and
-   * location in the format `projects/{project_id}/locations/{location}`. In Cloud
-   * BackupDR locations map to GCP regions, for example **us-central1**.
+   * location in the format `projects/{project_id}/locations/{location}`. In
+   * Backup and DR locations map to Google Cloud regions, for example **us-
+   * central1**.
    * @param BackupPlanAssociation $postBody
    * @param array $optParams Optional parameters.
    *
@@ -118,8 +119,8 @@ class ProjectsLocationsBackupPlanAssociations extends \Google\Service\Resource
    * retrieve the subsequent page. When paginating, all other parameters provided
    * to `FetchBackupPlanAssociationsForResourceType` must match the call that
    * provided the page token.
-   * @opt_param string resourceType Required. The type of the GCP resource. Ex:
-   * sql.googleapis.com/Instance
+   * @opt_param string resourceType Required. The type of the Google Cloud
+   * resource. Ex: sql.googleapis.com/Instance
    * @return FetchBackupPlanAssociationsForResourceTypeResponse
    * @throws \Google\Service\Exception
    */
@@ -151,8 +152,8 @@ class ProjectsLocationsBackupPlanAssociations extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location for which to
    * retrieve backup Plan Associations information, in the format
-   * `projects/{project_id}/locations/{location}`. In Cloud BackupDR, locations
-   * map to GCP regions, for example **us-central1**. To retrieve backup plan
+   * `projects/{project_id}/locations/{location}`. In Backup and DR, locations map
+   * to Google Cloud regions, for example **us-central1**. To retrieve backup plan
    * associations for all locations, use "-" for the `{location}` value.
    * @param array $optParams Optional parameters.
    *

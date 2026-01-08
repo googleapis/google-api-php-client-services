@@ -26,7 +26,7 @@ class NetworkConfig extends \Google\Model
   /**
    * Connect using Private Service Access to the Management Server. Private
    * services access provides an IP address range for multiple Google Cloud
-   * services, including Cloud BackupDR.
+   * services, including Google Cloud Backup and DR.
    */
   public const PEERING_MODE_PRIVATE_SERVICE_ACCESS = 'PRIVATE_SERVICE_ACCESS';
   /**

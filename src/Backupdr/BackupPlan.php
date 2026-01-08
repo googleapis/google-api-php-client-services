@@ -55,9 +55,9 @@ class BackupPlan extends \Google\Collection
    */
   public $backupVault;
   /**
-   * Output only. The Google Cloud Platform Service Account to be used by the
-   * BackupVault for taking backups. Specify the email address of the Backup
-   * Vault Service Account.
+   * Output only. The Google Cloud service account to be used by the BackupVault
+   * for taking backups. Specify the email address of the Backup Vault Service
+   * Account.
    *
    * @var string
    */
@@ -94,7 +94,7 @@ class BackupPlan extends \Google\Collection
    */
   public $labels;
   /**
-   * Optional. Applicable only for CloudSQL resource_type. Configures how long
+   * Optional. Applicable only for Cloud SQL resource_type. Configures how long
    * logs will be stored. It is defined in “days”. This value should be greater
    * than or equal to minimum enforced log retention duration of the backup
    * vault.
@@ -195,9 +195,9 @@ class BackupPlan extends \Google\Collection
     return $this->backupVault;
   }
   /**
-   * Output only. The Google Cloud Platform Service Account to be used by the
-   * BackupVault for taking backups. Specify the email address of the Backup
-   * Vault Service Account.
+   * Output only. The Google Cloud service account to be used by the BackupVault
+   * for taking backups. Specify the email address of the Backup Vault Service
+   * Account.
    *
    * @param string $backupVaultServiceAccount
    */
@@ -284,7 +284,7 @@ class BackupPlan extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Optional. Applicable only for CloudSQL resource_type. Configures how long
+   * Optional. Applicable only for Cloud SQL resource_type. Configures how long
    * logs will be stored. It is defined in “days”. This value should be greater
    * than or equal to minimum enforced log retention duration of the backup
    * vault.

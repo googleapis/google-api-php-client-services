@@ -52,8 +52,9 @@ class ProjectsLocationsBackupPlansRevisions extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location for which to
    * retrieve `BackupPlanRevisions` information. Format:
-   * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Cloud
-   * BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+   * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In
+   * Google Cloud Backup and DR, locations map to Google Cloud regions, for
+   * example **us-central1**.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of `BackupPlans` to

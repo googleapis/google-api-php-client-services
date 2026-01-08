@@ -62,8 +62,8 @@ class ProjectsLocationsDataSourceReferences extends \Google\Service\Resource
    * the subsequent page. When paginating, all other parameters provided to
    * `FetchDataSourceReferencesForResourceType` must match the call that provided
    * the page token.
-   * @opt_param string resourceType Required. The type of the GCP resource. Ex:
-   * sql.googleapis.com/Instance
+   * @opt_param string resourceType Required. The type of the Google Cloud
+   * resource. Ex: sql.googleapis.com/Instance
    * @return FetchDataSourceReferencesForResourceTypeResponse
    * @throws \Google\Service\Exception
    */

@@ -109,7 +109,7 @@ class ManagementServer extends \Google\Collection
   protected $networksDataType = 'array';
   /**
    * Output only. The OAuth 2.0 client id is required to make API calls to the
-   * BackupDR instance API of this ManagementServer. This is the value that
+   * Backup and DR instance API of this ManagementServer. This is the value that
    * should be provided in the 'aud' field of the OIDC ID Token (see openid
    * specification https://openid.net/specs/openid-connect-
    * core-1_0.html#IDToken).
@@ -290,7 +290,7 @@ class ManagementServer extends \Google\Collection
   }
   /**
    * Output only. The OAuth 2.0 client id is required to make API calls to the
-   * BackupDR instance API of this ManagementServer. This is the value that
+   * Backup and DR instance API of this ManagementServer. This is the value that
    * should be provided in the 'aud' field of the OIDC ID Token (see openid
    * specification https://openid.net/specs/openid-connect-
    * core-1_0.html#IDToken).
