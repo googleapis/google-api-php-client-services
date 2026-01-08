@@ -111,7 +111,7 @@ class GooglePubsubV1Subscription extends \Google\Collection
   protected $messageTransformsType = MessageTransform::class;
   protected $messageTransformsDataType = 'array';
   /**
-   * Required. Name of the subscription. Format is
+   * Required. Identifier. Name of the subscription. Format is
    * `projects/{project}/subscriptions/{sub}`.
    *
    * @var string
@@ -386,7 +386,7 @@ class GooglePubsubV1Subscription extends \Google\Collection
     return $this->messageTransforms;
   }
   /**
-   * Required. Name of the subscription. Format is
+   * Required. Identifier. Name of the subscription. Format is
    * `projects/{project}/subscriptions/{sub}`.
    *
    * @param string $name
