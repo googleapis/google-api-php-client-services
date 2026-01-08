@@ -23,9 +23,11 @@ class BigtableColumn extends \Google\Model
    * Optional. The encoding of the values when the type is not STRING.
    * Acceptable encoding values are: TEXT - indicates values are alphanumeric
    * text strings. BINARY - indicates values are encoded using HBase
-   * Bytes.toBytes family of functions. 'encoding' can also be set at the column
-   * family level. However, the setting at this level takes precedence if
-   * 'encoding' is set at both levels.
+   * Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in
+   * combination with JSON type. 'encoding' can also be set at the column family
+   * level. However, the setting at this level takes precedence if 'encoding' is
+   * set at both levels.
    *
    * @var string
    */
@@ -47,6 +49,8 @@ class BigtableColumn extends \Google\Model
    * @var bool
    */
   public $onlyReadLatest;
+  protected $protoConfigType = BigtableProtoConfig::class;
+  protected $protoConfigDataType = '';
   /**
    * [Required] Qualifier of the column. Columns in the parent column family
    * that has this exact qualifier are exposed as `.` field. If the qualifier is
@@ -81,9 +85,11 @@ class BigtableColumn extends \Google\Model
    * Optional. The encoding of the values when the type is not STRING.
    * Acceptable encoding values are: TEXT - indicates values are alphanumeric
    * text strings. BINARY - indicates values are encoded using HBase
-   * Bytes.toBytes family of functions. 'encoding' can also be set at the column
-   * family level. However, the setting at this level takes precedence if
-   * 'encoding' is set at both levels.
+   * Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in
+   * combination with JSON type. 'encoding' can also be set at the column family
+   * level. However, the setting at this level takes precedence if 'encoding' is
+   * set at both levels.
    *
    * @param string $encoding
    */
@@ -134,6 +140,23 @@ class BigtableColumn extends \Google\Model
   public function getOnlyReadLatest()
   {
     return $this->onlyReadLatest;
+  }
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the
+   * encoding is PROTO_BINARY.
+   *
+   * @param BigtableProtoConfig $protoConfig
+   */
+  public function setProtoConfig(BigtableProtoConfig $protoConfig)
+  {
+    $this->protoConfig = $protoConfig;
+  }
+  /**
+   * @return BigtableProtoConfig
+   */
+  public function getProtoConfig()
+  {
+    return $this->protoConfig;
   }
   /**
    * [Required] Qualifier of the column. Columns in the parent column family

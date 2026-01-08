@@ -26,9 +26,10 @@ class BigtableColumnFamily extends \Google\Collection
    * Optional. The encoding of the values when the type is not STRING.
    * Acceptable encoding values are: TEXT - indicates values are alphanumeric
    * text strings. BINARY - indicates values are encoded using HBase
-   * Bytes.toBytes family of functions. This can be overridden for a specific
-   * column by listing that column in 'columns' and specifying an encoding for
-   * it.
+   * Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in
+   * combination with JSON type. This can be overridden for a specific column by
+   * listing that column in 'columns' and specifying an encoding for it.
    *
    * @var string
    */
@@ -48,6 +49,8 @@ class BigtableColumnFamily extends \Google\Collection
    * @var bool
    */
   public $onlyReadLatest;
+  protected $protoConfigType = BigtableProtoConfig::class;
+  protected $protoConfigDataType = '';
   /**
    * Optional. The type to convert the value in cells of this column family. The
    * values are expected to be encoded using HBase Bytes.toBytes function when
@@ -83,9 +86,10 @@ class BigtableColumnFamily extends \Google\Collection
    * Optional. The encoding of the values when the type is not STRING.
    * Acceptable encoding values are: TEXT - indicates values are alphanumeric
    * text strings. BINARY - indicates values are encoded using HBase
-   * Bytes.toBytes family of functions. This can be overridden for a specific
-   * column by listing that column in 'columns' and specifying an encoding for
-   * it.
+   * Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in
+   * combination with JSON type. This can be overridden for a specific column by
+   * listing that column in 'columns' and specifying an encoding for it.
    *
    * @param string $encoding
    */
@@ -134,6 +138,23 @@ class BigtableColumnFamily extends \Google\Collection
   public function getOnlyReadLatest()
   {
     return $this->onlyReadLatest;
+  }
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the
+   * encoding is PROTO_BINARY.
+   *
+   * @param BigtableProtoConfig $protoConfig
+   */
+  public function setProtoConfig(BigtableProtoConfig $protoConfig)
+  {
+    $this->protoConfig = $protoConfig;
+  }
+  /**
+   * @return BigtableProtoConfig
+   */
+  public function getProtoConfig()
+  {
+    return $this->protoConfig;
   }
   /**
    * Optional. The type to convert the value in cells of this column family. The
