@@ -22,8 +22,8 @@ class GoogleCloudDataplexV1DataAssetAccessGroupConfig extends \Google\Collection
   protected $collection_key = 'iamRoles';
   /**
    * Optional. IAM roles granted on the resource to this access group. Role name
-   * follows https://cloud.google.com/iam/docs/reference/rest/v1/roles. Example:
-   * "roles/bigquery.dataViewer"
+   * follows https://cloud.google.com/iam/docs/reference/rest/v1/roles.Example:
+   * [ "roles/bigquery.dataViewer" ]
    *
    * @var string[]
    */
@@ -31,8 +31,8 @@ class GoogleCloudDataplexV1DataAssetAccessGroupConfig extends \Google\Collection
 
   /**
    * Optional. IAM roles granted on the resource to this access group. Role name
-   * follows https://cloud.google.com/iam/docs/reference/rest/v1/roles. Example:
-   * "roles/bigquery.dataViewer"
+   * follows https://cloud.google.com/iam/docs/reference/rest/v1/roles.Example:
+   * [ "roles/bigquery.dataViewer" ]
    *
    * @param string[] $iamRoles
    */

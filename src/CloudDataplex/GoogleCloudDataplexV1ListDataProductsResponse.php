@@ -37,7 +37,7 @@ class GoogleCloudDataplexV1ListDataProductsResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * The Data Products for the requested filter criteria.
+   * The data products for the requested filter criteria.
    *
    * @param GoogleCloudDataplexV1DataProduct[] $dataProducts
    */

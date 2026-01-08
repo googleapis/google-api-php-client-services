@@ -36,22 +36,22 @@ use Google\Service\CloudDataplex\GoogleLongrunningOperation;
 class ProjectsLocationsDataProducts extends \Google\Service\Resource
 {
   /**
-   * Creates a Data Product. (dataProducts.create)
+   * Creates a data product. (dataProducts.create)
    *
-   * @param string $parent Required. The parent resource where this Data Product
+   * @param string $parent Required. The parent resource where this data product
    * will be created. Format:
    * projects/{project_id_or_number}/locations/{location_id}
    * @param GoogleCloudDataplexV1DataProduct $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string dataProductId Optional. The ID of the Data Product to
+   * @opt_param string dataProductId Optional. The ID of the data product to
    * create.The ID must conform to RFC-1034 and contain only lower-case letters
    * (a-z), numbers (0-9), or hyphens, with the first character a letter, the last
    * a letter or a number, and a 63 character maximum. Characters outside of ASCII
-   * are not permitted. Valid format regex: (^a-z?$) If not provided, a system
-   * generated ID will be used.
+   * are not permitted. Valid format regex: ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If
+   * not provided, a system generated ID will be used.
    * @opt_param bool validateOnly Optional. Validates the request without actually
-   * creating the Data Product. Default: false.
+   * creating the data product. Default: false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -62,19 +62,19 @@ class ProjectsLocationsDataProducts extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes a Data Product. The deletion will fail if the Data Product is not
-   * empty (i.e. contains at least one Data Asset). (dataProducts.delete)
+   * Deletes a data product. The deletion will fail if the data product is not
+   * empty (i.e. contains at least one data asset). (dataProducts.delete)
    *
-   * @param string $name Required. The name of the Data Product to delete. Format:
+   * @param string $name Required. The name of the data product to delete. Format:
    * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_pr
    * oduct_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string etag Optional. The etag of the Data Product.If an etag is
-   * provided and does not match the current etag of the Data Product, then the
+   * @opt_param string etag Optional. The etag of the data product.If an etag is
+   * provided and does not match the current etag of the data product, then the
    * deletion will be blocked and an ABORTED error will be returned.
    * @opt_param bool validateOnly Optional. Validates the request without actually
-   * deleting the Data Product. Default: false.
+   * deleting the data product. Default: false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -85,9 +85,9 @@ class ProjectsLocationsDataProducts extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Gets a Data Product. (dataProducts.get)
+   * Gets a data product. (dataProducts.get)
    *
-   * @param string $name Required. The name of the Data Product to retrieve.
+   * @param string $name Required. The name of the data product to retrieve.
    * Format: projects/{project_id_or_number}/locations/{location_id}/dataProducts/
    * {data_product_id}
    * @param array $optParams Optional parameters.
@@ -131,27 +131,27 @@ class ProjectsLocationsDataProducts extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], GoogleIamV1Policy::class);
   }
   /**
-   * Lists Data Products for a given project.
+   * Lists data products for a given project.
    * (dataProducts.listProjectsLocationsDataProducts)
    *
-   * @param string $parent Required. The parent, which has this collection of Data
-   * Products.Format:
+   * @param string $parent Required. The parent, which has this collection of data
+   * products.Format:
    * projects/{project_id_or_number}/locations/{location_id}.Supports listing
    * across all locations with the wildcard - (hyphen) character. Example:
    * projects/{project_id_or_number}/locations/-
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filter expression that filters Data
-   * Products listed in the response.Example of using this filter is:
+   * @opt_param string filter Optional. Filter expression that filters data
+   * products listed in the response.Example of using this filter is:
    * display_name="my-data-product"
-   * @opt_param string orderBy Optional. Order by expression that orders Data
-   * Products listed in the response.Supported Order by fields are: name or
+   * @opt_param string orderBy Optional. Order by expression that orders data
+   * products listed in the response.Supported Order by fields are: name or
    * create_time.If not specified, the ordering is undefined.Ordering by
    * create_time is not supported when listing resources across locations (i.e.
    * when request contains /locations/-).
-   * @opt_param int pageSize Optional. The maximum number of Data Products to
+   * @opt_param int pageSize Optional. The maximum number of data products to
    * return. The service may return fewer than this value. If unspecified, at most
-   * 50 Data Products will be returned. The maximum value is 1000; values above
+   * 50 data products will be returned. The maximum value is 1000; values above
    * 1000 will be coerced to 1000.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * ListDataProducts call. Provide this to retrieve the subsequent page.When
@@ -167,9 +167,9 @@ class ProjectsLocationsDataProducts extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDataplexV1ListDataProductsResponse::class);
   }
   /**
-   * Updates a Data Product. (dataProducts.patch)
+   * Updates a data product. (dataProducts.patch)
    *
-   * @param string $name Identifier. Resource name of the Data Product. Format: pr
+   * @param string $name Identifier. Resource name of the data product. Format: pr
    * ojects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_prod
    * uct_id}.
    * @param GoogleCloudDataplexV1DataProduct $postBody
@@ -178,7 +178,7 @@ class ProjectsLocationsDataProducts extends \Google\Service\Resource
    * @opt_param string updateMask Optional. The list of fields to update. If this
    * is empty or not set, then all the fields will be updated.
    * @opt_param bool validateOnly Optional. Validates the request without actually
-   * updating the Data Product. Default: false.
+   * updating the data product. Default: false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

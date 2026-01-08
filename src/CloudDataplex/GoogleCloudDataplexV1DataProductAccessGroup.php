@@ -33,7 +33,7 @@ class GoogleCloudDataplexV1DataProductAccessGroup extends \Google\Model
    */
   public $displayName;
   /**
-   * Required. Unique identifier of the access group within the Data Product.
+   * Required. Unique identifier of the access group within the data product.
    * User defined. Eg. "analyst", "developer", etc.
    *
    * @var string
@@ -76,7 +76,7 @@ class GoogleCloudDataplexV1DataProductAccessGroup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Required. Unique identifier of the access group within the Data Product.
+   * Required. Unique identifier of the access group within the data product.
    * User defined. Eg. "analyst", "developer", etc.
    *
    * @param string $id

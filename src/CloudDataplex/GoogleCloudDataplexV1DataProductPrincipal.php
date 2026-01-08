@@ -20,7 +20,7 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataProductPrincipal extends \Google\Model
 {
   /**
-   * Email of the Google Group, as per
+   * Optional. Email of the Google Group, as per
    * https://cloud.google.com/iam/docs/principals-overview#google-group.
    *
    * @var string
@@ -28,7 +28,7 @@ class GoogleCloudDataplexV1DataProductPrincipal extends \Google\Model
   public $googleGroup;
 
   /**
-   * Email of the Google Group, as per
+   * Optional. Email of the Google Group, as per
    * https://cloud.google.com/iam/docs/principals-overview#google-group.
    *
    * @param string $googleGroup

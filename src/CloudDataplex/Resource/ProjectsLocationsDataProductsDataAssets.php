@@ -32,22 +32,22 @@ use Google\Service\CloudDataplex\GoogleLongrunningOperation;
 class ProjectsLocationsDataProductsDataAssets extends \Google\Service\Resource
 {
   /**
-   * Creates a Data Asset. (dataAssets.create)
+   * Creates a data asset. (dataAssets.create)
    *
-   * @param string $parent Required. The parent resource where this Data Asset
+   * @param string $parent Required. The parent resource where this data asset
    * will be created. Format: projects/{project_id_or_number}/locations/{location_
    * id}/dataProducts/{data_product_id}
    * @param GoogleCloudDataplexV1DataAsset $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string dataAssetId Optional. The ID of the Data Asset to
+   * @opt_param string dataAssetId Optional. The ID of the data asset to
    * create.The ID must conform to RFC-1034 and contain only lower-case letters
    * (a-z), numbers (0-9), or hyphens, with the first character a letter, the last
    * a letter or a number, and a 63 character maximum. Characters outside of ASCII
-   * are not permitted. Valid format regex: (^a-z?$) If not provided, a system
-   * generated ID will be used.
+   * are not permitted. Valid format regex: ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If
+   * not provided, a system generated ID will be used.
    * @opt_param bool validateOnly Optional. Validates the request without actually
-   * creating the Data Asset. Defaults to false.
+   * creating the data asset. Defaults to false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -58,19 +58,19 @@ class ProjectsLocationsDataProductsDataAssets extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes a Data Asset. (dataAssets.delete)
+   * Deletes a data asset. (dataAssets.delete)
    *
-   * @param string $name Required. The name of the Data Asset to delete. Format: p
+   * @param string $name Required. The name of the data asset to delete. Format: p
    * rojects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_pro
    * duct_id}/dataAssets/{data_asset_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string etag Optional. The etag of the Data Asset. If this is
+   * @opt_param string etag Optional. The etag of the data asset. If this is
    * provided, it must match the server's etag. If the etag is provided and does
    * not match the server-computed etag, the request must fail with a ABORTED
    * error code.
    * @opt_param bool validateOnly Optional. Validates the request without actually
-   * deleting the Data Asset. Defaults to false.
+   * deleting the data asset. Defaults to false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -81,9 +81,9 @@ class ProjectsLocationsDataProductsDataAssets extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Gets a Data Asset. (dataAssets.get)
+   * Gets a data asset. (dataAssets.get)
    *
-   * @param string $name Required. The name of the Data Asset to retrieve. Format:
+   * @param string $name Required. The name of the data asset to retrieve. Format:
    * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_pr
    * oduct_id}/dataAssets/{data_asset_id}
    * @param array $optParams Optional parameters.
@@ -97,22 +97,22 @@ class ProjectsLocationsDataProductsDataAssets extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudDataplexV1DataAsset::class);
   }
   /**
-   * Lists Data Assets for a given Data Product.
+   * Lists data assets for a given data product.
    * (dataAssets.listProjectsLocationsDataProductsDataAssets)
    *
-   * @param string $parent Required. The parent, which has this collection of Data
-   * Assets. Format: projects/{project_id_or_number}/locations/{location_id}/dataP
+   * @param string $parent Required. The parent, which has this collection of data
+   * assets. Format: projects/{project_id_or_number}/locations/{location_id}/dataP
    * roducts/{data_product_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filter expression that filters DataAssets
+   * @opt_param string filter Optional. Filter expression that filters data assets
    * listed in the response.
-   * @opt_param string orderBy Optional. Order by expression that orders
-   * DataAssets listed in the response.Supported Order by fields are: name or
+   * @opt_param string orderBy Optional. Order by expression that orders data
+   * assets listed in the response.Supported order_by fields are: name or
    * create_time.If not specified, the ordering is undefined.
-   * @opt_param int pageSize Optional. The maximum number of Data Assets to
+   * @opt_param int pageSize Optional. The maximum number of data assets to
    * return. The service may return fewer than this value. If unspecified, at most
-   * 50 Data Assets will be returned. The maximum value is 1000; values above 1000
+   * 50 data assets will be returned. The maximum value is 1000; values above 1000
    * will be coerced to 1000.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * ListDataAssets call. Provide this to retrieve the subsequent page.When
@@ -128,19 +128,18 @@ class ProjectsLocationsDataProductsDataAssets extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDataplexV1ListDataAssetsResponse::class);
   }
   /**
-   * Updates a Data Asset. (dataAssets.patch)
+   * Updates a data asset. (dataAssets.patch)
    *
-   * @param string $name Identifier. Resource name of the Data Asset. Format: proj
+   * @param string $name Identifier. Resource name of the data asset. Format: proj
    * ects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_produc
    * t_id}/dataAssets/{data_asset_id}
    * @param GoogleCloudDataplexV1DataAsset $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Optional. The list of fields to update. If this
-   * is empty or not set, then all fields that are populated (have a non-empty
-   * value) in data_asset above will be updated.
+   * is empty or not set, then all the fields will be updated.
    * @opt_param bool validateOnly Optional. Validates the request without actually
-   * updating the Data Asset. Defaults to false.
+   * updating the data asset. Defaults to false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

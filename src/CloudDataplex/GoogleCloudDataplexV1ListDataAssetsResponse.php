@@ -31,7 +31,7 @@ class GoogleCloudDataplexV1ListDataAssetsResponse extends \Google\Collection
   public $nextPageToken;
 
   /**
-   * The Data Assets for the requested filter criteria.
+   * The data assets for the requested filter criteria.
    *
    * @param GoogleCloudDataplexV1DataAsset[] $dataAssets
    */
