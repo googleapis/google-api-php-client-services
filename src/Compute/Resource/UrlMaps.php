@@ -19,6 +19,8 @@ namespace Google\Service\Compute\Resource;
 
 use Google\Service\Compute\CacheInvalidationRule;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 use Google\Service\Compute\UrlMap;
 use Google\Service\Compute\UrlMapList;
 use Google\Service\Compute\UrlMapsAggregatedList;
@@ -353,6 +355,23 @@ class UrlMaps extends \Google\Service\Resource
     $params = ['project' => $project, 'urlMap' => $urlMap, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (urlMaps.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
   /**
    * Updates the specified UrlMap resource with the data included in the request.

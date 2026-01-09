@@ -19,6 +19,8 @@ namespace Google\Service\Compute;
 
 class NetworkProfileNetworkFeatures extends \Google\Collection
 {
+  public const ALLOW_ADDRESS_CREATION_ADDRESS_CREATION_ALLOWED = 'ADDRESS_CREATION_ALLOWED';
+  public const ALLOW_ADDRESS_CREATION_ADDRESS_CREATION_BLOCKED = 'ADDRESS_CREATION_BLOCKED';
   public const ALLOW_ALIAS_IP_RANGES_ALIAS_IP_RANGES_ALLOWED = 'ALIAS_IP_RANGES_ALLOWED';
   public const ALLOW_ALIAS_IP_RANGES_ALIAS_IP_RANGES_BLOCKED = 'ALIAS_IP_RANGES_BLOCKED';
   public const ALLOW_AUTO_MODE_SUBNET_AUTO_MODE_SUBNET_ALLOWED = 'AUTO_MODE_SUBNET_ALLOWED';
@@ -33,6 +35,8 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   public const ALLOW_DEFAULT_NIC_ATTACHMENT_DEFAULT_NIC_ATTACHMENT_BLOCKED = 'DEFAULT_NIC_ATTACHMENT_BLOCKED';
   public const ALLOW_EXTERNAL_IP_ACCESS_EXTERNAL_IP_ACCESS_ALLOWED = 'EXTERNAL_IP_ACCESS_ALLOWED';
   public const ALLOW_EXTERNAL_IP_ACCESS_EXTERNAL_IP_ACCESS_BLOCKED = 'EXTERNAL_IP_ACCESS_BLOCKED';
+  public const ALLOW_FIREWALL_POLICY_FIREWALL_POLICY_ALLOWED = 'FIREWALL_POLICY_ALLOWED';
+  public const ALLOW_FIREWALL_POLICY_FIREWALL_POLICY_BLOCKED = 'FIREWALL_POLICY_BLOCKED';
   public const ALLOW_INTERCONNECT_INTERCONNECT_ALLOWED = 'INTERCONNECT_ALLOWED';
   public const ALLOW_INTERCONNECT_INTERCONNECT_BLOCKED = 'INTERCONNECT_BLOCKED';
   public const ALLOW_IP_FORWARDING_IP_FORWARDING_ALLOWED = 'IP_FORWARDING_ALLOWED';
@@ -41,6 +45,8 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   public const ALLOW_LOAD_BALANCING_LOAD_BALANCING_BLOCKED = 'LOAD_BALANCING_BLOCKED';
   public const ALLOW_MULTI_NIC_IN_SAME_NETWORK_MULTI_NIC_IN_SAME_NETWORK_ALLOWED = 'MULTI_NIC_IN_SAME_NETWORK_ALLOWED';
   public const ALLOW_MULTI_NIC_IN_SAME_NETWORK_MULTI_NIC_IN_SAME_NETWORK_BLOCKED = 'MULTI_NIC_IN_SAME_NETWORK_BLOCKED';
+  public const ALLOW_MULTI_NIC_IN_SAME_SUBNETWORK_MULTI_NIC_IN_SAME_SUBNETWORK_ALLOWED = 'MULTI_NIC_IN_SAME_SUBNETWORK_ALLOWED';
+  public const ALLOW_MULTI_NIC_IN_SAME_SUBNETWORK_MULTI_NIC_IN_SAME_SUBNETWORK_BLOCKED = 'MULTI_NIC_IN_SAME_SUBNETWORK_BLOCKED';
   public const ALLOW_MULTICAST_MULTICAST_ALLOWED = 'MULTICAST_ALLOWED';
   public const ALLOW_MULTICAST_MULTICAST_BLOCKED = 'MULTICAST_BLOCKED';
   public const ALLOW_NCC_NCC_ALLOWED = 'NCC_ALLOWED';
@@ -59,6 +65,10 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   public const ALLOW_STATIC_ROUTES_STATIC_ROUTES_BLOCKED = 'STATIC_ROUTES_BLOCKED';
   public const ALLOW_SUB_INTERFACES_SUBINTERFACES_ALLOWED = 'SUBINTERFACES_ALLOWED';
   public const ALLOW_SUB_INTERFACES_SUBINTERFACES_BLOCKED = 'SUBINTERFACES_BLOCKED';
+  public const ALLOW_SUBNETWORK_CREATION_SUBNETWORK_CREATION_ALLOWED = 'SUBNETWORK_CREATION_ALLOWED';
+  public const ALLOW_SUBNETWORK_CREATION_SUBNETWORK_CREATION_BLOCKED = 'SUBNETWORK_CREATION_BLOCKED';
+  public const ALLOW_VPC_FIREWALL_RULES_VPC_FIREWALL_RULES_ALLOWED = 'VPC_FIREWALL_RULES_ALLOWED';
+  public const ALLOW_VPC_FIREWALL_RULES_VPC_FIREWALL_RULES_BLOCKED = 'VPC_FIREWALL_RULES_BLOCKED';
   public const ALLOW_VPC_PEERING_VPC_PEERING_ALLOWED = 'VPC_PEERING_ALLOWED';
   public const ALLOW_VPC_PEERING_VPC_PEERING_BLOCKED = 'VPC_PEERING_BLOCKED';
   public const ALLOW_VPN_VPN_ALLOWED = 'VPN_ALLOWED';
@@ -75,6 +85,12 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    * @var string[]
    */
   public $addressPurposes;
+  /**
+   * Specifies whether address creation is allowed.
+   *
+   * @var string
+   */
+  public $allowAddressCreation;
   /**
    * Specifies whether alias IP ranges (and secondary address ranges) are
    * allowed.
@@ -120,6 +136,12 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    */
   public $allowExternalIpAccess;
   /**
+   * Specifies whether firewall policy can be attached to the network.
+   *
+   * @var string
+   */
+  public $allowFirewallPolicy;
+  /**
    * Specifies whether Cloud Interconnect creation is allowed.
    *
    * @var string
@@ -143,6 +165,12 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    * @var string
    */
   public $allowMultiNicInSameNetwork;
+  /**
+   * Specifies whether multi-nic in the same subnetwork is allowed.
+   *
+   * @var string
+   */
+  public $allowMultiNicInSameSubnetwork;
   /**
    * Specifies whether multicast is allowed.
    *
@@ -198,6 +226,18 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    */
   public $allowSubInterfaces;
   /**
+   * Specifies whether subnetwork creation is allowed.
+   *
+   * @var string
+   */
+  public $allowSubnetworkCreation;
+  /**
+   * Specifies whether VPC firewall rules can be created under the network.
+   *
+   * @var string
+   */
+  public $allowVpcFirewallRules;
+  /**
    * Specifies whether VPC peering is allowed.
    *
    * @var string
@@ -209,6 +249,10 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    * @var string
    */
   public $allowVpn;
+  /**
+   * @var string[]
+   */
+  public $firewallPolicyTypes;
   /**
    * If set, limits the interface types that the network supports. If empty, all
    * interface types are supported.
@@ -222,6 +266,14 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    * @var string
    */
   public $multicast;
+  /**
+   * Specifies a predefined internal IPv6 range for the network.
+   *
+   * @var string
+   */
+  public $predefinedNetworkInternalIpv6Range;
+  protected $predefinedSubnetworkRangesType = NetworkProfileNetworkFeaturesPredefinedSubnetworkRange::class;
+  protected $predefinedSubnetworkRangesDataType = 'array';
   /**
    * Specifies which subnetwork purposes are supported.
    *
@@ -269,6 +321,24 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   public function getAddressPurposes()
   {
     return $this->addressPurposes;
+  }
+  /**
+   * Specifies whether address creation is allowed.
+   *
+   * Accepted values: ADDRESS_CREATION_ALLOWED, ADDRESS_CREATION_BLOCKED
+   *
+   * @param self::ALLOW_ADDRESS_CREATION_* $allowAddressCreation
+   */
+  public function setAllowAddressCreation($allowAddressCreation)
+  {
+    $this->allowAddressCreation = $allowAddressCreation;
+  }
+  /**
+   * @return self::ALLOW_ADDRESS_CREATION_*
+   */
+  public function getAllowAddressCreation()
+  {
+    return $this->allowAddressCreation;
   }
   /**
    * Specifies whether alias IP ranges (and secondary address ranges) are
@@ -400,6 +470,24 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
     return $this->allowExternalIpAccess;
   }
   /**
+   * Specifies whether firewall policy can be attached to the network.
+   *
+   * Accepted values: FIREWALL_POLICY_ALLOWED, FIREWALL_POLICY_BLOCKED
+   *
+   * @param self::ALLOW_FIREWALL_POLICY_* $allowFirewallPolicy
+   */
+  public function setAllowFirewallPolicy($allowFirewallPolicy)
+  {
+    $this->allowFirewallPolicy = $allowFirewallPolicy;
+  }
+  /**
+   * @return self::ALLOW_FIREWALL_POLICY_*
+   */
+  public function getAllowFirewallPolicy()
+  {
+    return $this->allowFirewallPolicy;
+  }
+  /**
    * Specifies whether Cloud Interconnect creation is allowed.
    *
    * Accepted values: INTERCONNECT_ALLOWED, INTERCONNECT_BLOCKED
@@ -471,6 +559,25 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   public function getAllowMultiNicInSameNetwork()
   {
     return $this->allowMultiNicInSameNetwork;
+  }
+  /**
+   * Specifies whether multi-nic in the same subnetwork is allowed.
+   *
+   * Accepted values: MULTI_NIC_IN_SAME_SUBNETWORK_ALLOWED,
+   * MULTI_NIC_IN_SAME_SUBNETWORK_BLOCKED
+   *
+   * @param self::ALLOW_MULTI_NIC_IN_SAME_SUBNETWORK_* $allowMultiNicInSameSubnetwork
+   */
+  public function setAllowMultiNicInSameSubnetwork($allowMultiNicInSameSubnetwork)
+  {
+    $this->allowMultiNicInSameSubnetwork = $allowMultiNicInSameSubnetwork;
+  }
+  /**
+   * @return self::ALLOW_MULTI_NIC_IN_SAME_SUBNETWORK_*
+   */
+  public function getAllowMultiNicInSameSubnetwork()
+  {
+    return $this->allowMultiNicInSameSubnetwork;
   }
   /**
    * Specifies whether multicast is allowed.
@@ -636,6 +743,42 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
     return $this->allowSubInterfaces;
   }
   /**
+   * Specifies whether subnetwork creation is allowed.
+   *
+   * Accepted values: SUBNETWORK_CREATION_ALLOWED, SUBNETWORK_CREATION_BLOCKED
+   *
+   * @param self::ALLOW_SUBNETWORK_CREATION_* $allowSubnetworkCreation
+   */
+  public function setAllowSubnetworkCreation($allowSubnetworkCreation)
+  {
+    $this->allowSubnetworkCreation = $allowSubnetworkCreation;
+  }
+  /**
+   * @return self::ALLOW_SUBNETWORK_CREATION_*
+   */
+  public function getAllowSubnetworkCreation()
+  {
+    return $this->allowSubnetworkCreation;
+  }
+  /**
+   * Specifies whether VPC firewall rules can be created under the network.
+   *
+   * Accepted values: VPC_FIREWALL_RULES_ALLOWED, VPC_FIREWALL_RULES_BLOCKED
+   *
+   * @param self::ALLOW_VPC_FIREWALL_RULES_* $allowVpcFirewallRules
+   */
+  public function setAllowVpcFirewallRules($allowVpcFirewallRules)
+  {
+    $this->allowVpcFirewallRules = $allowVpcFirewallRules;
+  }
+  /**
+   * @return self::ALLOW_VPC_FIREWALL_RULES_*
+   */
+  public function getAllowVpcFirewallRules()
+  {
+    return $this->allowVpcFirewallRules;
+  }
+  /**
    * Specifies whether VPC peering is allowed.
    *
    * Accepted values: VPC_PEERING_ALLOWED, VPC_PEERING_BLOCKED
@@ -672,6 +815,20 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
     return $this->allowVpn;
   }
   /**
+   * @param string[] $firewallPolicyTypes
+   */
+  public function setFirewallPolicyTypes($firewallPolicyTypes)
+  {
+    $this->firewallPolicyTypes = $firewallPolicyTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFirewallPolicyTypes()
+  {
+    return $this->firewallPolicyTypes;
+  }
+  /**
    * If set, limits the interface types that the network supports. If empty, all
    * interface types are supported.
    *
@@ -705,6 +862,38 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   public function getMulticast()
   {
     return $this->multicast;
+  }
+  /**
+   * Specifies a predefined internal IPv6 range for the network.
+   *
+   * @param string $predefinedNetworkInternalIpv6Range
+   */
+  public function setPredefinedNetworkInternalIpv6Range($predefinedNetworkInternalIpv6Range)
+  {
+    $this->predefinedNetworkInternalIpv6Range = $predefinedNetworkInternalIpv6Range;
+  }
+  /**
+   * @return string
+   */
+  public function getPredefinedNetworkInternalIpv6Range()
+  {
+    return $this->predefinedNetworkInternalIpv6Range;
+  }
+  /**
+   * Predefined subnetwork ranges for the network.
+   *
+   * @param NetworkProfileNetworkFeaturesPredefinedSubnetworkRange[] $predefinedSubnetworkRanges
+   */
+  public function setPredefinedSubnetworkRanges($predefinedSubnetworkRanges)
+  {
+    $this->predefinedSubnetworkRanges = $predefinedSubnetworkRanges;
+  }
+  /**
+   * @return NetworkProfileNetworkFeaturesPredefinedSubnetworkRange[]
+   */
+  public function getPredefinedSubnetworkRanges()
+  {
+    return $this->predefinedSubnetworkRanges;
   }
   /**
    * Specifies which subnetwork purposes are supported.

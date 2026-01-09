@@ -25,6 +25,8 @@ use Google\Service\Compute\TargetSslProxiesSetProxyHeaderRequest;
 use Google\Service\Compute\TargetSslProxiesSetSslCertificatesRequest;
 use Google\Service\Compute\TargetSslProxy;
 use Google\Service\Compute\TargetSslProxyList;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "targetSslProxies" collection of methods.
@@ -351,6 +353,23 @@ class TargetSslProxies extends \Google\Service\Resource
     $params = ['project' => $project, 'targetSslProxy' => $targetSslProxy, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setSslPolicy', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (targetSslProxies.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
 }
 

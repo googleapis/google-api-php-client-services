@@ -40,6 +40,10 @@ class NetworkProfileProfileType extends \Google\Model
    */
   public const RDMA_SUBTYPE_ROCE = 'ROCE';
   /**
+   * RDMA over Converged Ethernet (RoCE) for Bare Metal.
+   */
+  public const RDMA_SUBTYPE_ROCE_METAL = 'ROCE_METAL';
+  /**
    * Exchange operator.
    */
   public const ULL_SUBTYPE_OPERATOR = 'OPERATOR';

@@ -123,6 +123,8 @@ class StoragePool extends \Google\Model
    * @var string
    */
   public $name;
+  protected $paramsType = StoragePoolParams::class;
+  protected $paramsDataType = '';
   /**
    * Provisioning type of the performance-related parameters of the pool, such
    * as throughput and IOPS.
@@ -357,6 +359,23 @@ class StoragePool extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Input only. Additional params passed with the request, but not persisted as
+   * part of resource payload.
+   *
+   * @param StoragePoolParams $params
+   */
+  public function setParams(StoragePoolParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return StoragePoolParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * Provisioning type of the performance-related parameters of the pool, such

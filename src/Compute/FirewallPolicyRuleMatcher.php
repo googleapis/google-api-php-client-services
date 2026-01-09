@@ -19,11 +19,21 @@ namespace Google\Service\Compute;
 
 class FirewallPolicyRuleMatcher extends \Google\Collection
 {
+  public const DEST_NETWORK_CONTEXT_INTERNET = 'INTERNET';
+  public const DEST_NETWORK_CONTEXT_INTRA_VPC = 'INTRA_VPC';
+  public const DEST_NETWORK_CONTEXT_NON_INTERNET = 'NON_INTERNET';
+  public const DEST_NETWORK_CONTEXT_UNSPECIFIED = 'UNSPECIFIED';
+  public const DEST_NETWORK_CONTEXT_VPC_NETWORKS = 'VPC_NETWORKS';
   public const DEST_NETWORK_TYPE_INTERNET = 'INTERNET';
   public const DEST_NETWORK_TYPE_INTRA_VPC = 'INTRA_VPC';
   public const DEST_NETWORK_TYPE_NON_INTERNET = 'NON_INTERNET';
   public const DEST_NETWORK_TYPE_UNSPECIFIED = 'UNSPECIFIED';
   public const DEST_NETWORK_TYPE_VPC_NETWORKS = 'VPC_NETWORKS';
+  public const SRC_NETWORK_CONTEXT_INTERNET = 'INTERNET';
+  public const SRC_NETWORK_CONTEXT_INTRA_VPC = 'INTRA_VPC';
+  public const SRC_NETWORK_CONTEXT_NON_INTERNET = 'NON_INTERNET';
+  public const SRC_NETWORK_CONTEXT_UNSPECIFIED = 'UNSPECIFIED';
+  public const SRC_NETWORK_CONTEXT_VPC_NETWORKS = 'VPC_NETWORKS';
   public const SRC_NETWORK_TYPE_INTERNET = 'INTERNET';
   public const SRC_NETWORK_TYPE_INTRA_VPC = 'INTRA_VPC';
   public const SRC_NETWORK_TYPE_NON_INTERNET = 'NON_INTERNET';
@@ -51,6 +61,13 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
    * @var string[]
    */
   public $destIpRanges;
+  /**
+   * Network context of the traffic destination. Allowed values are:
+   * - UNSPECIFIED      - INTERNET      - NON_INTERNET
+   *
+   * @var string
+   */
+  public $destNetworkContext;
   /**
    * Network type of the traffic destination. Allowed values are:              -
    * UNSPECIFIED      - INTERNET      - NON_INTERNET
@@ -97,6 +114,14 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
    * @var string[]
    */
   public $srcIpRanges;
+  /**
+   * Network context of the traffic source. Allowed values are:              -
+   * UNSPECIFIED      - INTERNET      - INTRA_VPC      - NON_INTERNET      -
+   * VPC_NETWORKS
+   *
+   * @var string
+   */
+  public $srcNetworkContext;
   /**
    * Network type of the traffic source. Allowed values are:              -
    * UNSPECIFIED      - INTERNET      - INTRA_VPC      - NON_INTERNET      -
@@ -180,6 +205,26 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
   public function getDestIpRanges()
   {
     return $this->destIpRanges;
+  }
+  /**
+   * Network context of the traffic destination. Allowed values are:
+   * - UNSPECIFIED      - INTERNET      - NON_INTERNET
+   *
+   * Accepted values: INTERNET, INTRA_VPC, NON_INTERNET, UNSPECIFIED,
+   * VPC_NETWORKS
+   *
+   * @param self::DEST_NETWORK_CONTEXT_* $destNetworkContext
+   */
+  public function setDestNetworkContext($destNetworkContext)
+  {
+    $this->destNetworkContext = $destNetworkContext;
+  }
+  /**
+   * @return self::DEST_NETWORK_CONTEXT_*
+   */
+  public function getDestNetworkContext()
+  {
+    return $this->destNetworkContext;
   }
   /**
    * Network type of the traffic destination. Allowed values are:              -
@@ -303,6 +348,27 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
   public function getSrcIpRanges()
   {
     return $this->srcIpRanges;
+  }
+  /**
+   * Network context of the traffic source. Allowed values are:              -
+   * UNSPECIFIED      - INTERNET      - INTRA_VPC      - NON_INTERNET      -
+   * VPC_NETWORKS
+   *
+   * Accepted values: INTERNET, INTRA_VPC, NON_INTERNET, UNSPECIFIED,
+   * VPC_NETWORKS
+   *
+   * @param self::SRC_NETWORK_CONTEXT_* $srcNetworkContext
+   */
+  public function setSrcNetworkContext($srcNetworkContext)
+  {
+    $this->srcNetworkContext = $srcNetworkContext;
+  }
+  /**
+   * @return self::SRC_NETWORK_CONTEXT_*
+   */
+  public function getSrcNetworkContext()
+  {
+    return $this->srcNetworkContext;
   }
   /**
    * Network type of the traffic source. Allowed values are:              -

@@ -31,6 +31,18 @@ class SourceInstanceProperties extends \Google\Collection
    * Indicates user chose to opt for VM shutdown on key revocation.
    */
   public const KEY_REVOCATION_ACTION_TYPE_STOP = 'STOP';
+  /**
+   * Indicates user chose no operation.
+   */
+  public const POST_KEY_REVOCATION_ACTION_TYPE_NOOP = 'NOOP';
+  /**
+   * Default value. This value is unused.
+   */
+  public const POST_KEY_REVOCATION_ACTION_TYPE_POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED = 'POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED';
+  /**
+   * Indicates user chose to opt for VM shutdown on key revocation.
+   */
+  public const POST_KEY_REVOCATION_ACTION_TYPE_SHUTDOWN = 'SHUTDOWN';
   protected $collection_key = 'serviceAccounts';
   /**
    * Enables instances created based on this machine image to send packets with
@@ -95,6 +107,12 @@ class SourceInstanceProperties extends \Google\Collection
   public $minCpuPlatform;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
+  /**
+   * PostKeyRevocationActionType of the instance.
+   *
+   * @var string
+   */
+  public $postKeyRevocationActionType;
   protected $schedulingType = Scheduling::class;
   protected $schedulingDataType = '';
   protected $serviceAccountsType = ServiceAccount::class;
@@ -296,6 +314,25 @@ class SourceInstanceProperties extends \Google\Collection
   public function getNetworkInterfaces()
   {
     return $this->networkInterfaces;
+  }
+  /**
+   * PostKeyRevocationActionType of the instance.
+   *
+   * Accepted values: NOOP, POST_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED,
+   * SHUTDOWN
+   *
+   * @param self::POST_KEY_REVOCATION_ACTION_TYPE_* $postKeyRevocationActionType
+   */
+  public function setPostKeyRevocationActionType($postKeyRevocationActionType)
+  {
+    $this->postKeyRevocationActionType = $postKeyRevocationActionType;
+  }
+  /**
+   * @return self::POST_KEY_REVOCATION_ACTION_TYPE_*
+   */
+  public function getPostKeyRevocationActionType()
+  {
+    return $this->postKeyRevocationActionType;
   }
   /**
    * Specifies the scheduling options for the instances that are created from

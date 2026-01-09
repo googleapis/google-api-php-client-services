@@ -62,6 +62,13 @@ class ReservationBlock extends \Google\Model
    */
   public $inUseCount;
   /**
+   * Output only. Number of hosts currently in use. If there is one or more
+   * Instances running on the host, it is considered in use.
+   *
+   * @var int
+   */
+  public $inUseHostCount;
+  /**
    * Output only. [Output Only] Type of the resource.
    * Alwayscompute#reservationBlock for reservation blocks.
    *
@@ -204,6 +211,23 @@ class ReservationBlock extends \Google\Model
   public function getInUseCount()
   {
     return $this->inUseCount;
+  }
+  /**
+   * Output only. Number of hosts currently in use. If there is one or more
+   * Instances running on the host, it is considered in use.
+   *
+   * @param int $inUseHostCount
+   */
+  public function setInUseHostCount($inUseHostCount)
+  {
+    $this->inUseHostCount = $inUseHostCount;
+  }
+  /**
+   * @return int
+   */
+  public function getInUseHostCount()
+  {
+    return $this->inUseHostCount;
   }
   /**
    * Output only. [Output Only] Type of the resource.

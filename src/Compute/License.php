@@ -105,6 +105,8 @@ class License extends \Google\Collection
    * @var bool
    */
   public $osLicense;
+  protected $paramsType = LicenseParams::class;
+  protected $paramsDataType = '';
   /**
    * If true, this license can be removed from a disk's set of licenses, with no
    * replacement license needed.
@@ -374,6 +376,23 @@ class License extends \Google\Collection
   public function getOsLicense()
   {
     return $this->osLicense;
+  }
+  /**
+   * Input only. Additional params passed with the request, but not persisted as
+   * part of resource payload.
+   *
+   * @param LicenseParams $params
+   */
+  public function setParams(LicenseParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return LicenseParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * If true, this license can be removed from a disk's set of licenses, with no

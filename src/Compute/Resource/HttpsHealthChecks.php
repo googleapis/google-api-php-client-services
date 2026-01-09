@@ -20,6 +20,8 @@ namespace Google\Service\Compute\Resource;
 use Google\Service\Compute\HttpsHealthCheck;
 use Google\Service\Compute\HttpsHealthCheckList;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "httpsHealthChecks" collection of methods.
@@ -221,6 +223,23 @@ class HttpsHealthChecks extends \Google\Service\Resource
     $params = ['project' => $project, 'httpsHealthCheck' => $httpsHealthCheck, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (httpsHealthChecks.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
   /**
    * Updates a HttpsHealthCheck resource in the specified project using the data

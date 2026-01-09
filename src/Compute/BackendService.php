@@ -504,6 +504,8 @@ class BackendService extends \Google\Collection
    * @var string
    */
   public $network;
+  protected $networkPassThroughLbTrafficPolicyType = BackendServiceNetworkPassThroughLbTrafficPolicy::class;
+  protected $networkPassThroughLbTrafficPolicyDataType = '';
   protected $outlierDetectionType = OutlierDetection::class;
   protected $outlierDetectionDataType = '';
   protected $paramsType = BackendServiceParams::class;
@@ -1371,6 +1373,25 @@ class BackendService extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * Configures traffic steering properties of internal passthrough Network Load
+   * Balancers.
+   *
+   * networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
+   *
+   * @param BackendServiceNetworkPassThroughLbTrafficPolicy $networkPassThroughLbTrafficPolicy
+   */
+  public function setNetworkPassThroughLbTrafficPolicy(BackendServiceNetworkPassThroughLbTrafficPolicy $networkPassThroughLbTrafficPolicy)
+  {
+    $this->networkPassThroughLbTrafficPolicy = $networkPassThroughLbTrafficPolicy;
+  }
+  /**
+   * @return BackendServiceNetworkPassThroughLbTrafficPolicy
+   */
+  public function getNetworkPassThroughLbTrafficPolicy()
+  {
+    return $this->networkPassThroughLbTrafficPolicy;
   }
   /**
    * Settings controlling the ejection of unhealthy backend endpoints from the

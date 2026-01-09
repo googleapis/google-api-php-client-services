@@ -20,6 +20,8 @@ namespace Google\Service\Compute\Resource;
 use Google\Service\Compute\Autoscaler;
 use Google\Service\Compute\Operation;
 use Google\Service\Compute\RegionAutoscalerList;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "regionAutoscalers" collection of methods.
@@ -223,6 +225,24 @@ class RegionAutoscalers extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (regionAutoscalers.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
   /**
    * Updates an autoscaler in the specified project using the data included in the

@@ -20,6 +20,8 @@ namespace Google\Service\Compute\Resource;
 use Google\Service\Compute\NotificationEndpoint;
 use Google\Service\Compute\NotificationEndpointList;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "regionNotificationEndpoints" collection of methods.
@@ -196,6 +198,24 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], NotificationEndpointList::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (regionNotificationEndpoints.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
 }
 
