@@ -38,6 +38,19 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
   protected $customerPolicyType = GoogleCloudDiscoveryengineV1AssistantCustomerPolicy::class;
   protected $customerPolicyDataType = '';
   /**
+   * Optional. This field controls the default web grounding toggle for end
+   * users if `web_grounding_type` is set to `WEB_GROUNDING_TYPE_GOOGLE_SEARCH`
+   * or `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`. By default, this field is
+   * set to false. If `web_grounding_type` is `WEB_GROUNDING_TYPE_GOOGLE_SEARCH`
+   * or `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`, end users will have web
+   * grounding enabled by default on UI. If true, grounding toggle will be
+   * disabled by default on UI. End users can still enable web grounding in the
+   * UI if web grounding is enabled.
+   *
+   * @var bool
+   */
+  public $defaultWebGroundingToggleOff;
+  /**
    * Optional. Description for additional information. Expected to be shown on
    * the configuration UI, not to the users of the assistant.
    *
@@ -86,6 +99,29 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
   public function getCustomerPolicy()
   {
     return $this->customerPolicy;
+  }
+  /**
+   * Optional. This field controls the default web grounding toggle for end
+   * users if `web_grounding_type` is set to `WEB_GROUNDING_TYPE_GOOGLE_SEARCH`
+   * or `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`. By default, this field is
+   * set to false. If `web_grounding_type` is `WEB_GROUNDING_TYPE_GOOGLE_SEARCH`
+   * or `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`, end users will have web
+   * grounding enabled by default on UI. If true, grounding toggle will be
+   * disabled by default on UI. End users can still enable web grounding in the
+   * UI if web grounding is enabled.
+   *
+   * @param bool $defaultWebGroundingToggleOff
+   */
+  public function setDefaultWebGroundingToggleOff($defaultWebGroundingToggleOff)
+  {
+    $this->defaultWebGroundingToggleOff = $defaultWebGroundingToggleOff;
+  }
+  /**
+   * @return bool
+   */
+  public function getDefaultWebGroundingToggleOff()
+  {
+    return $this->defaultWebGroundingToggleOff;
   }
   /**
    * Optional. Description for additional information. Expected to be shown on
