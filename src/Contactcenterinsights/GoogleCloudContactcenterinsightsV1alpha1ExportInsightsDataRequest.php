@@ -88,6 +88,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataRequest extends 
    */
   public const EXPORT_SCHEMA_VERSION_EXPORT_V16 = 'EXPORT_V16';
   /**
+   * Export schema version 17.
+   */
+  public const EXPORT_SCHEMA_VERSION_EXPORT_V17 = 'EXPORT_V17';
+  /**
    * Export schema version latest available.
    */
   public const EXPORT_SCHEMA_VERSION_EXPORT_VERSION_LATEST_AVAILABLE = 'EXPORT_VERSION_LATEST_AVAILABLE';
@@ -162,7 +166,7 @@ class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataRequest extends 
    * Accepted values: EXPORT_SCHEMA_VERSION_UNSPECIFIED, EXPORT_V1, EXPORT_V2,
    * EXPORT_V3, EXPORT_V4, EXPORT_V5, EXPORT_V6, EXPORT_V7, EXPORT_V8,
    * EXPORT_V9, EXPORT_V10, EXPORT_V11, EXPORT_V12, EXPORT_V13, EXPORT_V14,
-   * EXPORT_V15, EXPORT_V16, EXPORT_VERSION_LATEST_AVAILABLE
+   * EXPORT_V15, EXPORT_V16, EXPORT_V17, EXPORT_VERSION_LATEST_AVAILABLE
    *
    * @param self::EXPORT_SCHEMA_VERSION_* $exportSchemaVersion
    */
