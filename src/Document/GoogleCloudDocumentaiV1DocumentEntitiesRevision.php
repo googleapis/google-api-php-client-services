@@ -24,6 +24,8 @@ class GoogleCloudDocumentaiV1DocumentEntitiesRevision extends \Google\Collection
   protected $entitiesDataType = 'array';
   protected $entityValidationOutputType = GoogleCloudDocumentaiV1DocumentEntityValidationOutput::class;
   protected $entityValidationOutputDataType = '';
+  protected $provenanceType = GoogleCloudDocumentaiV1DocumentProvenance::class;
+  protected $provenanceDataType = '';
   /**
    * The revision id.
    *
@@ -62,6 +64,22 @@ class GoogleCloudDocumentaiV1DocumentEntitiesRevision extends \Google\Collection
   public function getEntityValidationOutput()
   {
     return $this->entityValidationOutput;
+  }
+  /**
+   * Optional. The history of this revision.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentProvenance $provenance
+   */
+  public function setProvenance(GoogleCloudDocumentaiV1DocumentProvenance $provenance)
+  {
+    $this->provenance = $provenance;
+  }
+  /**
+   * @return GoogleCloudDocumentaiV1DocumentProvenance
+   */
+  public function getProvenance()
+  {
+    return $this->provenance;
   }
   /**
    * The revision id.
