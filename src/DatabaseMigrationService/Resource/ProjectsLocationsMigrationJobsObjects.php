@@ -89,9 +89,10 @@ class ProjectsLocationsMigrationJobsObjects extends \Google\Service\Resource
    * collection of objects.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of objects to return. Default is 50.
-   * The maximum value is 1000; values above 1000 will be coerced to 1000.
-   * @opt_param string pageToken Page token received from a previous
+   * @opt_param int pageSize Optional. Maximum number of objects to return.
+   * Default is 50. The maximum value is 1000; values above 1000 will be coerced
+   * to 1000.
+   * @opt_param string pageToken Optional. Page token received from a previous
    * `ListMigrationJObObjectsRequest` call. Provide this to retrieve the
    * subsequent page. When paginating, all other parameters provided to
    * `ListMigrationJobObjectsRequest` must match the call that provided the page

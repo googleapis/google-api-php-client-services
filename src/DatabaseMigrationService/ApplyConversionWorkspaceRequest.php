@@ -41,8 +41,8 @@ class ApplyConversionWorkspaceRequest extends \Google\Model
    */
   public $dryRun;
   /**
-   * Filter which entities to apply. Leaving this field empty will apply all of
-   * the entities. Supports Google AIP 160 based filtering.
+   * Optional. Filter which entities to apply. Leaving this field empty will
+   * apply all of the entities. Supports Google AIP 160 based filtering.
    *
    * @var string
    */
@@ -100,8 +100,8 @@ class ApplyConversionWorkspaceRequest extends \Google\Model
     return $this->dryRun;
   }
   /**
-   * Filter which entities to apply. Leaving this field empty will apply all of
-   * the entities. Supports Google AIP 160 based filtering.
+   * Optional. Filter which entities to apply. Leaving this field empty will
+   * apply all of the entities. Supports Google AIP 160 based filtering.
    *
    * @param string $filter
    */

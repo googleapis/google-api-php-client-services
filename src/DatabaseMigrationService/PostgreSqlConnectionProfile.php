@@ -48,6 +48,8 @@ class PostgreSqlConnectionProfile extends \Google\Model
    * @var string
    */
   public $database;
+  protected $forwardSshConnectivityType = ForwardSshTunnelConnectivity::class;
+  protected $forwardSshConnectivityDataType = '';
   /**
    * Required. The IP or hostname of the source PostgreSQL database.
    *
@@ -82,6 +84,8 @@ class PostgreSqlConnectionProfile extends \Google\Model
    * @var int
    */
   public $port;
+  protected $privateConnectivityType = PrivateConnectivity::class;
+  protected $privateConnectivityDataType = '';
   protected $privateServiceConnectConnectivityType = PrivateServiceConnectConnectivity::class;
   protected $privateServiceConnectConnectivityDataType = '';
   protected $sslType = SslConfig::class;
@@ -146,6 +150,22 @@ class PostgreSqlConnectionProfile extends \Google\Model
   public function getDatabase()
   {
     return $this->database;
+  }
+  /**
+   * Forward SSH tunnel connectivity.
+   *
+   * @param ForwardSshTunnelConnectivity $forwardSshConnectivity
+   */
+  public function setForwardSshConnectivity(ForwardSshTunnelConnectivity $forwardSshConnectivity)
+  {
+    $this->forwardSshConnectivity = $forwardSshConnectivity;
+  }
+  /**
+   * @return ForwardSshTunnelConnectivity
+   */
+  public function getForwardSshConnectivity()
+  {
+    return $this->forwardSshConnectivity;
   }
   /**
    * Required. The IP or hostname of the source PostgreSQL database.
@@ -234,6 +254,22 @@ class PostgreSqlConnectionProfile extends \Google\Model
   public function getPort()
   {
     return $this->port;
+  }
+  /**
+   * Private connectivity.
+   *
+   * @param PrivateConnectivity $privateConnectivity
+   */
+  public function setPrivateConnectivity(PrivateConnectivity $privateConnectivity)
+  {
+    $this->privateConnectivity = $privateConnectivity;
+  }
+  /**
+   * @return PrivateConnectivity
+   */
+  public function getPrivateConnectivity()
+  {
+    return $this->privateConnectivity;
   }
   /**
    * Private service connect connectivity.

@@ -139,17 +139,18 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * private connections.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter A filter expression that filters private connections
-   * listed in the response. The expression must specify the field name, a
-   * comparison operator, and the value that you want to use for filtering. The
-   * value must be a string, a number, or a boolean. The comparison operator must
-   * be either =, !=, >, or <. For example, list private connections created this
-   * year by specifying **createTime %gt; 2021-01-01T00:00:00.000000000Z**.
-   * @opt_param string orderBy Order by fields for the result.
-   * @opt_param int pageSize Maximum number of private connections to return. If
-   * unspecified, at most 50 private connections that are returned. The maximum
-   * value is 1000; values above 1000 are coerced to 1000.
-   * @opt_param string pageToken Page token received from a previous
+   * @opt_param string filter Optional. A filter expression that filters private
+   * connections listed in the response. The expression must specify the field
+   * name, a comparison operator, and the value that you want to use for
+   * filtering. The value must be a string, a number, or a boolean. The comparison
+   * operator must be either =, !=, >, or <. For example, list private connections
+   * created this year by specifying **createTime %gt;
+   * 2021-01-01T00:00:00.000000000Z**.
+   * @opt_param string orderBy Optional. Order by fields for the result.
+   * @opt_param int pageSize Optional. Maximum number of private connections to
+   * return. If unspecified, at most 50 private connections that are returned. The
+   * maximum value is 1000; values above 1000 are coerced to 1000.
+   * @opt_param string pageToken Optional. Page token received from a previous
    * `ListPrivateConnections` call. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to `ListPrivateConnections`
    * must match the call that provided the page token.
