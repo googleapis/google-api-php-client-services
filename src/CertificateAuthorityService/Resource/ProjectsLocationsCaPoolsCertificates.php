@@ -96,8 +96,14 @@ class ProjectsLocationsCaPoolsCertificates extends \Google\Service\Resource
   /**
    * Lists Certificates. (certificates.listProjectsLocationsCaPoolsCertificates)
    *
-   * @param string $parent Required. The resource name of the location associated
-   * with the Certificates, in the format `projects/locations/caPools`.
+   * @param string $parent Required. The resource name of the parent associated
+   * with the Certificates, in the format `projects/locations/caPools`. The parent
+   * resource name can be in one of two forms: 1. **Specific CA Pool:** To list
+   * certificates within a single CA Pool: `projects/locations/caPools` 2. **All
+   * CA Pools in a Location:** To list certificates across *all* CA Pools in a
+   * given project and location, use the wildcard character (`-`) in place of the
+   * CA Pool ID. Example: `projects/locations/caPools/-` See go/ccfe-nested-
+   * collections#aggregate-listing for more details.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Only include resources that match the
