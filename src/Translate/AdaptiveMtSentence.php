@@ -26,7 +26,7 @@ class AdaptiveMtSentence extends \Google\Model
    */
   public $createTime;
   /**
-   * Required. The resource name of the file, in form of `projects/{project-
+   * Identifier. The resource name of the file, in form of `projects/{project-
    * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptive
    * MtFiles/{file}/adaptiveMtSentences/{sentence}`
    *
@@ -69,7 +69,7 @@ class AdaptiveMtSentence extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. The resource name of the file, in form of `projects/{project-
+   * Identifier. The resource name of the file, in form of `projects/{project-
    * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptive
    * MtFiles/{file}/adaptiveMtSentences/{sentence}`
    *

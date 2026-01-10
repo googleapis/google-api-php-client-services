@@ -52,13 +52,16 @@ class BatchTranslateTextRequest extends \Google\Collection
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
   /**
-   * Required. Source language code.
+   * Required. Source language code. Supported language codes are listed in
+   * [Language Support](https://cloud.google.com/translate/docs/languages).
    *
    * @var string
    */
   public $sourceLanguageCode;
   /**
-   * Required. Specify up to 10 language codes here.
+   * Required. Specify up to 10 language codes here. Supported language codes
+   * are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    *
    * @var string[]
    */
@@ -162,7 +165,8 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->outputConfig;
   }
   /**
-   * Required. Source language code.
+   * Required. Source language code. Supported language codes are listed in
+   * [Language Support](https://cloud.google.com/translate/docs/languages).
    *
    * @param string $sourceLanguageCode
    */
@@ -178,7 +182,9 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->sourceLanguageCode;
   }
   /**
-   * Required. Specify up to 10 language codes here.
+   * Required. Specify up to 10 language codes here. Supported language codes
+   * are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    *
    * @param string[] $targetLanguageCodes
    */

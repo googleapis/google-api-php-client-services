@@ -27,8 +27,9 @@ class Model extends \Google\Model
    */
   public $createTime;
   /**
-   * The dataset from which the model is trained, in form of `projects/{project-
-   * number-or-id}/locations/{location_id}/datasets/{dataset_id}`
+   * Required. The dataset from which the model is trained, in form of
+   * `projects/{project-number-or-
+   * id}/locations/{location_id}/datasets/{dataset_id}`
    *
    * @var string
    */
@@ -104,8 +105,9 @@ class Model extends \Google\Model
     return $this->createTime;
   }
   /**
-   * The dataset from which the model is trained, in form of `projects/{project-
-   * number-or-id}/locations/{location_id}/datasets/{dataset_id}`
+   * Required. The dataset from which the model is trained, in form of
+   * `projects/{project-number-or-
+   * id}/locations/{location_id}/datasets/{dataset_id}`
    *
    * @param string $dataset
    */

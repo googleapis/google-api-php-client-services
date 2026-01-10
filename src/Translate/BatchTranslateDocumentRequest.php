@@ -75,6 +75,12 @@ class BatchTranslateDocumentRequest extends \Google\Collection
   protected $outputConfigType = BatchDocumentOutputConfig::class;
   protected $outputConfigDataType = '';
   /**
+   * Optional. If true, only native pdf pages will be translated.
+   *
+   * @var bool
+   */
+  public $pdfNativeOnly;
+  /**
    * Required. The ISO-639 language code of the input document if known, for
    * example, "en-US" or "sr-Latn". Supported language codes are listed in
    * [Language Support](https://cloud.google.com/translate/docs/languages).
@@ -84,7 +90,9 @@ class BatchTranslateDocumentRequest extends \Google\Collection
   public $sourceLanguageCode;
   /**
    * Required. The ISO-639 language code to use for translation of the input
-   * document. Specify up to 10 language codes here.
+   * document. Specify up to 10 language codes here. Supported language codes
+   * are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    *
    * @var string[]
    */
@@ -240,6 +248,22 @@ class BatchTranslateDocumentRequest extends \Google\Collection
     return $this->outputConfig;
   }
   /**
+   * Optional. If true, only native pdf pages will be translated.
+   *
+   * @param bool $pdfNativeOnly
+   */
+  public function setPdfNativeOnly($pdfNativeOnly)
+  {
+    $this->pdfNativeOnly = $pdfNativeOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getPdfNativeOnly()
+  {
+    return $this->pdfNativeOnly;
+  }
+  /**
    * Required. The ISO-639 language code of the input document if known, for
    * example, "en-US" or "sr-Latn". Supported language codes are listed in
    * [Language Support](https://cloud.google.com/translate/docs/languages).
@@ -259,7 +283,9 @@ class BatchTranslateDocumentRequest extends \Google\Collection
   }
   /**
    * Required. The ISO-639 language code to use for translation of the input
-   * document. Specify up to 10 language codes here.
+   * document. Specify up to 10 language codes here. Supported language codes
+   * are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    *
    * @param string[] $targetLanguageCodes
    */

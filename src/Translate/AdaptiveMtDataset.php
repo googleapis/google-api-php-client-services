@@ -40,8 +40,9 @@ class AdaptiveMtDataset extends \Google\Model
    */
   public $exampleCount;
   /**
-   * Required. The resource name of the dataset, in form of `projects/{project-
-   * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset_id}`
+   * Identifier. The resource name of the dataset, in form of
+   * `projects/{project-number-or-
+   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset_id}`
    *
    * @var string
    */
@@ -116,8 +117,9 @@ class AdaptiveMtDataset extends \Google\Model
     return $this->exampleCount;
   }
   /**
-   * Required. The resource name of the dataset, in form of `projects/{project-
-   * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset_id}`
+   * Identifier. The resource name of the dataset, in form of
+   * `projects/{project-number-or-
+   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset_id}`
    *
    * @param string $name
    */

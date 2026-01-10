@@ -44,7 +44,7 @@ class Glossary extends \Google\Model
   protected $languagePairType = LanguageCodePair::class;
   protected $languagePairDataType = '';
   /**
-   * Required. The resource name of the glossary. Glossary names have the form
+   * Identifier. The resource name of the glossary. Glossary names have the form
    * `projects/{project-number-or-id}/locations/{location-
    * id}/glossaries/{glossary-id}`.
    *
@@ -156,7 +156,7 @@ class Glossary extends \Google\Model
     return $this->languagePair;
   }
   /**
-   * Required. The resource name of the glossary. Glossary names have the form
+   * Identifier. The resource name of the glossary. Glossary names have the form
    * `projects/{project-number-or-id}/locations/{location-
    * id}/glossaries/{glossary-id}`.
    *

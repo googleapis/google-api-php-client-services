@@ -38,7 +38,7 @@ class AdaptiveMtFile extends \Google\Model
    */
   public $entryCount;
   /**
-   * Required. The resource name of the file, in form of `projects/{project-
+   * Identifier. The resource name of the file, in form of `projects/{project-
    * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptive
    * MtFiles/{file}`
    *
@@ -101,7 +101,7 @@ class AdaptiveMtFile extends \Google\Model
     return $this->entryCount;
   }
   /**
-   * Required. The resource name of the file, in form of `projects/{project-
+   * Identifier. The resource name of the file, in form of `projects/{project-
    * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptive
    * MtFiles/{file}`
    *

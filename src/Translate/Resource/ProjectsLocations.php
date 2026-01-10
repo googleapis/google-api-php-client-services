@@ -26,6 +26,8 @@ use Google\Service\Translate\DetectLanguageResponse;
 use Google\Service\Translate\ListLocationsResponse;
 use Google\Service\Translate\Location;
 use Google\Service\Translate\Operation;
+use Google\Service\Translate\RefineTextRequest;
+use Google\Service\Translate\RefineTextResponse;
 use Google\Service\Translate\RomanizeTextRequest;
 use Google\Service\Translate\RomanizeTextResponse;
 use Google\Service\Translate\SupportedLanguages;
@@ -184,9 +186,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string extraLocationTypes Optional. A list of extra location types
-   * that should be used as conditions for controlling the visibility of the
-   * locations.
+   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
+   * unsupported and is ignored unless explicitly documented otherwise. This is
+   * primarily for internal usage.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like `"displayName=tokyo"`,
    * and is documented in more detail in [AIP-160](https://google.aip.dev/160).
@@ -202,6 +204,25 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListLocationsResponse::class);
+  }
+  /**
+   * Refines the input translated text to improve the quality.
+   * (locations.refineText)
+   *
+   * @param string $parent Required. Project or location to make a call. Must
+   * refer to a caller's project. Format: `projects/{project-number-or-
+   * id}/locations/{location-id}`. For global calls, use `projects/{project-
+   * number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+   * @param RefineTextRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RefineTextResponse
+   * @throws \Google\Service\Exception
+   */
+  public function refineText($parent, RefineTextRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('refineText', [$params], RefineTextResponse::class);
   }
   /**
    * Romanize input text written in non-Latin scripts to Latin text.

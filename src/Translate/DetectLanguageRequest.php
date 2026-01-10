@@ -25,6 +25,8 @@ class DetectLanguageRequest extends \Google\Model
    * @var string
    */
   public $content;
+  protected $documentInputConfigType = DocumentInputConfig::class;
+  protected $documentInputConfigDataType = '';
   /**
    * Optional. The labels with user-defined metadata for the request. Label keys
    * and values can be no longer than 63 characters (Unicode codepoints), can
@@ -71,6 +73,22 @@ class DetectLanguageRequest extends \Google\Model
   public function getContent()
   {
     return $this->content;
+  }
+  /**
+   * Optional. The document configuration of the input.
+   *
+   * @param DocumentInputConfig $documentInputConfig
+   */
+  public function setDocumentInputConfig(DocumentInputConfig $documentInputConfig)
+  {
+    $this->documentInputConfig = $documentInputConfig;
+  }
+  /**
+   * @return DocumentInputConfig
+   */
+  public function getDocumentInputConfig()
+  {
+    return $this->documentInputConfig;
   }
   /**
    * Optional. The labels with user-defined metadata for the request. Label keys
