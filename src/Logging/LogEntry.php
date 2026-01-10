@@ -61,6 +61,8 @@ class LogEntry extends \Google\Collection
   protected $apphubDataType = '';
   protected $apphubDestinationType = AppHub::class;
   protected $apphubDestinationDataType = '';
+  protected $apphubSourceType = AppHub::class;
+  protected $apphubSourceDataType = '';
   protected $errorGroupsType = LogErrorGroup::class;
   protected $errorGroupsDataType = 'array';
   protected $httpRequestType = HttpRequest::class;
@@ -244,7 +246,7 @@ class LogEntry extends \Google\Collection
   /**
    * Output only. AppHub application metadata associated with the destination
    * application. This is only populated if the log represented "edge"-like data
-   * (such as for VPC flow logs) with a source and destination.
+   * (such as for VPC flow logs) with a destination.
    *
    * @param AppHub $apphubDestination
    */
@@ -258,6 +260,24 @@ class LogEntry extends \Google\Collection
   public function getApphubDestination()
   {
     return $this->apphubDestination;
+  }
+  /**
+   * Output only. AppHub application metadata associated with the source
+   * application. This is only populated if the log represented "edge"-like data
+   * (such as for VPC flow logs) with a source.
+   *
+   * @param AppHub $apphubSource
+   */
+  public function setApphubSource(AppHub $apphubSource)
+  {
+    $this->apphubSource = $apphubSource;
+  }
+  /**
+   * @return AppHub
+   */
+  public function getApphubSource()
+  {
+    return $this->apphubSource;
   }
   /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting)
