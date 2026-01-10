@@ -192,13 +192,22 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
    */
   public $billingType;
   /**
-   * Output only. Base64-encoded public certificate for the root CA of the
-   * Apigee organization. Valid only when [RuntimeType](#RuntimeType) is
-   * `CLOUD`.
+   * Output only. Deprecated: Use `ca_certificates` instead. Base64-encoded
+   * public certificate for the root CA of the Apigee organization. Valid only
+   * when [RuntimeType](#RuntimeType) is `CLOUD`.
    *
+   * @deprecated
    * @var string
    */
   public $caCertificate;
+  /**
+   * Output only. Base64-encoded public certificates for the root CA of the
+   * Apigee organization. Valid only when [RuntimeType](#RuntimeType) is
+   * `CLOUD`. Multiple certificates are used to support certificate rotation.
+   *
+   * @var string[]
+   */
+  public $caCertificates;
   /**
    * Optional. Cloud KMS key name used for encrypting control plane data that is
    * stored in a multi region. Only used for the data residency region "US" or
@@ -515,10 +524,11 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
     return $this->billingType;
   }
   /**
-   * Output only. Base64-encoded public certificate for the root CA of the
-   * Apigee organization. Valid only when [RuntimeType](#RuntimeType) is
-   * `CLOUD`.
+   * Output only. Deprecated: Use `ca_certificates` instead. Base64-encoded
+   * public certificate for the root CA of the Apigee organization. Valid only
+   * when [RuntimeType](#RuntimeType) is `CLOUD`.
    *
+   * @deprecated
    * @param string $caCertificate
    */
   public function setCaCertificate($caCertificate)
@@ -526,11 +536,30 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
     $this->caCertificate = $caCertificate;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getCaCertificate()
   {
     return $this->caCertificate;
+  }
+  /**
+   * Output only. Base64-encoded public certificates for the root CA of the
+   * Apigee organization. Valid only when [RuntimeType](#RuntimeType) is
+   * `CLOUD`. Multiple certificates are used to support certificate rotation.
+   *
+   * @param string[] $caCertificates
+   */
+  public function setCaCertificates($caCertificates)
+  {
+    $this->caCertificates = $caCertificates;
+  }
+  /**
+   * @return string[]
+   */
+  public function getCaCertificates()
+  {
+    return $this->caCertificates;
   }
   /**
    * Optional. Cloud KMS key name used for encrypting control plane data that is
