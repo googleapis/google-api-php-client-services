@@ -110,16 +110,16 @@ class ProjectsLocationsPrivateConnectionsRoutes extends \Google\Service\Resource
    * Routess.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filter request.
-   * @opt_param string orderBy Order by fields for the result.
-   * @opt_param int pageSize Maximum number of Routes to return. The service may
-   * return fewer than this value. If unspecified, at most 50 Routes will be
-   * returned. The maximum value is 1000; values above 1000 will be coerced to
-   * 1000.
-   * @opt_param string pageToken Page token received from a previous `ListRoutes`
-   * call. Provide this to retrieve the subsequent page. When paginating, all
-   * other parameters provided to `ListRoutes` must match the call that provided
-   * the page token.
+   * @opt_param string filter Optional. Filter request.
+   * @opt_param string orderBy Optional. Order by fields for the result.
+   * @opt_param int pageSize Optional. Maximum number of Routes to return. The
+   * service may return fewer than this value. If unspecified, at most 50 Routes
+   * will be returned. The maximum value is 1000; values above 1000 will be
+   * coerced to 1000.
+   * @opt_param string pageToken Optional. Page token received from a previous
+   * `ListRoutes` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListRoutes` must match the call
+   * that provided the page token.
    * @return ListRoutesResponse
    * @throws \Google\Service\Exception
    */

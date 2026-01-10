@@ -39,9 +39,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * static IPs should be returned. Must be in the format `projects/locations`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of Ips to return, will likely not be
-   * specified.
-   * @opt_param string pageToken A page token, received from a previous
+   * @opt_param int pageSize Optional. Maximum number of Ips to return, will
+   * likely not be specified.
+   * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListStaticIps` call. will likely not be specified.
    * @return FetchStaticIpsResponse
    * @throws \Google\Service\Exception
