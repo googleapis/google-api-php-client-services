@@ -170,6 +170,12 @@ class Course extends \Google\Collection
    * @var string
    */
   public $section;
+  /**
+   * Optional. The subject of the course.
+   *
+   * @var string
+   */
+  public $subject;
   protected $teacherFolderType = DriveFolder::class;
   protected $teacherFolderDataType = '';
   /**
@@ -478,6 +484,22 @@ class Course extends \Google\Collection
   public function getSection()
   {
     return $this->section;
+  }
+  /**
+   * Optional. The subject of the course.
+   *
+   * @param string $subject
+   */
+  public function setSubject($subject)
+  {
+    $this->subject = $subject;
+  }
+  /**
+   * @return string
+   */
+  public function getSubject()
+  {
+    return $this->subject;
   }
   /**
    * Information about a Drive Folder that is shared with all teachers of the
