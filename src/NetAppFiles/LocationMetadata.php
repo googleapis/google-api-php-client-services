@@ -21,6 +21,12 @@ class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'supportedServiceLevels';
   /**
+   * Output only. Indicates if the location has ONTAP Proxy support.
+   *
+   * @var bool
+   */
+  public $hasOntapProxy;
+  /**
    * Output only. Indicates if the location has VCP support.
    *
    * @var bool
@@ -39,6 +45,22 @@ class LocationMetadata extends \Google\Collection
    */
   public $supportedServiceLevels;
 
+  /**
+   * Output only. Indicates if the location has ONTAP Proxy support.
+   *
+   * @param bool $hasOntapProxy
+   */
+  public function setHasOntapProxy($hasOntapProxy)
+  {
+    $this->hasOntapProxy = $hasOntapProxy;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasOntapProxy()
+  {
+    return $this->hasOntapProxy;
+  }
   /**
    * Output only. Indicates if the location has VCP support.
    *
