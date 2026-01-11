@@ -20,6 +20,13 @@ namespace Google\Service\CloudRedis;
 class MachineConfiguration extends \Google\Model
 {
   /**
+   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in
+   * increments of 50.
+   *
+   * @var string
+   */
+  public $baselineSlots;
+  /**
    * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482)
    * add proto validations again after bug fix.
    *
@@ -27,6 +34,13 @@ class MachineConfiguration extends \Google\Model
    * @var int
    */
   public $cpuCount;
+  /**
+   * Optional. Max slots for BigQuery Reservations. Max slots are in increments
+   * of 50.
+   *
+   * @var string
+   */
+  public $maxReservationSlots;
   /**
    * Memory size in bytes. TODO(b/342344482) add proto validations again after
    * bug fix.
@@ -49,6 +63,23 @@ class MachineConfiguration extends \Google\Model
   public $vcpuCount;
 
   /**
+   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in
+   * increments of 50.
+   *
+   * @param string $baselineSlots
+   */
+  public function setBaselineSlots($baselineSlots)
+  {
+    $this->baselineSlots = $baselineSlots;
+  }
+  /**
+   * @return string
+   */
+  public function getBaselineSlots()
+  {
+    return $this->baselineSlots;
+  }
+  /**
    * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482)
    * add proto validations again after bug fix.
    *
@@ -66,6 +97,23 @@ class MachineConfiguration extends \Google\Model
   public function getCpuCount()
   {
     return $this->cpuCount;
+  }
+  /**
+   * Optional. Max slots for BigQuery Reservations. Max slots are in increments
+   * of 50.
+   *
+   * @param string $maxReservationSlots
+   */
+  public function setMaxReservationSlots($maxReservationSlots)
+  {
+    $this->maxReservationSlots = $maxReservationSlots;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxReservationSlots()
+  {
+    return $this->maxReservationSlots;
   }
   /**
    * Memory size in bytes. TODO(b/342344482) add proto validations again after

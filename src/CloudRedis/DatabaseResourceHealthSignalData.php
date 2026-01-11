@@ -328,6 +328,8 @@ class DatabaseResourceHealthSignalData extends \Google\Collection
   /**
    * Represents if the cross_db_ownership_chaining database flag for a Cloud SQL
    * for SQL Server instance is not set to off.
+   *
+   * @deprecated
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXPOSED_BY_OWNERSHIP_CHAINING = 'SIGNAL_TYPE_EXPOSED_BY_OWNERSHIP_CHAINING';
   /**
@@ -543,6 +545,8 @@ class DatabaseResourceHealthSignalData extends \Google\Collection
   public const SIGNAL_TYPE_SIGNAL_TYPE_SCHEMA_NOT_OPTIMIZED = 'SIGNAL_TYPE_SCHEMA_NOT_OPTIMIZED';
   /**
    * High number of idle connections.
+   *
+   * @deprecated
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_MANY_IDLE_CONNECTIONS = 'SIGNAL_TYPE_MANY_IDLE_CONNECTIONS';
   /**
@@ -569,6 +573,10 @@ class DatabaseResourceHealthSignalData extends \Google\Collection
    * Resource version is in extended support.
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXTENDED_SUPPORT = 'SIGNAL_TYPE_EXTENDED_SUPPORT';
+  /**
+   * Change in performance KPIs.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_PERFORMANCE_KPI_CHANGE = 'SIGNAL_TYPE_PERFORMANCE_KPI_CHANGE';
   /**
    * Unspecified state.
    */
@@ -998,7 +1006,8 @@ class DatabaseResourceHealthSignalData extends \Google\Collection
    * SIGNAL_TYPE_MANY_IDLE_CONNECTIONS, SIGNAL_TYPE_REPLICATION_LAG,
    * SIGNAL_TYPE_OUTDATED_VERSION, SIGNAL_TYPE_OUTDATED_CLIENT,
    * SIGNAL_TYPE_DATABOOST_DISABLED,
-   * SIGNAL_TYPE_RECOMMENDED_MAINTENANCE_POLICIES, SIGNAL_TYPE_EXTENDED_SUPPORT
+   * SIGNAL_TYPE_RECOMMENDED_MAINTENANCE_POLICIES, SIGNAL_TYPE_EXTENDED_SUPPORT,
+   * SIGNAL_TYPE_PERFORMANCE_KPI_CHANGE
    *
    * @param self::SIGNAL_TYPE_* $signalType
    */
