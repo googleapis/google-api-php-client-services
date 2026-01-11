@@ -19,6 +19,22 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2InfoTypeDescription extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const LAUNCH_STATUS_INFO_TYPE_LAUNCH_STATUS_UNSPECIFIED = 'INFO_TYPE_LAUNCH_STATUS_UNSPECIFIED';
+  /**
+   * InfoType is generally available.
+   */
+  public const LAUNCH_STATUS_GENERAL_AVAILABILITY = 'GENERAL_AVAILABILITY';
+  /**
+   * InfoType is in public preview.
+   */
+  public const LAUNCH_STATUS_PUBLIC_PREVIEW = 'PUBLIC_PREVIEW';
+  /**
+   * InfoType is in private preview.
+   */
+  public const LAUNCH_STATUS_PRIVATE_PREVIEW = 'PRIVATE_PREVIEW';
   protected $collection_key = 'versions';
   protected $categoriesType = GooglePrivacyDlpV2InfoTypeCategory::class;
   protected $categoriesDataType = 'array';
@@ -41,6 +57,12 @@ class GooglePrivacyDlpV2InfoTypeDescription extends \Google\Collection
    * @var string
    */
   public $example;
+  /**
+   * The launch status of the infoType.
+   *
+   * @var string
+   */
+  public $launchStatus;
   protected $locationSupportType = GooglePrivacyDlpV2LocationSupport::class;
   protected $locationSupportDataType = '';
   /**
@@ -134,6 +156,25 @@ class GooglePrivacyDlpV2InfoTypeDescription extends \Google\Collection
   public function getExample()
   {
     return $this->example;
+  }
+  /**
+   * The launch status of the infoType.
+   *
+   * Accepted values: INFO_TYPE_LAUNCH_STATUS_UNSPECIFIED, GENERAL_AVAILABILITY,
+   * PUBLIC_PREVIEW, PRIVATE_PREVIEW
+   *
+   * @param self::LAUNCH_STATUS_* $launchStatus
+   */
+  public function setLaunchStatus($launchStatus)
+  {
+    $this->launchStatus = $launchStatus;
+  }
+  /**
+   * @return self::LAUNCH_STATUS_*
+   */
+  public function getLaunchStatus()
+  {
+    return $this->launchStatus;
   }
   /**
    * Locations at which this feature can be used. May change over time.
