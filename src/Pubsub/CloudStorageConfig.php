@@ -46,6 +46,12 @@ class CloudStorageConfig extends \Google\Model
    * the topic schema and subscription settings.
    */
   public const STATE_SCHEMA_MISMATCH = 'SCHEMA_MISMATCH';
+  /**
+   * Cannot write to the Cloud Storage bucket because the bucket is not in the
+   * same location as where Vertex AI models used in `message_transform`s are
+   * deployed.
+   */
+  public const STATE_VERTEX_AI_LOCATION_RESTRICTION = 'VERTEX_AI_LOCATION_RESTRICTION';
   protected $avroConfigType = AvroConfig::class;
   protected $avroConfigDataType = '';
   /**
@@ -294,7 +300,8 @@ class CloudStorageConfig extends \Google\Model
    * subscription can receive messages.
    *
    * Accepted values: STATE_UNSPECIFIED, ACTIVE, PERMISSION_DENIED, NOT_FOUND,
-   * IN_TRANSIT_LOCATION_RESTRICTION, SCHEMA_MISMATCH
+   * IN_TRANSIT_LOCATION_RESTRICTION, SCHEMA_MISMATCH,
+   * VERTEX_AI_LOCATION_RESTRICTION
    *
    * @param self::STATE_* $state
    */

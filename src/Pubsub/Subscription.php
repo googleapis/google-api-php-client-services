@@ -220,7 +220,7 @@ class Subscription extends \Google\Collection
   }
   /**
    * Output only. Information about the associated Analytics Hub subscription.
-   * Only set if the subscritpion is created by Analytics Hub.
+   * Only set if the subscription is created by Analytics Hub.
    *
    * @param AnalyticsHubSubscriptionInfo $analyticsHubSubscriptionInfo
    */

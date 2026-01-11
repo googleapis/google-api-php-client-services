@@ -51,6 +51,12 @@ class BigQueryConfig extends \Google\Model
    */
   public const STATE_IN_TRANSIT_LOCATION_RESTRICTION = 'IN_TRANSIT_LOCATION_RESTRICTION';
   /**
+   * Cannot write to the BigQuery table because the table is not in the same
+   * location as where Vertex AI models used in `message_transform`s are
+   * deployed.
+   */
+  public const STATE_VERTEX_AI_LOCATION_RESTRICTION = 'VERTEX_AI_LOCATION_RESTRICTION';
+  /**
    * Optional. When true and use_topic_schema is true, any fields that are a
    * part of the topic schema that are not part of the BigQuery table schema are
    * dropped when writing to BigQuery. Otherwise, the schemas must be kept in
@@ -158,7 +164,8 @@ class BigQueryConfig extends \Google\Model
    * subscription can receive messages.
    *
    * Accepted values: STATE_UNSPECIFIED, ACTIVE, PERMISSION_DENIED, NOT_FOUND,
-   * SCHEMA_MISMATCH, IN_TRANSIT_LOCATION_RESTRICTION
+   * SCHEMA_MISMATCH, IN_TRANSIT_LOCATION_RESTRICTION,
+   * VERTEX_AI_LOCATION_RESTRICTION
    *
    * @param self::STATE_* $state
    */
