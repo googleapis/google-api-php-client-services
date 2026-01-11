@@ -30,6 +30,8 @@ class GoogleCloudAiplatformV1BatchPredictionJobOutputConfig extends \Google\Mode
    * @var string
    */
   public $predictionsFormat;
+  protected $vertexMultimodalDatasetDestinationType = GoogleCloudAiplatformV1VertexMultimodalDatasetDestination::class;
+  protected $vertexMultimodalDatasetDestinationDataType = '';
 
   /**
    * The BigQuery project or dataset location where the output is to be written
@@ -105,6 +107,23 @@ class GoogleCloudAiplatformV1BatchPredictionJobOutputConfig extends \Google\Mode
   public function getPredictionsFormat()
   {
     return $this->predictionsFormat;
+  }
+  /**
+   * The details for a Vertex Multimodal Dataset that will be created for the
+   * output.
+   *
+   * @param GoogleCloudAiplatformV1VertexMultimodalDatasetDestination $vertexMultimodalDatasetDestination
+   */
+  public function setVertexMultimodalDatasetDestination(GoogleCloudAiplatformV1VertexMultimodalDatasetDestination $vertexMultimodalDatasetDestination)
+  {
+    $this->vertexMultimodalDatasetDestination = $vertexMultimodalDatasetDestination;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1VertexMultimodalDatasetDestination
+   */
+  public function getVertexMultimodalDatasetDestination()
+  {
+    return $this->vertexMultimodalDatasetDestination;
   }
 }
 

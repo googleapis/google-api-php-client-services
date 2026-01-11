@@ -30,6 +30,8 @@ class GoogleCloudAiplatformV1BatchPredictionJobInputConfig extends \Google\Model
    * @var string
    */
   public $instancesFormat;
+  protected $vertexMultimodalDatasetSourceType = GoogleCloudAiplatformV1VertexMultimodalDatasetSource::class;
+  protected $vertexMultimodalDatasetSourceDataType = '';
 
   /**
    * The BigQuery location of the input table. The schema of the table should be
@@ -82,6 +84,23 @@ class GoogleCloudAiplatformV1BatchPredictionJobInputConfig extends \Google\Model
   public function getInstancesFormat()
   {
     return $this->instancesFormat;
+  }
+  /**
+   * A Vertex Managed Dataset. Currently, only datasets of type Multimodal are
+   * supported.
+   *
+   * @param GoogleCloudAiplatformV1VertexMultimodalDatasetSource $vertexMultimodalDatasetSource
+   */
+  public function setVertexMultimodalDatasetSource(GoogleCloudAiplatformV1VertexMultimodalDatasetSource $vertexMultimodalDatasetSource)
+  {
+    $this->vertexMultimodalDatasetSource = $vertexMultimodalDatasetSource;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1VertexMultimodalDatasetSource
+   */
+  public function getVertexMultimodalDatasetSource()
+  {
+    return $this->vertexMultimodalDatasetSource;
   }
 }
 

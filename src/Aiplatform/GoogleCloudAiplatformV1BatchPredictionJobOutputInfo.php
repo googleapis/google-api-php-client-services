@@ -42,6 +42,14 @@ class GoogleCloudAiplatformV1BatchPredictionJobOutputInfo extends \Google\Model
    * @var string
    */
   public $gcsOutputDirectory;
+  /**
+   * Output only. The resource name of the Vertex Managed Dataset created, into
+   * which the prediction output is written. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
+   *
+   * @var string
+   */
+  public $vertexMultimodalDatasetName;
 
   /**
    * Output only. The path of the BigQuery dataset created, in
@@ -95,6 +103,24 @@ class GoogleCloudAiplatformV1BatchPredictionJobOutputInfo extends \Google\Model
   public function getGcsOutputDirectory()
   {
     return $this->gcsOutputDirectory;
+  }
+  /**
+   * Output only. The resource name of the Vertex Managed Dataset created, into
+   * which the prediction output is written. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
+   *
+   * @param string $vertexMultimodalDatasetName
+   */
+  public function setVertexMultimodalDatasetName($vertexMultimodalDatasetName)
+  {
+    $this->vertexMultimodalDatasetName = $vertexMultimodalDatasetName;
+  }
+  /**
+   * @return string
+   */
+  public function getVertexMultimodalDatasetName()
+  {
+    return $this->vertexMultimodalDatasetName;
   }
 }
 

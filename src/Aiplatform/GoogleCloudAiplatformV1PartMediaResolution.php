@@ -36,6 +36,10 @@ class GoogleCloudAiplatformV1PartMediaResolution extends \Google\Model
    */
   public const LEVEL_MEDIA_RESOLUTION_HIGH = 'MEDIA_RESOLUTION_HIGH';
   /**
+   * Media resolution set to ultra high. This is for image only.
+   */
+  public const LEVEL_MEDIA_RESOLUTION_ULTRA_HIGH = 'MEDIA_RESOLUTION_ULTRA_HIGH';
+  /**
    * The tokenization quality used for given media.
    *
    * @var string
@@ -46,7 +50,7 @@ class GoogleCloudAiplatformV1PartMediaResolution extends \Google\Model
    * The tokenization quality used for given media.
    *
    * Accepted values: MEDIA_RESOLUTION_UNSPECIFIED, MEDIA_RESOLUTION_LOW,
-   * MEDIA_RESOLUTION_MEDIUM, MEDIA_RESOLUTION_HIGH
+   * MEDIA_RESOLUTION_MEDIUM, MEDIA_RESOLUTION_HIGH, MEDIA_RESOLUTION_ULTRA_HIGH
    *
    * @param self::LEVEL_* $level
    */

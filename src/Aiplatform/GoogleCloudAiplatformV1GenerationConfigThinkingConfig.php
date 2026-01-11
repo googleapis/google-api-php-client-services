@@ -28,9 +28,17 @@ class GoogleCloudAiplatformV1GenerationConfigThinkingConfig extends \Google\Mode
    */
   public const THINKING_LEVEL_LOW = 'LOW';
   /**
+   * Medium thinking level.
+   */
+  public const THINKING_LEVEL_MEDIUM = 'MEDIUM';
+  /**
    * High thinking level.
    */
   public const THINKING_LEVEL_HIGH = 'HIGH';
+  /**
+   * MINIMAL thinking level.
+   */
+  public const THINKING_LEVEL_MINIMAL = 'MINIMAL';
   /**
    * Optional. If true, the model will include its thoughts in the response.
    * "Thoughts" are the intermediate steps the model takes to arrive at the
@@ -97,7 +105,7 @@ class GoogleCloudAiplatformV1GenerationConfigThinkingConfig extends \Google\Mode
   /**
    * Optional. The number of thoughts tokens that the model should generate.
    *
-   * Accepted values: THINKING_LEVEL_UNSPECIFIED, LOW, HIGH
+   * Accepted values: THINKING_LEVEL_UNSPECIFIED, LOW, MEDIUM, HIGH, MINIMAL
    *
    * @param self::THINKING_LEVEL_* $thinkingLevel
    */

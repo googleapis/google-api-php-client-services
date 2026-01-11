@@ -173,7 +173,8 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * `software_config.post_startup_script_config.post_startup_script` *
    * `software_config.post_startup_script_config.post_startup_script_url` *
    * `software_config.post_startup_script_config.post_startup_script_behavior` *
-   * `software_config.env` * `software_config.colab_image.release_name`
+   * `software_config.env` * `software_config.colab_image.release_name` *
+   * `software_config.custom_container_config.image_uri`
    * @return GoogleCloudAiplatformV1NotebookRuntimeTemplate
    * @throws \Google\Service\Exception
    */
