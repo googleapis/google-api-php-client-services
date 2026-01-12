@@ -55,6 +55,11 @@ class Step extends \Google\Model
    */
   public const STATE_START_FROM_CLOUD_SQL_INSTANCE = 'START_FROM_CLOUD_SQL_INSTANCE';
   /**
+   * Initial state: packet originating from a Google Kubernetes Engine Pod. A
+   * GkePodInfo is populated with starting Pod information.
+   */
+  public const STATE_START_FROM_GKE_POD = 'START_FROM_GKE_POD';
+  /**
    * Initial state: packet originating from a Redis instance. A
    * RedisInstanceInfo is populated with starting instance information.
    */
@@ -173,6 +178,11 @@ class Step extends \Google\Model
    */
   public const STATE_NAT = 'NAT';
   /**
+   * Transition state: GKE Pod IP masquerading is skipped. The
+   * `ip_masquerading_skipped` field is populated with the reason.
+   */
+  public const STATE_SKIP_GKE_POD_IP_MASQUERADING = 'SKIP_GKE_POD_IP_MASQUERADING';
+  /**
    * Transition state: original connection is terminated and a new proxied
    * connection is initiated.
    */
@@ -237,6 +247,8 @@ class Step extends \Google\Model
   protected $forwardingRuleDataType = '';
   protected $gkeMasterType = GKEMasterInfo::class;
   protected $gkeMasterDataType = '';
+  protected $gkePodType = GkePodInfo::class;
+  protected $gkePodDataType = '';
   protected $googleServiceType = GoogleServiceInfo::class;
   protected $googleServiceDataType = '';
   protected $hybridSubnetType = HybridSubnetInfo::class;
@@ -245,6 +257,8 @@ class Step extends \Google\Model
   protected $instanceDataType = '';
   protected $interconnectAttachmentType = InterconnectAttachmentInfo::class;
   protected $interconnectAttachmentDataType = '';
+  protected $ipMasqueradingSkippedType = IpMasqueradingSkippedInfo::class;
+  protected $ipMasqueradingSkippedDataType = '';
   protected $loadBalancerType = LoadBalancerInfo::class;
   protected $loadBalancerDataType = '';
   protected $loadBalancerBackendInfoType = LoadBalancerBackendInfo::class;
@@ -529,6 +543,22 @@ class Step extends \Google\Model
     return $this->gkeMaster;
   }
   /**
+   * Display information of a Google Kubernetes Engine Pod.
+   *
+   * @param GkePodInfo $gkePod
+   */
+  public function setGkePod(GkePodInfo $gkePod)
+  {
+    $this->gkePod = $gkePod;
+  }
+  /**
+   * @return GkePodInfo
+   */
+  public function getGkePod()
+  {
+    return $this->gkePod;
+  }
+  /**
    * Display information of a Google service
    *
    * @param GoogleServiceInfo $googleService
@@ -591,6 +621,22 @@ class Step extends \Google\Model
   public function getInterconnectAttachment()
   {
     return $this->interconnectAttachment;
+  }
+  /**
+   * Display information of the reason why GKE Pod IP masquerading was skipped.
+   *
+   * @param IpMasqueradingSkippedInfo $ipMasqueradingSkipped
+   */
+  public function setIpMasqueradingSkipped(IpMasqueradingSkippedInfo $ipMasqueradingSkipped)
+  {
+    $this->ipMasqueradingSkipped = $ipMasqueradingSkipped;
+  }
+  /**
+   * @return IpMasqueradingSkippedInfo
+   */
+  public function getIpMasqueradingSkipped()
+  {
+    return $this->ipMasqueradingSkipped;
   }
   /**
    * Display information of the load balancers. Deprecated in favor of the
@@ -777,7 +823,7 @@ class Step extends \Google\Model
    *
    * Accepted values: STATE_UNSPECIFIED, START_FROM_INSTANCE,
    * START_FROM_INTERNET, START_FROM_GOOGLE_SERVICE, START_FROM_PRIVATE_NETWORK,
-   * START_FROM_GKE_MASTER, START_FROM_CLOUD_SQL_INSTANCE,
+   * START_FROM_GKE_MASTER, START_FROM_CLOUD_SQL_INSTANCE, START_FROM_GKE_POD,
    * START_FROM_REDIS_INSTANCE, START_FROM_REDIS_CLUSTER,
    * START_FROM_CLOUD_FUNCTION, START_FROM_APP_ENGINE_VERSION,
    * START_FROM_CLOUD_RUN_REVISION, START_FROM_STORAGE_BUCKET,
@@ -789,7 +835,8 @@ class Step extends \Google\Model
    * ARRIVE_AT_VPN_GATEWAY, ARRIVE_AT_VPN_TUNNEL,
    * ARRIVE_AT_INTERCONNECT_ATTACHMENT, ARRIVE_AT_VPC_CONNECTOR,
    * DIRECT_VPC_EGRESS_CONNECTION, SERVERLESS_EXTERNAL_CONNECTION, NAT,
-   * PROXY_CONNECTION, DELIVER, DROP, FORWARD, ABORT, VIEWER_PERMISSION_MISSING
+   * SKIP_GKE_POD_IP_MASQUERADING, PROXY_CONNECTION, DELIVER, DROP, FORWARD,
+   * ABORT, VIEWER_PERMISSION_MISSING
    *
    * @param self::STATE_* $state
    */

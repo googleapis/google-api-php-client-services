@@ -131,6 +131,10 @@ class DeliverInfo extends \Google\Model
    */
   public const TARGET_REDIS_CLUSTER = 'REDIS_CLUSTER';
   /**
+   * Target is a GKE Pod.
+   */
+  public const TARGET_GKE_POD = 'GKE_POD';
+  /**
    * Recognized type of a Google Service the packet is delivered to (if
    * applicable).
    *
@@ -262,7 +266,7 @@ class DeliverInfo extends \Google\Model
    * GKE_MASTER, CLOUD_SQL_INSTANCE, PSC_PUBLISHED_SERVICE, PSC_GOOGLE_API,
    * PSC_VPC_SC, SERVERLESS_NEG, STORAGE_BUCKET, PRIVATE_NETWORK,
    * CLOUD_FUNCTION, APP_ENGINE_VERSION, CLOUD_RUN_REVISION,
-   * GOOGLE_MANAGED_SERVICE, REDIS_INSTANCE, REDIS_CLUSTER
+   * GOOGLE_MANAGED_SERVICE, REDIS_INSTANCE, REDIS_CLUSTER, GKE_POD
    *
    * @param self::TARGET_* $target
    */

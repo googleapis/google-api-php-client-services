@@ -219,6 +219,12 @@ class AbortInfo extends \Google\Collection
    * Aborted because the used protocol is not supported for the used IP version.
    */
   public const CAUSE_IP_VERSION_PROTOCOL_MISMATCH = 'IP_VERSION_PROTOCOL_MISMATCH';
+  /**
+   * Aborted because selected GKE Pod endpoint location is unknown. This is
+   * often the case for "Pending" Pods, which don't have assigned IP addresses
+   * yet.
+   */
+  public const CAUSE_GKE_POD_UNKNOWN_ENDPOINT_LOCATION = 'GKE_POD_UNKNOWN_ENDPOINT_LOCATION';
   protected $collection_key = 'projectsMissingPermission';
   /**
    * Causes that the analysis is aborted.
@@ -267,7 +273,7 @@ class AbortInfo extends \Google\Collection
    * SOURCE_REDIS_INSTANCE_UNSUPPORTED, SOURCE_FORWARDING_RULE_UNSUPPORTED,
    * NON_ROUTABLE_IP_ADDRESS, UNKNOWN_ISSUE_IN_GOOGLE_MANAGED_PROJECT,
    * UNSUPPORTED_GOOGLE_MANAGED_PROJECT_CONFIG, NO_SERVERLESS_IP_RANGES,
-   * IP_VERSION_PROTOCOL_MISMATCH
+   * IP_VERSION_PROTOCOL_MISMATCH, GKE_POD_UNKNOWN_ENDPOINT_LOCATION
    *
    * @param self::CAUSE_* $cause
    */

@@ -148,6 +148,13 @@ class Endpoint extends \Google\Model
    */
   public $gkeMasterCluster;
   /**
+   * A [GKE Pod](https://cloud.google.com/kubernetes-engine/docs/concepts/pod)
+   * URI.
+   *
+   * @var string
+   */
+  public $gkePod;
+  /**
    * A Compute Engine instance URI.
    *
    * @var string
@@ -368,6 +375,23 @@ class Endpoint extends \Google\Model
   public function getGkeMasterCluster()
   {
     return $this->gkeMasterCluster;
+  }
+  /**
+   * A [GKE Pod](https://cloud.google.com/kubernetes-engine/docs/concepts/pod)
+   * URI.
+   *
+   * @param string $gkePod
+   */
+  public function setGkePod($gkePod)
+  {
+    $this->gkePod = $gkePod;
+  }
+  /**
+   * @return string
+   */
+  public function getGkePod()
+  {
+    return $this->gkePod;
   }
   /**
    * A Compute Engine instance URI.
