@@ -17,6 +17,7 @@
 
 namespace Google\Service\Connectors\Resource;
 
+use Google\Service\Connectors\GetResourcePostRequest;
 use Google\Service\Connectors\GetResourceResponse;
 use Google\Service\Connectors\ListResourcesResponse;
 
@@ -36,6 +37,10 @@ class ProjectsLocationsConnectionsResources extends \Google\Service\Resource
    * @param string $name Required. Resource name of the Resource. Format: projects
    * /{project}/locations/{location}/connections/{connection}/resources/{resource}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return GetResourceResponse
    * @throws \Google\Service\Exception
    */
@@ -46,6 +51,22 @@ class ProjectsLocationsConnectionsResources extends \Google\Service\Resource
     return $this->call('get', [$params], GetResourceResponse::class);
   }
   /**
+   * Gets a specific resource with POST. (resources.getResourcePost)
+   *
+   * @param string $name Required. Resource name of the Resource. Format: projects
+   * /{project}/locations/{location}/connections/{connection}/resources/{resource}
+   * @param GetResourcePostRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GetResourceResponse
+   * @throws \Google\Service\Exception
+   */
+  public function getResourcePost($name, GetResourcePostRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('getResourcePost', [$params], GetResourceResponse::class);
+  }
+  /**
    * Lists all available resources.
    * (resources.listProjectsLocationsConnectionsResources)
    *
@@ -53,6 +74,9 @@ class ProjectsLocationsConnectionsResources extends \Google\Service\Resource
    * projects/{project}/locations/{location}/connections/{connection}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @opt_param int pageSize Optional. Page size for the request.
    * @opt_param string pageToken Optional. Page token for the request.
    * @return ListResourcesResponse

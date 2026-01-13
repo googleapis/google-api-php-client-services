@@ -19,13 +19,37 @@ namespace Google\Service\Connectors;
 
 class ExecuteToolRequest extends \Google\Model
 {
+  protected $executionConfigType = ExecutionConfig::class;
+  protected $executionConfigDataType = '';
   /**
    * Input parameters for the tool.
    *
    * @var array[]
    */
   public $parameters;
+  /**
+   * Tool definition for the tool to be executed.
+   *
+   * @var array[]
+   */
+  public $toolDefinition;
 
+  /**
+   * execution config for the request.
+   *
+   * @param ExecutionConfig $executionConfig
+   */
+  public function setExecutionConfig(ExecutionConfig $executionConfig)
+  {
+    $this->executionConfig = $executionConfig;
+  }
+  /**
+   * @return ExecutionConfig
+   */
+  public function getExecutionConfig()
+  {
+    return $this->executionConfig;
+  }
   /**
    * Input parameters for the tool.
    *
@@ -41,6 +65,22 @@ class ExecuteToolRequest extends \Google\Model
   public function getParameters()
   {
     return $this->parameters;
+  }
+  /**
+   * Tool definition for the tool to be executed.
+   *
+   * @param array[] $toolDefinition
+   */
+  public function setToolDefinition($toolDefinition)
+  {
+    $this->toolDefinition = $toolDefinition;
+  }
+  /**
+   * @return array[]
+   */
+  public function getToolDefinition()
+  {
+    return $this->toolDefinition;
   }
 }
 

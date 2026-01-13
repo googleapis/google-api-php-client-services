@@ -23,6 +23,8 @@ use Google\Service\Connectors\ExchangeAuthCodeRequest;
 use Google\Service\Connectors\ExchangeAuthCodeResponse;
 use Google\Service\Connectors\ExecuteSqlQueryRequest;
 use Google\Service\Connectors\ExecuteSqlQueryResponse;
+use Google\Service\Connectors\ListToolsPostRequest;
+use Google\Service\Connectors\ListToolsResponse;
 use Google\Service\Connectors\RefreshAccessTokenRequest;
 use Google\Service\Connectors\RefreshAccessTokenResponse;
 
@@ -61,6 +63,10 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    *
    * @param string $name
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return CheckStatusResponse
    * @throws \Google\Service\Exception
    */
@@ -122,6 +128,22 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('refreshAccessToken', [$params], RefreshAccessTokenResponse::class);
+  }
+  /**
+   * Lists all available tools with POST. (connections.tools)
+   *
+   * @param string $parent Required. Resource name of the Connection. Format:
+   * projects/{project}/locations/{location}/connections/{connection}
+   * @param ListToolsPostRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ListToolsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function tools($parent, ListToolsPostRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('tools', [$params], ListToolsResponse::class);
   }
 }
 

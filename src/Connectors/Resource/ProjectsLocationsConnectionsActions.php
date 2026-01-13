@@ -57,6 +57,9 @@ class ProjectsLocationsConnectionsActions extends \Google\Service\Resource
    * project}/locations/{location}/connections/{connection}/actions/{action}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @opt_param string view Specified view of the action schema.
    * @return Action
    * @throws \Google\Service\Exception
@@ -75,6 +78,9 @@ class ProjectsLocationsConnectionsActions extends \Google\Service\Resource
    * projects/{project}/locations/{location}/connections/{connection}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @opt_param int pageSize Number of Actions to return. Defaults to 25.
    * @opt_param string pageToken Page token, return from a previous ListActions
    * call, that can be used retrieve the next page of content. If unspecified, the

@@ -40,6 +40,9 @@ class ProjectsLocationsConnectionsEntityTypes extends \Google\Service\Resource
    *
    * @opt_param string contextMetadata Context metadata for request could be used
    * to fetch customization of entity type schema.
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @opt_param string view Specifies view for entity type schema.
    * @return EntityType
    * @throws \Google\Service\Exception
@@ -58,6 +61,9 @@ class ProjectsLocationsConnectionsEntityTypes extends \Google\Service\Resource
    * projects/{project}/locations/{location}/connections/{connection}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @opt_param int pageSize Number of entity types to return. Defaults to 25.
    * @opt_param string pageToken Page token, return from a previous
    * ListEntityTypes call, that can be used retrieve the next page of content. If

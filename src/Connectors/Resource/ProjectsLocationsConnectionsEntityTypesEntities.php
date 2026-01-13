@@ -43,6 +43,10 @@ class ProjectsLocationsConnectionsEntityTypesEntities extends \Google\Service\Re
    * pe}
    * @param Entity $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return Entity
    * @throws \Google\Service\Exception
    */
@@ -60,6 +64,10 @@ class ProjectsLocationsConnectionsEntityTypesEntities extends \Google\Service\Re
    * cts/{project}/locations/{location}/connections/{connection}/entityTypes/{type
    * }/entities/{id}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return ConnectorsEmpty
    * @throws \Google\Service\Exception
    */
@@ -85,6 +93,9 @@ class ProjectsLocationsConnectionsEntityTypesEntities extends \Google\Service\Re
    * conditions field is left empty, an exception is thrown. We don't want to
    * consider 'empty conditions' to be a match-all case. Connector developers can
    * determine and document what a match-all case constraint would be.
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return ConnectorsEmpty
    * @throws \Google\Service\Exception
    */
@@ -102,6 +113,10 @@ class ProjectsLocationsConnectionsEntityTypesEntities extends \Google\Service\Re
    * cts/{project}/locations/{location}/connections/{connection}/entityTypes/{type
    * }/entities/{id}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return Entity
    * @throws \Google\Service\Exception
    */
@@ -132,6 +147,9 @@ class ProjectsLocationsConnectionsEntityTypesEntities extends \Google\Service\Re
    * From a proto standpoint, There are no restrictions on what can be passed
    * using this field. The connector documentation should have information about
    * what format of filters/conditions are supported.
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @opt_param int pageSize Number of entity rows to return. Defaults page size =
    * 25. Max page size = 200.
    * @opt_param string pageToken Page token value if available from a previous
@@ -161,6 +179,10 @@ class ProjectsLocationsConnectionsEntityTypesEntities extends \Google\Service\Re
    * entities/{id}
    * @param Entity $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return Entity
    * @throws \Google\Service\Exception
    */
@@ -187,6 +209,9 @@ class ProjectsLocationsConnectionsEntityTypesEntities extends \Google\Service\Re
    * conditions field is left empty, an exception is thrown. We don't want to
    * consider 'empty conditions' to be a match-all case. Connector developers can
    * determine and document what a match-all case constraint would be.
+   * @opt_param string executionConfig.headers headers to be used for the request.
+   * For example: headers:'{"x-integration-connectors-managed-connection-
+   * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @return UpdateEntitiesWithConditionsResponse
    * @throws \Google\Service\Exception
    */

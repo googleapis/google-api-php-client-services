@@ -17,23 +17,27 @@
 
 namespace Google\Service\Connectors;
 
-class RefreshAccessTokenRequest extends \Google\Model
+class ListToolsPostRequest extends \Google\Model
 {
   protected $executionConfigType = ExecutionConfig::class;
   protected $executionConfigDataType = '';
-  protected $oauth2ConfigType = OAuth2Config::class;
-  protected $oauth2ConfigDataType = '';
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the
-   * runtime will read the data from the secret manager.
+   * Page size.
+   *
+   * @var int
+   */
+  public $pageSize;
+  /**
+   * Page token.
    *
    * @var string
    */
-  public $refreshToken;
+  public $pageToken;
+  protected $toolSpecType = ToolSpec::class;
+  protected $toolSpecDataType = '';
 
   /**
-   * ExecutionConfig contains the configuration for the execution of the
-   * request.
+   * execution config for the request.
    *
    * @param ExecutionConfig $executionConfig
    */
@@ -49,39 +53,54 @@ class RefreshAccessTokenRequest extends \Google\Model
     return $this->executionConfig;
   }
   /**
-   * OAuth2Config contains the OAuth2 config for the connection.
+   * Page size.
    *
-   * @param OAuth2Config $oauth2Config
+   * @param int $pageSize
    */
-  public function setOauth2Config(OAuth2Config $oauth2Config)
+  public function setPageSize($pageSize)
   {
-    $this->oauth2Config = $oauth2Config;
+    $this->pageSize = $pageSize;
   }
   /**
-   * @return OAuth2Config
+   * @return int
    */
-  public function getOauth2Config()
+  public function getPageSize()
   {
-    return $this->oauth2Config;
+    return $this->pageSize;
   }
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the
-   * runtime will read the data from the secret manager.
+   * Page token.
    *
-   * @param string $refreshToken
+   * @param string $pageToken
    */
-  public function setRefreshToken($refreshToken)
+  public function setPageToken($pageToken)
   {
-    $this->refreshToken = $refreshToken;
+    $this->pageToken = $pageToken;
   }
   /**
    * @return string
    */
-  public function getRefreshToken()
+  public function getPageToken()
   {
-    return $this->refreshToken;
+    return $this->pageToken;
+  }
+  /**
+   * List of tool specifications.
+   *
+   * @param ToolSpec $toolSpec
+   */
+  public function setToolSpec(ToolSpec $toolSpec)
+  {
+    $this->toolSpec = $toolSpec;
+  }
+  /**
+   * @return ToolSpec
+   */
+  public function getToolSpec()
+  {
+    return $this->toolSpec;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RefreshAccessTokenRequest::class, 'Google_Service_Connectors_RefreshAccessTokenRequest');
+class_alias(ListToolsPostRequest::class, 'Google_Service_Connectors_ListToolsPostRequest');

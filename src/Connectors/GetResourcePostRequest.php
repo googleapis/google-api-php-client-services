@@ -17,20 +17,15 @@
 
 namespace Google\Service\Connectors;
 
-class ExecuteActionRequest extends \Google\Model
+class GetResourcePostRequest extends \Google\Model
 {
   protected $executionConfigType = ExecutionConfig::class;
   protected $executionConfigDataType = '';
-  /**
-   * Parameters for executing the action. The parameters can be key/value pairs
-   * or nested structs.
-   *
-   * @var array[]
-   */
-  public $parameters;
+  protected $toolSpecType = ToolSpec::class;
+  protected $toolSpecDataType = '';
 
   /**
-   * Execution config for the request.
+   * execution config for the request.
    *
    * @param ExecutionConfig $executionConfig
    */
@@ -46,23 +41,22 @@ class ExecuteActionRequest extends \Google\Model
     return $this->executionConfig;
   }
   /**
-   * Parameters for executing the action. The parameters can be key/value pairs
-   * or nested structs.
+   * List of tool specifications.
    *
-   * @param array[] $parameters
+   * @param ToolSpec $toolSpec
    */
-  public function setParameters($parameters)
+  public function setToolSpec(ToolSpec $toolSpec)
   {
-    $this->parameters = $parameters;
+    $this->toolSpec = $toolSpec;
   }
   /**
-   * @return array[]
+   * @return ToolSpec
    */
-  public function getParameters()
+  public function getToolSpec()
   {
-    return $this->parameters;
+    return $this->toolSpec;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ExecuteActionRequest::class, 'Google_Service_Connectors_ExecuteActionRequest');
+class_alias(GetResourcePostRequest::class, 'Google_Service_Connectors_GetResourcePostRequest');
