@@ -17,8 +17,9 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1HealthcareFhirConfig extends \Google\Model
+class GoogleCloudDiscoveryengineV1HealthcareFhirConfig extends \Google\Collection
 {
+  protected $collection_key = 'initialFilterGroups';
   /**
    * Whether to enable configurable schema for `HEALTHCARE_FHIR` vertical. If
    * set to `true`, the predefined healthcare fhir schema can be extended for
@@ -35,6 +36,17 @@ class GoogleCloudDiscoveryengineV1HealthcareFhirConfig extends \Google\Model
    * @var bool
    */
   public $enableStaticIndexingForBatchIngestion;
+  /**
+   * Optional. Names of the Group resources to use as a basis for the initial
+   * patient filter, in format `projects/{project_id}/locations/{location_id}/da
+   * tasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Group/{group_id}`. The
+   * filter group must be a FHIR resource name of type Group, and the filter
+   * will be constructed from the direct members of the group which are Patient
+   * resources.
+   *
+   * @var string[]
+   */
+  public $initialFilterGroups;
 
   /**
    * Whether to enable configurable schema for `HEALTHCARE_FHIR` vertical. If
@@ -71,6 +83,27 @@ class GoogleCloudDiscoveryengineV1HealthcareFhirConfig extends \Google\Model
   public function getEnableStaticIndexingForBatchIngestion()
   {
     return $this->enableStaticIndexingForBatchIngestion;
+  }
+  /**
+   * Optional. Names of the Group resources to use as a basis for the initial
+   * patient filter, in format `projects/{project_id}/locations/{location_id}/da
+   * tasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Group/{group_id}`. The
+   * filter group must be a FHIR resource name of type Group, and the filter
+   * will be constructed from the direct members of the group which are Patient
+   * resources.
+   *
+   * @param string[] $initialFilterGroups
+   */
+  public function setInitialFilterGroups($initialFilterGroups)
+  {
+    $this->initialFilterGroups = $initialFilterGroups;
+  }
+  /**
+   * @return string[]
+   */
+  public function getInitialFilterGroups()
+  {
+    return $this->initialFilterGroups;
   }
 }
 

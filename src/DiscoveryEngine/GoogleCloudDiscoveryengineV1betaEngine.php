@@ -151,6 +151,8 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * @var string
    */
   public $industryVertical;
+  protected $knowledgeGraphConfigType = GoogleCloudDiscoveryengineV1betaEngineKnowledgeGraphConfig::class;
+  protected $knowledgeGraphConfigDataType = '';
   protected $mediaRecommendationEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig::class;
   protected $mediaRecommendationEngineConfigDataType = '';
   /**
@@ -410,6 +412,23 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   public function getIndustryVertical()
   {
     return $this->industryVertical;
+  }
+  /**
+   * Optional. Configurations for the Knowledge Graph. Only applicable if
+   * solution_type is SOLUTION_TYPE_SEARCH.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaEngineKnowledgeGraphConfig $knowledgeGraphConfig
+   */
+  public function setKnowledgeGraphConfig(GoogleCloudDiscoveryengineV1betaEngineKnowledgeGraphConfig $knowledgeGraphConfig)
+  {
+    $this->knowledgeGraphConfig = $knowledgeGraphConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaEngineKnowledgeGraphConfig
+   */
+  public function getKnowledgeGraphConfig()
+  {
+    return $this->knowledgeGraphConfig;
   }
   /**
    * Configurations for the Media Engine. Only applicable on the data stores
