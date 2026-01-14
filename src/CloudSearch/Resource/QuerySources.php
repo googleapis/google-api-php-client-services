@@ -34,7 +34,7 @@ class QuerySources extends \Google\Service\Resource
    * **Note:** This API requires a standard end user account to execute. A service
    * account can't perform Query API requests directly; to use a service account
    * to perform queries, set up [Google Workspace domain-wide delegation of
-   * authority](https://developers.google.com/cloud-
+   * authority](https://developers.google.com/workspace/cloud-
    * search/docs/guides/delegation/). (sources.listQuerySources)
    *
    * @param array $optParams Optional parameters.

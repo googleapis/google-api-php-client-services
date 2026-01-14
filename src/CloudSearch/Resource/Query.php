@@ -40,7 +40,7 @@ class Query extends \Google\Service\Resource
    * method. **Note:** This API requires a standard end user account to execute. A
    * service account can't perform Query API requests directly; to use a service
    * account to perform queries, set up [Google Workspace domain-wide delegation
-   * of authority](https://developers.google.com/cloud-
+   * of authority](https://developers.google.com/workspace/cloud-
    * search/docs/guides/delegation/). (query.debugSearch)
    *
    * @param SearchRequest $postBody
@@ -60,7 +60,7 @@ class Query extends \Google\Service\Resource
    * account to execute. A service account can't perform Remove Activity requests
    * directly; to use a service account to perform queries, set up [Google
    * Workspace domain-wide delegation of
-   * authority](https://developers.google.com/cloud-
+   * authority](https://developers.google.com/workspace/cloud-
    * search/docs/guides/delegation/). (query.removeActivity)
    *
    * @param RemoveActivityRequest $postBody
@@ -82,7 +82,7 @@ class Query extends \Google\Service\Resource
    * standard end user account to execute. A service account can't perform Query
    * API requests directly; to use a service account to perform queries, set up
    * [Google Workspace domain-wide delegation of
-   * authority](https://developers.google.com/cloud-
+   * authority](https://developers.google.com/workspace/cloud-
    * search/docs/guides/delegation/). (query.search)
    *
    * @param SearchRequest $postBody
@@ -101,7 +101,7 @@ class Query extends \Google\Service\Resource
    * requires a standard end user account to execute. A service account can't
    * perform Query API requests directly; to use a service account to perform
    * queries, set up [Google Workspace domain-wide delegation of
-   * authority](https://developers.google.com/cloud-
+   * authority](https://developers.google.com/workspace/cloud-
    * search/docs/guides/delegation/). (query.suggest)
    *
    * @param SuggestRequest $postBody

@@ -114,8 +114,8 @@ class SettingsSearchapplications extends \Google\Service\Resource
    * @param SearchApplication $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Only applies to
-   * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+   * @opt_param string updateMask Only applies to [`settings.searchapplications.pa
+   * tch`](https://developers.google.com/workspace/cloud-
    * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask
    * to control which fields to update. Example field paths:
    * `search_application.name`, `search_application.displayName`. * If
@@ -160,8 +160,8 @@ class SettingsSearchapplications extends \Google\Service\Resource
    * @param SearchApplication $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Only applies to
-   * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+   * @opt_param string updateMask Only applies to [`settings.searchapplications.pa
+   * tch`](https://developers.google.com/workspace/cloud-
    * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask
    * to control which fields to update. Example field paths:
    * `search_application.name`, `search_application.displayName`. * If

@@ -117,7 +117,7 @@ class SettingsDatasources extends \Google\Service\Resource
    * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
    * help with debugging, set this field. Otherwise, ignore this field.
    * @opt_param string updateMask Only applies to
-   * [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * [`settings.datasources.patch`](https://developers.google.com/workspace/cloud-
    * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to
    * control which fields to update. Example field paths: `name`, `displayName`. *
    * If `update_mask` is non-empty, then only the fields specified in the

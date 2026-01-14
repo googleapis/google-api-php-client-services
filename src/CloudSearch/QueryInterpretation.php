@@ -61,6 +61,18 @@ class QueryInterpretation extends \Google\Model
    */
   public $interpretedQuery;
   /**
+   * The actual number of results returned by the interpreted query.
+   *
+   * @var int
+   */
+  public $interpretedQueryActualResultCount;
+  /**
+   * The estimated number of results returned by the interpreted query.
+   *
+   * @var string
+   */
+  public $interpretedQueryEstimatedResultCount;
+  /**
    * The reason for interpretation of the query. This field will not be
    * UNSPECIFIED if the interpretation type is not NONE.
    *
@@ -100,6 +112,38 @@ class QueryInterpretation extends \Google\Model
   public function getInterpretedQuery()
   {
     return $this->interpretedQuery;
+  }
+  /**
+   * The actual number of results returned by the interpreted query.
+   *
+   * @param int $interpretedQueryActualResultCount
+   */
+  public function setInterpretedQueryActualResultCount($interpretedQueryActualResultCount)
+  {
+    $this->interpretedQueryActualResultCount = $interpretedQueryActualResultCount;
+  }
+  /**
+   * @return int
+   */
+  public function getInterpretedQueryActualResultCount()
+  {
+    return $this->interpretedQueryActualResultCount;
+  }
+  /**
+   * The estimated number of results returned by the interpreted query.
+   *
+   * @param string $interpretedQueryEstimatedResultCount
+   */
+  public function setInterpretedQueryEstimatedResultCount($interpretedQueryEstimatedResultCount)
+  {
+    $this->interpretedQueryEstimatedResultCount = $interpretedQueryEstimatedResultCount;
+  }
+  /**
+   * @return string
+   */
+  public function getInterpretedQueryEstimatedResultCount()
+  {
+    return $this->interpretedQueryEstimatedResultCount;
   }
   /**
    * The reason for interpretation of the query. This field will not be

@@ -61,7 +61,8 @@ class IndexingDatasourcesItems extends \Google\Service\Resource
    * to the version of the currently indexed item. The maximum length for this
    * field is 1024 bytes. For information on how item version affects the deletion
    * process, refer to [Handle revisions after manual
-   * deletes](https://developers.google.com/cloud-search/docs/guides/operations).
+   * deletes](https://developers.google.com/workspace/cloud-
+   * search/docs/guides/operations).
    * @return Operation
    * @throws \Google\Service\Exception
    */

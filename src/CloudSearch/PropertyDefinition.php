@@ -84,8 +84,8 @@ class PropertyDefinition extends \Google\Model
    * supported for Text properties. IsReturnable must be true to set this
    * option. In a given datasource maximum of 5 properties can be marked as
    * is_wildcard_searchable. For more details, see [Define object
-   * properties](https://developers.google.com/cloud-search/docs/guides/schema-
-   * guide#properties)
+   * properties](https://developers.google.com/workspace/cloud-
+   * search/docs/guides/schema-guide#properties)
    *
    * @var bool
    */
@@ -313,8 +313,8 @@ class PropertyDefinition extends \Google\Model
    * supported for Text properties. IsReturnable must be true to set this
    * option. In a given datasource maximum of 5 properties can be marked as
    * is_wildcard_searchable. For more details, see [Define object
-   * properties](https://developers.google.com/cloud-search/docs/guides/schema-
-   * guide#properties)
+   * properties](https://developers.google.com/workspace/cloud-
+   * search/docs/guides/schema-guide#properties)
    *
    * @param bool $isWildcardSearchable
    */

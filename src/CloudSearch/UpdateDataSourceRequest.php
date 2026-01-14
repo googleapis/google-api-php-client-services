@@ -24,8 +24,8 @@ class UpdateDataSourceRequest extends \Google\Model
   protected $sourceType = DataSource::class;
   protected $sourceDataType = '';
   /**
-   * Only applies to
-   * [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * Only applies to [`settings.datasources.patch`](https://developers.google.co
+   * m/workspace/cloud-
    * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to
    * control which fields to update. Example field paths: `name`, `displayName`.
    * * If `update_mask` is non-empty, then only the fields specified in the
@@ -69,8 +69,8 @@ class UpdateDataSourceRequest extends \Google\Model
     return $this->source;
   }
   /**
-   * Only applies to
-   * [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * Only applies to [`settings.datasources.patch`](https://developers.google.co
+   * m/workspace/cloud-
    * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to
    * control which fields to update. Example field paths: `name`, `displayName`.
    * * If `update_mask` is non-empty, then only the fields specified in the
