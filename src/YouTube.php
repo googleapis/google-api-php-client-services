@@ -90,7 +90,6 @@ class YouTube extends \Google\Service
   public $watermarks;
   public $youtube_v3;
   public $youtube_v3_liveChat_messages;
-  public $youtube_v3_videos;
   public $rootUrlTemplate;
 
   /**
@@ -2272,35 +2271,6 @@ class YouTube extends \Google\Service
                 'profileImageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->youtube_v3_videos = new YouTube\Resource\YoutubeV3Videos(
-        $this,
-        $this->serviceName,
-        'videos',
-        [
-          'methods' => [
-            'batchGetStats' => [
-              'path' => 'youtube/v3/videos:batchGetStats',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'id' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'onBehalfOfContentOwner' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'part' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ],
               ],
             ],
