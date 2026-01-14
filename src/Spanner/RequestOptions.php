@@ -57,8 +57,9 @@ class RequestOptions extends \Google\Model
   /**
    * A tag used for statistics collection about this transaction. Both
    * `request_tag` and `transaction_tag` can be specified for a read or query
-   * that belongs to a transaction. The value of transaction_tag should be the
-   * same for all requests belonging to the same transaction. If this request
+   * that belongs to a transaction. To enable tagging on a transaction,
+   * `transaction_tag` must be set to the same value for all requests belonging
+   * to the same transaction, including BeginTransaction. If this request
    * doesn't belong to any transaction, `transaction_tag` is ignored. Legal
    * characters for `transaction_tag` values are all printable characters (ASCII
    * 32 - 126) and the length of a `transaction_tag` is limited to 50
@@ -114,8 +115,9 @@ class RequestOptions extends \Google\Model
   /**
    * A tag used for statistics collection about this transaction. Both
    * `request_tag` and `transaction_tag` can be specified for a read or query
-   * that belongs to a transaction. The value of transaction_tag should be the
-   * same for all requests belonging to the same transaction. If this request
+   * that belongs to a transaction. To enable tagging on a transaction,
+   * `transaction_tag` must be set to the same value for all requests belonging
+   * to the same transaction, including BeginTransaction. If this request
    * doesn't belong to any transaction, `transaction_tag` is ignored. Legal
    * characters for `transaction_tag` values are all printable characters (ASCII
    * 32 - 126) and the length of a `transaction_tag` is limited to 50
