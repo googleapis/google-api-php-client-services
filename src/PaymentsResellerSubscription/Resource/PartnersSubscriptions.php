@@ -74,8 +74,8 @@ class PartnersSubscriptions extends \Google\Service\Resource
    *
    * @opt_param string subscriptionId Required. Identifies the subscription
    * resource on the Partner side. The value is restricted to 63 ASCII characters
-   * at the maximum. If a subscription was previously created with the same
-   * subscription_id, we will directly return that one.
+   * at the maximum. If a subscription with the same ID already exists, the
+   * creation fails with an `ALREADY_EXISTS` error.
    * @return Subscription
    * @throws \Google\Service\Exception
    */
@@ -161,8 +161,8 @@ class PartnersSubscriptions extends \Google\Service\Resource
    * the duration
    * @opt_param string subscriptionId Required. Identifies the subscription
    * resource on the Partner side. The value is restricted to 63 ASCII characters
-   * at the maximum. If a subscription was previously created with the same
-   * subscription_id, we will directly return that one.
+   * at the maximum. If a subscription with the same ID already exists, the
+   * creation fails with an `ALREADY_EXISTS` error.
    * @return Subscription
    * @throws \Google\Service\Exception
    */
