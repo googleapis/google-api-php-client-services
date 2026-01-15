@@ -21,6 +21,8 @@ class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPoint exten
 {
   protected $conversationMeasureType = GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointConversationMeasure::class;
   protected $conversationMeasureDataType = '';
+  protected $dialogflowInteractionMeasureType = GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointDialogflowInteractionMeasure::class;
+  protected $dialogflowInteractionMeasureDataType = '';
   protected $intervalType = GoogleTypeInterval::class;
   protected $intervalDataType = '';
 
@@ -39,6 +41,22 @@ class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPoint exten
   public function getConversationMeasure()
   {
     return $this->conversationMeasure;
+  }
+  /**
+   * The measure related to dialogflow interactions.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointDialogflowInteractionMeasure $dialogflowInteractionMeasure
+   */
+  public function setDialogflowInteractionMeasure(GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointDialogflowInteractionMeasure $dialogflowInteractionMeasure)
+  {
+    $this->dialogflowInteractionMeasure = $dialogflowInteractionMeasure;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointDialogflowInteractionMeasure
+   */
+  public function getDialogflowInteractionMeasure()
+  {
+    return $this->dialogflowInteractionMeasure;
   }
   /**
    * The interval that this data point represents. * If this is the total data
