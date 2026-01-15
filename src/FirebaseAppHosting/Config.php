@@ -20,11 +20,33 @@ namespace Google\Service\FirebaseAppHosting;
 class Config extends \Google\Collection
 {
   protected $collection_key = 'env';
+  protected $effectiveEnvType = EnvironmentVariable::class;
+  protected $effectiveEnvDataType = 'array';
   protected $envType = EnvironmentVariable::class;
   protected $envDataType = 'array';
   protected $runConfigType = RunConfig::class;
   protected $runConfigDataType = '';
 
+  /**
+   * Output only. [OUTPUT_ONLY] This field represents all environment variables
+   * employed during both the build and runtime. This list reflects the result
+   * of merging variables from all sources (Backend.override_env,
+   * Build.Config.env, YAML, defaults, system). Each variable includes its
+   * `origin`
+   *
+   * @param EnvironmentVariable[] $effectiveEnv
+   */
+  public function setEffectiveEnv($effectiveEnv)
+  {
+    $this->effectiveEnv = $effectiveEnv;
+  }
+  /**
+   * @return EnvironmentVariable[]
+   */
+  public function getEffectiveEnv()
+  {
+    return $this->effectiveEnv;
+  }
   /**
    * Optional. Supplied environment variables for a specific build. Provided at
    * Build creation time and immutable afterwards. This field is only applicable

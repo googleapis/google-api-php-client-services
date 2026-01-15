@@ -19,6 +19,28 @@ namespace Google\Service\FirebaseAppHosting;
 
 class EnvironmentVariable extends \Google\Collection
 {
+  /**
+   * Source is unspecified.
+   */
+  public const ORIGIN_ORIGIN_UNSPECIFIED = 'ORIGIN_UNSPECIFIED';
+  /**
+   * Variable was set on the backend resource (e.g. via API or Console).
+   * Represents variables from `Backend.override_env`
+   */
+  public const ORIGIN_BACKEND_OVERRIDES = 'BACKEND_OVERRIDES';
+  /**
+   * Variable was provided specifically for the build upon creation via the
+   * `Build.Config.env` field. Only used for pre-built images.
+   */
+  public const ORIGIN_BUILD_CONFIG = 'BUILD_CONFIG';
+  /**
+   * Variable is defined in apphosting.yaml file.
+   */
+  public const ORIGIN_APPHOSTING_YAML = 'APPHOSTING_YAML';
+  /**
+   * Variable is defined provided by the firebase platform.
+   */
+  public const ORIGIN_FIREBASE_SYSTEM = 'FIREBASE_SYSTEM';
   protected $collection_key = 'availability';
   /**
    * Optional. Where this variable should be made available. If left
@@ -27,6 +49,20 @@ class EnvironmentVariable extends \Google\Collection
    * @var string[]
    */
   public $availability;
+  /**
+   * Output only. The high-level origin category of the environment variable.
+   *
+   * @var string
+   */
+  public $origin;
+  /**
+   * Output only. Specific detail about the source. For APPHOSTING_YAML origins,
+   * this will contain the exact filename, such as "apphosting.yaml" or
+   * "apphosting.staging.yaml".
+   *
+   * @var string
+   */
+  public $originFileName;
   /**
    * A fully qualified secret version. The value of the secret will be accessed
    * once while building the application and once per cold start of the
@@ -70,6 +106,43 @@ class EnvironmentVariable extends \Google\Collection
   public function getAvailability()
   {
     return $this->availability;
+  }
+  /**
+   * Output only. The high-level origin category of the environment variable.
+   *
+   * Accepted values: ORIGIN_UNSPECIFIED, BACKEND_OVERRIDES, BUILD_CONFIG,
+   * APPHOSTING_YAML, FIREBASE_SYSTEM
+   *
+   * @param self::ORIGIN_* $origin
+   */
+  public function setOrigin($origin)
+  {
+    $this->origin = $origin;
+  }
+  /**
+   * @return self::ORIGIN_*
+   */
+  public function getOrigin()
+  {
+    return $this->origin;
+  }
+  /**
+   * Output only. Specific detail about the source. For APPHOSTING_YAML origins,
+   * this will contain the exact filename, such as "apphosting.yaml" or
+   * "apphosting.staging.yaml".
+   *
+   * @param string $originFileName
+   */
+  public function setOriginFileName($originFileName)
+  {
+    $this->originFileName = $originFileName;
+  }
+  /**
+   * @return string
+   */
+  public function getOriginFileName()
+  {
+    return $this->originFileName;
   }
   /**
    * A fully qualified secret version. The value of the secret will be accessed
