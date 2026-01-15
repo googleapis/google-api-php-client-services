@@ -94,6 +94,19 @@ class DeviceRadioState extends \Google\Model
    */
   public const ULTRA_WIDEBAND_STATE_ULTRA_WIDEBAND_DISABLED = 'ULTRA_WIDEBAND_DISABLED';
   /**
+   * Unspecified. Defaults to USER_INITIATED_ADD_ESIM_ALLOWED.
+   */
+  public const USER_INITIATED_ADD_ESIM_SETTINGS_USER_INITIATED_ADD_ESIM_SETTINGS_UNSPECIFIED = 'USER_INITIATED_ADD_ESIM_SETTINGS_UNSPECIFIED';
+  /**
+   * The user is allowed to add eSIM profiles.
+   */
+  public const USER_INITIATED_ADD_ESIM_SETTINGS_USER_INITIATED_ADD_ESIM_ALLOWED = 'USER_INITIATED_ADD_ESIM_ALLOWED';
+  /**
+   * Supported only on company-owned devices. A NonComplianceDetail with
+   * MANAGEMENT_MODE is reported for personally-owned devices.
+   */
+  public const USER_INITIATED_ADD_ESIM_SETTINGS_USER_INITIATED_ADD_ESIM_DISALLOWED = 'USER_INITIATED_ADD_ESIM_DISALLOWED';
+  /**
    * Unspecified. Defaults to WIFI_STATE_USER_CHOICE
    */
   public const WIFI_STATE_WIFI_STATE_UNSPECIFIED = 'WIFI_STATE_UNSPECIFIED';
@@ -139,6 +152,12 @@ class DeviceRadioState extends \Google\Model
    * @var string
    */
   public $ultraWidebandState;
+  /**
+   * Optional. Controls whether the user is allowed to add eSIM profiles.
+   *
+   * @var string
+   */
+  public $userInitiatedAddEsimSettings;
   /**
    * Controls current state of Wi-Fi and if user can change its state.
    *
@@ -224,6 +243,25 @@ class DeviceRadioState extends \Google\Model
   public function getUltraWidebandState()
   {
     return $this->ultraWidebandState;
+  }
+  /**
+   * Optional. Controls whether the user is allowed to add eSIM profiles.
+   *
+   * Accepted values: USER_INITIATED_ADD_ESIM_SETTINGS_UNSPECIFIED,
+   * USER_INITIATED_ADD_ESIM_ALLOWED, USER_INITIATED_ADD_ESIM_DISALLOWED
+   *
+   * @param self::USER_INITIATED_ADD_ESIM_SETTINGS_* $userInitiatedAddEsimSettings
+   */
+  public function setUserInitiatedAddEsimSettings($userInitiatedAddEsimSettings)
+  {
+    $this->userInitiatedAddEsimSettings = $userInitiatedAddEsimSettings;
+  }
+  /**
+   * @return self::USER_INITIATED_ADD_ESIM_SETTINGS_*
+   */
+  public function getUserInitiatedAddEsimSettings()
+  {
+    return $this->userInitiatedAddEsimSettings;
   }
   /**
    * Controls current state of Wi-Fi and if user can change its state.
