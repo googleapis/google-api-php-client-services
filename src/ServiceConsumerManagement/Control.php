@@ -22,8 +22,8 @@ class Control extends \Google\Collection
   protected $collection_key = 'methodPolicies';
   /**
    * The service controller environment to use. If empty, no control plane
-   * feature (like quota and billing) will be enabled. The recommended value for
-   * most services is servicecontrol.googleapis.com
+   * features (like quota and billing) will be enabled. The recommended value
+   * for most services is servicecontrol.googleapis.com.
    *
    * @var string
    */
@@ -33,8 +33,8 @@ class Control extends \Google\Collection
 
   /**
    * The service controller environment to use. If empty, no control plane
-   * feature (like quota and billing) will be enabled. The recommended value for
-   * most services is servicecontrol.googleapis.com
+   * features (like quota and billing) will be enabled. The recommended value
+   * for most services is servicecontrol.googleapis.com.
    *
    * @param string $environment
    */
