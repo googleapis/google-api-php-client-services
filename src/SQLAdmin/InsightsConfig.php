@@ -20,6 +20,12 @@ namespace Google\Service\SQLAdmin;
 class InsightsConfig extends \Google\Model
 {
   /**
+   * Optional. Whether enhanced query insights feature is enabled.
+   *
+   * @var bool
+   */
+  public $enhancedQueryInsightsEnabled;
+  /**
    * Whether Query Insights feature is enabled.
    *
    * @var bool
@@ -55,6 +61,22 @@ class InsightsConfig extends \Google\Model
    */
   public $recordClientAddress;
 
+  /**
+   * Optional. Whether enhanced query insights feature is enabled.
+   *
+   * @param bool $enhancedQueryInsightsEnabled
+   */
+  public function setEnhancedQueryInsightsEnabled($enhancedQueryInsightsEnabled)
+  {
+    $this->enhancedQueryInsightsEnabled = $enhancedQueryInsightsEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnhancedQueryInsightsEnabled()
+  {
+    return $this->enhancedQueryInsightsEnabled;
+  }
   /**
    * Whether Query Insights feature is enabled.
    *

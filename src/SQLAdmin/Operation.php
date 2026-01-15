@@ -100,7 +100,8 @@ class Operation extends \Google\Model
    */
   public const OPERATION_TYPE_DELETE_USER = 'DELETE_USER';
   /**
-   * Updates an existing user in a Cloud SQL instance.
+   * Updates an existing user in a Cloud SQL instance. If a user with the
+   * specified username doesn't exist, a new user is created.
    */
   public const OPERATION_TYPE_UPDATE_USER = 'UPDATE_USER';
   /**

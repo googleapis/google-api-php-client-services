@@ -36,13 +36,32 @@ class DnsNameMapping extends \Google\Model
    */
   public const CONNECTION_TYPE_PRIVATE_SERVICE_CONNECT = 'PRIVATE_SERVICE_CONNECT';
   /**
-   * Unknown DNS scope.
+   * DNS scope not set. This value should not be used.
    */
   public const DNS_SCOPE_DNS_SCOPE_UNSPECIFIED = 'DNS_SCOPE_UNSPECIFIED';
   /**
-   * Indicates a instance-level DNS name.
+   * Indicates an instance-level DNS name.
    */
   public const DNS_SCOPE_INSTANCE = 'INSTANCE';
+  /**
+   * Indicates a cluster-level DNS name.
+   */
+  public const DNS_SCOPE_CLUSTER = 'CLUSTER';
+  /**
+   * Record manager not set. This value should not be used.
+   */
+  public const RECORD_MANAGER_RECORD_MANAGER_UNSPECIFIED = 'RECORD_MANAGER_UNSPECIFIED';
+  /**
+   * The record may be managed by the customer. It is not automatically managed
+   * by Cloud SQL automation.
+   */
+  public const RECORD_MANAGER_CUSTOMER = 'CUSTOMER';
+  /**
+   * The record is managed by Cloud SQL, which will create, update, and delete
+   * the DNS records for the zone automatically when the Cloud SQL database
+   * instance is created or updated.
+   */
+  public const RECORD_MANAGER_CLOUD_SQL_AUTOMATION = 'CLOUD_SQL_AUTOMATION';
   /**
    * Output only. The connection type of the DNS name.
    *
@@ -56,11 +75,17 @@ class DnsNameMapping extends \Google\Model
    */
   public $dnsScope;
   /**
-   * The DNS name.
+   * Output only. The DNS name.
    *
    * @var string
    */
   public $name;
+  /**
+   * Output only. The manager for this DNS record.
+   *
+   * @var string
+   */
+  public $recordManager;
 
   /**
    * Output only. The connection type of the DNS name.
@@ -84,7 +109,7 @@ class DnsNameMapping extends \Google\Model
   /**
    * Output only. The scope that the DNS name applies to.
    *
-   * Accepted values: DNS_SCOPE_UNSPECIFIED, INSTANCE
+   * Accepted values: DNS_SCOPE_UNSPECIFIED, INSTANCE, CLUSTER
    *
    * @param self::DNS_SCOPE_* $dnsScope
    */
@@ -100,7 +125,7 @@ class DnsNameMapping extends \Google\Model
     return $this->dnsScope;
   }
   /**
-   * The DNS name.
+   * Output only. The DNS name.
    *
    * @param string $name
    */
@@ -114,6 +139,24 @@ class DnsNameMapping extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The manager for this DNS record.
+   *
+   * Accepted values: RECORD_MANAGER_UNSPECIFIED, CUSTOMER, CLOUD_SQL_AUTOMATION
+   *
+   * @param self::RECORD_MANAGER_* $recordManager
+   */
+  public function setRecordManager($recordManager)
+  {
+    $this->recordManager = $recordManager;
+  }
+  /**
+   * @return self::RECORD_MANAGER_*
+   */
+  public function getRecordManager()
+  {
+    return $this->recordManager;
   }
 }
 

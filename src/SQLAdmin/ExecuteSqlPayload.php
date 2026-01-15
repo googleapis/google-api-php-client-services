@@ -35,6 +35,14 @@ class ExecuteSqlPayload extends \Google\Model
    */
   public const PARTIAL_RESULT_MODE_ALLOW_PARTIAL_RESULT = 'ALLOW_PARTIAL_RESULT';
   /**
+   * Optional. Specifies the name of the application that is making the request.
+   * This field is used for telemetry. Only alphanumeric characters, dashes, and
+   * underscores are allowed. The maximum length is 32 characters.
+   *
+   * @var string
+   */
+  public $application;
+  /**
    * Optional. When set to true, the API caller identity associated with the
    * request is used for database authentication. The API caller must be an IAM
    * user in the database.
@@ -78,6 +86,24 @@ class ExecuteSqlPayload extends \Google\Model
    */
   public $user;
 
+  /**
+   * Optional. Specifies the name of the application that is making the request.
+   * This field is used for telemetry. Only alphanumeric characters, dashes, and
+   * underscores are allowed. The maximum length is 32 characters.
+   *
+   * @param string $application
+   */
+  public function setApplication($application)
+  {
+    $this->application = $application;
+  }
+  /**
+   * @return string
+   */
+  public function getApplication()
+  {
+    return $this->application;
+  }
   /**
    * Optional. When set to true, the API caller identity associated with the
    * request is used for database authentication. The API caller must be an IAM
