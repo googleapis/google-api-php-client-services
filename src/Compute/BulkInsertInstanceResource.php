@@ -25,6 +25,8 @@ class BulkInsertInstanceResource extends \Google\Model
    * @var string
    */
   public $count;
+  protected $instanceFlexibilityPolicyType = InstanceFlexibilityPolicy::class;
+  protected $instanceFlexibilityPolicyDataType = '';
   protected $instancePropertiesType = InstanceProperties::class;
   protected $instancePropertiesDataType = '';
   protected $locationPolicyType = LocationPolicy::class;
@@ -89,6 +91,22 @@ class BulkInsertInstanceResource extends \Google\Model
   public function getCount()
   {
     return $this->count;
+  }
+  /**
+   * A flexible specification of machine type of instances to create.
+   *
+   * @param InstanceFlexibilityPolicy $instanceFlexibilityPolicy
+   */
+  public function setInstanceFlexibilityPolicy(InstanceFlexibilityPolicy $instanceFlexibilityPolicy)
+  {
+    $this->instanceFlexibilityPolicy = $instanceFlexibilityPolicy;
+  }
+  /**
+   * @return InstanceFlexibilityPolicy
+   */
+  public function getInstanceFlexibilityPolicy()
+  {
+    return $this->instanceFlexibilityPolicy;
   }
   /**
    * The instance properties defining the VM instances to be created. Required

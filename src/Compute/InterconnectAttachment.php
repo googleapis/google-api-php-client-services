@@ -52,6 +52,10 @@ class InterconnectAttachment extends \Google\Collection
    */
   public const BANDWIDTH_BPS_300M = 'BPS_300M';
   /**
+   * 400 Gbit/s
+   */
+  public const BANDWIDTH_BPS_400G = 'BPS_400G';
+  /**
    * 400 Mbit/s
    */
   public const BANDWIDTH_BPS_400M = 'BPS_400M';
@@ -177,7 +181,7 @@ class InterconnectAttachment extends \Google\Collection
    * BPS_200M: 200 Mbit/s    - BPS_300M: 300 Mbit/s    - BPS_400M: 400 Mbit/s
    * - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2 Gbit/s    -
    * BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    -
-   * BPS_50G: 50 Gbit/s    - BPS_100G: 100 Gbit/s
+   * BPS_50G: 50 Gbit/s    - BPS_100G: 100 Gbit/s    - BPS_400G: 400 Gbit/s
    *
    * @var string
    */
@@ -612,10 +616,10 @@ class InterconnectAttachment extends \Google\Collection
    * BPS_200M: 200 Mbit/s    - BPS_300M: 300 Mbit/s    - BPS_400M: 400 Mbit/s
    * - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2 Gbit/s    -
    * BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    -
-   * BPS_50G: 50 Gbit/s    - BPS_100G: 100 Gbit/s
+   * BPS_50G: 50 Gbit/s    - BPS_100G: 100 Gbit/s    - BPS_400G: 400 Gbit/s
    *
    * Accepted values: BPS_100G, BPS_100M, BPS_10G, BPS_1G, BPS_200M, BPS_20G,
-   * BPS_2G, BPS_300M, BPS_400M, BPS_500M, BPS_50G, BPS_50M, BPS_5G
+   * BPS_2G, BPS_300M, BPS_400G, BPS_400M, BPS_500M, BPS_50G, BPS_50M, BPS_5G
    *
    * @param self::BANDWIDTH_* $bandwidth
    */

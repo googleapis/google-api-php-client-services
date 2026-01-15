@@ -25,6 +25,9 @@ class InstancesReportHostAsFaultyRequestFaultReason extends \Google\Model
   public const BEHAVIOR_BEHAVIOR_UNSPECIFIED = 'BEHAVIOR_UNSPECIFIED';
   public const BEHAVIOR_PERFORMANCE = 'PERFORMANCE';
   public const BEHAVIOR_SILENT_DATA_CORRUPTION = 'SILENT_DATA_CORRUPTION';
+  /**
+   * Unrecoverable GPU error identified by an XID
+   */
   public const BEHAVIOR_UNRECOVERABLE_GPU_ERROR = 'UNRECOVERABLE_GPU_ERROR';
   /**
    * @var string
