@@ -72,6 +72,8 @@ class ProjectsLocationsClustersConsumerGroups extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/clusters/{cluster}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Filter expression for the result. Only
+   * supports filtering by topic name as a key in the `topics` map.
    * @opt_param int pageSize Optional. The maximum number of consumer groups to
    * return. The service may return fewer than this value. If unset or zero, all
    * consumer groups for the parent is returned.
