@@ -55,6 +55,14 @@ class Blobstore2Info extends \Google\Model
    */
   public $readToken;
   /**
+   * A serialized Object Fragment List Creation Info passed from Bigstore ->
+   * Scotty for a GCS upload. This field must never be consumed outside of
+   * Bigstore, and is not applicable to non-GCS media uploads.
+   *
+   * @var string
+   */
+  public $uploadFragmentListCreationInfo;
+  /**
    * Metadata passed from Blobstore -> Scotty for a new GCS upload. This is a
    * signed, serialized blobstore2.BlobMetadataContainer proto which must never
    * be consumed outside of Bigstore, and is not applicable to non-GCS media
@@ -148,6 +156,24 @@ class Blobstore2Info extends \Google\Model
   public function getReadToken()
   {
     return $this->readToken;
+  }
+  /**
+   * A serialized Object Fragment List Creation Info passed from Bigstore ->
+   * Scotty for a GCS upload. This field must never be consumed outside of
+   * Bigstore, and is not applicable to non-GCS media uploads.
+   *
+   * @param string $uploadFragmentListCreationInfo
+   */
+  public function setUploadFragmentListCreationInfo($uploadFragmentListCreationInfo)
+  {
+    $this->uploadFragmentListCreationInfo = $uploadFragmentListCreationInfo;
+  }
+  /**
+   * @return string
+   */
+  public function getUploadFragmentListCreationInfo()
+  {
+    return $this->uploadFragmentListCreationInfo;
   }
   /**
    * Metadata passed from Blobstore -> Scotty for a new GCS upload. This is a
