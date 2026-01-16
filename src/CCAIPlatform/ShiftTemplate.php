@@ -36,9 +36,9 @@ class ShiftTemplate extends \Google\Collection
    */
   public $assignableEmployeeIds;
   /**
-   * Fixed number of days off per week. An employee has a given day off if they
-   * are not assigned to a shift that starts on that day. A week is 7 days and
-   * begins on Sunday.
+   * Optional. Fixed number of days off per week. An employee has a given day
+   * off if they are not assigned to a shift that starts on that day. A week is
+   * 7 days and begins on Sunday.
    *
    * @var int
    */
@@ -121,9 +121,9 @@ class ShiftTemplate extends \Google\Collection
     return $this->assignableEmployeeIds;
   }
   /**
-   * Fixed number of days off per week. An employee has a given day off if they
-   * are not assigned to a shift that starts on that day. A week is 7 days and
-   * begins on Sunday.
+   * Optional. Fixed number of days off per week. An employee has a given day
+   * off if they are not assigned to a shift that starts on that day. A week is
+   * 7 days and begins on Sunday.
    *
    * @param int $daysOffCountPerWeek
    */
@@ -139,7 +139,8 @@ class ShiftTemplate extends \Google\Collection
     return $this->daysOffCountPerWeek;
   }
   /**
-   * Fixed dates when shifts from this template should not be generated.
+   * Optional. Fixed dates when shifts from this template should not be
+   * generated.
    *
    * @param DateList $daysOffDates
    */
