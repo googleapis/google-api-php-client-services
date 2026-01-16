@@ -29,6 +29,8 @@ class SourceObjectIdentifier extends \Google\Model
   protected $postgresqlIdentifierDataType = '';
   protected $salesforceIdentifierType = SalesforceObjectIdentifier::class;
   protected $salesforceIdentifierDataType = '';
+  protected $spannerIdentifierType = SpannerObjectIdentifier::class;
+  protected $spannerIdentifierDataType = '';
   protected $sqlServerIdentifierType = SqlServerObjectIdentifier::class;
   protected $sqlServerIdentifierDataType = '';
 
@@ -111,6 +113,22 @@ class SourceObjectIdentifier extends \Google\Model
   public function getSalesforceIdentifier()
   {
     return $this->salesforceIdentifier;
+  }
+  /**
+   * Spanner data source object identifier.
+   *
+   * @param SpannerObjectIdentifier $spannerIdentifier
+   */
+  public function setSpannerIdentifier(SpannerObjectIdentifier $spannerIdentifier)
+  {
+    $this->spannerIdentifier = $spannerIdentifier;
+  }
+  /**
+   * @return SpannerObjectIdentifier
+   */
+  public function getSpannerIdentifier()
+  {
+    return $this->spannerIdentifier;
   }
   /**
    * SQLServer data source object identifier.

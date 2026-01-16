@@ -73,6 +73,8 @@ class ConnectionProfile extends \Google\Model
    * @var bool
    */
   public $satisfiesPzs;
+  protected $spannerProfileType = SpannerProfile::class;
+  protected $spannerProfileDataType = '';
   protected $sqlServerProfileType = SqlServerProfile::class;
   protected $sqlServerProfileDataType = '';
   protected $staticServiceIpConnectivityType = StaticServiceIpConnectivity::class;
@@ -323,6 +325,22 @@ class ConnectionProfile extends \Google\Model
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * Spanner Connection Profile configuration.
+   *
+   * @param SpannerProfile $spannerProfile
+   */
+  public function setSpannerProfile(SpannerProfile $spannerProfile)
+  {
+    $this->spannerProfile = $spannerProfile;
+  }
+  /**
+   * @return SpannerProfile
+   */
+  public function getSpannerProfile()
+  {
+    return $this->spannerProfile;
   }
   /**
    * SQLServer Connection Profile configuration.

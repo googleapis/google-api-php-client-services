@@ -29,6 +29,8 @@ class DiscoverConnectionProfileResponse extends \Google\Model
   protected $postgresqlRdbmsDataType = '';
   protected $salesforceOrgType = SalesforceOrg::class;
   protected $salesforceOrgDataType = '';
+  protected $spannerDatabaseType = SpannerDatabase::class;
+  protected $spannerDatabaseDataType = '';
   protected $sqlServerRdbmsType = SqlServerRdbms::class;
   protected $sqlServerRdbmsDataType = '';
 
@@ -111,6 +113,22 @@ class DiscoverConnectionProfileResponse extends \Google\Model
   public function getSalesforceOrg()
   {
     return $this->salesforceOrg;
+  }
+  /**
+   * Enriched Spanner database.
+   *
+   * @param SpannerDatabase $spannerDatabase
+   */
+  public function setSpannerDatabase(SpannerDatabase $spannerDatabase)
+  {
+    $this->spannerDatabase = $spannerDatabase;
+  }
+  /**
+   * @return SpannerDatabase
+   */
+  public function getSpannerDatabase()
+  {
+    return $this->spannerDatabase;
   }
   /**
    * Enriched SQLServer RDBMS object.

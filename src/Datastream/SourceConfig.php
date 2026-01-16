@@ -36,6 +36,8 @@ class SourceConfig extends \Google\Model
    * @var string
    */
   public $sourceConnectionProfile;
+  protected $spannerSourceConfigType = SpannerSourceConfig::class;
+  protected $spannerSourceConfigDataType = '';
   protected $sqlServerSourceConfigType = SqlServerSourceConfig::class;
   protected $sqlServerSourceConfigDataType = '';
 
@@ -135,6 +137,22 @@ class SourceConfig extends \Google\Model
   public function getSourceConnectionProfile()
   {
     return $this->sourceConnectionProfile;
+  }
+  /**
+   * Spanner data source configuration.
+   *
+   * @param SpannerSourceConfig $spannerSourceConfig
+   */
+  public function setSpannerSourceConfig(SpannerSourceConfig $spannerSourceConfig)
+  {
+    $this->spannerSourceConfig = $spannerSourceConfig;
+  }
+  /**
+   * @return SpannerSourceConfig
+   */
+  public function getSpannerSourceConfig()
+  {
+    return $this->spannerSourceConfig;
   }
   /**
    * SQLServer data source configuration.

@@ -29,6 +29,8 @@ class BackfillAllStrategy extends \Google\Model
   protected $postgresqlExcludedObjectsDataType = '';
   protected $salesforceExcludedObjectsType = SalesforceOrg::class;
   protected $salesforceExcludedObjectsDataType = '';
+  protected $spannerExcludedObjectsType = SpannerDatabase::class;
+  protected $spannerExcludedObjectsDataType = '';
   protected $sqlServerExcludedObjectsType = SqlServerRdbms::class;
   protected $sqlServerExcludedObjectsDataType = '';
 
@@ -111,6 +113,22 @@ class BackfillAllStrategy extends \Google\Model
   public function getSalesforceExcludedObjects()
   {
     return $this->salesforceExcludedObjects;
+  }
+  /**
+   * Spanner data source objects to avoid backfilling.
+   *
+   * @param SpannerDatabase $spannerExcludedObjects
+   */
+  public function setSpannerExcludedObjects(SpannerDatabase $spannerExcludedObjects)
+  {
+    $this->spannerExcludedObjects = $spannerExcludedObjects;
+  }
+  /**
+   * @return SpannerDatabase
+   */
+  public function getSpannerExcludedObjects()
+  {
+    return $this->spannerExcludedObjects;
   }
   /**
    * SQLServer data source objects to avoid backfilling
