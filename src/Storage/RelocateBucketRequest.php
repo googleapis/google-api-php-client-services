@@ -22,6 +22,14 @@ class RelocateBucketRequest extends \Google\Model
   protected $destinationCustomPlacementConfigType = RelocateBucketRequestDestinationCustomPlacementConfig::class;
   protected $destinationCustomPlacementConfigDataType = '';
   /**
+   * Resource name of a Cloud KMS key, of the form projects/my-
+   * project/locations/global/keyRings/my-kr/cryptoKeys/my-key. If set, is used
+   * to encrypt all objects in the destination bucket.
+   *
+   * @var string
+   */
+  public $destinationKmsKeyName;
+  /**
    * The new location the bucket will be relocated to.
    *
    * @var string
@@ -50,6 +58,24 @@ class RelocateBucketRequest extends \Google\Model
   public function getDestinationCustomPlacementConfig()
   {
     return $this->destinationCustomPlacementConfig;
+  }
+  /**
+   * Resource name of a Cloud KMS key, of the form projects/my-
+   * project/locations/global/keyRings/my-kr/cryptoKeys/my-key. If set, is used
+   * to encrypt all objects in the destination bucket.
+   *
+   * @param string $destinationKmsKeyName
+   */
+  public function setDestinationKmsKeyName($destinationKmsKeyName)
+  {
+    $this->destinationKmsKeyName = $destinationKmsKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationKmsKeyName()
+  {
+    return $this->destinationKmsKeyName;
   }
   /**
    * The new location the bucket will be relocated to.
