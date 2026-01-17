@@ -31,10 +31,11 @@ use Google\Service\CloudKMS\KeyAccessJustificationsPolicyConfig;
 class Folders extends \Google\Service\Resource
 {
   /**
-   * Returns the AutokeyConfig for a folder. (folders.getAutokeyConfig)
+   * Returns the AutokeyConfig for a folder or project. (folders.getAutokeyConfig)
    *
    * @param string $name Required. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig`.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * @param array $optParams Optional parameters.
    * @return AutokeyConfig
    * @throws \Google\Service\Exception
@@ -62,8 +63,8 @@ class Folders extends \Google\Service\Resource
     return $this->call('getKajPolicyConfig', [$params], KeyAccessJustificationsPolicyConfig::class);
   }
   /**
-   * Updates the AutokeyConfig for a folder. The caller must have both
-   * `cloudkms.autokeyConfigs.update` permission on the parent folder and
+   * Updates the AutokeyConfig for a folder or a project. The caller must have
+   * both `cloudkms.autokeyConfigs.update` permission on the parent folder and
    * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A
    * KeyHandle creation in the folder's descendant projects will use this
    * configuration to determine where to create the resulting CryptoKey.
