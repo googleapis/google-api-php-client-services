@@ -17,46 +17,54 @@
 
 namespace Google\Service\FirebaseDataConnect;
 
-class Datasource extends \Google\Model
+class HttpGraphql extends \Google\Model
 {
-  protected $httpGraphqlType = HttpGraphql::class;
-  protected $httpGraphqlDataType = '';
-  protected $postgresqlType = PostgreSql::class;
-  protected $postgresqlDataType = '';
+  /**
+   * Optional. Timeout duration for the HTTP request.
+   *
+   * @var string
+   */
+  public $timeout;
+  /**
+   * Required. The endpoint of the HTTP GraphQL server.
+   *
+   * @var string
+   */
+  public $uri;
 
   /**
-   * HTTP GraphQL server webhook configurations.
+   * Optional. Timeout duration for the HTTP request.
    *
-   * @param HttpGraphql $httpGraphql
+   * @param string $timeout
    */
-  public function setHttpGraphql(HttpGraphql $httpGraphql)
+  public function setTimeout($timeout)
   {
-    $this->httpGraphql = $httpGraphql;
+    $this->timeout = $timeout;
   }
   /**
-   * @return HttpGraphql
+   * @return string
    */
-  public function getHttpGraphql()
+  public function getTimeout()
   {
-    return $this->httpGraphql;
+    return $this->timeout;
   }
   /**
-   * PostgreSQL configurations.
+   * Required. The endpoint of the HTTP GraphQL server.
    *
-   * @param PostgreSql $postgresql
+   * @param string $uri
    */
-  public function setPostgresql(PostgreSql $postgresql)
+  public function setUri($uri)
   {
-    $this->postgresql = $postgresql;
+    $this->uri = $uri;
   }
   /**
-   * @return PostgreSql
+   * @return string
    */
-  public function getPostgresql()
+  public function getUri()
   {
-    return $this->postgresql;
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Datasource::class, 'Google_Service_FirebaseDataConnect_Datasource');
+class_alias(HttpGraphql::class, 'Google_Service_FirebaseDataConnect_HttpGraphql');
