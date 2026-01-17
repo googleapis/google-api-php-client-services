@@ -92,8 +92,8 @@ class BackupVault extends \Google\Model
   public $backupVaultType;
   /**
    * Output only. The crypto key version used to encrypt the backup vault.
-   * Format: projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoK
-   * eys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}
+   * Format: `projects/{project}/locations/{location}/keyRings/{key_ring}/crypto
+   * Keys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`
    *
    * @var string
    */
@@ -124,8 +124,9 @@ class BackupVault extends \Google\Model
    */
   public $encryptionState;
   /**
-   * Optional. Specifies the KMS config to be used for backup encryption.
-   * Format: projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * Optional. Specifies the Key Management System (KMS) configuration to be
+   * used for backup encryption. Format:
+   * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    *
    * @var string
    */
@@ -182,7 +183,7 @@ class BackupVault extends \Google\Model
     return $this->backupRegion;
   }
   /**
-   * Optional. Backup retention policy defining the retenton of backups.
+   * Optional. Backup retention policy defining the retention of backups.
    *
    * @param BackupRetentionPolicy $backupRetentionPolicy
    */
@@ -217,8 +218,8 @@ class BackupVault extends \Google\Model
   }
   /**
    * Output only. The crypto key version used to encrypt the backup vault.
-   * Format: projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoK
-   * eys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}
+   * Format: `projects/{project}/locations/{location}/keyRings/{key_ring}/crypto
+   * Keys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`
    *
    * @param string $backupsCryptoKeyVersion
    */
@@ -303,8 +304,9 @@ class BackupVault extends \Google\Model
     return $this->encryptionState;
   }
   /**
-   * Optional. Specifies the KMS config to be used for backup encryption.
-   * Format: projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * Optional. Specifies the Key Management System (KMS) configuration to be
+   * used for backup encryption. Format:
+   * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    *
    * @param string $kmsConfig
    */

@@ -17,6 +17,7 @@
 
 namespace Google\Service\NetAppFiles\Resource;
 
+use Google\Service\NetAppFiles\EstablishVolumePeeringRequest;
 use Google\Service\NetAppFiles\ListVolumesResponse;
 use Google\Service\NetAppFiles\Operation;
 use Google\Service\NetAppFiles\RestoreBackupFilesRequest;
@@ -70,6 +71,23 @@ class ProjectsLocationsVolumes extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Establish volume peering. This is used to establish cluster and svm peerings
+   * between the GCNV and OnPrem clusters. (volumes.establishPeering)
+   *
+   * @param string $name Required. The volume resource name, in the format
+   * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+   * @param EstablishVolumePeeringRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function establishPeering($name, EstablishVolumePeeringRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('establishPeering', [$params], Operation::class);
   }
   /**
    * Gets details of a single Volume. (volumes.get)

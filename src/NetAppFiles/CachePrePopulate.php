@@ -35,8 +35,8 @@ class CachePrePopulate extends \Google\Collection
    */
   public $pathList;
   /**
-   * Optional. Flag indicating whether the directories listed with the pathList
-   * need to be recursively pre-populated.
+   * Optional. Flag indicating whether the directories listed with the
+   * `path_list` need to be recursively pre-populated.
    *
    * @var bool
    */
@@ -77,8 +77,8 @@ class CachePrePopulate extends \Google\Collection
     return $this->pathList;
   }
   /**
-   * Optional. Flag indicating whether the directories listed with the pathList
-   * need to be recursively pre-populated.
+   * Optional. Flag indicating whether the directories listed with the
+   * `path_list` need to be recursively pre-populated.
    *
    * @param bool $recursion
    */

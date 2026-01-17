@@ -108,7 +108,9 @@ class StoragePool extends \Google\Model
    */
   public const TYPE_UNIFIED = 'UNIFIED';
   /**
-   * Storage pool type is unified large capacity.
+   * Deprecated: UNIFIED_LARGE_CAPACITY was previously tag 3.
+   *
+   * @deprecated
    */
   public const TYPE_UNIFIED_LARGE_CAPACITY = 'UNIFIED_LARGE_CAPACITY';
   /**

@@ -847,6 +847,16 @@ class NetAppFiles extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'establishPeering' => [
+              'path' => 'v1/{+name}:establishPeering',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
