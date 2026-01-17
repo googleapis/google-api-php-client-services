@@ -107,6 +107,14 @@ class Instance extends \Google\Collection
    * restricted while the instance is in this state.
    */
   public const STATE_SWITCHOVER = 'SWITCHOVER';
+  /**
+   * The instance is being stopped.
+   */
+  public const STATE_STOPPING = 'STOPPING';
+  /**
+   * The instance is being started.
+   */
+  public const STATE_STARTING = 'STARTING';
   protected $collection_key = 'outboundPublicIpAddresses';
   /**
    * Optional. Specifies whether an instance needs to spin up. Once the instance
@@ -785,7 +793,8 @@ class Instance extends \Google\Collection
    * Output only. The current serving state of the instance.
    *
    * Accepted values: STATE_UNSPECIFIED, READY, STOPPED, CREATING, DELETING,
-   * MAINTENANCE, FAILED, BOOTSTRAPPING, PROMOTING, SWITCHOVER
+   * MAINTENANCE, FAILED, BOOTSTRAPPING, PROMOTING, SWITCHOVER, STOPPING,
+   * STARTING
    *
    * @param self::STATE_* $state
    */
