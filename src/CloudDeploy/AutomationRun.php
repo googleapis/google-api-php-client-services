@@ -130,6 +130,12 @@ class AutomationRun extends \Google\Model
   protected $timedPromoteReleaseOperationType = TimedPromoteReleaseOperation::class;
   protected $timedPromoteReleaseOperationDataType = '';
   /**
+   * Output only. Unique identifier of the `AutomationRun`.
+   *
+   * @var string
+   */
+  public $uid;
+  /**
    * Output only. Time at which the automationRun was updated.
    *
    * @var string
@@ -414,6 +420,22 @@ class AutomationRun extends \Google\Model
   public function getTimedPromoteReleaseOperation()
   {
     return $this->timedPromoteReleaseOperation;
+  }
+  /**
+   * Output only. Unique identifier of the `AutomationRun`.
+   *
+   * @param string $uid
+   */
+  public function setUid($uid)
+  {
+    $this->uid = $uid;
+  }
+  /**
+   * @return string
+   */
+  public function getUid()
+  {
+    return $this->uid;
   }
   /**
    * Output only. Time at which the automationRun was updated.
