@@ -46,7 +46,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecPythonSpec extends
   public $requirementsFile;
   /**
    * Optional. The version of Python to use. Support version includes 3.9, 3.10,
-   * 3.11, 3.12, 3.13. If not specified, default value is 3.10.
+   * 3.11, 3.12, 3.13, 3.14. If not specified, default value is 3.10.
    *
    * @var string
    */
@@ -109,7 +109,7 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecPythonSpec extends
   }
   /**
    * Optional. The version of Python to use. Support version includes 3.9, 3.10,
-   * 3.11, 3.12, 3.13. If not specified, default value is 3.10.
+   * 3.11, 3.12, 3.13, 3.14. If not specified, default value is 3.10.
    *
    * @param string $version
    */

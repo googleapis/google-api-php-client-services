@@ -25,7 +25,10 @@ class GoogleCloudAiplatformV1AutoscalingMetricSpec extends \Google\Model
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
    * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
    * `aiplatform.googleapis.com/prediction/online/request_count` *
-   * `pubsub.googleapis.com/subscription/num_undelivered_messages`
+   * `pubsub.googleapis.com/subscription/num_undelivered_messages` *
+   * `prometheus.googleapis.com/vertex_dcgm_fi_dev_gpu_util` *
+   * `prometheus.googleapis.com/vertex_vllm_gpu_cache_usage_perc` *
+   * `prometheus.googleapis.com/vertex_vllm_num_requests_waiting`
    *
    * @var string
    */
@@ -46,7 +49,10 @@ class GoogleCloudAiplatformV1AutoscalingMetricSpec extends \Google\Model
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
    * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
    * `aiplatform.googleapis.com/prediction/online/request_count` *
-   * `pubsub.googleapis.com/subscription/num_undelivered_messages`
+   * `pubsub.googleapis.com/subscription/num_undelivered_messages` *
+   * `prometheus.googleapis.com/vertex_dcgm_fi_dev_gpu_util` *
+   * `prometheus.googleapis.com/vertex_vllm_gpu_cache_usage_perc` *
+   * `prometheus.googleapis.com/vertex_vllm_num_requests_waiting`
    *
    * @param string $metricName
    */

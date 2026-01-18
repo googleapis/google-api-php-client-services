@@ -106,7 +106,7 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
    */
   public $modelDeploymentMonitoringJob;
   /**
-   * Output only. The resource name of the Endpoint.
+   * Identifier. The resource name of the Endpoint.
    *
    * @var string
    */
@@ -412,7 +412,7 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->modelDeploymentMonitoringJob;
   }
   /**
-   * Output only. The resource name of the Endpoint.
+   * Identifier. The resource name of the Endpoint.
    *
    * @param string $name
    */
