@@ -17,7 +17,6 @@
 
 namespace Google\Service\Appengine\Resource;
 
-use Google\Service\Appengine\ExportAppImageRequest;
 use Google\Service\Appengine\ListVersionsResponse;
 use Google\Service\Appengine\Operation;
 use Google\Service\Appengine\Version;
@@ -65,24 +64,6 @@ class AppsServicesVersions extends \Google\Service\Resource
     $params = ['appsId' => $appsId, 'servicesId' => $servicesId, 'versionsId' => $versionsId];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
-  }
-  /**
-   * Exports a user image to Artifact Registry. (versions.exportAppImage)
-   *
-   * @param string $appsId Part of `name`. Required. Name of the App Engine
-   * version resource. Format: apps/{app}/services/{service}/versions/{version}
-   * @param string $servicesId Part of `name`. See documentation of `appsId`.
-   * @param string $versionsId Part of `name`. See documentation of `appsId`.
-   * @param ExportAppImageRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Operation
-   * @throws \Google\Service\Exception
-   */
-  public function exportAppImage($appsId, $servicesId, $versionsId, ExportAppImageRequest $postBody, $optParams = [])
-  {
-    $params = ['appsId' => $appsId, 'servicesId' => $servicesId, 'versionsId' => $versionsId, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('exportAppImage', [$params], Operation::class);
   }
   /**
    * Gets the specified Version resource. By default, only a BASIC_VIEW will be
