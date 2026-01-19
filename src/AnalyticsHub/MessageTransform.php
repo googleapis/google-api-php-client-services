@@ -19,6 +19,8 @@ namespace Google\Service\AnalyticsHub;
 
 class MessageTransform extends \Google\Model
 {
+  protected $aiInferenceType = AIInference::class;
+  protected $aiInferenceDataType = '';
   /**
    * Optional. If true, the transform is disabled and will not be applied to
    * messages. Defaults to `false`.
@@ -37,6 +39,22 @@ class MessageTransform extends \Google\Model
   protected $javascriptUdfType = JavaScriptUDF::class;
   protected $javascriptUdfDataType = '';
 
+  /**
+   * Optional. AI Inference.
+   *
+   * @param AIInference $aiInference
+   */
+  public function setAiInference(AIInference $aiInference)
+  {
+    $this->aiInference = $aiInference;
+  }
+  /**
+   * @return AIInference
+   */
+  public function getAiInference()
+  {
+    return $this->aiInference;
+  }
   /**
    * Optional. If true, the transform is disabled and will not be applied to
    * messages. Defaults to `false`.
