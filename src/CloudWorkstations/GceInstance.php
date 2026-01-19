@@ -77,6 +77,12 @@ class GceInstance extends \Google\Collection
    */
   public $enableNestedVirtualization;
   /**
+   * Optional. Custom metadata to apply to Compute Engine instances.
+   *
+   * @var string[]
+   */
+  public $instanceMetadata;
+  /**
    * Optional. The type of machine to use for VM instances—for example,
    * `"e2-standard-4"`. For more information about machine types that Cloud
    * Workstations supports, see the list of [available machine
@@ -137,9 +143,9 @@ class GceInstance extends \Google\Collection
    * script, the service account must have [Permission to access the bucket and
    * script file in Cloud Storage](https://cloud.google.com/storage/docs/access-
    * control/iam-permissions). Otherwise, the script must be publicly
-   * accessible. Note that the service regularly updates the OS version used,
-   * and it is the responsibility of the user to ensure the script stays
-   * compatible with the OS version.
+   * accessible. Note that the service regularly updates the OS version of the
+   * host VM, and it is the responsibility of the user to ensure the script
+   * stays compatible with the OS version.
    *
    * @var string
    */
@@ -309,6 +315,22 @@ class GceInstance extends \Google\Collection
     return $this->enableNestedVirtualization;
   }
   /**
+   * Optional. Custom metadata to apply to Compute Engine instances.
+   *
+   * @param string[] $instanceMetadata
+   */
+  public function setInstanceMetadata($instanceMetadata)
+  {
+    $this->instanceMetadata = $instanceMetadata;
+  }
+  /**
+   * @return string[]
+   */
+  public function getInstanceMetadata()
+  {
+    return $this->instanceMetadata;
+  }
+  /**
    * Optional. The type of machine to use for VM instances—for example,
    * `"e2-standard-4"`. For more information about machine types that Cloud
    * Workstations supports, see the list of [available machine
@@ -433,9 +455,9 @@ class GceInstance extends \Google\Collection
    * script, the service account must have [Permission to access the bucket and
    * script file in Cloud Storage](https://cloud.google.com/storage/docs/access-
    * control/iam-permissions). Otherwise, the script must be publicly
-   * accessible. Note that the service regularly updates the OS version used,
-   * and it is the responsibility of the user to ensure the script stays
-   * compatible with the OS version.
+   * accessible. Note that the service regularly updates the OS version of the
+   * host VM, and it is the responsibility of the user to ensure the script
+   * stays compatible with the OS version.
    *
    * @param string $startupScriptUri
    */
