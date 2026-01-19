@@ -38,6 +38,8 @@ class Version extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $fingerprintsType = Hash::class;
+  protected $fingerprintsDataType = 'array';
   /**
    * Output only. Repository-specific Metadata stored against this version. The
    * fields returned are defined by the underlying repository-specific resource.
@@ -110,6 +112,24 @@ class Version extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * Output only. Immutable reference for the version, calculated based on the
+   * version's content. Currently we only support dirsum_sha256 hash algorithm.
+   * Additional hash algorithms may be added in the future.
+   *
+   * @param Hash[] $fingerprints
+   */
+  public function setFingerprints($fingerprints)
+  {
+    $this->fingerprints = $fingerprints;
+  }
+  /**
+   * @return Hash[]
+   */
+  public function getFingerprints()
+  {
+    return $this->fingerprints;
   }
   /**
    * Output only. Repository-specific Metadata stored against this version. The
