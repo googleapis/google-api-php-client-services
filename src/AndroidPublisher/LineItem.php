@@ -48,7 +48,7 @@ class LineItem extends \Google\Model
 
   /**
    * Item's listed price on Play Store, this may or may not include tax.
-   * Excludes any discounts or promotions.
+   * Excludes Google-funded discounts only.
    *
    * @param Money $listingPrice
    */
