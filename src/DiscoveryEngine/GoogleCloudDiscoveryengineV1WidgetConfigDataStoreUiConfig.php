@@ -36,7 +36,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig extends \Google\
    * The name of the data store. It should be data store resource name Format: `
    * projects/{project}/locations/{location}/collections/{collection_id}/dataSto
    * res/{data_store_id}`. For APIs under WidgetService, such as
-   * WidgetService.LookUpWidgetConfig, the project number and location part is
+   * WidgetService.LookupWidgetConfig, the project number and location part is
    * erased in this field.
    *
    * @var string
@@ -102,7 +102,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig extends \Google\
    * The name of the data store. It should be data store resource name Format: `
    * projects/{project}/locations/{location}/collections/{collection_id}/dataSto
    * res/{data_store_id}`. For APIs under WidgetService, such as
-   * WidgetService.LookUpWidgetConfig, the project number and location part is
+   * WidgetService.LookupWidgetConfig, the project number and location part is
    * erased in this field.
    *
    * @param string $name

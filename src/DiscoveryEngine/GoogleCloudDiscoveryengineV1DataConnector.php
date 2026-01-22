@@ -34,7 +34,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   /**
    * The connector is in error. The error details can be found in
    * DataConnector.errors. If the error is unfixable, the DataConnector can be
-   * deleted by [CollectionService.DeleteCollection] API.
+   * deleted by CollectionService.DeleteCollection API.
    */
   public const ACTION_STATE_FAILED = 'FAILED';
   /**
@@ -123,7 +123,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   /**
    * The connector is in error. The error details can be found in
    * DataConnector.errors. If the error is unfixable, the DataConnector can be
-   * deleted by [CollectionService.DeleteCollection] API.
+   * deleted by CollectionService.DeleteCollection API.
    */
   public const REALTIME_STATE_FAILED = 'FAILED';
   /**
@@ -159,7 +159,7 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   /**
    * The connector is in error. The error details can be found in
    * DataConnector.errors. If the error is unfixable, the DataConnector can be
-   * deleted by [CollectionService.DeleteCollection] API.
+   * deleted by CollectionService.DeleteCollection API.
    */
   public const STATE_FAILED = 'FAILED';
   /**

@@ -58,7 +58,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   /**
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For
-   * APIs under WidgetService, such as WidgetService.LookUpWidgetConfig, the
+   * APIs under WidgetService, such as WidgetService.LookupWidgetConfig, the
    * project number and location part is erased in this field.
    *
    * @var string
@@ -167,7 +167,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   /**
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For
-   * APIs under WidgetService, such as WidgetService.LookUpWidgetConfig, the
+   * APIs under WidgetService, such as WidgetService.LookupWidgetConfig, the
    * project number and location part is erased in this field.
    *
    * @param string $name
