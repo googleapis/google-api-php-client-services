@@ -21,12 +21,28 @@ class MultiRegionMetadata extends \Google\Collection
 {
   protected $collection_key = 'constituentRegions';
   /**
+   * The regions constituting the multi-region.
+   *
    * @var string[]
    */
   public $constituentRegions;
+  /**
+   * The continent for this multi-region.
+   *
+   * @var string
+   */
+  public $continent;
+  /**
+   * The Spanner witness region for this multi-region.
+   *
+   * @var string
+   */
+  public $witnessRegion;
 
   /**
-   * @param string[]
+   * The regions constituting the multi-region.
+   *
+   * @param string[] $constituentRegions
    */
   public function setConstituentRegions($constituentRegions)
   {
@@ -38,6 +54,38 @@ class MultiRegionMetadata extends \Google\Collection
   public function getConstituentRegions()
   {
     return $this->constituentRegions;
+  }
+  /**
+   * The continent for this multi-region.
+   *
+   * @param string $continent
+   */
+  public function setContinent($continent)
+  {
+    $this->continent = $continent;
+  }
+  /**
+   * @return string
+   */
+  public function getContinent()
+  {
+    return $this->continent;
+  }
+  /**
+   * The Spanner witness region for this multi-region.
+   *
+   * @param string $witnessRegion
+   */
+  public function setWitnessRegion($witnessRegion)
+  {
+    $this->witnessRegion = $witnessRegion;
+  }
+  /**
+   * @return string
+   */
+  public function getWitnessRegion()
+  {
+    return $this->witnessRegion;
   }
 }
 

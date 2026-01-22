@@ -26,7 +26,9 @@ class MetadataManagementActivity extends \Google\Collection
   protected $restoresDataType = 'array';
 
   /**
-   * @param MetadataExport[]
+   * Output only. The latest metadata exports of the metastore service.
+   *
+   * @param MetadataExport[] $metadataExports
    */
   public function setMetadataExports($metadataExports)
   {
@@ -40,7 +42,9 @@ class MetadataManagementActivity extends \Google\Collection
     return $this->metadataExports;
   }
   /**
-   * @param Restore[]
+   * Output only. The latest restores of the metastore service.
+   *
+   * @param Restore[] $restores
    */
   public function setRestores($restores)
   {

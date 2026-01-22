@@ -20,12 +20,18 @@ namespace Google\Service\DataprocMetastore;
 class QueryMetadataRequest extends \Google\Model
 {
   /**
+   * Required. A read-only SQL query to execute against the metadata database.
+   * The query cannot change or mutate the data.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param string
+   * Required. A read-only SQL query to execute against the metadata database.
+   * The query cannot change or mutate the data.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

@@ -20,30 +20,128 @@ namespace Google\Service\DataprocMetastore;
 class Service extends \Google\Model
 {
   /**
+   * The DATABASE_TYPE is not set.
+   */
+  public const DATABASE_TYPE_DATABASE_TYPE_UNSPECIFIED = 'DATABASE_TYPE_UNSPECIFIED';
+  /**
+   * MySQL is used to persist the metastore data.
+   */
+  public const DATABASE_TYPE_MYSQL = 'MYSQL';
+  /**
+   * Spanner is used to persist the metastore data.
+   */
+  public const DATABASE_TYPE_SPANNER = 'SPANNER';
+  /**
+   * Release channel is not specified.
+   */
+  public const RELEASE_CHANNEL_RELEASE_CHANNEL_UNSPECIFIED = 'RELEASE_CHANNEL_UNSPECIFIED';
+  /**
+   * The CANARY release channel contains the newest features, which may be
+   * unstable and subject to unresolved issues with no known workarounds.
+   * Services using the CANARY release channel are not subject to any SLAs.
+   */
+  public const RELEASE_CHANNEL_CANARY = 'CANARY';
+  /**
+   * The STABLE release channel contains features that are considered stable and
+   * have been validated for production use.
+   */
+  public const RELEASE_CHANNEL_STABLE = 'STABLE';
+  /**
+   * The state of the metastore service is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The metastore service is in the process of being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The metastore service is running and ready to serve queries.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The metastore service is entering suspension. Its query-serving
+   * availability may cease unexpectedly.
+   */
+  public const STATE_SUSPENDING = 'SUSPENDING';
+  /**
+   * The metastore service is suspended and unable to serve queries.
+   */
+  public const STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * The metastore service is being updated. It remains usable but cannot accept
+   * additional update requests or be deleted at this time.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The metastore service is undergoing deletion. It cannot be used.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The metastore service has encountered an error and cannot be used. The
+   * metastore service should be deleted.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * The Dataproc Metastore service 2 is being scaled up or down.
+   */
+  public const STATE_AUTOSCALING = 'AUTOSCALING';
+  /**
+   * The metastore service is processing a managed migration.
+   */
+  public const STATE_MIGRATING = 'MIGRATING';
+  /**
+   * The tier is not set.
+   */
+  public const TIER_TIER_UNSPECIFIED = 'TIER_UNSPECIFIED';
+  /**
+   * The developer tier provides limited scalability and no fault tolerance.
+   * Good for low-cost proof-of-concept.
+   */
+  public const TIER_DEVELOPER = 'DEVELOPER';
+  /**
+   * The enterprise tier provides multi-zone high availability, and sufficient
+   * scalability for enterprise-level Dataproc Metastore workloads.
+   */
+  public const TIER_ENTERPRISE = 'ENTERPRISE';
+  /**
+   * Output only. A Cloud Storage URI (starting with gs://) that specifies where
+   * artifacts related to the metastore service are stored.
+   *
    * @var string
    */
   public $artifactGcsUri;
   /**
+   * Output only. The time when the metastore service was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Immutable. The database type that the Metastore service stores its data.
+   *
    * @var string
    */
   public $databaseType;
   /**
+   * Optional. Indicates if the dataproc metastore should be protected against
+   * accidental deletions.
+   *
    * @var bool
    */
   public $deletionProtection;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   /**
+   * Output only. The URI of the endpoint used to access the metastore service.
+   *
    * @var string
    */
   public $endpointUri;
   protected $hiveMetastoreConfigType = HiveMetastoreConfig::class;
   protected $hiveMetastoreConfigDataType = '';
   /**
+   * User-defined labels for the metastore service.
+   *
    * @var string[]
    */
   public $labels;
@@ -54,20 +152,34 @@ class Service extends \Google\Model
   protected $metadataManagementActivityType = MetadataManagementActivity::class;
   protected $metadataManagementActivityDataType = '';
   /**
+   * Immutable. Identifier. The relative resource name of the metastore service,
+   * in the following format:projects/{project_number}/locations/{location_id}/s
+   * ervices/{service_id}.
+   *
    * @var string
    */
   public $name;
   /**
+   * Immutable. The relative resource name of the VPC network on which the
+   * instance can be accessed. It is specified in the following
+   * form:projects/{project_number}/global/networks/{network_id}.
+   *
    * @var string
    */
   public $network;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
   /**
+   * Optional. The TCP port at which the metastore service is reached. Default:
+   * 9083.
+   *
    * @var int
    */
   public $port;
   /**
+   * Immutable. The release channel of the service. If unspecified, defaults to
+   * STABLE.
+   *
    * @var string
    */
   public $releaseChannel;
@@ -76,30 +188,53 @@ class Service extends \Google\Model
   protected $scheduledBackupType = ScheduledBackup::class;
   protected $scheduledBackupDataType = '';
   /**
+   * Output only. The current state of the metastore service.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Additional information about the current state of the
+   * metastore service, if available.
+   *
    * @var string
    */
   public $stateMessage;
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * resource. For example: "123/environment": "production", "123/costCenter":
+   * "marketing"
+   *
+   * @var string[]
+   */
+  public $tags;
   protected $telemetryConfigType = TelemetryConfig::class;
   protected $telemetryConfigDataType = '';
   /**
+   * Optional. The tier of the service.
+   *
    * @var string
    */
   public $tier;
   /**
+   * Output only. The globally unique resource identifier of the metastore
+   * service.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The time when the metastore service was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. A Cloud Storage URI (starting with gs://) that specifies where
+   * artifacts related to the metastore service are stored.
+   *
+   * @param string $artifactGcsUri
    */
   public function setArtifactGcsUri($artifactGcsUri)
   {
@@ -113,7 +248,9 @@ class Service extends \Google\Model
     return $this->artifactGcsUri;
   }
   /**
-   * @param string
+   * Output only. The time when the metastore service was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -127,21 +264,28 @@ class Service extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Immutable. The database type that the Metastore service stores its data.
+   *
+   * Accepted values: DATABASE_TYPE_UNSPECIFIED, MYSQL, SPANNER
+   *
+   * @param self::DATABASE_TYPE_* $databaseType
    */
   public function setDatabaseType($databaseType)
   {
     $this->databaseType = $databaseType;
   }
   /**
-   * @return string
+   * @return self::DATABASE_TYPE_*
    */
   public function getDatabaseType()
   {
     return $this->databaseType;
   }
   /**
-   * @param bool
+   * Optional. Indicates if the dataproc metastore should be protected against
+   * accidental deletions.
+   *
+   * @param bool $deletionProtection
    */
   public function setDeletionProtection($deletionProtection)
   {
@@ -155,7 +299,10 @@ class Service extends \Google\Model
     return $this->deletionProtection;
   }
   /**
-   * @param EncryptionConfig
+   * Immutable. Information used to configure the Dataproc Metastore service to
+   * encrypt customer data at rest. Cannot be updated.
+   *
+   * @param EncryptionConfig $encryptionConfig
    */
   public function setEncryptionConfig(EncryptionConfig $encryptionConfig)
   {
@@ -169,7 +316,9 @@ class Service extends \Google\Model
     return $this->encryptionConfig;
   }
   /**
-   * @param string
+   * Output only. The URI of the endpoint used to access the metastore service.
+   *
+   * @param string $endpointUri
    */
   public function setEndpointUri($endpointUri)
   {
@@ -183,7 +332,10 @@ class Service extends \Google\Model
     return $this->endpointUri;
   }
   /**
-   * @param HiveMetastoreConfig
+   * Configuration information specific to running Hive metastore software as
+   * the metastore service.
+   *
+   * @param HiveMetastoreConfig $hiveMetastoreConfig
    */
   public function setHiveMetastoreConfig(HiveMetastoreConfig $hiveMetastoreConfig)
   {
@@ -197,7 +349,9 @@ class Service extends \Google\Model
     return $this->hiveMetastoreConfig;
   }
   /**
-   * @param string[]
+   * User-defined labels for the metastore service.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -211,7 +365,12 @@ class Service extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param MaintenanceWindow
+   * Optional. The one hour maintenance window of the metastore service. This
+   * specifies when the service can be restarted for maintenance purposes in UTC
+   * time. Maintenance window is not needed for services with the SPANNER
+   * database type.
+   *
+   * @param MaintenanceWindow $maintenanceWindow
    */
   public function setMaintenanceWindow(MaintenanceWindow $maintenanceWindow)
   {
@@ -225,7 +384,10 @@ class Service extends \Google\Model
     return $this->maintenanceWindow;
   }
   /**
-   * @param MetadataIntegration
+   * Optional. The setting that defines how metastore metadata should be
+   * integrated with external services and systems.
+   *
+   * @param MetadataIntegration $metadataIntegration
    */
   public function setMetadataIntegration(MetadataIntegration $metadataIntegration)
   {
@@ -239,7 +401,9 @@ class Service extends \Google\Model
     return $this->metadataIntegration;
   }
   /**
-   * @param MetadataManagementActivity
+   * Output only. The metadata management activities of the metastore service.
+   *
+   * @param MetadataManagementActivity $metadataManagementActivity
    */
   public function setMetadataManagementActivity(MetadataManagementActivity $metadataManagementActivity)
   {
@@ -253,7 +417,11 @@ class Service extends \Google\Model
     return $this->metadataManagementActivity;
   }
   /**
-   * @param string
+   * Immutable. Identifier. The relative resource name of the metastore service,
+   * in the following format:projects/{project_number}/locations/{location_id}/s
+   * ervices/{service_id}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -267,7 +435,11 @@ class Service extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Immutable. The relative resource name of the VPC network on which the
+   * instance can be accessed. It is specified in the following
+   * form:projects/{project_number}/global/networks/{network_id}.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -281,7 +453,10 @@ class Service extends \Google\Model
     return $this->network;
   }
   /**
-   * @param NetworkConfig
+   * Optional. The configuration specifying the network settings for the
+   * Dataproc Metastore service.
+   *
+   * @param NetworkConfig $networkConfig
    */
   public function setNetworkConfig(NetworkConfig $networkConfig)
   {
@@ -295,7 +470,10 @@ class Service extends \Google\Model
     return $this->networkConfig;
   }
   /**
-   * @param int
+   * Optional. The TCP port at which the metastore service is reached. Default:
+   * 9083.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -309,21 +487,28 @@ class Service extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * Immutable. The release channel of the service. If unspecified, defaults to
+   * STABLE.
+   *
+   * Accepted values: RELEASE_CHANNEL_UNSPECIFIED, CANARY, STABLE
+   *
+   * @param self::RELEASE_CHANNEL_* $releaseChannel
    */
   public function setReleaseChannel($releaseChannel)
   {
     $this->releaseChannel = $releaseChannel;
   }
   /**
-   * @return string
+   * @return self::RELEASE_CHANNEL_*
    */
   public function getReleaseChannel()
   {
     return $this->releaseChannel;
   }
   /**
-   * @param ScalingConfig
+   * Optional. Scaling configuration of the metastore service.
+   *
+   * @param ScalingConfig $scalingConfig
    */
   public function setScalingConfig(ScalingConfig $scalingConfig)
   {
@@ -337,7 +522,9 @@ class Service extends \Google\Model
     return $this->scalingConfig;
   }
   /**
-   * @param ScheduledBackup
+   * Optional. The configuration of scheduled backup for the metastore service.
+   *
+   * @param ScheduledBackup $scheduledBackup
    */
   public function setScheduledBackup(ScheduledBackup $scheduledBackup)
   {
@@ -351,21 +538,29 @@ class Service extends \Google\Model
     return $this->scheduledBackup;
   }
   /**
-   * @param string
+   * Output only. The current state of the metastore service.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, SUSPENDING,
+   * SUSPENDED, UPDATING, DELETING, ERROR, AUTOSCALING, MIGRATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Additional information about the current state of the
+   * metastore service, if available.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {
@@ -379,7 +574,28 @@ class Service extends \Google\Model
     return $this->stateMessage;
   }
   /**
-   * @param TelemetryConfig
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * resource. For example: "123/environment": "production", "123/costCenter":
+   * "marketing"
+   *
+   * @param string[] $tags
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
+  }
+  /**
+   * Optional. The configuration specifying telemetry settings for the Dataproc
+   * Metastore service. If unspecified defaults to JSON.
+   *
+   * @param TelemetryConfig $telemetryConfig
    */
   public function setTelemetryConfig(TelemetryConfig $telemetryConfig)
   {
@@ -393,21 +609,28 @@ class Service extends \Google\Model
     return $this->telemetryConfig;
   }
   /**
-   * @param string
+   * Optional. The tier of the service.
+   *
+   * Accepted values: TIER_UNSPECIFIED, DEVELOPER, ENTERPRISE
+   *
+   * @param self::TIER_* $tier
    */
   public function setTier($tier)
   {
     $this->tier = $tier;
   }
   /**
-   * @return string
+   * @return self::TIER_*
    */
   public function getTier()
   {
     return $this->tier;
   }
   /**
-   * @param string
+   * Output only. The globally unique resource identifier of the metastore
+   * service.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -421,7 +644,9 @@ class Service extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The time when the metastore service was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

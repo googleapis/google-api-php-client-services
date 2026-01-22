@@ -20,40 +20,73 @@ namespace Google\Service\DataprocMetastore;
 class CloudSQLConnectionConfig extends \Google\Model
 {
   /**
+   * Required. The hive database name.
+   *
    * @var string
    */
   public $hiveDatabaseName;
   /**
+   * Required. Cloud SQL database connection name
+   * (project_id:region:instance_name)
+   *
    * @var string
    */
   public $instanceConnectionName;
   /**
+   * Required. The private IP address of the Cloud SQL instance.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * Required. The relative resource name of the subnetwork to be used for
+   * Private Service Connect. Note that this cannot be a regular subnet and is
+   * used only for NAT. (https://cloud.google.com/vpc/docs/about-vpc-hosted-
+   * services#psc-subnets) This subnet is used to publish the SOCKS5 proxy
+   * service. The subnet size must be at least /29 and it should reside in a
+   * network through which the Cloud SQL instance is accessible. The resource
+   * name should be in the format,
+   * projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
+   *
    * @var string
    */
   public $natSubnet;
   /**
+   * Required. Input only. The password for the user that Dataproc Metastore
+   * service will be using to connect to the database. This field is not
+   * returned on request.
+   *
    * @var string
    */
   public $password;
   /**
+   * Required. The network port of the database.
+   *
    * @var int
    */
   public $port;
   /**
+   * Required. The relative resource name of the subnetwork to deploy the SOCKS5
+   * proxy service in. The subnetwork should reside in a network through which
+   * the Cloud SQL instance is accessible. The resource name should be in the
+   * format,
+   * projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
+   *
    * @var string
    */
   public $proxySubnet;
   /**
+   * Required. The username that Dataproc Metastore service will use to connect
+   * to the database.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * Required. The hive database name.
+   *
+   * @param string $hiveDatabaseName
    */
   public function setHiveDatabaseName($hiveDatabaseName)
   {
@@ -67,7 +100,10 @@ class CloudSQLConnectionConfig extends \Google\Model
     return $this->hiveDatabaseName;
   }
   /**
-   * @param string
+   * Required. Cloud SQL database connection name
+   * (project_id:region:instance_name)
+   *
+   * @param string $instanceConnectionName
    */
   public function setInstanceConnectionName($instanceConnectionName)
   {
@@ -81,7 +117,9 @@ class CloudSQLConnectionConfig extends \Google\Model
     return $this->instanceConnectionName;
   }
   /**
-   * @param string
+   * Required. The private IP address of the Cloud SQL instance.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -95,7 +133,16 @@ class CloudSQLConnectionConfig extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * Required. The relative resource name of the subnetwork to be used for
+   * Private Service Connect. Note that this cannot be a regular subnet and is
+   * used only for NAT. (https://cloud.google.com/vpc/docs/about-vpc-hosted-
+   * services#psc-subnets) This subnet is used to publish the SOCKS5 proxy
+   * service. The subnet size must be at least /29 and it should reside in a
+   * network through which the Cloud SQL instance is accessible. The resource
+   * name should be in the format,
+   * projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
+   *
+   * @param string $natSubnet
    */
   public function setNatSubnet($natSubnet)
   {
@@ -109,7 +156,11 @@ class CloudSQLConnectionConfig extends \Google\Model
     return $this->natSubnet;
   }
   /**
-   * @param string
+   * Required. Input only. The password for the user that Dataproc Metastore
+   * service will be using to connect to the database. This field is not
+   * returned on request.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -123,7 +174,9 @@ class CloudSQLConnectionConfig extends \Google\Model
     return $this->password;
   }
   /**
-   * @param int
+   * Required. The network port of the database.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -137,7 +190,13 @@ class CloudSQLConnectionConfig extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * Required. The relative resource name of the subnetwork to deploy the SOCKS5
+   * proxy service in. The subnetwork should reside in a network through which
+   * the Cloud SQL instance is accessible. The resource name should be in the
+   * format,
+   * projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
+   *
+   * @param string $proxySubnet
    */
   public function setProxySubnet($proxySubnet)
   {
@@ -151,7 +210,10 @@ class CloudSQLConnectionConfig extends \Google\Model
     return $this->proxySubnet;
   }
   /**
-   * @param string
+   * Required. The username that Dataproc Metastore service will use to connect
+   * to the database.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

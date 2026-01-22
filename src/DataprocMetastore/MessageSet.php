@@ -17,30 +17,9 @@
 
 namespace Google\Service\DataprocMetastore;
 
-class NetworkConfig extends \Google\Collection
+class MessageSet extends \Google\Model
 {
-  protected $collection_key = 'consumers';
-  protected $consumersType = Consumer::class;
-  protected $consumersDataType = 'array';
-
-  /**
-   * Immutable. The consumer-side network configuration for the Dataproc
-   * Metastore instance.
-   *
-   * @param Consumer[] $consumers
-   */
-  public function setConsumers($consumers)
-  {
-    $this->consumers = $consumers;
-  }
-  /**
-   * @return Consumer[]
-   */
-  public function getConsumers()
-  {
-    return $this->consumers;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NetworkConfig::class, 'Google_Service_DataprocMetastore_NetworkConfig');
+class_alias(MessageSet::class, 'Google_Service_DataprocMetastore_MessageSet');

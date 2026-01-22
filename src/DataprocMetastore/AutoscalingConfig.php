@@ -20,10 +20,14 @@ namespace Google\Service\DataprocMetastore;
 class AutoscalingConfig extends \Google\Model
 {
   /**
+   * Optional. Whether or not autoscaling is enabled for this service.
+   *
    * @var bool
    */
   public $autoscalingEnabled;
   /**
+   * Output only. The scaling factor of a service with autoscaling enabled.
+   *
    * @var float
    */
   public $autoscalingFactor;
@@ -31,7 +35,9 @@ class AutoscalingConfig extends \Google\Model
   protected $limitConfigDataType = '';
 
   /**
-   * @param bool
+   * Optional. Whether or not autoscaling is enabled for this service.
+   *
+   * @param bool $autoscalingEnabled
    */
   public function setAutoscalingEnabled($autoscalingEnabled)
   {
@@ -45,7 +51,9 @@ class AutoscalingConfig extends \Google\Model
     return $this->autoscalingEnabled;
   }
   /**
-   * @param float
+   * Output only. The scaling factor of a service with autoscaling enabled.
+   *
+   * @param float $autoscalingFactor
    */
   public function setAutoscalingFactor($autoscalingFactor)
   {
@@ -59,7 +67,9 @@ class AutoscalingConfig extends \Google\Model
     return $this->autoscalingFactor;
   }
   /**
-   * @param LimitConfig
+   * Optional. The LimitConfig of the service.
+   *
+   * @param LimitConfig $limitConfig
    */
   public function setLimitConfig(LimitConfig $limitConfig)
   {

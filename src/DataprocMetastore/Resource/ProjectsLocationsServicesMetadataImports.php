@@ -115,9 +115,9 @@ class ProjectsLocationsServicesMetadataImports extends \Google\Service\Resource
    * Updates a single import. Only the description field of MetadataImport is
    * supported to be updated. (metadataImports.patch)
    *
-   * @param string $name Immutable. The relative resource name of the metadata
-   * import, of the form:projects/{project_number}/locations/{location_id}/service
-   * s/{service_id}/metadataImports/{metadata_import_id}.
+   * @param string $name Immutable. Identifier. The relative resource name of the
+   * metadata import, of the form:projects/{project_number}/locations/{location_id
+   * }/services/{service_id}/metadataImports/{metadata_import_id}.
    * @param MetadataImport $postBody
    * @param array $optParams Optional parameters.
    *

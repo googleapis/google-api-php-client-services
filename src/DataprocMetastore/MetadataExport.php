@@ -20,42 +20,92 @@ namespace Google\Service\DataprocMetastore;
 class MetadataExport extends \Google\Model
 {
   /**
+   * The type of the database dump is unknown.
+   */
+  public const DATABASE_DUMP_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Database dump is a MySQL dump file.
+   */
+  public const DATABASE_DUMP_TYPE_MYSQL = 'MYSQL';
+  /**
+   * Database dump contains Avro files.
+   */
+  public const DATABASE_DUMP_TYPE_AVRO = 'AVRO';
+  /**
+   * The state of the metadata export is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The metadata export is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The metadata export completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The metadata export failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The metadata export is cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Output only. The type of the database dump.
+   *
    * @var string
    */
   public $databaseDumpType;
   /**
+   * Output only. A Cloud Storage URI of a folder that metadata are exported to,
+   * in the form of gs:/, where is automatically generated.
+   *
    * @var string
    */
   public $destinationGcsUri;
   /**
+   * Output only. The time when the export ended.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. The time when the export started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The current state of the export.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The type of the database dump.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, MYSQL, AVRO
+   *
+   * @param self::DATABASE_DUMP_TYPE_* $databaseDumpType
    */
   public function setDatabaseDumpType($databaseDumpType)
   {
     $this->databaseDumpType = $databaseDumpType;
   }
   /**
-   * @return string
+   * @return self::DATABASE_DUMP_TYPE_*
    */
   public function getDatabaseDumpType()
   {
     return $this->databaseDumpType;
   }
   /**
-   * @param string
+   * Output only. A Cloud Storage URI of a folder that metadata are exported to,
+   * in the form of gs:/, where is automatically generated.
+   *
+   * @param string $destinationGcsUri
    */
   public function setDestinationGcsUri($destinationGcsUri)
   {
@@ -69,7 +119,9 @@ class MetadataExport extends \Google\Model
     return $this->destinationGcsUri;
   }
   /**
-   * @param string
+   * Output only. The time when the export ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -83,7 +135,9 @@ class MetadataExport extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. The time when the export started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -97,14 +151,18 @@ class MetadataExport extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The current state of the export.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, SUCCEEDED, FAILED, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

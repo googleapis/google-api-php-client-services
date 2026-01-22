@@ -23,16 +23,23 @@ class ListFederationsResponse extends \Google\Collection
   protected $federationsType = Federation::class;
   protected $federationsDataType = 'array';
   /**
+   * A token that can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Federation[]
+   * The services in the specified location.
+   *
+   * @param Federation[] $federations
    */
   public function setFederations($federations)
   {
@@ -46,7 +53,10 @@ class ListFederationsResponse extends \Google\Collection
     return $this->federations;
   }
   /**
-   * @param string
+   * A token that can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListFederationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

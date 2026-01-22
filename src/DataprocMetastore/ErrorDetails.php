@@ -20,12 +20,18 @@ namespace Google\Service\DataprocMetastore;
 class ErrorDetails extends \Google\Model
 {
   /**
+   * Additional structured details about this error.Keys define the failure
+   * items. Value describes the exception or details of the item.
+   *
    * @var string[]
    */
   public $details;
 
   /**
-   * @param string[]
+   * Additional structured details about this error.Keys define the failure
+   * items. Value describes the exception or details of the item.
+   *
+   * @param string[] $details
    */
   public function setDetails($details)
   {

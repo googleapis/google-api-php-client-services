@@ -20,34 +20,68 @@ namespace Google\Service\DataprocMetastore;
 class ExportMetadataRequest extends \Google\Model
 {
   /**
+   * The type of the database dump is unknown.
+   */
+  public const DATABASE_DUMP_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Database dump is a MySQL dump file.
+   */
+  public const DATABASE_DUMP_TYPE_MYSQL = 'MYSQL';
+  /**
+   * Database dump contains Avro files.
+   */
+  public const DATABASE_DUMP_TYPE_AVRO = 'AVRO';
+  /**
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   *
    * @var string
    */
   public $databaseDumpType;
   /**
+   * A Cloud Storage URI of a folder, in the format gs:. A sub-folder containing
+   * exported files will be created below it.
+   *
    * @var string
    */
   public $destinationGcsFolder;
   /**
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.For example, if an initial request times out, followed by
+   * another request with the same request ID, the server ignores the second
+   * request to prevent the creation of duplicate commitments.The request ID
+   * must be a valid UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format). A
+   * zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param string
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, MYSQL, AVRO
+   *
+   * @param self::DATABASE_DUMP_TYPE_* $databaseDumpType
    */
   public function setDatabaseDumpType($databaseDumpType)
   {
     $this->databaseDumpType = $databaseDumpType;
   }
   /**
-   * @return string
+   * @return self::DATABASE_DUMP_TYPE_*
    */
   public function getDatabaseDumpType()
   {
     return $this->databaseDumpType;
   }
   /**
-   * @param string
+   * A Cloud Storage URI of a folder, in the format gs:. A sub-folder containing
+   * exported files will be created below it.
+   *
+   * @param string $destinationGcsFolder
    */
   public function setDestinationGcsFolder($destinationGcsFolder)
   {
@@ -61,7 +95,17 @@ class ExportMetadataRequest extends \Google\Model
     return $this->destinationGcsFolder;
   }
   /**
-   * @param string
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.For example, if an initial request times out, followed by
+   * another request with the same request ID, the server ignores the second
+   * request to prevent the creation of duplicate commitments.The request ID
+   * must be a valid UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format). A
+   * zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

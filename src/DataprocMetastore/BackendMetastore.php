@@ -20,30 +20,58 @@ namespace Google\Service\DataprocMetastore;
 class BackendMetastore extends \Google\Model
 {
   /**
+   * The metastore type is not set.
+   */
+  public const METASTORE_TYPE_METASTORE_TYPE_UNSPECIFIED = 'METASTORE_TYPE_UNSPECIFIED';
+  /**
+   * The backend metastore is BigQuery.
+   */
+  public const METASTORE_TYPE_BIGQUERY = 'BIGQUERY';
+  /**
+   * The backend metastore is Dataproc Metastore.
+   */
+  public const METASTORE_TYPE_DATAPROC_METASTORE = 'DATAPROC_METASTORE';
+  /**
+   * The type of the backend metastore.
+   *
    * @var string
    */
   public $metastoreType;
   /**
+   * The relative resource name of the metastore that is being federated. The
+   * formats of the relative resource names for the currently supported
+   * metastores are listed below: BigQuery projects/{project_id} Dataproc
+   * Metastore projects/{project_id}/locations/{location}/services/{service_id}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The type of the backend metastore.
+   *
+   * Accepted values: METASTORE_TYPE_UNSPECIFIED, BIGQUERY, DATAPROC_METASTORE
+   *
+   * @param self::METASTORE_TYPE_* $metastoreType
    */
   public function setMetastoreType($metastoreType)
   {
     $this->metastoreType = $metastoreType;
   }
   /**
-   * @return string
+   * @return self::METASTORE_TYPE_*
    */
   public function getMetastoreType()
   {
     return $this->metastoreType;
   }
   /**
-   * @param string
+   * The relative resource name of the metastore that is being federated. The
+   * formats of the relative resource names for the currently supported
+   * metastores are listed below: BigQuery projects/{project_id} Dataproc
+   * Metastore projects/{project_id}/locations/{location}/services/{service_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

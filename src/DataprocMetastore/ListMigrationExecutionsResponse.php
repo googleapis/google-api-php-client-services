@@ -23,16 +23,23 @@ class ListMigrationExecutionsResponse extends \Google\Collection
   protected $migrationExecutionsType = MigrationExecution::class;
   protected $migrationExecutionsDataType = 'array';
   /**
+   * A token that can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param MigrationExecution[]
+   * The migration executions on the specified service.
+   *
+   * @param MigrationExecution[] $migrationExecutions
    */
   public function setMigrationExecutions($migrationExecutions)
   {
@@ -46,7 +53,10 @@ class ListMigrationExecutionsResponse extends \Google\Collection
     return $this->migrationExecutions;
   }
   /**
-   * @param string
+   * A token that can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListMigrationExecutionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

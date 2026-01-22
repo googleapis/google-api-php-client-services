@@ -20,19 +20,37 @@ namespace Google\Service\DataprocMetastore;
 class TelemetryConfig extends \Google\Model
 {
   /**
+   * The LOG_FORMAT is not set.
+   */
+  public const LOG_FORMAT_LOG_FORMAT_UNSPECIFIED = 'LOG_FORMAT_UNSPECIFIED';
+  /**
+   * Logging output uses the legacy textPayload format.
+   */
+  public const LOG_FORMAT_LEGACY = 'LEGACY';
+  /**
+   * Logging output uses the jsonPayload format.
+   */
+  public const LOG_FORMAT_JSON = 'JSON';
+  /**
+   * Optional. The output format of the Dataproc Metastore service's logs.
+   *
    * @var string
    */
   public $logFormat;
 
   /**
-   * @param string
+   * Optional. The output format of the Dataproc Metastore service's logs.
+   *
+   * Accepted values: LOG_FORMAT_UNSPECIFIED, LEGACY, JSON
+   *
+   * @param self::LOG_FORMAT_* $logFormat
    */
   public function setLogFormat($logFormat)
   {
     $this->logFormat = $logFormat;
   }
   /**
-   * @return string
+   * @return self::LOG_FORMAT_*
    */
   public function getLogFormat()
   {

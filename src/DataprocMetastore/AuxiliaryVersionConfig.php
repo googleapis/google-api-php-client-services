@@ -20,18 +20,33 @@ namespace Google\Service\DataprocMetastore;
 class AuxiliaryVersionConfig extends \Google\Model
 {
   /**
+   * Optional. A mapping of Hive metastore configuration key-value pairs to
+   * apply to the auxiliary Hive metastore (configured in hive-site.xml) in
+   * addition to the primary version's overrides. If keys are present in both
+   * the auxiliary version's overrides and the primary version's overrides, the
+   * value from the auxiliary version's overrides takes precedence.
+   *
    * @var string[]
    */
   public $configOverrides;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
   /**
+   * Optional. The Hive metastore version of the auxiliary service. It must be
+   * less than the primary Hive metastore service's version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string[]
+   * Optional. A mapping of Hive metastore configuration key-value pairs to
+   * apply to the auxiliary Hive metastore (configured in hive-site.xml) in
+   * addition to the primary version's overrides. If keys are present in both
+   * the auxiliary version's overrides and the primary version's overrides, the
+   * value from the auxiliary version's overrides takes precedence.
+   *
+   * @param string[] $configOverrides
    */
   public function setConfigOverrides($configOverrides)
   {
@@ -45,7 +60,10 @@ class AuxiliaryVersionConfig extends \Google\Model
     return $this->configOverrides;
   }
   /**
-   * @param NetworkConfig
+   * Output only. The network configuration contains the endpoint URI(s) of the
+   * auxiliary Hive metastore service.
+   *
+   * @param NetworkConfig $networkConfig
    */
   public function setNetworkConfig(NetworkConfig $networkConfig)
   {
@@ -59,7 +77,10 @@ class AuxiliaryVersionConfig extends \Google\Model
     return $this->networkConfig;
   }
   /**
-   * @param string
+   * Optional. The Hive metastore version of the auxiliary service. It must be
+   * less than the primary Hive metastore service's version.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

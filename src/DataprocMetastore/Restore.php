@@ -20,36 +20,90 @@ namespace Google\Service\DataprocMetastore;
 class Restore extends \Google\Model
 {
   /**
+   * The state of the metadata restore is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The metadata restore is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The metadata restore completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The metadata restore failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The metadata restore is cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The restore type is unknown.
+   */
+  public const TYPE_RESTORE_TYPE_UNSPECIFIED = 'RESTORE_TYPE_UNSPECIFIED';
+  /**
+   * The service's metadata and configuration are restored.
+   */
+  public const TYPE_FULL = 'FULL';
+  /**
+   * Only the service's metadata is restored.
+   */
+  public const TYPE_METADATA_ONLY = 'METADATA_ONLY';
+  /**
+   * Output only. The relative resource name of the metastore service backup to
+   * restore from, in the following form:projects/{project_id}/locations/{locati
+   * on_id}/services/{service_id}/backups/{backup_id}.
+   *
    * @var string
    */
   public $backup;
   /**
+   * Optional. A Cloud Storage URI specifying where the backup artifacts are
+   * stored, in the format gs:.
+   *
    * @var string
    */
   public $backupLocation;
   /**
+   * Output only. The restore details containing the revision of the service to
+   * be restored to, in format of JSON.
+   *
    * @var string
    */
   public $details;
   /**
+   * Output only. The time when the restore ended.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. The time when the restore started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The current state of the restore.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The type of restore.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The relative resource name of the metastore service backup to
+   * restore from, in the following form:projects/{project_id}/locations/{locati
+   * on_id}/services/{service_id}/backups/{backup_id}.
+   *
+   * @param string $backup
    */
   public function setBackup($backup)
   {
@@ -63,7 +117,10 @@ class Restore extends \Google\Model
     return $this->backup;
   }
   /**
-   * @param string
+   * Optional. A Cloud Storage URI specifying where the backup artifacts are
+   * stored, in the format gs:.
+   *
+   * @param string $backupLocation
    */
   public function setBackupLocation($backupLocation)
   {
@@ -77,7 +134,10 @@ class Restore extends \Google\Model
     return $this->backupLocation;
   }
   /**
-   * @param string
+   * Output only. The restore details containing the revision of the service to
+   * be restored to, in format of JSON.
+   *
+   * @param string $details
    */
   public function setDetails($details)
   {
@@ -91,7 +151,9 @@ class Restore extends \Google\Model
     return $this->details;
   }
   /**
-   * @param string
+   * Output only. The time when the restore ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -105,7 +167,9 @@ class Restore extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. The time when the restore started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -119,28 +183,36 @@ class Restore extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The current state of the restore.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, SUCCEEDED, FAILED, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The type of restore.
+   *
+   * Accepted values: RESTORE_TYPE_UNSPECIFIED, FULL, METADATA_ONLY
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

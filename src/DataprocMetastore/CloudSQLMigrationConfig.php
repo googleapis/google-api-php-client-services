@@ -25,7 +25,12 @@ class CloudSQLMigrationConfig extends \Google\Model
   protected $cloudSqlConnectionConfigDataType = '';
 
   /**
-   * @param CdcConfig
+   * Required. Configuration information to start the Change Data Capture (CDC)
+   * streams from customer database to backend database of Dataproc Metastore.
+   * Dataproc Metastore switches to using its backend database after the cutover
+   * phase of migration.
+   *
+   * @param CdcConfig $cdcConfig
    */
   public function setCdcConfig(CdcConfig $cdcConfig)
   {
@@ -39,7 +44,10 @@ class CloudSQLMigrationConfig extends \Google\Model
     return $this->cdcConfig;
   }
   /**
-   * @param CloudSQLConnectionConfig
+   * Required. Configuration information to establish customer database
+   * connection before the cutover phase of migration
+   *
+   * @param CloudSQLConnectionConfig $cloudSqlConnectionConfig
    */
   public function setCloudSqlConnectionConfig(CloudSQLConnectionConfig $cloudSqlConnectionConfig)
   {

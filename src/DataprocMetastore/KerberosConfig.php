@@ -22,16 +22,27 @@ class KerberosConfig extends \Google\Model
   protected $keytabType = Secret::class;
   protected $keytabDataType = '';
   /**
+   * Optional. A Cloud Storage URI that specifies the path to a krb5.conf file.
+   * It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file
+   * does not need to be named krb5.conf explicitly.
+   *
    * @var string
    */
   public $krb5ConfigGcsUri;
   /**
+   * Optional. A Kerberos principal that exists in the both the keytab the KDC
+   * to authenticate as. A typical principal is of the form
+   * primary/instance@REALM, but there is no exact format.
+   *
    * @var string
    */
   public $principal;
 
   /**
-   * @param Secret
+   * Optional. A Kerberos keytab file that can be used to authenticate a service
+   * principal with a Kerberos Key Distribution Center (KDC).
+   *
+   * @param Secret $keytab
    */
   public function setKeytab(Secret $keytab)
   {
@@ -45,7 +56,11 @@ class KerberosConfig extends \Google\Model
     return $this->keytab;
   }
   /**
-   * @param string
+   * Optional. A Cloud Storage URI that specifies the path to a krb5.conf file.
+   * It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file
+   * does not need to be named krb5.conf explicitly.
+   *
+   * @param string $krb5ConfigGcsUri
    */
   public function setKrb5ConfigGcsUri($krb5ConfigGcsUri)
   {
@@ -59,7 +74,11 @@ class KerberosConfig extends \Google\Model
     return $this->krb5ConfigGcsUri;
   }
   /**
-   * @param string
+   * Optional. A Kerberos principal that exists in the both the keytab the KDC
+   * to authenticate as. A typical principal is of the form
+   * primary/instance@REALM, but there is no exact format.
+   *
+   * @param string $principal
    */
   public function setPrincipal($principal)
   {
