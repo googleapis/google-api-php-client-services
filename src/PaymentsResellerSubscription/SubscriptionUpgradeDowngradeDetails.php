@@ -34,8 +34,9 @@ class SubscriptionUpgradeDowngradeDetails extends \Google\Model
    */
   public const BILLING_CYCLE_SPEC_BILLING_CYCLE_SPEC_START_IMMEDIATELY = 'BILLING_CYCLE_SPEC_START_IMMEDIATELY';
   /**
-   * The billing cycle starts at the end of the previous subscription's billing
-   * cycle and aligns with the previous subscription's billing cycle.
+   * The new subscription will have the same `renewalTime` as the previous
+   * subscription, while the previous subscription is scheduled for cancellation
+   * at that same time.
    */
   public const BILLING_CYCLE_SPEC_BILLING_CYCLE_SPEC_DEFERRED_TO_NEXT_RECURRENCE = 'BILLING_CYCLE_SPEC_DEFERRED_TO_NEXT_RECURRENCE';
   /**
