@@ -17,32 +17,34 @@
 
 namespace Google\Service\Backupdr;
 
-class AlloyDBClusterBackupPlanAssociationProperties extends \Google\Model
+class AlloyDBClusterDataSourceReferenceProperties extends \Google\Model
 {
   /**
-   * Output only. The cluster UID of the AlloyDB cluster.
+   * Output only. Name of the AlloyDB cluster backed up by the datasource.
+   * Format: projects/{project}/locations/{location}/clusters/{cluster}
    *
    * @var string
    */
-  public $clusterUid;
+  public $name;
 
   /**
-   * Output only. The cluster UID of the AlloyDB cluster.
+   * Output only. Name of the AlloyDB cluster backed up by the datasource.
+   * Format: projects/{project}/locations/{location}/clusters/{cluster}
    *
-   * @param string $clusterUid
+   * @param string $name
    */
-  public function setClusterUid($clusterUid)
+  public function setName($name)
   {
-    $this->clusterUid = $clusterUid;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getClusterUid()
+  public function getName()
   {
-    return $this->clusterUid;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AlloyDBClusterBackupPlanAssociationProperties::class, 'Google_Service_Backupdr_AlloyDBClusterBackupPlanAssociationProperties');
+class_alias(AlloyDBClusterDataSourceReferenceProperties::class, 'Google_Service_Backupdr_AlloyDBClusterDataSourceReferenceProperties');

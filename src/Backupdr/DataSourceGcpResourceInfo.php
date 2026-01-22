@@ -19,6 +19,8 @@ namespace Google\Service\Backupdr;
 
 class DataSourceGcpResourceInfo extends \Google\Model
 {
+  protected $alloyDbClusterPropertiesType = AlloyDBClusterDataSourceReferenceProperties::class;
+  protected $alloyDbClusterPropertiesDataType = '';
   protected $cloudSqlInstancePropertiesType = CloudSqlInstanceDataSourceReferenceProperties::class;
   protected $cloudSqlInstancePropertiesDataType = '';
   /**
@@ -43,6 +45,22 @@ class DataSourceGcpResourceInfo extends \Google\Model
    */
   public $type;
 
+  /**
+   * Output only. The properties of the AlloyDB cluster.
+   *
+   * @param AlloyDBClusterDataSourceReferenceProperties $alloyDbClusterProperties
+   */
+  public function setAlloyDbClusterProperties(AlloyDBClusterDataSourceReferenceProperties $alloyDbClusterProperties)
+  {
+    $this->alloyDbClusterProperties = $alloyDbClusterProperties;
+  }
+  /**
+   * @return AlloyDBClusterDataSourceReferenceProperties
+   */
+  public function getAlloyDbClusterProperties()
+  {
+    return $this->alloyDbClusterProperties;
+  }
   /**
    * Output only. The properties of the Cloud SQL instance.
    *

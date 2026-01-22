@@ -17,15 +17,42 @@
 
 namespace Google\Service\Backupdr;
 
-class AlloyDBClusterDataSourceProperties extends \Google\Model
+class AlloyDBClusterDataSourceProperties extends \Google\Collection
 {
+  protected $collection_key = 'pitrWindows';
+  /**
+   * Output only. The cluster UID of the AlloyDB cluster backed up by the
+   * datasource.
+   *
+   * @var string
+   */
+  public $clusterUid;
   /**
    * Output only. Name of the AlloyDB cluster backed up by the datasource.
    *
    * @var string
    */
   public $name;
+  protected $pitrWindowsType = AlloyDbPitrWindow::class;
+  protected $pitrWindowsDataType = 'array';
 
+  /**
+   * Output only. The cluster UID of the AlloyDB cluster backed up by the
+   * datasource.
+   *
+   * @param string $clusterUid
+   */
+  public function setClusterUid($clusterUid)
+  {
+    $this->clusterUid = $clusterUid;
+  }
+  /**
+   * @return string
+   */
+  public function getClusterUid()
+  {
+    return $this->clusterUid;
+  }
   /**
    * Output only. Name of the AlloyDB cluster backed up by the datasource.
    *
@@ -41,6 +68,23 @@ class AlloyDBClusterDataSourceProperties extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Point in time recovery windows. The order is guaranteed to be
+   * ascending by start time.
+   *
+   * @param AlloyDbPitrWindow[] $pitrWindows
+   */
+  public function setPitrWindows($pitrWindows)
+  {
+    $this->pitrWindows = $pitrWindows;
+  }
+  /**
+   * @return AlloyDbPitrWindow[]
+   */
+  public function getPitrWindows()
+  {
+    return $this->pitrWindows;
   }
 }
 
