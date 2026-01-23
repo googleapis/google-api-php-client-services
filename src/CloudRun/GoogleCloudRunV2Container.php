@@ -69,6 +69,8 @@ class GoogleCloudRunV2Container extends \Google\Collection
   public $name;
   protected $portsType = GoogleCloudRunV2ContainerPort::class;
   protected $portsDataType = 'array';
+  protected $readinessProbeType = GoogleCloudRunV2Probe::class;
+  protected $readinessProbeDataType = '';
   protected $resourcesType = GoogleCloudRunV2ResourceRequirements::class;
   protected $resourcesDataType = '';
   protected $sourceCodeType = GoogleCloudRunV2SourceCode::class;
@@ -254,6 +256,22 @@ class GoogleCloudRunV2Container extends \Google\Collection
   public function getPorts()
   {
     return $this->ports;
+  }
+  /**
+   * Readiness probe to be used for health checks.
+   *
+   * @param GoogleCloudRunV2Probe $readinessProbe
+   */
+  public function setReadinessProbe(GoogleCloudRunV2Probe $readinessProbe)
+  {
+    $this->readinessProbe = $readinessProbe;
+  }
+  /**
+   * @return GoogleCloudRunV2Probe
+   */
+  public function getReadinessProbe()
+  {
+    return $this->readinessProbe;
   }
   /**
    * Compute Resource requirements by this container.
