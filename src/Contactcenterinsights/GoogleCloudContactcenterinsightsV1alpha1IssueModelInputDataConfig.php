@@ -20,7 +20,7 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig extends \Google\Model
 {
   /**
-   * Default value, if unspecified will default to PHONE_CALL.
+   * Default value for unspecified.
    */
   public const MEDIUM_MEDIUM_UNSPECIFIED = 'MEDIUM_UNSPECIFIED';
   /**

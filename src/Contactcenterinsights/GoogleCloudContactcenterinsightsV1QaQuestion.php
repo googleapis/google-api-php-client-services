@@ -74,6 +74,8 @@ class GoogleCloudContactcenterinsightsV1QaQuestion extends \Google\Collection
   public $order;
   protected $predefinedQuestionConfigType = GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig::class;
   protected $predefinedQuestionConfigDataType = '';
+  protected $qaQuestionDataOptionsType = GoogleCloudContactcenterinsightsV1QaQuestionQaQuestionDataOptions::class;
+  protected $qaQuestionDataOptionsDataType = '';
   /**
    * Question text. E.g., "Did the agent greet the customer?"
    *
@@ -242,6 +244,22 @@ class GoogleCloudContactcenterinsightsV1QaQuestion extends \Google\Collection
   public function getPredefinedQuestionConfig()
   {
     return $this->predefinedQuestionConfig;
+  }
+  /**
+   * Options for configuring the data used to generate the QA question.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QaQuestionQaQuestionDataOptions $qaQuestionDataOptions
+   */
+  public function setQaQuestionDataOptions(GoogleCloudContactcenterinsightsV1QaQuestionQaQuestionDataOptions $qaQuestionDataOptions)
+  {
+    $this->qaQuestionDataOptions = $qaQuestionDataOptions;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1QaQuestionQaQuestionDataOptions
+   */
+  public function getQaQuestionDataOptions()
+  {
+    return $this->qaQuestionDataOptions;
   }
   /**
    * Question text. E.g., "Did the agent greet the customer?"

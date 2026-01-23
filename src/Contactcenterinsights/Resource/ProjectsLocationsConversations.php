@@ -224,6 +224,9 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @opt_param bool allowMissing Optional. Defaults to false. If set to true, and
    * the conversation is not found, a new conversation will be created. In this
    * situation, `update_mask` is ignored.
+   * @opt_param bool conversationAutoLabelingUpdateConfig.allowAutoLabelingUpdate
+   * Optional. If set to true, the conversation will be updated with auto labeling
+   * results.
    * @opt_param string updateMask The list of fields to be updated. All possible
    * fields can be updated by passing `*`, or a subset of the following updateable
    * fields can be provided: * `agent_id` * `language_code` * `labels` *

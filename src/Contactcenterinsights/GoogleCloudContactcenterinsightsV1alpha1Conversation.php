@@ -20,7 +20,7 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Collection
 {
   /**
-   * Default value, if unspecified will default to PHONE_CALL.
+   * Default value for unspecified.
    */
   public const MEDIUM_MEDIUM_UNSPECIFIED = 'MEDIUM_UNSPECIFIED';
   /**
@@ -41,6 +41,8 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
   public $agentId;
   protected $callMetadataType = GoogleCloudContactcenterinsightsV1alpha1ConversationCallMetadata::class;
   protected $callMetadataDataType = '';
+  protected $correlationInfoType = GoogleCloudContactcenterinsightsV1alpha1ConversationCorrelationInfo::class;
+  protected $correlationInfoDataType = '';
   /**
    * Output only. The time at which the conversation was created.
    *
@@ -82,8 +84,7 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
   protected $latestSummaryType = GoogleCloudContactcenterinsightsV1alpha1ConversationSummarizationSuggestionData::class;
   protected $latestSummaryDataType = '';
   /**
-   * Immutable. The conversation medium, if unspecified will default to
-   * PHONE_CALL.
+   * Immutable. The conversation medium.
    *
    * @var string
    */
@@ -173,6 +174,22 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
   public function getCallMetadata()
   {
     return $this->callMetadata;
+  }
+  /**
+   * Output only. Info for correlating across conversations.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationCorrelationInfo $correlationInfo
+   */
+  public function setCorrelationInfo(GoogleCloudContactcenterinsightsV1alpha1ConversationCorrelationInfo $correlationInfo)
+  {
+    $this->correlationInfo = $correlationInfo;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1ConversationCorrelationInfo
+   */
+  public function getCorrelationInfo()
+  {
+    return $this->correlationInfo;
   }
   /**
    * Output only. The time at which the conversation was created.
@@ -323,8 +340,7 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
     return $this->latestSummary;
   }
   /**
-   * Immutable. The conversation medium, if unspecified will default to
-   * PHONE_CALL.
+   * Immutable. The conversation medium.
    *
    * Accepted values: MEDIUM_UNSPECIFIED, PHONE_CALL, CHAT
    *

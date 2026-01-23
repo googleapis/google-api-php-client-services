@@ -20,11 +20,13 @@ namespace Google\Service\Contactcenterinsights\Resource;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkDeleteFeedbackLabelsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkUploadFeedbackLabelsRequest;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CorrelationConfig;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1EncryptionSpec;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListAllFeedbackLabelsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1QueryMetricsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1Settings;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1TestCorrelationConfigRequest;
 use Google\Service\Contactcenterinsights\GoogleLongrunningOperation;
 
 /**
@@ -86,6 +88,21 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('bulkUploadFeedbackLabels', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Gets correlation config. (locations.getCorrelationConfig)
+   *
+   * @param string $name Required. The name of the correlation config resource to
+   * get. Format: projects/{project}/locations/{location}/correlationConfig
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudContactcenterinsightsV1CorrelationConfig
+   * @throws \Google\Service\Exception
+   */
+  public function getCorrelationConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getCorrelationConfig', [$params], GoogleCloudContactcenterinsightsV1CorrelationConfig::class);
   }
   /**
    * Gets location-level encryption key specification.
@@ -182,6 +199,41 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('queryPerformanceOverview', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Tests correlation config on a conversation. (locations.testCorrelationConfig)
+   *
+   * @param string $location Required. The location to test correlation config.
+   * Format: projects/{project}/locations/{location}
+   * @param GoogleCloudContactcenterinsightsV1TestCorrelationConfigRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function testCorrelationConfig($location, GoogleCloudContactcenterinsightsV1TestCorrelationConfigRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testCorrelationConfig', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Updates correlation config. (locations.updateCorrelationConfig)
+   *
+   * @param string $name Immutable. Identifier. The resource name of the
+   * correlation config. Format:
+   * projects/{project}/locations/{location}/correlationConfig
+   * @param GoogleCloudContactcenterinsightsV1CorrelationConfig $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The list of fields to be updated.
+   * @return GoogleCloudContactcenterinsightsV1CorrelationConfig
+   * @throws \Google\Service\Exception
+   */
+  public function updateCorrelationConfig($name, GoogleCloudContactcenterinsightsV1CorrelationConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateCorrelationConfig', [$params], GoogleCloudContactcenterinsightsV1CorrelationConfig::class);
   }
   /**
    * Updates project-level settings. (locations.updateSettings)
