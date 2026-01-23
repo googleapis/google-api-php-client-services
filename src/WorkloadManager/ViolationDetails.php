@@ -17,8 +17,9 @@
 
 namespace Google\Service\WorkloadManager;
 
-class ViolationDetails extends \Google\Model
+class ViolationDetails extends \Google\Collection
 {
+  protected $collection_key = 'ruleOutput';
   /**
    * The name of the asset.
    *
@@ -26,11 +27,13 @@ class ViolationDetails extends \Google\Model
    */
   public $asset;
   /**
-   * Details of the violation. TODO(b/452163887)
+   * Details of the violation.
    *
    * @var string[]
    */
   public $observed;
+  protected $ruleOutputType = RuleOutput::class;
+  protected $ruleOutputDataType = 'array';
   /**
    * The service account associated with the resource.
    *
@@ -55,7 +58,7 @@ class ViolationDetails extends \Google\Model
     return $this->asset;
   }
   /**
-   * Details of the violation. TODO(b/452163887)
+   * Details of the violation.
    *
    * @param string[] $observed
    */
@@ -69,6 +72,22 @@ class ViolationDetails extends \Google\Model
   public function getObserved()
   {
     return $this->observed;
+  }
+  /**
+   * Output only. The rule output of the violation.
+   *
+   * @param RuleOutput[] $ruleOutput
+   */
+  public function setRuleOutput($ruleOutput)
+  {
+    $this->ruleOutput = $ruleOutput;
+  }
+  /**
+   * @return RuleOutput[]
+   */
+  public function getRuleOutput()
+  {
+    return $this->ruleOutput;
   }
   /**
    * The service account associated with the resource.
