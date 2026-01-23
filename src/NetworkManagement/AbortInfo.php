@@ -114,10 +114,26 @@ class AbortInfo extends \Google\Collection
    */
   public const CAUSE_PERMISSION_DENIED_NO_CLOUD_ROUTER_CONFIGS = 'PERMISSION_DENIED_NO_CLOUD_ROUTER_CONFIGS';
   /**
-   * Aborted because no valid source or destination endpoint is derived from the
-   * input test request.
+   * Aborted because no valid source or destination endpoint can be derived from
+   * the test request.
    */
   public const CAUSE_NO_SOURCE_LOCATION = 'NO_SOURCE_LOCATION';
+  /**
+   * Aborted because the source IP address is not contained within the subnet
+   * ranges of the provided VPC network.
+   */
+  public const CAUSE_NO_SOURCE_GCP_NETWORK_LOCATION = 'NO_SOURCE_GCP_NETWORK_LOCATION';
+  /**
+   * Aborted because the source IP address is not contained within the
+   * destination ranges of the routes towards non-GCP networks in the provided
+   * VPC network.
+   */
+  public const CAUSE_NO_SOURCE_NON_GCP_NETWORK_LOCATION = 'NO_SOURCE_NON_GCP_NETWORK_LOCATION';
+  /**
+   * Aborted because the source IP address can't be resolved as an Internet IP
+   * address.
+   */
+  public const CAUSE_NO_SOURCE_INTERNET_LOCATION = 'NO_SOURCE_INTERNET_LOCATION';
   /**
    * Aborted because the source or destination endpoint specified in the request
    * is invalid. Some examples: - The request might contain malformed resource
@@ -185,6 +201,12 @@ class AbortInfo extends \Google\Collection
    * not supported.
    */
   public const CAUSE_SOURCE_PSC_CLOUD_SQL_UNSUPPORTED = 'SOURCE_PSC_CLOUD_SQL_UNSUPPORTED';
+  /**
+   * Aborted because tests with the external database as a source are not
+   * supported. In such replication scenarios, the connection is initiated by
+   * the Cloud SQL replica instance.
+   */
+  public const CAUSE_SOURCE_EXTERNAL_CLOUD_SQL_UNSUPPORTED = 'SOURCE_EXTERNAL_CLOUD_SQL_UNSUPPORTED';
   /**
    * Aborted because tests with a Redis Cluster as a source are not supported.
    */
@@ -263,15 +285,18 @@ class AbortInfo extends \Google\Collection
    * PERMISSION_DENIED, PERMISSION_DENIED_NO_CLOUD_NAT_CONFIGS,
    * PERMISSION_DENIED_NO_NEG_ENDPOINT_CONFIGS,
    * PERMISSION_DENIED_NO_CLOUD_ROUTER_CONFIGS, NO_SOURCE_LOCATION,
-   * INVALID_ARGUMENT, TRACE_TOO_LONG, INTERNAL_ERROR, UNSUPPORTED,
-   * MISMATCHED_IP_VERSION, GKE_KONNECTIVITY_PROXY_UNSUPPORTED,
-   * RESOURCE_CONFIG_NOT_FOUND, VM_INSTANCE_CONFIG_NOT_FOUND,
-   * NETWORK_CONFIG_NOT_FOUND, FIREWALL_CONFIG_NOT_FOUND,
-   * ROUTE_CONFIG_NOT_FOUND, GOOGLE_MANAGED_SERVICE_AMBIGUOUS_PSC_ENDPOINT,
+   * NO_SOURCE_GCP_NETWORK_LOCATION, NO_SOURCE_NON_GCP_NETWORK_LOCATION,
+   * NO_SOURCE_INTERNET_LOCATION, INVALID_ARGUMENT, TRACE_TOO_LONG,
+   * INTERNAL_ERROR, UNSUPPORTED, MISMATCHED_IP_VERSION,
+   * GKE_KONNECTIVITY_PROXY_UNSUPPORTED, RESOURCE_CONFIG_NOT_FOUND,
+   * VM_INSTANCE_CONFIG_NOT_FOUND, NETWORK_CONFIG_NOT_FOUND,
+   * FIREWALL_CONFIG_NOT_FOUND, ROUTE_CONFIG_NOT_FOUND,
+   * GOOGLE_MANAGED_SERVICE_AMBIGUOUS_PSC_ENDPOINT,
    * GOOGLE_MANAGED_SERVICE_AMBIGUOUS_ENDPOINT,
-   * SOURCE_PSC_CLOUD_SQL_UNSUPPORTED, SOURCE_REDIS_CLUSTER_UNSUPPORTED,
-   * SOURCE_REDIS_INSTANCE_UNSUPPORTED, SOURCE_FORWARDING_RULE_UNSUPPORTED,
-   * NON_ROUTABLE_IP_ADDRESS, UNKNOWN_ISSUE_IN_GOOGLE_MANAGED_PROJECT,
+   * SOURCE_PSC_CLOUD_SQL_UNSUPPORTED, SOURCE_EXTERNAL_CLOUD_SQL_UNSUPPORTED,
+   * SOURCE_REDIS_CLUSTER_UNSUPPORTED, SOURCE_REDIS_INSTANCE_UNSUPPORTED,
+   * SOURCE_FORWARDING_RULE_UNSUPPORTED, NON_ROUTABLE_IP_ADDRESS,
+   * UNKNOWN_ISSUE_IN_GOOGLE_MANAGED_PROJECT,
    * UNSUPPORTED_GOOGLE_MANAGED_PROJECT_CONFIG, NO_SERVERLESS_IP_RANGES,
    * IP_VERSION_PROTOCOL_MISMATCH, GKE_POD_UNKNOWN_ENDPOINT_LOCATION
    *

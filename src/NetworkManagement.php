@@ -40,7 +40,7 @@ class NetworkManagement extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $organizations_locations;
-  public $organizations_locations_operations;
+  public $organizations_locations_global_operations;
   public $organizations_locations_vpcFlowLogsConfigs;
   public $projects_locations;
   public $projects_locations_global_connectivityTests;
@@ -112,7 +112,7 @@ class NetworkManagement extends \Google\Service
           ]
         ]
     );
-    $this->organizations_locations_operations = new NetworkManagement\Resource\OrganizationsLocationsOperations(
+    $this->organizations_locations_global_operations = new NetworkManagement\Resource\OrganizationsLocationsNetworkmanagementGlobalOperations(
         $this,
         $this->serviceName,
         'operations',
