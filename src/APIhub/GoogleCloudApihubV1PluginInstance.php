@@ -97,9 +97,9 @@ class GoogleCloudApihubV1PluginInstance extends \Google\Collection
   protected $sourceEnvironmentsConfigDataType = 'map';
   /**
    * Optional. The source project id of the plugin instance. This will be the id
-   * of runtime project in case of gcp based plugins and org id in case of non
-   * gcp based plugins. This field will be a required field for Google provided
-   * on-ramp plugins.
+   * of runtime project in case of Google Cloud based plugins and org id in case
+   * of non-Google Cloud based plugins. This field will be a required field for
+   * Google provided on-ramp plugins.
    *
    * @var string
    */
@@ -260,9 +260,9 @@ class GoogleCloudApihubV1PluginInstance extends \Google\Collection
   }
   /**
    * Optional. The source project id of the plugin instance. This will be the id
-   * of runtime project in case of gcp based plugins and org id in case of non
-   * gcp based plugins. This field will be a required field for Google provided
-   * on-ramp plugins.
+   * of runtime project in case of Google Cloud based plugins and org id in case
+   * of non-Google Cloud based plugins. This field will be a required field for
+   * Google provided on-ramp plugins.
    *
    * @param string $sourceProjectId
    */

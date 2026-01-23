@@ -75,8 +75,8 @@ class GoogleCloudApihubV1DiscoveredApiObservation extends \Google\Collection
    */
   public $name;
   /**
-   * Optional. For an observation pushed from a gcp resource, this would be the
-   * gcp project id.
+   * Optional. For an observation pushed from a Google Cloud resource, this
+   * would be the Google Cloud project id.
    *
    * @var string
    */
@@ -221,8 +221,8 @@ class GoogleCloudApihubV1DiscoveredApiObservation extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. For an observation pushed from a gcp resource, this would be the
-   * gcp project id.
+   * Optional. For an observation pushed from a Google Cloud resource, this
+   * would be the Google Cloud project id.
    *
    * @param string $origin
    */

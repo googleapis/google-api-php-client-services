@@ -87,13 +87,14 @@ class ProjectsLocationsApiHubInstances extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudApihubV1ApiHubInstance::class);
   }
   /**
-   * Looks up an Api Hub instance in a given GCP project. There will always be
-   * only one Api Hub instance for a GCP project across all locations.
-   * (apiHubInstances.lookup)
+   * Looks up an Api Hub instance in a given Google Cloud project. There will
+   * always be only one Api Hub instance for a Google Cloud project across all
+   * locations. (apiHubInstances.lookup)
    *
    * @param string $parent Required. There will always be only one Api Hub
-   * instance for a GCP project across all locations. The parent resource for the
-   * Api Hub instance resource. Format: `projects/{project}/locations/{location}`
+   * instance for a Google Cloud project across all locations. The parent resource
+   * for the Api Hub instance resource. Format:
+   * `projects/{project}/locations/{location}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApihubV1LookupApiHubInstanceResponse
    * @throws \Google\Service\Exception

@@ -94,9 +94,9 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
   protected $sourceMetadataType = GoogleCloudApihubV1SourceMetadata::class;
   protected $sourceMetadataDataType = 'array';
   /**
-   * Optional. The project to which the deployment belongs. For GCP gateways,
-   * this will refer to the project identifier. For others like Edge/OPDK, this
-   * will refer to the org identifier.
+   * Optional. The project to which the deployment belongs. For Google Cloud
+   * gateways, this will refer to the project identifier. For others like
+   * Edge/OPDK, this will refer to the org identifier.
    *
    * @var string
    */
@@ -387,9 +387,9 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->sourceMetadata;
   }
   /**
-   * Optional. The project to which the deployment belongs. For GCP gateways,
-   * this will refer to the project identifier. For others like Edge/OPDK, this
-   * will refer to the org identifier.
+   * Optional. The project to which the deployment belongs. For Google Cloud
+   * gateways, this will refer to the project identifier. For others like
+   * Edge/OPDK, this will refer to the org identifier.
    *
    * @param string $sourceProject
    */

@@ -80,7 +80,7 @@ class GoogleCloudApihubV1PluginInstanceAction extends \Google\Model
   public $scheduleTimeZone;
   /**
    * Optional. The service account used to publish data. Note, the service
-   * account will only be accepted for non GCP plugins like OPDK.
+   * account will only be accepted for non-Google Cloud plugins like OPDK.
    *
    * @var string
    */
@@ -145,8 +145,8 @@ class GoogleCloudApihubV1PluginInstanceAction extends \Google\Model
   }
   /**
    * Output only. The configuration of resources created for a given plugin
-   * instance action. Note these will be returned only in case of Non-GCP
-   * plugins like OPDK.
+   * instance action. Note these will be returned only in case of non-Google
+   * Cloud plugins like OPDK.
    *
    * @param GoogleCloudApihubV1ResourceConfig $resourceConfig
    */
@@ -197,7 +197,7 @@ class GoogleCloudApihubV1PluginInstanceAction extends \Google\Model
   }
   /**
    * Optional. The service account used to publish data. Note, the service
-   * account will only be accepted for non GCP plugins like OPDK.
+   * account will only be accepted for non-Google Cloud plugins like OPDK.
    *
    * @param string $serviceAccount
    */
