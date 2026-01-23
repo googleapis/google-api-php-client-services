@@ -18,11 +18,14 @@
 namespace Google\Service\CloudMemorystoreforMemcached\Resource;
 
 use Google\Service\CloudMemorystoreforMemcached\ApplyParametersRequest;
+use Google\Service\CloudMemorystoreforMemcached\GetTagsResponse;
 use Google\Service\CloudMemorystoreforMemcached\GoogleCloudMemcacheV1UpgradeInstanceRequest;
 use Google\Service\CloudMemorystoreforMemcached\Instance;
 use Google\Service\CloudMemorystoreforMemcached\ListInstancesResponse;
 use Google\Service\CloudMemorystoreforMemcached\Operation;
 use Google\Service\CloudMemorystoreforMemcached\RescheduleMaintenanceRequest;
+use Google\Service\CloudMemorystoreforMemcached\SetTagsRequest;
+use Google\Service\CloudMemorystoreforMemcached\SetTagsResponse;
 use Google\Service\CloudMemorystoreforMemcached\UpdateParametersRequest;
 
 /**
@@ -110,6 +113,20 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     return $this->call('get', [$params], Instance::class);
   }
   /**
+   * Returns tags directly bound to a GCP resource. (instances.getTags)
+   *
+   * @param string $name Required. The full resource name of the service resource.
+   * @param array $optParams Optional parameters.
+   * @return GetTagsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function getTags($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getTags', [$params], GetTagsResponse::class);
+  }
+  /**
    * Lists Instances in a given location.
    * (instances.listProjectsLocationsInstances)
    *
@@ -179,6 +196,21 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['instance' => $instance, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('rescheduleMaintenance', [$params], Operation::class);
+  }
+  /**
+   * Updates tags directly bound to a GCP resource. (instances.setTags)
+   *
+   * @param string $name Required. The full resource name of the service resource.
+   * @param SetTagsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return SetTagsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function setTags($name, SetTagsRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setTags', [$params], SetTagsResponse::class);
   }
   /**
    * Updates the defined Memcached parameters for an existing instance. This

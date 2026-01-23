@@ -20,7 +20,14 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class SetTagsRequest extends \Google\Model
 {
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Optional. A checksum based on the current bindings which can be passed to
+   * prevent race conditions. If not passed, etag check would be skipped.
+   *
+   * @var string
+   */
+  public $etag;
+  /**
+   * Required. The full resource name of the service resource.
    *
    * @var string
    */
@@ -41,16 +48,26 @@ class SetTagsRequest extends \Google\Model
    * @var string[]
    */
   public $tags;
+
   /**
    * Optional. A checksum based on the current bindings which can be passed to
    * prevent race conditions. If not passed, etag check would be skipped.
    *
-   * @var string
+   * @param string $etag
    */
-  public $tagsEtag;
-
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
+  }
+  /**
+   * Required. The full resource name of the service resource.
    *
    * @param string $name
    */
@@ -100,23 +117,6 @@ class SetTagsRequest extends \Google\Model
   public function getTags()
   {
     return $this->tags;
-  }
-  /**
-   * Optional. A checksum based on the current bindings which can be passed to
-   * prevent race conditions. If not passed, etag check would be skipped.
-   *
-   * @param string $tagsEtag
-   */
-  public function setTagsEtag($tagsEtag)
-  {
-    $this->tagsEtag = $tagsEtag;
-  }
-  /**
-   * @return string
-   */
-  public function getTagsEtag()
-  {
-    return $this->tagsEtag;
   }
 }
 

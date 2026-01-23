@@ -20,14 +20,14 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class GetTagsRequest extends \Google\Model
 {
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Required. The full resource name of the service resource.
    *
    * @var string
    */
   public $name;
 
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Required. The full resource name of the service resource.
    *
    * @param string $name
    */
