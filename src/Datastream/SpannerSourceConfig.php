@@ -111,7 +111,7 @@ class SpannerSourceConfig extends \Google\Model
     return $this->changeStreamName;
   }
   /**
-   * Optional. Spanner objects to avoid retrieving. If some objects are both
+   * Optional. The Spanner objects to avoid retrieving. If some objects are both
    * included and excluded, an error will be thrown.
    *
    * @param SpannerDatabase $excludeObjects
@@ -144,8 +144,8 @@ class SpannerSourceConfig extends \Google\Model
     return $this->fgacRole;
   }
   /**
-   * Optional. Spanner objects to retrieve from the data source. If some objects
-   * are both included and excluded, an error will be thrown.
+   * Optional. The Spanner objects to retrieve from the data source. If some
+   * objects are both included and excluded, an error will be thrown.
    *
    * @param SpannerDatabase $includeObjects
    */

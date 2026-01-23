@@ -21,7 +21,7 @@ class SpannerSchema extends \Google\Collection
 {
   protected $collection_key = 'tables';
   /**
-   * Required. Schema name.
+   * Required. The schema name.
    *
    * @var string
    */
@@ -30,7 +30,7 @@ class SpannerSchema extends \Google\Collection
   protected $tablesDataType = 'array';
 
   /**
-   * Required. Schema name.
+   * Required. The schema name.
    *
    * @param string $schema
    */

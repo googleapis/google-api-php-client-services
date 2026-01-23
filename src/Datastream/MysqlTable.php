@@ -23,7 +23,7 @@ class MysqlTable extends \Google\Collection
   protected $mysqlColumnsType = MysqlColumn::class;
   protected $mysqlColumnsDataType = 'array';
   /**
-   * Table name.
+   * The table name.
    *
    * @var string
    */
@@ -47,7 +47,7 @@ class MysqlTable extends \Google\Collection
     return $this->mysqlColumns;
   }
   /**
-   * Table name.
+   * The table name.
    *
    * @param string $table
    */

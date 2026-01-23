@@ -23,7 +23,7 @@ class OracleSchema extends \Google\Collection
   protected $oracleTablesType = OracleTable::class;
   protected $oracleTablesDataType = 'array';
   /**
-   * Schema name.
+   * The schema name.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class OracleSchema extends \Google\Collection
     return $this->oracleTables;
   }
   /**
-   * Schema name.
+   * The schema name.
    *
    * @param string $schema
    */

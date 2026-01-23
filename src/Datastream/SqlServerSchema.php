@@ -21,7 +21,7 @@ class SqlServerSchema extends \Google\Collection
 {
   protected $collection_key = 'tables';
   /**
-   * Schema name.
+   * The schema name.
    *
    * @var string
    */
@@ -30,7 +30,7 @@ class SqlServerSchema extends \Google\Collection
   protected $tablesDataType = 'array';
 
   /**
-   * Schema name.
+   * The schema name.
    *
    * @param string $schema
    */

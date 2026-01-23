@@ -26,7 +26,7 @@ class SalesforceField extends \Google\Model
    */
   public $dataType;
   /**
-   * Field name.
+   * The field name.
    *
    * @var string
    */
@@ -55,7 +55,7 @@ class SalesforceField extends \Google\Model
     return $this->dataType;
   }
   /**
-   * Field name.
+   * The field name.
    *
    * @param string $name
    */

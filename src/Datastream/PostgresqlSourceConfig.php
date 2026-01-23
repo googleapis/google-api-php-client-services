@@ -47,7 +47,7 @@ class PostgresqlSourceConfig extends \Google\Model
   public $replicationSlot;
 
   /**
-   * PostgreSQL objects to exclude from the stream.
+   * The PostgreSQL objects to exclude from the stream.
    *
    * @param PostgresqlRdbms $excludeObjects
    */
@@ -63,7 +63,7 @@ class PostgresqlSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * PostgreSQL objects to include in the stream.
+   * The PostgreSQL objects to include in the stream.
    *
    * @param PostgresqlRdbms $includeObjects
    */

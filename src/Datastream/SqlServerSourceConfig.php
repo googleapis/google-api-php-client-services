@@ -57,7 +57,7 @@ class SqlServerSourceConfig extends \Google\Model
     return $this->changeTables;
   }
   /**
-   * SQLServer objects to exclude from the stream.
+   * The SQLServer objects to exclude from the stream.
    *
    * @param SqlServerRdbms $excludeObjects
    */
@@ -73,7 +73,7 @@ class SqlServerSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * SQLServer objects to include in the stream.
+   * The SQLServer objects to include in the stream.
    *
    * @param SqlServerRdbms $includeObjects
    */

@@ -23,7 +23,7 @@ class SqlServerTable extends \Google\Collection
   protected $columnsType = SqlServerColumn::class;
   protected $columnsDataType = 'array';
   /**
-   * Table name.
+   * The table name.
    *
    * @var string
    */
@@ -47,7 +47,7 @@ class SqlServerTable extends \Google\Collection
     return $this->columns;
   }
   /**
-   * Table name.
+   * The table name.
    *
    * @param string $table
    */

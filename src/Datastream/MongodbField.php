@@ -20,14 +20,14 @@ namespace Google\Service\Datastream;
 class MongodbField extends \Google\Model
 {
   /**
-   * Field name.
+   * The field name.
    *
    * @var string
    */
   public $field;
 
   /**
-   * Field name.
+   * The field name.
    *
    * @param string $field
    */

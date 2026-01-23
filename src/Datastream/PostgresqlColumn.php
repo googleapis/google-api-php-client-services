@@ -20,7 +20,7 @@ namespace Google\Service\Datastream;
 class PostgresqlColumn extends \Google\Model
 {
   /**
-   * Column name.
+   * The column name.
    *
    * @var string
    */
@@ -69,7 +69,7 @@ class PostgresqlColumn extends \Google\Model
   public $scale;
 
   /**
-   * Column name.
+   * The column name.
    *
    * @param string $column
    */

@@ -23,7 +23,7 @@ class PostgresqlTable extends \Google\Collection
   protected $postgresqlColumnsType = PostgresqlColumn::class;
   protected $postgresqlColumnsDataType = 'array';
   /**
-   * Table name.
+   * The table name.
    *
    * @var string
    */
@@ -47,7 +47,7 @@ class PostgresqlTable extends \Google\Collection
     return $this->postgresqlColumns;
   }
   /**
-   * Table name.
+   * The table name.
    *
    * @param string $table
    */

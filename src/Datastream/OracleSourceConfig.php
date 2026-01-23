@@ -79,7 +79,7 @@ class OracleSourceConfig extends \Google\Model
     return $this->dropLargeObjects;
   }
   /**
-   * Oracle objects to exclude from the stream.
+   * The Oracle objects to exclude from the stream.
    *
    * @param OracleRdbms $excludeObjects
    */
@@ -95,7 +95,7 @@ class OracleSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * Oracle objects to include in the stream.
+   * The Oracle objects to include in the stream.
    *
    * @param OracleRdbms $includeObjects
    */

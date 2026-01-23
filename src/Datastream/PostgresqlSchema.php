@@ -23,7 +23,7 @@ class PostgresqlSchema extends \Google\Collection
   protected $postgresqlTablesType = PostgresqlTable::class;
   protected $postgresqlTablesDataType = 'array';
   /**
-   * Schema name.
+   * The schema name.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class PostgresqlSchema extends \Google\Collection
     return $this->postgresqlTables;
   }
   /**
-   * Schema name.
+   * The schema name.
    *
    * @param string $schema
    */

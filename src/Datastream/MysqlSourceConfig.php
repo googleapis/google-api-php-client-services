@@ -60,7 +60,7 @@ class MysqlSourceConfig extends \Google\Model
     return $this->binaryLogPosition;
   }
   /**
-   * MySQL objects to exclude from the stream.
+   * The MySQL objects to exclude from the stream.
    *
    * @param MysqlRdbms $excludeObjects
    */
@@ -92,7 +92,7 @@ class MysqlSourceConfig extends \Google\Model
     return $this->gtid;
   }
   /**
-   * MySQL objects to retrieve from the source.
+   * The MySQL objects to retrieve from the source.
    *
    * @param MysqlRdbms $includeObjects
    */

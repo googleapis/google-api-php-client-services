@@ -21,8 +21,8 @@ class EventFilter extends \Google\Model
 {
   /**
    * An SQL-query Where clause selecting which data should be included, not
-   * including the "WHERE" keyword. E.g., "t.key1 = 'value1' AND t.key2 =
-   * 'value2'".
+   * including the "WHERE" keyword. e.g., `t.key1 = 'value1' AND t.key2 =
+   * 'value2'`
    *
    * @var string
    */
@@ -30,8 +30,8 @@ class EventFilter extends \Google\Model
 
   /**
    * An SQL-query Where clause selecting which data should be included, not
-   * including the "WHERE" keyword. E.g., "t.key1 = 'value1' AND t.key2 =
-   * 'value2'".
+   * including the "WHERE" keyword. e.g., `t.key1 = 'value1' AND t.key2 =
+   * 'value2'`
    *
    * @param string $sqlWhereClause
    */

@@ -23,7 +23,7 @@ class SalesforceObject extends \Google\Collection
   protected $fieldsType = SalesforceField::class;
   protected $fieldsDataType = 'array';
   /**
-   * Object name.
+   * The object name.
    *
    * @var string
    */
@@ -47,7 +47,7 @@ class SalesforceObject extends \Google\Collection
     return $this->fields;
   }
   /**
-   * Object name.
+   * The object name.
    *
    * @param string $objectName
    */

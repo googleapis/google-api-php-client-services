@@ -20,7 +20,7 @@ namespace Google\Service\Datastream;
 class OracleColumn extends \Google\Model
 {
   /**
-   * Column name.
+   * The column name.
    *
    * @var string
    */
@@ -75,7 +75,7 @@ class OracleColumn extends \Google\Model
   public $scale;
 
   /**
-   * Column name.
+   * The column name.
    *
    * @param string $column
    */

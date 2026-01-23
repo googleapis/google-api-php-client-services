@@ -26,7 +26,7 @@ class GcsProfile extends \Google\Model
    */
   public $bucket;
   /**
-   * The root path inside the Cloud Storage bucket.
+   * Optional. The root path inside the Cloud Storage bucket.
    *
    * @var string
    */
@@ -49,7 +49,7 @@ class GcsProfile extends \Google\Model
     return $this->bucket;
   }
   /**
-   * The root path inside the Cloud Storage bucket.
+   * Optional. The root path inside the Cloud Storage bucket.
    *
    * @param string $rootPath
    */

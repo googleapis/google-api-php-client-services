@@ -26,7 +26,7 @@ class MysqlColumn extends \Google\Model
    */
   public $collation;
   /**
-   * Column name.
+   * The column name.
    *
    * @var string
    */
@@ -92,7 +92,7 @@ class MysqlColumn extends \Google\Model
     return $this->collation;
   }
   /**
-   * Column name.
+   * The column name.
    *
    * @param string $column
    */

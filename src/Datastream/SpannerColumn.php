@@ -20,7 +20,7 @@ namespace Google\Service\Datastream;
 class SpannerColumn extends \Google\Model
 {
   /**
-   * Required. Column name.
+   * Required. The column name.
    *
    * @var string
    */
@@ -45,7 +45,7 @@ class SpannerColumn extends \Google\Model
   public $ordinalPosition;
 
   /**
-   * Required. Column name.
+   * Required. The column name.
    *
    * @param string $column
    */

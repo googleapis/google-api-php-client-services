@@ -21,7 +21,7 @@ class MysqlDatabase extends \Google\Collection
 {
   protected $collection_key = 'mysqlTables';
   /**
-   * Database name.
+   * The database name.
    *
    * @var string
    */
@@ -30,7 +30,7 @@ class MysqlDatabase extends \Google\Collection
   protected $mysqlTablesDataType = 'array';
 
   /**
-   * Database name.
+   * The database name.
    *
    * @param string $database
    */

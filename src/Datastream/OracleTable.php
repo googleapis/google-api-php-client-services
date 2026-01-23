@@ -23,7 +23,7 @@ class OracleTable extends \Google\Collection
   protected $oracleColumnsType = OracleColumn::class;
   protected $oracleColumnsDataType = 'array';
   /**
-   * Table name.
+   * The table name.
    *
    * @var string
    */
@@ -47,7 +47,7 @@ class OracleTable extends \Google\Collection
     return $this->oracleColumns;
   }
   /**
-   * Table name.
+   * The table name.
    *
    * @param string $table
    */

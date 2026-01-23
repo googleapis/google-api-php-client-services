@@ -51,7 +51,7 @@ class MongodbSourceConfig extends \Google\Model
   public $maxConcurrentBackfillTasks;
 
   /**
-   * MongoDB collections to exclude from the stream.
+   * The MongoDB collections to exclude from the stream.
    *
    * @param MongodbCluster $excludeObjects
    */
@@ -67,7 +67,7 @@ class MongodbSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * MongoDB collections to include in the stream.
+   * The MongoDB collections to include in the stream.
    *
    * @param MongodbCluster $includeObjects
    */

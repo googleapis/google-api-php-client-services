@@ -23,7 +23,7 @@ class SpannerTable extends \Google\Collection
   protected $columnsType = SpannerColumn::class;
   protected $columnsDataType = 'array';
   /**
-   * Required. Table name.
+   * Required. The table name.
    *
    * @var string
    */
@@ -46,7 +46,7 @@ class SpannerTable extends \Google\Collection
     return $this->columns;
   }
   /**
-   * Required. Table name.
+   * Required. The table name.
    *
    * @param string $table
    */

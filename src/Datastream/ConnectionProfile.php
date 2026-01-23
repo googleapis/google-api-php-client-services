@@ -87,7 +87,7 @@ class ConnectionProfile extends \Google\Model
   public $updateTime;
 
   /**
-   * BigQuery Connection Profile configuration.
+   * Profile for connecting to a BigQuery destination.
    *
    * @param BigQueryProfile $bigqueryProfile
    */
@@ -151,7 +151,7 @@ class ConnectionProfile extends \Google\Model
     return $this->forwardSshConnectivity;
   }
   /**
-   * Cloud Storage ConnectionProfile configuration.
+   * Profile for connecting to a Cloud Storage destination.
    *
    * @param GcsProfile $gcsProfile
    */
@@ -183,7 +183,7 @@ class ConnectionProfile extends \Google\Model
     return $this->labels;
   }
   /**
-   * MongoDB Connection Profile configuration.
+   * Profile for connecting to a MongoDB source.
    *
    * @param MongodbProfile $mongodbProfile
    */
@@ -199,7 +199,7 @@ class ConnectionProfile extends \Google\Model
     return $this->mongodbProfile;
   }
   /**
-   * MySQL ConnectionProfile configuration.
+   * Profile for connecting to a MySQL source.
    *
    * @param MysqlProfile $mysqlProfile
    */
@@ -231,7 +231,7 @@ class ConnectionProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * Oracle ConnectionProfile configuration.
+   * Profile for connecting to an Oracle source.
    *
    * @param OracleProfile $oracleProfile
    */
@@ -247,7 +247,7 @@ class ConnectionProfile extends \Google\Model
     return $this->oracleProfile;
   }
   /**
-   * PostgreSQL Connection Profile configuration.
+   * Profile for connecting to a PostgreSQL source.
    *
    * @param PostgresqlProfile $postgresqlProfile
    */
@@ -279,7 +279,7 @@ class ConnectionProfile extends \Google\Model
     return $this->privateConnectivity;
   }
   /**
-   * Salesforce Connection Profile configuration.
+   * Profile for connecting to a Salesforce source.
    *
    * @param SalesforceProfile $salesforceProfile
    */
@@ -327,7 +327,7 @@ class ConnectionProfile extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * Spanner Connection Profile configuration.
+   * Profile for connecting to a Spanner source.
    *
    * @param SpannerProfile $spannerProfile
    */
@@ -343,7 +343,7 @@ class ConnectionProfile extends \Google\Model
     return $this->spannerProfile;
   }
   /**
-   * SQLServer Connection Profile configuration.
+   * Profile for connecting to a SQLServer source.
    *
    * @param SqlServerProfile $sqlServerProfile
    */
