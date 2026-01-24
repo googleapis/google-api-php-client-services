@@ -91,7 +91,7 @@ class LogEntry extends \Google\Collection
    * Optional. A map of key, value pairs that provides additional information
    * about the log entry. The labels can be user-defined or system-defined.User-
    * defined labels are arbitrary key, value pairs that you can use to classify
-   * logs.System-defined labels are defined by GCP services for platform logs.
+   * logs.System-defined labels are defined by cloud services for platform logs.
    * They have two components - a service namespace component and the attribute
    * name. For example: compute.googleapis.com/resource_name.Cloud Logging
    * truncates label keys that exceed 512 B and label values that exceed 64 KB
@@ -361,7 +361,7 @@ class LogEntry extends \Google\Collection
    * Optional. A map of key, value pairs that provides additional information
    * about the log entry. The labels can be user-defined or system-defined.User-
    * defined labels are arbitrary key, value pairs that you can use to classify
-   * logs.System-defined labels are defined by GCP services for platform logs.
+   * logs.System-defined labels are defined by cloud services for platform logs.
    * They have two components - a service namespace component and the attribute
    * name. For example: compute.googleapis.com/resource_name.Cloud Logging
    * truncates label keys that exceed 512 B and label values that exceed 64 KB
