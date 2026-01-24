@@ -74,6 +74,16 @@ class ProjectsMetadata extends \Google\Collection
   protected $gceTagType = GceTag::class;
   protected $gceTagDataType = 'array';
   /**
+   * DEPRECATED: Indicates whether the GCE project is in the DEPROVISIONING
+   * state. This field is a temporary workaround (see b/475310865) to allow GCE
+   * extensions to bypass certain checks during deprovisioning. It will be
+   * replaced by a permanent solution in the future.
+   *
+   * @deprecated
+   * @var bool
+   */
+  public $isGceProjectDeprovisioning;
+  /**
    * The service account authorized to operate on the consumer project. Note:
    * CCFE only propagates P4SA with default tag to CLH.
    *
@@ -174,6 +184,27 @@ class ProjectsMetadata extends \Google\Collection
   public function getGceTag()
   {
     return $this->gceTag;
+  }
+  /**
+   * DEPRECATED: Indicates whether the GCE project is in the DEPROVISIONING
+   * state. This field is a temporary workaround (see b/475310865) to allow GCE
+   * extensions to bypass certain checks during deprovisioning. It will be
+   * replaced by a permanent solution in the future.
+   *
+   * @deprecated
+   * @param bool $isGceProjectDeprovisioning
+   */
+  public function setIsGceProjectDeprovisioning($isGceProjectDeprovisioning)
+  {
+    $this->isGceProjectDeprovisioning = $isGceProjectDeprovisioning;
+  }
+  /**
+   * @deprecated
+   * @return bool
+   */
+  public function getIsGceProjectDeprovisioning()
+  {
+    return $this->isGceProjectDeprovisioning;
   }
   /**
    * The service account authorized to operate on the consumer project. Note:
