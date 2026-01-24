@@ -45,6 +45,14 @@ class SystemUpdate extends \Google\Collection
   public const TYPE_POSTPONE = 'POSTPONE';
   protected $collection_key = 'freezePeriods';
   /**
+   * If this is greater than zero, then this is the number of days after a
+   * pending update becoming available that a device can remain compliant,
+   * without taking the update. Has no effect otherwise.
+   *
+   * @var int
+   */
+  public $allowedDaysWithoutUpdate;
+  /**
    * If the type is WINDOWED, the end of the maintenance window, measured as the
    * number of minutes after midnight in device's local time. This value must be
    * between 0 and 1439, inclusive. If this value is less than start_minutes,
@@ -72,6 +80,24 @@ class SystemUpdate extends \Google\Collection
    */
   public $type;
 
+  /**
+   * If this is greater than zero, then this is the number of days after a
+   * pending update becoming available that a device can remain compliant,
+   * without taking the update. Has no effect otherwise.
+   *
+   * @param int $allowedDaysWithoutUpdate
+   */
+  public function setAllowedDaysWithoutUpdate($allowedDaysWithoutUpdate)
+  {
+    $this->allowedDaysWithoutUpdate = $allowedDaysWithoutUpdate;
+  }
+  /**
+   * @return int
+   */
+  public function getAllowedDaysWithoutUpdate()
+  {
+    return $this->allowedDaysWithoutUpdate;
+  }
   /**
    * If the type is WINDOWED, the end of the maintenance window, measured as the
    * number of minutes after midnight in device's local time. This value must be
