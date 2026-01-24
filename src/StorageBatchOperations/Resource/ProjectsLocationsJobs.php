@@ -82,6 +82,11 @@ class ProjectsLocationsJobs extends \Google\Service\Resource
    * projects/{project_id}/locations/global/jobs/{job_id} .
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool force Optional. If set to true, any child bucket operations
+   * of the job will also be deleted. Highly recommended to be set to true by all
+   * clients. Users cannot mutate bucket operations directly, so only the
+   * jobs.delete permission is required to delete a job (and its child bucket
+   * operations).
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID in case you need to retry your request.
    * Requests with same `request_id` will be ignored for at least 60 minutes since

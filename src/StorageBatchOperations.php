@@ -40,6 +40,7 @@ class StorageBatchOperations extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_jobs;
+  public $projects_locations_jobs_bucketOperations;
   public $projects_locations_operations;
   public $rootUrlTemplate;
 
@@ -151,6 +152,10 @@ class StorageBatchOperations extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'force' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -168,6 +173,52 @@ class StorageBatchOperations extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/jobs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_jobs_bucketOperations = new StorageBatchOperations\Resource\ProjectsLocationsJobsBucketOperations(
+        $this,
+        $this->serviceName,
+        'bucketOperations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/bucketOperations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
