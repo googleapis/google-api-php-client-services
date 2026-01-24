@@ -43,6 +43,12 @@ class StreamingConfigTask extends \Google\Collection
   protected $streamingComputationConfigsType = StreamingComputationConfig::class;
   protected $streamingComputationConfigsDataType = 'array';
   /**
+   * Optional. The state tag encoding format version for streaming engine jobs.
+   *
+   * @var int
+   */
+  public $streamingEngineStateTagEncodingVersion;
+  /**
    * Map from user step names to state families.
    *
    * @var string[]
@@ -159,6 +165,22 @@ class StreamingConfigTask extends \Google\Collection
   public function getStreamingComputationConfigs()
   {
     return $this->streamingComputationConfigs;
+  }
+  /**
+   * Optional. The state tag encoding format version for streaming engine jobs.
+   *
+   * @param int $streamingEngineStateTagEncodingVersion
+   */
+  public function setStreamingEngineStateTagEncodingVersion($streamingEngineStateTagEncodingVersion)
+  {
+    $this->streamingEngineStateTagEncodingVersion = $streamingEngineStateTagEncodingVersion;
+  }
+  /**
+   * @return int
+   */
+  public function getStreamingEngineStateTagEncodingVersion()
+  {
+    return $this->streamingEngineStateTagEncodingVersion;
   }
   /**
    * Map from user step names to state families.
