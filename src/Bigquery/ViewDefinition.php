@@ -39,10 +39,10 @@ class ViewDefinition extends \Google\Collection
   public $useExplicitColumnNames;
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default
-   * value is true. If set to false, the view will use BigQuery's GoogleSQL:
-   * https://cloud.google.com/bigquery/sql-reference/ Queries and views that
-   * reference this view must use the same flag value. A wrapper is used here
-   * because the default value is True.
+   * value is true. If set to false, the view uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql).
+   * Queries and views that reference this view must use the same flag value. A
+   * wrapper is used here because the default value is True.
    *
    * @var bool
    */
@@ -117,10 +117,10 @@ class ViewDefinition extends \Google\Collection
   }
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default
-   * value is true. If set to false, the view will use BigQuery's GoogleSQL:
-   * https://cloud.google.com/bigquery/sql-reference/ Queries and views that
-   * reference this view must use the same flag value. A wrapper is used here
-   * because the default value is True.
+   * value is true. If set to false, the view uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql).
+   * Queries and views that reference this view must use the same flag value. A
+   * wrapper is used here because the default value is True.
    *
    * @param bool $useLegacySql
    */
