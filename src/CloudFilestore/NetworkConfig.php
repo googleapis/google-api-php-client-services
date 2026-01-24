@@ -57,7 +57,7 @@ class NetworkConfig extends \Google\Collection
   public $ipAddresses;
   /**
    * Internet protocol versions for which the instance has IP addresses
-   * assigned. For this version, only MODE_IPV4 is supported.
+   * assigned.
    *
    * @var string[]
    */
@@ -133,7 +133,7 @@ class NetworkConfig extends \Google\Collection
   }
   /**
    * Internet protocol versions for which the instance has IP addresses
-   * assigned. For this version, only MODE_IPV4 is supported.
+   * assigned.
    *
    * @param string[] $modes
    */
