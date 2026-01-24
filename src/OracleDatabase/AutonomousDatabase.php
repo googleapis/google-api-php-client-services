@@ -21,13 +21,13 @@ class AutonomousDatabase extends \Google\Collection
 {
   protected $collection_key = 'peerAutonomousDatabases';
   /**
-   * Optional. The password for the default ADMIN user.
+   * Optional. Immutable. The password for the default ADMIN user.
    *
    * @var string
    */
   public $adminPassword;
   /**
-   * Optional. The subnet CIDR range for the Autonomous Database.
+   * Optional. Immutable. The subnet CIDR range for the Autonomous Database.
    *
    * @var string
    */
@@ -39,9 +39,9 @@ class AutonomousDatabase extends \Google\Collection
    */
   public $createTime;
   /**
-   * Optional. The name of the Autonomous Database. The database name must be
-   * unique in the project. The name must begin with a letter and can contain a
-   * maximum of 30 alphanumeric characters.
+   * Optional. Immutable. The name of the Autonomous Database. The database name
+   * must be unique in the project. The name must begin with a letter and can
+   * contain a maximum of 30 alphanumeric characters.
    *
    * @var string
    */
@@ -54,8 +54,8 @@ class AutonomousDatabase extends \Google\Collection
    */
   public $disasterRecoverySupportedLocations;
   /**
-   * Optional. The display name for the Autonomous Database. The name does not
-   * have to be unique within your project.
+   * Optional. Immutable. The display name for the Autonomous Database. The name
+   * does not have to be unique within your project.
    *
    * @var string
    */
@@ -82,15 +82,16 @@ class AutonomousDatabase extends \Google\Collection
    */
   public $name;
   /**
-   * Optional. The name of the VPC network used by the Autonomous Database in
-   * the following format: projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network used by the Autonomous
+   * Database in the following format:
+   * projects/{project}/global/networks/{network}
    *
    * @var string
    */
   public $network;
   /**
-   * Optional. The name of the OdbNetwork associated with the Autonomous
-   * Database. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the
+   * Autonomous Database. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
    * optional but if specified, this should match the parent ODBNetwork of the
    * OdbSubnet.
@@ -99,9 +100,9 @@ class AutonomousDatabase extends \Google\Collection
    */
   public $odbNetwork;
   /**
-   * Optional. The name of the OdbSubnet associated with the Autonomous
-   * Database. Format: projects/{project}/locations/{location}/odbNetworks/{odb_
-   * network}/odbSubnets/{odb_subnet}
+   * Optional. Immutable. The name of the OdbSubnet associated with the
+   * Autonomous Database. Format: projects/{project}/locations/{location}/odbNet
+   * works/{odb_network}/odbSubnets/{odb_subnet}
    *
    * @var string
    */
@@ -119,7 +120,7 @@ class AutonomousDatabase extends \Google\Collection
   protected $sourceConfigDataType = '';
 
   /**
-   * Optional. The password for the default ADMIN user.
+   * Optional. Immutable. The password for the default ADMIN user.
    *
    * @param string $adminPassword
    */
@@ -135,7 +136,7 @@ class AutonomousDatabase extends \Google\Collection
     return $this->adminPassword;
   }
   /**
-   * Optional. The subnet CIDR range for the Autonomous Database.
+   * Optional. Immutable. The subnet CIDR range for the Autonomous Database.
    *
    * @param string $cidr
    */
@@ -167,9 +168,9 @@ class AutonomousDatabase extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. The name of the Autonomous Database. The database name must be
-   * unique in the project. The name must begin with a letter and can contain a
-   * maximum of 30 alphanumeric characters.
+   * Optional. Immutable. The name of the Autonomous Database. The database name
+   * must be unique in the project. The name must begin with a letter and can
+   * contain a maximum of 30 alphanumeric characters.
    *
    * @param string $database
    */
@@ -202,8 +203,8 @@ class AutonomousDatabase extends \Google\Collection
     return $this->disasterRecoverySupportedLocations;
   }
   /**
-   * Optional. The display name for the Autonomous Database. The name does not
-   * have to be unique within your project.
+   * Optional. Immutable. The display name for the Autonomous Database. The name
+   * does not have to be unique within your project.
    *
    * @param string $displayName
    */
@@ -270,8 +271,9 @@ class AutonomousDatabase extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. The name of the VPC network used by the Autonomous Database in
-   * the following format: projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network used by the Autonomous
+   * Database in the following format:
+   * projects/{project}/global/networks/{network}
    *
    * @param string $network
    */
@@ -287,8 +289,8 @@ class AutonomousDatabase extends \Google\Collection
     return $this->network;
   }
   /**
-   * Optional. The name of the OdbNetwork associated with the Autonomous
-   * Database. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the
+   * Autonomous Database. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
    * optional but if specified, this should match the parent ODBNetwork of the
    * OdbSubnet.
@@ -307,9 +309,9 @@ class AutonomousDatabase extends \Google\Collection
     return $this->odbNetwork;
   }
   /**
-   * Optional. The name of the OdbSubnet associated with the Autonomous
-   * Database. Format: projects/{project}/locations/{location}/odbNetworks/{odb_
-   * network}/odbSubnets/{odb_subnet}
+   * Optional. Immutable. The name of the OdbSubnet associated with the
+   * Autonomous Database. Format: projects/{project}/locations/{location}/odbNet
+   * works/{odb_network}/odbSubnets/{odb_subnet}
    *
    * @param string $odbSubnet
    */
@@ -358,9 +360,10 @@ class AutonomousDatabase extends \Google\Collection
     return $this->properties;
   }
   /**
-   * Optional. The source Autonomous Database configuration for the standby
-   * Autonomous Database. The source Autonomous Database is configured while
-   * creating the Peer Autonomous Database and can't be updated after creation.
+   * Optional. Immutable. The source Autonomous Database configuration for the
+   * standby Autonomous Database. The source Autonomous Database is configured
+   * while creating the Peer Autonomous Database and can't be updated after
+   * creation.
    *
    * @param SourceConfig $sourceConfig
    */

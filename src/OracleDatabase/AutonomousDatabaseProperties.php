@@ -348,7 +348,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $allocatedStorageSizeTb;
   /**
-   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * Optional. Immutable. The list of allowlisted IP addresses for the
+   * Autonomous Database.
    *
    * @var string[]
    */
@@ -382,22 +383,23 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $availableUpgradeVersions;
   /**
-   * Optional. The retention period for the Autonomous Database. This field is
-   * specified in days, can range from 1 day to 60 days, and has a default value
-   * of 60 days.
+   * Optional. Immutable. The retention period for the Autonomous Database. This
+   * field is specified in days, can range from 1 day to 60 days, and has a
+   * default value of 60 days.
    *
    * @var int
    */
   public $backupRetentionPeriodDays;
   /**
-   * Optional. The character set for the Autonomous Database. The default is
-   * AL32UTF8.
+   * Optional. Immutable. The character set for the Autonomous Database. The
+   * default is AL32UTF8.
    *
    * @var string
    */
   public $characterSet;
   /**
-   * Optional. The number of compute servers for the Autonomous Database.
+   * Optional. Immutable. The number of compute servers for the Autonomous
+   * Database.
    *
    * @var float
    */
@@ -407,7 +409,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
   protected $connectionUrlsType = AutonomousDatabaseConnectionUrls::class;
   protected $connectionUrlsDataType = '';
   /**
-   * Optional. The number of CPU cores to be made available to the database.
+   * Optional. Immutable. The number of CPU cores to be made available to the
+   * database.
    *
    * @var int
    */
@@ -429,13 +432,15 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $dataSafeState;
   /**
-   * Optional. The size of the data stored in the database, in gigabytes.
+   * Optional. Immutable. The size of the data stored in the database, in
+   * gigabytes.
    *
    * @var int
    */
   public $dataStorageSizeGb;
   /**
-   * Optional. The size of the data stored in the database, in terabytes.
+   * Optional. Immutable. The size of the data stored in the database, in
+   * terabytes.
    *
    * @var int
    */
@@ -448,19 +453,20 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $databaseManagementState;
   /**
-   * Optional. The edition of the Autonomous Databases.
+   * Optional. Immutable. The edition of the Autonomous Databases.
    *
    * @var string
    */
   public $dbEdition;
   /**
-   * Optional. The Oracle Database version for the Autonomous Database.
+   * Optional. Immutable. The Oracle Database version for the Autonomous
+   * Database.
    *
    * @var string
    */
   public $dbVersion;
   /**
-   * Required. The workload type of the Autonomous Database.
+   * Required. Immutable. The workload type of the Autonomous Database.
    *
    * @var string
    */
@@ -484,8 +490,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $failedDataRecoveryDuration;
   /**
-   * Optional. This field indicates if auto scaling is enabled for the
-   * Autonomous Database CPU core count.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for
+   * the Autonomous Database CPU core count.
    *
    * @var bool
    */
@@ -498,14 +504,14 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $isLocalDataGuardEnabled;
   /**
-   * Optional. This field indicates if auto scaling is enabled for the
-   * Autonomous Database storage.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for
+   * the Autonomous Database storage.
    *
    * @var bool
    */
   public $isStorageAutoScalingEnabled;
   /**
-   * Required. The license type used for the Autonomous Database.
+   * Required. Immutable. The license type used for the Autonomous Database.
    *
    * @var string
    */
@@ -546,7 +552,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $maintenanceEndTime;
   /**
-   * Optional. The maintenance schedule of the Autonomous Database.
+   * Optional. Immutable. The maintenance schedule of the Autonomous Database.
    *
    * @var string
    */
@@ -565,15 +571,15 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $memoryTableGbs;
   /**
-   * Optional. This field specifies if the Autonomous Database requires mTLS
-   * connections.
+   * Optional. Immutable. This field specifies if the Autonomous Database
+   * requires mTLS connections.
    *
    * @var bool
    */
   public $mtlsConnectionRequired;
   /**
-   * Optional. The national character set for the Autonomous Database. The
-   * default is AL16UTF16.
+   * Optional. Immutable. The national character set for the Autonomous
+   * Database. The default is AL16UTF16.
    *
    * @var string
    */
@@ -632,13 +638,15 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $privateEndpoint;
   /**
-   * Optional. The private endpoint IP address for the Autonomous Database.
+   * Optional. Immutable. The private endpoint IP address for the Autonomous
+   * Database.
    *
    * @var string
    */
   public $privateEndpointIp;
   /**
-   * Optional. The private endpoint label for the Autonomous Database.
+   * Optional. Immutable. The private endpoint label for the Autonomous
+   * Database.
    *
    * @var string
    */
@@ -664,7 +672,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
   protected $scheduledOperationDetailsType = ScheduledOperationDetails::class;
   protected $scheduledOperationDetailsDataType = 'array';
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault secret.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault
+   * secret.
    *
    * @var string
    */
@@ -709,7 +718,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $usedDataStorageSizeTbs;
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault.
    *
    * @var string
    */
@@ -732,7 +741,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->allocatedStorageSizeTb;
   }
   /**
-   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * Optional. Immutable. The list of allowlisted IP addresses for the
+   * Autonomous Database.
    *
    * @param string[] $allowlistedIps
    */
@@ -820,9 +830,9 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->availableUpgradeVersions;
   }
   /**
-   * Optional. The retention period for the Autonomous Database. This field is
-   * specified in days, can range from 1 day to 60 days, and has a default value
-   * of 60 days.
+   * Optional. Immutable. The retention period for the Autonomous Database. This
+   * field is specified in days, can range from 1 day to 60 days, and has a
+   * default value of 60 days.
    *
    * @param int $backupRetentionPeriodDays
    */
@@ -838,8 +848,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->backupRetentionPeriodDays;
   }
   /**
-   * Optional. The character set for the Autonomous Database. The default is
-   * AL32UTF8.
+   * Optional. Immutable. The character set for the Autonomous Database. The
+   * default is AL32UTF8.
    *
    * @param string $characterSet
    */
@@ -855,7 +865,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->characterSet;
   }
   /**
-   * Optional. The number of compute servers for the Autonomous Database.
+   * Optional. Immutable. The number of compute servers for the Autonomous
+   * Database.
    *
    * @param float $computeCount
    */
@@ -904,7 +915,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->connectionUrls;
   }
   /**
-   * Optional. The number of CPU cores to be made available to the database.
+   * Optional. Immutable. The number of CPU cores to be made available to the
+   * database.
    *
    * @param int $cpuCoreCount
    */
@@ -920,7 +932,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->cpuCoreCount;
   }
   /**
-   * Optional. The list of customer contacts.
+   * Optional. Immutable. The list of customer contacts.
    *
    * @param CustomerContact[] $customerContacts
    */
@@ -973,7 +985,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->dataSafeState;
   }
   /**
-   * Optional. The size of the data stored in the database, in gigabytes.
+   * Optional. Immutable. The size of the data stored in the database, in
+   * gigabytes.
    *
    * @param int $dataStorageSizeGb
    */
@@ -989,7 +1002,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->dataStorageSizeGb;
   }
   /**
-   * Optional. The size of the data stored in the database, in terabytes.
+   * Optional. Immutable. The size of the data stored in the database, in
+   * terabytes.
    *
    * @param int $dataStorageSizeTb
    */
@@ -1025,7 +1039,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->databaseManagementState;
   }
   /**
-   * Optional. The edition of the Autonomous Databases.
+   * Optional. Immutable. The edition of the Autonomous Databases.
    *
    * Accepted values: DATABASE_EDITION_UNSPECIFIED, STANDARD_EDITION,
    * ENTERPRISE_EDITION
@@ -1044,7 +1058,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->dbEdition;
   }
   /**
-   * Optional. The Oracle Database version for the Autonomous Database.
+   * Optional. Immutable. The Oracle Database version for the Autonomous
+   * Database.
    *
    * @param string $dbVersion
    */
@@ -1060,7 +1075,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->dbVersion;
   }
   /**
-   * Required. The workload type of the Autonomous Database.
+   * Required. Immutable. The workload type of the Autonomous Database.
    *
    * Accepted values: DB_WORKLOAD_UNSPECIFIED, OLTP, DW, AJD, APEX
    *
@@ -1147,8 +1162,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->failedDataRecoveryDuration;
   }
   /**
-   * Optional. This field indicates if auto scaling is enabled for the
-   * Autonomous Database CPU core count.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for
+   * the Autonomous Database CPU core count.
    *
    * @param bool $isAutoScalingEnabled
    */
@@ -1181,8 +1196,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->isLocalDataGuardEnabled;
   }
   /**
-   * Optional. This field indicates if auto scaling is enabled for the
-   * Autonomous Database storage.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for
+   * the Autonomous Database storage.
    *
    * @param bool $isStorageAutoScalingEnabled
    */
@@ -1198,7 +1213,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->isStorageAutoScalingEnabled;
   }
   /**
-   * Required. The license type used for the Autonomous Database.
+   * Required. Immutable. The license type used for the Autonomous Database.
    *
    * Accepted values: LICENSE_TYPE_UNSPECIFIED, LICENSE_INCLUDED,
    * BRING_YOUR_OWN_LICENSE
@@ -1319,7 +1334,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->maintenanceEndTime;
   }
   /**
-   * Optional. The maintenance schedule of the Autonomous Database.
+   * Optional. Immutable. The maintenance schedule of the Autonomous Database.
    *
    * Accepted values: MAINTENANCE_SCHEDULE_TYPE_UNSPECIFIED, EARLY, REGULAR
    *
@@ -1370,8 +1385,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->memoryTableGbs;
   }
   /**
-   * Optional. This field specifies if the Autonomous Database requires mTLS
-   * connections.
+   * Optional. Immutable. This field specifies if the Autonomous Database
+   * requires mTLS connections.
    *
    * @param bool $mtlsConnectionRequired
    */
@@ -1387,8 +1402,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->mtlsConnectionRequired;
   }
   /**
-   * Optional. The national character set for the Autonomous Database. The
-   * default is AL16UTF16.
+   * Optional. Immutable. The national character set for the Autonomous
+   * Database. The default is AL16UTF16.
    *
    * @param string $nCharacterSet
    */
@@ -1544,7 +1559,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->privateEndpoint;
   }
   /**
-   * Optional. The private endpoint IP address for the Autonomous Database.
+   * Optional. Immutable. The private endpoint IP address for the Autonomous
+   * Database.
    *
    * @param string $privateEndpointIp
    */
@@ -1560,7 +1576,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->privateEndpointIp;
   }
   /**
-   * Optional. The private endpoint label for the Autonomous Database.
+   * Optional. Immutable. The private endpoint label for the Autonomous
+   * Database.
    *
    * @param string $privateEndpointLabel
    */
@@ -1648,7 +1665,8 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->scheduledOperationDetails;
   }
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault secret.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault
+   * secret.
    *
    * @param string $secretId
    */
@@ -1769,7 +1787,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->usedDataStorageSizeTbs;
   }
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault.
    *
    * @param string $vaultId
    */
