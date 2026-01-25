@@ -49,8 +49,10 @@ class ConfigManagementSpec extends \Google\Model
   protected $hierarchyControllerType = ConfigManagementHierarchyControllerConfig::class;
   protected $hierarchyControllerDataType = '';
   /**
-   * Optional. Enables automatic Feature management.
+   * Optional. Deprecated: From version 1.21.0, automatic Feature management is
+   * unavailable, and Config Sync only supports manual upgrades.
    *
+   * @deprecated
    * @var string
    */
   public $management;
@@ -141,11 +143,13 @@ class ConfigManagementSpec extends \Google\Model
     return $this->hierarchyController;
   }
   /**
-   * Optional. Enables automatic Feature management.
+   * Optional. Deprecated: From version 1.21.0, automatic Feature management is
+   * unavailable, and Config Sync only supports manual upgrades.
    *
    * Accepted values: MANAGEMENT_UNSPECIFIED, MANAGEMENT_AUTOMATIC,
    * MANAGEMENT_MANUAL
    *
+   * @deprecated
    * @param self::MANAGEMENT_* $management
    */
   public function setManagement($management)
@@ -153,6 +157,7 @@ class ConfigManagementSpec extends \Google\Model
     $this->management = $management;
   }
   /**
+   * @deprecated
    * @return self::MANAGEMENT_*
    */
   public function getManagement()
