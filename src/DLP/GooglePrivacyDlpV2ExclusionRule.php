@@ -41,10 +41,21 @@ class GooglePrivacyDlpV2ExclusionRule extends \Google\Model
    * intersection with affecting infoTypes findings
    */
   public const MATCHING_TYPE_MATCHING_TYPE_INVERSE_MATCH = 'MATCHING_TYPE_INVERSE_MATCH';
+  /**
+   * Rule-specific match. The matching logic is based on the specific rule being
+   * used. This is required for rules where the matching behavior is not a
+   * simple string comparison (e.g., image containment). This matching type can
+   * only be used with the `ExcludeByImageFindings` rule. - Exclude by image
+   * findings: The matching logic is defined within `ExcludeByImageFindings`
+   * based on spatial relationships between bounding boxes.
+   */
+  public const MATCHING_TYPE_MATCHING_TYPE_RULE_SPECIFIC = 'MATCHING_TYPE_RULE_SPECIFIC';
   protected $dictionaryType = GooglePrivacyDlpV2Dictionary::class;
   protected $dictionaryDataType = '';
   protected $excludeByHotwordType = GooglePrivacyDlpV2ExcludeByHotword::class;
   protected $excludeByHotwordDataType = '';
+  protected $excludeByImageFindingsType = GooglePrivacyDlpV2ExcludeByImageFindings::class;
+  protected $excludeByImageFindingsDataType = '';
   protected $excludeInfoTypesType = GooglePrivacyDlpV2ExcludeInfoTypes::class;
   protected $excludeInfoTypesDataType = '';
   /**
@@ -90,6 +101,23 @@ class GooglePrivacyDlpV2ExclusionRule extends \Google\Model
     return $this->excludeByHotword;
   }
   /**
+   * Exclude findings based on image containment rules. For example, exclude an
+   * image finding if it overlaps with another image finding.
+   *
+   * @param GooglePrivacyDlpV2ExcludeByImageFindings $excludeByImageFindings
+   */
+  public function setExcludeByImageFindings(GooglePrivacyDlpV2ExcludeByImageFindings $excludeByImageFindings)
+  {
+    $this->excludeByImageFindings = $excludeByImageFindings;
+  }
+  /**
+   * @return GooglePrivacyDlpV2ExcludeByImageFindings
+   */
+  public function getExcludeByImageFindings()
+  {
+    return $this->excludeByImageFindings;
+  }
+  /**
    * Set of infoTypes for which findings would affect this rule.
    *
    * @param GooglePrivacyDlpV2ExcludeInfoTypes $excludeInfoTypes
@@ -109,7 +137,8 @@ class GooglePrivacyDlpV2ExclusionRule extends \Google\Model
    * How the rule is applied, see MatchingType documentation for details.
    *
    * Accepted values: MATCHING_TYPE_UNSPECIFIED, MATCHING_TYPE_FULL_MATCH,
-   * MATCHING_TYPE_PARTIAL_MATCH, MATCHING_TYPE_INVERSE_MATCH
+   * MATCHING_TYPE_PARTIAL_MATCH, MATCHING_TYPE_INVERSE_MATCH,
+   * MATCHING_TYPE_RULE_SPECIFIC
    *
    * @param self::MATCHING_TYPE_* $matchingType
    */
