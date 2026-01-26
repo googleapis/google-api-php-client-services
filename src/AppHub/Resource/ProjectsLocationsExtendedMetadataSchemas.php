@@ -33,9 +33,10 @@ class ProjectsLocationsExtendedMetadataSchemas extends \Google\Service\Resource
   /**
    * Gets an Extended Metadata Schema. (extendedMetadataSchemas.get)
    *
-   * @param string $name Required. Schema resource name Format:
-   * projects//locations//extendedMetadataSchemas/ could be
-   * "apphub.googleapis.com/Name"
+   * @param string $name Required. Schema resource name. Format: `projects/{projec
+   * t}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+   * `{extended_metadata_schema}` has the format
+   * `"apphub.googleapis.com/{SchemaName}"`.
    * @param array $optParams Optional parameters.
    * @return ExtendedMetadataSchema
    * @throws \Google\Service\Exception

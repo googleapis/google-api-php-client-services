@@ -44,7 +44,7 @@ class Boundary extends \Google\Model
   public $createTime;
   /**
    * Optional. The resource name of the CRM node being attached to the boundary.
-   * Format: `projects/{project-number}`
+   * Format: `projects/{project-number}` or `projects/{project-id}`
    *
    * @var string
    */
@@ -87,7 +87,7 @@ class Boundary extends \Google\Model
   }
   /**
    * Optional. The resource name of the CRM node being attached to the boundary.
-   * Format: `projects/{project-number}`
+   * Format: `projects/{project-number}` or `projects/{project-id}`
    *
    * @param string $crmNode
    */

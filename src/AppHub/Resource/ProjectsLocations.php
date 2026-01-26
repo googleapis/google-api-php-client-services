@@ -72,7 +72,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * Gets a Boundary. (locations.getBoundary)
    *
    * @param string $name Required. The name of the boundary to retrieve. Format:
-   * projects/{project}/locations/{location}/boundary
+   * `projects/{project}/locations/{location}/boundary`.
    * @param array $optParams Optional parameters.
    * @return Boundary
    * @throws \Google\Service\Exception
