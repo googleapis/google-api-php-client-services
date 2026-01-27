@@ -126,9 +126,9 @@ class ProjectsLocationsSingleTenantHsmInstancesProposals extends \Google\Service
    * Lists SingleTenantHsmInstanceProposals.
    * (proposals.listProjectsLocationsSingleTenantHsmInstancesProposals)
    *
-   * @param string $parent Required. The resource name of the location associated
-   * with the SingleTenantHsmInstanceProposals to list, in the format
-   * `projects/locations/singleTenantHsmInstances`.
+   * @param string $parent Required. The resource name of the single tenant HSM
+   * instance associated with the SingleTenantHsmInstanceProposals to list, in the
+   * format `projects/locations/singleTenantHsmInstances`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Only include resources that match the
