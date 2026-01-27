@@ -38,7 +38,10 @@ class Datalineage extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
+  public $folders_locations_config;
+  public $organizations_locations_config;
   public $projects_locations;
+  public $projects_locations_config;
   public $projects_locations_operations;
   public $projects_locations_processes;
   public $projects_locations_processes_runs;
@@ -62,6 +65,66 @@ class Datalineage extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'datalineage';
 
+    $this->folders_locations_config = new Datalineage\Resource\FoldersLocationsConfig(
+        $this,
+        $this->serviceName,
+        'config',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_locations_config = new Datalineage\Resource\OrganizationsLocationsConfig(
+        $this,
+        $this->serviceName,
+        'config',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations = new Datalineage\Resource\ProjectsLocations(
         $this,
         $this->serviceName,
@@ -97,6 +160,36 @@ class Datalineage extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_config = new Datalineage\Resource\ProjectsLocationsConfig(
+        $this,
+        $this->serviceName,
+        'config',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
