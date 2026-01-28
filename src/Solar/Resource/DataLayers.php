@@ -44,7 +44,11 @@ class DataLayers extends \Google\Service\Resource
    * `MEDIUM` quality imagery is returned if `required_quality` is set to
    * `MEDIUM`.
    * @opt_param string experiments Optional. Specifies the pre-GA experiments to
-   * enable.
+   * enable. Requests using this field are classified as a pre-GA offering under
+   * the [Google Maps Platform Service Specific
+   * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). See
+   * [launch stage descriptions]( https://cloud.google.com/maps-
+   * platform/terms/launch-stages) for more details.
    * @opt_param double location.latitude The latitude in degrees. It must be in
    * the range [-90.0, +90.0].
    * @opt_param double location.longitude The longitude in degrees. It must be in
