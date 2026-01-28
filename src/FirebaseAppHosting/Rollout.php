@@ -55,6 +55,10 @@ class Rollout extends \Google\Model
    */
   public const STATE_CANCELLED = 'CANCELLED';
   /**
+   * The rollout has been skipped.
+   */
+  public const STATE_SKIPPED = 'SKIPPED';
+  /**
    * Optional. Unstructured key value map that may be set by external tools to
    * store and arbitrary metadata. They are not queryable and should be
    * preserved when modifying objects.
@@ -310,7 +314,7 @@ class Rollout extends \Google\Model
    * Output only. The state of the rollout.
    *
    * Accepted values: STATE_UNSPECIFIED, QUEUED, PENDING_BUILD, PROGRESSING,
-   * PAUSED, SUCCEEDED, FAILED, CANCELLED
+   * PAUSED, SUCCEEDED, FAILED, CANCELLED, SKIPPED
    *
    * @param self::STATE_* $state
    */
