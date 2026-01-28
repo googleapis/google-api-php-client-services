@@ -55,14 +55,14 @@ class LinkedProducerVpcNetwork extends \Google\Collection
   public $producerNetwork;
   /**
    * Output only. The proposed exclude export IP ranges waiting for hub
-   * administration's approval.
+   * administrator's approval.
    *
    * @var string[]
    */
   public $proposedExcludeExportRanges;
   /**
    * Output only. The proposed include export IP ranges waiting for hub
-   * administration's approval.
+   * administrator's approval.
    *
    * @var string[]
    */
@@ -159,7 +159,7 @@ class LinkedProducerVpcNetwork extends \Google\Collection
   }
   /**
    * Output only. The proposed exclude export IP ranges waiting for hub
-   * administration's approval.
+   * administrator's approval.
    *
    * @param string[] $proposedExcludeExportRanges
    */
@@ -176,7 +176,7 @@ class LinkedProducerVpcNetwork extends \Google\Collection
   }
   /**
    * Output only. The proposed include export IP ranges waiting for hub
-   * administration's approval.
+   * administrator's approval.
    *
    * @param string[] $proposedIncludeExportRanges
    */

@@ -108,7 +108,7 @@ class Spoke extends \Google\Collection
    */
   public $etag;
   /**
-   * Optional. The list of fields waiting for hub administration's approval.
+   * Optional. The list of fields waiting for hub administrator's approval.
    *
    * @var string[]
    */
@@ -231,7 +231,7 @@ class Spoke extends \Google\Collection
     return $this->etag;
   }
   /**
-   * Optional. The list of fields waiting for hub administration's approval.
+   * Optional. The list of fields waiting for hub administrator's approval.
    *
    * @param string[] $fieldPathsPendingUpdate
    */

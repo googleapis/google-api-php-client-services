@@ -76,7 +76,7 @@ class InternalRange extends \Google\Collection
   protected $allocationOptionsType = AllocationOptions::class;
   protected $allocationOptionsDataType = '';
   /**
-   * Time when the internal range was created.
+   * Output only. Time when the internal range was created.
    *
    * @var string
    */
@@ -175,7 +175,7 @@ class InternalRange extends \Google\Collection
    */
   public $targetCidrRange;
   /**
-   * Time when the internal range was updated.
+   * Output only. Time when the internal range was updated.
    *
    * @var string
    */
@@ -217,7 +217,7 @@ class InternalRange extends \Google\Collection
     return $this->allocationOptions;
   }
   /**
-   * Time when the internal range was created.
+   * Output only. Time when the internal range was created.
    *
    * @param string $createTime
    */
@@ -452,7 +452,7 @@ class InternalRange extends \Google\Collection
     return $this->targetCidrRange;
   }
   /**
-   * Time when the internal range was updated.
+   * Output only. Time when the internal range was updated.
    *
    * @param string $updateTime
    */
