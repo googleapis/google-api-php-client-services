@@ -57,6 +57,10 @@ class SparkWrapperObject extends \Google\Model
   protected $rddStorageInfoDataType = '';
   protected $resourceProfileInfoType = ResourceProfileInfo::class;
   protected $resourceProfileInfoDataType = '';
+  protected $sparkConnectExecutionInfoType = SparkConnectExecutionInfo::class;
+  protected $sparkConnectExecutionInfoDataType = '';
+  protected $sparkConnectSessionInfoType = SparkConnectSessionInfo::class;
+  protected $sparkConnectSessionInfoDataType = '';
   protected $sparkPlanGraphType = SparkPlanGraph::class;
   protected $sparkPlanGraphDataType = '';
   protected $speculationStageSummaryType = SpeculationStageSummary::class;
@@ -291,6 +295,38 @@ class SparkWrapperObject extends \Google\Model
   public function getResourceProfileInfo()
   {
     return $this->resourceProfileInfo;
+  }
+  /**
+   * Spark Connect Execution Info
+   *
+   * @param SparkConnectExecutionInfo $sparkConnectExecutionInfo
+   */
+  public function setSparkConnectExecutionInfo(SparkConnectExecutionInfo $sparkConnectExecutionInfo)
+  {
+    $this->sparkConnectExecutionInfo = $sparkConnectExecutionInfo;
+  }
+  /**
+   * @return SparkConnectExecutionInfo
+   */
+  public function getSparkConnectExecutionInfo()
+  {
+    return $this->sparkConnectExecutionInfo;
+  }
+  /**
+   * Spark Connect Session Info
+   *
+   * @param SparkConnectSessionInfo $sparkConnectSessionInfo
+   */
+  public function setSparkConnectSessionInfo(SparkConnectSessionInfo $sparkConnectSessionInfo)
+  {
+    $this->sparkConnectSessionInfo = $sparkConnectSessionInfo;
+  }
+  /**
+   * @return SparkConnectSessionInfo
+   */
+  public function getSparkConnectSessionInfo()
+  {
+    return $this->sparkConnectSessionInfo;
   }
   /**
    * @param SparkPlanGraph $sparkPlanGraph

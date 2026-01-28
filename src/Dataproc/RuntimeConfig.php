@@ -22,8 +22,8 @@ class RuntimeConfig extends \Google\Model
   protected $autotuningConfigType = AutotuningConfig::class;
   protected $autotuningConfigDataType = '';
   /**
-   * Optional. Cohort identifier. Identifies families of the workloads having
-   * the same shape, e.g. daily ETL jobs.
+   * Optional. Cohort identifier. Identifies families of the workloads that have
+   * the same shape, for example, daily ETL jobs.
    *
    * @var string
    */
@@ -68,8 +68,8 @@ class RuntimeConfig extends \Google\Model
     return $this->autotuningConfig;
   }
   /**
-   * Optional. Cohort identifier. Identifies families of the workloads having
-   * the same shape, e.g. daily ETL jobs.
+   * Optional. Cohort identifier. Identifies families of the workloads that have
+   * the same shape, for example, daily ETL jobs.
    *
    * @param string $cohort
    */
