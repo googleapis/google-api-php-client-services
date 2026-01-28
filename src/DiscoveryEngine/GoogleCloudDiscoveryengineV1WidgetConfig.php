@@ -91,7 +91,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
    * `SOLUTION_TYPE_CHAT` solution.
    */
   public const SOLUTION_TYPE_SOLUTION_TYPE_GENERATIVE_CHAT = 'SOLUTION_TYPE_GENERATIVE_CHAT';
-  protected $collection_key = 'facetField';
+  protected $collection_key = 'nodes';
   protected $accessSettingsType = GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings::class;
   protected $accessSettingsDataType = '';
   /**
@@ -266,6 +266,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $nodesType = GoogleCloudDiscoveryengineV1WidgetConfigNode::class;
+  protected $nodesDataType = 'array';
   /**
    * The type of snippet to display in UCS widget. -
    * RESULT_DISPLAY_TYPE_UNSPECIFIED for existing users. - SNIPPET for new non-
@@ -849,6 +851,22 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The nodes associated with the Widget Config.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigNode[] $nodes
+   */
+  public function setNodes($nodes)
+  {
+    $this->nodes = $nodes;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1WidgetConfigNode[]
+   */
+  public function getNodes()
+  {
+    return $this->nodes;
   }
   /**
    * The type of snippet to display in UCS widget. -

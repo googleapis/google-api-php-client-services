@@ -36,11 +36,37 @@ class GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus extends \Goog
    */
   public $effectiveSearchQpmThreshold;
   /**
+   * Output only. The earliest next update time for the indexing core
+   * subscription threshold. This is based on the next_update_time returned by
+   * the underlying Cloud Billing Subscription V3 API. This field is populated
+   * only if an update indexing core subscription threshold request is
+   * succeeded.
+   *
+   * @var string
+   */
+  public $indexingCoreThresholdNextUpdateTime;
+  /**
+   * Output only. The earliest next update time for the search QPM subscription
+   * threshold. This is based on the next_update_time returned by the underlying
+   * Cloud Billing Subscription V3 API. This field is populated only if an
+   * update QPM subscription threshold request is succeeded.
+   *
+   * @var string
+   */
+  public $searchQpmThresholdNextUpdateTime;
+  /**
    * Optional. The start time of the currently active billing subscription.
    *
    * @var string
    */
   public $startTime;
+  /**
+   * Output only. The latest terminate effective time of search qpm and indexing
+   * core subscriptions.
+   *
+   * @var string
+   */
+  public $terminateTime;
 
   /**
    * Optional. The currently effective Indexing Core threshold. This is the
@@ -79,6 +105,45 @@ class GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus extends \Goog
     return $this->effectiveSearchQpmThreshold;
   }
   /**
+   * Output only. The earliest next update time for the indexing core
+   * subscription threshold. This is based on the next_update_time returned by
+   * the underlying Cloud Billing Subscription V3 API. This field is populated
+   * only if an update indexing core subscription threshold request is
+   * succeeded.
+   *
+   * @param string $indexingCoreThresholdNextUpdateTime
+   */
+  public function setIndexingCoreThresholdNextUpdateTime($indexingCoreThresholdNextUpdateTime)
+  {
+    $this->indexingCoreThresholdNextUpdateTime = $indexingCoreThresholdNextUpdateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getIndexingCoreThresholdNextUpdateTime()
+  {
+    return $this->indexingCoreThresholdNextUpdateTime;
+  }
+  /**
+   * Output only. The earliest next update time for the search QPM subscription
+   * threshold. This is based on the next_update_time returned by the underlying
+   * Cloud Billing Subscription V3 API. This field is populated only if an
+   * update QPM subscription threshold request is succeeded.
+   *
+   * @param string $searchQpmThresholdNextUpdateTime
+   */
+  public function setSearchQpmThresholdNextUpdateTime($searchQpmThresholdNextUpdateTime)
+  {
+    $this->searchQpmThresholdNextUpdateTime = $searchQpmThresholdNextUpdateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getSearchQpmThresholdNextUpdateTime()
+  {
+    return $this->searchQpmThresholdNextUpdateTime;
+  }
+  /**
    * Optional. The start time of the currently active billing subscription.
    *
    * @param string $startTime
@@ -93,6 +158,23 @@ class GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus extends \Goog
   public function getStartTime()
   {
     return $this->startTime;
+  }
+  /**
+   * Output only. The latest terminate effective time of search qpm and indexing
+   * core subscriptions.
+   *
+   * @param string $terminateTime
+   */
+  public function setTerminateTime($terminateTime)
+  {
+    $this->terminateTime = $terminateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getTerminateTime()
+  {
+    return $this->terminateTime;
   }
 }
 
