@@ -17,8 +17,8 @@
 
 namespace Google\Service\CloudObservability\Resource;
 
-use Google\Service\CloudObservability\Operation;
-use Google\Service\CloudObservability\Settings;
+use Google\Service\CloudObservability\ListLocationsResponse;
+use Google\Service\CloudObservability\Location;
 
 /**
  * The "locations" collection of methods.
@@ -31,39 +31,45 @@ use Google\Service\CloudObservability\Settings;
 class FoldersLocations extends \Google\Service\Resource
 {
   /**
-   * Get Settings (locations.getSettings)
+   * Gets information about a location. (locations.get)
    *
-   * @param string $name Required. Name of the settings to retrieve. Name format:
-   * "projects/[PROJECT_ID]/locations/[LOCATION]/settings"
-   * "folders/[FOLDER_ID]/locations/[LOCATION]/settings"
-   * "organizations/[ORGANIZATION_ID]/locations/[LOCATION]/settings"
+   * @param string $name Resource name for the location.
    * @param array $optParams Optional parameters.
-   * @return Settings
+   * @return Location
    * @throws \Google\Service\Exception
    */
-  public function getSettings($name, $optParams = [])
+  public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('getSettings', [$params], Settings::class);
+    return $this->call('get', [$params], Location::class);
   }
   /**
-   * Update Settings (locations.updateSettings)
+   * Lists information about the supported locations for this service.
+   * (locations.listFoldersLocations)
    *
-   * @param string $name Identifier. The resource name of the settings.
-   * @param Settings $postBody
+   * @param string $name The resource that owns the locations collection, if
+   * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Optional. The field mask specifying which fields
-   * of the settings are to be updated.
-   * @return Operation
+   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
+   * unsupported and is ignored unless explicitly documented otherwise. This is
+   * primarily for internal usage.
+   * @opt_param string filter A filter to narrow down results to a preferred
+   * subset. The filtering language accepts strings like `"displayName=tokyo"`,
+   * and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+   * @opt_param int pageSize The maximum number of results to return. If not set,
+   * the service selects a default.
+   * @opt_param string pageToken A page token received from the `next_page_token`
+   * field in the response. Send that page token to receive the subsequent page.
+   * @return ListLocationsResponse
    * @throws \Google\Service\Exception
    */
-  public function updateSettings($name, Settings $postBody, $optParams = [])
+  public function listFoldersLocations($name, $optParams = [])
   {
-    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('updateSettings', [$params], Operation::class);
+    return $this->call('list', [$params], ListLocationsResponse::class);
   }
 }
 
