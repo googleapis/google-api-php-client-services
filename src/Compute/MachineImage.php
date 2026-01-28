@@ -95,6 +95,8 @@ class MachineImage extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = MachineImageParams::class;
+  protected $paramsDataType = '';
   /**
    * Output only. Reserved for future use.
    *
@@ -341,6 +343,23 @@ class MachineImage extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Input only. [Input Only] Additional parameters that are passed in the
+   * request, but are not persisted in the resource.
+   *
+   * @param MachineImageParams $params
+   */
+  public function setParams(MachineImageParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return MachineImageParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * Output only. Reserved for future use.

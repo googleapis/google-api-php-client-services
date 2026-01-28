@@ -23,6 +23,10 @@ class InstancesReportHostAsFaultyRequestFaultReason extends \Google\Model
    * Public reportable behaviors
    */
   public const BEHAVIOR_BEHAVIOR_UNSPECIFIED = 'BEHAVIOR_UNSPECIFIED';
+  /**
+   * Any GPU or TPU errors or faults where the accelerator becomes unusable
+   */
+  public const BEHAVIOR_CHIP_ERROR = 'CHIP_ERROR';
   public const BEHAVIOR_PERFORMANCE = 'PERFORMANCE';
   public const BEHAVIOR_SILENT_DATA_CORRUPTION = 'SILENT_DATA_CORRUPTION';
   /**

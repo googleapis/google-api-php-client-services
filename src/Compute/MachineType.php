@@ -40,6 +40,8 @@ class MachineType extends \Google\Collection
    * @var string
    */
   public $architecture;
+  protected $bundledLocalSsdsType = BundledLocalSsds::class;
+  protected $bundledLocalSsdsDataType = '';
   /**
    * [Output Only] Creation timestamp inRFC3339 text format.
    *
@@ -162,6 +164,22 @@ class MachineType extends \Google\Collection
   public function getArchitecture()
   {
     return $this->architecture;
+  }
+  /**
+   * [Output Only] The configuration of bundled local SSD for the machine type.
+   *
+   * @param BundledLocalSsds $bundledLocalSsds
+   */
+  public function setBundledLocalSsds(BundledLocalSsds $bundledLocalSsds)
+  {
+    $this->bundledLocalSsds = $bundledLocalSsds;
+  }
+  /**
+   * @return BundledLocalSsds
+   */
+  public function getBundledLocalSsds()
+  {
+    return $this->bundledLocalSsds;
   }
   /**
    * [Output Only] Creation timestamp inRFC3339 text format.

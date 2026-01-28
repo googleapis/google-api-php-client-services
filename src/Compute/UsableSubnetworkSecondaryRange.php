@@ -20,7 +20,8 @@ namespace Google\Service\Compute;
 class UsableSubnetworkSecondaryRange extends \Google\Model
 {
   /**
-   * The range of IP addresses belonging to this subnetwork secondary range.
+   * The range of IP addresses belonging to this subnetwork secondary range. Can
+   * be Ipv4 or Ipv6 range.
    *
    * @var string
    */
@@ -35,7 +36,8 @@ class UsableSubnetworkSecondaryRange extends \Google\Model
   public $rangeName;
 
   /**
-   * The range of IP addresses belonging to this subnetwork secondary range.
+   * The range of IP addresses belonging to this subnetwork secondary range. Can
+   * be Ipv4 or Ipv6 range.
    *
    * @param string $ipCidrRange
    */

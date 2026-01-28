@@ -144,9 +144,7 @@ class NetworkPeering extends \Google\Model
    */
   public $stackType;
   /**
-   * Output only. [Output Only] State for the peering, either `ACTIVE` or
-   * `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration
-   * in the peer network.
+   * Output only. [Output Only] State for the peering.
    *
    * @var string
    */
@@ -368,9 +366,7 @@ class NetworkPeering extends \Google\Model
     return $this->stackType;
   }
   /**
-   * Output only. [Output Only] State for the peering, either `ACTIVE` or
-   * `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration
-   * in the peer network.
+   * Output only. [Output Only] State for the peering.
    *
    * Accepted values: ACTIVE, INACTIVE
    *

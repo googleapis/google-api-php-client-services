@@ -20,30 +20,26 @@ namespace Google\Service\Compute;
 class StoragePoolExapoolProvisionedCapacityGb extends \Google\Model
 {
   /**
-   * Output only. Size, in GiB, of provisioned capacity-optimized capacity for
-   * this Exapool
+   * Size, in GiB, of provisioned capacity-optimized capacity for this Exapool
    *
    * @var string
    */
   public $capacityOptimized;
   /**
-   * Output only. Size, in GiB, of provisioned read-optimized capacity for this
-   * Exapool
+   * Size, in GiB, of provisioned read-optimized capacity for this Exapool
    *
    * @var string
    */
   public $readOptimized;
   /**
-   * Output only. Size, in GiB, of provisioned write-optimized capacity for this
-   * Exapool
+   * Size, in GiB, of provisioned write-optimized capacity for this Exapool
    *
    * @var string
    */
   public $writeOptimized;
 
   /**
-   * Output only. Size, in GiB, of provisioned capacity-optimized capacity for
-   * this Exapool
+   * Size, in GiB, of provisioned capacity-optimized capacity for this Exapool
    *
    * @param string $capacityOptimized
    */
@@ -59,8 +55,7 @@ class StoragePoolExapoolProvisionedCapacityGb extends \Google\Model
     return $this->capacityOptimized;
   }
   /**
-   * Output only. Size, in GiB, of provisioned read-optimized capacity for this
-   * Exapool
+   * Size, in GiB, of provisioned read-optimized capacity for this Exapool
    *
    * @param string $readOptimized
    */
@@ -76,8 +71,7 @@ class StoragePoolExapoolProvisionedCapacityGb extends \Google\Model
     return $this->readOptimized;
   }
   /**
-   * Output only. Size, in GiB, of provisioned write-optimized capacity for this
-   * Exapool
+   * Size, in GiB, of provisioned write-optimized capacity for this Exapool
    *
    * @param string $writeOptimized
    */
