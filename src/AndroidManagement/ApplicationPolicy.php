@@ -349,7 +349,8 @@ class ApplicationPolicy extends \Google\Collection
    * ManagedProperty. The field value must be compatible with the type of the
    * ManagedProperty: *type* *JSON value* BOOL true or false STRING string
    * INTEGER number CHOICE string MULTISELECT array of strings HIDDEN string
-   * BUNDLE_ARRAY array of objects
+   * BUNDLE_ARRAY array of objects Note: string values cannot be longer than
+   * 65535 characters.
    *
    * @var array[]
    */
@@ -703,7 +704,8 @@ class ApplicationPolicy extends \Google\Collection
    * ManagedProperty. The field value must be compatible with the type of the
    * ManagedProperty: *type* *JSON value* BOOL true or false STRING string
    * INTEGER number CHOICE string MULTISELECT array of strings HIDDEN string
-   * BUNDLE_ARRAY array of objects
+   * BUNDLE_ARRAY array of objects Note: string values cannot be longer than
+   * 65535 characters.
    *
    * @param array[] $managedConfiguration
    */
