@@ -32,7 +32,7 @@ class GoogleCloudRetailV2ConversationalSearchRequestUserAnswer extends \Google\M
   /**
    * Optional. This field specifies the selected answer during the
    * conversational search. This should be a subset of
-   * ConversationalSearchResponse.followup_question.suggested_answers.
+   * ConversationalSearchResponse.FollowupQuestion.SuggestedAnswer.
    *
    * @param GoogleCloudRetailV2ConversationalSearchRequestUserAnswerSelectedAnswer $selectedAnswer
    */

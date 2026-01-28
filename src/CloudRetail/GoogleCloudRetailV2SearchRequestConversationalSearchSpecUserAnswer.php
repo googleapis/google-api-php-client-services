@@ -32,7 +32,7 @@ class GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserAnswer extends
   /**
    * This field specifies the selected attributes during the conversational
    * search. This should be a subset of
-   * ConversationalSearchResult.suggested_answers.
+   * SearchResponse.ConversationalSearchResult.suggested_answers.
    *
    * @param GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserAnswerSelectedAnswer $selectedAnswer
    */

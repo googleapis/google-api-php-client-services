@@ -22,8 +22,8 @@ class GoogleCloudRetailV2SearchRequestConversationalSearchSpec extends \Google\M
   /**
    * This field specifies the conversation id, which maintains the state of the
    * conversation between client side and server side. Use the value from the
-   * previous ConversationalSearchResult.conversation_id. For the initial
-   * request, this should be empty.
+   * previous SearchResponse.ConversationalSearchResult.conversation_id. For the
+   * initial request, this should be empty.
    *
    * @var string
    */
@@ -43,8 +43,8 @@ class GoogleCloudRetailV2SearchRequestConversationalSearchSpec extends \Google\M
   /**
    * This field specifies the conversation id, which maintains the state of the
    * conversation between client side and server side. Use the value from the
-   * previous ConversationalSearchResult.conversation_id. For the initial
-   * request, this should be empty.
+   * previous SearchResponse.ConversationalSearchResult.conversation_id. For the
+   * initial request, this should be empty.
    *
    * @param string $conversationId
    */

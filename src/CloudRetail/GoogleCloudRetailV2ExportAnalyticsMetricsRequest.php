@@ -63,7 +63,8 @@ class GoogleCloudRetailV2ExportAnalyticsMetricsRequest extends \Google\Model
     return $this->filter;
   }
   /**
-   * Required. The output location of the data.
+   * Required. The output location of the data. Only `bigquery_destination` is
+   * supported, and `bigquery_destination.table_type` must be set to `view`.
    *
    * @param GoogleCloudRetailV2OutputConfig $outputConfig
    */

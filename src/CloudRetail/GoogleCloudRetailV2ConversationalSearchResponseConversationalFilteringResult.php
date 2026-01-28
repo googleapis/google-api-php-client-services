@@ -27,7 +27,7 @@ class GoogleCloudRetailV2ConversationalSearchResponseConversationalFilteringResu
   /**
    * This is the incremental additional filters implied from the current user
    * answer. User should add the suggested addition filters to the previous
-   * ConversationalSearchRequest.search_params.filter and SearchRequest.filter,
+   * ConversationalSearchRequest.SearchParams.filter and SearchRequest.filter,
    * and use the merged filter in the follow up requests.
    *
    * @param GoogleCloudRetailV2ConversationalSearchResponseConversationalFilteringResultAdditionalFilter $additionalFilter

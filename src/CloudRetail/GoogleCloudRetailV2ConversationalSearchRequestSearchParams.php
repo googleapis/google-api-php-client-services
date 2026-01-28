@@ -38,7 +38,7 @@ class GoogleCloudRetailV2ConversationalSearchRequestSearchParams extends \Google
   public $filter;
   /**
    * Optional. The sort string to specify the sorting of search results. The
-   * syntax of the sort string is the same as SearchRequest.sort.
+   * syntax of the sort string is the same as SearchRequest.order_by.
    *
    * @var string
    */
@@ -98,7 +98,7 @@ class GoogleCloudRetailV2ConversationalSearchRequestSearchParams extends \Google
   }
   /**
    * Optional. The sort string to specify the sorting of search results. The
-   * syntax of the sort string is the same as SearchRequest.sort.
+   * syntax of the sort string is the same as SearchRequest.order_by.
    *
    * @param string $sortBy
    */
