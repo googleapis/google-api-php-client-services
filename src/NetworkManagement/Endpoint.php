@@ -191,15 +191,17 @@ class Endpoint extends \Google\Model
    */
   public $loadBalancerType;
   /**
-   * A VPC network URI. Used according to the `network_type`. Relevant only for
-   * the source endpoints.
+   * A VPC network URI. For source endpoints, used according to the
+   * `network_type`. For destination endpoints, used only when the source is an
+   * external IP address endpoint, and the destination is an internal IP address
+   * endpoint.
    *
    * @var string
    */
   public $network;
   /**
-   * Type of the network where the endpoint is located. Relevant only for the
-   * source endpoints.
+   * For source endpoints, type of the network where the endpoint is located.
+   * Not relevant for destination endpoints.
    *
    * @var string
    */
@@ -212,8 +214,8 @@ class Endpoint extends \Google\Model
    */
   public $port;
   /**
-   * Endpoint project ID. Used according to the `network_type`. Relevant only
-   * for the source endpoints.
+   * For source endpoints, endpoint project ID. Used according to the
+   * `network_type`. Not relevant for destination endpoints.
    *
    * @var string
    */
@@ -472,8 +474,10 @@ class Endpoint extends \Google\Model
     return $this->loadBalancerType;
   }
   /**
-   * A VPC network URI. Used according to the `network_type`. Relevant only for
-   * the source endpoints.
+   * A VPC network URI. For source endpoints, used according to the
+   * `network_type`. For destination endpoints, used only when the source is an
+   * external IP address endpoint, and the destination is an internal IP address
+   * endpoint.
    *
    * @param string $network
    */
@@ -489,8 +493,8 @@ class Endpoint extends \Google\Model
     return $this->network;
   }
   /**
-   * Type of the network where the endpoint is located. Relevant only for the
-   * source endpoints.
+   * For source endpoints, type of the network where the endpoint is located.
+   * Not relevant for destination endpoints.
    *
    * Accepted values: NETWORK_TYPE_UNSPECIFIED, GCP_NETWORK, NON_GCP_NETWORK,
    * INTERNET
@@ -526,8 +530,8 @@ class Endpoint extends \Google\Model
     return $this->port;
   }
   /**
-   * Endpoint project ID. Used according to the `network_type`. Relevant only
-   * for the source endpoints.
+   * For source endpoints, endpoint project ID. Used according to the
+   * `network_type`. Not relevant for destination endpoints.
    *
    * @param string $projectId
    */

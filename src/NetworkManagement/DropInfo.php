@@ -83,10 +83,13 @@ class DropInfo extends \Google\Model
    */
   public const CAUSE_ROUTE_NEXT_HOP_FORWARDING_RULE_TYPE_INVALID = 'ROUTE_NEXT_HOP_FORWARDING_RULE_TYPE_INVALID';
   /**
-   * Packet is sent from the Internet or Google service to the private IPv6
-   * address.
+   * Packet is sent from the Internet to the private IPv6 address.
    */
   public const CAUSE_NO_ROUTE_FROM_INTERNET_TO_PRIVATE_IPV6_ADDRESS = 'NO_ROUTE_FROM_INTERNET_TO_PRIVATE_IPV6_ADDRESS';
+  /**
+   * Packet is sent from the Internet to the private IPv4 address.
+   */
+  public const CAUSE_NO_ROUTE_FROM_INTERNET_TO_PRIVATE_IPV4_ADDRESS = 'NO_ROUTE_FROM_INTERNET_TO_PRIVATE_IPV4_ADDRESS';
   /**
    * Packet is sent from the external IPv6 source address of an instance to the
    * private IPv6 address of an instance.
@@ -577,6 +580,7 @@ class DropInfo extends \Google\Model
    * ROUTE_NEXT_HOP_VPN_TUNNEL_NOT_ESTABLISHED,
    * ROUTE_NEXT_HOP_FORWARDING_RULE_TYPE_INVALID,
    * NO_ROUTE_FROM_INTERNET_TO_PRIVATE_IPV6_ADDRESS,
+   * NO_ROUTE_FROM_INTERNET_TO_PRIVATE_IPV4_ADDRESS,
    * NO_ROUTE_FROM_EXTERNAL_IPV6_SOURCE_TO_PRIVATE_IPV6_ADDRESS,
    * VPN_TUNNEL_LOCAL_SELECTOR_MISMATCH, VPN_TUNNEL_REMOTE_SELECTOR_MISMATCH,
    * PRIVATE_TRAFFIC_TO_INTERNET, PRIVATE_GOOGLE_ACCESS_DISALLOWED,
