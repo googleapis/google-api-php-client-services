@@ -17,8 +17,38 @@
 
 namespace Google\Service\Firestore;
 
-class GoogleFirestoreAdminV1LocationMetadata extends \Google\Model
+class GoogleFirestoreAdminV1LocationMetadata extends \Google\Collection
 {
+  protected $collection_key = 'availableStoragePlacements';
+  /**
+   * The storage placements available in the location. When the location
+   * represents a Standard Managed Multi-Region (SMMR) like "us", this field
+   * lists the available Google-Managed Multi-Regions (GMMRs) within it, such as
+   * "nam5" or "eur3".
+   *
+   * @var string[]
+   */
+  public $availableStoragePlacements;
+
+  /**
+   * The storage placements available in the location. When the location
+   * represents a Standard Managed Multi-Region (SMMR) like "us", this field
+   * lists the available Google-Managed Multi-Regions (GMMRs) within it, such as
+   * "nam5" or "eur3".
+   *
+   * @param string[] $availableStoragePlacements
+   */
+  public function setAvailableStoragePlacements($availableStoragePlacements)
+  {
+    $this->availableStoragePlacements = $availableStoragePlacements;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAvailableStoragePlacements()
+  {
+    return $this->availableStoragePlacements;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
