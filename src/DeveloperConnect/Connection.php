@@ -69,6 +69,8 @@ class Connection extends \Google\Model
   protected $gitlabConfigDataType = '';
   protected $gitlabEnterpriseConfigType = GitLabEnterpriseConfig::class;
   protected $gitlabEnterpriseConfigDataType = '';
+  protected $httpConfigType = GenericHTTPEndpointConfig::class;
+  protected $httpConfigDataType = '';
   protected $installationStateType = InstallationState::class;
   protected $installationStateDataType = '';
   /**
@@ -91,6 +93,8 @@ class Connection extends \Google\Model
    * @var bool
    */
   public $reconciling;
+  protected $secureSourceManagerInstanceConfigType = SecureSourceManagerInstanceConfig::class;
+  protected $secureSourceManagerInstanceConfigDataType = '';
   /**
    * Output only. A system-assigned unique identifier for the Connection.
    *
@@ -320,6 +324,22 @@ class Connection extends \Google\Model
     return $this->gitlabEnterpriseConfig;
   }
   /**
+   * Optional. Configuration for connections to an HTTP service provider.
+   *
+   * @param GenericHTTPEndpointConfig $httpConfig
+   */
+  public function setHttpConfig(GenericHTTPEndpointConfig $httpConfig)
+  {
+    $this->httpConfig = $httpConfig;
+  }
+  /**
+   * @return GenericHTTPEndpointConfig
+   */
+  public function getHttpConfig()
+  {
+    return $this->httpConfig;
+  }
+  /**
    * Output only. Installation state of the Connection.
    *
    * @param InstallationState $installationState
@@ -384,6 +404,22 @@ class Connection extends \Google\Model
   public function getReconciling()
   {
     return $this->reconciling;
+  }
+  /**
+   * Configuration for connections to an instance of Secure Source Manager.
+   *
+   * @param SecureSourceManagerInstanceConfig $secureSourceManagerInstanceConfig
+   */
+  public function setSecureSourceManagerInstanceConfig(SecureSourceManagerInstanceConfig $secureSourceManagerInstanceConfig)
+  {
+    $this->secureSourceManagerInstanceConfig = $secureSourceManagerInstanceConfig;
+  }
+  /**
+   * @return SecureSourceManagerInstanceConfig
+   */
+  public function getSecureSourceManagerInstanceConfig()
+  {
+    return $this->secureSourceManagerInstanceConfig;
   }
   /**
    * Output only. A system-assigned unique identifier for the Connection.

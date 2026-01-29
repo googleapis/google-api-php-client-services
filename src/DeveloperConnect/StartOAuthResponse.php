@@ -91,14 +91,13 @@ class StartOAuthResponse extends \Google\Collection
    */
   public $clientId;
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.1 Follow
-   * http://shortn/_WFYl6U0NyC to include it in the AutoCodeURL.
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.1
    *
    * @var string
    */
   public $codeChallenge;
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
    *
    * @var string
    */
@@ -156,8 +155,7 @@ class StartOAuthResponse extends \Google\Collection
     return $this->clientId;
   }
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.1 Follow
-   * http://shortn/_WFYl6U0NyC to include it in the AutoCodeURL.
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.1
    *
    * @param string $codeChallenge
    */
@@ -173,7 +171,7 @@ class StartOAuthResponse extends \Google\Collection
     return $this->codeChallenge;
   }
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
    *
    * @param string $codeChallengeMethod
    */

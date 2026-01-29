@@ -51,6 +51,13 @@ class GitHubEnterpriseConfig extends \Google\Model
    */
   public $installationUri;
   /**
+   * Optional. Immutable. GitHub Enterprise organization in which the GitHub App
+   * is created.
+   *
+   * @var string
+   */
+  public $organization;
+  /**
    * Optional. SecretManager resource containing the private key of the GitHub
    * App, formatted as `projects/secrets/versions` or
    * `projects/locations/secrets/versions` (if regional secrets are supported in
@@ -163,6 +170,23 @@ class GitHubEnterpriseConfig extends \Google\Model
   public function getInstallationUri()
   {
     return $this->installationUri;
+  }
+  /**
+   * Optional. Immutable. GitHub Enterprise organization in which the GitHub App
+   * is created.
+   *
+   * @param string $organization
+   */
+  public function setOrganization($organization)
+  {
+    $this->organization = $organization;
+  }
+  /**
+   * @return string
+   */
+  public function getOrganization()
+  {
+    return $this->organization;
   }
   /**
    * Optional. SecretManager resource containing the private key of the GitHub

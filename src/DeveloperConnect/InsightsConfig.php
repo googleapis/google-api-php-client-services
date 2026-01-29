@@ -221,7 +221,7 @@ class InsightsConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. The GCP projects to track with the InsightsConfig.
+   * Optional. The projects to track with the InsightsConfig.
    *
    * @param Projects $projects
    */

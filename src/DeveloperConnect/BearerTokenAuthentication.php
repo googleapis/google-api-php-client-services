@@ -17,33 +17,32 @@
 
 namespace Google\Service\DeveloperConnect;
 
-class Projects extends \Google\Collection
+class BearerTokenAuthentication extends \Google\Model
 {
-  protected $collection_key = 'projectIds';
   /**
-   * Optional. The project IDs. Format: {project}
+   * Optional. The token SecretManager secret version to authenticate as.
    *
-   * @var string[]
+   * @var string
    */
-  public $projectIds;
+  public $tokenSecretVersion;
 
   /**
-   * Optional. The project IDs. Format: {project}
+   * Optional. The token SecretManager secret version to authenticate as.
    *
-   * @param string[] $projectIds
+   * @param string $tokenSecretVersion
    */
-  public function setProjectIds($projectIds)
+  public function setTokenSecretVersion($tokenSecretVersion)
   {
-    $this->projectIds = $projectIds;
+    $this->tokenSecretVersion = $tokenSecretVersion;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getProjectIds()
+  public function getTokenSecretVersion()
   {
-    return $this->projectIds;
+    return $this->tokenSecretVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Projects::class, 'Google_Service_DeveloperConnect_Projects');
+class_alias(BearerTokenAuthentication::class, 'Google_Service_DeveloperConnect_BearerTokenAuthentication');

@@ -17,33 +17,34 @@
 
 namespace Google\Service\DeveloperConnect;
 
-class Projects extends \Google\Collection
+class SecureSourceManagerInstanceConfig extends \Google\Model
 {
-  protected $collection_key = 'projectIds';
   /**
-   * Optional. The project IDs. Format: {project}
+   * Required. Immutable. SSM instance resource, formatted as
+   * `projects/locations/instances`
    *
-   * @var string[]
+   * @var string
    */
-  public $projectIds;
+  public $instance;
 
   /**
-   * Optional. The project IDs. Format: {project}
+   * Required. Immutable. SSM instance resource, formatted as
+   * `projects/locations/instances`
    *
-   * @param string[] $projectIds
+   * @param string $instance
    */
-  public function setProjectIds($projectIds)
+  public function setInstance($instance)
   {
-    $this->projectIds = $projectIds;
+    $this->instance = $instance;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getProjectIds()
+  public function getInstance()
   {
-    return $this->projectIds;
+    return $this->instance;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Projects::class, 'Google_Service_DeveloperConnect_Projects');
+class_alias(SecureSourceManagerInstanceConfig::class, 'Google_Service_DeveloperConnect_SecureSourceManagerInstanceConfig');

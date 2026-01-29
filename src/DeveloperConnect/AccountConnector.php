@@ -169,7 +169,7 @@ class AccountConnector extends \Google\Model
     return $this->oauthStartUri;
   }
   /**
-   * Provider OAuth config.
+   * Optional. Provider OAuth config.
    *
    * @param ProviderOAuthConfig $providerOauthConfig
    */

@@ -48,9 +48,9 @@ class DeploymentEvent extends \Google\Collection
    */
   public $deployTime;
   /**
-   * Identifier. The name of the DeploymentEvent. This name is provided by DCI.
-   * Format: projects/{project}/locations/{location}/insightsConfigs/{insights_c
-   * onfig}/deploymentEvents/{uuid}
+   * Identifier. The name of the DeploymentEvent. This name is provided by
+   * Developer Connect insights. Format: projects/{project}/locations/{location}
+   * /insightsConfigs/{insights_config}/deploymentEvents/{uuid}
    *
    * @var string
    */
@@ -142,9 +142,9 @@ class DeploymentEvent extends \Google\Collection
     return $this->deployTime;
   }
   /**
-   * Identifier. The name of the DeploymentEvent. This name is provided by DCI.
-   * Format: projects/{project}/locations/{location}/insightsConfigs/{insights_c
-   * onfig}/deploymentEvents/{uuid}
+   * Identifier. The name of the DeploymentEvent. This name is provided by
+   * Developer Connect insights. Format: projects/{project}/locations/{location}
+   * /insightsConfigs/{insights_config}/deploymentEvents/{uuid}
    *
    * @param string $name
    */
