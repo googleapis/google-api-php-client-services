@@ -23,7 +23,7 @@ class TargetTechnologyAlertDetail extends \Google\Model
   protected $vulnerabilityMatchDataType = '';
 
   /**
-   * Output only. The vulnerability match details.
+   * Optional. The vulnerability match details.
    *
    * @param VulnerabilityMatch $vulnerabilityMatch
    */
