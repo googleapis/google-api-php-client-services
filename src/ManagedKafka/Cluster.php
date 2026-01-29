@@ -35,6 +35,10 @@ class Cluster extends \Google\Collection
    * The cluster is being deleted.
    */
   public const STATE_DELETING = 'DELETING';
+  /**
+   * The cluster is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
   protected $collection_key = 'brokerDetails';
   protected $brokerDetailsType = BrokerDetails::class;
   protected $brokerDetailsDataType = 'array';
@@ -266,7 +270,7 @@ class Cluster extends \Google\Collection
   /**
    * Output only. The current state of the cluster.
    *
-   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING, UPDATING
    *
    * @param self::STATE_* $state
    */
