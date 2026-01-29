@@ -37,6 +37,8 @@ class OperationMetadata extends \Google\Model
    * @var string
    */
   public $endTime;
+  protected $progressType = OperationProgress::class;
+  protected $progressDataType = '';
   /**
    * Output only. Identifies whether the user has requested cancellation of the
    * operation. Operations that have been cancelled successfully have
@@ -106,6 +108,22 @@ class OperationMetadata extends \Google\Model
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * Output only. Progress of the operation.
+   *
+   * @param OperationProgress $progress
+   */
+  public function setProgress(OperationProgress $progress)
+  {
+    $this->progress = $progress;
+  }
+  /**
+   * @return OperationProgress
+   */
+  public function getProgress()
+  {
+    return $this->progress;
   }
   /**
    * Output only. Identifies whether the user has requested cancellation of the
