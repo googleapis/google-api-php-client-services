@@ -46,7 +46,7 @@ class AdGroupAd extends \Google\Collection
   public const ENTITY_STATUS_ENTITY_STATUS_SCHEDULED_FOR_DELETION = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION';
   protected $collection_key = 'adUrls';
   /**
-   * The unique ID of the ad. Assigned by the system.
+   * Output only. The unique ID of the ad. Assigned by the system.
    *
    * @var string
    */
@@ -65,7 +65,7 @@ class AdGroupAd extends \Google\Collection
   protected $adUrlsType = AdUrl::class;
   protected $adUrlsDataType = 'array';
   /**
-   * The unique ID of the advertiser the ad belongs to.
+   * Output only. The unique ID of the advertiser the ad belongs to.
    *
    * @var string
    */
@@ -94,7 +94,7 @@ class AdGroupAd extends \Google\Collection
   protected $mastheadAdType = MastheadAd::class;
   protected $mastheadAdDataType = '';
   /**
-   * The resource name of the ad.
+   * Output only. The resource name of the ad.
    *
    * @var string
    */
@@ -107,7 +107,7 @@ class AdGroupAd extends \Google\Collection
   protected $videoPerformanceAdDataType = '';
 
   /**
-   * The unique ID of the ad. Assigned by the system.
+   * Output only. The unique ID of the ad. Assigned by the system.
    *
    * @param string $adGroupAdId
    */
@@ -142,7 +142,7 @@ class AdGroupAd extends \Google\Collection
     return $this->adGroupId;
   }
   /**
-   * The policy approval status of the ad.
+   * Output only. The policy approval status of the ad.
    *
    * @param AdPolicy $adPolicy
    */
@@ -174,7 +174,7 @@ class AdGroupAd extends \Google\Collection
     return $this->adUrls;
   }
   /**
-   * The unique ID of the advertiser the ad belongs to.
+   * Output only. The unique ID of the advertiser the ad belongs to.
    *
    * @param string $advertiserId
    */
@@ -313,7 +313,7 @@ class AdGroupAd extends \Google\Collection
     return $this->mastheadAd;
   }
   /**
-   * The resource name of the ad.
+   * Output only. The resource name of the ad.
    *
    * @param string $name
    */

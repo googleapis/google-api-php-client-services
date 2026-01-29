@@ -32,7 +32,7 @@ class ListAdGroupAdsResponse extends \Google\Collection
   public $nextPageToken;
 
   /**
-   * The list of ad group ads. This list will be absent if empty.
+   * The list of ads. This list will be absent if empty.
    *
    * @param AdGroupAd[] $adGroupAds
    */

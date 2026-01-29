@@ -35,7 +35,7 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
    *
    * @param string $advertiserId Required. The ID of the advertiser this ad group
    * ad belongs to.
-   * @param string $adGroupAdId Required. The ID of the ad group ad to fetch.
+   * @param string $adGroupAdId Required. The ID of the ad to fetch.
    * @param array $optParams Optional parameters.
    * @return AdGroupAd
    * @throws \Google\Service\Exception
@@ -49,12 +49,12 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
   /**
    * Lists ad group ads. (adGroupAds.listAdvertisersAdGroupAds)
    *
-   * @param string $advertiserId Required. The ID of the advertiser the ad groups
-   * belongs to.
+   * @param string $advertiserId Required. The ID of the advertiser the ads belong
+   * to.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Allows filtering by custom ad group ad
-   * fields. Supported syntax: * Filter expressions are made up of one or more
+   * @opt_param string filter Optional. Allows filtering by ad group ad fields.
+   * Supported syntax: * Filter expressions are made up of one or more
    * restrictions. * Restrictions can be combined by `AND` and `OR`. A sequence of
    * restrictions implicitly uses `AND`. * A restriction has the form of `{field}
    * {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
