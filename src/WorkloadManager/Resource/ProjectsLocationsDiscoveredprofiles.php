@@ -18,6 +18,7 @@
 namespace Google\Service\WorkloadManager\Resource;
 
 use Google\Service\WorkloadManager\ListDiscoveredProfilesResponse;
+use Google\Service\WorkloadManager\WorkloadProfile;
 
 /**
  * The "discoveredprofiles" collection of methods.
@@ -29,6 +30,20 @@ use Google\Service\WorkloadManager\ListDiscoveredProfilesResponse;
  */
 class ProjectsLocationsDiscoveredprofiles extends \Google\Service\Resource
 {
+  /**
+   * Gets details of a discovered workload profile. (discoveredprofiles.get)
+   *
+   * @param string $name Required. Name of the resource
+   * @param array $optParams Optional parameters.
+   * @return WorkloadProfile
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], WorkloadProfile::class);
+  }
   /**
    * List discovered workload profiles
    * (discoveredprofiles.listProjectsLocationsDiscoveredprofiles)

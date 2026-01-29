@@ -42,6 +42,7 @@ class WorkloadManager extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_discoveredprofiles;
+  public $projects_locations_discoveredprofiles_health;
   public $projects_locations_evaluations;
   public $projects_locations_evaluations_executions;
   public $projects_locations_evaluations_executions_results;
@@ -121,7 +122,17 @@ class WorkloadManager extends \Google\Service
         'discoveredprofiles',
         [
           'methods' => [
-            'list' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
               'path' => 'v1/{+parent}/discoveredprofiles',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -141,6 +152,26 @@ class WorkloadManager extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_discoveredprofiles_health = new WorkloadManager\Resource\ProjectsLocationsDiscoveredprofilesHealth(
+        $this,
+        $this->serviceName,
+        'health',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

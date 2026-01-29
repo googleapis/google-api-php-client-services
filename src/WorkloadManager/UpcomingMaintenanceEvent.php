@@ -32,7 +32,7 @@ class UpcomingMaintenanceEvent extends \Google\Model
    */
   public $maintenanceStatus;
   /**
-   * Optional. Instance maintenance behavior. Could be "MIGRATE" or "TERMINATE".
+   * Optional. Instance maintenance behavior. Could be `MIGRATE` or `TERMINATE`.
    *
    * @var string
    */
@@ -83,7 +83,7 @@ class UpcomingMaintenanceEvent extends \Google\Model
     return $this->maintenanceStatus;
   }
   /**
-   * Optional. Instance maintenance behavior. Could be "MIGRATE" or "TERMINATE".
+   * Optional. Instance maintenance behavior. Could be `MIGRATE` or `TERMINATE`.
    *
    * @param string $onHostMaintenance
    */

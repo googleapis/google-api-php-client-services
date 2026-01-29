@@ -50,7 +50,7 @@ class DatabaseProperties extends \Google\Model
   protected $backupPropertiesType = BackupProperties::class;
   protected $backupPropertiesDataType = '';
   /**
-   * Output only. Type of the database. HANA, DB2, etc.
+   * Output only. Type of the database. `HANA`, `DB2`, etc.
    *
    * @var string
    */
@@ -73,7 +73,7 @@ class DatabaseProperties extends \Google\Model
     return $this->backupProperties;
   }
   /**
-   * Output only. Type of the database. HANA, DB2, etc.
+   * Output only. Type of the database. `HANA`, `DB2`, etc.
    *
    * Accepted values: DATABASE_TYPE_UNSPECIFIED, HANA, MAX_DB, DB2, ORACLE,
    * SQLSERVER, ASE

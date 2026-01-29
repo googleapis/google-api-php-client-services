@@ -19,30 +19,70 @@ namespace Google\Service\WorkloadManager;
 
 class ComponentHealth extends \Google\Collection
 {
-  protected $collection_key = 'subComponentHealthes';
   /**
+   * Unspecified
+   */
+  public const COMPONENT_HEALTH_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * required
+   */
+  public const COMPONENT_HEALTH_TYPE_TYPE_REQUIRED = 'TYPE_REQUIRED';
+  /**
+   * optional
+   */
+  public const COMPONENT_HEALTH_TYPE_TYPE_OPTIONAL = 'TYPE_OPTIONAL';
+  /**
+   * special
+   */
+  public const COMPONENT_HEALTH_TYPE_TYPE_SPECIAL = 'TYPE_SPECIAL';
+  /**
+   * Unspecified.
+   */
+  public const STATE_HEALTH_STATE_UNSPECIFIED = 'HEALTH_STATE_UNSPECIFIED';
+  /**
+   * Healthy workload.
+   */
+  public const STATE_HEALTHY = 'HEALTHY';
+  /**
+   * Unhealthy workload.
+   */
+  public const STATE_UNHEALTHY = 'UNHEALTHY';
+  /**
+   * Has critical issues.
+   */
+  public const STATE_CRITICAL = 'CRITICAL';
+  /**
+   * Unsupported.
+   */
+  public const STATE_UNSUPPORTED = 'UNSUPPORTED';
+  protected $collection_key = 'subComponentsHealth';
+  /**
+   * The component of a workload.
+   *
    * @var string
    */
   public $component;
   protected $componentHealthChecksType = HealthCheck::class;
   protected $componentHealthChecksDataType = 'array';
   /**
+   * Output only. The type of the component health.
+   *
    * @var string
    */
   public $componentHealthType;
   /**
-   * @var bool
-   */
-  public $isRequired;
-  /**
+   * Output only. The health state of the component.
+   *
    * @var string
    */
   public $state;
-  protected $subComponentHealthesType = ComponentHealth::class;
-  protected $subComponentHealthesDataType = 'array';
+  protected $subComponentsHealthType = ComponentHealth::class;
+  protected $subComponentsHealthDataType = 'array';
 
   /**
-   * @param string
+   * The component of a workload.
+   *
+   * @param string $component
    */
   public function setComponent($component)
   {
@@ -56,7 +96,9 @@ class ComponentHealth extends \Google\Collection
     return $this->component;
   }
   /**
-   * @param HealthCheck[]
+   * The detailed health checks of the component.
+   *
+   * @param HealthCheck[] $componentHealthChecks
    */
   public function setComponentHealthChecks($componentHealthChecks)
   {
@@ -70,60 +112,58 @@ class ComponentHealth extends \Google\Collection
     return $this->componentHealthChecks;
   }
   /**
-   * @param string
+   * Output only. The type of the component health.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, TYPE_REQUIRED, TYPE_OPTIONAL,
+   * TYPE_SPECIAL
+   *
+   * @param self::COMPONENT_HEALTH_TYPE_* $componentHealthType
    */
   public function setComponentHealthType($componentHealthType)
   {
     $this->componentHealthType = $componentHealthType;
   }
   /**
-   * @return string
+   * @return self::COMPONENT_HEALTH_TYPE_*
    */
   public function getComponentHealthType()
   {
     return $this->componentHealthType;
   }
   /**
-   * @param bool
-   */
-  public function setIsRequired($isRequired)
-  {
-    $this->isRequired = $isRequired;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsRequired()
-  {
-    return $this->isRequired;
-  }
-  /**
-   * @param string
+   * Output only. The health state of the component.
+   *
+   * Accepted values: HEALTH_STATE_UNSPECIFIED, HEALTHY, UNHEALTHY, CRITICAL,
+   * UNSUPPORTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param ComponentHealth[]
+   * Sub component health.
+   *
+   * @param ComponentHealth[] $subComponentsHealth
    */
-  public function setSubComponentHealthes($subComponentHealthes)
+  public function setSubComponentsHealth($subComponentsHealth)
   {
-    $this->subComponentHealthes = $subComponentHealthes;
+    $this->subComponentsHealth = $subComponentsHealth;
   }
   /**
    * @return ComponentHealth[]
    */
-  public function getSubComponentHealthes()
+  public function getSubComponentsHealth()
   {
-    return $this->subComponentHealthes;
+    return $this->subComponentsHealth;
   }
 }
 

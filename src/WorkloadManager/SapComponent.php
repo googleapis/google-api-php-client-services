@@ -35,7 +35,7 @@ class SapComponent extends \Google\Collection
   protected $databasePropertiesType = DatabaseProperties::class;
   protected $databasePropertiesDataType = '';
   /**
-   * A list of host URIs that are part of the HA configuration if present. An
+   * List of host URIs that are part of the HA configuration if present. An
    * empty list indicates the component is not configured for HA.
    *
    * @var string[]
@@ -73,7 +73,7 @@ class SapComponent extends \Google\Collection
     return $this->databaseProperties;
   }
   /**
-   * A list of host URIs that are part of the HA configuration if present. An
+   * List of host URIs that are part of the HA configuration if present. An
    * empty list indicates the component is not configured for HA.
    *
    * @param string[] $haHosts

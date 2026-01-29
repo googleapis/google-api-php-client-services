@@ -51,7 +51,7 @@ class SapWorkload extends \Google\Collection
   protected $applicationType = SapComponent::class;
   protected $applicationDataType = '';
   /**
-   * Output only. the architecture
+   * Output only. The architecture.
    *
    * @var string
    */
@@ -68,7 +68,7 @@ class SapWorkload extends \Google\Collection
   protected $productsDataType = 'array';
 
   /**
-   * Output only. the acsc componment
+   * Output only. application component
    *
    * @param SapComponent $application
    */
@@ -84,7 +84,7 @@ class SapWorkload extends \Google\Collection
     return $this->application;
   }
   /**
-   * Output only. the architecture
+   * Output only. The architecture.
    *
    * Accepted values: ARCHITECTURE_UNSPECIFIED, INVALID, CENTRALIZED,
    * DISTRIBUTED, DISTRIBUTED_HA, STANDALONE_DATABASE, STANDALONE_DATABASE_HA
@@ -103,7 +103,7 @@ class SapWorkload extends \Google\Collection
     return $this->architecture;
   }
   /**
-   * Output only. the database componment
+   * Output only. database component
    *
    * @param SapComponent $database
    */
@@ -135,7 +135,7 @@ class SapWorkload extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * Output only. the products on this workload.
+   * Output only. The products on this workload.
    *
    * @param Product[] $products
    */
