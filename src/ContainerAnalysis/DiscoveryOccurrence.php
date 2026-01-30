@@ -100,6 +100,12 @@ class DiscoveryOccurrence extends \Google\Collection
    * @var string
    */
   public $lastScanTime;
+  /**
+   * The last time vulnerability scan results changed.
+   *
+   * @var string
+   */
+  public $lastVulnerabilityUpdateTime;
   protected $sbomStatusType = SBOMStatus::class;
   protected $sbomStatusDataType = '';
 
@@ -253,6 +259,22 @@ class DiscoveryOccurrence extends \Google\Collection
   public function getLastScanTime()
   {
     return $this->lastScanTime;
+  }
+  /**
+   * The last time vulnerability scan results changed.
+   *
+   * @param string $lastVulnerabilityUpdateTime
+   */
+  public function setLastVulnerabilityUpdateTime($lastVulnerabilityUpdateTime)
+  {
+    $this->lastVulnerabilityUpdateTime = $lastVulnerabilityUpdateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getLastVulnerabilityUpdateTime()
+  {
+    return $this->lastVulnerabilityUpdateTime;
   }
   /**
    * The status of an SBOM generation.
