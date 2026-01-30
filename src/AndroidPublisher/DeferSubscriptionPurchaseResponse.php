@@ -17,32 +17,29 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class TrackTargetedCountry extends \Google\Model
+class DeferSubscriptionPurchaseResponse extends \Google\Collection
 {
-  /**
-   * The country that can be targeted, as a two-letter CLDR code.
-   *
-   * @var string
-   */
-  public $countryCode;
+  protected $collection_key = 'itemExpiryTimeDetails';
+  protected $itemExpiryTimeDetailsType = ItemExpiryTimeDetails::class;
+  protected $itemExpiryTimeDetailsDataType = 'array';
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
+   * The new expiry time for each subscription items.
    *
-   * @param string $countryCode
+   * @param ItemExpiryTimeDetails[] $itemExpiryTimeDetails
    */
-  public function setCountryCode($countryCode)
+  public function setItemExpiryTimeDetails($itemExpiryTimeDetails)
   {
-    $this->countryCode = $countryCode;
+    $this->itemExpiryTimeDetails = $itemExpiryTimeDetails;
   }
   /**
-   * @return string
+   * @return ItemExpiryTimeDetails[]
    */
-  public function getCountryCode()
+  public function getItemExpiryTimeDetails()
   {
-    return $this->countryCode;
+    return $this->itemExpiryTimeDetails;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TrackTargetedCountry::class, 'Google_Service_AndroidPublisher_TrackTargetedCountry');
+class_alias(DeferSubscriptionPurchaseResponse::class, 'Google_Service_AndroidPublisher_DeferSubscriptionPurchaseResponse');

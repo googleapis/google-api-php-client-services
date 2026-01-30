@@ -44,6 +44,8 @@ class SubscriptionPurchaseLineItem extends \Google\Model
   public $latestSuccessfulOrderId;
   protected $offerDetailsType = OfferDetails::class;
   protected $offerDetailsDataType = '';
+  protected $offerPhaseType = OfferPhase::class;
+  protected $offerPhaseDataType = '';
   protected $prepaidPlanType = PrepaidPlan::class;
   protected $prepaidPlanDataType = '';
   /**
@@ -171,6 +173,22 @@ class SubscriptionPurchaseLineItem extends \Google\Model
   public function getOfferDetails()
   {
     return $this->offerDetails;
+  }
+  /**
+   * Current offer phase details for this item.
+   *
+   * @param OfferPhase $offerPhase
+   */
+  public function setOfferPhase(OfferPhase $offerPhase)
+  {
+    $this->offerPhase = $offerPhase;
+  }
+  /**
+   * @return OfferPhase
+   */
+  public function getOfferPhase()
+  {
+    return $this->offerPhase;
   }
   /**
    * The item is prepaid.

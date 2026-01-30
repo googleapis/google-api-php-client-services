@@ -17,32 +17,9 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class TrackTargetedCountry extends \Google\Model
+class FreeTrialOfferPhase extends \Google\Model
 {
-  /**
-   * The country that can be targeted, as a two-letter CLDR code.
-   *
-   * @var string
-   */
-  public $countryCode;
-
-  /**
-   * The country that can be targeted, as a two-letter CLDR code.
-   *
-   * @param string $countryCode
-   */
-  public function setCountryCode($countryCode)
-  {
-    $this->countryCode = $countryCode;
-  }
-  /**
-   * @return string
-   */
-  public function getCountryCode()
-  {
-    return $this->countryCode;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TrackTargetedCountry::class, 'Google_Service_AndroidPublisher_TrackTargetedCountry');
+class_alias(FreeTrialOfferPhase::class, 'Google_Service_AndroidPublisher_FreeTrialOfferPhase');

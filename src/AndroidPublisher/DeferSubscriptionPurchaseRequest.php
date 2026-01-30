@@ -17,32 +17,28 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class TrackTargetedCountry extends \Google\Model
+class DeferSubscriptionPurchaseRequest extends \Google\Model
 {
-  /**
-   * The country that can be targeted, as a two-letter CLDR code.
-   *
-   * @var string
-   */
-  public $countryCode;
+  protected $deferralContextType = DeferralContext::class;
+  protected $deferralContextDataType = '';
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
+   * Required. Details about the subscription deferral.
    *
-   * @param string $countryCode
+   * @param DeferralContext $deferralContext
    */
-  public function setCountryCode($countryCode)
+  public function setDeferralContext(DeferralContext $deferralContext)
   {
-    $this->countryCode = $countryCode;
+    $this->deferralContext = $deferralContext;
   }
   /**
-   * @return string
+   * @return DeferralContext
    */
-  public function getCountryCode()
+  public function getDeferralContext()
   {
-    return $this->countryCode;
+    return $this->deferralContext;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TrackTargetedCountry::class, 'Google_Service_AndroidPublisher_TrackTargetedCountry');
+class_alias(DeferSubscriptionPurchaseRequest::class, 'Google_Service_AndroidPublisher_DeferSubscriptionPurchaseRequest');

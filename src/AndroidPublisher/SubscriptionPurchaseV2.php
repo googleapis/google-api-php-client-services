@@ -88,6 +88,14 @@ class SubscriptionPurchaseV2 extends \Google\Collection
   public $acknowledgementState;
   protected $canceledStateContextType = CanceledStateContext::class;
   protected $canceledStateContextDataType = '';
+  /**
+   * Entity tag representing the current state of the subscription. The
+   * developer will provide this etag for subscription actions. This etag is
+   * always present for auto-renewing and prepaid subscriptions.
+   *
+   * @var string
+   */
+  public $etag;
   protected $externalAccountIdentifiersType = ExternalAccountIdentifiers::class;
   protected $externalAccountIdentifiersDataType = '';
   /**
@@ -187,6 +195,24 @@ class SubscriptionPurchaseV2 extends \Google\Collection
   public function getCanceledStateContext()
   {
     return $this->canceledStateContext;
+  }
+  /**
+   * Entity tag representing the current state of the subscription. The
+   * developer will provide this etag for subscription actions. This etag is
+   * always present for auto-renewing and prepaid subscriptions.
+   *
+   * @param string $etag
+   */
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  /**
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
   }
   /**
    * User account identifier in the third-party service.
