@@ -28,8 +28,10 @@ class LocationMetadata extends \Google\Collection
   protected $supportedHiveMetastoreVersionsDataType = 'array';
 
   /**
-   * Possible configurations supported if the current region is a custom region.
+   * Deprecated: Use a single region service instead. Possible configurations
+   * supported if the current region is a custom region.
    *
+   * @deprecated
    * @param CustomRegionMetadata[] $customRegionMetadata
    */
   public function setCustomRegionMetadata($customRegionMetadata)
@@ -37,6 +39,7 @@ class LocationMetadata extends \Google\Collection
     $this->customRegionMetadata = $customRegionMetadata;
   }
   /**
+   * @deprecated
    * @return CustomRegionMetadata[]
    */
   public function getCustomRegionMetadata()
@@ -44,8 +47,10 @@ class LocationMetadata extends \Google\Collection
     return $this->customRegionMetadata;
   }
   /**
-   * The multi-region metadata if the current region is a multi-region.
+   * Deprecated: Use a single region service instead. The multi-region metadata
+   * if the current region is a multi-region.
    *
+   * @deprecated
    * @param MultiRegionMetadata $multiRegionMetadata
    */
   public function setMultiRegionMetadata(MultiRegionMetadata $multiRegionMetadata)
@@ -53,6 +58,7 @@ class LocationMetadata extends \Google\Collection
     $this->multiRegionMetadata = $multiRegionMetadata;
   }
   /**
+   * @deprecated
    * @return MultiRegionMetadata
    */
   public function getMultiRegionMetadata()
