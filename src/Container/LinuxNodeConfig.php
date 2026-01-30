@@ -95,6 +95,8 @@ class LinuxNodeConfig extends \Google\Model
   protected $hugepagesDataType = '';
   protected $nodeKernelModuleLoadingType = NodeKernelModuleLoading::class;
   protected $nodeKernelModuleLoadingDataType = '';
+  protected $swapConfigType = SwapConfig::class;
+  protected $swapConfigDataType = '';
   /**
    * The Linux kernel parameters to be applied to the nodes and all pods running
    * on the nodes. The following parameters are supported. net.core.busy_poll
@@ -194,6 +196,23 @@ class LinuxNodeConfig extends \Google\Model
   public function getNodeKernelModuleLoading()
   {
     return $this->nodeKernelModuleLoading;
+  }
+  /**
+   * Optional. Enables and configures swap space on nodes. If omitted, swap is
+   * disabled.
+   *
+   * @param SwapConfig $swapConfig
+   */
+  public function setSwapConfig(SwapConfig $swapConfig)
+  {
+    $this->swapConfig = $swapConfig;
+  }
+  /**
+   * @return SwapConfig
+   */
+  public function getSwapConfig()
+  {
+    return $this->swapConfig;
   }
   /**
    * The Linux kernel parameters to be applied to the nodes and all pods running

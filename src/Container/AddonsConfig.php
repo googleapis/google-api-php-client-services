@@ -49,6 +49,8 @@ class AddonsConfig extends \Google\Model
   protected $parallelstoreCsiDriverConfigDataType = '';
   protected $rayOperatorConfigType = RayOperatorConfig::class;
   protected $rayOperatorConfigDataType = '';
+  protected $sliceControllerConfigType = SliceControllerConfig::class;
+  protected $sliceControllerConfigDataType = '';
   protected $statefulHaConfigType = StatefulHAConfig::class;
   protected $statefulHaConfigDataType = '';
 
@@ -304,6 +306,22 @@ class AddonsConfig extends \Google\Model
   public function getRayOperatorConfig()
   {
     return $this->rayOperatorConfig;
+  }
+  /**
+   * Optional. Configuration for the slice controller add-on.
+   *
+   * @param SliceControllerConfig $sliceControllerConfig
+   */
+  public function setSliceControllerConfig(SliceControllerConfig $sliceControllerConfig)
+  {
+    $this->sliceControllerConfig = $sliceControllerConfig;
+  }
+  /**
+   * @return SliceControllerConfig
+   */
+  public function getSliceControllerConfig()
+  {
+    return $this->sliceControllerConfig;
   }
   /**
    * Optional. Configuration for the StatefulHA add-on.

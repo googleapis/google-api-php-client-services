@@ -33,6 +33,12 @@ class UpgradeSettings extends \Google\Model
    * max_unavailable determines the level of upgrade parallelism.
    */
   public const STRATEGY_SURGE = 'SURGE';
+  /**
+   * SHORT_LIVED is the dedicated upgrade strategy for QueuedProvisioning and
+   * flex start nodepools scaled up only by enqueueing to the Dynamic Workload
+   * Scheduler (DWS).
+   */
+  public const STRATEGY_SHORT_LIVED = 'SHORT_LIVED';
   protected $blueGreenSettingsType = BlueGreenSettings::class;
   protected $blueGreenSettingsDataType = '';
   /**
@@ -109,7 +115,8 @@ class UpgradeSettings extends \Google\Model
   /**
    * Update strategy of the node pool.
    *
-   * Accepted values: NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED, BLUE_GREEN, SURGE
+   * Accepted values: NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED, BLUE_GREEN, SURGE,
+   * SHORT_LIVED
    *
    * @param self::STRATEGY_* $strategy
    */

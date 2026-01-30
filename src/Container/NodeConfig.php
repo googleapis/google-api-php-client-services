@@ -121,6 +121,8 @@ class NodeConfig extends \Google\Collection
   public $flexStart;
   protected $gcfsConfigType = GcfsConfig::class;
   protected $gcfsConfigDataType = '';
+  protected $gpuDirectConfigType = GPUDirectConfig::class;
+  protected $gpuDirectConfigDataType = '';
   protected $gvnicType = VirtualNIC::class;
   protected $gvnicDataType = '';
   /**
@@ -562,6 +564,22 @@ class NodeConfig extends \Google\Collection
   public function getGcfsConfig()
   {
     return $this->gcfsConfig;
+  }
+  /**
+   * The configuration for GPU Direct
+   *
+   * @param GPUDirectConfig $gpuDirectConfig
+   */
+  public function setGpuDirectConfig(GPUDirectConfig $gpuDirectConfig)
+  {
+    $this->gpuDirectConfig = $gpuDirectConfig;
+  }
+  /**
+   * @return GPUDirectConfig
+   */
+  public function getGpuDirectConfig()
+  {
+    return $this->gpuDirectConfig;
   }
   /**
    * Enable or disable gvnic in the node pool.
