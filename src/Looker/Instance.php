@@ -80,6 +80,22 @@ class Instance extends \Google\Model
    */
   public const PLATFORM_EDITION_LOOKER_CORE_TRIAL_EMBED = 'LOOKER_CORE_TRIAL_EMBED';
   /**
+   * Soft delete reason is unspecified. This is the default value.
+   */
+  public const SOFT_DELETE_REASON_SOFT_DELETE_REASON_UNSPECIFIED = 'SOFT_DELETE_REASON_UNSPECIFIED';
+  /**
+   * Instance is soft deleted due to billing account issues.
+   */
+  public const SOFT_DELETE_REASON_BILLING_ACCOUNT_ISSUE = 'BILLING_ACCOUNT_ISSUE';
+  /**
+   * Instance is soft deleted due to trial expiration.
+   */
+  public const SOFT_DELETE_REASON_TRIAL_EXPIRED = 'TRIAL_EXPIRED';
+  /**
+   * Instance is soft deleted by the customer.
+   */
+  public const SOFT_DELETE_REASON_CUSTOMER_REQUEST = 'CUSTOMER_REQUEST';
+  /**
    * State is unspecified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -117,6 +133,13 @@ class Instance extends \Google\Model
   public const STATE_IMPORTING = 'IMPORTING';
   protected $adminSettingsType = AdminSettings::class;
   protected $adminSettingsDataType = '';
+  /**
+   * Optional. Indicates whether catalog integration is enabled for the Looker
+   * instance.
+   *
+   * @var bool
+   */
+  public $catalogIntegrationEnabled;
   /**
    * Optional. Storage class of the instance.
    *
@@ -268,11 +291,24 @@ class Instance extends \Google\Model
    */
   public $satisfiesPzs;
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   *
+   * @var string
+   */
+  public $softDeleteReason;
+  /**
    * Output only. The state of the instance.
    *
    * @var string
    */
   public $state;
+  /**
+   * Output only. The time when the Looker instance was suspended (soft
+   * deleted).
+   *
+   * @var string
+   */
+  public $suspendedTime;
   /**
    * Output only. The time when the Looker instance was last updated.
    *
@@ -297,6 +333,23 @@ class Instance extends \Google\Model
   public function getAdminSettings()
   {
     return $this->adminSettings;
+  }
+  /**
+   * Optional. Indicates whether catalog integration is enabled for the Looker
+   * instance.
+   *
+   * @param bool $catalogIntegrationEnabled
+   */
+  public function setCatalogIntegrationEnabled($catalogIntegrationEnabled)
+  {
+    $this->catalogIntegrationEnabled = $catalogIntegrationEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getCatalogIntegrationEnabled()
+  {
+    return $this->catalogIntegrationEnabled;
   }
   /**
    * Optional. Storage class of the instance.
@@ -799,6 +852,25 @@ class Instance extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   *
+   * Accepted values: SOFT_DELETE_REASON_UNSPECIFIED, BILLING_ACCOUNT_ISSUE,
+   * TRIAL_EXPIRED, CUSTOMER_REQUEST
+   *
+   * @param self::SOFT_DELETE_REASON_* $softDeleteReason
+   */
+  public function setSoftDeleteReason($softDeleteReason)
+  {
+    $this->softDeleteReason = $softDeleteReason;
+  }
+  /**
+   * @return self::SOFT_DELETE_REASON_*
+   */
+  public function getSoftDeleteReason()
+  {
+    return $this->softDeleteReason;
+  }
+  /**
    * Output only. The state of the instance.
    *
    * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, FAILED, SUSPENDED,
@@ -816,6 +888,23 @@ class Instance extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. The time when the Looker instance was suspended (soft
+   * deleted).
+   *
+   * @param string $suspendedTime
+   */
+  public function setSuspendedTime($suspendedTime)
+  {
+    $this->suspendedTime = $suspendedTime;
+  }
+  /**
+   * @return string
+   */
+  public function getSuspendedTime()
+  {
+    return $this->suspendedTime;
   }
   /**
    * Output only. The time when the Looker instance was last updated.
