@@ -88,6 +88,18 @@ class GoogleCloudRunV2Execution extends \Google\Collection
    */
   public $cancelledCount;
   /**
+   * Output only. Arbitrary identifier for the API client.
+   *
+   * @var string
+   */
+  public $client;
+  /**
+   * Output only. Arbitrary version identifier for the API client.
+   *
+   * @var string
+   */
+  public $clientVersion;
+  /**
    * Output only. Represents time when the execution was completed. It is not
    * guaranteed to be set in happens-before order across separate operations.
    *
@@ -168,7 +180,7 @@ class GoogleCloudRunV2Execution extends \Google\Collection
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
    * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used
    * as input. For example, if ALPHA was provided as input in the parent
-   * resource, but only BETA and GA-level features are were, this field will be
+   * resource, but only BETA and GA-level features are used, this field will be
    * BETA.
    *
    * @var string
@@ -302,6 +314,38 @@ class GoogleCloudRunV2Execution extends \Google\Collection
   public function getCancelledCount()
   {
     return $this->cancelledCount;
+  }
+  /**
+   * Output only. Arbitrary identifier for the API client.
+   *
+   * @param string $client
+   */
+  public function setClient($client)
+  {
+    $this->client = $client;
+  }
+  /**
+   * @return string
+   */
+  public function getClient()
+  {
+    return $this->client;
+  }
+  /**
+   * Output only. Arbitrary version identifier for the API client.
+   *
+   * @param string $clientVersion
+   */
+  public function setClientVersion($clientVersion)
+  {
+    $this->clientVersion = $clientVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getClientVersion()
+  {
+    return $this->clientVersion;
   }
   /**
    * Output only. Represents time when the execution was completed. It is not
@@ -500,7 +544,7 @@ class GoogleCloudRunV2Execution extends \Google\Collection
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
    * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used
    * as input. For example, if ALPHA was provided as input in the parent
-   * resource, but only BETA and GA-level features are were, this field will be
+   * resource, but only BETA and GA-level features are used, this field will be
    * BETA.
    *
    * Accepted values: LAUNCH_STAGE_UNSPECIFIED, UNIMPLEMENTED, PRELAUNCH,

@@ -45,6 +45,18 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
    * @var string[]
    */
   public $annotations;
+  /**
+   * Optional. Arbitrary identifier for the API client.
+   *
+   * @var string
+   */
+  public $client;
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   *
+   * @var string
+   */
+  public $clientVersion;
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
   /**
@@ -136,6 +148,38 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
   public function getAnnotations()
   {
     return $this->annotations;
+  }
+  /**
+   * Optional. Arbitrary identifier for the API client.
+   *
+   * @param string $client
+   */
+  public function setClient($client)
+  {
+    $this->client = $client;
+  }
+  /**
+   * @return string
+   */
+  public function getClient()
+  {
+    return $this->client;
+  }
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   *
+   * @param string $clientVersion
+   */
+  public function setClientVersion($clientVersion)
+  {
+    $this->clientVersion = $clientVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getClientVersion()
+  {
+    return $this->clientVersion;
   }
   /**
    * Holds list of the containers that defines the unit of execution for this
