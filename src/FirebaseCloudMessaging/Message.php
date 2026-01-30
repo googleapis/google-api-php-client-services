@@ -54,6 +54,7 @@ class Message extends \Google\Model
   /**
    * Registration token to send a message to.
    *
+   * @deprecated
    * @var string
    */
   public $token;
@@ -191,6 +192,7 @@ class Message extends \Google\Model
   /**
    * Registration token to send a message to.
    *
+   * @deprecated
    * @param string $token
    */
   public function setToken($token)
@@ -198,6 +200,7 @@ class Message extends \Google\Model
     $this->token = $token;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getToken()
