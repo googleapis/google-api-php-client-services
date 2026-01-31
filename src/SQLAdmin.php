@@ -884,6 +884,21 @@ class SQLAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'restoreBackupMcp' => [
+              'path' => 'v1/projects/{targetProject}/instances/{targetInstance}:restoreBackupMcp',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'targetProject' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'targetInstance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'rotateServerCa' => [
               'path' => 'v1/projects/{project}/instances/{instance}/rotateServerCa',
               'httpMethod' => 'POST',

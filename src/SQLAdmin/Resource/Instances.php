@@ -42,6 +42,7 @@ use Google\Service\SQLAdmin\PointInTimeRestoreContext;
 use Google\Service\SQLAdmin\SqlInstancesAcquireSsrsLeaseResponse;
 use Google\Service\SQLAdmin\SqlInstancesExecuteSqlResponse;
 use Google\Service\SQLAdmin\SqlInstancesReleaseSsrsLeaseResponse;
+use Google\Service\SQLAdmin\SqlInstancesRestoreBackupMcpRequest;
 
 /**
  * The "instances" collection of methods.
@@ -628,6 +629,24 @@ class Instances extends \Google\Service\Resource
     $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('restoreBackup', [$params], Operation::class);
+  }
+  /**
+   * Restores a backup of a Cloud SQL instance for Model Context Protocol (MCP)
+   * server. (instances.restoreBackupMcp)
+   *
+   * @param string $targetProject Required. Project ID of the target project.
+   * @param string $targetInstance Required. Cloud SQL instance ID of the target.
+   * This does not include the project ID.
+   * @param SqlInstancesRestoreBackupMcpRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function restoreBackupMcp($targetProject, $targetInstance, SqlInstancesRestoreBackupMcpRequest $postBody, $optParams = [])
+  {
+    $params = ['targetProject' => $targetProject, 'targetInstance' => $targetInstance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('restoreBackupMcp', [$params], Operation::class);
   }
   /**
    * Rotates the server certificate to one signed by the Certificate Authority
