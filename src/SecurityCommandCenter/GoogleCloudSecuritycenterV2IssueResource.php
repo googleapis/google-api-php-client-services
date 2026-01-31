@@ -35,6 +35,12 @@ class GoogleCloudSecuritycenterV2IssueResource extends \Google\Model
    * Microsoft Azure.
    */
   public const CLOUD_PROVIDER_MICROSOFT_AZURE = 'MICROSOFT_AZURE';
+  protected $adcApplicationType = GoogleCloudSecuritycenterV2IssueResourceAdcApplication::class;
+  protected $adcApplicationDataType = '';
+  protected $adcApplicationTemplateType = GoogleCloudSecuritycenterV2IssueResourceAdcApplicationTemplateRevision::class;
+  protected $adcApplicationTemplateDataType = '';
+  protected $adcSharedTemplateType = GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision::class;
+  protected $adcSharedTemplateDataType = '';
   protected $applicationType = GoogleCloudSecuritycenterV2IssueResourceApplication::class;
   protected $applicationDataType = '';
   protected $awsMetadataType = GoogleCloudSecuritycenterV2IssueResourceAwsMetadata::class;
@@ -69,6 +75,54 @@ class GoogleCloudSecuritycenterV2IssueResource extends \Google\Model
    */
   public $type;
 
+  /**
+   * The ADC application associated with the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueResourceAdcApplication $adcApplication
+   */
+  public function setAdcApplication(GoogleCloudSecuritycenterV2IssueResourceAdcApplication $adcApplication)
+  {
+    $this->adcApplication = $adcApplication;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2IssueResourceAdcApplication
+   */
+  public function getAdcApplication()
+  {
+    return $this->adcApplication;
+  }
+  /**
+   * The ADC template associated with the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueResourceAdcApplicationTemplateRevision $adcApplicationTemplate
+   */
+  public function setAdcApplicationTemplate(GoogleCloudSecuritycenterV2IssueResourceAdcApplicationTemplateRevision $adcApplicationTemplate)
+  {
+    $this->adcApplicationTemplate = $adcApplicationTemplate;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2IssueResourceAdcApplicationTemplateRevision
+   */
+  public function getAdcApplicationTemplate()
+  {
+    return $this->adcApplicationTemplate;
+  }
+  /**
+   * The ADC shared template associated with the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision $adcSharedTemplate
+   */
+  public function setAdcSharedTemplate(GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision $adcSharedTemplate)
+  {
+    $this->adcSharedTemplate = $adcSharedTemplate;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision
+   */
+  public function getAdcSharedTemplate()
+  {
+    return $this->adcSharedTemplate;
+  }
   /**
    * The AppHub application associated with the resource, if any. Only populated
    * for the primary resource.
