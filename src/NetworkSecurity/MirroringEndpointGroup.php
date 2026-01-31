@@ -54,6 +54,14 @@ class MirroringEndpointGroup extends \Google\Collection
    * operation is to retry deleting the endpoint group.
    */
   public const STATE_DELETE_FAILED = 'DELETE_FAILED';
+  /**
+   * Not set.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * An endpoint group that sends packets to a single deployment group.
+   */
+  public const TYPE_DIRECT = 'DIRECT';
   protected $collection_key = 'connectedDeploymentGroups';
   protected $associationsType = MirroringEndpointGroupAssociationDetails::class;
   protected $associationsDataType = 'array';
@@ -113,6 +121,13 @@ class MirroringEndpointGroup extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * Immutable. The type of the endpoint group. If left unspecified, defaults to
+   * DIRECT.
+   *
+   * @var string
+   */
+  public $type;
   /**
    * Output only. The timestamp when the resource was most recently updated. See
    * https://google.aip.dev/148#timestamps.
@@ -280,6 +295,25 @@ class MirroringEndpointGroup extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Immutable. The type of the endpoint group. If left unspecified, defaults to
+   * DIRECT.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, DIRECT
+   *
+   * @param self::TYPE_* $type
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return self::TYPE_*
+   */
+  public function getType()
+  {
+    return $this->type;
   }
   /**
    * Output only. The timestamp when the resource was most recently updated. See

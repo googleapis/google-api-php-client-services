@@ -98,9 +98,9 @@ class OrganizationsLocationsSecurityProfileGroups extends \Google\Service\Resour
    * `projects|organizations/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of SecurityProfileGroups to return per
-   * call.
-   * @opt_param string pageToken The value returned by the last
+   * @opt_param int pageSize Optional. Maximum number of SecurityProfileGroups to
+   * return per call.
+   * @opt_param string pageToken Optional. The value returned by the last
    * `ListSecurityProfileGroupsResponse` Indicates that this is a continuation of
    * a prior `ListSecurityProfileGroups` call, and that the system should return
    * the next page of data.
