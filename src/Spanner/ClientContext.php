@@ -19,6 +19,33 @@ namespace Google\Service\Spanner;
 
 class ClientContext extends \Google\Model
 {
+  /**
+   * Optional. Map of parameter name to value for this request. These values
+   * will be returned by any SECURE_CONTEXT() calls invoked by this request
+   * (e.g., by queries against Parameterized Secure Views).
+   *
+   * @var array[]
+   */
+  public $secureContext;
+
+  /**
+   * Optional. Map of parameter name to value for this request. These values
+   * will be returned by any SECURE_CONTEXT() calls invoked by this request
+   * (e.g., by queries against Parameterized Secure Views).
+   *
+   * @param array[] $secureContext
+   */
+  public function setSecureContext($secureContext)
+  {
+    $this->secureContext = $secureContext;
+  }
+  /**
+   * @return array[]
+   */
+  public function getSecureContext()
+  {
+    return $this->secureContext;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
