@@ -44,6 +44,21 @@ class Instance extends \Google\Collection
    */
   public const AVAILABILITY_TYPE_REGIONAL = 'REGIONAL';
   /**
+   * DEFAULT_DATA_API_ENABLED_FOR_GOOGLE_CLOUD_SERVICES is a default value that
+   * allows Google internal services like AlloyDB Studio to access the instance.
+   */
+  public const DATA_API_ACCESS_DEFAULT_DATA_API_ENABLED_FOR_GOOGLE_CLOUD_SERVICES = 'DEFAULT_DATA_API_ENABLED_FOR_GOOGLE_CLOUD_SERVICES';
+  /**
+   * Data API access is disabled for this instance.
+   */
+  public const DATA_API_ACCESS_DISABLED = 'DISABLED';
+  /**
+   * Data API access is enabled for this instance. For private IP instances,
+   * this allows authorized users to access the instance from the public
+   * internet using the ExecuteSql API.
+   */
+  public const DATA_API_ACCESS_ENABLED = 'ENABLED';
+  /**
    * The type of the instance is unknown.
    */
   public const INSTANCE_TYPE_INSTANCE_TYPE_UNSPECIFIED = 'INSTANCE_TYPE_UNSPECIFIED';
@@ -155,6 +170,17 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * Optional. Controls whether the Data API is enabled for this instance. When
+   * enabled, this allows authorized users to connect to the instance from the
+   * public internet using the `executeSql` API, even for private IP instances.
+   * If this is not specified, the data API is enabled by default for Google
+   * internal services like AlloyDB Studio. Disable it explicitly to disallow
+   * Google internal services as well.
+   *
+   * @var string
+   */
+  public $dataApiAccess;
   /**
    * Database flags. Set at the instance level. They are copied from the primary
    * instance on secondary instance creation. Flags that have restrictions
@@ -416,6 +442,30 @@ class Instance extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Optional. Controls whether the Data API is enabled for this instance. When
+   * enabled, this allows authorized users to connect to the instance from the
+   * public internet using the `executeSql` API, even for private IP instances.
+   * If this is not specified, the data API is enabled by default for Google
+   * internal services like AlloyDB Studio. Disable it explicitly to disallow
+   * Google internal services as well.
+   *
+   * Accepted values: DEFAULT_DATA_API_ENABLED_FOR_GOOGLE_CLOUD_SERVICES,
+   * DISABLED, ENABLED
+   *
+   * @param self::DATA_API_ACCESS_* $dataApiAccess
+   */
+  public function setDataApiAccess($dataApiAccess)
+  {
+    $this->dataApiAccess = $dataApiAccess;
+  }
+  /**
+   * @return self::DATA_API_ACCESS_*
+   */
+  public function getDataApiAccess()
+  {
+    return $this->dataApiAccess;
   }
   /**
    * Database flags. Set at the instance level. They are copied from the primary
