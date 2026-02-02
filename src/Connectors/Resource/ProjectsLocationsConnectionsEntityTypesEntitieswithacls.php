@@ -51,7 +51,7 @@ class ProjectsLocationsConnectionsEntityTypesEntitieswithacls extends \Google\Se
    * From a proto standpoint, There are no restrictions on what can be passed
    * using this field. The connector documentation should have information about
    * what format of filters/conditions are supported.
-   * @opt_param string gsutilUri Format: gs://object_path
+   * @opt_param string gcloud storage Uri Format: gs://object_path
    * @return Operation
    * @throws \Google\Service\Exception
    */
