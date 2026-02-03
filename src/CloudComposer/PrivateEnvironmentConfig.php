@@ -70,7 +70,8 @@ class PrivateEnvironmentConfig extends \Google\Model
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If
    * this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set
    * to true for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * composer-1.*.*-airflow-*.*.*. This field is going to be deprecated. Use
+   * `networking_type` instead.
    *
    * @var bool
    */
@@ -207,7 +208,8 @@ class PrivateEnvironmentConfig extends \Google\Model
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If
    * this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set
    * to true for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * composer-1.*.*-airflow-*.*.*. This field is going to be deprecated. Use
+   * `networking_type` instead.
    *
    * @param bool $enablePrivateEnvironment
    */
