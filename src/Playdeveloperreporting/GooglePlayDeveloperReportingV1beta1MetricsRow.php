@@ -38,7 +38,7 @@ class GooglePlayDeveloperReportingV1beta1MetricsRow extends \Google\Collection
   public const AGGREGATION_PERIOD_FULL_RANGE = 'FULL_RANGE';
   protected $collection_key = 'metrics';
   /**
-   * Granularity of the aggregation period of the row.
+   * Optional. Granularity of the aggregation period of the row.
    *
    * @var string
    */
@@ -51,7 +51,7 @@ class GooglePlayDeveloperReportingV1beta1MetricsRow extends \Google\Collection
   protected $startTimeDataType = '';
 
   /**
-   * Granularity of the aggregation period of the row.
+   * Optional. Granularity of the aggregation period of the row.
    *
    * Accepted values: AGGREGATION_PERIOD_UNSPECIFIED, HOURLY, DAILY, FULL_RANGE
    *
@@ -69,7 +69,7 @@ class GooglePlayDeveloperReportingV1beta1MetricsRow extends \Google\Collection
     return $this->aggregationPeriod;
   }
   /**
-   * Dimension columns in the row.
+   * Optional. Dimension columns in the row.
    *
    * @param GooglePlayDeveloperReportingV1beta1DimensionValue[] $dimensions
    */
@@ -85,7 +85,7 @@ class GooglePlayDeveloperReportingV1beta1MetricsRow extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * Metric columns in the row.
+   * Optional. Metric columns in the row.
    *
    * @param GooglePlayDeveloperReportingV1beta1MetricValue[] $metrics
    */
@@ -101,8 +101,8 @@ class GooglePlayDeveloperReportingV1beta1MetricsRow extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * Starting date (and time for hourly aggregation) of the period covered by
-   * this row.
+   * Optional. Starting date (and time for hourly aggregation) of the period
+   * covered by this row.
    *
    * @param GoogleTypeDateTime $startTime
    */

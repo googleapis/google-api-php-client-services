@@ -36,8 +36,8 @@ class VitalsErrorsReports extends \Google\Service\Resource
    * the application for which they were received. Format: apps/{app}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter A selection predicate to retrieve only a subset of
-   * the reports. For filtering basics, please check
+   * @opt_param string filter Optional. A selection predicate to retrieve only a
+   * subset of the reports. For filtering basics, please check
    * [AIP-160](https://google.aip.dev/160). ** Supported field names:** *
    * `apiLevel`: Matches error reports that occurred in the requested Android
    * versions (specified as the numeric API level) only. Example: `apiLevel = 28
@@ -120,10 +120,11 @@ class VitalsErrorsReports extends \Google\Service\Resource
    * would be represented as { seconds: -14400 }.
    * @opt_param int interval.startTime.year Optional. Year of date. Must be from 1
    * to 9999, or 0 if specifying a datetime without a year.
-   * @opt_param int pageSize The maximum number of reports to return. The service
-   * may return fewer than this value. If unspecified, at most 50 reports will be
-   * returned. The maximum value is 100; values above 100 will be coerced to 100.
-   * @opt_param string pageToken A page token, received from a previous
+   * @opt_param int pageSize Optional. The maximum number of reports to return.
+   * The service may return fewer than this value. If unspecified, at most 50
+   * reports will be returned. The maximum value is 100; values above 100 will be
+   * coerced to 100.
+   * @opt_param string pageToken Optional. A page token, received from a previous
    * `SearchErrorReports` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `SearchErrorReports` must match
    * the call that provided the page token.

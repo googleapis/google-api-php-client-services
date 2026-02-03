@@ -21,11 +21,11 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
 {
   protected $collection_key = 'metrics';
   /**
-   * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel`
-   * (string): the API level of Android that was running on the user's device,
-   * e.g., 26. * `versionCode` (int64): unique identifier of the user's device
-   * model. The form of the identifier is 'deviceBrand/device', where
-   * deviceBrand corresponds to Build.BRAND and device corresponds to
+   * Optional. Dimensions to slice the data by. **Supported dimensions:** *
+   * `apiLevel` (string): the API level of Android that was running on the
+   * user's device, e.g., 26. * `versionCode` (int64): unique identifier of the
+   * user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to
    * Build.DEVICE, e.g., google/coral. * `deviceModel` (string): unique
    * identifier of the user's device model. * `deviceType` (string): identifier
    * of the device's form factor, e.g., PHONE. * `reportType` (string): the type
@@ -53,7 +53,7 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
    */
   public $dimensions;
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by
    * equality of all breakdown dimensions and: * `isUserPerceived` (string):
    * denotes whether error is user perceived or not, USER_PERCEIVED or
@@ -63,7 +63,7 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
    */
   public $filter;
   /**
-   * Metrics to aggregate. **Supported metrics:** * `errorReportCount`
+   * Optional. Metrics to aggregate. **Supported metrics:** * `errorReportCount`
    * (`google.type.Decimal`): Absolute count of individual error reports that
    * have been received for an app. * `distinctUsers` (`google.type.Decimal`):
    * Count of distinct users for which reports have been received. Care must be
@@ -75,17 +75,17 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
    */
   public $metrics;
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will
-   * be returned. The maximum value is 100000; values above 100000 will be
-   * coerced to 100000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000
+   * rows will be returned. The maximum value is 100000; values above 100000
+   * will be coerced to 100000.
    *
    * @var int
    */
   public $pageSize;
   /**
-   * A page token, received from a previous call. Provide this to retrieve the
-   * subsequent page. When paginating, all other parameters provided to the
-   * request must match the call that provided the page token.
+   * Optional. A page token, received from a previous call. Provide this to
+   * retrieve the subsequent page. When paginating, all other parameters
+   * provided to the request must match the call that provided the page token.
    *
    * @var string
    */
@@ -94,11 +94,11 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
   protected $timelineSpecDataType = '';
 
   /**
-   * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel`
-   * (string): the API level of Android that was running on the user's device,
-   * e.g., 26. * `versionCode` (int64): unique identifier of the user's device
-   * model. The form of the identifier is 'deviceBrand/device', where
-   * deviceBrand corresponds to Build.BRAND and device corresponds to
+   * Optional. Dimensions to slice the data by. **Supported dimensions:** *
+   * `apiLevel` (string): the API level of Android that was running on the
+   * user's device, e.g., 26. * `versionCode` (int64): unique identifier of the
+   * user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to
    * Build.DEVICE, e.g., google/coral. * `deviceModel` (string): unique
    * identifier of the user's device model. * `deviceType` (string): identifier
    * of the device's form factor, e.g., PHONE. * `reportType` (string): the type
@@ -136,7 +136,7 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
     return $this->dimensions;
   }
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by
    * equality of all breakdown dimensions and: * `isUserPerceived` (string):
    * denotes whether error is user perceived or not, USER_PERCEIVED or
@@ -156,7 +156,7 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
     return $this->filter;
   }
   /**
-   * Metrics to aggregate. **Supported metrics:** * `errorReportCount`
+   * Optional. Metrics to aggregate. **Supported metrics:** * `errorReportCount`
    * (`google.type.Decimal`): Absolute count of individual error reports that
    * have been received for an app. * `distinctUsers` (`google.type.Decimal`):
    * Count of distinct users for which reports have been received. Care must be
@@ -178,9 +178,9 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
     return $this->metrics;
   }
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will
-   * be returned. The maximum value is 100000; values above 100000 will be
-   * coerced to 100000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000
+   * rows will be returned. The maximum value is 100000; values above 100000
+   * will be coerced to 100000.
    *
    * @param int $pageSize
    */
@@ -196,9 +196,9 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
     return $this->pageSize;
   }
   /**
-   * A page token, received from a previous call. Provide this to retrieve the
-   * subsequent page. When paginating, all other parameters provided to the
-   * request must match the call that provided the page token.
+   * Optional. A page token, received from a previous call. Provide this to
+   * retrieve the subsequent page. When paginating, all other parameters
+   * provided to the request must match the call that provided the page token.
    *
    * @param string $pageToken
    */
@@ -214,7 +214,7 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
     return $this->pageToken;
   }
   /**
-   * Specification of the timeline aggregation parameters. **Supported
+   * Optional. Specification of the timeline aggregation parameters. **Supported
    * aggregation periods:** * DAILY: metrics are aggregated in calendar date
    * intervals. The default and only supported timezone is
    * `America/Los_Angeles`.

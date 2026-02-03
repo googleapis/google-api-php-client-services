@@ -36,9 +36,9 @@ class VitalsErrorsIssues extends \Google\Service\Resource
    * indicating the application for which they were received. Format: apps/{app}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter A selection predicate to retrieve only a subset of
-   * the issues. Counts in the returned error issues will only reflect occurrences
-   * that matched the filter. For filtering basics, please check
+   * @opt_param string filter Optional. A selection predicate to retrieve only a
+   * subset of the issues. Counts in the returned error issues will only reflect
+   * occurrences that matched the filter. For filtering basics, please check
    * [AIP-160](https://google.aip.dev/160). ** Supported field names:** *
    * `apiLevel`: Matches error issues that occurred in the requested Android
    * versions (specified as the numeric API level) only. Example: `apiLevel = 28
@@ -117,21 +117,21 @@ class VitalsErrorsIssues extends \Google\Service\Resource
    * would be represented as { seconds: -14400 }.
    * @opt_param int interval.startTime.year Optional. Year of date. Must be from 1
    * to 9999, or 0 if specifying a datetime without a year.
-   * @opt_param string orderBy Specifies a field that will be used to order the
-   * results. ** Supported dimensions:** * `errorReportCount`: Orders issues by
-   * number of error reports. * `distinctUsers`: Orders issues by number of unique
-   * affected users. ** Supported operations:** * `asc` for ascending order. *
-   * `desc` for descending order. Format: A field and an operation, e.g.,
+   * @opt_param string orderBy Optional. Specifies a field that will be used to
+   * order the results. ** Supported dimensions:** * `errorReportCount`: Orders
+   * issues by number of error reports. * `distinctUsers`: Orders issues by number
+   * of unique affected users. ** Supported operations:** * `asc` for ascending
+   * order. * `desc` for descending order. Format: A field and an operation, e.g.,
    * `errorReportCount desc` *Note:* currently only one field is supported at a
    * time.
-   * @opt_param int pageSize The maximum number of error issues to return. The
-   * service may return fewer than this value. If unspecified, at most 50 error
-   * issues will be returned. The maximum value is 1000; values above 1000 will be
-   * coerced to 1000.
-   * @opt_param string pageToken A page token, received from a previous call.
-   * Provide this to retrieve the subsequent page. When paginating, all other
-   * parameters provided to the request must match the call that provided the page
-   * token.
+   * @opt_param int pageSize Optional. The maximum number of error issues to
+   * return. The service may return fewer than this value. If unspecified, at most
+   * 50 error issues will be returned. The maximum value is 1000; values above
+   * 1000 will be coerced to 1000.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * call. Provide this to retrieve the subsequent page. When paginating, all
+   * other parameters provided to the request must match the call that provided
+   * the page token.
    * @opt_param int sampleErrorReportLimit Optional. Number of sample error
    * reports to return per ErrorIssue. If unspecified, 0 will be used. *Note:*
    * currently only 0 and 1 are supported.

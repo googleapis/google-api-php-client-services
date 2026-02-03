@@ -59,7 +59,7 @@ class GooglePlayDeveloperReportingV1beta1ErrorReport extends \Google\Model
    */
   public $issue;
   /**
-   * The resource name of the report. Format: apps/{app}/{report}
+   * Identifier. The resource name of the report. Format: apps/{app}/{report}
    *
    * @var string
    */
@@ -161,7 +161,7 @@ class GooglePlayDeveloperReportingV1beta1ErrorReport extends \Google\Model
     return $this->issue;
   }
   /**
-   * The resource name of the report. Format: apps/{app}/{report}
+   * Identifier. The resource name of the report. Format: apps/{app}/{report}
    *
    * @param string $name
    */

@@ -36,21 +36,21 @@ class Anomalies extends \Google\Service\Resource
    * Format: apps/{app}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filtering criteria for anomalies. For basic filter
-   * guidance, please check: https://google.aip.dev/160. **Supported functions:**
-   * * `activeBetween(startTime, endTime)`: If specified, only list anomalies that
-   * were active in between `startTime` (inclusive) and `endTime` (exclusive).
-   * Both parameters are expected to conform to an RFC-3339 formatted string (e.g.
-   * `2012-04-21T11:30:00-04:00`). UTC offsets are supported. Both `startTime` and
-   * `endTime` accept the special value `UNBOUNDED`, to signify intervals with no
-   * lower or upper bound, respectively. Examples: *
+   * @opt_param string filter Optional. Filtering criteria for anomalies. For
+   * basic filter guidance, please check: https://google.aip.dev/160. **Supported
+   * functions:** * `activeBetween(startTime, endTime)`: If specified, only list
+   * anomalies that were active in between `startTime` (inclusive) and `endTime`
+   * (exclusive). Both parameters are expected to conform to an RFC-3339 formatted
+   * string (e.g. `2012-04-21T11:30:00-04:00`). UTC offsets are supported. Both
+   * `startTime` and `endTime` accept the special value `UNBOUNDED`, to signify
+   * intervals with no lower or upper bound, respectively. Examples: *
    * `activeBetween("2021-04-21T11:30:00Z", "2021-07-21T00:00:00Z")` *
    * `activeBetween(UNBOUNDED, "2021-11-21T00:00:00-04:00")` *
    * `activeBetween("2021-07-21T00:00:00-04:00", UNBOUNDED)`
-   * @opt_param int pageSize Maximum size of the returned data. If unspecified, at
-   * most 10 anomalies will be returned. The maximum value is 100; values above
-   * 100 will be coerced to 100.
-   * @opt_param string pageToken A page token, received from a previous
+   * @opt_param int pageSize Optional. Maximum size of the returned data. If
+   * unspecified, at most 10 anomalies will be returned. The maximum value is 100;
+   * values above 100 will be coerced to 100.
+   * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListErrorReports` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListErrorReports` must match
    * the call that provided the page token.

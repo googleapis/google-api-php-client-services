@@ -37,8 +37,8 @@ class GooglePlayDeveloperReportingV1beta1TimelineSpec extends \Google\Model
    */
   public const AGGREGATION_PERIOD_FULL_RANGE = 'FULL_RANGE';
   /**
-   * Type of the aggregation period of the datapoints in the timeline. Intervals
-   * are identified by the date and time at the start of the interval.
+   * Optional. Type of the aggregation period of the datapoints in the timeline.
+   * Intervals are identified by the date and time at the start of the interval.
    *
    * @var string
    */
@@ -49,8 +49,8 @@ class GooglePlayDeveloperReportingV1beta1TimelineSpec extends \Google\Model
   protected $startTimeDataType = '';
 
   /**
-   * Type of the aggregation period of the datapoints in the timeline. Intervals
-   * are identified by the date and time at the start of the interval.
+   * Optional. Type of the aggregation period of the datapoints in the timeline.
+   * Intervals are identified by the date and time at the start of the interval.
    *
    * Accepted values: AGGREGATION_PERIOD_UNSPECIFIED, HOURLY, DAILY, FULL_RANGE
    *
@@ -68,7 +68,7 @@ class GooglePlayDeveloperReportingV1beta1TimelineSpec extends \Google\Model
     return $this->aggregationPeriod;
   }
   /**
-   * Ending datapoint of the timeline (exclusive). See start_time for
+   * Optional. Ending datapoint of the timeline (exclusive). See start_time for
    * restrictions. The timezone of the end point must match the timezone of the
    * start point.
    *
@@ -86,15 +86,15 @@ class GooglePlayDeveloperReportingV1beta1TimelineSpec extends \Google\Model
     return $this->endTime;
   }
   /**
-   * Starting datapoint of the timeline (inclusive). Must be aligned to the
-   * aggregation period as follows: * HOURLY: the 'minutes', 'seconds' and
-   * 'nanos' fields must be unset. The time_zone can be left unset (defaults to
-   * UTC) or set explicitly to "UTC". Setting any other utc_offset or timezone
-   * id will result in a validation error. * DAILY: the 'hours', 'minutes',
-   * 'seconds' and 'nanos' fields must be unset. Different metric sets support
-   * different timezones. It can be left unset to use the default timezone
-   * specified by the metric set. The timezone of the end point must match the
-   * timezone of the start point.
+   * Optional. Starting datapoint of the timeline (inclusive). Must be aligned
+   * to the aggregation period as follows: * HOURLY: the 'minutes', 'seconds'
+   * and 'nanos' fields must be unset. The time_zone can be left unset (defaults
+   * to UTC) or set explicitly to "UTC". Setting any other utc_offset or
+   * timezone id will result in a validation error. * DAILY: the 'hours',
+   * 'minutes', 'seconds' and 'nanos' fields must be unset. Different metric
+   * sets support different timezones. It can be left unset to use the default
+   * timezone specified by the metric set. The timezone of the end point must
+   * match the timezone of the start point.
    *
    * @param GoogleTypeDateTime $startTime
    */

@@ -20,14 +20,14 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1OsVersion extends \Google\Model
 {
   /**
-   * Numeric version code of the OS - API level
+   * Optional. Numeric version code of the OS - API level
    *
    * @var string
    */
   public $apiLevel;
 
   /**
-   * Numeric version code of the OS - API level
+   * Optional. Numeric version code of the OS - API level
    *
    * @param string $apiLevel
    */
