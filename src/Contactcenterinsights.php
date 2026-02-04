@@ -55,6 +55,8 @@ class Contactcenterinsights extends \Google\Service
   public $projects_locations_conversations_assessments_notes;
   public $projects_locations_conversations_feedbackLabels;
   public $projects_locations_conversations_segments;
+  public $projects_locations_dashboards;
+  public $projects_locations_dashboards_charts;
   public $projects_locations_datasets;
   public $projects_locations_datasets_conversations;
   public $projects_locations_datasets_conversations_feedbackLabels;
@@ -121,6 +123,16 @@ class Contactcenterinsights extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generativeInsights' => [
+              'path' => 'v1/{+location}:generativeInsights',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -501,6 +513,16 @@ class Contactcenterinsights extends \Google\Service
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generativeInsights' => [
+              'path' => 'v1/{+location}:generativeInsights',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -1604,6 +1626,158 @@ class Contactcenterinsights extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dashboards = new Contactcenterinsights\Resource\ProjectsLocationsDashboards(
+        $this,
+        $this->serviceName,
+        'dashboards',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/dashboards',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'dashboardId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/dashboards',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dashboards_charts = new Contactcenterinsights\Resource\ProjectsLocationsDashboardsCharts(
+        $this,
+        $this->serviceName,
+        'charts',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/charts',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'chartId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/charts',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

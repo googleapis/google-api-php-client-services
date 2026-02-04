@@ -18,6 +18,7 @@
 namespace Google\Service\Contactcenterinsights\Resource;
 
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1AuthorizedView;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1GenerativeInsightsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListAuthorizedViewsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1QueryMetricsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest;
@@ -74,6 +75,24 @@ class ProjectsLocationsAuthorizedViewSetsAuthorizedViews extends \Google\Service
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Natural language based Insights which powers the next generation of
+   * dashboards in Insights. Next generation of QueryMetrics.
+   * (authorizedViews.generativeInsights)
+   *
+   * @param string $location Required. The location of the data.
+   * "projects/{project}/locations/{location}"
+   * @param GoogleCloudContactcenterinsightsV1GenerativeInsightsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function generativeInsights($location, GoogleCloudContactcenterinsightsV1GenerativeInsightsRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generativeInsights', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Get AuthorizedView (authorizedViews.get)

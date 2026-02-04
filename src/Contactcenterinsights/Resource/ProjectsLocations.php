@@ -22,6 +22,7 @@ use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkD
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkUploadFeedbackLabelsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CorrelationConfig;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1EncryptionSpec;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1GenerativeInsightsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListAllFeedbackLabelsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1QueryMetricsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest;
@@ -88,6 +89,24 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('bulkUploadFeedbackLabels', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Natural language based Insights which powers the next generation of
+   * dashboards in Insights. Next generation of QueryMetrics.
+   * (locations.generativeInsights)
+   *
+   * @param string $location Required. The location of the data.
+   * "projects/{project}/locations/{location}"
+   * @param GoogleCloudContactcenterinsightsV1GenerativeInsightsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function generativeInsights($location, GoogleCloudContactcenterinsightsV1GenerativeInsightsRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generativeInsights', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Gets correlation config. (locations.getCorrelationConfig)
