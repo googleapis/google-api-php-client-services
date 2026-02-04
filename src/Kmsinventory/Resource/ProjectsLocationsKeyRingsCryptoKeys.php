@@ -31,13 +31,20 @@ class ProjectsLocationsKeyRingsCryptoKeys extends \Google\Service\Resource
 {
   /**
    * Returns aggregate information about the resources protected by the given
-   * Cloud KMS CryptoKey. Only resources within the same Cloud organization as the
-   * key will be returned. The project that holds the key must be part of an
-   * organization in order for this call to succeed.
+   * Cloud KMS CryptoKey. By default, summary of resources within the same Cloud
+   * organization as the key will be returned, which requires the KMS organization
+   * service account to be configured(refer
+   * https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles). If the
+   * KMS organization service account is not configured or key's project is not
+   * part of an organization, set fallback_scope to `FALLBACK_SCOPE_PROJECT` to
+   * retrieve a summary of protected resources within the key's project.
    * (cryptoKeys.getProtectedResourcesSummary)
    *
    * @param string $name Required. The resource name of the CryptoKey.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string fallbackScope Optional. The scope to use if the kms
+   * organization service account is not configured.
    * @return GoogleCloudKmsInventoryV1ProtectedResourcesSummary
    * @throws \Google\Service\Exception
    */

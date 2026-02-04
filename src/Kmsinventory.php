@@ -41,6 +41,7 @@ class Kmsinventory extends \Google\Service
   public $organizations_protectedResources;
   public $projects_cryptoKeys;
   public $projects_locations_keyRings_cryptoKeys;
+  public $projects_protectedResources;
   public $rootUrlTemplate;
 
   /**
@@ -139,6 +140,47 @@ class Kmsinventory extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'fallbackScope' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_protectedResources = new Kmsinventory\Resource\ProjectsProtectedResources(
+        $this,
+        $this->serviceName,
+        'protectedResources',
+        [
+          'methods' => [
+            'search' => [
+              'path' => 'v1/{+scope}/protectedResources:search',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'scope' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'cryptoKey' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'resourceTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],

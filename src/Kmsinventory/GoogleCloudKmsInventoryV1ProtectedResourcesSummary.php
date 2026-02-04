@@ -17,8 +17,9 @@
 
 namespace Google\Service\Kmsinventory;
 
-class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends \Google\Model
+class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends \Google\Collection
 {
+  protected $collection_key = 'warnings';
   /**
    * The number of resources protected by the key grouped by Cloud product.
    *
@@ -59,6 +60,8 @@ class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends \Google\Model
    * @var string[]
    */
   public $resourceTypes;
+  protected $warningsType = GoogleCloudKmsInventoryV1Warning::class;
+  protected $warningsDataType = 'array';
 
   /**
    * The number of resources protected by the key grouped by Cloud product.
@@ -159,6 +162,24 @@ class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends \Google\Model
   public function getResourceTypes()
   {
     return $this->resourceTypes;
+  }
+  /**
+   * Warning messages for the state of response ProtectedResourcesSummary For
+   * example, if the organization service account is not configured,
+   * INSUFFICIENT_PERMISSIONS_PARTIAL_DATA warning will be returned.
+   *
+   * @param GoogleCloudKmsInventoryV1Warning[] $warnings
+   */
+  public function setWarnings($warnings)
+  {
+    $this->warnings = $warnings;
+  }
+  /**
+   * @return GoogleCloudKmsInventoryV1Warning[]
+   */
+  public function getWarnings()
+  {
+    return $this->warnings;
   }
 }
 

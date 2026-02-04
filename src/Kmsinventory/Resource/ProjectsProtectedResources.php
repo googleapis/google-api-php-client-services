@@ -24,10 +24,10 @@ use Google\Service\Kmsinventory\GoogleCloudKmsInventoryV1SearchProtectedResource
  * Typical usage is:
  *  <code>
  *   $kmsinventoryService = new Google\Service\Kmsinventory(...);
- *   $protectedResources = $kmsinventoryService->organizations_protectedResources;
+ *   $protectedResources = $kmsinventoryService->projects_protectedResources;
  *  </code>
  */
-class OrganizationsProtectedResources extends \Google\Service\Resource
+class ProjectsProtectedResources extends \Google\Service\Resource
 {
   /**
    * Returns metadata about the resources protected by the given Cloud KMS
@@ -73,4 +73,4 @@ class OrganizationsProtectedResources extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OrganizationsProtectedResources::class, 'Google_Service_Kmsinventory_Resource_OrganizationsProtectedResources');
+class_alias(ProjectsProtectedResources::class, 'Google_Service_Kmsinventory_Resource_ProjectsProtectedResources');
