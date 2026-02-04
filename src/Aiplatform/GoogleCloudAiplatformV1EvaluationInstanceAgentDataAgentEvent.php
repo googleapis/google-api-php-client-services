@@ -1,0 +1,133 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\Aiplatform;
+
+class GoogleCloudAiplatformV1EvaluationInstanceAgentDataAgentEvent extends \Google\Collection
+{
+  protected $collection_key = 'activeTools';
+  protected $activeToolsType = GoogleCloudAiplatformV1Tool::class;
+  protected $activeToolsDataType = 'array';
+  /**
+   * Required. The ID of the agent or entity that generated this event.
+   *
+   * @var string
+   */
+  public $author;
+  protected $contentType = GoogleCloudAiplatformV1Content::class;
+  protected $contentDataType = '';
+  /**
+   * Optional. The timestamp when the event occurred.
+   *
+   * @var string
+   */
+  public $eventTime;
+  /**
+   * Optional. The change in the session state caused by this event. This is a
+   * key-value map of fields that were modified or added by the event.
+   *
+   * @var array[]
+   */
+  public $stateDelta;
+
+  /**
+   * Optional. The list of tools that were active/available to the agent at the
+   * time of this event. This overrides the `AgentConfig.tools` if set.
+   *
+   * @param GoogleCloudAiplatformV1Tool[] $activeTools
+   */
+  public function setActiveTools($activeTools)
+  {
+    $this->activeTools = $activeTools;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Tool[]
+   */
+  public function getActiveTools()
+  {
+    return $this->activeTools;
+  }
+  /**
+   * Required. The ID of the agent or entity that generated this event.
+   *
+   * @param string $author
+   */
+  public function setAuthor($author)
+  {
+    $this->author = $author;
+  }
+  /**
+   * @return string
+   */
+  public function getAuthor()
+  {
+    return $this->author;
+  }
+  /**
+   * Required. The content of the event (e.g., text response, tool call, tool
+   * response).
+   *
+   * @param GoogleCloudAiplatformV1Content $content
+   */
+  public function setContent(GoogleCloudAiplatformV1Content $content)
+  {
+    $this->content = $content;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Content
+   */
+  public function getContent()
+  {
+    return $this->content;
+  }
+  /**
+   * Optional. The timestamp when the event occurred.
+   *
+   * @param string $eventTime
+   */
+  public function setEventTime($eventTime)
+  {
+    $this->eventTime = $eventTime;
+  }
+  /**
+   * @return string
+   */
+  public function getEventTime()
+  {
+    return $this->eventTime;
+  }
+  /**
+   * Optional. The change in the session state caused by this event. This is a
+   * key-value map of fields that were modified or added by the event.
+   *
+   * @param array[] $stateDelta
+   */
+  public function setStateDelta($stateDelta)
+  {
+    $this->stateDelta = $stateDelta;
+  }
+  /**
+   * @return array[]
+   */
+  public function getStateDelta()
+  {
+    return $this->stateDelta;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudAiplatformV1EvaluationInstanceAgentDataAgentEvent::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1EvaluationInstanceAgentDataAgentEvent');

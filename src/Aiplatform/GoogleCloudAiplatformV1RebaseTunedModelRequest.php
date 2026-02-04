@@ -22,9 +22,11 @@ class GoogleCloudAiplatformV1RebaseTunedModelRequest extends \Google\Model
   protected $artifactDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $artifactDestinationDataType = '';
   /**
-   * Optional. By default, bison to gemini migration will always create new
-   * model/endpoint, but for gemini-1.0 to gemini-1.5 migration, we default
-   * deploy to the same endpoint. See details in this Section.
+   * Optional. By default, rebasing a model creates a new endpoint for the new
+   * model. If this flag is set to true, the new model will be deployed to the
+   * same endpoint as the original model. WARNING: If you deploy to the same
+   * endpoint, the original model will be un-deployed and replaced by the new
+   * model.
    *
    * @var bool
    */
@@ -35,7 +37,7 @@ class GoogleCloudAiplatformV1RebaseTunedModelRequest extends \Google\Model
   protected $tuningJobDataType = '';
 
   /**
-   * Optional. The Google Cloud Storage location to write the artifacts.
+   * Optional. The Google Cloud Storage location to write the artifacts to.
    *
    * @param GoogleCloudAiplatformV1GcsDestination $artifactDestination
    */
@@ -51,9 +53,11 @@ class GoogleCloudAiplatformV1RebaseTunedModelRequest extends \Google\Model
     return $this->artifactDestination;
   }
   /**
-   * Optional. By default, bison to gemini migration will always create new
-   * model/endpoint, but for gemini-1.0 to gemini-1.5 migration, we default
-   * deploy to the same endpoint. See details in this Section.
+   * Optional. By default, rebasing a model creates a new endpoint for the new
+   * model. If this flag is set to true, the new model will be deployed to the
+   * same endpoint as the original model. WARNING: If you deploy to the same
+   * endpoint, the original model will be un-deployed and replaced by the new
+   * model.
    *
    * @param bool $deployToSameEndpoint
    */
@@ -69,7 +73,7 @@ class GoogleCloudAiplatformV1RebaseTunedModelRequest extends \Google\Model
     return $this->deployToSameEndpoint;
   }
   /**
-   * Required. TunedModel reference to retrieve the legacy model information.
+   * Required. A reference to the tuned model to rebase.
    *
    * @param GoogleCloudAiplatformV1TunedModelRef $tunedModelRef
    */
@@ -85,8 +89,8 @@ class GoogleCloudAiplatformV1RebaseTunedModelRequest extends \Google\Model
     return $this->tunedModelRef;
   }
   /**
-   * Optional. The TuningJob to be updated. Users can use this TuningJob field
-   * to overwrite tuning configs.
+   * Optional. The tuning job to be updated. Users can use this field to
+   * overwrite tuning configs.
    *
    * @param GoogleCloudAiplatformV1TuningJob $tuningJob
    */

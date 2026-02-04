@@ -17,10 +17,13 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
+class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Collection
 {
+  protected $collection_key = 'turns';
   protected $agentConfigType = GoogleCloudAiplatformV1EvaluationInstanceAgentConfig::class;
   protected $agentConfigDataType = '';
+  protected $agentsType = GoogleCloudAiplatformV1EvaluationInstanceAgentConfig::class;
+  protected $agentsDataType = 'map';
   protected $developerInstructionType = GoogleCloudAiplatformV1EvaluationInstanceInstanceData::class;
   protected $developerInstructionDataType = '';
   protected $eventsType = GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents::class;
@@ -29,17 +32,14 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
   protected $toolsDataType = '';
   /**
    * A JSON string containing a list of tools available to an agent with info
-   * such as name, description, parameters and required parameters. Example: [ {
-   * "name": "search_actors", "description": "Search for actors in a movie.
-   * Returns a list of actors, their roles, their birthdate, and their place of
-   * birth.", "parameters": [ { "name": "movie_name", "description": "The name
-   * of the movie." }, { "name": "character_name", "description": "The name of
-   * the character." } ], "required": ["movie_name", "character_name"] } ]
+   * such as name, description, parameters and required parameters.
    *
    * @deprecated
    * @var string
    */
   public $toolsText;
+  protected $turnsType = GoogleCloudAiplatformV1EvaluationInstanceAgentDataConversationTurn::class;
+  protected $turnsDataType = 'array';
 
   /**
    * Optional. Agent configuration.
@@ -58,7 +58,28 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
     return $this->agentConfig;
   }
   /**
-   * Optional. A field containing instructions from the developer for the agent.
+   * Optional. The static Agent Configuration. This map defines the graph
+   * structure of the agent system. Key: agent_id (matches the `author` field in
+   * events). Value: The static configuration of the agent (tools, instructions,
+   * sub-agents).
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfig[] $agents
+   */
+  public function setAgents($agents)
+  {
+    $this->agents = $agents;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentConfig[]
+   */
+  public function getAgents()
+  {
+    return $this->agents;
+  }
+  /**
+   * Optional. Deprecated. A field containing instructions from the developer
+   * for the agent. Please use `agents.developer_instruction` or
+   * `turns.events.active_instruction` instead.
    *
    * @deprecated
    * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData $developerInstruction
@@ -111,12 +132,7 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
   }
   /**
    * A JSON string containing a list of tools available to an agent with info
-   * such as name, description, parameters and required parameters. Example: [ {
-   * "name": "search_actors", "description": "Search for actors in a movie.
-   * Returns a list of actors, their roles, their birthdate, and their place of
-   * birth.", "parameters": [ { "name": "movie_name", "description": "The name
-   * of the movie." }, { "name": "character_name", "description": "The name of
-   * the character." } ], "required": ["movie_name", "character_name"] } ]
+   * such as name, description, parameters and required parameters.
    *
    * @deprecated
    * @param string $toolsText
@@ -132,6 +148,23 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
   public function getToolsText()
   {
     return $this->toolsText;
+  }
+  /**
+   * Optional. The chronological list of conversation turns. Each turn
+   * represents a logical execution cycle (e.g., User Input -> Agent Response).
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentDataConversationTurn[] $turns
+   */
+  public function setTurns($turns)
+  {
+    $this->turns = $turns;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentDataConversationTurn[]
+   */
+  public function getTurns()
+  {
+    return $this->turns;
   }
 }
 

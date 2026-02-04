@@ -63,7 +63,7 @@ class GoogleCloudAiplatformV1EvaluationRequest extends \Google\Collection
     return $this->goldenResponse;
   }
   /**
-   * Required. The request/prompt to evaluate.
+   * Optional. The request/prompt to evaluate.
    *
    * @param GoogleCloudAiplatformV1EvaluationPrompt $prompt
    */

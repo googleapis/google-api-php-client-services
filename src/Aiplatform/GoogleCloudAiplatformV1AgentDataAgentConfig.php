@@ -17,11 +17,11 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1EvaluationInstanceAgentConfig extends \Google\Collection
+class GoogleCloudAiplatformV1AgentDataAgentConfig extends \Google\Collection
 {
-  protected $collection_key = 'subAgents';
+  protected $collection_key = 'tools';
   /**
-   * Optional. Unique identifier of the agent. This ID is used to refer to this
+   * Required. Unique identifier of the agent. This ID is used to refer to this
    * agent, e.g., in AgentEvent.author, or in the `sub_agents` field. It must be
    * unique within the `agents` map.
    *
@@ -44,27 +44,25 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentConfig extends \Google\Colle
    * @var string
    */
   public $description;
-  protected $developerInstructionType = GoogleCloudAiplatformV1EvaluationInstanceInstanceData::class;
-  protected $developerInstructionDataType = '';
   /**
-   * Optional. The list of valid agent IDs (names) that this agent can delegate
-   * to. This defines the directed edges in the agent system graph topology.
+   * Optional. Instructions from the developer for the agent. Can be static or a
+   * dynamic prompt template used with the `AgentEvent.state_delta` field.
+   *
+   * @var string
+   */
+  public $developerInstruction;
+  /**
+   * Optional. The list of valid agent IDs that this agent can delegate to. This
+   * defines the directed edges in the agent system graph topology.
    *
    * @var string[]
    */
   public $subAgents;
-  protected $toolsType = GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools::class;
-  protected $toolsDataType = '';
-  /**
-   * A JSON string containing a list of tools available to an agent with info
-   * such as name, description, parameters and required parameters.
-   *
-   * @var string
-   */
-  public $toolsText;
+  protected $toolsType = GoogleCloudAiplatformV1Tool::class;
+  protected $toolsDataType = 'array';
 
   /**
-   * Optional. Unique identifier of the agent. This ID is used to refer to this
+   * Required. Unique identifier of the agent. This ID is used to refer to this
    * agent, e.g., in AgentEvent.author, or in the `sub_agents` field. It must be
    * unique within the `agents` map.
    *
@@ -118,26 +116,25 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentConfig extends \Google\Colle
     return $this->description;
   }
   /**
-   * Optional. Contains instructions from the developer for the agent. Can be
-   * static or a dynamic prompt template used with the `AgentEvent.state_delta`
-   * field.
+   * Optional. Instructions from the developer for the agent. Can be static or a
+   * dynamic prompt template used with the `AgentEvent.state_delta` field.
    *
-   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData $developerInstruction
+   * @param string $developerInstruction
    */
-  public function setDeveloperInstruction(GoogleCloudAiplatformV1EvaluationInstanceInstanceData $developerInstruction)
+  public function setDeveloperInstruction($developerInstruction)
   {
     $this->developerInstruction = $developerInstruction;
   }
   /**
-   * @return GoogleCloudAiplatformV1EvaluationInstanceInstanceData
+   * @return string
    */
   public function getDeveloperInstruction()
   {
     return $this->developerInstruction;
   }
   /**
-   * Optional. The list of valid agent IDs (names) that this agent can delegate
-   * to. This defines the directed edges in the agent system graph topology.
+   * Optional. The list of valid agent IDs that this agent can delegate to. This
+   * defines the directed edges in the agent system graph topology.
    *
    * @param string[] $subAgents
    */
@@ -153,39 +150,22 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentConfig extends \Google\Colle
     return $this->subAgents;
   }
   /**
-   * List of tools.
+   * Optional. The list of tools available to this agent.
    *
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools $tools
+   * @param GoogleCloudAiplatformV1Tool[] $tools
    */
-  public function setTools(GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools $tools)
+  public function setTools($tools)
   {
     $this->tools = $tools;
   }
   /**
-   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools
+   * @return GoogleCloudAiplatformV1Tool[]
    */
   public function getTools()
   {
     return $this->tools;
   }
-  /**
-   * A JSON string containing a list of tools available to an agent with info
-   * such as name, description, parameters and required parameters.
-   *
-   * @param string $toolsText
-   */
-  public function setToolsText($toolsText)
-  {
-    $this->toolsText = $toolsText;
-  }
-  /**
-   * @return string
-   */
-  public function getToolsText()
-  {
-    return $this->toolsText;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1EvaluationInstanceAgentConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1EvaluationInstanceAgentConfig');
+class_alias(GoogleCloudAiplatformV1AgentDataAgentConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1AgentDataAgentConfig');
