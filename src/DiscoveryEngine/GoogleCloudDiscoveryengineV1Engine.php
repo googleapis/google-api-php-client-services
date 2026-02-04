@@ -178,6 +178,8 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $observabilityConfigType = GoogleCloudDiscoveryengineV1ObservabilityConfig::class;
+  protected $observabilityConfigDataType = '';
   protected $searchEngineConfigType = GoogleCloudDiscoveryengineV1EngineSearchEngineConfig::class;
   protected $searchEngineConfigDataType = '';
   /**
@@ -491,6 +493,22 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Observability config for the engine.
+   *
+   * @param GoogleCloudDiscoveryengineV1ObservabilityConfig $observabilityConfig
+   */
+  public function setObservabilityConfig(GoogleCloudDiscoveryengineV1ObservabilityConfig $observabilityConfig)
+  {
+    $this->observabilityConfig = $observabilityConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1ObservabilityConfig
+   */
+  public function getObservabilityConfig()
+  {
+    return $this->observabilityConfig;
   }
   /**
    * Configurations for the Search Engine. Only applicable if solution_type is

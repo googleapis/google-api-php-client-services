@@ -21,6 +21,8 @@ class GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfig 
 {
   protected $modelArmorConfigType = GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig::class;
   protected $modelArmorConfigDataType = '';
+  protected $observabilityConfigType = GoogleCloudDiscoveryengineV1ObservabilityConfig::class;
+  protected $observabilityConfigDataType = '';
   /**
    * Optional. Whether to disable the notebook sharing feature for the project.
    * Default to false if not specified.
@@ -45,6 +47,22 @@ class GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfigNotebooklmConfig 
   public function getModelArmorConfig()
   {
     return $this->modelArmorConfig;
+  }
+  /**
+   * Optional. Observability config for NotebookLM.
+   *
+   * @param GoogleCloudDiscoveryengineV1ObservabilityConfig $observabilityConfig
+   */
+  public function setObservabilityConfig(GoogleCloudDiscoveryengineV1ObservabilityConfig $observabilityConfig)
+  {
+    $this->observabilityConfig = $observabilityConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1ObservabilityConfig
+   */
+  public function getObservabilityConfig()
+  {
+    return $this->observabilityConfig;
   }
   /**
    * Optional. Whether to disable the notebook sharing feature for the project.

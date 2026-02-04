@@ -178,6 +178,8 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $observabilityConfigType = GoogleCloudDiscoveryengineV1alphaObservabilityConfig::class;
+  protected $observabilityConfigDataType = '';
   protected $recommendationMetadataType = GoogleCloudDiscoveryengineV1alphaEngineRecommendationMetadata::class;
   protected $recommendationMetadataDataType = '';
   protected $searchEngineConfigType = GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig::class;
@@ -495,6 +497,22 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Observability config for the engine.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaObservabilityConfig $observabilityConfig
+   */
+  public function setObservabilityConfig(GoogleCloudDiscoveryengineV1alphaObservabilityConfig $observabilityConfig)
+  {
+    $this->observabilityConfig = $observabilityConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaObservabilityConfig
+   */
+  public function getObservabilityConfig()
+  {
+    return $this->observabilityConfig;
   }
   /**
    * Output only. Additional information of a recommendation engine. Only
