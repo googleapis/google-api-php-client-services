@@ -76,6 +76,12 @@ class Note extends \Google\Collection
    */
   public const KIND_SECRET = 'SECRET';
   protected $collection_key = 'relatedUrl';
+  /**
+   * The timestamp when the advisory was first published by the source feed.
+   *
+   * @var string
+   */
+  public $advisoryPublishTime;
   protected $attestationType = AttestationNote::class;
   protected $attestationDataType = '';
   protected $buildType = BuildNote::class;
@@ -157,6 +163,22 @@ class Note extends \Google\Collection
   protected $vulnerabilityAssessmentType = VulnerabilityAssessmentNote::class;
   protected $vulnerabilityAssessmentDataType = '';
 
+  /**
+   * The timestamp when the advisory was first published by the source feed.
+   *
+   * @param string $advisoryPublishTime
+   */
+  public function setAdvisoryPublishTime($advisoryPublishTime)
+  {
+    $this->advisoryPublishTime = $advisoryPublishTime;
+  }
+  /**
+   * @return string
+   */
+  public function getAdvisoryPublishTime()
+  {
+    return $this->advisoryPublishTime;
+  }
   /**
    * A note describing an attestation role.
    *
