@@ -129,7 +129,8 @@ class ImportJob extends \Google\Model
    * material for the wrapping key resides and where all related cryptographic
    * operations are performed. Currently, this field is only populated for keys
    * stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and may
-   * apply to additional ProtectionLevels in the future.
+   * apply to additional ProtectionLevels in the future. Supported resources: *
+   * `"projects/locations/singleTenantHsmInstances"`
    *
    * @var string
    */
@@ -226,7 +227,8 @@ class ImportJob extends \Google\Model
    * material for the wrapping key resides and where all related cryptographic
    * operations are performed. Currently, this field is only populated for keys
    * stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and may
-   * apply to additional ProtectionLevels in the future.
+   * apply to additional ProtectionLevels in the future. Supported resources: *
+   * `"projects/locations/singleTenantHsmInstances"`
    *
    * @param string $cryptoKeyBackend
    */

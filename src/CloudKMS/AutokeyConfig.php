@@ -20,6 +20,30 @@ namespace Google\Service\CloudKMS;
 class AutokeyConfig extends \Google\Model
 {
   /**
+   * Default value. KeyProjectResolutionMode when not specified will act as
+   * `DEDICATED_KEY_PROJECT`.
+   */
+  public const KEY_PROJECT_RESOLUTION_MODE_KEY_PROJECT_RESOLUTION_MODE_UNSPECIFIED = 'KEY_PROJECT_RESOLUTION_MODE_UNSPECIFIED';
+  /**
+   * Keys are created in a dedicated project specified by `key_project`.
+   */
+  public const KEY_PROJECT_RESOLUTION_MODE_DEDICATED_KEY_PROJECT = 'DEDICATED_KEY_PROJECT';
+  /**
+   * Keys are created in the same project as the resource requesting the key.
+   * `key_project` must not be set when this mode is used.
+   */
+  public const KEY_PROJECT_RESOLUTION_MODE_RESOURCE_PROJECT = 'RESOURCE_PROJECT';
+  /**
+   * Disables the AutokeyConfig. When this mode is set, any AutokeyConfig from
+   * higher levels in the resource hierarchy are ignored for this resource and
+   * its descendants. This setting can be overridden by a more specific
+   * configuration at a lower level. For example, if Autokey is disabled on a
+   * folder, it can be re-enabled on a sub-folder or project within that folder
+   * by setting a different mode (e.g., DEDICATED_KEY_PROJECT or
+   * RESOURCE_PROJECT).
+   */
+  public const KEY_PROJECT_RESOLUTION_MODE_DISABLED = 'DISABLED';
+  /**
    * The state of the AutokeyConfig is unspecified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -60,6 +84,13 @@ class AutokeyConfig extends \Google\Model
    * @var string
    */
   public $keyProject;
+  /**
+   * Optional. KeyProjectResolutionMode for the AutokeyConfig. Valid values are
+   * `DEDICATED_KEY_PROJECT`, `RESOURCE_PROJECT`, or `DISABLED`.
+   *
+   * @var string
+   */
+  public $keyProjectResolutionMode;
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
    * `folders/{FOLDER_NUMBER}/autokeyConfig`
@@ -116,6 +147,26 @@ class AutokeyConfig extends \Google\Model
   public function getKeyProject()
   {
     return $this->keyProject;
+  }
+  /**
+   * Optional. KeyProjectResolutionMode for the AutokeyConfig. Valid values are
+   * `DEDICATED_KEY_PROJECT`, `RESOURCE_PROJECT`, or `DISABLED`.
+   *
+   * Accepted values: KEY_PROJECT_RESOLUTION_MODE_UNSPECIFIED,
+   * DEDICATED_KEY_PROJECT, RESOURCE_PROJECT, DISABLED
+   *
+   * @param self::KEY_PROJECT_RESOLUTION_MODE_* $keyProjectResolutionMode
+   */
+  public function setKeyProjectResolutionMode($keyProjectResolutionMode)
+  {
+    $this->keyProjectResolutionMode = $keyProjectResolutionMode;
+  }
+  /**
+   * @return self::KEY_PROJECT_RESOLUTION_MODE_*
+   */
+  public function getKeyProjectResolutionMode()
+  {
+    return $this->keyProjectResolutionMode;
   }
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
