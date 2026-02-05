@@ -27,6 +27,12 @@ class SetTagsRequest extends \Google\Model
    */
   public $etag;
   /**
+   * Required. The full resource name of the service resource.
+   *
+   * @var string
+   */
+  public $name;
+  /**
    * Optional. A unique identifier for this request. Must be a valid UUID. This
    * request is only idempotent if a `request_id` is provided.
    *
@@ -59,6 +65,22 @@ class SetTagsRequest extends \Google\Model
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * Required. The full resource name of the service resource.
+   *
+   * @param string $name
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * Optional. A unique identifier for this request. Must be a valid UUID. This
