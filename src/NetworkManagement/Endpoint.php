@@ -85,29 +85,34 @@ class Endpoint extends \Google\Model
    */
   public const LOAD_BALANCER_TYPE_TCP_UDP_INTERNAL_LOAD_BALANCER = 'TCP_UDP_INTERNAL_LOAD_BALANCER';
   /**
-   * Unspecified. The `project_id` field should be set to the project where the
-   * GCP endpoint is located, or where the non-GCP endpoint should be reachable
-   * from (via routes to non-GCP networks). The test will analyze all possible
-   * IP address locations. This might take longer and produce inaccurate or
-   * ambiguous results, so prefer specifying an explicit network type.
+   * Unspecified. The test will analyze all possible IP address locations. This
+   * might take longer and produce inaccurate or ambiguous results, so prefer
+   * specifying an explicit network type. The `project_id` field should be set
+   * to the project where the GCP endpoint is located, or where the non-GCP
+   * endpoint should be reachable from (via routes to non-GCP networks). The
+   * project might also be inferred from the Connectivity Test project or other
+   * projects referenced in the request.
    */
   public const NETWORK_TYPE_NETWORK_TYPE_UNSPECIFIED = 'NETWORK_TYPE_UNSPECIFIED';
   /**
-   * A VPC network. The `network` field should be set to the URI of this
-   * network. Only endpoints within this network will be considered.
+   * A VPC network. Should be used for internal IP addresses in VPC networks.
+   * The `network` field should be set to the URI of this network. Only
+   * endpoints within this network will be considered.
    */
   public const NETWORK_TYPE_GCP_NETWORK = 'GCP_NETWORK';
   /**
-   * A non-GCP network (for example, an on-premises network or network in
-   * another Cloud). The `network` field should be set to the URI of the VPC
-   * network containing a corresponding VPN tunnel, Interconnect attachment, or
-   * router appliance instance. Only endpoints reachable from the provided VPC
-   * network via the routes to non-GCP networks will be considered.
+   * A non-GCP network (for example, an on-premises network or another cloud
+   * provider network). Should be used for internal IP addresses outside of
+   * Google Cloud. The `network` field should be set to the URI of the VPC
+   * network containing a corresponding Cloud VPN tunnel, Cloud Interconnect
+   * VLAN attachment, or a router appliance instance. Only endpoints reachable
+   * from the provided VPC network via the routes to non-GCP networks will be
+   * considered.
    */
   public const NETWORK_TYPE_NON_GCP_NETWORK = 'NON_GCP_NETWORK';
   /**
-   * Internet. Only endpoints reachable over public Internet and endpoints
-   * within Google API and service ranges will be considered.
+   * Internet. Should be used for internet-routable external IP addresses or IP
+   * addresses for global Google APIs and services.
    */
   public const NETWORK_TYPE_INTERNET = 'INTERNET';
   protected $appEngineVersionType = AppEngineVersionEndpoint::class;

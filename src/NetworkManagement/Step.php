@@ -173,10 +173,6 @@ class Step extends \Google\Model
    */
   public const STATE_SERVERLESS_EXTERNAL_CONNECTION = 'SERVERLESS_EXTERNAL_CONNECTION';
   /**
-   * Forwarding state: arriving at a Google-managed service endpoint.
-   */
-  public const STATE_ARRIVE_AT_GOOGLE_MANAGED_SERVICE = 'ARRIVE_AT_GOOGLE_MANAGED_SERVICE';
-  /**
    * Transition state: packet header translated. The `nat` field is populated
    * with the translation information.
    */
@@ -253,8 +249,6 @@ class Step extends \Google\Model
   protected $gkeMasterDataType = '';
   protected $gkePodType = GkePodInfo::class;
   protected $gkePodDataType = '';
-  protected $googleManagedServiceType = GoogleManagedServiceInfo::class;
-  protected $googleManagedServiceDataType = '';
   protected $googleServiceType = GoogleServiceInfo::class;
   protected $googleServiceDataType = '';
   protected $hybridSubnetType = HybridSubnetInfo::class;
@@ -565,22 +559,6 @@ class Step extends \Google\Model
     return $this->gkePod;
   }
   /**
-   * Display information of a Google-managed service.
-   *
-   * @param GoogleManagedServiceInfo $googleManagedService
-   */
-  public function setGoogleManagedService(GoogleManagedServiceInfo $googleManagedService)
-  {
-    $this->googleManagedService = $googleManagedService;
-  }
-  /**
-   * @return GoogleManagedServiceInfo
-   */
-  public function getGoogleManagedService()
-  {
-    return $this->googleManagedService;
-  }
-  /**
    * Display information of a Google service
    *
    * @param GoogleServiceInfo $googleService
@@ -856,9 +834,9 @@ class Step extends \Google\Model
    * ARRIVE_AT_EXTERNAL_LOAD_BALANCER, ARRIVE_AT_HYBRID_SUBNET,
    * ARRIVE_AT_VPN_GATEWAY, ARRIVE_AT_VPN_TUNNEL,
    * ARRIVE_AT_INTERCONNECT_ATTACHMENT, ARRIVE_AT_VPC_CONNECTOR,
-   * DIRECT_VPC_EGRESS_CONNECTION, SERVERLESS_EXTERNAL_CONNECTION,
-   * ARRIVE_AT_GOOGLE_MANAGED_SERVICE, NAT, SKIP_GKE_POD_IP_MASQUERADING,
-   * PROXY_CONNECTION, DELIVER, DROP, FORWARD, ABORT, VIEWER_PERMISSION_MISSING
+   * DIRECT_VPC_EGRESS_CONNECTION, SERVERLESS_EXTERNAL_CONNECTION, NAT,
+   * SKIP_GKE_POD_IP_MASQUERADING, PROXY_CONNECTION, DELIVER, DROP, FORWARD,
+   * ABORT, VIEWER_PERMISSION_MISSING
    *
    * @param self::STATE_* $state
    */

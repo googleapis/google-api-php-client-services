@@ -526,6 +526,11 @@ class DropInfo extends \Google\Model
    */
   public const CAUSE_HYBRID_SUBNET_NO_ROUTE = 'HYBRID_SUBNET_NO_ROUTE';
   /**
+   * Packet is dropped because there is no valid matching route from the network
+   * of the Google-managed service to the destination.
+   */
+  public const CAUSE_NO_VALID_ROUTE_FROM_GOOGLE_MANAGED_NETWORK_TO_DESTINATION = 'NO_VALID_ROUTE_FROM_GOOGLE_MANAGED_NETWORK_TO_DESTINATION';
+  /**
    * Cause that the packet is dropped.
    *
    * @var string
@@ -637,7 +642,8 @@ class DropInfo extends \Google\Model
    * CLOUD_NAT_PROTOCOL_UNSUPPORTED, L2_INTERCONNECT_UNSUPPORTED_PROTOCOL,
    * L2_INTERCONNECT_UNSUPPORTED_PORT, L2_INTERCONNECT_DESTINATION_IP_MISMATCH,
    * NCC_ROUTE_WITHIN_HYBRID_SUBNET_UNSUPPORTED, HYBRID_SUBNET_REGION_MISMATCH,
-   * HYBRID_SUBNET_NO_ROUTE
+   * HYBRID_SUBNET_NO_ROUTE,
+   * NO_VALID_ROUTE_FROM_GOOGLE_MANAGED_NETWORK_TO_DESTINATION
    *
    * @param self::CAUSE_* $cause
    */
