@@ -1334,6 +1334,11 @@ class Storage extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'dropContextGroups' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'ifGenerationMatch' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1851,6 +1856,11 @@ class Storage extends \Google\Service
                 'destinationPredefinedAcl' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'dropContextGroups' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
                 'ifGenerationMatch' => [
                   'location' => 'query',
