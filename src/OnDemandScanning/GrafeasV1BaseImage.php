@@ -32,6 +32,12 @@ class GrafeasV1BaseImage extends \Google\Model
    */
   public $name;
   /**
+   * The registry in which the base image is from.
+   *
+   * @var string
+   */
+  public $registry;
+  /**
    * The repository name in which the base image is from.
    *
    * @var string
@@ -69,6 +75,22 @@ class GrafeasV1BaseImage extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * The registry in which the base image is from.
+   *
+   * @param string $registry
+   */
+  public function setRegistry($registry)
+  {
+    $this->registry = $registry;
+  }
+  /**
+   * @return string
+   */
+  public function getRegistry()
+  {
+    return $this->registry;
   }
   /**
    * The repository name in which the base image is from.
