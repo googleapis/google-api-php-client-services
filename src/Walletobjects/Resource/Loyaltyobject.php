@@ -111,7 +111,8 @@ class Loyaltyobject extends \Google\Service\Resource
     return $this->call('list', [$params], LoyaltyObjectListResponse::class);
   }
   /**
-   * Modifies linked offer objects for the loyalty object with the given ID.
+   * Deprecated: Use Auto Linked Passes instead. Modifies linked offer objects for
+   * the loyalty object with the given ID.
    * (loyaltyobject.modifylinkedofferobjects)
    *
    * @param string $resourceId The unique identifier for an object. This ID must

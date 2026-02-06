@@ -112,7 +112,8 @@ class Eventticketobject extends \Google\Service\Resource
     return $this->call('list', [$params], EventTicketObjectListResponse::class);
   }
   /**
-   * Modifies linked offer objects for the event ticket object with the given ID.
+   * Deprecated: Use Auto Linked Passes instead. Modifies linked offer objects for
+   * the event ticket object with the given ID.
    * (eventticketobject.modifylinkedofferobjects)
    *
    * @param string $resourceId The unique identifier for an object. This ID must
