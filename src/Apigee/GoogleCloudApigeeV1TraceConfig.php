@@ -32,6 +32,10 @@ class GoogleCloudApigeeV1TraceConfig extends \Google\Model
    */
   public const EXPORTER_CLOUD_TRACE = 'CLOUD_TRACE';
   /**
+   * Open Telemetry Collector
+   */
+  public const EXPORTER_OPEN_TELEMETRY_COLLECTOR = 'OPEN_TELEMETRY_COLLECTOR';
+  /**
    * Required. Endpoint of the exporter.
    *
    * @var string
@@ -69,7 +73,8 @@ class GoogleCloudApigeeV1TraceConfig extends \Google\Model
    * using OpenCensus. An exporter sends traces to any backend that is capable
    * of consuming them. Recorded spans can be exported by registered exporters.
    *
-   * Accepted values: EXPORTER_UNSPECIFIED, JAEGER, CLOUD_TRACE
+   * Accepted values: EXPORTER_UNSPECIFIED, JAEGER, CLOUD_TRACE,
+   * OPEN_TELEMETRY_COLLECTOR
    *
    * @param self::EXPORTER_* $exporter
    */

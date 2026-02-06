@@ -34,6 +34,17 @@ class GoogleCloudApigeeV1RuntimeTraceConfigOverride extends \Google\Model
    */
   public $name;
   /**
+   * If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace
+   * data. Configuration Requirements (if `open_telemetry_protocol_enabled` is
+   * `true`): - Allowed `Exporter`s: `CLOUD_TRACE` or
+   * `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is `OPEN_TELEMETRY_COLLECTOR`:
+   * - `endpoint` refers to a valid OTLP collector URL. - If `Exporter` is
+   * `CLOUD_TRACE`: - `endpoint` refers to a valid project ID
+   *
+   * @var bool
+   */
+  public $openTelemetryProtocolEnabled;
+  /**
    * The timestamp that the revision was created or updated.
    *
    * @var string
@@ -89,6 +100,27 @@ class GoogleCloudApigeeV1RuntimeTraceConfigOverride extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace
+   * data. Configuration Requirements (if `open_telemetry_protocol_enabled` is
+   * `true`): - Allowed `Exporter`s: `CLOUD_TRACE` or
+   * `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is `OPEN_TELEMETRY_COLLECTOR`:
+   * - `endpoint` refers to a valid OTLP collector URL. - If `Exporter` is
+   * `CLOUD_TRACE`: - `endpoint` refers to a valid project ID
+   *
+   * @param bool $openTelemetryProtocolEnabled
+   */
+  public function setOpenTelemetryProtocolEnabled($openTelemetryProtocolEnabled)
+  {
+    $this->openTelemetryProtocolEnabled = $openTelemetryProtocolEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getOpenTelemetryProtocolEnabled()
+  {
+    return $this->openTelemetryProtocolEnabled;
   }
   /**
    * The timestamp that the revision was created or updated.
