@@ -33,22 +33,6 @@ class Backup extends \Google\Collection
    */
   public const DATABASE_DIALECT_POSTGRESQL = 'POSTGRESQL';
   /**
-   * Edition not specified.
-   */
-  public const MINIMUM_RESTORABLE_EDITION_EDITION_UNSPECIFIED = 'EDITION_UNSPECIFIED';
-  /**
-   * Standard edition.
-   */
-  public const MINIMUM_RESTORABLE_EDITION_STANDARD = 'STANDARD';
-  /**
-   * Enterprise edition.
-   */
-  public const MINIMUM_RESTORABLE_EDITION_ENTERPRISE = 'ENTERPRISE';
-  /**
-   * Enterprise Plus edition.
-   */
-  public const MINIMUM_RESTORABLE_EDITION_ENTERPRISE_PLUS = 'ENTERPRISE_PLUS';
-  /**
    * Not specified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -156,13 +140,6 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $maxExpireTime;
-  /**
-   * Output only. The minimum edition required to successfully restore the
-   * backup. Populated only if the edition is Enterprise or Enterprise Plus.
-   *
-   * @var string
-   */
-  public $minimumRestorableEdition;
   /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup
    * operation. A globally unique identifier for the backup which cannot be
@@ -468,25 +445,6 @@ class Backup extends \Google\Collection
   public function getMaxExpireTime()
   {
     return $this->maxExpireTime;
-  }
-  /**
-   * Output only. The minimum edition required to successfully restore the
-   * backup. Populated only if the edition is Enterprise or Enterprise Plus.
-   *
-   * Accepted values: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS
-   *
-   * @param self::MINIMUM_RESTORABLE_EDITION_* $minimumRestorableEdition
-   */
-  public function setMinimumRestorableEdition($minimumRestorableEdition)
-  {
-    $this->minimumRestorableEdition = $minimumRestorableEdition;
-  }
-  /**
-   * @return self::MINIMUM_RESTORABLE_EDITION_*
-   */
-  public function getMinimumRestorableEdition()
-  {
-    return $this->minimumRestorableEdition;
   }
   /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup
