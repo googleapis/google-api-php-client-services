@@ -93,7 +93,7 @@ class ResourceBackupConfig extends \Google\Collection
    * Output only. Whether the target resource is protected by a backup vault.
    * This is true if the backup_configs_details is not empty and any of the
    * ResourceBackupConfig.backup_configs_details has a backup configuration with
-   * BackupConfigDetails.backup_vault set. set.
+   * BackupConfigDetails.backup_vault set.
    *
    * @var bool
    */
@@ -242,7 +242,7 @@ class ResourceBackupConfig extends \Google\Collection
    * Output only. Whether the target resource is protected by a backup vault.
    * This is true if the backup_configs_details is not empty and any of the
    * ResourceBackupConfig.backup_configs_details has a backup configuration with
-   * BackupConfigDetails.backup_vault set. set.
+   * BackupConfigDetails.backup_vault set.
    *
    * @param bool $vaulted
    */
