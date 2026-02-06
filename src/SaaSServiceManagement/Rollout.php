@@ -77,6 +77,13 @@ class Rollout extends \Google\Model
    */
   public $createTime;
   /**
+   * Output only. The timestamp when the resource was marked for deletion
+   * (deletion is an asynchronous operation).
+   *
+   * @var string
+   */
+  public $deleteTime;
+  /**
    * Optional. Output only. Output only snapshot of the effective unit filter at
    * Rollout start time. Contains a CEL(https://github.com/google/cel-spec)
    * expression consisting of a conjunction of Rollout.unit_filter and
@@ -275,6 +282,23 @@ class Rollout extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Output only. The timestamp when the resource was marked for deletion
+   * (deletion is an asynchronous operation).
+   *
+   * @param string $deleteTime
+   */
+  public function setDeleteTime($deleteTime)
+  {
+    $this->deleteTime = $deleteTime;
+  }
+  /**
+   * @return string
+   */
+  public function getDeleteTime()
+  {
+    return $this->deleteTime;
   }
   /**
    * Optional. Output only. Output only snapshot of the effective unit filter at
