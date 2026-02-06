@@ -21,8 +21,7 @@ class ApplicationSigningKeyCert extends \Google\Model
 {
   /**
    * Required. The SHA-256 hash value of the signing key certificate of the app.
-   * This must be a valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the
-   * policy is rejected.
+   * This must be a valid SHA-256 hash value, i.e. 32 bytes.
    *
    * @var string
    */
@@ -30,8 +29,7 @@ class ApplicationSigningKeyCert extends \Google\Model
 
   /**
    * Required. The SHA-256 hash value of the signing key certificate of the app.
-   * This must be a valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the
-   * policy is rejected.
+   * This must be a valid SHA-256 hash value, i.e. 32 bytes.
    *
    * @param string $signingKeyCertFingerprintSha256
    */
