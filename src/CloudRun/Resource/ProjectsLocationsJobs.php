@@ -45,8 +45,9 @@ class ProjectsLocationsJobs extends \Google\Service\Resource
    * @param GoogleCloudRunV2Job $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string jobId Required. The unique identifier for the Job. The name
-   * of the job becomes {parent}/jobs/{job_id}.
+   * @opt_param string jobId Optional. The unique identifier for the Job. The name
+   * of the job becomes {parent}/jobs/{job_id}. If not provided, the server will
+   * generate a unique `job_id`.
    * @opt_param bool validateOnly Indicates that the request should be validated
    * and default values populated, without persisting the request or creating any
    * resources.

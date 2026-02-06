@@ -45,10 +45,11 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param GoogleCloudRunV2Service $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string serviceId Required. The unique identifier for the Service.
+   * @opt_param string serviceId Optional. The unique identifier for the Service.
    * It must begin with letter, and cannot end with hyphen; must contain fewer
    * than 50 characters. The name of the service becomes
-   * {parent}/services/{service_id}.
+   * {parent}/services/{service_id}. If not provided, the server will generate a
+   * unique `service_id`.
    * @opt_param bool validateOnly Indicates that the request should be validated
    * and default values populated, without persisting the request or creating any
    * resources.

@@ -49,10 +49,11 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. Indicates that the request should be
    * validated and default values populated, without persisting the request or
    * creating any resources.
-   * @opt_param string workerPoolId Required. The unique identifier for the
+   * @opt_param string workerPoolId Optional. The unique identifier for the
    * WorkerPool. It must begin with letter, and cannot end with hyphen; must
    * contain fewer than 50 characters. The name of the worker pool becomes
-   * `{parent}/workerPools/{worker_pool_id}`.
+   * `{parent}/workerPools/{worker_pool_id}`. If not provided, the server will
+   * generate a unique `worker_pool_id`.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
