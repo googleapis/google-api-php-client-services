@@ -53,7 +53,7 @@ class GoogleCloudDocumentaiV1DocumentEntity extends \Google\Collection
    */
   public $mentionId;
   /**
-   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value of the entity, for example, `1600 Amphitheatre Pkwy`.
    *
    * @var string
    */
@@ -82,7 +82,7 @@ class GoogleCloudDocumentaiV1DocumentEntity extends \Google\Collection
   protected $textAnchorType = GoogleCloudDocumentaiV1DocumentTextAnchor::class;
   protected $textAnchorDataType = '';
   /**
-   * Required. Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema, for example, `Address`.
    *
    * @var string
    */
@@ -138,7 +138,7 @@ class GoogleCloudDocumentaiV1DocumentEntity extends \Google\Collection
     return $this->mentionId;
   }
   /**
-   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value of the entity, for example, `1600 Amphitheatre Pkwy`.
    *
    * @param string $mentionText
    */
@@ -173,9 +173,9 @@ class GoogleCloudDocumentaiV1DocumentEntity extends \Google\Collection
   }
   /**
    * Optional. Normalized entity value. Absent if the extracted value could not
-   * be converted or the type (e.g. address) is not supported for certain
-   * parsers. This field is also only populated for certain supported document
-   * types.
+   * be converted or the type (for example, address) is not supported for
+   * certain parsers. This field is also only populated for certain supported
+   * document types.
    *
    * @param GoogleCloudDocumentaiV1DocumentEntityNormalizedValue $normalizedValue
    */
@@ -275,7 +275,7 @@ class GoogleCloudDocumentaiV1DocumentEntity extends \Google\Collection
     return $this->textAnchor;
   }
   /**
-   * Required. Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema, for example, `Address`.
    *
    * @param string $type
    */

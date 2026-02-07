@@ -20,7 +20,7 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3EvaluationMetrics extends \Google\Model
 {
   /**
-   * The calculated f1 score.
+   * The calculated F1 score.
    *
    * @var float
    */
@@ -87,7 +87,7 @@ class GoogleCloudDocumentaiUiv1beta3EvaluationMetrics extends \Google\Model
   public $truePositivesCount;
 
   /**
-   * The calculated f1 score.
+   * The calculated F1 score.
    *
    * @param float $f1Score
    */

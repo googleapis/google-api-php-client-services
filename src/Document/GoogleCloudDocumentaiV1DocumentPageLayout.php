@@ -46,8 +46,8 @@ class GoogleCloudDocumentaiV1DocumentPageLayout extends \Google\Model
   protected $boundingPolyDataType = '';
   /**
    * Confidence of the current Layout within context of the object this layout
-   * is for. e.g. confidence can be for a single token, a table, a visual
-   * element, etc. depending on context. Range `[0, 1]`.
+   * is for. For example, confidence can be for a single token, a table, a
+   * visual element, etc. depending on context. Range `[0, 1]`.
    *
    * @var float
    */
@@ -79,8 +79,8 @@ class GoogleCloudDocumentaiV1DocumentPageLayout extends \Google\Model
   }
   /**
    * Confidence of the current Layout within context of the object this layout
-   * is for. e.g. confidence can be for a single token, a table, a visual
-   * element, etc. depending on context. Range `[0, 1]`.
+   * is for. For example, confidence can be for a single token, a table, a
+   * visual element, etc. depending on context. Range `[0, 1]`.
    *
    * @param float $confidence
    */

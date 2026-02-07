@@ -32,7 +32,7 @@ class GoogleCloudDocumentaiV1NextSchema extends \Google\Model
    */
   public $displayName;
   /**
-   * Optional. The GCP labels for the Schema.
+   * Optional. The {{gcp_name_short}} labels for the Schema.
    *
    * @var string[]
    */
@@ -84,7 +84,7 @@ class GoogleCloudDocumentaiV1NextSchema extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Optional. The GCP labels for the Schema.
+   * Optional. The {{gcp_name_short}} labels for the Schema.
    *
    * @param string[] $labels
    */

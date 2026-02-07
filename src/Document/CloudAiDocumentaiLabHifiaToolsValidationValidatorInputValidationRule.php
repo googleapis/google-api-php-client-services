@@ -22,7 +22,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule exten
   protected $childAlignmentRuleType = CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule::class;
   protected $childAlignmentRuleDataType = '';
   /**
-   * Description of the validation rule. This has no use but for documentation
+   * Description of the validation rule. This has no use but for documentation.
    *
    * @var string
    */
@@ -63,7 +63,7 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule exten
     return $this->childAlignmentRule;
   }
   /**
-   * Description of the validation rule. This has no use but for documentation
+   * Description of the validation rule. This has no use but for documentation.
    *
    * @param string $description
    */

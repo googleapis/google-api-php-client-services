@@ -327,8 +327,8 @@ class GoogleCloudDocumentaiV1DocumentPage extends \Google\Collection
     return $this->transforms;
   }
   /**
-   * A list of detected non-text visual elements e.g. checkbox, signature etc.
-   * on the page.
+   * A list of detected non-text visual elements, for example, checkbox,
+   * signature etc. on the page.
    *
    * @param GoogleCloudDocumentaiV1DocumentPageVisualElement[] $visualElements
    */

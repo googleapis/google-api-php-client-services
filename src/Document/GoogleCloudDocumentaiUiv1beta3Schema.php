@@ -27,7 +27,7 @@ class GoogleCloudDocumentaiUiv1beta3Schema extends \Google\Collection
    */
   public $description;
   /**
-   * Display name to show to users.
+   * Display name to show users.
    *
    * @var string
    */
@@ -52,7 +52,7 @@ class GoogleCloudDocumentaiUiv1beta3Schema extends \Google\Collection
     return $this->description;
   }
   /**
-   * Display name to show to users.
+   * Display name to show users.
    *
    * @param string $displayName
    */

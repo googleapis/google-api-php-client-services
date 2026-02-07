@@ -17,8 +17,9 @@
 
 namespace Google\Service\Document;
 
-class GoogleCloudDocumentaiV1Evaluation extends \Google\Model
+class GoogleCloudDocumentaiV1Evaluation extends \Google\Collection
 {
+  protected $collection_key = 'revisions';
   protected $allEntitiesMetricsType = GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics::class;
   protected $allEntitiesMetricsDataType = '';
   /**
@@ -51,6 +52,8 @@ class GoogleCloudDocumentaiV1Evaluation extends \Google\Model
    * @var string
    */
   public $name;
+  protected $revisionsType = GoogleCloudDocumentaiV1EvaluationEvaluationRevision::class;
+  protected $revisionsDataType = 'array';
 
   /**
    * Metrics for all the entities in aggregate.
@@ -165,6 +168,22 @@ class GoogleCloudDocumentaiV1Evaluation extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Contains all revisions of the evaluation, excluding the latest one.
+   *
+   * @param GoogleCloudDocumentaiV1EvaluationEvaluationRevision[] $revisions
+   */
+  public function setRevisions($revisions)
+  {
+    $this->revisions = $revisions;
+  }
+  /**
+   * @return GoogleCloudDocumentaiV1EvaluationEvaluationRevision[]
+   */
+  public function getRevisions()
+  {
+    return $this->revisions;
   }
 }
 

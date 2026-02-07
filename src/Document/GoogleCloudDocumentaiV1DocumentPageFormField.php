@@ -92,8 +92,8 @@ class GoogleCloudDocumentaiV1DocumentPageFormField extends \Google\Collection
     return $this->correctedValueText;
   }
   /**
-   * Layout for the FormField name. e.g. `Address`, `Email`, `Grand total`,
-   * `Phone number`, etc.
+   * Layout for the FormField name. For example, `Address`, `Email`, `Grand
+   * total`, `Phone number`, etc.
    *
    * @param GoogleCloudDocumentaiV1DocumentPageLayout $fieldName
    */

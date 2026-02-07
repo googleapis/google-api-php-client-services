@@ -41,7 +41,7 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   protected $entitiesType = GoogleCloudDocumentaiV1DocumentEntity::class;
   protected $entitiesDataType = 'array';
   /**
-   * The entity revision id that `document.entities` field is based on. If this
+   * The entity revision ID that `document.entities` field is based on. If this
    * field is set and `entities_revisions` is not empty, the entities in
    * `document.entities` field are the entities in the entity revision with this
    * id and `document.entity_validation_output` field is the
@@ -175,7 +175,7 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->entities;
   }
   /**
-   * The entity revision id that `document.entities` field is based on. If this
+   * The entity revision ID that `document.entities` field is based on. If this
    * field is set and `entities_revisions` is not empty, the entities in
    * `document.entities` field are the entities in the entity revision with this
    * id and `document.entity_validation_output` field is the

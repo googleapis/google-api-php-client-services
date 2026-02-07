@@ -20,7 +20,7 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1DocumentRevisionHumanReview extends \Google\Model
 {
   /**
-   * Human review state. e.g. `requested`, `succeeded`, `rejected`.
+   * Human review state. For example, `requested`, `succeeded`, `rejected`.
    *
    * @var string
    */
@@ -34,7 +34,7 @@ class GoogleCloudDocumentaiV1DocumentRevisionHumanReview extends \Google\Model
   public $stateMessage;
 
   /**
-   * Human review state. e.g. `requested`, `succeeded`, `rejected`.
+   * Human review state. For example, `requested`, `succeeded`, `rejected`.
    *
    * @param string $state
    */

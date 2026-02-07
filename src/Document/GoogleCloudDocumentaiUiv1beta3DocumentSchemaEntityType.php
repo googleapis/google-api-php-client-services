@@ -49,8 +49,8 @@ class GoogleCloudDocumentaiUiv1beta3DocumentSchemaEntityType extends \Google\Col
    * "Common Type". The following naming conventions are used: - Use
    * `snake_casing`. - Name matching is case-sensitive. - Maximum 64 characters.
    * - Must start with a letter. - Allowed characters: ASCII letters
-   * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and
-   * tooling can handle any ascii character.) - The `/` is sometimes used to
+   * `[a-z0-9_-]`. (For backward compatibility, internal infrastructure and
+   * tooling can handle any ASCII character.) - The `/` is sometimes used to
    * denote a property of a type. For example `line_item/amount`. This
    * convention is deprecated, but will still be honored for backward
    * compatibility.
@@ -130,7 +130,7 @@ class GoogleCloudDocumentaiUiv1beta3DocumentSchemaEntityType extends \Google\Col
   /**
    * If specified, lists all the possible values for this entity. This should
    * not be more than a handful of values. If the number of values is >10 or
-   * could change frequently use the `EntityType.value_ontology` field and
+   * could change frequently, use the `EntityType.value_ontology` field and
    * specify a list of all possible values in a value ontology file.
    *
    * @param GoogleCloudDocumentaiUiv1beta3DocumentSchemaEntityTypeEnumValues $enumValues
@@ -151,8 +151,8 @@ class GoogleCloudDocumentaiUiv1beta3DocumentSchemaEntityType extends \Google\Col
    * "Common Type". The following naming conventions are used: - Use
    * `snake_casing`. - Name matching is case-sensitive. - Maximum 64 characters.
    * - Must start with a letter. - Allowed characters: ASCII letters
-   * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and
-   * tooling can handle any ascii character.) - The `/` is sometimes used to
+   * `[a-z0-9_-]`. (For backward compatibility, internal infrastructure and
+   * tooling can handle any ASCII character.) - The `/` is sometimes used to
    * denote a property of a type. For example `line_item/amount`. This
    * convention is deprecated, but will still be honored for backward
    * compatibility.

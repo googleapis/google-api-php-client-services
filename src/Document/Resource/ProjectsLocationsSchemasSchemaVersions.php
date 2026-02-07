@@ -110,8 +110,8 @@ class ProjectsLocationsSchemasSchemaVersions extends \Google\Service\Resource
    * @opt_param int pageSize Optional. The maximum number of SchemaVersion to
    * return. If unspecified, at most `10` SchemaVersion will be returned. The
    * maximum value is `20`. Values above `20` will be coerced to `20`.
-   * @opt_param string pageToken Optional. We will return the SchemaVersion sorted
-   * by creation time. The page token will point to the next SchemaVersion.
+   * @opt_param string pageToken Optional. Returns the SchemaVersion sorted by
+   * creation time. The page token will point to the next SchemaVersion.
    * @return GoogleCloudDocumentaiV1ListSchemaVersionsResponse
    * @throws \Google\Service\Exception
    */
@@ -132,8 +132,8 @@ class ProjectsLocationsSchemasSchemaVersions extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Optional. The update mask to apply to the
-   * resource. **Note:** Only the following fields can be updated: - display_name.
-   * - labels.
+   * resource. **Note:** Only the following fields can be updated: -
+   * `display_name` - `labels`
    * @return GoogleCloudDocumentaiV1SchemaVersion
    * @throws \Google\Service\Exception
    */

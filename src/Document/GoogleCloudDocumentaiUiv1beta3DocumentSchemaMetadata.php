@@ -41,7 +41,7 @@ class GoogleCloudDocumentaiUiv1beta3DocumentSchemaMetadata extends \Google\Model
    */
   public $prefixedNamingOnProperties;
   /**
-   * If set, we will skip the naming format validation in the schema. So the
+   * If set, this will skip the naming format validation in the schema. So the
    * string values in `DocumentSchema.EntityType.name` and
    * `DocumentSchema.EntityType.Property.name` will not be checked.
    *
@@ -101,7 +101,7 @@ class GoogleCloudDocumentaiUiv1beta3DocumentSchemaMetadata extends \Google\Model
     return $this->prefixedNamingOnProperties;
   }
   /**
-   * If set, we will skip the naming format validation in the schema. So the
+   * If set, this will skip the naming format validation in the schema. So the
    * string values in `DocumentSchema.EntityType.name` and
    * `DocumentSchema.EntityType.Property.name` will not be checked.
    *

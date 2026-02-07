@@ -58,8 +58,6 @@ class GoogleCloudDocumentaiV1beta3Dataset extends \Google\Model
    * @var bool
    */
   public $satisfiesPzs;
-  protected $spannerIndexingConfigType = GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig::class;
-  protected $spannerIndexingConfigDataType = '';
   /**
    * Required. State of the dataset. Ignored when updating dataset.
    *
@@ -154,24 +152,6 @@ class GoogleCloudDocumentaiV1beta3Dataset extends \Google\Model
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
-  }
-  /**
-   * Optional. A lightweight indexing source with low latency and high
-   * reliability, but lacking advanced features like CMEK and content-based
-   * search.
-   *
-   * @param GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig $spannerIndexingConfig
-   */
-  public function setSpannerIndexingConfig(GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig $spannerIndexingConfig)
-  {
-    $this->spannerIndexingConfig = $spannerIndexingConfig;
-  }
-  /**
-   * @return GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig
-   */
-  public function getSpannerIndexingConfig()
-  {
-    return $this->spannerIndexingConfig;
   }
   /**
    * Required. State of the dataset. Ignored when updating dataset.
