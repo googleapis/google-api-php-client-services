@@ -17,6 +17,9 @@
 
 namespace Google\Service\ThreatIntelligenceService\Resource;
 
+use Google\Service\ThreatIntelligenceService\GenerateOrgProfileConfigurationRequest;
+use Google\Service\ThreatIntelligenceService\Operation;
+
 /**
  * The "projects" collection of methods.
  * Typical usage is:
@@ -27,6 +30,23 @@ namespace Google\Service\ThreatIntelligenceService\Resource;
  */
 class Projects extends \Google\Service\Resource
 {
+  /**
+   * Triggers the generation of a Customer Profile for a project.
+   * (projects.generateOrgProfile)
+   *
+   * @param string $name Required. The name of the project to generate the profile
+   * for. Format: projects/{project}
+   * @param GenerateOrgProfileConfigurationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function generateOrgProfile($name, GenerateOrgProfileConfigurationRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateOrgProfile', [$params], Operation::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

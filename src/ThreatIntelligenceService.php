@@ -38,6 +38,7 @@ class ThreatIntelligenceService extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
+  public $projects;
   public $projects_alerts;
   public $projects_alerts_documents;
   public $projects_configurations;
@@ -63,6 +64,26 @@ class ThreatIntelligenceService extends \Google\Service
     $this->version = 'v1beta';
     $this->serviceName = 'threatintelligence';
 
+    $this->projects = new ThreatIntelligenceService\Resource\Projects(
+        $this,
+        $this->serviceName,
+        'projects',
+        [
+          'methods' => [
+            'generateOrgProfile' => [
+              'path' => 'v1beta/{+name}:generateOrgProfile',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_alerts = new ThreatIntelligenceService\Resource\ProjectsAlerts(
         $this,
         $this->serviceName,

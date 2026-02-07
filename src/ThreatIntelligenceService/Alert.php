@@ -123,6 +123,12 @@ class Alert extends \Google\Collection
    */
   public $externalId;
   /**
+   * Output only. The number of findings associated with this alert.
+   *
+   * @var string
+   */
+  public $findingCount;
+  /**
    * Output only. Findings that are covered by this alert.
    *
    * @var string[]
@@ -314,6 +320,22 @@ class Alert extends \Google\Collection
   public function getExternalId()
   {
     return $this->externalId;
+  }
+  /**
+   * Output only. The number of findings associated with this alert.
+   *
+   * @param string $findingCount
+   */
+  public function setFindingCount($findingCount)
+  {
+    $this->findingCount = $findingCount;
+  }
+  /**
+   * @return string
+   */
+  public function getFindingCount()
+  {
+    return $this->findingCount;
   }
   /**
    * Output only. Findings that are covered by this alert.
