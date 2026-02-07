@@ -41,6 +41,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    */
   public const CURRENT_STATE_STATE_OTHER = 'STATE_OTHER';
   /**
+   * Instance is in STOPPED state.
+   */
+  public const CURRENT_STATE_STOPPED = 'STOPPED';
+  /**
    * Default, to make it consistent with instance edition enum.
    */
   public const EDITION_EDITION_UNSPECIFIED = 'EDITION_UNSPECIFIED';
@@ -77,6 +81,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * For rest of the other category
    */
   public const EXPECTED_STATE_STATE_OTHER = 'STATE_OTHER';
+  /**
+   * Instance is in STOPPED state.
+   */
+  public const EXPECTED_STATE_STOPPED = 'STOPPED';
   /**
    * Unspecified.
    *
@@ -159,7 +167,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * Replicated cluster encryption key inaccessible.
    */
   public const SUSPENSION_REASON_REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE = 'REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE';
-  protected $collection_key = 'entitlements';
+  protected $collection_key = 'resourceFlags';
   protected $availabilityConfigurationType = StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration::class;
   protected $availabilityConfigurationDataType = '';
   protected $backupConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupConfiguration::class;
@@ -247,6 +255,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * @var string
    */
   public $resourceContainer;
+  protected $resourceFlagsType = StorageDatabasecenterPartnerapiV1mainResourceFlags::class;
+  protected $resourceFlagsDataType = 'array';
   /**
    * Required. Different from DatabaseResourceId.unique_id, a resource name can
    * be reused over time. That is, after a resource named "ABC" is deleted, the
@@ -366,7 +376,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * Current state of the instance.
    *
    * Accepted values: STATE_UNSPECIFIED, HEALTHY, UNHEALTHY, SUSPENDED, DELETED,
-   * STATE_OTHER
+   * STATE_OTHER, STOPPED
    *
    * @param self::CURRENT_STATE_* $currentState
    */
@@ -440,7 +450,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * expected state will remain at the HEALTHY.
    *
    * Accepted values: STATE_UNSPECIFIED, HEALTHY, UNHEALTHY, SUSPENDED, DELETED,
-   * STATE_OTHER
+   * STATE_OTHER, STOPPED
    *
    * @param self::EXPECTED_STATE_* $expectedState
    */
@@ -644,6 +654,22 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getResourceContainer()
   {
     return $this->resourceContainer;
+  }
+  /**
+   * Optional. List of resource flags for the database resource.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainResourceFlags[] $resourceFlags
+   */
+  public function setResourceFlags($resourceFlags)
+  {
+    $this->resourceFlags = $resourceFlags;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainResourceFlags[]
+   */
+  public function getResourceFlags()
+  {
+    return $this->resourceFlags;
   }
   /**
    * Required. Different from DatabaseResourceId.unique_id, a resource name can

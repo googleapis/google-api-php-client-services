@@ -50,6 +50,14 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   protected $collection_key = 'denyMaintenanceSchedules';
   protected $denyMaintenanceSchedulesType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule::class;
   protected $denyMaintenanceSchedulesDataType = 'array';
+  /**
+   * Optional. Whether the instance is in stopped state. This information is
+   * temporarily being captured in maintenanceInfo, till STOPPED state is
+   * supported by DB Center.
+   *
+   * @var bool
+   */
+  public $isInstanceStopped;
   protected $maintenanceScheduleType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
   /**
@@ -67,6 +75,14 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   public $maintenanceVersion;
   protected $upcomingMaintenanceType = StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
+  /**
+   * Optional. This field will contain the date when the last version update was
+   * applied to the database resource. This will be used to calculate the age of
+   * the maintenance version.
+   *
+   * @var string
+   */
+  public $versionUpdateTime;
 
   /**
    * Optional. List of Deny maintenance period for the database resource.
@@ -83,6 +99,24 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   public function getDenyMaintenanceSchedules()
   {
     return $this->denyMaintenanceSchedules;
+  }
+  /**
+   * Optional. Whether the instance is in stopped state. This information is
+   * temporarily being captured in maintenanceInfo, till STOPPED state is
+   * supported by DB Center.
+   *
+   * @param bool $isInstanceStopped
+   */
+  public function setIsInstanceStopped($isInstanceStopped)
+  {
+    $this->isInstanceStopped = $isInstanceStopped;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsInstanceStopped()
+  {
+    return $this->isInstanceStopped;
   }
   /**
    * Optional. Maintenance window for the database resource.
@@ -152,6 +186,24 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   public function getUpcomingMaintenance()
   {
     return $this->upcomingMaintenance;
+  }
+  /**
+   * Optional. This field will contain the date when the last version update was
+   * applied to the database resource. This will be used to calculate the age of
+   * the maintenance version.
+   *
+   * @param string $versionUpdateTime
+   */
+  public function setVersionUpdateTime($versionUpdateTime)
+  {
+    $this->versionUpdateTime = $versionUpdateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getVersionUpdateTime()
+  {
+    return $this->versionUpdateTime;
   }
 }
 
