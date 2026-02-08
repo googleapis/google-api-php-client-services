@@ -19,8 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
 {
-  protected $agentDataType = GoogleCloudAiplatformV1AgentData::class;
-  protected $agentDataDataType = '';
   protected $promptTemplateDataType = GoogleCloudAiplatformV1EvaluationPromptPromptTemplateData::class;
   protected $promptTemplateDataDataType = '';
   /**
@@ -36,24 +34,6 @@ class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
    */
   public $value;
 
-  /**
-   * Optional. Represents the complete execution trace of a multi-turn
-   * conversation, which can involve single or multiple agents. This serves as
-   * the input context for agent scraping.
-   *
-   * @param GoogleCloudAiplatformV1AgentData $agentData
-   */
-  public function setAgentData(GoogleCloudAiplatformV1AgentData $agentData)
-  {
-    $this->agentData = $agentData;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1AgentData
-   */
-  public function getAgentData()
-  {
-    return $this->agentData;
-  }
   /**
    * Prompt template data.
    *

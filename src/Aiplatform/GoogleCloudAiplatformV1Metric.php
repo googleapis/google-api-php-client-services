@@ -28,6 +28,8 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   public $aggregationMetrics;
   protected $bleuSpecType = GoogleCloudAiplatformV1BleuSpec::class;
   protected $bleuSpecDataType = '';
+  protected $computationBasedMetricSpecType = GoogleCloudAiplatformV1ComputationBasedMetricSpec::class;
+  protected $computationBasedMetricSpecDataType = '';
   protected $customCodeExecutionSpecType = GoogleCloudAiplatformV1CustomCodeExecutionSpec::class;
   protected $customCodeExecutionSpecDataType = '';
   protected $exactMatchSpecType = GoogleCloudAiplatformV1ExactMatchSpec::class;
@@ -74,6 +76,22 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   public function getBleuSpec()
   {
     return $this->bleuSpec;
+  }
+  /**
+   * Spec for a computation based metric.
+   *
+   * @param GoogleCloudAiplatformV1ComputationBasedMetricSpec $computationBasedMetricSpec
+   */
+  public function setComputationBasedMetricSpec(GoogleCloudAiplatformV1ComputationBasedMetricSpec $computationBasedMetricSpec)
+  {
+    $this->computationBasedMetricSpec = $computationBasedMetricSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ComputationBasedMetricSpec
+   */
+  public function getComputationBasedMetricSpec()
+  {
+    return $this->computationBasedMetricSpec;
   }
   /**
    * Spec for Custom Code Execution metric.

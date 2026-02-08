@@ -17,7 +17,7 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec extends \Google\Model
+class GoogleCloudAiplatformV1ComputationBasedMetricSpec extends \Google\Model
 {
   /**
    * Unspecified computation based metric type.
@@ -88,4 +88,4 @@ class GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec exten
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec');
+class_alias(GoogleCloudAiplatformV1ComputationBasedMetricSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ComputationBasedMetricSpec');

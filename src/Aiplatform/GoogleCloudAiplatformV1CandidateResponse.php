@@ -19,8 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1CandidateResponse extends \Google\Model
 {
-  protected $agentDataType = GoogleCloudAiplatformV1AgentData::class;
-  protected $agentDataDataType = '';
   /**
    * Required. The name of the candidate that produced the response.
    *
@@ -40,25 +38,6 @@ class GoogleCloudAiplatformV1CandidateResponse extends \Google\Model
    */
   public $value;
 
-  /**
-   * Optional. Represents the complete execution trace of a multi-turn
-   * conversation, which can involve single or multiple agents. This field is
-   * used to provide the full output of an agent's run, including all turns and
-   * events, for direct evaluation.
-   *
-   * @param GoogleCloudAiplatformV1AgentData $agentData
-   */
-  public function setAgentData(GoogleCloudAiplatformV1AgentData $agentData)
-  {
-    $this->agentData = $agentData;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1AgentData
-   */
-  public function getAgentData()
-  {
-    return $this->agentData;
-  }
   /**
    * Required. The name of the candidate that produced the response.
    *

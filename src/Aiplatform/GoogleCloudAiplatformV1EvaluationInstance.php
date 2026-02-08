@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
 {
   protected $agentDataType = GoogleCloudAiplatformV1EvaluationInstanceAgentData::class;
   protected $agentDataDataType = '';
+  protected $agentEvalDataType = GoogleCloudAiplatformV1EvaluationInstanceAgentData::class;
+  protected $agentEvalDataDataType = '';
   protected $otherDataType = GoogleCloudAiplatformV1EvaluationInstanceMapInstance::class;
   protected $otherDataDataType = '';
   protected $promptType = GoogleCloudAiplatformV1EvaluationInstanceInstanceData::class;
@@ -33,8 +35,10 @@ class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
   protected $rubricGroupsDataType = 'map';
 
   /**
-   * Optional. Data used for agent evaluation.
+   * Optional. Deprecated. Use `agent_eval_data` instead. Data used for agent
+   * evaluation.
    *
+   * @deprecated
    * @param GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentData
    */
   public function setAgentData(GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentData)
@@ -42,11 +46,28 @@ class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
     $this->agentData = $agentData;
   }
   /**
+   * @deprecated
    * @return GoogleCloudAiplatformV1EvaluationInstanceAgentData
    */
   public function getAgentData()
   {
     return $this->agentData;
+  }
+  /**
+   * Optional. Data used for agent evaluation.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentEvalData
+   */
+  public function setAgentEvalData(GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentEvalData)
+  {
+    $this->agentEvalData = $agentEvalData;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentData
+   */
+  public function getAgentEvalData()
+  {
+    return $this->agentEvalData;
   }
   /**
    * Optional. Other data used to populate placeholders based on their key.

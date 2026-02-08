@@ -17,8 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PurgeMemoriesRequest extends \Google\Model
+class GoogleCloudAiplatformV1PurgeMemoriesRequest extends \Google\Collection
 {
+  protected $collection_key = 'filterGroups';
   /**
    * Required. The standard list filter to determine which memories to purge.
    * More detail in [AIP-160](https://google.aip.dev/160).
@@ -26,6 +27,8 @@ class GoogleCloudAiplatformV1PurgeMemoriesRequest extends \Google\Model
    * @var string
    */
   public $filter;
+  protected $filterGroupsType = GoogleCloudAiplatformV1MemoryConjunctionFilter::class;
+  protected $filterGroupsDataType = 'array';
   /**
    * Optional. If true, the memories will actually be purged. If false, the
    * purge request will be validated but not executed.
@@ -50,6 +53,29 @@ class GoogleCloudAiplatformV1PurgeMemoriesRequest extends \Google\Model
   public function getFilter()
   {
     return $this->filter;
+  }
+  /**
+   * Optional. Metadata filters that will be applied to the memories to be
+   * purged. Filters are defined using disjunctive normal form (OR of ANDs). For
+   * example: `filter_groups: [{filters: [{key: "author", value: {string_value:
+   * "agent 123"}, op: EQUAL}]}, {filters: [{key: "label", value: {string_value:
+   * "travel"}, op: EQUAL}, {key: "author", value: {string_value: "agent 321"},
+   * op: EQUAL}]}]` would be equivalent to the logical expression:
+   * `(metadata.author = "agent 123" OR (metadata.label = "travel" AND
+   * metadata.author = "agent 321"))`.
+   *
+   * @param GoogleCloudAiplatformV1MemoryConjunctionFilter[] $filterGroups
+   */
+  public function setFilterGroups($filterGroups)
+  {
+    $this->filterGroups = $filterGroups;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1MemoryConjunctionFilter[]
+   */
+  public function getFilterGroups()
+  {
+    return $this->filterGroups;
   }
   /**
    * Optional. If true, the memories will actually be purged. If false, the
