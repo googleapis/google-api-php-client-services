@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig extends \Google\Model
 {
+  protected $dataProtectionPolicyType = GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigDataProtectionPolicy::class;
+  protected $dataProtectionPolicyDataType = '';
   protected $modelArmorConfigType = GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig::class;
   protected $modelArmorConfigDataType = '';
   protected $observabilityConfigType = GoogleCloudDiscoveryengineV1betaObservabilityConfig::class;
@@ -31,6 +33,22 @@ class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmCon
    */
   public $optOutNotebookSharing;
 
+  /**
+   * Optional. Specifies the data protection policy for NotebookLM.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigDataProtectionPolicy $dataProtectionPolicy
+   */
+  public function setDataProtectionPolicy(GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigDataProtectionPolicy $dataProtectionPolicy)
+  {
+    $this->dataProtectionPolicy = $dataProtectionPolicy;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigDataProtectionPolicy
+   */
+  public function getDataProtectionPolicy()
+  {
+    return $this->dataProtectionPolicy;
+  }
   /**
    * Model Armor configuration to be used for sanitizing user prompts and LLM
    * responses.

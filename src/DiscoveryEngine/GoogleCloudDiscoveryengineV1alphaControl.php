@@ -41,6 +41,10 @@ class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
    * `SOLUTION_TYPE_CHAT` solution.
    */
   public const SOLUTION_TYPE_SOLUTION_TYPE_GENERATIVE_CHAT = 'SOLUTION_TYPE_GENERATIVE_CHAT';
+  /**
+   * Used for AI Mode.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_AI_MODE = 'SOLUTION_TYPE_AI_MODE';
   protected $collection_key = 'useCases';
   /**
    * Output only. List of all ServingConfig IDs this control is attached to. May
@@ -234,7 +238,8 @@ class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
    * is thrown.
    *
    * Accepted values: SOLUTION_TYPE_UNSPECIFIED, SOLUTION_TYPE_RECOMMENDATION,
-   * SOLUTION_TYPE_SEARCH, SOLUTION_TYPE_CHAT, SOLUTION_TYPE_GENERATIVE_CHAT
+   * SOLUTION_TYPE_SEARCH, SOLUTION_TYPE_CHAT, SOLUTION_TYPE_GENERATIVE_CHAT,
+   * SOLUTION_TYPE_AI_MODE
    *
    * @param self::SOLUTION_TYPE_* $solutionType
    */

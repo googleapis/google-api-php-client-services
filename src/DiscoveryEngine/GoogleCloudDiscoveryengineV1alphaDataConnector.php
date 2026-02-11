@@ -109,6 +109,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    */
   public const CONNECTOR_TYPE_GOOGLE_CHAT = 'GOOGLE_CHAT';
   /**
+   * Google Sites connector.
+   */
+  public const CONNECTOR_TYPE_GOOGLE_SITES = 'GOOGLE_SITES';
+  /**
    * Default value.
    */
   public const REALTIME_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -258,6 +262,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * @var string
    */
   public $createTime;
+  protected $dataProtectionPolicyType = GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy::class;
+  protected $dataProtectionPolicyDataType = '';
   /**
    * Required. The name of the data source. Supported values: `salesforce`,
    * `jira`, `confluence`, `bigquery`.
@@ -577,7 +583,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * Accepted values: CONNECTOR_TYPE_UNSPECIFIED, THIRD_PARTY, GCP_FHIR,
    * BIG_QUERY, GCS, GOOGLE_MAIL, GOOGLE_CALENDAR, GOOGLE_DRIVE,
    * NATIVE_CLOUD_IDENTITY, THIRD_PARTY_FEDERATED, THIRD_PARTY_EUA, GCNV,
-   * GOOGLE_CHAT
+   * GOOGLE_CHAT, GOOGLE_SITES
    *
    * @param self::CONNECTOR_TYPE_* $connectorType
    */
@@ -623,6 +629,22 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Optional. Specifies the data protection policy for the connector.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy $dataProtectionPolicy
+   */
+  public function setDataProtectionPolicy(GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy $dataProtectionPolicy)
+  {
+    $this->dataProtectionPolicy = $dataProtectionPolicy;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy
+   */
+  public function getDataProtectionPolicy()
+  {
+    return $this->dataProtectionPolicy;
   }
   /**
    * Required. The name of the data source. Supported values: `salesforce`,

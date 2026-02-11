@@ -48,6 +48,16 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec extends \Google
    * @var string
    */
   public $filter;
+  /**
+   * Optional. The maximum number of results to retrieve from this data store.
+   * If not specified, it will use the SearchRequest.num_results_per_data_store
+   * if provided, otherwise there is no limit. If both this field and
+   * SearchRequest.num_results_per_data_store are specified, this field will be
+   * used.
+   *
+   * @var int
+   */
+  public $numResults;
 
   /**
    * Optional. Boost specification to boost certain documents. For more
@@ -124,6 +134,26 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec extends \Google
   public function getFilter()
   {
     return $this->filter;
+  }
+  /**
+   * Optional. The maximum number of results to retrieve from this data store.
+   * If not specified, it will use the SearchRequest.num_results_per_data_store
+   * if provided, otherwise there is no limit. If both this field and
+   * SearchRequest.num_results_per_data_store are specified, this field will be
+   * used.
+   *
+   * @param int $numResults
+   */
+  public function setNumResults($numResults)
+  {
+    $this->numResults = $numResults;
+  }
+  /**
+   * @return int
+   */
+  public function getNumResults()
+  {
+    return $this->numResults;
   }
 }
 

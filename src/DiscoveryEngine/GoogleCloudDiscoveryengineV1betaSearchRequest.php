@@ -136,6 +136,15 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   protected $naturalLanguageQueryUnderstandingSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec::class;
   protected $naturalLanguageQueryUnderstandingSpecDataType = '';
   /**
+   * Optional. The maximum number of results to retrieve from each data store.
+   * If not specified, it will use the
+   * SearchRequest.data_store_specs.num_results if provided, otherwise there is
+   * no limit.
+   *
+   * @var int
+   */
+  public $numResultsPerDataStore;
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting
    * result location, amongst the Documents deemed by the API as relevant) in
    * search results. This field is only considered if page_token is unset. If
@@ -650,6 +659,25 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   public function getNaturalLanguageQueryUnderstandingSpec()
   {
     return $this->naturalLanguageQueryUnderstandingSpec;
+  }
+  /**
+   * Optional. The maximum number of results to retrieve from each data store.
+   * If not specified, it will use the
+   * SearchRequest.data_store_specs.num_results if provided, otherwise there is
+   * no limit.
+   *
+   * @param int $numResultsPerDataStore
+   */
+  public function setNumResultsPerDataStore($numResultsPerDataStore)
+  {
+    $this->numResultsPerDataStore = $numResultsPerDataStore;
+  }
+  /**
+   * @return int
+   */
+  public function getNumResultsPerDataStore()
+  {
+    return $this->numResultsPerDataStore;
   }
   /**
    * A 0-indexed integer that specifies the current offset (that is, starting

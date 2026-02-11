@@ -36,6 +36,13 @@ class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig extends \Google
    * @var string
    */
   public $languageCode;
+  /**
+   * Optional. The region code used of the user that subscribed to the alert
+   * policy.
+   *
+   * @var string
+   */
+  public $regionCode;
 
   /**
    * Optional. The enrollment state of each alert.
@@ -100,6 +107,23 @@ class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig extends \Google
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  /**
+   * Optional. The region code used of the user that subscribed to the alert
+   * policy.
+   *
+   * @param string $regionCode
+   */
+  public function setRegionCode($regionCode)
+  {
+    $this->regionCode = $regionCode;
+  }
+  /**
+   * @return string
+   */
+  public function getRegionCode()
+  {
+    return $this->regionCode;
   }
 }
 

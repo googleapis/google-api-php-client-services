@@ -24,13 +24,12 @@ class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends \Google\Colle
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_UNSPECIFIED = 'SUBSCRIPTION_TIER_UNSPECIFIED';
   /**
-   * Search tier. Search tier can access VAIS search features and NotebookLM
-   * features.
+   * Search tier. Search tier can access Vertex AI Search features and
+   * NotebookLM features.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_SEARCH = 'SUBSCRIPTION_TIER_SEARCH';
   /**
-   * Search + assistant tier. Search + assistant tier can access VAIS search
-   * features, NotebookLM features and assistant features.
+   * Gemini Enterprise Plus tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT = 'SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT';
   /**
@@ -39,39 +38,43 @@ class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends \Google\Colle
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_NOTEBOOK_LM = 'SUBSCRIPTION_TIER_NOTEBOOK_LM';
   /**
-   * Frontline worker tier.
+   * Gemini Frontline worker tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_FRONTLINE_WORKER = 'SUBSCRIPTION_TIER_FRONTLINE_WORKER';
   /**
-   * Agentspace Starter tier.
+   * Gemini Business Starter tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_AGENTSPACE_STARTER = 'SUBSCRIPTION_TIER_AGENTSPACE_STARTER';
   /**
-   * Agentspace Business tier.
+   * Gemini Business tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS = 'SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS';
   /**
-   * Enterprise tier.
+   * Gemini Enterprise Standard tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_ENTERPRISE = 'SUBSCRIPTION_TIER_ENTERPRISE';
   /**
-   * EDU tier.
+   * Gemini Enterprise Standard tier for emerging markets.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_ENTERPRISE_EMERGING = 'SUBSCRIPTION_TIER_ENTERPRISE_EMERGING';
+  /**
+   * Gemini Enterprise EDU tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU = 'SUBSCRIPTION_TIER_EDU';
   /**
-   * EDU Pro tier.
+   * Gemini Enterprise EDU Pro tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO = 'SUBSCRIPTION_TIER_EDU_PRO';
   /**
-   * EDU emerging market tier.
+   * Gemini Enterprise EDU tier for emerging market only.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_EMERGING = 'SUBSCRIPTION_TIER_EDU_EMERGING';
   /**
-   * EDU Pro emerging market tier.
+   * Gemini Enterprise EDU Pro tier for emerging market.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO_EMERGING = 'SUBSCRIPTION_TIER_EDU_PRO_EMERGING';
   /**
-   * Frontline starter tier.
+   * Gemini Frontline Starter tier.
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_FRONTLINE_STARTER = 'SUBSCRIPTION_TIER_FRONTLINE_STARTER';
   /**
@@ -121,9 +124,9 @@ class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends \Google\Colle
    * SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT, SUBSCRIPTION_TIER_NOTEBOOK_LM,
    * SUBSCRIPTION_TIER_FRONTLINE_WORKER, SUBSCRIPTION_TIER_AGENTSPACE_STARTER,
    * SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS, SUBSCRIPTION_TIER_ENTERPRISE,
-   * SUBSCRIPTION_TIER_EDU, SUBSCRIPTION_TIER_EDU_PRO,
-   * SUBSCRIPTION_TIER_EDU_EMERGING, SUBSCRIPTION_TIER_EDU_PRO_EMERGING,
-   * SUBSCRIPTION_TIER_FRONTLINE_STARTER
+   * SUBSCRIPTION_TIER_ENTERPRISE_EMERGING, SUBSCRIPTION_TIER_EDU,
+   * SUBSCRIPTION_TIER_EDU_PRO, SUBSCRIPTION_TIER_EDU_EMERGING,
+   * SUBSCRIPTION_TIER_EDU_PRO_EMERGING, SUBSCRIPTION_TIER_FRONTLINE_STARTER
    *
    * @param self::REQUIRED_SUBSCRIPTION_TIER_* $requiredSubscriptionTier
    */
