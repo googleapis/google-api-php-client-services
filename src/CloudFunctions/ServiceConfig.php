@@ -22,6 +22,18 @@ class ServiceConfig extends \Google\Collection
   /**
    * Unspecified.
    */
+  public const DIRECT_VPC_EGRESS_DIRECT_VPC_EGRESS_UNSPECIFIED = 'DIRECT_VPC_EGRESS_UNSPECIFIED';
+  /**
+   * Sends only traffic to internal addresses through the VPC network.
+   */
+  public const DIRECT_VPC_EGRESS_VPC_EGRESS_PRIVATE_RANGES_ONLY = 'VPC_EGRESS_PRIVATE_RANGES_ONLY';
+  /**
+   * Sends all outbound traffic through the VPC network.
+   */
+  public const DIRECT_VPC_EGRESS_VPC_EGRESS_ALL_TRAFFIC = 'VPC_EGRESS_ALL_TRAFFIC';
+  /**
+   * Unspecified.
+   */
   public const INGRESS_SETTINGS_INGRESS_SETTINGS_UNSPECIFIED = 'INGRESS_SETTINGS_UNSPECIFIED';
   /**
    * Allow HTTP traffic from public and private sources.
@@ -100,6 +112,15 @@ class ServiceConfig extends \Google\Collection
    * @var string
    */
   public $binaryAuthorizationPolicy;
+  /**
+   * Optional. Egress settings for direct VPC. If not provided, it defaults to
+   * VPC_EGRESS_PRIVATE_RANGES_ONLY.
+   *
+   * @var string
+   */
+  public $directVpcEgress;
+  protected $directVpcNetworkInterfaceType = DirectVpcNetworkInterface::class;
+  protected $directVpcNetworkInterfaceDataType = 'array';
   /**
    * Environment variables that shall be available during function execution.
    *
@@ -281,6 +302,43 @@ class ServiceConfig extends \Google\Collection
   public function getBinaryAuthorizationPolicy()
   {
     return $this->binaryAuthorizationPolicy;
+  }
+  /**
+   * Optional. Egress settings for direct VPC. If not provided, it defaults to
+   * VPC_EGRESS_PRIVATE_RANGES_ONLY.
+   *
+   * Accepted values: DIRECT_VPC_EGRESS_UNSPECIFIED,
+   * VPC_EGRESS_PRIVATE_RANGES_ONLY, VPC_EGRESS_ALL_TRAFFIC
+   *
+   * @param self::DIRECT_VPC_EGRESS_* $directVpcEgress
+   */
+  public function setDirectVpcEgress($directVpcEgress)
+  {
+    $this->directVpcEgress = $directVpcEgress;
+  }
+  /**
+   * @return self::DIRECT_VPC_EGRESS_*
+   */
+  public function getDirectVpcEgress()
+  {
+    return $this->directVpcEgress;
+  }
+  /**
+   * Optional. The Direct VPC network interface for the Cloud Function.
+   * Currently only a single Direct VPC is supported.
+   *
+   * @param DirectVpcNetworkInterface[] $directVpcNetworkInterface
+   */
+  public function setDirectVpcNetworkInterface($directVpcNetworkInterface)
+  {
+    $this->directVpcNetworkInterface = $directVpcNetworkInterface;
+  }
+  /**
+   * @return DirectVpcNetworkInterface[]
+   */
+  public function getDirectVpcNetworkInterface()
+  {
+    return $this->directVpcNetworkInterface;
   }
   /**
    * Environment variables that shall be available during function execution.
