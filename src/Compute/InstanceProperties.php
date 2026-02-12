@@ -150,6 +150,8 @@ class InstanceProperties extends \Google\Collection
   protected $shieldedInstanceConfigDataType = '';
   protected $tagsType = Tags::class;
   protected $tagsDataType = '';
+  protected $workloadIdentityConfigType = WorkloadIdentityConfig::class;
+  protected $workloadIdentityConfigDataType = '';
 
   /**
    * Controls for advanced machine-related behavior features. Note that for
@@ -527,6 +529,20 @@ class InstanceProperties extends \Google\Collection
   public function getTags()
   {
     return $this->tags;
+  }
+  /**
+   * @param WorkloadIdentityConfig $workloadIdentityConfig
+   */
+  public function setWorkloadIdentityConfig(WorkloadIdentityConfig $workloadIdentityConfig)
+  {
+    $this->workloadIdentityConfig = $workloadIdentityConfig;
+  }
+  /**
+   * @return WorkloadIdentityConfig
+   */
+  public function getWorkloadIdentityConfig()
+  {
+    return $this->workloadIdentityConfig;
   }
 }
 

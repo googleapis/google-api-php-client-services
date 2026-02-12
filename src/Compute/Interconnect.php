@@ -342,8 +342,7 @@ class Interconnect extends \Google\Collection
    */
   public $state;
   /**
-   * Specific subzone in the InterconnectLocation that represents where this
-   * connection is to be provisioned.
+   * To be deprecated.
    *
    * @var string
    */
@@ -1001,8 +1000,7 @@ class Interconnect extends \Google\Collection
     return $this->state;
   }
   /**
-   * Specific subzone in the InterconnectLocation that represents where this
-   * connection is to be provisioned.
+   * To be deprecated.
    *
    * Accepted values: SUBZONE_A, SUBZONE_B
    *

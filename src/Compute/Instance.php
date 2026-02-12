@@ -348,6 +348,8 @@ class Instance extends \Google\Collection
   public $statusMessage;
   protected $tagsType = Tags::class;
   protected $tagsDataType = '';
+  protected $workloadIdentityConfigType = WorkloadIdentityConfig::class;
+  protected $workloadIdentityConfigDataType = '';
   /**
    * Output only. [Output Only] URL of the zone where the instance resides. You
    * must specify this field as part of the HTTP request URL. It is not settable
@@ -1154,6 +1156,20 @@ class Instance extends \Google\Collection
   public function getTags()
   {
     return $this->tags;
+  }
+  /**
+   * @param WorkloadIdentityConfig $workloadIdentityConfig
+   */
+  public function setWorkloadIdentityConfig(WorkloadIdentityConfig $workloadIdentityConfig)
+  {
+    $this->workloadIdentityConfig = $workloadIdentityConfig;
+  }
+  /**
+   * @return WorkloadIdentityConfig
+   */
+  public function getWorkloadIdentityConfig()
+  {
+    return $this->workloadIdentityConfig;
   }
   /**
    * Output only. [Output Only] URL of the zone where the instance resides. You

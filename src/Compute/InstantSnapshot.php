@@ -125,6 +125,8 @@ class InstantSnapshot extends \Google\Model
    * @var string
    */
   public $name;
+  protected $paramsType = InstantSnapshotParams::class;
+  protected $paramsDataType = '';
   /**
    * Output only. [Output Only] URL of the region where the instant snapshot
    * resides. You must specify this field as part of the HTTP request URL. It is
@@ -363,6 +365,23 @@ class InstantSnapshot extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Input only. Additional params passed with the request, but not persisted as
+   * part of resource payload.
+   *
+   * @param InstantSnapshotParams $params
+   */
+  public function setParams(InstantSnapshotParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return InstantSnapshotParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * Output only. [Output Only] URL of the region where the instant snapshot

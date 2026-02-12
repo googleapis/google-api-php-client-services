@@ -77,6 +77,13 @@ class NetworkInterface extends \Google\Collection
   protected $aliasIpRangesType = AliasIpRange::class;
   protected $aliasIpRangesDataType = 'array';
   /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only
+   * valid with network_attachment.
+   *
+   * @var bool
+   */
+  public $enableVpcScopedDns;
+  /**
    * Fingerprint hash of contents stored in this network interface. This field
    * will be ignored when inserting an Instance or adding a NetworkInterface. An
    * up-to-date fingerprint must be provided in order to update
@@ -256,6 +263,23 @@ class NetworkInterface extends \Google\Collection
   public function getAliasIpRanges()
   {
     return $this->aliasIpRanges;
+  }
+  /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only
+   * valid with network_attachment.
+   *
+   * @param bool $enableVpcScopedDns
+   */
+  public function setEnableVpcScopedDns($enableVpcScopedDns)
+  {
+    $this->enableVpcScopedDns = $enableVpcScopedDns;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableVpcScopedDns()
+  {
+    return $this->enableVpcScopedDns;
   }
   /**
    * Fingerprint hash of contents stored in this network interface. This field

@@ -156,7 +156,13 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
   /**
    * Creates a network endpoint group in the specified project using the
    * parameters that are included in the request.
-   * (regionNetworkEndpointGroups.insert)
+   *
+   * Note: Use the following APIs to manage network endpoint groups:        -
+   * To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
+   * NEGs): zonal    API    -     To manage NEGs with regional scope (such as
+   * regional internet NEGs,    serverless NEGs, Private Service Connect NEGs):
+   * regional    API    -     To manage NEGs with global scope (such as global
+   * internet NEGs):global    API (regionNetworkEndpointGroups.insert)
    *
    * @param string $project Project ID for this request.
    * @param string $region The name of the region where you want to create the

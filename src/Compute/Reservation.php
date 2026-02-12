@@ -25,6 +25,18 @@ class Reservation extends \Google\Collection
   public const DEPLOYMENT_TYPE_DENSE = 'DENSE';
   public const DEPLOYMENT_TYPE_DEPLOYMENT_TYPE_UNSPECIFIED = 'DEPLOYMENT_TYPE_UNSPECIFIED';
   /**
+   * No early access.
+   */
+  public const EARLY_ACCESS_MAINTENANCE_NO_EARLY_ACCESS = 'NO_EARLY_ACCESS';
+  /**
+   * Wave 1: Fastest notification period
+   */
+  public const EARLY_ACCESS_MAINTENANCE_WAVE1 = 'WAVE1';
+  /**
+   * Wave 2: Medium notification period
+   */
+  public const EARLY_ACCESS_MAINTENANCE_WAVE2 = 'WAVE2';
+  /**
    * CAPACITY_OPTIMIZED capacity leverages redundancies (e.g. power, cooling) at
    * the data center during normal operating conditions. In the event of
    * infrastructure failures at data center (e.g. power and/or cooling
@@ -115,6 +127,14 @@ class Reservation extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * Indicates the early access maintenance for the reservation. If this field
+   * is absent or set to NO_EARLY_ACCESS, the reservation is not enrolled in
+   * early access maintenance and the standard notice applies.
+   *
+   * @var string
+   */
+  public $earlyAccessMaintenance;
   /**
    * Indicates whether Compute Engine allows unplanned maintenance for your VMs;
    * for example, to fix hardware errors.
@@ -358,6 +378,26 @@ class Reservation extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * Indicates the early access maintenance for the reservation. If this field
+   * is absent or set to NO_EARLY_ACCESS, the reservation is not enrolled in
+   * early access maintenance and the standard notice applies.
+   *
+   * Accepted values: NO_EARLY_ACCESS, WAVE1, WAVE2
+   *
+   * @param self::EARLY_ACCESS_MAINTENANCE_* $earlyAccessMaintenance
+   */
+  public function setEarlyAccessMaintenance($earlyAccessMaintenance)
+  {
+    $this->earlyAccessMaintenance = $earlyAccessMaintenance;
+  }
+  /**
+   * @return self::EARLY_ACCESS_MAINTENANCE_*
+   */
+  public function getEarlyAccessMaintenance()
+  {
+    return $this->earlyAccessMaintenance;
   }
   /**
    * Indicates whether Compute Engine allows unplanned maintenance for your VMs;

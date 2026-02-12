@@ -2317,6 +2317,10 @@ class Compute extends \Google\Service
               'path' => 'locations/global/firewallPolicies/listAssociations',
               'httpMethod' => 'GET',
               'parameters' => [
+                'includeInheritedPolicies' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'targetResource' => [
                   'location' => 'query',
                   'type' => 'string',

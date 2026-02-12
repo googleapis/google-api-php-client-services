@@ -347,6 +347,10 @@ class FirewallPolicies extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool includeInheritedPolicies If set to "true", the response will
+   * contain a list of all associations for the containing folders and the
+   * containing organization of the target. The parameter has no effect if the
+   * target is an organization.
    * @opt_param string targetResource The target resource to list associations. It
    * is an organization, or a folder.
    * @return FirewallPoliciesListAssociationsResponse
