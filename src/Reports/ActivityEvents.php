@@ -42,6 +42,8 @@ class ActivityEvents extends \Google\Collection
    * @var string[]
    */
   public $resourceIds;
+  protected $statusType = ActivityEventsStatus::class;
+  protected $statusDataType = '';
   /**
    * Type of event. The Google Workspace service or feature that an
    * administrator changes is identified in the `type` property which identifies
@@ -110,6 +112,22 @@ class ActivityEvents extends \Google\Collection
   public function getResourceIds()
   {
     return $this->resourceIds;
+  }
+  /**
+   * Status of the event. Note: Not all events have status.
+   *
+   * @param ActivityEventsStatus $status
+   */
+  public function setStatus(ActivityEventsStatus $status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return ActivityEventsStatus
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
   /**
    * Type of event. The Google Workspace service or feature that an

@@ -55,6 +55,10 @@ class Activities extends \Google\Service\Resource
    * example, the IP address can be the user's proxy server's address or a virtual
    * private network (VPN) address. This parameter supports both IPv4 and IPv6
    * address versions.
+   * @opt_param string applicationInfoFilter Optional. Used to filter on the
+   * `oAuthClientId` field present in [`ApplicationInfo`](#applicationinfo)
+   * message. **Usage** ``` GET...&applicationInfoFilter=oAuthClientId="clientId"
+   * GET...&applicationInfoFilter=oAuthClientId=%22clientId%22 ```
    * @opt_param string customerId The unique ID of the customer to retrieve data
    * for.
    * @opt_param string endTime Sets the end of the range of time shown in the
@@ -124,6 +128,10 @@ class Activities extends \Google\Service\Resource
    * report has two activities, the report has two pages. The response's
    * `nextPageToken` property has the token to the second page. The `maxResults`
    * query string is optional in the request. The default value is 1000.
+   * @opt_param string networkInfoFilter Optional. Used to filter on the
+   * `regionCode` field present in [`NetworkInfo`](#networkinfo) message.
+   * **Usage** ``` GET...&networkInfoFilter=regionCode="IN"
+   * GET...&networkInfoFilter=regionCode=%22IN%22 ```
    * @opt_param string orgUnitID ID of the organizational unit to report on.
    * Activity records will be shown only for users who belong to the specified
    * organizational unit. Data before Dec 17, 2018 doesn't appear in the filtered
@@ -180,6 +188,10 @@ class Activities extends \Google\Service\Resource
    * and the current time when the request is made, or the API returns an error.
    * For Gmail requests, `startTime` and `endTime` must be provided and the
    * difference must not be greater than 30 days.
+   * @opt_param string statusFilter Optional. Used to filter on the `statusCode`
+   * field present in [`Status`](#status) message. **Usage** ```
+   * GET...&statusFilter=statusCode="200" GET...&statusFilter=statusCode=%22200%22
+   * ```
    * @return ActivitiesModel
    * @throws \Google\Service\Exception
    */
