@@ -381,7 +381,7 @@ class GoogleCloudRunV2Revision extends \Google\Collection
     return $this->conditions;
   }
   /**
-   * Holds the single container that defines the unit of execution for this
+   * Containers holds the list which define the units of execution for this
    * Revision.
    *
    * @param GoogleCloudRunV2Container[] $containers

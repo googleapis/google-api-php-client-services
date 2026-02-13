@@ -20,6 +20,19 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2RevisionScaling extends \Google\Model
 {
   /**
+   * Optional. Determines a threshold for concurrency utilization before scaling
+   * begins.
+   *
+   * @var float
+   */
+  public $concurrencyUtilization;
+  /**
+   * Optional. Determines a threshold for CPU utilization before scaling begins.
+   *
+   * @var float
+   */
+  public $cpuUtilization;
+  /**
    * Optional. Maximum number of serving instances that this resource should
    * have. When unspecified, the field is set to the server default value of
    * 100. For more information see
@@ -36,6 +49,39 @@ class GoogleCloudRunV2RevisionScaling extends \Google\Model
    */
   public $minInstanceCount;
 
+  /**
+   * Optional. Determines a threshold for concurrency utilization before scaling
+   * begins.
+   *
+   * @param float $concurrencyUtilization
+   */
+  public function setConcurrencyUtilization($concurrencyUtilization)
+  {
+    $this->concurrencyUtilization = $concurrencyUtilization;
+  }
+  /**
+   * @return float
+   */
+  public function getConcurrencyUtilization()
+  {
+    return $this->concurrencyUtilization;
+  }
+  /**
+   * Optional. Determines a threshold for CPU utilization before scaling begins.
+   *
+   * @param float $cpuUtilization
+   */
+  public function setCpuUtilization($cpuUtilization)
+  {
+    $this->cpuUtilization = $cpuUtilization;
+  }
+  /**
+   * @return float
+   */
+  public function getCpuUtilization()
+  {
+    return $this->cpuUtilization;
+  }
   /**
    * Optional. Maximum number of serving instances that this resource should
    * have. When unspecified, the field is set to the server default value of

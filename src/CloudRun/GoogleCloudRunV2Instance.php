@@ -304,6 +304,13 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   protected $terminalConditionType = GoogleCloudRunV2Condition::class;
   protected $terminalConditionDataType = '';
   /**
+   * Optional. Duration the instance may be active before the system will shut
+   * it down.
+   *
+   * @var string
+   */
+  public $timeout;
+  /**
    * Output only. Server assigned unique identifier for the trigger. The value
    * is a UUID4 string and guaranteed to remain unchanged until the resource is
    * deleted.
@@ -887,6 +894,23 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   public function getTerminalCondition()
   {
     return $this->terminalCondition;
+  }
+  /**
+   * Optional. Duration the instance may be active before the system will shut
+   * it down.
+   *
+   * @param string $timeout
+   */
+  public function setTimeout($timeout)
+  {
+    $this->timeout = $timeout;
+  }
+  /**
+   * @return string
+   */
+  public function getTimeout()
+  {
+    return $this->timeout;
   }
   /**
    * Output only. Server assigned unique identifier for the trigger. The value
