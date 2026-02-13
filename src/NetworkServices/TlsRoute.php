@@ -19,7 +19,7 @@ namespace Google\Service\NetworkServices;
 
 class TlsRoute extends \Google\Collection
 {
-  protected $collection_key = 'rules';
+  protected $collection_key = 'targetProxies';
   /**
    * Output only. The timestamp when the resource was created.
    *
@@ -72,6 +72,15 @@ class TlsRoute extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * Optional. TargetProxies defines a list of TargetTcpProxies this TlsRoute is
+   * attached to, as one of the routing rules to route the requests served by
+   * the TargetTcpProxy. Each TargetTcpProxy reference should match the pattern:
+   * `projects/locations/targetTcpProxies/`
+   *
+   * @var string[]
+   */
+  public $targetProxies;
   /**
    * Output only. The timestamp when the resource was updated.
    *
@@ -216,6 +225,25 @@ class TlsRoute extends \Google\Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  /**
+   * Optional. TargetProxies defines a list of TargetTcpProxies this TlsRoute is
+   * attached to, as one of the routing rules to route the requests served by
+   * the TargetTcpProxy. Each TargetTcpProxy reference should match the pattern:
+   * `projects/locations/targetTcpProxies/`
+   *
+   * @param string[] $targetProxies
+   */
+  public function setTargetProxies($targetProxies)
+  {
+    $this->targetProxies = $targetProxies;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTargetProxies()
+  {
+    return $this->targetProxies;
   }
   /**
    * Output only. The timestamp when the resource was updated.
