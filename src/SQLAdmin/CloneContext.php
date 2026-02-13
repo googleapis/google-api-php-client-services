@@ -47,6 +47,24 @@ class CloneContext extends \Google\Collection
    */
   public $destinationInstanceName;
   /**
+   * Optional. The fully qualified URI of the VPC network to which the cloned
+   * instance will be connected via Private Services Access for private IP. For
+   * example:`projects/my-network-project/global/networks/my-network`. This
+   * field is only required for cross-project cloning.
+   *
+   * @var string
+   */
+  public $destinationNetwork;
+  /**
+   * Optional. The project ID of the destination project where the cloned
+   * instance will be created. To perform a cross-project clone, this field is
+   * required. If not specified, the clone is created in the same project as the
+   * source instance.
+   *
+   * @var string
+   */
+  public $destinationProject;
+  /**
    * This is always `sql#cloneContext`.
    *
    * @var string
@@ -161,6 +179,44 @@ class CloneContext extends \Google\Collection
   public function getDestinationInstanceName()
   {
     return $this->destinationInstanceName;
+  }
+  /**
+   * Optional. The fully qualified URI of the VPC network to which the cloned
+   * instance will be connected via Private Services Access for private IP. For
+   * example:`projects/my-network-project/global/networks/my-network`. This
+   * field is only required for cross-project cloning.
+   *
+   * @param string $destinationNetwork
+   */
+  public function setDestinationNetwork($destinationNetwork)
+  {
+    $this->destinationNetwork = $destinationNetwork;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationNetwork()
+  {
+    return $this->destinationNetwork;
+  }
+  /**
+   * Optional. The project ID of the destination project where the cloned
+   * instance will be created. To perform a cross-project clone, this field is
+   * required. If not specified, the clone is created in the same project as the
+   * source instance.
+   *
+   * @param string $destinationProject
+   */
+  public function setDestinationProject($destinationProject)
+  {
+    $this->destinationProject = $destinationProject;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationProject()
+  {
+    return $this->destinationProject;
   }
   /**
    * This is always `sql#cloneContext`.

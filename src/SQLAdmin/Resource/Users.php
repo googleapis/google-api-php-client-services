@@ -115,6 +115,10 @@ class Users extends \Google\Service\Resource
    * the user. body.database_roles will be ignored for update request.
    * @opt_param string host Optional. Host of the user in the instance.
    * @opt_param string name Name of the user in the instance.
+   * @opt_param bool revokeExistingRoles Optional. Specifies whether to revoke
+   * existing roles that are not present in the `database_roles` field. If `false`
+   * or unset, the database roles specified in `database_roles` are added to the
+   * user's existing roles.
    * @return Operation
    * @throws \Google\Service\Exception
    */
