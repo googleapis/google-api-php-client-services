@@ -390,6 +390,28 @@ class Directory extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'countChromeOsDevices' => [
+              'path' => 'admin/directory/v1/customer/{customerId}/devices/chromeos:countChromeOsDevices',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customerId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'includeChildOrgunits' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'orgUnitPath' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'issueCommand' => [
               'path' => 'admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}:issueCommand',
               'httpMethod' => 'POST',
