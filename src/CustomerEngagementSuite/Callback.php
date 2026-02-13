@@ -33,6 +33,17 @@ class Callback extends \Google\Model
    */
   public $disabled;
   /**
+   * Optional. If enabled, the callback will also be executed on intermediate
+   * model outputs. This setting only affects after model callback. **ENABLE
+   * WITH CAUTION**. Typically after model callback only needs to be executed
+   * after receiving all model responses. Enabling proactive execution may have
+   * negative implication on the execution cost and latency, and should only be
+   * enabled in rare situations.
+   *
+   * @var bool
+   */
+  public $proactiveExecutionEnabled;
+  /**
    * Required. The python code to execute for the callback.
    *
    * @var string
@@ -71,6 +82,27 @@ class Callback extends \Google\Model
   public function getDisabled()
   {
     return $this->disabled;
+  }
+  /**
+   * Optional. If enabled, the callback will also be executed on intermediate
+   * model outputs. This setting only affects after model callback. **ENABLE
+   * WITH CAUTION**. Typically after model callback only needs to be executed
+   * after receiving all model responses. Enabling proactive execution may have
+   * negative implication on the execution cost and latency, and should only be
+   * enabled in rare situations.
+   *
+   * @param bool $proactiveExecutionEnabled
+   */
+  public function setProactiveExecutionEnabled($proactiveExecutionEnabled)
+  {
+    $this->proactiveExecutionEnabled = $proactiveExecutionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getProactiveExecutionEnabled()
+  {
+    return $this->proactiveExecutionEnabled;
   }
   /**
    * Required. The python code to execute for the callback.

@@ -54,6 +54,8 @@ class GoogleSearchTool extends \Google\Collection
    * @var string[]
    */
   public $preferredDomains;
+  protected $promptConfigType = GoogleSearchToolPromptConfig::class;
+  protected $promptConfigDataType = '';
 
   /**
    * Optional. Content will be fetched directly from these URLs for context and
@@ -138,6 +140,23 @@ class GoogleSearchTool extends \Google\Collection
   public function getPreferredDomains()
   {
     return $this->preferredDomains;
+  }
+  /**
+   * Optional. Prompt instructions passed to planner on how the search results
+   * should be processed for text and voice.
+   *
+   * @param GoogleSearchToolPromptConfig $promptConfig
+   */
+  public function setPromptConfig(GoogleSearchToolPromptConfig $promptConfig)
+  {
+    $this->promptConfig = $promptConfig;
+  }
+  /**
+   * @return GoogleSearchToolPromptConfig
+   */
+  public function getPromptConfig()
+  {
+    return $this->promptConfig;
   }
 }
 

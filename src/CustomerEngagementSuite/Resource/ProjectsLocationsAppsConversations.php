@@ -102,7 +102,10 @@ class ProjectsLocationsAppsConversations extends \Google\Service\Resource
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous list AgentService.ListConversations call.
    * @opt_param string source Optional. Indicate the source of the conversation.
-   * If not set, Source.Live will be applied by default.
+   * If not set, Source.Live will be applied by default. Will be deprecated in
+   * favor of `sources` field.
+   * @opt_param string sources Optional. Indicate the sources of the
+   * conversations. If not set, all available sources will be applied by default.
    * @return ListConversationsResponse
    * @throws \Google\Service\Exception
    */

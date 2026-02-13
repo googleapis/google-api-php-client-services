@@ -54,6 +54,13 @@ class ImportAppRequest extends \Google\Model
    * @var string
    */
   public $gcsUri;
+  /**
+   * Optional. Flag for overriding the app lock during import. If set to true,
+   * the import process will ignore the app lock.
+   *
+   * @var bool
+   */
+  public $ignoreAppLock;
   protected $importOptionsType = ImportAppRequestImportOptions::class;
   protected $importOptionsDataType = '';
 
@@ -131,6 +138,23 @@ class ImportAppRequest extends \Google\Model
   public function getGcsUri()
   {
     return $this->gcsUri;
+  }
+  /**
+   * Optional. Flag for overriding the app lock during import. If set to true,
+   * the import process will ignore the app lock.
+   *
+   * @param bool $ignoreAppLock
+   */
+  public function setIgnoreAppLock($ignoreAppLock)
+  {
+    $this->ignoreAppLock = $ignoreAppLock;
+  }
+  /**
+   * @return bool
+   */
+  public function getIgnoreAppLock()
+  {
+    return $this->ignoreAppLock;
   }
   /**
    * Optional. Options governing the import process for the app.

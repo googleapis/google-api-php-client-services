@@ -456,6 +456,11 @@ class CustomerEngagementSuite extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'sources' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],
           ]
