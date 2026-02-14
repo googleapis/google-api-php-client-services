@@ -4585,6 +4585,14 @@ class Dfareporting extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'countryDartId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'tvDataProvider' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]
@@ -4609,7 +4617,15 @@ class Dfareporting extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'countryDartId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'tvDataProvider' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

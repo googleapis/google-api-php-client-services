@@ -17,8 +17,9 @@
 
 namespace Google\Service\Dfareporting;
 
-class Country extends \Google\Model
+class Country extends \Google\Collection
 {
+  protected $collection_key = 'tvDataProviders';
   /**
    * Country code.
    *
@@ -51,6 +52,12 @@ class Country extends \Google\Model
    * @var bool
    */
   public $sslEnabled;
+  /**
+   * Output only. The TV data providers supported in this country.
+   *
+   * @var string[]
+   */
+  public $tvDataProviders;
 
   /**
    * Country code.
@@ -133,6 +140,22 @@ class Country extends \Google\Model
   public function getSslEnabled()
   {
     return $this->sslEnabled;
+  }
+  /**
+   * Output only. The TV data providers supported in this country.
+   *
+   * @param string[] $tvDataProviders
+   */
+  public function setTvDataProviders($tvDataProviders)
+  {
+    $this->tvDataProviders = $tvDataProviders;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTvDataProviders()
+  {
+    return $this->tvDataProviders;
   }
 }
 

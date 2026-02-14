@@ -40,6 +40,26 @@ class StudioCreative extends \Google\Collection
    */
   public const FORMAT_VPAID_LINEAR_VIDEO = 'VPAID_LINEAR_VIDEO';
   /**
+   * In-stream video creative format.
+   */
+  public const FORMAT_INSTREAM_VIDEO = 'INSTREAM_VIDEO';
+  /**
+   * The orientation of the studio creative is unknown.
+   */
+  public const ORIENTATION_ORIENTATION_UNKNOWN = 'ORIENTATION_UNKNOWN';
+  /**
+   * The asset is a landscape asset.
+   */
+  public const ORIENTATION_ASSET_LANDSCAPE = 'ASSET_LANDSCAPE';
+  /**
+   * The asset is a portrait asset.
+   */
+  public const ORIENTATION_ASSET_PORTRAIT = 'ASSET_PORTRAIT';
+  /**
+   * The asset is a square asset.
+   */
+  public const ORIENTATION_ASSET_SQUARE = 'ASSET_SQUARE';
+  /**
    * The status of the studio creative is unknown. This value is unused.
    */
   public const STATUS_UNKNOWN_STATUS = 'UNKNOWN_STATUS';
@@ -82,6 +102,12 @@ class StudioCreative extends \Google\Collection
   protected $dimensionType = StudioCreativeDimension::class;
   protected $dimensionDataType = '';
   /**
+   * Optional. Duration of this studio creative in seconds.
+   *
+   * @var int
+   */
+  public $durationSeconds;
+  /**
    * Dynamic profile ID of this studio creative.
    *
    * @var string
@@ -109,6 +135,16 @@ class StudioCreative extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * Optional. LINT.ThenChange( //depot/google3/ads/richmedia/studio/proto/stubb
+   * y/creative.proto:orientation,
+   * //depot/google3/ads/xfa/proto/api/enum.proto:orientation, //depot/google3/j
+   * ava/com/google/ads/richmedia/studio/domain/model/converter/CreativeConverte
+   * r.java:orientation ) Orientation of this studio creative.
+   *
+   * @var string
+   */
+  public $orientation;
   /**
    * Output only. Status of this studio creative. It is a read-only field.
    *
@@ -205,6 +241,22 @@ class StudioCreative extends \Google\Collection
     return $this->dimension;
   }
   /**
+   * Optional. Duration of this studio creative in seconds.
+   *
+   * @param int $durationSeconds
+   */
+  public function setDurationSeconds($durationSeconds)
+  {
+    $this->durationSeconds = $durationSeconds;
+  }
+  /**
+   * @return int
+   */
+  public function getDurationSeconds()
+  {
+    return $this->durationSeconds;
+  }
+  /**
    * Dynamic profile ID of this studio creative.
    *
    * @param string $dynamicProfileId
@@ -224,7 +276,7 @@ class StudioCreative extends \Google\Collection
    * Format of this studio creative. This is a required field on insertion.
    *
    * Accepted values: UNKNOWN, BANNER, EXPANDING, INTERSTITIAL,
-   * VPAID_LINEAR_VIDEO
+   * VPAID_LINEAR_VIDEO, INSTREAM_VIDEO
    *
    * @param self::FORMAT_* $format
    */
@@ -289,6 +341,29 @@ class StudioCreative extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. LINT.ThenChange( //depot/google3/ads/richmedia/studio/proto/stubb
+   * y/creative.proto:orientation,
+   * //depot/google3/ads/xfa/proto/api/enum.proto:orientation, //depot/google3/j
+   * ava/com/google/ads/richmedia/studio/domain/model/converter/CreativeConverte
+   * r.java:orientation ) Orientation of this studio creative.
+   *
+   * Accepted values: ORIENTATION_UNKNOWN, ASSET_LANDSCAPE, ASSET_PORTRAIT,
+   * ASSET_SQUARE
+   *
+   * @param self::ORIENTATION_* $orientation
+   */
+  public function setOrientation($orientation)
+  {
+    $this->orientation = $orientation;
+  }
+  /**
+   * @return self::ORIENTATION_*
+   */
+  public function getOrientation()
+  {
+    return $this->orientation;
   }
   /**
    * Output only. Status of this studio creative. It is a read-only field.

@@ -39,6 +39,10 @@ class TvCampaignDetails extends \Google\Service\Resource
    *
    * @opt_param string accountId Required. Account ID associated with this
    * request.
+   * @opt_param string countryDartId Optional. Country Dart ID. If not specified,
+   * defaults to 256 (US).
+   * @opt_param string tvDataProvider Optional. TV data provider. If not
+   * specified, defaults to `COMSCORE_NATIONAL_US`.
    * @return TvCampaignDetail
    * @throws \Google\Service\Exception
    */
