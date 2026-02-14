@@ -32,7 +32,7 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Model
    */
   public $description;
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at
+   * Optional. The dimension a rule belongs to. Results are also aggregated at
    * the dimension level. Custom dimension name is supported with all uppercase
    * letters and maximum length of 30 characters.
    *
@@ -122,7 +122,7 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Model
     return $this->description;
   }
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at
+   * Optional. The dimension a rule belongs to. Results are also aggregated at
    * the dimension level. Custom dimension name is supported with all uppercase
    * letters and maximum length of 30 characters.
    *

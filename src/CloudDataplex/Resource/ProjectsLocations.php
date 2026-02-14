@@ -78,11 +78,7 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudLocationListLocationsResponse::class);
   }
   /**
-   * Looks up an entry by name using the permission on the source system. Caution:
-   * The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc Metastore
-   * metadata that is stored in Dataplex Universal Catalog is changing. For more
-   * information, see Changes to metadata stored in Dataplex Universal Catalog
-   * (https://cloud.google.com/dataplex/docs/metadata-changes).
+   * Looks up an entry by name using the permission on the source system.
    * (locations.lookupEntry)
    *
    * @param string $name Required. The project to which the request should be
