@@ -48,6 +48,8 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
    */
   public const MAINTENANCE_STATE_ERROR = 'ERROR';
   protected $collection_key = 'denyMaintenanceSchedules';
+  protected $currentVersionReleaseDateType = GoogleTypeDate::class;
+  protected $currentVersionReleaseDateDataType = '';
   protected $denyMaintenanceSchedulesType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule::class;
   protected $denyMaintenanceSchedulesDataType = 'array';
   /**
@@ -75,15 +77,23 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   public $maintenanceVersion;
   protected $upcomingMaintenanceType = StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
-  /**
-   * Optional. This field will contain the date when the last version update was
-   * applied to the database resource. This will be used to calculate the age of
-   * the maintenance version.
-   *
-   * @var string
-   */
-  public $versionUpdateTime;
 
+  /**
+   * Optional. The date when the current maintenance version was released.
+   *
+   * @param GoogleTypeDate $currentVersionReleaseDate
+   */
+  public function setCurrentVersionReleaseDate(GoogleTypeDate $currentVersionReleaseDate)
+  {
+    $this->currentVersionReleaseDate = $currentVersionReleaseDate;
+  }
+  /**
+   * @return GoogleTypeDate
+   */
+  public function getCurrentVersionReleaseDate()
+  {
+    return $this->currentVersionReleaseDate;
+  }
   /**
    * Optional. List of Deny maintenance period for the database resource.
    *
@@ -186,24 +196,6 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   public function getUpcomingMaintenance()
   {
     return $this->upcomingMaintenance;
-  }
-  /**
-   * Optional. This field will contain the date when the last version update was
-   * applied to the database resource. This will be used to calculate the age of
-   * the maintenance version.
-   *
-   * @param string $versionUpdateTime
-   */
-  public function setVersionUpdateTime($versionUpdateTime)
-  {
-    $this->versionUpdateTime = $versionUpdateTime;
-  }
-  /**
-   * @return string
-   */
-  public function getVersionUpdateTime()
-  {
-    return $this->versionUpdateTime;
   }
 }
 
