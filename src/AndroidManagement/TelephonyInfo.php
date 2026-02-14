@@ -45,9 +45,9 @@ class TelephonyInfo extends \Google\Model
   public const CONFIG_MODE_USER_CONFIGURED = 'USER_CONFIGURED';
   /**
    * Output only. Activation state of the SIM card on the device. This is
-   * applicable for eSIMs only. This is supported on all devices for API level
-   * 35 and above. This is always ACTIVATION_STATE_UNSPECIFIED for physical SIMs
-   * and for devices below API level 35.
+   * applicable for eSIMs only. This is supported on all devices for Android 15
+   * and above. This is always ACTIVATION_STATE_UNSPECIFIED for physical SIMs
+   * and for devices below Android 15.
    *
    * @var string
    */
@@ -60,9 +60,9 @@ class TelephonyInfo extends \Google\Model
   public $carrierName;
   /**
    * Output only. The configuration mode of the SIM card on the device. This is
-   * applicable for eSIMs only. This is supported on all devices for API level
-   * 35 and above. This is always CONFIG_MODE_UNSPECIFIED for physical SIMs and
-   * for devices below API level 35.
+   * applicable for eSIMs only. This is supported on all devices for Android 15
+   * and above. This is always CONFIG_MODE_UNSPECIFIED for physical SIMs and for
+   * devices below Android 15.
    *
    * @var string
    */
@@ -82,9 +82,9 @@ class TelephonyInfo extends \Google\Model
 
   /**
    * Output only. Activation state of the SIM card on the device. This is
-   * applicable for eSIMs only. This is supported on all devices for API level
-   * 35 and above. This is always ACTIVATION_STATE_UNSPECIFIED for physical SIMs
-   * and for devices below API level 35.
+   * applicable for eSIMs only. This is supported on all devices for Android 15
+   * and above. This is always ACTIVATION_STATE_UNSPECIFIED for physical SIMs
+   * and for devices below Android 15.
    *
    * Accepted values: ACTIVATION_STATE_UNSPECIFIED, ACTIVATED, NOT_ACTIVATED
    *
@@ -119,9 +119,9 @@ class TelephonyInfo extends \Google\Model
   }
   /**
    * Output only. The configuration mode of the SIM card on the device. This is
-   * applicable for eSIMs only. This is supported on all devices for API level
-   * 35 and above. This is always CONFIG_MODE_UNSPECIFIED for physical SIMs and
-   * for devices below API level 35.
+   * applicable for eSIMs only. This is supported on all devices for Android 15
+   * and above. This is always CONFIG_MODE_UNSPECIFIED for physical SIMs and for
+   * devices below Android 15.
    *
    * Accepted values: CONFIG_MODE_UNSPECIFIED, ADMIN_CONFIGURED, USER_CONFIGURED
    *

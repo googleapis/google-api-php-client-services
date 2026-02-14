@@ -100,7 +100,7 @@ class NetworkInfo extends \Google\Collection
   }
   /**
    * Provides telephony information associated with each SIM card on the device.
-   * Only supported on fully managed devices starting from Android API level 23.
+   * Only supported on fully managed devices starting from Android 6.
    *
    * @param TelephonyInfo[] $telephonyInfos
    */
