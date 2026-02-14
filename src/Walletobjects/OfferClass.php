@@ -1063,8 +1063,8 @@ class OfferClass extends \Google\Collection
     return $this->titleImage;
   }
   /**
-   * Optional value added module data. Maximum of ten on the class. For a pass
-   * only ten will be displayed, prioritizing those from the object.
+   * Optional value added module data. Maximum of twelve on the class. For a
+   * pass only twelve will be displayed, prioritizing those from the object.
    *
    * @param ValueAddedModuleData[] $valueAddedModuleData
    */

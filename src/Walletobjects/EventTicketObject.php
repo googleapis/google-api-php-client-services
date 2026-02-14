@@ -878,7 +878,7 @@ class EventTicketObject extends \Google\Collection
     return $this->validTimeInterval;
   }
   /**
-   * Optional value added module data. Maximum of ten on the object.
+   * Optional value added module data. Maximum of twelve on the object.
    *
    * @param ValueAddedModuleData[] $valueAddedModuleData
    */
