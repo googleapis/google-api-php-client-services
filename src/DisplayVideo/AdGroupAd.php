@@ -52,10 +52,7 @@ class AdGroupAd extends \Google\Collection
    */
   public $adGroupAdId;
   /**
-   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad
-   * groups for Demand Gen ads are not currently retrieveable using
-   * `advertisers.adGroups.list` or `advertisers.adGroups.get`. Demand Gen ads
-   * can be identified by the absence of the `ad_details` union field.
+   * Required. The unique ID of the ad group that the ad belongs to.
    *
    * @var string
    */
@@ -75,8 +72,8 @@ class AdGroupAd extends \Google\Collection
   protected $bumperAdType = BumperAd::class;
   protected $bumperAdDataType = '';
   /**
-   * The display name of the ad. Must be UTF-8 encoded with a maximum size of
-   * 255 bytes.
+   * Required. The display name of the ad. Must be UTF-8 encoded with a maximum
+   * size of 255 bytes.
    *
    * @var string
    */
@@ -84,7 +81,7 @@ class AdGroupAd extends \Google\Collection
   protected $displayVideoSourceAdType = DisplayVideoSourceAd::class;
   protected $displayVideoSourceAdDataType = '';
   /**
-   * The entity status of the ad.
+   * Required. The entity status of the ad.
    *
    * @var string
    */
@@ -123,10 +120,7 @@ class AdGroupAd extends \Google\Collection
     return $this->adGroupAdId;
   }
   /**
-   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad
-   * groups for Demand Gen ads are not currently retrieveable using
-   * `advertisers.adGroups.list` or `advertisers.adGroups.get`. Demand Gen ads
-   * can be identified by the absence of the `ad_details` union field.
+   * Required. The unique ID of the ad group that the ad belongs to.
    *
    * @param string $adGroupId
    */
@@ -158,7 +152,7 @@ class AdGroupAd extends \Google\Collection
     return $this->adPolicy;
   }
   /**
-   * List of URLs used by the ad.
+   * Output only. List of URLs used by the ad.
    *
    * @param AdUrl[] $adUrls
    */
@@ -190,8 +184,9 @@ class AdGroupAd extends \Google\Collection
     return $this->advertiserId;
   }
   /**
-   * Details of an [audio ad](//support.google.com/displayvideo/answer/6274216)
-   * used for reach marketing objectives.
+   * Output only. Details of an [audio
+   * ad](//support.google.com/displayvideo/answer/6274216) used for reach
+   * marketing objectives.
    *
    * @param AudioAd $audioAd
    */
@@ -207,7 +202,7 @@ class AdGroupAd extends \Google\Collection
     return $this->audioAd;
   }
   /**
-   * Details of a [non-skippable short video
+   * Output only. Details of a [non-skippable short video
    * ad](//support.google.com/displayvideo/answer/6274216), equal to or less
    * than 6 seconds, used for reach.
    *
@@ -225,8 +220,8 @@ class AdGroupAd extends \Google\Collection
     return $this->bumperAd;
   }
   /**
-   * The display name of the ad. Must be UTF-8 encoded with a maximum size of
-   * 255 bytes.
+   * Required. The display name of the ad. Must be UTF-8 encoded with a maximum
+   * size of 255 bytes.
    *
    * @param string $displayName
    */
@@ -242,7 +237,7 @@ class AdGroupAd extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Details of an ad sourced from a Display & Video 360 creative.
+   * Output only. Details of an ad sourced from a Display & Video 360 creative.
    *
    * @param DisplayVideoSourceAd $displayVideoSourceAd
    */
@@ -258,7 +253,7 @@ class AdGroupAd extends \Google\Collection
     return $this->displayVideoSourceAd;
   }
   /**
-   * The entity status of the ad.
+   * Required. The entity status of the ad.
    *
    * Accepted values: ENTITY_STATUS_UNSPECIFIED, ENTITY_STATUS_ACTIVE,
    * ENTITY_STATUS_ARCHIVED, ENTITY_STATUS_DRAFT, ENTITY_STATUS_PAUSED,
@@ -278,7 +273,7 @@ class AdGroupAd extends \Google\Collection
     return $this->entityStatus;
   }
   /**
-   * Details of an [in-stream ad skippable after 5
+   * Output only. Details of an [in-stream ad skippable after 5
    * seconds](//support.google.com/displayvideo/answer/6274216), used for brand
    * awareness or reach marketing objectives.
    *
@@ -296,7 +291,7 @@ class AdGroupAd extends \Google\Collection
     return $this->inStreamAd;
   }
   /**
-   * Details of an [ad served on the YouTube Home
+   * Output only. Details of an [ad served on the YouTube Home
    * feed](//support.google.com/google-ads/answer/9709826).
    *
    * @param MastheadAd $mastheadAd
@@ -329,7 +324,7 @@ class AdGroupAd extends \Google\Collection
     return $this->name;
   }
   /**
-   * Details of a [non-skippable short in-stream video
+   * Output only. Details of a [non-skippable short in-stream video
    * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15
    * seconds, used for reach marketing objectives.
    *
@@ -347,7 +342,7 @@ class AdGroupAd extends \Google\Collection
     return $this->nonSkippableAd;
   }
   /**
-   * Details of an [ad promoting a
+   * Output only. Details of an [ad promoting a
    * video](//support.google.com/displayvideo/answer/6274216) that shows in
    * places of discovery.
    *
@@ -365,7 +360,7 @@ class AdGroupAd extends \Google\Collection
     return $this->videoDiscoverAd;
   }
   /**
-   * Details of an [ad used in a video action
+   * Output only. Details of an [ad used in a video action
    * campaign](//support.google.com/google-ads/answer/10147229) to drive actions
    * to the business, service or product.
    *

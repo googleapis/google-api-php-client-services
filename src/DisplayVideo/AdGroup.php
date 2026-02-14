@@ -83,19 +83,19 @@ class AdGroup extends \Google\Model
    */
   public const ENTITY_STATUS_ENTITY_STATUS_SCHEDULED_FOR_DELETION = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION';
   /**
-   * The format of the ads in the ad group.
+   * Required. The format of the ads in the ad group.
    *
    * @var string
    */
   public $adGroupFormat;
   /**
-   * The unique ID of the ad group. Assigned by the system.
+   * Output only. The unique ID of the ad group. Assigned by the system.
    *
    * @var string
    */
   public $adGroupId;
   /**
-   * The unique ID of the advertiser the ad group belongs to.
+   * Output only. The unique ID of the advertiser the ad group belongs to.
    *
    * @var string
    */
@@ -103,28 +103,29 @@ class AdGroup extends \Google\Model
   protected $bidStrategyType = BiddingStrategy::class;
   protected $bidStrategyDataType = '';
   /**
-   * The display name of the ad group. Must be UTF-8 encoded with a maximum size
-   * of 255 bytes.
+   * Required. The display name of the ad group. Must be UTF-8 encoded with a
+   * maximum size of 255 bytes.
    *
    * @var string
    */
   public $displayName;
   /**
-   * Controls whether or not the ad group can spend its budget and bid on
-   * inventory. If the ad group's parent line item is not active, the ad group
-   * can't spend its budget even if its own status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the ad group can spend its budget and bid
+   * on inventory. If the ad group's parent line item is not active, the ad
+   * group can't spend its budget even if its own status is
+   * `ENTITY_STATUS_ACTIVE`.
    *
    * @var string
    */
   public $entityStatus;
   /**
-   * The unique ID of the line item that the ad group belongs to.
+   * Required. The unique ID of the line item that the ad group belongs to.
    *
    * @var string
    */
   public $lineItemId;
   /**
-   * The resource name of the ad group.
+   * Output only. Identifier. The resource name of the ad group.
    *
    * @var string
    */
@@ -135,7 +136,7 @@ class AdGroup extends \Google\Model
   protected $targetingExpansionDataType = '';
 
   /**
-   * The format of the ads in the ad group.
+   * Required. The format of the ads in the ad group.
    *
    * Accepted values: AD_GROUP_FORMAT_UNSPECIFIED, AD_GROUP_FORMAT_IN_STREAM,
    * AD_GROUP_FORMAT_VIDEO_DISCOVERY, AD_GROUP_FORMAT_BUMPER,
@@ -156,7 +157,7 @@ class AdGroup extends \Google\Model
     return $this->adGroupFormat;
   }
   /**
-   * The unique ID of the ad group. Assigned by the system.
+   * Output only. The unique ID of the ad group. Assigned by the system.
    *
    * @param string $adGroupId
    */
@@ -172,7 +173,7 @@ class AdGroup extends \Google\Model
     return $this->adGroupId;
   }
   /**
-   * The unique ID of the advertiser the ad group belongs to.
+   * Output only. The unique ID of the advertiser the ad group belongs to.
    *
    * @param string $advertiserId
    */
@@ -188,8 +189,9 @@ class AdGroup extends \Google\Model
     return $this->advertiserId;
   }
   /**
-   * The bidding strategy used by the ad group. Only the youtubeAndPartnersBid
-   * field can be used in the bidding strategy.
+   * Optional. The bidding strategy used by the ad group. Only the
+   * youtubeAndPartnersBid and demandGenBid field can be used in the bidding
+   * strategy.
    *
    * @param BiddingStrategy $bidStrategy
    */
@@ -205,8 +207,8 @@ class AdGroup extends \Google\Model
     return $this->bidStrategy;
   }
   /**
-   * The display name of the ad group. Must be UTF-8 encoded with a maximum size
-   * of 255 bytes.
+   * Required. The display name of the ad group. Must be UTF-8 encoded with a
+   * maximum size of 255 bytes.
    *
    * @param string $displayName
    */
@@ -222,9 +224,10 @@ class AdGroup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Controls whether or not the ad group can spend its budget and bid on
-   * inventory. If the ad group's parent line item is not active, the ad group
-   * can't spend its budget even if its own status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the ad group can spend its budget and bid
+   * on inventory. If the ad group's parent line item is not active, the ad
+   * group can't spend its budget even if its own status is
+   * `ENTITY_STATUS_ACTIVE`.
    *
    * Accepted values: ENTITY_STATUS_UNSPECIFIED, ENTITY_STATUS_ACTIVE,
    * ENTITY_STATUS_ARCHIVED, ENTITY_STATUS_DRAFT, ENTITY_STATUS_PAUSED,
@@ -244,7 +247,7 @@ class AdGroup extends \Google\Model
     return $this->entityStatus;
   }
   /**
-   * The unique ID of the line item that the ad group belongs to.
+   * Required. The unique ID of the line item that the ad group belongs to.
    *
    * @param string $lineItemId
    */
@@ -260,7 +263,7 @@ class AdGroup extends \Google\Model
     return $this->lineItemId;
   }
   /**
-   * The resource name of the ad group.
+   * Output only. Identifier. The resource name of the ad group.
    *
    * @param string $name
    */
@@ -276,7 +279,7 @@ class AdGroup extends \Google\Model
     return $this->name;
   }
   /**
-   * The settings of the product feed in this ad group.
+   * Optional. The settings of the product feed in this ad group.
    *
    * @param ProductFeedData $productFeedData
    */
@@ -292,7 +295,7 @@ class AdGroup extends \Google\Model
     return $this->productFeedData;
   }
   /**
-   * The [optimized
+   * Optional. The [optimized
    * targeting](//support.google.com/displayvideo/answer/12060859) settings of
    * the ad group.
    *

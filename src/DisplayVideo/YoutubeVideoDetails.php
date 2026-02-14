@@ -32,7 +32,7 @@ class YoutubeVideoDetails extends \Google\Model
    */
   public const UNAVAILABLE_REASON_VIDEO_UNAVAILABLE_REASON_DELETED = 'VIDEO_UNAVAILABLE_REASON_DELETED';
   /**
-   * The YouTube video ID which can be searched on YouTube webpage.
+   * Output only. The YouTube video ID which can be searched on YouTube webpage.
    *
    * @var string
    */
@@ -43,9 +43,15 @@ class YoutubeVideoDetails extends \Google\Model
    * @var string
    */
   public $unavailableReason;
+  /**
+   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   *
+   * @var string
+   */
+  public $videoAssetId;
 
   /**
-   * The YouTube video ID which can be searched on YouTube webpage.
+   * Output only. The YouTube video ID which can be searched on YouTube webpage.
    *
    * @param string $id
    */
@@ -78,6 +84,22 @@ class YoutubeVideoDetails extends \Google\Model
   public function getUnavailableReason()
   {
     return $this->unavailableReason;
+  }
+  /**
+   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   *
+   * @param string $videoAssetId
+   */
+  public function setVideoAssetId($videoAssetId)
+  {
+    $this->videoAssetId = $videoAssetId;
+  }
+  /**
+   * @return string
+   */
+  public function getVideoAssetId()
+  {
+    return $this->videoAssetId;
   }
 }
 
