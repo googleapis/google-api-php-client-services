@@ -298,6 +298,12 @@ class Job extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * Output only. Indicates whether the job can be paused.
+   *
+   * @var bool
+   */
+  public $pausable;
   protected $pipelineDescriptionType = PipelineDescription::class;
   protected $pipelineDescriptionDataType = '';
   /**
@@ -620,6 +626,22 @@ class Job extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Indicates whether the job can be paused.
+   *
+   * @param bool $pausable
+   */
+  public function setPausable($pausable)
+  {
+    $this->pausable = $pausable;
+  }
+  /**
+   * @return bool
+   */
+  public function getPausable()
+  {
+    return $this->pausable;
   }
   /**
    * Preliminary field: The format of this data may change at any time. A
