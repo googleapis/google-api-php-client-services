@@ -30,7 +30,7 @@ class AutokeyConfig extends \Google\Model
   public const KEY_PROJECT_RESOLUTION_MODE_DEDICATED_KEY_PROJECT = 'DEDICATED_KEY_PROJECT';
   /**
    * Keys are created in the same project as the resource requesting the key.
-   * `key_project` must not be set when this mode is used.
+   * The `key_project` must not be set when this mode is used.
    */
   public const KEY_PROJECT_RESOLUTION_MODE_RESOURCE_PROJECT = 'RESOURCE_PROJECT';
   /**
@@ -93,7 +93,8 @@ class AutokeyConfig extends \Google\Model
   public $keyProjectResolutionMode;
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    *
    * @var string
    */
@@ -170,7 +171,8 @@ class AutokeyConfig extends \Google\Model
   }
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    *
    * @param string $name
    */

@@ -31,6 +31,7 @@ use Google\Service\CloudKMS\MacSignRequest;
 use Google\Service\CloudKMS\MacSignResponse;
 use Google\Service\CloudKMS\MacVerifyRequest;
 use Google\Service\CloudKMS\MacVerifyResponse;
+use Google\Service\CloudKMS\Operation;
 use Google\Service\CloudKMS\PublicKey;
 use Google\Service\CloudKMS\RawDecryptRequest;
 use Google\Service\CloudKMS\RawDecryptResponse;
@@ -119,6 +120,25 @@ class ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions extends \Google\Servi
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('decapsulate', [$params], DecapsulateResponse::class);
+  }
+  /**
+   * Permanently deletes the given CryptoKeyVersion. Only possible if the version
+   * has not been previously imported and if its state is one of DESTROYED,
+   * IMPORT_FAILED, or GENERATION_FAILED. Successfully imported CryptoKeyVersions
+   * cannot be deleted at this time. The specified version will be immediately and
+   * permanently deleted upon calling this method. This action cannot be undone.
+   * (cryptoKeyVersions.delete)
+   *
+   * @param string $name Required. The name of the CryptoKeyVersion to delete.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
   }
   /**
    * Schedule a CryptoKeyVersion for destruction. Upon calling this method,

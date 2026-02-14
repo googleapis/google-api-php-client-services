@@ -23,6 +23,7 @@ use Google\Service\CloudKMS\DecryptResponse;
 use Google\Service\CloudKMS\EncryptRequest;
 use Google\Service\CloudKMS\EncryptResponse;
 use Google\Service\CloudKMS\ListCryptoKeysResponse;
+use Google\Service\CloudKMS\Operation;
 use Google\Service\CloudKMS\Policy;
 use Google\Service\CloudKMS\SetIamPolicyRequest;
 use Google\Service\CloudKMS\TestIamPermissionsRequest;
@@ -79,6 +80,24 @@ class ProjectsLocationsKeyRingsCryptoKeys extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('decrypt', [$params], DecryptResponse::class);
+  }
+  /**
+   * Permanently deletes the given CryptoKey. All child CryptoKeyVersions must
+   * have been previously deleted using
+   * KeyManagementService.DeleteCryptoKeyVersion. The specified crypto key will be
+   * immediately and permanently deleted upon calling this method. This action
+   * cannot be undone. (cryptoKeys.delete)
+   *
+   * @param string $name Required. The name of the CryptoKey to delete.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
   }
   /**
    * Encrypts data, so that it can only be recovered by a call to Decrypt. The
