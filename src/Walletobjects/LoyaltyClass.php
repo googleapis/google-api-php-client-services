@@ -1093,8 +1093,8 @@ class LoyaltyClass extends \Google\Collection
     return $this->textModulesData;
   }
   /**
-   * Optional value added module data. Maximum of twelve on the class. For a
-   * pass only twelve will be displayed, prioritizing those from the object.
+   * Optional value added module data. Maximum of fifteen on the class. For a
+   * pass only fifteen will be displayed, prioritizing those from the object.
    *
    * @param ValueAddedModuleData[] $valueAddedModuleData
    */

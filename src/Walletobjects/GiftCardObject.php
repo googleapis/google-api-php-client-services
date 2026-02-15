@@ -800,7 +800,8 @@ class GiftCardObject extends \Google\Collection
     return $this->validTimeInterval;
   }
   /**
-   * Optional value added module data. Maximum of twelve on the object.
+   * Optional value added module data. Maximum of fifteen on the object. For a
+   * pass only fifteen will be displayed.
    *
    * @param ValueAddedModuleData[] $valueAddedModuleData
    */
