@@ -25,6 +25,8 @@ class GoogleCloudAiplatformV1CandidateResponse extends \Google\Model
    * @var string
    */
   public $candidate;
+  protected $errorType = GoogleRpcStatus::class;
+  protected $errorDataType = '';
   /**
    * Text response.
    *
@@ -53,6 +55,22 @@ class GoogleCloudAiplatformV1CandidateResponse extends \Google\Model
   public function getCandidate()
   {
     return $this->candidate;
+  }
+  /**
+   * Output only. Error while scraping model or agent.
+   *
+   * @param GoogleRpcStatus $error
+   */
+  public function setError(GoogleRpcStatus $error)
+  {
+    $this->error = $error;
+  }
+  /**
+   * @return GoogleRpcStatus
+   */
+  public function getError()
+  {
+    return $this->error;
   }
   /**
    * Text response.
