@@ -92,7 +92,7 @@ class DeveloperMetadataLookup extends \Google\Model
    * associated on rows. If the field is left unspecified, all location types
    * are considered. This field cannot be specified as SPREADSHEET when the
    * locationMatchingStrategy is specified as INTERSECTING or when the
-   * metadataLocation is specified as a non-spreadsheet location: spreadsheet
+   * metadataLocation is specified as a non-spreadsheet location. Spreadsheet
    * metadata cannot intersect any other developer metadata location. This field
    * also must be left unspecified when the locationMatchingStrategy is
    * specified as EXACT.
@@ -163,7 +163,7 @@ class DeveloperMetadataLookup extends \Google\Model
    * associated on rows. If the field is left unspecified, all location types
    * are considered. This field cannot be specified as SPREADSHEET when the
    * locationMatchingStrategy is specified as INTERSECTING or when the
-   * metadataLocation is specified as a non-spreadsheet location: spreadsheet
+   * metadataLocation is specified as a non-spreadsheet location. Spreadsheet
    * metadata cannot intersect any other developer metadata location. This field
    * also must be left unspecified when the locationMatchingStrategy is
    * specified as EXACT.

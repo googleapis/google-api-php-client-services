@@ -62,7 +62,7 @@ class DeveloperMetadataLocation extends \Google\Model
 
   /**
    * Represents the row or column when metadata is associated with a dimension.
-   * The specified DimensionRange must represent a single row or column; it
+   * The specified DimensionRange must represent a single row or column. It
    * cannot be unbounded or span multiple rows or columns.
    *
    * @param DimensionRange $dimensionRange

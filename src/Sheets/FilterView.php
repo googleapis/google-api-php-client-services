@@ -32,7 +32,7 @@ class FilterView extends \Google\Collection
   public $filterViewId;
   /**
    * The named range this filter view is backed by, if any. When writing, only
-   * one of range or named_range_id or table_id may be set.
+   * one of range, named_range_id, or table_id may be set.
    *
    * @var string
    */
@@ -43,7 +43,7 @@ class FilterView extends \Google\Collection
   protected $sortSpecsDataType = 'array';
   /**
    * The table this filter view is backed by, if any. When writing, only one of
-   * range or named_range_id or table_id may be set.
+   * range, named_range_id, or table_id may be set.
    *
    * @var string
    */
@@ -76,9 +76,9 @@ class FilterView extends \Google\Collection
     return $this->criteria;
   }
   /**
-   * The filter criteria for showing/hiding values per column. Both criteria and
-   * filter_specs are populated in responses. If both fields are specified in an
-   * update request, this field takes precedence.
+   * The filter criteria for showing or hiding values per column. Both criteria
+   * and filter_specs are populated in responses. If both fields are specified
+   * in an update request, this field takes precedence.
    *
    * @param FilterSpec[] $filterSpecs
    */
@@ -111,7 +111,7 @@ class FilterView extends \Google\Collection
   }
   /**
    * The named range this filter view is backed by, if any. When writing, only
-   * one of range or named_range_id or table_id may be set.
+   * one of range, named_range_id, or table_id may be set.
    *
    * @param string $namedRangeId
    */
@@ -127,8 +127,8 @@ class FilterView extends \Google\Collection
     return $this->namedRangeId;
   }
   /**
-   * The range this filter view covers. When writing, only one of range or
-   * named_range_id or table_id may be set.
+   * The range this filter view covers. When writing, only one of range,
+   * named_range_id, or table_id may be set.
    *
    * @param GridRange $range
    */
@@ -162,7 +162,7 @@ class FilterView extends \Google\Collection
   }
   /**
    * The table this filter view is backed by, if any. When writing, only one of
-   * range or named_range_id or table_id may be set.
+   * range, named_range_id, or table_id may be set.
    *
    * @param string $tableId
    */

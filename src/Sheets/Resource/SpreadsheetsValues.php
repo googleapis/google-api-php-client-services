@@ -103,11 +103,13 @@ class SpreadsheetsValues extends \Google\Service\Resource
     return $this->call('batchClear', [$params], BatchClearValuesResponse::class);
   }
   /**
-   * Clears one or more ranges of values from a spreadsheet. The caller must
-   * specify the spreadsheet ID and one or more DataFilters. Ranges matching any
-   * of the specified data filters will be cleared. Only values are cleared -- all
-   * other properties of the cell (such as formatting, data validation, etc..) are
-   * kept. (values.batchClearByDataFilter)
+   * Clears one or more ranges of values from a spreadsheet. For more information,
+   * see [Read, write, and search metadata](https://developers.google.com/workspac
+   * e/sheets/api/guides/metadata). The caller must specify the spreadsheet ID and
+   * one or more DataFilters. Ranges matching any of the specified data filters
+   * will be cleared. Only values are cleared -- all other properties of the cell
+   * (such as formatting, data validation, etc.) are kept.
+   * (values.batchClearByDataFilter)
    *
    * @param string $spreadsheetId The ID of the spreadsheet to update.
    * @param BatchClearValuesByDataFilterRequest $postBody
@@ -152,9 +154,10 @@ class SpreadsheetsValues extends \Google\Service\Resource
   }
   /**
    * Returns one or more ranges of values that match the specified data filters.
-   * The caller must specify the spreadsheet ID and one or more DataFilters.
-   * Ranges that match any of the data filters in the request will be returned.
-   * (values.batchGetByDataFilter)
+   * For more information, see [Read, write, and search metadata](https://develope
+   * rs.google.com/workspace/sheets/api/guides/metadata). The caller must specify
+   * the spreadsheet ID and one or more DataFilters. Ranges that match any of the
+   * data filters in the request will be returned. (values.batchGetByDataFilter)
    *
    * @param string $spreadsheetId The ID of the spreadsheet to retrieve data from.
    * @param BatchGetValuesByDataFilterRequest $postBody
@@ -186,9 +189,11 @@ class SpreadsheetsValues extends \Google\Service\Resource
     return $this->call('batchUpdate', [$params], BatchUpdateValuesResponse::class);
   }
   /**
-   * Sets values in one or more ranges of a spreadsheet. The caller must specify
-   * the spreadsheet ID, a valueInputOption, and one or more
-   * DataFilterValueRanges. (values.batchUpdateByDataFilter)
+   * Sets values in one or more ranges of a spreadsheet. For more information, see
+   * [Read, write, and search metadata](https://developers.google.com/workspace/sh
+   * eets/api/guides/metadata). The caller must specify the spreadsheet ID, a
+   * valueInputOption, and one or more DataFilterValueRanges.
+   * (values.batchUpdateByDataFilter)
    *
    * @param string $spreadsheetId The ID of the spreadsheet to update.
    * @param BatchUpdateValuesByDataFilterRequest $postBody

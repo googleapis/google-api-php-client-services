@@ -21,7 +21,7 @@ class ClearValuesResponse extends \Google\Model
 {
   /**
    * The range (in A1 notation) that was cleared. (If the request was for an
-   * unbounded range or a ranger larger than the bounds of the sheet, this will
+   * unbounded range or a range larger than the bounds of the sheet, this will
    * be the actual range that was cleared, bounded to the sheet's limits.)
    *
    * @var string
@@ -36,7 +36,7 @@ class ClearValuesResponse extends \Google\Model
 
   /**
    * The range (in A1 notation) that was cleared. (If the request was for an
-   * unbounded range or a ranger larger than the bounds of the sheet, this will
+   * unbounded range or a range larger than the bounds of the sheet, this will
    * be the actual range that was cleared, bounded to the sheet's limits.)
    *
    * @param string $clearedRange

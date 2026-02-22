@@ -38,7 +38,7 @@ class FilterCriteria extends \Google\Collection
   protected $visibleForegroundColorStyleDataType = '';
 
   /**
-   * A condition that must be true for values to be shown. (This does not
+   * A condition that must be `true` for values to be shown. (This does not
    * override hidden_values -- if a value is listed there, it will still be
    * hidden.)
    *

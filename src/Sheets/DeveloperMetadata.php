@@ -57,7 +57,7 @@ class DeveloperMetadata extends \Google\Model
    */
   public $metadataValue;
   /**
-   * The metadata visibility. Developer metadata must always have a visibility
+   * The metadata visibility. Developer metadata must always have visibility
    * specified.
    *
    * @var string
@@ -132,7 +132,7 @@ class DeveloperMetadata extends \Google\Model
     return $this->metadataValue;
   }
   /**
-   * The metadata visibility. Developer metadata must always have a visibility
+   * The metadata visibility. Developer metadata must always have visibility
    * specified.
    *
    * Accepted values: DEVELOPER_METADATA_VISIBILITY_UNSPECIFIED, DOCUMENT,

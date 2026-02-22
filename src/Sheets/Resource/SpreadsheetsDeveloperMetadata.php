@@ -33,8 +33,9 @@ class SpreadsheetsDeveloperMetadata extends \Google\Service\Resource
 {
   /**
    * Returns the developer metadata with the specified ID. The caller must specify
-   * the spreadsheet ID and the developer metadata's unique metadataId.
-   * (developerMetadata.get)
+   * the spreadsheet ID and the developer metadata's unique metadataId. For more
+   * information, see [Read, write, and search metadata](https://developers.google
+   * .com/workspace/sheets/api/guides/metadata). (developerMetadata.get)
    *
    * @param string $spreadsheetId The ID of the spreadsheet to retrieve metadata
    * from.
@@ -50,12 +51,13 @@ class SpreadsheetsDeveloperMetadata extends \Google\Service\Resource
     return $this->call('get', [$params], DeveloperMetadata::class);
   }
   /**
-   * Returns all developer metadata matching the specified DataFilter. If the
-   * provided DataFilter represents a DeveloperMetadataLookup object, this will
-   * return all DeveloperMetadata entries selected by it. If the DataFilter
-   * represents a location in a spreadsheet, this will return all developer
-   * metadata associated with locations intersecting that region.
-   * (developerMetadata.search)
+   * Returns all developer metadata matching the specified DataFilter. For more
+   * information, see [Read, write, and search metadata](https://developers.google
+   * .com/workspace/sheets/api/guides/metadata). If the provided DataFilter
+   * represents a DeveloperMetadataLookup object, this will return all
+   * DeveloperMetadata entries selected by it. If the DataFilter represents a
+   * location in a spreadsheet, this will return all developer metadata associated
+   * with locations intersecting that region. (developerMetadata.search)
    *
    * @param string $spreadsheetId The ID of the spreadsheet to retrieve metadata
    * from.
