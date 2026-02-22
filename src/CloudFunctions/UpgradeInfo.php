@@ -73,8 +73,12 @@ class UpgradeInfo extends \Google\Model
    */
   public const UPGRADE_STATE_COMMIT_FUNCTION_UPGRADE_ERROR_ROLLBACK_SAFE = 'COMMIT_FUNCTION_UPGRADE_ERROR_ROLLBACK_SAFE';
   /**
-   * Indicates that the `CommitFunctionUpgradeAsGen2` API call succeeded and the
-   * function was successfully migrated to the 2nd Gen stack.
+   * Deprecated: This state is no longer returned by the backend. Clients should
+   * not rely on polling for this specific state. A successful upgrade is now
+   * indicated by the long-running operation completing successfully with a
+   * Function resource in the response.
+   *
+   * @deprecated
    */
   public const UPGRADE_STATE_COMMIT_FUNCTION_UPGRADE_AS_GEN2_SUCCESSFUL = 'COMMIT_FUNCTION_UPGRADE_AS_GEN2_SUCCESSFUL';
   /**
