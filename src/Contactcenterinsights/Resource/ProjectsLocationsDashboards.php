@@ -116,7 +116,8 @@ class ProjectsLocationsDashboards extends \Google\Service\Resource
    *
    * @opt_param string updateMask Optional. List of fields to be updated. All
    * possible fields can be updated by passing `*`, or a subset of the following
-   * updateable fields can be provided: * `display_name` * `root_container`
+   * updateable fields can be provided: * `display_name` * `root_container` *
+   * `description`
    * @return GoogleCloudContactcenterinsightsV1Dashboard
    * @throws \Google\Service\Exception
    */
