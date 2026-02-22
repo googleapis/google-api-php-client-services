@@ -33,6 +33,13 @@ class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty extends \Goog
    */
   public const METHOD_DERIVE = 'DERIVE';
   /**
+   * Attempts to extract the position and value as-is from the document text. If
+   * the value cannot be grounded in the text, it falls back to derivation
+   * through inference, for both position and value. Note: The inference
+   * fallback is currently only supported for boolean entities.
+   */
+  public const METHOD_RELAXED_EXTRACT = 'RELAXED_EXTRACT';
+  /**
    * Unspecified occurrence type.
    */
   public const OCCURRENCE_TYPE_OCCURRENCE_TYPE_UNSPECIFIED = 'OCCURRENCE_TYPE_UNSPECIFIED';
@@ -133,7 +140,7 @@ class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty extends \Goog
   /**
    * Specifies how the entity's value is obtained.
    *
-   * Accepted values: METHOD_UNSPECIFIED, EXTRACT, DERIVE
+   * Accepted values: METHOD_UNSPECIFIED, EXTRACT, DERIVE, RELAXED_EXTRACT
    *
    * @param self::METHOD_* $method
    */
