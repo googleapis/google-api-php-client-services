@@ -228,8 +228,7 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
     return $this->clientVersion;
   }
   /**
-   * Holds the single container that defines the unit of execution for this
-   * Revision.
+   * Holds the list which define the units of execution for this Revision.
    *
    * @param GoogleCloudRunV2Container[] $containers
    */
