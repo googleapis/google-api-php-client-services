@@ -20,6 +20,27 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityMonitoringCondition extends \Google\Model
 {
   /**
+   * Risk assessment type is not specified.
+   */
+  public const RISK_ASSESSMENT_TYPE_RISK_ASSESSMENT_TYPE_UNSPECIFIED = 'RISK_ASSESSMENT_TYPE_UNSPECIFIED';
+  /**
+   * Risk assessment type is Apigee.
+   */
+  public const RISK_ASSESSMENT_TYPE_APIGEE = 'APIGEE';
+  /**
+   * Risk assessment type is API Hub.
+   */
+  public const RISK_ASSESSMENT_TYPE_API_HUB = 'API_HUB';
+  /**
+   * Optional. The API Hub gateway monitored by the security monitoring
+   * condition. This should only be set if risk_assessment_type is API_HUB.
+   * Format: `projects/{project}/locations/{location}/plugins/{plugin}/instances
+   * /{instance}`
+   *
+   * @var string
+   */
+  public $apiHubGateway;
+  /**
    * Output only. The time of the security monitoring condition creation.
    *
    * @var string
@@ -44,8 +65,17 @@ class GoogleCloudApigeeV1SecurityMonitoringCondition extends \Google\Model
    */
   public $profile;
   /**
-   * Optional. Scope of the security monitoring condition. For Apigee, the
-   * environment is the scope of the resources.
+   * Optional. The risk assessment type of the security monitoring condition.
+   * Defaults to ADVANCED_API_SECURITY.
+   *
+   * @var string
+   */
+  public $riskAssessmentType;
+  /**
+   * Optional. Scope of the security monitoring condition. When
+   * RiskAssessmentType is APIGEE, the scope should be set to the environment of
+   * the resources. When RiskAssessmentType is API_HUB, the scope should not be
+   * set.
    *
    * @var string
    */
@@ -69,6 +99,25 @@ class GoogleCloudApigeeV1SecurityMonitoringCondition extends \Google\Model
    */
   public $updateTime;
 
+  /**
+   * Optional. The API Hub gateway monitored by the security monitoring
+   * condition. This should only be set if risk_assessment_type is API_HUB.
+   * Format: `projects/{project}/locations/{location}/plugins/{plugin}/instances
+   * /{instance}`
+   *
+   * @param string $apiHubGateway
+   */
+  public function setApiHubGateway($apiHubGateway)
+  {
+    $this->apiHubGateway = $apiHubGateway;
+  }
+  /**
+   * @return string
+   */
+  public function getApiHubGateway()
+  {
+    return $this->apiHubGateway;
+  }
   /**
    * Output only. The time of the security monitoring condition creation.
    *
@@ -152,8 +201,29 @@ class GoogleCloudApigeeV1SecurityMonitoringCondition extends \Google\Model
     return $this->profile;
   }
   /**
-   * Optional. Scope of the security monitoring condition. For Apigee, the
-   * environment is the scope of the resources.
+   * Optional. The risk assessment type of the security monitoring condition.
+   * Defaults to ADVANCED_API_SECURITY.
+   *
+   * Accepted values: RISK_ASSESSMENT_TYPE_UNSPECIFIED, APIGEE, API_HUB
+   *
+   * @param self::RISK_ASSESSMENT_TYPE_* $riskAssessmentType
+   */
+  public function setRiskAssessmentType($riskAssessmentType)
+  {
+    $this->riskAssessmentType = $riskAssessmentType;
+  }
+  /**
+   * @return self::RISK_ASSESSMENT_TYPE_*
+   */
+  public function getRiskAssessmentType()
+  {
+    return $this->riskAssessmentType;
+  }
+  /**
+   * Optional. Scope of the security monitoring condition. When
+   * RiskAssessmentType is APIGEE, the scope should be set to the environment of
+   * the resources. When RiskAssessmentType is API_HUB, the scope should not be
+   * set.
    *
    * @param string $scope
    */

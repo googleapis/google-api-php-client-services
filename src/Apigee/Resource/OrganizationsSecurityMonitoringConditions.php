@@ -59,6 +59,9 @@ class OrganizationsSecurityMonitoringConditions extends \Google\Service\Resource
    * to delete. Format: `organizations/{org}/securityMonitoringConditions/{securit
    * y_monitoring_condition}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string riskAssessmentType Optional. The risk assessment type of
+   * the security monitoring condition. Defaults to ADVANCED_API_SECURITY.
    * @return GoogleProtobufEmpty
    * @throws \Google\Service\Exception
    */
@@ -75,6 +78,9 @@ class OrganizationsSecurityMonitoringConditions extends \Google\Service\Resource
    * to get. Format: `organizations/{org}/securityMonitoringConditions/{security_m
    * onitoring_condition}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string riskAssessmentType Optional. The risk assessment type of
+   * the security monitoring condition. Defaults to ADVANCED_API_SECURITY.
    * @return GoogleCloudApigeeV1SecurityMonitoringCondition
    * @throws \Google\Service\Exception
    */
@@ -92,13 +98,19 @@ class OrganizationsSecurityMonitoringConditions extends \Google\Service\Resource
    * security monitoring conditions. Format: `organizations/{org}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filter for the monitoring conditions. For
-   * example: `profile=profile1 AND scope=env1`
+   * @opt_param string filter Optional. Filter for the monitoring conditions. When
+   * RiskAssessmentType is APIGEE, monitoring conditions can be filtered by
+   * profile and scope. For example: `profile=profile1 AND scope=env1` When
+   * RiskAssessmentType is API_HUB, monitoring conditions can be filtered by
+   * profile and api_hub_gateway. For example: `profile=profile1 AND
+   * api_hub_gateway=gateway1`
    * @opt_param int pageSize Optional. The maximum number of monitoring conditions
    * to return.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListSecurityMonitoringConditions` call. Provide this to retrieve the
    * subsequent page.
+   * @opt_param string riskAssessmentType Optional. The risk assessment type of
+   * the security monitoring condition. Defaults to ADVANCED_API_SECURITY.
    * @return GoogleCloudApigeeV1ListSecurityMonitoringConditionsResponse
    * @throws \Google\Service\Exception
    */

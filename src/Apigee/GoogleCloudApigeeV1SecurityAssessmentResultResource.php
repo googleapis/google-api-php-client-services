@@ -20,6 +20,26 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
 {
   /**
+   * Gateway type is not specified.
+   */
+  public const API_HUB_GATEWAY_TYPE_API_HUB_GATEWAY_TYPE_UNSPECIFIED = 'API_HUB_GATEWAY_TYPE_UNSPECIFIED';
+  /**
+   * Gateway is Apigee X for API Hub.
+   */
+  public const API_HUB_GATEWAY_TYPE_APIGEE_X = 'APIGEE_X';
+  /**
+   * Gateway is Apigee Hybrid for API Hub.
+   */
+  public const API_HUB_GATEWAY_TYPE_APIGEE_HYBRID = 'APIGEE_HYBRID';
+  /**
+   * Gateway is Apigee Edge for API Hub.
+   */
+  public const API_HUB_GATEWAY_TYPE_APIGEE_EDGE = 'APIGEE_EDGE';
+  /**
+   * Gateway is Apigee OPDK for API Hub.
+   */
+  public const API_HUB_GATEWAY_TYPE_APIGEE_OPDK = 'APIGEE_OPDK';
+  /**
    * ResourceType not specified.
    */
   public const TYPE_RESOURCE_TYPE_UNSPECIFIED = 'RESOURCE_TYPE_UNSPECIFIED';
@@ -33,6 +53,12 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
   public const TYPE_API_HUB_DEPLOYMENT = 'API_HUB_DEPLOYMENT';
   protected $apiHubDeploymentDetailsType = GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails::class;
   protected $apiHubDeploymentDetailsDataType = '';
+  /**
+   * Optional.
+   *
+   * @var string
+   */
+  public $apiHubGatewayType;
   /**
    * Required. Name of this resource. For an Apigee API Proxy, this should be
    * the id of the API proxy. For an API Hub Deployment, this should be the id
@@ -70,6 +96,25 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
   public function getApiHubDeploymentDetails()
   {
     return $this->apiHubDeploymentDetails;
+  }
+  /**
+   * Optional.
+   *
+   * Accepted values: API_HUB_GATEWAY_TYPE_UNSPECIFIED, APIGEE_X, APIGEE_HYBRID,
+   * APIGEE_EDGE, APIGEE_OPDK
+   *
+   * @param self::API_HUB_GATEWAY_TYPE_* $apiHubGatewayType
+   */
+  public function setApiHubGatewayType($apiHubGatewayType)
+  {
+    $this->apiHubGatewayType = $apiHubGatewayType;
+  }
+  /**
+   * @return self::API_HUB_GATEWAY_TYPE_*
+   */
+  public function getApiHubGatewayType()
+  {
+    return $this->apiHubGatewayType;
   }
   /**
    * Required. Name of this resource. For an Apigee API Proxy, this should be
