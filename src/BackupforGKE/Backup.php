@@ -148,6 +148,13 @@ class Backup extends \Google\Model
    */
   public $name;
   /**
+   * Output only. The total number of user managed namespaces contained in the
+   * Backup.
+   *
+   * @var int
+   */
+  public $namespaceCount;
+  /**
    * Output only. If false, Backup will fail when Backup for GKE detects
    * Kubernetes configuration that is non-standard or requires additional setup
    * to restore. Inherited from the parent BackupPlan's permissive_mode value.
@@ -507,6 +514,23 @@ class Backup extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The total number of user managed namespaces contained in the
+   * Backup.
+   *
+   * @param int $namespaceCount
+   */
+  public function setNamespaceCount($namespaceCount)
+  {
+    $this->namespaceCount = $namespaceCount;
+  }
+  /**
+   * @return int
+   */
+  public function getNamespaceCount()
+  {
+    return $this->namespaceCount;
   }
   /**
    * Output only. If false, Backup will fail when Backup for GKE detects

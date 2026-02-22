@@ -125,6 +125,13 @@ class BackupPlan extends \Google\Model
    */
   public $name;
   /**
+   * Output only. The number of user managed namespaces backed up in the last
+   * successful Backup created via this BackupPlan.
+   *
+   * @var int
+   */
+  public $protectedNamespaceCount;
+  /**
    * Output only. The number of Kubernetes Pods backed up in the last successful
    * Backup created via this BackupPlan.
    *
@@ -373,6 +380,23 @@ class BackupPlan extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The number of user managed namespaces backed up in the last
+   * successful Backup created via this BackupPlan.
+   *
+   * @param int $protectedNamespaceCount
+   */
+  public function setProtectedNamespaceCount($protectedNamespaceCount)
+  {
+    $this->protectedNamespaceCount = $protectedNamespaceCount;
+  }
+  /**
+   * @return int
+   */
+  public function getProtectedNamespaceCount()
+  {
+    return $this->protectedNamespaceCount;
   }
   /**
    * Output only. The number of Kubernetes Pods backed up in the last successful
