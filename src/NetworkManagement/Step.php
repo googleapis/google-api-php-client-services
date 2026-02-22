@@ -173,6 +173,11 @@ class Step extends \Google\Model
    */
   public const STATE_SERVERLESS_EXTERNAL_CONNECTION = 'SERVERLESS_EXTERNAL_CONNECTION';
   /**
+   * Forwarding state: Layer 7 packet inspection by the firewall endpoint based
+   * on the configured security profile group.
+   */
+  public const STATE_NGFW_PACKET_INSPECTION = 'NGFW_PACKET_INSPECTION';
+  /**
    * Transition state: packet header translated. The `nat` field is populated
    * with the translation information.
    */
@@ -267,6 +272,8 @@ class Step extends \Google\Model
   protected $natDataType = '';
   protected $networkType = NetworkInfo::class;
   protected $networkDataType = '';
+  protected $ngfwPacketInspectionType = NgfwPacketInspectionInfo::class;
+  protected $ngfwPacketInspectionDataType = '';
   /**
    * Project ID that contains the configuration this step is validating.
    *
@@ -706,6 +713,22 @@ class Step extends \Google\Model
     return $this->network;
   }
   /**
+   * Display information of a layer 7 packet inspection by the firewall.
+   *
+   * @param NgfwPacketInspectionInfo $ngfwPacketInspection
+   */
+  public function setNgfwPacketInspection(NgfwPacketInspectionInfo $ngfwPacketInspection)
+  {
+    $this->ngfwPacketInspection = $ngfwPacketInspection;
+  }
+  /**
+   * @return NgfwPacketInspectionInfo
+   */
+  public function getNgfwPacketInspection()
+  {
+    return $this->ngfwPacketInspection;
+  }
+  /**
    * Project ID that contains the configuration this step is validating.
    *
    * @param string $projectId
@@ -834,9 +857,9 @@ class Step extends \Google\Model
    * ARRIVE_AT_EXTERNAL_LOAD_BALANCER, ARRIVE_AT_HYBRID_SUBNET,
    * ARRIVE_AT_VPN_GATEWAY, ARRIVE_AT_VPN_TUNNEL,
    * ARRIVE_AT_INTERCONNECT_ATTACHMENT, ARRIVE_AT_VPC_CONNECTOR,
-   * DIRECT_VPC_EGRESS_CONNECTION, SERVERLESS_EXTERNAL_CONNECTION, NAT,
-   * SKIP_GKE_POD_IP_MASQUERADING, PROXY_CONNECTION, DELIVER, DROP, FORWARD,
-   * ABORT, VIEWER_PERMISSION_MISSING
+   * DIRECT_VPC_EGRESS_CONNECTION, SERVERLESS_EXTERNAL_CONNECTION,
+   * NGFW_PACKET_INSPECTION, NAT, SKIP_GKE_POD_IP_MASQUERADING,
+   * PROXY_CONNECTION, DELIVER, DROP, FORWARD, ABORT, VIEWER_PERMISSION_MISSING
    *
    * @param self::STATE_* $state
    */
