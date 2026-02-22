@@ -78,6 +78,18 @@ class WorkerPool extends \Google\Collection
    */
   public $defaultPackageSet;
   /**
+   * Optional. IOPS provisioned for the root disk for VMs.
+   *
+   * @var string
+   */
+  public $diskProvisionedIops;
+  /**
+   * Optional. Throughput provisioned for the root disk for VMs.
+   *
+   * @var string
+   */
+  public $diskProvisionedThroughputMibps;
+  /**
    * Size of root disk for VMs, in GB. If zero or unspecified, the service will
    * attempt to choose a reasonable default.
    *
@@ -256,6 +268,38 @@ class WorkerPool extends \Google\Collection
   public function getDefaultPackageSet()
   {
     return $this->defaultPackageSet;
+  }
+  /**
+   * Optional. IOPS provisioned for the root disk for VMs.
+   *
+   * @param string $diskProvisionedIops
+   */
+  public function setDiskProvisionedIops($diskProvisionedIops)
+  {
+    $this->diskProvisionedIops = $diskProvisionedIops;
+  }
+  /**
+   * @return string
+   */
+  public function getDiskProvisionedIops()
+  {
+    return $this->diskProvisionedIops;
+  }
+  /**
+   * Optional. Throughput provisioned for the root disk for VMs.
+   *
+   * @param string $diskProvisionedThroughputMibps
+   */
+  public function setDiskProvisionedThroughputMibps($diskProvisionedThroughputMibps)
+  {
+    $this->diskProvisionedThroughputMibps = $diskProvisionedThroughputMibps;
+  }
+  /**
+   * @return string
+   */
+  public function getDiskProvisionedThroughputMibps()
+  {
+    return $this->diskProvisionedThroughputMibps;
   }
   /**
    * Size of root disk for VMs, in GB. If zero or unspecified, the service will
