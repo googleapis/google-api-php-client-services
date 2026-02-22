@@ -124,6 +124,8 @@ class Volume extends \Google\Collection
    * @var string
    */
   public $capacityGib;
+  protected $cloneDetailsType = CloneDetails::class;
+  protected $cloneDetailsDataType = '';
   /**
    * Output only. Size of the volume cold tier data rounded down to the nearest
    * GiB.
@@ -417,6 +419,23 @@ class Volume extends \Google\Collection
   public function getCapacityGib()
   {
     return $this->capacityGib;
+  }
+  /**
+   * Output only. If this volume is a clone, this field contains details about
+   * the clone.
+   *
+   * @param CloneDetails $cloneDetails
+   */
+  public function setCloneDetails(CloneDetails $cloneDetails)
+  {
+    $this->cloneDetails = $cloneDetails;
+  }
+  /**
+   * @return CloneDetails
+   */
+  public function getCloneDetails()
+  {
+    return $this->cloneDetails;
   }
   /**
    * Output only. Size of the volume cold tier data rounded down to the nearest
