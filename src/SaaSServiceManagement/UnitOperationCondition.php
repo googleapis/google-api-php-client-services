@@ -56,6 +56,14 @@ class UnitOperationCondition extends \Google\Model
    */
   public const TYPE_TYPE_CANCELLED = 'TYPE_CANCELLED';
   /**
+   * Indicates if AppHub app has been created.
+   */
+  public const TYPE_TYPE_APP_CREATED = 'TYPE_APP_CREATED';
+  /**
+   * Indicates if services and workloads have been registered with AppHub.
+   */
+  public const TYPE_TYPE_APP_COMPONENTS_REGISTERED = 'TYPE_APP_COMPONENTS_REGISTERED';
+  /**
    * Required. Last time the condition transited from one status to another.
    *
    * @var string
@@ -159,7 +167,8 @@ class UnitOperationCondition extends \Google\Model
    * Required. Type of the condition.
    *
    * Accepted values: TYPE_UNSPECIFIED, TYPE_SCHEDULED, TYPE_RUNNING,
-   * TYPE_SUCCEEDED, TYPE_CANCELLED
+   * TYPE_SUCCEEDED, TYPE_CANCELLED, TYPE_APP_CREATED,
+   * TYPE_APP_COMPONENTS_REGISTERED
    *
    * @param self::TYPE_* $type
    */
