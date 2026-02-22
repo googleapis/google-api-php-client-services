@@ -75,7 +75,7 @@ class Relation extends \Google\Collection
    * Optional. The connection specifying the credentials to be used to read and
    * write to external storage, such as Cloud Storage. The connection can have
    * the form `{project}.{location}.{connection_id}` or
-   * `projects/{project}/locations/{location}/connections/{connection_id}", or
+   * `projects/{project}/locations/{location}/connections/{connection_id}`, or
    * be set to DEFAULT.
    *
    * @var string
@@ -202,7 +202,7 @@ class Relation extends \Google\Collection
    * Optional. The connection specifying the credentials to be used to read and
    * write to external storage, such as Cloud Storage. The connection can have
    * the form `{project}.{location}.{connection_id}` or
-   * `projects/{project}/locations/{location}/connections/{connection_id}", or
+   * `projects/{project}/locations/{location}/connections/{connection_id}`, or
    * be set to DEFAULT.
    *
    * @param string $connection
