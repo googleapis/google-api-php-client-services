@@ -115,6 +115,8 @@ class VpnGateway extends \Google\Collection
    * @var string
    */
   public $network;
+  protected $paramsType = VpnGatewayParams::class;
+  protected $paramsDataType = '';
   /**
    * Output only. [Output Only] URL of the region where the VPN gateway resides.
    *
@@ -305,6 +307,23 @@ class VpnGateway extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not
+   * persisted as part of resource payload.
+   *
+   * @param VpnGatewayParams $params
+   */
+  public function setParams(VpnGatewayParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return VpnGatewayParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * Output only. [Output Only] URL of the region where the VPN gateway resides.

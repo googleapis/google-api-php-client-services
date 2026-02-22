@@ -160,6 +160,8 @@ class VpnTunnel extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = VpnTunnelParams::class;
+  protected $paramsDataType = '';
   /**
    * URL of the peer side external VPN gateway to which this VPN tunnel is
    * connected. Provided by the client when the VPN tunnel is created. This
@@ -485,6 +487,23 @@ class VpnTunnel extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not
+   * persisted as part of resource payload.
+   *
+   * @param VpnTunnelParams $params
+   */
+  public function setParams(VpnTunnelParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return VpnTunnelParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * URL of the peer side external VPN gateway to which this VPN tunnel is

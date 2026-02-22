@@ -50,6 +50,12 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
    */
   public $enableOsloginMetadataValue;
   /**
+   * Effective gce-container-declaration value at Instance level.
+   *
+   * @var bool
+   */
+  public $gceContainerDeclarationMetadataValue;
+  /**
    * Effective serial-port-enable value at Instance level.
    *
    * @var bool
@@ -147,6 +153,22 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
   public function getEnableOsloginMetadataValue()
   {
     return $this->enableOsloginMetadataValue;
+  }
+  /**
+   * Effective gce-container-declaration value at Instance level.
+   *
+   * @param bool $gceContainerDeclarationMetadataValue
+   */
+  public function setGceContainerDeclarationMetadataValue($gceContainerDeclarationMetadataValue)
+  {
+    $this->gceContainerDeclarationMetadataValue = $gceContainerDeclarationMetadataValue;
+  }
+  /**
+   * @return bool
+   */
+  public function getGceContainerDeclarationMetadataValue()
+  {
+    return $this->gceContainerDeclarationMetadataValue;
   }
   /**
    * Effective serial-port-enable value at Instance level.

@@ -17,7 +17,7 @@
 
 namespace Google\Service\Compute;
 
-class LocationPolicy extends \Google\Model
+class LocationPolicy extends \Google\Collection
 {
   /**
    * GCE picks zones for creating VM instances to fulfill the requested number
@@ -40,6 +40,7 @@ class LocationPolicy extends \Google\Model
    * highly available serving workloads.
    */
   public const TARGET_SHAPE_BALANCED = 'BALANCED';
+  protected $collection_key = 'zones';
   protected $locationsType = LocationPolicyLocation::class;
   protected $locationsDataType = 'map';
   /**
@@ -48,11 +49,19 @@ class LocationPolicy extends \Google\Model
    * @var string
    */
   public $targetShape;
+  protected $zonesType = LocationPolicyZoneConfiguration::class;
+  protected $zonesDataType = 'array';
 
   /**
    * Location configurations mapped by location name. Currently only zone names
    * are supported and must be represented as valid internal URLs, such as
-   * zones/us-central1-a.
+   * zones/us-central1-a. The bulkInsert operation doesn't create instances in
+   * an AI zone, even if an AI zone is available in the specified region. For
+   * example, if you set a DENY preference for us-central1-a, Compute Engine
+   * will consider us-central1-b and us-central1-c for instance creation, but
+   * not us-central1-ai1a. Also, you can't use the locations[] configuration to
+   * allow instance creation in an AI zone. To include an AI zone in bulkInsert
+   * operations, use the locationPolicy.zones[] field.
    *
    * @param LocationPolicyLocation[] $locations
    */
@@ -84,6 +93,24 @@ class LocationPolicy extends \Google\Model
   public function getTargetShape()
   {
     return $this->targetShape;
+  }
+  /**
+   * The bulkInsert operation applies any preferences set in the locations field
+   * to the specific zones listed in the zones field if the same zones are
+   * specified in both fields.
+   *
+   * @param LocationPolicyZoneConfiguration[] $zones
+   */
+  public function setZones($zones)
+  {
+    $this->zones = $zones;
+  }
+  /**
+   * @return LocationPolicyZoneConfiguration[]
+   */
+  public function getZones()
+  {
+    return $this->zones;
   }
 }
 

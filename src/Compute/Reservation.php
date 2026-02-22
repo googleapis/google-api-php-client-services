@@ -175,6 +175,8 @@ class Reservation extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = ReservationParams::class;
+  protected $paramsDataType = '';
   /**
    * Protection tier for the workload which specifies the workload expectations
    * in the event of infrastructure failures at data center (e.g. power and/or
@@ -488,6 +490,23 @@ class Reservation extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Input only. Additional params passed with the request, but not persisted as
+   * part of resource payload.
+   *
+   * @param ReservationParams $params
+   */
+  public function setParams(ReservationParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return ReservationParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * Protection tier for the workload which specifies the workload expectations

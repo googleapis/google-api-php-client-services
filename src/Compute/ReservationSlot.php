@@ -33,6 +33,10 @@ class ReservationSlot extends \Google\Model
   public const STATE_DELETING = 'DELETING';
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
+   * The reservation slot is currently unavailable.
+   */
+  public const STATE_UNAVAILABLE = 'UNAVAILABLE';
+  /**
    * Output only. [Output Only] The creation timestamp, formatted asRFC3339
    * text.
    *
@@ -231,7 +235,7 @@ class ReservationSlot extends \Google\Model
   /**
    * Output only. [Output Only] The state of the reservation slot.
    *
-   * Accepted values: ACTIVE, CREATING, DELETING, STATE_UNSPECIFIED
+   * Accepted values: ACTIVE, CREATING, DELETING, STATE_UNSPECIFIED, UNAVAILABLE
    *
    * @param self::STATE_* $state
    */

@@ -176,6 +176,8 @@ class Backend extends \Google\Collection
    * @var float
    */
   public $maxUtilization;
+  protected $orchestrationInfoType = BackendBackendOrchestrationInfo::class;
+  protected $orchestrationInfoDataType = '';
   /**
    * This field indicates whether this backend should be fully utilized before
    * sending traffic to backends with default preference. The possible values
@@ -452,6 +454,22 @@ class Backend extends \Google\Collection
   public function getMaxUtilization()
   {
     return $this->maxUtilization;
+  }
+  /**
+   * Information about the resource or system that manages the backend.
+   *
+   * @param BackendBackendOrchestrationInfo $orchestrationInfo
+   */
+  public function setOrchestrationInfo(BackendBackendOrchestrationInfo $orchestrationInfo)
+  {
+    $this->orchestrationInfo = $orchestrationInfo;
+  }
+  /**
+   * @return BackendBackendOrchestrationInfo
+   */
+  public function getOrchestrationInfo()
+  {
+    return $this->orchestrationInfo;
   }
   /**
    * This field indicates whether this backend should be fully utilized before

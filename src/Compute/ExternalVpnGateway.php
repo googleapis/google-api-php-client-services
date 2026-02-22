@@ -113,6 +113,8 @@ class ExternalVpnGateway extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = ExternalVpnGatewayParams::class;
+  protected $paramsDataType = '';
   /**
    * Indicates the user-supplied redundancy type of this external VPN gateway.
    *
@@ -277,6 +279,23 @@ class ExternalVpnGateway extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not
+   * persisted as part of resource payload.
+   *
+   * @param ExternalVpnGatewayParams $params
+   */
+  public function setParams(ExternalVpnGatewayParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return ExternalVpnGatewayParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * Indicates the user-supplied redundancy type of this external VPN gateway.

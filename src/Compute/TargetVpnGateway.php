@@ -100,6 +100,8 @@ class TargetVpnGateway extends \Google\Collection
    * @var string
    */
   public $network;
+  protected $paramsType = TargetVpnGatewayParams::class;
+  protected $paramsDataType = '';
   /**
    * [Output Only] URL of the region where the target VPN gateway resides. You
    * must specify this field as part of the HTTP request URL. It is not settable
@@ -295,6 +297,23 @@ class TargetVpnGateway extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not
+   * persisted as part of resource payload.
+   *
+   * @param TargetVpnGatewayParams $params
+   */
+  public function setParams(TargetVpnGatewayParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return TargetVpnGatewayParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * [Output Only] URL of the region where the target VPN gateway resides. You

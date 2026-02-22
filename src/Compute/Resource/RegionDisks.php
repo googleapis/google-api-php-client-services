@@ -544,8 +544,8 @@ class RegionDisks extends \Google\Service\Resource
   }
   /**
    * Update the specified disk with the data included in the request. Update is
-   * performed only on selected fields included as part of update-mask. Only the
-   * following fields can be modified: user_license. (regionDisks.update)
+   * performed only on selected fields included as part of update-mask.
+   * (regionDisks.update)
    *
    * @param string $project Project ID for this request.
    * @param string $region The name of the region for this request.

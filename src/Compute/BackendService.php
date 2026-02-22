@@ -506,6 +506,8 @@ class BackendService extends \Google\Collection
   public $network;
   protected $networkPassThroughLbTrafficPolicyType = BackendServiceNetworkPassThroughLbTrafficPolicy::class;
   protected $networkPassThroughLbTrafficPolicyDataType = '';
+  protected $orchestrationInfoType = BackendServiceOrchestrationInfo::class;
+  protected $orchestrationInfoDataType = '';
   protected $outlierDetectionType = OutlierDetection::class;
   protected $outlierDetectionDataType = '';
   protected $paramsType = BackendServiceParams::class;
@@ -1392,6 +1394,22 @@ class BackendService extends \Google\Collection
   public function getNetworkPassThroughLbTrafficPolicy()
   {
     return $this->networkPassThroughLbTrafficPolicy;
+  }
+  /**
+   * Information about the resource or system that manages the backend service.
+   *
+   * @param BackendServiceOrchestrationInfo $orchestrationInfo
+   */
+  public function setOrchestrationInfo(BackendServiceOrchestrationInfo $orchestrationInfo)
+  {
+    $this->orchestrationInfo = $orchestrationInfo;
+  }
+  /**
+   * @return BackendServiceOrchestrationInfo
+   */
+  public function getOrchestrationInfo()
+  {
+    return $this->orchestrationInfo;
   }
   /**
    * Settings controlling the ejection of unhealthy backend endpoints from the
