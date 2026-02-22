@@ -355,6 +355,37 @@ class CloudDataplex extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'lookupEntryLinks' => [
+              'path' => 'v1/{+name}:lookupEntryLinks',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'entry' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'entryLinkTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'entryMode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'searchEntries' => [
               'path' => 'v1/{+name}:searchEntries',
               'httpMethod' => 'POST',

@@ -17,14 +17,17 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataQualityRule extends \Google\Model
+class GoogleCloudDataplexV1DataQualityRule extends \Google\Collection
 {
+  protected $collection_key = 'debugQueries';
   /**
    * Optional. The unnested column which this rule is evaluated against.
    *
    * @var string
    */
   public $column;
+  protected $debugQueriesType = GoogleCloudDataplexV1DataQualityRuleDebugQuery::class;
+  protected $debugQueriesDataType = 'array';
   /**
    * Optional. Description of the rule. The maximum length is 1,024 characters.
    *
@@ -104,6 +107,23 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Model
   public function getColumn()
   {
     return $this->column;
+  }
+  /**
+   * Optional. Specifies the debug queries for this rule. Currently, only one
+   * query is supported, but this may be expanded in the future.
+   *
+   * @param GoogleCloudDataplexV1DataQualityRuleDebugQuery[] $debugQueries
+   */
+  public function setDebugQueries($debugQueries)
+  {
+    $this->debugQueries = $debugQueries;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataQualityRuleDebugQuery[]
+   */
+  public function getDebugQueries()
+  {
+    return $this->debugQueries;
   }
   /**
    * Optional. Description of the rule. The maximum length is 1,024 characters.

@@ -17,8 +17,9 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataQualityRuleResult extends \Google\Model
+class GoogleCloudDataplexV1DataQualityRuleResult extends \Google\Collection
 {
+  protected $collection_key = 'debugQueriesResultSets';
   /**
    * Output only. The number of rows returned by the SQL statement in a SQL
    * assertion rule.This field is only valid for SQL assertion rules.
@@ -26,6 +27,8 @@ class GoogleCloudDataplexV1DataQualityRuleResult extends \Google\Model
    * @var string
    */
   public $assertionRowCount;
+  protected $debugQueriesResultSetsType = GoogleCloudDataplexV1DataQualityRuleResultDebugQueryResultSet::class;
+  protected $debugQueriesResultSetsDataType = 'array';
   /**
    * Output only. The number of rows a rule was evaluated against.This field is
    * only valid for row-level type rules.Evaluated count can be configured to
@@ -89,6 +92,23 @@ class GoogleCloudDataplexV1DataQualityRuleResult extends \Google\Model
   public function getAssertionRowCount()
   {
     return $this->assertionRowCount;
+  }
+  /**
+   * Output only. Contains the results of all debug queries for this rule. The
+   * number of result sets will correspond to the number of debug_queries.
+   *
+   * @param GoogleCloudDataplexV1DataQualityRuleResultDebugQueryResultSet[] $debugQueriesResultSets
+   */
+  public function setDebugQueriesResultSets($debugQueriesResultSets)
+  {
+    $this->debugQueriesResultSets = $debugQueriesResultSets;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataQualityRuleResultDebugQueryResultSet[]
+   */
+  public function getDebugQueriesResultSets()
+  {
+    return $this->debugQueriesResultSets;
   }
   /**
    * Output only. The number of rows a rule was evaluated against.This field is

@@ -18,6 +18,7 @@
 namespace Google\Service\CloudDataplex\Resource;
 
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1Entry;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1LookupEntryLinksResponse;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1SearchEntriesResponse;
 use Google\Service\CloudDataplex\GoogleCloudLocationListLocationsResponse;
 use Google\Service\CloudDataplex\GoogleCloudLocationLocation;
@@ -102,6 +103,39 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('lookupEntry', [$params], GoogleCloudDataplexV1Entry::class);
+  }
+  /**
+   * Looks up Entry Links referencing the specified Entry.
+   * (locations.lookupEntryLinks)
+   *
+   * @param string $name Required. The project to which the request should be
+   * attributed to Format:
+   * projects/{project_id_or_number}/locations/{location_id}.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string entry Required. The resource name of the referred Entry.
+   * Format: projects/{project_id_or_number}/locations/{location_id}/entryGroups/{
+   * entry_group_id}/entries/{entry_id}. Entry Links which references this entry
+   * will be returned in the response.
+   * @opt_param string entryLinkTypes Entry link types to filter the response by.
+   * If empty, all entry link types will be returned. At most 10 entry link types
+   * can be specified.
+   * @opt_param string entryMode Mode of entry reference.
+   * @opt_param int pageSize Maximum number of EntryLinks to return. The service
+   * may return fewer than this value. If unspecified, at most 10 EntryLinks will
+   * be returned. The maximum value is 10; values above 10 will be coerced to 10.
+   * @opt_param string pageToken Page token received from a previous
+   * LookupEntryLinks call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters that are provided to the LookupEntryLinks
+   * request must match the call that provided the page token.
+   * @return GoogleCloudDataplexV1LookupEntryLinksResponse
+   * @throws \Google\Service\Exception
+   */
+  public function lookupEntryLinks($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('lookupEntryLinks', [$params], GoogleCloudDataplexV1LookupEntryLinksResponse::class);
   }
   /**
    * Searches for Entries matching the given query and scope.
