@@ -17,6 +17,8 @@
 
 namespace Google\Service\DiscoveryEngine\Resource;
 
+use Google\Service\DiscoveryEngine\A2aV1AgentCard;
+
 /**
  * The "agents" collection of methods.
  * Typical usage is:
@@ -27,6 +29,21 @@ namespace Google\Service\DiscoveryEngine\Resource;
  */
 class ProjectsLocationsCollectionsEnginesAssistantsAgents extends \Google\Service\Resource
 {
+  /**
+   * GetAgentCard returns the agent card for the agent. (agents.getCard)
+   *
+   * @param string $tenant Optional tenant, provided as a path parameter.
+   * Experimental, might still change for 1.0 release.
+   * @param array $optParams Optional parameters.
+   * @return A2aV1AgentCard
+   * @throws \Google\Service\Exception
+   */
+  public function getCard($tenant, $optParams = [])
+  {
+    $params = ['tenant' => $tenant];
+    $params = array_merge($params, $optParams);
+    return $this->call('getCard', [$params], A2aV1AgentCard::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

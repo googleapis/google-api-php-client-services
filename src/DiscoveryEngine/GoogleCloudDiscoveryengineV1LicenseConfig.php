@@ -65,6 +65,10 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
    */
   public const SUBSCRIPTION_TERM_SUBSCRIPTION_TERM_THREE_YEARS = 'SUBSCRIPTION_TERM_THREE_YEARS';
   /**
+   * Custom term. Must set the end_date.
+   */
+  public const SUBSCRIPTION_TERM_SUBSCRIPTION_TERM_CUSTOM = 'SUBSCRIPTION_TERM_CUSTOM';
+  /**
    * Default value.
    */
   public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_UNSPECIFIED = 'SUBSCRIPTION_TIER_UNSPECIFIED';
@@ -362,7 +366,7 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
    *
    * Accepted values: SUBSCRIPTION_TERM_UNSPECIFIED,
    * SUBSCRIPTION_TERM_ONE_MONTH, SUBSCRIPTION_TERM_ONE_YEAR,
-   * SUBSCRIPTION_TERM_THREE_YEARS
+   * SUBSCRIPTION_TERM_THREE_YEARS, SUBSCRIPTION_TERM_CUSTOM
    *
    * @param self::SUBSCRIPTION_TERM_* $subscriptionTerm
    */
