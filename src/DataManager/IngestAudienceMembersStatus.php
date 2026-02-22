@@ -23,8 +23,12 @@ class IngestAudienceMembersStatus extends \Google\Model
   protected $mobileDataIngestionStatusDataType = '';
   protected $pairDataIngestionStatusType = IngestPairDataStatus::class;
   protected $pairDataIngestionStatusDataType = '';
+  protected $ppidDataIngestionStatusType = IngestPpidDataStatus::class;
+  protected $ppidDataIngestionStatusDataType = '';
   protected $userDataIngestionStatusType = IngestUserDataStatus::class;
   protected $userDataIngestionStatusDataType = '';
+  protected $userIdDataIngestionStatusType = IngestUserIdDataStatus::class;
+  protected $userIdDataIngestionStatusDataType = '';
 
   /**
    * The status of the mobile data ingestion to the destination.
@@ -59,6 +63,22 @@ class IngestAudienceMembersStatus extends \Google\Model
     return $this->pairDataIngestionStatus;
   }
   /**
+   * The status of the ppid data ingestion to the destination.
+   *
+   * @param IngestPpidDataStatus $ppidDataIngestionStatus
+   */
+  public function setPpidDataIngestionStatus(IngestPpidDataStatus $ppidDataIngestionStatus)
+  {
+    $this->ppidDataIngestionStatus = $ppidDataIngestionStatus;
+  }
+  /**
+   * @return IngestPpidDataStatus
+   */
+  public function getPpidDataIngestionStatus()
+  {
+    return $this->ppidDataIngestionStatus;
+  }
+  /**
    * The status of the user data ingestion to the destination.
    *
    * @param IngestUserDataStatus $userDataIngestionStatus
@@ -73,6 +93,22 @@ class IngestAudienceMembersStatus extends \Google\Model
   public function getUserDataIngestionStatus()
   {
     return $this->userDataIngestionStatus;
+  }
+  /**
+   * The status of the user id data ingestion to the destination.
+   *
+   * @param IngestUserIdDataStatus $userIdDataIngestionStatus
+   */
+  public function setUserIdDataIngestionStatus(IngestUserIdDataStatus $userIdDataIngestionStatus)
+  {
+    $this->userIdDataIngestionStatus = $userIdDataIngestionStatus;
+  }
+  /**
+   * @return IngestUserIdDataStatus
+   */
+  public function getUserIdDataIngestionStatus()
+  {
+    return $this->userIdDataIngestionStatus;
   }
 }
 
