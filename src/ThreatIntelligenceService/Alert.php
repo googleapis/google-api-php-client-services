@@ -70,12 +70,6 @@ class Alert extends \Google\Collection
    * @var string
    */
   public $aiSummary;
-  /**
-   * Output only. Assets that are impacted by this alert.
-   *
-   * @var string[]
-   */
-  public $assets;
   protected $auditType = Audit::class;
   protected $auditDataType = '';
   /**
@@ -169,22 +163,6 @@ class Alert extends \Google\Collection
   public function getAiSummary()
   {
     return $this->aiSummary;
-  }
-  /**
-   * Output only. Assets that are impacted by this alert.
-   *
-   * @param string[] $assets
-   */
-  public function setAssets($assets)
-  {
-    $this->assets = $assets;
-  }
-  /**
-   * @return string[]
-   */
-  public function getAssets()
-  {
-    return $this->assets;
   }
   /**
    * Output only. Audit information for the alert.

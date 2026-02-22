@@ -29,10 +29,6 @@ use Google\Service\ThreatIntelligenceService\MarkAlertAsReadRequest;
 use Google\Service\ThreatIntelligenceService\MarkAlertAsResolvedRequest;
 use Google\Service\ThreatIntelligenceService\MarkAlertAsTrackedExternallyRequest;
 use Google\Service\ThreatIntelligenceService\MarkAlertAsTriagedRequest;
-use Google\Service\ThreatIntelligenceService\RefreshAlertUriStatusRequest;
-use Google\Service\ThreatIntelligenceService\RefreshAlertUriStatusResponse;
-use Google\Service\ThreatIntelligenceService\ReportAlertUriRequest;
-use Google\Service\ThreatIntelligenceService\ReportAlertUriResponse;
 
 /**
  * The "alerts" collection of methods.
@@ -195,38 +191,6 @@ class ProjectsAlerts extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('read', [$params], Alert::class);
-  }
-  /**
-   * Return the status of a URI submitted to Google WebRisk.
-   * (alerts.refreshUriStatus)
-   *
-   * @param string $name Required. Name of alert to refresh status from WebRisk
-   * @param RefreshAlertUriStatusRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return RefreshAlertUriStatusResponse
-   * @throws \Google\Service\Exception
-   */
-  public function refreshUriStatus($name, RefreshAlertUriStatusRequest $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('refreshUriStatus', [$params], RefreshAlertUriStatusResponse::class);
-  }
-  /**
-   * Report the URI associated with an alert to Google WebRisk.
-   * (alerts.reportAlertUri)
-   *
-   * @param string $name Required. Name of alert to submit to WebRisk.
-   * @param ReportAlertUriRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return ReportAlertUriResponse
-   * @throws \Google\Service\Exception
-   */
-  public function reportAlertUri($name, ReportAlertUriRequest $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('reportAlertUri', [$params], ReportAlertUriResponse::class);
   }
   /**
    * Marks an alert to closed state - RESOLVED. (alerts.resolve)

@@ -19,8 +19,6 @@ namespace Google\Service\ThreatIntelligenceService;
 
 class ConfigurationDetail extends \Google\Model
 {
-  protected $assetDiscoveryType = AssetDiscoveryConfig::class;
-  protected $assetDiscoveryDataType = '';
   protected $customerProfileType = CustomerProfileConfig::class;
   protected $customerProfileDataType = '';
   /**
@@ -30,29 +28,7 @@ class ConfigurationDetail extends \Google\Model
    * @var string
    */
   public $detailType;
-  protected $domainMonitoringType = DomainMonitoringConfig::class;
-  protected $domainMonitoringDataType = '';
-  protected $initialAccessBrokerType = InitialAccessBrokerConfig::class;
-  protected $initialAccessBrokerDataType = '';
-  protected $technologyWatchlistType = TechnologyWatchListConfig::class;
-  protected $technologyWatchlistDataType = '';
 
-  /**
-   * Asset Discovery detail config.
-   *
-   * @param AssetDiscoveryConfig $assetDiscovery
-   */
-  public function setAssetDiscovery(AssetDiscoveryConfig $assetDiscovery)
-  {
-    $this->assetDiscovery = $assetDiscovery;
-  }
-  /**
-   * @return AssetDiscoveryConfig
-   */
-  public function getAssetDiscovery()
-  {
-    return $this->assetDiscovery;
-  }
   /**
    * Customer Profile detail config.
    *
@@ -85,54 +61,6 @@ class ConfigurationDetail extends \Google\Model
   public function getDetailType()
   {
     return $this->detailType;
-  }
-  /**
-   * Domain Monitoring detail config.
-   *
-   * @param DomainMonitoringConfig $domainMonitoring
-   */
-  public function setDomainMonitoring(DomainMonitoringConfig $domainMonitoring)
-  {
-    $this->domainMonitoring = $domainMonitoring;
-  }
-  /**
-   * @return DomainMonitoringConfig
-   */
-  public function getDomainMonitoring()
-  {
-    return $this->domainMonitoring;
-  }
-  /**
-   * Initial Access Broker (IAB) detail config.
-   *
-   * @param InitialAccessBrokerConfig $initialAccessBroker
-   */
-  public function setInitialAccessBroker(InitialAccessBrokerConfig $initialAccessBroker)
-  {
-    $this->initialAccessBroker = $initialAccessBroker;
-  }
-  /**
-   * @return InitialAccessBrokerConfig
-   */
-  public function getInitialAccessBroker()
-  {
-    return $this->initialAccessBroker;
-  }
-  /**
-   * Technology Watchlist detail config.
-   *
-   * @param TechnologyWatchListConfig $technologyWatchlist
-   */
-  public function setTechnologyWatchlist(TechnologyWatchListConfig $technologyWatchlist)
-  {
-    $this->technologyWatchlist = $technologyWatchlist;
-  }
-  /**
-   * @return TechnologyWatchListConfig
-   */
-  public function getTechnologyWatchlist()
-  {
-    return $this->technologyWatchlist;
   }
 }
 

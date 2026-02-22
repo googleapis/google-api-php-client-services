@@ -19,8 +19,6 @@ namespace Google\Service\ThreatIntelligenceService;
 
 class FindingDetail extends \Google\Model
 {
-  protected $compromisedCredentialsType = CompromisedCredentialsFindingDetail::class;
-  protected $compromisedCredentialsDataType = '';
   protected $dataLeakType = DataLeakFindingDetail::class;
   protected $dataLeakDataType = '';
   /**
@@ -30,35 +28,11 @@ class FindingDetail extends \Google\Model
    * @var string
    */
   public $detailType;
-  protected $inbandVulnerabilityType = InbandVulnerabilityFindingDetail::class;
-  protected $inbandVulnerabilityDataType = '';
   protected $initialAccessBrokerType = InitialAccessBrokerFindingDetail::class;
   protected $initialAccessBrokerDataType = '';
   protected $insiderThreatType = InsiderThreatFindingDetail::class;
   protected $insiderThreatDataType = '';
-  protected $misconfigurationType = MisconfigurationFindingDetail::class;
-  protected $misconfigurationDataType = '';
-  protected $suspiciousDomainType = SuspiciousDomainFindingDetail::class;
-  protected $suspiciousDomainDataType = '';
-  protected $targetTechnologyType = TargetTechnologyFindingDetail::class;
-  protected $targetTechnologyDataType = '';
 
-  /**
-   * Compromised Credentials detail type.
-   *
-   * @param CompromisedCredentialsFindingDetail $compromisedCredentials
-   */
-  public function setCompromisedCredentials(CompromisedCredentialsFindingDetail $compromisedCredentials)
-  {
-    $this->compromisedCredentials = $compromisedCredentials;
-  }
-  /**
-   * @return CompromisedCredentialsFindingDetail
-   */
-  public function getCompromisedCredentials()
-  {
-    return $this->compromisedCredentials;
-  }
   /**
    * Data Leak finding detail type.
    *
@@ -93,22 +67,6 @@ class FindingDetail extends \Google\Model
     return $this->detailType;
   }
   /**
-   * Inband vulnerability detail type.
-   *
-   * @param InbandVulnerabilityFindingDetail $inbandVulnerability
-   */
-  public function setInbandVulnerability(InbandVulnerabilityFindingDetail $inbandVulnerability)
-  {
-    $this->inbandVulnerability = $inbandVulnerability;
-  }
-  /**
-   * @return InbandVulnerabilityFindingDetail
-   */
-  public function getInbandVulnerability()
-  {
-    return $this->inbandVulnerability;
-  }
-  /**
    * Initial Access Broker finding detail type.
    *
    * @param InitialAccessBrokerFindingDetail $initialAccessBroker
@@ -139,54 +97,6 @@ class FindingDetail extends \Google\Model
   public function getInsiderThreat()
   {
     return $this->insiderThreat;
-  }
-  /**
-   * Misconfiguration finding detail type.
-   *
-   * @param MisconfigurationFindingDetail $misconfiguration
-   */
-  public function setMisconfiguration(MisconfigurationFindingDetail $misconfiguration)
-  {
-    $this->misconfiguration = $misconfiguration;
-  }
-  /**
-   * @return MisconfigurationFindingDetail
-   */
-  public function getMisconfiguration()
-  {
-    return $this->misconfiguration;
-  }
-  /**
-   * Domain Monitoring finding detail type.
-   *
-   * @param SuspiciousDomainFindingDetail $suspiciousDomain
-   */
-  public function setSuspiciousDomain(SuspiciousDomainFindingDetail $suspiciousDomain)
-  {
-    $this->suspiciousDomain = $suspiciousDomain;
-  }
-  /**
-   * @return SuspiciousDomainFindingDetail
-   */
-  public function getSuspiciousDomain()
-  {
-    return $this->suspiciousDomain;
-  }
-  /**
-   * Technology Watchlist finding detail type.
-   *
-   * @param TargetTechnologyFindingDetail $targetTechnology
-   */
-  public function setTargetTechnology(TargetTechnologyFindingDetail $targetTechnology)
-  {
-    $this->targetTechnology = $targetTechnology;
-  }
-  /**
-   * @return TargetTechnologyFindingDetail
-   */
-  public function getTargetTechnology()
-  {
-    return $this->targetTechnology;
   }
 }
 

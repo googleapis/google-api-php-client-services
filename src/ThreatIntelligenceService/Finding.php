@@ -32,13 +32,6 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $alert;
-  /**
-   * Optional. Optional - asset name if known. Format:
-   * vaults/{vault}/assets/{asset}
-   *
-   * @var string
-   */
-  public $asset;
   protected $auditType = Audit::class;
   protected $auditDataType = '';
   /**
@@ -57,15 +50,8 @@ class Finding extends \Google\Collection
    */
   public $displayName;
   /**
-   * Optional. Optional - name of the issue that this finding is bound to.
-   * Format: vaults/{vault}/issues/{issue}
-   *
-   * @var string
-   */
-  public $issue;
-  /**
    * Identifier. Server generated name for the finding (leave clear during
-   * creation). Format: vaults/{vault}/findings/{finding}
+   * creation). Format: projects/{project}/findings/{finding}
    *
    * @var string
    */
@@ -127,23 +113,6 @@ class Finding extends \Google\Collection
   public function getAlert()
   {
     return $this->alert;
-  }
-  /**
-   * Optional. Optional - asset name if known. Format:
-   * vaults/{vault}/assets/{asset}
-   *
-   * @param string $asset
-   */
-  public function setAsset($asset)
-  {
-    $this->asset = $asset;
-  }
-  /**
-   * @return string
-   */
-  public function getAsset()
-  {
-    return $this->asset;
   }
   /**
    * Output only. Audit data about the finding.
@@ -211,25 +180,8 @@ class Finding extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Optional. Optional - name of the issue that this finding is bound to.
-   * Format: vaults/{vault}/issues/{issue}
-   *
-   * @param string $issue
-   */
-  public function setIssue($issue)
-  {
-    $this->issue = $issue;
-  }
-  /**
-   * @return string
-   */
-  public function getIssue()
-  {
-    return $this->issue;
-  }
-  /**
    * Identifier. Server generated name for the finding (leave clear during
-   * creation). Format: vaults/{vault}/findings/{finding}
+   * creation). Format: projects/{project}/findings/{finding}
    *
    * @param string $name
    */

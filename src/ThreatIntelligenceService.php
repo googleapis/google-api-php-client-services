@@ -200,26 +200,6 @@ class ThreatIntelligenceService extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'refreshUriStatus' => [
-              'path' => 'v1beta/{+name}:refreshUriStatus',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'reportAlertUri' => [
-              'path' => 'v1beta/{+name}:reportAlertUri',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'resolve' => [
               'path' => 'v1beta/{+name}:resolve',
               'httpMethod' => 'POST',

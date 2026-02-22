@@ -53,7 +53,7 @@ class Configuration extends \Google\Model
   public $displayName;
   /**
    * Identifier. Server generated name for the configuration. format is
-   * vaults/{vault}/configurations/{configuration}
+   * projects/{project}/configurations/{configuration}
    *
    * @var string
    */
@@ -144,7 +144,7 @@ class Configuration extends \Google\Model
   }
   /**
    * Identifier. Server generated name for the configuration. format is
-   * vaults/{vault}/configurations/{configuration}
+   * projects/{project}/configurations/{configuration}
    *
    * @param string $name
    */

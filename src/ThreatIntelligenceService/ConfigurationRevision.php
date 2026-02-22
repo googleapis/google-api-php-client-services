@@ -27,7 +27,7 @@ class ConfigurationRevision extends \Google\Model
   public $createTime;
   /**
    * Identifier. The name of the ConfigurationRevision Format:
-   * vaults//configurations//revisions/ OR projects//configurations//revisions/
+   * projects//configurations//revisions/
    *
    * @var string
    */
@@ -53,7 +53,7 @@ class ConfigurationRevision extends \Google\Model
   }
   /**
    * Identifier. The name of the ConfigurationRevision Format:
-   * vaults//configurations//revisions/ OR projects//configurations//revisions/
+   * projects//configurations//revisions/
    *
    * @param string $name
    */

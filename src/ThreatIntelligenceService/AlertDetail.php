@@ -32,10 +32,6 @@ class AlertDetail extends \Google\Model
   protected $initialAccessBrokerDataType = '';
   protected $insiderThreatType = InsiderThreatAlertDetail::class;
   protected $insiderThreatDataType = '';
-  protected $suspiciousDomainType = SuspiciousDomainAlertDetail::class;
-  protected $suspiciousDomainDataType = '';
-  protected $targetTechnologyType = TargetTechnologyAlertDetail::class;
-  protected $targetTechnologyDataType = '';
 
   /**
    * Data Leak alert detail type.
@@ -101,38 +97,6 @@ class AlertDetail extends \Google\Model
   public function getInsiderThreat()
   {
     return $this->insiderThreat;
-  }
-  /**
-   * Domain Monitoring alert detail type.
-   *
-   * @param SuspiciousDomainAlertDetail $suspiciousDomain
-   */
-  public function setSuspiciousDomain(SuspiciousDomainAlertDetail $suspiciousDomain)
-  {
-    $this->suspiciousDomain = $suspiciousDomain;
-  }
-  /**
-   * @return SuspiciousDomainAlertDetail
-   */
-  public function getSuspiciousDomain()
-  {
-    return $this->suspiciousDomain;
-  }
-  /**
-   * Technology Watchlist alert detail type.
-   *
-   * @param TargetTechnologyAlertDetail $targetTechnology
-   */
-  public function setTargetTechnology(TargetTechnologyAlertDetail $targetTechnology)
-  {
-    $this->targetTechnology = $targetTechnology;
-  }
-  /**
-   * @return TargetTechnologyAlertDetail
-   */
-  public function getTargetTechnology()
-  {
-    return $this->targetTechnology;
   }
 }
 
