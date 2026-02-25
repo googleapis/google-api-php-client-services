@@ -103,6 +103,14 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
    */
   public $configurableBillingApproach;
   /**
+   * Optional. Maps a connector ID (e.g., "hybrid-github", "shopify") to tenant-
+   * specific information required for that connector. The structure of the
+   * tenant information string is connector-dependent.
+   *
+   * @var string[]
+   */
+  public $connectorTenantInfo;
+  /**
    * Output only. Timestamp the Recommendation Engine was created at.
    *
    * @var string
@@ -307,6 +315,24 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
   public function getConfigurableBillingApproach()
   {
     return $this->configurableBillingApproach;
+  }
+  /**
+   * Optional. Maps a connector ID (e.g., "hybrid-github", "shopify") to tenant-
+   * specific information required for that connector. The structure of the
+   * tenant information string is connector-dependent.
+   *
+   * @param string[] $connectorTenantInfo
+   */
+  public function setConnectorTenantInfo($connectorTenantInfo)
+  {
+    $this->connectorTenantInfo = $connectorTenantInfo;
+  }
+  /**
+   * @return string[]
+   */
+  public function getConnectorTenantInfo()
+  {
+    return $this->connectorTenantInfo;
   }
   /**
    * Output only. Timestamp the Recommendation Engine was created at.

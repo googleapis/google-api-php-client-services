@@ -139,9 +139,8 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
   protected $naturalLanguageQueryUnderstandingSpecDataType = '';
   /**
    * Optional. The maximum number of results to retrieve from each data store.
-   * If not specified, it will use the
-   * SearchRequest.data_store_specs.num_results if provided, otherwise there is
-   * no limit.
+   * If not specified, it will use the SearchRequest.DataStoreSpec.num_results
+   * if provided, otherwise there is no limit.
    *
    * @var int
    */
@@ -690,9 +689,8 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
   }
   /**
    * Optional. The maximum number of results to retrieve from each data store.
-   * If not specified, it will use the
-   * SearchRequest.data_store_specs.num_results if provided, otherwise there is
-   * no limit.
+   * If not specified, it will use the SearchRequest.DataStoreSpec.num_results
+   * if provided, otherwise there is no limit.
    *
    * @param int $numResultsPerDataStore
    */
