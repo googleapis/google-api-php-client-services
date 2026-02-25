@@ -66,6 +66,11 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    */
   public const FINDING_CLASS_CHOKEPOINT = 'CHOKEPOINT';
   /**
+   * Describes a potential security risk due to the resource being exposed to
+   * the internet.
+   */
+  public const FINDING_CLASS_EXTERNAL_EXPOSURE = 'EXTERNAL_EXPOSURE';
+  /**
    * Unspecified.
    */
   public const MUTE_MUTE_UNSPECIFIED = 'MUTE_UNSPECIFIED';
@@ -239,6 +244,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public $eventTime;
   protected $exfiltrationType = GoogleCloudSecuritycenterV2Exfiltration::class;
   protected $exfiltrationDataType = '';
+  protected $externalExposureType = GoogleCloudSecuritycenterV2ExternalExposure::class;
+  protected $externalExposureDataType = '';
   protected $externalSystemsType = GoogleCloudSecuritycenterV2ExternalSystem::class;
   protected $externalSystemsDataType = 'map';
   /**
@@ -884,6 +891,22 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
     return $this->exfiltration;
   }
   /**
+   * External exposure associated with the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2ExternalExposure $externalExposure
+   */
+  public function setExternalExposure(GoogleCloudSecuritycenterV2ExternalExposure $externalExposure)
+  {
+    $this->externalExposure = $externalExposure;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2ExternalExposure
+   */
+  public function getExternalExposure()
+  {
+    return $this->externalExposure;
+  }
+  /**
    * Output only. Third party SIEM/SOAR fields within SCC, contains external
    * system information and external system finding fields.
    *
@@ -939,7 +962,7 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    *
    * Accepted values: FINDING_CLASS_UNSPECIFIED, THREAT, VULNERABILITY,
    * MISCONFIGURATION, OBSERVATION, SCC_ERROR, POSTURE_VIOLATION,
-   * TOXIC_COMBINATION, SENSITIVE_DATA_RISK, CHOKEPOINT
+   * TOXIC_COMBINATION, SENSITIVE_DATA_RISK, CHOKEPOINT, EXTERNAL_EXPOSURE
    *
    * @param self::FINDING_CLASS_* $findingClass
    */
