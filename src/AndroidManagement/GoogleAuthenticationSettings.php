@@ -38,7 +38,9 @@ class GoogleAuthenticationSettings extends \Google\Model
    * set only via the Google Admin Console. Google authentication can be used
    * with signin_url In the case where Google authentication is required and a
    * signin_url is specified, Google authentication will be launched before
-   * signin_url.
+   * signin_url. This value is overridden by
+   * EnrollmentToken.googleAuthenticationOptions and
+   * SigninDetail.googleAuthenticationOptions, if they are set.
    *
    * @var string
    */
@@ -51,7 +53,9 @@ class GoogleAuthenticationSettings extends \Google\Model
    * set only via the Google Admin Console. Google authentication can be used
    * with signin_url In the case where Google authentication is required and a
    * signin_url is specified, Google authentication will be launched before
-   * signin_url.
+   * signin_url. This value is overridden by
+   * EnrollmentToken.googleAuthenticationOptions and
+   * SigninDetail.googleAuthenticationOptions, if they are set.
    *
    * Accepted values: GOOGLE_AUTHENTICATION_REQUIRED_UNSPECIFIED, NOT_REQUIRED,
    * REQUIRED
