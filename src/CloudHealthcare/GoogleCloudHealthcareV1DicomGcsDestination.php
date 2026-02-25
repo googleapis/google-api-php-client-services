@@ -27,15 +27,39 @@ class GoogleCloudHealthcareV1DicomGcsDestination extends \Google\Model
    * MIME types are consistent with supported formats in DICOMweb:
    * https://cloud.google.com/healthcare/docs/dicom#retrieve_transaction.
    * Specifically, the following are supported: - application/dicom; transfer-
-   * syntax=1.2.840.10008.1.2.1 (uncompressed DICOM) - application/dicom;
-   * transfer-syntax=1.2.840.10008.1.2.4.50 (DICOM with embedded JPEG Baseline)
-   * - application/dicom; transfer-syntax=1.2.840.10008.1.2.4.90 (DICOM with
-   * embedded JPEG 2000 Lossless Only) - application/dicom; transfer-
-   * syntax=1.2.840.10008.1.2.4.91 (DICOM with embedded JPEG 2000) -
-   * application/dicom; transfer-syntax=* (DICOM with no transcoding) -
-   * application/octet-stream; transfer-syntax=1.2.840.10008.1.2.1 (raw
-   * uncompressed PixelData) - application/octet-stream; transfer-syntax=* (raw
-   * PixelData in whatever format it was uploaded in) - image/jpeg; transfer-
+   * syntax=1.2.840.10008.1.2 (DICOM Implicit VR Little Endian) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.1 (DICOM Explicit VR
+   * Little Endian) - application/dicom; transfer-syntax=1.2.840.10008.1.2.1.99
+   * (DICOM Deflated Explicit VR Little Endian) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.50 (DICOM with embedded JPEG Baseline) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.51 (DICOM with
+   * embedded JPEG Extended) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.57 (DICOM with embedded JPEG Lossless) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.70 (DICOM with
+   * embedded JPEG Lossless First-Order Prediction) - application/dicom;
+   * transfer-syntax=1.2.840.10008.1.2.4.80 (DICOM with embedded JPEG-LS
+   * Lossless) - application/dicom; transfer-syntax=1.2.840.10008.1.2.4.81
+   * (DICOM with embedded JPEG-LS Lossy (Near-Lossless)) - application/dicom;
+   * transfer-syntax=1.2.840.10008.1.2.4.90 (DICOM with embedded JPEG 2000
+   * Lossless Only) - application/dicom; transfer-syntax=1.2.840.10008.1.2.4.91
+   * (DICOM with embedded JPEG 2000) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.110 (DICOM with embedded JPEG XL Lossless) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.111 (DICOM with
+   * embedded JPEG XL JPEG Recompression) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.112 (DICOM with embedded JPEG XL) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.201 (DICOM with
+   * embedded High-Throughput JPEG 2000 Lossless) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.202 (DICOM with embedded High-Throughput JPEG
+   * 2000 with RPCL Options Lossless) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.203 (DICOM with embedded High-Throughput JPEG
+   * 2000) - application/dicom; transfer-syntax=1.2.840.10008.1.2.5 (DICOM with
+   * embedded RLE Lossless) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.8.1 (DICOM with embedded Deflated Image Frame
+   * Compression) - application/dicom; transfer-syntax=* (DICOM with no
+   * transcoding) - application/octet-stream; transfer-
+   * syntax=1.2.840.10008.1.2.1 (raw uncompressed PixelData) -
+   * application/octet-stream; transfer-syntax=* (raw PixelData in whatever
+   * format it was uploaded in) - image/jpeg; transfer-
    * syntax=1.2.840.10008.1.2.4.50 (Consumer JPEG) - image/png The following
    * extensions are used for output files: - application/dicom -> .dcm -
    * image/jpeg -> .jpg - image/png -> .png - application/octet-stream -> no
@@ -65,15 +89,39 @@ class GoogleCloudHealthcareV1DicomGcsDestination extends \Google\Model
    * MIME types are consistent with supported formats in DICOMweb:
    * https://cloud.google.com/healthcare/docs/dicom#retrieve_transaction.
    * Specifically, the following are supported: - application/dicom; transfer-
-   * syntax=1.2.840.10008.1.2.1 (uncompressed DICOM) - application/dicom;
-   * transfer-syntax=1.2.840.10008.1.2.4.50 (DICOM with embedded JPEG Baseline)
-   * - application/dicom; transfer-syntax=1.2.840.10008.1.2.4.90 (DICOM with
-   * embedded JPEG 2000 Lossless Only) - application/dicom; transfer-
-   * syntax=1.2.840.10008.1.2.4.91 (DICOM with embedded JPEG 2000) -
-   * application/dicom; transfer-syntax=* (DICOM with no transcoding) -
-   * application/octet-stream; transfer-syntax=1.2.840.10008.1.2.1 (raw
-   * uncompressed PixelData) - application/octet-stream; transfer-syntax=* (raw
-   * PixelData in whatever format it was uploaded in) - image/jpeg; transfer-
+   * syntax=1.2.840.10008.1.2 (DICOM Implicit VR Little Endian) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.1 (DICOM Explicit VR
+   * Little Endian) - application/dicom; transfer-syntax=1.2.840.10008.1.2.1.99
+   * (DICOM Deflated Explicit VR Little Endian) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.50 (DICOM with embedded JPEG Baseline) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.51 (DICOM with
+   * embedded JPEG Extended) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.57 (DICOM with embedded JPEG Lossless) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.70 (DICOM with
+   * embedded JPEG Lossless First-Order Prediction) - application/dicom;
+   * transfer-syntax=1.2.840.10008.1.2.4.80 (DICOM with embedded JPEG-LS
+   * Lossless) - application/dicom; transfer-syntax=1.2.840.10008.1.2.4.81
+   * (DICOM with embedded JPEG-LS Lossy (Near-Lossless)) - application/dicom;
+   * transfer-syntax=1.2.840.10008.1.2.4.90 (DICOM with embedded JPEG 2000
+   * Lossless Only) - application/dicom; transfer-syntax=1.2.840.10008.1.2.4.91
+   * (DICOM with embedded JPEG 2000) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.110 (DICOM with embedded JPEG XL Lossless) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.111 (DICOM with
+   * embedded JPEG XL JPEG Recompression) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.112 (DICOM with embedded JPEG XL) -
+   * application/dicom; transfer-syntax=1.2.840.10008.1.2.4.201 (DICOM with
+   * embedded High-Throughput JPEG 2000 Lossless) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.202 (DICOM with embedded High-Throughput JPEG
+   * 2000 with RPCL Options Lossless) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.4.203 (DICOM with embedded High-Throughput JPEG
+   * 2000) - application/dicom; transfer-syntax=1.2.840.10008.1.2.5 (DICOM with
+   * embedded RLE Lossless) - application/dicom; transfer-
+   * syntax=1.2.840.10008.1.2.8.1 (DICOM with embedded Deflated Image Frame
+   * Compression) - application/dicom; transfer-syntax=* (DICOM with no
+   * transcoding) - application/octet-stream; transfer-
+   * syntax=1.2.840.10008.1.2.1 (raw uncompressed PixelData) -
+   * application/octet-stream; transfer-syntax=* (raw PixelData in whatever
+   * format it was uploaded in) - image/jpeg; transfer-
    * syntax=1.2.840.10008.1.2.4.50 (Consumer JPEG) - image/png The following
    * extensions are used for output files: - application/dicom -> .dcm -
    * image/jpeg -> .jpg - image/png -> .png - application/octet-stream -> no

@@ -22,14 +22,13 @@ class DeidentifyFhirStoreRequest extends \Google\Model
   protected $configType = DeidentifyConfig::class;
   protected $configDataType = '';
   /**
-   * Required. The name of the FHIR store to create and write the redacted data
-   * to. For example, `projects/{project_id}/locations/{location_id}/datasets/{d
-   * ataset_id}/fhirStores/{fhir_store_id}`. * The destination dataset must
-   * exist. * The source dataset and destination dataset must both reside in the
-   * same location. De-identifying data across multiple locations is not
-   * supported. * The destination FHIR store must exist. * The caller must have
-   * the healthcare.fhirResources.update permission to write to the destination
-   * FHIR store.
+   * Required. The name of the FHIR store to write the redacted data to. For
+   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_i
+   * d}/fhirStores/{fhir_store_id}`. * The destination dataset and FHIR store
+   * must exist. * The source dataset and destination dataset must both reside
+   * in the same location. De-identifying data across multiple locations is not
+   * supported. * The caller must have the healthcare.fhirResources.update
+   * permission to write to the destination FHIR store.
    *
    * @var string
    */
@@ -73,14 +72,13 @@ class DeidentifyFhirStoreRequest extends \Google\Model
     return $this->config;
   }
   /**
-   * Required. The name of the FHIR store to create and write the redacted data
-   * to. For example, `projects/{project_id}/locations/{location_id}/datasets/{d
-   * ataset_id}/fhirStores/{fhir_store_id}`. * The destination dataset must
-   * exist. * The source dataset and destination dataset must both reside in the
-   * same location. De-identifying data across multiple locations is not
-   * supported. * The destination FHIR store must exist. * The caller must have
-   * the healthcare.fhirResources.update permission to write to the destination
-   * FHIR store.
+   * Required. The name of the FHIR store to write the redacted data to. For
+   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_i
+   * d}/fhirStores/{fhir_store_id}`. * The destination dataset and FHIR store
+   * must exist. * The source dataset and destination dataset must both reside
+   * in the same location. De-identifying data across multiple locations is not
+   * supported. * The caller must have the healthcare.fhirResources.update
+   * permission to write to the destination FHIR store.
    *
    * @param string $destinationStore
    */

@@ -22,13 +22,13 @@ class DeidentifyDicomStoreRequest extends \Google\Model
   protected $configType = DeidentifyConfig::class;
   protected $configDataType = '';
   /**
-   * Required. The name of the DICOM store to create and write the redacted data
-   * to. For example, `projects/{project_id}/locations/{location_id}/datasets/{d
-   * ataset_id}/dicomStores/{dicom_store_id}`. * The destination dataset must
-   * exist. * The source dataset and destination dataset must both reside in the
-   * same location. De-identifying data across multiple locations is not
-   * supported. * The destination DICOM store must not exist. * The caller must
-   * have the necessary permissions to create the destination DICOM store.
+   * Required. The name of the DICOM store to write the redacted data to. For
+   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_i
+   * d}/dicomStores/{dicom_store_id}`. * The destination dataset and DICOM store
+   * must exist. * The source dataset and destination dataset must both reside
+   * in the same location. De-identifying data across multiple locations is not
+   * supported. * The caller must have the healthcare.dicomStores.dicomWebWrite
+   * permission to write to the destination DICOM store.
    *
    * @var string
    */
@@ -65,13 +65,13 @@ class DeidentifyDicomStoreRequest extends \Google\Model
     return $this->config;
   }
   /**
-   * Required. The name of the DICOM store to create and write the redacted data
-   * to. For example, `projects/{project_id}/locations/{location_id}/datasets/{d
-   * ataset_id}/dicomStores/{dicom_store_id}`. * The destination dataset must
-   * exist. * The source dataset and destination dataset must both reside in the
-   * same location. De-identifying data across multiple locations is not
-   * supported. * The destination DICOM store must not exist. * The caller must
-   * have the necessary permissions to create the destination DICOM store.
+   * Required. The name of the DICOM store to write the redacted data to. For
+   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_i
+   * d}/dicomStores/{dicom_store_id}`. * The destination dataset and DICOM store
+   * must exist. * The source dataset and destination dataset must both reside
+   * in the same location. De-identifying data across multiple locations is not
+   * supported. * The caller must have the healthcare.dicomStores.dicomWebWrite
+   * permission to write to the destination DICOM store.
    *
    * @param string $destinationStore
    */

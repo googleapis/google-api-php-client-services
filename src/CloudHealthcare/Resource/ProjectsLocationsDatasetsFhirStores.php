@@ -19,6 +19,7 @@ namespace Google\Service\CloudHealthcare\Resource;
 
 use Google\Service\CloudHealthcare\ApplyAdminConsentsRequest;
 use Google\Service\CloudHealthcare\ApplyConsentsRequest;
+use Google\Service\CloudHealthcare\BulkDeleteResourcesRequest;
 use Google\Service\CloudHealthcare\DeidentifyFhirStoreRequest;
 use Google\Service\CloudHealthcare\ExplainDataAccessResponse;
 use Google\Service\CloudHealthcare\ExportResourcesRequest;
@@ -175,6 +176,27 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('bulk-export-group', [$params], HttpBody::class);
+  }
+  /**
+   * Bulk deletes the FHIR resources from the given FHIR store. This method
+   * returns an Operation that can be used to track the progress of the deletion
+   * by calling GetOperation. The success and secondary_success counters
+   * correspond to the deleted current version and historical versions,
+   * respectively. (fhirStores.bulkDelete)
+   *
+   * @param string $name Required. The name of the FHIR store to bulk delete
+   * resources from, in the format of `projects/{project_id}/locations/{location_i
+   * d}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+   * @param BulkDeleteResourcesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function bulkDelete($name, BulkDeleteResourcesRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('bulkDelete', [$params], Operation::class);
   }
   /**
    * Creates a new FHIR store within the parent dataset. (fhirStores.create)
