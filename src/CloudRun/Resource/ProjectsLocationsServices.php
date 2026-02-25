@@ -170,6 +170,13 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * does not exist, it will create a new one. The caller must have
    * 'run.services.create' permissions if this is set to true and the Service does
    * not exist.
+   * @opt_param bool forceNewRevision Optional. If set to true, a new revision
+   * will be created from the template even if the system doesn't detect any
+   * changes from the previously deployed revision. This may be useful for cases
+   * where the underlying resources need to be recreated or reinitialized. For
+   * example if the image is specified by label, but the underlying image digest
+   * has changed) or if the container performs deployment initialization work that
+   * needs to be performed again.
    * @opt_param string updateMask Optional. The list of fields to be updated.
    * @opt_param bool validateOnly Indicates that the request should be validated
    * and default values populated, without persisting the request or updating any
