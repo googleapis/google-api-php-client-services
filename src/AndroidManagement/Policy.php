@@ -391,10 +391,7 @@ class Policy extends \Google\Collection
    */
   public $autoTimeRequired;
   /**
-   * Whether applications other than the ones configured in applications are
-   * blocked from being installed. When set, applications that were installed
-   * under a previous policy but no longer appear in the policy are
-   * automatically uninstalled.
+   * This field has no effect.
    *
    * @deprecated
    * @var bool
@@ -1132,10 +1129,7 @@ class Policy extends \Google\Collection
     return $this->autoTimeRequired;
   }
   /**
-   * Whether applications other than the ones configured in applications are
-   * blocked from being installed. When set, applications that were installed
-   * under a previous policy but no longer appear in the policy are
-   * automatically uninstalled.
+   * This field has no effect.
    *
    * @deprecated
    * @param bool $blockApplicationsEnabled
