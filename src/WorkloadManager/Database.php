@@ -20,77 +20,265 @@ namespace Google\Service\WorkloadManager;
 class Database extends \Google\Model
 {
   /**
-   * @var string
+   * Unspecified tenancy model
    */
-  public $backupFile;
+  public const TENANCY_MODEL_TENANCY_MODEL_UNSPECIFIED = 'TENANCY_MODEL_UNSPECIFIED';
   /**
-   * @var string
+   * Shared tenancy model
    */
-  public $backupSchedule;
+  public const TENANCY_MODEL_SHARED = 'SHARED';
   /**
-   * @var string
+   * Sole Tenant tenancy model
    */
-  public $hostVm;
+  public const TENANCY_MODEL_SOLE_TENANT = 'SOLE_TENANT';
   /**
+   * Required. disk_type
+   *
    * @var string
    */
-  public $name;
+  public $diskType;
+  /**
+   * Optional. only useful for Linux High Availability setup
+   *
+   * @var string
+   */
+  public $floatingIpAddress;
+  /**
+   * Required. machine type
+   *
+   * @var string
+   */
+  public $machineType;
+  /**
+   * Optional. the name of a secondary-sole-tenant node/node group
+   *
+   * @var string
+   */
+  public $secondarySoleTenantNode;
+  /**
+   * Optional. the type of a secondary-sole-tenant node/node group e.g.
+   * compute.googleapis.com/node-name
+   *
+   * @var string
+   */
+  public $secondarySoleTenantNodeType;
+  /**
+   * Required. secret_manager_secret
+   *
+   * @var string
+   */
+  public $secretManagerSecret;
+  /**
+   * Required. whether simultaneous multithreading is enabled or not
+   *
+   * @var bool
+   */
+  public $smt;
+  /**
+   * Optional. the name of a primary sole-tenant node/node group
+   *
+   * @var string
+   */
+  public $soleTenantNode;
+  /**
+   * Optional. the type of a primary sole-tenant node/node group e.g.
+   * compute.googleapis.com/node-name
+   *
+   * @var string
+   */
+  public $soleTenantNodeType;
+  /**
+   * Required. whether to have TempDB on local SSD
+   *
+   * @var bool
+   */
+  public $tempdbOnSsd;
+  /**
+   * Required. SHARED or SOLE_TENANT
+   *
+   * @var string
+   */
+  public $tenancyModel;
 
   /**
-   * @param string
+   * Required. disk_type
+   *
+   * @param string $diskType
    */
-  public function setBackupFile($backupFile)
+  public function setDiskType($diskType)
   {
-    $this->backupFile = $backupFile;
+    $this->diskType = $diskType;
   }
   /**
    * @return string
    */
-  public function getBackupFile()
+  public function getDiskType()
   {
-    return $this->backupFile;
+    return $this->diskType;
   }
   /**
-   * @param string
+   * Optional. only useful for Linux High Availability setup
+   *
+   * @param string $floatingIpAddress
    */
-  public function setBackupSchedule($backupSchedule)
+  public function setFloatingIpAddress($floatingIpAddress)
   {
-    $this->backupSchedule = $backupSchedule;
-  }
-  /**
-   * @return string
-   */
-  public function getBackupSchedule()
-  {
-    return $this->backupSchedule;
-  }
-  /**
-   * @param string
-   */
-  public function setHostVm($hostVm)
-  {
-    $this->hostVm = $hostVm;
+    $this->floatingIpAddress = $floatingIpAddress;
   }
   /**
    * @return string
    */
-  public function getHostVm()
+  public function getFloatingIpAddress()
   {
-    return $this->hostVm;
+    return $this->floatingIpAddress;
   }
   /**
-   * @param string
+   * Required. machine type
+   *
+   * @param string $machineType
    */
-  public function setName($name)
+  public function setMachineType($machineType)
   {
-    $this->name = $name;
+    $this->machineType = $machineType;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getMachineType()
   {
-    return $this->name;
+    return $this->machineType;
+  }
+  /**
+   * Optional. the name of a secondary-sole-tenant node/node group
+   *
+   * @param string $secondarySoleTenantNode
+   */
+  public function setSecondarySoleTenantNode($secondarySoleTenantNode)
+  {
+    $this->secondarySoleTenantNode = $secondarySoleTenantNode;
+  }
+  /**
+   * @return string
+   */
+  public function getSecondarySoleTenantNode()
+  {
+    return $this->secondarySoleTenantNode;
+  }
+  /**
+   * Optional. the type of a secondary-sole-tenant node/node group e.g.
+   * compute.googleapis.com/node-name
+   *
+   * @param string $secondarySoleTenantNodeType
+   */
+  public function setSecondarySoleTenantNodeType($secondarySoleTenantNodeType)
+  {
+    $this->secondarySoleTenantNodeType = $secondarySoleTenantNodeType;
+  }
+  /**
+   * @return string
+   */
+  public function getSecondarySoleTenantNodeType()
+  {
+    return $this->secondarySoleTenantNodeType;
+  }
+  /**
+   * Required. secret_manager_secret
+   *
+   * @param string $secretManagerSecret
+   */
+  public function setSecretManagerSecret($secretManagerSecret)
+  {
+    $this->secretManagerSecret = $secretManagerSecret;
+  }
+  /**
+   * @return string
+   */
+  public function getSecretManagerSecret()
+  {
+    return $this->secretManagerSecret;
+  }
+  /**
+   * Required. whether simultaneous multithreading is enabled or not
+   *
+   * @param bool $smt
+   */
+  public function setSmt($smt)
+  {
+    $this->smt = $smt;
+  }
+  /**
+   * @return bool
+   */
+  public function getSmt()
+  {
+    return $this->smt;
+  }
+  /**
+   * Optional. the name of a primary sole-tenant node/node group
+   *
+   * @param string $soleTenantNode
+   */
+  public function setSoleTenantNode($soleTenantNode)
+  {
+    $this->soleTenantNode = $soleTenantNode;
+  }
+  /**
+   * @return string
+   */
+  public function getSoleTenantNode()
+  {
+    return $this->soleTenantNode;
+  }
+  /**
+   * Optional. the type of a primary sole-tenant node/node group e.g.
+   * compute.googleapis.com/node-name
+   *
+   * @param string $soleTenantNodeType
+   */
+  public function setSoleTenantNodeType($soleTenantNodeType)
+  {
+    $this->soleTenantNodeType = $soleTenantNodeType;
+  }
+  /**
+   * @return string
+   */
+  public function getSoleTenantNodeType()
+  {
+    return $this->soleTenantNodeType;
+  }
+  /**
+   * Required. whether to have TempDB on local SSD
+   *
+   * @param bool $tempdbOnSsd
+   */
+  public function setTempdbOnSsd($tempdbOnSsd)
+  {
+    $this->tempdbOnSsd = $tempdbOnSsd;
+  }
+  /**
+   * @return bool
+   */
+  public function getTempdbOnSsd()
+  {
+    return $this->tempdbOnSsd;
+  }
+  /**
+   * Required. SHARED or SOLE_TENANT
+   *
+   * Accepted values: TENANCY_MODEL_UNSPECIFIED, SHARED, SOLE_TENANT
+   *
+   * @param self::TENANCY_MODEL_* $tenancyModel
+   */
+  public function setTenancyModel($tenancyModel)
+  {
+    $this->tenancyModel = $tenancyModel;
+  }
+  /**
+   * @return self::TENANCY_MODEL_*
+   */
+  public function getTenancyModel()
+  {
+    return $this->tenancyModel;
   }
 }
 
