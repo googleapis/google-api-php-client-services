@@ -28,6 +28,8 @@ class GoogleCloudAiplatformV1GroundingChunkMaps extends \Google\Model
    * @var string
    */
   public $placeId;
+  protected $routeType = GoogleCloudAiplatformV1GroundingChunkMapsRoute::class;
+  protected $routeDataType = '';
   /**
    * The text of the place answer.
    *
@@ -81,6 +83,22 @@ class GoogleCloudAiplatformV1GroundingChunkMaps extends \Google\Model
   public function getPlaceId()
   {
     return $this->placeId;
+  }
+  /**
+   * Output only. Route information.
+   *
+   * @param GoogleCloudAiplatformV1GroundingChunkMapsRoute $route
+   */
+  public function setRoute(GoogleCloudAiplatformV1GroundingChunkMapsRoute $route)
+  {
+    $this->route = $route;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GroundingChunkMapsRoute
+   */
+  public function getRoute()
+  {
+    return $this->route;
   }
   /**
    * The text of the place answer.

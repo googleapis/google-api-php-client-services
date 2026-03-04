@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1GroundingChunk extends \Google\Model
 {
+  protected $imageType = GoogleCloudAiplatformV1GroundingChunkImage::class;
+  protected $imageDataType = '';
   protected $mapsType = GoogleCloudAiplatformV1GroundingChunkMaps::class;
   protected $mapsDataType = '';
   protected $retrievedContextType = GoogleCloudAiplatformV1GroundingChunkRetrievedContext::class;
@@ -26,6 +28,23 @@ class GoogleCloudAiplatformV1GroundingChunk extends \Google\Model
   protected $webType = GoogleCloudAiplatformV1GroundingChunkWeb::class;
   protected $webDataType = '';
 
+  /**
+   * A grounding chunk from an image search result. See the `Image` message for
+   * details.
+   *
+   * @param GoogleCloudAiplatformV1GroundingChunkImage $image
+   */
+  public function setImage(GoogleCloudAiplatformV1GroundingChunkImage $image)
+  {
+    $this->image = $image;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GroundingChunkImage
+   */
+  public function getImage()
+  {
+    return $this->image;
+  }
   /**
    * A grounding chunk from Google Maps. See the `Maps` message for details.
    *

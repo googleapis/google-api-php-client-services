@@ -62,6 +62,8 @@ class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Collection
    * @var string[]
    */
   public $excludeDomains;
+  protected $searchTypesType = GoogleCloudAiplatformV1ToolGoogleSearchSearchTypes::class;
+  protected $searchTypesDataType = '';
 
   /**
    * Optional. Sites with confidence level chosen & above this value will be
@@ -100,6 +102,23 @@ class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Collection
   public function getExcludeDomains()
   {
     return $this->excludeDomains;
+  }
+  /**
+   * Optional. The set of search types to enable. If not set, web search is
+   * enabled by default.
+   *
+   * @param GoogleCloudAiplatformV1ToolGoogleSearchSearchTypes $searchTypes
+   */
+  public function setSearchTypes(GoogleCloudAiplatformV1ToolGoogleSearchSearchTypes $searchTypes)
+  {
+    $this->searchTypes = $searchTypes;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ToolGoogleSearchSearchTypes
+   */
+  public function getSearchTypes()
+  {
+    return $this->searchTypes;
   }
 }
 

@@ -19,7 +19,7 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1GroundingSupport extends \Google\Collection
 {
-  protected $collection_key = 'groundingChunkIndices';
+  protected $collection_key = 'renderedParts';
   /**
    * The confidence scores for the support references. This list is parallel to
    * the `grounding_chunk_indices` list. A score is a value between 0.0 and 1.0,
@@ -41,6 +41,14 @@ class GoogleCloudAiplatformV1GroundingSupport extends \Google\Collection
    * @var int[]
    */
   public $groundingChunkIndices;
+  /**
+   * Indices into the `rendered_parts` field of the `GroundingMetadata` message.
+   * These indices specify which rendered parts are associated with this support
+   * message.
+   *
+   * @var int[]
+   */
+  public $renderedParts;
   protected $segmentType = GoogleCloudAiplatformV1Segment::class;
   protected $segmentDataType = '';
 
@@ -84,6 +92,24 @@ class GoogleCloudAiplatformV1GroundingSupport extends \Google\Collection
   public function getGroundingChunkIndices()
   {
     return $this->groundingChunkIndices;
+  }
+  /**
+   * Indices into the `rendered_parts` field of the `GroundingMetadata` message.
+   * These indices specify which rendered parts are associated with this support
+   * message.
+   *
+   * @param int[] $renderedParts
+   */
+  public function setRenderedParts($renderedParts)
+  {
+    $this->renderedParts = $renderedParts;
+  }
+  /**
+   * @return int[]
+   */
+  public function getRenderedParts()
+  {
+    return $this->renderedParts;
   }
   /**
    * The content segment that this support message applies to.

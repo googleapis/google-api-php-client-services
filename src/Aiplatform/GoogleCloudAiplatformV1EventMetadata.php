@@ -37,6 +37,8 @@ class GoogleCloudAiplatformV1EventMetadata extends \Google\Collection
   public $customMetadata;
   protected $groundingMetadataType = GoogleCloudAiplatformV1GroundingMetadata::class;
   protected $groundingMetadataDataType = '';
+  protected $inputTranscriptionType = GoogleCloudAiplatformV1Transcription::class;
+  protected $inputTranscriptionDataType = '';
   /**
    * Optional. Flag indicating that LLM was interrupted when generating the
    * content. Usually it's due to user interruption during a bidi streaming.
@@ -52,6 +54,8 @@ class GoogleCloudAiplatformV1EventMetadata extends \Google\Collection
    * @var string[]
    */
   public $longRunningToolIds;
+  protected $outputTranscriptionType = GoogleCloudAiplatformV1Transcription::class;
+  protected $outputTranscriptionDataType = '';
   /**
    * Optional. Indicates whether the text content is part of a unfinished text
    * stream. Only used for streaming mode and when the content is plain text.
@@ -119,6 +123,22 @@ class GoogleCloudAiplatformV1EventMetadata extends \Google\Collection
     return $this->groundingMetadata;
   }
   /**
+   * Optional. Audio transcription of user input.
+   *
+   * @param GoogleCloudAiplatformV1Transcription $inputTranscription
+   */
+  public function setInputTranscription(GoogleCloudAiplatformV1Transcription $inputTranscription)
+  {
+    $this->inputTranscription = $inputTranscription;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Transcription
+   */
+  public function getInputTranscription()
+  {
+    return $this->inputTranscription;
+  }
+  /**
    * Optional. Flag indicating that LLM was interrupted when generating the
    * content. Usually it's due to user interruption during a bidi streaming.
    *
@@ -152,6 +172,22 @@ class GoogleCloudAiplatformV1EventMetadata extends \Google\Collection
   public function getLongRunningToolIds()
   {
     return $this->longRunningToolIds;
+  }
+  /**
+   * Optional. Audio transcription of model output.
+   *
+   * @param GoogleCloudAiplatformV1Transcription $outputTranscription
+   */
+  public function setOutputTranscription(GoogleCloudAiplatformV1Transcription $outputTranscription)
+  {
+    $this->outputTranscription = $outputTranscription;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Transcription
+   */
+  public function getOutputTranscription()
+  {
+    return $this->outputTranscription;
   }
   /**
    * Optional. Indicates whether the text content is part of a unfinished text

@@ -32,6 +32,14 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
   protected $groundingChunksDataType = 'array';
   protected $groundingSupportsType = GoogleCloudAiplatformV1GroundingSupport::class;
   protected $groundingSupportsDataType = 'array';
+  /**
+   * Optional. The image search queries that were used to generate the content.
+   * This field is populated only when the grounding source is Google Search
+   * with the Image Search search_type enabled.
+   *
+   * @var string[]
+   */
+  public $imageSearchQueries;
   protected $retrievalMetadataType = GoogleCloudAiplatformV1RetrievalMetadata::class;
   protected $retrievalMetadataDataType = '';
   protected $searchEntryPointType = GoogleCloudAiplatformV1SearchEntryPoint::class;
@@ -99,6 +107,24 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
   public function getGroundingSupports()
   {
     return $this->groundingSupports;
+  }
+  /**
+   * Optional. The image search queries that were used to generate the content.
+   * This field is populated only when the grounding source is Google Search
+   * with the Image Search search_type enabled.
+   *
+   * @param string[] $imageSearchQueries
+   */
+  public function setImageSearchQueries($imageSearchQueries)
+  {
+    $this->imageSearchQueries = $imageSearchQueries;
+  }
+  /**
+   * @return string[]
+   */
+  public function getImageSearchQueries()
+  {
+    return $this->imageSearchQueries;
   }
   /**
    * Optional. Output only. Metadata related to the retrieval grounding source.
