@@ -34,7 +34,7 @@ class PrivateDnsSettings extends \Google\Model
    * above on fully managed devices and work profiles on company-owned devices.
    * A NonComplianceDetail with MANAGEMENT_MODE is reported on other management
    * modes. A NonComplianceDetail with API_LEVEL is reported if the Android
-   * version is less than 10. A NonComplianceReason with INVALID_VALUE is
+   * version is less than 10. A NonComplianceDetail with INVALID_VALUE is
    * reported if setting this fails for any other reason.Note: For work profiles
    * on company-owned devices, setting this mode prevents the user from changing
    * the setting, but the active private DNS setting is not modified. A
@@ -60,9 +60,9 @@ class PrivateDnsSettings extends \Google\Model
    * is not connected to a network. A NonComplianceDetail with
    * nonComplianceReason INVALID_VALUE and specificNonComplianceReason
    * PRIVATE_DNS_HOST_NOT_SERVING is reported if the specified host is not a DNS
-   * server or not supported on Android. A NonComplianceReason with
-   * nonComplianceReason INVALID_VALUE is reported if applying this setting
-   * fails for any other reason.
+   * server or not supported on Android. A NonComplianceDetail with
+   * INVALID_VALUE is reported if applying this setting fails for any other
+   * reason.
    *
    * @var string
    */
@@ -86,9 +86,9 @@ class PrivateDnsSettings extends \Google\Model
    * is not connected to a network. A NonComplianceDetail with
    * nonComplianceReason INVALID_VALUE and specificNonComplianceReason
    * PRIVATE_DNS_HOST_NOT_SERVING is reported if the specified host is not a DNS
-   * server or not supported on Android. A NonComplianceReason with
-   * nonComplianceReason INVALID_VALUE is reported if applying this setting
-   * fails for any other reason.
+   * server or not supported on Android. A NonComplianceDetail with
+   * INVALID_VALUE is reported if applying this setting fails for any other
+   * reason.
    *
    * @param string $privateDnsHost
    */
