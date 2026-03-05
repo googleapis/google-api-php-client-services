@@ -526,9 +526,10 @@ class LineItem extends \Google\Collection
     return $this->flight;
   }
   /**
-   * Required. The impression frequency cap settings of the line item. The
+   * Optional. The impression frequency cap settings of the line item. The
    * max_impressions field in this settings object must be used if assigning a
-   * limited cap.
+   * limited cap. This field is REQUIRED for all line item types excluding
+   * LINE_ITEM_TYPE_DEMAND_GEN.
    *
    * @param FrequencyCap $frequencyCap
    */

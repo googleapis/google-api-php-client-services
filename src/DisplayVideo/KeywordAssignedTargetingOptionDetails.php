@@ -17,8 +17,16 @@
 
 namespace Google\Service\DisplayVideo;
 
-class KeywordAssignedTargetingOptionDetails extends \Google\Model
+class KeywordAssignedTargetingOptionDetails extends \Google\Collection
 {
+  protected $collection_key = 'exemptedPolicyNames';
+  /**
+   * Optional. The policy names to exempt the keyword from. This field is only
+   * applicable for Demand Gen keywords, which are positively targeted.
+   *
+   * @var string[]
+   */
+  public $exemptedPolicyNames;
   /**
    * Required. The keyword, for example `car insurance`. Positive keyword cannot
    * be offensive word. Must be UTF-8 encoded with a maximum size of 255 bytes.
@@ -34,6 +42,23 @@ class KeywordAssignedTargetingOptionDetails extends \Google\Model
    */
   public $negative;
 
+  /**
+   * Optional. The policy names to exempt the keyword from. This field is only
+   * applicable for Demand Gen keywords, which are positively targeted.
+   *
+   * @param string[] $exemptedPolicyNames
+   */
+  public function setExemptedPolicyNames($exemptedPolicyNames)
+  {
+    $this->exemptedPolicyNames = $exemptedPolicyNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExemptedPolicyNames()
+  {
+    return $this->exemptedPolicyNames;
+  }
   /**
    * Required. The keyword, for example `car insurance`. Positive keyword cannot
    * be offensive word. Must be UTF-8 encoded with a maximum size of 255 bytes.

@@ -37,7 +37,7 @@ class InsertionOrderBudget extends \Google\Collection
   public const AUTOMATION_TYPE_INSERTION_ORDER_AUTOMATION_TYPE_NONE = 'INSERTION_ORDER_AUTOMATION_TYPE_NONE';
   /**
    * Allow the system to automatically adjust bids and shift budget to owning
-   * line items to optimize performance defined by kpi.
+   * line items to optimize performance defined by bid_strategy.
    */
   public const AUTOMATION_TYPE_INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET = 'INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET';
   /**
