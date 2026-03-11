@@ -17,8 +17,9 @@
 
 namespace Google\Service\Contactcenterinsights;
 
-class GoogleCloudContactcenterinsightsV1ConversationDataSource extends \Google\Model
+class GoogleCloudContactcenterinsightsV1ConversationDataSource extends \Google\Collection
 {
+  protected $collection_key = 'turnLevelAudios';
   protected $dialogflowSourceType = GoogleCloudContactcenterinsightsV1DialogflowSource::class;
   protected $dialogflowSourceDataType = '';
   protected $gcsSourceType = GoogleCloudContactcenterinsightsV1GcsSource::class;
@@ -30,6 +31,8 @@ class GoogleCloudContactcenterinsightsV1ConversationDataSource extends \Google\M
    * @var string
    */
   public $metadataUri;
+  protected $turnLevelAudiosType = GoogleCloudContactcenterinsightsV1ConversationDataSourceTurnLevelAudio::class;
+  protected $turnLevelAudiosDataType = 'array';
 
   /**
    * The source when the conversation comes from Dialogflow.
@@ -79,6 +82,24 @@ class GoogleCloudContactcenterinsightsV1ConversationDataSource extends \Google\M
   public function getMetadataUri()
   {
     return $this->metadataUri;
+  }
+  /**
+   * Cloud Storage URIs that points to files that contain the conversation audio
+   * for each turn. Assume the order of the URIs is the same as the order of the
+   * transcript turns.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ConversationDataSourceTurnLevelAudio[] $turnLevelAudios
+   */
+  public function setTurnLevelAudios($turnLevelAudios)
+  {
+    $this->turnLevelAudios = $turnLevelAudios;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1ConversationDataSourceTurnLevelAudio[]
+   */
+  public function getTurnLevelAudios()
+  {
+    return $this->turnLevelAudios;
   }
 }
 

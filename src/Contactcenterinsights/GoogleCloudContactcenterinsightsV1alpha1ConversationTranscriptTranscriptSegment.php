@@ -61,6 +61,8 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
    * @var string
    */
   public $text;
+  protected $turnLevelAudioType = GoogleCloudContactcenterinsightsV1alpha1ConversationDataSourceTurnLevelAudio::class;
+  protected $turnLevelAudioDataType = '';
   protected $wordsType = GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentWordInfo::class;
   protected $wordsDataType = 'array';
 
@@ -196,6 +198,22 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
   public function getText()
   {
     return $this->text;
+  }
+  /**
+   * Turn level audio for this transcript segment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationDataSourceTurnLevelAudio $turnLevelAudio
+   */
+  public function setTurnLevelAudio(GoogleCloudContactcenterinsightsV1alpha1ConversationDataSourceTurnLevelAudio $turnLevelAudio)
+  {
+    $this->turnLevelAudio = $turnLevelAudio;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1ConversationDataSourceTurnLevelAudio
+   */
+  public function getTurnLevelAudio()
+  {
+    return $this->turnLevelAudio;
   }
   /**
    * A list of the word-specific information for each word in the segment.

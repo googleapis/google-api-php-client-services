@@ -86,6 +86,16 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   protected $speechConfigType = GoogleCloudContactcenterinsightsV1SpeechConfig::class;
   protected $speechConfigDataType = '';
   /**
+   * Optional. The time zone applied to the project. This is a string
+   * representation of the time zone, for example, "America/New_York". This
+   * field follows the IANA TZ database format. See https://www.iana.org/time-
+   * zones for a list of valid values. If no value is set the user time zone
+   * will be used.
+   *
+   * @var string
+   */
+  public $timeZone;
+  /**
    * Output only. The time at which the settings were last updated.
    *
    * @var string
@@ -266,6 +276,26 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   public function getSpeechConfig()
   {
     return $this->speechConfig;
+  }
+  /**
+   * Optional. The time zone applied to the project. This is a string
+   * representation of the time zone, for example, "America/New_York". This
+   * field follows the IANA TZ database format. See https://www.iana.org/time-
+   * zones for a list of valid values. If no value is set the user time zone
+   * will be used.
+   *
+   * @param string $timeZone
+   */
+  public function setTimeZone($timeZone)
+  {
+    $this->timeZone = $timeZone;
+  }
+  /**
+   * @return string
+   */
+  public function getTimeZone()
+  {
+    return $this->timeZone;
   }
   /**
    * Output only. The time at which the settings were last updated.
