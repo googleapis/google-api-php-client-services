@@ -651,7 +651,9 @@ class Policy extends \Google\Collection
    */
   public $networkEscapeHatchEnabled;
   /**
-   * Whether resetting network settings is disabled.
+   * Whether resetting network settings is disabled. This applies only on fully
+   * managed devices. A NonComplianceDetail with MANAGEMENT_MODE is reported for
+   * other management modes.
    *
    * @var bool
    */
@@ -1904,7 +1906,9 @@ class Policy extends \Google\Collection
     return $this->networkEscapeHatchEnabled;
   }
   /**
-   * Whether resetting network settings is disabled.
+   * Whether resetting network settings is disabled. This applies only on fully
+   * managed devices. A NonComplianceDetail with MANAGEMENT_MODE is reported for
+   * other management modes.
    *
    * @param bool $networkResetDisabled
    */
