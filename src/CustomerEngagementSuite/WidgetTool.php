@@ -71,6 +71,8 @@ class WidgetTool extends \Google\Model
    * Contact form widget.
    */
   public const WIDGET_TYPE_CONTACT_FORM = 'CONTACT_FORM';
+  protected $dataMappingType = WidgetToolDataMapping::class;
+  protected $dataMappingDataType = '';
   /**
    * Optional. The description of the widget tool.
    *
@@ -86,6 +88,12 @@ class WidgetTool extends \Google\Model
   protected $parametersType = Schema::class;
   protected $parametersDataType = '';
   /**
+   * Optional. Configuration for rendering the widget.
+   *
+   * @var array[]
+   */
+  public $uiConfig;
+  /**
    * Optional. The type of the widget tool. If not specified, the default type
    * will be CUSTOMIZED.
    *
@@ -93,6 +101,23 @@ class WidgetTool extends \Google\Model
    */
   public $widgetType;
 
+  /**
+   * Optional. The mapping that defines how data from a source tool is mapped to
+   * the widget's input parameters.
+   *
+   * @param WidgetToolDataMapping $dataMapping
+   */
+  public function setDataMapping(WidgetToolDataMapping $dataMapping)
+  {
+    $this->dataMapping = $dataMapping;
+  }
+  /**
+   * @return WidgetToolDataMapping
+   */
+  public function getDataMapping()
+  {
+    return $this->dataMapping;
+  }
   /**
    * Optional. The description of the widget tool.
    *
@@ -140,6 +165,22 @@ class WidgetTool extends \Google\Model
   public function getParameters()
   {
     return $this->parameters;
+  }
+  /**
+   * Optional. Configuration for rendering the widget.
+   *
+   * @param array[] $uiConfig
+   */
+  public function setUiConfig($uiConfig)
+  {
+    $this->uiConfig = $uiConfig;
+  }
+  /**
+   * @return array[]
+   */
+  public function getUiConfig()
+  {
+    return $this->uiConfig;
   }
   /**
    * Optional. The type of the widget tool. If not specified, the default type

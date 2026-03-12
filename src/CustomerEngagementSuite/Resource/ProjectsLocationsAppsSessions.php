@@ -51,7 +51,7 @@ class ProjectsLocationsAppsSessions extends \Google\Service\Resource
     return $this->call('generateChatToken', [$params], GenerateChatTokenResponse::class);
   }
   /**
-   * Initiates a single turn interaction with the CES agent within a session.
+   * Initiates a single-turn interaction with the CES agent within a session.
    * (sessions.runSession)
    *
    * @param string $session Required. The unique identifier of the session.

@@ -27,7 +27,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/customer-engagement-ai/conversational-agents/ps/reference" target="_blank">Documentation</a>
+ * <a href="https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.

@@ -27,6 +27,14 @@ class ExecuteToolRequest extends \Google\Model
    */
   public $args;
   /**
+   * Optional. The [ToolCallContext](https://docs.cloud.google.com/customer-
+   * engagement-ai/conversational-agents/ps/tool/python#environment for details)
+   * to be passed to the Python tool.
+   *
+   * @var array[]
+   */
+  public $context;
+  /**
    * Optional. The name of the tool to execute. Format:
    * projects/{project}/locations/{location}/apps/{app}/tools/{tool}
    *
@@ -58,6 +66,24 @@ class ExecuteToolRequest extends \Google\Model
   public function getArgs()
   {
     return $this->args;
+  }
+  /**
+   * Optional. The [ToolCallContext](https://docs.cloud.google.com/customer-
+   * engagement-ai/conversational-agents/ps/tool/python#environment for details)
+   * to be passed to the Python tool.
+   *
+   * @param array[] $context
+   */
+  public function setContext($context)
+  {
+    $this->context = $context;
+  }
+  /**
+   * @return array[]
+   */
+  public function getContext()
+  {
+    return $this->context;
   }
   /**
    * Optional. The name of the tool to execute. Format:

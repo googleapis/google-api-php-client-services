@@ -32,6 +32,13 @@ class ExportAppRequest extends \Google\Model
    */
   public const EXPORT_FORMAT_YAML = 'YAML';
   /**
+   * Optional. The resource name of the app version to export. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`.
+   *
+   * @var string
+   */
+  public $appVersion;
+  /**
    * Required. The format to export the app in.
    *
    * @var string
@@ -47,6 +54,23 @@ class ExportAppRequest extends \Google\Model
    */
   public $gcsUri;
 
+  /**
+   * Optional. The resource name of the app version to export. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`.
+   *
+   * @param string $appVersion
+   */
+  public function setAppVersion($appVersion)
+  {
+    $this->appVersion = $appVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getAppVersion()
+  {
+    return $this->appVersion;
+  }
   /**
    * Required. The format to export the app in.
    *
