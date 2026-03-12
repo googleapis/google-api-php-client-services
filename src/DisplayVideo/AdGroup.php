@@ -87,7 +87,7 @@ class AdGroup extends \Google\Model
    */
   public const ENTITY_STATUS_ENTITY_STATUS_SCHEDULED_FOR_DELETION = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION';
   /**
-   * Required. The format of the ads in the ad group.
+   * Required. Immutable. The format of the ads in the ad group.
    *
    * @var string
    */
@@ -125,7 +125,8 @@ class AdGroup extends \Google\Model
    */
   public $entityStatus;
   /**
-   * Required. The unique ID of the line item that the ad group belongs to.
+   * Required. Immutable. The unique ID of the line item that the ad group
+   * belongs to.
    *
    * @var string
    */
@@ -142,7 +143,7 @@ class AdGroup extends \Google\Model
   protected $targetingExpansionDataType = '';
 
   /**
-   * Required. The format of the ads in the ad group.
+   * Required. Immutable. The format of the ads in the ad group.
    *
    * Accepted values: AD_GROUP_FORMAT_UNSPECIFIED, AD_GROUP_FORMAT_IN_STREAM,
    * AD_GROUP_FORMAT_VIDEO_DISCOVERY, AD_GROUP_FORMAT_BUMPER,
@@ -271,7 +272,8 @@ class AdGroup extends \Google\Model
     return $this->entityStatus;
   }
   /**
-   * Required. The unique ID of the line item that the ad group belongs to.
+   * Required. Immutable. The unique ID of the line item that the ad group
+   * belongs to.
    *
    * @param string $lineItemId
    */

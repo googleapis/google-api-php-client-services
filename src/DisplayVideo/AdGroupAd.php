@@ -52,7 +52,7 @@ class AdGroupAd extends \Google\Collection
    */
   public $adGroupAdId;
   /**
-   * Required. The unique ID of the ad group that the ad belongs to.
+   * Required. Immutable. The unique ID of the ad group that the ad belongs to.
    *
    * @var string
    */
@@ -128,7 +128,7 @@ class AdGroupAd extends \Google\Collection
     return $this->adGroupAdId;
   }
   /**
-   * Required. The unique ID of the ad group that the ad belongs to.
+   * Required. Immutable. The unique ID of the ad group that the ad belongs to.
    *
    * @param string $adGroupId
    */
