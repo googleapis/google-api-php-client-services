@@ -214,6 +214,20 @@ class Attributes extends \Google\Collection
    */
   public $material;
   /**
+   * Maximum rating score of the product. Required if `rating` is provided. This
+   * field is for an upcoming feature and is not yet used.
+   *
+   * @var string
+   */
+  public $maxRating;
+  /**
+   * Minimum rating score of the product. Required if `rating` is provided. This
+   * field is for an upcoming feature and is not yet used.
+   *
+   * @var string
+   */
+  public $minRating;
+  /**
    * Manufacturer Part Number
    * ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
    * item.
@@ -268,6 +282,23 @@ class Attributes extends \Google\Collection
   protected $productWeightDataType = '';
   protected $productWidthType = ProductDimension::class;
   protected $productWidthDataType = '';
+  /**
+   * Average rating score of the product. The value must be within the range of
+   * [`min_rating`, `max_rating`], inclusive. When displayed on the product
+   * page, this rating is normalized to a scale of [1, 5] with one decimal
+   * place. If provided, `review_count`, `min_rating`, and `max_rating` are also
+   * required. This field is for an upcoming feature and is not yet used.
+   *
+   * @var 
+   */
+  public $rating;
+  /**
+   * Number of reviews of the product. Required if `rating` is provided. This
+   * field is for an upcoming feature and is not yet used.
+   *
+   * @var string
+   */
+  public $reviewCount;
   /**
    * Size of the item. Only one value is allowed. For variants with different
    * sizes, insert a separate product for each size with the same `itemGroupId`
@@ -861,6 +892,40 @@ class Attributes extends \Google\Collection
     return $this->material;
   }
   /**
+   * Maximum rating score of the product. Required if `rating` is provided. This
+   * field is for an upcoming feature and is not yet used.
+   *
+   * @param string $maxRating
+   */
+  public function setMaxRating($maxRating)
+  {
+    $this->maxRating = $maxRating;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxRating()
+  {
+    return $this->maxRating;
+  }
+  /**
+   * Minimum rating score of the product. Required if `rating` is provided. This
+   * field is for an upcoming feature and is not yet used.
+   *
+   * @param string $minRating
+   */
+  public function setMinRating($minRating)
+  {
+    $this->minRating = $minRating;
+  }
+  /**
+   * @return string
+   */
+  public function getMinRating()
+  {
+    return $this->minRating;
+  }
+  /**
    * Manufacturer Part Number
    * ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
    * item.
@@ -1058,6 +1123,31 @@ class Attributes extends \Google\Collection
   public function getProductWidth()
   {
     return $this->productWidth;
+  }
+  public function setRating($rating)
+  {
+    $this->rating = $rating;
+  }
+  public function getRating()
+  {
+    return $this->rating;
+  }
+  /**
+   * Number of reviews of the product. Required if `rating` is provided. This
+   * field is for an upcoming feature and is not yet used.
+   *
+   * @param string $reviewCount
+   */
+  public function setReviewCount($reviewCount)
+  {
+    $this->reviewCount = $reviewCount;
+  }
+  /**
+   * @return string
+   */
+  public function getReviewCount()
+  {
+    return $this->reviewCount;
   }
   /**
    * Size of the item. Only one value is allowed. For variants with different
