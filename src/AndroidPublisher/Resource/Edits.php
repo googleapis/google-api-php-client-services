@@ -36,6 +36,8 @@ class Edits extends \Google\Service\Resource
    * @param string $editId Identifier of the edit.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string changesInReviewBehavior Optional. The behavior of
+   * committing a new edit while changes are already in review.
    * @opt_param bool changesNotSentForReview When a rejection happens, the
    * parameter will make sure that the changes in this edit won't be reviewed
    * until they are explicitly sent for review from within the Google Play Console
