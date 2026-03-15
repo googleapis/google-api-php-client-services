@@ -80,6 +80,13 @@ class InstanceGroupManagerResizeRequest extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * Output only. [Output Only] The URL of aregion where the resize request is
+   * located. Populated only for regional resize requests.
+   *
+   * @var string
+   */
+  public $region;
   protected $requestedRunDurationType = Duration::class;
   protected $requestedRunDurationDataType = '';
   /**
@@ -203,6 +210,23 @@ class InstanceGroupManagerResizeRequest extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. [Output Only] The URL of aregion where the resize request is
+   * located. Populated only for regional resize requests.
+   *
+   * @param string $region
+   */
+  public function setRegion($region)
+  {
+    $this->region = $region;
+  }
+  /**
+   * @return string
+   */
+  public function getRegion()
+  {
+    return $this->region;
   }
   /**
    * Requested run duration for instances that will be created by this request.

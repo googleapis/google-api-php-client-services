@@ -20,6 +20,11 @@ namespace Google\Service\Compute;
 class Reservation extends \Google\Collection
 {
   /**
+   * Intel Trust Domain Extensions.
+   */
+  public const CONFIDENTIAL_COMPUTE_TYPE_CONFIDENTIAL_COMPUTE_TYPE_TDX = 'CONFIDENTIAL_COMPUTE_TYPE_TDX';
+  public const CONFIDENTIAL_COMPUTE_TYPE_CONFIDENTIAL_COMPUTE_TYPE_UNSPECIFIED = 'CONFIDENTIAL_COMPUTE_TYPE_UNSPECIFIED';
+  /**
    * The reserved capacity is made up of densely deployed reservation blocks.
    */
   public const DEPLOYMENT_TYPE_DENSE = 'DENSE';
@@ -99,6 +104,10 @@ class Reservation extends \Google\Collection
    * @var string
    */
   public $commitment;
+  /**
+   * @var string
+   */
+  public $confidentialComputeType;
   /**
    * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    *
@@ -295,6 +304,20 @@ class Reservation extends \Google\Collection
   public function getCommitment()
   {
     return $this->commitment;
+  }
+  /**
+   * @param self::CONFIDENTIAL_COMPUTE_TYPE_* $confidentialComputeType
+   */
+  public function setConfidentialComputeType($confidentialComputeType)
+  {
+    $this->confidentialComputeType = $confidentialComputeType;
+  }
+  /**
+   * @return self::CONFIDENTIAL_COMPUTE_TYPE_*
+   */
+  public function getConfidentialComputeType()
+  {
+    return $this->confidentialComputeType;
   }
   /**
    * Output only. [Output Only] Creation timestamp inRFC3339 text format.

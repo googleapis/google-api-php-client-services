@@ -170,6 +170,8 @@ class InstanceTemplates extends \Google\Service\Resource
    * @param string $project Project ID for this request.
    * @param string $instanceTemplate The name of the instance template.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View of the instance template.
    * @return InstanceTemplate
    * @throws \Google\Service\Exception
    */
@@ -305,6 +307,7 @@ class InstanceTemplates extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
+   * @opt_param string view View of the instance template.
    * @return InstanceTemplateList
    * @throws \Google\Service\Exception
    */

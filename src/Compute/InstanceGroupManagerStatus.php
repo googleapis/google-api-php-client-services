@@ -33,6 +33,8 @@ class InstanceGroupManagerStatus extends \Google\Collection
   public $autoscaler;
   protected $bulkInstanceOperationType = InstanceGroupManagerStatusBulkInstanceOperation::class;
   protected $bulkInstanceOperationDataType = '';
+  protected $currentInstanceStatusesType = InstanceGroupManagerStatusInstanceStatusSummary::class;
+  protected $currentInstanceStatusesDataType = '';
   /**
    * Output only. [Output Only] A bit indicating whether the managed instance
    * group is in a stable state. A stable state means that: none of the
@@ -115,6 +117,24 @@ class InstanceGroupManagerStatus extends \Google\Collection
   public function getBulkInstanceOperation()
   {
     return $this->bulkInstanceOperation;
+  }
+  /**
+   * Output only. [Output Only] The list of instance statuses and the number of
+   * instances in this managed instance group that have the status. Currently
+   * only shown for TPU MIGs
+   *
+   * @param InstanceGroupManagerStatusInstanceStatusSummary $currentInstanceStatuses
+   */
+  public function setCurrentInstanceStatuses(InstanceGroupManagerStatusInstanceStatusSummary $currentInstanceStatuses)
+  {
+    $this->currentInstanceStatuses = $currentInstanceStatuses;
+  }
+  /**
+   * @return InstanceGroupManagerStatusInstanceStatusSummary
+   */
+  public function getCurrentInstanceStatuses()
+  {
+    return $this->currentInstanceStatuses;
   }
   /**
    * Output only. [Output Only] A bit indicating whether the managed instance

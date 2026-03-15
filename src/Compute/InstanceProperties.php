@@ -116,6 +116,8 @@ class InstanceProperties extends \Google\Collection
   protected $networkInterfacesDataType = 'array';
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
+  protected $partnerMetadataType = StructuredEntries::class;
+  protected $partnerMetadataDataType = 'map';
   /**
    * The private IPv6 google access type for VMs. If not specified, use
    * INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not
@@ -384,6 +386,23 @@ class InstanceProperties extends \Google\Collection
   public function getNetworkPerformanceConfig()
   {
     return $this->networkPerformanceConfig;
+  }
+  /**
+   * Partner Metadata assigned to the instance properties. A map from a
+   * subdomain (namespace) to entries map.
+   *
+   * @param StructuredEntries[] $partnerMetadata
+   */
+  public function setPartnerMetadata($partnerMetadata)
+  {
+    $this->partnerMetadata = $partnerMetadata;
+  }
+  /**
+   * @return StructuredEntries[]
+   */
+  public function getPartnerMetadata()
+  {
+    return $this->partnerMetadata;
   }
   /**
    * The private IPv6 google access type for VMs. If not specified, use

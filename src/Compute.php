@@ -120,6 +120,7 @@ class Compute extends \Google\Service
   public $regionHealthCheckServices;
   public $regionHealthChecks;
   public $regionHealthSources;
+  public $regionInstanceGroupManagerResizeRequests;
   public $regionInstanceGroupManagers;
   public $regionInstanceGroups;
   public $regionInstanceTemplates;
@@ -167,6 +168,7 @@ class Compute extends \Google\Service
   public $vpnTunnels;
   public $wireGroups;
   public $zoneOperations;
+  public $zoneVmExtensionPolicies;
   public $zones;
   public $rootUrlTemplate;
 
@@ -5639,6 +5641,10 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'projects/{project}/global/instanceTemplates/{resource}/getIamPolicy',
@@ -5701,6 +5707,10 @@ class Compute extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'setIamPolicy' => [
@@ -6040,6 +6050,10 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getEffectiveFirewalls' => [
               'path' => 'projects/{project}/zones/{zone}/instances/{instance}/getEffectiveFirewalls',
@@ -6116,6 +6130,30 @@ class Compute extends \Google\Service
                 'optionsRequestedPolicyVersion' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+              ],
+            ],'getPartnerMetadata' => [
+              'path' => 'projects/{project}/zones/{zone}/instances/{instance}/getPartnerMetadata',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'namespaces' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'getScreenshot' => [
@@ -6247,6 +6285,10 @@ class Compute extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'listReferrers' => [
               'path' => 'projects/{project}/zones/{zone}/instances/{instance}/referrers',
@@ -6286,6 +6328,30 @@ class Compute extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'patchPartnerMetadata' => [
+              'path' => 'projects/{project}/zones/{zone}/instances/{instance}/patchPartnerMetadata',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'performMaintenance' => [
@@ -13902,6 +13968,163 @@ class Compute extends \Google\Service
           ]
         ]
     );
+    $this->regionInstanceGroupManagerResizeRequests = new Compute\Resource\RegionInstanceGroupManagerResizeRequests(
+        $this,
+        $this->serviceName,
+        'regionInstanceGroupManagerResizeRequests',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}/cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resizeRequest' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resizeRequest' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resizeRequest' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->regionInstanceGroupManagers = new Compute\Resource\RegionInstanceGroupManagers(
         $this,
         $this->serviceName,
@@ -14709,6 +14932,10 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'insert' => [
               'path' => 'projects/{project}/regions/{region}/instanceTemplates',
@@ -14762,6 +14989,10 @@ class Compute extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -22979,6 +23210,138 @@ class Compute extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->zoneVmExtensionPolicies = new Compute\Resource\ZoneVmExtensionPolicies(
+        $this,
+        $this->serviceName,
+        'zoneVmExtensionPolicies',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'projects/{project}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'vmExtensionPolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'projects/{project}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'vmExtensionPolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'projects/{project}/zones/{zone}/vmExtensionPolicies',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/zones/{zone}/vmExtensionPolicies',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'update' => [
+              'path' => 'projects/{project}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'vmExtensionPolicy' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

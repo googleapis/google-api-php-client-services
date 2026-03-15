@@ -38,10 +38,13 @@ class ImageRawDisk extends \Google\Model
    */
   public $sha1Checksum;
   /**
-   * The full Google Cloud Storage URL where the raw disk image archive is
-   * stored. The following are valid formats for the URL:        -
+   * The full Google Cloud Storage URL or Artifact Registry path where the raw
+   * disk image archive is stored. The following are valid formats:        -
    * https://storage.googleapis.com/bucket_name/image_archive_name    -
    * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name
+   * - projects/project/locations/location/repositories/repo/packages/package/ve
+   * rsions/version_id    - projects/project/locations/location/repositories/rep
+   * o/packages/package/versions/version_id@dirsum_sha256:hex_value
    *
    * In order to create an image, you must provide the full or partial URL of
    * one of the following:        - The rawDisk.source URL     - The sourceDisk
@@ -92,10 +95,13 @@ class ImageRawDisk extends \Google\Model
     return $this->sha1Checksum;
   }
   /**
-   * The full Google Cloud Storage URL where the raw disk image archive is
-   * stored. The following are valid formats for the URL:        -
+   * The full Google Cloud Storage URL or Artifact Registry path where the raw
+   * disk image archive is stored. The following are valid formats:        -
    * https://storage.googleapis.com/bucket_name/image_archive_name    -
    * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name
+   * - projects/project/locations/location/repositories/repo/packages/package/ve
+   * rsions/version_id    - projects/project/locations/location/repositories/rep
+   * o/packages/package/versions/version_id@dirsum_sha256:hex_value
    *
    * In order to create an image, you must provide the full or partial URL of
    * one of the following:        - The rawDisk.source URL     - The sourceDisk

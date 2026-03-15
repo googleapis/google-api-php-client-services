@@ -17,27 +17,28 @@
 
 namespace Google\Service\Compute\Resource;
 
-use Google\Service\Compute\InstanceTemplate;
-use Google\Service\Compute\InstanceTemplateList;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\VmExtensionPolicy;
+use Google\Service\Compute\VmExtensionPolicyList;
 
 /**
- * The "regionInstanceTemplates" collection of methods.
+ * The "zoneVmExtensionPolicies" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $regionInstanceTemplates = $computeService->regionInstanceTemplates;
+ *   $zoneVmExtensionPolicies = $computeService->zoneVmExtensionPolicies;
  *  </code>
  */
-class RegionInstanceTemplates extends \Google\Service\Resource
+class ZoneVmExtensionPolicies extends \Google\Service\Resource
 {
   /**
-   * Deletes the specified instance template. Deleting an instance template is
-   * permanent and cannot be undone. (regionInstanceTemplates.delete)
+   * Deletes a specified zone VM extension policy.
+   * (zoneVmExtensionPolicies.delete)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $instanceTemplate The name of the instance template to delete.
+   * @param string $zone Name of the zone for this request.
+   * @param string $vmExtensionPolicy Name of the zone VM extension policy to
+   * delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -55,38 +56,37 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function delete($project, $region, $instanceTemplate, $optParams = [])
+  public function delete($project, $zone, $vmExtensionPolicy, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instanceTemplate' => $instanceTemplate];
+    $params = ['project' => $project, 'zone' => $zone, 'vmExtensionPolicy' => $vmExtensionPolicy];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified instance template. (regionInstanceTemplates.get)
+   * Retrieves details of a specific zone VM extension policy.
+   * (zoneVmExtensionPolicies.get)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $instanceTemplate The name of the instance template.
+   * @param string $zone Name of the zone for this request.
+   * @param string $vmExtensionPolicy Name of the VM extension policy resource to
+   * return.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string view View of the instance template.
-   * @return InstanceTemplate
+   * @return VmExtensionPolicy
    * @throws \Google\Service\Exception
    */
-  public function get($project, $region, $instanceTemplate, $optParams = [])
+  public function get($project, $zone, $vmExtensionPolicy, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instanceTemplate' => $instanceTemplate];
+    $params = ['project' => $project, 'zone' => $zone, 'vmExtensionPolicy' => $vmExtensionPolicy];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], InstanceTemplate::class);
+    return $this->call('get', [$params], VmExtensionPolicy::class);
   }
   /**
-   * Creates an instance template in the specified project and region using the
-   * global instance template whose URL is included in the request.
-   * (regionInstanceTemplates.insert)
+   * Creates a new zone-level VM extension policy within a project.
+   * (zoneVmExtensionPolicies.insert)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param InstanceTemplate $postBody
+   * @param string $zone Name of the zone for this request.
+   * @param VmExtensionPolicy $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -104,19 +104,18 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function insert($project, $region, InstanceTemplate $postBody, $optParams = [])
+  public function insert($project, $zone, VmExtensionPolicy $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
+    $params = ['project' => $project, 'zone' => $zone, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Retrieves a list of instance templates that are contained within the
-   * specified project and region.
-   * (regionInstanceTemplates.listRegionInstanceTemplates)
+   * Lists all VM extension policies within a specific zone for a project.
+   * (zoneVmExtensionPolicies.listZoneVmExtensionPolicies)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the regions for this request.
+   * @param string $zone Name of the zone for this request.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -188,17 +187,48 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
-   * @opt_param string view View of the instance template.
-   * @return InstanceTemplateList
+   * @return VmExtensionPolicyList
    * @throws \Google\Service\Exception
    */
-  public function listRegionInstanceTemplates($project, $region, $optParams = [])
+  public function listZoneVmExtensionPolicies($project, $zone, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region];
+    $params = ['project' => $project, 'zone' => $zone];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], InstanceTemplateList::class);
+    return $this->call('list', [$params], VmExtensionPolicyList::class);
+  }
+  /**
+   * Modifies an existing zone VM extension policy.
+   * (zoneVmExtensionPolicies.update)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone Name of the zone for this request.
+   * @param string $vmExtensionPolicy Name of the zone VM extension policy to
+   * update.
+   * @param VmExtensionPolicy $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function update($project, $zone, $vmExtensionPolicy, VmExtensionPolicy $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'vmExtensionPolicy' => $vmExtensionPolicy, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('update', [$params], Operation::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RegionInstanceTemplates::class, 'Google_Service_Compute_Resource_RegionInstanceTemplates');
+class_alias(ZoneVmExtensionPolicies::class, 'Google_Service_Compute_Resource_ZoneVmExtensionPolicies');

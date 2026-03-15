@@ -17,27 +17,33 @@
 
 namespace Google\Service\Compute\Resource;
 
-use Google\Service\Compute\InstanceTemplate;
-use Google\Service\Compute\InstanceTemplateList;
+use Google\Service\Compute\InstanceGroupManagerResizeRequest;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\RegionInstanceGroupManagerResizeRequestsListResponse;
 
 /**
- * The "regionInstanceTemplates" collection of methods.
+ * The "regionInstanceGroupManagerResizeRequests" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $regionInstanceTemplates = $computeService->regionInstanceTemplates;
+ *   $regionInstanceGroupManagerResizeRequests = $computeService->regionInstanceGroupManagerResizeRequests;
  *  </code>
  */
-class RegionInstanceTemplates extends \Google\Service\Resource
+class RegionInstanceGroupManagerResizeRequests extends \Google\Service\Resource
 {
   /**
-   * Deletes the specified instance template. Deleting an instance template is
-   * permanent and cannot be undone. (regionInstanceTemplates.delete)
+   * Cancels the specified resize request. Cancelled resize request no longer
+   * waits for the resources to be provisioned. Cancel is only possible for
+   * requests that are in accepted state.
+   * (regionInstanceGroupManagerResizeRequests.cancel)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $instanceTemplate The name of the instance template to delete.
+   * @param string $region The name of the region scoping this request. Name
+   * should conform to RFC1035.
+   * @param string $instanceGroupManager The name of the managed instance group.
+   * Name should conform to RFC1035 or be a resource ID.
+   * @param string $resizeRequest The name of the resize request to cancel. Name
+   * should conform to RFC1035 or be a resource ID.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -55,38 +61,80 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function delete($project, $region, $instanceTemplate, $optParams = [])
+  public function cancel($project, $region, $instanceGroupManager, $resizeRequest, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instanceTemplate' => $instanceTemplate];
+    $params = ['project' => $project, 'region' => $region, 'instanceGroupManager' => $instanceGroupManager, 'resizeRequest' => $resizeRequest];
+    $params = array_merge($params, $optParams);
+    return $this->call('cancel', [$params], Operation::class);
+  }
+  /**
+   * Deletes the specified, inactive resize request. Requests that are still
+   * active cannot be deleted. Deleting request does not delete instances that
+   * were provisioned previously.
+   * (regionInstanceGroupManagerResizeRequests.delete)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region scoping this request. Name
+   * should conform to RFC1035.
+   * @param string $instanceGroupManager The name of the managed instance group.
+   * Name should conform to RFC1035 or be a resource ID.
+   * @param string $resizeRequest The name of the resize request to delete. Name
+   * should conform to RFC1035 or be a resource ID.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($project, $region, $instanceGroupManager, $resizeRequest, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'instanceGroupManager' => $instanceGroupManager, 'resizeRequest' => $resizeRequest];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified instance template. (regionInstanceTemplates.get)
+   * Returns all of the details about the specified resize request.
+   * (regionInstanceGroupManagerResizeRequests.get)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $instanceTemplate The name of the instance template.
+   * @param string $region The name of the region scoping this request. Name
+   * should conform to RFC1035.
+   * @param string $instanceGroupManager The name of the managed instance group.
+   * Name should conform to RFC1035 or be a resource ID.
+   * @param string $resizeRequest The name of the resize request. Name should
+   * conform to RFC1035 or be a resource ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string view View of the instance template.
-   * @return InstanceTemplate
+   * @return InstanceGroupManagerResizeRequest
    * @throws \Google\Service\Exception
    */
-  public function get($project, $region, $instanceTemplate, $optParams = [])
+  public function get($project, $region, $instanceGroupManager, $resizeRequest, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instanceTemplate' => $instanceTemplate];
+    $params = ['project' => $project, 'region' => $region, 'instanceGroupManager' => $instanceGroupManager, 'resizeRequest' => $resizeRequest];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], InstanceTemplate::class);
+    return $this->call('get', [$params], InstanceGroupManagerResizeRequest::class);
   }
   /**
-   * Creates an instance template in the specified project and region using the
-   * global instance template whose URL is included in the request.
-   * (regionInstanceTemplates.insert)
+   * Creates a new Resize Request that starts provisioning VMs immediately or
+   * queues VM creation. (regionInstanceGroupManagerResizeRequests.insert)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param InstanceTemplate $postBody
+   * @param string $region Name of the region scoping this request. Name should
+   * conform to RFC1035.
+   * @param string $instanceGroupManager Name of the managed instance group to
+   * which the resize request is scoped. Name should conform to RFC1035 or be a
+   * resource ID.
+   * @param InstanceGroupManagerResizeRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -104,19 +152,22 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function insert($project, $region, InstanceTemplate $postBody, $optParams = [])
+  public function insert($project, $region, $instanceGroupManager, InstanceGroupManagerResizeRequest $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
+    $params = ['project' => $project, 'region' => $region, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Retrieves a list of instance templates that are contained within the
-   * specified project and region.
-   * (regionInstanceTemplates.listRegionInstanceTemplates)
+   * Retrieves a list of Resize Requests that are contained in the managed
+   * instance group. (regionInstanceGroupManagerResizeRequests.listRegionInstanceG
+   * roupManagerResizeRequests)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the regions for this request.
+   * @param string $region Name of the region scoping this request. Name should
+   * conform to RFC1035.
+   * @param string $instanceGroupManager The name of the managed instance group.
+   * The name should conform to RFC1035.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -188,17 +239,16 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
-   * @opt_param string view View of the instance template.
-   * @return InstanceTemplateList
+   * @return RegionInstanceGroupManagerResizeRequestsListResponse
    * @throws \Google\Service\Exception
    */
-  public function listRegionInstanceTemplates($project, $region, $optParams = [])
+  public function listRegionInstanceGroupManagerResizeRequests($project, $region, $instanceGroupManager, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region];
+    $params = ['project' => $project, 'region' => $region, 'instanceGroupManager' => $instanceGroupManager];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], InstanceTemplateList::class);
+    return $this->call('list', [$params], RegionInstanceGroupManagerResizeRequestsListResponse::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RegionInstanceTemplates::class, 'Google_Service_Compute_Resource_RegionInstanceTemplates');
+class_alias(RegionInstanceGroupManagerResizeRequests::class, 'Google_Service_Compute_Resource_RegionInstanceGroupManagerResizeRequests');

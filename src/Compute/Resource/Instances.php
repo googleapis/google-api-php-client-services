@@ -41,6 +41,7 @@ use Google\Service\Compute\InstancesStartWithEncryptionKeyRequest;
 use Google\Service\Compute\Metadata;
 use Google\Service\Compute\NetworkInterface;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\PartnerMetadata;
 use Google\Service\Compute\Policy;
 use Google\Service\Compute\Scheduling;
 use Google\Service\Compute\Screenshot;
@@ -464,6 +465,8 @@ class Instances extends \Google\Service\Resource
    * @param string $zone The name of the zone for this request.
    * @param string $instance Name of the instance resource to return.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View of the instance.
    * @return Instance
    * @throws \Google\Service\Exception
    */
@@ -531,6 +534,25 @@ class Instances extends \Google\Service\Resource
     $params = ['project' => $project, 'zone' => $zone, 'resource' => $resource];
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Gets partner metadata of the specified instance and namespaces.
+   * (instances.getPartnerMetadata)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $instance Name of the instance scoping this request.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string namespaces Comma separated partner metadata namespaces.
+   * @return PartnerMetadata
+   * @throws \Google\Service\Exception
+   */
+  public function getPartnerMetadata($project, $zone, $instance, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'instance' => $instance];
+    $params = array_merge($params, $optParams);
+    return $this->call('getPartnerMetadata', [$params], PartnerMetadata::class);
   }
   /**
    * Returns the screenshot from the specified instance. (instances.getScreenshot)
@@ -725,6 +747,7 @@ class Instances extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
+   * @opt_param string view View of the instance.
    * @return InstanceList
    * @throws \Google\Service\Exception
    */
@@ -823,6 +846,37 @@ class Instances extends \Google\Service\Resource
     $params = ['project' => $project, 'zone' => $zone, 'instance' => $instance];
     $params = array_merge($params, $optParams);
     return $this->call('listReferrers', [$params], InstanceListReferrers::class);
+  }
+  /**
+   * Patches partner metadata of the specified instance.
+   * (instances.patchPartnerMetadata)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $instance Name of the instance scoping this request.
+   * @param PartnerMetadata $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patchPartnerMetadata($project, $zone, $instance, PartnerMetadata $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'instance' => $instance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patchPartnerMetadata', [$params], Operation::class);
   }
   /**
    * Perform a manual maintenance on the instance. (instances.performMaintenance)

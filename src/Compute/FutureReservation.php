@@ -20,6 +20,11 @@ namespace Google\Service\Compute;
 class FutureReservation extends \Google\Model
 {
   /**
+   * Intel Trust Domain Extensions.
+   */
+  public const CONFIDENTIAL_COMPUTE_TYPE_CONFIDENTIAL_COMPUTE_TYPE_TDX = 'CONFIDENTIAL_COMPUTE_TYPE_TDX';
+  public const CONFIDENTIAL_COMPUTE_TYPE_CONFIDENTIAL_COMPUTE_TYPE_UNSPECIFIED = 'CONFIDENTIAL_COMPUTE_TYPE_UNSPECIFIED';
+  /**
    * The reserved capacity is made up of densely deployed reservation blocks.
    */
   public const DEPLOYMENT_TYPE_DENSE = 'DENSE';
@@ -83,6 +88,10 @@ class FutureReservation extends \Google\Model
   public $autoDeleteAutoCreatedReservations;
   protected $commitmentInfoType = FutureReservationCommitmentInfo::class;
   protected $commitmentInfoDataType = '';
+  /**
+   * @var string
+   */
+  public $confidentialComputeType;
   /**
    * Output only. [Output Only] The creation timestamp for this future
    * reservation inRFC3339 text format.
@@ -302,6 +311,20 @@ class FutureReservation extends \Google\Model
   public function getCommitmentInfo()
   {
     return $this->commitmentInfo;
+  }
+  /**
+   * @param self::CONFIDENTIAL_COMPUTE_TYPE_* $confidentialComputeType
+   */
+  public function setConfidentialComputeType($confidentialComputeType)
+  {
+    $this->confidentialComputeType = $confidentialComputeType;
+  }
+  /**
+   * @return self::CONFIDENTIAL_COMPUTE_TYPE_*
+   */
+  public function getConfidentialComputeType()
+  {
+    return $this->confidentialComputeType;
   }
   /**
    * Output only. [Output Only] The creation timestamp for this future
