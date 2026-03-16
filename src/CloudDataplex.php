@@ -37,6 +37,9 @@ class CloudDataplex extends \Google\Service
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
+  /** View your data across Google Cloud services and see the email address of your Google Account. */
+  const CLOUD_PLATFORM_READ_ONLY =
+      "https://www.googleapis.com/auth/cloud-platform.read-only";
   /** See, edit, configure, and delete your Google Cloud Dataplex data and see the email address for your Google Account. */
   const DATAPLEX_READ_WRITE =
       "https://www.googleapis.com/auth/dataplex.read-write";
@@ -328,6 +331,16 @@ class CloudDataplex extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'lookupContext' => [
+              'path' => 'v1/{+name}:lookupContext',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'lookupEntry' => [

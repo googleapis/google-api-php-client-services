@@ -18,6 +18,8 @@
 namespace Google\Service\CloudDataplex\Resource;
 
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1Entry;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1LookupContextRequest;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1LookupContextResponse;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1LookupEntryLinksResponse;
 use Google\Service\CloudDataplex\GoogleCloudDataplexV1SearchEntriesResponse;
 use Google\Service\CloudDataplex\GoogleCloudLocationListLocationsResponse;
@@ -77,6 +79,22 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudLocationListLocationsResponse::class);
+  }
+  /**
+   * Looks up LLM Context for the specified resources. (locations.lookupContext)
+   *
+   * @param string $name Required. The project to which the request should be
+   * attributed in the following form: projects/{project}/locations/{location}.
+   * @param GoogleCloudDataplexV1LookupContextRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1LookupContextResponse
+   * @throws \Google\Service\Exception
+   */
+  public function lookupContext($name, GoogleCloudDataplexV1LookupContextRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('lookupContext', [$params], GoogleCloudDataplexV1LookupContextResponse::class);
   }
   /**
    * Looks up an entry by name using the permission on the source system.
