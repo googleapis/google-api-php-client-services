@@ -40,6 +40,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Hash extends \Google\Model
    */
   public const TYPE_SHA512 = 'SHA512';
   /**
+   * Use a dirsum_sha256 hash.
+   */
+  public const TYPE_DIRSUM_SHA256 = 'DIRSUM_SHA256';
+  /**
    * The type of hash that was performed.
    *
    * @var string
@@ -55,7 +59,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Hash extends \Google\Model
   /**
    * The type of hash that was performed.
    *
-   * Accepted values: NONE, SHA256, MD5, GO_MODULE_H1, SHA512
+   * Accepted values: NONE, SHA256, MD5, GO_MODULE_H1, SHA512, DIRSUM_SHA256
    *
    * @param self::TYPE_* $type
    */
