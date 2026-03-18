@@ -748,7 +748,8 @@ class Policy extends \Google\Collection
    */
   public $safeBootDisabled;
   /**
-   * Whether screen capture is disabled.
+   * Whether screen capture is disabled. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    *
    * @var bool
    */
@@ -2274,7 +2275,8 @@ class Policy extends \Google\Collection
     return $this->safeBootDisabled;
   }
   /**
-   * Whether screen capture is disabled.
+   * Whether screen capture is disabled. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    *
    * @param bool $screenCaptureDisabled
    */

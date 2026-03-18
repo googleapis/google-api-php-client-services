@@ -117,7 +117,8 @@ class PersonalUsagePolicies extends \Google\Collection
    */
   public $privateSpacePolicy;
   /**
-   * If true, screen capture is disabled for all users.
+   * If true, screen capture is disabled for all users. This also blocks Circle
+   * to Search (https://support.google.com/android/answer/14508957).
    *
    * @var bool
    */
@@ -251,7 +252,8 @@ class PersonalUsagePolicies extends \Google\Collection
     return $this->privateSpacePolicy;
   }
   /**
-   * If true, screen capture is disabled for all users.
+   * If true, screen capture is disabled for all users. This also blocks Circle
+   * to Search (https://support.google.com/android/answer/14508957).
    *
    * @param bool $screenCaptureDisabled
    */
