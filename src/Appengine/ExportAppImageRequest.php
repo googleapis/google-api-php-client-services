@@ -30,13 +30,6 @@ class ExportAppImageRequest extends \Google\Model
    * @var string
    */
   public $destinationRepository;
-  /**
-   * Optional. Optional: A service account to use for authenticating to Artifact
-   * Registry.
-   *
-   * @var string
-   */
-  public $serviceAccount;
 
   /**
    * Optional. The full resource name of the AR repository to export to. Format:
@@ -58,23 +51,6 @@ class ExportAppImageRequest extends \Google\Model
   public function getDestinationRepository()
   {
     return $this->destinationRepository;
-  }
-  /**
-   * Optional. Optional: A service account to use for authenticating to Artifact
-   * Registry.
-   *
-   * @param string $serviceAccount
-   */
-  public function setServiceAccount($serviceAccount)
-  {
-    $this->serviceAccount = $serviceAccount;
-  }
-  /**
-   * @return string
-   */
-  public function getServiceAccount()
-  {
-    return $this->serviceAccount;
   }
 }
 
