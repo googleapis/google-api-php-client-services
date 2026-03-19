@@ -56,11 +56,11 @@ class LiveChatGiftDetails extends \Google\Model
    */
   public $hasVisualEffect;
   /**
-   * The cost of the gift in jewels.
+   * The value of the gift in jewels.
    *
    * @var int
    */
-  public $jewelsCount;
+  public $jewelsAmount;
   /**
    * The BCP-47 language code of the gift.
    *
@@ -165,20 +165,20 @@ class LiveChatGiftDetails extends \Google\Model
     return $this->hasVisualEffect;
   }
   /**
-   * The cost of the gift in jewels.
+   * The value of the gift in jewels.
    *
-   * @param int $jewelsCount
+   * @param int $jewelsAmount
    */
-  public function setJewelsCount($jewelsCount)
+  public function setJewelsAmount($jewelsAmount)
   {
-    $this->jewelsCount = $jewelsCount;
+    $this->jewelsAmount = $jewelsAmount;
   }
   /**
    * @return int
    */
-  public function getJewelsCount()
+  public function getJewelsAmount()
   {
-    return $this->jewelsCount;
+    return $this->jewelsAmount;
   }
   /**
    * The BCP-47 language code of the gift.
