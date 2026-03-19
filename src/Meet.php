@@ -48,6 +48,7 @@ class Meet extends \Google\Service
   public $conferenceRecords_participants;
   public $conferenceRecords_participants_participantSessions;
   public $conferenceRecords_recordings;
+  public $conferenceRecords_smartNotes;
   public $conferenceRecords_transcripts;
   public $conferenceRecords_transcripts_entries;
   public $spaces;
@@ -209,6 +210,44 @@ class Meet extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v2/{+parent}/recordings',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->conferenceRecords_smartNotes = new Meet\Resource\ConferenceRecordsSmartNotes(
+        $this,
+        $this->serviceName,
+        'smartNotes',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/smartNotes',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
