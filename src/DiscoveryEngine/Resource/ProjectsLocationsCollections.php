@@ -53,9 +53,9 @@ class ProjectsLocationsCollections extends \Google\Service\Resource
    * @param string $name Required. Full resource name of DataConnector, such as `p
    * rojects/{project}/locations/{location}/collections/{collection_id}/dataConnec
    * tor`. If the caller does not have permission to access the DataConnector,
-   * regardless of whether or not it exists, a PERMISSION_DENIED error is
-   * returned. If the requested DataConnector does not exist, a NOT_FOUND error is
-   * returned.
+   * regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+   * returned. If the requested DataConnector does not exist, a `NOT_FOUND` error
+   * is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1DataConnector
    * @throws \Google\Service\Exception
@@ -83,7 +83,7 @@ class ProjectsLocationsCollections extends \Google\Service\Resource
    * `data_protection_policy` Note: Support for these fields may vary depending on
    * the connector type. For example, not all connectors support
    * `destination_configs`. If an unsupported or unknown field path is provided,
-   * the request will return an INVALID_ARGUMENT error.
+   * the request will return an `INVALID_ARGUMENT` error.
    * @return GoogleCloudDiscoveryengineV1DataConnector
    * @throws \Google\Service\Exception
    */

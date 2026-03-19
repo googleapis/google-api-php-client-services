@@ -2019,7 +2019,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'getCard' => [
-              'path' => '{+tenant}/card',
+              'path' => 'v1/{+tenant}/card',
               'httpMethod' => 'GET',
               'parameters' => [
                 'tenant' => [
@@ -2039,7 +2039,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'send' => [
-              'path' => '{+tenant}/message:send',
+              'path' => 'v1/{+tenant}/message:send',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
@@ -2049,7 +2049,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'stream' => [
-              'path' => '{+tenant}/message:stream',
+              'path' => 'v1/{+tenant}/message:stream',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
@@ -2089,7 +2089,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'cancel' => [
-              'path' => '{+tenant}/{+name}:cancel',
+              'path' => 'v1/{+tenant}/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
@@ -2104,7 +2104,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => '{+tenant}/{+name}',
+              'path' => 'v1/{+tenant}/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'tenant' => [
@@ -2123,7 +2123,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'subscribe' => [
-              'path' => '{+tenant}/{+name}:subscribe',
+              'path' => 'v1/{+tenant}/{+name}:subscribe',
               'httpMethod' => 'GET',
               'parameters' => [
                 'tenant' => [
@@ -2148,7 +2148,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => '{+tenant}/{+parent}',
+              'path' => 'v1/{+tenant}/{+parent}',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
@@ -2167,7 +2167,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => '{+tenant}/{+name}',
+              'path' => 'v1/{+tenant}/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'tenant' => [
@@ -2182,7 +2182,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => '{+tenant}/{+name}',
+              'path' => 'v1/{+tenant}/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'tenant' => [
@@ -2197,7 +2197,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => '{+tenant}/{+parent}/pushNotificationConfigs',
+              'path' => 'v1/{+tenant}/{+parent}/pushNotificationConfigs',
               'httpMethod' => 'GET',
               'parameters' => [
                 'tenant' => [
@@ -4399,30 +4399,6 @@ class DiscoveryEngine extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
-              'path' => 'v1/{+parent}/userStores',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'userStoreId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

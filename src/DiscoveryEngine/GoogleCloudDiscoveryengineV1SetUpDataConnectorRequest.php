@@ -31,10 +31,9 @@ class GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest extends \Google\Mode
    * Required. The ID to use for the Collection, which will become the final
    * component of the Collection's resource name. A new Collection is created as
    * part of the DataConnector setup. DataConnector is a singleton resource
-   * under Collection, managing all DataStores of the Collection. This field
-   * must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard
-   * with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error
-   * is returned.
+   * under Collection, managing all DataStores of the Collection. Should conform
+   * to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+   * limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    *
    * @var string
    */
@@ -64,10 +63,9 @@ class GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest extends \Google\Mode
    * Required. The ID to use for the Collection, which will become the final
    * component of the Collection's resource name. A new Collection is created as
    * part of the DataConnector setup. DataConnector is a singleton resource
-   * under Collection, managing all DataStores of the Collection. This field
-   * must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard
-   * with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error
-   * is returned.
+   * under Collection, managing all DataStores of the Collection. Should conform
+   * to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+   * limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    *
    * @param string $collectionId
    */

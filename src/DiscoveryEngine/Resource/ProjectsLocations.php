@@ -102,9 +102,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * which will become the final component of the Collection's resource name. A
    * new Collection is created as part of the DataConnector setup. DataConnector
    * is a singleton resource under Collection, managing all DataStores of the
-   * Collection. This field must conform to
-   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit
-   * of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * Collection. Should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
+   * standard with a length limit of 63 characters. Otherwise, an
+   * `INVALID_ARGUMENT` error is returned.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

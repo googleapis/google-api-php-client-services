@@ -17,17 +17,10 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1AnswerReference extends \Google\Collection
+class GoogleCloudDiscoveryengineV1AnswerReference extends \Google\Model
 {
-  protected $collection_key = 'queries';
   protected $chunkInfoType = GoogleCloudDiscoveryengineV1AnswerReferenceChunkInfo::class;
   protected $chunkInfoDataType = '';
-  /**
-   * Output only. The search queries that produced this reference.
-   *
-   * @var string[]
-   */
-  public $queries;
   protected $structuredDocumentInfoType = GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo::class;
   protected $structuredDocumentInfoDataType = '';
   protected $unstructuredDocumentInfoType = GoogleCloudDiscoveryengineV1AnswerReferenceUnstructuredDocumentInfo::class;
@@ -48,22 +41,6 @@ class GoogleCloudDiscoveryengineV1AnswerReference extends \Google\Collection
   public function getChunkInfo()
   {
     return $this->chunkInfo;
-  }
-  /**
-   * Output only. The search queries that produced this reference.
-   *
-   * @param string[] $queries
-   */
-  public function setQueries($queries)
-  {
-    $this->queries = $queries;
-  }
-  /**
-   * @return string[]
-   */
-  public function getQueries()
-  {
-    return $this->queries;
   }
   /**
    * Structured document information.

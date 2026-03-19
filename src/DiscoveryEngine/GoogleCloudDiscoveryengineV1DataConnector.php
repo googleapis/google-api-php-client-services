@@ -287,6 +287,8 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   public $dataSource;
   protected $destinationConfigsType = GoogleCloudDiscoveryengineV1DestinationConfig::class;
   protected $destinationConfigsDataType = 'array';
+  protected $dynamicToolsType = GoogleCloudDiscoveryengineV1DynamicTool::class;
+  protected $dynamicToolsDataType = 'array';
   /**
    * Output only. The list of FQDNs of the data connector can egress to. This
    * includes both FQDN derived from the customer provided instance URL and
@@ -705,6 +707,22 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   public function getDestinationConfigs()
   {
     return $this->destinationConfigs;
+  }
+  /**
+   * Output only. The dynamic tools fetched for this connector.
+   *
+   * @param GoogleCloudDiscoveryengineV1DynamicTool[] $dynamicTools
+   */
+  public function setDynamicTools($dynamicTools)
+  {
+    $this->dynamicTools = $dynamicTools;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1DynamicTool[]
+   */
+  public function getDynamicTools()
+  {
+    return $this->dynamicTools;
   }
   /**
    * Output only. The list of FQDNs of the data connector can egress to. This

@@ -49,41 +49,6 @@ class ProjectsLocationsUserStores extends \Google\Service\Resource
     return $this->call('batchUpdateUserLicenses', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Creates a new User Store. (userStores.create)
-   *
-   * @param string $parent Required. The parent collection resource name, such as
-   * `projects/{project}/locations/{location}`.
-   * @param GoogleCloudDiscoveryengineV1UserStore $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string userStoreId Required. The ID of the User Store to create.
-   * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-   * and hyphens (-). The maximum length is 63 characters.
-   * @return GoogleCloudDiscoveryengineV1UserStore
-   * @throws \Google\Service\Exception
-   */
-  public function create($parent, GoogleCloudDiscoveryengineV1UserStore $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], GoogleCloudDiscoveryengineV1UserStore::class);
-  }
-  /**
-   * Deletes the User Store. (userStores.delete)
-   *
-   * @param string $name Required. The name of the User Store to delete. Format:
-   * `projects/{project}/locations/{location}/userStores/{user_store_id}`
-   * @param array $optParams Optional parameters.
-   * @return GoogleLongrunningOperation
-   * @throws \Google\Service\Exception
-   */
-  public function delete($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', [$params], GoogleLongrunningOperation::class);
-  }
-  /**
    * Gets the User Store. (userStores.get)
    *
    * @param string $name Required. The name of the User Store to get. Format:
