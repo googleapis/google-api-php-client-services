@@ -20,7 +20,11 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2SourceFile extends \Google\Model
 {
   /**
-   * Required. Input only. The source code as raw text.
+   * Required. Input only. Represents the exact, literal, and complete source
+   * code of the file. Placeholders like `...` or comments such as `# [rest of
+   * code]` should NEVER be used as omission. Every character in this field will
+   * be built into the final container. Any omission will result in a broken
+   * application.
    *
    * @var string
    */
@@ -37,7 +41,11 @@ class GoogleCloudRunV2SourceFile extends \Google\Model
   public $filename;
 
   /**
-   * Required. Input only. The source code as raw text.
+   * Required. Input only. Represents the exact, literal, and complete source
+   * code of the file. Placeholders like `...` or comments such as `# [rest of
+   * code]` should NEVER be used as omission. Every character in this field will
+   * be built into the final container. Any omission will result in a broken
+   * application.
    *
    * @param string $content
    */
