@@ -38,6 +38,8 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends \Google\Colle
   protected $npmPackagesDataType = 'array';
   protected $objectsType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects::class;
   protected $objectsDataType = '';
+  protected $ociType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsOci::class;
+  protected $ociDataType = 'array';
   protected $pythonPackagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage::class;
   protected $pythonPackagesDataType = 'array';
 
@@ -139,6 +141,26 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends \Google\Colle
   public function getObjects()
   {
     return $this->objects;
+  }
+  /**
+   * Optional. A list of OCI images to be uploaded to Artifact Registry upon
+   * successful completion of all build steps. OCI images in the specified paths
+   * will be uploaded to the specified Artifact Registry repository using the
+   * builder service account's credentials. If any images fail to be pushed, the
+   * build is marked FAILURE.
+   *
+   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsOci[] $oci
+   */
+  public function setOci($oci)
+  {
+    $this->oci = $oci;
+  }
+  /**
+   * @return ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsOci[]
+   */
+  public function getOci()
+  {
+    return $this->oci;
   }
   /**
    * A list of Python packages to be uploaded to Artifact Registry upon

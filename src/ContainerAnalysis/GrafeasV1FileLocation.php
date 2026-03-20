@@ -28,6 +28,13 @@ class GrafeasV1FileLocation extends \Google\Model
   public $filePath;
   protected $layerDetailsType = LayerDetails::class;
   protected $layerDetailsDataType = '';
+  /**
+   * Line number in the file where the package was found. Optional field that
+   * only applies to source repository scanning.
+   *
+   * @var int
+   */
+  public $lineNumber;
 
   /**
    * For jars that are contained inside .war files, this filepath can indicate
@@ -62,6 +69,23 @@ class GrafeasV1FileLocation extends \Google\Model
   public function getLayerDetails()
   {
     return $this->layerDetails;
+  }
+  /**
+   * Line number in the file where the package was found. Optional field that
+   * only applies to source repository scanning.
+   *
+   * @param int $lineNumber
+   */
+  public function setLineNumber($lineNumber)
+  {
+    $this->lineNumber = $lineNumber;
+  }
+  /**
+   * @return int
+   */
+  public function getLineNumber()
+  {
+    return $this->lineNumber;
   }
 }
 

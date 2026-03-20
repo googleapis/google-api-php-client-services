@@ -20,6 +20,20 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const OCI_MEDIA_TYPE_OCI_MEDIA_TYPE_UNSPECIFIED = 'OCI_MEDIA_TYPE_UNSPECIFIED';
+  /**
+   * The artifact is an image manifest, which represents a single image with all
+   * its layers.
+   */
+  public const OCI_MEDIA_TYPE_IMAGE_MANIFEST = 'IMAGE_MANIFEST';
+  /**
+   * The artifact is an image index, which can contain a list of image
+   * manifests.
+   */
+  public const OCI_MEDIA_TYPE_IMAGE_INDEX = 'IMAGE_INDEX';
+  /**
    * Output only. Path to the artifact in Artifact Registry.
    *
    * @var string
@@ -38,6 +52,13 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage extends \Google\Mode
    * @var string
    */
   public $name;
+  /**
+   * Output only. The OCI media type of the artifact. Non-OCI images, such as
+   * Docker images, will have an unspecified value.
+   *
+   * @var string
+   */
+  public $ociMediaType;
   protected $pushTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $pushTimingDataType = '';
 
@@ -89,6 +110,25 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage extends \Google\Mode
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The OCI media type of the artifact. Non-OCI images, such as
+   * Docker images, will have an unspecified value.
+   *
+   * Accepted values: OCI_MEDIA_TYPE_UNSPECIFIED, IMAGE_MANIFEST, IMAGE_INDEX
+   *
+   * @param self::OCI_MEDIA_TYPE_* $ociMediaType
+   */
+  public function setOciMediaType($ociMediaType)
+  {
+    $this->ociMediaType = $ociMediaType;
+  }
+  /**
+   * @return self::OCI_MEDIA_TYPE_*
+   */
+  public function getOciMediaType()
+  {
+    return $this->ociMediaType;
   }
   /**
    * Output only. Stores timing information for pushing the specified image.
