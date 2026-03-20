@@ -166,6 +166,28 @@ class DeveloperConnect extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'fetchUserRepositories' => [
+              'path' => 'v1/{+accountConnector}:fetchUserRepositories',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'accountConnector' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'repository' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',

@@ -31,6 +31,8 @@ class AccountConnector extends \Google\Model
    * @var string
    */
   public $createTime;
+  protected $customOauthConfigType = CustomOAuthConfig::class;
+  protected $customOauthConfigDataType = '';
   /**
    * Optional. This checksum is computed by the server based on the value of
    * other fields, and may be sent on update and delete requests to ensure the
@@ -61,6 +63,8 @@ class AccountConnector extends \Google\Model
   public $oauthStartUri;
   protected $providerOauthConfigType = ProviderOAuthConfig::class;
   protected $providerOauthConfigDataType = '';
+  protected $proxyConfigType = ProxyConfig::class;
+  protected $proxyConfigDataType = '';
   /**
    * Output only. The timestamp when the accountConnector was updated.
    *
@@ -99,6 +103,22 @@ class AccountConnector extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Custom OAuth config.
+   *
+   * @param CustomOAuthConfig $customOauthConfig
+   */
+  public function setCustomOauthConfig(CustomOAuthConfig $customOauthConfig)
+  {
+    $this->customOauthConfig = $customOauthConfig;
+  }
+  /**
+   * @return CustomOAuthConfig
+   */
+  public function getCustomOauthConfig()
+  {
+    return $this->customOauthConfig;
   }
   /**
    * Optional. This checksum is computed by the server based on the value of
@@ -183,6 +203,22 @@ class AccountConnector extends \Google\Model
   public function getProviderOauthConfig()
   {
     return $this->providerOauthConfig;
+  }
+  /**
+   * Optional. Configuration for the http and git proxy features.
+   *
+   * @param ProxyConfig $proxyConfig
+   */
+  public function setProxyConfig(ProxyConfig $proxyConfig)
+  {
+    $this->proxyConfig = $proxyConfig;
+  }
+  /**
+   * @return ProxyConfig
+   */
+  public function getProxyConfig()
+  {
+    return $this->proxyConfig;
   }
   /**
    * Output only. The timestamp when the accountConnector was updated.

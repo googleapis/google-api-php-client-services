@@ -18,6 +18,7 @@
 namespace Google\Service\DeveloperConnect\Resource;
 
 use Google\Service\DeveloperConnect\AccountConnector;
+use Google\Service\DeveloperConnect\FetchUserRepositoriesResponse;
 use Google\Service\DeveloperConnect\ListAccountConnectorsResponse;
 use Google\Service\DeveloperConnect\Operation;
 
@@ -101,6 +102,29 @@ class ProjectsLocationsAccountConnectors extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * FetchUserRepositories returns a list of UserRepos that are available for an
+   * account connector resource. (accountConnectors.fetchUserRepositories)
+   *
+   * @param string $accountConnector Required. The name of the Account Connector
+   * resource in the format: `projects/locations/accountConnectors`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. Number of results to return in the list.
+   * Defaults to 20.
+   * @opt_param string pageToken Optional. Page start.
+   * @opt_param string repository Optional. The name of the repository. When
+   * specified, only the UserRepository with this name will be returned if the
+   * repository is accessible under this Account Connector for the calling user.
+   * @return FetchUserRepositoriesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchUserRepositories($accountConnector, $optParams = [])
+  {
+    $params = ['accountConnector' => $accountConnector];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchUserRepositories', [$params], FetchUserRepositoriesResponse::class);
   }
   /**
    * Gets details of a single AccountConnector. (accountConnectors.get)
