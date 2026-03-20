@@ -96,8 +96,11 @@ class MigrationExecution extends \Google\Model
    */
   public $name;
   /**
-   * Output only. The current phase of the migration execution.
+   * Output only. Deprecated: Phase was designed for incoming migrations to
+   * Dataproc Metastore, not applicable when migrating away from it. The current
+   * phase of the migration execution.
    *
+   * @deprecated
    * @var string
    */
   public $phase;
@@ -116,10 +119,12 @@ class MigrationExecution extends \Google\Model
   public $stateMessage;
 
   /**
-   * Configuration information specific to migrating from self-managed hive
-   * metastore on Google Cloud using Cloud SQL as the backend database to
-   * Dataproc Metastore.
+   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use
+   * BigLake Metastore migration instead. Configuration information specific to
+   * migrating from self-managed hive metastore on Google Cloud using Cloud SQL
+   * as the backend database to Dataproc Metastore.
    *
+   * @deprecated
    * @param CloudSQLMigrationConfig $cloudSqlMigrationConfig
    */
   public function setCloudSqlMigrationConfig(CloudSQLMigrationConfig $cloudSqlMigrationConfig)
@@ -127,6 +132,7 @@ class MigrationExecution extends \Google\Model
     $this->cloudSqlMigrationConfig = $cloudSqlMigrationConfig;
   }
   /**
+   * @deprecated
    * @return CloudSQLMigrationConfig
    */
   public function getCloudSqlMigrationConfig()
@@ -184,10 +190,13 @@ class MigrationExecution extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. The current phase of the migration execution.
+   * Output only. Deprecated: Phase was designed for incoming migrations to
+   * Dataproc Metastore, not applicable when migrating away from it. The current
+   * phase of the migration execution.
    *
    * Accepted values: PHASE_UNSPECIFIED, REPLICATION, CUTOVER
    *
+   * @deprecated
    * @param self::PHASE_* $phase
    */
   public function setPhase($phase)
@@ -195,6 +204,7 @@ class MigrationExecution extends \Google\Model
     $this->phase = $phase;
   }
   /**
+   * @deprecated
    * @return self::PHASE_*
    */
   public function getPhase()
