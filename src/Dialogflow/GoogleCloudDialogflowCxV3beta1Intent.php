@@ -29,6 +29,10 @@ class GoogleCloudDialogflowCxV3beta1Intent extends \Google\Collection
    */
   public $displayName;
   /**
+   * @var string
+   */
+  public $dtmfPattern;
+  /**
    * @var bool
    */
   public $isFallback;
@@ -76,6 +80,20 @@ class GoogleCloudDialogflowCxV3beta1Intent extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param string $dtmfPattern
+   */
+  public function setDtmfPattern($dtmfPattern)
+  {
+    $this->dtmfPattern = $dtmfPattern;
+  }
+  /**
+   * @return string
+   */
+  public function getDtmfPattern()
+  {
+    return $this->dtmfPattern;
   }
   /**
    * @param bool $isFallback

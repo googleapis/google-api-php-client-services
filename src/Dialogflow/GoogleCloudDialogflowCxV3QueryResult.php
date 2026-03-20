@@ -63,6 +63,8 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
    * @var string
    */
   public $text;
+  protected $traceBlocksType = GoogleCloudDialogflowCxV3TraceBlock::class;
+  protected $traceBlocksDataType = 'array';
   /**
    * @var string
    */
@@ -295,6 +297,20 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
   public function getText()
   {
     return $this->text;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3TraceBlock[] $traceBlocks
+   */
+  public function setTraceBlocks($traceBlocks)
+  {
+    $this->traceBlocks = $traceBlocks;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3TraceBlock[]
+   */
+  public function getTraceBlocks()
+  {
+    return $this->traceBlocks;
   }
   /**
    * @param string $transcript
