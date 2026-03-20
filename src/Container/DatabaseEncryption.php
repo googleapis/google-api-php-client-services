@@ -51,6 +51,19 @@ class DatabaseEncryption extends \Google\Collection
    */
   public const CURRENT_STATE_CURRENT_STATE_DECRYPTION_ERROR = 'CURRENT_STATE_DECRYPTION_ERROR';
   /**
+   * Encryption of all objects in the storage is enabled. It does not guarantee
+   * that all objects in the storage are encrypted, but eventually they will be.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_ENABLED = 'CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_ENABLED';
+  /**
+   * Enablement of the encryption of all objects in storage is pending.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_PENDING = 'CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_PENDING';
+  /**
+   * Enabling encryption of all objects in storage encountered an error.
+   */
+  public const CURRENT_STATE_CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_ERROR = 'CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_ERROR';
+  /**
    * Should never be set
    */
   public const STATE_UNKNOWN = 'UNKNOWN';
@@ -63,6 +76,11 @@ class DatabaseEncryption extends \Google\Collection
    * unrelated to Compute Engine level full disk encryption.
    */
   public const STATE_DECRYPTED = 'DECRYPTED';
+  /**
+   * Encryption of all objects in the storage is enabled. There is no guarantee
+   * that all objects in the storage are encrypted, but eventually they will be.
+   */
+  public const STATE_ALL_OBJECTS_ENCRYPTION_ENABLED = 'ALL_OBJECTS_ENCRYPTION_ENABLED';
   protected $collection_key = 'lastOperationErrors';
   /**
    * Output only. The current state of etcd encryption.
@@ -99,7 +117,10 @@ class DatabaseEncryption extends \Google\Collection
    * Accepted values: CURRENT_STATE_UNSPECIFIED, CURRENT_STATE_ENCRYPTED,
    * CURRENT_STATE_DECRYPTED, CURRENT_STATE_ENCRYPTION_PENDING,
    * CURRENT_STATE_ENCRYPTION_ERROR, CURRENT_STATE_DECRYPTION_PENDING,
-   * CURRENT_STATE_DECRYPTION_ERROR
+   * CURRENT_STATE_DECRYPTION_ERROR,
+   * CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_ENABLED,
+   * CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_PENDING,
+   * CURRENT_STATE_ALL_OBJECTS_ENCRYPTION_ERROR
    *
    * @param self::CURRENT_STATE_* $currentState
    */
@@ -168,7 +189,8 @@ class DatabaseEncryption extends \Google\Collection
   /**
    * The desired state of etcd encryption.
    *
-   * Accepted values: UNKNOWN, ENCRYPTED, DECRYPTED
+   * Accepted values: UNKNOWN, ENCRYPTED, DECRYPTED,
+   * ALL_OBJECTS_ENCRYPTION_ENABLED
    *
    * @param self::STATE_* $state
    */

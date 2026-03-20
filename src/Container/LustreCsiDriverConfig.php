@@ -20,6 +20,15 @@ namespace Google\Service\Container;
 class LustreCsiDriverConfig extends \Google\Model
 {
   /**
+   * When set to true, this disables multi-NIC support for the Lustre CSI
+   * driver. By default, GKE enables multi-NIC support, which allows the Lustre
+   * CSI driver to automatically detect and configure all suitable network
+   * interfaces on a node to maximize I/O performance for demanding workloads.
+   *
+   * @var bool
+   */
+  public $disableMultiNic;
+  /**
    * If set to true, the Lustre CSI driver will install Lustre kernel modules
    * using port 6988. This serves as a workaround for a port conflict with the
    * gke-metadata-server. This field is required ONLY under the following
@@ -40,6 +49,25 @@ class LustreCsiDriverConfig extends \Google\Model
    */
   public $enabled;
 
+  /**
+   * When set to true, this disables multi-NIC support for the Lustre CSI
+   * driver. By default, GKE enables multi-NIC support, which allows the Lustre
+   * CSI driver to automatically detect and configure all suitable network
+   * interfaces on a node to maximize I/O performance for demanding workloads.
+   *
+   * @param bool $disableMultiNic
+   */
+  public function setDisableMultiNic($disableMultiNic)
+  {
+    $this->disableMultiNic = $disableMultiNic;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableMultiNic()
+  {
+    return $this->disableMultiNic;
+  }
   /**
    * If set to true, the Lustre CSI driver will install Lustre kernel modules
    * using port 6988. This serves as a workaround for a port conflict with the

@@ -87,6 +87,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredAuthenticatorGroupsConfigDataType = '';
   protected $desiredAutoIpamConfigType = AutoIpamConfig::class;
   protected $desiredAutoIpamConfigDataType = '';
+  protected $desiredAutopilotClusterPolicyConfigType = ClusterPolicyConfig::class;
+  protected $desiredAutopilotClusterPolicyConfigDataType = '';
   protected $desiredAutopilotWorkloadPolicyConfigType = WorkloadPolicyConfig::class;
   protected $desiredAutopilotWorkloadPolicyConfigDataType = '';
   protected $desiredBinaryAuthorizationType = BinaryAuthorization::class;
@@ -210,6 +212,8 @@ class ClusterUpdate extends \Google\Collection
    * @var string
    */
   public $desiredLoggingService;
+  protected $desiredManagedMachineLearningDiagnosticsConfigType = ManagedMachineLearningDiagnosticsConfig::class;
+  protected $desiredManagedMachineLearningDiagnosticsConfigDataType = '';
   protected $desiredManagedOpentelemetryConfigType = ManagedOpenTelemetryConfig::class;
   protected $desiredManagedOpentelemetryConfigDataType = '';
   protected $desiredMasterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
@@ -440,6 +444,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredAutoIpamConfig()
   {
     return $this->desiredAutoIpamConfig;
+  }
+  /**
+   * The desired autopilot cluster policies that to be enforced in the cluster.
+   *
+   * @param ClusterPolicyConfig $desiredAutopilotClusterPolicyConfig
+   */
+  public function setDesiredAutopilotClusterPolicyConfig(ClusterPolicyConfig $desiredAutopilotClusterPolicyConfig)
+  {
+    $this->desiredAutopilotClusterPolicyConfig = $desiredAutopilotClusterPolicyConfig;
+  }
+  /**
+   * @return ClusterPolicyConfig
+   */
+  public function getDesiredAutopilotClusterPolicyConfig()
+  {
+    return $this->desiredAutopilotClusterPolicyConfig;
   }
   /**
    * WorkloadPolicyConfig is the configuration related to GCW workload policy
@@ -955,6 +975,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredLoggingService()
   {
     return $this->desiredLoggingService;
+  }
+  /**
+   * The desired managed machine learning diagnostics configuration.
+   *
+   * @param ManagedMachineLearningDiagnosticsConfig $desiredManagedMachineLearningDiagnosticsConfig
+   */
+  public function setDesiredManagedMachineLearningDiagnosticsConfig(ManagedMachineLearningDiagnosticsConfig $desiredManagedMachineLearningDiagnosticsConfig)
+  {
+    $this->desiredManagedMachineLearningDiagnosticsConfig = $desiredManagedMachineLearningDiagnosticsConfig;
+  }
+  /**
+   * @return ManagedMachineLearningDiagnosticsConfig
+   */
+  public function getDesiredManagedMachineLearningDiagnosticsConfig()
+  {
+    return $this->desiredManagedMachineLearningDiagnosticsConfig;
   }
   /**
    * The desired managed open telemetry configuration.

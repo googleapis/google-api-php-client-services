@@ -299,6 +299,8 @@ class NodeConfig extends \Google\Collection
    * @var string[]
    */
   public $tags;
+  protected $taintConfigType = TaintConfig::class;
+  protected $taintConfigDataType = '';
   protected $taintsType = NodeTaint::class;
   protected $taintsDataType = 'array';
   protected $windowsNodeConfigType = WindowsNodeConfig::class;
@@ -1090,6 +1092,22 @@ class NodeConfig extends \Google\Collection
   public function getTags()
   {
     return $this->tags;
+  }
+  /**
+   * Optional. The taint configuration for the node pool.
+   *
+   * @param TaintConfig $taintConfig
+   */
+  public function setTaintConfig(TaintConfig $taintConfig)
+  {
+    $this->taintConfig = $taintConfig;
+  }
+  /**
+   * @return TaintConfig
+   */
+  public function getTaintConfig()
+  {
+    return $this->taintConfig;
   }
   /**
    * List of kubernetes taints to be applied to each node. For more information,

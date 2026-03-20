@@ -59,6 +59,10 @@ class UpgradeInfoEvent extends \Google\Model
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
+   * SCHEDULED indicates the upgrade was scheduled.
+   */
+  public const STATE_SCHEDULED = 'SCHEDULED';
+  /**
    * STARTED indicates the upgrade has started.
    */
   public const STATE_STARTED = 'STARTED';
@@ -336,7 +340,8 @@ class UpgradeInfoEvent extends \Google\Model
   /**
    * Output only. The state of the upgrade.
    *
-   * Accepted values: STATE_UNSPECIFIED, STARTED, SUCCEEDED, FAILED, CANCELED
+   * Accepted values: STATE_UNSPECIFIED, SCHEDULED, STARTED, SUCCEEDED, FAILED,
+   * CANCELED
    *
    * @param self::STATE_* $state
    */

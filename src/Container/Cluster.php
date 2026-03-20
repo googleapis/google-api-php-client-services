@@ -280,6 +280,8 @@ class Cluster extends \Google\Collection
   public $loggingService;
   protected $maintenancePolicyType = MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
+  protected $managedMachineLearningDiagnosticsConfigType = ManagedMachineLearningDiagnosticsConfig::class;
+  protected $managedMachineLearningDiagnosticsConfigDataType = '';
   protected $managedOpentelemetryConfigType = ManagedOpenTelemetryConfig::class;
   protected $managedOpentelemetryConfigDataType = '';
   protected $masterAuthType = MasterAuth::class;
@@ -375,6 +377,8 @@ class Cluster extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  protected $scheduleUpgradeConfigType = ScheduleUpgradeConfig::class;
+  protected $scheduleUpgradeConfigDataType = '';
   protected $secretManagerConfigType = SecretManagerConfig::class;
   protected $secretManagerConfigDataType = '';
   protected $securityPostureConfigType = SecurityPostureConfig::class;
@@ -1197,6 +1201,22 @@ class Cluster extends \Google\Collection
     return $this->maintenancePolicy;
   }
   /**
+   * Configuration for Managed Machine Learning Diagnostics.
+   *
+   * @param ManagedMachineLearningDiagnosticsConfig $managedMachineLearningDiagnosticsConfig
+   */
+  public function setManagedMachineLearningDiagnosticsConfig(ManagedMachineLearningDiagnosticsConfig $managedMachineLearningDiagnosticsConfig)
+  {
+    $this->managedMachineLearningDiagnosticsConfig = $managedMachineLearningDiagnosticsConfig;
+  }
+  /**
+   * @return ManagedMachineLearningDiagnosticsConfig
+   */
+  public function getManagedMachineLearningDiagnosticsConfig()
+  {
+    return $this->managedMachineLearningDiagnosticsConfig;
+  }
+  /**
    * Configuration for Managed OpenTelemetry pipeline.
    *
    * @param ManagedOpenTelemetryConfig $managedOpentelemetryConfig
@@ -1642,6 +1662,22 @@ class Cluster extends \Google\Collection
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * Optional. Configuration for scheduled upgrades.
+   *
+   * @param ScheduleUpgradeConfig $scheduleUpgradeConfig
+   */
+  public function setScheduleUpgradeConfig(ScheduleUpgradeConfig $scheduleUpgradeConfig)
+  {
+    $this->scheduleUpgradeConfig = $scheduleUpgradeConfig;
+  }
+  /**
+   * @return ScheduleUpgradeConfig
+   */
+  public function getScheduleUpgradeConfig()
+  {
+    return $this->scheduleUpgradeConfig;
   }
   /**
    * Secret CSI driver configuration.

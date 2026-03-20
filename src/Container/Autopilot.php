@@ -19,6 +19,8 @@ namespace Google\Service\Container;
 
 class Autopilot extends \Google\Model
 {
+  protected $clusterPolicyConfigType = ClusterPolicyConfig::class;
+  protected $clusterPolicyConfigDataType = '';
   /**
    * Enable Autopilot
    *
@@ -30,6 +32,23 @@ class Autopilot extends \Google\Model
   protected $workloadPolicyConfigType = WorkloadPolicyConfig::class;
   protected $workloadPolicyConfigDataType = '';
 
+  /**
+   * ClusterPolicyConfig denotes cluster level policies that are enforced for
+   * the cluster.
+   *
+   * @param ClusterPolicyConfig $clusterPolicyConfig
+   */
+  public function setClusterPolicyConfig(ClusterPolicyConfig $clusterPolicyConfig)
+  {
+    $this->clusterPolicyConfig = $clusterPolicyConfig;
+  }
+  /**
+   * @return ClusterPolicyConfig
+   */
+  public function getClusterPolicyConfig()
+  {
+    return $this->clusterPolicyConfig;
+  }
   /**
    * Enable Autopilot
    *
