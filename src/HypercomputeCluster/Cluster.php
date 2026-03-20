@@ -28,7 +28,8 @@ class Cluster extends \Google\Model
    */
   public $createTime;
   /**
-   * Optional. User-provided description of the cluster.
+   * Optional. User-provided description of the cluster. Maximum of 2048
+   * characters.
    *
    * @var string
    */
@@ -106,7 +107,8 @@ class Cluster extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. User-provided description of the cluster.
+   * Optional. User-provided description of the cluster. Maximum of 2048
+   * characters.
    *
    * @param string $description
    */
