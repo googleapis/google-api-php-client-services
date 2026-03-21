@@ -31,6 +31,8 @@ class DirectoryEntry extends \Google\Model
    * @var string
    */
   public $file;
+  protected $metadataType = FilesystemEntryMetadata::class;
+  protected $metadataDataType = '';
 
   /**
    * A child directory in the directory.
@@ -63,6 +65,22 @@ class DirectoryEntry extends \Google\Model
   public function getFile()
   {
     return $this->file;
+  }
+  /**
+   * Entry with metadata.
+   *
+   * @param FilesystemEntryMetadata $metadata
+   */
+  public function setMetadata(FilesystemEntryMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return FilesystemEntryMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
 }
 

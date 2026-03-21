@@ -37,6 +37,10 @@ class ComputeRepositoryAccessTokenStatusResponse extends \Google\Model
    */
   public const TOKEN_STATUS_VALID = 'VALID';
   /**
+   * The token is not accessible due to permission issues.
+   */
+  public const TOKEN_STATUS_PERMISSION_DENIED = 'PERMISSION_DENIED';
+  /**
    * Indicates the status of the Git access token.
    *
    * @var string
@@ -46,7 +50,8 @@ class ComputeRepositoryAccessTokenStatusResponse extends \Google\Model
   /**
    * Indicates the status of the Git access token.
    *
-   * Accepted values: TOKEN_STATUS_UNSPECIFIED, NOT_FOUND, INVALID, VALID
+   * Accepted values: TOKEN_STATUS_UNSPECIFIED, NOT_FOUND, INVALID, VALID,
+   * PERMISSION_DENIED
    *
    * @param self::TOKEN_STATUS_* $tokenStatus
    */

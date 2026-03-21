@@ -999,6 +999,10 @@ class Dataform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'readFile' => [
               'path' => 'v1/{+workspace}:readFile',

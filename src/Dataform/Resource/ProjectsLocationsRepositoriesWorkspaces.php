@@ -349,6 +349,11 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @opt_param string path Optional. The directory's full path including
    * directory name, relative to the workspace root. If left unset, the workspace
    * root is used.
+   * @opt_param string view Optional. Specifies the metadata to return for each
+   * directory entry. If unspecified, the default is
+   * `DIRECTORY_CONTENTS_VIEW_BASIC`. Currently the
+   * `DIRECTORY_CONTENTS_VIEW_METADATA` view is not supported by CMEK-protected
+   * workspaces.
    * @return QueryDirectoryContentsResponse
    * @throws \Google\Service\Exception
    */
