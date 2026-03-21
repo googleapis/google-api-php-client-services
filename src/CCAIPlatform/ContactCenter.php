@@ -70,6 +70,10 @@ class ContactCenter extends \Google\Collection
    * in this state.
    */
   public const STATE_STATE_REPAIRING = 'STATE_REPAIRING';
+  /**
+   * Flagged by an automation as soon to be expired.
+   */
+  public const STATE_STATE_EXPIRING = 'STATE_EXPIRING';
   protected $collection_key = 'privateComponents';
   protected $adminUserType = AdminUser::class;
   protected $adminUserDataType = '';
@@ -535,7 +539,7 @@ class ContactCenter extends \Google\Collection
    * Accepted values: STATE_UNSPECIFIED, STATE_DEPLOYING, STATE_DEPLOYED,
    * STATE_TERMINATING, STATE_FAILED, STATE_TERMINATING_FAILED,
    * STATE_TERMINATED, STATE_IN_GRACE_PERIOD, STATE_FAILING_OVER,
-   * STATE_DEGRADED, STATE_REPAIRING
+   * STATE_DEGRADED, STATE_REPAIRING, STATE_EXPIRING
    *
    * @param self::STATE_* $state
    */
