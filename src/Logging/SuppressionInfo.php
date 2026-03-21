@@ -26,7 +26,7 @@ class SuppressionInfo extends \Google\Model
   /**
    * Indicates suppression occurred due to relevant entries being received in
    * excess of rate limits. For quotas and limits, see Logging API quotas and
-   * limits (https://cloud.google.com/logging/quotas#api-limits).
+   * limits (https://docs.cloud.google.com/logging/quotas#api-limits).
    */
   public const REASON_RATE_LIMIT = 'RATE_LIMIT';
   /**

@@ -31,12 +31,13 @@ class TailLogEntriesRequest extends \Google\Collection
   public $bufferWindow;
   /**
    * Optional. A filter that chooses which log entries to return. For more
-   * information, see Logging query language (https://{$universe.dns_names.final
-   * _documentation_domain}/logging/docs/view/logging-query-language).Only log
-   * entries that match the filter are returned. An empty filter matches all log
-   * entries in the resources listed in resource_names. Referencing a parent
-   * resource that is not listed in resource_names will cause the filter to
-   * return no results. The maximum length of a filter is 20,000 characters.
+   * information, see Logging query language
+   * (https://docs.cloud.google.com/logging/docs/view/logging-query-
+   * language).Only log entries that match the filter are returned. An empty
+   * filter matches all log entries in the resources listed in resource_names.
+   * Referencing a parent resource that is not listed in resource_names will
+   * cause the filter to return no results. The maximum length of a filter is
+   * 20,000 characters.
    *
    * @var string
    */
@@ -76,12 +77,13 @@ class TailLogEntriesRequest extends \Google\Collection
   }
   /**
    * Optional. A filter that chooses which log entries to return. For more
-   * information, see Logging query language (https://{$universe.dns_names.final
-   * _documentation_domain}/logging/docs/view/logging-query-language).Only log
-   * entries that match the filter are returned. An empty filter matches all log
-   * entries in the resources listed in resource_names. Referencing a parent
-   * resource that is not listed in resource_names will cause the filter to
-   * return no results. The maximum length of a filter is 20,000 characters.
+   * information, see Logging query language
+   * (https://docs.cloud.google.com/logging/docs/view/logging-query-
+   * language).Only log entries that match the filter are returned. An empty
+   * filter matches all log entries in the resources listed in resource_names.
+   * Referencing a parent resource that is not listed in resource_names will
+   * cause the filter to return no results. The maximum length of a filter is
+   * 20,000 characters.
    *
    * @param string $filter
    */
