@@ -475,8 +475,8 @@ class Message extends \Google\Collection
     return $this->lastUpdateTime;
   }
   /**
-   * Output only. A URL in `spaces.messages.text` that matches a link preview
-   * pattern. For more information, see [Preview
+   * Output only. A URL in the Chat message `text` field that matches a link
+   * preview pattern. For more information, see [Preview
    * links](https://developers.google.com/workspace/chat/preview-links).
    *
    * @param MatchedUrl $matchedUrl
