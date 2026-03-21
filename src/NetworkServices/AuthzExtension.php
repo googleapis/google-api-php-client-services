@@ -51,8 +51,9 @@ class AuthzExtension extends \Google\Collection
   public const WIRE_FORMAT_EXT_AUTHZ_GRPC = 'EXT_AUTHZ_GRPC';
   protected $collection_key = 'forwardHeaders';
   /**
-   * Required. The `:authority` header in the gRPC request sent from Envoy to
-   * the extension service.
+   * Optional. The `:authority` header in the gRPC request sent from Envoy to
+   * the extension service. It is required when the `service` field points to a
+   * backend service or a wasm plugin.
    *
    * @var string
    */
@@ -179,8 +180,9 @@ class AuthzExtension extends \Google\Collection
   public $wireFormat;
 
   /**
-   * Required. The `:authority` header in the gRPC request sent from Envoy to
-   * the extension service.
+   * Optional. The `:authority` header in the gRPC request sent from Envoy to
+   * the extension service. It is required when the `service` field points to a
+   * backend service or a wasm plugin.
    *
    * @param string $authority
    */

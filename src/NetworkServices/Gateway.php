@@ -81,6 +81,14 @@ class Gateway extends \Google\Collection
    */
   public $addresses;
   /**
+   * Optional. If true, the gateway will allow traffic from clients outside of
+   * the region where the gateway is located. This field is configurable only
+   * for gateways of type SECURE_WEB_GATEWAY.
+   *
+   * @var bool
+   */
+  public $allowGlobalAccess;
+  /**
    * Optional. A fully-qualified Certificates URL reference. The proxy presents
    * a Certificate (selected based on SNI) when establishing a TLS connection.
    * This feature only applies to gateways of type 'SECURE_WEB_GATEWAY'.
@@ -230,6 +238,24 @@ class Gateway extends \Google\Collection
   public function getAddresses()
   {
     return $this->addresses;
+  }
+  /**
+   * Optional. If true, the gateway will allow traffic from clients outside of
+   * the region where the gateway is located. This field is configurable only
+   * for gateways of type SECURE_WEB_GATEWAY.
+   *
+   * @param bool $allowGlobalAccess
+   */
+  public function setAllowGlobalAccess($allowGlobalAccess)
+  {
+    $this->allowGlobalAccess = $allowGlobalAccess;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowGlobalAccess()
+  {
+    return $this->allowGlobalAccess;
   }
   /**
    * Optional. A fully-qualified Certificates URL reference. The proxy presents
