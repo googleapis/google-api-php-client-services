@@ -49,6 +49,7 @@ class NetAppFiles extends \Google\Service
   public $projects_locations_kmsConfigs;
   public $projects_locations_operations;
   public $projects_locations_storagePools;
+  public $projects_locations_storagePools_ontap;
   public $projects_locations_volumes;
   public $projects_locations_volumes_quotaRules;
   public $projects_locations_volumes_replications;
@@ -804,6 +805,56 @@ class NetAppFiles extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_storagePools_ontap = new NetAppFiles\Resource\ProjectsLocationsStoragePoolsOntap(
+        $this,
+        $this->serviceName,
+        'ontap',
+        [
+          'methods' => [
+            'executeOntapDelete' => [
+              'path' => 'v1/{+ontapPath}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'ontapPath' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'executeOntapGet' => [
+              'path' => 'v1/{+ontapPath}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'ontapPath' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'executeOntapPatch' => [
+              'path' => 'v1/{+ontapPath}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'ontapPath' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'executeOntapPost' => [
+              'path' => 'v1/{+ontapPath}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'ontapPath' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

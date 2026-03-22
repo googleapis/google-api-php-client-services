@@ -32,6 +32,18 @@ class StoragePool extends \Google\Model
    */
   public const ENCRYPTION_TYPE_CLOUD_KMS = 'CLOUD_KMS';
   /**
+   * The `Mode` is not specified.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * The resource is managed by the GCNV APIs.
+   */
+  public const MODE_DEFAULT = 'DEFAULT';
+  /**
+   * The resource is managed by the GCNV ONTAP Mode APIs.
+   */
+  public const MODE_ONTAP = 'ONTAP';
+  /**
    * Unspecified QoS Type
    */
   public const QOS_TYPE_QOS_TYPE_UNSPECIFIED = 'QOS_TYPE_UNSPECIFIED';
@@ -43,6 +55,20 @@ class StoragePool extends \Google\Model
    * QoS Type is Manual
    */
   public const QOS_TYPE_MANUAL = 'MANUAL';
+  /**
+   * The default value. This value is unused.
+   */
+  public const SCALE_TIER_SCALE_TIER_UNSPECIFIED = 'SCALE_TIER_UNSPECIFIED';
+  /**
+   * The standard capacity and performance tier. Suitable for general purpose
+   * workloads.
+   */
+  public const SCALE_TIER_SCALE_TIER_STANDARD = 'SCALE_TIER_STANDARD';
+  /**
+   * A higher capacity and performance tier. Suitable for more demanding
+   * workloads.
+   */
+  public const SCALE_TIER_SCALE_TIER_ENTERPRISE = 'SCALE_TIER_ENTERPRISE';
   /**
    * Unspecified service level.
    */
@@ -107,12 +133,6 @@ class StoragePool extends \Google\Model
    * Storage pool type is unified.
    */
   public const TYPE_UNIFIED = 'UNIFIED';
-  /**
-   * Deprecated: UNIFIED_LARGE_CAPACITY was previously tag 3.
-   *
-   * @deprecated
-   */
-  public const TYPE_UNIFIED_LARGE_CAPACITY = 'UNIFIED_LARGE_CAPACITY';
   /**
    * Optional. Specifies the Active Directory to be used for creating a SMB
    * volume.
@@ -224,6 +244,15 @@ class StoragePool extends \Google\Model
    */
   public $ldapEnabled;
   /**
+   * Optional. Mode of the storage pool. This field is used to control whether
+   * the user can perform the ONTAP operations on the storage pool using the
+   * GCNV ONTAP Mode APIs. If not specified during creation, it defaults to
+   * `DEFAULT`.
+   *
+   * @var string
+   */
+  public $mode;
+  /**
    * Identifier. Name of the storage pool
    *
    * @var string
@@ -268,6 +297,13 @@ class StoragePool extends \Google\Model
    */
   public $satisfiesPzs;
   /**
+   * Optional. The effective scale tier of the storage pool. If `scale_tier` is
+   * not specified during creation, this defaults to `SCALE_TIER_STANDARD`.
+   *
+   * @var string
+   */
+  public $scaleTier;
+  /**
    * Required. Service level of the storage pool
    *
    * @var string
@@ -301,9 +337,7 @@ class StoragePool extends \Google\Model
   /**
    * Optional. Type of the storage pool. This field is used to control whether
    * the pool supports `FILE` based volumes only or `UNIFIED` (both `FILE` and
-   * `BLOCK`) volumes or `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`)
-   * volumes with large capacity. If not specified during creation, it defaults
-   * to `FILE`.
+   * `BLOCK`) volumes. If not specified during creation, it defaults to `FILE`.
    *
    * @var string
    */
@@ -593,6 +627,27 @@ class StoragePool extends \Google\Model
     return $this->ldapEnabled;
   }
   /**
+   * Optional. Mode of the storage pool. This field is used to control whether
+   * the user can perform the ONTAP operations on the storage pool using the
+   * GCNV ONTAP Mode APIs. If not specified during creation, it defaults to
+   * `DEFAULT`.
+   *
+   * Accepted values: MODE_UNSPECIFIED, DEFAULT, ONTAP
+   *
+   * @param self::MODE_* $mode
+   */
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  /**
+   * @return self::MODE_*
+   */
+  public function getMode()
+  {
+    return $this->mode;
+  }
+  /**
    * Identifier. Name of the storage pool
    *
    * @param string $name
@@ -709,6 +764,26 @@ class StoragePool extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
+   * Optional. The effective scale tier of the storage pool. If `scale_tier` is
+   * not specified during creation, this defaults to `SCALE_TIER_STANDARD`.
+   *
+   * Accepted values: SCALE_TIER_UNSPECIFIED, SCALE_TIER_STANDARD,
+   * SCALE_TIER_ENTERPRISE
+   *
+   * @param self::SCALE_TIER_* $scaleTier
+   */
+  public function setScaleTier($scaleTier)
+  {
+    $this->scaleTier = $scaleTier;
+  }
+  /**
+   * @return self::SCALE_TIER_*
+   */
+  public function getScaleTier()
+  {
+    return $this->scaleTier;
+  }
+  /**
    * Required. Service level of the storage pool
    *
    * Accepted values: SERVICE_LEVEL_UNSPECIFIED, PREMIUM, EXTREME, STANDARD,
@@ -798,12 +873,9 @@ class StoragePool extends \Google\Model
   /**
    * Optional. Type of the storage pool. This field is used to control whether
    * the pool supports `FILE` based volumes only or `UNIFIED` (both `FILE` and
-   * `BLOCK`) volumes or `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`)
-   * volumes with large capacity. If not specified during creation, it defaults
-   * to `FILE`.
+   * `BLOCK`) volumes. If not specified during creation, it defaults to `FILE`.
    *
-   * Accepted values: STORAGE_POOL_TYPE_UNSPECIFIED, FILE, UNIFIED,
-   * UNIFIED_LARGE_CAPACITY
+   * Accepted values: STORAGE_POOL_TYPE_UNSPECIFIED, FILE, UNIFIED
    *
    * @param self::TYPE_* $type
    */
