@@ -27,7 +27,8 @@ class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse extends \Goog
   protected $softwareConfigDataType = '';
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for external keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for external
+   * keys.
    *
    * @param KeyAccessJustificationsEnrollmentConfig $externalConfig
    */
@@ -43,7 +44,8 @@ class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse extends \Goog
     return $this->externalConfig;
   }
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for hardware keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for hardware
+   * keys.
    *
    * @param KeyAccessJustificationsEnrollmentConfig $hardwareConfig
    */
@@ -59,7 +61,8 @@ class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse extends \Goog
     return $this->hardwareConfig;
   }
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for software keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for software
+   * keys.
    *
    * @param KeyAccessJustificationsEnrollmentConfig $softwareConfig
    */

@@ -50,7 +50,7 @@ class Folders extends \Google\Service\Resource
    * Gets the KeyAccessJustificationsPolicyConfig for a given organization,
    * folder, or project. (folders.getKajPolicyConfig)
    *
-   * @param string $name Required. The name of the
+   * @param string $name Required. Specifies the name of the
    * KeyAccessJustificationsPolicyConfig to get.
    * @param array $optParams Optional parameters.
    * @return KeyAccessJustificationsPolicyConfig
@@ -91,13 +91,14 @@ class Folders extends \Google\Service\Resource
    * Updates the KeyAccessJustificationsPolicyConfig for a given organization,
    * folder, or project. (folders.updateKajPolicyConfig)
    *
-   * @param string $name Identifier. The resource name for this
+   * @param string $name Identifier. Represents the resource name for this
    * KeyAccessJustificationsPolicyConfig in the format of
    * "{organizations|folders|projects}/kajPolicyConfig".
    * @param KeyAccessJustificationsPolicyConfig $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Optional. The list of fields to update.
+   * @opt_param string updateMask Optional. Specifies the list of fields to
+   * update.
    * @return KeyAccessJustificationsPolicyConfig
    * @throws \Google\Service\Exception
    */

@@ -22,18 +22,23 @@ class KeyAccessJustificationsPolicyConfig extends \Google\Model
   protected $defaultKeyAccessJustificationPolicyType = KeyAccessJustificationsPolicy::class;
   protected $defaultKeyAccessJustificationPolicyDataType = '';
   /**
-   * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig
-   * in the format of "{organizations|folders|projects}/kajPolicyConfig".
+   * Identifier. Represents the resource name for this
+   * KeyAccessJustificationsPolicyConfig in the format of
+   * "{organizations|folders|projects}/kajPolicyConfig".
    *
    * @var string
    */
   public $name;
 
   /**
-   * Optional. The default key access justification policy used when a CryptoKey
-   * is created in this folder. This is only used when a Key Access
-   * Justifications policy is not provided in the CreateCryptoKeyRequest. This
-   * overrides any default policies in its ancestry.
+   * Optional. Specifies the default key access justifications (KAJ) policy used
+   * when a CryptoKey is created in this folder. This is only used when a Key
+   * Access Justifications policy is not provided in the CreateCryptoKeyRequest.
+   * This overrides any default policies in its ancestry. If this field is
+   * unset, or is set but contains an empty allowed_access_reasons list, no
+   * default Key Access Justifications (KAJ) policy configuration is active. In
+   * this scenario, all newly created keys will default to an "allow-all"
+   * policy.
    *
    * @param KeyAccessJustificationsPolicy $defaultKeyAccessJustificationPolicy
    */
@@ -49,8 +54,9 @@ class KeyAccessJustificationsPolicyConfig extends \Google\Model
     return $this->defaultKeyAccessJustificationPolicy;
   }
   /**
-   * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig
-   * in the format of "{organizations|folders|projects}/kajPolicyConfig".
+   * Identifier. Represents the resource name for this
+   * KeyAccessJustificationsPolicyConfig in the format of
+   * "{organizations|folders|projects}/kajPolicyConfig".
    *
    * @param string $name
    */

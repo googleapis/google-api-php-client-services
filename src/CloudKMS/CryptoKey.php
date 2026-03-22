@@ -215,7 +215,10 @@ class CryptoKey extends \Google\Model
    * the policy. The policy is defined by specifying zero or more allowed
    * justification codes. https://cloud.google.com/assured-workloads/key-access-
    * justifications/docs/justification-codes By default, this field is absent,
-   * and all justification codes are allowed.
+   * and all justification codes are allowed. If the
+   * `key_access_justifications_policy.allowed_access_reasons` is empty (zero
+   * allowed justification code), all encrypt, decrypt, and sign operations will
+   * fail.
    *
    * @param KeyAccessJustificationsPolicy $keyAccessJustificationsPolicy
    */
