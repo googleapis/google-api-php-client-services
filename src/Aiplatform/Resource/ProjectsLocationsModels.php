@@ -276,7 +276,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
   /**
    * Updates a Model. (models.patch)
    *
-   * @param string $name The resource name of the Model.
+   * @param string $name Identifier. The resource name of the Model.
    * @param GoogleCloudAiplatformV1Model $postBody
    * @param array $optParams Optional parameters.
    *

@@ -22,6 +22,8 @@ class GoogleCloudAiplatformV1EvaluationConfig extends \Google\Collection
   protected $collection_key = 'metrics';
   protected $autoraterConfigType = GoogleCloudAiplatformV1AutoraterConfig::class;
   protected $autoraterConfigDataType = '';
+  protected $datasetCustomMetricsType = GoogleCloudAiplatformV1DatasetCustomMetric::class;
+  protected $datasetCustomMetricsDataType = 'array';
   protected $inferenceGenerationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $inferenceGenerationConfigDataType = '';
   protected $metricsType = GoogleCloudAiplatformV1Metric::class;
@@ -44,6 +46,22 @@ class GoogleCloudAiplatformV1EvaluationConfig extends \Google\Collection
   public function getAutoraterConfig()
   {
     return $this->autoraterConfig;
+  }
+  /**
+   * Optional. Specifications for custom dataset-level aggregations.
+   *
+   * @param GoogleCloudAiplatformV1DatasetCustomMetric[] $datasetCustomMetrics
+   */
+  public function setDatasetCustomMetrics($datasetCustomMetrics)
+  {
+    $this->datasetCustomMetrics = $datasetCustomMetrics;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1DatasetCustomMetric[]
+   */
+  public function getDatasetCustomMetrics()
+  {
+    return $this->datasetCustomMetrics;
   }
   /**
    * Optional. Configuration options for inference generation and outputs. If

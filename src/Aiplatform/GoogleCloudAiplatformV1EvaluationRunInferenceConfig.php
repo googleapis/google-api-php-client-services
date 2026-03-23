@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
 {
+  protected $agentRunConfigType = GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig::class;
+  protected $agentRunConfigDataType = '';
   protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
@@ -26,8 +28,8 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
    * use. Anthropic and Llama third-party models are also supported through
    * Model Garden. Publisher model format:
    * `projects/{project}/locations/{location}/publishers/models` Third-party
-   * model format: `projects/{project}/locations/{location}/publishers/anthropic
-   * /models/{model}`
+   * model formats: `projects/{project}/locations/{location}/publishers/anthropi
+   * c/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}`
    * Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
@@ -36,6 +38,22 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
    */
   public $model;
 
+  /**
+   * Optional. Agent run config.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig $agentRunConfig
+   */
+  public function setAgentRunConfig(GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig $agentRunConfig)
+  {
+    $this->agentRunConfig = $agentRunConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig
+   */
+  public function getAgentRunConfig()
+  {
+    return $this->agentRunConfig;
+  }
   /**
    * Optional. Generation config.
    *
@@ -57,8 +75,8 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
    * use. Anthropic and Llama third-party models are also supported through
    * Model Garden. Publisher model format:
    * `projects/{project}/locations/{location}/publishers/models` Third-party
-   * model format: `projects/{project}/locations/{location}/publishers/anthropic
-   * /models/{model}`
+   * model formats: `projects/{project}/locations/{location}/publishers/anthropi
+   * c/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}`
    * Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`

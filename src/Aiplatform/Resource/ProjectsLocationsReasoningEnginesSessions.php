@@ -62,8 +62,8 @@ class ProjectsLocationsReasoningEnginesSessions extends \Google\Service\Resource
    * @opt_param string sessionId Optional. The user defined ID to use for session,
    * which will become the final component of the session resource name. If not
    * provided, Vertex AI will generate a value for this ID. This value may be up
-   * to 63 characters, and valid characters are `[a-z0-9-]`. The first character
-   * must be a letter, and the last character must be a letter or number.
+   * to 63 characters, and valid characters are `[a-z0-9-]`. The first and last
+   * characters must be a letter or number.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

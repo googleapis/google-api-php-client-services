@@ -118,7 +118,7 @@ class GoogleCloudAiplatformV1Model extends \Google\Collection
   protected $modelSourceInfoType = GoogleCloudAiplatformV1ModelSourceInfo::class;
   protected $modelSourceInfoDataType = '';
   /**
-   * The resource name of the Model.
+   * Identifier. The resource name of the Model.
    *
    * @var string
    */
@@ -586,7 +586,7 @@ class GoogleCloudAiplatformV1Model extends \Google\Collection
     return $this->modelSourceInfo;
   }
   /**
-   * The resource name of the Model.
+   * Identifier. The resource name of the Model.
    *
    * @param string $name
    */

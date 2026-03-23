@@ -130,7 +130,7 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * generate output that conforms to this MIME type. Supported values include
    * 'text/plain' (default) and 'application/json'. The model needs to be
    * prompted to output the appropriate response type, otherwise the behavior is
-   * undefined. This is a preview feature.
+   * undefined.
    *
    * @var string
    */
@@ -416,7 +416,7 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * generate output that conforms to this MIME type. Supported values include
    * 'text/plain' (default) and 'application/json'. The model needs to be
    * prompted to output the appropriate response type, otherwise the behavior is
-   * undefined. This is a preview feature.
+   * undefined.
    *
    * @param string $responseMimeType
    */

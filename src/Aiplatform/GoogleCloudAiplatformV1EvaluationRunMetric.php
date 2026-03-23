@@ -31,6 +31,12 @@ class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
   public $metric;
   protected $metricConfigType = GoogleCloudAiplatformV1Metric::class;
   protected $metricConfigDataType = '';
+  /**
+   * Optional. The resource name of the metric definition.
+   *
+   * @var string
+   */
+  public $metricResourceName;
   protected $predefinedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec::class;
   protected $predefinedMetricSpecDataType = '';
   protected $rubricBasedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec::class;
@@ -99,6 +105,22 @@ class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
   public function getMetricConfig()
   {
     return $this->metricConfig;
+  }
+  /**
+   * Optional. The resource name of the metric definition.
+   *
+   * @param string $metricResourceName
+   */
+  public function setMetricResourceName($metricResourceName)
+  {
+    $this->metricResourceName = $metricResourceName;
+  }
+  /**
+   * @return string
+   */
+  public function getMetricResourceName()
+  {
+    return $this->metricResourceName;
   }
   /**
    * Spec for a pre-defined metric.

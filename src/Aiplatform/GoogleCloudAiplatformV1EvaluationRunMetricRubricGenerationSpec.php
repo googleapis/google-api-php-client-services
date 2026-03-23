@@ -36,6 +36,12 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec extends \Go
    */
   public const RUBRIC_CONTENT_TYPE_PYTHON_CODE_ASSERTION = 'PYTHON_CODE_ASSERTION';
   protected $collection_key = 'rubricTypeOntology';
+  /**
+   * Optional. Resource name of the metric definition.
+   *
+   * @var string
+   */
+  public $metricResourceName;
   protected $modelConfigType = GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig::class;
   protected $modelConfigDataType = '';
   /**
@@ -61,6 +67,22 @@ class GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec extends \Go
    */
   public $rubricTypeOntology;
 
+  /**
+   * Optional. Resource name of the metric definition.
+   *
+   * @param string $metricResourceName
+   */
+  public function setMetricResourceName($metricResourceName)
+  {
+    $this->metricResourceName = $metricResourceName;
+  }
+  /**
+   * @return string
+   */
+  public function getMetricResourceName()
+  {
+    return $this->metricResourceName;
+  }
   /**
    * Optional. Configuration for the model used in rubric generation. Configs
    * including sampling count and base model can be specified here. Flipping is

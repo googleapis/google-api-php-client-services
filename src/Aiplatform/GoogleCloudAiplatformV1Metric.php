@@ -36,6 +36,8 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   protected $exactMatchSpecDataType = '';
   protected $llmBasedMetricSpecType = GoogleCloudAiplatformV1LLMBasedMetricSpec::class;
   protected $llmBasedMetricSpecDataType = '';
+  protected $metadataType = GoogleCloudAiplatformV1MetricMetadata::class;
+  protected $metadataDataType = '';
   protected $pairwiseMetricSpecType = GoogleCloudAiplatformV1PairwiseMetricSpec::class;
   protected $pairwiseMetricSpecDataType = '';
   protected $pointwiseMetricSpecType = GoogleCloudAiplatformV1PointwiseMetricSpec::class;
@@ -140,6 +142,23 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   public function getLlmBasedMetricSpec()
   {
     return $this->llmBasedMetricSpec;
+  }
+  /**
+   * Optional. Metadata about the metric, used for visualization and
+   * organization.
+   *
+   * @param GoogleCloudAiplatformV1MetricMetadata $metadata
+   */
+  public function setMetadata(GoogleCloudAiplatformV1MetricMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1MetricMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * Spec for pairwise metric.

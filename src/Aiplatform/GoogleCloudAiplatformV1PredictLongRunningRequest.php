@@ -33,6 +33,16 @@ class GoogleCloudAiplatformV1PredictLongRunningRequest extends \Google\Collectio
    */
   public $instances;
   /**
+   * Optional. The labels with user-defined metadata for the request. It is used
+   * for billing and reporting only. Label keys and values can be no longer than
+   * 63 characters (Unicode codepoints) and can only contain lowercase letters,
+   * numeric characters, underscores, and dashes. International characters are
+   * allowed. Label values are optional. Label keys must start with a letter.
+   *
+   * @var string[]
+   */
+  public $labels;
+  /**
    * Optional. The parameters that govern the prediction. The schema of the
    * parameters may be specified via Endpoint's DeployedModels' Model's
    * PredictSchemata's parameters_schema_uri.
@@ -62,6 +72,26 @@ class GoogleCloudAiplatformV1PredictLongRunningRequest extends \Google\Collectio
   public function getInstances()
   {
     return $this->instances;
+  }
+  /**
+   * Optional. The labels with user-defined metadata for the request. It is used
+   * for billing and reporting only. Label keys and values can be no longer than
+   * 63 characters (Unicode codepoints) and can only contain lowercase letters,
+   * numeric characters, underscores, and dashes. International characters are
+   * allowed. Label values are optional. Label keys must start with a letter.
+   *
+   * @param string[] $labels
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * Optional. The parameters that govern the prediction. The schema of the

@@ -32,6 +32,8 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateInstanceRubricsRequ
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateInstanceRubricsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateSyntheticDataRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateSyntheticDataResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateUserScenariosRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateUserScenariosResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RagEngineConfig;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsResponse;
@@ -208,6 +210,23 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['location' => $location, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('generateSyntheticData', [$params], GoogleCloudAiplatformV1GenerateSyntheticDataResponse::class);
+  }
+  /**
+   * Generates user scenarios for agent evaluation.
+   * (locations.generateUserScenarios)
+   *
+   * @param string $location Required. The resource name of the Location to run
+   * the job. Format: `projects/{project}/locations/{location}`
+   * @param GoogleCloudAiplatformV1GenerateUserScenariosRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateUserScenariosResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateUserScenarios($location, GoogleCloudAiplatformV1GenerateUserScenariosRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateUserScenarios', [$params], GoogleCloudAiplatformV1GenerateUserScenariosResponse::class);
   }
   /**
    * Gets information about a location. (locations.get)
