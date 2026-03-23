@@ -29,6 +29,16 @@ class CloudRunMetadata extends \Google\Collection
    */
   public $job;
   /**
+   * Output only. The previous Cloud Run Revision name associated with a
+   * `Rollout`. Only set when a canary deployment strategy is configured. Format
+   * for service is projects/{project}/locations/{location}/services/{service}/r
+   * evisions/{revision}. Format for worker pool is projects/{project}/locations
+   * /{location}/workerPools/{workerpool}/revisions/{revision}.
+   *
+   * @var string
+   */
+  public $previousRevision;
+  /**
    * Output only. The Cloud Run Revision id associated with a `Rollout`.
    *
    * @var string
@@ -74,6 +84,26 @@ class CloudRunMetadata extends \Google\Collection
   public function getJob()
   {
     return $this->job;
+  }
+  /**
+   * Output only. The previous Cloud Run Revision name associated with a
+   * `Rollout`. Only set when a canary deployment strategy is configured. Format
+   * for service is projects/{project}/locations/{location}/services/{service}/r
+   * evisions/{revision}. Format for worker pool is projects/{project}/locations
+   * /{location}/workerPools/{workerpool}/revisions/{revision}.
+   *
+   * @param string $previousRevision
+   */
+  public function setPreviousRevision($previousRevision)
+  {
+    $this->previousRevision = $previousRevision;
+  }
+  /**
+   * @return string
+   */
+  public function getPreviousRevision()
+  {
+    return $this->previousRevision;
   }
   /**
    * Output only. The Cloud Run Revision id associated with a `Rollout`.

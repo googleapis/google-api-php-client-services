@@ -17,29 +17,29 @@
 
 namespace Google\Service\CloudDeploy;
 
-class VerifyJob extends \Google\Collection
+class Task extends \Google\Model
 {
-  protected $collection_key = 'tasks';
-  protected $tasksType = Task::class;
-  protected $tasksDataType = 'array';
+  protected $containerType = ContainerTask::class;
+  protected $containerDataType = '';
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Optional. This task is represented by a container that is executed in the
+   * Cloud Build execution environment.
    *
-   * @param Task[] $tasks
+   * @param ContainerTask $container
    */
-  public function setTasks($tasks)
+  public function setContainer(ContainerTask $container)
   {
-    $this->tasks = $tasks;
+    $this->container = $container;
   }
   /**
-   * @return Task[]
+   * @return ContainerTask
    */
-  public function getTasks()
+  public function getContainer()
   {
-    return $this->tasks;
+    return $this->container;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyJob::class, 'Google_Service_CloudDeploy_VerifyJob');
+class_alias(Task::class, 'Google_Service_CloudDeploy_Task');

@@ -82,6 +82,8 @@ class VerifyJobRun extends \Google\Model
    * @var string
    */
   public $failureMessage;
+  protected $metadataType = VerifyJobRunMetadata::class;
+  protected $metadataDataType = '';
 
   /**
    * Output only. URI of a directory containing the verify artifacts. This
@@ -171,6 +173,22 @@ class VerifyJobRun extends \Google\Model
   public function getFailureMessage()
   {
     return $this->failureMessage;
+  }
+  /**
+   * Output only. Metadata containing information about the verify `JobRun`.
+   *
+   * @param VerifyJobRunMetadata $metadata
+   */
+  public function setMetadata(VerifyJobRunMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return VerifyJobRunMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
 }
 

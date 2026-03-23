@@ -20,6 +20,8 @@ namespace Google\Service\CloudDeploy;
 class CanaryDeployment extends \Google\Collection
 {
   protected $collection_key = 'percentages';
+  protected $analysisType = Analysis::class;
+  protected $analysisDataType = '';
   /**
    * Required. The percentage based deployments that will occur as a part of a
    * `Rollout`. List is expected in ascending order and each integer n is 0 <= n
@@ -40,7 +42,26 @@ class CanaryDeployment extends \Google\Collection
    * @var bool
    */
   public $verify;
+  protected $verifyConfigType = Verify::class;
+  protected $verifyConfigDataType = '';
 
+  /**
+   * Optional. Configuration for the analysis job. If configured, the analysis
+   * will run after each percentage deployment.
+   *
+   * @param Analysis $analysis
+   */
+  public function setAnalysis(Analysis $analysis)
+  {
+    $this->analysis = $analysis;
+  }
+  /**
+   * @return Analysis
+   */
+  public function getAnalysis()
+  {
+    return $this->analysis;
+  }
   /**
    * Required. The percentage based deployments that will occur as a part of a
    * `Rollout`. List is expected in ascending order and each integer n is 0 <= n
@@ -110,6 +131,23 @@ class CanaryDeployment extends \Google\Collection
   public function getVerify()
   {
     return $this->verify;
+  }
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is
+   * set to true.
+   *
+   * @param Verify $verifyConfig
+   */
+  public function setVerifyConfig(Verify $verifyConfig)
+  {
+    $this->verifyConfig = $verifyConfig;
+  }
+  /**
+   * @return Verify
+   */
+  public function getVerifyConfig()
+  {
+    return $this->verifyConfig;
   }
 }
 

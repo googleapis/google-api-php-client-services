@@ -66,6 +66,8 @@ class PredeployJobRun extends \Google\Model
    * @var string
    */
   public $failureMessage;
+  protected $metadataType = PredeployJobRunMetadata::class;
+  protected $metadataDataType = '';
 
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is
@@ -121,6 +123,22 @@ class PredeployJobRun extends \Google\Model
   public function getFailureMessage()
   {
     return $this->failureMessage;
+  }
+  /**
+   * Output only. Metadata containing information about the predeploy `JobRun`.
+   *
+   * @param PredeployJobRunMetadata $metadata
+   */
+  public function setMetadata(PredeployJobRunMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return PredeployJobRunMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
 }
 

@@ -17,29 +17,28 @@
 
 namespace Google\Service\CloudDeploy;
 
-class VerifyJob extends \Google\Collection
+class PredeployJobRunMetadata extends \Google\Model
 {
-  protected $collection_key = 'tasks';
-  protected $tasksType = Task::class;
-  protected $tasksDataType = 'array';
+  protected $customType = CustomMetadata::class;
+  protected $customDataType = '';
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Output only. Custom metadata provided by user-defined predeploy operation.
    *
-   * @param Task[] $tasks
+   * @param CustomMetadata $custom
    */
-  public function setTasks($tasks)
+  public function setCustom(CustomMetadata $custom)
   {
-    $this->tasks = $tasks;
+    $this->custom = $custom;
   }
   /**
-   * @return Task[]
+   * @return CustomMetadata
    */
-  public function getTasks()
+  public function getCustom()
   {
-    return $this->tasks;
+    return $this->custom;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyJob::class, 'Google_Service_CloudDeploy_VerifyJob');
+class_alias(PredeployJobRunMetadata::class, 'Google_Service_CloudDeploy_PredeployJobRunMetadata');

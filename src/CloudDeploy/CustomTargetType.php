@@ -78,6 +78,8 @@ class CustomTargetType extends \Google\Model
    * @var string
    */
   public $name;
+  protected $tasksType = CustomTargetTasks::class;
+  protected $tasksDataType = '';
   /**
    * Output only. Unique identifier of the `CustomTargetType`.
    *
@@ -234,6 +236,23 @@ class CustomTargetType extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Configures render and deploy for the `CustomTargetType` using
+   * tasks.
+   *
+   * @param CustomTargetTasks $tasks
+   */
+  public function setTasks(CustomTargetTasks $tasks)
+  {
+    $this->tasks = $tasks;
+  }
+  /**
+   * @return CustomTargetTasks
+   */
+  public function getTasks()
+  {
+    return $this->tasks;
   }
   /**
    * Output only. Unique identifier of the `CustomTargetType`.

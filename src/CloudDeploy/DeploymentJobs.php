@@ -19,6 +19,8 @@ namespace Google\Service\CloudDeploy;
 
 class DeploymentJobs extends \Google\Model
 {
+  protected $analysisJobType = Job::class;
+  protected $analysisJobDataType = '';
   protected $deployJobType = Job::class;
   protected $deployJobDataType = '';
   protected $postdeployJobType = Job::class;
@@ -28,6 +30,23 @@ class DeploymentJobs extends \Google\Model
   protected $verifyJobType = Job::class;
   protected $verifyJobDataType = '';
 
+  /**
+   * Output only. The analysis Job. Runs after a verify if there is a verify job
+   * and the verify job succeeds.
+   *
+   * @param Job $analysisJob
+   */
+  public function setAnalysisJob(Job $analysisJob)
+  {
+    $this->analysisJob = $analysisJob;
+  }
+  /**
+   * @return Job
+   */
+  public function getAnalysisJob()
+  {
+    return $this->analysisJob;
+  }
   /**
    * Output only. The deploy Job. This is the deploy job in the phase.
    *

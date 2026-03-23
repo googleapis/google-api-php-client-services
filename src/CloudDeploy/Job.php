@@ -57,6 +57,8 @@ class Job extends \Google\Model
   public const STATE_IGNORED = 'IGNORED';
   protected $advanceChildRolloutJobType = AdvanceChildRolloutJob::class;
   protected $advanceChildRolloutJobDataType = '';
+  protected $analysisJobType = AnalysisJob::class;
+  protected $analysisJobDataType = '';
   protected $createChildRolloutJobType = CreateChildRolloutJob::class;
   protected $createChildRolloutJobDataType = '';
   protected $deployJobType = DeployJob::class;
@@ -109,6 +111,22 @@ class Job extends \Google\Model
   public function getAdvanceChildRolloutJob()
   {
     return $this->advanceChildRolloutJob;
+  }
+  /**
+   * Output only. An analysis Job.
+   *
+   * @param AnalysisJob $analysisJob
+   */
+  public function setAnalysisJob(AnalysisJob $analysisJob)
+  {
+    $this->analysisJob = $analysisJob;
+  }
+  /**
+   * @return AnalysisJob
+   */
+  public function getAnalysisJob()
+  {
+    return $this->analysisJob;
   }
   /**
    * Output only. A createChildRollout Job.

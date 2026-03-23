@@ -66,6 +66,8 @@ class PostdeployJobRun extends \Google\Model
    * @var string
    */
   public $failureMessage;
+  protected $metadataType = PostdeployJobRunMetadata::class;
+  protected $metadataDataType = '';
 
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is
@@ -121,6 +123,22 @@ class PostdeployJobRun extends \Google\Model
   public function getFailureMessage()
   {
     return $this->failureMessage;
+  }
+  /**
+   * Output only. Metadata containing information about the postdeploy `JobRun`.
+   *
+   * @param PostdeployJobRunMetadata $metadata
+   */
+  public function setMetadata(PostdeployJobRunMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return PostdeployJobRunMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
 }
 

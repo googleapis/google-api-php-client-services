@@ -20,6 +20,8 @@ namespace Google\Service\CloudDeploy;
 class PhaseConfig extends \Google\Collection
 {
   protected $collection_key = 'profiles';
+  protected $analysisType = Analysis::class;
+  protected $analysisDataType = '';
   /**
    * Required. Percentage deployment for the phase.
    *
@@ -55,7 +57,26 @@ class PhaseConfig extends \Google\Collection
    * @var bool
    */
   public $verify;
+  protected $verifyConfigType = Verify::class;
+  protected $verifyConfigDataType = '';
 
+  /**
+   * Optional. Configuration for the analysis job of this phase. If this is not
+   * configured, there will be no analysis job for this phase.
+   *
+   * @param Analysis $analysis
+   */
+  public function setAnalysis(Analysis $analysis)
+  {
+    $this->analysis = $analysis;
+  }
+  /**
+   * @return Analysis
+   */
+  public function getAnalysis()
+  {
+    return $this->analysis;
+  }
   /**
    * Required. Percentage deployment for the phase.
    *
@@ -160,6 +181,23 @@ class PhaseConfig extends \Google\Collection
   public function getVerify()
   {
     return $this->verify;
+  }
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is
+   * set to true.
+   *
+   * @param Verify $verifyConfig
+   */
+  public function setVerifyConfig(Verify $verifyConfig)
+  {
+    $this->verifyConfig = $verifyConfig;
+  }
+  /**
+   * @return Verify
+   */
+  public function getVerifyConfig()
+  {
+    return $this->verifyConfig;
   }
 }
 

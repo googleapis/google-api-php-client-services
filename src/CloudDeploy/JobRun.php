@@ -45,6 +45,8 @@ class JobRun extends \Google\Model
   public const STATE_TERMINATED = 'TERMINATED';
   protected $advanceChildRolloutJobRunType = AdvanceChildRolloutJobRun::class;
   protected $advanceChildRolloutJobRunDataType = '';
+  protected $analysisJobRunType = AnalysisJobRun::class;
+  protected $analysisJobRunDataType = '';
   protected $createChildRolloutJobRunType = CreateChildRolloutJobRun::class;
   protected $createChildRolloutJobRunDataType = '';
   /**
@@ -129,6 +131,22 @@ class JobRun extends \Google\Model
   public function getAdvanceChildRolloutJobRun()
   {
     return $this->advanceChildRolloutJobRun;
+  }
+  /**
+   * Output only. Information specific to an analysis `JobRun`.
+   *
+   * @param AnalysisJobRun $analysisJobRun
+   */
+  public function setAnalysisJobRun(AnalysisJobRun $analysisJobRun)
+  {
+    $this->analysisJobRun = $analysisJobRun;
+  }
+  /**
+   * @return AnalysisJobRun
+   */
+  public function getAnalysisJobRun()
+  {
+    return $this->analysisJobRun;
   }
   /**
    * Output only. Information specific to a createChildRollout `JobRun`.

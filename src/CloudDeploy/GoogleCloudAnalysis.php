@@ -17,29 +17,30 @@
 
 namespace Google\Service\CloudDeploy;
 
-class VerifyJob extends \Google\Collection
+class GoogleCloudAnalysis extends \Google\Collection
 {
-  protected $collection_key = 'tasks';
-  protected $tasksType = Task::class;
-  protected $tasksDataType = 'array';
+  protected $collection_key = 'alertPolicyChecks';
+  protected $alertPolicyChecksType = AlertPolicyCheck::class;
+  protected $alertPolicyChecksDataType = 'array';
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Optional. A list of Cloud Monitoring Alert Policy checks to perform as part
+   * of the analysis.
    *
-   * @param Task[] $tasks
+   * @param AlertPolicyCheck[] $alertPolicyChecks
    */
-  public function setTasks($tasks)
+  public function setAlertPolicyChecks($alertPolicyChecks)
   {
-    $this->tasks = $tasks;
+    $this->alertPolicyChecks = $alertPolicyChecks;
   }
   /**
-   * @return Task[]
+   * @return AlertPolicyCheck[]
    */
-  public function getTasks()
+  public function getAlertPolicyChecks()
   {
-    return $this->tasks;
+    return $this->alertPolicyChecks;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyJob::class, 'Google_Service_CloudDeploy_VerifyJob');
+class_alias(GoogleCloudAnalysis::class, 'Google_Service_CloudDeploy_GoogleCloudAnalysis');

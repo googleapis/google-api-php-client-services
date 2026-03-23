@@ -17,40 +17,15 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Predeploy extends \Google\Collection
+class Verify extends \Google\Collection
 {
   protected $collection_key = 'tasks';
-  /**
-   * Optional. A sequence of Skaffold custom actions to invoke during execution
-   * of the predeploy job.
-   *
-   * @var string[]
-   */
-  public $actions;
   protected $tasksType = Task::class;
   protected $tasksDataType = 'array';
 
   /**
-   * Optional. A sequence of Skaffold custom actions to invoke during execution
-   * of the predeploy job.
-   *
-   * @param string[] $actions
-   */
-  public function setActions($actions)
-  {
-    $this->actions = $actions;
-  }
-  /**
-   * @return string[]
-   */
-  public function getActions()
-  {
-    return $this->actions;
-  }
-  /**
-   * Optional. The tasks that will run as a part of the predeploy job. The tasks
-   * are executed sequentially in the order specified. Only one of `actions` or
-   * `tasks` can be specified.
+   * Optional. The tasks that will run as a part of the verify job. The tasks
+   * are executed sequentially in the order specified.
    *
    * @param Task[] $tasks
    */
@@ -68,4 +43,4 @@ class Predeploy extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Predeploy::class, 'Google_Service_CloudDeploy_Predeploy');
+class_alias(Verify::class, 'Google_Service_CloudDeploy_Verify');

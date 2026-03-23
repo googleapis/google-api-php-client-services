@@ -19,13 +19,15 @@ namespace Google\Service\CloudDeploy;
 
 class PostdeployJob extends \Google\Collection
 {
-  protected $collection_key = 'actions';
+  protected $collection_key = 'tasks';
   /**
    * Output only. The custom actions that the postdeploy Job executes.
    *
    * @var string[]
    */
   public $actions;
+  protected $tasksType = Task::class;
+  protected $tasksDataType = 'array';
 
   /**
    * Output only. The custom actions that the postdeploy Job executes.
@@ -42,6 +44,22 @@ class PostdeployJob extends \Google\Collection
   public function getActions()
   {
     return $this->actions;
+  }
+  /**
+   * Output only. The tasks that are executed as part of the postdeploy Job.
+   *
+   * @param Task[] $tasks
+   */
+  public function setTasks($tasks)
+  {
+    $this->tasks = $tasks;
+  }
+  /**
+   * @return Task[]
+   */
+  public function getTasks()
+  {
+    return $this->tasks;
   }
 }
 
