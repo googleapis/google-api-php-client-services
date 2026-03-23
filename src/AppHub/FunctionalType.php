@@ -32,6 +32,10 @@ class FunctionalType extends \Google\Model
    */
   public const TYPE_MCP_SERVER = 'MCP_SERVER';
   /**
+   * Endpoint type.
+   */
+  public const TYPE_ENDPOINT = 'ENDPOINT';
+  /**
    * Output only. The functional type of a service or workload.
    *
    * @var string
@@ -41,7 +45,7 @@ class FunctionalType extends \Google\Model
   /**
    * Output only. The functional type of a service or workload.
    *
-   * Accepted values: TYPE_UNSPECIFIED, AGENT, MCP_SERVER
+   * Accepted values: TYPE_UNSPECIFIED, AGENT, MCP_SERVER, ENDPOINT
    *
    * @param self::TYPE_* $type
    */
