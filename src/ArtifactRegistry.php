@@ -131,6 +131,16 @@ class ArtifactRegistry extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getProjectConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getVpcscConfig' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -168,6 +178,20 @@ class ArtifactRegistry extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'updateProjectConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'updateVpcscConfig' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
@@ -192,7 +216,17 @@ class ArtifactRegistry extends \Google\Service
         'operations',
         [
           'methods' => [
-            'get' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [

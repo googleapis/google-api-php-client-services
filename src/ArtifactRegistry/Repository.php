@@ -161,6 +161,8 @@ class Repository extends \Google\Model
    * @var string
    */
   public $name;
+  protected $platformLogsConfigType = PlatformLogsConfig::class;
+  protected $platformLogsConfigDataType = '';
   /**
    * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-
    * proj/my-repo`.
@@ -413,6 +415,22 @@ class Repository extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Configuration for platform logs.
+   *
+   * @param PlatformLogsConfig $platformLogsConfig
+   */
+  public function setPlatformLogsConfig(PlatformLogsConfig $platformLogsConfig)
+  {
+    $this->platformLogsConfig = $platformLogsConfig;
+  }
+  /**
+   * @return PlatformLogsConfig
+   */
+  public function getPlatformLogsConfig()
+  {
+    return $this->platformLogsConfig;
   }
   /**
    * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-

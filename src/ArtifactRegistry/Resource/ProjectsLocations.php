@@ -19,6 +19,7 @@ namespace Google\Service\ArtifactRegistry\Resource;
 
 use Google\Service\ArtifactRegistry\ListLocationsResponse;
 use Google\Service\ArtifactRegistry\Location;
+use Google\Service\ArtifactRegistry\ProjectConfig;
 use Google\Service\ArtifactRegistry\VPCSCConfig;
 
 /**
@@ -44,6 +45,21 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Location::class);
+  }
+  /**
+   * Retrieves the project configuration. (locations.getProjectConfig)
+   *
+   * @param string $name Required. The name of the project's logging
+   * configuration: projects/{project}/locations/{location}/projectConfig
+   * @param array $optParams Optional parameters.
+   * @return ProjectConfig
+   * @throws \Google\Service\Exception
+   */
+  public function getProjectConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getProjectConfig', [$params], ProjectConfig::class);
   }
   /**
    * Retrieves the VPCSC Config for the Project. (locations.getVpcscConfig)
@@ -89,6 +105,26 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListLocationsResponse::class);
+  }
+  /**
+   * Updates the project configuration. (locations.updateProjectConfig)
+   *
+   * @param string $name Identifier. The name of the project's configuration.
+   * Always of the form: projects/{project}/locations/{location}/projectConfig
+   * @param ProjectConfig $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. Field mask to support partial updates.
+   * See https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask for
+   * more details.
+   * @return ProjectConfig
+   * @throws \Google\Service\Exception
+   */
+  public function updateProjectConfig($name, ProjectConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateProjectConfig', [$params], ProjectConfig::class);
   }
   /**
    * Updates the VPCSC Config for the Project. (locations.updateVpcscConfig)
