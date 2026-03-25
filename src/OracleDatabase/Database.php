@@ -48,7 +48,7 @@ class Database extends \Google\Model
    */
   public const OPS_INSIGHTS_STATUS_FAILED_DISABLING = 'FAILED_DISABLING';
   /**
-   * Required. The password for the default ADMIN user.
+   * Optional. The password for the default ADMIN user.
    *
    * @var string
    */
@@ -149,7 +149,7 @@ class Database extends \Google\Model
   public $tdeWalletPassword;
 
   /**
-   * Required. The password for the default ADMIN user.
+   * Optional. The password for the default ADMIN user.
    *
    * @param string $adminPassword
    */
