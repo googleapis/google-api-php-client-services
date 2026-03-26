@@ -756,6 +756,16 @@ class CustomerEngagementSuite extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'streamRunSession' => [
+              'path' => 'v1/{+session}:streamRunSession',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'session' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]

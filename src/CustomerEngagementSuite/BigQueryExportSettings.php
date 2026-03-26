@@ -20,7 +20,7 @@ namespace Google\Service\CustomerEngagementSuite;
 class BigQueryExportSettings extends \Google\Model
 {
   /**
-   * Optional. The BigQuery dataset to export the data to.
+   * Optional. The BigQuery **dataset ID** to export the data to.
    *
    * @var string
    */
@@ -32,7 +32,7 @@ class BigQueryExportSettings extends \Google\Model
    */
   public $enabled;
   /**
-   * Optional. The project ID of the BigQuery dataset to export the data to.
+   * Optional. The **project ID** of the BigQuery dataset to export the data to.
    * Note: If the BigQuery dataset is in a different project from the app, you
    * should grant `roles/bigquery.admin` role to the CES service agent
    * `service-@gcp-sa-ces.iam.gserviceaccount.com`.
@@ -42,7 +42,7 @@ class BigQueryExportSettings extends \Google\Model
   public $project;
 
   /**
-   * Optional. The BigQuery dataset to export the data to.
+   * Optional. The BigQuery **dataset ID** to export the data to.
    *
    * @param string $dataset
    */
@@ -74,7 +74,7 @@ class BigQueryExportSettings extends \Google\Model
     return $this->enabled;
   }
   /**
-   * Optional. The project ID of the BigQuery dataset to export the data to.
+   * Optional. The **project ID** of the BigQuery dataset to export the data to.
    * Note: If the BigQuery dataset is in a different project from the app, you
    * should grant `roles/bigquery.admin` role to the CES service agent
    * `service-@gcp-sa-ces.iam.gserviceaccount.com`.

@@ -33,6 +33,11 @@ class ErrorHandlingSettings extends \Google\Model
    */
   public const ERROR_HANDLING_STRATEGY_FALLBACK_RESPONSE = 'FALLBACK_RESPONSE';
   /**
+   * An EndSession signal will be emitted in case of system errors (e.g. LLM
+   * errors).
+   */
+  public const ERROR_HANDLING_STRATEGY_END_SESSION = 'END_SESSION';
+  /**
    * Optional. The strategy to use for error handling.
    *
    * @var string
@@ -43,7 +48,7 @@ class ErrorHandlingSettings extends \Google\Model
    * Optional. The strategy to use for error handling.
    *
    * Accepted values: ERROR_HANDLING_STRATEGY_UNSPECIFIED, NONE,
-   * FALLBACK_RESPONSE
+   * FALLBACK_RESPONSE, END_SESSION
    *
    * @param self::ERROR_HANDLING_STRATEGY_* $errorHandlingStrategy
    */

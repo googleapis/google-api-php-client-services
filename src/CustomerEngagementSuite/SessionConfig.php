@@ -28,6 +28,15 @@ class SessionConfig extends \Google\Collection
    */
   public $deployment;
   /**
+   * Optional. Whether to enable streaming text outputs from the model. By
+   * default, text outputs from the model are collected before sending to the
+   * client. NOTE: This is only supported for text (non-voice) sessions via
+   * StreamRunSession or BidiRunSession.
+   *
+   * @var bool
+   */
+  public $enableTextStreaming;
+  /**
    * Optional. The entry agent to handle the session. If not specified, the
    * session will be handled by the root agent of the app. Format:
    * `projects/{project}/locations/{location}/apps/{app}/agents/{agent}`
@@ -76,6 +85,25 @@ class SessionConfig extends \Google\Collection
   public function getDeployment()
   {
     return $this->deployment;
+  }
+  /**
+   * Optional. Whether to enable streaming text outputs from the model. By
+   * default, text outputs from the model are collected before sending to the
+   * client. NOTE: This is only supported for text (non-voice) sessions via
+   * StreamRunSession or BidiRunSession.
+   *
+   * @param bool $enableTextStreaming
+   */
+  public function setEnableTextStreaming($enableTextStreaming)
+  {
+    $this->enableTextStreaming = $enableTextStreaming;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableTextStreaming()
+  {
+    return $this->enableTextStreaming;
   }
   /**
    * Optional. The entry agent to handle the session. If not specified, the

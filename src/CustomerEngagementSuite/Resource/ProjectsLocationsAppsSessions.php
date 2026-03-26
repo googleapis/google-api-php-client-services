@@ -68,6 +68,28 @@ class ProjectsLocationsAppsSessions extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('runSession', [$params], RunSessionResponse::class);
   }
+  /**
+   * Initiates a single-turn interaction with the CES agent. Uses server-side
+   * streaming to deliver incremental results and partial responses as they are
+   * generated. By default, complete responses (e.g., messages from callbacks or
+   * full LLM responses) are sent to the client as soon as they are available. To
+   * enable streaming individual text chunks directly from the model, set
+   * enable_text_streaming to true. (sessions.streamRunSession)
+   *
+   * @param string $session Required. The unique identifier of the session.
+   * Format:
+   * `projects/{project}/locations/{location}/apps/{app}/sessions/{session}`
+   * @param RunSessionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RunSessionResponse
+   * @throws \Google\Service\Exception
+   */
+  public function streamRunSession($session, RunSessionRequest $postBody, $optParams = [])
+  {
+    $params = ['session' => $session, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('streamRunSession', [$params], RunSessionResponse::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

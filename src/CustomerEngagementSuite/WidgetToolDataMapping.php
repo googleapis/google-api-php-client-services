@@ -44,11 +44,12 @@ class WidgetToolDataMapping extends \Google\Model
    * @var string
    */
   public $mode;
+  protected $pythonFunctionType = PythonFunction::class;
+  protected $pythonFunctionDataType = '';
   /**
-   * Optional. A Python script used to transform the source tool's output into
-   * the widget's input format. This is used when the mapping is too complex for
-   * simple field mappings.
+   * Deprecated: Use `python_function` instead.
    *
+   * @deprecated
    * @var string
    */
   public $pythonScript;
@@ -97,10 +98,26 @@ class WidgetToolDataMapping extends \Google\Model
     return $this->mode;
   }
   /**
-   * Optional. A Python script used to transform the source tool's output into
-   * the widget's input format. This is used when the mapping is too complex for
-   * simple field mappings.
+   * Optional. Configuration for a Python function used to transform the source
+   * tool's output into the widget's input format.
    *
+   * @param PythonFunction $pythonFunction
+   */
+  public function setPythonFunction(PythonFunction $pythonFunction)
+  {
+    $this->pythonFunction = $pythonFunction;
+  }
+  /**
+   * @return PythonFunction
+   */
+  public function getPythonFunction()
+  {
+    return $this->pythonFunction;
+  }
+  /**
+   * Deprecated: Use `python_function` instead.
+   *
+   * @deprecated
    * @param string $pythonScript
    */
   public function setPythonScript($pythonScript)
@@ -108,6 +125,7 @@ class WidgetToolDataMapping extends \Google\Model
     $this->pythonScript = $pythonScript;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getPythonScript()
