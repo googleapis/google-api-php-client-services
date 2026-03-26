@@ -86,8 +86,9 @@ class Message extends \Google\Collection
    * formatting. This field might not capture all formatting visible in the UI,
    * but includes the following: * [Markup
    * syntax](https://developers.google.com/workspace/chat/format-messages) for
-   * bold, italic, strikethrough, monospace, monospace block, and bulleted list.
-   * * [User mentions](https://developers.google.com/workspace/chat/format-
+   * bold, italic, strikethrough, monospace, monospace block, bulleted list, and
+   * block quote. * [User
+   * mentions](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention) using the format ``. * Custom hyperlinks using
    * the format `<{url}|{rendered_text}>` where the first string is the URL and
    * the second is the rendered text—for example, ``. * Custom emoji using the
@@ -432,8 +433,9 @@ class Message extends \Google\Collection
    * formatting. This field might not capture all formatting visible in the UI,
    * but includes the following: * [Markup
    * syntax](https://developers.google.com/workspace/chat/format-messages) for
-   * bold, italic, strikethrough, monospace, monospace block, and bulleted list.
-   * * [User mentions](https://developers.google.com/workspace/chat/format-
+   * bold, italic, strikethrough, monospace, monospace block, bulleted list, and
+   * block quote. * [User
+   * mentions](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention) using the format ``. * Custom hyperlinks using
    * the format `<{url}|{rendered_text}>` where the first string is the URL and
    * the second is the rendered text—for example, ``. * Custom emoji using the

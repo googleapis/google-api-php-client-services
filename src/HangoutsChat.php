@@ -122,6 +122,12 @@ class HangoutsChat extends \Google\Service
   /** View last read time for Google Chat conversations. */
   const CHAT_USERS_READSTATE_READONLY =
       "https://www.googleapis.com/auth/chat.users.readstate.readonly";
+  /** View, create, update, and delete your sections in Google Chat; move and list your section items in Google Chat. */
+  const CHAT_USERS_SECTIONS =
+      "https://www.googleapis.com/auth/chat.users.sections";
+  /** View your sections and their section items in Google Chat. */
+  const CHAT_USERS_SECTIONS_READONLY =
+      "https://www.googleapis.com/auth/chat.users.sections.readonly";
   /** Read and update your space settings. */
   const CHAT_USERS_SPACESETTINGS =
       "https://www.googleapis.com/auth/chat.users.spacesettings";
@@ -134,6 +140,8 @@ class HangoutsChat extends \Google\Service
   public $spaces_messages_attachments;
   public $spaces_messages_reactions;
   public $spaces_spaceEvents;
+  public $users_sections;
+  public $users_sections_items;
   public $users_spaces;
   public $users_spaces_spaceNotificationSetting;
   public $users_spaces_threads;
@@ -705,6 +713,120 @@ class HangoutsChat extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->users_sections = new HangoutsChat\Resource\UsersSections(
+        $this,
+        $this->serviceName,
+        'sections',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/sections',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/sections',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'position' => [
+              'path' => 'v1/{+name}:position',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->users_sections_items = new HangoutsChat\Resource\UsersSectionsItems(
+        $this,
+        $this->serviceName,
+        'items',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/items',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'move' => [
+              'path' => 'v1/{+name}:move',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
