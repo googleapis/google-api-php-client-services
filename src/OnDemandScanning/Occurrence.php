@@ -75,6 +75,12 @@ class Occurrence extends \Google\Model
    * This represents a secret.
    */
   public const KIND_SECRET = 'SECRET';
+  /**
+   * The time this advisory was published by the source.
+   *
+   * @var string
+   */
+  public $advisoryPublishTime;
   protected $attestationType = AttestationOccurrence::class;
   protected $attestationDataType = '';
   protected $buildType = BuildOccurrence::class;
@@ -150,6 +156,22 @@ class Occurrence extends \Google\Model
   protected $vulnerabilityType = VulnerabilityOccurrence::class;
   protected $vulnerabilityDataType = '';
 
+  /**
+   * The time this advisory was published by the source.
+   *
+   * @param string $advisoryPublishTime
+   */
+  public function setAdvisoryPublishTime($advisoryPublishTime)
+  {
+    $this->advisoryPublishTime = $advisoryPublishTime;
+  }
+  /**
+   * @return string
+   */
+  public function getAdvisoryPublishTime()
+  {
+    return $this->advisoryPublishTime;
+  }
   /**
    * Describes an attestation of an artifact.
    *
