@@ -20,6 +20,23 @@ namespace Google\Service\BigtableAdmin;
 class Instance extends \Google\Model
 {
   /**
+   * The edition is unspecified. This is treated as `ENTERPRISE`.
+   */
+  public const EDITION_EDITION_UNSPECIFIED = 'EDITION_UNSPECIFIED';
+  /**
+   * The Enterprise edition. This is the default offering that is designed to
+   * meet the needs of most enterprise workloads.
+   */
+  public const EDITION_ENTERPRISE = 'ENTERPRISE';
+  /**
+   * The Enterprise Plus edition. This is a premium tier that is designed for
+   * demanding, multi-tenant workloads requiring the highest levels of
+   * performance, scale, and global availability. The nodes in the Enterprise
+   * Plus tier come at a higher cost than the Enterprise tier. Any Enterprise
+   * Plus features must be disabled before downgrading to Enterprise.
+   */
+  public const EDITION_ENTERPRISE_PLUS = 'ENTERPRISE_PLUS';
+  /**
    * The state of the instance could not be determined.
    */
   public const STATE_STATE_NOT_KNOWN = 'STATE_NOT_KNOWN';
@@ -65,6 +82,12 @@ class Instance extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * Optional. The edition of the instance. See Edition for details.
+   *
+   * @var string
+   */
+  public $edition;
   /**
    * Labels are a flexible and lightweight mechanism for organizing cloud
    * resources into groups that reflect a customer's organizational needs and
@@ -157,6 +180,24 @@ class Instance extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * Optional. The edition of the instance. See Edition for details.
+   *
+   * Accepted values: EDITION_UNSPECIFIED, ENTERPRISE, ENTERPRISE_PLUS
+   *
+   * @param self::EDITION_* $edition
+   */
+  public function setEdition($edition)
+  {
+    $this->edition = $edition;
+  }
+  /**
+   * @return self::EDITION_*
+   */
+  public function getEdition()
+  {
+    return $this->edition;
   }
   /**
    * Labels are a flexible and lightweight mechanism for organizing cloud
