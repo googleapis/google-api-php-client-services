@@ -27,6 +27,8 @@ class DataSourceGcpResource extends \Google\Model
   protected $computeInstanceDatasourcePropertiesDataType = '';
   protected $diskDatasourcePropertiesType = DiskDataSourceProperties::class;
   protected $diskDatasourcePropertiesDataType = '';
+  protected $filestoreInstanceDatasourcePropertiesType = FilestoreInstanceDataSourceProperties::class;
+  protected $filestoreInstanceDatasourcePropertiesDataType = '';
   /**
    * Output only. Full resource pathname URL of the source Google Cloud
    * resource.
@@ -117,6 +119,23 @@ class DataSourceGcpResource extends \Google\Model
   public function getDiskDatasourceProperties()
   {
     return $this->diskDatasourceProperties;
+  }
+  /**
+   * Output only. FilestoreInstanceDataSourceProperties has a subset of
+   * FileStore instance properties that are useful at the Datasource level.
+   *
+   * @param FilestoreInstanceDataSourceProperties $filestoreInstanceDatasourceProperties
+   */
+  public function setFilestoreInstanceDatasourceProperties(FilestoreInstanceDataSourceProperties $filestoreInstanceDatasourceProperties)
+  {
+    $this->filestoreInstanceDatasourceProperties = $filestoreInstanceDatasourceProperties;
+  }
+  /**
+   * @return FilestoreInstanceDataSourceProperties
+   */
+  public function getFilestoreInstanceDatasourceProperties()
+  {
+    return $this->filestoreInstanceDatasourceProperties;
   }
   /**
    * Output only. Full resource pathname URL of the source Google Cloud

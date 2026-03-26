@@ -39,6 +39,10 @@ class ResourceBackupConfig extends \Google\Collection
    * Compute Engine Regional Disk.
    */
   public const TARGET_RESOURCE_TYPE_COMPUTE_ENGINE_REGIONAL_DISK = 'COMPUTE_ENGINE_REGIONAL_DISK';
+  /**
+   * Filestore Instance.
+   */
+  public const TARGET_RESOURCE_TYPE_FILESTORE_INSTANCE = 'FILESTORE_INSTANCE';
   protected $collection_key = 'backupConfigsDetails';
   protected $backupConfigsDetailsType = BackupConfigDetails::class;
   protected $backupConfigsDetailsDataType = 'array';
@@ -207,7 +211,8 @@ class ResourceBackupConfig extends \Google\Collection
    * Output only. The type of the target resource.
    *
    * Accepted values: RESOURCE_TYPE_UNSPECIFIED, CLOUD_SQL_INSTANCE,
-   * COMPUTE_ENGINE_VM, COMPUTE_ENGINE_DISK, COMPUTE_ENGINE_REGIONAL_DISK
+   * COMPUTE_ENGINE_VM, COMPUTE_ENGINE_DISK, COMPUTE_ENGINE_REGIONAL_DISK,
+   * FILESTORE_INSTANCE
    *
    * @param self::TARGET_RESOURCE_TYPE_* $targetResourceType
    */

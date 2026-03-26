@@ -143,6 +143,8 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $expireTime;
+  protected $filestoreInstanceBackupPropertiesType = FilestoreInstanceBackupProperties::class;
+  protected $filestoreInstanceBackupPropertiesDataType = '';
   protected $gcpBackupPlanInfoType = GCPBackupPlanInfo::class;
   protected $gcpBackupPlanInfoDataType = '';
   protected $gcpResourceType = BackupGcpResource::class;
@@ -436,6 +438,22 @@ class Backup extends \Google\Collection
   public function getExpireTime()
   {
     return $this->expireTime;
+  }
+  /**
+   * Output only. Filestore specific backup properties.
+   *
+   * @param FilestoreInstanceBackupProperties $filestoreInstanceBackupProperties
+   */
+  public function setFilestoreInstanceBackupProperties(FilestoreInstanceBackupProperties $filestoreInstanceBackupProperties)
+  {
+    $this->filestoreInstanceBackupProperties = $filestoreInstanceBackupProperties;
+  }
+  /**
+   * @return FilestoreInstanceBackupProperties
+   */
+  public function getFilestoreInstanceBackupProperties()
+  {
+    return $this->filestoreInstanceBackupProperties;
   }
   /**
    * Output only. Configuration for a Google Cloud resource.
