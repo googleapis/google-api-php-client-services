@@ -44,6 +44,8 @@ class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Co
    * @var string[]
    */
   public $inputPrefixes;
+  protected $interactionDataType = GoogleCloudAiplatformV1SchemaPromptSpecInteractionData::class;
+  protected $interactionDataDataType = '';
   /**
    * Preamble: The output prefixes before each example output.
    *
@@ -150,6 +152,22 @@ class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Co
   public function getInputPrefixes()
   {
     return $this->inputPrefixes;
+  }
+  /**
+   * Data for interaction use case.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecInteractionData $interactionData
+   */
+  public function setInteractionData(GoogleCloudAiplatformV1SchemaPromptSpecInteractionData $interactionData)
+  {
+    $this->interactionData = $interactionData;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SchemaPromptSpecInteractionData
+   */
+  public function getInteractionData()
+  {
+    return $this->interactionData;
   }
   /**
    * Preamble: The output prefixes before each example output.

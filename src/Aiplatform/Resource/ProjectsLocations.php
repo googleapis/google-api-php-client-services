@@ -32,8 +32,6 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateInstanceRubricsRequ
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateInstanceRubricsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateSyntheticDataRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateSyntheticDataResponse;
-use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateUserScenariosRequest;
-use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateUserScenariosResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RagEngineConfig;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsResponse;
@@ -212,23 +210,6 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('generateSyntheticData', [$params], GoogleCloudAiplatformV1GenerateSyntheticDataResponse::class);
   }
   /**
-   * Generates user scenarios for agent evaluation.
-   * (locations.generateUserScenarios)
-   *
-   * @param string $location Required. The resource name of the Location to run
-   * the job. Format: `projects/{project}/locations/{location}`
-   * @param GoogleCloudAiplatformV1GenerateUserScenariosRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleCloudAiplatformV1GenerateUserScenariosResponse
-   * @throws \Google\Service\Exception
-   */
-  public function generateUserScenarios($location, GoogleCloudAiplatformV1GenerateUserScenariosRequest $postBody, $optParams = [])
-  {
-    $params = ['location' => $location, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('generateUserScenarios', [$params], GoogleCloudAiplatformV1GenerateUserScenariosResponse::class);
-  }
-  /**
    * Gets information about a location. (locations.get)
    *
    * @param string $name Resource name for the location.
@@ -259,11 +240,16 @@ class ProjectsLocations extends \Google\Service\Resource
   }
   /**
    * Lists information about the supported locations for this service. This method
-   * can be called in two ways: * **List all public locations:** Use the path `GET
-   * /v1/locations`. * **List project-visible locations:** Use the path `GET
-   * /v1/projects/{project_id}/locations`. This may include public locations as
-   * well as private or other locations specifically visible to the project.
-   * (locations.listProjectsLocations)
+   * lists locations based on the resource scope provided in the
+   * [ListLocationsRequest.name] field: * **Global locations**: If `name` is
+   * empty, the method lists the public locations available to all projects. *
+   * **Project-specific locations**: If `name` follows the format
+   * `projects/{project}`, the method lists locations visible to that specific
+   * project. This includes public, private, or other project-specific locations
+   * enabled for the project. For gRPC and client library implementations, the
+   * resource name is passed as the `name` field. For direct service calls, the
+   * resource name is incorporated into the request path based on the specific
+   * service implementation and version. (locations.listProjectsLocations)
    *
    * @param string $name The resource that owns the locations collection, if
    * applicable.

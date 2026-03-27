@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\Model
 {
+  protected $agentConfigSourceType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecAgentConfigSource::class;
+  protected $agentConfigSourceDataType = '';
   protected $developerConnectSourceType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource::class;
   protected $developerConnectSourceDataType = '';
   protected $imageSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecImageSpec::class;
@@ -28,6 +30,22 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\M
   protected $pythonSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecPythonSpec::class;
   protected $pythonSpecDataType = '';
 
+  /**
+   * Source code is generated from the agent config.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecAgentConfigSource $agentConfigSource
+   */
+  public function setAgentConfigSource(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecAgentConfigSource $agentConfigSource)
+  {
+    $this->agentConfigSource = $agentConfigSource;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecAgentConfigSource
+   */
+  public function getAgentConfigSource()
+  {
+    return $this->agentConfigSource;
+  }
   /**
    * Source code is in a Git repository managed by Developer Connect.
    *
