@@ -21,6 +21,8 @@ class RuntimeInfo extends \Google\Model
 {
   protected $approximateUsageType = UsageMetrics::class;
   protected $approximateUsageDataType = '';
+  protected $cohortInfoType = CohortInfo::class;
+  protected $cohortInfoDataType = '';
   protected $currentUsageType = UsageSnapshot::class;
   protected $currentUsageDataType = '';
   /**
@@ -68,6 +70,22 @@ class RuntimeInfo extends \Google\Model
   public function getApproximateUsage()
   {
     return $this->approximateUsage;
+  }
+  /**
+   * Output only. Information about the cohort that the workload belongs to.
+   *
+   * @param CohortInfo $cohortInfo
+   */
+  public function setCohortInfo(CohortInfo $cohortInfo)
+  {
+    $this->cohortInfo = $cohortInfo;
+  }
+  /**
+   * @return CohortInfo
+   */
+  public function getCohortInfo()
+  {
+    return $this->cohortInfo;
   }
   /**
    * Output only. Snapshot of current workload resource usage.

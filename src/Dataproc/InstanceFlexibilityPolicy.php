@@ -20,6 +20,15 @@ namespace Google\Service\Dataproc;
 class InstanceFlexibilityPolicy extends \Google\Collection
 {
   protected $collection_key = 'instanceSelectionResults';
+  /**
+   * Output only. A map of instance short name to machine type. The key is the
+   * short name of the Compute Engine instance, and the value is the full
+   * machine-type name (e.g., 'n1-standard-16'). See Machine types for more
+   * information on valid machine type strings.
+   *
+   * @var string[]
+   */
+  public $instanceMachineTypes;
   protected $instanceSelectionListType = InstanceSelection::class;
   protected $instanceSelectionListDataType = 'array';
   protected $instanceSelectionResultsType = InstanceSelectionResult::class;
@@ -27,6 +36,25 @@ class InstanceFlexibilityPolicy extends \Google\Collection
   protected $provisioningModelMixType = ProvisioningModelMix::class;
   protected $provisioningModelMixDataType = '';
 
+  /**
+   * Output only. A map of instance short name to machine type. The key is the
+   * short name of the Compute Engine instance, and the value is the full
+   * machine-type name (e.g., 'n1-standard-16'). See Machine types for more
+   * information on valid machine type strings.
+   *
+   * @param string[] $instanceMachineTypes
+   */
+  public function setInstanceMachineTypes($instanceMachineTypes)
+  {
+    $this->instanceMachineTypes = $instanceMachineTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getInstanceMachineTypes()
+  {
+    return $this->instanceMachineTypes;
+  }
   /**
    * Optional. List of instance selection options that the group will use when
    * creating new VMs.
