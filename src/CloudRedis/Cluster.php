@@ -107,6 +107,14 @@ class Cluster extends \Google\Collection
    */
   public $aclPolicy;
   /**
+   * Optional. Output only. Indicates whether the ACL rules applied to the
+   * cluster are in sync with the latest ACL policy rules. This field is only
+   * applicable if the ACL policy is set for the cluster.
+   *
+   * @var bool
+   */
+  public $aclPolicyInSync;
+  /**
    * Optional. Immutable. Deprecated, do not use.
    *
    * @deprecated
@@ -341,6 +349,24 @@ class Cluster extends \Google\Collection
   public function getAclPolicy()
   {
     return $this->aclPolicy;
+  }
+  /**
+   * Optional. Output only. Indicates whether the ACL rules applied to the
+   * cluster are in sync with the latest ACL policy rules. This field is only
+   * applicable if the ACL policy is set for the cluster.
+   *
+   * @param bool $aclPolicyInSync
+   */
+  public function setAclPolicyInSync($aclPolicyInSync)
+  {
+    $this->aclPolicyInSync = $aclPolicyInSync;
+  }
+  /**
+   * @return bool
+   */
+  public function getAclPolicyInSync()
+  {
+    return $this->aclPolicyInSync;
   }
   /**
    * Optional. Immutable. Deprecated, do not use.

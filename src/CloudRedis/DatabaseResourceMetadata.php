@@ -247,6 +247,12 @@ class DatabaseResourceMetadata extends \Google\Collection
   protected $machineConfigurationDataType = '';
   protected $maintenanceInfoType = ResourceMaintenanceInfo::class;
   protected $maintenanceInfoDataType = '';
+  /**
+   * Optional. The modes of the database resource.
+   *
+   * @var string[]
+   */
+  public $modes;
   protected $primaryResourceIdType = DatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
   /**
@@ -597,6 +603,22 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getMaintenanceInfo()
   {
     return $this->maintenanceInfo;
+  }
+  /**
+   * Optional. The modes of the database resource.
+   *
+   * @param string[] $modes
+   */
+  public function setModes($modes)
+  {
+    $this->modes = $modes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getModes()
+  {
+    return $this->modes;
   }
   /**
    * Identifier for this resource's immediate parent/primary resource if the
