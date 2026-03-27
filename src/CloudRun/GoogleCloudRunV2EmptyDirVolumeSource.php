@@ -29,6 +29,10 @@ class GoogleCloudRunV2EmptyDirVolumeSource extends \Google\Model
    */
   public const MEDIUM_MEMORY = 'MEMORY';
   /**
+   * Explicitly sets the EmptyDir to be a disk.
+   */
+  public const MEDIUM_DISK = 'DISK';
+  /**
    * The medium on which the data is stored. Acceptable values today is only
    * MEMORY or none. When none, the default will currently be backed by memory
    * but could change over time. +optional
@@ -55,7 +59,7 @@ class GoogleCloudRunV2EmptyDirVolumeSource extends \Google\Model
    * MEMORY or none. When none, the default will currently be backed by memory
    * but could change over time. +optional
    *
-   * Accepted values: MEDIUM_UNSPECIFIED, MEMORY
+   * Accepted values: MEDIUM_UNSPECIFIED, MEMORY, DISK
    *
    * @param self::MEDIUM_* $medium
    */

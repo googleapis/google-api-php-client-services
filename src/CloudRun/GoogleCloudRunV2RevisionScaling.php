@@ -22,7 +22,8 @@ class GoogleCloudRunV2RevisionScaling extends \Google\Model
   /**
    * Optional. Determines a threshold for concurrency utilization before scaling
    * begins. Accepted values are between `0.1` and `0.95` (inclusive) or `0.0`
-   * to disable concurrency utilization as threshold for scaling.
+   * to disable concurrency utilization as threshold for scaling. CPU and
+   * concurrency scaling cannot both be disabled.
    *
    * @var float
    */
@@ -30,7 +31,8 @@ class GoogleCloudRunV2RevisionScaling extends \Google\Model
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins.
    * Accepted values are between `0.1` and `0.95` (inclusive) or `0.0` to
-   * disable CPU utilization as threshold for scaling.
+   * disable CPU utilization as threshold for scaling. CPU and concurrency
+   * scaling cannot both be disabled.
    *
    * @var float
    */
@@ -55,7 +57,8 @@ class GoogleCloudRunV2RevisionScaling extends \Google\Model
   /**
    * Optional. Determines a threshold for concurrency utilization before scaling
    * begins. Accepted values are between `0.1` and `0.95` (inclusive) or `0.0`
-   * to disable concurrency utilization as threshold for scaling.
+   * to disable concurrency utilization as threshold for scaling. CPU and
+   * concurrency scaling cannot both be disabled.
    *
    * @param float $concurrencyUtilization
    */
@@ -73,7 +76,8 @@ class GoogleCloudRunV2RevisionScaling extends \Google\Model
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins.
    * Accepted values are between `0.1` and `0.95` (inclusive) or `0.0` to
-   * disable CPU utilization as threshold for scaling.
+   * disable CPU utilization as threshold for scaling. CPU and concurrency
+   * scaling cannot both be disabled.
    *
    * @param float $cpuUtilization
    */

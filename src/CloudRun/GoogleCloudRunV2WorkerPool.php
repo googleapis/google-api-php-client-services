@@ -115,8 +115,9 @@ class GoogleCloudRunV2WorkerPool extends \Google\Collection
    */
   public $creator;
   /**
-   * Not supported, and ignored by Cloud Run.
+   * Deprecated: Not supported, and ignored by Cloud Run.
    *
+   * @deprecated
    * @var string[]
    */
   public $customAudiences;
@@ -410,8 +411,9 @@ class GoogleCloudRunV2WorkerPool extends \Google\Collection
     return $this->creator;
   }
   /**
-   * Not supported, and ignored by Cloud Run.
+   * Deprecated: Not supported, and ignored by Cloud Run.
    *
+   * @deprecated
    * @param string[] $customAudiences
    */
   public function setCustomAudiences($customAudiences)
@@ -419,6 +421,7 @@ class GoogleCloudRunV2WorkerPool extends \Google\Collection
     $this->customAudiences = $customAudiences;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getCustomAudiences()
