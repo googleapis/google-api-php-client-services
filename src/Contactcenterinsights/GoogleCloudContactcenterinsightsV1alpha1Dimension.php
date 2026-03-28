@@ -114,6 +114,10 @@ class GoogleCloudContactcenterinsightsV1alpha1Dimension extends \Google\Model
    * The dimension is keyed by label key-value pairs.
    */
   public const DIMENSION_KEY_LABEL_KEY_AND_VALUE = 'LABEL_KEY_AND_VALUE';
+  /**
+   * The dimension is keyed by the last transfer sub agent name.
+   */
+  public const DIMENSION_KEY_LAST_TRANSFER_SUB_AGENT_NAME = 'LAST_TRANSFER_SUB_AGENT_NAME';
   protected $agentDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata::class;
   protected $agentDimensionMetadataDataType = '';
   protected $clientSentimentCategoryDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionClientSentimentCategoryDimensionMetadata::class;
@@ -232,7 +236,7 @@ class GoogleCloudContactcenterinsightsV1alpha1Dimension extends \Google\Model
    * CONVERSATIONAL_AGENTS_PLAYBOOK_NAME, CONVERSATIONAL_AGENTS_TOOL_ID,
    * CONVERSATIONAL_AGENTS_TOOL_NAME, CLIENT_SENTIMENT_CATEGORY,
    * AGENT_VERSION_ID, AGENT_DEPLOYMENT_ID, AGENT_ASSIST_SUPERVISOR_ID,
-   * LABEL_KEY, LABEL_VALUE, LABEL_KEY_AND_VALUE
+   * LABEL_KEY, LABEL_VALUE, LABEL_KEY_AND_VALUE, LAST_TRANSFER_SUB_AGENT_NAME
    *
    * @param self::DIMENSION_KEY_* $dimensionKey
    */
