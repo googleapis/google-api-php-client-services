@@ -99,6 +99,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredCompliancePostureConfigDataType = '';
   protected $desiredContainerdConfigType = ContainerdConfig::class;
   protected $desiredContainerdConfigDataType = '';
+  protected $desiredControlPlaneEgressType = ControlPlaneEgress::class;
+  protected $desiredControlPlaneEgressDataType = '';
   protected $desiredControlPlaneEndpointsConfigType = ControlPlaneEndpointsConfig::class;
   protected $desiredControlPlaneEndpointsConfigDataType = '';
   protected $desiredCostManagementConfigType = CostManagementConfig::class;
@@ -310,6 +312,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredResourceUsageExportConfigDataType = '';
   protected $desiredSecretManagerConfigType = SecretManagerConfig::class;
   protected $desiredSecretManagerConfigDataType = '';
+  protected $desiredSecretSyncConfigType = SecretSyncConfig::class;
+  protected $desiredSecretSyncConfigDataType = '';
   protected $desiredSecurityPostureConfigType = SecurityPostureConfig::class;
   protected $desiredSecurityPostureConfigDataType = '';
   protected $desiredServiceExternalIpsConfigType = ServiceExternalIPsConfig::class;
@@ -545,6 +549,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredContainerdConfig()
   {
     return $this->desiredContainerdConfig;
+  }
+  /**
+   * The desired control plane egress control config for the cluster.
+   *
+   * @param ControlPlaneEgress $desiredControlPlaneEgress
+   */
+  public function setDesiredControlPlaneEgress(ControlPlaneEgress $desiredControlPlaneEgress)
+  {
+    $this->desiredControlPlaneEgress = $desiredControlPlaneEgress;
+  }
+  /**
+   * @return ControlPlaneEgress
+   */
+  public function getDesiredControlPlaneEgress()
+  {
+    return $this->desiredControlPlaneEgress;
   }
   /**
    * Control plane endpoints configuration.
@@ -1470,6 +1490,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredSecretManagerConfig()
   {
     return $this->desiredSecretManagerConfig;
+  }
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   *
+   * @param SecretSyncConfig $desiredSecretSyncConfig
+   */
+  public function setDesiredSecretSyncConfig(SecretSyncConfig $desiredSecretSyncConfig)
+  {
+    $this->desiredSecretSyncConfig = $desiredSecretSyncConfig;
+  }
+  /**
+   * @return SecretSyncConfig
+   */
+  public function getDesiredSecretSyncConfig()
+  {
+    return $this->desiredSecretSyncConfig;
   }
   /**
    * Enable/Disable Security Posture API features for the cluster.

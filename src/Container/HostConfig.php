@@ -46,9 +46,10 @@ class HostConfig extends \Google\Collection
   protected $headerDataType = 'array';
   /**
    * Host configures the registry host/mirror. It supports fully qualified
-   * domain names (FQDN) and IP addresses: Specifying port is supported.
-   * Wildcards are NOT supported. Examples: - my.customdomain.com -
-   * 10.0.1.2:5000
+   * domain names (FQDNs) and IP addresses. Specifying scheme, port or path is
+   * supported. Scheme can only be http or https. Wildcards are NOT supported.
+   * Examples: - `my.customdomain.com` - `https://my.customdomain.com/path` -
+   * `10.0.1.2:5000`
    *
    * @var string
    */
@@ -151,9 +152,10 @@ class HostConfig extends \Google\Collection
   }
   /**
    * Host configures the registry host/mirror. It supports fully qualified
-   * domain names (FQDN) and IP addresses: Specifying port is supported.
-   * Wildcards are NOT supported. Examples: - my.customdomain.com -
-   * 10.0.1.2:5000
+   * domain names (FQDNs) and IP addresses. Specifying scheme, port or path is
+   * supported. Scheme can only be http or https. Wildcards are NOT supported.
+   * Examples: - `my.customdomain.com` - `https://my.customdomain.com/path` -
+   * `10.0.1.2:5000`
    *
    * @param string $host
    */

@@ -26,8 +26,8 @@ class RegistryHostConfig extends \Google\Collection
    * Defines the host name of the registry server, which will be used to create
    * configuration file as /etc/containerd/hosts.d//hosts.toml. It supports
    * fully qualified domain names (FQDN) and IP addresses: Specifying port is
-   * supported. Wildcards are NOT supported. Examples: - my.customdomain.com -
-   * 10.0.1.2:5000
+   * supported, while scheme and path are NOT supported. Wildcards are NOT
+   * supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    *
    * @var string
    */
@@ -54,8 +54,8 @@ class RegistryHostConfig extends \Google\Collection
    * Defines the host name of the registry server, which will be used to create
    * configuration file as /etc/containerd/hosts.d//hosts.toml. It supports
    * fully qualified domain names (FQDN) and IP addresses: Specifying port is
-   * supported. Wildcards are NOT supported. Examples: - my.customdomain.com -
-   * 10.0.1.2:5000
+   * supported, while scheme and path are NOT supported. Wildcards are NOT
+   * supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    *
    * @param string $server
    */

@@ -85,6 +85,8 @@ class LinuxNodeConfig extends \Google\Model
    * Transparent hugepage support for anonymous memory is disabled.
    */
   public const TRANSPARENT_HUGEPAGE_ENABLED_TRANSPARENT_HUGEPAGE_ENABLED_NEVER = 'TRANSPARENT_HUGEPAGE_ENABLED_NEVER';
+  protected $accurateTimeConfigType = AccurateTimeConfig::class;
+  protected $accurateTimeConfigDataType = '';
   /**
    * cgroup_mode specifies the cgroup mode to be used on the node.
    *
@@ -145,6 +147,22 @@ class LinuxNodeConfig extends \Google\Model
    */
   public $transparentHugepageEnabled;
 
+  /**
+   * Optional. The accurate time configuration for the node pool.
+   *
+   * @param AccurateTimeConfig $accurateTimeConfig
+   */
+  public function setAccurateTimeConfig(AccurateTimeConfig $accurateTimeConfig)
+  {
+    $this->accurateTimeConfig = $accurateTimeConfig;
+  }
+  /**
+   * @return AccurateTimeConfig
+   */
+  public function getAccurateTimeConfig()
+  {
+    return $this->accurateTimeConfig;
+  }
   /**
    * cgroup_mode specifies the cgroup mode to be used on the node.
    *

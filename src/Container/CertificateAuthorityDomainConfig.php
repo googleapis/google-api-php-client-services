@@ -22,8 +22,8 @@ class CertificateAuthorityDomainConfig extends \Google\Collection
   protected $collection_key = 'fqdns';
   /**
    * List of fully qualified domain names (FQDN). Specifying port is supported.
-   * Wildcards are NOT supported. Examples: - my.customdomain.com -
-   * 10.0.1.2:5000
+   * Wildcards are NOT supported. Examples: - `my.customdomain.com` -
+   * `10.0.1.2:5000`
    *
    * @var string[]
    */
@@ -33,8 +33,8 @@ class CertificateAuthorityDomainConfig extends \Google\Collection
 
   /**
    * List of fully qualified domain names (FQDN). Specifying port is supported.
-   * Wildcards are NOT supported. Examples: - my.customdomain.com -
-   * 10.0.1.2:5000
+   * Wildcards are NOT supported. Examples: - `my.customdomain.com` -
+   * `10.0.1.2:5000`
    *
    * @param string[] $fqdns
    */

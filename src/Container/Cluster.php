@@ -88,6 +88,8 @@ class Cluster extends \Google\Collection
   protected $conditionsDataType = 'array';
   protected $confidentialNodesType = ConfidentialNodes::class;
   protected $confidentialNodesDataType = '';
+  protected $controlPlaneEgressType = ControlPlaneEgress::class;
+  protected $controlPlaneEgressDataType = '';
   protected $controlPlaneEndpointsConfigType = ControlPlaneEndpointsConfig::class;
   protected $controlPlaneEndpointsConfigDataType = '';
   protected $costManagementConfigType = CostManagementConfig::class;
@@ -381,6 +383,8 @@ class Cluster extends \Google\Collection
   protected $scheduleUpgradeConfigDataType = '';
   protected $secretManagerConfigType = SecretManagerConfig::class;
   protected $secretManagerConfigDataType = '';
+  protected $secretSyncConfigType = SecretSyncConfig::class;
+  protected $secretSyncConfigDataType = '';
   protected $securityPostureConfigType = SecurityPostureConfig::class;
   protected $securityPostureConfigDataType = '';
   /**
@@ -635,6 +639,22 @@ class Cluster extends \Google\Collection
   public function getConfidentialNodes()
   {
     return $this->confidentialNodes;
+  }
+  /**
+   * Configuration for control plane egress control.
+   *
+   * @param ControlPlaneEgress $controlPlaneEgress
+   */
+  public function setControlPlaneEgress(ControlPlaneEgress $controlPlaneEgress)
+  {
+    $this->controlPlaneEgress = $controlPlaneEgress;
+  }
+  /**
+   * @return ControlPlaneEgress
+   */
+  public function getControlPlaneEgress()
+  {
+    return $this->controlPlaneEgress;
   }
   /**
    * Configuration for all cluster's control plane endpoints.
@@ -1694,6 +1714,22 @@ class Cluster extends \Google\Collection
   public function getSecretManagerConfig()
   {
     return $this->secretManagerConfig;
+  }
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   *
+   * @param SecretSyncConfig $secretSyncConfig
+   */
+  public function setSecretSyncConfig(SecretSyncConfig $secretSyncConfig)
+  {
+    $this->secretSyncConfig = $secretSyncConfig;
+  }
+  /**
+   * @return SecretSyncConfig
+   */
+  public function getSecretSyncConfig()
+  {
+    return $this->secretSyncConfig;
   }
   /**
    * Optional. Enable/Disable Security Posture API features for the cluster.
