@@ -153,6 +153,8 @@ class FutureReservation extends \Google\Model
    * @var string
    */
   public $namePrefix;
+  protected $paramsType = FutureReservationParams::class;
+  protected $paramsDataType = '';
   /**
    * Planning state before being submitted for evaluation
    *
@@ -468,6 +470,23 @@ class FutureReservation extends \Google\Model
   public function getNamePrefix()
   {
     return $this->namePrefix;
+  }
+  /**
+   * Input only. Additional params passed with the request, but not persisted as
+   * part of resource payload.
+   *
+   * @param FutureReservationParams $params
+   */
+  public function setParams(FutureReservationParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return FutureReservationParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * Planning state before being submitted for evaluation

@@ -20,8 +20,7 @@ namespace Google\Service\Compute;
 class InstanceGroupManagerStatusBulkInstanceOperation extends \Google\Model
 {
   /**
-   * Output only. [Output Only] Informs whether bulk instance operation is in
-   * progress.
+   * Output only. Informs whether bulk instance operation is in progress.
    *
    * @var bool
    */
@@ -30,8 +29,7 @@ class InstanceGroupManagerStatusBulkInstanceOperation extends \Google\Model
   protected $lastProgressCheckDataType = '';
 
   /**
-   * Output only. [Output Only] Informs whether bulk instance operation is in
-   * progress.
+   * Output only. Informs whether bulk instance operation is in progress.
    *
    * @param bool $inProgress
    */
@@ -47,8 +45,8 @@ class InstanceGroupManagerStatusBulkInstanceOperation extends \Google\Model
     return $this->inProgress;
   }
   /**
-   * Output only. [Output Only] Information from the last progress check of bulk
-   * instance operation.
+   * Output only. Information from the last progress check of bulk instance
+   * operation.
    *
    * @param InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck $lastProgressCheck
    */

@@ -45,14 +45,14 @@ class InstanceGroupManagerStatusAcceleratorTopology extends \Google\Model
    */
   public const STATE_REACTIVATING = 'REACTIVATING';
   /**
-   * Output only. [Output Only] Topology in the format of: "16x16", "4x4x4",
-   * etc. The value is the same as configured in the WorkloadPolicy.
+   * Output only. Topology in the format of: "16x16", "4x4x4", etc. The value is
+   * the same as configured in the WorkloadPolicy.
    *
    * @var string
    */
   public $acceleratorTopology;
   /**
-   * Output only. [Output Only] The state of the accelerator topology.
+   * Output only. The state of the accelerator topology.
    *
    * @var string
    */
@@ -61,8 +61,8 @@ class InstanceGroupManagerStatusAcceleratorTopology extends \Google\Model
   protected $stateDetailsDataType = '';
 
   /**
-   * Output only. [Output Only] Topology in the format of: "16x16", "4x4x4",
-   * etc. The value is the same as configured in the WorkloadPolicy.
+   * Output only. Topology in the format of: "16x16", "4x4x4", etc. The value is
+   * the same as configured in the WorkloadPolicy.
    *
    * @param string $acceleratorTopology
    */
@@ -78,7 +78,7 @@ class InstanceGroupManagerStatusAcceleratorTopology extends \Google\Model
     return $this->acceleratorTopology;
   }
   /**
-   * Output only. [Output Only] The state of the accelerator topology.
+   * Output only. The state of the accelerator topology.
    *
    * Accepted values: ACTIVATING, ACTIVE, DEACTIVATING, FAILED, INCOMPLETE,
    * REACTIVATING
@@ -97,8 +97,7 @@ class InstanceGroupManagerStatusAcceleratorTopology extends \Google\Model
     return $this->state;
   }
   /**
-   * Output only. [Output Only] The result of the latest accelerator topology
-   * state check.
+   * Output only. The result of the latest accelerator topology state check.
    *
    * @param InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetails $stateDetails
    */

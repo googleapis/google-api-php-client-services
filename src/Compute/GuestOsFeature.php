@@ -40,7 +40,7 @@ class GuestOsFeature extends \Google\Model
    * VIRTIO_SCSI_MULTIQUEUE    - WINDOWS    - MULTI_IP_SUBNET    -
    * UEFI_COMPATIBLE    - GVNIC    - SEV_CAPABLE    - SUSPEND_RESUME_COMPATIBLE
    * - SEV_LIVE_MIGRATABLE_V2    - SEV_SNP_CAPABLE    - TDX_CAPABLE    - IDPF
-   * - SNP_SVSM_CAPABLE
+   * - SNP_SVSM_CAPABLE    - CCA_CAPABLE
    *
    * For more information, see Enabling guest operating system features.
    *
@@ -54,7 +54,7 @@ class GuestOsFeature extends \Google\Model
    * VIRTIO_SCSI_MULTIQUEUE    - WINDOWS    - MULTI_IP_SUBNET    -
    * UEFI_COMPATIBLE    - GVNIC    - SEV_CAPABLE    - SUSPEND_RESUME_COMPATIBLE
    * - SEV_LIVE_MIGRATABLE_V2    - SEV_SNP_CAPABLE    - TDX_CAPABLE    - IDPF
-   * - SNP_SVSM_CAPABLE
+   * - SNP_SVSM_CAPABLE    - CCA_CAPABLE
    *
    * For more information, see Enabling guest operating system features.
    *

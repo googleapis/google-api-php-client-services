@@ -70,6 +70,12 @@ class NetworkAttachmentConnectedEndpoint extends \Google\Collection
    */
   public $secondaryIpCidrRanges;
   /**
+   * The service class id of the producer service to which the IP was assigned.
+   *
+   * @var string
+   */
+  public $serviceClassId;
+  /**
    * The status of a connected endpoint to this network attachment.
    *
    * @var string
@@ -156,6 +162,22 @@ class NetworkAttachmentConnectedEndpoint extends \Google\Collection
   public function getSecondaryIpCidrRanges()
   {
     return $this->secondaryIpCidrRanges;
+  }
+  /**
+   * The service class id of the producer service to which the IP was assigned.
+   *
+   * @param string $serviceClassId
+   */
+  public function setServiceClassId($serviceClassId)
+  {
+    $this->serviceClassId = $serviceClassId;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceClassId()
+  {
+    return $this->serviceClassId;
   }
   /**
    * The status of a connected endpoint to this network attachment.

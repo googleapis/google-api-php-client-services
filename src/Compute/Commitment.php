@@ -187,6 +187,8 @@ class Commitment extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = CommitmentParams::class;
+  protected $paramsDataType = '';
   /**
    * The minimum time duration that you commit to purchasing resources. The plan
    * that you choose determines the preset term length of the commitment (which
@@ -483,6 +485,23 @@ class Commitment extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Input only. Additional params passed with the request, but not persisted as
+   * part of resource payload.
+   *
+   * @param CommitmentParams $params
+   */
+  public function setParams(CommitmentParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return CommitmentParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * The minimum time duration that you commit to purchasing resources. The plan

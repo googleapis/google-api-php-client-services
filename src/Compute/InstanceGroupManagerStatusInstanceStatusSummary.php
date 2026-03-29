@@ -20,106 +20,105 @@ namespace Google\Service\Compute;
 class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
 {
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have DEPROVISIONING status.
+   * Output only. The number of instances in the managed instance group that
+   * have DEPROVISIONING status.
    *
    * @var int
    */
   public $deprovisioning;
   /**
-   * Output only. [Output Only] The number of instances that have not been
-   * created yet or have been deleted. Includes only instances that would be
-   * shown in the listManagedInstances method and not all instances that have
-   * been deleted in the lifetime of the MIG. Does not include FlexStart
-   * instances that are waiting for the resources availability, they are
-   * considered as 'pending'.
+   * Output only. The number of instances that have not been created yet or have
+   * been deleted. Includes only instances that would be shown in the
+   * listManagedInstances method and not all instances that have been deleted in
+   * the lifetime of the MIG. Does not include FlexStart instances that are
+   * waiting for the resources availability, they are considered as 'pending'.
    *
    * @var int
    */
   public $nonExistent;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have PENDING status, that is FlexStart instances that are
-   * waiting for resources. Instances that do not exist because of the other
-   * reasons are counted as 'non_existent'.
+   * Output only. The number of instances in the managed instance group that
+   * have PENDING status, that is FlexStart instances that are waiting for
+   * resources. Instances that do not exist because of the other reasons are
+   * counted as 'non_existent'.
    *
    * @var int
    */
   public $pending;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have PENDING_STOP status.
+   * Output only. The number of instances in the managed instance group that
+   * have PENDING_STOP status.
    *
    * @var int
    */
   public $pendingStop;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have PROVISIONING status.
+   * Output only. The number of instances in the managed instance group that
+   * have PROVISIONING status.
    *
    * @var int
    */
   public $provisioning;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have REPAIRING status.
+   * Output only. The number of instances in the managed instance group that
+   * have REPAIRING status.
    *
    * @var int
    */
   public $repairing;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have RUNNING status.
+   * Output only. The number of instances in the managed instance group that
+   * have RUNNING status.
    *
    * @var int
    */
   public $running;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have STAGING status.
+   * Output only. The number of instances in the managed instance group that
+   * have STAGING status.
    *
    * @var int
    */
   public $staging;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have STOPPED status.
+   * Output only. The number of instances in the managed instance group that
+   * have STOPPED status.
    *
    * @var int
    */
   public $stopped;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have STOPPING status.
+   * Output only. The number of instances in the managed instance group that
+   * have STOPPING status.
    *
    * @var int
    */
   public $stopping;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have SUSPENDED status.
+   * Output only. The number of instances in the managed instance group that
+   * have SUSPENDED status.
    *
    * @var int
    */
   public $suspended;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have SUSPENDING status.
+   * Output only. The number of instances in the managed instance group that
+   * have SUSPENDING status.
    *
    * @var int
    */
   public $suspending;
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have TERMINATED status.
+   * Output only. The number of instances in the managed instance group that
+   * have TERMINATED status.
    *
    * @var int
    */
   public $terminated;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have DEPROVISIONING status.
+   * Output only. The number of instances in the managed instance group that
+   * have DEPROVISIONING status.
    *
    * @param int $deprovisioning
    */
@@ -135,12 +134,11 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->deprovisioning;
   }
   /**
-   * Output only. [Output Only] The number of instances that have not been
-   * created yet or have been deleted. Includes only instances that would be
-   * shown in the listManagedInstances method and not all instances that have
-   * been deleted in the lifetime of the MIG. Does not include FlexStart
-   * instances that are waiting for the resources availability, they are
-   * considered as 'pending'.
+   * Output only. The number of instances that have not been created yet or have
+   * been deleted. Includes only instances that would be shown in the
+   * listManagedInstances method and not all instances that have been deleted in
+   * the lifetime of the MIG. Does not include FlexStart instances that are
+   * waiting for the resources availability, they are considered as 'pending'.
    *
    * @param int $nonExistent
    */
@@ -156,10 +154,10 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->nonExistent;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have PENDING status, that is FlexStart instances that are
-   * waiting for resources. Instances that do not exist because of the other
-   * reasons are counted as 'non_existent'.
+   * Output only. The number of instances in the managed instance group that
+   * have PENDING status, that is FlexStart instances that are waiting for
+   * resources. Instances that do not exist because of the other reasons are
+   * counted as 'non_existent'.
    *
    * @param int $pending
    */
@@ -175,8 +173,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->pending;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have PENDING_STOP status.
+   * Output only. The number of instances in the managed instance group that
+   * have PENDING_STOP status.
    *
    * @param int $pendingStop
    */
@@ -192,8 +190,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->pendingStop;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have PROVISIONING status.
+   * Output only. The number of instances in the managed instance group that
+   * have PROVISIONING status.
    *
    * @param int $provisioning
    */
@@ -209,8 +207,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->provisioning;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have REPAIRING status.
+   * Output only. The number of instances in the managed instance group that
+   * have REPAIRING status.
    *
    * @param int $repairing
    */
@@ -226,8 +224,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->repairing;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have RUNNING status.
+   * Output only. The number of instances in the managed instance group that
+   * have RUNNING status.
    *
    * @param int $running
    */
@@ -243,8 +241,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->running;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have STAGING status.
+   * Output only. The number of instances in the managed instance group that
+   * have STAGING status.
    *
    * @param int $staging
    */
@@ -260,8 +258,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->staging;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have STOPPED status.
+   * Output only. The number of instances in the managed instance group that
+   * have STOPPED status.
    *
    * @param int $stopped
    */
@@ -277,8 +275,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->stopped;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have STOPPING status.
+   * Output only. The number of instances in the managed instance group that
+   * have STOPPING status.
    *
    * @param int $stopping
    */
@@ -294,8 +292,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->stopping;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have SUSPENDED status.
+   * Output only. The number of instances in the managed instance group that
+   * have SUSPENDED status.
    *
    * @param int $suspended
    */
@@ -311,8 +309,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->suspended;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have SUSPENDING status.
+   * Output only. The number of instances in the managed instance group that
+   * have SUSPENDING status.
    *
    * @param int $suspending
    */
@@ -328,8 +326,8 @@ class InstanceGroupManagerStatusInstanceStatusSummary extends \Google\Model
     return $this->suspending;
   }
   /**
-   * Output only. [Output Only] The number of instances in the managed instance
-   * group that have TERMINATED status.
+   * Output only. The number of instances in the managed instance group that
+   * have TERMINATED status.
    *
    * @param int $terminated
    */

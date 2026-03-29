@@ -19,6 +19,7 @@ namespace Google\Service\Compute\Resource;
 
 use Google\Service\Compute\HealthSource;
 use Google\Service\Compute\HealthSourceAggregatedList;
+use Google\Service\Compute\HealthSourceHealth;
 use Google\Service\Compute\HealthSourceList;
 use Google\Service\Compute\Operation;
 use Google\Service\Compute\TestPermissionsRequest;
@@ -178,6 +179,24 @@ class RegionHealthSources extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'healthSource' => $healthSource];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], HealthSource::class);
+  }
+  /**
+   * Gets the most recent health check results for this regional HealthSource.
+   * (regionHealthSources.getHealth)
+   *
+   * @param string $project Name of the project scoping this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $healthSource Name of the HealthSource resource to get health
+   * for.
+   * @param array $optParams Optional parameters.
+   * @return HealthSourceHealth
+   * @throws \Google\Service\Exception
+   */
+  public function getHealth($project, $region, $healthSource, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'healthSource' => $healthSource];
+    $params = array_merge($params, $optParams);
+    return $this->call('getHealth', [$params], HealthSourceHealth::class);
   }
   /**
    * Create a HealthSource in the specified project in the given region using the

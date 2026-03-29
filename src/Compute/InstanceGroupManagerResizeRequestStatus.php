@@ -25,11 +25,10 @@ class InstanceGroupManagerResizeRequestStatus extends \Google\Model
   protected $lastAttemptDataType = '';
 
   /**
-   * Output only. [Output only] Fatal errors encountered during the queueing or
-   * provisioning phases of the ResizeRequest that caused the transition to the
-   * FAILED state. Contrary to the last_attempt errors, this field is final and
-   * errors are never removed from here, as the ResizeRequest is not going to
-   * retry.
+   * Output only. Fatal errors encountered during the queueing or provisioning
+   * phases of the ResizeRequest that caused the transition to the FAILED state.
+   * Contrary to the last_attempt errors, this field is final and errors are
+   * never removed from here, as the ResizeRequest is not going to retry.
    *
    * @param InstanceGroupManagerResizeRequestStatusError $error
    */
@@ -45,14 +44,14 @@ class InstanceGroupManagerResizeRequestStatus extends \Google\Model
     return $this->error;
   }
   /**
-   * Output only. [Output only] Information about the last attempt to fulfill
-   * the request. The value is temporary since the ResizeRequest can retry, as
-   * long as it's still active and the last attempt value can either be cleared
-   * or replaced with a different error. Since ResizeRequest retries
-   * infrequently, the value may be stale and no longer show an active problem.
-   * The value is cleared when ResizeRequest transitions to the final state
-   * (becomes inactive). If the final state is FAILED the error describing it
-   * will be storred in the "error" field only.
+   * Output only. Information about the last attempt to fulfill the request. The
+   * value is temporary since the ResizeRequest can retry, as long as it's still
+   * active and the last attempt value can either be cleared or replaced with a
+   * different error. Since ResizeRequest retries infrequently, the value may be
+   * stale and no longer show an active problem. The value is cleared when
+   * ResizeRequest transitions to the final state (becomes inactive). If the
+   * final state is FAILED the error describing it will be stored in the "error"
+   * field only.
    *
    * @param InstanceGroupManagerResizeRequestStatusLastAttempt $lastAttempt
    */

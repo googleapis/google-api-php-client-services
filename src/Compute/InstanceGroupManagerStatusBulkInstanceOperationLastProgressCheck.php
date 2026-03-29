@@ -22,16 +22,15 @@ class InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck extends \
   protected $errorType = InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheckError::class;
   protected $errorDataType = '';
   /**
-   * Output only. [Output Only] Timestamp of the last progress check of bulk
-   * instance operation. Timestamp is in RFC3339 text format.
+   * Output only. Timestamp of the last progress check of bulk instance
+   * operation. Timestamp is in RFC3339 text format.
    *
    * @var string
    */
   public $timestamp;
 
   /**
-   * Output only. [Output Only] Errors encountered during bulk instance
-   * operation.
+   * Output only. Errors encountered during bulk instance operation.
    *
    * @param InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheckError $error
    */
@@ -47,8 +46,8 @@ class InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck extends \
     return $this->error;
   }
   /**
-   * Output only. [Output Only] Timestamp of the last progress check of bulk
-   * instance operation. Timestamp is in RFC3339 text format.
+   * Output only. Timestamp of the last progress check of bulk instance
+   * operation. Timestamp is in RFC3339 text format.
    *
    * @param string $timestamp
    */

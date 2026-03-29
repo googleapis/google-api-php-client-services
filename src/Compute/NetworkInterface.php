@@ -198,6 +198,15 @@ class NetworkInterface extends \Google\Collection
    */
   public $queueCount;
   /**
+   * Optional. Producer Service's Service class Id for the region of this
+   * network interface. Can only be used with network_attachment. It is not
+   * possible to use on its own however, network_attachment can be used without
+   * service_class_id.
+   *
+   * @var string
+   */
+  public $serviceClassId;
+  /**
    * The stack type for this network interface. To assign only IPv4 addresses,
    * use IPV4_ONLY. To assign both IPv4 and IPv6 addresses, useIPV4_IPV6. If not
    * specified, IPV4_ONLY is used.
@@ -548,6 +557,25 @@ class NetworkInterface extends \Google\Collection
   public function getQueueCount()
   {
     return $this->queueCount;
+  }
+  /**
+   * Optional. Producer Service's Service class Id for the region of this
+   * network interface. Can only be used with network_attachment. It is not
+   * possible to use on its own however, network_attachment can be used without
+   * service_class_id.
+   *
+   * @param string $serviceClassId
+   */
+  public function setServiceClassId($serviceClassId)
+  {
+    $this->serviceClassId = $serviceClassId;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceClassId()
+  {
+    return $this->serviceClassId;
   }
   /**
    * The stack type for this network interface. To assign only IPv4 addresses,

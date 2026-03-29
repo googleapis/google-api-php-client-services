@@ -25,8 +25,8 @@ class InstanceGroupManagerStatus extends \Google\Collection
   protected $appliedAcceleratorTopologiesType = InstanceGroupManagerStatusAcceleratorTopology::class;
   protected $appliedAcceleratorTopologiesDataType = 'array';
   /**
-   * Output only. [Output Only] The URL of theAutoscaler that targets this
-   * instance group manager.
+   * Output only. The URL of theAutoscaler that targets this instance group
+   * manager.
    *
    * @var string
    */
@@ -36,12 +36,12 @@ class InstanceGroupManagerStatus extends \Google\Collection
   protected $currentInstanceStatusesType = InstanceGroupManagerStatusInstanceStatusSummary::class;
   protected $currentInstanceStatusesDataType = '';
   /**
-   * Output only. [Output Only] A bit indicating whether the managed instance
-   * group is in a stable state. A stable state means that: none of the
-   * instances in the managed instance group is currently undergoing any type of
-   * change (for example, creation, restart, or deletion); no future changes are
-   * scheduled for instances in the managed instance group; and the managed
-   * instance group itself is not being modified.
+   * Output only. A bit indicating whether the managed instance group is in a
+   * stable state. A stable state means that: none of the instances in the
+   * managed instance group is currently undergoing any type of change (for
+   * example, creation, restart, or deletion); no future changes are scheduled
+   * for instances in the managed instance group; and the managed instance group
+   * itself is not being modified.
    *
    * @var bool
    */
@@ -52,8 +52,7 @@ class InstanceGroupManagerStatus extends \Google\Collection
   protected $versionTargetDataType = '';
 
   /**
-   * Output only. [Output only] Status of all-instances configuration on the
-   * group.
+   * Output only. Status of all-instances configuration on the group.
    *
    * @param InstanceGroupManagerStatusAllInstancesConfig $allInstancesConfig
    */
@@ -69,8 +68,8 @@ class InstanceGroupManagerStatus extends \Google\Collection
     return $this->allInstancesConfig;
   }
   /**
-   * Output only. [Output Only] The accelerator topology applied to this MIG.
-   * Currently only one accelerator topology is supported.
+   * Output only. The accelerator topology applied to this MIG. Currently only
+   * one accelerator topology is supported.
    *
    * @param InstanceGroupManagerStatusAcceleratorTopology[] $appliedAcceleratorTopologies
    */
@@ -86,8 +85,8 @@ class InstanceGroupManagerStatus extends \Google\Collection
     return $this->appliedAcceleratorTopologies;
   }
   /**
-   * Output only. [Output Only] The URL of theAutoscaler that targets this
-   * instance group manager.
+   * Output only. The URL of theAutoscaler that targets this instance group
+   * manager.
    *
    * @param string $autoscaler
    */
@@ -103,7 +102,7 @@ class InstanceGroupManagerStatus extends \Google\Collection
     return $this->autoscaler;
   }
   /**
-   * Output only. [Output Only] The status of bulk instance operation.
+   * Output only. The status of bulk instance operation.
    *
    * @param InstanceGroupManagerStatusBulkInstanceOperation $bulkInstanceOperation
    */
@@ -119,9 +118,9 @@ class InstanceGroupManagerStatus extends \Google\Collection
     return $this->bulkInstanceOperation;
   }
   /**
-   * Output only. [Output Only] The list of instance statuses and the number of
-   * instances in this managed instance group that have the status. Currently
-   * only shown for TPU MIGs
+   * Output only. The list of instance statuses and the number of instances in
+   * this managed instance group that have the status. Currently only shown for
+   * TPU MIGs
    *
    * @param InstanceGroupManagerStatusInstanceStatusSummary $currentInstanceStatuses
    */
@@ -137,12 +136,12 @@ class InstanceGroupManagerStatus extends \Google\Collection
     return $this->currentInstanceStatuses;
   }
   /**
-   * Output only. [Output Only] A bit indicating whether the managed instance
-   * group is in a stable state. A stable state means that: none of the
-   * instances in the managed instance group is currently undergoing any type of
-   * change (for example, creation, restart, or deletion); no future changes are
-   * scheduled for instances in the managed instance group; and the managed
-   * instance group itself is not being modified.
+   * Output only. A bit indicating whether the managed instance group is in a
+   * stable state. A stable state means that: none of the instances in the
+   * managed instance group is currently undergoing any type of change (for
+   * example, creation, restart, or deletion); no future changes are scheduled
+   * for instances in the managed instance group; and the managed instance group
+   * itself is not being modified.
    *
    * @param bool $isStable
    */
@@ -158,8 +157,7 @@ class InstanceGroupManagerStatus extends \Google\Collection
     return $this->isStable;
   }
   /**
-   * Output only. [Output Only] Stateful status of the given Instance Group
-   * Manager.
+   * Output only. Stateful status of the given Instance Group Manager.
    *
    * @param InstanceGroupManagerStatusStateful $stateful
    */
@@ -175,9 +173,8 @@ class InstanceGroupManagerStatus extends \Google\Collection
     return $this->stateful;
   }
   /**
-   * Output only. [Output Only] A status of consistency of Instances' versions
-   * with their target version specified by version field on Instance Group
-   * Manager.
+   * Output only. A status of consistency of Instances' versions with their
+   * target version specified by version field on Instance Group Manager.
    *
    * @param InstanceGroupManagerStatusVersionTarget $versionTarget
    */

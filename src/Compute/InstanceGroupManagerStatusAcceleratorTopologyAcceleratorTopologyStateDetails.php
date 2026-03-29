@@ -22,15 +22,15 @@ class InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetai
   protected $errorType = InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetailsError::class;
   protected $errorDataType = '';
   /**
-   * Output only. [Output Only] Timestamp is shown only if there is an error.
-   * The field has // RFC3339 // text format.
+   * Output only. Timestamp is shown only if there is an error. The field has //
+   * RFC3339 // text format.
    *
    * @var string
    */
   public $timestamp;
 
   /**
-   * Output only. [Output Only] Encountered errors.
+   * Output only. Encountered errors.
    *
    * @param InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetailsError $error
    */
@@ -46,8 +46,8 @@ class InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetai
     return $this->error;
   }
   /**
-   * Output only. [Output Only] Timestamp is shown only if there is an error.
-   * The field has // RFC3339 // text format.
+   * Output only. Timestamp is shown only if there is an error. The field has //
+   * RFC3339 // text format.
    *
    * @param string $timestamp
    */

@@ -19,6 +19,7 @@ namespace Google\Service\Compute\Resource;
 
 use Google\Service\Compute\CompositeHealthCheck;
 use Google\Service\Compute\CompositeHealthCheckAggregatedList;
+use Google\Service\Compute\CompositeHealthCheckHealth;
 use Google\Service\Compute\CompositeHealthCheckList;
 use Google\Service\Compute\Operation;
 use Google\Service\Compute\TestPermissionsRequest;
@@ -180,6 +181,24 @@ class RegionCompositeHealthChecks extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'compositeHealthCheck' => $compositeHealthCheck];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], CompositeHealthCheck::class);
+  }
+  /**
+   * Gets the most recent health check results for this regional
+   * CompositeHealthCheck. (regionCompositeHealthChecks.getHealth)
+   *
+   * @param string $project Name of the project scoping this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $compositeHealthCheck Name of the CompositeHealthCheck resource
+   * to get health for.
+   * @param array $optParams Optional parameters.
+   * @return CompositeHealthCheckHealth
+   * @throws \Google\Service\Exception
+   */
+  public function getHealth($project, $region, $compositeHealthCheck, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'compositeHealthCheck' => $compositeHealthCheck];
+    $params = array_merge($params, $optParams);
+    return $this->call('getHealth', [$params], CompositeHealthCheckHealth::class);
   }
   /**
    * Create a CompositeHealthCheck in the specified project in the given region
