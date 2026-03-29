@@ -195,8 +195,6 @@ class Volume extends \Google\Collection
    * @var bool
    */
   public $largeCapacity;
-  protected $largeCapacityConfigType = LargeCapacityConfig::class;
-  protected $largeCapacityConfigDataType = '';
   /**
    * Output only. Flag indicating if the volume is NFS LDAP enabled or not.
    *
@@ -637,22 +635,6 @@ class Volume extends \Google\Collection
   public function getLargeCapacity()
   {
     return $this->largeCapacity;
-  }
-  /**
-   * Optional. Large capacity config for the volume.
-   *
-   * @param LargeCapacityConfig $largeCapacityConfig
-   */
-  public function setLargeCapacityConfig(LargeCapacityConfig $largeCapacityConfig)
-  {
-    $this->largeCapacityConfig = $largeCapacityConfig;
-  }
-  /**
-   * @return LargeCapacityConfig
-   */
-  public function getLargeCapacityConfig()
-  {
-    return $this->largeCapacityConfig;
   }
   /**
    * Output only. Flag indicating if the volume is NFS LDAP enabled or not.

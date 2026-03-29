@@ -56,20 +56,6 @@ class StoragePool extends \Google\Model
    */
   public const QOS_TYPE_MANUAL = 'MANUAL';
   /**
-   * The default value. This value is unused.
-   */
-  public const SCALE_TIER_SCALE_TIER_UNSPECIFIED = 'SCALE_TIER_UNSPECIFIED';
-  /**
-   * The standard capacity and performance tier. Suitable for general purpose
-   * workloads.
-   */
-  public const SCALE_TIER_SCALE_TIER_STANDARD = 'SCALE_TIER_STANDARD';
-  /**
-   * A higher capacity and performance tier. Suitable for more demanding
-   * workloads.
-   */
-  public const SCALE_TIER_SCALE_TIER_ENTERPRISE = 'SCALE_TIER_ENTERPRISE';
-  /**
    * Unspecified service level.
    */
   public const SERVICE_LEVEL_SERVICE_LEVEL_UNSPECIFIED = 'SERVICE_LEVEL_UNSPECIFIED';
@@ -296,13 +282,6 @@ class StoragePool extends \Google\Model
    * @var bool
    */
   public $satisfiesPzs;
-  /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is
-   * not specified during creation, this defaults to `SCALE_TIER_STANDARD`.
-   *
-   * @var string
-   */
-  public $scaleTier;
   /**
    * Required. Service level of the storage pool
    *
@@ -762,26 +741,6 @@ class StoragePool extends \Google\Model
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
-  }
-  /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is
-   * not specified during creation, this defaults to `SCALE_TIER_STANDARD`.
-   *
-   * Accepted values: SCALE_TIER_UNSPECIFIED, SCALE_TIER_STANDARD,
-   * SCALE_TIER_ENTERPRISE
-   *
-   * @param self::SCALE_TIER_* $scaleTier
-   */
-  public function setScaleTier($scaleTier)
-  {
-    $this->scaleTier = $scaleTier;
-  }
-  /**
-   * @return self::SCALE_TIER_*
-   */
-  public function getScaleTier()
-  {
-    return $this->scaleTier;
   }
   /**
    * Required. Service level of the storage pool
