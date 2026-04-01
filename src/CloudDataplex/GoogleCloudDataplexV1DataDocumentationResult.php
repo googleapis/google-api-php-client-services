@@ -19,11 +19,29 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataDocumentationResult extends \Google\Model
 {
+  protected $datasetResultType = GoogleCloudDataplexV1DataDocumentationResultDatasetResult::class;
+  protected $datasetResultDataType = '';
   protected $tableResultType = GoogleCloudDataplexV1DataDocumentationResultTableResult::class;
   protected $tableResultDataType = '';
 
   /**
-   * Output only. Table result for insights.
+   * Output only. Insights for a Dataset resource.
+   *
+   * @param GoogleCloudDataplexV1DataDocumentationResultDatasetResult $datasetResult
+   */
+  public function setDatasetResult(GoogleCloudDataplexV1DataDocumentationResultDatasetResult $datasetResult)
+  {
+    $this->datasetResult = $datasetResult;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataDocumentationResultDatasetResult
+   */
+  public function getDatasetResult()
+  {
+    return $this->datasetResult;
+  }
+  /**
+   * Output only. Insights for a Table resource.
    *
    * @param GoogleCloudDataplexV1DataDocumentationResultTableResult $tableResult
    */

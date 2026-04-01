@@ -27,9 +27,9 @@ class GoogleCloudDataplexV1LookupContextRequest extends \Google\Collection
    */
   public $options;
   /**
-   * Required. The entry names to lookup context for. The request should have
-   * max 10 of those.Examples:projects/{project}/locations/{location}/entryGroup
-   * s/{entry_group}/entries/{entry}
+   * Required. The entry names to look up the context for. The maximum number of
+   * resources for a request is limited to 10.Examples:projects/{project}/locati
+   * ons/{location}/entryGroups/{entry_group}/entries/{entry}
    *
    * @var string[]
    */
@@ -52,9 +52,9 @@ class GoogleCloudDataplexV1LookupContextRequest extends \Google\Collection
     return $this->options;
   }
   /**
-   * Required. The entry names to lookup context for. The request should have
-   * max 10 of those.Examples:projects/{project}/locations/{location}/entryGroup
-   * s/{entry_group}/entries/{entry}
+   * Required. The entry names to look up the context for. The maximum number of
+   * resources for a request is limited to 10.Examples:projects/{project}/locati
+   * ons/{location}/entryGroups/{entry_group}/entries/{entry}
    *
    * @param string[] $resources
    */
