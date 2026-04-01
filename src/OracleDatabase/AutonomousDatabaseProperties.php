@@ -497,9 +497,11 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $isAutoScalingEnabled;
   /**
-   * Output only. This field indicates whether the Autonomous Database has local
-   * (in-region) Data Guard enabled.
+   * Output only. Deprecated: Please use `local_data_guard_enabled` instead.
+   * This field indicates whether the Autonomous Database has local (in-region)
+   * Data Guard enabled.
    *
+   * @deprecated
    * @var bool
    */
   public $isLocalDataGuardEnabled;
@@ -524,12 +526,30 @@ class AutonomousDatabaseProperties extends \Google\Collection
    */
   public $lifecycleDetails;
   /**
-   * Output only. This field indicates the maximum data loss limit for an
+   * Output only. Deprecated: Please use
+   * `local_adg_auto_failover_max_data_loss_limit_duration` instead. This field
+   * indicates the maximum data loss limit for an Autonomous Database, in
+   * seconds.
+   *
+   * @deprecated
+   * @var int
+   */
+  public $localAdgAutoFailoverMaxDataLossLimit;
+  /**
+   * Optional. This field indicates the maximum data loss limit for an
    * Autonomous Database, in seconds.
    *
    * @var int
    */
-  public $localAdgAutoFailoverMaxDataLossLimit;
+  public $localAdgAutoFailoverMaxDataLossLimitDuration;
+  /**
+   * Optional. Indicates whether the Autonomous Database has a local (in-region)
+   * standby database. Not applicable to cross-region Data Guard or dedicated
+   * Exadata infrastructure.
+   *
+   * @var bool
+   */
+  public $localDataGuardEnabled;
   /**
    * Output only. This field indicates the local disaster recovery (DR) type of
    * an Autonomous Database.
@@ -1179,9 +1199,11 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->isAutoScalingEnabled;
   }
   /**
-   * Output only. This field indicates whether the Autonomous Database has local
-   * (in-region) Data Guard enabled.
+   * Output only. Deprecated: Please use `local_data_guard_enabled` instead.
+   * This field indicates whether the Autonomous Database has local (in-region)
+   * Data Guard enabled.
    *
+   * @deprecated
    * @param bool $isLocalDataGuardEnabled
    */
   public function setIsLocalDataGuardEnabled($isLocalDataGuardEnabled)
@@ -1189,6 +1211,7 @@ class AutonomousDatabaseProperties extends \Google\Collection
     $this->isLocalDataGuardEnabled = $isLocalDataGuardEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getIsLocalDataGuardEnabled()
@@ -1249,9 +1272,12 @@ class AutonomousDatabaseProperties extends \Google\Collection
     return $this->lifecycleDetails;
   }
   /**
-   * Output only. This field indicates the maximum data loss limit for an
-   * Autonomous Database, in seconds.
+   * Output only. Deprecated: Please use
+   * `local_adg_auto_failover_max_data_loss_limit_duration` instead. This field
+   * indicates the maximum data loss limit for an Autonomous Database, in
+   * seconds.
    *
+   * @deprecated
    * @param int $localAdgAutoFailoverMaxDataLossLimit
    */
   public function setLocalAdgAutoFailoverMaxDataLossLimit($localAdgAutoFailoverMaxDataLossLimit)
@@ -1259,11 +1285,47 @@ class AutonomousDatabaseProperties extends \Google\Collection
     $this->localAdgAutoFailoverMaxDataLossLimit = $localAdgAutoFailoverMaxDataLossLimit;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getLocalAdgAutoFailoverMaxDataLossLimit()
   {
     return $this->localAdgAutoFailoverMaxDataLossLimit;
+  }
+  /**
+   * Optional. This field indicates the maximum data loss limit for an
+   * Autonomous Database, in seconds.
+   *
+   * @param int $localAdgAutoFailoverMaxDataLossLimitDuration
+   */
+  public function setLocalAdgAutoFailoverMaxDataLossLimitDuration($localAdgAutoFailoverMaxDataLossLimitDuration)
+  {
+    $this->localAdgAutoFailoverMaxDataLossLimitDuration = $localAdgAutoFailoverMaxDataLossLimitDuration;
+  }
+  /**
+   * @return int
+   */
+  public function getLocalAdgAutoFailoverMaxDataLossLimitDuration()
+  {
+    return $this->localAdgAutoFailoverMaxDataLossLimitDuration;
+  }
+  /**
+   * Optional. Indicates whether the Autonomous Database has a local (in-region)
+   * standby database. Not applicable to cross-region Data Guard or dedicated
+   * Exadata infrastructure.
+   *
+   * @param bool $localDataGuardEnabled
+   */
+  public function setLocalDataGuardEnabled($localDataGuardEnabled)
+  {
+    $this->localDataGuardEnabled = $localDataGuardEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getLocalDataGuardEnabled()
+  {
+    return $this->localDataGuardEnabled;
   }
   /**
    * Output only. This field indicates the local disaster recovery (DR) type of
