@@ -56,6 +56,20 @@ class StoragePool extends \Google\Model
    */
   public const QOS_TYPE_MANUAL = 'MANUAL';
   /**
+   * Unspecified scale type.
+   */
+  public const SCALE_TYPE_SCALE_TYPE_UNSPECIFIED = 'SCALE_TYPE_UNSPECIFIED';
+  /**
+   * Represents standard capacity and performance scale-type. Suitable for
+   * general purpose workloads.
+   */
+  public const SCALE_TYPE_SCALE_TYPE_DEFAULT = 'SCALE_TYPE_DEFAULT';
+  /**
+   * Represents higher capacity and performance scale-type. Suitable for more
+   * demanding workloads.
+   */
+  public const SCALE_TYPE_SCALE_TYPE_SCALEOUT = 'SCALE_TYPE_SCALEOUT';
+  /**
    * Unspecified service level.
    */
   public const SERVICE_LEVEL_SERVICE_LEVEL_UNSPECIFIED = 'SERVICE_LEVEL_UNSPECIFIED';
@@ -282,6 +296,13 @@ class StoragePool extends \Google\Model
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * Optional. The scale type of the storage pool. Defaults to
+   * `SCALE_TYPE_DEFAULT` if not specified.
+   *
+   * @var string
+   */
+  public $scaleType;
   /**
    * Required. Service level of the storage pool
    *
@@ -741,6 +762,26 @@ class StoragePool extends \Google\Model
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * Optional. The scale type of the storage pool. Defaults to
+   * `SCALE_TYPE_DEFAULT` if not specified.
+   *
+   * Accepted values: SCALE_TYPE_UNSPECIFIED, SCALE_TYPE_DEFAULT,
+   * SCALE_TYPE_SCALEOUT
+   *
+   * @param self::SCALE_TYPE_* $scaleType
+   */
+  public function setScaleType($scaleType)
+  {
+    $this->scaleType = $scaleType;
+  }
+  /**
+   * @return self::SCALE_TYPE_*
+   */
+  public function getScaleType()
+  {
+    return $this->scaleType;
   }
   /**
    * Required. Service level of the storage pool
