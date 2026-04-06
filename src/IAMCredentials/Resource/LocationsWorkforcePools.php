@@ -33,7 +33,8 @@ class LocationsWorkforcePools extends \Google\Service\Resource
    * Returns the trust boundary info for a given workforce pool.
    * (workforcePools.getAllowedLocations)
    *
-   * @param string $name Required. Resource name of workforce pool.
+   * @param string $name Required. Resource name of workforce pool. Format:
+   * `locations/global/workforcePools/{pool_id}`
    * @param array $optParams Optional parameters.
    * @return WorkforcePoolAllowedLocations
    * @throws \Google\Service\Exception

@@ -79,7 +79,8 @@ class ProjectsServiceAccounts extends \Google\Service\Resource
    * Returns the trust boundary info for a given service account.
    * (serviceAccounts.getAllowedLocations)
    *
-   * @param string $name Required. Resource name of service account.
+   * @param string $name Required. Resource name of service account. Format:
+   * `projects/-/serviceAccounts/{service_account_email}`
    * @param array $optParams Optional parameters.
    * @return ServiceAccountAllowedLocations
    * @throws \Google\Service\Exception
