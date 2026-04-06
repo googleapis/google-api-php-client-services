@@ -4,6 +4,7 @@ composer.lock
 # Ignore files with casing conflicts
 src/Compute/HTTPHealthCheck.php
 src/Compute/HTTPSHealthCheck.php
+src/WorkloadManager/SqlserverWorkload.php
 
 # Python for generator
 *.pyc
