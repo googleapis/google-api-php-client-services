@@ -96,6 +96,10 @@ class RuleViolationInfo extends \Google\Collection
    * ChromeOS.
    */
   public const TRIGGER_CHROMEOS_FILE_TRANSFER = 'CHROMEOS_FILE_TRANSFER';
+  /**
+   * Gemini access.
+   */
+  public const TRIGGER_GEMINI_ACCESS = 'GEMINI_ACCESS';
   protected $collection_key = 'triggeredActionTypes';
   /**
    * Source of the data.
@@ -281,7 +285,7 @@ class RuleViolationInfo extends \Google\Collection
    * Accepted values: TRIGGER_UNSPECIFIED, DRIVE_SHARE, MAIL_BEING_SENT,
    * CHROME_FILE_DOWNLOAD, CHROME_FILE_UPLOAD, CHROME_WEB_CONTENT_UPLOAD,
    * CHAT_MESSAGE_SENT, CHAT_ATTACHMENT_UPLOADED, CHROME_PAGE_PRINT,
-   * CHROME_URL_VISITED, CHROMEOS_FILE_TRANSFER
+   * CHROME_URL_VISITED, CHROMEOS_FILE_TRANSFER, GEMINI_ACCESS
    *
    * @param self::TRIGGER_* $trigger
    */
