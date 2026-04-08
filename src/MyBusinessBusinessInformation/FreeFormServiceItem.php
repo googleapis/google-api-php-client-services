@@ -52,7 +52,7 @@ class FreeFormServiceItem extends \Google\Model
    * Required. Language-tagged labels for the item. We recommend that item names
    * be 140 characters or less, and descriptions 250 characters or less. This
    * field should only be set if the input is a custom service item.
-   * Standardized service types should be updated via service_type_id.
+   * Standardized service types should be updated using service_type_id.
    *
    * @param Label $label
    */

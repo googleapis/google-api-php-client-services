@@ -20,7 +20,9 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class GoogleUpdatedLocation extends \Google\Model
 {
   /**
-   * The fields that Google updated.
+   * The fields where the values in the view as it appears to consumers are
+   * different than the merchant's information. To accept these changes, patch
+   * the location. To reject, patch with your preferred values.
    *
    * @var string
    */
@@ -28,15 +30,18 @@ class GoogleUpdatedLocation extends \Google\Model
   protected $locationType = Location::class;
   protected $locationDataType = '';
   /**
-   * The fields that have pending edits that haven't yet been pushed to Maps and
-   * Search.
+   * The fields where the merchant has provided an update that is currently in
+   * flight and hasn't yet been published to Maps and Search. This mask only
+   * tracks the status of the merchant's own edits, not external changes.
    *
    * @var string
    */
   public $pendingMask;
 
   /**
-   * The fields that Google updated.
+   * The fields where the values in the view as it appears to consumers are
+   * different than the merchant's information. To accept these changes, patch
+   * the location. To reject, patch with your preferred values.
    *
    * @param string $diffMask
    */
@@ -68,8 +73,9 @@ class GoogleUpdatedLocation extends \Google\Model
     return $this->location;
   }
   /**
-   * The fields that have pending edits that haven't yet been pushed to Maps and
-   * Search.
+   * The fields where the merchant has provided an update that is currently in
+   * flight and hasn't yet been published to Maps and Search. This mask only
+   * tracks the status of the merchant's own edits, not external changes.
    *
    * @param string $pendingMask
    */

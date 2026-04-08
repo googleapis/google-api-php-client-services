@@ -72,7 +72,7 @@ class Metadata extends \Google\Model
   /**
    * Output only. Indicates whether the place ID associated with this location
    * has updates that need to be updated or rejected by the client. If this
-   * boolean is set, you should call the `getGoogleUpdated` method to lookup
+   * boolean is set, you should call the `getGoogleUpdated` method to look up
    * information that's needs to be verified.
    *
    * @var bool
@@ -256,7 +256,7 @@ class Metadata extends \Google\Model
   /**
    * Output only. Indicates whether the place ID associated with this location
    * has updates that need to be updated or rejected by the client. If this
-   * boolean is set, you should call the `getGoogleUpdated` method to lookup
+   * boolean is set, you should call the `getGoogleUpdated` method to look up
    * information that's needs to be verified.
    *
    * @param bool $hasGoogleUpdated
