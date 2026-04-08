@@ -163,6 +163,16 @@ class AgentRegistry extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'search' => [
+              'path' => 'v1alpha/{+parent}/agents:search',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -249,6 +259,16 @@ class AgentRegistry extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'search' => [
+              'path' => 'v1alpha/{+parent}/mcpServers:search',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

@@ -19,6 +19,8 @@ namespace Google\Service\AgentRegistry\Resource;
 
 use Google\Service\AgentRegistry\Agent;
 use Google\Service\AgentRegistry\ListAgentsResponse;
+use Google\Service\AgentRegistry\SearchAgentsRequest;
+use Google\Service\AgentRegistry\SearchAgentsResponse;
 
 /**
  * The "agents" collection of methods.
@@ -66,6 +68,22 @@ class ProjectsLocationsAgents extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListAgentsResponse::class);
+  }
+  /**
+   * Searches Agents in a given project and location. (agents.search)
+   *
+   * @param string $parent Required. Parent value for SearchAgentsRequest. Format:
+   * `projects/{project}/locations/{location}`.
+   * @param SearchAgentsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return SearchAgentsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function search($parent, SearchAgentsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('search', [$params], SearchAgentsResponse::class);
   }
 }
 

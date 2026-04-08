@@ -19,6 +19,8 @@ namespace Google\Service\AgentRegistry\Resource;
 
 use Google\Service\AgentRegistry\ListMcpServersResponse;
 use Google\Service\AgentRegistry\McpServer;
+use Google\Service\AgentRegistry\SearchMcpServersRequest;
+use Google\Service\AgentRegistry\SearchMcpServersResponse;
 
 /**
  * The "mcpServers" collection of methods.
@@ -67,6 +69,22 @@ class ProjectsLocationsMcpServers extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListMcpServersResponse::class);
+  }
+  /**
+   * Searches McpServers in a given project and location. (mcpServers.search)
+   *
+   * @param string $parent Required. Parent value for SearchMcpServersRequest.
+   * Format: `projects/{project}/locations/{location}`.
+   * @param SearchMcpServersRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return SearchMcpServersResponse
+   * @throws \Google\Service\Exception
+   */
+  public function search($parent, SearchMcpServersRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('search', [$params], SearchMcpServersResponse::class);
   }
 }
 
