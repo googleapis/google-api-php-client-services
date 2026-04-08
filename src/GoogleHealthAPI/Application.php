@@ -20,28 +20,42 @@ namespace Google\Service\GoogleHealthAPI;
 class Application extends \Google\Model
 {
   /**
-   * Output only. Captures the client ID of the entity that recorded the data.
+   * Output only. The Google OAuth 2.0 client ID of the web application or
+   * service that recorded the data. This is the client ID used during the
+   * Google OAuth flow to obtain user credentials. This field is system-
+   * populated when the data is uploaded from Google Web API.
    *
    * @var string
    */
   public $googleWebClientId;
   /**
-   * Output only. A unique ID from an external data source. A unique identifier
-   * of the mobile application, e.g. `com.google.fitbit`
+   * Output only. A unique identifier for the mobile application that was the
+   * source of the data. This is typically the application's package name on
+   * Android (e.g., `com.google.fitbit`) or the bundle ID on iOS. This field is
+   * informational and helps trace data origin. This field is system-populated
+   * when the data is uploaded from the Fitbit mobile application, Health
+   * Connect or Health Kit.
    *
    * @var string
    */
   public $packageName;
   /**
-   * Output only. Captures the client ID of the web application that recorded
-   * the data.
+   * Output only. The client ID of the application that recorded the data. This
+   * ID is a legacy Fitbit API client ID, which is different from a Google OAuth
+   * client ID. Example format: `ABC123`. This field is system-populated and
+   * used for tracing data from legacy Fitbit API integrations. This field is
+   * system-populated when the data is uploaded from a legacy Fitbit API
+   * integration.
    *
    * @var string
    */
   public $webClientId;
 
   /**
-   * Output only. Captures the client ID of the entity that recorded the data.
+   * Output only. The Google OAuth 2.0 client ID of the web application or
+   * service that recorded the data. This is the client ID used during the
+   * Google OAuth flow to obtain user credentials. This field is system-
+   * populated when the data is uploaded from Google Web API.
    *
    * @param string $googleWebClientId
    */
@@ -57,8 +71,12 @@ class Application extends \Google\Model
     return $this->googleWebClientId;
   }
   /**
-   * Output only. A unique ID from an external data source. A unique identifier
-   * of the mobile application, e.g. `com.google.fitbit`
+   * Output only. A unique identifier for the mobile application that was the
+   * source of the data. This is typically the application's package name on
+   * Android (e.g., `com.google.fitbit`) or the bundle ID on iOS. This field is
+   * informational and helps trace data origin. This field is system-populated
+   * when the data is uploaded from the Fitbit mobile application, Health
+   * Connect or Health Kit.
    *
    * @param string $packageName
    */
@@ -74,8 +92,12 @@ class Application extends \Google\Model
     return $this->packageName;
   }
   /**
-   * Output only. Captures the client ID of the web application that recorded
-   * the data.
+   * Output only. The client ID of the application that recorded the data. This
+   * ID is a legacy Fitbit API client ID, which is different from a Google OAuth
+   * client ID. Example format: `ABC123`. This field is system-populated and
+   * used for tracing data from legacy Fitbit API integrations. This field is
+   * system-populated when the data is uploaded from a legacy Fitbit API
+   * integration.
    *
    * @param string $webClientId
    */

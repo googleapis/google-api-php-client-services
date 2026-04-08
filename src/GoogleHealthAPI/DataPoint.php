@@ -64,7 +64,7 @@ class DataPoint extends \Google\Model
    * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example: `user
    * s/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
    * The `{user}` ID is a system-generated identifier, as described in
-   * Profile.encoded_id. The `{data_type}` ID corresponds to the kebab-case
+   * Identity.health_user_id. The `{data_type}` ID corresponds to the kebab-case
    * version of the field names in the DataPoint data union field, e.g. `total-
    * calories` for the `total_calories` field. The `{data_point}` ID can be
    * client-provided or system-generated. If client-provided, it must be a
@@ -416,7 +416,7 @@ class DataPoint extends \Google\Model
    * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example: `user
    * s/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
    * The `{user}` ID is a system-generated identifier, as described in
-   * Profile.encoded_id. The `{data_type}` ID corresponds to the kebab-case
+   * Identity.health_user_id. The `{data_type}` ID corresponds to the kebab-case
    * version of the field names in the DataPoint data union field, e.g. `total-
    * calories` for the `total_calories` field. The `{data_point}` ID can be
    * client-provided or system-generated. If client-provided, it must be a

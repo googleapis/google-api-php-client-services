@@ -222,9 +222,8 @@ class Settings extends \Google\Model
    */
   public $timeZone;
   /**
-   * Optional. The duration of the offset from UTC in milliseconds. This offset
-   * is the difference between the user's current local time and UTC. Updates to
-   * this field are currently not supported.
+   * Optional. The user's timezone offset relative to UTC. Updates to this field
+   * are currently not supported.
    *
    * @var string
    */
@@ -453,9 +452,8 @@ class Settings extends \Google\Model
     return $this->timeZone;
   }
   /**
-   * Optional. The duration of the offset from UTC in milliseconds. This offset
-   * is the difference between the user's current local time and UTC. Updates to
-   * this field are currently not supported.
+   * Optional. The user's timezone offset relative to UTC. Updates to this field
+   * are currently not supported.
    *
    * @param string $utcOffset
    */

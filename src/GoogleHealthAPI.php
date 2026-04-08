@@ -207,10 +207,6 @@ class GoogleHealthAPI extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'reconcile' => [
               'path' => 'v4/{+parent}/dataPoints:reconcile',
