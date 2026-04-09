@@ -17,21 +17,17 @@
 
 namespace Google\Service\Container;
 
-class QueuedProvisioning extends \Google\Model
+class PodSnapshotConfig extends \Google\Model
 {
   /**
-   * Denotes that this node pool is QRM specific, meaning nodes can be only
-   * obtained through queuing via the Cluster Autoscaler ProvisioningRequest
-   * API.
+   * Whether or not the Pod Snapshots feature is enabled.
    *
    * @var bool
    */
   public $enabled;
 
   /**
-   * Denotes that this node pool is QRM specific, meaning nodes can be only
-   * obtained through queuing via the Cluster Autoscaler ProvisioningRequest
-   * API.
+   * Whether or not the Pod Snapshots feature is enabled.
    *
    * @param bool $enabled
    */
@@ -49,4 +45,4 @@ class QueuedProvisioning extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(QueuedProvisioning::class, 'Google_Service_Container_QueuedProvisioning');
+class_alias(PodSnapshotConfig::class, 'Google_Service_Container_PodSnapshotConfig');

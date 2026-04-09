@@ -45,7 +45,7 @@ class NodePoolAutoscaling extends \Google\Model
    */
   public $enabled;
   /**
-   * Location policy used when scaling up a nodepool.
+   * Location policy used when scaling up a node pool.
    *
    * @var string
    */
@@ -115,7 +115,7 @@ class NodePoolAutoscaling extends \Google\Model
     return $this->enabled;
   }
   /**
-   * Location policy used when scaling up a nodepool.
+   * Location policy used when scaling up a node pool.
    *
    * Accepted values: LOCATION_POLICY_UNSPECIFIED, BALANCED, ANY
    *

@@ -27,13 +27,13 @@ class NodePoolUpgradeInfo extends \Google\Collection
    */
   public $autoUpgradeStatus;
   /**
-   * The nodepool's current minor version's end of extended support timestamp.
+   * The node pool's current minor version's end of extended support timestamp.
    *
    * @var string
    */
   public $endOfExtendedSupportTimestamp;
   /**
-   * The nodepool's current minor version's end of standard support timestamp.
+   * The node pool's current minor version's end of standard support timestamp.
    *
    * @var string
    */
@@ -76,7 +76,7 @@ class NodePoolUpgradeInfo extends \Google\Collection
     return $this->autoUpgradeStatus;
   }
   /**
-   * The nodepool's current minor version's end of extended support timestamp.
+   * The node pool's current minor version's end of extended support timestamp.
    *
    * @param string $endOfExtendedSupportTimestamp
    */
@@ -92,7 +92,7 @@ class NodePoolUpgradeInfo extends \Google\Collection
     return $this->endOfExtendedSupportTimestamp;
   }
   /**
-   * The nodepool's current minor version's end of standard support timestamp.
+   * The node pool's current minor version's end of standard support timestamp.
    *
    * @param string $endOfStandardSupportTimestamp
    */

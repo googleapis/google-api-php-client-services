@@ -35,7 +35,7 @@ class UpgradeSettings extends \Google\Model
   public const STRATEGY_SURGE = 'SURGE';
   /**
    * SHORT_LIVED is the dedicated upgrade strategy for QueuedProvisioning and
-   * flex start nodepools scaled up only by enqueueing to the Dynamic Workload
+   * flex start node pools scaled up only by enqueueing to the Dynamic Workload
    * Scheduler (DWS).
    */
   public const STRATEGY_SHORT_LIVED = 'SHORT_LIVED';

@@ -105,11 +105,11 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Fetch upgrade information of a specific nodepool.
+   * Fetch upgrade information of a specific node pool.
    * (nodePools.fetchNodePoolUpgradeInfo)
    *
-   * @param string $name Required. The name (project, location, cluster, nodepool)
-   * of the nodepool to get. Specified in the format
+   * @param string $name Required. The name (project, location, cluster, node
+   * pool) of the node pool to get. Specified in the format
    * `projects/locations/clusters/nodePools` or
    * `projects/zones/clusters/nodePools`.
    * @param array $optParams Optional parameters.

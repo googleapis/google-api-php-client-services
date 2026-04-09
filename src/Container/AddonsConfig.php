@@ -47,6 +47,8 @@ class AddonsConfig extends \Google\Model
   protected $networkPolicyConfigDataType = '';
   protected $parallelstoreCsiDriverConfigType = ParallelstoreCsiDriverConfig::class;
   protected $parallelstoreCsiDriverConfigDataType = '';
+  protected $podSnapshotConfigType = PodSnapshotConfig::class;
+  protected $podSnapshotConfigDataType = '';
   protected $rayOperatorConfigType = RayOperatorConfig::class;
   protected $rayOperatorConfigDataType = '';
   protected $sliceControllerConfigType = SliceControllerConfig::class;
@@ -290,6 +292,22 @@ class AddonsConfig extends \Google\Model
   public function getParallelstoreCsiDriverConfig()
   {
     return $this->parallelstoreCsiDriverConfig;
+  }
+  /**
+   * Optional. Configuration for the Pod Snapshot feature.
+   *
+   * @param PodSnapshotConfig $podSnapshotConfig
+   */
+  public function setPodSnapshotConfig(PodSnapshotConfig $podSnapshotConfig)
+  {
+    $this->podSnapshotConfig = $podSnapshotConfig;
+  }
+  /**
+   * @return PodSnapshotConfig
+   */
+  public function getPodSnapshotConfig()
+  {
+    return $this->podSnapshotConfig;
   }
   /**
    * Optional. Configuration for Ray Operator addon.
