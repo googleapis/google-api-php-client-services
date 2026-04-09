@@ -57,8 +57,9 @@ class ProjectsLocationsProcessesRunsLineageEvents extends \Google\Service\Resour
    * @param string $name Required. The name of the lineage event to delete.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing If set to true and the lineage event is not
-   * found, the request succeeds but the server doesn't perform any actions.
+   * @opt_param bool allowMissing Optional. If set to true and the lineage event
+   * is not found, the request succeeds but the server doesn't perform any
+   * actions.
    * @return GoogleProtobufEmpty
    * @throws \Google\Service\Exception
    */
@@ -90,11 +91,11 @@ class ProjectsLocationsProcessesRunsLineageEvents extends \Google\Service\Resour
    * of lineage events to get.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of lineage events to return. The
-   * service may return fewer events than this value. If unspecified, at most 50
-   * events are returned. The maximum value is 100; values greater than 100 are
-   * cut to 100.
-   * @opt_param string pageToken The page token received from a previous
+   * @opt_param int pageSize Optional. The maximum number of lineage events to
+   * return. The service may return fewer events than this value. If unspecified,
+   * at most 50 events are returned. The maximum value is 100; values greater than
+   * 100 are cut to 100.
+   * @opt_param string pageToken Optional. The page token received from a previous
    * `ListLineageEvents` call. Specify it to get the next page. When paginating,
    * all other parameters specified in this call must match the parameters of the
    * call that provided the page token.
