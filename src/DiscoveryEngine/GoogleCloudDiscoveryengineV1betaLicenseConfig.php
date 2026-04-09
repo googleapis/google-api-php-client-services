@@ -171,6 +171,8 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
    * @var string
    */
   public $name;
+  protected $scheduledUpdateType = GoogleCloudDiscoveryengineV1betaLicenseConfigScheduledUpdate::class;
+  protected $scheduledUpdateDataType = '';
   protected $startDateType = GoogleTypeDate::class;
   protected $startDateDataType = '';
   /**
@@ -325,6 +327,22 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Scheduled update configuration.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaLicenseConfigScheduledUpdate $scheduledUpdate
+   */
+  public function setScheduledUpdate(GoogleCloudDiscoveryengineV1betaLicenseConfigScheduledUpdate $scheduledUpdate)
+  {
+    $this->scheduledUpdate = $scheduledUpdate;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaLicenseConfigScheduledUpdate
+   */
+  public function getScheduledUpdate()
+  {
+    return $this->scheduledUpdate;
   }
   /**
    * Required. The start date.

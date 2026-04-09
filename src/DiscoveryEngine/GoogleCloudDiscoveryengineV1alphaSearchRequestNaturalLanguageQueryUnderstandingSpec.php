@@ -84,9 +84,7 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUndersta
   /**
    * Field names used for location-based filtering, where geolocation filters
    * are detected in natural language search queries. Only valid when the
-   * FilterExtractionCondition is set to `ENABLED`. If this field is set, it
-   * overrides the field names set in
-   * ServingConfig.geo_search_query_detection_field_names.
+   * FilterExtractionCondition is set to `ENABLED`.
    *
    * @var string[]
    */
@@ -162,9 +160,7 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUndersta
   /**
    * Field names used for location-based filtering, where geolocation filters
    * are detected in natural language search queries. Only valid when the
-   * FilterExtractionCondition is set to `ENABLED`. If this field is set, it
-   * overrides the field names set in
-   * ServingConfig.geo_search_query_detection_field_names.
+   * FilterExtractionCondition is set to `ENABLED`.
    *
    * @param string[] $geoSearchQueryDetectionFieldNames
    */

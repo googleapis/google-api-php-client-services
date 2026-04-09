@@ -140,7 +140,7 @@ class GoogleCloudDiscoveryengineV1alphaAnswer extends \Google\Collection
     return $this->answerText;
   }
   /**
-   * List of blob attachments in the answer.
+   * Output only. List of blob attachments in the answer.
    *
    * @param GoogleCloudDiscoveryengineV1alphaAnswerBlobAttachment[] $blobAttachments
    */

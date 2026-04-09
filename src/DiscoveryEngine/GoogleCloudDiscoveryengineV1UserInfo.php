@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1UserInfo extends \Google\Model
 {
+  protected $preciseLocationType = GoogleCloudDiscoveryengineV1UserInfoPreciseLocation::class;
+  protected $preciseLocationDataType = '';
   /**
    * Optional. IANA time zone, e.g. Europe/Budapest.
    *
@@ -52,6 +54,24 @@ class GoogleCloudDiscoveryengineV1UserInfo extends \Google\Model
    */
   public $userId;
 
+  /**
+   * Optional. Input only. Precise location of the user. It is used in Custom
+   * Ranking to calculate the distance between the user and the relevant
+   * documents.
+   *
+   * @param GoogleCloudDiscoveryengineV1UserInfoPreciseLocation $preciseLocation
+   */
+  public function setPreciseLocation(GoogleCloudDiscoveryengineV1UserInfoPreciseLocation $preciseLocation)
+  {
+    $this->preciseLocation = $preciseLocation;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1UserInfoPreciseLocation
+   */
+  public function getPreciseLocation()
+  {
+    return $this->preciseLocation;
+  }
   /**
    * Optional. IANA time zone, e.g. Europe/Budapest.
    *

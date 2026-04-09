@@ -19,7 +19,7 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends \Google\Collection
 {
-  protected $collection_key = 'customSignals';
+  protected $collection_key = 'precomputedExpressionValues';
   /**
    * Optional. Combined custom boosts for a doc.
    *
@@ -52,6 +52,14 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
    * @var float
    */
   public $pctrRank;
+  /**
+   * Optional. A list of precomputed expression results for a given document, in
+   * the same order as requested in
+   * `SearchRequest.custom_ranking_params.expressions_to_precompute`.
+   *
+   * @var float[]
+   */
+  public $precomputedExpressionValues;
   /**
    * Optional. Semantic relevance adjustment.
    *
@@ -166,6 +174,24 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals extends 
   public function getPctrRank()
   {
     return $this->pctrRank;
+  }
+  /**
+   * Optional. A list of precomputed expression results for a given document, in
+   * the same order as requested in
+   * `SearchRequest.custom_ranking_params.expressions_to_precompute`.
+   *
+   * @param float[] $precomputedExpressionValues
+   */
+  public function setPrecomputedExpressionValues($precomputedExpressionValues)
+  {
+    $this->precomputedExpressionValues = $precomputedExpressionValues;
+  }
+  /**
+   * @return float[]
+   */
+  public function getPrecomputedExpressionValues()
+  {
+    return $this->precomputedExpressionValues;
   }
   /**
    * Optional. Semantic relevance adjustment.

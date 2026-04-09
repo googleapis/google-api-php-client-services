@@ -17,6 +17,8 @@
 
 namespace Google\Service\DiscoveryEngine\Resource;
 
+use Google\Service\DiscoveryEngine\GoogleApiHttpBody;
+
 /**
  * The "dataConnector" collection of methods.
  * Typical usage is:
@@ -27,6 +29,28 @@ namespace Google\Service\DiscoveryEngine\Resource;
  */
 class ProjectsLocationsCollectionsDataConnector extends \Google\Service\Resource
 {
+  /**
+   * ServeMcpDeleteRequest serves a MCP DELETE request. (dataConnector.mcp)
+   *
+   * @param string $projectsId
+   * @param string $locationsId
+   * @param string $collectionsId
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string contentType The HTTP Content-Type header value specifying
+   * the content type of the body.
+   * @opt_param string data The HTTP request/response body as raw binary.
+   * @opt_param object extensions Application specific response metadata. Must be
+   * set in the first response for streaming APIs.
+   * @return GoogleApiHttpBody
+   * @throws \Google\Service\Exception
+   */
+  public function mcp($projectsId, $locationsId, $collectionsId, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'collectionsId' => $collectionsId];
+    $params = array_merge($params, $optParams);
+    return $this->call('mcp', [$params], GoogleApiHttpBody::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

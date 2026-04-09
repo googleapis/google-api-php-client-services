@@ -40,6 +40,11 @@ class ProjectsLocationsCollectionsEnginesSessions extends \Google\Service\Resour
    * aStores/{data_store_id}`
    * @param GoogleCloudDiscoveryengineV1Session $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string sessionId Optional. The ID to use for the session, which
+   * will become the final component of the session's resource name. This value
+   * should be 1-63 characters, and valid characters are /a-z0-9{0,61}[a-z0-9]/.
+   * If not specified, a unique ID will be generated.
    * @return GoogleCloudDiscoveryengineV1Session
    * @throws \Google\Service\Exception
    */

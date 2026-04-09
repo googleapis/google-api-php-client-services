@@ -46,11 +46,16 @@ class DiscoveryEngine extends \Google\Service
   /** View, edit, create, and delete all your data associated with any Discovery Engine API product, such as Agentspace, Vertex AI Search, or NotebookLM Enterprise, including both end user data and administration or configuration data.. */
   const DISCOVERYENGINE_READWRITE =
       "https://www.googleapis.com/auth/discoveryengine.readwrite";
+  /** Interact with Discovery Engine API products, such as Agentspace, Vertex AI Search, or NotebookLM Enterprise, on your behalf. It will also allow the app to view all data that you have access to when you use or interact with a Discovery Engine API product.. */
+  const DISCOVERYENGINE_SERVING_READWRITE =
+      "https://www.googleapis.com/auth/discoveryengine.serving.readwrite";
 
+  public $billingAccounts_billingAccountLicenseConfigs;
   public $projects;
   public $projects_locations;
   public $projects_locations_cmekConfigs;
   public $projects_locations_collections;
+  public $projects_locations_collections_dataConnector;
   public $projects_locations_collections_dataConnector_operations;
   public $projects_locations_collections_dataStores;
   public $projects_locations_collections_dataStores_branches;
@@ -143,6 +148,36 @@ class DiscoveryEngine extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'discoveryengine';
 
+    $this->billingAccounts_billingAccountLicenseConfigs = new DiscoveryEngine\Resource\BillingAccountsBillingAccountLicenseConfigs(
+        $this,
+        $this->serviceName,
+        'billingAccountLicenseConfigs',
+        [
+          'methods' => [
+            'distributeLicenseConfig' => [
+              'path' => 'v1/{+billingAccountLicenseConfig}:distributeLicenseConfig',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'billingAccountLicenseConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'retractLicenseConfig' => [
+              'path' => 'v1/{+billingAccountLicenseConfig}:retractLicenseConfig',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'billingAccountLicenseConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects = new DiscoveryEngine\Resource\Projects(
         $this,
         $this->serviceName,
@@ -337,6 +372,49 @@ class DiscoveryEngine extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_dataConnector = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataConnector(
+        $this,
+        $this->serviceName,
+        'dataConnector',
+        [
+          'methods' => [
+            'mcp' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/collections/{collectionsId}/dataConnector/mcp',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'collectionsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'contentType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'data' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'extensions' => [
+                  'location' => 'query',
+                  'type' => 'object',
+                  'repeated' => true,
                 ],
               ],
             ],
@@ -1311,6 +1389,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'sessionId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'delete' => [
@@ -2610,6 +2692,10 @@ class DiscoveryEngine extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'sessionId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -3634,6 +3720,10 @@ class DiscoveryEngine extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'sessionId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -4466,6 +4556,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'orderBy' => [
                   'location' => 'query',

@@ -26,6 +26,12 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
    */
   public $actionParams;
   /**
+   * Optional. Whether to create a BAP connection for the connector.
+   *
+   * @var bool
+   */
+  public $createBapConnection;
+  /**
    * Output only. The connector contains the necessary parameters and is
    * configured to support actions.
    *
@@ -72,6 +78,22 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
   public function getActionParams()
   {
     return $this->actionParams;
+  }
+  /**
+   * Optional. Whether to create a BAP connection for the connector.
+   *
+   * @param bool $createBapConnection
+   */
+  public function setCreateBapConnection($createBapConnection)
+  {
+    $this->createBapConnection = $createBapConnection;
+  }
+  /**
+   * @return bool
+   */
+  public function getCreateBapConnection()
+  {
+    return $this->createBapConnection;
   }
   /**
    * Output only. The connector contains the necessary parameters and is

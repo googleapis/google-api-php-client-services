@@ -178,7 +178,8 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
    * sharing` * `personalization-memory` * `personalization-suggested-
    * highlights` * `disable-agent-sharing` * `disable-image-generation` *
    * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-
-   * content` * `disable-google-drive-upload` * `disable-welcome-emails`
+   * content` * `disable-google-drive-upload` * `disable-welcome-emails` *
+   * `disable-canvas` * `disable-canvas-workspace`
    *
    * @var string[]
    */
@@ -470,7 +471,8 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
    * sharing` * `personalization-memory` * `personalization-suggested-
    * highlights` * `disable-agent-sharing` * `disable-image-generation` *
    * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-
-   * content` * `disable-google-drive-upload` * `disable-welcome-emails`
+   * content` * `disable-google-drive-upload` * `disable-welcome-emails` *
+   * `disable-canvas` * `disable-canvas-workspace`
    *
    * @param string[] $features
    */

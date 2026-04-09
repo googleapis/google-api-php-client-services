@@ -44,8 +44,12 @@ class ProjectsLocationsCollectionsDataStoresServingConfigs extends \Google\Servi
    * serving config, such as `projects/locations/global/collections/default_collec
    * tion/engines/servingConfigs/default_serving_config`, or `projects/locations/g
    * lobal/collections/default_collection/dataStores/servingConfigs/default_servin
-   * g_config`. This field is used to identify the serving configuration name, set
-   * of models used to make the search.
+   * g_config`. Or the resource name of the agent engine serving config, such as:
+   * `projects/locations/global/collections/default_collection/engines/servingConf
+   * igs/default_agent_answer`. (use when `enable_agent_invocation` set to true,
+   * and you have custom `AI_MODE` agent engine configured) This field is used to
+   * identify the serving configuration name, set of models used to make the
+   * search.
    * @param GoogleCloudDiscoveryengineV1AnswerQueryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1AnswerQueryResponse
@@ -240,8 +244,12 @@ class ProjectsLocationsCollectionsDataStoresServingConfigs extends \Google\Servi
    * serving config, such as `projects/locations/global/collections/default_collec
    * tion/engines/servingConfigs/default_serving_config`, or `projects/locations/g
    * lobal/collections/default_collection/dataStores/servingConfigs/default_servin
-   * g_config`. This field is used to identify the serving configuration name, set
-   * of models used to make the search.
+   * g_config`. Or the resource name of the agent engine serving config, such as:
+   * `projects/locations/global/collections/default_collection/engines/servingConf
+   * igs/default_agent_answer`. (use when `enable_agent_invocation` set to true,
+   * and you have custom `AI_MODE` agent engine configured) This field is used to
+   * identify the serving configuration name, set of models used to make the
+   * search.
    * @param GoogleCloudDiscoveryengineV1AnswerQueryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1AnswerQueryResponse

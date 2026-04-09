@@ -97,12 +97,24 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   protected $contentSearchSpecDataType = '';
   protected $crowdingSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestCrowdingSpec::class;
   protected $crowdingSpecsDataType = 'array';
+  protected $customRankingParamsType = GoogleCloudDiscoveryengineV1betaSearchRequestCustomRankingParams::class;
+  protected $customRankingParamsDataType = '';
   protected $dataStoreSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec::class;
   protected $dataStoreSpecsDataType = 'array';
   protected $displaySpecType = GoogleCloudDiscoveryengineV1betaSearchRequestDisplaySpec::class;
   protected $displaySpecDataType = '';
   protected $embeddingSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec::class;
   protected $embeddingSpecDataType = '';
+  /**
+   * Optional. The entity for customers that may run multiple different
+   * entities, domains, sites or regions, for example, "Google US", "Google
+   * Ads", "Waymo", "google.com", "youtube.com", etc. If this is set, it should
+   * be exactly matched with UserEvent.entity to get search results boosted by
+   * entity.
+   *
+   * @var string
+   */
+  public $entity;
   protected $facetSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec::class;
   protected $facetSpecsDataType = 'array';
   /**
@@ -499,6 +511,22 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->crowdingSpecs;
   }
   /**
+   * Optional. Optional configuration for the Custom Ranking feature.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestCustomRankingParams $customRankingParams
+   */
+  public function setCustomRankingParams(GoogleCloudDiscoveryengineV1betaSearchRequestCustomRankingParams $customRankingParams)
+  {
+    $this->customRankingParams = $customRankingParams;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchRequestCustomRankingParams
+   */
+  public function getCustomRankingParams()
+  {
+    return $this->customRankingParams;
+  }
+  /**
    * Specifications that define the specific DataStores to be searched, along
    * with configurations for those data stores. This is only considered for
    * Engines with multiple data stores. For engines with a single data store,
@@ -555,6 +583,26 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   public function getEmbeddingSpec()
   {
     return $this->embeddingSpec;
+  }
+  /**
+   * Optional. The entity for customers that may run multiple different
+   * entities, domains, sites or regions, for example, "Google US", "Google
+   * Ads", "Waymo", "google.com", "youtube.com", etc. If this is set, it should
+   * be exactly matched with UserEvent.entity to get search results boosted by
+   * entity.
+   *
+   * @param string $entity
+   */
+  public function setEntity($entity)
+  {
+    $this->entity = $entity;
+  }
+  /**
+   * @return string
+   */
+  public function getEntity()
+  {
+    return $this->entity;
   }
   /**
    * Facet specifications for faceted search. If empty, no facets are returned.

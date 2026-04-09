@@ -37,6 +37,15 @@ class ProjectsLocationsUserStoresUserLicenses extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Filter for the list request. Supported
+   * fields: * `license_assignment_state` * `user_principal` * Examples: *
+   * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
+   * `license_assignment_state = NO_LICENSE` to list not licensed users. *
+   * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
+   * attempted login but no license assigned. * `license_assignment_state !=
+   * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no
+   * license assigned. * `user_principal = user1@abc.com` to list user license for
+   * `user1@abc.com`.
    * @opt_param string orderBy Optional. The order in which the UserLicenses are
    * listed. The value must be a comma-separated list of fields. Default sorting
    * order is ascending. To specify descending order for a field, append a " desc"
