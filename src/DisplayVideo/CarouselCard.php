@@ -20,8 +20,8 @@ namespace Google\Service\DisplayVideo;
 class CarouselCard extends \Google\Model
 {
   /**
-   * Required. The call-to-action button shown on the card. Must use 10
-   * characters or less.
+   * Required. The text on the call-to-action button shown on the card. Must use
+   * 10 characters or less.
    *
    * @var string
    */
@@ -54,8 +54,8 @@ class CarouselCard extends \Google\Model
   protected $squareMarketingImageDataType = '';
 
   /**
-   * Required. The call-to-action button shown on the card. Must use 10
-   * characters or less.
+   * Required. The text on the call-to-action button shown on the card. Must use
+   * 10 characters or less.
    *
    * @param string $callToAction
    */

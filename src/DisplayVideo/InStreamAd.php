@@ -22,7 +22,7 @@ class InStreamAd extends \Google\Model
   protected $commonInStreamAttributeType = CommonInStreamAttribute::class;
   protected $commonInStreamAttributeDataType = '';
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    *
    * @var string[]
    */
@@ -45,7 +45,7 @@ class InStreamAd extends \Google\Model
     return $this->commonInStreamAttribute;
   }
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    *
    * @param string[] $customParameters
    */

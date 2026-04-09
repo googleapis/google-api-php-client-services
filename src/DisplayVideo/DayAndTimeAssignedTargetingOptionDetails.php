@@ -85,8 +85,8 @@ class DayAndTimeAssignedTargetingOptionDetails extends \Google\Model
   public $startHour;
   /**
    * Required. The mechanism used to determine which timezone to use for this
-   * day and time targeting setting. For demand gen line items, this field is
-   * always TIME_ZONE_RESOLUTION_ADVERTISER.
+   * day and time targeting setting. For Demand Gen line items, this field is
+   * always `TIME_ZONE_RESOLUTION_ADVERTISER`.
    *
    * @var string
    */
@@ -147,8 +147,8 @@ class DayAndTimeAssignedTargetingOptionDetails extends \Google\Model
   }
   /**
    * Required. The mechanism used to determine which timezone to use for this
-   * day and time targeting setting. For demand gen line items, this field is
-   * always TIME_ZONE_RESOLUTION_ADVERTISER.
+   * day and time targeting setting. For Demand Gen line items, this field is
+   * always `TIME_ZONE_RESOLUTION_ADVERTISER`.
    *
    * Accepted values: TIME_ZONE_RESOLUTION_UNSPECIFIED,
    * TIME_ZONE_RESOLUTION_END_USER, TIME_ZONE_RESOLUTION_ADVERTISER

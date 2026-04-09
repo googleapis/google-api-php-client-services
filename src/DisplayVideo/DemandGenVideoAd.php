@@ -115,8 +115,8 @@ class DemandGenVideoAd extends \Google\Collection
   protected $companionBannerType = ImageAsset::class;
   protected $companionBannerDataType = '';
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL
-   * template.
+   * Optional. The custom parameters and accompanying values to add to the
+   * tracking URL.
    *
    * @var string[]
    */
@@ -168,7 +168,7 @@ class DemandGenVideoAd extends \Google\Collection
   protected $logoType = ImageAsset::class;
   protected $logoDataType = '';
   /**
-   * Required. The list of lone headlines shown on the ad.
+   * Required. The list of long headlines shown on the ad.
    *
    * @var string[]
    */
@@ -247,8 +247,8 @@ class DemandGenVideoAd extends \Google\Collection
     return $this->companionBanner;
   }
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL
-   * template.
+   * Optional. The custom parameters and accompanying values to add to the
+   * tracking URL.
    *
    * @param string[] $customParameters
    */
@@ -394,7 +394,7 @@ class DemandGenVideoAd extends \Google\Collection
     return $this->logo;
   }
   /**
-   * Required. The list of lone headlines shown on the ad.
+   * Required. The list of long headlines shown on the ad.
    *
    * @param string[] $longHeadlines
    */

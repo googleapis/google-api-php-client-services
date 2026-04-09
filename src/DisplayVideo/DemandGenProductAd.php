@@ -110,8 +110,8 @@ class DemandGenProductAd extends \Google\Model
    */
   public $callToAction;
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL
-   * template.
+   * Optional. The custom parameters and accompanying values to add to the
+   * tracking URL.
    *
    * @var string[]
    */
@@ -209,8 +209,8 @@ class DemandGenProductAd extends \Google\Model
     return $this->callToAction;
   }
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL
-   * template.
+   * Optional. The custom parameters and accompanying values to add to the
+   * tracking URL.
    *
    * @param string[] $customParameters
    */

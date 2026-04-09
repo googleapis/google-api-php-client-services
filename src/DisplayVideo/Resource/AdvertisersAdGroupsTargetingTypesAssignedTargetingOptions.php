@@ -33,8 +33,9 @@ class AdvertisersAdGroupsTargetingTypesAssignedTargetingOptions extends \Google\
 {
   /**
    * Assigns a targeting option to an ad group. Returns the assigned targeting
-   * option if successful. Only ad groups under a line item of line_item_type
-   * `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+   * option if successful. This method is only supported for Demand Gen ad groups.
+   * Retrieval and management of Demand Gen resources is currently in beta. This
+   * method is only available to allowlisted users.
    * (assignedTargetingOptions.create)
    *
    * @param string $advertiserId Required. The ID of the advertiser the ad group
@@ -62,9 +63,11 @@ class AdvertisersAdGroupsTargetingTypesAssignedTargetingOptions extends \Google\
     return $this->call('create', [$params], AssignedTargetingOption::class);
   }
   /**
-   * Deletes an assigned targeting option from an ad group. Only ad groups under a
-   * line item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for
-   * this method. (assignedTargetingOptions.delete)
+   * Deletes an assigned targeting option from an ad group. This method is only
+   * supported for Demand Gen ad groups with the AdGroupFormat
+   * `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of Demand Gen
+   * resources is currently in beta. This method is only available to allowlisted
+   * users. (assignedTargetingOptions.delete)
    *
    * @param string $advertiserId Required. The ID of the advertiser the ad group
    * belongs to.

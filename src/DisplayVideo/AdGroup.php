@@ -58,7 +58,8 @@ class AdGroup extends \Google\Model
    */
   public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_MASTHEAD = 'AD_GROUP_FORMAT_MASTHEAD';
   /**
-   * Demand Gen ads.
+   * Demand Gen ads. Retrieval and management of Demand Gen resources is
+   * currently in beta. This enum value is only available to allowlisted users.
    */
   public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_DEMAND_GEN = 'AD_GROUP_FORMAT_DEMAND_GEN';
   /**
@@ -181,8 +182,8 @@ class AdGroup extends \Google\Model
     return $this->adGroupId;
   }
   /**
-   * Optional. Specifies the inventory control of the ad group. This field is
-   * required for Demand Gen ad groups.
+   * Optional. Required for Demand Gen ad groups. Specifies the inventory
+   * control of the ad group.
    *
    * @param AdGroupInventoryControl $adGroupInventoryControl
    */

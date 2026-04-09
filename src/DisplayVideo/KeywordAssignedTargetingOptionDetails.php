@@ -21,8 +21,13 @@ class KeywordAssignedTargetingOptionDetails extends \Google\Collection
 {
   protected $collection_key = 'exemptedPolicyNames';
   /**
-   * Optional. The policy names to exempt the keyword from. This field is only
-   * applicable for Demand Gen keywords, which are positively targeted.
+   * Optional. The policy names to exempt the keyword from. When attempting to
+   * target a keyword that violates a policy, the error returned will include
+   * the name of the relevant policy. Use that name in this field to exempt the
+   * targeted keyword from the policy. This field is only applicable for
+   * positively-targeted keywords assigned to Demand Gen resources. Retrieval
+   * and management of Demand Gen resources is currently in beta. This field is
+   * only available to allowlisted users.
    *
    * @var string[]
    */
@@ -43,8 +48,13 @@ class KeywordAssignedTargetingOptionDetails extends \Google\Collection
   public $negative;
 
   /**
-   * Optional. The policy names to exempt the keyword from. This field is only
-   * applicable for Demand Gen keywords, which are positively targeted.
+   * Optional. The policy names to exempt the keyword from. When attempting to
+   * target a keyword that violates a policy, the error returned will include
+   * the name of the relevant policy. Use that name in this field to exempt the
+   * targeted keyword from the policy. This field is only applicable for
+   * positively-targeted keywords assigned to Demand Gen resources. Retrieval
+   * and management of Demand Gen resources is currently in beta. This field is
+   * only available to allowlisted users.
    *
    * @param string[] $exemptedPolicyNames
    */

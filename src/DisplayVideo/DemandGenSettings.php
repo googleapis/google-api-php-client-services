@@ -22,14 +22,15 @@ class DemandGenSettings extends \Google\Model
   /**
    * Optional. Immutable. Whether location and language targeting can be set at
    * the line item level. Otherwise, relevant targeting types must be assigned
-   * directly to the ad groups.
+   * directly to ad groups.
    *
    * @var bool
    */
   public $geoLanguageTargetingEnabled;
   /**
-   * Optional. The ID of the merchant which is linked to the line item for
-   * product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product
+   * feed. This Merchant Center account must already be linked to the
+   * advertiser.
    *
    * @var string
    */
@@ -40,7 +41,7 @@ class DemandGenSettings extends \Google\Model
   /**
    * Optional. Immutable. Whether location and language targeting can be set at
    * the line item level. Otherwise, relevant targeting types must be assigned
-   * directly to the ad groups.
+   * directly to ad groups.
    *
    * @param bool $geoLanguageTargetingEnabled
    */
@@ -56,8 +57,9 @@ class DemandGenSettings extends \Google\Model
     return $this->geoLanguageTargetingEnabled;
   }
   /**
-   * Optional. The ID of the merchant which is linked to the line item for
-   * product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product
+   * feed. This Merchant Center account must already be linked to the
+   * advertiser.
    *
    * @param string $linkedMerchantId
    */

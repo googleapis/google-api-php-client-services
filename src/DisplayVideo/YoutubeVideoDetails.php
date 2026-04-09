@@ -44,7 +44,8 @@ class YoutubeVideoDetails extends \Google\Model
    */
   public $unavailableReason;
   /**
-   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * Required. The YouTube video asset id. This is the adAssetId of an AdAsset
+   * resource.
    *
    * @var string
    */
@@ -86,7 +87,8 @@ class YoutubeVideoDetails extends \Google\Model
     return $this->unavailableReason;
   }
   /**
-   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * Required. The YouTube video asset id. This is the adAssetId of an AdAsset
+   * resource.
    *
    * @param string $videoAssetId
    */

@@ -50,8 +50,9 @@ class ThirdPartyMeasurementConfigs extends \Google\Collection
   }
   /**
    * Optional. The third-party vendors measuring brand safety. The following
-   * third-party vendors are applicable: * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
-   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` * `THIRD_PARTY_VENDOR_ZEFR`
+   * third-party vendors are applicable: * `THIRD_PARTY_VENDOR_ZEFR` *
+   * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
+   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
    *
    * @param ThirdPartyVendorConfig[] $brandSafetyVendorConfigs
    */

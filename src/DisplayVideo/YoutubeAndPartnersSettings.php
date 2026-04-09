@@ -88,8 +88,9 @@ class YoutubeAndPartnersSettings extends \Google\Collection
    */
   public $leadFormId;
   /**
-   * Optional. The ID of the merchant which is linked to the line item for
-   * product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product
+   * feed. This Merchant Center account must already be linked to the
+   * advertiser.
    *
    * @var string
    */
@@ -193,8 +194,9 @@ class YoutubeAndPartnersSettings extends \Google\Collection
     return $this->leadFormId;
   }
   /**
-   * Optional. The ID of the merchant which is linked to the line item for
-   * product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product
+   * feed. This Merchant Center account must already be linked to the
+   * advertiser.
    *
    * @param string $linkedMerchantId
    */

@@ -32,7 +32,9 @@ use Google\Service\DisplayVideo\ListAdGroupAdsResponse;
 class AdvertisersAdGroupAds extends \Google\Service\Resource
 {
   /**
-   * Creates an ad group ad. (adGroupAds.create)
+   * Creates an ad group ad. This method is only supported for Demand Gen ads.
+   * Retrieval and management of Demand Gen resources is currently in beta. This
+   * method is only available to allowlisted users. (adGroupAds.create)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * ad belongs to.
@@ -48,11 +50,14 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
     return $this->call('create', [$params], AdGroupAd::class);
   }
   /**
-   * Deletes an ad group ad. (adGroupAds.delete)
+   * Deletes an ad group ad. This method is only supported for Demand Gen ads.
+   * Retrieval and management of Demand Gen resources is currently in beta. This
+   * method is only available to allowlisted users. (adGroupAds.delete)
    *
    * @param string $advertiserId Required. The ID of the advertiser the ad belongs
    * to.
-   * @param string $adGroupAdId Required. The ID of the ad to delete.
+   * @param string $adGroupAdId Required. The ID of the ad to delete. Only Demand
+   * Gen ads are supported.
    * @param array $optParams Optional parameters.
    * @return DisplayvideoEmpty
    * @throws \Google\Service\Exception
@@ -120,7 +125,9 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
     return $this->call('list', [$params], ListAdGroupAdsResponse::class);
   }
   /**
-   * Updates an ad group ad. (adGroupAds.patch)
+   * Updates an ad group ad. This method is only supported for Demand Gen ads.
+   * Retrieval and management of Demand Gen resources is currently in beta. This
+   * method is only available to allowlisted users. (adGroupAds.patch)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * ad belongs to.

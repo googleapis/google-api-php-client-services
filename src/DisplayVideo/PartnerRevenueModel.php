@@ -56,9 +56,9 @@ class PartnerRevenueModel extends \Google\Model
    */
   public $markupAmount;
   /**
-   * Required. The markup type of the partner revenue model. Demand Gen line
-   * items only support
-   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP`.
+   * Required. The markup type of the partner revenue model. This field must be
+   * set to `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP` for
+   * Demand Gen line items.
    *
    * @var string
    */
@@ -91,9 +91,9 @@ class PartnerRevenueModel extends \Google\Model
     return $this->markupAmount;
   }
   /**
-   * Required. The markup type of the partner revenue model. Demand Gen line
-   * items only support
-   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP`.
+   * Required. The markup type of the partner revenue model. This field must be
+   * set to `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP` for
+   * Demand Gen line items.
    *
    * Accepted values: PARTNER_REVENUE_MODEL_MARKUP_TYPE_UNSPECIFIED,
    * PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM,

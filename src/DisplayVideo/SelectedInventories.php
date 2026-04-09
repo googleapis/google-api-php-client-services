@@ -50,7 +50,7 @@ class SelectedInventories extends \Google\Model
    */
   public $allowYoutubeShorts;
   /**
-   * Whether the ad group is opted-in to YouTube in-stream.
+   * Whether the ad group is opted-in to YouTube in-stream inventory.
    *
    * @var bool
    */
@@ -137,7 +137,7 @@ class SelectedInventories extends \Google\Model
     return $this->allowYoutubeShorts;
   }
   /**
-   * Whether the ad group is opted-in to YouTube in-stream.
+   * Whether the ad group is opted-in to YouTube in-stream inventory.
    *
    * @param bool $allowYoutubeStream
    */

@@ -250,7 +250,9 @@ class AdGroupAd extends \Google\Collection
   }
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/ans
-   * wer/15598924?&sjid=11207068802760924844-NC#CarouselAd).
+   * wer/15598924?&sjid=11207068802760924844-NC#CarouselAd). Retrieval and
+   * management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    *
    * @param DemandGenCarouselAd $demandGenCarouselAd
    */
@@ -267,7 +269,9 @@ class AdGroupAd extends \Google\Collection
   }
   /**
    * Details of a [Demand Gen image ad](//support.google.com/displayvideo/answer
-   * /15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * /15598924?&sjid=11207068802760924844-NC#ImageAd). Retrieval and management
+   * of Demand Gen resources is currently in beta. This field is only available
+   * to allowlisted users.
    *
    * @param DemandGenImageAd $demandGenImageAd
    */
@@ -284,7 +288,9 @@ class AdGroupAd extends \Google\Collection
   }
   /**
    * Details of a [Demand Gen product ad](//support.google.com/displayvideo/answ
-   * er/15598924?&sjid=11207068802760924844-NC#Product-onlyAd).
+   * er/15598924?&sjid=11207068802760924844-NC#Product-onlyAd). Retrieval and
+   * management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    *
    * @param DemandGenProductAd $demandGenProductAd
    */
@@ -301,7 +307,9 @@ class AdGroupAd extends \Google\Collection
   }
   /**
    * Details of a [Demand Gen video ad](//support.google.com/displayvideo/answer
-   * /15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * /15598924?&sjid=11207068802760924844-NC#VideoAd). Retrieval and management
+   * of Demand Gen resources is currently in beta. This field is only available
+   * to allowlisted users.
    *
    * @param DemandGenVideoAd $demandGenVideoAd
    */

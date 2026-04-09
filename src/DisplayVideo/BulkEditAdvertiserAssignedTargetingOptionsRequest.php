@@ -30,7 +30,7 @@ class BulkEditAdvertiserAssignedTargetingOptionsRequest extends \Google\Collecti
    * `CreateAssignedTargetingOptionsRequest`. Supported targeting types: *
    * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`
    * * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-   * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_KEYWORD`
    *
    * @param CreateAssignedTargetingOptionsRequest[] $createRequests
    */
@@ -50,7 +50,7 @@ class BulkEditAdvertiserAssignedTargetingOptionsRequest extends \Google\Collecti
    * `DeleteAssignedTargetingOptionsRequest`. Supported targeting types: *
    * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`
    * * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-   * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_KEYWORD`
    *
    * @param DeleteAssignedTargetingOptionsRequest[] $deleteRequests
    */

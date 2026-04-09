@@ -59,10 +59,12 @@ class DemandGenBiddingStrategy extends \Google\Model
    */
   public const TYPE_DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CLICKS = 'DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CLICKS';
   /**
-   * Output only. If AG doesn't set value for tCPA or tROAS, line item bidding
-   * value will be the effective_bidding_value, if the bidding strategy type is
-   * not tCPA or tROAS, effective_bidding_value is always 0. For line item, it
-   * will be the same as the value field.
+   * Output only. The value effectively used by the bidding strategy. This field
+   * will be the same as value if set. If value is not set and the strategy is
+   * assigned to an ad group, this field will be inherited from the line item's
+   * bidding strategy. If type is not
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` or
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`, this field will be 0.
    *
    * @var string
    */
@@ -74,15 +76,16 @@ class DemandGenBiddingStrategy extends \Google\Model
    */
   public $effectiveBiddingValueSource;
   /**
-   * Optional. The type of the bidding strategy. This can only be set at the
-   * line item level.
+   * Optional. The type of the bidding strategy. This can only be set when
+   * assigned to a line item. Ad groups will inherit this value from their line
+   * item.
    *
    * @var string
    */
   public $type;
   /**
-   * Optional. The value used by the bidding strategy. This can be set at the
-   * line item and ad group level. This field is only applicable for the
+   * Optional. The value used by the bidding strategy. This can be set when
+   * assigned to line items or ad groups. This field is only applicable for the
    * following strategy types: * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in
@@ -95,10 +98,12 @@ class DemandGenBiddingStrategy extends \Google\Model
   public $value;
 
   /**
-   * Output only. If AG doesn't set value for tCPA or tROAS, line item bidding
-   * value will be the effective_bidding_value, if the bidding strategy type is
-   * not tCPA or tROAS, effective_bidding_value is always 0. For line item, it
-   * will be the same as the value field.
+   * Output only. The value effectively used by the bidding strategy. This field
+   * will be the same as value if set. If value is not set and the strategy is
+   * assigned to an ad group, this field will be inherited from the line item's
+   * bidding strategy. If type is not
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` or
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`, this field will be 0.
    *
    * @param string $effectiveBiddingValue
    */
@@ -133,8 +138,9 @@ class DemandGenBiddingStrategy extends \Google\Model
     return $this->effectiveBiddingValueSource;
   }
   /**
-   * Optional. The type of the bidding strategy. This can only be set at the
-   * line item level.
+   * Optional. The type of the bidding strategy. This can only be set when
+   * assigned to a line item. Ad groups will inherit this value from their line
+   * item.
    *
    * Accepted values: DEMAND_GEN_BIDDING_STRATEGY_TYPE_UNSPECIFIED,
    * DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA,
@@ -157,8 +163,8 @@ class DemandGenBiddingStrategy extends \Google\Model
     return $this->type;
   }
   /**
-   * Optional. The value used by the bidding strategy. This can be set at the
-   * line item and ad group level. This field is only applicable for the
+   * Optional. The value used by the bidding strategy. This can be set when
+   * assigned to line items or ad groups. This field is only applicable for the
    * following strategy types: * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in

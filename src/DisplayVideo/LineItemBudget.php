@@ -50,10 +50,9 @@ class LineItemBudget extends \Google\Model
   /**
    * Required. The type of the budget allocation.
    * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is only applicable when
-   * automatic budget allocation is enabled for the parent insertion order. For
-   * demand gen line items, budget allocation type must be
-   * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`. Demand Gen line items do not
-   * support other budget allocation types.
+   * automatic budget allocation is enabled for the parent insertion order. This
+   * field must be set to `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED` for Demand
+   * Gen line items.
    *
    * @var string
    */
@@ -85,10 +84,9 @@ class LineItemBudget extends \Google\Model
   /**
    * Required. The type of the budget allocation.
    * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is only applicable when
-   * automatic budget allocation is enabled for the parent insertion order. For
-   * demand gen line items, budget allocation type must be
-   * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`. Demand Gen line items do not
-   * support other budget allocation types.
+   * automatic budget allocation is enabled for the parent insertion order. This
+   * field must be set to `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED` for Demand
+   * Gen line items.
    *
    * Accepted values: LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNSPECIFIED,
    * LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC,

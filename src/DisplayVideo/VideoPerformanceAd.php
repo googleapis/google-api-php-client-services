@@ -29,7 +29,7 @@ class VideoPerformanceAd extends \Google\Collection
   protected $companionBannersType = ImageAsset::class;
   protected $companionBannersDataType = 'array';
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    *
    * @var string[]
    */
@@ -71,7 +71,7 @@ class VideoPerformanceAd extends \Google\Collection
    */
   public $headlines;
   /**
-   * The list of lone headlines shown on the call-to-action banner.
+   * The list of long headlines shown on the call-to-action banner.
    *
    * @var string[]
    */
@@ -118,7 +118,7 @@ class VideoPerformanceAd extends \Google\Collection
     return $this->companionBanners;
   }
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    *
    * @param string[] $customParameters
    */
@@ -230,7 +230,7 @@ class VideoPerformanceAd extends \Google\Collection
     return $this->headlines;
   }
   /**
-   * The list of lone headlines shown on the call-to-action banner.
+   * The list of long headlines shown on the call-to-action banner.
    *
    * @param string[] $longHeadlines
    */

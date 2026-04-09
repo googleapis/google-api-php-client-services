@@ -29,8 +29,8 @@ class DemandGenCarouselAd extends \Google\Collection
   protected $cardsType = CarouselCard::class;
   protected $cardsDataType = 'array';
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL
-   * template.
+   * Optional. The custom parameters and accompanying values to add to the
+   * tracking URL.
    *
    * @var string[]
    */
@@ -109,8 +109,8 @@ class DemandGenCarouselAd extends \Google\Collection
     return $this->cards;
   }
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL
-   * template.
+   * Optional. The custom parameters and accompanying values to add to the
+   * tracking URL.
    *
    * @param string[] $customParameters
    */

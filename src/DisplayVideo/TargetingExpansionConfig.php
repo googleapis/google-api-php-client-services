@@ -77,7 +77,9 @@ class TargetingExpansionConfig extends \Google\Model
   public $enableOptimizedTargeting;
   /**
    * Optional. Whether to exclude demographic expansion for Optimized Targeting.
-   * This field only applies to Demand Gen ad groups.
+   * This field can only be set for Demand Gen ad groups. Retrieval and
+   * management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    *
    * @var bool
    */
@@ -153,7 +155,9 @@ class TargetingExpansionConfig extends \Google\Model
   }
   /**
    * Optional. Whether to exclude demographic expansion for Optimized Targeting.
-   * This field only applies to Demand Gen ad groups.
+   * This field can only be set for Demand Gen ad groups. Retrieval and
+   * management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    *
    * @param bool $excludeDemographicExpansion
    */

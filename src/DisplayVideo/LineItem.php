@@ -172,7 +172,8 @@ class LineItem extends \Google\Collection
    */
   public const LINE_ITEM_TYPE_LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME = 'LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME';
   /**
-   * Demand Gen ads.
+   * Demand Gen ads. Retrieval and management of Demand Gen resources is
+   * currently in beta. This enum value is only available to allowlisted users.
    */
   public const LINE_ITEM_TYPE_LINE_ITEM_TYPE_DEMAND_GEN = 'LINE_ITEM_TYPE_DEMAND_GEN';
   /**
@@ -548,10 +549,10 @@ class LineItem extends \Google\Collection
     return $this->flight;
   }
   /**
-   * Optional. The impression frequency cap settings of the line item. The
-   * max_impressions field in this settings object must be used if assigning a
-   * limited cap. This field is REQUIRED for all line item types excluding
-   * LINE_ITEM_TYPE_DEMAND_GEN.
+   * Optional. Required if the line item type is not
+   * `LINE_ITEM_TYPE_DEMAND_GEN`. The impression frequency cap settings of the
+   * line item. The max_impressions field in this settings object must be used
+   * if assigning a limited cap.
    *
    * @param FrequencyCap $frequencyCap
    */
