@@ -39,9 +39,8 @@ class Subscriptions extends \Google\Service\Resource
    * subscription). For a subscription on a [Chat target
    * resource](https://developers.google.com/workspace/events/guides/events-chat),
    * you can create a subscription as: - A Chat app by specifying an authorization
-   * scope that begins with `chat.app` and getting one-time administrator approval
-   * ([Developer Preview](https://developers.google.com/workspace/preview)). To
-   * learn more, see [Authorize as a Chat app with administrator
+   * scope that begins with `chat.app` and getting one-time administrator
+   * approval. To learn more, see [Authorize as a Chat app with administrator
    * approval](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app). - A user by specifying an authorization scope that
    * doesn't include `app` in its name. To learn more, see [Authorize as a Chat
@@ -153,9 +152,8 @@ class Subscriptions extends \Google\Service\Resource
    * subscription). For a subscription on a [Chat target
    * resource](https://developers.google.com/workspace/events/guides/events-chat),
    * you can update a subscription as: - A Chat app by specifying an authorization
-   * scope that begins with `chat.app` andgetting one-time administrator approval
-   * ([Developer Preview](https://developers.google.com/workspace/preview)). To
-   * learn more, see [Authorize as a Chat app with administrator
+   * scope that begins with `chat.app` and getting one-time administrator
+   * approval. To learn more, see [Authorize as a Chat app with administrator
    * approval](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app). - A user by specifying an authorization scope that
    * doesn't include `app` in its name. To learn more, see [Authorize as a Chat
@@ -195,10 +193,9 @@ class Subscriptions extends \Google\Service\Resource
    * subscription). For a subscription on a [Chat target
    * resource](https://developers.google.com/workspace/events/guides/events-chat),
    * you can reactivate a subscription as: - A Chat app by specifying an
-   * authorization scope that begins with `chat.app` andgetting one-time
-   * administrator approval ([Developer
-   * Preview](https://developers.google.com/workspace/preview)). To learn more,
-   * see [Authorize as a Chat app with administrator
+   * authorization scope that begins with `chat.app` and getting one-time
+   * administrator approval. To learn more, see [Authorize as a Chat app with
+   * administrator
    * approval](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app). - A user by specifying an authorization scope that
    * doesn't include `app` in its name. To learn more, see [Authorize as a Chat

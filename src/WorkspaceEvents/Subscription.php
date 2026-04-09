@@ -51,8 +51,7 @@ class Subscription extends \Google\Collection
   public const SUSPENSION_REASON_USER_SCOPE_REVOKED = 'USER_SCOPE_REVOKED';
   /**
    * The domain administrator has revoked the grant of one or more OAuth scopes
-   * for the app. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * for the app.
    */
   public const SUSPENSION_REASON_APP_SCOPE_REVOKED = 'APP_SCOPE_REVOKED';
   /**
@@ -66,8 +65,7 @@ class Subscription extends \Google\Collection
   public const SUSPENSION_REASON_USER_AUTHORIZATION_FAILURE = 'USER_AUTHORIZATION_FAILURE';
   /**
    * The app that authorized the creation of the subscription no longer has
-   * access to the subscription's target resource. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * access to the subscription's target resource.
    */
   public const SUSPENSION_REASON_APP_AUTHORIZATION_FAILURE = 'APP_AUTHORIZATION_FAILURE';
   /**
@@ -162,9 +160,8 @@ class Subscription extends \Google\Collection
   /**
    * Output only. The service account that was used to authorize the creation of
    * the subscription. This service account must be owned by the same Google
-   * Cloud project where you create this subscription. Format:
-   * `projects/{project_id}/serviceAccounts/{service_account_id}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Cloud project where you created this subscription. Format:
+   * `projects/{project_id}/serviceAccounts/{service_account_id}`
    *
    * @var string
    */
@@ -223,8 +220,7 @@ class Subscription extends \Google\Collection
    * user must be able to view the `target_resource`. For Google Workspace
    * users, the `{user}` value is the [`user.id`](https://developers.google.com/
    * workspace/admin/directory/reference/rest/v1/users#User.FIELDS.id) field
-   * from the Directory API. Format: `users/{user}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * from the Directory API. Format: `users/{user}`
    *
    * @var string
    */
@@ -401,9 +397,8 @@ class Subscription extends \Google\Collection
   /**
    * Output only. The service account that was used to authorize the creation of
    * the subscription. This service account must be owned by the same Google
-   * Cloud project where you create this subscription. Format:
-   * `projects/{project_id}/serviceAccounts/{service_account_id}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Cloud project where you created this subscription. Format:
+   * `projects/{project_id}/serviceAccounts/{service_account_id}`
    *
    * @param string $serviceAccountAuthority
    */
@@ -539,8 +534,7 @@ class Subscription extends \Google\Collection
    * user must be able to view the `target_resource`. For Google Workspace
    * users, the `{user}` value is the [`user.id`](https://developers.google.com/
    * workspace/admin/directory/reference/rest/v1/users#User.FIELDS.id) field
-   * from the Directory API. Format: `users/{user}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * from the Directory API. Format: `users/{user}`
    *
    * @param string $userAuthority
    */
