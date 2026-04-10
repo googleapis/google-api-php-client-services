@@ -24,50 +24,50 @@ class RuleExecutionResult extends \Google\Model
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * execution completed successfully
+   * Execution completed successfully
    */
   public const STATE_STATE_SUCCESS = 'STATE_SUCCESS';
   /**
-   * execution completed with failures
+   * Execution completed with failures
    */
   public const STATE_STATE_FAILURE = 'STATE_FAILURE';
   /**
-   * execution was not executed
+   * Execution was not executed
    */
   public const STATE_STATE_SKIPPED = 'STATE_SKIPPED';
   /**
-   * Execution message, if any
+   * Execution message, if any.
    *
    * @var string
    */
   public $message;
   /**
-   * Number of violations
+   * Number of violations.
    *
    * @var string
    */
   public $resultCount;
   /**
-   * rule name
+   * Rule name as plain text like `sap-hana-configured`.
    *
    * @var string
    */
   public $rule;
   /**
-   * Number of total scanned resources
+   * Number of total scanned resources.
    *
    * @var string
    */
   public $scannedResourceCount;
   /**
-   * Output only. The execution status
+   * Output only. The execution status.
    *
    * @var string
    */
   public $state;
 
   /**
-   * Execution message, if any
+   * Execution message, if any.
    *
    * @param string $message
    */
@@ -83,7 +83,7 @@ class RuleExecutionResult extends \Google\Model
     return $this->message;
   }
   /**
-   * Number of violations
+   * Number of violations.
    *
    * @param string $resultCount
    */
@@ -99,7 +99,7 @@ class RuleExecutionResult extends \Google\Model
     return $this->resultCount;
   }
   /**
-   * rule name
+   * Rule name as plain text like `sap-hana-configured`.
    *
    * @param string $rule
    */
@@ -115,7 +115,7 @@ class RuleExecutionResult extends \Google\Model
     return $this->rule;
   }
   /**
-   * Number of total scanned resources
+   * Number of total scanned resources.
    *
    * @param string $scannedResourceCount
    */
@@ -131,7 +131,7 @@ class RuleExecutionResult extends \Google\Model
     return $this->scannedResourceCount;
   }
   /**
-   * Output only. The execution status
+   * Output only. The execution status.
    *
    * Accepted values: STATE_UNSPECIFIED, STATE_SUCCESS, STATE_FAILURE,
    * STATE_SKIPPED

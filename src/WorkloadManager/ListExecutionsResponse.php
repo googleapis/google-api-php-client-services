@@ -36,7 +36,7 @@ class ListExecutionsResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * The list of Execution
+   * The list of Execution.
    *
    * @param Execution[] $executions
    */

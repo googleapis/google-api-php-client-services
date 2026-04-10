@@ -36,11 +36,11 @@ class ProjectsLocationsEvaluations extends \Google\Service\Resource
    * (evaluations.create)
    *
    * @param string $parent Required. The resource prefix of the evaluation
-   * location using the form: `projects/{project_id}/locations/{location_id}`
+   * location using the form: `projects/{project_id}/locations/{location_id}`.
    * @param Evaluation $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string evaluationId Required. Id of the requesting object
+   * @opt_param string evaluationId Required. Id of the requesting object.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -64,11 +64,11 @@ class ProjectsLocationsEvaluations extends \Google\Service\Resource
   /**
    * Deletes a single Evaluation. (evaluations.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool force Optional. Followed the best practice from
-   * https://aip.dev/135#cascading-delete
+   * https://aip.dev/135#cascading-delete.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -92,7 +92,7 @@ class ProjectsLocationsEvaluations extends \Google\Service\Resource
   /**
    * Gets details of a single Evaluation. (evaluations.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    * @return Evaluation
    * @throws \Google\Service\Exception
@@ -107,12 +107,12 @@ class ProjectsLocationsEvaluations extends \Google\Service\Resource
    * Lists Evaluations in a given project and location.
    * (evaluations.listProjectsLocationsEvaluations)
    *
-   * @param string $parent Required. Parent value for ListEvaluationsRequest
+   * @param string $parent Required. Parent value for ListEvaluationsRequest.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Filter to be applied when listing the evaluation
    * results.
-   * @opt_param string orderBy Hint for how to order the results
+   * @opt_param string orderBy Hint for how to order the results.
    * @opt_param int pageSize Requested page size. Server may return fewer items
    * than requested. If unspecified, server will pick an appropriate default.
    * @opt_param string pageToken A token identifying a page of results the server
@@ -129,8 +129,8 @@ class ProjectsLocationsEvaluations extends \Google\Service\Resource
   /**
    * Updates the parameters of a single Evaluation. (evaluations.patch)
    *
-   * @param string $name name of resource names have the form
-   * 'projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}'
+   * @param string $name Name of resource that has the form
+   * `projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}`.
    * @param Evaluation $postBody
    * @param array $optParams Optional parameters.
    *

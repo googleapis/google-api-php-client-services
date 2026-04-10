@@ -24,11 +24,11 @@ class Rule extends \Google\Collection
    */
   public const RULE_TYPE_RULE_TYPE_UNSPECIFIED = 'RULE_TYPE_UNSPECIFIED';
   /**
-   * Baseline rules
+   * Baseline rules.
    */
   public const RULE_TYPE_BASELINE = 'BASELINE';
   /**
-   * Custom rules
+   * Custom rules.
    */
   public const RULE_TYPE_CUSTOM = 'CUSTOM';
   protected $collection_key = 'tags';
@@ -40,43 +40,43 @@ class Rule extends \Google\Collection
    */
   public $assetType;
   /**
-   * descrite rule in plain language
+   * Describe rule in plain language.
    *
    * @var string
    */
   public $description;
   /**
-   * the name display in UI
+   * The name display in UI.
    *
    * @var string
    */
   public $displayName;
   /**
-   * the message template for rule
+   * The message template for rule.
    *
    * @var string
    */
   public $errorMessage;
   /**
-   * rule name
+   * Rule name.
    *
    * @var string
    */
   public $name;
   /**
-   * the primary category
+   * The primary category.
    *
    * @var string
    */
   public $primaryCategory;
   /**
-   * the remediation for the rule
+   * The remediation for the rule.
    *
    * @var string
    */
   public $remediation;
   /**
-   * Output only. the version of the rule
+   * Output only. The version of the rule.
    *
    * @var string
    */
@@ -88,25 +88,25 @@ class Rule extends \Google\Collection
    */
   public $ruleType;
   /**
-   * the secondary category
+   * The secondary category.
    *
    * @var string
    */
   public $secondaryCategory;
   /**
-   * the severity of the rule
+   * The severity of the rule.
    *
    * @var string
    */
   public $severity;
   /**
-   * List of user-defined tags
+   * List of user-defined tags.
    *
    * @var string[]
    */
   public $tags;
   /**
-   * the docuement url for the rule
+   * The document url for the rule.
    *
    * @var string
    */
@@ -130,7 +130,7 @@ class Rule extends \Google\Collection
     return $this->assetType;
   }
   /**
-   * descrite rule in plain language
+   * Describe rule in plain language.
    *
    * @param string $description
    */
@@ -146,7 +146,7 @@ class Rule extends \Google\Collection
     return $this->description;
   }
   /**
-   * the name display in UI
+   * The name display in UI.
    *
    * @param string $displayName
    */
@@ -162,7 +162,7 @@ class Rule extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * the message template for rule
+   * The message template for rule.
    *
    * @param string $errorMessage
    */
@@ -178,7 +178,7 @@ class Rule extends \Google\Collection
     return $this->errorMessage;
   }
   /**
-   * rule name
+   * Rule name.
    *
    * @param string $name
    */
@@ -194,7 +194,7 @@ class Rule extends \Google\Collection
     return $this->name;
   }
   /**
-   * the primary category
+   * The primary category.
    *
    * @param string $primaryCategory
    */
@@ -210,7 +210,7 @@ class Rule extends \Google\Collection
     return $this->primaryCategory;
   }
   /**
-   * the remediation for the rule
+   * The remediation for the rule.
    *
    * @param string $remediation
    */
@@ -226,7 +226,7 @@ class Rule extends \Google\Collection
     return $this->remediation;
   }
   /**
-   * Output only. the version of the rule
+   * Output only. The version of the rule.
    *
    * @param string $revisionId
    */
@@ -260,7 +260,7 @@ class Rule extends \Google\Collection
     return $this->ruleType;
   }
   /**
-   * the secondary category
+   * The secondary category.
    *
    * @param string $secondaryCategory
    */
@@ -276,7 +276,7 @@ class Rule extends \Google\Collection
     return $this->secondaryCategory;
   }
   /**
-   * the severity of the rule
+   * The severity of the rule.
    *
    * @param string $severity
    */
@@ -292,7 +292,7 @@ class Rule extends \Google\Collection
     return $this->severity;
   }
   /**
-   * List of user-defined tags
+   * List of user-defined tags.
    *
    * @param string[] $tags
    */
@@ -308,7 +308,7 @@ class Rule extends \Google\Collection
     return $this->tags;
   }
   /**
-   * the docuement url for the rule
+   * The document url for the rule.
    *
    * @param string $uri
    */

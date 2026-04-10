@@ -17,9 +17,11 @@
 
 namespace Google\Service\WorkloadManager;
 
-class ListScannedResourcesResponse extends \Google\Collection
+class ListActuationsResponse extends \Google\Collection
 {
-  protected $collection_key = 'scannedResources';
+  protected $collection_key = 'unreachable';
+  protected $actuationsType = Actuation::class;
+  protected $actuationsDataType = 'array';
   /**
    * A token, which can be sent as `page_token` to retrieve the next page. If
    * this field is omitted, there are no subsequent pages.
@@ -27,9 +29,29 @@ class ListScannedResourcesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  protected $scannedResourcesType = ScannedResource::class;
-  protected $scannedResourcesDataType = 'array';
+  /**
+   * Unordered list. Locations that could not be reached.
+   *
+   * @var string[]
+   */
+  public $unreachable;
 
+  /**
+   * The list of Actuation
+   *
+   * @param Actuation[] $actuations
+   */
+  public function setActuations($actuations)
+  {
+    $this->actuations = $actuations;
+  }
+  /**
+   * @return Actuation[]
+   */
+  public function getActuations()
+  {
+    return $this->actuations;
+  }
   /**
    * A token, which can be sent as `page_token` to retrieve the next page. If
    * this field is omitted, there are no subsequent pages.
@@ -48,22 +70,22 @@ class ListScannedResourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * All scanned resources in response.
+   * Unordered list. Locations that could not be reached.
    *
-   * @param ScannedResource[] $scannedResources
+   * @param string[] $unreachable
    */
-  public function setScannedResources($scannedResources)
+  public function setUnreachable($unreachable)
   {
-    $this->scannedResources = $scannedResources;
+    $this->unreachable = $unreachable;
   }
   /**
-   * @return ScannedResource[]
+   * @return string[]
    */
-  public function getScannedResources()
+  public function getUnreachable()
   {
-    return $this->scannedResources;
+    return $this->unreachable;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListScannedResourcesResponse::class, 'Google_Service_WorkloadManager_ListScannedResourcesResponse');
+class_alias(ListActuationsResponse::class, 'Google_Service_WorkloadManager_ListActuationsResponse');

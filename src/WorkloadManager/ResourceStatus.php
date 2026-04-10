@@ -17,7 +17,7 @@
 
 namespace Google\Service\WorkloadManager;
 
-class ResourceStatus extends \Google\Collection
+class ResourceStatus extends \Google\Model
 {
   /**
    * The state has not been populated in this message.
@@ -36,41 +36,15 @@ class ResourceStatus extends \Google\Collection
    * Resource has an active Delete operation.
    */
   public const STATE_DELETING = 'DELETING';
-  protected $collection_key = 'rulesNewerVersions';
   /**
-   * Historical: Used before 2023-05-22 the new version of rule id if exists
-   *
-   * @deprecated
-   * @var string[]
-   */
-  public $rulesNewerVersions;
-  /**
-   * State of the resource
+   * State of the Evaluation resource.
    *
    * @var string
    */
   public $state;
 
   /**
-   * Historical: Used before 2023-05-22 the new version of rule id if exists
-   *
-   * @deprecated
-   * @param string[] $rulesNewerVersions
-   */
-  public function setRulesNewerVersions($rulesNewerVersions)
-  {
-    $this->rulesNewerVersions = $rulesNewerVersions;
-  }
-  /**
-   * @deprecated
-   * @return string[]
-   */
-  public function getRulesNewerVersions()
-  {
-    return $this->rulesNewerVersions;
-  }
-  /**
-   * State of the resource
+   * State of the Evaluation resource.
    *
    * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
    *

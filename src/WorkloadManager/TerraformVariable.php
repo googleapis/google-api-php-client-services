@@ -17,32 +17,32 @@
 
 namespace Google\Service\WorkloadManager;
 
-class Notice extends \Google\Model
+class TerraformVariable extends \Google\Model
 {
   /**
-   * Output only. Message of the notice.
+   * Optional. Input variable value.
    *
-   * @var string
+   * @var array
    */
-  public $message;
+  public $inputValue;
 
   /**
-   * Output only. Message of the notice.
+   * Optional. Input variable value.
    *
-   * @param string $message
+   * @param array $inputValue
    */
-  public function setMessage($message)
+  public function setInputValue($inputValue)
   {
-    $this->message = $message;
+    $this->inputValue = $inputValue;
   }
   /**
-   * @return string
+   * @return array
    */
-  public function getMessage()
+  public function getInputValue()
   {
-    return $this->message;
+    return $this->inputValue;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Notice::class, 'Google_Service_WorkloadManager_Notice');
+class_alias(TerraformVariable::class, 'Google_Service_WorkloadManager_TerraformVariable');

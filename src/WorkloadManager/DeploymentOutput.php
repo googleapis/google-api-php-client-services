@@ -17,32 +17,54 @@
 
 namespace Google\Service\WorkloadManager;
 
-class Notice extends \Google\Model
+class DeploymentOutput extends \Google\Model
 {
   /**
-   * Output only. Message of the notice.
+   * name of the resource
    *
    * @var string
    */
-  public $message;
+  public $name;
+  /**
+   * type of the resource
+   *
+   * @var string
+   */
+  public $type;
 
   /**
-   * Output only. Message of the notice.
+   * name of the resource
    *
-   * @param string $message
+   * @param string $name
    */
-  public function setMessage($message)
+  public function setName($name)
   {
-    $this->message = $message;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getMessage()
+  public function getName()
   {
-    return $this->message;
+    return $this->name;
+  }
+  /**
+   * type of the resource
+   *
+   * @param string $type
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Notice::class, 'Google_Service_WorkloadManager_Notice');
+class_alias(DeploymentOutput::class, 'Google_Service_WorkloadManager_DeploymentOutput');

@@ -20,15 +20,15 @@ namespace Google\Service\WorkloadManager;
 class ExecutionResult extends \Google\Collection
 {
   /**
-   * Unknown state
+   * Unknown state.
    */
   public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**
-   * resource successfully passed the rule
+   * Resource successfully passed the rule.
    */
   public const TYPE_TYPE_PASSED = 'TYPE_PASSED';
   /**
-   * resource violated the rule
+   * Resource violated the rule.
    */
   public const TYPE_TYPE_VIOLATED = 'TYPE_VIOLATED';
   protected $collection_key = 'commands';
@@ -55,7 +55,7 @@ class ExecutionResult extends \Google\Collection
    */
   public $severity;
   /**
-   * Execution result type of the scanned resource
+   * Execution result type of the scanned resource.
    *
    * @var string
    */
@@ -150,7 +150,7 @@ class ExecutionResult extends \Google\Collection
     return $this->severity;
   }
   /**
-   * Execution result type of the scanned resource
+   * Execution result type of the scanned resource.
    *
    * Accepted values: TYPE_UNSPECIFIED, TYPE_PASSED, TYPE_VIOLATED
    *

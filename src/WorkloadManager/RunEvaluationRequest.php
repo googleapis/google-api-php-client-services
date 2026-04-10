@@ -22,8 +22,7 @@ class RunEvaluationRequest extends \Google\Model
   protected $executionType = Execution::class;
   protected $executionDataType = '';
   /**
-   * Required. Id of the requesting object If auto-generating Id server-side,
-   * remove this field and execution_id from the method_signature of Create RPC
+   * Required. ID of the execution which will be created.
    *
    * @var string
    */
@@ -46,7 +45,7 @@ class RunEvaluationRequest extends \Google\Model
   public $requestId;
 
   /**
-   * Required. The resource being created
+   * Required. The resource being created.
    *
    * @param Execution $execution
    */
@@ -62,8 +61,7 @@ class RunEvaluationRequest extends \Google\Model
     return $this->execution;
   }
   /**
-   * Required. Id of the requesting object If auto-generating Id server-side,
-   * remove this field and execution_id from the method_signature of Create RPC
+   * Required. ID of the execution which will be created.
    *
    * @param string $executionId
    */

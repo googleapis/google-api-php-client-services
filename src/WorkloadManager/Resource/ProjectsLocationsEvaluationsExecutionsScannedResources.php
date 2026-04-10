@@ -33,17 +33,17 @@ class ProjectsLocationsEvaluationsExecutionsScannedResources extends \Google\Ser
    * List all scanned resources for a single Execution.
    * (scannedResources.listProjectsLocationsEvaluationsExecutionsScannedResources)
    *
-   * @param string $parent Required. parent for ListScannedResourcesRequest
+   * @param string $parent Required. Parent for ListScannedResourcesRequest.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filtering results
+   * @opt_param string filter Filtering results.
    * @opt_param string orderBy Field to sort by. See
    * https://google.aip.dev/132#ordering for more details.
    * @opt_param int pageSize Requested page size. Server may return fewer items
    * than requested. If unspecified, server will pick an appropriate default.
    * @opt_param string pageToken A token identifying a page of results the server
    * should return.
-   * @opt_param string rule rule name
+   * @opt_param string rule Rule name.
    * @return ListScannedResourcesResponse
    * @throws \Google\Service\Exception
    */

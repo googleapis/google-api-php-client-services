@@ -20,60 +20,60 @@ namespace Google\Service\WorkloadManager;
 class Execution extends \Google\Collection
 {
   /**
-   * The original CG
+   * The original CG.
    */
   public const ENGINE_ENGINE_UNSPECIFIED = 'ENGINE_UNSPECIFIED';
   /**
-   * SlimCG / Scanner
+   * SlimCG / Scanner.
    */
   public const ENGINE_ENGINE_SCANNER = 'ENGINE_SCANNER';
   /**
-   * Evaluation Engine V2
+   * Evaluation Engine V2.
    */
   public const ENGINE_V2 = 'V2';
   /**
-   * type of execution is unspecified
+   * Type of execution is unspecified.
    */
   public const RUN_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**
-   * type of execution is one time
+   * Type of execution is one time.
    */
   public const RUN_TYPE_ONE_TIME = 'ONE_TIME';
   /**
-   * type of execution is scheduled
+   * Type of execution is scheduled.
    */
   public const RUN_TYPE_SCHEDULED = 'SCHEDULED';
   /**
-   * state of execution is unspecified
+   * State of execution is unspecified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * the execution is running in backend service
+   * The execution is running in backend service.
    */
   public const STATE_RUNNING = 'RUNNING';
   /**
-   * the execution run success
+   * The execution run succeeded.
    */
   public const STATE_SUCCEEDED = 'SUCCEEDED';
   /**
-   * the execution run failed
+   * The execution run failed.
    */
   public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'ruleResults';
   /**
-   * Output only. [Output only] End time stamp
+   * Output only. [Output only] End time stamp.
    *
    * @var string
    */
   public $endTime;
   /**
-   * Optional. Engine
+   * Optional. Engine.
    *
    * @var string
    */
   public $engine;
   /**
-   * Output only. [Output only] Evaluation ID
+   * Output only. [Output only] Evaluation ID.
    *
    * @var string
    */
@@ -81,20 +81,20 @@ class Execution extends \Google\Collection
   protected $externalDataSourcesType = ExternalDataSources::class;
   protected $externalDataSourcesDataType = 'array';
   /**
-   * Output only. [Output only] Inventory time stamp
+   * Output only. [Output only] Inventory time stamp.
    *
    * @var string
    */
   public $inventoryTime;
   /**
-   * Labels as key value pairs
+   * Labels as key value pairs.
    *
    * @var string[]
    */
   public $labels;
   /**
    * The name of execution resource. The format is projects/{project}/locations/
-   * {location}/evaluations/{evaluation}/executions/{execution}
+   * {location}/evaluations/{evaluation}/executions/{execution}.
    *
    * @var string
    */
@@ -106,27 +106,27 @@ class Execution extends \Google\Collection
   protected $ruleResultsType = RuleExecutionResult::class;
   protected $ruleResultsDataType = 'array';
   /**
-   * type represent whether the execution executed directly by user or scheduled
-   * according evaluation.schedule field.
+   * Type which represents whether the execution executed directly by user or
+   * scheduled according to the `Evaluation.schedule` field.
    *
    * @var string
    */
   public $runType;
   /**
-   * Output only. [Output only] Start time stamp
+   * Output only. [Output only] Start time stamp.
    *
    * @var string
    */
   public $startTime;
   /**
-   * Output only. [Output only] State
+   * Output only. [Output only] State.
    *
    * @var string
    */
   public $state;
 
   /**
-   * Output only. [Output only] End time stamp
+   * Output only. [Output only] End time stamp.
    *
    * @param string $endTime
    */
@@ -142,7 +142,7 @@ class Execution extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * Optional. Engine
+   * Optional. Engine.
    *
    * Accepted values: ENGINE_UNSPECIFIED, ENGINE_SCANNER, V2
    *
@@ -160,7 +160,7 @@ class Execution extends \Google\Collection
     return $this->engine;
   }
   /**
-   * Output only. [Output only] Evaluation ID
+   * Output only. [Output only] Evaluation ID.
    *
    * @param string $evaluationId
    */
@@ -176,7 +176,7 @@ class Execution extends \Google\Collection
     return $this->evaluationId;
   }
   /**
-   * Optional. External data sources
+   * Optional. External data sources.
    *
    * @param ExternalDataSources[] $externalDataSources
    */
@@ -192,7 +192,7 @@ class Execution extends \Google\Collection
     return $this->externalDataSources;
   }
   /**
-   * Output only. [Output only] Inventory time stamp
+   * Output only. [Output only] Inventory time stamp.
    *
    * @param string $inventoryTime
    */
@@ -208,7 +208,7 @@ class Execution extends \Google\Collection
     return $this->inventoryTime;
   }
   /**
-   * Labels as key value pairs
+   * Labels as key value pairs.
    *
    * @param string[] $labels
    */
@@ -225,7 +225,7 @@ class Execution extends \Google\Collection
   }
   /**
    * The name of execution resource. The format is projects/{project}/locations/
-   * {location}/evaluations/{evaluation}/executions/{execution}
+   * {location}/evaluations/{evaluation}/executions/{execution}.
    *
    * @param string $name
    */
@@ -241,7 +241,7 @@ class Execution extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. Additional information generated by the execution
+   * Output only. Additional information generated by the execution.
    *
    * @param Notice[] $notices
    */
@@ -257,7 +257,7 @@ class Execution extends \Google\Collection
     return $this->notices;
   }
   /**
-   * Output only. [Output only] Result summary for the execution
+   * Output only. [Output only] Result summary for the execution.
    *
    * @param Summary $resultSummary
    */
@@ -273,7 +273,7 @@ class Execution extends \Google\Collection
     return $this->resultSummary;
   }
   /**
-   * Output only. execution result summary per rule
+   * Output only. Execution result summary per rule.
    *
    * @param RuleExecutionResult[] $ruleResults
    */
@@ -289,8 +289,8 @@ class Execution extends \Google\Collection
     return $this->ruleResults;
   }
   /**
-   * type represent whether the execution executed directly by user or scheduled
-   * according evaluation.schedule field.
+   * Type which represents whether the execution executed directly by user or
+   * scheduled according to the `Evaluation.schedule` field.
    *
    * Accepted values: TYPE_UNSPECIFIED, ONE_TIME, SCHEDULED
    *
@@ -308,7 +308,7 @@ class Execution extends \Google\Collection
     return $this->runType;
   }
   /**
-   * Output only. [Output only] Start time stamp
+   * Output only. [Output only] Start time stamp.
    *
    * @param string $startTime
    */
@@ -324,7 +324,7 @@ class Execution extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * Output only. [Output only] State
+   * Output only. [Output only] State.
    *
    * Accepted values: STATE_UNSPECIFIED, RUNNING, SUCCEEDED, FAILED
    *

@@ -17,11 +17,11 @@
 
 namespace Google\Service\WorkloadManager;
 
-class ListEvaluationsResponse extends \Google\Collection
+class ListDeploymentsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  protected $evaluationsType = Evaluation::class;
-  protected $evaluationsDataType = 'array';
+  protected $deploymentsType = Deployment::class;
+  protected $deploymentsDataType = 'array';
   /**
    * A token identifying a page of results the server should return.
    *
@@ -29,27 +29,27 @@ class ListEvaluationsResponse extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * The list of evaluations.
+   * The list of Deployment
    *
-   * @param Evaluation[] $evaluations
+   * @param Deployment[] $deployments
    */
-  public function setEvaluations($evaluations)
+  public function setDeployments($deployments)
   {
-    $this->evaluations = $evaluations;
+    $this->deployments = $deployments;
   }
   /**
-   * @return Evaluation[]
+   * @return Deployment[]
    */
-  public function getEvaluations()
+  public function getDeployments()
   {
-    return $this->evaluations;
+    return $this->deployments;
   }
   /**
    * A token identifying a page of results the server should return.
@@ -68,7 +68,7 @@ class ListEvaluationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @param string[] $unreachable
    */
@@ -86,4 +86,4 @@ class ListEvaluationsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListEvaluationsResponse::class, 'Google_Service_WorkloadManager_ListEvaluationsResponse');
+class_alias(ListDeploymentsResponse::class, 'Google_Service_WorkloadManager_ListDeploymentsResponse');

@@ -20,11 +20,11 @@ namespace Google\Service\WorkloadManager;
 class ExternalDataSources extends \Google\Model
 {
   /**
-   * Unknown type
+   * Unknown type.
    */
   public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
   /**
-   * BigQuery table
+   * BigQuery table.
    */
   public const TYPE_BIG_QUERY_TABLE = 'BIG_QUERY_TABLE';
   /**
@@ -39,20 +39,20 @@ class ExternalDataSources extends \Google\Model
   public $assetType;
   /**
    * Optional. Name of external data source. The name will be used inside the
-   * rego/sql to refer the external data
+   * rego/sql to refer the external data.
    *
    * @var string
    */
   public $name;
   /**
-   * Required. Type of external data source
+   * Required. Type of external data source.
    *
    * @var string
    */
   public $type;
   /**
    * Required. URI of external data source. example of bq table
-   * {project_ID}.{dataset_ID}.{table_ID}
+   * {project_ID}.{dataset_ID}.{table_ID}.
    *
    * @var string
    */
@@ -80,7 +80,7 @@ class ExternalDataSources extends \Google\Model
   }
   /**
    * Optional. Name of external data source. The name will be used inside the
-   * rego/sql to refer the external data
+   * rego/sql to refer the external data.
    *
    * @param string $name
    */
@@ -96,7 +96,7 @@ class ExternalDataSources extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. Type of external data source
+   * Required. Type of external data source.
    *
    * Accepted values: TYPE_UNSPECIFIED, BIG_QUERY_TABLE
    *
@@ -115,7 +115,7 @@ class ExternalDataSources extends \Google\Model
   }
   /**
    * Required. URI of external data source. example of bq table
-   * {project_ID}.{dataset_ID}.{table_ID}
+   * {project_ID}.{dataset_ID}.{table_ID}.
    *
    * @param string $uri
    */

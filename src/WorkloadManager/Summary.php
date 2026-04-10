@@ -20,26 +20,26 @@ namespace Google\Service\WorkloadManager;
 class Summary extends \Google\Model
 {
   /**
-   * Output only. Number of failures
+   * Output only. Number of failures.
    *
    * @var string
    */
   public $failures;
   /**
-   * Output only. Number of new failures compared to the previous execution
+   * Output only. Number of new failures compared to the previous execution.
    *
    * @var string
    */
   public $newFailures;
   /**
-   * Output only. Number of new fixes compared to the previous execution
+   * Output only. Number of new fixes compared to the previous execution.
    *
    * @var string
    */
   public $newFixes;
 
   /**
-   * Output only. Number of failures
+   * Output only. Number of failures.
    *
    * @param string $failures
    */
@@ -55,7 +55,7 @@ class Summary extends \Google\Model
     return $this->failures;
   }
   /**
-   * Output only. Number of new failures compared to the previous execution
+   * Output only. Number of new failures compared to the previous execution.
    *
    * @param string $newFailures
    */
@@ -71,7 +71,7 @@ class Summary extends \Google\Model
     return $this->newFailures;
   }
   /**
-   * Output only. Number of new fixes compared to the previous execution
+   * Output only. Number of new fixes compared to the previous execution.
    *
    * @param string $newFixes
    */

@@ -20,13 +20,13 @@ namespace Google\Service\WorkloadManager;
 class ShellCommand extends \Google\Model
 {
   /**
-   * args is a string of arguments to be passed to the command.
+   * Arguments to be passed to the command.
    *
    * @var string
    */
   public $args;
   /**
-   * command is the name of the command to be executed.
+   * The name of the command to be executed.
    *
    * @var string
    */
@@ -39,7 +39,7 @@ class ShellCommand extends \Google\Model
   public $timeoutSeconds;
 
   /**
-   * args is a string of arguments to be passed to the command.
+   * Arguments to be passed to the command.
    *
    * @param string $args
    */
@@ -55,7 +55,7 @@ class ShellCommand extends \Google\Model
     return $this->args;
   }
   /**
-   * command is the name of the command to be executed.
+   * The name of the command to be executed.
    *
    * @param string $command
    */

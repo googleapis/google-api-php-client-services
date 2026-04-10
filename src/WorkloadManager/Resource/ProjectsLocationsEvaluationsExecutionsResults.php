@@ -34,10 +34,10 @@ class ProjectsLocationsEvaluationsExecutionsResults extends \Google\Service\Reso
    * (results.listProjectsLocationsEvaluationsExecutionsResults)
    *
    * @param string $parent Required. The execution results. Format:
-   * {parent}/evaluations/executions/results
+   * {parent}/evaluations/executions/results.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filtering results
+   * @opt_param string filter Filtering results.
    * @opt_param int pageSize Requested page size. Server may return fewer items
    * than requested. If unspecified, server will pick an appropriate default.
    * @opt_param string pageToken A token identifying a page of results the server

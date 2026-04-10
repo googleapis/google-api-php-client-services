@@ -35,7 +35,7 @@ class ProjectsLocationsEvaluationsExecutions extends \Google\Service\Resource
   /**
    * Deletes a single Execution. (executions.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. An optional request ID to identify
@@ -61,7 +61,7 @@ class ProjectsLocationsEvaluationsExecutions extends \Google\Service\Resource
   /**
    * Gets details of a single Execution. (executions.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    * @return Execution
    * @throws \Google\Service\Exception
@@ -77,10 +77,10 @@ class ProjectsLocationsEvaluationsExecutions extends \Google\Service\Resource
    * (executions.listProjectsLocationsEvaluationsExecutions)
    *
    * @param string $parent Required. The resource prefix of the Execution using
-   * the form: 'projects/{project}/locations/{location}/evaluations/{evaluation}'
+   * the form: `projects/{project}/locations/{location}/evaluations/{evaluation}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filtering results
+   * @opt_param string filter Filtering results.
    * @opt_param string orderBy Field to sort by. See
    * https://google.aip.dev/132#ordering for more details.
    * @opt_param int pageSize Requested page size. Server may return fewer items
@@ -99,9 +99,8 @@ class ProjectsLocationsEvaluationsExecutions extends \Google\Service\Resource
   /**
    * Creates a new Execution in a given project and location. (executions.run)
    *
-   * @param string $name Required. The resource name of the Execution using the
-   * form: 'projects/{project}/locations/{location}/evaluations/{evaluation}/execu
-   * tions/{execution}'
+   * @param string $name Required. The resource name of the Evaluation using the
+   * form: `projects/{project}/locations/{location}/evaluations/{evaluation}`.
    * @param RunEvaluationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
