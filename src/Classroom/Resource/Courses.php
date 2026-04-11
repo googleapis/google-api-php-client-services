@@ -133,11 +133,13 @@ class Courses extends \Google\Service\Resource
    * @opt_param string studentId Restricts returned courses to those having a
    * student with the specified identifier. The identifier can be one of the
    * following: * the numeric identifier for the user * the email address of the
-   * user * the string literal `"me"`, indicating the requesting user
+   * user * the string literal `"me"`, indicating the requesting user If
+   * specified, `teacher_id` must be empty.
    * @opt_param string teacherId Restricts returned courses to those having a
    * teacher with the specified identifier. The identifier can be one of the
    * following: * the numeric identifier for the user * the email address of the
-   * user * the string literal `"me"`, indicating the requesting user
+   * user * the string literal `"me"`, indicating the requesting user If
+   * specified, `student_id` must be empty.
    * @return ListCoursesResponse
    * @throws \Google\Service\Exception
    */
