@@ -36,6 +36,14 @@ class UnitVariable extends \Google\Model
    */
   public const TYPE_BOOL = 'BOOL';
   /**
+   * Variable type is struct.
+   */
+  public const TYPE_STRUCT = 'STRUCT';
+  /**
+   * Variable type is list.
+   */
+  public const TYPE_LIST = 'LIST';
+  /**
    * Optional. Immutable. Name of a supported variable type. Supported types are
    * string, int, bool.
    *
@@ -59,7 +67,7 @@ class UnitVariable extends \Google\Model
    * Optional. Immutable. Name of a supported variable type. Supported types are
    * string, int, bool.
    *
-   * Accepted values: TYPE_UNSPECIFIED, STRING, INT, BOOL
+   * Accepted values: TYPE_UNSPECIFIED, STRING, INT, BOOL, STRUCT, LIST
    *
    * @param self::TYPE_* $type
    */

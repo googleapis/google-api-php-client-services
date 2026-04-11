@@ -27,8 +27,8 @@ class ToMapping extends \Google\Model
    */
   public $dependency;
   /**
-   * Optional. Tells SaaS Runtime if this mapping should be used during lookup
-   * or not
+   * Optional. Tells App Lifecycle Manager if this mapping should be used during
+   * lookup or not
    *
    * @var bool
    */
@@ -58,8 +58,8 @@ class ToMapping extends \Google\Model
     return $this->dependency;
   }
   /**
-   * Optional. Tells SaaS Runtime if this mapping should be used during lookup
-   * or not
+   * Optional. Tells App Lifecycle Manager if this mapping should be used during
+   * lookup or not
    *
    * @param bool $ignoreForLookup
    */

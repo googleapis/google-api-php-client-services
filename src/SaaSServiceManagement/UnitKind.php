@@ -36,6 +36,13 @@ class UnitKind extends \Google\Collection
    */
   public $createTime;
   /**
+   * Optional. Default revisions of flags for this UnitKind. Newly created units
+   * will use the flag default_flag_revisions present at the time of creation.
+   *
+   * @var string[]
+   */
+  public $defaultFlagRevisions;
+  /**
    * Optional. A reference to the Release object to use as default for creating
    * new units of this UnitKind (optional). If not specified, a new unit must
    * explicitly reference which release to use for its creation.
@@ -74,8 +81,9 @@ class UnitKind extends \Google\Collection
   protected $outputVariableMappingsDataType = 'array';
   /**
    * Required. Immutable. A reference to the Saas that defines the product
-   * (managed service) that the producer wants to manage with SaaS Runtime. Part
-   * of the SaaS Runtime common data model. Immutable once set.
+   * (managed service) that the producer wants to manage with App Lifecycle
+   * Manager. Part of the App Lifecycle Manager common data model. Immutable
+   * once set.
    *
    * @var string
    */
@@ -133,6 +141,23 @@ class UnitKind extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Optional. Default revisions of flags for this UnitKind. Newly created units
+   * will use the flag default_flag_revisions present at the time of creation.
+   *
+   * @param string[] $defaultFlagRevisions
+   */
+  public function setDefaultFlagRevisions($defaultFlagRevisions)
+  {
+    $this->defaultFlagRevisions = $defaultFlagRevisions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDefaultFlagRevisions()
+  {
+    return $this->defaultFlagRevisions;
   }
   /**
    * Optional. A reference to the Release object to use as default for creating
@@ -260,8 +285,9 @@ class UnitKind extends \Google\Collection
   }
   /**
    * Required. Immutable. A reference to the Saas that defines the product
-   * (managed service) that the producer wants to manage with SaaS Runtime. Part
-   * of the SaaS Runtime common data model. Immutable once set.
+   * (managed service) that the producer wants to manage with App Lifecycle
+   * Manager. Part of the App Lifecycle Manager common data model. Immutable
+   * once set.
    *
    * @param string $saas
    */

@@ -103,6 +103,12 @@ class Unit extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * Optional. Output only. Flag revisions used by this Unit.
+   *
+   * @var string[]
+   */
+  public $flagRevisions;
   protected $inputVariablesType = UnitVariable::class;
   protected $inputVariablesDataType = 'array';
   /**
@@ -326,6 +332,22 @@ class Unit extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * Optional. Output only. Flag revisions used by this Unit.
+   *
+   * @param string[] $flagRevisions
+   */
+  public function setFlagRevisions($flagRevisions)
+  {
+    $this->flagRevisions = $flagRevisions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFlagRevisions()
+  {
+    return $this->flagRevisions;
   }
   /**
    * Optional. Output only. Indicates the current input variables deployed by

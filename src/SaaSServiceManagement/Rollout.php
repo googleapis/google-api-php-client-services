@@ -113,6 +113,15 @@ class Rollout extends \Google\Model
    */
   public $etag;
   /**
+   * Optional. Immutable. Name of the FlagRelease to be rolled out to the target
+   * Units. Release and FlagRelease are mutually exclusive. Note: `release`
+   * comment needs to be adjusted to mention that "Release and FlagRelease are
+   * mutually exclusive" when visibility restriction will be lifted.
+   *
+   * @var string
+   */
+  public $flagRelease;
+  /**
    * Optional. The labels on the resource, which can be used for categorization.
    * similar to Kubernetes resource labels.
    *
@@ -358,6 +367,25 @@ class Rollout extends \Google\Model
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * Optional. Immutable. Name of the FlagRelease to be rolled out to the target
+   * Units. Release and FlagRelease are mutually exclusive. Note: `release`
+   * comment needs to be adjusted to mention that "Release and FlagRelease are
+   * mutually exclusive" when visibility restriction will be lifted.
+   *
+   * @param string $flagRelease
+   */
+  public function setFlagRelease($flagRelease)
+  {
+    $this->flagRelease = $flagRelease;
+  }
+  /**
+   * @return string
+   */
+  public function getFlagRelease()
+  {
+    return $this->flagRelease;
   }
   /**
    * Optional. The labels on the resource, which can be used for categorization.
