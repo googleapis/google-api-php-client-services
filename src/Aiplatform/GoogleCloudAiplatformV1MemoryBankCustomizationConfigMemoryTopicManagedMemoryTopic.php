@@ -20,35 +20,37 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopicManagedMemoryTopic extends \Google\Model
 {
   /**
-   * Unspecified topic. This value should not be used.
+   * Represents an unspecified topic. This value should not be used.
    */
   public const MANAGED_TOPIC_ENUM_MANAGED_TOPIC_ENUM_UNSPECIFIED = 'MANAGED_TOPIC_ENUM_UNSPECIFIED';
   /**
-   * Significant personal information about the User like first names,
-   * relationships, hobbies, important dates.
+   * Represents significant personal information about the User like first
+   * names, relationships, hobbies, important dates.
    */
   public const MANAGED_TOPIC_ENUM_USER_PERSONAL_INFO = 'USER_PERSONAL_INFO';
   /**
-   * Stated or implied likes, dislikes, preferred styles, or patterns.
+   * Represents stated or implied likes, dislikes, preferred styles, or
+   * patterns.
    */
   public const MANAGED_TOPIC_ENUM_USER_PREFERENCES = 'USER_PREFERENCES';
   /**
-   * Important milestones or conclusions within the dialogue.
+   * Represents important milestones or conclusions within the dialogue.
    */
   public const MANAGED_TOPIC_ENUM_KEY_CONVERSATION_DETAILS = 'KEY_CONVERSATION_DETAILS';
   /**
-   * Information that the user explicitly requested to remember or forget.
+   * Represents information that the user explicitly requested to remember or
+   * forget.
    */
   public const MANAGED_TOPIC_ENUM_EXPLICIT_INSTRUCTIONS = 'EXPLICIT_INSTRUCTIONS';
   /**
-   * Required. The managed topic.
+   * Required. Represents the managed topic.
    *
    * @var string
    */
   public $managedTopicEnum;
 
   /**
-   * Required. The managed topic.
+   * Required. Represents the managed topic.
    *
    * Accepted values: MANAGED_TOPIC_ENUM_UNSPECIFIED, USER_PERSONAL_INFO,
    * USER_PREFERENCES, KEY_CONVERSATION_DETAILS, EXPLICIT_INSTRUCTIONS

@@ -140,9 +140,9 @@ class ProjectsLocationsReasoningEnginesMemories extends \Google\Service\Resource
   /**
    * Update a Memory. (memories.patch)
    *
-   * @param string $name Identifier. The resource name of the Memory. Format: `pro
-   * jects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memo
-   * ries/{memory}`
+   * @param string $name Identifier. Represents the resource name of the Memory.
+   * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_
+   * engine}/memories/{memory}`
    * @param GoogleCloudAiplatformV1Memory $postBody
    * @param array $optParams Optional parameters.
    *

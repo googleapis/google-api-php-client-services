@@ -19,8 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig extends \Google\Model
 {
+  protected $generationTriggerConfigType = GoogleCloudAiplatformV1MemoryGenerationTriggerConfig::class;
+  protected $generationTriggerConfigDataType = '';
   /**
-   * Required. The model used to generate memories. Format:
+   * Optional. The model used to generate memories. Format:
    * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    *
    * @var string
@@ -28,7 +30,24 @@ class GoogleCloudAiplatformV1ReasoningEngineContextSpecMemoryBankConfigGeneratio
   public $model;
 
   /**
-   * Required. The model used to generate memories. Format:
+   * Optional. Specifies the default trigger configuration for generating
+   * memories using `IngestEvents`.
+   *
+   * @param GoogleCloudAiplatformV1MemoryGenerationTriggerConfig $generationTriggerConfig
+   */
+  public function setGenerationTriggerConfig(GoogleCloudAiplatformV1MemoryGenerationTriggerConfig $generationTriggerConfig)
+  {
+    $this->generationTriggerConfig = $generationTriggerConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1MemoryGenerationTriggerConfig
+   */
+  public function getGenerationTriggerConfig()
+  {
+    return $this->generationTriggerConfig;
+  }
+  /**
+   * Optional. The model used to generate memories. Format:
    * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    *
    * @param string $model

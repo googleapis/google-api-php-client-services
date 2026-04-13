@@ -20,7 +20,7 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MemoryFilter extends \Google\Model
 {
   /**
-   * Unspecified operator. Defaults to EQUAL.
+   * Represents an unspecified operator. Defaults to EQUAL.
    */
   public const OP_OPERATOR_UNSPECIFIED = 'OPERATOR_UNSPECIFIED';
   /**
@@ -36,20 +36,21 @@ class GoogleCloudAiplatformV1MemoryFilter extends \Google\Model
    */
   public const OP_LESS_THAN = 'LESS_THAN';
   /**
-   * Key of the filter. For example, "author" would apply to `metadata` entries
-   * with the key "author".
+   * Represents the key of the filter. For example, "author" would apply to
+   * `metadata` entries with the key "author".
    *
    * @var string
    */
   public $key;
   /**
-   * If true, the filter will be negated.
+   * Indicates whether the filter will be negated.
    *
    * @var bool
    */
   public $negate;
   /**
-   * Operator to apply to the filter. If not set, then EQUAL will be used.
+   * Represents the operator to apply to the filter. If not set, then EQUAL will
+   * be used.
    *
    * @var string
    */
@@ -58,8 +59,8 @@ class GoogleCloudAiplatformV1MemoryFilter extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * Key of the filter. For example, "author" would apply to `metadata` entries
-   * with the key "author".
+   * Represents the key of the filter. For example, "author" would apply to
+   * `metadata` entries with the key "author".
    *
    * @param string $key
    */
@@ -75,7 +76,7 @@ class GoogleCloudAiplatformV1MemoryFilter extends \Google\Model
     return $this->key;
   }
   /**
-   * If true, the filter will be negated.
+   * Indicates whether the filter will be negated.
    *
    * @param bool $negate
    */
@@ -91,7 +92,8 @@ class GoogleCloudAiplatformV1MemoryFilter extends \Google\Model
     return $this->negate;
   }
   /**
-   * Operator to apply to the filter. If not set, then EQUAL will be used.
+   * Represents the operator to apply to the filter. If not set, then EQUAL will
+   * be used.
    *
    * Accepted values: OPERATOR_UNSPECIFIED, EQUAL, GREATER_THAN, LESS_THAN
    *
@@ -109,7 +111,7 @@ class GoogleCloudAiplatformV1MemoryFilter extends \Google\Model
     return $this->op;
   }
   /**
-   * Value to compare to.
+   * Represents the value to compare to.
    *
    * @param GoogleCloudAiplatformV1MemoryMetadataValue $value
    */

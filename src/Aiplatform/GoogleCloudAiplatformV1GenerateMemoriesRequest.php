@@ -17,7 +17,7 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GenerateMemoriesRequest extends \Google\Model
+class GoogleCloudAiplatformV1GenerateMemoriesRequest extends \Google\Collection
 {
   /**
    * Unspecified metadata merge strategy. If unspecified, the default behavior
@@ -39,6 +39,9 @@ class GoogleCloudAiplatformV1GenerateMemoriesRequest extends \Google\Model
    * for consolidation.
    */
   public const METADATA_MERGE_STRATEGY_REQUIRE_EXACT_MATCH = 'REQUIRE_EXACT_MATCH';
+  protected $collection_key = 'allowedTopics';
+  protected $allowedTopicsType = GoogleCloudAiplatformV1MemoryTopicId::class;
+  protected $allowedTopicsDataType = 'array';
   protected $directContentsSourceType = GoogleCloudAiplatformV1GenerateMemoriesRequestDirectContentsSource::class;
   protected $directContentsSourceDataType = '';
   protected $directMemoriesSourceType = GoogleCloudAiplatformV1GenerateMemoriesRequestDirectMemoriesSource::class;
@@ -100,6 +103,22 @@ class GoogleCloudAiplatformV1GenerateMemoriesRequest extends \Google\Model
   protected $vertexSessionSourceType = GoogleCloudAiplatformV1GenerateMemoriesRequestVertexSessionSource::class;
   protected $vertexSessionSourceDataType = '';
 
+  /**
+   * Optional. Restricts memory generation to a subset of memory topics.
+   *
+   * @param GoogleCloudAiplatformV1MemoryTopicId[] $allowedTopics
+   */
+  public function setAllowedTopics($allowedTopics)
+  {
+    $this->allowedTopics = $allowedTopics;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1MemoryTopicId[]
+   */
+  public function getAllowedTopics()
+  {
+    return $this->allowedTopics;
+  }
   /**
    * Defines a direct source of content as the source content from which to
    * generate memories.

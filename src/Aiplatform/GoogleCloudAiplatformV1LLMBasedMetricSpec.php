@@ -35,6 +35,8 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
   public $metricPromptTemplate;
   protected $predefinedRubricGenerationSpecType = GoogleCloudAiplatformV1PredefinedMetricSpec::class;
   protected $predefinedRubricGenerationSpecDataType = '';
+  protected $resultParserConfigType = GoogleCloudAiplatformV1EvaluationParserConfig::class;
+  protected $resultParserConfigDataType = '';
   protected $rubricGenerationSpecType = GoogleCloudAiplatformV1RubricGenerationSpec::class;
   protected $rubricGenerationSpecDataType = '';
   /**
@@ -114,6 +116,22 @@ class GoogleCloudAiplatformV1LLMBasedMetricSpec extends \Google\Model
   public function getPredefinedRubricGenerationSpec()
   {
     return $this->predefinedRubricGenerationSpec;
+  }
+  /**
+   * Optional. The parser config for the metric result.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationParserConfig $resultParserConfig
+   */
+  public function setResultParserConfig(GoogleCloudAiplatformV1EvaluationParserConfig $resultParserConfig)
+  {
+    $this->resultParserConfig = $resultParserConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationParserConfig
+   */
+  public function getResultParserConfig()
+  {
+    return $this->resultParserConfig;
   }
   /**
    * Dynamically generate rubrics using this specification.

@@ -23,10 +23,19 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
   protected $consolidationConfigType = GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig::class;
   protected $consolidationConfigDataType = '';
   /**
-   * Optional. If true, then the memories will be generated in the third person
-   * (i.e. "The user generates memories with Memory Bank."). By default, the
-   * memories will be generated in the first person (i.e. "I generate memories
-   * with Memory Bank.")
+   * Optional. Indicates whether natural language memory generation should be
+   * disabled for all requests. By default, natural language memory generation
+   * is enabled. Set this to `true` when you only want to generate structured
+   * memories.
+   *
+   * @var bool
+   */
+  public $disableNaturalLanguageMemories;
+  /**
+   * Optional. Indicates whether the memories will be generated in the third
+   * person (i.e. "The user generates memories with Memory Bank."). By default,
+   * the memories will be generated in the first person (i.e. "I generate
+   * memories with Memory Bank.")
    *
    * @var bool
    */
@@ -36,11 +45,11 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
   protected $memoryTopicsType = GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopic::class;
   protected $memoryTopicsDataType = 'array';
   /**
-   * Optional. The scope keys (i.e. 'user_id') for which to use this config. A
-   * request's scope must include all of the provided keys for the config to be
-   * used (order does not matter). If empty, then the config will be used for
-   * all requests that do not have a more specific config. Only one default
-   * config is allowed per Memory Bank.
+   * Optional. Represents the scope keys (i.e. 'user_id') for which to use this
+   * config. A request's scope must include all of the provided keys for the
+   * config to be used (order does not matter). If empty, then the config will
+   * be used for all requests that do not have a more specific config. Only one
+   * default config is allowed per Memory Bank.
    *
    * @var string[]
    */
@@ -64,10 +73,29 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
     return $this->consolidationConfig;
   }
   /**
-   * Optional. If true, then the memories will be generated in the third person
-   * (i.e. "The user generates memories with Memory Bank."). By default, the
-   * memories will be generated in the first person (i.e. "I generate memories
-   * with Memory Bank.")
+   * Optional. Indicates whether natural language memory generation should be
+   * disabled for all requests. By default, natural language memory generation
+   * is enabled. Set this to `true` when you only want to generate structured
+   * memories.
+   *
+   * @param bool $disableNaturalLanguageMemories
+   */
+  public function setDisableNaturalLanguageMemories($disableNaturalLanguageMemories)
+  {
+    $this->disableNaturalLanguageMemories = $disableNaturalLanguageMemories;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableNaturalLanguageMemories()
+  {
+    return $this->disableNaturalLanguageMemories;
+  }
+  /**
+   * Optional. Indicates whether the memories will be generated in the third
+   * person (i.e. "The user generates memories with Memory Bank."). By default,
+   * the memories will be generated in the first person (i.e. "I generate
+   * memories with Memory Bank.")
    *
    * @param bool $enableThirdPersonMemories
    */
@@ -83,7 +111,8 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
     return $this->enableThirdPersonMemories;
   }
   /**
-   * Optional. Examples of how to generate memories for a particular scope.
+   * Optional. Provides examples of how to generate memories for a particular
+   * scope.
    *
    * @param GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExample[] $generateMemoriesExamples
    */
@@ -99,9 +128,9 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
     return $this->generateMemoriesExamples;
   }
   /**
-   * Optional. Topics of information that should be extracted from conversations
-   * and stored as memories. If not set, then Memory Bank's default topics will
-   * be used.
+   * Optional. Represents topics of information that should be extracted from
+   * conversations and stored as memories. If not set, then Memory Bank's
+   * default topics will be used.
    *
    * @param GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopic[] $memoryTopics
    */
@@ -117,11 +146,11 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends \Google\Colle
     return $this->memoryTopics;
   }
   /**
-   * Optional. The scope keys (i.e. 'user_id') for which to use this config. A
-   * request's scope must include all of the provided keys for the config to be
-   * used (order does not matter). If empty, then the config will be used for
-   * all requests that do not have a more specific config. Only one default
-   * config is allowed per Memory Bank.
+   * Optional. Represents the scope keys (i.e. 'user_id') for which to use this
+   * config. A request's scope must include all of the provided keys for the
+   * config to be used (order does not matter). If empty, then the config will
+   * be used for all requests that do not have a more specific config. Only one
+   * default config is allowed per Memory Bank.
    *
    * @param string[] $scopeKeys
    */

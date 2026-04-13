@@ -20,33 +20,33 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MemoryMetadataValue extends \Google\Model
 {
   /**
-   * Boolean value.
+   * Represents a boolean value.
    *
    * @var bool
    */
   public $boolValue;
   /**
-   * Double value.
+   * Represents a double value.
    *
    * @var 
    */
   public $doubleValue;
   /**
-   * String value.
+   * Represents a string value.
    *
    * @var string
    */
   public $stringValue;
   /**
-   * Timestamp value. When filtering on timestamp values, only the seconds field
-   * will be compared.
+   * Represents a timestamp value. When filtering on timestamp values, only the
+   * seconds field will be compared.
    *
    * @var string
    */
   public $timestampValue;
 
   /**
-   * Boolean value.
+   * Represents a boolean value.
    *
    * @param bool $boolValue
    */
@@ -70,7 +70,7 @@ class GoogleCloudAiplatformV1MemoryMetadataValue extends \Google\Model
     return $this->doubleValue;
   }
   /**
-   * String value.
+   * Represents a string value.
    *
    * @param string $stringValue
    */
@@ -86,8 +86,8 @@ class GoogleCloudAiplatformV1MemoryMetadataValue extends \Google\Model
     return $this->stringValue;
   }
   /**
-   * Timestamp value. When filtering on timestamp values, only the seconds field
-   * will be compared.
+   * Represents a timestamp value. When filtering on timestamp values, only the
+   * seconds field will be compared.
    *
    * @param string $timestampValue
    */

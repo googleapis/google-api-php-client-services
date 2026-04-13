@@ -17,29 +17,32 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1MemoryConjunctionFilter extends \Google\Collection
+class GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig extends \Google\Model
 {
-  protected $collection_key = 'filters';
-  protected $filtersType = GoogleCloudAiplatformV1MemoryFilter::class;
-  protected $filtersDataType = 'array';
+  /**
+   * Optional. The target number of pre-warmed instances to maintain.
+   *
+   * @var int
+   */
+  public $targetInstanceCount;
 
   /**
-   * Represents filters that will be combined using AND logic.
+   * Optional. The target number of pre-warmed instances to maintain.
    *
-   * @param GoogleCloudAiplatformV1MemoryFilter[] $filters
+   * @param int $targetInstanceCount
    */
-  public function setFilters($filters)
+  public function setTargetInstanceCount($targetInstanceCount)
   {
-    $this->filters = $filters;
+    $this->targetInstanceCount = $targetInstanceCount;
   }
   /**
-   * @return GoogleCloudAiplatformV1MemoryFilter[]
+   * @return int
    */
-  public function getFilters()
+  public function getTargetInstanceCount()
   {
-    return $this->filters;
+    return $this->targetInstanceCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1MemoryConjunctionFilter::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1MemoryConjunctionFilter');
+class_alias(GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig');

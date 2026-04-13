@@ -19,7 +19,7 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1RetrieveMemoriesRequest extends \Google\Collection
 {
-  protected $collection_key = 'filterGroups';
+  protected $collection_key = 'memoryTypes';
   /**
    * Optional. The standard list filter that will be applied to the retrieved
    * memories. More detail in [AIP-160](https://google.aip.dev/160). Supported
@@ -32,6 +32,15 @@ class GoogleCloudAiplatformV1RetrieveMemoriesRequest extends \Google\Collection
   public $filter;
   protected $filterGroupsType = GoogleCloudAiplatformV1MemoryConjunctionFilter::class;
   protected $filterGroupsDataType = 'array';
+  /**
+   * Optional. Specifies the types of memories to retrieve. If this field is
+   * empty or not provided, the request will default to retrieving only memories
+   * of type `NATURAL_LANGUAGE_COLLECTION`. If populated, the request will
+   * retrieve memories matching any of the specified `MemoryType` values.
+   *
+   * @var string[]
+   */
+  public $memoryTypes;
   /**
    * Required. The scope of the memories to retrieve. A memory must have exactly
    * the same scope (`Memory.scope`) as the scope provided here to be retrieved
@@ -87,6 +96,25 @@ class GoogleCloudAiplatformV1RetrieveMemoriesRequest extends \Google\Collection
   public function getFilterGroups()
   {
     return $this->filterGroups;
+  }
+  /**
+   * Optional. Specifies the types of memories to retrieve. If this field is
+   * empty or not provided, the request will default to retrieving only memories
+   * of type `NATURAL_LANGUAGE_COLLECTION`. If populated, the request will
+   * retrieve memories matching any of the specified `MemoryType` values.
+   *
+   * @param string[] $memoryTypes
+   */
+  public function setMemoryTypes($memoryTypes)
+  {
+    $this->memoryTypes = $memoryTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getMemoryTypes()
+  {
+    return $this->memoryTypes;
   }
   /**
    * Required. The scope of the memories to retrieve. A memory must have exactly

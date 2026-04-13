@@ -37,6 +37,13 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
    * @var string
    */
   public $model;
+  /**
+   * Optional. The parallelism of the evaluation run for the inference step. If
+   * not specified, the default parallelism will be used.
+   *
+   * @var int
+   */
+  public $parallelism;
 
   /**
    * Optional. Agent run config.
@@ -93,6 +100,23 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
   public function getModel()
   {
     return $this->model;
+  }
+  /**
+   * Optional. The parallelism of the evaluation run for the inference step. If
+   * not specified, the default parallelism will be used.
+   *
+   * @param int $parallelism
+   */
+  public function setParallelism($parallelism)
+  {
+    $this->parallelism = $parallelism;
+  }
+  /**
+   * @return int
+   */
+  public function getParallelism()
+  {
+    return $this->parallelism;
   }
 }
 

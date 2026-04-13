@@ -20,14 +20,44 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1IntermediateExtractedMemory extends \Google\Model
 {
   /**
-   * Output only. The fact of the extracted memory.
+   * Output only. Represents the explanation of why the information was
+   * extracted from the source content.
+   *
+   * @var string
+   */
+  public $context;
+  /**
+   * Output only. Represents the fact of the extracted memory.
    *
    * @var string
    */
   public $fact;
+  /**
+   * Output only. Represents the structured value of the extracted memory.
+   *
+   * @var array[]
+   */
+  public $structuredData;
 
   /**
-   * Output only. The fact of the extracted memory.
+   * Output only. Represents the explanation of why the information was
+   * extracted from the source content.
+   *
+   * @param string $context
+   */
+  public function setContext($context)
+  {
+    $this->context = $context;
+  }
+  /**
+   * @return string
+   */
+  public function getContext()
+  {
+    return $this->context;
+  }
+  /**
+   * Output only. Represents the fact of the extracted memory.
    *
    * @param string $fact
    */
@@ -41,6 +71,22 @@ class GoogleCloudAiplatformV1IntermediateExtractedMemory extends \Google\Model
   public function getFact()
   {
     return $this->fact;
+  }
+  /**
+   * Output only. Represents the structured value of the extracted memory.
+   *
+   * @param array[] $structuredData
+   */
+  public function setStructuredData($structuredData)
+  {
+    $this->structuredData = $structuredData;
+  }
+  /**
+   * @return array[]
+   */
+  public function getStructuredData()
+  {
+    return $this->structuredData;
   }
 }
 

@@ -21,6 +21,7 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExecuteSandboxEnvironmentRe
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExecuteSandboxEnvironmentResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListSandboxEnvironmentsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1SandboxEnvironment;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1SandboxEnvironmentSnapshot;
 use Google\Service\Aiplatform\GoogleLongrunningOperation;
 
 /**
@@ -125,6 +126,24 @@ class ReasoningEnginesSandboxEnvironments extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudAiplatformV1ListSandboxEnvironmentsResponse::class);
+  }
+  /**
+   * Snapshots the specific SandboxEnvironment resource and creates a
+   * SandboxEnvironmentSnapshot resource. (sandboxEnvironments.snapshot)
+   *
+   * @param string $name Required. The resource name of the sandbox environment to
+   * snapshot. Format: `projects/{project}/locations/{location}/reasoningEngines/{
+   * reasoning_engine}/sandboxEnvironments/{sandbox_environment}`.
+   * @param GoogleCloudAiplatformV1SandboxEnvironmentSnapshot $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function snapshot($name, GoogleCloudAiplatformV1SandboxEnvironmentSnapshot $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('snapshot', [$params], GoogleLongrunningOperation::class);
   }
 }
 

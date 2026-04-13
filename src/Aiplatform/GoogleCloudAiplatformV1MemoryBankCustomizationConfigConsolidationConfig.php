@@ -20,18 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig extends \Google\Model
 {
   /**
-   * Optional. The maximum number of revisions to consider for each candidate
-   * memory. If not set, then the default value (1) will be used, which means
-   * that only the latest revision will be considered.
+   * Optional. Represents the maximum number of revisions to consider for each
+   * candidate memory. If not set, then the default value (1) will be used,
+   * which means that only the latest revision will be considered.
    *
    * @var int
    */
   public $revisionsPerCandidateCount;
 
   /**
-   * Optional. The maximum number of revisions to consider for each candidate
-   * memory. If not set, then the default value (1) will be used, which means
-   * that only the latest revision will be considered.
+   * Optional. Represents the maximum number of revisions to consider for each
+   * candidate memory. If not set, then the default value (1) will be used,
+   * which means that only the latest revision will be considered.
    *
    * @param int $revisionsPerCandidateCount
    */

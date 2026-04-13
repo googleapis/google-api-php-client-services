@@ -20,22 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopicCustomMemoryTopic extends \Google\Model
 {
   /**
-   * Required. Description of the memory topic. This should explain what
-   * information should be extracted for this topic.
+   * Required. Represents the description of the memory topic. This should
+   * explain what information should be extracted for this topic.
    *
    * @var string
    */
   public $description;
   /**
-   * Required. The label of the topic.
+   * Required. Represents the label of the topic.
    *
    * @var string
    */
   public $label;
 
   /**
-   * Required. Description of the memory topic. This should explain what
-   * information should be extracted for this topic.
+   * Required. Represents the description of the memory topic. This should
+   * explain what information should be extracted for this topic.
    *
    * @param string $description
    */
@@ -51,7 +51,7 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopicCustomMemor
     return $this->description;
   }
   /**
-   * Required. The label of the topic.
+   * Required. Represents the label of the topic.
    *
    * @param string $label
    */

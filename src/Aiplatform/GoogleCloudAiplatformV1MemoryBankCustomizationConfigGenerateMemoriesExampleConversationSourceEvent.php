@@ -23,7 +23,7 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampl
   protected $contentDataType = '';
 
   /**
-   * Required. The content of the event.
+   * Required. Represents the content of the event.
    *
    * @param GoogleCloudAiplatformV1Content $content
    */

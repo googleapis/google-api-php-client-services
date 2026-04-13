@@ -42,9 +42,9 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampl
     return $this->conversationSource;
   }
   /**
-   * Optional. The memories that are expected to be generated from the input
-   * conversation. An empty list indicates that no memories are expected to be
-   * generated for the input conversation.
+   * Optional. Represents the memories that are expected to be generated from
+   * the input conversation. An empty list indicates that no memories are
+   * expected to be generated for the input conversation.
    *
    * @param GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory[] $generatedMemories
    */

@@ -32,6 +32,12 @@ class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo extends \Google\Mo
    */
   public $loadBalancerIp;
   /**
+   * Output only. The hostname of the SandboxEnvironment.
+   *
+   * @var string
+   */
+  public $sandboxHostname;
+  /**
    * Output only. The internal IP address of the SandboxEnvironment.
    *
    * @var string
@@ -69,6 +75,22 @@ class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo extends \Google\Mo
   public function getLoadBalancerIp()
   {
     return $this->loadBalancerIp;
+  }
+  /**
+   * Output only. The hostname of the SandboxEnvironment.
+   *
+   * @param string $sandboxHostname
+   */
+  public function setSandboxHostname($sandboxHostname)
+  {
+    $this->sandboxHostname = $sandboxHostname;
+  }
+  /**
+   * @return string
+   */
+  public function getSandboxHostname()
+  {
+    return $this->sandboxHostname;
   }
   /**
    * Output only. The internal IP address of the SandboxEnvironment.

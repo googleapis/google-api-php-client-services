@@ -24,7 +24,7 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampl
   protected $eventsDataType = 'array';
 
   /**
-   * Optional. The input conversation events for the example.
+   * Optional. Represents the input conversation events for the example.
    *
    * @param GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampleConversationSourceEvent[] $events
    */

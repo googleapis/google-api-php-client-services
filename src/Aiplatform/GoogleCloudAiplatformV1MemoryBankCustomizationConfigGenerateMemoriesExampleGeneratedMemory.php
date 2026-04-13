@@ -21,7 +21,7 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampl
 {
   protected $collection_key = 'topics';
   /**
-   * Required. The fact to generate a memory from.
+   * Required. Represents the fact to generate a memory from.
    *
    * @var string
    */
@@ -30,7 +30,7 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampl
   protected $topicsDataType = 'array';
 
   /**
-   * Required. The fact to generate a memory from.
+   * Required. Represents the fact to generate a memory from.
    *
    * @param string $fact
    */
@@ -46,9 +46,10 @@ class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampl
     return $this->fact;
   }
   /**
-   * Optional. The list of topics that the memory should be associated with. For
-   * example, use `custom_memory_topic_label = "jargon"` if the extracted memory
-   * is an example of memory extraction for the custom topic `jargon`.
+   * Optional. Represents the list of topics that the memory should be
+   * associated with. For example, use `custom_memory_topic_label = "jargon"` if
+   * the extracted memory is an example of memory extraction for the custom
+   * topic `jargon`.
    *
    * @param GoogleCloudAiplatformV1MemoryTopicId[] $topics
    */

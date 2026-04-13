@@ -21,13 +21,15 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
 {
   protected $collection_key = 'extractedMemories';
   /**
-   * Output only. Timestamp when this Memory Revision was created.
+   * Output only. Represents the timestamp when this Memory Revision was
+   * created.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Output only. Timestamp of when this resource is considered expired.
+   * Output only. Represents the timestamp of when this resource is considered
+   * expired.
    *
    * @var string
    */
@@ -35,31 +37,39 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
   protected $extractedMemoriesType = GoogleCloudAiplatformV1IntermediateExtractedMemory::class;
   protected $extractedMemoriesDataType = 'array';
   /**
-   * Output only. The fact of the Memory Revision. This corresponds to the
-   * `fact` field of the parent Memory at the time of revision creation.
+   * Output only. Represents the fact of the Memory Revision. This corresponds
+   * to the `fact` field of the parent Memory at the time of revision creation.
    *
    * @var string
    */
   public $fact;
   /**
-   * Output only. The labels of the Memory Revision. These labels are applied to
-   * the MemoryRevision when it is created based on
+   * Output only. Represents the labels of the Memory Revision. These labels are
+   * applied to the MemoryRevision when it is created based on
    * `GenerateMemoriesRequest.revision_labels`.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Identifier. The resource name of the Memory Revision. Format: `projects/{pr
-   * oject}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{m
-   * emory}/revisions/{memory_revision}`
+   * Identifier. Represents the resource name of the Memory Revision. Format: `p
+   * rojects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/
+   * memories/{memory}/revisions/{memory_revision}`
    *
    * @var string
    */
   public $name;
+  /**
+   * Output only. Represents the structured value of the memory at the time of
+   * revision creation.
+   *
+   * @var array[]
+   */
+  public $structuredData;
 
   /**
-   * Output only. Timestamp when this Memory Revision was created.
+   * Output only. Represents the timestamp when this Memory Revision was
+   * created.
    *
    * @param string $createTime
    */
@@ -75,7 +85,8 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Output only. Timestamp of when this resource is considered expired.
+   * Output only. Represents the timestamp of when this resource is considered
+   * expired.
    *
    * @param string $expireTime
    */
@@ -91,8 +102,8 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * Output only. The extracted memories from the source content before
-   * consolidation when the memory was updated via GenerateMemories. This
+   * Output only. Represents the extracted memories from the source content
+   * before consolidation when the memory was updated via GenerateMemories. This
    * information was used to modify an existing Memory via Consolidation.
    *
    * @param GoogleCloudAiplatformV1IntermediateExtractedMemory[] $extractedMemories
@@ -109,8 +120,8 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
     return $this->extractedMemories;
   }
   /**
-   * Output only. The fact of the Memory Revision. This corresponds to the
-   * `fact` field of the parent Memory at the time of revision creation.
+   * Output only. Represents the fact of the Memory Revision. This corresponds
+   * to the `fact` field of the parent Memory at the time of revision creation.
    *
    * @param string $fact
    */
@@ -126,8 +137,8 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
     return $this->fact;
   }
   /**
-   * Output only. The labels of the Memory Revision. These labels are applied to
-   * the MemoryRevision when it is created based on
+   * Output only. Represents the labels of the Memory Revision. These labels are
+   * applied to the MemoryRevision when it is created based on
    * `GenerateMemoriesRequest.revision_labels`.
    *
    * @param string[] $labels
@@ -144,9 +155,9 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Identifier. The resource name of the Memory Revision. Format: `projects/{pr
-   * oject}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{m
-   * emory}/revisions/{memory_revision}`
+   * Identifier. Represents the resource name of the Memory Revision. Format: `p
+   * rojects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/
+   * memories/{memory}/revisions/{memory_revision}`
    *
    * @param string $name
    */
@@ -160,6 +171,23 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Represents the structured value of the memory at the time of
+   * revision creation.
+   *
+   * @param array[] $structuredData
+   */
+  public function setStructuredData($structuredData)
+  {
+    $this->structuredData = $structuredData;
+  }
+  /**
+   * @return array[]
+   */
+  public function getStructuredData()
+  {
+    return $this->structuredData;
   }
 }
 
