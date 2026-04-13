@@ -25,6 +25,13 @@ class ConversationLoggingSettings extends \Google\Model
    * @var bool
    */
   public $disableConversationLogging;
+  /**
+   * Optional. Controls the retention window for the conversation. If not set,
+   * the conversation will be retained for 365 days.
+   *
+   * @var string
+   */
+  public $retentionWindow;
 
   /**
    * Optional. Whether to disable conversation logging for the sessions.
@@ -41,6 +48,23 @@ class ConversationLoggingSettings extends \Google\Model
   public function getDisableConversationLogging()
   {
     return $this->disableConversationLogging;
+  }
+  /**
+   * Optional. Controls the retention window for the conversation. If not set,
+   * the conversation will be retained for 365 days.
+   *
+   * @param string $retentionWindow
+   */
+  public function setRetentionWindow($retentionWindow)
+  {
+    $this->retentionWindow = $retentionWindow;
+  }
+  /**
+   * @return string
+   */
+  public function getRetentionWindow()
+  {
+    return $this->retentionWindow;
   }
 }
 

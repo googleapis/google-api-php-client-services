@@ -20,6 +20,13 @@ namespace Google\Service\CustomerEngagementSuite;
 class AgentTool extends \Google\Model
 {
   /**
+   * Optional. The resource name of the agent that is the entry point of the
+   * tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
+   *
+   * @var string
+   */
+  public $agent;
+  /**
    * Optional. Description of the tool's purpose.
    *
    * @var string
@@ -32,13 +39,32 @@ class AgentTool extends \Google\Model
    */
   public $name;
   /**
-   * Optional. The resource name of the root agent that is the entry point of
-   * the tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
+   * Optional. Deprecated: Use `agent` instead. The resource name of the root
+   * agent that is the entry point of the tool. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
    *
+   * @deprecated
    * @var string
    */
   public $rootAgent;
 
+  /**
+   * Optional. The resource name of the agent that is the entry point of the
+   * tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
+   *
+   * @param string $agent
+   */
+  public function setAgent($agent)
+  {
+    $this->agent = $agent;
+  }
+  /**
+   * @return string
+   */
+  public function getAgent()
+  {
+    return $this->agent;
+  }
   /**
    * Optional. Description of the tool's purpose.
    *
@@ -72,9 +98,11 @@ class AgentTool extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. The resource name of the root agent that is the entry point of
-   * the tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
+   * Optional. Deprecated: Use `agent` instead. The resource name of the root
+   * agent that is the entry point of the tool. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
    *
+   * @deprecated
    * @param string $rootAgent
    */
   public function setRootAgent($rootAgent)
@@ -82,6 +110,7 @@ class AgentTool extends \Google\Model
     $this->rootAgent = $rootAgent;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getRootAgent()

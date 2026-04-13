@@ -54,6 +54,11 @@ class Conversation extends \Google\Collection
    * The conversation is from the evaluation.
    */
   public const SOURCE_EVAL = 'EVAL';
+  /**
+   * The conversation is from an agent tool. Agent tool runs the agent in a
+   * separate session, which is persisted for testing and debugging purposes.
+   */
+  public const SOURCE_AGENT_TOOL = 'AGENT_TOOL';
   protected $collection_key = 'turns';
   /**
    * Output only. The version of the app used for processing the conversation.
@@ -294,7 +299,7 @@ class Conversation extends \Google\Collection
   /**
    * Output only. Indicate the source of the conversation.
    *
-   * Accepted values: SOURCE_UNSPECIFIED, LIVE, SIMULATOR, EVAL
+   * Accepted values: SOURCE_UNSPECIFIED, LIVE, SIMULATOR, EVAL, AGENT_TOOL
    *
    * @param self::SOURCE_* $source
    */

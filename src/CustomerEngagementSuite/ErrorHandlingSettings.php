@@ -37,13 +37,34 @@ class ErrorHandlingSettings extends \Google\Model
    * errors).
    */
   public const ERROR_HANDLING_STRATEGY_END_SESSION = 'END_SESSION';
+  protected $endSessionConfigType = ErrorHandlingSettingsEndSessionConfig::class;
+  protected $endSessionConfigDataType = '';
   /**
    * Optional. The strategy to use for error handling.
    *
    * @var string
    */
   public $errorHandlingStrategy;
+  protected $fallbackResponseConfigType = ErrorHandlingSettingsFallbackResponseConfig::class;
+  protected $fallbackResponseConfigDataType = '';
 
+  /**
+   * Optional. Configuration for ending the session in case of system errors
+   * (e.g. LLM errors).
+   *
+   * @param ErrorHandlingSettingsEndSessionConfig $endSessionConfig
+   */
+  public function setEndSessionConfig(ErrorHandlingSettingsEndSessionConfig $endSessionConfig)
+  {
+    $this->endSessionConfig = $endSessionConfig;
+  }
+  /**
+   * @return ErrorHandlingSettingsEndSessionConfig
+   */
+  public function getEndSessionConfig()
+  {
+    return $this->endSessionConfig;
+  }
   /**
    * Optional. The strategy to use for error handling.
    *
@@ -62,6 +83,22 @@ class ErrorHandlingSettings extends \Google\Model
   public function getErrorHandlingStrategy()
   {
     return $this->errorHandlingStrategy;
+  }
+  /**
+   * Optional. Configuration for handling fallback responses.
+   *
+   * @param ErrorHandlingSettingsFallbackResponseConfig $fallbackResponseConfig
+   */
+  public function setFallbackResponseConfig(ErrorHandlingSettingsFallbackResponseConfig $fallbackResponseConfig)
+  {
+    $this->fallbackResponseConfig = $fallbackResponseConfig;
+  }
+  /**
+   * @return ErrorHandlingSettingsFallbackResponseConfig
+   */
+  public function getFallbackResponseConfig()
+  {
+    return $this->fallbackResponseConfig;
   }
 }
 
