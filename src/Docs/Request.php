@@ -57,6 +57,8 @@ class Request extends \Google\Model
   protected $insertPageBreakDataType = '';
   protected $insertPersonType = InsertPersonRequest::class;
   protected $insertPersonDataType = '';
+  protected $insertRichLinkType = InsertRichLinkRequest::class;
+  protected $insertRichLinkDataType = '';
   protected $insertSectionBreakType = InsertSectionBreakRequest::class;
   protected $insertSectionBreakDataType = '';
   protected $insertTableType = InsertTableRequest::class;
@@ -399,6 +401,22 @@ class Request extends \Google\Model
   public function getInsertPerson()
   {
     return $this->insertPerson;
+  }
+  /**
+   * Insert a rich link.
+   *
+   * @param InsertRichLinkRequest $insertRichLink
+   */
+  public function setInsertRichLink(InsertRichLinkRequest $insertRichLink)
+  {
+    $this->insertRichLink = $insertRichLink;
+  }
+  /**
+   * @return InsertRichLinkRequest
+   */
+  public function getInsertRichLink()
+  {
+    return $this->insertRichLink;
   }
   /**
    * Inserts a section break at the specified location.
