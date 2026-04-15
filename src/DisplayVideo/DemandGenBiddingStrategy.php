@@ -59,6 +59,10 @@ class DemandGenBiddingStrategy extends \Google\Model
    */
   public const TYPE_DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CLICKS = 'DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CLICKS';
   /**
+   * A bidding strategy that automatically optimizes cost per click.
+   */
+  public const TYPE_DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC = 'DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC';
+  /**
    * Output only. The value effectively used by the bidding strategy. This field
    * will be the same as value if set. If value is not set and the strategy is
    * assigned to an ad group, this field will be inherited from the line item's
@@ -147,7 +151,8 @@ class DemandGenBiddingStrategy extends \Google\Model
    * DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS,
    * DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSIONS,
    * DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSION_VALUE,
-   * DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CLICKS
+   * DEMAND_GEN_BIDDING_STRATEGY_TYPE_MAXIMIZE_CLICKS,
+   * DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC
    *
    * @param self::TYPE_* $type
    */
