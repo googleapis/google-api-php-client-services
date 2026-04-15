@@ -275,7 +275,7 @@ class Location extends \Google\Collection
   /**
    * Optional. Describes your business in your own voice and shares with users
    * the unique story of your business and offerings. This field is required for
-   * all categories except lodging categories (e.g. hotels, motels, inns).
+   * all categories except lodging categories (e.g., hotels, motels, inns).
    *
    * @param Profile $profile
    */

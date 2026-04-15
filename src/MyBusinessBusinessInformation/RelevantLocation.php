@@ -32,7 +32,7 @@ class RelevantLocation extends \Google\Model
   public const RELATION_TYPE_DEPARTMENT_OF = 'DEPARTMENT_OF';
   /**
    * This represents the cases where 2 locations are co-located in the same
-   * physical location, but from different companies (e.g. Starbucks in a
+   * physical location, but from different companies (e.g., Starbucks in a
    * Safeway, shops in a mall).
    */
   public const RELATION_TYPE_INDEPENDENT_ESTABLISHMENT_IN = 'INDEPENDENT_ESTABLISHMENT_IN';
