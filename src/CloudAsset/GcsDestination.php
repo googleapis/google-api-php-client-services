@@ -21,10 +21,10 @@ class GcsDestination extends \Google\Model
 {
   /**
    * The URI of the Cloud Storage object. It's the same URI that is used by
-   * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and Editing
-   * Object Metadata](https://cloud.google.com/storage/docs/viewing-editing-
-   * metadata) for more information. If the specified Cloud Storage object
-   * already exists and there is no
+   * gcloud storage. Example: "gs://bucket_name/object_name". See [Viewing and
+   * Editing Object Metadata](https://cloud.google.com/storage/docs/viewing-
+   * editing-metadata) for more information. If the specified Cloud Storage
+   * object already exists and there is no
    * [hold](https://cloud.google.com/storage/docs/object-holds), it will be
    * overwritten with the exported result.
    *
@@ -47,10 +47,10 @@ class GcsDestination extends \Google\Model
 
   /**
    * The URI of the Cloud Storage object. It's the same URI that is used by
-   * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and Editing
-   * Object Metadata](https://cloud.google.com/storage/docs/viewing-editing-
-   * metadata) for more information. If the specified Cloud Storage object
-   * already exists and there is no
+   * gcloud storage. Example: "gs://bucket_name/object_name". See [Viewing and
+   * Editing Object Metadata](https://cloud.google.com/storage/docs/viewing-
+   * editing-metadata) for more information. If the specified Cloud Storage
+   * object already exists and there is no
    * [hold](https://cloud.google.com/storage/docs/object-holds), it will be
    * overwritten with the exported result.
    *

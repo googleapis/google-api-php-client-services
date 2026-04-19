@@ -38,10 +38,10 @@ class GoogleIdentityAccesscontextmanagerV1IngressFrom extends \Google\Collection
   protected $collection_key = 'sources';
   /**
    * A list of identities that are allowed access through [IngressPolicy].
-   * Identities can be an individual user, service account, Google group, or
-   * third-party identity. For the list of supported identity types, see
-   * https://docs.cloud.google.com/vpc-service-controls/docs/supported-
-   * identities.
+   * Identities can be an individual user, service account, Google group, third-
+   * party identity, or agent identity. For the list of supported identity
+   * types, see https://docs.cloud.google.com/vpc-service-
+   * controls/docs/supported-identities.
    *
    * @var string[]
    */
@@ -59,10 +59,10 @@ class GoogleIdentityAccesscontextmanagerV1IngressFrom extends \Google\Collection
 
   /**
    * A list of identities that are allowed access through [IngressPolicy].
-   * Identities can be an individual user, service account, Google group, or
-   * third-party identity. For the list of supported identity types, see
-   * https://docs.cloud.google.com/vpc-service-controls/docs/supported-
-   * identities.
+   * Identities can be an individual user, service account, Google group, third-
+   * party identity, or agent identity. For the list of supported identity
+   * types, see https://docs.cloud.google.com/vpc-service-
+   * controls/docs/supported-identities.
    *
    * @param string[] $identities
    */
