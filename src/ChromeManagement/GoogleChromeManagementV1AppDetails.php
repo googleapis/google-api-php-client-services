@@ -17,7 +17,7 @@
 
 namespace Google\Service\ChromeManagement;
 
-class GoogleChromeManagementV1AppDetails extends \Google\Model
+class GoogleChromeManagementV1AppDetails extends \Google\Collection
 {
   /**
    * App type unspecified.
@@ -35,6 +35,7 @@ class GoogleChromeManagementV1AppDetails extends \Google\Model
    * Web app.
    */
   public const TYPE_WEB = 'WEB';
+  protected $collection_key = 'categoryIds';
   protected $androidAppInfoType = GoogleChromeManagementV1AndroidAppInfo::class;
   protected $androidAppInfoDataType = '';
   /**
@@ -45,6 +46,13 @@ class GoogleChromeManagementV1AppDetails extends \Google\Model
    * @var string
    */
   public $appId;
+  /**
+   * Output only. The category IDs of the app, which are the same as stored in
+   * the Web Store item. It's expected that there is only one category ID.
+   *
+   * @var string[]
+   */
+  public $categoryIds;
   protected $chromeAppInfoType = GoogleChromeManagementV1ChromeAppInfo::class;
   protected $chromeAppInfoDataType = '';
   /**
@@ -180,6 +188,23 @@ class GoogleChromeManagementV1AppDetails extends \Google\Model
   public function getAppId()
   {
     return $this->appId;
+  }
+  /**
+   * Output only. The category IDs of the app, which are the same as stored in
+   * the Web Store item. It's expected that there is only one category ID.
+   *
+   * @param string[] $categoryIds
+   */
+  public function setCategoryIds($categoryIds)
+  {
+    $this->categoryIds = $categoryIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getCategoryIds()
+  {
+    return $this->categoryIds;
   }
   /**
    * Output only. Chrome Web Store app information.
