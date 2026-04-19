@@ -20,22 +20,24 @@ namespace Google\Service\DeveloperKnowledge;
 class DocumentChunk extends \Google\Model
 {
   /**
-   * Output only. The content of the document chunk.
+   * Output only. Contains the content of the document chunk.
    *
    * @var string
    */
   public $content;
+  protected $documentType = Document::class;
+  protected $documentDataType = '';
   /**
-   * Output only. The ID of this chunk within the document. The chunk ID is
-   * unique within a document, but not globally unique across documents. The
-   * chunk ID is not stable and may change over time.
+   * Output only. Specifies the ID of this chunk within the document. The chunk
+   * ID is unique within a document, but not globally unique across documents.
+   * The chunk ID is not stable and may change over time.
    *
    * @var string
    */
   public $id;
   /**
-   * Output only. The resource name of the document this chunk is from. Format:
-   * `documents/{uri_without_scheme}` Example:
+   * Output only. Contains the resource name of the document this chunk is from.
+   * Format: `documents/{uri_without_scheme}` Example:
    * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    *
    * @var string
@@ -43,7 +45,7 @@ class DocumentChunk extends \Google\Model
   public $parent;
 
   /**
-   * Output only. The content of the document chunk.
+   * Output only. Contains the content of the document chunk.
    *
    * @param string $content
    */
@@ -59,9 +61,31 @@ class DocumentChunk extends \Google\Model
     return $this->content;
   }
   /**
-   * Output only. The ID of this chunk within the document. The chunk ID is
-   * unique within a document, but not globally unique across documents. The
-   * chunk ID is not stable and may change over time.
+   * Output only. Represents metadata about the Document this chunk is from. The
+   * DocumentView of this Document message will be set to `DOCUMENT_VIEW_BASIC`.
+   * It is included here for convenience so that clients do not need to call
+   * DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments if
+   * they only need the metadata fields. Otherwise, clients should use
+   * DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to
+   * fetch the full document content.
+   *
+   * @param Document $document
+   */
+  public function setDocument(Document $document)
+  {
+    $this->document = $document;
+  }
+  /**
+   * @return Document
+   */
+  public function getDocument()
+  {
+    return $this->document;
+  }
+  /**
+   * Output only. Specifies the ID of this chunk within the document. The chunk
+   * ID is unique within a document, but not globally unique across documents.
+   * The chunk ID is not stable and may change over time.
    *
    * @param string $id
    */
@@ -77,8 +101,8 @@ class DocumentChunk extends \Google\Model
     return $this->id;
   }
   /**
-   * Output only. The resource name of the document this chunk is from. Format:
-   * `documents/{uri_without_scheme}` Example:
+   * Output only. Contains the resource name of the document this chunk is from.
+   * Format: `documents/{uri_without_scheme}` Example:
    * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    *
    * @param string $parent

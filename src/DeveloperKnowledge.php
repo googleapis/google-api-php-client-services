@@ -39,6 +39,7 @@ class DeveloperKnowledge extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $documents;
+  public $v1alpha;
   public $rootUrlTemplate;
 
   /**
@@ -73,6 +74,10 @@ class DeveloperKnowledge extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'get' => [
               'path' => 'v1alpha/{+name}',
@@ -83,11 +88,19 @@ class DeveloperKnowledge extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'searchDocumentChunks' => [
               'path' => 'v1alpha/documents:searchDocumentChunks',
               'httpMethod' => 'GET',
               'parameters' => [
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
@@ -101,6 +114,20 @@ class DeveloperKnowledge extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],
+          ]
+        ]
+    );
+    $this->v1alpha = new DeveloperKnowledge\Resource\V1alpha(
+        $this,
+        $this->serviceName,
+        'v1alpha',
+        [
+          'methods' => [
+            'answerQuery' => [
+              'path' => 'v1alpha:answerQuery',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]

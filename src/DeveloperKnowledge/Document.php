@@ -20,19 +20,47 @@ namespace Google\Service\DeveloperKnowledge;
 class Document extends \Google\Model
 {
   /**
-   * Output only. The full content of the document in Markdown format.
+   * The default / unset value. See each API method for its default value if
+   * DocumentView is not specified.
+   */
+  public const VIEW_DOCUMENT_VIEW_UNSPECIFIED = 'DOCUMENT_VIEW_UNSPECIFIED';
+  /**
+   * Includes only the basic metadata fields: - `name` - `uri` - `data_source` -
+   * `title` - `description` - `update_time` - `view` This is the default of
+   * view for DeveloperKnowledge.SearchDocumentChunks.
+   */
+  public const VIEW_DOCUMENT_VIEW_BASIC = 'DOCUMENT_VIEW_BASIC';
+  /**
+   * Includes all Document fields.
+   */
+  public const VIEW_DOCUMENT_VIEW_FULL = 'DOCUMENT_VIEW_FULL';
+  /**
+   * Includes the `DOCUMENT_VIEW_BASIC` fields and the `content` field. This is
+   * the default of view for DeveloperKnowledge.GetDocument and
+   * DeveloperKnowledge.BatchGetDocuments.
+   */
+  public const VIEW_DOCUMENT_VIEW_CONTENT = 'DOCUMENT_VIEW_CONTENT';
+  /**
+   * Output only. Contains the full content of the document in Markdown format.
    *
    * @var string
    */
   public $content;
   /**
-   * Output only. A description of the document.
+   * Output only. Specifies the data source of the document. Example data
+   * source: `firebase.google.com`
+   *
+   * @var string
+   */
+  public $dataSource;
+  /**
+   * Output only. Provides a description of the document.
    *
    * @var string
    */
   public $description;
   /**
-   * Identifier. The resource name of the document. Format:
+   * Identifier. Contains the resource name of the document. Format:
    * `documents/{uri_without_scheme}` Example:
    * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    *
@@ -40,15 +68,34 @@ class Document extends \Google\Model
    */
   public $name;
   /**
-   * Output only. The URI of the content, such as
+   * Output only. Provides the title of the document.
+   *
+   * @var string
+   */
+  public $title;
+  /**
+   * Output only. Represents the timestamp when the content or metadata of the
+   * document was last updated.
+   *
+   * @var string
+   */
+  public $updateTime;
+  /**
+   * Output only. Provides the URI of the content, such as
    * `docs.cloud.google.com/storage/docs/creating-buckets`.
    *
    * @var string
    */
   public $uri;
+  /**
+   * Output only. Specifies the DocumentView of the document.
+   *
+   * @var string
+   */
+  public $view;
 
   /**
-   * Output only. The full content of the document in Markdown format.
+   * Output only. Contains the full content of the document in Markdown format.
    *
    * @param string $content
    */
@@ -64,7 +111,24 @@ class Document extends \Google\Model
     return $this->content;
   }
   /**
-   * Output only. A description of the document.
+   * Output only. Specifies the data source of the document. Example data
+   * source: `firebase.google.com`
+   *
+   * @param string $dataSource
+   */
+  public function setDataSource($dataSource)
+  {
+    $this->dataSource = $dataSource;
+  }
+  /**
+   * @return string
+   */
+  public function getDataSource()
+  {
+    return $this->dataSource;
+  }
+  /**
+   * Output only. Provides a description of the document.
    *
    * @param string $description
    */
@@ -80,7 +144,7 @@ class Document extends \Google\Model
     return $this->description;
   }
   /**
-   * Identifier. The resource name of the document. Format:
+   * Identifier. Contains the resource name of the document. Format:
    * `documents/{uri_without_scheme}` Example:
    * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    *
@@ -98,7 +162,40 @@ class Document extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. The URI of the content, such as
+   * Output only. Provides the title of the document.
+   *
+   * @param string $title
+   */
+  public function setTitle($title)
+  {
+    $this->title = $title;
+  }
+  /**
+   * @return string
+   */
+  public function getTitle()
+  {
+    return $this->title;
+  }
+  /**
+   * Output only. Represents the timestamp when the content or metadata of the
+   * document was last updated.
+   *
+   * @param string $updateTime
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
+  }
+  /**
+   * Output only. Provides the URI of the content, such as
    * `docs.cloud.google.com/storage/docs/creating-buckets`.
    *
    * @param string $uri
@@ -113,6 +210,25 @@ class Document extends \Google\Model
   public function getUri()
   {
     return $this->uri;
+  }
+  /**
+   * Output only. Specifies the DocumentView of the document.
+   *
+   * Accepted values: DOCUMENT_VIEW_UNSPECIFIED, DOCUMENT_VIEW_BASIC,
+   * DOCUMENT_VIEW_FULL, DOCUMENT_VIEW_CONTENT
+   *
+   * @param self::VIEW_* $view
+   */
+  public function setView($view)
+  {
+    $this->view = $view;
+  }
+  /**
+   * @return self::VIEW_*
+   */
+  public function getView()
+  {
+    return $this->view;
   }
 }
 

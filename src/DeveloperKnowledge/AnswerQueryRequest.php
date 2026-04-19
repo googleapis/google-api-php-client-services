@@ -17,29 +17,32 @@
 
 namespace Google\Service\DeveloperKnowledge;
 
-class BatchGetDocumentsResponse extends \Google\Collection
+class AnswerQueryRequest extends \Google\Model
 {
-  protected $collection_key = 'documents';
-  protected $documentsType = Document::class;
-  protected $documentsDataType = 'array';
+  /**
+   * Required. The query to answer.
+   *
+   * @var string
+   */
+  public $query;
 
   /**
-   * Contains the documents requested.
+   * Required. The query to answer.
    *
-   * @param Document[] $documents
+   * @param string $query
    */
-  public function setDocuments($documents)
+  public function setQuery($query)
   {
-    $this->documents = $documents;
+    $this->query = $query;
   }
   /**
-   * @return Document[]
+   * @return string
    */
-  public function getDocuments()
+  public function getQuery()
   {
-    return $this->documents;
+    return $this->query;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BatchGetDocumentsResponse::class, 'Google_Service_DeveloperKnowledge_BatchGetDocumentsResponse');
+class_alias(AnswerQueryRequest::class, 'Google_Service_DeveloperKnowledge_AnswerQueryRequest');

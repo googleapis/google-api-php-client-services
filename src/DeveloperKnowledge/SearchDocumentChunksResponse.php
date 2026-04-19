@@ -21,8 +21,8 @@ class SearchDocumentChunksResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
-   * Optional. A token that can be sent as `page_token` to retrieve the next
-   * page. If this field is omitted, there are no subsequent pages.
+   * Optional. Provides a token that can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
    *
    * @var string
    */
@@ -31,8 +31,8 @@ class SearchDocumentChunksResponse extends \Google\Collection
   protected $resultsDataType = 'array';
 
   /**
-   * Optional. A token that can be sent as `page_token` to retrieve the next
-   * page. If this field is omitted, there are no subsequent pages.
+   * Optional. Provides a token that can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
    *
    * @param string $nextPageToken
    */
@@ -48,8 +48,8 @@ class SearchDocumentChunksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The search results for the given query. Each DocumentChunk in this list
-   * contains a snippet of content relevant to the search query. Use the
+   * Contains the search results for the given query. Each DocumentChunk in this
+   * list contains a snippet of content relevant to the search query. Use the
    * DocumentChunk.parent field of each result with
    * DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to
    * retrieve the full document content.
