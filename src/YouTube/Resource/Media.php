@@ -17,57 +17,40 @@
 
 namespace Google\Service\YouTube\Resource;
 
-use Google\Service\YouTube\CommentThread;
+use Google\Service\YouTube\AudioTrack;
 
 /**
- * The "v3" collection of methods.
+ * The "media" collection of methods.
  * Typical usage is:
  *  <code>
  *   $youtubeService = new Google\Service\YouTube(...);
- *   $v3 = $youtubeService->youtube_v3;
+ *   $media = $youtubeService->media;
  *  </code>
  */
-class YoutubeV3 extends \Google\Service\Resource
+class Media extends \Google\Service\Resource
 {
   /**
-   * Deletes one or more AudioTracks from a video. (v3.deleteAudiotracks)
+   * Inserts a new AudioTrack for a video. (media.upload)
    *
+   * @param AudioTrack $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string audioTrackId Required. The audio track ID of the AudioTrack
-   * to be deleted (e.g., "v1234567890").
+   * @opt_param string language Required. The BCP-47 language code of the
+   * AudioTrack (e.g., "es-ES").
    * @opt_param string part Optional. The `part` parameter specifies the
    * `AudioTrack` resource parts that the API response will include. The `part`
    * names that you can include in the parameter value are `id` and `snippet`.
    * @opt_param string videoId Required. The external YouTube video ID.
+   * @return AudioTrack
    * @throws \Google\Service\Exception
    */
-  public function deleteAudiotracks($optParams = [])
-  {
-    $params = [];
-    $params = array_merge($params, $optParams);
-    return $this->call('deleteAudiotracks', [$params]);
-  }
-  /**
-   * Updates an existing resource. (v3.updateCommentThreads)
-   *
-   * @param CommentThread $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string part The *part* parameter specifies a comma-separated list
-   * of commentThread resource properties that the API response will include. You
-   * must at least include the snippet part in the parameter value since that part
-   * contains all of the properties that the API request can update.
-   * @return CommentThread
-   * @throws \Google\Service\Exception
-   */
-  public function updateCommentThreads(CommentThread $postBody, $optParams = [])
+  public function upload(AudioTrack $postBody, $optParams = [])
   {
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('updateCommentThreads', [$params], CommentThread::class);
+    return $this->call('upload', [$params], AudioTrack::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(YoutubeV3::class, 'Google_Service_YouTube_Resource_YoutubeV3');
+class_alias(Media::class, 'Google_Service_YouTube_Resource_Media');

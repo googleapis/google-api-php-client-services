@@ -72,6 +72,7 @@ class YouTube extends \Google\Service
   public $liveChatMessages;
   public $liveChatModerators;
   public $liveStreams;
+  public $media;
   public $members;
   public $membershipsLevels;
   public $playlistImages;
@@ -89,6 +90,7 @@ class YouTube extends \Google\Service
   public $videos;
   public $watermarks;
   public $youtube_v3;
+  public $youtube_v3_audiotracks;
   public $youtube_v3_liveChat_messages;
   public $rootUrlTemplate;
 
@@ -1195,6 +1197,34 @@ class YouTube extends \Google\Service
           ]
         ]
     );
+    $this->media = new YouTube\Resource\Media(
+        $this,
+        $this->serviceName,
+        'media',
+        [
+          'methods' => [
+            'upload' => [
+              'path' => 'youtube/v3/audiotracks',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'language' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'part' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'videoId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->members = new YouTube\Resource\Members(
         $this,
         $this->serviceName,
@@ -2227,7 +2257,25 @@ class YouTube extends \Google\Service
         'v3',
         [
           'methods' => [
-            'updateCommentThreads' => [
+            'deleteAudiotracks' => [
+              'path' => 'youtube/v3/audiotracks',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'audioTrackId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'part' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'videoId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'updateCommentThreads' => [
               'path' => 'youtube/v3/commentThreads',
               'httpMethod' => 'PUT',
               'parameters' => [
@@ -2235,6 +2283,35 @@ class YouTube extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->youtube_v3_audiotracks = new YouTube\Resource\YoutubeV3Audiotracks(
+        $this,
+        $this->serviceName,
+        'audiotracks',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'youtube/v3/audiotracks',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'language' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'part' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'videoId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
