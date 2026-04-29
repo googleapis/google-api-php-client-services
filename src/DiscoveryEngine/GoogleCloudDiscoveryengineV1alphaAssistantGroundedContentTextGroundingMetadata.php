@@ -19,11 +19,13 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadata extends \Google\Collection
 {
-  protected $collection_key = 'segments';
+  protected $collection_key = 'visualSegments';
   protected $referencesType = GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataReference::class;
   protected $referencesDataType = 'array';
   protected $segmentsType = GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataSegment::class;
   protected $segmentsDataType = 'array';
+  protected $visualSegmentsType = GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataVisualSegment::class;
+  protected $visualSegmentsDataType = 'array';
 
   /**
    * References for the grounded text.
@@ -56,6 +58,22 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
   public function getSegments()
   {
     return $this->segments;
+  }
+  /**
+   * Grounding information for parts of the visual content.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataVisualSegment[] $visualSegments
+   */
+  public function setVisualSegments($visualSegments)
+  {
+    $this->visualSegments = $visualSegments;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataVisualSegment[]
+   */
+  public function getVisualSegments()
+  {
+    return $this->visualSegments;
   }
 }
 

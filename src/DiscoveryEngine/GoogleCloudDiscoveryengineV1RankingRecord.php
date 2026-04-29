@@ -34,8 +34,8 @@ class GoogleCloudDiscoveryengineV1RankingRecord extends \Google\Model
   public $id;
   /**
    * The score of this record based on the given query and selected model. The
-   * score will be rounded to 2 decimal places. If the score is close to 0, it
-   * will be rounded to 0.0001 to avoid returning unset.
+   * score will be rounded to 4 decimal places. If the score is close to 0, it
+   * will be rounded to 0.00001 to avoid returning unset.
    *
    * @var float
    */
@@ -83,8 +83,8 @@ class GoogleCloudDiscoveryengineV1RankingRecord extends \Google\Model
   }
   /**
    * The score of this record based on the given query and selected model. The
-   * score will be rounded to 2 decimal places. If the score is close to 0, it
-   * will be rounded to 0.0001 to avoid returning unset.
+   * score will be rounded to 4 decimal places. If the score is close to 0, it
+   * will be rounded to 0.00001 to avoid returning unset.
    *
    * @param float $score
    */

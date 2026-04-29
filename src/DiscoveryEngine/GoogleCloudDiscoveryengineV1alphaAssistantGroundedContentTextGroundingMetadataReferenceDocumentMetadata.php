@@ -19,6 +19,9 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata extends \Google\Model
 {
+  public const LANGUAGE_LANGUAGE_UNSPECIFIED = 'LANGUAGE_UNSPECIFIED';
+  public const LANGUAGE_PYTHON = 'PYTHON';
+  public const LANGUAGE_SQL = 'SQL';
   /**
    * Document resource name.
    *
@@ -33,6 +36,10 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
    * @var string
    */
   public $domain;
+  /**
+   * @var string
+   */
+  public $language;
   /**
    * The mime type of the document. https://www.iana.org/assignments/media-
    * types/media-types.xhtml.
@@ -93,6 +100,20 @@ class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMeta
   public function getDomain()
   {
     return $this->domain;
+  }
+  /**
+   * @param self::LANGUAGE_* $language
+   */
+  public function setLanguage($language)
+  {
+    $this->language = $language;
+  }
+  /**
+   * @return self::LANGUAGE_*
+   */
+  public function getLanguage()
+  {
+    return $this->language;
   }
   /**
    * The mime type of the document. https://www.iana.org/assignments/media-

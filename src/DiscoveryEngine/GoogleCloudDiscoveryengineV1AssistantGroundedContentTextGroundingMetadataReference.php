@@ -20,6 +20,12 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReference extends \Google\Model
 {
   /**
+   * Chunk of code snippet from the referenced document.
+   *
+   * @var string
+   */
+  public $codeSnippet;
+  /**
    * Referenced text content.
    *
    * @var string
@@ -28,6 +34,22 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataR
   protected $documentMetadataType = GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata::class;
   protected $documentMetadataDataType = '';
 
+  /**
+   * Chunk of code snippet from the referenced document.
+   *
+   * @param string $codeSnippet
+   */
+  public function setCodeSnippet($codeSnippet)
+  {
+    $this->codeSnippet = $codeSnippet;
+  }
+  /**
+   * @return string
+   */
+  public function getCodeSnippet()
+  {
+    return $this->codeSnippet;
+  }
   /**
    * Referenced text content.
    *

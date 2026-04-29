@@ -44,8 +44,8 @@ class ProjectsLocationsUserStoresUserLicenses extends \Google\Service\Resource
    * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
    * attempted login but no license assigned. * `license_assignment_state !=
    * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no
-   * license assigned. * `user_principal = user1@abc.com` to list user license for
-   * `user1@abc.com`.
+   * license assigned. * `user_principal = user1@example.com` to list user license
+   * for `user1@example.com`.
    * @opt_param string orderBy Optional. The order in which the UserLicenses are
    * listed. The value must be a comma-separated list of fields. Default sorting
    * order is ascending. To specify descending order for a field, append a " desc"

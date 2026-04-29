@@ -30,6 +30,12 @@ class GoogleCloudDiscoveryengineV1alphaSessionTurn extends \Google\Model
   protected $detailedAnswerDataType = '';
   protected $detailedAssistAnswerType = GoogleCloudDiscoveryengineV1alphaAssistAnswer::class;
   protected $detailedAssistAnswerDataType = '';
+  /**
+   * Optional. Indicates whether this turn is a live turn.
+   *
+   * @var bool
+   */
+  public $live;
   protected $queryType = GoogleCloudDiscoveryengineV1alphaQuery::class;
   protected $queryDataType = '';
   /**
@@ -94,6 +100,22 @@ class GoogleCloudDiscoveryengineV1alphaSessionTurn extends \Google\Model
   public function getDetailedAssistAnswer()
   {
     return $this->detailedAssistAnswer;
+  }
+  /**
+   * Optional. Indicates whether this turn is a live turn.
+   *
+   * @param bool $live
+   */
+  public function setLive($live)
+  {
+    $this->live = $live;
+  }
+  /**
+   * @return bool
+   */
+  public function getLive()
+  {
+    return $this->live;
   }
   /**
    * Optional. The user query. May not be set if this turn is merely
