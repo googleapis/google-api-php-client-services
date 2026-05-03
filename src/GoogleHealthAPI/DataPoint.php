@@ -27,6 +27,8 @@ class DataPoint extends \Google\Model
   protected $activityLevelDataType = '';
   protected $altitudeType = Altitude::class;
   protected $altitudeDataType = '';
+  protected $basalEnergyBurnedType = BasalEnergyBurned::class;
+  protected $basalEnergyBurnedDataType = '';
   protected $bodyFatType = BodyFat::class;
   protected $bodyFatDataType = '';
   protected $dailyHeartRateVariabilityType = DailyHeartRateVariability::class;
@@ -163,6 +165,23 @@ class DataPoint extends \Google\Model
   public function getAltitude()
   {
     return $this->altitude;
+  }
+  /**
+   * Optional. Data for points in the `basal-energy-burned` interval data type
+   * collection.
+   *
+   * @param BasalEnergyBurned $basalEnergyBurned
+   */
+  public function setBasalEnergyBurned(BasalEnergyBurned $basalEnergyBurned)
+  {
+    $this->basalEnergyBurned = $basalEnergyBurned;
+  }
+  /**
+   * @return BasalEnergyBurned
+   */
+  public function getBasalEnergyBurned()
+  {
+    return $this->basalEnergyBurned;
   }
   /**
    * Optional. Data for points in the `body-fat` sample data type collection.
