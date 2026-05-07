@@ -19,7 +19,7 @@ namespace Google\Service\AndroidPublisher;
 
 class GeneratedApksPerSigningKey extends \Google\Collection
 {
-  protected $collection_key = 'generatedStandaloneApks';
+  protected $collection_key = 'unprotectedGeneratedStandaloneApks';
   /**
    * SHA256 hash of the APK signing public key certificate.
    *
@@ -38,6 +38,10 @@ class GeneratedApksPerSigningKey extends \Google\Collection
   protected $generatedUniversalApkDataType = '';
   protected $targetingInfoType = TargetingInfo::class;
   protected $targetingInfoDataType = '';
+  protected $unprotectedGeneratedSplitApksType = GeneratedSplitApk::class;
+  protected $unprotectedGeneratedSplitApksDataType = 'array';
+  protected $unprotectedGeneratedStandaloneApksType = GeneratedStandaloneApk::class;
+  protected $unprotectedGeneratedStandaloneApksDataType = 'array';
 
   /**
    * SHA256 hash of the APK signing public key certificate.
@@ -158,6 +162,46 @@ class GeneratedApksPerSigningKey extends \Google\Collection
   public function getTargetingInfo()
   {
     return $this->targetingInfo;
+  }
+  /**
+   * List of generated split APKs without automatic protection, signed with a
+   * key corresponding to certificate_sha256_hash. This field is only present if
+   * the app uses automatic protection. In this case, `generated_split_apks`
+   * contains APKs with automatic protection enabled, whereas this field
+   * contains APKs without automatic protection.
+   *
+   * @param GeneratedSplitApk[] $unprotectedGeneratedSplitApks
+   */
+  public function setUnprotectedGeneratedSplitApks($unprotectedGeneratedSplitApks)
+  {
+    $this->unprotectedGeneratedSplitApks = $unprotectedGeneratedSplitApks;
+  }
+  /**
+   * @return GeneratedSplitApk[]
+   */
+  public function getUnprotectedGeneratedSplitApks()
+  {
+    return $this->unprotectedGeneratedSplitApks;
+  }
+  /**
+   * List of generated standalone APKs without automatic protection, signed with
+   * a key corresponding to certificate_sha256_hash. This field is only present
+   * if the app uses automatic protection. In this case,
+   * `generated_standalone_apks` contains APKs with automatic protection
+   * enabled, whereas this field contains APKs without automatic protection.
+   *
+   * @param GeneratedStandaloneApk[] $unprotectedGeneratedStandaloneApks
+   */
+  public function setUnprotectedGeneratedStandaloneApks($unprotectedGeneratedStandaloneApks)
+  {
+    $this->unprotectedGeneratedStandaloneApks = $unprotectedGeneratedStandaloneApks;
+  }
+  /**
+   * @return GeneratedStandaloneApk[]
+   */
+  public function getUnprotectedGeneratedStandaloneApks()
+  {
+    return $this->unprotectedGeneratedStandaloneApks;
   }
 }
 
