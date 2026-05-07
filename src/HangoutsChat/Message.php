@@ -133,6 +133,13 @@ class Message extends \Google\Collection
   protected $quotedMessageMetadataDataType = '';
   protected $senderType = User::class;
   protected $senderDataType = '';
+  /**
+   * Output only. Whether this is a silent message. Silent messages are messages
+   * where Chat suppresses push notifications for recipients.
+   *
+   * @var bool
+   */
+  public $silent;
   protected $slashCommandType = SlashCommand::class;
   protected $slashCommandDataType = '';
   protected $spaceType = Space::class;
@@ -587,6 +594,23 @@ class Message extends \Google\Collection
   public function getSender()
   {
     return $this->sender;
+  }
+  /**
+   * Output only. Whether this is a silent message. Silent messages are messages
+   * where Chat suppresses push notifications for recipients.
+   *
+   * @param bool $silent
+   */
+  public function setSilent($silent)
+  {
+    $this->silent = $silent;
+  }
+  /**
+   * @return bool
+   */
+  public function getSilent()
+  {
+    return $this->silent;
   }
   /**
    * Output only. Slash command information, if applicable.

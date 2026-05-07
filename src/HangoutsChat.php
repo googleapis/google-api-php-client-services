@@ -522,6 +522,10 @@ class HangoutsChat extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'createMessageNotificationOptions.notificationType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'messageId' => [
                   'location' => 'query',
                   'type' => 'string',

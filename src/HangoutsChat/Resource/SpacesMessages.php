@@ -69,6 +69,8 @@ class SpacesMessages extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string createMessageNotificationOptions.notificationType The
+   * notification type for the message.
    * @opt_param string messageId Optional. A custom ID for a message. Lets Chat
    * apps get, update, or delete a message without needing to store the system-
    * assigned ID in the message's resource name (represented in the message `name`
