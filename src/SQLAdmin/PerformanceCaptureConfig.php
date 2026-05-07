@@ -20,48 +20,49 @@ namespace Google\Service\SQLAdmin;
 class PerformanceCaptureConfig extends \Google\Model
 {
   /**
-   * Optional. Enable or disable the Performance Capture feature.
+   * Optional. Enables or disables the performance capture feature.
    *
    * @var bool
    */
   public $enabled;
   /**
-   * Optional. The minimum number of consecutive readings above threshold that
-   * triggers instance state capture.
+   * Optional. Specifies the minimum number of consecutive probe threshold that
+   * triggers performance capture.
    *
    * @var int
    */
   public $probeThreshold;
   /**
-   * Optional. The time interval in seconds between any two probes.
+   * Optional. Specifies the interval in seconds between consecutive probes that
+   * check if any trigger condition thresholds have been reached.
    *
    * @var int
    */
   public $probingIntervalSeconds;
   /**
-   * Optional. The minimum number of server threads running to trigger the
-   * capture on primary.
+   * Optional. Specifies the minimum number of MySQL `Threads_running` to
+   * trigger the performance capture on the primary instance.
    *
    * @var int
    */
   public $runningThreadsThreshold;
   /**
-   * Optional. The minimum number of seconds replica must be lagging behind
-   * primary to trigger capture on replica.
+   * Optional. Specifies the minimum number of seconds replica must be lagging
+   * behind primary instance to trigger the performance capture on replica.
    *
    * @var int
    */
   public $secondsBehindSourceThreshold;
   /**
-   * Optional. The amount of time in seconds that a transaction needs to have
-   * been open before the watcher starts recording it.
+   * Optional. Specifies the amount of time in seconds that a transaction needs
+   * to have been open before the watcher starts recording it.
    *
    * @var int
    */
   public $transactionDurationThreshold;
 
   /**
-   * Optional. Enable or disable the Performance Capture feature.
+   * Optional. Enables or disables the performance capture feature.
    *
    * @param bool $enabled
    */
@@ -77,8 +78,8 @@ class PerformanceCaptureConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * Optional. The minimum number of consecutive readings above threshold that
-   * triggers instance state capture.
+   * Optional. Specifies the minimum number of consecutive probe threshold that
+   * triggers performance capture.
    *
    * @param int $probeThreshold
    */
@@ -94,7 +95,8 @@ class PerformanceCaptureConfig extends \Google\Model
     return $this->probeThreshold;
   }
   /**
-   * Optional. The time interval in seconds between any two probes.
+   * Optional. Specifies the interval in seconds between consecutive probes that
+   * check if any trigger condition thresholds have been reached.
    *
    * @param int $probingIntervalSeconds
    */
@@ -110,8 +112,8 @@ class PerformanceCaptureConfig extends \Google\Model
     return $this->probingIntervalSeconds;
   }
   /**
-   * Optional. The minimum number of server threads running to trigger the
-   * capture on primary.
+   * Optional. Specifies the minimum number of MySQL `Threads_running` to
+   * trigger the performance capture on the primary instance.
    *
    * @param int $runningThreadsThreshold
    */
@@ -127,8 +129,8 @@ class PerformanceCaptureConfig extends \Google\Model
     return $this->runningThreadsThreshold;
   }
   /**
-   * Optional. The minimum number of seconds replica must be lagging behind
-   * primary to trigger capture on replica.
+   * Optional. Specifies the minimum number of seconds replica must be lagging
+   * behind primary instance to trigger the performance capture on replica.
    *
    * @param int $secondsBehindSourceThreshold
    */
@@ -144,8 +146,8 @@ class PerformanceCaptureConfig extends \Google\Model
     return $this->secondsBehindSourceThreshold;
   }
   /**
-   * Optional. The amount of time in seconds that a transaction needs to have
-   * been open before the watcher starts recording it.
+   * Optional. Specifies the amount of time in seconds that a transaction needs
+   * to have been open before the watcher starts recording it.
    *
    * @param int $transactionDurationThreshold
    */
