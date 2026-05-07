@@ -263,6 +263,8 @@ class MigrationJob extends \Google\Model
    * @var string
    */
   public $phase;
+  protected $postgresHomogeneousConfigType = PostgresHomogeneousConfig::class;
+  protected $postgresHomogeneousConfigDataType = '';
   protected $postgresToSqlserverConfigType = PostgresToSqlServerConfig::class;
   protected $postgresToSqlserverConfigDataType = '';
   /**
@@ -672,6 +674,22 @@ class MigrationJob extends \Google\Model
   public function getPhase()
   {
     return $this->phase;
+  }
+  /**
+   * Optional. Configuration for PostgreSQL homogeneous migration.
+   *
+   * @param PostgresHomogeneousConfig $postgresHomogeneousConfig
+   */
+  public function setPostgresHomogeneousConfig(PostgresHomogeneousConfig $postgresHomogeneousConfig)
+  {
+    $this->postgresHomogeneousConfig = $postgresHomogeneousConfig;
+  }
+  /**
+   * @return PostgresHomogeneousConfig
+   */
+  public function getPostgresHomogeneousConfig()
+  {
+    return $this->postgresHomogeneousConfig;
   }
   /**
    * Configuration for heterogeneous failback migrations from **PostgreSQL to
