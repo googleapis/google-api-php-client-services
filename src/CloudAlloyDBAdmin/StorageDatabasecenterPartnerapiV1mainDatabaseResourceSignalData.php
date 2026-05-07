@@ -97,7 +97,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
    */
   public $lastRefreshTime;
   /**
-   * Resource location.
+   * Required. Resource location.
    *
    * @var string
    */
@@ -177,7 +177,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->lastRefreshTime;
   }
   /**
-   * Resource location.
+   * Required. Resource location.
    *
    * @param string $location
    */
