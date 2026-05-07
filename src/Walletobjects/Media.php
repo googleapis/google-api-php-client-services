@@ -240,6 +240,12 @@ class Media extends \Google\Collection
    */
   public $sha256Hash;
   /**
+   * Scotty-provided SHA512 hash for an upload.
+   *
+   * @var string
+   */
+  public $sha512Hash;
+  /**
    * Time at which the media data was last updated, in milliseconds since UNIX
    * epoch
    *
@@ -744,6 +750,22 @@ class Media extends \Google\Collection
   public function getSha256Hash()
   {
     return $this->sha256Hash;
+  }
+  /**
+   * Scotty-provided SHA512 hash for an upload.
+   *
+   * @param string $sha512Hash
+   */
+  public function setSha512Hash($sha512Hash)
+  {
+    $this->sha512Hash = $sha512Hash;
+  }
+  /**
+   * @return string
+   */
+  public function getSha512Hash()
+  {
+    return $this->sha512Hash;
   }
   /**
    * Time at which the media data was last updated, in milliseconds since UNIX
