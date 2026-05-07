@@ -142,6 +142,12 @@ class GoogleCloudRunV2Instance extends \Google\Collection
    */
   public $creator;
   /**
+   * Optional. Disables public resolution of the default URI of this Instance.
+   *
+   * @var bool
+   */
+  public $defaultUriDisabled;
+  /**
    * Output only. The deletion time.
    *
    * @var string
@@ -481,6 +487,22 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   public function getCreator()
   {
     return $this->creator;
+  }
+  /**
+   * Optional. Disables public resolution of the default URI of this Instance.
+   *
+   * @param bool $defaultUriDisabled
+   */
+  public function setDefaultUriDisabled($defaultUriDisabled)
+  {
+    $this->defaultUriDisabled = $defaultUriDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDefaultUriDisabled()
+  {
+    return $this->defaultUriDisabled;
   }
   /**
    * Output only. The deletion time.
