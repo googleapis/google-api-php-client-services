@@ -20,6 +20,12 @@ namespace Google\Service\Dfareporting;
 class DependentFieldValue extends \Google\Model
 {
   /**
+   * Optional. The ID of the dynamic feed that value's field will match against.
+   *
+   * @var string
+   */
+  public $dynamicFeedId;
+  /**
    * Optional. The ID of the element that value's field will match against.
    *
    * @var string
@@ -32,6 +38,22 @@ class DependentFieldValue extends \Google\Model
    */
   public $fieldId;
 
+  /**
+   * Optional. The ID of the dynamic feed that value's field will match against.
+   *
+   * @param string $dynamicFeedId
+   */
+  public function setDynamicFeedId($dynamicFeedId)
+  {
+    $this->dynamicFeedId = $dynamicFeedId;
+  }
+  /**
+   * @return string
+   */
+  public function getDynamicFeedId()
+  {
+    return $this->dynamicFeedId;
+  }
   /**
    * Optional. The ID of the element that value's field will match against.
    *
