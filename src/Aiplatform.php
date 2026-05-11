@@ -10965,6 +10965,20 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'cancelAsyncQuery' => [
+              'path' => 'v1/{+name}:cancelAsyncQuery',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'operationName' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'create' => [
               'path' => 'v1/{+parent}/reasoningEngines',
               'httpMethod' => 'POST',
@@ -14238,6 +14252,20 @@ class Aiplatform extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'cancelAsyncQuery' => [
+              'path' => 'v1/{+name}:cancelAsyncQuery',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'operationName' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'create' => [

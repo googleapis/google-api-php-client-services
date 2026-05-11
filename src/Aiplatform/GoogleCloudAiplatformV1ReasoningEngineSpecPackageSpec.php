@@ -32,8 +32,8 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec extends \Google\Mode
    */
   public $pickleObjectGcsUri;
   /**
-   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12,
-   * 3.13, 3.14. If not specified, the default value is 3.10.
+   * Optional. The Python version. Supported values are 3.10, 3.11, 3.12, 3.13,
+   * 3.14. If not specified, the default value is 3.10.
    *
    * @var string
    */
@@ -78,8 +78,8 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec extends \Google\Mode
     return $this->pickleObjectGcsUri;
   }
   /**
-   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12,
-   * 3.13, 3.14. If not specified, the default value is 3.10.
+   * Optional. The Python version. Supported values are 3.10, 3.11, 3.12, 3.13,
+   * 3.14. If not specified, the default value is 3.10.
    *
    * @param string $pythonVersion
    */
