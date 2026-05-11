@@ -25,42 +25,20 @@ class Finding extends \Google\Model
    * @var string
    */
   public $category;
+  protected $locationType = FindingLocation::class;
+  protected $locationDataType = '';
   /**
-   * Detailed description of the finding.
+   * Scanner determines which engine (e.g. static, llm) emitted the finding.
    *
    * @var string
    */
-  public $description;
-  /**
-   * Path to the file where the finding was detected.
-   *
-   * @var string
-   */
-  public $filePath;
-  /**
-   * Unique identifier of the rule that produced this finding.
-   *
-   * @var string
-   */
-  public $ruleId;
+  public $scanner;
   /**
    * Severity of the finding.
    *
    * @var string
    */
   public $severity;
-  /**
-   * Code snippet relevant to the finding.
-   *
-   * @var string
-   */
-  public $snippet;
-  /**
-   * Title of the finding.
-   *
-   * @var string
-   */
-  public $title;
 
   /**
    * Category of the finding.
@@ -79,52 +57,36 @@ class Finding extends \Google\Model
     return $this->category;
   }
   /**
-   * Detailed description of the finding.
+   * Location (path and line) where the finding was detected.
    *
-   * @param string $description
+   * @param FindingLocation $location
    */
-  public function setDescription($description)
+  public function setLocation(FindingLocation $location)
   {
-    $this->description = $description;
+    $this->location = $location;
+  }
+  /**
+   * @return FindingLocation
+   */
+  public function getLocation()
+  {
+    return $this->location;
+  }
+  /**
+   * Scanner determines which engine (e.g. static, llm) emitted the finding.
+   *
+   * @param string $scanner
+   */
+  public function setScanner($scanner)
+  {
+    $this->scanner = $scanner;
   }
   /**
    * @return string
    */
-  public function getDescription()
+  public function getScanner()
   {
-    return $this->description;
-  }
-  /**
-   * Path to the file where the finding was detected.
-   *
-   * @param string $filePath
-   */
-  public function setFilePath($filePath)
-  {
-    $this->filePath = $filePath;
-  }
-  /**
-   * @return string
-   */
-  public function getFilePath()
-  {
-    return $this->filePath;
-  }
-  /**
-   * Unique identifier of the rule that produced this finding.
-   *
-   * @param string $ruleId
-   */
-  public function setRuleId($ruleId)
-  {
-    $this->ruleId = $ruleId;
-  }
-  /**
-   * @return string
-   */
-  public function getRuleId()
-  {
-    return $this->ruleId;
+    return $this->scanner;
   }
   /**
    * Severity of the finding.
@@ -141,38 +103,6 @@ class Finding extends \Google\Model
   public function getSeverity()
   {
     return $this->severity;
-  }
-  /**
-   * Code snippet relevant to the finding.
-   *
-   * @param string $snippet
-   */
-  public function setSnippet($snippet)
-  {
-    $this->snippet = $snippet;
-  }
-  /**
-   * @return string
-   */
-  public function getSnippet()
-  {
-    return $this->snippet;
-  }
-  /**
-   * Title of the finding.
-   *
-   * @param string $title
-   */
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
-  /**
-   * @return string
-   */
-  public function getTitle()
-  {
-    return $this->title;
   }
 }
 

@@ -23,6 +23,12 @@ class AISkillAnalysisOccurrence extends \Google\Collection
   protected $findingsType = Finding::class;
   protected $findingsDataType = 'array';
   /**
+   * Maximum severity found among findings.
+   *
+   * @var string
+   */
+  public $maxSeverity;
+  /**
    * Name of the skill that produced this analysis.
    *
    * @var string
@@ -44,6 +50,22 @@ class AISkillAnalysisOccurrence extends \Google\Collection
   public function getFindings()
   {
     return $this->findings;
+  }
+  /**
+   * Maximum severity found among findings.
+   *
+   * @param string $maxSeverity
+   */
+  public function setMaxSeverity($maxSeverity)
+  {
+    $this->maxSeverity = $maxSeverity;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxSeverity()
+  {
+    return $this->maxSeverity;
   }
   /**
    * Name of the skill that produced this analysis.
