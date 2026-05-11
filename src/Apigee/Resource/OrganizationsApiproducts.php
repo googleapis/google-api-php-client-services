@@ -214,8 +214,11 @@ class OrganizationsApiproducts extends \Google\Service\Resource
    * are updating. The API product name required in the request URL is the
    * internal name of the product, not the display name. While they may be the
    * same, it depends on whether the API product was created via UI or API. View
-   * the list of API products to identify their internal names.
-   * (apiproducts.update)
+   * the list of API products to identify their internal names. **Note:** We
+   * recommend that you avoid making concurrent update requests for the same
+   * resource. Near-simultaneous writes to the same entity can result in conflicts
+   * and unexpected behavior. Ensure operations are sequential when modifying a
+   * single resource. (apiproducts.update)
    *
    * @param string $name Required. Name of the API product. Use the following
    * structure in your request: `organizations/{org}/apiproducts/{apiproduct}` If

@@ -151,8 +151,11 @@ class OrganizationsAppgroups extends \Google\Service\Resource
    * Updates an AppGroup. This API replaces the existing AppGroup details with
    * those specified in the request. Include or exclude any existing details that
    * you want to retain or delete, respectively. Note that the state of the
-   * AppGroup should be updated using `action`, and not via AppGroup.
-   * (appgroups.update)
+   * AppGroup should be updated using `action`, and not via AppGroup. **Note:** We
+   * recommend that you avoid making concurrent update requests for the same
+   * resource. Near-simultaneous writes to the same entity can result in conflicts
+   * and unexpected behavior. Ensure operations are sequential when modifying a
+   * single resource. (appgroups.update)
    *
    * @param string $name Required. Name of the AppGroup. Use the following
    * structure in your request: `organizations/{org}/appgroups/{app_group_name}`
@@ -172,8 +175,11 @@ class OrganizationsAppgroups extends \Google\Service\Resource
     return $this->call('update', [$params], GoogleCloudApigeeV1AppGroup::class);
   }
   /**
-   * Updates the monetization configuration for the AppGroup.
-   * (appgroups.updateMonetizationConfig)
+   * Updates the monetization configuration for the AppGroup. **Note:** We
+   * recommend that you avoid making concurrent update requests for the same
+   * resource. Near-simultaneous writes to the same entity can result in conflicts
+   * and unexpected behavior. Ensure operations are sequential when modifying a
+   * single resource. (appgroups.updateMonetizationConfig)
    *
    * @param string $name Required. Monetization configuration for the AppGroup.
    * Use the following structure in your request:

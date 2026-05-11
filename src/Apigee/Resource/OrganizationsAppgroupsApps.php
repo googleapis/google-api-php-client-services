@@ -118,7 +118,10 @@ class OrganizationsAppgroupsApps extends \Google\Service\Resource
    * it is the primary key used to identify the app and cannot be changed. This
    * API replaces the existing attributes with those specified in the request.
    * Include or exclude any existing attributes that you want to retain or delete,
-   * respectively. (apps.update)
+   * respectively. **Note:** We recommend that you avoid making concurrent update
+   * requests for the same resource. Near-simultaneous writes to the same entity
+   * can result in conflicts and unexpected behavior. Ensure operations are
+   * sequential when modifying a single resource. (apps.update)
    *
    * @param string $name Required. Name of the AppGroup app. Use the following
    * structure in your request:

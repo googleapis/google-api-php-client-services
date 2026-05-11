@@ -203,7 +203,11 @@ class OrganizationsDevelopersApps extends \Google\Service\Resource
    * changed. * Scopes associated with the app. Instead, use the
    * ReplaceDeveloperAppKey API. This API replaces the existing attributes with
    * those specified in the request. Include or exclude any existing attributes
-   * that you want to retain or delete, respectively. (apps.update)
+   * that you want to retain or delete, respectively. **Note:** We recommend that
+   * you avoid making concurrent update requests for the same resource. Near-
+   * simultaneous writes to the same entity can result in conflicts and unexpected
+   * behavior. Ensure operations are sequential when modifying a single resource.
+   * (apps.update)
    *
    * @param string $name Required. Name of the developer app. Use the following
    * structure in your request:
