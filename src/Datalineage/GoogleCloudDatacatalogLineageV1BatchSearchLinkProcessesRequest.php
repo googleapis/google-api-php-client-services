@@ -30,8 +30,8 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest extends \Go
    */
   public $links;
   /**
-   * The maximum number of processes to return in a single page of the response.
-   * A page may contain fewer results than this value.
+   * Optional. The maximum number of processes to return in a single page of the
+   * response. A page may contain fewer results than this value.
    *
    * @var int
    */
@@ -66,8 +66,8 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest extends \Go
     return $this->links;
   }
   /**
-   * The maximum number of processes to return in a single page of the response.
-   * A page may contain fewer results than this value.
+   * Optional. The maximum number of processes to return in a single page of the
+   * response. A page may contain fewer results than this value.
    *
    * @param int $pageSize
    */

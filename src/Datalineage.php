@@ -155,6 +155,16 @@ class Datalineage extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'searchLineageStreaming' => [
+              'path' => 'v1/{+parent}:searchLineageStreaming',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'searchLinks' => [
               'path' => 'v1/{+parent}:searchLinks',
               'httpMethod' => 'POST',

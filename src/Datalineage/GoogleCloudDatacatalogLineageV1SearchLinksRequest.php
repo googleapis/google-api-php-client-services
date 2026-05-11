@@ -39,8 +39,12 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
   public $pageToken;
   protected $sourceType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $sourceDataType = '';
+  protected $sourcesType = GoogleCloudDatacatalogLineageV1MultipleEntityReference::class;
+  protected $sourcesDataType = '';
   protected $targetType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $targetDataType = '';
+  protected $targetsType = GoogleCloudDatacatalogLineageV1MultipleEntityReference::class;
+  protected $targetsDataType = '';
 
   /**
    * Optional. The maximum number of links to return in a single page of the
@@ -98,6 +102,26 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
     return $this->source;
   }
   /**
+   * Optional. Send a list of asset information in the **sources** field to
+   * retrieve all links that lead from the specified assets to downstream
+   * assets. This field is similar to the `source` source field but allows
+   * providing multiple entities. All entities within the
+   * `MultipleEntityReference` must have the same `fully_qualified_name`.
+   *
+   * @param GoogleCloudDatacatalogLineageV1MultipleEntityReference $sources
+   */
+  public function setSources(GoogleCloudDatacatalogLineageV1MultipleEntityReference $sources)
+  {
+    $this->sources = $sources;
+  }
+  /**
+   * @return GoogleCloudDatacatalogLineageV1MultipleEntityReference
+   */
+  public function getSources()
+  {
+    return $this->sources;
+  }
+  /**
    * Optional. Send asset information in the **target** field to retrieve all
    * links that lead from upstream assets to the specified asset.
    *
@@ -113,6 +137,26 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
   public function getTarget()
   {
     return $this->target;
+  }
+  /**
+   * Optional. Send a list of asset information in the **targets** field to
+   * retrieve all links that lead from upstream assets to the specified assets.
+   * This field is similar to the `target` target field but allows providing
+   * multiple entities. All entities within the `MultipleEntityReference` must
+   * have the same `fully_qualified_name`.
+   *
+   * @param GoogleCloudDatacatalogLineageV1MultipleEntityReference $targets
+   */
+  public function setTargets(GoogleCloudDatacatalogLineageV1MultipleEntityReference $targets)
+  {
+    $this->targets = $targets;
+  }
+  /**
+   * @return GoogleCloudDatacatalogLineageV1MultipleEntityReference
+   */
+  public function getTargets()
+  {
+    return $this->targets;
   }
 }
 

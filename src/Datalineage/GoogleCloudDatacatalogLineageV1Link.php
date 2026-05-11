@@ -17,8 +17,11 @@
 
 namespace Google\Service\Datalineage;
 
-class GoogleCloudDatacatalogLineageV1Link extends \Google\Model
+class GoogleCloudDatacatalogLineageV1Link extends \Google\Collection
 {
+  protected $collection_key = 'dependencyInfo';
+  protected $dependencyInfoType = GoogleCloudDatacatalogLineageV1LinkDependencyInfo::class;
+  protected $dependencyInfoDataType = 'array';
   /**
    * The end of the last event establishing this link.
    *
@@ -43,6 +46,23 @@ class GoogleCloudDatacatalogLineageV1Link extends \Google\Model
   protected $targetType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $targetDataType = '';
 
+  /**
+   * Optional. The dependency info of the link (applies only to column level
+   * links).
+   *
+   * @param GoogleCloudDatacatalogLineageV1LinkDependencyInfo[] $dependencyInfo
+   */
+  public function setDependencyInfo($dependencyInfo)
+  {
+    $this->dependencyInfo = $dependencyInfo;
+  }
+  /**
+   * @return GoogleCloudDatacatalogLineageV1LinkDependencyInfo[]
+   */
+  public function getDependencyInfo()
+  {
+    return $this->dependencyInfo;
+  }
   /**
    * The end of the last event establishing this link.
    *
