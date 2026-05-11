@@ -138,6 +138,15 @@ class Course extends \Google\Collection
    */
   public $id;
   /**
+   * Optional. Levels for the course. Examples: "9th grade", "Middle school",
+   * "4th - 5th", "K-2", "3000". If set, this field must be a valid UTF-8 string
+   * and fewer than 1000 characters. This field can only be cleared using the
+   * `PatchCourse` method.
+   *
+   * @var string
+   */
+  public $levels;
+  /**
    * Name of the course. For example, "10th Grade Biology". The name is
    * required. It must be between 1 and 750 characters and a valid UTF-8 string.
    *
@@ -411,6 +420,25 @@ class Course extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * Optional. Levels for the course. Examples: "9th grade", "Middle school",
+   * "4th - 5th", "K-2", "3000". If set, this field must be a valid UTF-8 string
+   * and fewer than 1000 characters. This field can only be cleared using the
+   * `PatchCourse` method.
+   *
+   * @param string $levels
+   */
+  public function setLevels($levels)
+  {
+    $this->levels = $levels;
+  }
+  /**
+   * @return string
+   */
+  public function getLevels()
+  {
+    return $this->levels;
   }
   /**
    * Name of the course. For example, "10th Grade Biology". The name is
