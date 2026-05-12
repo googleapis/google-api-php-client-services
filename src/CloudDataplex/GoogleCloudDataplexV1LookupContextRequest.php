@@ -21,6 +21,13 @@ class GoogleCloudDataplexV1LookupContextRequest extends \Google\Collection
 {
   protected $collection_key = 'resources';
   /**
+   * Optional. The text representing contextual information for which metadata
+   * context is being requested.
+   *
+   * @var string
+   */
+  public $context;
+  /**
    * Optional. Allows to configure the context.Supported options: format - The
    * format of the context (one of yaml, xml, json, default is yaml).
    * context_budget - If provided, the output will be intelligently truncated on
@@ -39,6 +46,23 @@ class GoogleCloudDataplexV1LookupContextRequest extends \Google\Collection
    */
   public $resources;
 
+  /**
+   * Optional. The text representing contextual information for which metadata
+   * context is being requested.
+   *
+   * @param string $context
+   */
+  public function setContext($context)
+  {
+    $this->context = $context;
+  }
+  /**
+   * @return string
+   */
+  public function getContext()
+  {
+    return $this->context;
+  }
   /**
    * Optional. Allows to configure the context.Supported options: format - The
    * format of the context (one of yaml, xml, json, default is yaml).

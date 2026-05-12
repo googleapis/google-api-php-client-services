@@ -48,7 +48,8 @@ class ProjectsLocationsDataScans extends \Google\Service\Resource
    * @param GoogleCloudDataplexV1DataScan $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string dataScanId Required. DataScan identifier. Must contain only
+   * @opt_param string dataScanId Optional. DataScan identifier. If not provided,
+   * a unique ID will be generated with the prefix "data-scan-". Must contain only
    * lowercase letters, numbers and hyphens. Must start with a letter. Must end
    * with a number or a letter. Must be between 1-63 characters. Must be unique
    * within the customer project / location.
