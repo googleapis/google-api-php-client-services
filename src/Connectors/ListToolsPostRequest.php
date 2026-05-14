@@ -17,8 +17,9 @@
 
 namespace Google\Service\Connectors;
 
-class ListToolsPostRequest extends \Google\Model
+class ListToolsPostRequest extends \Google\Collection
 {
+  protected $collection_key = 'toolNames';
   protected $executionConfigType = ExecutionConfig::class;
   protected $executionConfigDataType = '';
   /**
@@ -33,6 +34,12 @@ class ListToolsPostRequest extends \Google\Model
    * @var string
    */
   public $pageToken;
+  /**
+   * List of tool names to for selective tool fetching.
+   *
+   * @var string[]
+   */
+  public $toolNames;
   protected $toolSpecType = ToolSpec::class;
   protected $toolSpecDataType = '';
 
@@ -83,6 +90,22 @@ class ListToolsPostRequest extends \Google\Model
   public function getPageToken()
   {
     return $this->pageToken;
+  }
+  /**
+   * List of tool names to for selective tool fetching.
+   *
+   * @param string[] $toolNames
+   */
+  public function setToolNames($toolNames)
+  {
+    $this->toolNames = $toolNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getToolNames()
+  {
+    return $this->toolNames;
   }
   /**
    * List of tool specifications.
