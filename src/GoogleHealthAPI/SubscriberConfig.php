@@ -42,8 +42,9 @@ class SubscriberConfig extends \Google\Collection
   public const SUBSCRIPTION_CREATE_POLICY_MANUAL = 'MANUAL';
   protected $collection_key = 'dataTypes';
   /**
-   * Required. Supported data types are: "altitude", "distance", "floors",
-   * "sleep", "steps", "weight". Values should be in kebab-case.
+   * Required. See [Google Health API data
+   * types](https://developers.google.com/health/data-types) for the list of
+   * supported data types. Values should be in kebab-case.
    *
    * @var string[]
    */
@@ -56,8 +57,9 @@ class SubscriberConfig extends \Google\Collection
   public $subscriptionCreatePolicy;
 
   /**
-   * Required. Supported data types are: "altitude", "distance", "floors",
-   * "sleep", "steps", "weight". Values should be in kebab-case.
+   * Required. See [Google Health API data
+   * types](https://developers.google.com/health/data-types) for the list of
+   * supported data types. Values should be in kebab-case.
    *
    * @param string[] $dataTypes
    */

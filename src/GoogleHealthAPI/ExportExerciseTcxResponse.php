@@ -20,14 +20,20 @@ namespace Google\Service\GoogleHealthAPI;
 class ExportExerciseTcxResponse extends \Google\Model
 {
   /**
-   * Contains the exported TCX data.
+   * Contains the exported TCX data. This field is intended for gRPC clients, as
+   * media download integration is not supported for gRPC. HTTP clients should
+   * instead use the `alt=media` query parameter to download the raw binary TCX
+   * file.
    *
    * @var string
    */
   public $tcxData;
 
   /**
-   * Contains the exported TCX data.
+   * Contains the exported TCX data. This field is intended for gRPC clients, as
+   * media download integration is not supported for gRPC. HTTP clients should
+   * instead use the `alt=media` query parameter to download the raw binary TCX
+   * file.
    *
    * @param string $tcxData
    */
