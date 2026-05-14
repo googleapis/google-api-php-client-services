@@ -33,9 +33,11 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
 {% endif %}{% if model.has_gapi %}
   protected $internal_gapi_mappings = [
     {% for property in model.properties %}
-      {% if not property.member_name_is_json_name %}
+      {% if not property.member_name_is_json_name %}{% if not "$" in property.wireName %}
         "{{ property.memberName }}" => "{{ property.wireName }}",
-      {% endif %}
+      {% else %}
+        "{{ property.memberName }}" => '{{ property.wireName }}',
+      {% endif %}{% endif %}
     {% endfor %}
   ];
 {% endif %}{% for property in model.properties %}

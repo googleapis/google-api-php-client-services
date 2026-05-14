@@ -19,7 +19,7 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1mainLossPattern extends \Google\Collection
 {
-  protected $collection_key = 'conversationIds';
+  protected $collection_key = 'links';
   /**
    * Output only. A list of conversation IDs that match this loss pattern.
    *
@@ -50,6 +50,8 @@ class GoogleCloudContactcenterinsightsV1mainLossPattern extends \Google\Collecti
    * @var string
    */
   public $id;
+  protected $linksType = GoogleCloudContactcenterinsightsV1mainLossPatternLink::class;
+  protected $linksDataType = 'array';
   /**
    * Output only. The percentage of conversations that match this loss pattern.
    *
@@ -142,6 +144,22 @@ class GoogleCloudContactcenterinsightsV1mainLossPattern extends \Google\Collecti
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * Output only. A list of links to conversations or bot instructions.
+   *
+   * @param GoogleCloudContactcenterinsightsV1mainLossPatternLink[] $links
+   */
+  public function setLinks($links)
+  {
+    $this->links = $links;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1mainLossPatternLink[]
+   */
+  public function getLinks()
+  {
+    return $this->links;
   }
   public function setPercentage($percentage)
   {

@@ -21,22 +21,27 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
 {
   protected $collection_key = 'fullTrajectorySteps';
   /**
-   * Output only. The final, high-level answer or diagnostic summary returned by
-   * the Sherlock worker.
+   * Output only. Deprecated: Output only. The final, high-level answer or
+   * diagnostic summary returned by the Sherlock worker is deprecated. The
+   * persistent analysis summary is stored inside the Diagnostic resource
+   * instead.
    *
+   * @deprecated
    * @var string
    */
   public $answer;
   /**
-   * Output only. If an external destination was requested, the URI of the
-   * exported data.
+   * Output only. Deprecated: Output only. If an external destination was
+   * requested, the URI of the exported data is deprecated. The persistent
+   * diagnostic details are stored inside the Diagnostic resource instead.
    *
+   * @deprecated
    * @var string
    */
   public $exportUri;
   /**
-   * Output only. Deprecated: Use full_trajectory_steps instead. The complete
-   * sequence of thoughts and actions (full trajectory).
+   * Output only. Deprecated: Use full_trajectory_steps instead. Output only.
+   * The complete sequence of thoughts and actions (full trajectory).
    *
    * @deprecated
    * @var string[]
@@ -46,9 +51,12 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
   protected $fullTrajectoryStepsDataType = 'array';
 
   /**
-   * Output only. The final, high-level answer or diagnostic summary returned by
-   * the Sherlock worker.
+   * Output only. Deprecated: Output only. The final, high-level answer or
+   * diagnostic summary returned by the Sherlock worker is deprecated. The
+   * persistent analysis summary is stored inside the Diagnostic resource
+   * instead.
    *
+   * @deprecated
    * @param string $answer
    */
   public function setAnswer($answer)
@@ -56,6 +64,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
     $this->answer = $answer;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getAnswer()
@@ -63,9 +72,11 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
     return $this->answer;
   }
   /**
-   * Output only. If an external destination was requested, the URI of the
-   * exported data.
+   * Output only. Deprecated: Output only. If an external destination was
+   * requested, the URI of the exported data is deprecated. The persistent
+   * diagnostic details are stored inside the Diagnostic resource instead.
    *
+   * @deprecated
    * @param string $exportUri
    */
   public function setExportUri($exportUri)
@@ -73,6 +84,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
     $this->exportUri = $exportUri;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getExportUri()
@@ -80,8 +92,8 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
     return $this->exportUri;
   }
   /**
-   * Output only. Deprecated: Use full_trajectory_steps instead. The complete
-   * sequence of thoughts and actions (full trajectory).
+   * Output only. Deprecated: Use full_trajectory_steps instead. Output only.
+   * The complete sequence of thoughts and actions (full trajectory).
    *
    * @deprecated
    * @param string[] $fullTrajectories
@@ -99,9 +111,11 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
     return $this->fullTrajectories;
   }
   /**
-   * Output only. The complete sequence of thoughts and actions taken by the
-   * agent.
+   * Output only. Deprecated: Output only. The complete sequence of thoughts and
+   * actions taken by the agent is deprecated under LRO response completions.
+   * Use the persistent details inside the Diagnostic resource instead.
    *
+   * @deprecated
    * @param GoogleCloudContactcenterinsightsV1alpha1SherlockStep[] $fullTrajectorySteps
    */
   public function setFullTrajectorySteps($fullTrajectorySteps)
@@ -109,6 +123,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsResponse exte
     $this->fullTrajectorySteps = $fullTrajectorySteps;
   }
   /**
+   * @deprecated
    * @return GoogleCloudContactcenterinsightsV1alpha1SherlockStep[]
    */
   public function getFullTrajectorySteps()

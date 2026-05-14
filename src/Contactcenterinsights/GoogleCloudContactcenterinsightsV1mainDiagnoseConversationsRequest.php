@@ -32,9 +32,11 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
    */
   public const METRIC_TYPE_CONTAINMENT = 'CONTAINMENT';
   /**
-   * Optional. If true, the request will be validated and a simulation of the
-   * analysis will be performed without actually executing the task.
+   * Optional. Deprecated: If true, the request will be validated and a
+   * simulation of the analysis will be performed without actually executing the
+   * task. This field is unused. Use validate_only instead.
    *
+   * @deprecated
    * @var bool
    */
   public $dryRun;
@@ -45,9 +47,12 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
    */
   public $filter;
   /**
-   * Optional. If true, the agent will generate a full diagnostic report for all
-   * sub-agents.
+   * Optional. Deprecated: If true, the agent will generate a full diagnostic
+   * report for all sub-agents. Subagent reporting configuration is unused. The
+   * final diagnostic details are already persisted inside the Diagnostic
+   * resource instead.
    *
+   * @deprecated
    * @var bool
    */
   public $fullReport;
@@ -104,9 +109,11 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
   public $validateOnly;
 
   /**
-   * Optional. If true, the request will be validated and a simulation of the
-   * analysis will be performed without actually executing the task.
+   * Optional. Deprecated: If true, the request will be validated and a
+   * simulation of the analysis will be performed without actually executing the
+   * task. This field is unused. Use validate_only instead.
    *
+   * @deprecated
    * @param bool $dryRun
    */
   public function setDryRun($dryRun)
@@ -114,6 +121,7 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
     $this->dryRun = $dryRun;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getDryRun()
@@ -137,9 +145,12 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
     return $this->filter;
   }
   /**
-   * Optional. If true, the agent will generate a full diagnostic report for all
-   * sub-agents.
+   * Optional. Deprecated: If true, the agent will generate a full diagnostic
+   * report for all sub-agents. Subagent reporting configuration is unused. The
+   * final diagnostic details are already persisted inside the Diagnostic
+   * resource instead.
    *
+   * @deprecated
    * @param bool $fullReport
    */
   public function setFullReport($fullReport)
@@ -147,6 +158,7 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
     $this->fullReport = $fullReport;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getFullReport()
@@ -206,8 +218,11 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
     return $this->metricType;
   }
   /**
-   * Optional. The configuration for the output of the task.
+   * Optional. Deprecated: The configuration for the output of the task. The
+   * export destination is unused. Detailed markdown and conversation slices are
+   * already persisted inside the Diagnostic resource instead.
    *
+   * @deprecated
    * @param GoogleCloudContactcenterinsightsV1mainOutputConfig $outputConfig
    */
   public function setOutputConfig(GoogleCloudContactcenterinsightsV1mainOutputConfig $outputConfig)
@@ -215,6 +230,7 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest extends
     $this->outputConfig = $outputConfig;
   }
   /**
+   * @deprecated
    * @return GoogleCloudContactcenterinsightsV1mainOutputConfig
    */
   public function getOutputConfig()

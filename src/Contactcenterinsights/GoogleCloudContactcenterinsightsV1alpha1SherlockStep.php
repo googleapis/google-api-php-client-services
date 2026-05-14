@@ -21,29 +21,117 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
 {
   protected $collection_key = 'toolCalls';
   /**
-   * Output only. Natural language input stimulus.
+   * Output only. The ID of the agent that produced/received this content.
    *
+   * @var string
+   */
+  public $agentId;
+  protected $contentType = GoogleCloudAiplatformV1Content::class;
+  protected $contentDataType = '';
+  /**
+   * Output only. List of state changes caused by this specific turn.
+   *
+   * @var array[]
+   */
+  public $stateDeltas;
+  /**
+   * Output only. Unique ID for this specific turn.
+   *
+   * @var string
+   */
+  public $stepId;
+  /**
+   * Output only. Deprecated: Use content instead.
+   *
+   * @deprecated
    * @var string[]
    */
   public $textInput;
   /**
-   * Output only. The reasoning or internal monologue of the agent.
+   * Output only. Deprecated: Use content instead.
    *
+   * @deprecated
    * @var string
    */
   public $thought;
   protected $toolCallsType = GoogleCloudContactcenterinsightsV1alpha1ToolCall::class;
   protected $toolCallsDataType = 'array';
   /**
-   * Output only. The output response from the tool execution.
+   * Output only. Deprecated: Use content instead.
    *
+   * @deprecated
    * @var array[]
    */
   public $toolOutput;
 
   /**
-   * Output only. Natural language input stimulus.
+   * Output only. The ID of the agent that produced/received this content.
    *
+   * @param string $agentId
+   */
+  public function setAgentId($agentId)
+  {
+    $this->agentId = $agentId;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentId()
+  {
+    return $this->agentId;
+  }
+  /**
+   * Output only. The content of the turn (either Model or User role).
+   *
+   * @param GoogleCloudAiplatformV1Content $content
+   */
+  public function setContent(GoogleCloudAiplatformV1Content $content)
+  {
+    $this->content = $content;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Content
+   */
+  public function getContent()
+  {
+    return $this->content;
+  }
+  /**
+   * Output only. List of state changes caused by this specific turn.
+   *
+   * @param array[] $stateDeltas
+   */
+  public function setStateDeltas($stateDeltas)
+  {
+    $this->stateDeltas = $stateDeltas;
+  }
+  /**
+   * @return array[]
+   */
+  public function getStateDeltas()
+  {
+    return $this->stateDeltas;
+  }
+  /**
+   * Output only. Unique ID for this specific turn.
+   *
+   * @param string $stepId
+   */
+  public function setStepId($stepId)
+  {
+    $this->stepId = $stepId;
+  }
+  /**
+   * @return string
+   */
+  public function getStepId()
+  {
+    return $this->stepId;
+  }
+  /**
+   * Output only. Deprecated: Use content instead.
+   *
+   * @deprecated
    * @param string[] $textInput
    */
   public function setTextInput($textInput)
@@ -51,6 +139,7 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
     $this->textInput = $textInput;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getTextInput()
@@ -58,8 +147,9 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
     return $this->textInput;
   }
   /**
-   * Output only. The reasoning or internal monologue of the agent.
+   * Output only. Deprecated: Use content instead.
    *
+   * @deprecated
    * @param string $thought
    */
   public function setThought($thought)
@@ -67,6 +157,7 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
     $this->thought = $thought;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getThought()
@@ -74,8 +165,9 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
     return $this->thought;
   }
   /**
-   * Output only. The tool call issued by the agent.
+   * Output only. Deprecated: Use content instead.
    *
+   * @deprecated
    * @param GoogleCloudContactcenterinsightsV1alpha1ToolCall[] $toolCalls
    */
   public function setToolCalls($toolCalls)
@@ -83,6 +175,7 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
     $this->toolCalls = $toolCalls;
   }
   /**
+   * @deprecated
    * @return GoogleCloudContactcenterinsightsV1alpha1ToolCall[]
    */
   public function getToolCalls()
@@ -90,8 +183,9 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
     return $this->toolCalls;
   }
   /**
-   * Output only. The output response from the tool execution.
+   * Output only. Deprecated: Use content instead.
    *
+   * @deprecated
    * @param array[] $toolOutput
    */
   public function setToolOutput($toolOutput)
@@ -99,6 +193,7 @@ class GoogleCloudContactcenterinsightsV1alpha1SherlockStep extends \Google\Colle
     $this->toolOutput = $toolOutput;
   }
   /**
+   * @deprecated
    * @return array[]
    */
   public function getToolOutput()

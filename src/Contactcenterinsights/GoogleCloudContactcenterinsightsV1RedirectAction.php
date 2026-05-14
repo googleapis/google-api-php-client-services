@@ -20,12 +20,34 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1RedirectAction extends \Google\Model
 {
   /**
+   * The query params to be added to the redirect path.
+   *
+   * @var string[]
+   */
+  public $queryParams;
+  /**
    * The relative path to redirect to.
    *
    * @var string
    */
   public $relativePath;
 
+  /**
+   * The query params to be added to the redirect path.
+   *
+   * @param string[] $queryParams
+   */
+  public function setQueryParams($queryParams)
+  {
+    $this->queryParams = $queryParams;
+  }
+  /**
+   * @return string[]
+   */
+  public function getQueryParams()
+  {
+    return $this->queryParams;
+  }
   /**
    * The relative path to redirect to.
    *

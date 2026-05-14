@@ -20,16 +20,41 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1DiagnosticReport extends \Google\Collection
 {
   protected $collection_key = 'lossPatterns';
+  protected $conversationSlicesType = GoogleCloudContactcenterinsightsV1alpha1DiagnosticReportConversationSlice::class;
+  protected $conversationSlicesDataType = 'map';
   protected $intentStatsType = GoogleCloudContactcenterinsightsV1alpha1DiagnosticReportIntentStats::class;
   protected $intentStatsDataType = 'array';
   protected $lossPatternsType = GoogleCloudContactcenterinsightsV1alpha1LossPattern::class;
   protected $lossPatternsDataType = 'array';
   protected $metricsType = GoogleCloudContactcenterinsightsV1alpha1MetricValue::class;
   protected $metricsDataType = 'map';
+  /**
+   * Output only. The final report in markdown format.
+   *
+   * @var string
+   */
+  public $report;
 
   /**
-   * Output only. A breakdown of metrics grouped by intent.
+   * Output only. A map of conversation slices used in the report.
    *
+   * @param GoogleCloudContactcenterinsightsV1alpha1DiagnosticReportConversationSlice[] $conversationSlices
+   */
+  public function setConversationSlices($conversationSlices)
+  {
+    $this->conversationSlices = $conversationSlices;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1DiagnosticReportConversationSlice[]
+   */
+  public function getConversationSlices()
+  {
+    return $this->conversationSlices;
+  }
+  /**
+   * Output only. Deprecated: Intent breakdowns are no longer used.
+   *
+   * @deprecated
    * @param GoogleCloudContactcenterinsightsV1alpha1DiagnosticReportIntentStats[] $intentStats
    */
   public function setIntentStats($intentStats)
@@ -37,6 +62,7 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnosticReport extends \Google\C
     $this->intentStats = $intentStats;
   }
   /**
+   * @deprecated
    * @return GoogleCloudContactcenterinsightsV1alpha1DiagnosticReportIntentStats[]
    */
   public function getIntentStats()
@@ -78,6 +104,22 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnosticReport extends \Google\C
   public function getMetrics()
   {
     return $this->metrics;
+  }
+  /**
+   * Output only. The final report in markdown format.
+   *
+   * @param string $report
+   */
+  public function setReport($report)
+  {
+    $this->report = $report;
+  }
+  /**
+   * @return string
+   */
+  public function getReport()
+  {
+    return $this->report;
   }
 }
 
