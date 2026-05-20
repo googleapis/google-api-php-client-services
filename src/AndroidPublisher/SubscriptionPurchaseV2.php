@@ -98,6 +98,8 @@ class SubscriptionPurchaseV2 extends \Google\Collection
   public $etag;
   protected $externalAccountIdentifiersType = ExternalAccountIdentifiers::class;
   protected $externalAccountIdentifiersDataType = '';
+  protected $inGracePeriodStateContextType = InGracePeriodStateContext::class;
+  protected $inGracePeriodStateContextDataType = '';
   /**
    * This kind represents a SubscriptionPurchaseV2 object in the
    * androidpublisher service.
@@ -129,6 +131,8 @@ class SubscriptionPurchaseV2 extends \Google\Collection
    * @var string
    */
   public $linkedPurchaseToken;
+  protected $onHoldStateContextType = OnHoldStateContext::class;
+  protected $onHoldStateContextDataType = '';
   protected $outOfAppPurchaseContextType = OutOfAppPurchaseContext::class;
   protected $outOfAppPurchaseContextDataType = '';
   protected $pausedStateContextType = PausedStateContext::class;
@@ -231,6 +235,24 @@ class SubscriptionPurchaseV2 extends \Google\Collection
     return $this->externalAccountIdentifiers;
   }
   /**
+   * Optional. Additional context around subscriptions in IN_GRACE_PERIOD state.
+   * Only present if the subscription currently has subscription_state
+   * SUBSCRIPTION_STATE_IN_GRACE_PERIOD.
+   *
+   * @param InGracePeriodStateContext $inGracePeriodStateContext
+   */
+  public function setInGracePeriodStateContext(InGracePeriodStateContext $inGracePeriodStateContext)
+  {
+    $this->inGracePeriodStateContext = $inGracePeriodStateContext;
+  }
+  /**
+   * @return InGracePeriodStateContext
+   */
+  public function getInGracePeriodStateContext()
+  {
+    return $this->inGracePeriodStateContext;
+  }
+  /**
    * This kind represents a SubscriptionPurchaseV2 object in the
    * androidpublisher service.
    *
@@ -306,6 +328,24 @@ class SubscriptionPurchaseV2 extends \Google\Collection
   public function getLinkedPurchaseToken()
   {
     return $this->linkedPurchaseToken;
+  }
+  /**
+   * Optional. Additional context around subscriptions in ON_HOLD state. Only
+   * present if the subscription currently has subscription_state
+   * SUBSCRIPTION_STATE_ON_HOLD.
+   *
+   * @param OnHoldStateContext $onHoldStateContext
+   */
+  public function setOnHoldStateContext(OnHoldStateContext $onHoldStateContext)
+  {
+    $this->onHoldStateContext = $onHoldStateContext;
+  }
+  /**
+   * @return OnHoldStateContext
+   */
+  public function getOnHoldStateContext()
+  {
+    return $this->onHoldStateContext;
   }
   /**
    * Additional context for out of app purchases. This information is only

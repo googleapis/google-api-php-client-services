@@ -48,9 +48,10 @@ class SubscriptionDetails extends \Google\Model
    */
   public $offerId;
   /**
-   * The pricing phase for the billing period funded by this order. Deprecated.
-   * Use offer_phase_details instead.
+   * Deprecated: Use offer_phase_details instead. The pricing phase for the
+   * billing period funded by this order.
    *
+   * @deprecated
    * @var string
    */
   public $offerPhase;
@@ -107,11 +108,12 @@ class SubscriptionDetails extends \Google\Model
     return $this->offerId;
   }
   /**
-   * The pricing phase for the billing period funded by this order. Deprecated.
-   * Use offer_phase_details instead.
+   * Deprecated: Use offer_phase_details instead. The pricing phase for the
+   * billing period funded by this order.
    *
    * Accepted values: OFFER_PHASE_UNSPECIFIED, BASE, INTRODUCTORY, FREE_TRIAL
    *
+   * @deprecated
    * @param self::OFFER_PHASE_* $offerPhase
    */
   public function setOfferPhase($offerPhase)
@@ -119,6 +121,7 @@ class SubscriptionDetails extends \Google\Model
     $this->offerPhase = $offerPhase;
   }
   /**
+   * @deprecated
    * @return self::OFFER_PHASE_*
    */
   public function getOfferPhase()
