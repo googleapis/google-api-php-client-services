@@ -388,6 +388,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public $takeout;
   protected $timeZoneType = GoogleTypeTimeZone::class;
   protected $timeZoneDataType = '';
+  protected $transitStationType = GoogleMapsPlacesV1TransitStation::class;
+  protected $transitStationDataType = '';
   /**
    * A set of type tags for this result. For example, "political" and
    * "locality". For the complete list of possible values, see Table A and Table
@@ -1651,6 +1653,22 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getTimeZone()
   {
     return $this->timeZone;
+  }
+  /**
+   * The transit station information for the place.
+   *
+   * @param GoogleMapsPlacesV1TransitStation $transitStation
+   */
+  public function setTransitStation(GoogleMapsPlacesV1TransitStation $transitStation)
+  {
+    $this->transitStation = $transitStation;
+  }
+  /**
+   * @return GoogleMapsPlacesV1TransitStation
+   */
+  public function getTransitStation()
+  {
+    return $this->transitStation;
   }
   /**
    * A set of type tags for this result. For example, "political" and
