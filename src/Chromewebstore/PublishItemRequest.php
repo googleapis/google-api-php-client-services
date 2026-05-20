@@ -33,6 +33,16 @@ class PublishItemRequest extends \Google\Collection
    */
   public const PUBLISH_TYPE_STAGED_PUBLISH = 'STAGED_PUBLISH';
   protected $collection_key = 'deployInfos';
+  /**
+   * Optional. When set to true the request will fail if there are any warnings
+   * during validation and the details will be included in the error_details.
+   * Otherwise warnings are treated as non-blocking and will be ignored for
+   * validation but will be included in the response for inspection. Defaults to
+   * `false` if unset.
+   *
+   * @var bool
+   */
+  public $blockOnWarnings;
   protected $deployInfosType = DeployInfo::class;
   protected $deployInfosDataType = 'array';
   /**
@@ -52,6 +62,26 @@ class PublishItemRequest extends \Google\Collection
    */
   public $skipReview;
 
+  /**
+   * Optional. When set to true the request will fail if there are any warnings
+   * during validation and the details will be included in the error_details.
+   * Otherwise warnings are treated as non-blocking and will be ignored for
+   * validation but will be included in the response for inspection. Defaults to
+   * `false` if unset.
+   *
+   * @param bool $blockOnWarnings
+   */
+  public function setBlockOnWarnings($blockOnWarnings)
+  {
+    $this->blockOnWarnings = $blockOnWarnings;
+  }
+  /**
+   * @return bool
+   */
+  public function getBlockOnWarnings()
+  {
+    return $this->blockOnWarnings;
+  }
   /**
    * Optional. Additional deploy information including the desired initial
    * percentage rollout. Defaults to the current value saved in the developer

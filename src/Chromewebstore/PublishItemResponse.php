@@ -65,6 +65,8 @@ class PublishItemResponse extends \Google\Model
    * @var string
    */
   public $state;
+  protected $warningInfoType = WarningsInfo::class;
+  protected $warningInfoDataType = '';
 
   /**
    * Output only. The ID of the item.
@@ -116,6 +118,22 @@ class PublishItemResponse extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. Non-blocking warnings encountered during the request.
+   *
+   * @param WarningsInfo $warningInfo
+   */
+  public function setWarningInfo(WarningsInfo $warningInfo)
+  {
+    $this->warningInfo = $warningInfo;
+  }
+  /**
+   * @return WarningsInfo
+   */
+  public function getWarningInfo()
+  {
+    return $this->warningInfo;
   }
 }
 
