@@ -19,68 +19,134 @@ namespace Google\Service\NetworkManagement;
 
 class WebPath extends \Google\Collection
 {
+  /**
+   * The default value. This value is used if the status is omitted.
+   */
+  public const MONITORING_STATUS_MONITORING_STATUS_UNSPECIFIED = 'MONITORING_STATUS_UNSPECIFIED';
+  /**
+   * Monitoring is enabled.
+   */
+  public const MONITORING_STATUS_MONITORING = 'MONITORING';
+  /**
+   * Policy is mismatched.
+   */
+  public const MONITORING_STATUS_POLICY_MISMATCH = 'POLICY_MISMATCH';
+  /**
+   * Monitoring point is offline.
+   */
+  public const MONITORING_STATUS_MONITORING_POINT_OFFLINE = 'MONITORING_POINT_OFFLINE';
+  /**
+   * Monitoring is disabled.
+   */
+  public const MONITORING_STATUS_DISABLED = 'DISABLED';
+  /**
+   * The default value. This value is used if the status is omitted.
+   */
+  public const WORKFLOW_TYPE_WORKFLOW_TYPE_UNSPECIFIED = 'WORKFLOW_TYPE_UNSPECIFIED';
+  /**
+   * Browser.
+   */
+  public const WORKFLOW_TYPE_BROWSER = 'BROWSER';
+  /**
+   * HTTP.
+   */
+  public const WORKFLOW_TYPE_HTTP = 'HTTP';
   protected $collection_key = 'providerTags';
   /**
+   * Output only. The time the WebPath was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Web monitoring target.
+   *
    * @var string
    */
   public $destination;
+  protected $destinationGeoLocationType = GeoLocation::class;
+  protected $destinationGeoLocationDataType = '';
   /**
+   * Output only. Display name of the WebPath.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Monitoring interval.
+   *
    * @var string
    */
   public $interval;
   /**
+   * Output only. Is monitoring enabled for the WebPath.
+   *
    * @var bool
    */
   public $monitoringEnabled;
   /**
+   * Output only. Display name of the monitoring policy.
+   *
    * @var string
    */
   public $monitoringPolicyDisplayName;
   /**
+   * Output only. ID of the monitoring policy.
+   *
    * @var string
    */
   public $monitoringPolicyId;
   /**
+   * Output only. The monitoring status of the WebPath.
+   *
    * @var string
    */
   public $monitoringStatus;
   /**
+   * Identifier. Name of the resource. Format: `projects/{project}/locations/{lo
+   * cation}/networkMonitoringProviders/{network_monitoring_provider}/webPaths/{
+   * web_path}`
+   *
    * @var string
    */
   public $name;
   protected $providerTagsType = ProviderTag::class;
   protected $providerTagsDataType = 'array';
   /**
+   * Output only. Link to provider's UI; link shows the WebPath.
+   *
    * @var string
    */
   public $providerUiUri;
   /**
+   * Output only. Provider's UUID of the related NetworkPath.
+   *
    * @var string
    */
   public $relatedNetworkPathId;
   /**
+   * Output only. ID of the source MonitoringPoint.
+   *
    * @var string
    */
   public $sourceMonitoringPointId;
   /**
+   * Output only. The time the WebPath was updated.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. The workflow type of the WebPath.
+   *
    * @var string
    */
   public $workflowType;
 
   /**
-   * @param string
+   * Output only. The time the WebPath was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -94,7 +160,9 @@ class WebPath extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Web monitoring target.
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -108,7 +176,25 @@ class WebPath extends \Google\Collection
     return $this->destination;
   }
   /**
-   * @param string
+   * Output only. Geographical location of the destination.
+   *
+   * @param GeoLocation $destinationGeoLocation
+   */
+  public function setDestinationGeoLocation(GeoLocation $destinationGeoLocation)
+  {
+    $this->destinationGeoLocation = $destinationGeoLocation;
+  }
+  /**
+   * @return GeoLocation
+   */
+  public function getDestinationGeoLocation()
+  {
+    return $this->destinationGeoLocation;
+  }
+  /**
+   * Output only. Display name of the WebPath.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -122,7 +208,9 @@ class WebPath extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Monitoring interval.
+   *
+   * @param string $interval
    */
   public function setInterval($interval)
   {
@@ -136,7 +224,9 @@ class WebPath extends \Google\Collection
     return $this->interval;
   }
   /**
-   * @param bool
+   * Output only. Is monitoring enabled for the WebPath.
+   *
+   * @param bool $monitoringEnabled
    */
   public function setMonitoringEnabled($monitoringEnabled)
   {
@@ -150,7 +240,9 @@ class WebPath extends \Google\Collection
     return $this->monitoringEnabled;
   }
   /**
-   * @param string
+   * Output only. Display name of the monitoring policy.
+   *
+   * @param string $monitoringPolicyDisplayName
    */
   public function setMonitoringPolicyDisplayName($monitoringPolicyDisplayName)
   {
@@ -164,7 +256,9 @@ class WebPath extends \Google\Collection
     return $this->monitoringPolicyDisplayName;
   }
   /**
-   * @param string
+   * Output only. ID of the monitoring policy.
+   *
+   * @param string $monitoringPolicyId
    */
   public function setMonitoringPolicyId($monitoringPolicyId)
   {
@@ -178,21 +272,30 @@ class WebPath extends \Google\Collection
     return $this->monitoringPolicyId;
   }
   /**
-   * @param string
+   * Output only. The monitoring status of the WebPath.
+   *
+   * Accepted values: MONITORING_STATUS_UNSPECIFIED, MONITORING,
+   * POLICY_MISMATCH, MONITORING_POINT_OFFLINE, DISABLED
+   *
+   * @param self::MONITORING_STATUS_* $monitoringStatus
    */
   public function setMonitoringStatus($monitoringStatus)
   {
     $this->monitoringStatus = $monitoringStatus;
   }
   /**
-   * @return string
+   * @return self::MONITORING_STATUS_*
    */
   public function getMonitoringStatus()
   {
     return $this->monitoringStatus;
   }
   /**
-   * @param string
+   * Identifier. Name of the resource. Format: `projects/{project}/locations/{lo
+   * cation}/networkMonitoringProviders/{network_monitoring_provider}/webPaths/{
+   * web_path}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -206,7 +309,9 @@ class WebPath extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ProviderTag[]
+   * Output only. The provider tags of the web path.
+   *
+   * @param ProviderTag[] $providerTags
    */
   public function setProviderTags($providerTags)
   {
@@ -220,7 +325,9 @@ class WebPath extends \Google\Collection
     return $this->providerTags;
   }
   /**
-   * @param string
+   * Output only. Link to provider's UI; link shows the WebPath.
+   *
+   * @param string $providerUiUri
    */
   public function setProviderUiUri($providerUiUri)
   {
@@ -234,7 +341,9 @@ class WebPath extends \Google\Collection
     return $this->providerUiUri;
   }
   /**
-   * @param string
+   * Output only. Provider's UUID of the related NetworkPath.
+   *
+   * @param string $relatedNetworkPathId
    */
   public function setRelatedNetworkPathId($relatedNetworkPathId)
   {
@@ -248,7 +357,9 @@ class WebPath extends \Google\Collection
     return $this->relatedNetworkPathId;
   }
   /**
-   * @param string
+   * Output only. ID of the source MonitoringPoint.
+   *
+   * @param string $sourceMonitoringPointId
    */
   public function setSourceMonitoringPointId($sourceMonitoringPointId)
   {
@@ -262,7 +373,9 @@ class WebPath extends \Google\Collection
     return $this->sourceMonitoringPointId;
   }
   /**
-   * @param string
+   * Output only. The time the WebPath was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -276,14 +389,18 @@ class WebPath extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Output only. The workflow type of the WebPath.
+   *
+   * Accepted values: WORKFLOW_TYPE_UNSPECIFIED, BROWSER, HTTP
+   *
+   * @param self::WORKFLOW_TYPE_* $workflowType
    */
   public function setWorkflowType($workflowType)
   {
     $this->workflowType = $workflowType;
   }
   /**
-   * @return string
+   * @return self::WORKFLOW_TYPE_*
    */
   public function getWorkflowType()
   {

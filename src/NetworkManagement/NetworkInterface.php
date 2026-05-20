@@ -20,36 +20,53 @@ namespace Google\Service\NetworkManagement;
 class NetworkInterface extends \Google\Model
 {
   /**
+   * Output only. The description of the interface.
+   *
    * @var string
    */
   public $adapterDescription;
   /**
+   * Output only. The IP address of the interface and subnet mask in CIDR
+   * format. Examples: 192.168.1.0/24, 2001:db8::/32
+   *
    * @var string
    */
   public $cidr;
   /**
+   * Output only. The name of the network interface. Examples: eth0, eno1
+   *
    * @var string
    */
   public $interfaceName;
   /**
+   * Output only. The IP address of the interface.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * Output only. The MAC address of the interface.
+   *
    * @var string
    */
   public $macAddress;
   /**
+   * Output only. Speed of the interface in millions of bits per second.
+   *
    * @var string
    */
   public $speed;
   /**
+   * Output only. The id of the VLAN.
+   *
    * @var string
    */
   public $vlanId;
 
   /**
-   * @param string
+   * Output only. The description of the interface.
+   *
+   * @param string $adapterDescription
    */
   public function setAdapterDescription($adapterDescription)
   {
@@ -63,7 +80,10 @@ class NetworkInterface extends \Google\Model
     return $this->adapterDescription;
   }
   /**
-   * @param string
+   * Output only. The IP address of the interface and subnet mask in CIDR
+   * format. Examples: 192.168.1.0/24, 2001:db8::/32
+   *
+   * @param string $cidr
    */
   public function setCidr($cidr)
   {
@@ -77,7 +97,9 @@ class NetworkInterface extends \Google\Model
     return $this->cidr;
   }
   /**
-   * @param string
+   * Output only. The name of the network interface. Examples: eth0, eno1
+   *
+   * @param string $interfaceName
    */
   public function setInterfaceName($interfaceName)
   {
@@ -91,7 +113,9 @@ class NetworkInterface extends \Google\Model
     return $this->interfaceName;
   }
   /**
-   * @param string
+   * Output only. The IP address of the interface.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -105,7 +129,9 @@ class NetworkInterface extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * Output only. The MAC address of the interface.
+   *
+   * @param string $macAddress
    */
   public function setMacAddress($macAddress)
   {
@@ -119,7 +145,9 @@ class NetworkInterface extends \Google\Model
     return $this->macAddress;
   }
   /**
-   * @param string
+   * Output only. Speed of the interface in millions of bits per second.
+   *
+   * @param string $speed
    */
   public function setSpeed($speed)
   {
@@ -133,7 +161,9 @@ class NetworkInterface extends \Google\Model
     return $this->speed;
   }
   /**
-   * @param string
+   * Output only. The id of the VLAN.
+   *
+   * @param string $vlanId
    */
   public function setVlanId($vlanId)
   {

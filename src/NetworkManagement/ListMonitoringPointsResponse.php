@@ -23,12 +23,16 @@ class ListMonitoringPointsResponse extends \Google\Collection
   protected $monitoringPointsType = MonitoringPoint::class;
   protected $monitoringPointsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param MonitoringPoint[]
+   * The list of MonitoringPoints.
+   *
+   * @param MonitoringPoint[] $monitoringPoints
    */
   public function setMonitoringPoints($monitoringPoints)
   {
@@ -42,7 +46,9 @@ class ListMonitoringPointsResponse extends \Google\Collection
     return $this->monitoringPoints;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

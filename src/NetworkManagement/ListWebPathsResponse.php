@@ -21,6 +21,8 @@ class ListWebPathsResponse extends \Google\Collection
 {
   protected $collection_key = 'webPaths';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListWebPathsResponse extends \Google\Collection
   protected $webPathsDataType = 'array';
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListWebPathsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param WebPath[]
+   * The list of WebPath.
+   *
+   * @param WebPath[] $webPaths
    */
   public function setWebPaths($webPaths)
   {

@@ -19,66 +19,143 @@ namespace Google\Service\NetworkManagement;
 
 class NetworkPath extends \Google\Collection
 {
+  /**
+   * The default value. This value is used if the status is omitted.
+   */
+  public const MONITORING_STATUS_MONITORING_STATUS_UNSPECIFIED = 'MONITORING_STATUS_UNSPECIFIED';
+  /**
+   * Monitoring is enabled.
+   */
+  public const MONITORING_STATUS_MONITORING = 'MONITORING';
+  /**
+   * Policy is mismatched.
+   */
+  public const MONITORING_STATUS_POLICY_MISMATCH = 'POLICY_MISMATCH';
+  /**
+   * Monitoring point is offline.
+   */
+  public const MONITORING_STATUS_MONITORING_POINT_OFFLINE = 'MONITORING_POINT_OFFLINE';
+  /**
+   * Monitoring is disabled.
+   */
+  public const MONITORING_STATUS_DISABLED = 'DISABLED';
+  /**
+   * The default value. This value is used if the network protocol is omitted.
+   */
+  public const NETWORK_PROTOCOL_NETWORK_PROTOCOL_UNSPECIFIED = 'NETWORK_PROTOCOL_UNSPECIFIED';
+  /**
+   * ICMP.
+   */
+  public const NETWORK_PROTOCOL_ICMP = 'ICMP';
+  /**
+   * UDP.
+   */
+  public const NETWORK_PROTOCOL_UDP = 'UDP';
+  /**
+   * TCP.
+   */
+  public const NETWORK_PROTOCOL_TCP = 'TCP';
   protected $collection_key = 'providerTags';
   /**
+   * Output only. The time the NetworkPath was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. IP address or hostname of the network path destination.
+   *
    * @var string
    */
   public $destination;
   protected $destinationGeoLocationType = GeoLocation::class;
   protected $destinationGeoLocationDataType = '';
   /**
+   * Output only. Provider's UUID of the destination MonitoringPoint. This id
+   * may not point to a resource in the Google Cloud.
+   *
+   * @var string
+   */
+  public $destinationMonitoringPointId;
+  /**
+   * Output only. The display name of the network path.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Indicates if the network path is dual ended. When true, the
+   * network path is measured both: from both source to destination, and from
+   * destination to source. When false, the network path is measured from the
+   * source through the destination back to the source (round trip measurement).
+   *
    * @var bool
    */
   public $dualEnded;
   /**
+   * Output only. Is monitoring enabled for the network path.
+   *
    * @var bool
    */
   public $monitoringEnabled;
   /**
+   * Output only. Display name of the monitoring policy.
+   *
    * @var string
    */
   public $monitoringPolicyDisplayName;
   /**
+   * Output only. ID of monitoring policy.
+   *
    * @var string
    */
   public $monitoringPolicyId;
   /**
+   * Output only. The monitoring status of the network path.
+   *
    * @var string
    */
   public $monitoringStatus;
   /**
+   * Identifier. Name of the resource. Format: `projects/{project}/locations/{lo
+   * cation}/networkMonitoringProviders/{network_monitoring_provider}/networkPat
+   * hs/{network_path}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The network protocol of the network path.
+   *
    * @var string
    */
   public $networkProtocol;
   protected $providerTagsType = ProviderTag::class;
   protected $providerTagsDataType = 'array';
   /**
+   * Output only. Link to provider's UI; link shows the NetworkPath.
+   *
    * @var string
    */
   public $providerUiUri;
   /**
+   * Output only. Provider's UUID of the source MonitoringPoint. This id may not
+   * point to a resource in the Google Cloud.
+   *
    * @var string
    */
   public $sourceMonitoringPointId;
   /**
+   * Output only. The time the NetworkPath was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time the NetworkPath was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -92,7 +169,9 @@ class NetworkPath extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. IP address or hostname of the network path destination.
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -106,7 +185,9 @@ class NetworkPath extends \Google\Collection
     return $this->destination;
   }
   /**
-   * @param GeoLocation
+   * Output only. Geographical location of the destination MonitoringPoint.
+   *
+   * @param GeoLocation $destinationGeoLocation
    */
   public function setDestinationGeoLocation(GeoLocation $destinationGeoLocation)
   {
@@ -120,7 +201,26 @@ class NetworkPath extends \Google\Collection
     return $this->destinationGeoLocation;
   }
   /**
-   * @param string
+   * Output only. Provider's UUID of the destination MonitoringPoint. This id
+   * may not point to a resource in the Google Cloud.
+   *
+   * @param string $destinationMonitoringPointId
+   */
+  public function setDestinationMonitoringPointId($destinationMonitoringPointId)
+  {
+    $this->destinationMonitoringPointId = $destinationMonitoringPointId;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationMonitoringPointId()
+  {
+    return $this->destinationMonitoringPointId;
+  }
+  /**
+   * Output only. The display name of the network path.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -134,7 +234,12 @@ class NetworkPath extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Output only. Indicates if the network path is dual ended. When true, the
+   * network path is measured both: from both source to destination, and from
+   * destination to source. When false, the network path is measured from the
+   * source through the destination back to the source (round trip measurement).
+   *
+   * @param bool $dualEnded
    */
   public function setDualEnded($dualEnded)
   {
@@ -148,7 +253,9 @@ class NetworkPath extends \Google\Collection
     return $this->dualEnded;
   }
   /**
-   * @param bool
+   * Output only. Is monitoring enabled for the network path.
+   *
+   * @param bool $monitoringEnabled
    */
   public function setMonitoringEnabled($monitoringEnabled)
   {
@@ -162,7 +269,9 @@ class NetworkPath extends \Google\Collection
     return $this->monitoringEnabled;
   }
   /**
-   * @param string
+   * Output only. Display name of the monitoring policy.
+   *
+   * @param string $monitoringPolicyDisplayName
    */
   public function setMonitoringPolicyDisplayName($monitoringPolicyDisplayName)
   {
@@ -176,7 +285,9 @@ class NetworkPath extends \Google\Collection
     return $this->monitoringPolicyDisplayName;
   }
   /**
-   * @param string
+   * Output only. ID of monitoring policy.
+   *
+   * @param string $monitoringPolicyId
    */
   public function setMonitoringPolicyId($monitoringPolicyId)
   {
@@ -190,21 +301,30 @@ class NetworkPath extends \Google\Collection
     return $this->monitoringPolicyId;
   }
   /**
-   * @param string
+   * Output only. The monitoring status of the network path.
+   *
+   * Accepted values: MONITORING_STATUS_UNSPECIFIED, MONITORING,
+   * POLICY_MISMATCH, MONITORING_POINT_OFFLINE, DISABLED
+   *
+   * @param self::MONITORING_STATUS_* $monitoringStatus
    */
   public function setMonitoringStatus($monitoringStatus)
   {
     $this->monitoringStatus = $monitoringStatus;
   }
   /**
-   * @return string
+   * @return self::MONITORING_STATUS_*
    */
   public function getMonitoringStatus()
   {
     return $this->monitoringStatus;
   }
   /**
-   * @param string
+   * Identifier. Name of the resource. Format: `projects/{project}/locations/{lo
+   * cation}/networkMonitoringProviders/{network_monitoring_provider}/networkPat
+   * hs/{network_path}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -218,21 +338,27 @@ class NetworkPath extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The network protocol of the network path.
+   *
+   * Accepted values: NETWORK_PROTOCOL_UNSPECIFIED, ICMP, UDP, TCP
+   *
+   * @param self::NETWORK_PROTOCOL_* $networkProtocol
    */
   public function setNetworkProtocol($networkProtocol)
   {
     $this->networkProtocol = $networkProtocol;
   }
   /**
-   * @return string
+   * @return self::NETWORK_PROTOCOL_*
    */
   public function getNetworkProtocol()
   {
     return $this->networkProtocol;
   }
   /**
-   * @param ProviderTag[]
+   * Output only. The provider tags of the network path.
+   *
+   * @param ProviderTag[] $providerTags
    */
   public function setProviderTags($providerTags)
   {
@@ -246,7 +372,9 @@ class NetworkPath extends \Google\Collection
     return $this->providerTags;
   }
   /**
-   * @param string
+   * Output only. Link to provider's UI; link shows the NetworkPath.
+   *
+   * @param string $providerUiUri
    */
   public function setProviderUiUri($providerUiUri)
   {
@@ -260,7 +388,10 @@ class NetworkPath extends \Google\Collection
     return $this->providerUiUri;
   }
   /**
-   * @param string
+   * Output only. Provider's UUID of the source MonitoringPoint. This id may not
+   * point to a resource in the Google Cloud.
+   *
+   * @param string $sourceMonitoringPointId
    */
   public function setSourceMonitoringPointId($sourceMonitoringPointId)
   {
@@ -274,7 +405,9 @@ class NetworkPath extends \Google\Collection
     return $this->sourceMonitoringPointId;
   }
   /**
-   * @param string
+   * Output only. The time the NetworkPath was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

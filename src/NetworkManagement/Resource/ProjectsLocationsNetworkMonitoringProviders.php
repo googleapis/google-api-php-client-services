@@ -17,6 +17,8 @@
 
 namespace Google\Service\NetworkManagement\Resource;
 
+use Google\Service\NetworkManagement\GenerateMonitoringPointConfigResponse;
+use Google\Service\NetworkManagement\GenerateProviderAccessTokenResponse;
 use Google\Service\NetworkManagement\ListNetworkMonitoringProvidersResponse;
 use Google\Service\NetworkManagement\NetworkMonitoringProvider;
 use Google\Service\NetworkManagement\Operation;
@@ -61,6 +63,11 @@ class ProjectsLocationsNetworkMonitoringProviders extends \Google\Service\Resour
    * }/locations/{location}/networkMonitoringProviders/{network_monitoring_provide
    * r}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force Optional. If set to true, any nested MonitoringPoints,
+   * NetworkPaths and WebPaths resources from this NetworkMonitoringProvider will
+   * also be deleted. Otherwise, the request will only work if there are no nested
+   * resources.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -69,6 +76,43 @@ class ProjectsLocationsNetworkMonitoringProviders extends \Google\Service\Resour
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Generates Monitoring Point configuration of a NetworkMonitoringProvider
+   * resource. (networkMonitoringProviders.generateMonitoringPointConfig)
+   *
+   * @param string $name Required. Name of the resource. Format: projects/{project
+   * }/locations/{location}/networkMonitoringProviders/{network_monitoring_provide
+   * r}
+   * @param array $optParams Optional parameters.
+   * @return GenerateMonitoringPointConfigResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateMonitoringPointConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateMonitoringPointConfig', [$params], GenerateMonitoringPointConfigResponse::class);
+  }
+  /**
+   * Generates a provider access token for a given Google access token. Provider
+   * access token is a short-lived token that is used to access resources in the
+   * provider's platform. (networkMonitoringProviders.generateProviderAccessToken)
+   *
+   * @param string $name Required. Name of the resource. Format: projects/{project
+   * }/locations/{location}/networkMonitoringProviders/{network_monitoring_provide
+   * r}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string gcpAccessToken Required. Google access token.
+   * @return GenerateProviderAccessTokenResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateProviderAccessToken($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateProviderAccessToken', [$params], GenerateProviderAccessTokenResponse::class);
   }
   /**
    * Gets the NetworkMonitoringProvider resource. (networkMonitoringProviders.get)

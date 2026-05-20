@@ -135,6 +135,14 @@ class DeliverInfo extends \Google\Model
    */
   public const TARGET_GKE_POD = 'GKE_POD';
   /**
+   * Target is a DMS Private Connection. Used only for return traces.
+   */
+  public const TARGET_DMS_PRIVATE_CONNECTION = 'DMS_PRIVATE_CONNECTION';
+  /**
+   * Target is a Datastream Private Connection. Used only for return traces.
+   */
+  public const TARGET_DATASTREAM_PRIVATE_CONNECTION = 'DATASTREAM_PRIVATE_CONNECTION';
+  /**
    * Recognized type of a Google Service the packet is delivered to (if
    * applicable).
    *
@@ -266,7 +274,8 @@ class DeliverInfo extends \Google\Model
    * GKE_MASTER, CLOUD_SQL_INSTANCE, PSC_PUBLISHED_SERVICE, PSC_GOOGLE_API,
    * PSC_VPC_SC, SERVERLESS_NEG, STORAGE_BUCKET, PRIVATE_NETWORK,
    * CLOUD_FUNCTION, APP_ENGINE_VERSION, CLOUD_RUN_REVISION,
-   * GOOGLE_MANAGED_SERVICE, REDIS_INSTANCE, REDIS_CLUSTER, GKE_POD
+   * GOOGLE_MANAGED_SERVICE, REDIS_INSTANCE, REDIS_CLUSTER, GKE_POD,
+   * DMS_PRIVATE_CONNECTION, DATASTREAM_PRIVATE_CONNECTION
    *
    * @param self::TARGET_* $target
    */

@@ -21,40 +21,52 @@ class Host extends \Google\Collection
 {
   protected $collection_key = 'cloudVirtualNetworkIds';
   /**
+   * Output only. The cloud instance id of the host.
+   *
    * @var string
    */
   public $cloudInstanceId;
   /**
+   * Output only. The cloud project id of the host.
+   *
    * @var string
    */
   public $cloudProjectId;
   /**
+   * Output only. The cloud provider of the host.
+   *
    * @var string
    */
   public $cloudProvider;
   /**
+   * Output only. The cloud region of the host.
+   *
    * @var string
    */
   public $cloudRegion;
   /**
+   * Output only. The ids of cloud virtual networks of the host.
+   *
    * @var string[]
    */
   public $cloudVirtualNetworkIds;
   /**
-   * @var string
-   */
-  public $cloudVpcId;
-  /**
+   * Output only. The cloud zone of the host.
+   *
    * @var string
    */
   public $cloudZone;
   /**
+   * Output only. The operating system of the host.
+   *
    * @var string
    */
   public $os;
 
   /**
-   * @param string
+   * Output only. The cloud instance id of the host.
+   *
+   * @param string $cloudInstanceId
    */
   public function setCloudInstanceId($cloudInstanceId)
   {
@@ -68,7 +80,9 @@ class Host extends \Google\Collection
     return $this->cloudInstanceId;
   }
   /**
-   * @param string
+   * Output only. The cloud project id of the host.
+   *
+   * @param string $cloudProjectId
    */
   public function setCloudProjectId($cloudProjectId)
   {
@@ -82,7 +96,9 @@ class Host extends \Google\Collection
     return $this->cloudProjectId;
   }
   /**
-   * @param string
+   * Output only. The cloud provider of the host.
+   *
+   * @param string $cloudProvider
    */
   public function setCloudProvider($cloudProvider)
   {
@@ -96,7 +112,9 @@ class Host extends \Google\Collection
     return $this->cloudProvider;
   }
   /**
-   * @param string
+   * Output only. The cloud region of the host.
+   *
+   * @param string $cloudRegion
    */
   public function setCloudRegion($cloudRegion)
   {
@@ -110,7 +128,9 @@ class Host extends \Google\Collection
     return $this->cloudRegion;
   }
   /**
-   * @param string[]
+   * Output only. The ids of cloud virtual networks of the host.
+   *
+   * @param string[] $cloudVirtualNetworkIds
    */
   public function setCloudVirtualNetworkIds($cloudVirtualNetworkIds)
   {
@@ -124,21 +144,9 @@ class Host extends \Google\Collection
     return $this->cloudVirtualNetworkIds;
   }
   /**
-   * @param string
-   */
-  public function setCloudVpcId($cloudVpcId)
-  {
-    $this->cloudVpcId = $cloudVpcId;
-  }
-  /**
-   * @return string
-   */
-  public function getCloudVpcId()
-  {
-    return $this->cloudVpcId;
-  }
-  /**
-   * @param string
+   * Output only. The cloud zone of the host.
+   *
+   * @param string $cloudZone
    */
   public function setCloudZone($cloudZone)
   {
@@ -152,7 +160,9 @@ class Host extends \Google\Collection
     return $this->cloudZone;
   }
   /**
-   * @param string
+   * Output only. The operating system of the host.
+   *
+   * @param string $os
    */
   public function setOs($os)
   {

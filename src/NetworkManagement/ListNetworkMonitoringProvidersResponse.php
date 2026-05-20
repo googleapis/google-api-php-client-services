@@ -23,12 +23,16 @@ class ListNetworkMonitoringProvidersResponse extends \Google\Collection
   protected $networkMonitoringProvidersType = NetworkMonitoringProvider::class;
   protected $networkMonitoringProvidersDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param NetworkMonitoringProvider[]
+   * The list of NetworkMonitoringProvider
+   *
+   * @param NetworkMonitoringProvider[] $networkMonitoringProviders
    */
   public function setNetworkMonitoringProviders($networkMonitoringProviders)
   {
@@ -42,7 +46,9 @@ class ListNetworkMonitoringProvidersResponse extends \Google\Collection
     return $this->networkMonitoringProviders;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -19,38 +19,93 @@ namespace Google\Service\NetworkManagement;
 
 class NetworkMonitoringProvider extends \Google\Collection
 {
+  /**
+   * The default value. This value is used if the type is omitted.
+   */
+  public const PROVIDER_TYPE_PROVIDER_TYPE_UNSPECIFIED = 'PROVIDER_TYPE_UNSPECIFIED';
+  /**
+   * External provider.
+   */
+  public const PROVIDER_TYPE_EXTERNAL = 'EXTERNAL';
+  /**
+   * The default value. This value is used if the status is omitted.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * NetworkMonitoringProvider is being activated.
+   */
+  public const STATE_ACTIVATING = 'ACTIVATING';
+  /**
+   * NetworkMonitoringProvider is active.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * NetworkMonitoringProvider is being suspended.
+   */
+  public const STATE_SUSPENDING = 'SUSPENDING';
+  /**
+   * NetworkMonitoringProvider is suspended.
+   */
+  public const STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * NetworkMonitoringProvider is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * NetworkMonitoringProvider is deleted.
+   */
+  public const STATE_DELETED = 'DELETED';
   protected $collection_key = 'errors';
   /**
+   * Output only. The time the NetworkMonitoringProvider was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The list of error messages detected for the
+   * NetworkMonitoringProvider.
+   *
    * @var string[]
    */
   public $errors;
   /**
+   * Output only. Identifier. Name of the resource. Format: `projects/{project}/
+   * locations/{location}/networkMonitoringProviders/{network_monitoring_provide
+   * r}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Type of the NetworkMonitoringProvider.
+   *
    * @var string
    */
   public $providerType;
   /**
+   * Output only. Link to the provider's UI.
+   *
    * @var string
    */
   public $providerUri;
   /**
+   * Output only. State of the NetworkMonitoringProvider.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time the NetworkMonitoringProvider was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time the NetworkMonitoringProvider was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -64,7 +119,10 @@ class NetworkMonitoringProvider extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string[]
+   * Output only. The list of error messages detected for the
+   * NetworkMonitoringProvider.
+   *
+   * @param string[] $errors
    */
   public function setErrors($errors)
   {
@@ -78,7 +136,11 @@ class NetworkMonitoringProvider extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * Output only. Identifier. Name of the resource. Format: `projects/{project}/
+   * locations/{location}/networkMonitoringProviders/{network_monitoring_provide
+   * r}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -92,21 +154,27 @@ class NetworkMonitoringProvider extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Type of the NetworkMonitoringProvider.
+   *
+   * Accepted values: PROVIDER_TYPE_UNSPECIFIED, EXTERNAL
+   *
+   * @param self::PROVIDER_TYPE_* $providerType
    */
   public function setProviderType($providerType)
   {
     $this->providerType = $providerType;
   }
   /**
-   * @return string
+   * @return self::PROVIDER_TYPE_*
    */
   public function getProviderType()
   {
     return $this->providerType;
   }
   /**
-   * @param string
+   * Output only. Link to the provider's UI.
+   *
+   * @param string $providerUri
    */
   public function setProviderUri($providerUri)
   {
@@ -120,21 +188,28 @@ class NetworkMonitoringProvider extends \Google\Collection
     return $this->providerUri;
   }
   /**
-   * @param string
+   * Output only. State of the NetworkMonitoringProvider.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVATING, ACTIVE, SUSPENDING,
+   * SUSPENDED, DELETING, DELETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time the NetworkMonitoringProvider was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -23,12 +23,16 @@ class ListNetworkPathsResponse extends \Google\Collection
   protected $networkPathsType = NetworkPath::class;
   protected $networkPathsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param NetworkPath[]
+   * The list of NetworkPath
+   *
+   * @param NetworkPath[] $networkPaths
    */
   public function setNetworkPaths($networkPaths)
   {
@@ -42,7 +46,9 @@ class ListNetworkPathsResponse extends \Google\Collection
     return $this->networkPaths;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

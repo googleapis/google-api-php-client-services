@@ -17,54 +17,32 @@
 
 namespace Google\Service\NetworkManagement;
 
-class GeoLocation extends \Google\Model
+class GenerateProviderAccessTokenResponse extends \Google\Model
 {
   /**
-   * Formatted address.
+   * Provider access token for the NetworkMonitoringProvider resource.
    *
    * @var string
    */
-  public $formattedAddress;
-  /**
-   * Unicode CLDR region code.
-   *
-   * @var string
-   */
-  public $regionCode;
+  public $providerAccessToken;
 
   /**
-   * Formatted address.
+   * Provider access token for the NetworkMonitoringProvider resource.
    *
-   * @param string $formattedAddress
+   * @param string $providerAccessToken
    */
-  public function setFormattedAddress($formattedAddress)
+  public function setProviderAccessToken($providerAccessToken)
   {
-    $this->formattedAddress = $formattedAddress;
+    $this->providerAccessToken = $providerAccessToken;
   }
   /**
    * @return string
    */
-  public function getFormattedAddress()
+  public function getProviderAccessToken()
   {
-    return $this->formattedAddress;
-  }
-  /**
-   * Unicode CLDR region code.
-   *
-   * @param string $regionCode
-   */
-  public function setRegionCode($regionCode)
-  {
-    $this->regionCode = $regionCode;
-  }
-  /**
-   * @return string
-   */
-  public function getRegionCode()
-  {
-    return $this->regionCode;
+    return $this->providerAccessToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GeoLocation::class, 'Google_Service_NetworkManagement_GeoLocation');
+class_alias(GenerateProviderAccessTokenResponse::class, 'Google_Service_NetworkManagement_GenerateProviderAccessTokenResponse');
