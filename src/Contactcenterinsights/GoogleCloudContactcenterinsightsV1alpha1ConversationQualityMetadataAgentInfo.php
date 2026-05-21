@@ -84,6 +84,12 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
    */
   public $entrySubagentDisplayName;
   /**
+   * The entry subagent's ID.
+   *
+   * @var string
+   */
+  public $entrySubagentId;
+  /**
    * The agent's location.
    *
    * @var string
@@ -231,6 +237,22 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentIn
   public function getEntrySubagentDisplayName()
   {
     return $this->entrySubagentDisplayName;
+  }
+  /**
+   * The entry subagent's ID.
+   *
+   * @param string $entrySubagentId
+   */
+  public function setEntrySubagentId($entrySubagentId)
+  {
+    $this->entrySubagentId = $entrySubagentId;
+  }
+  /**
+   * @return string
+   */
+  public function getEntrySubagentId()
+  {
+    return $this->entrySubagentId;
   }
   /**
    * The agent's location.
