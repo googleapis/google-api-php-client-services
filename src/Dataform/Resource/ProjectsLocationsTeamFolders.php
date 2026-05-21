@@ -198,7 +198,7 @@ class ProjectsLocationsTeamFolders extends \Google\Service\Resource
    * `orderBy="display_name desc"`
    * @opt_param int pageSize Optional. Maximum number of TeamFolders to return.
    * The server may return fewer items than requested. If unspecified, the server
-   * will pick an appropriate default.
+   * will pick a default of page_size = 50.
    * @opt_param string pageToken Optional. Page token received from a previous
    * `SearchTeamFolders` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `SearchTeamFolders`, with the

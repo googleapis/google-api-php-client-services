@@ -20,13 +20,15 @@ namespace Google\Service\Dataform;
 class DirectoryEntry extends \Google\Model
 {
   /**
-   * A child directory in the directory.
+   * A child directory in the directory. The path is returned including the full
+   * folder structure from the root.
    *
    * @var string
    */
   public $directory;
   /**
-   * A file in the directory.
+   * A file in the directory. The path is returned including the full folder
+   * structure from the root.
    *
    * @var string
    */
@@ -35,7 +37,8 @@ class DirectoryEntry extends \Google\Model
   protected $metadataDataType = '';
 
   /**
-   * A child directory in the directory.
+   * A child directory in the directory. The path is returned including the full
+   * folder structure from the root.
    *
    * @param string $directory
    */
@@ -51,7 +54,8 @@ class DirectoryEntry extends \Google\Model
     return $this->directory;
   }
   /**
-   * A file in the directory.
+   * A file in the directory. The path is returned including the full folder
+   * structure from the root.
    *
    * @param string $file
    */

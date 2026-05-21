@@ -45,12 +45,19 @@ class GitRemoteSettings extends \Google\Model
    */
   public $authenticationTokenSecretVersion;
   /**
-   * Required. The Git remote's default branch name. If not set, `main` will be
-   * used and stored for the repository.
+   * Optional. The Git remote's default branch name. If not set `main` will be
+   * used.
    *
    * @var string
    */
   public $defaultBranch;
+  /**
+   * Output only. The Git remote's effective default branch name. This is the
+   * default branch name of the Git remote if it is set, otherwise it is `main`.
+   *
+   * @var string
+   */
+  public $effectiveDefaultBranch;
   protected $sshAuthenticationConfigType = SshAuthenticationConfig::class;
   protected $sshAuthenticationConfigDataType = '';
   /**
@@ -87,8 +94,8 @@ class GitRemoteSettings extends \Google\Model
     return $this->authenticationTokenSecretVersion;
   }
   /**
-   * Required. The Git remote's default branch name. If not set, `main` will be
-   * used and stored for the repository.
+   * Optional. The Git remote's default branch name. If not set `main` will be
+   * used.
    *
    * @param string $defaultBranch
    */
@@ -102,6 +109,23 @@ class GitRemoteSettings extends \Google\Model
   public function getDefaultBranch()
   {
     return $this->defaultBranch;
+  }
+  /**
+   * Output only. The Git remote's effective default branch name. This is the
+   * default branch name of the Git remote if it is set, otherwise it is `main`.
+   *
+   * @param string $effectiveDefaultBranch
+   */
+  public function setEffectiveDefaultBranch($effectiveDefaultBranch)
+  {
+    $this->effectiveDefaultBranch = $effectiveDefaultBranch;
+  }
+  /**
+   * @return string
+   */
+  public function getEffectiveDefaultBranch()
+  {
+    return $this->effectiveDefaultBranch;
   }
   /**
    * Optional. Authentication fields for remote uris using SSH protocol.
