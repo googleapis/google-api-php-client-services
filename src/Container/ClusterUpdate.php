@@ -253,6 +253,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredNetworkPerformanceConfigDataType = '';
   protected $desiredNetworkTierConfigType = NetworkTierConfig::class;
   protected $desiredNetworkTierConfigDataType = '';
+  protected $desiredNodeCreationConfigType = NodeCreationConfig::class;
+  protected $desiredNodeCreationConfigDataType = '';
   protected $desiredNodeKubeletConfigType = NodeKubeletConfig::class;
   protected $desiredNodeKubeletConfigDataType = '';
   protected $desiredNodePoolAutoConfigKubeletConfigType = NodeKubeletConfig::class;
@@ -1157,6 +1159,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredNetworkTierConfig()
   {
     return $this->desiredNetworkTierConfig;
+  }
+  /**
+   * Optional. The desired NodeCreationConfig for the cluster.
+   *
+   * @param NodeCreationConfig $desiredNodeCreationConfig
+   */
+  public function setDesiredNodeCreationConfig(NodeCreationConfig $desiredNodeCreationConfig)
+  {
+    $this->desiredNodeCreationConfig = $desiredNodeCreationConfig;
+  }
+  /**
+   * @return NodeCreationConfig
+   */
+  public function getDesiredNodeCreationConfig()
+  {
+    return $this->desiredNodeCreationConfig;
   }
   /**
    * The desired node kubelet config for the cluster.

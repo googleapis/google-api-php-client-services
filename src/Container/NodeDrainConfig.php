@@ -20,12 +20,56 @@ namespace Google\Service\Container;
 class NodeDrainConfig extends \Google\Model
 {
   /**
+   * The duration of the grace termination period for node drain.
+   *
+   * @var string
+   */
+  public $graceTerminationDuration;
+  /**
+   * The duration of the PDB timeout period for node drain.
+   *
+   * @var string
+   */
+  public $pdbTimeoutDuration;
+  /**
    * Whether to respect PDB during node pool deletion.
    *
    * @var bool
    */
   public $respectPdbDuringNodePoolDeletion;
 
+  /**
+   * The duration of the grace termination period for node drain.
+   *
+   * @param string $graceTerminationDuration
+   */
+  public function setGraceTerminationDuration($graceTerminationDuration)
+  {
+    $this->graceTerminationDuration = $graceTerminationDuration;
+  }
+  /**
+   * @return string
+   */
+  public function getGraceTerminationDuration()
+  {
+    return $this->graceTerminationDuration;
+  }
+  /**
+   * The duration of the PDB timeout period for node drain.
+   *
+   * @param string $pdbTimeoutDuration
+   */
+  public function setPdbTimeoutDuration($pdbTimeoutDuration)
+  {
+    $this->pdbTimeoutDuration = $pdbTimeoutDuration;
+  }
+  /**
+   * @return string
+   */
+  public function getPdbTimeoutDuration()
+  {
+    return $this->pdbTimeoutDuration;
+  }
   /**
    * Whether to respect PDB during node pool deletion.
    *

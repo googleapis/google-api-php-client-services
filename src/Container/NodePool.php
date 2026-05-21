@@ -105,6 +105,8 @@ class NodePool extends \Google\Collection
    * @var string[]
    */
   public $locations;
+  protected $maintenancePolicyType = NodePoolMaintenancePolicy::class;
+  protected $maintenancePolicyDataType = '';
   protected $managementType = NodeManagement::class;
   protected $managementDataType = '';
   protected $maxPodsConstraintType = MaxPodsConstraint::class;
@@ -323,6 +325,22 @@ class NodePool extends \Google\Collection
   public function getLocations()
   {
     return $this->locations;
+  }
+  /**
+   * Optional. Specifies the maintenance policy for the node pool.
+   *
+   * @param NodePoolMaintenancePolicy $maintenancePolicy
+   */
+  public function setMaintenancePolicy(NodePoolMaintenancePolicy $maintenancePolicy)
+  {
+    $this->maintenancePolicy = $maintenancePolicy;
+  }
+  /**
+   * @return NodePoolMaintenancePolicy
+   */
+  public function getMaintenancePolicy()
+  {
+    return $this->maintenancePolicy;
   }
   /**
    * NodeManagement configuration for this NodePool.

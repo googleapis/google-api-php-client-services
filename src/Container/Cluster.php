@@ -331,6 +331,8 @@ class Cluster extends \Google\Collection
   protected $networkPolicyDataType = '';
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
+  protected $nodeCreationConfigType = NodeCreationConfig::class;
+  protected $nodeCreationConfigDataType = '';
   /**
    * Output only. The size of the address space on each node for hosting
    * containers. This is provisioned from within the `container_ipv4_cidr`
@@ -1442,6 +1444,22 @@ class Cluster extends \Google\Collection
   public function getNodeConfig()
   {
     return $this->nodeConfig;
+  }
+  /**
+   * Optional. Configuration for Node Creation Mode.
+   *
+   * @param NodeCreationConfig $nodeCreationConfig
+   */
+  public function setNodeCreationConfig(NodeCreationConfig $nodeCreationConfig)
+  {
+    $this->nodeCreationConfig = $nodeCreationConfig;
+  }
+  /**
+   * @return NodeCreationConfig
+   */
+  public function getNodeCreationConfig()
+  {
+    return $this->nodeCreationConfig;
   }
   /**
    * Output only. The size of the address space on each node for hosting
