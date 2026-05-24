@@ -20,11 +20,11 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InspectTemplate extends \Google\Model
 {
   /**
-   * Optional. Enables the use of limited-availability built-in infoTypes in
+   * Optional. Enables the use of [limited-availability built-in
+   * infoTypes](https://docs.cloud.google.com/sensitive-data-
+   * protection/docs/infotypes-reference#limited-availability-infotypes) in
    * inspect_config. These infoTypes are supported only in specific regions and
-   * can cause scanning errors if used elsewhere. For more information, see
-   * https://cloud.google.com/sensitive-data-protection/docs/locations#location-
-   * specific_limitations to learn more about location-specific limitations.
+   * can cause scanning errors if used elsewhere.
    *
    * @var bool
    */
@@ -65,11 +65,11 @@ class GooglePrivacyDlpV2InspectTemplate extends \Google\Model
   public $updateTime;
 
   /**
-   * Optional. Enables the use of limited-availability built-in infoTypes in
+   * Optional. Enables the use of [limited-availability built-in
+   * infoTypes](https://docs.cloud.google.com/sensitive-data-
+   * protection/docs/infotypes-reference#limited-availability-infotypes) in
    * inspect_config. These infoTypes are supported only in specific regions and
-   * can cause scanning errors if used elsewhere. For more information, see
-   * https://cloud.google.com/sensitive-data-protection/docs/locations#location-
-   * specific_limitations to learn more about location-specific limitations.
+   * can cause scanning errors if used elsewhere.
    *
    * @param bool $allowLimitedAvailabilityInfoTypes
    */

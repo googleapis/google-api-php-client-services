@@ -46,6 +46,8 @@ class GooglePrivacyDlpV2ContentLocation extends \Google\Model
    * @var string
    */
   public $containerVersion;
+  protected $conversationLocationType = GooglePrivacyDlpV2ConversationLocation::class;
+  protected $conversationLocationDataType = '';
   protected $documentLocationType = GooglePrivacyDlpV2DocumentLocation::class;
   protected $documentLocationDataType = '';
   protected $imageLocationType = GooglePrivacyDlpV2ImageLocation::class;
@@ -111,6 +113,22 @@ class GooglePrivacyDlpV2ContentLocation extends \Google\Model
   public function getContainerVersion()
   {
     return $this->containerVersion;
+  }
+  /**
+   * Location within a conversation.
+   *
+   * @param GooglePrivacyDlpV2ConversationLocation $conversationLocation
+   */
+  public function setConversationLocation(GooglePrivacyDlpV2ConversationLocation $conversationLocation)
+  {
+    $this->conversationLocation = $conversationLocation;
+  }
+  /**
+   * @return GooglePrivacyDlpV2ConversationLocation
+   */
+  public function getConversationLocation()
+  {
+    return $this->conversationLocation;
   }
   /**
    * Location data for document files.
