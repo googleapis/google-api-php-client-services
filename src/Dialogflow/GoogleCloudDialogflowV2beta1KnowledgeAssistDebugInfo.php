@@ -45,6 +45,10 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends \Google\Model
   public const QUERY_GENERATION_FAILURE_REASON_QUERY_GENERATION_EMPTY_LAST_MESSAGE = 'QUERY_GENERATION_EMPTY_LAST_MESSAGE';
   public const QUERY_GENERATION_FAILURE_REASON_QUERY_GENERATION_TRIGGERING_EVENT_CONDITION_NOT_MET = 'QUERY_GENERATION_TRIGGERING_EVENT_CONDITION_NOT_MET';
   /**
+   * @var array[]
+   */
+  public $cesDebugInfo;
+  /**
    * @var string
    */
   public $datastoreResponseReason;
@@ -56,6 +60,8 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends \Google\Model
    * @var string
    */
   public $queryCategorizationFailureReason;
+  protected $queryGenerationDebugInfoType = GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugInfo::class;
+  protected $queryGenerationDebugInfoDataType = '';
   /**
    * @var string
    */
@@ -63,6 +69,20 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends \Google\Model
   protected $serviceLatencyType = GoogleCloudDialogflowV2beta1ServiceLatency::class;
   protected $serviceLatencyDataType = '';
 
+  /**
+   * @param array[] $cesDebugInfo
+   */
+  public function setCesDebugInfo($cesDebugInfo)
+  {
+    $this->cesDebugInfo = $cesDebugInfo;
+  }
+  /**
+   * @return array[]
+   */
+  public function getCesDebugInfo()
+  {
+    return $this->cesDebugInfo;
+  }
   /**
    * @param self::DATASTORE_RESPONSE_REASON_* $datastoreResponseReason
    */
@@ -118,6 +138,20 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends \Google\Model
   public function getQueryCategorizationFailureReason()
   {
     return $this->queryCategorizationFailureReason;
+  }
+  /**
+   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugInfo $queryGenerationDebugInfo
+   */
+  public function setQueryGenerationDebugInfo(GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugInfo $queryGenerationDebugInfo)
+  {
+    $this->queryGenerationDebugInfo = $queryGenerationDebugInfo;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugInfo
+   */
+  public function getQueryGenerationDebugInfo()
+  {
+    return $this->queryGenerationDebugInfo;
   }
   /**
    * @param self::QUERY_GENERATION_FAILURE_REASON_* $queryGenerationFailureReason
