@@ -59,6 +59,7 @@ class ChromeManagement extends \Google\Service
   public $customers_certificateProvisioningProcesses;
   public $customers_certificateProvisioningProcesses_operations;
   public $customers_connectorConfigs;
+  public $customers_enterprise_securityInsights;
   public $customers_profiles;
   public $customers_profiles_commands;
   public $customers_reports;
@@ -385,6 +386,46 @@ class ChromeManagement extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_enterprise_securityInsights = new ChromeManagement\Resource\CustomersEnterpriseSecurityInsights(
+        $this,
+        $this->serviceName,
+        'securityInsights',
+        [
+          'methods' => [
+            'checkEnablementStatus' => [
+              'path' => 'v1/{+customer}/enterprise/securityInsights:checkEnablementStatus',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'disable' => [
+              'path' => 'v1/{+customer}/enterprise/securityInsights:disable',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'enable' => [
+              'path' => 'v1/{+customer}/enterprise/securityInsights:enable',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
