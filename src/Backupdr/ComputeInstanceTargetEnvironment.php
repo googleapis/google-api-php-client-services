@@ -26,6 +26,13 @@ class ComputeInstanceTargetEnvironment extends \Google\Model
    */
   public $project;
   /**
+   * Optional. Whether to use the project service account for the Compute Engine
+   * instance.
+   *
+   * @var bool
+   */
+  public $useProjectServiceAccount;
+  /**
    * Required. The zone of the Compute Engine instance.
    *
    * @var string
@@ -47,6 +54,23 @@ class ComputeInstanceTargetEnvironment extends \Google\Model
   public function getProject()
   {
     return $this->project;
+  }
+  /**
+   * Optional. Whether to use the project service account for the Compute Engine
+   * instance.
+   *
+   * @param bool $useProjectServiceAccount
+   */
+  public function setUseProjectServiceAccount($useProjectServiceAccount)
+  {
+    $this->useProjectServiceAccount = $useProjectServiceAccount;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseProjectServiceAccount()
+  {
+    return $this->useProjectServiceAccount;
   }
   /**
    * Required. The zone of the Compute Engine instance.

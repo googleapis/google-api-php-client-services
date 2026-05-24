@@ -38,6 +38,12 @@ class RegionDiskTargetEnvironment extends \Google\Collection
    * @var string[]
    */
   public $replicaZones;
+  /**
+   * Optional. Whether to use the project service account for the disk.
+   *
+   * @var bool
+   */
+  public $useProjectServiceAccount;
 
   /**
    * Required. Target project for the disk.
@@ -86,6 +92,22 @@ class RegionDiskTargetEnvironment extends \Google\Collection
   public function getReplicaZones()
   {
     return $this->replicaZones;
+  }
+  /**
+   * Optional. Whether to use the project service account for the disk.
+   *
+   * @param bool $useProjectServiceAccount
+   */
+  public function setUseProjectServiceAccount($useProjectServiceAccount)
+  {
+    $this->useProjectServiceAccount = $useProjectServiceAccount;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseProjectServiceAccount()
+  {
+    return $this->useProjectServiceAccount;
   }
 }
 

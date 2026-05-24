@@ -26,6 +26,12 @@ class DiskTargetEnvironment extends \Google\Model
    */
   public $project;
   /**
+   * Optional. Whether to use the project service account for the disk.
+   *
+   * @var bool
+   */
+  public $useProjectServiceAccount;
+  /**
    * Required. Target zone for the disk.
    *
    * @var string
@@ -47,6 +53,22 @@ class DiskTargetEnvironment extends \Google\Model
   public function getProject()
   {
     return $this->project;
+  }
+  /**
+   * Optional. Whether to use the project service account for the disk.
+   *
+   * @param bool $useProjectServiceAccount
+   */
+  public function setUseProjectServiceAccount($useProjectServiceAccount)
+  {
+    $this->useProjectServiceAccount = $useProjectServiceAccount;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseProjectServiceAccount()
+  {
+    return $this->useProjectServiceAccount;
   }
   /**
    * Required. Target zone for the disk.
