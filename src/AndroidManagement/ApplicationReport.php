@@ -65,7 +65,7 @@ class ApplicationReport extends \Google\Collection
    * App is user facing.
    */
   public const USER_FACING_TYPE_USER_FACING = 'USER_FACING';
-  protected $collection_key = 'signingKeyCertFingerprints';
+  protected $collection_key = 'signingKeyCerts';
   /**
    * The source of the package.
    *
@@ -103,14 +103,18 @@ class ApplicationReport extends \Google\Collection
    */
   public $packageSha256Hash;
   /**
-   * The SHA-1 hash of each android.content.pm.Signature
+   * Deprecated. Use signingKeyCerts instead. The SHA-1 hash of each
+   * android.content.pm.Signature
    * (https://developer.android.com/reference/android/content/pm/Signature.html)
    * associated with the app package. Each byte of each hash value is
    * represented as a two-digit hexadecimal number.
    *
+   * @deprecated
    * @var string[]
    */
   public $signingKeyCertFingerprints;
+  protected $signingKeyCertsType = ApplicationSigningKeyCert::class;
+  protected $signingKeyCertsDataType = 'array';
   /**
    * Application state.
    *
@@ -256,11 +260,13 @@ class ApplicationReport extends \Google\Collection
     return $this->packageSha256Hash;
   }
   /**
-   * The SHA-1 hash of each android.content.pm.Signature
+   * Deprecated. Use signingKeyCerts instead. The SHA-1 hash of each
+   * android.content.pm.Signature
    * (https://developer.android.com/reference/android/content/pm/Signature.html)
    * associated with the app package. Each byte of each hash value is
    * represented as a two-digit hexadecimal number.
    *
+   * @deprecated
    * @param string[] $signingKeyCertFingerprints
    */
   public function setSigningKeyCertFingerprints($signingKeyCertFingerprints)
@@ -268,11 +274,28 @@ class ApplicationReport extends \Google\Collection
     $this->signingKeyCertFingerprints = $signingKeyCertFingerprints;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getSigningKeyCertFingerprints()
   {
     return $this->signingKeyCertFingerprints;
+  }
+  /**
+   * Output only. Signing key certificates of the app.
+   *
+   * @param ApplicationSigningKeyCert[] $signingKeyCerts
+   */
+  public function setSigningKeyCerts($signingKeyCerts)
+  {
+    $this->signingKeyCerts = $signingKeyCerts;
+  }
+  /**
+   * @return ApplicationSigningKeyCert[]
+   */
+  public function getSigningKeyCerts()
+  {
+    return $this->signingKeyCerts;
   }
   /**
    * Application state.
