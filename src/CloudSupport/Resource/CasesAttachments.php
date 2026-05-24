@@ -17,6 +17,7 @@
 
 namespace Google\Service\CloudSupport\Resource;
 
+use Google\Service\CloudSupport\Attachment;
 use Google\Service\CloudSupport\ListAttachmentsResponse;
 
 /**
@@ -29,6 +30,31 @@ use Google\Service\CloudSupport\ListAttachmentsResponse;
  */
 class CasesAttachments extends \Google\Service\Resource
 {
+  /**
+   * Retrieve an attachment associated with a support case. EXAMPLES: cURL:
+   * ```shell attachment="projects/some-
+   * project/cases/23598314/attachments/0684M00000P3h1fQAB" curl \ --header
+   * "Authorization: Bearer $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$attachment" ``` Python: ```python
+   * import googleapiclient.discovery api_version = "v2" supportApiService =
+   * googleapiclient.discovery.build( serviceName="cloudsupport",
+   * version=api_version, discoveryServiceUrl=f"https://cloudsupport.googleapis.co
+   * m/$discovery/rest?version={api_version}", ) request = (
+   * supportApiService.cases() .attachments() .get(name="projects/some-
+   * project/cases/43595344/attachments/0684M00000P3h1fQAB") )
+   * print(request.execute()) ``` (attachments.get)
+   *
+   * @param string $name Required. The name of the attachment to get.
+   * @param array $optParams Optional parameters.
+   * @return Attachment
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], Attachment::class);
+  }
   /**
    * List all the attachments associated with a support case. EXAMPLES: cURL:
    * ```shell case="projects/some-project/cases/23598314" curl \ --header

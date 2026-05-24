@@ -59,6 +59,30 @@ class CasesComments extends \Google\Service\Resource
     return $this->call('create', [$params], Comment::class);
   }
   /**
+   * Retrieve a comment. EXAMPLES: cURL: ```shell comment="projects/some-
+   * project/cases/43595344/comments/234567890" curl \ --header "Authorization:
+   * Bearer $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$comment" ``` Python: ```python
+   * import googleapiclient.discovery api_version = "v2" supportApiService =
+   * googleapiclient.discovery.build( serviceName="cloudsupport",
+   * version=api_version, discoveryServiceUrl=f"https://cloudsupport.googleapis.co
+   * m/$discovery/rest?version={api_version}", ) request =
+   * supportApiService.cases().comments().get( name="projects/some-
+   * project/cases/43595344/comments/234567890", ) print(request.execute()) ```
+   * (comments.get)
+   *
+   * @param string $name Required. The name of the comment to retrieve.
+   * @param array $optParams Optional parameters.
+   * @return Comment
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], Comment::class);
+  }
+  /**
    * List all the comments associated with a case. EXAMPLES: cURL: ```shell
    * case="projects/some-project/cases/43595344" curl \ --header "Authorization:
    * Bearer $(gcloud auth print-access-token)" \

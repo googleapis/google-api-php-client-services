@@ -209,6 +209,12 @@ class Media extends \Google\Collection
    *
    * @var string
    */
+  public $sha512Hash;
+  /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @var string
+   */
   public $timestamp;
   /**
    * # gdata.* are outside protos with mising documentation
@@ -677,6 +683,22 @@ class Media extends \Google\Collection
   public function getSha256Hash()
   {
     return $this->sha256Hash;
+  }
+  /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $sha512Hash
+   */
+  public function setSha512Hash($sha512Hash)
+  {
+    $this->sha512Hash = $sha512Hash;
+  }
+  /**
+   * @return string
+   */
+  public function getSha512Hash()
+  {
+    return $this->sha512Hash;
   }
   /**
    * # gdata.* are outside protos with mising documentation

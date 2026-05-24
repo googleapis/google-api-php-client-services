@@ -65,19 +65,18 @@ class Media extends \Google\Service\Resource
    * "This text is in a file I'm uploading using CSAPI." \ > "./example_file.txt"
    * case="projects/some-project/cases/43594844" curl \ --header "Authorization:
    * Bearer $(gcloud auth print-access-token)" \ --data-binary
-   * @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2beta/$c
-   * ase/attachments?attachment.filename=uploaded_via_curl.txt" ``` Python:
-   * ```python import googleapiclient.discovery api_version = "v2"
-   * supportApiService = googleapiclient.discovery.build(
-   * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https:
-   * //cloudsupport.googleapis.com/$discovery/rest?version={api_version}", )
-   * file_path = "./example_file.txt" with open(file_path, "w") as file:
-   * file.write( "This text is inside a file I'm going to upload using the Cloud
-   * Support API.", ) request = supportApiService.media().upload(
-   * parent="projects/some-project/cases/43595344", media_body=file_path )
-   * request.uri = request.uri.split("?")[0] +
-   * "?attachment.filename=uploaded_via_python.txt" print(request.execute()) ```
-   * (media.upload)
+   * @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2/$case/
+   * attachments?attachment.filename=uploaded_via_curl.txt" ``` Python: ```python
+   * import googleapiclient.discovery api_version = "v2" supportApiService =
+   * googleapiclient.discovery.build( serviceName="cloudsupport",
+   * version=api_version, discoveryServiceUrl=f"https://cloudsupport.googleapis.co
+   * m/$discovery/rest?version={api_version}", ) file_path = "./example_file.txt"
+   * with open(file_path, "w") as file: file.write( "This text is inside a file
+   * I'm going to upload using the Cloud Support API.", ) request =
+   * supportApiService.media().upload( parent="projects/some-
+   * project/cases/43595344", media_body=file_path ) request.uri =
+   * request.uri.split("?")[0] + "?attachment.filename=uploaded_via_python.txt"
+   * print(request.execute()) ``` (media.upload)
    *
    * @param string $parent Required. The name of the case or Cloud resource to
    * which the attachment should be attached.
