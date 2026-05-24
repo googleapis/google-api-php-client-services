@@ -20,22 +20,56 @@ namespace Google\Service\CloudKMS;
 class WrappingPublicKey extends \Google\Model
 {
   /**
+   * Output only. Contains the public key, formatted according to the
+   * PublicKey.PublicKeyFormat specified in the
+   * KeyManagementService.GetImportJob request.
+   *
+   * @var string
+   */
+  public $data;
+  /**
    * The public key, encoded in PEM format. For more information, see the [RFC
    * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
    * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
    * Encoding of Subject Public Key Info]
-   * (https://tools.ietf.org/html/rfc7468#section-13).
+   * (https://tools.ietf.org/html/rfc7468#section-13). This field gets populated
+   * by default for RSA-based import methods, if no public_key_format is
+   * specified in the request. If you want to retrieve the wrapping key of an
+   * ImportJob in some other format, use KeyManagementService.GetImportJob and
+   * set the public_key_format to the desired public key format.
    *
    * @var string
    */
   public $pem;
 
   /**
+   * Output only. Contains the public key, formatted according to the
+   * PublicKey.PublicKeyFormat specified in the
+   * KeyManagementService.GetImportJob request.
+   *
+   * @param string $data
+   */
+  public function setData($data)
+  {
+    $this->data = $data;
+  }
+  /**
+   * @return string
+   */
+  public function getData()
+  {
+    return $this->data;
+  }
+  /**
    * The public key, encoded in PEM format. For more information, see the [RFC
    * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
    * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
    * Encoding of Subject Public Key Info]
-   * (https://tools.ietf.org/html/rfc7468#section-13).
+   * (https://tools.ietf.org/html/rfc7468#section-13). This field gets populated
+   * by default for RSA-based import methods, if no public_key_format is
+   * specified in the request. If you want to retrieve the wrapping key of an
+   * ImportJob in some other format, use KeyManagementService.GetImportJob and
+   * set the public_key_format to the desired public key format.
    *
    * @param string $pem
    */

@@ -59,6 +59,14 @@ class ProjectsLocationsKeyRingsImportJobs extends \Google\Service\Resource
    *
    * @param string $name Required. The name of the ImportJob to get.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string publicKeyFormat Optional. Specifies the WrappingPublicKey
+   * format. If not specified: * For RSA-based import methods, the wrapping key
+   * will be returned in PEM format * For pure ML-KEM-based import methods, the
+   * wrapping key will be returned in the raw bytes format specified in FIPS-203 *
+   * For X-Wing-based import methods, the wrapping key will be returned in the raw
+   * bytes format specified in https://datatracker.ietf.org/doc/draft-connolly-
+   * cfrg-xwing-kem.
    * @return ImportJob
    * @throws \Google\Service\Exception
    */

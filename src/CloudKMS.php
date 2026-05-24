@@ -1032,6 +1032,10 @@ class CloudKMS extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'publicKeyFormat' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'v1/{+resource}:getIamPolicy',

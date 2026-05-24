@@ -74,6 +74,36 @@ class ImportJob extends \Google\Model
    */
   public const IMPORT_METHOD_RSA_OAEP_4096_SHA256 = 'RSA_OAEP_4096_SHA256';
   /**
+   * Represents the Hybrid Public Key Encryption (HPKE) Scheme originally
+   * defined in [RFC 9180](https://www.rfc-editor.org/rfc/rfc9180). It involves
+   * wrapping the raw key with an ephemeral AES key, derived with HKDF-SHA256
+   * from an encryption context, that is, in turn obtained from the receiver’s
+   * public key with the help of the ML-KEM-768 KEM. For more details, see the
+   * [ML-KEM HPKE standard](http://datatracker.ietf.org/doc/draft-ietf-hpke-
+   * pq/01/).
+   */
+  public const IMPORT_METHOD_HPKE_KEM_ML_KEM_768_HKDF_SHA256_AES_256_GCM = 'HPKE_KEM_ML_KEM_768_HKDF_SHA256_AES_256_GCM';
+  /**
+   * Represents the Hybrid Public Key Encryption (HPKE) Scheme originally
+   * defined in [RFC 9180](https://www.rfc-editor.org/rfc/rfc9180). It involves
+   * wrapping the raw key with an ephemeral AES key, derived with HKDF-SHA256
+   * from an encryption context, that is, in turn obtained from the receiver’s
+   * public key with the help of the ML-KEM-1024 KEM. For more details, see the
+   * [ML-KEM HPKE standard](http://datatracker.ietf.org/doc/draft-ietf-hpke-
+   * pq/01/).
+   */
+  public const IMPORT_METHOD_HPKE_KEM_ML_KEM_1024_HKDF_SHA256_AES_256_GCM = 'HPKE_KEM_ML_KEM_1024_HKDF_SHA256_AES_256_GCM';
+  /**
+   * Represents the Hybrid Public Key Encryption (HPKE) Scheme originally
+   * defined in [RFC 9180](https://www.rfc-editor.org/rfc/rfc9180). It involves
+   * wrapping the raw key with an ephemeral AES key, derived with HKDF-SHA256
+   * from an encryption context, that is, in turn obtained from the receiver’s
+   * public key with the help of the X-Wing hybrid KEM. For more details, see
+   * the [X-Wing standard](http://datatracker.ietf.org/doc/draft-connolly-cfrg-
+   * xwing-kem/09/).
+   */
+  public const IMPORT_METHOD_HPKE_KEM_XWING_HKDF_SHA256_AES_256_GCM = 'HPKE_KEM_XWING_HKDF_SHA256_AES_256_GCM';
+  /**
    * Not specified.
    */
   public const PROTECTION_LEVEL_PROTECTION_LEVEL_UNSPECIFIED = 'PROTECTION_LEVEL_UNSPECIFIED';
@@ -97,6 +127,37 @@ class ImportJob extends \Google\Model
    * Crypto operations are performed in a single-tenant HSM.
    */
   public const PROTECTION_LEVEL_HSM_SINGLE_TENANT = 'HSM_SINGLE_TENANT';
+  /**
+   * If the public_key_format field is not specified: - For PQC algorithms, an
+   * error will be returned. - For non-PQC algorithms, the default format is
+   * PEM, and the field pem will be populated. Otherwise, the public key will be
+   * exported through the public_key field in the requested format.
+   */
+  public const PUBLIC_KEY_FORMAT_PUBLIC_KEY_FORMAT_UNSPECIFIED = 'PUBLIC_KEY_FORMAT_UNSPECIFIED';
+  /**
+   * The returned public key will be encoded in PEM format. See the
+   * [RFC7468](https://tools.ietf.org/html/rfc7468) sections for [General
+   * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
+   * Encoding of Subject Public Key Info]
+   * (https://tools.ietf.org/html/rfc7468#section-13) for more information.
+   */
+  public const PUBLIC_KEY_FORMAT_PEM = 'PEM';
+  /**
+   * The returned public key will be encoded in DER format (the PrivateKeyInfo
+   * structure from RFC 5208).
+   */
+  public const PUBLIC_KEY_FORMAT_DER = 'DER';
+  /**
+   * This is supported only for PQC algorithms. The key material is returned in
+   * the format defined by NIST PQC standards (FIPS 203, FIPS 204, and FIPS
+   * 205).
+   */
+  public const PUBLIC_KEY_FORMAT_NIST_PQC = 'NIST_PQC';
+  /**
+   * The returned public key is in raw bytes format defined in its standard
+   * https://datatracker.ietf.org/doc/draft-connolly-cfrg-xwing-kem.
+   */
+  public const PUBLIC_KEY_FORMAT_XWING_RAW_BYTES = 'XWING_RAW_BYTES';
   /**
    * Not specified.
    */
@@ -179,6 +240,13 @@ class ImportJob extends \Google\Model
   public $protectionLevel;
   protected $publicKeyType = WrappingPublicKey::class;
   protected $publicKeyDataType = '';
+  /**
+   * Output only. Specifies the WrappingPublicKey format provided by the
+   * customer in the KeyManagementService.GetImportJob request.
+   *
+   * @var string
+   */
+  public $publicKeyFormat;
   /**
    * Output only. The current state of the ImportJob, indicating if it can be
    * used.
@@ -299,7 +367,10 @@ class ImportJob extends \Google\Model
    *
    * Accepted values: IMPORT_METHOD_UNSPECIFIED, RSA_OAEP_3072_SHA1_AES_256,
    * RSA_OAEP_4096_SHA1_AES_256, RSA_OAEP_3072_SHA256_AES_256,
-   * RSA_OAEP_4096_SHA256_AES_256, RSA_OAEP_3072_SHA256, RSA_OAEP_4096_SHA256
+   * RSA_OAEP_4096_SHA256_AES_256, RSA_OAEP_3072_SHA256, RSA_OAEP_4096_SHA256,
+   * HPKE_KEM_ML_KEM_768_HKDF_SHA256_AES_256_GCM,
+   * HPKE_KEM_ML_KEM_1024_HKDF_SHA256_AES_256_GCM,
+   * HPKE_KEM_XWING_HKDF_SHA256_AES_256_GCM
    *
    * @param self::IMPORT_METHOD_* $importMethod
    */
@@ -368,6 +439,26 @@ class ImportJob extends \Google\Model
   public function getPublicKey()
   {
     return $this->publicKey;
+  }
+  /**
+   * Output only. Specifies the WrappingPublicKey format provided by the
+   * customer in the KeyManagementService.GetImportJob request.
+   *
+   * Accepted values: PUBLIC_KEY_FORMAT_UNSPECIFIED, PEM, DER, NIST_PQC,
+   * XWING_RAW_BYTES
+   *
+   * @param self::PUBLIC_KEY_FORMAT_* $publicKeyFormat
+   */
+  public function setPublicKeyFormat($publicKeyFormat)
+  {
+    $this->publicKeyFormat = $publicKeyFormat;
+  }
+  /**
+   * @return self::PUBLIC_KEY_FORMAT_*
+   */
+  public function getPublicKeyFormat()
+  {
+    return $this->publicKeyFormat;
   }
   /**
    * Output only. The current state of the ImportJob, indicating if it can be
