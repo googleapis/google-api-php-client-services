@@ -65,6 +65,9 @@ class ProjectsLocationsDiagnostics extends \Google\Service\Resource
    * @param string $parent Required. The parent resource of the diagnostics.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string appId Optional. The CES App ID to filter diagnostics by.
+   * @opt_param string appVersion Optional. The CES App version to filter
+   * diagnostics by.
    * @opt_param string filter Optional. A filter to apply to the list (e.g.
    * `create_time > "2023-01-01T00:00:00Z"`).
    * @opt_param int pageSize Optional. The maximum number of diagnostics to

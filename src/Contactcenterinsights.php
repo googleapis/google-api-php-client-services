@@ -2180,6 +2180,14 @@ class Contactcenterinsights extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'appId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'appVersion' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',

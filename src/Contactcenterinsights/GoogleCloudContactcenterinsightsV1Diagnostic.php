@@ -20,12 +20,36 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1Diagnostic extends \Google\Model
 {
   /**
+   * Output only. The display name of the agent associated with the diagnostic.
+   *
+   * @var string
+   */
+  public $agentDisplayName;
+  /**
+   * Output only. The ID of the agent associated with the diagnostic.
+   *
+   * @var string
+   */
+  public $agentId;
+  /**
    * Output only. The complete sequence of thoughts and actions taken by the
    * agent.
    *
    * @var string
    */
   public $analysisSummary;
+  /**
+   * Output only. The application ID associated with the diagnostic.
+   *
+   * @var string
+   */
+  public $appId;
+  /**
+   * Output only. The application version associated with the diagnostic.
+   *
+   * @var string
+   */
+  public $appVersion;
   /**
    * Output only. The filter used to select the conversations that were included
    * in the diagnostic.
@@ -40,6 +64,12 @@ class GoogleCloudContactcenterinsightsV1Diagnostic extends \Google\Model
    */
   public $createTime;
   /**
+   * Output only. The timestamp when the group was created.
+   *
+   * @var string
+   */
+  public $groupCreateTime;
+  /**
    * Immutable. Identifier. The resource name of the diagnostic.
    *
    * @var string
@@ -48,6 +78,38 @@ class GoogleCloudContactcenterinsightsV1Diagnostic extends \Google\Model
   protected $reportType = GoogleCloudContactcenterinsightsV1DiagnosticReport::class;
   protected $reportDataType = '';
 
+  /**
+   * Output only. The display name of the agent associated with the diagnostic.
+   *
+   * @param string $agentDisplayName
+   */
+  public function setAgentDisplayName($agentDisplayName)
+  {
+    $this->agentDisplayName = $agentDisplayName;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentDisplayName()
+  {
+    return $this->agentDisplayName;
+  }
+  /**
+   * Output only. The ID of the agent associated with the diagnostic.
+   *
+   * @param string $agentId
+   */
+  public function setAgentId($agentId)
+  {
+    $this->agentId = $agentId;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentId()
+  {
+    return $this->agentId;
+  }
   /**
    * Output only. The complete sequence of thoughts and actions taken by the
    * agent.
@@ -64,6 +126,38 @@ class GoogleCloudContactcenterinsightsV1Diagnostic extends \Google\Model
   public function getAnalysisSummary()
   {
     return $this->analysisSummary;
+  }
+  /**
+   * Output only. The application ID associated with the diagnostic.
+   *
+   * @param string $appId
+   */
+  public function setAppId($appId)
+  {
+    $this->appId = $appId;
+  }
+  /**
+   * @return string
+   */
+  public function getAppId()
+  {
+    return $this->appId;
+  }
+  /**
+   * Output only. The application version associated with the diagnostic.
+   *
+   * @param string $appVersion
+   */
+  public function setAppVersion($appVersion)
+  {
+    $this->appVersion = $appVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getAppVersion()
+  {
+    return $this->appVersion;
   }
   /**
    * Output only. The filter used to select the conversations that were included
@@ -97,6 +191,22 @@ class GoogleCloudContactcenterinsightsV1Diagnostic extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Output only. The timestamp when the group was created.
+   *
+   * @param string $groupCreateTime
+   */
+  public function setGroupCreateTime($groupCreateTime)
+  {
+    $this->groupCreateTime = $groupCreateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getGroupCreateTime()
+  {
+    return $this->groupCreateTime;
   }
   /**
    * Immutable. Identifier. The resource name of the diagnostic.
