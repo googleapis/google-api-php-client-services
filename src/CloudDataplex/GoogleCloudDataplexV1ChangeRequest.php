@@ -80,6 +80,10 @@ class GoogleCloudDataplexV1ChangeRequest extends \Google\Model
    */
   public const CHANGE_TYPE_DELETE_GLOSSARY_TERM = 'DELETE_GLOSSARY_TERM';
   /**
+   * Request to request Data Product access.
+   */
+  public const CHANGE_TYPE_REQUEST_DATA_PRODUCT_ACCESS = 'REQUEST_DATA_PRODUCT_ACCESS';
+  /**
    * State unspecified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -139,6 +143,8 @@ class GoogleCloudDataplexV1ChangeRequest extends \Google\Model
    * @var string
    */
   public $createTime;
+  protected $dataProductAccessRequestType = GoogleCloudDataplexV1DataProductAccessRequest::class;
+  protected $dataProductAccessRequestDataType = '';
   protected $deleteEntryType = GoogleCloudDataplexV1DeleteEntryRequest::class;
   protected $deleteEntryDataType = '';
   protected $deleteEntryLinkType = GoogleCloudDataplexV1DeleteEntryLinkRequest::class;
@@ -260,7 +266,7 @@ class GoogleCloudDataplexV1ChangeRequest extends \Google\Model
    * DELETE_ENTRY, CREATE_ENTRY_LINK, DELETE_ENTRY_LINK, CREATE_GLOSSARY,
    * UPDATE_GLOSSARY, DELETE_GLOSSARY, CREATE_GLOSSARY_CATEGORY,
    * UPDATE_GLOSSARY_CATEGORY, DELETE_GLOSSARY_CATEGORY, CREATE_GLOSSARY_TERM,
-   * UPDATE_GLOSSARY_TERM, DELETE_GLOSSARY_TERM
+   * UPDATE_GLOSSARY_TERM, DELETE_GLOSSARY_TERM, REQUEST_DATA_PRODUCT_ACCESS
    *
    * @param self::CHANGE_TYPE_* $changeType
    */
@@ -370,6 +376,22 @@ class GoogleCloudDataplexV1ChangeRequest extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Payload for Data Product access request.
+   *
+   * @param GoogleCloudDataplexV1DataProductAccessRequest $dataProductAccessRequest
+   */
+  public function setDataProductAccessRequest(GoogleCloudDataplexV1DataProductAccessRequest $dataProductAccessRequest)
+  {
+    $this->dataProductAccessRequest = $dataProductAccessRequest;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataProductAccessRequest
+   */
+  public function getDataProductAccessRequest()
+  {
+    return $this->dataProductAccessRequest;
   }
   /**
    * Payload for deleting an Entry.

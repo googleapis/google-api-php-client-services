@@ -20,15 +20,6 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions extends \Google\Model
 {
   /**
-   * Optional. Deprecated: Use semantic_inference_enabled instead. Specifies
-   * whether deeper entity inference over the objects' contents using GenAI is
-   * enabled.
-   *
-   * @deprecated
-   * @var bool
-   */
-  public $entityInferenceEnabled;
-  /**
    * Optional. Specifies whether deeper semantic inference over the objects'
    * contents using GenAI is enabled.
    *
@@ -36,26 +27,6 @@ class GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions
    */
   public $semanticInferenceEnabled;
 
-  /**
-   * Optional. Deprecated: Use semantic_inference_enabled instead. Specifies
-   * whether deeper entity inference over the objects' contents using GenAI is
-   * enabled.
-   *
-   * @deprecated
-   * @param bool $entityInferenceEnabled
-   */
-  public function setEntityInferenceEnabled($entityInferenceEnabled)
-  {
-    $this->entityInferenceEnabled = $entityInferenceEnabled;
-  }
-  /**
-   * @deprecated
-   * @return bool
-   */
-  public function getEntityInferenceEnabled()
-  {
-    return $this->entityInferenceEnabled;
-  }
   /**
    * Optional. Specifies whether deeper semantic inference over the objects'
    * contents using GenAI is enabled.

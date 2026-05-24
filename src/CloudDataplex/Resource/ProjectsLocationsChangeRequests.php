@@ -17,6 +17,11 @@
 
 namespace Google\Service\CloudDataplex\Resource;
 
+use Google\Service\CloudDataplex\DataplexEmpty;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1ApproveChangeRequestRequest;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1ChangeRequest;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1ListChangeRequestsResponse;
+use Google\Service\CloudDataplex\GoogleCloudDataplexV1RejectChangeRequestRequest;
 use Google\Service\CloudDataplex\GoogleIamV1Policy;
 use Google\Service\CloudDataplex\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsRequest;
@@ -32,6 +37,59 @@ use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
  */
 class ProjectsLocationsChangeRequests extends \Google\Service\Resource
 {
+  /**
+   * Approves a ChangeRequest. (changeRequests.approve)
+   *
+   * @param string $name Required. The name of the ChangeRequest to approve.
+   * @param GoogleCloudDataplexV1ApproveChangeRequestRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1ChangeRequest
+   * @throws \Google\Service\Exception
+   */
+  public function approve($name, GoogleCloudDataplexV1ApproveChangeRequestRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('approve', [$params], GoogleCloudDataplexV1ChangeRequest::class);
+  }
+  /**
+   * Deletes a ChangeRequest.Behavior depends on the caller's permissions and the
+   * resource's state: 1. Callers with dataplex.changeRequests.delete can only
+   * delete ChangeRequests in the NEW state. 2. Callers with the
+   * dataplex.changeRequests.adminDelete permission can delete ChangeRequests
+   * regardless of their state. (changeRequests.delete)
+   *
+   * @param string $name Required. The name of the ChangeRequest to delete.
+   * Format: projects/{project_number}/locations/{location_id}/changeRequests/{cha
+   * nge_request_id}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string etag Optional. The etag of the ChangeRequest.
+   * @return DataplexEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], DataplexEmpty::class);
+  }
+  /**
+   * Gets a ChangeRequest. (changeRequests.get)
+   *
+   * @param string $name Required. The name of the ChangeRequest to retrieve.
+   * Format: projects/{project_number}/locations/{location_id}/changeRequests/{cha
+   * nge_request_id}
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1ChangeRequest
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudDataplexV1ChangeRequest::class);
+  }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (changeRequests.getIamPolicy)
@@ -61,6 +119,64 @@ class ProjectsLocationsChangeRequests extends \Google\Service\Resource
     $params = ['resource' => $resource];
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', [$params], GoogleIamV1Policy::class);
+  }
+  /**
+   * Lists ChangeRequests. (changeRequests.listProjectsLocationsChangeRequests)
+   *
+   * @param string $parent Required. The parent, which owns this collection of
+   * ChangeRequests. Format: projects/{project_number}/locations/{location_id}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Filter request. Supports filtering by:
+   * state, author, resource, create_time, update_time.
+   * @opt_param string orderBy Optional. Order by fields for the result.
+   * @opt_param int pageSize Optional. Maximum number of ChangeRequests to return.
+   * The service may return fewer.
+   * @opt_param string pageToken Optional. Page token received from a previous
+   * ListChangeRequests call.
+   * @return GoogleCloudDataplexV1ListChangeRequestsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsChangeRequests($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudDataplexV1ListChangeRequestsResponse::class);
+  }
+  /**
+   * Updates a ChangeRequest. Only allowed when the state is NEW.
+   * (changeRequests.patch)
+   *
+   * @param string $name Identifier. The relative resource name of the
+   * ChangeRequest, of the form: projects/{project_number}/locations/{location_id}
+   * /changeRequests/{change_request_id}
+   * @param GoogleCloudDataplexV1ChangeRequest $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The list of fields to update.
+   * @return GoogleCloudDataplexV1ChangeRequest
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudDataplexV1ChangeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleCloudDataplexV1ChangeRequest::class);
+  }
+  /**
+   * Rejects a ChangeRequest. (changeRequests.reject)
+   *
+   * @param string $name Required. The name of the ChangeRequest to reject.
+   * @param GoogleCloudDataplexV1RejectChangeRequestRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDataplexV1ChangeRequest
+   * @throws \Google\Service\Exception
+   */
+  public function reject($name, GoogleCloudDataplexV1RejectChangeRequestRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reject', [$params], GoogleCloudDataplexV1ChangeRequest::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
