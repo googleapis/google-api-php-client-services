@@ -19,6 +19,8 @@ namespace Google\Service\Bigquery;
 
 class GenAiFunctionStats extends \Google\Model
 {
+  protected $cacheStatsType = GenAiFunctionCacheStats::class;
+  protected $cacheStatsDataType = '';
   protected $costOptimizationStatsType = GenAiFunctionCostOptimizationStats::class;
   protected $costOptimizationStatsDataType = '';
   protected $errorStatsType = GenAiFunctionErrorStats::class;
@@ -43,6 +45,22 @@ class GenAiFunctionStats extends \Google\Model
    */
   public $prompt;
 
+  /**
+   * Cache stats for the function.
+   *
+   * @param GenAiFunctionCacheStats $cacheStats
+   */
+  public function setCacheStats(GenAiFunctionCacheStats $cacheStats)
+  {
+    $this->cacheStats = $cacheStats;
+  }
+  /**
+   * @return GenAiFunctionCacheStats
+   */
+  public function getCacheStats()
+  {
+    return $this->cacheStats;
+  }
   /**
    * Cost optimization stats if applied on the rows processed by the function.
    *

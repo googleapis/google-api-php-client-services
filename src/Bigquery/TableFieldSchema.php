@@ -46,8 +46,12 @@ class TableFieldSchema extends \Google\Collection
    * @var string
    */
   public $collation;
+  protected $dataGovernanceTagsInfoType = TableFieldSchemaDataGovernanceTagsInfo::class;
+  protected $dataGovernanceTagsInfoDataType = '';
   protected $dataPoliciesType = DataPolicyOption::class;
   protected $dataPoliciesDataType = 'array';
+  protected $dataPolicyListType = DataPolicyList::class;
+  protected $dataPolicyListDataType = '';
   /**
    * Optional. A SQL expression to specify the [default value]
    * (https://cloud.google.com/bigquery/docs/default-values) for this field.
@@ -192,6 +196,33 @@ class TableFieldSchema extends \Google\Collection
     return $this->collation;
   }
   /**
+   * Optional. Specifies the data governance tags on this field. This field
+   * works with other column-level security fields as follows: - Precedence: If
+   * a data governance tag is attached to a column, it takes precedence over the
+   * policy tag attached to the column. However, if a data policy is attached to
+   * a column, it takes precedence over the data governance tag. - Patching
+   * behavior (how this field behaves during a `Table.patch` schema update): -
+   * Unset: If the `data_governance_tags_info` field is omitted from the update
+   * request, the existing tags on the column are preserved. - Empty Field: To
+   * clear data governance tags from a column, send the
+   * `data_governance_tags_info` field as an empty object. This will remove all
+   * tags from the column. - Updating tags: To replace existing tag, send the
+   * field with the new tag.
+   *
+   * @param TableFieldSchemaDataGovernanceTagsInfo $dataGovernanceTagsInfo
+   */
+  public function setDataGovernanceTagsInfo(TableFieldSchemaDataGovernanceTagsInfo $dataGovernanceTagsInfo)
+  {
+    $this->dataGovernanceTagsInfo = $dataGovernanceTagsInfo;
+  }
+  /**
+   * @return TableFieldSchemaDataGovernanceTagsInfo
+   */
+  public function getDataGovernanceTagsInfo()
+  {
+    return $this->dataGovernanceTagsInfo;
+  }
+  /**
    * Optional. Data policies attached to this field, used for field-level access
    * control.
    *
@@ -207,6 +238,24 @@ class TableFieldSchema extends \Google\Collection
   public function getDataPolicies()
   {
     return $this->dataPolicies;
+  }
+  /**
+   * Optional. Specifies data policies attached to this field, used for field-
+   * level access control. When set, this will be the source of truth for data
+   * policy information.
+   *
+   * @param DataPolicyList $dataPolicyList
+   */
+  public function setDataPolicyList(DataPolicyList $dataPolicyList)
+  {
+    $this->dataPolicyList = $dataPolicyList;
+  }
+  /**
+   * @return DataPolicyList
+   */
+  public function getDataPolicyList()
+  {
+    return $this->dataPolicyList;
   }
   /**
    * Optional. A SQL expression to specify the [default value]

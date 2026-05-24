@@ -40,6 +40,13 @@ class ExternalRuntimeOptions extends \Google\Model
    */
   public $containerMemory;
   /**
+   * Optional. Maximum number of requests that a Cloud Run instance can handle
+   * concurrently. If absent or if `0`, a default concurrency is used.
+   *
+   * @var string
+   */
+  public $containerRequestConcurrency;
+  /**
    * Optional. Maximum number of rows in each batch sent to the external
    * runtime. If absent or if 0, BigQuery dynamically decides the number of rows
    * in a batch.
@@ -90,6 +97,23 @@ class ExternalRuntimeOptions extends \Google\Model
   public function getContainerMemory()
   {
     return $this->containerMemory;
+  }
+  /**
+   * Optional. Maximum number of requests that a Cloud Run instance can handle
+   * concurrently. If absent or if `0`, a default concurrency is used.
+   *
+   * @param string $containerRequestConcurrency
+   */
+  public function setContainerRequestConcurrency($containerRequestConcurrency)
+  {
+    $this->containerRequestConcurrency = $containerRequestConcurrency;
+  }
+  /**
+   * @return string
+   */
+  public function getContainerRequestConcurrency()
+  {
+    return $this->containerRequestConcurrency;
   }
   /**
    * Optional. Maximum number of rows in each batch sent to the external

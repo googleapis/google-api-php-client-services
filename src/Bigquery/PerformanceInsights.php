@@ -19,7 +19,7 @@ namespace Google\Service\Bigquery;
 
 class PerformanceInsights extends \Google\Collection
 {
-  protected $collection_key = 'stagePerformanceStandaloneInsights';
+  protected $collection_key = 'tableChangeInsights';
   /**
    * Output only. Average execution ms of previous runs. Indicates the job ran
    * slow compared to previous executions. To find previous executions, use
@@ -32,6 +32,8 @@ class PerformanceInsights extends \Google\Collection
   protected $stagePerformanceChangeInsightsDataType = 'array';
   protected $stagePerformanceStandaloneInsightsType = StagePerformanceStandaloneInsight::class;
   protected $stagePerformanceStandaloneInsightsDataType = 'array';
+  protected $tableChangeInsightsType = TableChangeInsight::class;
+  protected $tableChangeInsightsDataType = 'array';
 
   /**
    * Output only. Average execution ms of previous runs. Indicates the job ran
@@ -84,6 +86,23 @@ class PerformanceInsights extends \Google\Collection
   public function getStagePerformanceStandaloneInsights()
   {
     return $this->stagePerformanceStandaloneInsights;
+  }
+  /**
+   * Output only. Performance insights for table-level attributes that changed
+   * compared to previous runs.
+   *
+   * @param TableChangeInsight[] $tableChangeInsights
+   */
+  public function setTableChangeInsights($tableChangeInsights)
+  {
+    $this->tableChangeInsights = $tableChangeInsights;
+  }
+  /**
+   * @return TableChangeInsight[]
+   */
+  public function getTableChangeInsights()
+  {
+    return $this->tableChangeInsights;
   }
 }
 
