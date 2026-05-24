@@ -54,7 +54,7 @@ class AuthzPolicy extends \Google\Collection
    * `FULL_DUPLEX_STREAMED` body send mode.
    */
   public const POLICY_PROFILE_CONTENT_AUTHZ = 'CONTENT_AUTHZ';
-  protected $collection_key = 'httpRules';
+  protected $collection_key = 'networkRules';
   /**
    * Required. Can be one of `ALLOW`, `DENY`, `CUSTOM`. When the action is
    * `CUSTOM`, `customProvider` must be specified. When the action is `ALLOW`,
@@ -105,6 +105,8 @@ class AuthzPolicy extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $networkRulesType = AuthzPolicyAuthzRule::class;
+  protected $networkRulesDataType = 'array';
   /**
    * Optional. Immutable. Defines the type of authorization being performed. If
    * not specified, `REQUEST_AUTHZ` is applied. This field cannot be changed
@@ -256,6 +258,26 @@ class AuthzPolicy extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. A list of authorization network rules to match against the
+   * incoming request. A policy match occurs when at least one network rule
+   * matches the request. At least one network rule is required for Allow or
+   * Deny Action if no HTTP rules are provided. Network rules are mutually
+   * exclusive with HTTP rules. Limited to 5 rules.
+   *
+   * @param AuthzPolicyAuthzRule[] $networkRules
+   */
+  public function setNetworkRules($networkRules)
+  {
+    $this->networkRules = $networkRules;
+  }
+  /**
+   * @return AuthzPolicyAuthzRule[]
+   */
+  public function getNetworkRules()
+  {
+    return $this->networkRules;
   }
   /**
    * Optional. Immutable. Defines the type of authorization being performed. If

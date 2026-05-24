@@ -41,10 +41,10 @@ class FirewallEndpoint extends \Google\Collection
   public const STATE_INACTIVE = 'INACTIVE';
   protected $collection_key = 'associations';
   /**
-   * Output only. List of networks that are associated with this endpoint in the
-   * local zone. This is a projection of the FirewallEndpointAssociations
-   * pointing at this endpoint. A network will only appear in this list after
-   * traffic routing is fully configured. Format:
+   * Output only. Deprecated: List of networks that are associated with this
+   * endpoint in the local zone. This is a projection of the
+   * FirewallEndpointAssociations pointing at this endpoint. A network will only
+   * appear in this list after traffic routing is fully configured. Format:
    * projects/{project}/global/networks/{name}.
    *
    * @deprecated
@@ -120,10 +120,10 @@ class FirewallEndpoint extends \Google\Collection
   public $updateTime;
 
   /**
-   * Output only. List of networks that are associated with this endpoint in the
-   * local zone. This is a projection of the FirewallEndpointAssociations
-   * pointing at this endpoint. A network will only appear in this list after
-   * traffic routing is fully configured. Format:
+   * Output only. Deprecated: List of networks that are associated with this
+   * endpoint in the local zone. This is a projection of the
+   * FirewallEndpointAssociations pointing at this endpoint. A network will only
+   * appear in this list after traffic routing is fully configured. Format:
    * projects/{project}/global/networks/{name}.
    *
    * @deprecated
