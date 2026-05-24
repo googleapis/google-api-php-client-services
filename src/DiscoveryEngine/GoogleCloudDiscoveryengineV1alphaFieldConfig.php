@@ -286,7 +286,9 @@ class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Collection
    * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this
    * field is ignored. If `searchable_option` is `SEARCHABLE_ENABLED` and this
    * is `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as
-   * `DEFAULT_IMPORTANCE`.
+   * `DEFAULT_IMPORTANCE`. For more information, see [Weight searchable
+   * fields](https://cloud.google.com/generative-ai-app-builder/docs/configure-
+   * field-settings#weight-search).
    *
    * @var string
    */
@@ -561,7 +563,9 @@ class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Collection
    * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this
    * field is ignored. If `searchable_option` is `SEARCHABLE_ENABLED` and this
    * is `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as
-   * `DEFAULT_IMPORTANCE`.
+   * `DEFAULT_IMPORTANCE`. For more information, see [Weight searchable
+   * fields](https://cloud.google.com/generative-ai-app-builder/docs/configure-
+   * field-settings#weight-search).
    *
    * Accepted values: SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED,
    * VERY_LOW_IMPORTANCE, LOW_IMPORTANCE, DEFAULT_IMPORTANCE, HIGH_IMPORTANCE,

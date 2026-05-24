@@ -56,7 +56,9 @@ class GoogleCloudDiscoveryengineV1WorkspaceConfig extends \Google\Model
    */
   public const TYPE_GOOGLE_PEOPLE = 'GOOGLE_PEOPLE';
   /**
-   * Obfuscated Dasher customer ID.
+   * Output only. Obfuscated Dasher customer ID. Derived by the server from the
+   * project's GCP organization at data store creation time; any value supplied
+   * in the request payload is ignored.
    *
    * @var string
    */
@@ -85,7 +87,9 @@ class GoogleCloudDiscoveryengineV1WorkspaceConfig extends \Google\Model
   public $type;
 
   /**
-   * Obfuscated Dasher customer ID.
+   * Output only. Obfuscated Dasher customer ID. Derived by the server from the
+   * project's GCP organization at data store creation time; any value supplied
+   * in the request payload is ignored.
    *
    * @param string $dasherCustomerId
    */
