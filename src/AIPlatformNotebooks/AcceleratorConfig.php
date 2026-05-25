@@ -80,6 +80,10 @@ class AcceleratorConfig extends \Google\Model
    */
   public const TYPE_NVIDIA_B200 = 'NVIDIA_B200';
   /**
+   * NVIDIA RTX 6000.
+   */
+  public const TYPE_NVIDIA_RTX6000 = 'NVIDIA_RTX6000';
+  /**
    * Optional. Count of cores of this accelerator.
    *
    * @var string
@@ -115,7 +119,7 @@ class AcceleratorConfig extends \Google\Model
    * NVIDIA_TESLA_V100, NVIDIA_TESLA_P4, NVIDIA_TESLA_T4, NVIDIA_TESLA_A100,
    * NVIDIA_A100_80GB, NVIDIA_L4, NVIDIA_H100_80GB, NVIDIA_H100_MEGA_80GB,
    * NVIDIA_H200_141GB, NVIDIA_TESLA_T4_VWS, NVIDIA_TESLA_P100_VWS,
-   * NVIDIA_TESLA_P4_VWS, NVIDIA_B200
+   * NVIDIA_TESLA_P4_VWS, NVIDIA_B200, NVIDIA_RTX6000
    *
    * @param self::TYPE_* $type
    */
