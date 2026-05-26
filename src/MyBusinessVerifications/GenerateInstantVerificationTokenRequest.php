@@ -35,9 +35,11 @@ class GenerateInstantVerificationTokenRequest extends \Google\Model
   public $locationId;
 
   /**
-   * Immutable. The address and other details of the location to generate an
-   * instant verification token for.
+   * Immutable. Deprecated: Please use location_id instead. The address and
+   * other details of the location to generate an instant verification token
+   * for.
    *
+   * @deprecated
    * @param LocationData $locationData
    */
   public function setLocationData(LocationData $locationData)
@@ -45,6 +47,7 @@ class GenerateInstantVerificationTokenRequest extends \Google\Model
     $this->locationData = $locationData;
   }
   /**
+   * @deprecated
    * @return LocationData
    */
   public function getLocationData()
