@@ -550,6 +550,10 @@ class NetworkManagement extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'privateConnectivityEnabled' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'generateProviderAccessToken' => [
               'path' => 'v1/{+name}:generateProviderAccessToken',
@@ -631,6 +635,10 @@ class NetworkManagement extends \Google\Service
                 'ntpServerSecondaryAddress' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'privateConnectivityEnabled' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'staticIpAddress.dnsServerAddress' => [
                   'location' => 'query',

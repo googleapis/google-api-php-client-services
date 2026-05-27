@@ -135,6 +135,10 @@ class DeliverInfo extends \Google\Model
    */
   public const TARGET_GKE_POD = 'GKE_POD';
   /**
+   * Target is a Cloud Run Job. Used only for return traces.
+   */
+  public const TARGET_CLOUD_RUN_JOB = 'CLOUD_RUN_JOB';
+  /**
    * Target is a DMS Private Connection. Used only for return traces.
    */
   public const TARGET_DMS_PRIVATE_CONNECTION = 'DMS_PRIVATE_CONNECTION';
@@ -275,7 +279,7 @@ class DeliverInfo extends \Google\Model
    * PSC_VPC_SC, SERVERLESS_NEG, STORAGE_BUCKET, PRIVATE_NETWORK,
    * CLOUD_FUNCTION, APP_ENGINE_VERSION, CLOUD_RUN_REVISION,
    * GOOGLE_MANAGED_SERVICE, REDIS_INSTANCE, REDIS_CLUSTER, GKE_POD,
-   * DMS_PRIVATE_CONNECTION, DATASTREAM_PRIVATE_CONNECTION
+   * CLOUD_RUN_JOB, DMS_PRIVATE_CONNECTION, DATASTREAM_PRIVATE_CONNECTION
    *
    * @param self::TARGET_* $target
    */

@@ -85,6 +85,10 @@ class ProjectsLocationsNetworkMonitoringProviders extends \Google\Service\Resour
    * }/locations/{location}/networkMonitoringProviders/{network_monitoring_provide
    * r}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool privateConnectivityEnabled Optional. For Google Cloud MPs,
+   * this field indicates whether the Monitoring Point is deployed in a Private
+   * Service Connect deployment. Not used for non-Google Cloud MPs.
    * @return GenerateMonitoringPointConfigResponse
    * @throws \Google\Service\Exception
    */

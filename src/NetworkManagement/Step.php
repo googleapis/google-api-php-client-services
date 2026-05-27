@@ -85,6 +85,11 @@ class Step extends \Google\Model
    */
   public const STATE_START_FROM_CLOUD_RUN_REVISION = 'START_FROM_CLOUD_RUN_REVISION';
   /**
+   * Initial state: packet originating from a Cloud Run Job. A CloudRunJobInfo
+   * is populated with starting Job information.
+   */
+  public const STATE_START_FROM_CLOUD_RUN_JOB = 'START_FROM_CLOUD_RUN_JOB';
+  /**
    * Initial state: packet originating from a Storage Bucket. Used only for
    * return traces. The storage_bucket information is populated.
    */
@@ -256,6 +261,8 @@ class Step extends \Google\Model
   public $causesDrop;
   protected $cloudFunctionType = CloudFunctionInfo::class;
   protected $cloudFunctionDataType = '';
+  protected $cloudRunJobType = CloudRunJobInfo::class;
+  protected $cloudRunJobDataType = '';
   protected $cloudRunRevisionType = CloudRunRevisionInfo::class;
   protected $cloudRunRevisionDataType = '';
   protected $cloudSqlInstanceType = CloudSQLInstanceInfo::class;
@@ -408,6 +415,22 @@ class Step extends \Google\Model
   public function getCloudFunction()
   {
     return $this->cloudFunction;
+  }
+  /**
+   * Display information of a Cloud Run job.
+   *
+   * @param CloudRunJobInfo $cloudRunJob
+   */
+  public function setCloudRunJob(CloudRunJobInfo $cloudRunJob)
+  {
+    $this->cloudRunJob = $cloudRunJob;
+  }
+  /**
+   * @return CloudRunJobInfo
+   */
+  public function getCloudRunJob()
+  {
+    return $this->cloudRunJob;
   }
   /**
    * Display information of a Cloud Run revision.
@@ -952,9 +975,9 @@ class Step extends \Google\Model
    * START_FROM_GKE_MASTER, START_FROM_CLOUD_SQL_INSTANCE, START_FROM_GKE_POD,
    * START_FROM_REDIS_INSTANCE, START_FROM_REDIS_CLUSTER,
    * START_FROM_CLOUD_FUNCTION, START_FROM_APP_ENGINE_VERSION,
-   * START_FROM_CLOUD_RUN_REVISION, START_FROM_STORAGE_BUCKET,
-   * START_FROM_PSC_PUBLISHED_SERVICE, START_FROM_SERVERLESS_NEG,
-   * START_FROM_DMS_PRIVATE_CONNECTION,
+   * START_FROM_CLOUD_RUN_REVISION, START_FROM_CLOUD_RUN_JOB,
+   * START_FROM_STORAGE_BUCKET, START_FROM_PSC_PUBLISHED_SERVICE,
+   * START_FROM_SERVERLESS_NEG, START_FROM_DMS_PRIVATE_CONNECTION,
    * START_FROM_DATASTREAM_PRIVATE_CONNECTION, APPLY_INGRESS_FIREWALL_RULE,
    * APPLY_EGRESS_FIREWALL_RULE, APPLY_ROUTE, APPLY_FORWARDING_RULE,
    * ANALYZE_LOAD_BALANCER_BACKEND, SPOOFING_APPROVED, ARRIVE_AT_INSTANCE,

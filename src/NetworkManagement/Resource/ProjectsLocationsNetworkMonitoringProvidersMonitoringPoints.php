@@ -51,6 +51,9 @@ class ProjectsLocationsNetworkMonitoringProvidersMonitoringPoints extends \Googl
    * provided in the DHCP lease or a set of well-known NTP servers pre-configured
    * on the monitoring point. This field can be an IP address or FQDN.
    * @opt_param string ntpServerSecondaryAddress Optional. Second NTP server.
+   * @opt_param bool privateConnectivityEnabled Optional. For Google Cloud MPs,
+   * this field indicates whether the Monitoring Point is deployed in a Private
+   * Service Connect deployment. Not used for non-Google Cloud MPs.
    * @opt_param string staticIpAddress.dnsServerAddress Required. DNS server.
    * @opt_param string staticIpAddress.dnsServerSecondaryAddress Optional. Second
    * DNS server.
