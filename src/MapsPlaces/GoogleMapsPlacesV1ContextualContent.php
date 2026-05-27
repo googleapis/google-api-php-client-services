@@ -28,10 +28,7 @@ class GoogleMapsPlacesV1ContextualContent extends \Google\Collection
   protected $reviewsDataType = 'array';
 
   /**
-   * Experimental: See
-   * https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. Justifications for
-   * the place.
+   * Justifications for the place.
    *
    * @param GoogleMapsPlacesV1ContextualContentJustification[] $justifications
    */
