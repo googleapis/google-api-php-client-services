@@ -58,7 +58,8 @@ class ClusterConfig extends \Google\Collection
    */
   public const ENGINE_DEFAULT = 'DEFAULT';
   /**
-   * The cluster is a lightning engine cluster.
+   * The cluster is a Lightning Engine
+   * (https://cloud.google.com/dataproc/docs/guides/lightning-engine) cluster.
    */
   public const ENGINE_LIGHTNING = 'LIGHTNING';
   protected $collection_key = 'initializationActions';

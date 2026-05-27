@@ -20,18 +20,44 @@ namespace Google\Service\Dataproc;
 class UsageSnapshot extends \Google\Model
 {
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is
+   * only used in runtime versions below 3.0.
    *
    * @var string
    */
   public $acceleratorType;
   /**
    * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless
-   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)) Deprecated:
+   * This field is only used in runtime versions below 3.0.
    *
    * @var string
    */
   public $milliAccelerator;
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-40 accelerators. (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-
+   * serverless/pricing))
+   *
+   * @var string
+   */
+  public $milliAcceleratorA10040;
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-80 accelerators. (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-
+   * serverless/pricing))
+   *
+   * @var string
+   */
+  public $milliAcceleratorA10080;
+  /**
+   * Optional. Milli (one-thousandth) accelerator for L4 accelerators. (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-
+   * serverless/pricing))
+   *
+   * @var string
+   */
+  public $milliAcceleratorL4;
   /**
    * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) (see
    * Dataproc Serverless pricing (https://cloud.google.com/dataproc-
@@ -71,7 +97,8 @@ class UsageSnapshot extends \Google\Model
   public $snapshotTime;
 
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is
+   * only used in runtime versions below 3.0.
    *
    * @param string $acceleratorType
    */
@@ -88,7 +115,8 @@ class UsageSnapshot extends \Google\Model
   }
   /**
    * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless
-   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)) Deprecated:
+   * This field is only used in runtime versions below 3.0.
    *
    * @param string $milliAccelerator
    */
@@ -102,6 +130,60 @@ class UsageSnapshot extends \Google\Model
   public function getMilliAccelerator()
   {
     return $this->milliAccelerator;
+  }
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-40 accelerators. (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-
+   * serverless/pricing))
+   *
+   * @param string $milliAcceleratorA10040
+   */
+  public function setMilliAcceleratorA10040($milliAcceleratorA10040)
+  {
+    $this->milliAcceleratorA10040 = $milliAcceleratorA10040;
+  }
+  /**
+   * @return string
+   */
+  public function getMilliAcceleratorA10040()
+  {
+    return $this->milliAcceleratorA10040;
+  }
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-80 accelerators. (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-
+   * serverless/pricing))
+   *
+   * @param string $milliAcceleratorA10080
+   */
+  public function setMilliAcceleratorA10080($milliAcceleratorA10080)
+  {
+    $this->milliAcceleratorA10080 = $milliAcceleratorA10080;
+  }
+  /**
+   * @return string
+   */
+  public function getMilliAcceleratorA10080()
+  {
+    return $this->milliAcceleratorA10080;
+  }
+  /**
+   * Optional. Milli (one-thousandth) accelerator for L4 accelerators. (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-
+   * serverless/pricing))
+   *
+   * @param string $milliAcceleratorL4
+   */
+  public function setMilliAcceleratorL4($milliAcceleratorL4)
+  {
+    $this->milliAcceleratorL4 = $milliAcceleratorL4;
+  }
+  /**
+   * @return string
+   */
+  public function getMilliAcceleratorL4()
+  {
+    return $this->milliAcceleratorL4;
   }
   /**
    * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) (see
