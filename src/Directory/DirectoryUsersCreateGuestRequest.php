@@ -20,20 +20,24 @@ namespace Google\Service\Directory;
 class DirectoryUsersCreateGuestRequest extends \Google\Model
 {
   /**
-   * Optional. Immutable ID of the Google Workspace account.
+   * Optional. Immutable ID of the Google Workspace account. Only required when
+   * request is created by a service account. Defaults to the authenticated
+   * user's customer ID otherwise.
    *
    * @var string
    */
   public $customer;
   /**
-   * Immutable. External email of the guest user being created.
+   * Required. External email of the guest user being created.
    *
    * @var string
    */
   public $primaryGuestEmail;
 
   /**
-   * Optional. Immutable ID of the Google Workspace account.
+   * Optional. Immutable ID of the Google Workspace account. Only required when
+   * request is created by a service account. Defaults to the authenticated
+   * user's customer ID otherwise.
    *
    * @param string $customer
    */
@@ -49,7 +53,7 @@ class DirectoryUsersCreateGuestRequest extends \Google\Model
     return $this->customer;
   }
   /**
-   * Immutable. External email of the guest user being created.
+   * Required. External email of the guest user being created.
    *
    * @param string $primaryGuestEmail
    */
