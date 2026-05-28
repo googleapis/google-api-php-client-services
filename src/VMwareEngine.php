@@ -887,6 +887,16 @@ class VMwareEngine extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'migrateManagementVms' => [
+              'path' => 'v1/{+name}:migrateManagementVms',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',

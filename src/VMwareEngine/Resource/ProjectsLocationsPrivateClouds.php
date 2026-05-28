@@ -21,6 +21,7 @@ use Google\Service\VMwareEngine\AcceleratePrivateCloudDeletionRequest;
 use Google\Service\VMwareEngine\Credentials;
 use Google\Service\VMwareEngine\DnsForwarding;
 use Google\Service\VMwareEngine\ListPrivateCloudsResponse;
+use Google\Service\VMwareEngine\MigrateManagementVmsRequest;
 use Google\Service\VMwareEngine\Operation;
 use Google\Service\VMwareEngine\Policy;
 use Google\Service\VMwareEngine\PrivateCloud;
@@ -234,6 +235,27 @@ class ProjectsLocationsPrivateClouds extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListPrivateCloudsResponse::class);
+  }
+  /**
+   * Migrates the management VMs of the PC from the current management cluster to
+   * a workload cluster. Post this migration, the provided workload cluster
+   * becomes the management cluster (privateClouds.migrateManagementVms)
+   *
+   * @param string $name Required. The resource name of the private cloud whose
+   * management vms are getting migrated. Resource names are schemeless URIs that
+   * follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+   * @param MigrateManagementVmsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function migrateManagementVms($name, MigrateManagementVmsRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('migrateManagementVms', [$params], Operation::class);
   }
   /**
    * Modifies a `PrivateCloud` resource. Only the following fields can be updated:
