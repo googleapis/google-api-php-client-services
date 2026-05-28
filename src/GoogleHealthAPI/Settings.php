@@ -158,6 +158,16 @@ class Settings extends \Google\Model
    */
   public $distanceUnit;
   /**
+   * Output only. The food language code derived from the user's food database.
+   * Possible values: `'en-US'`, `'en-GB'`, `'de-DE'`, `'es-ES'`, `'fr-FR'`,
+   * `'zh-CN'`, `'zh-TW'`, `'ja-JP'`, `'en-AU'`, `'en-CA'`, `'it-IT'`, `'ko-
+   * KR'`, `'es-MX'`, `'en-IN'`, `'en-SG'`, `'en-PH'`, `'en-IE'`, `'fr-CA'`.
+   * Updates to this field are currently not supported.
+   *
+   * @var string
+   */
+  public $foodLanguageCode;
+  /**
    * Optional. The measurement unit defined in the user's account settings.
    *
    * @var string
@@ -277,6 +287,26 @@ class Settings extends \Google\Model
   public function getDistanceUnit()
   {
     return $this->distanceUnit;
+  }
+  /**
+   * Output only. The food language code derived from the user's food database.
+   * Possible values: `'en-US'`, `'en-GB'`, `'de-DE'`, `'es-ES'`, `'fr-FR'`,
+   * `'zh-CN'`, `'zh-TW'`, `'ja-JP'`, `'en-AU'`, `'en-CA'`, `'it-IT'`, `'ko-
+   * KR'`, `'es-MX'`, `'en-IN'`, `'en-SG'`, `'en-PH'`, `'en-IE'`, `'fr-CA'`.
+   * Updates to this field are currently not supported.
+   *
+   * @param string $foodLanguageCode
+   */
+  public function setFoodLanguageCode($foodLanguageCode)
+  {
+    $this->foodLanguageCode = $foodLanguageCode;
+  }
+  /**
+   * @return string
+   */
+  public function getFoodLanguageCode()
+  {
+    return $this->foodLanguageCode;
   }
   /**
    * Optional. The measurement unit defined in the user's account settings.

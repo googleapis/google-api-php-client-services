@@ -19,6 +19,8 @@ namespace Google\Service\GoogleHealthAPI;
 
 class DataPoint extends \Google\Model
 {
+  protected $activeEnergyBurnedType = ActiveEnergyBurned::class;
+  protected $activeEnergyBurnedDataType = '';
   protected $activeMinutesType = ActiveMinutes::class;
   protected $activeMinutesDataType = '';
   protected $activeZoneMinutesType = ActiveZoneMinutes::class;
@@ -29,8 +31,12 @@ class DataPoint extends \Google\Model
   protected $altitudeDataType = '';
   protected $basalEnergyBurnedType = BasalEnergyBurned::class;
   protected $basalEnergyBurnedDataType = '';
+  protected $bloodGlucoseType = BloodGlucose::class;
+  protected $bloodGlucoseDataType = '';
   protected $bodyFatType = BodyFat::class;
   protected $bodyFatDataType = '';
+  protected $coreBodyTemperatureType = CoreBodyTemperature::class;
+  protected $coreBodyTemperatureDataType = '';
   protected $dailyHeartRateVariabilityType = DailyHeartRateVariability::class;
   protected $dailyHeartRateVariabilityDataType = '';
   protected $dailyHeartRateZonesType = DailyHeartRateZones::class;
@@ -49,10 +55,16 @@ class DataPoint extends \Google\Model
   protected $dataSourceDataType = '';
   protected $distanceType = Distance::class;
   protected $distanceDataType = '';
+  protected $electrocardiogramType = Electrocardiogram::class;
+  protected $electrocardiogramDataType = '';
   protected $exerciseType = Exercise::class;
   protected $exerciseDataType = '';
   protected $floorsType = Floors::class;
   protected $floorsDataType = '';
+  protected $foodType = Food::class;
+  protected $foodDataType = '';
+  protected $foodMeasurementUnitType = FoodMeasurementUnit::class;
+  protected $foodMeasurementUnitDataType = '';
   protected $heartRateType = HeartRate::class;
   protected $heartRateDataType = '';
   protected $heartRateVariabilityType = HeartRateVariability::class;
@@ -61,6 +73,8 @@ class DataPoint extends \Google\Model
   protected $heightDataType = '';
   protected $hydrationLogType = HydrationLog::class;
   protected $hydrationLogDataType = '';
+  protected $irregularRhythmNotificationType = IrregularRhythmNotification::class;
+  protected $irregularRhythmNotificationDataType = '';
   /**
    * Identifier. Data point name, only supported for the subset of identifiable
    * data types. For the majority of the data types, individual data points do
@@ -78,6 +92,8 @@ class DataPoint extends \Google\Model
    * @var string
    */
   public $name;
+  protected $nutritionLogType = NutritionLog::class;
+  protected $nutritionLogDataType = '';
   protected $oxygenSaturationType = OxygenSaturation::class;
   protected $oxygenSaturationDataType = '';
   protected $respiratoryRateSleepSummaryType = RespiratoryRateSleepSummary::class;
@@ -99,6 +115,23 @@ class DataPoint extends \Google\Model
   protected $weightType = Weight::class;
   protected $weightDataType = '';
 
+  /**
+   * Optional. Data for points in the `active-energy-burned` interval data type
+   * collection.
+   *
+   * @param ActiveEnergyBurned $activeEnergyBurned
+   */
+  public function setActiveEnergyBurned(ActiveEnergyBurned $activeEnergyBurned)
+  {
+    $this->activeEnergyBurned = $activeEnergyBurned;
+  }
+  /**
+   * @return ActiveEnergyBurned
+   */
+  public function getActiveEnergyBurned()
+  {
+    return $this->activeEnergyBurned;
+  }
   /**
    * Optional. Data for points in the `active-minutes` interval data type
    * collection.
@@ -184,6 +217,23 @@ class DataPoint extends \Google\Model
     return $this->basalEnergyBurned;
   }
   /**
+   * Optional. Data for points in the `blood-glucose` sample data type
+   * collection.
+   *
+   * @param BloodGlucose $bloodGlucose
+   */
+  public function setBloodGlucose(BloodGlucose $bloodGlucose)
+  {
+    $this->bloodGlucose = $bloodGlucose;
+  }
+  /**
+   * @return BloodGlucose
+   */
+  public function getBloodGlucose()
+  {
+    return $this->bloodGlucose;
+  }
+  /**
    * Optional. Data for points in the `body-fat` sample data type collection.
    *
    * @param BodyFat $bodyFat
@@ -198,6 +248,23 @@ class DataPoint extends \Google\Model
   public function getBodyFat()
   {
     return $this->bodyFat;
+  }
+  /**
+   * Optional. Data for points in the `core-body-temperature` sample data type
+   * collection.
+   *
+   * @param CoreBodyTemperature $coreBodyTemperature
+   */
+  public function setCoreBodyTemperature(CoreBodyTemperature $coreBodyTemperature)
+  {
+    $this->coreBodyTemperature = $coreBodyTemperature;
+  }
+  /**
+   * @return CoreBodyTemperature
+   */
+  public function getCoreBodyTemperature()
+  {
+    return $this->coreBodyTemperature;
   }
   /**
    * Optional. Data for points in the `daily-heart-rate-variability` daily data
@@ -351,6 +418,23 @@ class DataPoint extends \Google\Model
     return $this->distance;
   }
   /**
+   * Optional. Data for points in the `electrocardiogram` session data type
+   * collection.
+   *
+   * @param Electrocardiogram $electrocardiogram
+   */
+  public function setElectrocardiogram(Electrocardiogram $electrocardiogram)
+  {
+    $this->electrocardiogram = $electrocardiogram;
+  }
+  /**
+   * @return Electrocardiogram
+   */
+  public function getElectrocardiogram()
+  {
+    return $this->electrocardiogram;
+  }
+  /**
    * Optional. Data for points in the `exercise` session data type collection.
    *
    * @param Exercise $exercise
@@ -381,6 +465,38 @@ class DataPoint extends \Google\Model
   public function getFloors()
   {
     return $this->floors;
+  }
+  /**
+   * Optional. The food details.
+   *
+   * @param Food $food
+   */
+  public function setFood(Food $food)
+  {
+    $this->food = $food;
+  }
+  /**
+   * @return Food
+   */
+  public function getFood()
+  {
+    return $this->food;
+  }
+  /**
+   * Optional. The food measurement unit details.
+   *
+   * @param FoodMeasurementUnit $foodMeasurementUnit
+   */
+  public function setFoodMeasurementUnit(FoodMeasurementUnit $foodMeasurementUnit)
+  {
+    $this->foodMeasurementUnit = $foodMeasurementUnit;
+  }
+  /**
+   * @return FoodMeasurementUnit
+   */
+  public function getFoodMeasurementUnit()
+  {
+    return $this->foodMeasurementUnit;
   }
   /**
    * Optional. Data for points in the `heart-rate` sample data type collection.
@@ -449,6 +565,23 @@ class DataPoint extends \Google\Model
     return $this->hydrationLog;
   }
   /**
+   * Optional. Data for points in the `irregular-rhythm-notification` session
+   * data type collection.
+   *
+   * @param IrregularRhythmNotification $irregularRhythmNotification
+   */
+  public function setIrregularRhythmNotification(IrregularRhythmNotification $irregularRhythmNotification)
+  {
+    $this->irregularRhythmNotification = $irregularRhythmNotification;
+  }
+  /**
+   * @return IrregularRhythmNotification
+   */
+  public function getIrregularRhythmNotification()
+  {
+    return $this->irregularRhythmNotification;
+  }
+  /**
    * Identifier. Data point name, only supported for the subset of identifiable
    * data types. For the majority of the data types, individual data points do
    * not need to be identified and this field would be empty. Format:
@@ -474,6 +607,23 @@ class DataPoint extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Data for points in the `nutrition-log` session data type
+   * collection.
+   *
+   * @param NutritionLog $nutritionLog
+   */
+  public function setNutritionLog(NutritionLog $nutritionLog)
+  {
+    $this->nutritionLog = $nutritionLog;
+  }
+  /**
+   * @return NutritionLog
+   */
+  public function getNutritionLog()
+  {
+    return $this->nutritionLog;
   }
   /**
    * Optional. Data for points in the `oxygen-saturation` sample data type

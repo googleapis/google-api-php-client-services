@@ -19,6 +19,8 @@ namespace Google\Service\GoogleHealthAPI;
 
 class DailyRollupDataPoint extends \Google\Model
 {
+  protected $activeEnergyBurnedType = ActiveEnergyBurnedRollupValue::class;
+  protected $activeEnergyBurnedDataType = '';
   protected $activeMinutesType = ActiveMinutesRollupValue::class;
   protected $activeMinutesDataType = '';
   protected $activeZoneMinutesType = ActiveZoneMinutesRollupValue::class;
@@ -27,6 +29,8 @@ class DailyRollupDataPoint extends \Google\Model
   protected $activityLevelDataType = '';
   protected $altitudeType = AltitudeRollupValue::class;
   protected $altitudeDataType = '';
+  protected $bloodGlucoseType = BloodGlucoseRollupValue::class;
+  protected $bloodGlucoseDataType = '';
   protected $bodyFatType = BodyFatRollupValue::class;
   protected $bodyFatDataType = '';
   protected $caloriesInHeartRateZoneType = CaloriesInHeartRateZoneRollupValue::class;
@@ -35,6 +39,8 @@ class DailyRollupDataPoint extends \Google\Model
   protected $civilEndTimeDataType = '';
   protected $civilStartTimeType = CivilDateTime::class;
   protected $civilStartTimeDataType = '';
+  protected $coreBodyTemperatureType = CoreBodyTemperatureRollupValue::class;
+  protected $coreBodyTemperatureDataType = '';
   protected $distanceType = DistanceRollupValue::class;
   protected $distanceDataType = '';
   protected $floorsType = FloorsRollupValue::class;
@@ -45,6 +51,8 @@ class DailyRollupDataPoint extends \Google\Model
   protected $heartRateVariabilityPersonalRangeDataType = '';
   protected $hydrationLogType = HydrationLogRollupValue::class;
   protected $hydrationLogDataType = '';
+  protected $nutritionLogType = NutritionLogRollupValue::class;
+  protected $nutritionLogDataType = '';
   protected $restingHeartRatePersonalRangeType = RestingHeartRatePersonalRangeRollupValue::class;
   protected $restingHeartRatePersonalRangeDataType = '';
   protected $runVo2MaxType = RunVO2MaxRollupValue::class;
@@ -62,6 +70,23 @@ class DailyRollupDataPoint extends \Google\Model
   protected $weightType = WeightRollupValue::class;
   protected $weightDataType = '';
 
+  /**
+   * Returned by default when rolling up data points from the `active-energy-
+   * burned` data type.
+   *
+   * @param ActiveEnergyBurnedRollupValue $activeEnergyBurned
+   */
+  public function setActiveEnergyBurned(ActiveEnergyBurnedRollupValue $activeEnergyBurned)
+  {
+    $this->activeEnergyBurned = $activeEnergyBurned;
+  }
+  /**
+   * @return ActiveEnergyBurnedRollupValue
+   */
+  public function getActiveEnergyBurned()
+  {
+    return $this->activeEnergyBurned;
+  }
   /**
    * Returned by default when rolling up data points from the `active-minutes`
    * data type, or when requested explicitly using the `active-minutes` rollup
@@ -135,6 +160,23 @@ class DailyRollupDataPoint extends \Google\Model
     return $this->altitude;
   }
   /**
+   * Returned by default when rolling up data points from the `blood-glucose`
+   * data type.
+   *
+   * @param BloodGlucoseRollupValue $bloodGlucose
+   */
+  public function setBloodGlucose(BloodGlucoseRollupValue $bloodGlucose)
+  {
+    $this->bloodGlucose = $bloodGlucose;
+  }
+  /**
+   * @return BloodGlucoseRollupValue
+   */
+  public function getBloodGlucose()
+  {
+    return $this->bloodGlucose;
+  }
+  /**
    * Returned by default when rolling up data points from the `body-fat` data
    * type, or when requested explicitly using the `body-fat` rollup type
    * identifier.
@@ -201,6 +243,24 @@ class DailyRollupDataPoint extends \Google\Model
   public function getCivilStartTime()
   {
     return $this->civilStartTime;
+  }
+  /**
+   * Returned by default when rolling up data points from the `core-body-
+   * temperature` data type, or when requested explicitly using the `core-body-
+   * temperature` rollup type identifier.
+   *
+   * @param CoreBodyTemperatureRollupValue $coreBodyTemperature
+   */
+  public function setCoreBodyTemperature(CoreBodyTemperatureRollupValue $coreBodyTemperature)
+  {
+    $this->coreBodyTemperature = $coreBodyTemperature;
+  }
+  /**
+   * @return CoreBodyTemperatureRollupValue
+   */
+  public function getCoreBodyTemperature()
+  {
+    return $this->coreBodyTemperature;
   }
   /**
    * Returned by default when rolling up data points from the `distance` data
@@ -291,6 +351,24 @@ class DailyRollupDataPoint extends \Google\Model
   public function getHydrationLog()
   {
     return $this->hydrationLog;
+  }
+  /**
+   * Returned by default when rolling up data points from the `nutrition-log`
+   * data type, or when requested explicitly using the `nutrition-log` rollup
+   * type identifier.
+   *
+   * @param NutritionLogRollupValue $nutritionLog
+   */
+  public function setNutritionLog(NutritionLogRollupValue $nutritionLog)
+  {
+    $this->nutritionLog = $nutritionLog;
+  }
+  /**
+   * @return NutritionLogRollupValue
+   */
+  public function getNutritionLog()
+  {
+    return $this->nutritionLog;
   }
   /**
    * Returned by default when rolling up data points from the `daily-resting-

@@ -18,6 +18,7 @@
 namespace Google\Service\GoogleHealthAPI\Resource;
 
 use Google\Service\GoogleHealthAPI\Identity;
+use Google\Service\GoogleHealthAPI\IrnProfile;
 use Google\Service\GoogleHealthAPI\Profile;
 use Google\Service\GoogleHealthAPI\Settings;
 
@@ -47,6 +48,25 @@ class Users extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('getIdentity', [$params], Identity::class);
+  }
+  /**
+   * Returns user's IRN Profile details. (users.getIrnProfile)
+   *
+   * @param string $name Required. The resource name of the IRN Profile. Format:
+   * `users/{user}/irnProfile` Example: `users/1234567890/irnProfile` or
+   * `users/me/irnProfile` The {user} ID is a system-generated Google Health API
+   * user ID, a string of 1-63 characters consisting of lowercase and uppercase
+   * letters, numbers, and hyphens. The literal `me` can also be used to refer to
+   * the authenticated user.
+   * @param array $optParams Optional parameters.
+   * @return IrnProfile
+   * @throws \Google\Service\Exception
+   */
+  public function getIrnProfile($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getIrnProfile', [$params], IrnProfile::class);
   }
   /**
    * Returns user Profile details. (users.getProfile)

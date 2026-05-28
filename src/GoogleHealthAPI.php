@@ -44,6 +44,9 @@ class GoogleHealthAPI extends \Google\Service
   /** See your Google Health health metrics and measurement data. */
   const GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY =
       "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly";
+  /** See your Google Health Irregular Rhythm Notifications data. */
+  const GOOGLEHEALTH_IRN_READONLY =
+      "https://www.googleapis.com/auth/googlehealth.irn.readonly";
   /** See exercise GPS location data in Google Health. */
   const GOOGLEHEALTH_LOCATION_READONLY =
       "https://www.googleapis.com/auth/googlehealth.location.readonly";
@@ -58,8 +61,10 @@ class GoogleHealthAPI extends \Google\Service
       "https://www.googleapis.com/auth/googlehealth.sleep.readonly";
 
   public $projects_subscribers;
+  public $projects_subscribers_subscriptions;
   public $users;
   public $users_dataTypes_dataPoints;
+  public $users_pairedDevices;
   public $rootUrlTemplate;
 
   /**
@@ -149,6 +154,76 @@ class GoogleHealthAPI extends \Google\Service
           ]
         ]
     );
+    $this->projects_subscribers_subscriptions = new GoogleHealthAPI\Resource\ProjectsSubscribersSubscriptions(
+        $this,
+        $this->serviceName,
+        'subscriptions',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v4/{+parent}/subscriptions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'subscriptionId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v4/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v4/{+parent}/subscriptions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v4/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->users = new GoogleHealthAPI\Resource\Users(
         $this,
         $this->serviceName,
@@ -156,6 +231,16 @@ class GoogleHealthAPI extends \Google\Service
         [
           'methods' => [
             'getIdentity' => [
+              'path' => 'v4/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getIrnProfile' => [
               'path' => 'v4/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -343,6 +428,44 @@ class GoogleHealthAPI extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->users_pairedDevices = new GoogleHealthAPI\Resource\UsersPairedDevices(
+        $this,
+        $this->serviceName,
+        'pairedDevices',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v4/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v4/{+parent}/pairedDevices',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

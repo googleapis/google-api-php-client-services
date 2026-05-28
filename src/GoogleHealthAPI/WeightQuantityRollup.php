@@ -1,0 +1,101 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\GoogleHealthAPI;
+
+class WeightQuantityRollup extends \Google\Model
+{
+  /**
+   * Unspecified weight unit.
+   */
+  public const USER_PROVIDED_UNIT_LAST_WEIGHT_UNIT_UNSPECIFIED = 'WEIGHT_UNIT_UNSPECIFIED';
+  /**
+   * Value representing gram.
+   */
+  public const USER_PROVIDED_UNIT_LAST_GRAM = 'GRAM';
+  /**
+   * Value representing kilogram.
+   */
+  public const USER_PROVIDED_UNIT_LAST_KILOGRAM = 'KILOGRAM';
+  /**
+   * Value representing ounce.
+   */
+  public const USER_PROVIDED_UNIT_LAST_OUNCE = 'OUNCE';
+  /**
+   * Value representing pound.
+   */
+  public const USER_PROVIDED_UNIT_LAST_POUND = 'POUND';
+  /**
+   * Value representing stone.
+   */
+  public const USER_PROVIDED_UNIT_LAST_STONE = 'STONE';
+  /**
+   * Value representing milligram.
+   */
+  public const USER_PROVIDED_UNIT_LAST_MILLIGRAM = 'MILLIGRAM';
+  /**
+   * Value representing microgram.
+   */
+  public const USER_PROVIDED_UNIT_LAST_MICROGRAM = 'MICROGRAM';
+  /**
+   * Value representing nanogram.
+   */
+  public const USER_PROVIDED_UNIT_LAST_NANOGRAM = 'NANOGRAM';
+  /**
+   * Required. The sum of the weight in grams.
+   *
+   * @var 
+   */
+  public $gramsSum;
+  /**
+   * Optional. The user provided unit on the last element.
+   *
+   * @var string
+   */
+  public $userProvidedUnitLast;
+
+  public function setGramsSum($gramsSum)
+  {
+    $this->gramsSum = $gramsSum;
+  }
+  public function getGramsSum()
+  {
+    return $this->gramsSum;
+  }
+  /**
+   * Optional. The user provided unit on the last element.
+   *
+   * Accepted values: WEIGHT_UNIT_UNSPECIFIED, GRAM, KILOGRAM, OUNCE, POUND,
+   * STONE, MILLIGRAM, MICROGRAM, NANOGRAM
+   *
+   * @param self::USER_PROVIDED_UNIT_LAST_* $userProvidedUnitLast
+   */
+  public function setUserProvidedUnitLast($userProvidedUnitLast)
+  {
+    $this->userProvidedUnitLast = $userProvidedUnitLast;
+  }
+  /**
+   * @return self::USER_PROVIDED_UNIT_LAST_*
+   */
+  public function getUserProvidedUnitLast()
+  {
+    return $this->userProvidedUnitLast;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(WeightQuantityRollup::class, 'Google_Service_GoogleHealthAPI_WeightQuantityRollup');
