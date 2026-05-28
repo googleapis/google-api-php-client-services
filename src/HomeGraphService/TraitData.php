@@ -20,14 +20,14 @@ namespace Google\Service\HomeGraphService;
 class TraitData extends \Google\Model
 {
   /**
-   * Optional. The Home API trait payload.
+   * The Provider Home API trait payload.
    *
    * @var array[]
    */
   public $trait;
 
   /**
-   * Optional. The Home API trait payload.
+   * The Provider Home API trait payload.
    *
    * @param array[] $trait
    */
