@@ -102,7 +102,7 @@ class GoldengateJavaMessageServiceConnectionProperties extends \Google\Model
    */
   public $jndiSecurityPrincipal;
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    *
    * @var string
    */
@@ -165,7 +165,7 @@ class GoldengateJavaMessageServiceConnectionProperties extends \Google\Model
    */
   public $technologyType;
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    *
    * @var string
    */
@@ -336,7 +336,7 @@ class GoldengateJavaMessageServiceConnectionProperties extends \Google\Model
     return $this->jndiSecurityPrincipal;
   }
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    *
    * @param string $keyStoreFile
    */
@@ -491,7 +491,7 @@ class GoldengateJavaMessageServiceConnectionProperties extends \Google\Model
     return $this->technologyType;
   }
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    *
    * @param string $trustStoreFile
    */

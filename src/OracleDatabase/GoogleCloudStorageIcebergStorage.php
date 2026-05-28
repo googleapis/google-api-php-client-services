@@ -32,7 +32,8 @@ class GoogleCloudStorageIcebergStorage extends \Google\Model
    */
   public $projectId;
   /**
-   * Optional. The service account key file of Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file of
+   * Google Cloud Storage.
    *
    * @var string
    */
@@ -71,7 +72,8 @@ class GoogleCloudStorageIcebergStorage extends \Google\Model
     return $this->projectId;
   }
   /**
-   * Optional. The service account key file of Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file of
+   * Google Cloud Storage.
    *
    * @param string $serviceAccountKeyFile
    */

@@ -20,8 +20,8 @@ namespace Google\Service\OracleDatabase;
 class RestIcebergCatalog extends \Google\Model
 {
   /**
-   * Optional. The content of the configuration file containing additional
-   * properties for the REST catalog.
+   * Optional. The base64 encoded content of the configuration file containing
+   * additional properties for the REST catalog.
    *
    * @var string
    */
@@ -34,8 +34,8 @@ class RestIcebergCatalog extends \Google\Model
   public $uri;
 
   /**
-   * Optional. The content of the configuration file containing additional
-   * properties for the REST catalog.
+   * Optional. The base64 encoded content of the configuration file containing
+   * additional properties for the REST catalog.
    *
    * @param string $properties
    */

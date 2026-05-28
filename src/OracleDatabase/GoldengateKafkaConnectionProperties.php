@@ -50,13 +50,13 @@ class GoldengateKafkaConnectionProperties extends \Google\Collection
    */
   public $clusterId;
   /**
-   * Optional. The content of the consumer.properties file.
+   * Optional. The base64 encoded content of the consumer.properties file.
    *
    * @var string
    */
   public $consumerPropertiesFile;
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    *
    * @var string
    */
@@ -90,7 +90,7 @@ class GoldengateKafkaConnectionProperties extends \Google\Collection
    */
   public $passwordSecretVersion;
   /**
-   * Optional. The content of the producer.properties file.
+   * Optional. The base64 encoded content of the producer.properties file.
    *
    * @var string
    */
@@ -129,7 +129,7 @@ class GoldengateKafkaConnectionProperties extends \Google\Collection
    */
   public $technologyType;
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    *
    * @var string
    */
@@ -200,7 +200,7 @@ class GoldengateKafkaConnectionProperties extends \Google\Collection
     return $this->clusterId;
   }
   /**
-   * Optional. The content of the consumer.properties file.
+   * Optional. The base64 encoded content of the consumer.properties file.
    *
    * @param string $consumerPropertiesFile
    */
@@ -216,7 +216,7 @@ class GoldengateKafkaConnectionProperties extends \Google\Collection
     return $this->consumerPropertiesFile;
   }
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    *
    * @param string $keyStoreFile
    */
@@ -300,7 +300,7 @@ class GoldengateKafkaConnectionProperties extends \Google\Collection
     return $this->passwordSecretVersion;
   }
   /**
-   * Optional. The content of the producer.properties file.
+   * Optional. The base64 encoded content of the producer.properties file.
    *
    * @param string $producerPropertiesFile
    */
@@ -402,7 +402,7 @@ class GoldengateKafkaConnectionProperties extends \Google\Collection
     return $this->technologyType;
   }
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    *
    * @param string $trustStoreFile
    */

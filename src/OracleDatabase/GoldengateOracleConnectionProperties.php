@@ -99,7 +99,7 @@ class GoldengateOracleConnectionProperties extends \Google\Model
   public $username;
   /**
    * Optional. The wallet contents Oracle Goldengate uses to make connections to
-   * a database.
+   * a database. This attribute is expected to be base64 encoded.
    *
    * @var string
    */
@@ -245,7 +245,7 @@ class GoldengateOracleConnectionProperties extends \Google\Model
   }
   /**
    * Optional. The wallet contents Oracle Goldengate uses to make connections to
-   * a database.
+   * a database. This attribute is expected to be base64 encoded.
    *
    * @param string $walletFile
    */

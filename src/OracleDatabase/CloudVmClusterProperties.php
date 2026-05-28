@@ -234,13 +234,13 @@ class CloudVmClusterProperties extends \Google\Collection
    */
   public $scanIpIds;
   /**
-   * Output only. SCAN listener port - TCP
+   * Optional. SCAN listener port - TCP
    *
    * @var int
    */
   public $scanListenerPortTcp;
   /**
-   * Output only. SCAN listener port - TLS
+   * Optional. SCAN listener port - TLS
    *
    * @var int
    */
@@ -672,7 +672,7 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->scanIpIds;
   }
   /**
-   * Output only. SCAN listener port - TCP
+   * Optional. SCAN listener port - TCP
    *
    * @param int $scanListenerPortTcp
    */
@@ -688,7 +688,7 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->scanListenerPortTcp;
   }
   /**
-   * Output only. SCAN listener port - TLS
+   * Optional. SCAN listener port - TLS
    *
    * @param int $scanListenerPortTcpSsl
    */

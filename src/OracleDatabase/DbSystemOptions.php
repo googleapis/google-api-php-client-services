@@ -24,7 +24,8 @@ class DbSystemOptions extends \Google\Model
    */
   public const STORAGE_MANAGEMENT_STORAGE_MANAGEMENT_UNSPECIFIED = 'STORAGE_MANAGEMENT_UNSPECIFIED';
   /**
-   * Automatic storage management.
+   * Automatic storage management. This option is not supported. Only LVM is
+   * supported.
    */
   public const STORAGE_MANAGEMENT_ASM = 'ASM';
   /**

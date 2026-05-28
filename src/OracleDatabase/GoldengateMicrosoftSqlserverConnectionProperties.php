@@ -82,8 +82,8 @@ class GoldengateMicrosoftSqlserverConnectionProperties extends \Google\Collectio
    */
   public $serverCertificateValidationRequired;
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file
-   * containing the server public key (for 1-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or
+   * .crt file containing the server public key (for 1-way SSL).
    *
    * @var string
    */
@@ -240,8 +240,8 @@ class GoldengateMicrosoftSqlserverConnectionProperties extends \Google\Collectio
     return $this->serverCertificateValidationRequired;
   }
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file
-   * containing the server public key (for 1-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or
+   * .crt file containing the server public key (for 1-way SSL).
    *
    * @param string $sslCaFile
    */

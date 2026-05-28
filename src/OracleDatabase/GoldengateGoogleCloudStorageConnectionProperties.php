@@ -20,8 +20,8 @@ namespace Google\Service\OracleDatabase;
 class GoldengateGoogleCloudStorageConnectionProperties extends \Google\Model
 {
   /**
-   * Optional. The service account key Cloud Storage file containing the
-   * credentials required to use Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file
+   * containing the credentials required to use Google Cloud Storage.
    *
    * @var string
    */
@@ -34,8 +34,8 @@ class GoldengateGoogleCloudStorageConnectionProperties extends \Google\Model
   public $technologyType;
 
   /**
-   * Optional. The service account key Cloud Storage file containing the
-   * credentials required to use Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file
+   * containing the credentials required to use Google Cloud Storage.
    *
    * @param string $serviceAccountKeyFile
    */

@@ -20,8 +20,8 @@ namespace Google\Service\OracleDatabase;
 class GoldengateGooglePubsubConnectionProperties extends \Google\Model
 {
   /**
-   * Optional. The content of the service account key file containing the
-   * credentials required to use Google Pub/Sub.
+   * Optional. The base64 encoded content of the service account key file
+   * containing the credentials required to use Google Pub/Sub.
    *
    * @var string
    */
@@ -34,8 +34,8 @@ class GoldengateGooglePubsubConnectionProperties extends \Google\Model
   public $technologyType;
 
   /**
-   * Optional. The content of the service account key file containing the
-   * credentials required to use Google Pub/Sub.
+   * Optional. The base64 encoded content of the service account key file
+   * containing the credentials required to use Google Pub/Sub.
    *
    * @param string $serviceAccountKeyFile
    */

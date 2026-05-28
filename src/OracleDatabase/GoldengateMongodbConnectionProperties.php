@@ -77,15 +77,15 @@ class GoldengateMongodbConnectionProperties extends \Google\Model
    */
   public $technologyType;
   /**
-   * Optional. Database Certificate - The content of a .pem file, containing the
-   * server public key (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem file,
+   * containing the server public key (for 1 and 2-way SSL).
    *
    * @var string
    */
   public $tlsCaFile;
   /**
-   * Optional. Client Certificate - The content of a .pem file, containing the
-   * client public key (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem file,
+   * containing the client public key (for 2-way SSL).
    *
    * @var string
    */
@@ -216,8 +216,8 @@ class GoldengateMongodbConnectionProperties extends \Google\Model
     return $this->technologyType;
   }
   /**
-   * Optional. Database Certificate - The content of a .pem file, containing the
-   * server public key (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem file,
+   * containing the server public key (for 1 and 2-way SSL).
    *
    * @param string $tlsCaFile
    */
@@ -233,8 +233,8 @@ class GoldengateMongodbConnectionProperties extends \Google\Model
     return $this->tlsCaFile;
   }
   /**
-   * Optional. Client Certificate - The content of a .pem file, containing the
-   * client public key (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem file,
+   * containing the client public key (for 2-way SSL).
    *
    * @param string $tlsCertificateKeyFile
    */

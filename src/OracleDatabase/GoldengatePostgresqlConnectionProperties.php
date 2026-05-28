@@ -104,27 +104,27 @@ class GoldengatePostgresqlConnectionProperties extends \Google\Collection
    */
   public $securityProtocol;
   /**
-   * Optional. The certificate of the trusted certificate authorities (Trusted
-   * CA) for PostgreSQL.
+   * Optional. The base64 encoded certificate of the trusted certificate
+   * authorities (Trusted CA) for PostgreSQL.
    *
    * @var string
    */
   public $sslCaFile;
   /**
-   * Optional. The certificate of the PostgreSQL server.
+   * Optional. The base64 encoded certificate of the PostgreSQL server.
    *
    * @var string
    */
   public $sslCertFile;
   /**
-   * Optional. The list of certificates revoked by the trusted certificate
-   * authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted
+   * certificate authorities (Trusted CA).
    *
    * @var string
    */
   public $sslCrlFile;
   /**
-   * Optional. The private key of the PostgreSQL server.
+   * Optional. The base64 encoded private key of the PostgreSQL server.
    *
    * @var string
    */
@@ -284,8 +284,8 @@ class GoldengatePostgresqlConnectionProperties extends \Google\Collection
     return $this->securityProtocol;
   }
   /**
-   * Optional. The certificate of the trusted certificate authorities (Trusted
-   * CA) for PostgreSQL.
+   * Optional. The base64 encoded certificate of the trusted certificate
+   * authorities (Trusted CA) for PostgreSQL.
    *
    * @param string $sslCaFile
    */
@@ -301,7 +301,7 @@ class GoldengatePostgresqlConnectionProperties extends \Google\Collection
     return $this->sslCaFile;
   }
   /**
-   * Optional. The certificate of the PostgreSQL server.
+   * Optional. The base64 encoded certificate of the PostgreSQL server.
    *
    * @param string $sslCertFile
    */
@@ -317,8 +317,8 @@ class GoldengatePostgresqlConnectionProperties extends \Google\Collection
     return $this->sslCertFile;
   }
   /**
-   * Optional. The list of certificates revoked by the trusted certificate
-   * authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted
+   * certificate authorities (Trusted CA).
    *
    * @param string $sslCrlFile
    */
@@ -334,7 +334,7 @@ class GoldengatePostgresqlConnectionProperties extends \Google\Collection
     return $this->sslCrlFile;
   }
   /**
-   * Optional. The private key of the PostgreSQL server.
+   * Optional. The base64 encoded private key of the PostgreSQL server.
    *
    * @param string $sslKeyFile
    */

@@ -108,29 +108,29 @@ class GoldengateMysqlConnectionProperties extends \Google\Collection
    */
   public $securityProtocol;
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file
-   * containing the server public key (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or
+   * .crt file containing the server public key (for 1 and 2-way SSL).
    *
    * @var string
    */
   public $sslCaFile;
   /**
-   * Optional. Client Certificate - The content of a .pem or .crt file
-   * containing the client public key (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem or .crt
+   * file containing the client public key (for 2-way SSL).
    *
    * @var string
    */
   public $sslCertFile;
   /**
-   * Optional. The list of certificates revoked by the trusted certificate
-   * authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted
+   * certificate authorities (Trusted CA).
    *
    * @var string
    */
   public $sslCrlFile;
   /**
-   * Optional. Client Key - The content of a .pem or .crt file containing the
-   * client private key (for 2-way SSL).
+   * Optional. Client Key - The base64 encoded content of a .pem or .crt file
+   * containing the client private key (for 2-way SSL).
    *
    * @var string
    */
@@ -290,8 +290,8 @@ class GoldengateMysqlConnectionProperties extends \Google\Collection
     return $this->securityProtocol;
   }
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file
-   * containing the server public key (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or
+   * .crt file containing the server public key (for 1 and 2-way SSL).
    *
    * @param string $sslCaFile
    */
@@ -307,8 +307,8 @@ class GoldengateMysqlConnectionProperties extends \Google\Collection
     return $this->sslCaFile;
   }
   /**
-   * Optional. Client Certificate - The content of a .pem or .crt file
-   * containing the client public key (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem or .crt
+   * file containing the client public key (for 2-way SSL).
    *
    * @param string $sslCertFile
    */
@@ -324,8 +324,8 @@ class GoldengateMysqlConnectionProperties extends \Google\Collection
     return $this->sslCertFile;
   }
   /**
-   * Optional. The list of certificates revoked by the trusted certificate
-   * authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted
+   * certificate authorities (Trusted CA).
    *
    * @param string $sslCrlFile
    */
@@ -341,8 +341,8 @@ class GoldengateMysqlConnectionProperties extends \Google\Collection
     return $this->sslCrlFile;
   }
   /**
-   * Optional. Client Key - The content of a .pem or .crt file containing the
-   * client private key (for 2-way SSL).
+   * Optional. Client Key - The base64 encoded content of a .pem or .crt file
+   * containing the client private key (for 2-way SSL).
    *
    * @param string $sslKeyFile
    */

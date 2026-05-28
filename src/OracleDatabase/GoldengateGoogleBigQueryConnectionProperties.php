@@ -20,8 +20,8 @@ namespace Google\Service\OracleDatabase;
 class GoldengateGoogleBigQueryConnectionProperties extends \Google\Model
 {
   /**
-   * Optional. The service account key file Cloud Storage containing the
-   * credentials required to use Google BigQuery.
+   * Optional. The base64 encoded content of the service account key file
+   * containing the credentials required to use Google BigQuery.
    *
    * @var string
    */
@@ -34,8 +34,8 @@ class GoldengateGoogleBigQueryConnectionProperties extends \Google\Model
   public $technologyType;
 
   /**
-   * Optional. The service account key file Cloud Storage containing the
-   * credentials required to use Google BigQuery.
+   * Optional. The base64 encoded content of the service account key file
+   * containing the credentials required to use Google BigQuery.
    *
    * @param string $serviceAccountKeyFile
    */
