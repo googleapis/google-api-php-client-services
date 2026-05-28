@@ -111,8 +111,8 @@ class ProjectsLocationsCollectionsEnginesSessions extends \Google\Service\Resour
    * @opt_param string orderBy A comma-separated list of fields to order by,
    * sorted in ascending order. Use "desc" after a field name for descending.
    * Supported fields: * `update_time` * `create_time` * `session_name` *
-   * `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned
-   * desc,update_time desc`: list sessions by is_pinned first, then by
+   * `is_pinned` * `display_name` Example: * `update_time desc` * `create_time` *
+   * `is_pinned desc,update_time desc`: list sessions by is_pinned first, then by
    * update_time.
    * @opt_param int pageSize Maximum number of results to return. If unspecified,
    * defaults to 50. Max allowed value is 1000.
