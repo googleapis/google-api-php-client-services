@@ -38,6 +38,7 @@ class Search extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string channelId Filter on resources belonging to this channelId.
+   * (Force TAP rebuild)
    * @opt_param string channelType Add a filter on the channel search.
    * @opt_param string eventType Filter on the livestream status of the videos.
    * @opt_param bool forContentOwner Search owned by a content owner.

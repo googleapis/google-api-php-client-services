@@ -64,7 +64,7 @@ class SearchListResponse extends \Google\Collection
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**
-   * The visitorId identifies the visitor.
+   * The visitor ID identifies the visitor.
    *
    * @var string
    */
@@ -214,7 +214,7 @@ class SearchListResponse extends \Google\Collection
     return $this->tokenPagination;
   }
   /**
-   * The visitorId identifies the visitor.
+   * The visitor ID identifies the visitor.
    *
    * @param string $visitorId
    */
