@@ -180,6 +180,12 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    */
   public const SUSPENSION_REASON_REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE = 'REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE';
   protected $collection_key = 'resourceFlags';
+  /**
+   * Field to ingest additional metadata whichd does not support proto format.
+   *
+   * @var array[]
+   */
+  public $additionalMetadata;
   protected $availabilityConfigurationType = StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration::class;
   protected $availabilityConfigurationDataType = '';
   protected $backupConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupConfiguration::class;
@@ -231,6 +237,14 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * @var string
    */
   public $instanceType;
+  /**
+   * Field to ingest additional metadata which support proto format.
+   *
+   * @var array[]
+   */
+  public $internalAdditionalMetadata;
+  protected $ipAddressType = StorageDatabasecenterPartnerapiV1mainIpAddress::class;
+  protected $ipAddressDataType = '';
   /**
    * Optional. Whether deletion protection is enabled for this resource.
    *
@@ -309,6 +323,22 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    */
   public $zone;
 
+  /**
+   * Field to ingest additional metadata whichd does not support proto format.
+   *
+   * @param array[] $additionalMetadata
+   */
+  public function setAdditionalMetadata($additionalMetadata)
+  {
+    $this->additionalMetadata = $additionalMetadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getAdditionalMetadata()
+  {
+    return $this->additionalMetadata;
+  }
   /**
    * Availability configuration for this instance
    *
@@ -539,6 +569,38 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getInstanceType()
   {
     return $this->instanceType;
+  }
+  /**
+   * Field to ingest additional metadata which support proto format.
+   *
+   * @param array[] $internalAdditionalMetadata
+   */
+  public function setInternalAdditionalMetadata($internalAdditionalMetadata)
+  {
+    $this->internalAdditionalMetadata = $internalAdditionalMetadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getInternalAdditionalMetadata()
+  {
+    return $this->internalAdditionalMetadata;
+  }
+  /**
+   * Optional. Private and public IP address of the resource.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainIpAddress $ipAddress
+   */
+  public function setIpAddress(StorageDatabasecenterPartnerapiV1mainIpAddress $ipAddress)
+  {
+    $this->ipAddress = $ipAddress;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainIpAddress
+   */
+  public function getIpAddress()
+  {
+    return $this->ipAddress;
   }
   /**
    * Optional. Whether deletion protection is enabled for this resource.
