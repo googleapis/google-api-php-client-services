@@ -95,9 +95,9 @@ class ProjectsSubscribersSubscriptions extends \Google\Service\Resource
    * subscriptions. The filter syntax is described in https://google.aip.dev/160.
    * The filter can be applied to the following fields: - `user` - `data_type` The
    * `user` identifier (e.g., `user1` in `users/user1`) refers to the public
-   * `healthUserId` Example: user = "users/user1" Example: user = "users/user1" OR
-   * user = "users/user2" Example: user = "users/user1" AND (data_type = "sleep"
-   * OR data_type = "weight")
+   * `health_user_id` Example: user = "users/user1" Example: user = "users/user1"
+   * OR user = "users/user2" Example: user = "users/user1" AND (data_type =
+   * "sleep" OR data_type = "weight")
    * @opt_param int pageSize Optional. The maximum number of subscriptions to
    * return. The service may return fewer than this value. If unspecified, at most
    * 50 subscriptions will be returned. The maximum value is 1000; values above

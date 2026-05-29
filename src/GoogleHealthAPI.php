@@ -41,6 +41,9 @@ class GoogleHealthAPI extends \Google\Service
   /** See your Google Health activity and fitness data. */
   const GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY =
       "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly";
+  /** See your Google Health ECG data. */
+  const GOOGLEHEALTH_ECG_READONLY =
+      "https://www.googleapis.com/auth/googlehealth.ecg.readonly";
   /** See your Google Health health metrics and measurement data. */
   const GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY =
       "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly";
