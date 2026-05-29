@@ -52,6 +52,12 @@ class NodeNetworkConfig extends \Google\Collection
    * @var bool
    */
   public $enablePrivateNodes;
+  /**
+   * Optional. Immutable. The VPC network for the node pool.
+   *
+   * @var string
+   */
+  public $network;
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
   protected $networkTierConfigType = NetworkTierConfig::class;
@@ -196,6 +202,22 @@ class NodeNetworkConfig extends \Google\Collection
   public function getEnablePrivateNodes()
   {
     return $this->enablePrivateNodes;
+  }
+  /**
+   * Optional. Immutable. The VPC network for the node pool.
+   *
+   * @param string $network
+   */
+  public function setNetwork($network)
+  {
+    $this->network = $network;
+  }
+  /**
+   * @return string
+   */
+  public function getNetwork()
+  {
+    return $this->network;
   }
   /**
    * Network bandwidth tier configuration.

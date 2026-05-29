@@ -69,6 +69,8 @@ class NetworkConfig extends \Google\Model
    * @var string
    */
   public $datapathProvider;
+  protected $dataplaneV2ConfigType = DataplaneV2Config::class;
+  protected $dataplaneV2ConfigDataType = '';
   /**
    * Controls whether by default nodes have private IP addresses only. It is
    * invalid to specify both PrivateClusterConfig.enablePrivateNodes and this
@@ -178,6 +180,22 @@ class NetworkConfig extends \Google\Model
   public function getDatapathProvider()
   {
     return $this->datapathProvider;
+  }
+  /**
+   * Optional. DataplaneV2Config specifies the DPv2 configuration.
+   *
+   * @param DataplaneV2Config $dataplaneV2Config
+   */
+  public function setDataplaneV2Config(DataplaneV2Config $dataplaneV2Config)
+  {
+    $this->dataplaneV2Config = $dataplaneV2Config;
+  }
+  /**
+   * @return DataplaneV2Config
+   */
+  public function getDataplaneV2Config()
+  {
+    return $this->dataplaneV2Config;
   }
   /**
    * Controls whether by default nodes have private IP addresses only. It is

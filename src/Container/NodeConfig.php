@@ -230,6 +230,8 @@ class NodeConfig extends \Google\Collection
    * @var string
    */
   public $nodeGroup;
+  protected $nodeImageConfigType = CustomImageConfig::class;
+  protected $nodeImageConfigDataType = '';
   /**
    * The set of Google API scopes to be made available on all of the node VMs
    * under the "default" service account. The following scopes are recommended,
@@ -857,6 +859,23 @@ class NodeConfig extends \Google\Collection
   public function getNodeGroup()
   {
     return $this->nodeGroup;
+  }
+  /**
+   * The node image configuration to use for this node pool. Note that this is
+   * only applicable for node pools using image_type=CUSTOM.
+   *
+   * @param CustomImageConfig $nodeImageConfig
+   */
+  public function setNodeImageConfig(CustomImageConfig $nodeImageConfig)
+  {
+    $this->nodeImageConfig = $nodeImageConfig;
+  }
+  /**
+   * @return CustomImageConfig
+   */
+  public function getNodeImageConfig()
+  {
+    return $this->nodeImageConfig;
   }
   /**
    * The set of Google API scopes to be made available on all of the node VMs

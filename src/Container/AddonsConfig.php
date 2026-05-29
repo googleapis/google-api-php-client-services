@@ -19,6 +19,8 @@ namespace Google\Service\Container;
 
 class AddonsConfig extends \Google\Model
 {
+  protected $agentSandboxConfigType = AgentSandboxConfig::class;
+  protected $agentSandboxConfigDataType = '';
   protected $cloudRunConfigType = CloudRunConfig::class;
   protected $cloudRunConfigDataType = '';
   protected $configConnectorConfigType = ConfigConnectorConfig::class;
@@ -60,6 +62,22 @@ class AddonsConfig extends \Google\Model
   protected $statefulHaConfigType = StatefulHAConfig::class;
   protected $statefulHaConfigDataType = '';
 
+  /**
+   * Optional. Configuration for the AgentSandbox addon.
+   *
+   * @param AgentSandboxConfig $agentSandboxConfig
+   */
+  public function setAgentSandboxConfig(AgentSandboxConfig $agentSandboxConfig)
+  {
+    $this->agentSandboxConfig = $agentSandboxConfig;
+  }
+  /**
+   * @return AgentSandboxConfig
+   */
+  public function getAgentSandboxConfig()
+  {
+    return $this->agentSandboxConfig;
+  }
   /**
    * Configuration for the Cloud Run addon, which allows the user to use a
    * managed Knative service.
