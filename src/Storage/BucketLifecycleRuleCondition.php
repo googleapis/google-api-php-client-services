@@ -119,6 +119,18 @@ class BucketLifecycleRuleCondition extends \Google\Collection
    * @var int
    */
   public $numNewerVersions;
+  /**
+   * Objects having a size greater than this value in bytes will be matched.
+   *
+   * @var string
+   */
+  public $sizeAboveBytes;
+  /**
+   * Objects having a size less than this value in bytes will be matched.
+   *
+   * @var string
+   */
+  public $sizeBelowBytes;
 
   /**
    * Age of an object (in days). This condition is satisfied when an object
@@ -338,6 +350,38 @@ class BucketLifecycleRuleCondition extends \Google\Collection
   public function getNumNewerVersions()
   {
     return $this->numNewerVersions;
+  }
+  /**
+   * Objects having a size greater than this value in bytes will be matched.
+   *
+   * @param string $sizeAboveBytes
+   */
+  public function setSizeAboveBytes($sizeAboveBytes)
+  {
+    $this->sizeAboveBytes = $sizeAboveBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getSizeAboveBytes()
+  {
+    return $this->sizeAboveBytes;
+  }
+  /**
+   * Objects having a size less than this value in bytes will be matched.
+   *
+   * @param string $sizeBelowBytes
+   */
+  public function setSizeBelowBytes($sizeBelowBytes)
+  {
+    $this->sizeBelowBytes = $sizeBelowBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getSizeBelowBytes()
+  {
+    return $this->sizeBelowBytes;
   }
 }
 
