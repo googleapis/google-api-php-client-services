@@ -52,6 +52,14 @@ class Configuration extends \Google\Model
    */
   public $displayName;
   /**
+   * If included when updating a configuration, this should be set to the
+   * current etag of the configuration. If the etags do not match, the update
+   * will be rejected and an ABORTED error will be returned.
+   *
+   * @var string
+   */
+  public $etag;
+  /**
    * Identifier. Server generated name for the configuration. format is
    * projects/{project}/configurations/{configuration}
    *
@@ -141,6 +149,24 @@ class Configuration extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * If included when updating a configuration, this should be set to the
+   * current etag of the configuration. If the etags do not match, the update
+   * will be rejected and an ABORTED error will be returned.
+   *
+   * @param string $etag
+   */
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  /**
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
   }
   /**
    * Identifier. Server generated name for the configuration. format is
