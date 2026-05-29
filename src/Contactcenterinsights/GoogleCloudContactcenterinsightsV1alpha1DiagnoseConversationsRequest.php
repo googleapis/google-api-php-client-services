@@ -50,9 +50,10 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsRequest exten
    */
   public $appId;
   /**
-   * Optional. Optional but highly recommended. ces app version. If provided,
-   * specific version of agent instruction will be retrieved. If empty or set to
-   * '-', will use the latest draft version of instruction.
+   * Required. The CES App version of the agent. Setting to "-" uses the latest
+   * draft version. Note that the agent active during the conversation history
+   * may have different instructions or tool definitions compared with the
+   * latest draft version.
    *
    * @var string
    */
@@ -192,9 +193,10 @@ class GoogleCloudContactcenterinsightsV1alpha1DiagnoseConversationsRequest exten
     return $this->appId;
   }
   /**
-   * Optional. Optional but highly recommended. ces app version. If provided,
-   * specific version of agent instruction will be retrieved. If empty or set to
-   * '-', will use the latest draft version of instruction.
+   * Required. The CES App version of the agent. Setting to "-" uses the latest
+   * draft version. Note that the agent active during the conversation history
+   * may have different instructions or tool definitions compared with the
+   * latest draft version.
    *
    * @param string $appVersion
    */

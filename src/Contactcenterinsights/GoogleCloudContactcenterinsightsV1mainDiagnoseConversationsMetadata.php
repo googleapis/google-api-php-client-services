@@ -33,6 +33,13 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsMetadata extend
   public const METRIC_TYPE_CONTAINMENT = 'CONTAINMENT';
   protected $collection_key = 'partialTrajectorySteps';
   /**
+   * Output only. The list of conversation IDs that were selected for this
+   * diagnosis.
+   *
+   * @var string[]
+   */
+  public $conversationIds;
+  /**
    * Output only. The time the operation was created.
    *
    * @var string
@@ -74,6 +81,23 @@ class GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsMetadata extend
   protected $requestType = GoogleCloudContactcenterinsightsV1mainDiagnoseConversationsRequest::class;
   protected $requestDataType = '';
 
+  /**
+   * Output only. The list of conversation IDs that were selected for this
+   * diagnosis.
+   *
+   * @param string[] $conversationIds
+   */
+  public function setConversationIds($conversationIds)
+  {
+    $this->conversationIds = $conversationIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getConversationIds()
+  {
+    return $this->conversationIds;
+  }
   /**
    * Output only. The time the operation was created.
    *

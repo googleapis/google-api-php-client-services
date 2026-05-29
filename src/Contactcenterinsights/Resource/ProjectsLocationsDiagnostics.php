@@ -67,7 +67,10 @@ class ProjectsLocationsDiagnostics extends \Google\Service\Resource
    *
    * @opt_param string appId Optional. The CES App ID to filter diagnostics by.
    * @opt_param string appVersion Optional. The CES App version to filter
-   * diagnostics by.
+   * diagnostics by. Setting to "-" filters to diagnostics created using "-" (the
+   * latest draft version). Note that reports created at different times may
+   * correspond to different draft instructions. Setting to "" (empty) retrieves
+   * all diagnostics for the app_id regardless of version.
    * @opt_param string filter Optional. A filter to apply to the list (e.g.
    * `create_time > "2023-01-01T00:00:00Z"`).
    * @opt_param int pageSize Optional. The maximum number of diagnostics to
