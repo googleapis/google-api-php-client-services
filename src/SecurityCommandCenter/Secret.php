@@ -26,15 +26,11 @@ class Secret extends \Google\Model
   protected $statusType = SecretStatus::class;
   protected $statusDataType = '';
   /**
-   * The type of secret, for example, GCP_API_KEY.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * The environment variable containing the secret.
-   *
    * @param SecretEnvironmentVariable $environmentVariable
    */
   public function setEnvironmentVariable(SecretEnvironmentVariable $environmentVariable)
@@ -49,8 +45,6 @@ class Secret extends \Google\Model
     return $this->environmentVariable;
   }
   /**
-   * The file containing the secret.
-   *
    * @param SecretFilePath $filePath
    */
   public function setFilePath(SecretFilePath $filePath)
@@ -65,8 +59,6 @@ class Secret extends \Google\Model
     return $this->filePath;
   }
   /**
-   * The status of the secret.
-   *
    * @param SecretStatus $status
    */
   public function setStatus(SecretStatus $status)
@@ -81,8 +73,6 @@ class Secret extends \Google\Model
     return $this->status;
   }
   /**
-   * The type of secret, for example, GCP_API_KEY.
-   *
    * @param string $type
    */
   public function setType($type)

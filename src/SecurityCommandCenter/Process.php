@@ -21,14 +21,10 @@ class Process extends \Google\Collection
 {
   protected $collection_key = 'libraries';
   /**
-   * Process arguments as JSON encoded strings.
-   *
    * @var string[]
    */
   public $args;
   /**
-   * True if `args` is incomplete.
-   *
    * @var bool
    */
   public $argumentsTruncated;
@@ -37,46 +33,31 @@ class Process extends \Google\Collection
   protected $envVariablesType = EnvironmentVariable::class;
   protected $envVariablesDataType = 'array';
   /**
-   * True if `env_variables` is incomplete.
-   *
    * @var bool
    */
   public $envVariablesTruncated;
   protected $librariesType = SecuritycenterFile::class;
   protected $librariesDataType = 'array';
   /**
-   * The process name, as displayed in utilities like `top` and `ps`. This name
-   * can be accessed through `/proc/[pid]/comm` and changed with
-   * `prctl(PR_SET_NAME)`.
-   *
    * @var string
    */
   public $name;
   /**
-   * The parent process ID.
-   *
    * @var string
    */
   public $parentPid;
   /**
-   * The process ID.
-   *
    * @var string
    */
   public $pid;
   protected $scriptType = SecuritycenterFile::class;
   protected $scriptDataType = '';
   /**
-   * The ID of the user that executed the process. E.g. If this is the root user
-   * this will always be 0.
-   *
    * @var string
    */
   public $userId;
 
   /**
-   * Process arguments as JSON encoded strings.
-   *
    * @param string[] $args
    */
   public function setArgs($args)
@@ -91,8 +72,6 @@ class Process extends \Google\Collection
     return $this->args;
   }
   /**
-   * True if `args` is incomplete.
-   *
    * @param bool $argumentsTruncated
    */
   public function setArgumentsTruncated($argumentsTruncated)
@@ -107,8 +86,6 @@ class Process extends \Google\Collection
     return $this->argumentsTruncated;
   }
   /**
-   * File information for the process executable.
-   *
    * @param SecuritycenterFile $binary
    */
   public function setBinary(SecuritycenterFile $binary)
@@ -123,8 +100,6 @@ class Process extends \Google\Collection
     return $this->binary;
   }
   /**
-   * Process environment variables.
-   *
    * @param EnvironmentVariable[] $envVariables
    */
   public function setEnvVariables($envVariables)
@@ -139,8 +114,6 @@ class Process extends \Google\Collection
     return $this->envVariables;
   }
   /**
-   * True if `env_variables` is incomplete.
-   *
    * @param bool $envVariablesTruncated
    */
   public function setEnvVariablesTruncated($envVariablesTruncated)
@@ -155,8 +128,6 @@ class Process extends \Google\Collection
     return $this->envVariablesTruncated;
   }
   /**
-   * File information for libraries loaded by the process.
-   *
    * @param SecuritycenterFile[] $libraries
    */
   public function setLibraries($libraries)
@@ -171,10 +142,6 @@ class Process extends \Google\Collection
     return $this->libraries;
   }
   /**
-   * The process name, as displayed in utilities like `top` and `ps`. This name
-   * can be accessed through `/proc/[pid]/comm` and changed with
-   * `prctl(PR_SET_NAME)`.
-   *
    * @param string $name
    */
   public function setName($name)
@@ -189,8 +156,6 @@ class Process extends \Google\Collection
     return $this->name;
   }
   /**
-   * The parent process ID.
-   *
    * @param string $parentPid
    */
   public function setParentPid($parentPid)
@@ -205,8 +170,6 @@ class Process extends \Google\Collection
     return $this->parentPid;
   }
   /**
-   * The process ID.
-   *
    * @param string $pid
    */
   public function setPid($pid)
@@ -221,10 +184,6 @@ class Process extends \Google\Collection
     return $this->pid;
   }
   /**
-   * When the process represents the invocation of a script, `binary` provides
-   * information about the interpreter, while `script` provides information
-   * about the script file provided to the interpreter.
-   *
    * @param SecuritycenterFile $script
    */
   public function setScript(SecuritycenterFile $script)
@@ -239,9 +198,6 @@ class Process extends \Google\Collection
     return $this->script;
   }
   /**
-   * The ID of the user that executed the process. E.g. If this is the root user
-   * this will always be 0.
-   *
    * @param string $userId
    */
   public function setUserId($userId)

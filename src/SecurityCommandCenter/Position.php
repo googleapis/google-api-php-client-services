@@ -20,21 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class Position extends \Google\Model
 {
   /**
-   * The column number.
-   *
    * @var int
    */
   public $columnNumber;
   /**
-   * The line number.
-   *
    * @var int
    */
   public $lineNumber;
 
   /**
-   * The column number.
-   *
    * @param int $columnNumber
    */
   public function setColumnNumber($columnNumber)
@@ -49,8 +43,6 @@ class Position extends \Google\Model
     return $this->columnNumber;
   }
   /**
-   * The line number.
-   *
    * @param int $lineNumber
    */
   public function setLineNumber($lineNumber)

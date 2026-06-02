@@ -30,26 +30,14 @@ use Google\Service\SecurityCommandCenter\ListAttackPathsResponse;
 class OrganizationsSimulationsValuedResourcesAttackPaths extends \Google\Service\Resource
 {
   /**
-   * Lists the attack paths for a set of simulation results or valued resources
-   * and filter.
    * (attackPaths.listOrganizationsSimulationsValuedResourcesAttackPaths)
    *
-   * @param string $parent Required. Name of parent to list attack paths. Valid
-   * formats: `organizations/{organization}`,
-   * `organizations/{organization}/simulations/{simulation}` `organizations/{organ
-   * ization}/simulations/{simulation}/attackExposureResults/{attack_exposure_resu
-   * lt_v2}` `organizations/{organization}/simulations/{simulation}/valuedResource
-   * s/{valued_resource}`
+   * @param string $parent
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter The filter expression that filters the attack path
-   * in the response. Supported fields: * `valued_resources` supports =
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * response. Default is 10, minimum is 1, maximum is 1000.
-   * @opt_param string pageToken The value returned by the last
-   * `ListAttackPathsResponse`; indicates that this is a continuation of a prior
-   * `ListAttackPaths` call, and that the system should return the next page of
-   * data.
+   * @opt_param string filter
+   * @opt_param int pageSize
+   * @opt_param string pageToken
    * @return ListAttackPathsResponse
    * @throws \Google\Service\Exception
    */

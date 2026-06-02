@@ -19,23 +19,12 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ProcessSignature extends \Google\Model
 {
-  /**
-   * The default signature type.
-   */
   public const SIGNATURE_TYPE_SIGNATURE_TYPE_UNSPECIFIED = 'SIGNATURE_TYPE_UNSPECIFIED';
-  /**
-   * Used for signatures concerning processes.
-   */
   public const SIGNATURE_TYPE_SIGNATURE_TYPE_PROCESS = 'SIGNATURE_TYPE_PROCESS';
-  /**
-   * Used for signatures concerning disks.
-   */
   public const SIGNATURE_TYPE_SIGNATURE_TYPE_FILE = 'SIGNATURE_TYPE_FILE';
   protected $memoryHashSignatureType = MemoryHashSignature::class;
   protected $memoryHashSignatureDataType = '';
   /**
-   * Describes the type of resource associated with the signature.
-   *
    * @var string
    */
   public $signatureType;
@@ -43,8 +32,6 @@ class ProcessSignature extends \Google\Model
   protected $yaraRuleSignatureDataType = '';
 
   /**
-   * Signature indicating that a binary family was matched.
-   *
    * @param MemoryHashSignature $memoryHashSignature
    */
   public function setMemoryHashSignature(MemoryHashSignature $memoryHashSignature)
@@ -59,11 +46,6 @@ class ProcessSignature extends \Google\Model
     return $this->memoryHashSignature;
   }
   /**
-   * Describes the type of resource associated with the signature.
-   *
-   * Accepted values: SIGNATURE_TYPE_UNSPECIFIED, SIGNATURE_TYPE_PROCESS,
-   * SIGNATURE_TYPE_FILE
-   *
    * @param self::SIGNATURE_TYPE_* $signatureType
    */
   public function setSignatureType($signatureType)
@@ -78,8 +60,6 @@ class ProcessSignature extends \Google\Model
     return $this->signatureType;
   }
   /**
-   * Signature indicating that a YARA rule was matched.
-   *
    * @param YaraRuleSignature $yaraRuleSignature
    */
   public function setYaraRuleSignature(YaraRuleSignature $yaraRuleSignature)

@@ -20,15 +20,11 @@ namespace Google\Service\SecurityCommandCenter;
 class SecretFilePath extends \Google\Model
 {
   /**
-   * Path to the file.
-   *
    * @var string
    */
   public $path;
 
   /**
-   * Path to the file.
-   *
    * @param string $path
    */
   public function setPath($path)

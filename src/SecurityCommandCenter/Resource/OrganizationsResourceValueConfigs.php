@@ -34,14 +34,9 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
 class OrganizationsResourceValueConfigs extends \Google\Service\Resource
 {
   /**
-   * Creates a ResourceValueConfig for an organization. Maps user's tags to
-   * difference resource values for use by the attack path simulation.
    * (resourceValueConfigs.batchCreate)
    *
-   * @param string $parent Required. Resource name of the new
-   * ResourceValueConfig's parent. The parent field in the
-   * CreateResourceValueConfigRequest messages must either be empty or match this
-   * field.
+   * @param string $parent
    * @param BatchCreateResourceValueConfigsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchCreateResourceValueConfigsResponse
@@ -54,9 +49,9 @@ class OrganizationsResourceValueConfigs extends \Google\Service\Resource
     return $this->call('batchCreate', [$params], BatchCreateResourceValueConfigsResponse::class);
   }
   /**
-   * Deletes a ResourceValueConfig. (resourceValueConfigs.delete)
+   * (resourceValueConfigs.delete)
    *
-   * @param string $name Required. Name of the ResourceValueConfig to delete
+   * @param string $name
    * @param array $optParams Optional parameters.
    * @return SecuritycenterEmpty
    * @throws \Google\Service\Exception
@@ -68,11 +63,9 @@ class OrganizationsResourceValueConfigs extends \Google\Service\Resource
     return $this->call('delete', [$params], SecuritycenterEmpty::class);
   }
   /**
-   * Gets a ResourceValueConfig. (resourceValueConfigs.get)
+   * (resourceValueConfigs.get)
    *
-   * @param string $name Required. Name of the resource value config to retrieve.
-   * Its format is
-   * `organizations/{organization}/resourceValueConfigs/{config_id}`.
+   * @param string $name
    * @param array $optParams Optional parameters.
    * @return GoogleCloudSecuritycenterV1ResourceValueConfig
    * @throws \Google\Service\Exception
@@ -84,22 +77,13 @@ class OrganizationsResourceValueConfigs extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudSecuritycenterV1ResourceValueConfig::class);
   }
   /**
-   * Lists all ResourceValueConfigs.
    * (resourceValueConfigs.listOrganizationsResourceValueConfigs)
    *
-   * @param string $parent Required. The parent, which owns the collection of
-   * resource value configs. Its format is `organizations/[organization_id]`
+   * @param string $parent
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The number of results to return. The service may
-   * return fewer than this value. If unspecified, at most 10 configs will be
-   * returned. The maximum value is 1000; values above 1000 will be coerced to
-   * 1000.
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListResourceValueConfigs` call. Provide this to retrieve the subsequent
-   * page. When paginating, all other parameters provided to
-   * `ListResourceValueConfigs` must match the call that provided the page token.
-   * page_size can be specified, and the new page_size will be used.
+   * @opt_param int pageSize
+   * @opt_param string pageToken
    * @return ListResourceValueConfigsResponse
    * @throws \Google\Service\Exception
    */
@@ -110,15 +94,13 @@ class OrganizationsResourceValueConfigs extends \Google\Service\Resource
     return $this->call('list', [$params], ListResourceValueConfigsResponse::class);
   }
   /**
-   * Updates an existing ResourceValueConfigs with new rules.
    * (resourceValueConfigs.patch)
    *
-   * @param string $name Name for the resource value configuration
+   * @param string $name
    * @param GoogleCloudSecuritycenterV1ResourceValueConfig $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The list of fields to be updated. If empty all
-   * mutable fields will be updated.
+   * @opt_param string updateMask
    * @return GoogleCloudSecuritycenterV1ResourceValueConfig
    * @throws \Google\Service\Exception
    */

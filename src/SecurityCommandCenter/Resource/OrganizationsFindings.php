@@ -31,13 +31,9 @@ use Google\Service\SecurityCommandCenter\Operation;
 class OrganizationsFindings extends \Google\Service\Resource
 {
   /**
-   * Kicks off an LRO to bulk mute findings for a parent based on a filter. The
-   * parent can be either an organization, folder or project. The findings matched
-   * by the filter will be muted after the LRO is done. (findings.bulkMute)
+   * (findings.bulkMute)
    *
-   * @param string $parent Required. The parent, at which bulk action needs to be
-   * applied. Its format is `organizations/[organization_id]`,
-   * `folders/[folder_id]`, `projects/[project_id]`.
+   * @param string $parent
    * @param BulkMuteFindingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

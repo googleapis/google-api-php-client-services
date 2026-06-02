@@ -21,57 +21,37 @@ class SecurityPosture extends \Google\Collection
 {
   protected $collection_key = 'policyDriftDetails';
   /**
-   * The name of the updated policy, for example,
-   * `projects/{project_id}/policies/{constraint_name}`.
-   *
    * @var string
    */
   public $changedPolicy;
   /**
-   * Name of the posture, for example, `CIS-Posture`.
-   *
    * @var string
    */
   public $name;
   /**
-   * The ID of the updated policy, for example, `compute-policy-1`.
-   *
    * @var string
    */
   public $policy;
   protected $policyDriftDetailsType = PolicyDriftDetails::class;
   protected $policyDriftDetailsDataType = 'array';
   /**
-   * The name of the updated policyset, for example, `cis-policyset`.
-   *
    * @var string
    */
   public $policySet;
   /**
-   * The name of the posture deployment, for example,
-   * `organizations/{org_id}/posturedeployments/{posture_deployment_id}`.
-   *
    * @var string
    */
   public $postureDeployment;
   /**
-   * The project, folder, or organization on which the posture is deployed, for
-   * example, `projects/{project_number}`.
-   *
    * @var string
    */
   public $postureDeploymentResource;
   /**
-   * The version of the posture, for example, `c7cfa2a8`.
-   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * The name of the updated policy, for example,
-   * `projects/{project_id}/policies/{constraint_name}`.
-   *
    * @param string $changedPolicy
    */
   public function setChangedPolicy($changedPolicy)
@@ -86,8 +66,6 @@ class SecurityPosture extends \Google\Collection
     return $this->changedPolicy;
   }
   /**
-   * Name of the posture, for example, `CIS-Posture`.
-   *
    * @param string $name
    */
   public function setName($name)
@@ -102,8 +80,6 @@ class SecurityPosture extends \Google\Collection
     return $this->name;
   }
   /**
-   * The ID of the updated policy, for example, `compute-policy-1`.
-   *
    * @param string $policy
    */
   public function setPolicy($policy)
@@ -118,9 +94,6 @@ class SecurityPosture extends \Google\Collection
     return $this->policy;
   }
   /**
-   * The details about a change in an updated policy that violates the deployed
-   * posture.
-   *
    * @param PolicyDriftDetails[] $policyDriftDetails
    */
   public function setPolicyDriftDetails($policyDriftDetails)
@@ -135,8 +108,6 @@ class SecurityPosture extends \Google\Collection
     return $this->policyDriftDetails;
   }
   /**
-   * The name of the updated policyset, for example, `cis-policyset`.
-   *
    * @param string $policySet
    */
   public function setPolicySet($policySet)
@@ -151,9 +122,6 @@ class SecurityPosture extends \Google\Collection
     return $this->policySet;
   }
   /**
-   * The name of the posture deployment, for example,
-   * `organizations/{org_id}/posturedeployments/{posture_deployment_id}`.
-   *
    * @param string $postureDeployment
    */
   public function setPostureDeployment($postureDeployment)
@@ -168,9 +136,6 @@ class SecurityPosture extends \Google\Collection
     return $this->postureDeployment;
   }
   /**
-   * The project, folder, or organization on which the posture is deployed, for
-   * example, `projects/{project_number}`.
-   *
    * @param string $postureDeploymentResource
    */
   public function setPostureDeploymentResource($postureDeploymentResource)
@@ -185,8 +150,6 @@ class SecurityPosture extends \Google\Collection
     return $this->postureDeploymentResource;
   }
   /**
-   * The version of the posture, for example, `c7cfa2a8`.
-   *
    * @param string $revisionId
    */
   public function setRevisionId($revisionId)

@@ -30,32 +30,16 @@ use Google\Service\SecurityCommandCenter\ListValuedResourcesResponse;
 class OrganizationsSimulationsAttackExposureResultsValuedResources extends \Google\Service\Resource
 {
   /**
-   * Lists the valued resources for a set of simulation results and filter. (value
-   * dResources.listOrganizationsSimulationsAttackExposureResultsValuedResources)
+   * (valuedResources.listOrganizationsSimulationsAttackExposureResultsValuedResou
+   * rces)
    *
-   * @param string $parent Required. Name of parent to list valued resources.
-   * Valid formats: `organizations/{organization}`,
-   * `organizations/{organization}/simulations/{simulation}` `organizations/{organ
-   * ization}/simulations/{simulation}/attackExposureResults/{attack_exposure_resu
-   * lt_v2}`
+   * @param string $parent
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter The filter expression that filters the valued
-   * resources in the response. Supported fields: * `resource_value` supports = *
-   * `resource_type` supports =
-   * @opt_param string orderBy Optional. The fields by which to order the valued
-   * resources response. Supported fields: * `exposed_score` * `resource_value` *
-   * `resource_type` * `resource` * `display_name` Values should be a comma
-   * separated list of fields. For example: `exposed_score,resource_value`. The
-   * default sorting order is descending. To specify ascending or descending order
-   * for a field, append a ` ASC` or a ` DESC` suffix, respectively; for example:
-   * `exposed_score DESC`.
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * response. Default is 10, minimum is 1, maximum is 1000.
-   * @opt_param string pageToken The value returned by the last
-   * `ListValuedResourcesResponse`; indicates that this is a continuation of a
-   * prior `ListValuedResources` call, and that the system should return the next
-   * page of data.
+   * @opt_param string filter
+   * @opt_param string orderBy
+   * @opt_param int pageSize
+   * @opt_param string pageToken
    * @return ListValuedResourcesResponse
    * @throws \Google\Service\Exception
    */
