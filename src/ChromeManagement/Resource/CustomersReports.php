@@ -23,6 +23,7 @@ use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeCrashEven
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse;
+use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeProfileVersionsResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeVersionsResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountDevicesPerBootTypeResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse;
@@ -185,6 +186,32 @@ class CustomersReports extends \Google\Service\Resource
     $params = ['customer' => $customer];
     $params = array_merge($params, $optParams);
     return $this->call('countChromeHardwareFleetDevices', [$params], GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse::class);
+  }
+  /**
+   * Generate report of installed Chrome versions on managed profiles.
+   * (reports.countChromeProfileVersions)
+   *
+   * @param string $customer Required. Customer id or "my_customer" to use the
+   * customer associated to the account making the request.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Query string to filter results, AND-
+   * separated fields in EBNF syntax. Note: OR operations are not supported in
+   * this filter. Supported filter fields: * last_active_date
+   * @opt_param string orgUnitId The ID of the organizational unit. If omitted,
+   * all data will be returned.
+   * @opt_param int pageSize Optional. Maximum number of results to return.
+   * Maximum and default are 100.
+   * @opt_param string pageToken Optional. Token to specify the page of the
+   * request to be returned.
+   * @return GoogleChromeManagementV1CountChromeProfileVersionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function countChromeProfileVersions($customer, $optParams = [])
+  {
+    $params = ['customer' => $customer];
+    $params = array_merge($params, $optParams);
+    return $this->call('countChromeProfileVersions', [$params], GoogleChromeManagementV1CountChromeProfileVersionsResponse::class);
   }
   /**
    * Generate report of installed Chrome versions. (reports.countChromeVersions)

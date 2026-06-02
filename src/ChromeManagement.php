@@ -658,6 +658,32 @@ class ChromeManagement extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'countChromeProfileVersions' => [
+              'path' => 'v1/{+customer}/reports:countChromeProfileVersions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orgUnitId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'countChromeVersions' => [
               'path' => 'v1/{+customer}/reports:countChromeVersions',
               'httpMethod' => 'GET',
