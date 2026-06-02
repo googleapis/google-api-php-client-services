@@ -59,6 +59,7 @@ class ProjectsLocationsConnectionsTools extends \Google\Service\Resource
    * id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
    * @opt_param int pageSize Page size.
    * @opt_param string pageToken Page token.
+   * @opt_param string toolNames List of tool names for selective tool fetching.
    * @return ListToolsResponse
    * @throws \Google\Service\Exception
    */

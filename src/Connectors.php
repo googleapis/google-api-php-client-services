@@ -511,6 +511,11 @@ class Connectors extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'toolNames' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],
           ]
