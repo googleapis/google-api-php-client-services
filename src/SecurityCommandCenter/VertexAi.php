@@ -26,8 +26,6 @@ class VertexAi extends \Google\Collection
   protected $pipelinesDataType = 'array';
 
   /**
-   * Datasets associated with the finding.
-   *
    * @param Dataset[] $datasets
    */
   public function setDatasets($datasets)
@@ -42,8 +40,6 @@ class VertexAi extends \Google\Collection
     return $this->datasets;
   }
   /**
-   * Pipelines associated with the finding.
-   *
    * @param Pipeline[] $pipelines
    */
   public function setPipelines($pipelines)
