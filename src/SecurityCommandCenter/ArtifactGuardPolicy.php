@@ -19,39 +19,22 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ArtifactGuardPolicy extends \Google\Model
 {
-  /**
-   * Default value. This value is unused.
-   */
   public const TYPE_ARTIFACT_GUARD_POLICY_TYPE_UNSPECIFIED = 'ARTIFACT_GUARD_POLICY_TYPE_UNSPECIFIED';
-  /**
-   * Vulnerability type.
-   */
   public const TYPE_VULNERABILITY = 'VULNERABILITY';
   /**
-   * The reason for the policy failure, for example, "severity=HIGH AND
-   * max_vuln_count=2".
-   *
    * @var string
    */
   public $failureReason;
   /**
-   * The ID of the failing policy, for example,
-   * "organizations/3392779/locations/global/policies/prod-policy".
-   *
    * @var string
    */
   public $policyId;
   /**
-   * The type of the policy evaluation.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * The reason for the policy failure, for example, "severity=HIGH AND
-   * max_vuln_count=2".
-   *
    * @param string $failureReason
    */
   public function setFailureReason($failureReason)
@@ -66,9 +49,6 @@ class ArtifactGuardPolicy extends \Google\Model
     return $this->failureReason;
   }
   /**
-   * The ID of the failing policy, for example,
-   * "organizations/3392779/locations/global/policies/prod-policy".
-   *
    * @param string $policyId
    */
   public function setPolicyId($policyId)
@@ -83,10 +63,6 @@ class ArtifactGuardPolicy extends \Google\Model
     return $this->policyId;
   }
   /**
-   * The type of the policy evaluation.
-   *
-   * Accepted values: ARTIFACT_GUARD_POLICY_TYPE_UNSPECIFIED, VULNERABILITY
-   *
    * @param self::TYPE_* $type
    */
   public function setType($type)

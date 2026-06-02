@@ -20,19 +20,11 @@ namespace Google\Service\SecurityCommandCenter;
 class Disk extends \Google\Model
 {
   /**
-   * The name of the disk, for example,
-   * "https://www.googleapis.com/compute/v1/projects/{project-id}/zones/{zone-
-   * id}/disks/{disk-id}".
-   *
    * @var string
    */
   public $name;
 
   /**
-   * The name of the disk, for example,
-   * "https://www.googleapis.com/compute/v1/projects/{project-id}/zones/{zone-
-   * id}/disks/{disk-id}".
-   *
    * @param string $name
    */
   public function setName($name)

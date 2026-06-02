@@ -22,16 +22,11 @@ class AdcApplication extends \Google\Model
   protected $attributesType = GoogleCloudSecuritycenterV1ResourceApplicationAttributes::class;
   protected $attributesDataType = '';
   /**
-   * The resource name of an ADC Application. Format: projects/{project}/locatio
-   * ns/{location}/spaces/{space}/applications/{application}
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Consumer provided attributes for the AppHub application.
-   *
    * @param GoogleCloudSecuritycenterV1ResourceApplicationAttributes $attributes
    */
   public function setAttributes(GoogleCloudSecuritycenterV1ResourceApplicationAttributes $attributes)
@@ -46,9 +41,6 @@ class AdcApplication extends \Google\Model
     return $this->attributes;
   }
   /**
-   * The resource name of an ADC Application. Format: projects/{project}/locatio
-   * ns/{location}/spaces/{space}/applications/{application}
-   *
    * @param string $name
    */
   public function setName($name)

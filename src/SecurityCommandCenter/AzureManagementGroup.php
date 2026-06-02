@@ -20,22 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class AzureManagementGroup extends \Google\Model
 {
   /**
-   * The display name of the Azure management group.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * The UUID of the Azure management group, for example,
-   * `20000000-0001-0000-0000-000000000000`.
-   *
    * @var string
    */
   public $id;
 
   /**
-   * The display name of the Azure management group.
-   *
    * @param string $displayName
    */
   public function setDisplayName($displayName)
@@ -50,9 +43,6 @@ class AzureManagementGroup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * The UUID of the Azure management group, for example,
-   * `20000000-0001-0000-0000-000000000000`.
-   *
    * @param string $id
    */
   public function setId($id)

@@ -20,8 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV1Property extends \Google\Model
 {
   /**
-   * Name of the property for the custom output.
-   *
    * @var string
    */
   public $name;
@@ -29,8 +27,6 @@ class GoogleCloudSecuritycenterV1Property extends \Google\Model
   protected $valueExpressionDataType = '';
 
   /**
-   * Name of the property for the custom output.
-   *
    * @param string $name
    */
   public function setName($name)
@@ -45,10 +41,6 @@ class GoogleCloudSecuritycenterV1Property extends \Google\Model
     return $this->name;
   }
   /**
-   * The CEL expression for the custom output. A resource property can be
-   * specified to return the value of the property or a text string enclosed in
-   * quotation marks.
-   *
    * @param Expr $valueExpression
    */
   public function setValueExpression(Expr $valueExpression)

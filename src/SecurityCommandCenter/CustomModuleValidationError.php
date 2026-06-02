@@ -20,17 +20,12 @@ namespace Google\Service\SecurityCommandCenter;
 class CustomModuleValidationError extends \Google\Model
 {
   /**
-   * A description of the error, suitable for human consumption. Required.
-   *
    * @var string
    */
   public $description;
   protected $endType = Position::class;
   protected $endDataType = '';
   /**
-   * The path, in RFC 8901 JSON Pointer format, to the field that failed
-   * validation. This may be left empty if no specific field is affected.
-   *
    * @var string
    */
   public $fieldPath;
@@ -38,8 +33,6 @@ class CustomModuleValidationError extends \Google\Model
   protected $startDataType = '';
 
   /**
-   * A description of the error, suitable for human consumption. Required.
-   *
    * @param string $description
    */
   public function setDescription($description)
@@ -54,10 +47,6 @@ class CustomModuleValidationError extends \Google\Model
     return $this->description;
   }
   /**
-   * The end position of the error in the uploaded text version of the module.
-   * This field may be omitted if no specific position applies, or if one could
-   * not be computed.
-   *
    * @param Position $end
    */
   public function setEnd(Position $end)
@@ -72,9 +61,6 @@ class CustomModuleValidationError extends \Google\Model
     return $this->end;
   }
   /**
-   * The path, in RFC 8901 JSON Pointer format, to the field that failed
-   * validation. This may be left empty if no specific field is affected.
-   *
    * @param string $fieldPath
    */
   public function setFieldPath($fieldPath)
@@ -89,10 +75,6 @@ class CustomModuleValidationError extends \Google\Model
     return $this->fieldPath;
   }
   /**
-   * The initial position of the error in the uploaded text version of the
-   * module. This field may be omitted if no specific position applies, or if
-   * one could not be computed.
-   *
    * @param Position $start
    */
   public function setStart(Position $start)

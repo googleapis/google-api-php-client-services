@@ -24,8 +24,6 @@ class GoogleCloudSecuritycenterV1CustomOutputSpec extends \Google\Collection
   protected $propertiesDataType = 'array';
 
   /**
-   * A list of custom output properties to add to the finding.
-   *
    * @param GoogleCloudSecuritycenterV1Property[] $properties
    */
   public function setProperties($properties)

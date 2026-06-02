@@ -23,15 +23,11 @@ class ArtifactGuardPolicies extends \Google\Collection
   protected $failingPoliciesType = ArtifactGuardPolicy::class;
   protected $failingPoliciesDataType = 'array';
   /**
-   * The ID of the resource that has policies configured for it.
-   *
    * @var string
    */
   public $resourceId;
 
   /**
-   * A list of failing policies.
-   *
    * @param ArtifactGuardPolicy[] $failingPolicies
    */
   public function setFailingPolicies($failingPolicies)
@@ -46,8 +42,6 @@ class ArtifactGuardPolicies extends \Google\Collection
     return $this->failingPolicies;
   }
   /**
-   * The ID of the resource that has policies configured for it.
-   *
    * @param string $resourceId
    */
   public function setResourceId($resourceId)

@@ -19,67 +19,34 @@ namespace Google\Service\SecurityCommandCenter;
 
 class Connection extends \Google\Model
 {
-  /**
-   * Unspecified protocol (not HOPOPT).
-   */
   public const PROTOCOL_PROTOCOL_UNSPECIFIED = 'PROTOCOL_UNSPECIFIED';
-  /**
-   * Internet Control Message Protocol.
-   */
   public const PROTOCOL_ICMP = 'ICMP';
-  /**
-   * Transmission Control Protocol.
-   */
   public const PROTOCOL_TCP = 'TCP';
-  /**
-   * User Datagram Protocol.
-   */
   public const PROTOCOL_UDP = 'UDP';
-  /**
-   * Generic Routing Encapsulation.
-   */
   public const PROTOCOL_GRE = 'GRE';
-  /**
-   * Encap Security Payload.
-   */
   public const PROTOCOL_ESP = 'ESP';
   /**
-   * Destination IP address. Not present for sockets that are listening and not
-   * connected.
-   *
    * @var string
    */
   public $destinationIp;
   /**
-   * Destination port. Not present for sockets that are listening and not
-   * connected.
-   *
    * @var int
    */
   public $destinationPort;
   /**
-   * IANA Internet Protocol Number such as TCP(6) and UDP(17).
-   *
    * @var string
    */
   public $protocol;
   /**
-   * Source IP address.
-   *
    * @var string
    */
   public $sourceIp;
   /**
-   * Source port.
-   *
    * @var int
    */
   public $sourcePort;
 
   /**
-   * Destination IP address. Not present for sockets that are listening and not
-   * connected.
-   *
    * @param string $destinationIp
    */
   public function setDestinationIp($destinationIp)
@@ -94,9 +61,6 @@ class Connection extends \Google\Model
     return $this->destinationIp;
   }
   /**
-   * Destination port. Not present for sockets that are listening and not
-   * connected.
-   *
    * @param int $destinationPort
    */
   public function setDestinationPort($destinationPort)
@@ -111,10 +75,6 @@ class Connection extends \Google\Model
     return $this->destinationPort;
   }
   /**
-   * IANA Internet Protocol Number such as TCP(6) and UDP(17).
-   *
-   * Accepted values: PROTOCOL_UNSPECIFIED, ICMP, TCP, UDP, GRE, ESP
-   *
    * @param self::PROTOCOL_* $protocol
    */
   public function setProtocol($protocol)
@@ -129,8 +89,6 @@ class Connection extends \Google\Model
     return $this->protocol;
   }
   /**
-   * Source IP address.
-   *
    * @param string $sourceIp
    */
   public function setSourceIp($sourceIp)
@@ -145,8 +103,6 @@ class Connection extends \Google\Model
     return $this->sourceIp;
   }
   /**
-   * Source port.
-   *
    * @param int $sourcePort
    */
   public function setSourcePort($sourcePort)

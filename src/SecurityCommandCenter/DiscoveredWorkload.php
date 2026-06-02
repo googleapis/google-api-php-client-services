@@ -19,69 +19,34 @@ namespace Google\Service\SecurityCommandCenter;
 
 class DiscoveredWorkload extends \Google\Model
 {
-  /**
-   * Unspecified confidence level.
-   */
   public const CONFIDENCE_CONFIDENCE_UNSPECIFIED = 'CONFIDENCE_UNSPECIFIED';
-  /**
-   * High confidence in detection of a workload.
-   */
   public const CONFIDENCE_CONFIDENCE_HIGH = 'CONFIDENCE_HIGH';
-  /**
-   * Unspecified workload type
-   */
   public const WORKLOAD_TYPE_WORKLOAD_TYPE_UNSPECIFIED = 'WORKLOAD_TYPE_UNSPECIFIED';
-  /**
-   * A workload of type MCP Server
-   */
   public const WORKLOAD_TYPE_MCP_SERVER = 'MCP_SERVER';
-  /**
-   * A workload of type AI Inference
-   */
   public const WORKLOAD_TYPE_AI_INFERENCE = 'AI_INFERENCE';
-  /**
-   * A workload of type LLM Agent
-   */
   public const WORKLOAD_TYPE_AGENT = 'AGENT';
   /**
-   * The confidence in detection of this workload.
-   *
    * @var string
    */
   public $confidence;
   /**
-   * A boolean flag set to true if associated hardware strongly predicts the
-   * workload type.
-   *
    * @var bool
    */
   public $detectedRelevantHardware;
   /**
-   * A boolean flag set to true if associated keywords strongly predict the
-   * workload type.
-   *
    * @var bool
    */
   public $detectedRelevantKeywords;
   /**
-   * A boolean flag set to true if installed packages strongly predict the
-   * workload type.
-   *
    * @var bool
    */
   public $detectedRelevantPackages;
   /**
-   * The type of workload.
-   *
    * @var string
    */
   public $workloadType;
 
   /**
-   * The confidence in detection of this workload.
-   *
-   * Accepted values: CONFIDENCE_UNSPECIFIED, CONFIDENCE_HIGH
-   *
    * @param self::CONFIDENCE_* $confidence
    */
   public function setConfidence($confidence)
@@ -96,9 +61,6 @@ class DiscoveredWorkload extends \Google\Model
     return $this->confidence;
   }
   /**
-   * A boolean flag set to true if associated hardware strongly predicts the
-   * workload type.
-   *
    * @param bool $detectedRelevantHardware
    */
   public function setDetectedRelevantHardware($detectedRelevantHardware)
@@ -113,9 +75,6 @@ class DiscoveredWorkload extends \Google\Model
     return $this->detectedRelevantHardware;
   }
   /**
-   * A boolean flag set to true if associated keywords strongly predict the
-   * workload type.
-   *
    * @param bool $detectedRelevantKeywords
    */
   public function setDetectedRelevantKeywords($detectedRelevantKeywords)
@@ -130,9 +89,6 @@ class DiscoveredWorkload extends \Google\Model
     return $this->detectedRelevantKeywords;
   }
   /**
-   * A boolean flag set to true if installed packages strongly predict the
-   * workload type.
-   *
    * @param bool $detectedRelevantPackages
    */
   public function setDetectedRelevantPackages($detectedRelevantPackages)
@@ -147,10 +103,6 @@ class DiscoveredWorkload extends \Google\Model
     return $this->detectedRelevantPackages;
   }
   /**
-   * The type of workload.
-   *
-   * Accepted values: WORKLOAD_TYPE_UNSPECIFIED, MCP_SERVER, AI_INFERENCE, AGENT
-   *
    * @param self::WORKLOAD_TYPE_* $workloadType
    */
   public function setWorkloadType($workloadType)

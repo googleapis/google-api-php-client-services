@@ -23,9 +23,6 @@ class GetIamPolicyRequest extends \Google\Model
   protected $optionsDataType = '';
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to
-   * `GetIamPolicy`.
-   *
    * @param GetPolicyOptions $options
    */
   public function setOptions(GetPolicyOptions $options)

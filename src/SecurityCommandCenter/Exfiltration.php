@@ -25,17 +25,11 @@ class Exfiltration extends \Google\Collection
   protected $targetsType = ExfilResource::class;
   protected $targetsDataType = 'array';
   /**
-   * Total exfiltrated bytes processed for the entire job.
-   *
    * @var string
    */
   public $totalExfiltratedBytes;
 
   /**
-   * If there are multiple sources, then the data is considered "joined" between
-   * them. For instance, BigQuery can join multiple tables, and each table would
-   * be considered a source.
-   *
    * @param ExfilResource[] $sources
    */
   public function setSources($sources)
@@ -50,9 +44,6 @@ class Exfiltration extends \Google\Collection
     return $this->sources;
   }
   /**
-   * If there are multiple targets, each target would get a complete copy of the
-   * "joined" source data.
-   *
    * @param ExfilResource[] $targets
    */
   public function setTargets($targets)
@@ -67,8 +58,6 @@ class Exfiltration extends \Google\Collection
     return $this->targets;
   }
   /**
-   * Total exfiltrated bytes processed for the entire job.
-   *
    * @param string $totalExfiltratedBytes
    */
   public function setTotalExfiltratedBytes($totalExfiltratedBytes)

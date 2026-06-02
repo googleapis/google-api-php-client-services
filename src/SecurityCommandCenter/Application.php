@@ -20,24 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class Application extends \Google\Model
 {
   /**
-   * The base URI that identifies the network location of the application in
-   * which the vulnerability was detected. For example, `http://example.com`.
-   *
    * @var string
    */
   public $baseUri;
   /**
-   * The full URI with payload that can be used to reproduce the vulnerability.
-   * For example, `http://example.com?p=aMmYgI6H`.
-   *
    * @var string
    */
   public $fullUri;
 
   /**
-   * The base URI that identifies the network location of the application in
-   * which the vulnerability was detected. For example, `http://example.com`.
-   *
    * @param string $baseUri
    */
   public function setBaseUri($baseUri)
@@ -52,9 +43,6 @@ class Application extends \Google\Model
     return $this->baseUri;
   }
   /**
-   * The full URI with payload that can be used to reproduce the vulnerability.
-   * For example, `http://example.com?p=aMmYgI6H`.
-   *
    * @param string $fullUri
    */
   public function setFullUri($fullUri)

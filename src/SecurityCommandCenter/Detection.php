@@ -20,21 +20,12 @@ namespace Google\Service\SecurityCommandCenter;
 class Detection extends \Google\Model
 {
   /**
-   * The name of the binary associated with the memory hash signature detection.
-   *
    * @var string
    */
   public $binary;
-  /**
-   * The percentage of memory page hashes in the signature that were matched.
-   *
-   * @var 
-   */
   public $percentPagesMatched;
 
   /**
-   * The name of the binary associated with the memory hash signature detection.
-   *
    * @param string $binary
    */
   public function setBinary($binary)

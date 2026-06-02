@@ -19,57 +19,32 @@ namespace Google\Service\SecurityCommandCenter;
 
 class DataFlowEvent extends \Google\Model
 {
-  /**
-   * The operation is unspecified.
-   */
   public const OPERATION_OPERATION_UNSPECIFIED = 'OPERATION_UNSPECIFIED';
-  /**
-   * Represents a read operation.
-   */
   public const OPERATION_READ = 'READ';
-  /**
-   * Represents a move operation.
-   */
   public const OPERATION_MOVE = 'MOVE';
-  /**
-   * Represents a copy operation.
-   */
   public const OPERATION_COPY = 'COPY';
   /**
-   * Unique identifier for data flow event.
-   *
    * @var string
    */
   public $eventId;
   /**
-   * Timestamp of data flow event.
-   *
    * @var string
    */
   public $eventTime;
   /**
-   * The operation performed by the principal for the data flow event.
-   *
    * @var string
    */
   public $operation;
   /**
-   * The email address of the principal that initiated the data flow event. The
-   * principal could be a user account, service account, Google group, or other.
-   *
    * @var string
    */
   public $principalEmail;
   /**
-   * Non-compliant location of the principal or the data destination.
-   *
    * @var string
    */
   public $violatedLocation;
 
   /**
-   * Unique identifier for data flow event.
-   *
    * @param string $eventId
    */
   public function setEventId($eventId)
@@ -84,8 +59,6 @@ class DataFlowEvent extends \Google\Model
     return $this->eventId;
   }
   /**
-   * Timestamp of data flow event.
-   *
    * @param string $eventTime
    */
   public function setEventTime($eventTime)
@@ -100,10 +73,6 @@ class DataFlowEvent extends \Google\Model
     return $this->eventTime;
   }
   /**
-   * The operation performed by the principal for the data flow event.
-   *
-   * Accepted values: OPERATION_UNSPECIFIED, READ, MOVE, COPY
-   *
    * @param self::OPERATION_* $operation
    */
   public function setOperation($operation)
@@ -118,9 +87,6 @@ class DataFlowEvent extends \Google\Model
     return $this->operation;
   }
   /**
-   * The email address of the principal that initiated the data flow event. The
-   * principal could be a user account, service account, Google group, or other.
-   *
    * @param string $principalEmail
    */
   public function setPrincipalEmail($principalEmail)
@@ -135,8 +101,6 @@ class DataFlowEvent extends \Google\Model
     return $this->principalEmail;
   }
   /**
-   * Non-compliant location of the principal or the data destination.
-   *
    * @param string $violatedLocation
    */
   public function setViolatedLocation($violatedLocation)

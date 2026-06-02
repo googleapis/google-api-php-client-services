@@ -19,60 +19,33 @@ namespace Google\Service\SecurityCommandCenter;
 
 class AttackStepNode extends \Google\Model
 {
-  /**
-   * Type not specified
-   */
   public const TYPE_NODE_TYPE_UNSPECIFIED = 'NODE_TYPE_UNSPECIFIED';
-  /**
-   * Incoming edge joined with AND
-   */
   public const TYPE_NODE_TYPE_AND = 'NODE_TYPE_AND';
-  /**
-   * Incoming edge joined with OR
-   */
   public const TYPE_NODE_TYPE_OR = 'NODE_TYPE_OR';
-  /**
-   * Incoming edge is defense
-   */
   public const TYPE_NODE_TYPE_DEFENSE = 'NODE_TYPE_DEFENSE';
-  /**
-   * Incoming edge is attacker
-   */
   public const TYPE_NODE_TYPE_ATTACKER = 'NODE_TYPE_ATTACKER';
   /**
-   * Attack step description
-   *
    * @var string
    */
   public $description;
   /**
-   * User friendly name of the attack step
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Attack step labels for metadata
-   *
    * @var string[]
    */
   public $labels;
   /**
-   * Attack step type. Can be either AND, OR or DEFENSE
-   *
    * @var string
    */
   public $type;
   /**
-   * Unique ID for one Node
-   *
    * @var string
    */
   public $uuid;
 
   /**
-   * Attack step description
-   *
    * @param string $description
    */
   public function setDescription($description)
@@ -87,8 +60,6 @@ class AttackStepNode extends \Google\Model
     return $this->description;
   }
   /**
-   * User friendly name of the attack step
-   *
    * @param string $displayName
    */
   public function setDisplayName($displayName)
@@ -103,8 +74,6 @@ class AttackStepNode extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Attack step labels for metadata
-   *
    * @param string[] $labels
    */
   public function setLabels($labels)
@@ -119,11 +88,6 @@ class AttackStepNode extends \Google\Model
     return $this->labels;
   }
   /**
-   * Attack step type. Can be either AND, OR or DEFENSE
-   *
-   * Accepted values: NODE_TYPE_UNSPECIFIED, NODE_TYPE_AND, NODE_TYPE_OR,
-   * NODE_TYPE_DEFENSE, NODE_TYPE_ATTACKER
-   *
    * @param self::TYPE_* $type
    */
   public function setType($type)
@@ -138,8 +102,6 @@ class AttackStepNode extends \Google\Model
     return $this->type;
   }
   /**
-   * Unique ID for one Node
-   *
    * @param string $uuid
    */
   public function setUuid($uuid)

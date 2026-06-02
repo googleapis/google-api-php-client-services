@@ -19,50 +19,28 @@ namespace Google\Service\SecurityCommandCenter;
 
 class AgentDataAccessEvent extends \Google\Model
 {
-  /**
-   * The operation is unspecified.
-   */
   public const OPERATION_OPERATION_UNSPECIFIED = 'OPERATION_UNSPECIFIED';
-  /**
-   * Represents a read operation.
-   */
   public const OPERATION_READ = 'READ';
-  /**
-   * Represents a move operation.
-   */
   public const OPERATION_MOVE = 'MOVE';
-  /**
-   * Represents a copy operation.
-   */
   public const OPERATION_COPY = 'COPY';
   /**
-   * Unique identifier for data access event.
-   *
    * @var string
    */
   public $eventId;
   /**
-   * Timestamp of data access event.
-   *
    * @var string
    */
   public $eventTime;
   /**
-   * The operation performed by the principal to access the data.
-   *
    * @var string
    */
   public $operation;
   /**
-   * The agent principal that accessed the data.
-   *
    * @var string
    */
   public $principalSubject;
 
   /**
-   * Unique identifier for data access event.
-   *
    * @param string $eventId
    */
   public function setEventId($eventId)
@@ -77,8 +55,6 @@ class AgentDataAccessEvent extends \Google\Model
     return $this->eventId;
   }
   /**
-   * Timestamp of data access event.
-   *
    * @param string $eventTime
    */
   public function setEventTime($eventTime)
@@ -93,10 +69,6 @@ class AgentDataAccessEvent extends \Google\Model
     return $this->eventTime;
   }
   /**
-   * The operation performed by the principal to access the data.
-   *
-   * Accepted values: OPERATION_UNSPECIFIED, READ, MOVE, COPY
-   *
    * @param self::OPERATION_* $operation
    */
   public function setOperation($operation)
@@ -111,8 +83,6 @@ class AgentDataAccessEvent extends \Google\Model
     return $this->operation;
   }
   /**
-   * The agent principal that accessed the data.
-   *
    * @param string $principalSubject
    */
   public function setPrincipalSubject($principalSubject)

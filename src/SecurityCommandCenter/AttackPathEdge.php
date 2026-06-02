@@ -20,21 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class AttackPathEdge extends \Google\Model
 {
   /**
-   * The attack node uuid of the destination node.
-   *
    * @var string
    */
   public $destination;
   /**
-   * The attack node uuid of the source node.
-   *
    * @var string
    */
   public $source;
 
   /**
-   * The attack node uuid of the destination node.
-   *
    * @param string $destination
    */
   public function setDestination($destination)
@@ -49,8 +43,6 @@ class AttackPathEdge extends \Google\Model
     return $this->destination;
   }
   /**
-   * The attack node uuid of the source node.
-   *
    * @param string $source
    */
   public function setSource($source)
