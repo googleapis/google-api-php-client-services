@@ -47,7 +47,7 @@ class ResourceMaintenanceInfo extends \Google\Collection
    * Database resource encountered an error and is in indeterministic state.
    */
   public const MAINTENANCE_STATE_ERROR = 'ERROR';
-  protected $collection_key = 'denyMaintenanceSchedules';
+  protected $collection_key = 'nextAvailableMaintenanceVersions';
   protected $currentVersionReleaseDateType = Date::class;
   protected $currentVersionReleaseDateDataType = '';
   protected $denyMaintenanceSchedulesType = ResourceMaintenanceDenySchedule::class;
@@ -75,6 +75,12 @@ class ResourceMaintenanceInfo extends \Google\Collection
    * @var string
    */
   public $maintenanceVersion;
+  /**
+   * Optional. List of next available maintenance versions.
+   *
+   * @var string[]
+   */
+  public $nextAvailableMaintenanceVersions;
   protected $upcomingMaintenanceType = UpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
 
@@ -179,6 +185,22 @@ class ResourceMaintenanceInfo extends \Google\Collection
   public function getMaintenanceVersion()
   {
     return $this->maintenanceVersion;
+  }
+  /**
+   * Optional. List of next available maintenance versions.
+   *
+   * @param string[] $nextAvailableMaintenanceVersions
+   */
+  public function setNextAvailableMaintenanceVersions($nextAvailableMaintenanceVersions)
+  {
+    $this->nextAvailableMaintenanceVersions = $nextAvailableMaintenanceVersions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getNextAvailableMaintenanceVersions()
+  {
+    return $this->nextAvailableMaintenanceVersions;
   }
   /**
    * Optional. Upcoming maintenance for the database resource. This field is
