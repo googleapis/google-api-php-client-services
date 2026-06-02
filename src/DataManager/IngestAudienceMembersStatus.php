@@ -19,6 +19,8 @@ namespace Google\Service\DataManager;
 
 class IngestAudienceMembersStatus extends \Google\Model
 {
+  protected $compositeDataIngestionStatusType = IngestCompositeDataStatus::class;
+  protected $compositeDataIngestionStatusDataType = '';
   protected $mobileDataIngestionStatusType = IngestMobileDataStatus::class;
   protected $mobileDataIngestionStatusDataType = '';
   protected $pairDataIngestionStatusType = IngestPairDataStatus::class;
@@ -30,6 +32,22 @@ class IngestAudienceMembersStatus extends \Google\Model
   protected $userIdDataIngestionStatusType = IngestUserIdDataStatus::class;
   protected $userIdDataIngestionStatusDataType = '';
 
+  /**
+   * The status of the composite data ingestion to the destination.
+   *
+   * @param IngestCompositeDataStatus $compositeDataIngestionStatus
+   */
+  public function setCompositeDataIngestionStatus(IngestCompositeDataStatus $compositeDataIngestionStatus)
+  {
+    $this->compositeDataIngestionStatus = $compositeDataIngestionStatus;
+  }
+  /**
+   * @return IngestCompositeDataStatus
+   */
+  public function getCompositeDataIngestionStatus()
+  {
+    return $this->compositeDataIngestionStatus;
+  }
   /**
    * The status of the mobile data ingestion to the destination.
    *

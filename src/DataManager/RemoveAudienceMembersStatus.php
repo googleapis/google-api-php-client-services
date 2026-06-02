@@ -19,6 +19,8 @@ namespace Google\Service\DataManager;
 
 class RemoveAudienceMembersStatus extends \Google\Model
 {
+  protected $compositeDataRemovalStatusType = RemoveCompositeDataStatus::class;
+  protected $compositeDataRemovalStatusDataType = '';
   protected $mobileDataRemovalStatusType = RemoveMobileDataStatus::class;
   protected $mobileDataRemovalStatusDataType = '';
   protected $pairDataRemovalStatusType = RemovePairDataStatus::class;
@@ -30,6 +32,22 @@ class RemoveAudienceMembersStatus extends \Google\Model
   protected $userIdDataRemovalStatusType = RemoveUserIdDataStatus::class;
   protected $userIdDataRemovalStatusDataType = '';
 
+  /**
+   * The status of the composite data removal from the destination.
+   *
+   * @param RemoveCompositeDataStatus $compositeDataRemovalStatus
+   */
+  public function setCompositeDataRemovalStatus(RemoveCompositeDataStatus $compositeDataRemovalStatus)
+  {
+    $this->compositeDataRemovalStatus = $compositeDataRemovalStatus;
+  }
+  /**
+   * @return RemoveCompositeDataStatus
+   */
+  public function getCompositeDataRemovalStatus()
+  {
+    return $this->compositeDataRemovalStatus;
+  }
   /**
    * The status of the mobile data removal from the destination.
    *

@@ -71,6 +71,13 @@ class Event extends \Google\Collection
   protected $consentType = Consent::class;
   protected $consentDataType = '';
   /**
+   * Optional. The conversion quantity associated with the event, for counting-
+   * based conversions.
+   *
+   * @var 
+   */
+  public $conversionCount;
+  /**
    * Optional. The conversion value associated with the event, for value-based
    * conversions.
    *
@@ -246,6 +253,14 @@ class Event extends \Google\Collection
   public function getConsent()
   {
     return $this->consent;
+  }
+  public function setConversionCount($conversionCount)
+  {
+    $this->conversionCount = $conversionCount;
+  }
+  public function getConversionCount()
+  {
+    return $this->conversionCount;
   }
   public function setConversionValue($conversionValue)
   {

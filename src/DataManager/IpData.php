@@ -1,0 +1,96 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\DataManager;
+
+class IpData extends \Google\Model
+{
+  /**
+   * Required. IP address captured at the time of customer interaction. Accepts
+   * standard string formats for both IPv4 and IPv6.
+   *
+   * @var string
+   */
+  public $ipAddress;
+  /**
+   * Optional. Last recorded interaction time from this IP address in a session.
+   *
+   * @var string
+   */
+  public $observeEndTime;
+  /**
+   * Optional. First recorded interaction time from this IP address in a
+   * session.
+   *
+   * @var string
+   */
+  public $observeStartTime;
+
+  /**
+   * Required. IP address captured at the time of customer interaction. Accepts
+   * standard string formats for both IPv4 and IPv6.
+   *
+   * @param string $ipAddress
+   */
+  public function setIpAddress($ipAddress)
+  {
+    $this->ipAddress = $ipAddress;
+  }
+  /**
+   * @return string
+   */
+  public function getIpAddress()
+  {
+    return $this->ipAddress;
+  }
+  /**
+   * Optional. Last recorded interaction time from this IP address in a session.
+   *
+   * @param string $observeEndTime
+   */
+  public function setObserveEndTime($observeEndTime)
+  {
+    $this->observeEndTime = $observeEndTime;
+  }
+  /**
+   * @return string
+   */
+  public function getObserveEndTime()
+  {
+    return $this->observeEndTime;
+  }
+  /**
+   * Optional. First recorded interaction time from this IP address in a
+   * session.
+   *
+   * @param string $observeStartTime
+   */
+  public function setObserveStartTime($observeStartTime)
+  {
+    $this->observeStartTime = $observeStartTime;
+  }
+  /**
+   * @return string
+   */
+  public function getObserveStartTime()
+  {
+    return $this->observeStartTime;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(IpData::class, 'Google_Service_DataManager_IpData');

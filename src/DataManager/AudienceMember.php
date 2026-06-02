@@ -20,6 +20,8 @@ namespace Google\Service\DataManager;
 class AudienceMember extends \Google\Collection
 {
   protected $collection_key = 'destinationReferences';
+  protected $compositeDataType = CompositeData::class;
+  protected $compositeDataDataType = '';
   protected $consentType = Consent::class;
   protected $consentDataType = '';
   /**
@@ -39,6 +41,22 @@ class AudienceMember extends \Google\Collection
   protected $userIdDataType = UserIdData::class;
   protected $userIdDataDataType = '';
 
+  /**
+   * Group of multiple identifier types.
+   *
+   * @param CompositeData $compositeData
+   */
+  public function setCompositeData(CompositeData $compositeData)
+  {
+    $this->compositeData = $compositeData;
+  }
+  /**
+   * @return CompositeData
+   */
+  public function getCompositeData()
+  {
+    return $this->compositeData;
+  }
   /**
    * Optional. The consent setting for the user.
    *
