@@ -54,6 +54,14 @@ class ArtifactDeployment extends \Google\Collection
    */
   public $id;
   /**
+   * Output only. The URIs of the source code, if available. For Cloud Run
+   * source deploy for example: `gs://my-bucket/my-folder/1234567890.abcde-
+   * fdbe.zip#1234567890`
+   *
+   * @var string[]
+   */
+  public $sourceCodeUris;
+  /**
    * Output only. The source commits at which this artifact was built. Extracted
    * from provenance.
    *
@@ -150,6 +158,24 @@ class ArtifactDeployment extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * Output only. The URIs of the source code, if available. For Cloud Run
+   * source deploy for example: `gs://my-bucket/my-folder/1234567890.abcde-
+   * fdbe.zip#1234567890`
+   *
+   * @param string[] $sourceCodeUris
+   */
+  public function setSourceCodeUris($sourceCodeUris)
+  {
+    $this->sourceCodeUris = $sourceCodeUris;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSourceCodeUris()
+  {
+    return $this->sourceCodeUris;
   }
   /**
    * Output only. The source commits at which this artifact was built. Extracted
