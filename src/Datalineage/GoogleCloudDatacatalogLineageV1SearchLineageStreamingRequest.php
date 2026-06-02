@@ -43,7 +43,8 @@ class GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest extends \Goog
   protected $limitsType = GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequestSearchLimits::class;
   protected $limitsDataType = '';
   /**
-   * Required. The locations to search in.
+   * Required. The locations to search in. This list should contain the location
+   * from the `parent` field.
    *
    * @var string[]
    */
@@ -102,7 +103,8 @@ class GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest extends \Goog
     return $this->limits;
   }
   /**
-   * Required. The locations to search in.
+   * Required. The locations to search in. This list should contain the location
+   * from the `parent` field.
    *
    * @param string[] $locations
    */
