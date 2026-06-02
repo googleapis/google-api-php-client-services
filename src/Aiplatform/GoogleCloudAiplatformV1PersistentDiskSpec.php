@@ -29,7 +29,10 @@ class GoogleCloudAiplatformV1PersistentDiskSpec extends \Google\Model
    * Type of the disk (default is "pd-standard"). Valid values: "pd-ssd"
    * (Persistent Disk Solid State Drive) "pd-standard" (Persistent Disk Hard
    * Disk Drive) "pd-balanced" (Balanced Persistent Disk) "pd-extreme" (Extreme
-   * Persistent Disk)
+   * Persistent Disk) "hyperdisk-balanced" (Hyperdisk Balanced) "hyperdisk-
+   * extreme" (Hyperdisk Extreme) "hyperdisk-balanced-high-availability"
+   * (Hyperdisk Balanced High Availability) "hyperdisk-ml" (Hyperdisk ML)
+   * "hyperdisk-throughput" (Hyperdisk Throughput)
    *
    * @var string
    */
@@ -55,7 +58,10 @@ class GoogleCloudAiplatformV1PersistentDiskSpec extends \Google\Model
    * Type of the disk (default is "pd-standard"). Valid values: "pd-ssd"
    * (Persistent Disk Solid State Drive) "pd-standard" (Persistent Disk Hard
    * Disk Drive) "pd-balanced" (Balanced Persistent Disk) "pd-extreme" (Extreme
-   * Persistent Disk)
+   * Persistent Disk) "hyperdisk-balanced" (Hyperdisk Balanced) "hyperdisk-
+   * extreme" (Hyperdisk Extreme) "hyperdisk-balanced-high-availability"
+   * (Hyperdisk Balanced High Availability) "hyperdisk-ml" (Hyperdisk ML)
+   * "hyperdisk-throughput" (Hyperdisk Throughput)
    *
    * @param string $diskType
    */

@@ -45,6 +45,15 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
    * @var int
    */
   public $numDiffusionSteps;
+  /**
+   * The original REST API request JSON sent by the user, in the
+   * instances/parameters format. Preserved for saving alongside output
+   * artifacts so users can reproduce their requests. This field is populated by
+   * the API handler and is not user-settable.
+   *
+   * @var string
+   */
+  public $originalRequestJson;
   protected $promptInputsType = CloudAiLargeModelsVisionPromptInputs::class;
   protected $promptInputsDataType = '';
   /**
@@ -162,6 +171,25 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getNumDiffusionSteps()
   {
     return $this->numDiffusionSteps;
+  }
+  /**
+   * The original REST API request JSON sent by the user, in the
+   * instances/parameters format. Preserved for saving alongside output
+   * artifacts so users can reproduce their requests. This field is populated by
+   * the API handler and is not user-settable.
+   *
+   * @param string $originalRequestJson
+   */
+  public function setOriginalRequestJson($originalRequestJson)
+  {
+    $this->originalRequestJson = $originalRequestJson;
+  }
+  /**
+   * @return string
+   */
+  public function getOriginalRequestJson()
+  {
+    return $this->originalRequestJson;
   }
   /**
    * Prompt chunks for "ProModel" prompting. If set, the prompt will not be

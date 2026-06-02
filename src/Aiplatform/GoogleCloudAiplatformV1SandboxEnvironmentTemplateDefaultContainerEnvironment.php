@@ -33,6 +33,8 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplateDefaultContainerEnvironme
    * @var string
    */
   public $defaultContainerCategory;
+  protected $resourcesType = GoogleCloudAiplatformV1SandboxEnvironmentTemplateResourceRequirements::class;
+  protected $resourcesDataType = '';
 
   /**
    * Required. The category of the default container image.
@@ -52,6 +54,22 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplateDefaultContainerEnvironme
   public function getDefaultContainerCategory()
   {
     return $this->defaultContainerCategory;
+  }
+  /**
+   * Optional. Resource requests and limits for the default container.
+   *
+   * @param GoogleCloudAiplatformV1SandboxEnvironmentTemplateResourceRequirements $resources
+   */
+  public function setResources(GoogleCloudAiplatformV1SandboxEnvironmentTemplateResourceRequirements $resources)
+  {
+    $this->resources = $resources;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SandboxEnvironmentTemplateResourceRequirements
+   */
+  public function getResources()
+  {
+    return $this->resources;
   }
 }
 

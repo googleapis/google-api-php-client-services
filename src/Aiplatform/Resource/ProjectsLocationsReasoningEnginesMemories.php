@@ -147,7 +147,7 @@ class ProjectsLocationsReasoningEnginesMemories extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Optional. Mask specifying which fields to
-   * update. Supported fields: * `display_name` * `description` * `fact`
+   * update. The following fields are immutable: * `scope` * `memory_type`
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

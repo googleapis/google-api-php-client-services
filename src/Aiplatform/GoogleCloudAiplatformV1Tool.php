@@ -26,6 +26,8 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   protected $computerUseDataType = '';
   protected $enterpriseWebSearchType = GoogleCloudAiplatformV1EnterpriseWebSearch::class;
   protected $enterpriseWebSearchDataType = '';
+  protected $exaAiSearchType = GoogleCloudAiplatformV1ToolExaAiSearch::class;
+  protected $exaAiSearchDataType = '';
   protected $functionDeclarationsType = GoogleCloudAiplatformV1FunctionDeclaration::class;
   protected $functionDeclarationsDataType = 'array';
   protected $googleMapsType = GoogleCloudAiplatformV1GoogleMaps::class;
@@ -92,6 +94,24 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   public function getEnterpriseWebSearch()
   {
     return $this->enterpriseWebSearch;
+  }
+  /**
+   * Optional. Uses Exa.ai to search for information to answer user queries. The
+   * search results will be grounded on Exa.ai and presented to the model for
+   * response generation
+   *
+   * @param GoogleCloudAiplatformV1ToolExaAiSearch $exaAiSearch
+   */
+  public function setExaAiSearch(GoogleCloudAiplatformV1ToolExaAiSearch $exaAiSearch)
+  {
+    $this->exaAiSearch = $exaAiSearch;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ToolExaAiSearch
+   */
+  public function getExaAiSearch()
+  {
+    return $this->exaAiSearch;
   }
   /**
    * Optional. Function tool type. One or more function declarations to be
