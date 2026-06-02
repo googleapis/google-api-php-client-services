@@ -20,21 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount extends \Google\Model
 {
   /**
-   * Aggregation key.
-   *
    * @var string
    */
   public $key;
   /**
-   * Aggregation value.
-   *
    * @var int
    */
   public $value;
 
   /**
-   * Aggregation key.
-   *
    * @param string $key
    */
   public function setKey($key)
@@ -49,8 +43,6 @@ class GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount extends \Go
     return $this->key;
   }
   /**
-   * Aggregation value.
-   *
    * @param int $value
    */
   public function setValue($value)

@@ -20,23 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class HttpResponse extends \Google\Model
 {
   /**
-   * The http path for which response code was returned by web application, for
-   * example, "https://test-app.a.run.app/test".
-   *
    * @var string
    */
   public $path;
   /**
-   * The http response code returned by the web application, for example, 200.
-   *
    * @var string
    */
   public $statusCode;
 
   /**
-   * The http path for which response code was returned by web application, for
-   * example, "https://test-app.a.run.app/test".
-   *
    * @param string $path
    */
   public function setPath($path)
@@ -51,8 +43,6 @@ class HttpResponse extends \Google\Model
     return $this->path;
   }
   /**
-   * The http response code returned by the web application, for example, 200.
-   *
    * @param string $statusCode
    */
   public function setStatusCode($statusCode)

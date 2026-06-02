@@ -23,16 +23,11 @@ class ListDescendantEventThreatDetectionCustomModulesResponse extends \Google\Co
   protected $eventThreatDetectionCustomModulesType = EventThreatDetectionCustomModule::class;
   protected $eventThreatDetectionCustomModulesDataType = 'array';
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * Custom modules belonging to the requested parent.
-   *
    * @param EventThreatDetectionCustomModule[] $eventThreatDetectionCustomModules
    */
   public function setEventThreatDetectionCustomModules($eventThreatDetectionCustomModules)
@@ -47,9 +42,6 @@ class ListDescendantEventThreatDetectionCustomModulesResponse extends \Google\Co
     return $this->eventThreatDetectionCustomModules;
   }
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
    * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)

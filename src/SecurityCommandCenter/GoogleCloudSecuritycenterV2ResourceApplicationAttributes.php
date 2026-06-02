@@ -32,8 +32,6 @@ class GoogleCloudSecuritycenterV2ResourceApplicationAttributes extends \Google\C
   protected $operatorOwnersDataType = 'array';
 
   /**
-   * Business team that ensures user needs are met and value is delivered
-   *
    * @param GoogleCloudSecuritycenterV2ResourceApplicationAttributesContactInfo[] $businessOwners
    */
   public function setBusinessOwners($businessOwners)
@@ -48,8 +46,6 @@ class GoogleCloudSecuritycenterV2ResourceApplicationAttributes extends \Google\C
     return $this->businessOwners;
   }
   /**
-   * User-defined criticality information.
-   *
    * @param GoogleCloudSecuritycenterV2ResourceApplicationAttributesCriticality $criticality
    */
   public function setCriticality(GoogleCloudSecuritycenterV2ResourceApplicationAttributesCriticality $criticality)
@@ -64,8 +60,6 @@ class GoogleCloudSecuritycenterV2ResourceApplicationAttributes extends \Google\C
     return $this->criticality;
   }
   /**
-   * Developer team that owns development and coding.
-   *
    * @param GoogleCloudSecuritycenterV2ResourceApplicationAttributesContactInfo[] $developerOwners
    */
   public function setDeveloperOwners($developerOwners)
@@ -80,8 +74,6 @@ class GoogleCloudSecuritycenterV2ResourceApplicationAttributes extends \Google\C
     return $this->developerOwners;
   }
   /**
-   * User-defined environment information.
-   *
    * @param GoogleCloudSecuritycenterV2ResourceApplicationAttributesEnvironment $environment
    */
   public function setEnvironment(GoogleCloudSecuritycenterV2ResourceApplicationAttributesEnvironment $environment)
@@ -96,8 +88,6 @@ class GoogleCloudSecuritycenterV2ResourceApplicationAttributes extends \Google\C
     return $this->environment;
   }
   /**
-   * Operator team that ensures runtime and operations.
-   *
    * @param GoogleCloudSecuritycenterV2ResourceApplicationAttributesContactInfo[] $operatorOwners
    */
   public function setOperatorOwners($operatorOwners)

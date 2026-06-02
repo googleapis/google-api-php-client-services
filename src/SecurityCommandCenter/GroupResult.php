@@ -20,21 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class GroupResult extends \Google\Model
 {
   /**
-   * Total count of resources for the given properties.
-   *
    * @var string
    */
   public $count;
   /**
-   * Properties matching the groupBy fields in the request.
-   *
    * @var array[]
    */
   public $properties;
 
   /**
-   * Total count of resources for the given properties.
-   *
    * @param string $count
    */
   public function setCount($count)
@@ -49,8 +43,6 @@ class GroupResult extends \Google\Model
     return $this->count;
   }
   /**
-   * Properties matching the groupBy fields in the request.
-   *
    * @param array[] $properties
    */
   public function setProperties($properties)

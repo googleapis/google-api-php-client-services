@@ -21,8 +21,6 @@ class GoogleCloudSecuritycenterV2NodePool extends \Google\Collection
 {
   protected $collection_key = 'nodes';
   /**
-   * Kubernetes node pool name.
-   *
    * @var string
    */
   public $name;
@@ -30,8 +28,6 @@ class GoogleCloudSecuritycenterV2NodePool extends \Google\Collection
   protected $nodesDataType = 'array';
 
   /**
-   * Kubernetes node pool name.
-   *
    * @param string $name
    */
   public function setName($name)
@@ -46,8 +42,6 @@ class GoogleCloudSecuritycenterV2NodePool extends \Google\Collection
     return $this->name;
   }
   /**
-   * Nodes associated with the finding.
-   *
    * @param GoogleCloudSecuritycenterV2Node[] $nodes
    */
   public function setNodes($nodes)

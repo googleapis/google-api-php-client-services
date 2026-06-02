@@ -21,9 +21,6 @@ class ListSourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'sources';
   /**
-   * Token to retrieve the next page of results, or empty if there are no more
-   * results.
-   *
    * @var string
    */
   public $nextPageToken;
@@ -31,9 +28,6 @@ class ListSourcesResponse extends \Google\Collection
   protected $sourcesDataType = 'array';
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more
-   * results.
-   *
    * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
@@ -48,8 +42,6 @@ class ListSourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Sources belonging to the requested parent.
-   *
    * @param Source[] $sources
    */
   public function setSources($sources)

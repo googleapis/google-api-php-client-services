@@ -23,16 +23,11 @@ class ListEffectiveEventThreatDetectionCustomModulesResponse extends \Google\Col
   protected $effectiveEventThreatDetectionCustomModulesType = EffectiveEventThreatDetectionCustomModule::class;
   protected $effectiveEventThreatDetectionCustomModulesDataType = 'array';
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * Effective custom modules belonging to the requested parent.
-   *
    * @param EffectiveEventThreatDetectionCustomModule[] $effectiveEventThreatDetectionCustomModules
    */
   public function setEffectiveEventThreatDetectionCustomModules($effectiveEventThreatDetectionCustomModules)
@@ -47,9 +42,6 @@ class ListEffectiveEventThreatDetectionCustomModulesResponse extends \Google\Col
     return $this->effectiveEventThreatDetectionCustomModules;
   }
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
-   *
    * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)

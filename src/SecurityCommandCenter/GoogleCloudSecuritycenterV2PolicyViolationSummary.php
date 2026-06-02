@@ -20,34 +20,23 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2PolicyViolationSummary extends \Google\Model
 {
   /**
-   * Total number of child resources that conform to the policy.
-   *
    * @var string
    */
   public $conformantResourcesCount;
   /**
-   * Number of child resources for which errors during evaluation occurred. The
-   * evaluation result for these child resources is effectively "unknown".
-   *
    * @var string
    */
   public $evaluationErrorsCount;
   /**
-   * Total count of child resources which were not in scope for evaluation.
-   *
    * @var string
    */
   public $outOfScopeResourcesCount;
   /**
-   * Count of child resources in violation of the policy.
-   *
    * @var string
    */
   public $policyViolationsCount;
 
   /**
-   * Total number of child resources that conform to the policy.
-   *
    * @param string $conformantResourcesCount
    */
   public function setConformantResourcesCount($conformantResourcesCount)
@@ -62,9 +51,6 @@ class GoogleCloudSecuritycenterV2PolicyViolationSummary extends \Google\Model
     return $this->conformantResourcesCount;
   }
   /**
-   * Number of child resources for which errors during evaluation occurred. The
-   * evaluation result for these child resources is effectively "unknown".
-   *
    * @param string $evaluationErrorsCount
    */
   public function setEvaluationErrorsCount($evaluationErrorsCount)
@@ -79,8 +65,6 @@ class GoogleCloudSecuritycenterV2PolicyViolationSummary extends \Google\Model
     return $this->evaluationErrorsCount;
   }
   /**
-   * Total count of child resources which were not in scope for evaluation.
-   *
    * @param string $outOfScopeResourcesCount
    */
   public function setOutOfScopeResourcesCount($outOfScopeResourcesCount)
@@ -95,8 +79,6 @@ class GoogleCloudSecuritycenterV2PolicyViolationSummary extends \Google\Model
     return $this->outOfScopeResourcesCount;
   }
   /**
-   * Count of child resources in violation of the policy.
-   *
    * @param string $policyViolationsCount
    */
   public function setPolicyViolationsCount($policyViolationsCount)

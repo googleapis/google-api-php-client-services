@@ -20,19 +20,11 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2SecretEnvironmentVariable extends \Google\Model
 {
   /**
-   * Environment variable name as a JSON encoded string. Note that value is not
-   * included since the value contains the secret data, which is sensitive core
-   * content.
-   *
    * @var string
    */
   public $key;
 
   /**
-   * Environment variable name as a JSON encoded string. Note that value is not
-   * included since the value contains the secret data, which is sensitive core
-   * content.
-   *
    * @param string $key
    */
   public function setKey($key)

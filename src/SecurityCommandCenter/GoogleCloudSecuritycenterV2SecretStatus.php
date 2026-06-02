@@ -19,42 +19,21 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2SecretStatus extends \Google\Model
 {
-  /**
-   * Default value; no validation was attempted.
-   */
   public const VALIDITY_SECRET_VALIDITY_UNSPECIFIED = 'SECRET_VALIDITY_UNSPECIFIED';
-  /**
-   * There is no mechanism to validate the secret.
-   */
   public const VALIDITY_SECRET_VALIDITY_UNSUPPORTED = 'SECRET_VALIDITY_UNSUPPORTED';
-  /**
-   * Validation is supported but the validation failed.
-   */
   public const VALIDITY_SECRET_VALIDITY_FAILED = 'SECRET_VALIDITY_FAILED';
-  /**
-   * The secret is confirmed to be invalid.
-   */
   public const VALIDITY_SECRET_VALIDITY_INVALID = 'SECRET_VALIDITY_INVALID';
-  /**
-   * The secret is confirmed to be valid.
-   */
   public const VALIDITY_SECRET_VALIDITY_VALID = 'SECRET_VALIDITY_VALID';
   /**
-   * Time that the secret was found.
-   *
    * @var string
    */
   public $lastUpdatedTime;
   /**
-   * The validity of the secret.
-   *
    * @var string
    */
   public $validity;
 
   /**
-   * Time that the secret was found.
-   *
    * @param string $lastUpdatedTime
    */
   public function setLastUpdatedTime($lastUpdatedTime)
@@ -69,11 +48,6 @@ class GoogleCloudSecuritycenterV2SecretStatus extends \Google\Model
     return $this->lastUpdatedTime;
   }
   /**
-   * The validity of the secret.
-   *
-   * Accepted values: SECRET_VALIDITY_UNSPECIFIED, SECRET_VALIDITY_UNSUPPORTED,
-   * SECRET_VALIDITY_FAILED, SECRET_VALIDITY_INVALID, SECRET_VALIDITY_VALID
-   *
    * @param self::VALIDITY_* $validity
    */
   public function setValidity($validity)

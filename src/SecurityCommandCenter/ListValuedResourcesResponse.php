@@ -21,15 +21,10 @@ class ListValuedResourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'valuedResources';
   /**
-   * Token to retrieve the next page of results, or empty if there are no more
-   * results.
-   *
    * @var string
    */
   public $nextPageToken;
   /**
-   * The estimated total number of results matching the query.
-   *
    * @var int
    */
   public $totalSize;
@@ -37,9 +32,6 @@ class ListValuedResourcesResponse extends \Google\Collection
   protected $valuedResourcesDataType = 'array';
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more
-   * results.
-   *
    * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
@@ -54,8 +46,6 @@ class ListValuedResourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * The estimated total number of results matching the query.
-   *
    * @param int $totalSize
    */
   public function setTotalSize($totalSize)
@@ -70,8 +60,6 @@ class ListValuedResourcesResponse extends \Google\Collection
     return $this->totalSize;
   }
   /**
-   * The valued resources that the attack path simulation identified.
-   *
    * @param ValuedResource[] $valuedResources
    */
   public function setValuedResources($valuedResources)

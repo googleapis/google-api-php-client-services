@@ -20,22 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Pipeline extends \Google\Model
 {
   /**
-   * The user-defined display name of pipeline, e.g. plants-classification
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Resource name of the pipeline, e.g. projects/{project}/locations/{location}
-   * /trainingPipelines/5253428229225578496
-   *
    * @var string
    */
   public $name;
 
   /**
-   * The user-defined display name of pipeline, e.g. plants-classification
-   *
    * @param string $displayName
    */
   public function setDisplayName($displayName)
@@ -50,9 +43,6 @@ class GoogleCloudSecuritycenterV2Pipeline extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Resource name of the pipeline, e.g. projects/{project}/locations/{location}
-   * /trainingPipelines/5253428229225578496
-   *
    * @param string $name
    */
   public function setName($name)

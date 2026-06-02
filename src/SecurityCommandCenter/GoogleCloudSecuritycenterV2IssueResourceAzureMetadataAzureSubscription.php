@@ -20,23 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription extends \Google\Model
 {
   /**
-   * The Azure subscription display name of the resource associated with the
-   * issue.
-   *
    * @var string
    */
   public $displayName;
   /**
-   * The Azure subscription ID of the resource associated with the issue.
-   *
    * @var string
    */
   public $id;
 
   /**
-   * The Azure subscription display name of the resource associated with the
-   * issue.
-   *
    * @param string $displayName
    */
   public function setDisplayName($displayName)
@@ -51,8 +43,6 @@ class GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription ext
     return $this->displayName;
   }
   /**
-   * The Azure subscription ID of the resource associated with the issue.
-   *
    * @param string $id
    */
   public function setId($id)

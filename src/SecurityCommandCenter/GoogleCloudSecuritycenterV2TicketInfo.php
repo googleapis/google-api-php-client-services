@@ -20,46 +20,31 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2TicketInfo extends \Google\Model
 {
   /**
-   * The assignee of the ticket in the ticket system.
-   *
    * @var string
    */
   public $assignee;
   /**
-   * The description of the ticket in the ticket system.
-   *
    * @var string
    */
   public $description;
   /**
-   * The identifier of the ticket in the ticket system.
-   *
    * @var string
    */
   public $id;
   /**
-   * The latest status of the ticket, as reported by the ticket system.
-   *
    * @var string
    */
   public $status;
   /**
-   * The time when the ticket was last updated, as reported by the ticket
-   * system.
-   *
    * @var string
    */
   public $updateTime;
   /**
-   * The link to the ticket in the ticket system.
-   *
    * @var string
    */
   public $uri;
 
   /**
-   * The assignee of the ticket in the ticket system.
-   *
    * @param string $assignee
    */
   public function setAssignee($assignee)
@@ -74,8 +59,6 @@ class GoogleCloudSecuritycenterV2TicketInfo extends \Google\Model
     return $this->assignee;
   }
   /**
-   * The description of the ticket in the ticket system.
-   *
    * @param string $description
    */
   public function setDescription($description)
@@ -90,8 +73,6 @@ class GoogleCloudSecuritycenterV2TicketInfo extends \Google\Model
     return $this->description;
   }
   /**
-   * The identifier of the ticket in the ticket system.
-   *
    * @param string $id
    */
   public function setId($id)
@@ -106,8 +87,6 @@ class GoogleCloudSecuritycenterV2TicketInfo extends \Google\Model
     return $this->id;
   }
   /**
-   * The latest status of the ticket, as reported by the ticket system.
-   *
    * @param string $status
    */
   public function setStatus($status)
@@ -122,9 +101,6 @@ class GoogleCloudSecuritycenterV2TicketInfo extends \Google\Model
     return $this->status;
   }
   /**
-   * The time when the ticket was last updated, as reported by the ticket
-   * system.
-   *
    * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
@@ -139,8 +115,6 @@ class GoogleCloudSecuritycenterV2TicketInfo extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * The link to the ticket in the ticket system.
-   *
    * @param string $uri
    */
   public function setUri($uri)

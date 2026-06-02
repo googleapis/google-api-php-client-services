@@ -20,19 +20,8 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2ToxicCombination extends \Google\Collection
 {
   protected $collection_key = 'relatedFindings';
-  /**
-   * The [Attack exposure score](https://cloud.google.com/security-command-
-   * center/docs/attack-exposure-learn#attack_exposure_scores) of this toxic
-   * combination. The score is a measure of how much this toxic combination
-   * exposes one or more high-value resources to potential attack.
-   *
-   * @var 
-   */
   public $attackExposureScore;
   /**
-   * List of resource names of findings associated with this toxic combination.
-   * For example, `organizations/123/sources/456/findings/789`.
-   *
    * @var string[]
    */
   public $relatedFindings;
@@ -46,9 +35,6 @@ class GoogleCloudSecuritycenterV2ToxicCombination extends \Google\Collection
     return $this->attackExposureScore;
   }
   /**
-   * List of resource names of findings associated with this toxic combination.
-   * For example, `organizations/123/sources/456/findings/789`.
-   *
    * @param string[] $relatedFindings
    */
   public function setRelatedFindings($relatedFindings)

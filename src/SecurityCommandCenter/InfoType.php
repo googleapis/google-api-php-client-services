@@ -20,33 +20,17 @@ namespace Google\Service\SecurityCommandCenter;
 class InfoType extends \Google\Model
 {
   /**
-   * Name of the information type. Either a name of your choosing when creating
-   * a CustomInfoType, or one of the names listed at
-   * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
-   * when specifying a built-in type. When sending Cloud DLP results to Data
-   * Catalog, infoType names should conform to the pattern
-   * `[A-Za-z0-9$_-]{1,64}`.
-   *
    * @var string
    */
   public $name;
   protected $sensitivityScoreType = SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**
-   * Optional version name for this InfoType.
-   *
    * @var string
    */
   public $version;
 
   /**
-   * Name of the information type. Either a name of your choosing when creating
-   * a CustomInfoType, or one of the names listed at
-   * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
-   * when specifying a built-in type. When sending Cloud DLP results to Data
-   * Catalog, infoType names should conform to the pattern
-   * `[A-Za-z0-9$_-]{1,64}`.
-   *
    * @param string $name
    */
   public function setName($name)
@@ -61,9 +45,6 @@ class InfoType extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional custom sensitivity for this InfoType. This only applies to data
-   * profiling.
-   *
    * @param SensitivityScore $sensitivityScore
    */
   public function setSensitivityScore(SensitivityScore $sensitivityScore)
@@ -78,8 +59,6 @@ class InfoType extends \Google\Model
     return $this->sensitivityScore;
   }
   /**
-   * Optional version name for this InfoType.
-   *
    * @param string $version
    */
   public function setVersion($version)

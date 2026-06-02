@@ -26,15 +26,11 @@ class GoogleCloudSecuritycenterV2Secret extends \Google\Model
   protected $statusType = GoogleCloudSecuritycenterV2SecretStatus::class;
   protected $statusDataType = '';
   /**
-   * The type of secret, for example, GCP_API_KEY.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * The environment variable containing the secret.
-   *
    * @param GoogleCloudSecuritycenterV2SecretEnvironmentVariable $environmentVariable
    */
   public function setEnvironmentVariable(GoogleCloudSecuritycenterV2SecretEnvironmentVariable $environmentVariable)
@@ -49,8 +45,6 @@ class GoogleCloudSecuritycenterV2Secret extends \Google\Model
     return $this->environmentVariable;
   }
   /**
-   * The file containing the secret.
-   *
    * @param GoogleCloudSecuritycenterV2SecretFilePath $filePath
    */
   public function setFilePath(GoogleCloudSecuritycenterV2SecretFilePath $filePath)
@@ -65,8 +59,6 @@ class GoogleCloudSecuritycenterV2Secret extends \Google\Model
     return $this->filePath;
   }
   /**
-   * The status of the secret.
-   *
    * @param GoogleCloudSecuritycenterV2SecretStatus $status
    */
   public function setStatus(GoogleCloudSecuritycenterV2SecretStatus $status)
@@ -81,8 +73,6 @@ class GoogleCloudSecuritycenterV2Secret extends \Google\Model
     return $this->status;
   }
   /**
-   * The type of secret, for example, GCP_API_KEY.
-   *
    * @param string $type
    */
   public function setType($type)

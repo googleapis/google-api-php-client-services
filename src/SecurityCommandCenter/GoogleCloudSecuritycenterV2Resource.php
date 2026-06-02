@@ -19,21 +19,9 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2Resource extends \Google\Model
 {
-  /**
-   * The cloud provider is unspecified.
-   */
   public const CLOUD_PROVIDER_CLOUD_PROVIDER_UNSPECIFIED = 'CLOUD_PROVIDER_UNSPECIFIED';
-  /**
-   * The cloud provider is Google Cloud.
-   */
   public const CLOUD_PROVIDER_GOOGLE_CLOUD_PLATFORM = 'GOOGLE_CLOUD_PLATFORM';
-  /**
-   * The cloud provider is Amazon Web Services.
-   */
   public const CLOUD_PROVIDER_AMAZON_WEB_SERVICES = 'AMAZON_WEB_SERVICES';
-  /**
-   * The cloud provider is Microsoft Azure.
-   */
   public const CLOUD_PROVIDER_MICROSOFT_AZURE = 'MICROSOFT_AZURE';
   protected $adcApplicationType = GoogleCloudSecuritycenterV2AdcApplication::class;
   protected $adcApplicationDataType = '';
@@ -48,64 +36,39 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
   protected $azureMetadataType = GoogleCloudSecuritycenterV2AzureMetadata::class;
   protected $azureMetadataDataType = '';
   /**
-   * Indicates which cloud provider the finding is from.
-   *
    * @var string
    */
   public $cloudProvider;
   /**
-   * The human readable name of the resource.
-   *
    * @var string
    */
   public $displayName;
   protected $gcpMetadataType = GcpMetadata::class;
   protected $gcpMetadataDataType = '';
   /**
-   * The region or location of the service (if applicable).
-   *
    * @var string
    */
   public $location;
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
-   *
    * @var string
    */
   public $name;
   protected $resourcePathType = GoogleCloudSecuritycenterV2ResourcePath::class;
   protected $resourcePathDataType = '';
   /**
-   * A string representation of the resource path. For Google Cloud, it has the
-   * format of `organizations/{organization_id}/folders/{folder_id}/folders/{fol
-   * der_id}/projects/{project_id}` where there can be any number of folders.
-   * For AWS, it has the format of `org/{organization_id}/ou/{organizational_uni
-   * t_id}/ou/{organizational_unit_id}/account/{account_id}` where there can be
-   * any number of organizational units. For Azure, it has the format of `mg/{ma
-   * nagement_group_id}/mg/{management_group_id}/subscription/{subscription_id}/
-   * rg/{resource_group_name}` where there can be any number of management
-   * groups.
-   *
    * @var string
    */
   public $resourcePathString;
   /**
-   * The service or resource provider associated with the resource.
-   *
    * @var string
    */
   public $service;
   /**
-   * The full resource type of the resource.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * The ADC application associated with the finding.
-   *
    * @param GoogleCloudSecuritycenterV2AdcApplication $adcApplication
    */
   public function setAdcApplication(GoogleCloudSecuritycenterV2AdcApplication $adcApplication)
@@ -120,8 +83,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->adcApplication;
   }
   /**
-   * The ADC template associated with the finding.
-   *
    * @param GoogleCloudSecuritycenterV2AdcApplicationTemplateRevision $adcApplicationTemplate
    */
   public function setAdcApplicationTemplate(GoogleCloudSecuritycenterV2AdcApplicationTemplateRevision $adcApplicationTemplate)
@@ -136,8 +97,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->adcApplicationTemplate;
   }
   /**
-   * The ADC shared template associated with the finding.
-   *
    * @param GoogleCloudSecuritycenterV2AdcSharedTemplateRevision $adcSharedTemplate
    */
   public function setAdcSharedTemplate(GoogleCloudSecuritycenterV2AdcSharedTemplateRevision $adcSharedTemplate)
@@ -152,8 +111,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->adcSharedTemplate;
   }
   /**
-   * The App Hub application this resource belongs to.
-   *
    * @param GoogleCloudSecuritycenterV2ResourceApplication $application
    */
   public function setApplication(GoogleCloudSecuritycenterV2ResourceApplication $application)
@@ -168,8 +125,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->application;
   }
   /**
-   * The AWS metadata associated with the finding.
-   *
    * @param GoogleCloudSecuritycenterV2AwsMetadata $awsMetadata
    */
   public function setAwsMetadata(GoogleCloudSecuritycenterV2AwsMetadata $awsMetadata)
@@ -184,8 +139,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->awsMetadata;
   }
   /**
-   * The Azure metadata associated with the finding.
-   *
    * @param GoogleCloudSecuritycenterV2AzureMetadata $azureMetadata
    */
   public function setAzureMetadata(GoogleCloudSecuritycenterV2AzureMetadata $azureMetadata)
@@ -200,11 +153,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->azureMetadata;
   }
   /**
-   * Indicates which cloud provider the finding is from.
-   *
-   * Accepted values: CLOUD_PROVIDER_UNSPECIFIED, GOOGLE_CLOUD_PLATFORM,
-   * AMAZON_WEB_SERVICES, MICROSOFT_AZURE
-   *
    * @param self::CLOUD_PROVIDER_* $cloudProvider
    */
   public function setCloudProvider($cloudProvider)
@@ -219,8 +167,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->cloudProvider;
   }
   /**
-   * The human readable name of the resource.
-   *
    * @param string $displayName
    */
   public function setDisplayName($displayName)
@@ -235,8 +181,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->displayName;
   }
   /**
-   * The Google Cloud metadata associated with the finding.
-   *
    * @param GcpMetadata $gcpMetadata
    */
   public function setGcpMetadata(GcpMetadata $gcpMetadata)
@@ -251,8 +195,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->gcpMetadata;
   }
   /**
-   * The region or location of the service (if applicable).
-   *
    * @param string $location
    */
   public function setLocation($location)
@@ -267,9 +209,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->location;
   }
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
-   *
    * @param string $name
    */
   public function setName($name)
@@ -284,8 +223,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->name;
   }
   /**
-   * Provides the path to the resource within the resource hierarchy.
-   *
    * @param GoogleCloudSecuritycenterV2ResourcePath $resourcePath
    */
   public function setResourcePath(GoogleCloudSecuritycenterV2ResourcePath $resourcePath)
@@ -300,16 +237,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->resourcePath;
   }
   /**
-   * A string representation of the resource path. For Google Cloud, it has the
-   * format of `organizations/{organization_id}/folders/{folder_id}/folders/{fol
-   * der_id}/projects/{project_id}` where there can be any number of folders.
-   * For AWS, it has the format of `org/{organization_id}/ou/{organizational_uni
-   * t_id}/ou/{organizational_unit_id}/account/{account_id}` where there can be
-   * any number of organizational units. For Azure, it has the format of `mg/{ma
-   * nagement_group_id}/mg/{management_group_id}/subscription/{subscription_id}/
-   * rg/{resource_group_name}` where there can be any number of management
-   * groups.
-   *
    * @param string $resourcePathString
    */
   public function setResourcePathString($resourcePathString)
@@ -324,8 +251,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->resourcePathString;
   }
   /**
-   * The service or resource provider associated with the resource.
-   *
    * @param string $service
    */
   public function setService($service)
@@ -340,8 +265,6 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
     return $this->service;
   }
   /**
-   * The full resource type of the resource.
-   *
    * @param string $type
    */
   public function setType($type)
