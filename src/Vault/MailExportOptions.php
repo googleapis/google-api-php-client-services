@@ -41,6 +41,10 @@ class MailExportOptions extends \Google\Model
    */
   public const EXPORT_FORMAT_XML = 'XML';
   /**
+   * Export as JSON. Only available for Gemini in Workpace.
+   */
+  public const EXPORT_FORMAT_JSON = 'JSON';
+  /**
    * The file format for exported messages.
    *
    * @var string
@@ -68,7 +72,7 @@ class MailExportOptions extends \Google\Model
   /**
    * The file format for exported messages.
    *
-   * Accepted values: EXPORT_FORMAT_UNSPECIFIED, MBOX, PST, ICS, XML
+   * Accepted values: EXPORT_FORMAT_UNSPECIFIED, MBOX, PST, ICS, XML, JSON
    *
    * @param self::EXPORT_FORMAT_* $exportFormat
    */
