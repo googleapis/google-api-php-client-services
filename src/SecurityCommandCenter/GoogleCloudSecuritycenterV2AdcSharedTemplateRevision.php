@@ -20,19 +20,11 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2AdcSharedTemplateRevision extends \Google\Model
 {
   /**
-   * The resource name of an ADC Shared Template Revision. Format: projects/{pro
-   * ject}/locations/{location}/spaces/{space}/applicationTemplates/{application
-   * _template}/revisions/{revision}
-   *
    * @var string
    */
   public $name;
 
   /**
-   * The resource name of an ADC Shared Template Revision. Format: projects/{pro
-   * ject}/locations/{location}/spaces/{space}/applicationTemplates/{application
-   * _template}/revisions/{revision}
-   *
    * @param string $name
    */
   public function setName($name)

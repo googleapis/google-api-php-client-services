@@ -21,73 +21,42 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
 {
   protected $collection_key = 'assignees';
   /**
-   * References primary/secondary etc assignees in the external system.
-   *
    * @var string[]
    */
   public $assignees;
   /**
-   * The time when the case was closed, as reported by the external system.
-   *
    * @var string
    */
   public $caseCloseTime;
   /**
-   * The time when the case was created, as reported by the external system.
-   *
    * @var string
    */
   public $caseCreateTime;
   /**
-   * The priority of the finding's corresponding case in the external system.
-   *
    * @var string
    */
   public $casePriority;
   /**
-   * The SLA of the finding's corresponding case in the external system.
-   *
    * @var string
    */
   public $caseSla;
   /**
-   * The link to the finding's corresponding case in the external system.
-   *
    * @var string
    */
   public $caseUri;
   /**
-   * The time when the case was last updated, as reported by the external
-   * system.
-   *
    * @var string
    */
   public $externalSystemUpdateTime;
   /**
-   * The identifier that's used to track the finding's corresponding case in the
-   * external system.
-   *
    * @var string
    */
   public $externalUid;
   /**
-   * Full resource name of the external system. The following list shows some
-   * examples: +
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira` + `o
-   * rganizations/1234/sources/5678/locations/us/findings/123456/externalSystems
-   * /jira` + `folders/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/locations/us/findings/123456/externalSystems/jir
-   * a` + `projects/1234/sources/5678/findings/123456/externalSystems/jira` + `p
-   * rojects/1234/sources/5678/locations/us/findings/123456/externalSystems/jira
-   * `
-   *
    * @var string
    */
   public $name;
   /**
-   * The most recent status of the finding's corresponding case, as reported by
-   * the external system.
-   *
    * @var string
    */
   public $status;
@@ -95,8 +64,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
   protected $ticketInfoDataType = '';
 
   /**
-   * References primary/secondary etc assignees in the external system.
-   *
    * @param string[] $assignees
    */
   public function setAssignees($assignees)
@@ -111,8 +78,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->assignees;
   }
   /**
-   * The time when the case was closed, as reported by the external system.
-   *
    * @param string $caseCloseTime
    */
   public function setCaseCloseTime($caseCloseTime)
@@ -127,8 +92,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->caseCloseTime;
   }
   /**
-   * The time when the case was created, as reported by the external system.
-   *
    * @param string $caseCreateTime
    */
   public function setCaseCreateTime($caseCreateTime)
@@ -143,8 +106,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->caseCreateTime;
   }
   /**
-   * The priority of the finding's corresponding case in the external system.
-   *
    * @param string $casePriority
    */
   public function setCasePriority($casePriority)
@@ -159,8 +120,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->casePriority;
   }
   /**
-   * The SLA of the finding's corresponding case in the external system.
-   *
    * @param string $caseSla
    */
   public function setCaseSla($caseSla)
@@ -175,8 +134,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->caseSla;
   }
   /**
-   * The link to the finding's corresponding case in the external system.
-   *
    * @param string $caseUri
    */
   public function setCaseUri($caseUri)
@@ -191,9 +148,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->caseUri;
   }
   /**
-   * The time when the case was last updated, as reported by the external
-   * system.
-   *
    * @param string $externalSystemUpdateTime
    */
   public function setExternalSystemUpdateTime($externalSystemUpdateTime)
@@ -208,9 +162,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->externalSystemUpdateTime;
   }
   /**
-   * The identifier that's used to track the finding's corresponding case in the
-   * external system.
-   *
    * @param string $externalUid
    */
   public function setExternalUid($externalUid)
@@ -225,16 +176,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->externalUid;
   }
   /**
-   * Full resource name of the external system. The following list shows some
-   * examples: +
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira` + `o
-   * rganizations/1234/sources/5678/locations/us/findings/123456/externalSystems
-   * /jira` + `folders/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/locations/us/findings/123456/externalSystems/jir
-   * a` + `projects/1234/sources/5678/findings/123456/externalSystems/jira` + `p
-   * rojects/1234/sources/5678/locations/us/findings/123456/externalSystems/jira
-   * `
-   *
    * @param string $name
    */
   public function setName($name)
@@ -249,9 +190,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->name;
   }
   /**
-   * The most recent status of the finding's corresponding case, as reported by
-   * the external system.
-   *
    * @param string $status
    */
   public function setStatus($status)
@@ -266,9 +204,6 @@ class GoogleCloudSecuritycenterV2ExternalSystem extends \Google\Collection
     return $this->status;
   }
   /**
-   * Information about the ticket, if any, that is being used to track the
-   * resolution of the issue that is identified by this finding.
-   *
    * @param GoogleCloudSecuritycenterV2TicketInfo $ticketInfo
    */
   public function setTicketInfo(GoogleCloudSecuritycenterV2TicketInfo $ticketInfo)

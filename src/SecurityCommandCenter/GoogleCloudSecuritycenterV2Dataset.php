@@ -20,29 +20,19 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Dataset extends \Google\Model
 {
   /**
-   * The user defined display name of dataset, e.g. plants-dataset
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Resource name of the dataset, e.g.
-   * projects/{project}/locations/{location}/datasets/2094040236064505856
-   *
    * @var string
    */
   public $name;
   /**
-   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-
-   * test.AIPPtest.gsod
-   *
    * @var string
    */
   public $source;
 
   /**
-   * The user defined display name of dataset, e.g. plants-dataset
-   *
    * @param string $displayName
    */
   public function setDisplayName($displayName)
@@ -57,9 +47,6 @@ class GoogleCloudSecuritycenterV2Dataset extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Resource name of the dataset, e.g.
-   * projects/{project}/locations/{location}/datasets/2094040236064505856
-   *
    * @param string $name
    */
   public function setName($name)
@@ -74,9 +61,6 @@ class GoogleCloudSecuritycenterV2Dataset extends \Google\Model
     return $this->name;
   }
   /**
-   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-
-   * test.AIPPtest.gsod
-   *
    * @param string $source
    */
   public function setSource($source)

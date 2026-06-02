@@ -21,30 +21,15 @@ class GoogleCloudSecuritycenterV2ExfilResource extends \Google\Collection
 {
   protected $collection_key = 'components';
   /**
-   * Subcomponents of the asset that was exfiltrated, like URIs used during
-   * exfiltration, table names, databases, and filenames. For example, multiple
-   * tables might have been exfiltrated from the same Cloud SQL instance, or
-   * multiple files might have been exfiltrated from the same Cloud Storage
-   * bucket.
-   *
    * @var string[]
    */
   public $components;
   /**
-   * The resource's [full resource name](https://cloud.google.com/apis/design/re
-   * source_names#full_resource_name).
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Subcomponents of the asset that was exfiltrated, like URIs used during
-   * exfiltration, table names, databases, and filenames. For example, multiple
-   * tables might have been exfiltrated from the same Cloud SQL instance, or
-   * multiple files might have been exfiltrated from the same Cloud Storage
-   * bucket.
-   *
    * @param string[] $components
    */
   public function setComponents($components)
@@ -59,9 +44,6 @@ class GoogleCloudSecuritycenterV2ExfilResource extends \Google\Collection
     return $this->components;
   }
   /**
-   * The resource's [full resource name](https://cloud.google.com/apis/design/re
-   * source_names#full_resource_name).
-   *
    * @param string $name
    */
   public function setName($name)

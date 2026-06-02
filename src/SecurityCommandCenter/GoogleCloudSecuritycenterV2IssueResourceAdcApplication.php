@@ -22,16 +22,11 @@ class GoogleCloudSecuritycenterV2IssueResourceAdcApplication extends \Google\Mod
   protected $attributesType = GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes::class;
   protected $attributesDataType = '';
   /**
-   * The resource name of an ADC Application. Format: projects/{project}/locatio
-   * ns/{location}/spaces/{space}/applications/{application}
-   *
    * @var string
    */
   public $name;
 
   /**
-   * Consumer provided attributes for the AppHub application.
-   *
    * @param GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes $attributes
    */
   public function setAttributes(GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes $attributes)
@@ -46,9 +41,6 @@ class GoogleCloudSecuritycenterV2IssueResourceAdcApplication extends \Google\Mod
     return $this->attributes;
   }
   /**
-   * The resource name of an ADC Application. Format: projects/{project}/locatio
-   * ns/{location}/spaces/{space}/applications/{application}
-   *
    * @param string $name
    */
   public function setName($name)

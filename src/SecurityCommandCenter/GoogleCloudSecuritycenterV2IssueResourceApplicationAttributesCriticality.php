@@ -19,39 +19,17 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2IssueResourceApplicationAttributesCriticality extends \Google\Model
 {
-  /**
-   * Unspecified type.
-   */
   public const TYPE_CRITICALITY_TYPE_UNSPECIFIED = 'CRITICALITY_TYPE_UNSPECIFIED';
-  /**
-   * Mission critical service, application or workload.
-   */
   public const TYPE_MISSION_CRITICAL = 'MISSION_CRITICAL';
-  /**
-   * High impact.
-   */
   public const TYPE_HIGH = 'HIGH';
-  /**
-   * Medium impact.
-   */
   public const TYPE_MEDIUM = 'MEDIUM';
-  /**
-   * Low impact.
-   */
   public const TYPE_LOW = 'LOW';
   /**
-   * Criticality Type.
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Criticality Type.
-   *
-   * Accepted values: CRITICALITY_TYPE_UNSPECIFIED, MISSION_CRITICAL, HIGH,
-   * MEDIUM, LOW
-   *
    * @param self::TYPE_* $type
    */
   public function setType($type)

@@ -21,19 +21,11 @@ class GoogleCloudSecuritycenterV2Chokepoint extends \Google\Collection
 {
   protected $collection_key = 'relatedFindings';
   /**
-   * List of resource names of findings associated with this chokepoint. For
-   * example, organizations/123/sources/456/findings/789. This list will have at
-   * most 100 findings.
-   *
    * @var string[]
    */
   public $relatedFindings;
 
   /**
-   * List of resource names of findings associated with this chokepoint. For
-   * example, organizations/123/sources/456/findings/789. This list will have at
-   * most 100 findings.
-   *
    * @param string[] $relatedFindings
    */
   public function setRelatedFindings($relatedFindings)

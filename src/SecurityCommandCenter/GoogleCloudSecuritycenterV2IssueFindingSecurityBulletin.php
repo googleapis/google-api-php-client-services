@@ -20,15 +20,11 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueFindingSecurityBulletin extends \Google\Model
 {
   /**
-   * The security bulletin name.
-   *
    * @var string
    */
   public $name;
 
   /**
-   * The security bulletin name.
-   *
    * @param string $name
    */
   public function setName($name)

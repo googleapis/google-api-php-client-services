@@ -23,42 +23,27 @@ class GoogleCloudSecuritycenterV1p1beta1Resource extends \Google\Collection
   protected $foldersType = GoogleCloudSecuritycenterV1p1beta1Folder::class;
   protected $foldersDataType = 'array';
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
-   *
    * @var string
    */
   public $name;
   /**
-   * The full resource name of resource's parent.
-   *
    * @var string
    */
   public $parent;
   /**
-   * The human readable name of resource's parent.
-   *
    * @var string
    */
   public $parentDisplayName;
   /**
-   * The full resource name of project that the resource belongs to.
-   *
    * @var string
    */
   public $project;
   /**
-   * The project id that the resource belongs to.
-   *
    * @var string
    */
   public $projectDisplayName;
 
   /**
-   * Output only. Contains a Folder message for each folder in the assets
-   * ancestry. The first folder is the deepest nested folder, and the last
-   * folder is the folder directly under the Organization.
-   *
    * @param GoogleCloudSecuritycenterV1p1beta1Folder[] $folders
    */
   public function setFolders($folders)
@@ -73,9 +58,6 @@ class GoogleCloudSecuritycenterV1p1beta1Resource extends \Google\Collection
     return $this->folders;
   }
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
-   *
    * @param string $name
    */
   public function setName($name)
@@ -90,8 +72,6 @@ class GoogleCloudSecuritycenterV1p1beta1Resource extends \Google\Collection
     return $this->name;
   }
   /**
-   * The full resource name of resource's parent.
-   *
    * @param string $parent
    */
   public function setParent($parent)
@@ -106,8 +86,6 @@ class GoogleCloudSecuritycenterV1p1beta1Resource extends \Google\Collection
     return $this->parent;
   }
   /**
-   * The human readable name of resource's parent.
-   *
    * @param string $parentDisplayName
    */
   public function setParentDisplayName($parentDisplayName)
@@ -122,8 +100,6 @@ class GoogleCloudSecuritycenterV1p1beta1Resource extends \Google\Collection
     return $this->parentDisplayName;
   }
   /**
-   * The full resource name of project that the resource belongs to.
-   *
    * @param string $project
    */
   public function setProject($project)
@@ -138,8 +114,6 @@ class GoogleCloudSecuritycenterV1p1beta1Resource extends \Google\Collection
     return $this->project;
   }
   /**
-   * The project id that the resource belongs to.
-   *
    * @param string $projectDisplayName
    */
   public function setProjectDisplayName($projectDisplayName)

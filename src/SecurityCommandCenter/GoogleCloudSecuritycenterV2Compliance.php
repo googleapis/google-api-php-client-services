@@ -21,28 +21,19 @@ class GoogleCloudSecuritycenterV2Compliance extends \Google\Collection
 {
   protected $collection_key = 'ids';
   /**
-   * Policies within the standard or benchmark, for example, A.12.4.1
-   *
    * @var string[]
    */
   public $ids;
   /**
-   * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and
-   * OWASP.
-   *
    * @var string
    */
   public $standard;
   /**
-   * Version of the standard or benchmark, for example, 1.1
-   *
    * @var string
    */
   public $version;
 
   /**
-   * Policies within the standard or benchmark, for example, A.12.4.1
-   *
    * @param string[] $ids
    */
   public function setIds($ids)
@@ -57,9 +48,6 @@ class GoogleCloudSecuritycenterV2Compliance extends \Google\Collection
     return $this->ids;
   }
   /**
-   * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and
-   * OWASP.
-   *
    * @param string $standard
    */
   public function setStandard($standard)
@@ -74,8 +62,6 @@ class GoogleCloudSecuritycenterV2Compliance extends \Google\Collection
     return $this->standard;
   }
   /**
-   * Version of the standard or benchmark, for example, 1.1
-   *
    * @param string $version
    */
   public function setVersion($version)

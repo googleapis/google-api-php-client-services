@@ -28,8 +28,6 @@ class GoogleCloudSecuritycenterV2AwsMetadata extends \Google\Collection
   protected $organizationalUnitsDataType = 'array';
 
   /**
-   * The AWS account associated with the resource.
-   *
    * @param GoogleCloudSecuritycenterV2AwsAccount $account
    */
   public function setAccount(GoogleCloudSecuritycenterV2AwsAccount $account)
@@ -44,8 +42,6 @@ class GoogleCloudSecuritycenterV2AwsMetadata extends \Google\Collection
     return $this->account;
   }
   /**
-   * The AWS organization associated with the resource.
-   *
    * @param GoogleCloudSecuritycenterV2AwsOrganization $organization
    */
   public function setOrganization(GoogleCloudSecuritycenterV2AwsOrganization $organization)
@@ -60,9 +56,6 @@ class GoogleCloudSecuritycenterV2AwsMetadata extends \Google\Collection
     return $this->organization;
   }
   /**
-   * A list of AWS organizational units associated with the resource, ordered
-   * from lowest level (closest to the account) to highest level.
-   *
    * @param GoogleCloudSecuritycenterV2AwsOrganizationalUnit[] $organizationalUnits
    */
   public function setOrganizationalUnits($organizationalUnits)

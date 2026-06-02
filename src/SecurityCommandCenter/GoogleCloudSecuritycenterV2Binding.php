@@ -21,14 +21,10 @@ class GoogleCloudSecuritycenterV2Binding extends \Google\Collection
 {
   protected $collection_key = 'subjects';
   /**
-   * Name for the binding.
-   *
    * @var string
    */
   public $name;
   /**
-   * Namespace for the binding.
-   *
    * @var string
    */
   public $ns;
@@ -38,8 +34,6 @@ class GoogleCloudSecuritycenterV2Binding extends \Google\Collection
   protected $subjectsDataType = 'array';
 
   /**
-   * Name for the binding.
-   *
    * @param string $name
    */
   public function setName($name)
@@ -54,8 +48,6 @@ class GoogleCloudSecuritycenterV2Binding extends \Google\Collection
     return $this->name;
   }
   /**
-   * Namespace for the binding.
-   *
    * @param string $ns
    */
   public function setNs($ns)
@@ -70,8 +62,6 @@ class GoogleCloudSecuritycenterV2Binding extends \Google\Collection
     return $this->ns;
   }
   /**
-   * The Role or ClusterRole referenced by the binding.
-   *
    * @param GoogleCloudSecuritycenterV2Role $role
    */
   public function setRole(GoogleCloudSecuritycenterV2Role $role)
@@ -86,9 +76,6 @@ class GoogleCloudSecuritycenterV2Binding extends \Google\Collection
     return $this->role;
   }
   /**
-   * Represents one or more subjects that are bound to the role. Not always
-   * available for PATCH requests.
-   *
    * @param GoogleCloudSecuritycenterV2Subject[] $subjects
    */
   public function setSubjects($subjects)

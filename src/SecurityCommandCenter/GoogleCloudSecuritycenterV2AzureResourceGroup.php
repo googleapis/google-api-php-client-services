@@ -20,21 +20,15 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2AzureResourceGroup extends \Google\Model
 {
   /**
-   * The ID of the Azure resource group.
-   *
    * @var string
    */
   public $id;
   /**
-   * The name of the Azure resource group. This is not a UUID.
-   *
    * @var string
    */
   public $name;
 
   /**
-   * The ID of the Azure resource group.
-   *
    * @param string $id
    */
   public function setId($id)
@@ -49,8 +43,6 @@ class GoogleCloudSecuritycenterV2AzureResourceGroup extends \Google\Model
     return $this->id;
   }
   /**
-   * The name of the Azure resource group. This is not a UUID.
-   *
    * @param string $name
    */
   public function setName($name)

@@ -19,39 +19,20 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV1beta1RunAssetDiscoveryResponse extends \Google\Model
 {
-  /**
-   * Asset discovery run state was unspecified.
-   */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
-  /**
-   * Asset discovery run completed successfully.
-   */
   public const STATE_COMPLETED = 'COMPLETED';
-  /**
-   * Asset discovery run was cancelled with tasks still pending, as another run
-   * for the same organization was started with a higher priority.
-   */
   public const STATE_SUPERSEDED = 'SUPERSEDED';
-  /**
-   * Asset discovery run was killed and terminated.
-   */
   public const STATE_TERMINATED = 'TERMINATED';
   /**
-   * The duration between asset discovery run start and end
-   *
    * @var string
    */
   public $duration;
   /**
-   * The state of an asset discovery run.
-   *
    * @var string
    */
   public $state;
 
   /**
-   * The duration between asset discovery run start and end
-   *
    * @param string $duration
    */
   public function setDuration($duration)
@@ -66,10 +47,6 @@ class GoogleCloudSecuritycenterV1beta1RunAssetDiscoveryResponse extends \Google\
     return $this->duration;
   }
   /**
-   * The state of an asset discovery run.
-   *
-   * Accepted values: STATE_UNSPECIFIED, COMPLETED, SUPERSEDED, TERMINATED
-   *
    * @param self::STATE_* $state
    */
   public function setState($state)

@@ -19,56 +19,30 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2Framework extends \Google\Collection
 {
-  /**
-   * Default value. This value is unused.
-   */
   public const TYPE_FRAMEWORK_TYPE_UNSPECIFIED = 'FRAMEWORK_TYPE_UNSPECIFIED';
-  /**
-   * The framework is a built-in framework if it is created and managed by GCP.
-   */
   public const TYPE_FRAMEWORK_TYPE_BUILT_IN = 'FRAMEWORK_TYPE_BUILT_IN';
-  /**
-   * The framework is a custom framework if it is created and managed by the
-   * user.
-   */
   public const TYPE_FRAMEWORK_TYPE_CUSTOM = 'FRAMEWORK_TYPE_CUSTOM';
   protected $collection_key = 'controls';
   /**
-   * Category of the framework associated with the finding. E.g. Security
-   * Benchmark, or Assured Workloads
-   *
    * @var string[]
    */
   public $category;
   protected $controlsType = GoogleCloudSecuritycenterV2Control::class;
   protected $controlsDataType = 'array';
   /**
-   * Display name of the framework. For a standard framework, this will look
-   * like e.g. PCI DSS 3.2.1, whereas for a custom framework it can be a user
-   * defined string like MyFramework
-   *
    * @var string
    */
   public $displayName;
   /**
-   * Name of the framework associated with the finding
-   *
    * @var string
    */
   public $name;
   /**
-   * Type of the framework associated with the finding, to specify whether the
-   * framework is built-in (pre-defined and immutable) or a custom framework
-   * defined by the customer (equivalent to security posture)
-   *
    * @var string
    */
   public $type;
 
   /**
-   * Category of the framework associated with the finding. E.g. Security
-   * Benchmark, or Assured Workloads
-   *
    * @param string[] $category
    */
   public function setCategory($category)
@@ -83,8 +57,6 @@ class GoogleCloudSecuritycenterV2Framework extends \Google\Collection
     return $this->category;
   }
   /**
-   * The controls associated with the framework.
-   *
    * @param GoogleCloudSecuritycenterV2Control[] $controls
    */
   public function setControls($controls)
@@ -99,10 +71,6 @@ class GoogleCloudSecuritycenterV2Framework extends \Google\Collection
     return $this->controls;
   }
   /**
-   * Display name of the framework. For a standard framework, this will look
-   * like e.g. PCI DSS 3.2.1, whereas for a custom framework it can be a user
-   * defined string like MyFramework
-   *
    * @param string $displayName
    */
   public function setDisplayName($displayName)
@@ -117,8 +85,6 @@ class GoogleCloudSecuritycenterV2Framework extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * Name of the framework associated with the finding
-   *
    * @param string $name
    */
   public function setName($name)
@@ -133,13 +99,6 @@ class GoogleCloudSecuritycenterV2Framework extends \Google\Collection
     return $this->name;
   }
   /**
-   * Type of the framework associated with the finding, to specify whether the
-   * framework is built-in (pre-defined and immutable) or a custom framework
-   * defined by the customer (equivalent to security posture)
-   *
-   * Accepted values: FRAMEWORK_TYPE_UNSPECIFIED, FRAMEWORK_TYPE_BUILT_IN,
-   * FRAMEWORK_TYPE_CUSTOM
-   *
    * @param self::TYPE_* $type
    */
   public function setType($type)

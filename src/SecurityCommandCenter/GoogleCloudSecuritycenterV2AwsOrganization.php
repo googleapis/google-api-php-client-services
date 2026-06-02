@@ -20,19 +20,11 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2AwsOrganization extends \Google\Model
 {
   /**
-   * The unique identifier (ID) for the organization. The regex pattern for an
-   * organization ID string requires "o-" followed by from 10 to 32 lowercase
-   * letters or digits.
-   *
    * @var string
    */
   public $id;
 
   /**
-   * The unique identifier (ID) for the organization. The regex pattern for an
-   * organization ID string requires "o-" followed by from 10 to 32 lowercase
-   * letters or digits.
-   *
    * @param string $id
    */
   public function setId($id)
