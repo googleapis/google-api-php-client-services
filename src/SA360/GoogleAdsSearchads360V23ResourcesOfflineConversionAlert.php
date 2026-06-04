@@ -1,0 +1,59 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\SA360;
+
+class GoogleAdsSearchads360V23ResourcesOfflineConversionAlert extends \Google\Model
+{
+  protected $errorType = GoogleAdsSearchads360V23ResourcesOfflineConversionError::class;
+  protected $errorDataType = '';
+  /**
+   * Output only. Percentage of the error, the range of this field should be [0,
+   * 1.0].
+   *
+   * @var 
+   */
+  public $errorPercentage;
+
+  /**
+   * Output only. Error for offline conversion client alert.
+   *
+   * @param GoogleAdsSearchads360V23ResourcesOfflineConversionError $error
+   */
+  public function setError(GoogleAdsSearchads360V23ResourcesOfflineConversionError $error)
+  {
+    $this->error = $error;
+  }
+  /**
+   * @return GoogleAdsSearchads360V23ResourcesOfflineConversionError
+   */
+  public function getError()
+  {
+    return $this->error;
+  }
+  public function setErrorPercentage($errorPercentage)
+  {
+    $this->errorPercentage = $errorPercentage;
+  }
+  public function getErrorPercentage()
+  {
+    return $this->errorPercentage;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAdsSearchads360V23ResourcesOfflineConversionAlert::class, 'Google_Service_SA360_GoogleAdsSearchads360V23ResourcesOfflineConversionAlert');

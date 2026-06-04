@@ -1,0 +1,76 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\SA360;
+
+class GoogleAdsSearchads360V23ResourcesListingGroupFilterDimensionWebpageCondition extends \Google\Model
+{
+  /**
+   * Filters the URLs in a page feed that have this custom label. A custom label
+   * can be added to a campaign by creating an AssetSet of type PAGE_FEED and
+   * linking it to the campaign using CampaignAssetSet.
+   *
+   * @var string
+   */
+  public $customLabel;
+  /**
+   * Filters the URLs in a page feed and the URLs from the advertiser web domain
+   * that contain this string.
+   *
+   * @var string
+   */
+  public $urlContains;
+
+  /**
+   * Filters the URLs in a page feed that have this custom label. A custom label
+   * can be added to a campaign by creating an AssetSet of type PAGE_FEED and
+   * linking it to the campaign using CampaignAssetSet.
+   *
+   * @param string $customLabel
+   */
+  public function setCustomLabel($customLabel)
+  {
+    $this->customLabel = $customLabel;
+  }
+  /**
+   * @return string
+   */
+  public function getCustomLabel()
+  {
+    return $this->customLabel;
+  }
+  /**
+   * Filters the URLs in a page feed and the URLs from the advertiser web domain
+   * that contain this string.
+   *
+   * @param string $urlContains
+   */
+  public function setUrlContains($urlContains)
+  {
+    $this->urlContains = $urlContains;
+  }
+  /**
+   * @return string
+   */
+  public function getUrlContains()
+  {
+    return $this->urlContains;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAdsSearchads360V23ResourcesListingGroupFilterDimensionWebpageCondition::class, 'Google_Service_SA360_GoogleAdsSearchads360V23ResourcesListingGroupFilterDimensionWebpageCondition');
