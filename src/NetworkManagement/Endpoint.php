@@ -119,6 +119,15 @@ class Endpoint extends \Google\Model
   protected $appEngineVersionDataType = '';
   protected $cloudFunctionType = CloudFunctionEndpoint::class;
   protected $cloudFunctionDataType = '';
+  /**
+   * A [Cloud Run](https://cloud.google.com/run) [job](https://docs.cloud.google
+   * .com/run/docs/reference/rest/v2/projects.locations.jobs#Job) URI.
+   * Applicable only to source endpoint. The format is:
+   * projects/{project}/locations/{location}/jobs/{job}
+   *
+   * @var string
+   */
+  public $cloudRunJob;
   protected $cloudRunRevisionType = CloudRunRevisionEndpoint::class;
   protected $cloudRunRevisionDataType = '';
   /**
@@ -275,6 +284,25 @@ class Endpoint extends \Google\Model
   public function getCloudFunction()
   {
     return $this->cloudFunction;
+  }
+  /**
+   * A [Cloud Run](https://cloud.google.com/run) [job](https://docs.cloud.google
+   * .com/run/docs/reference/rest/v2/projects.locations.jobs#Job) URI.
+   * Applicable only to source endpoint. The format is:
+   * projects/{project}/locations/{location}/jobs/{job}
+   *
+   * @param string $cloudRunJob
+   */
+  public function setCloudRunJob($cloudRunJob)
+  {
+    $this->cloudRunJob = $cloudRunJob;
+  }
+  /**
+   * @return string
+   */
+  public function getCloudRunJob()
+  {
+    return $this->cloudRunJob;
   }
   /**
    * A [Cloud Run](https://cloud.google.com/run) [revision](https://cloud.google
