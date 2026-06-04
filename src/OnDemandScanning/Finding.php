@@ -20,11 +20,41 @@ namespace Google\Service\OnDemandScanning;
 class Finding extends \Google\Model
 {
   /**
+   * Unspecified scanner.
+   */
+  public const SCANNER_SCANNER_UNSPECIFIED = 'SCANNER_UNSPECIFIED';
+  /**
+   * Static scanner.
+   */
+  public const SCANNER_STATIC = 'STATIC';
+  /**
+   * LLM scanner.
+   */
+  public const SCANNER_LLM = 'LLM';
+  /**
+   * Unspecified severity.
+   */
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * Critical severity.
+   */
+  public const SEVERITY_CRITICAL = 'CRITICAL';
+  /**
+   * High severity.
+   */
+  public const SEVERITY_HIGH = 'HIGH';
+  /**
    * Category of the finding.
    *
    * @var string
    */
   public $category;
+  /**
+   * Description of the finding category.
+   *
+   * @var string
+   */
+  public $details;
   protected $locationType = FindingLocation::class;
   protected $locationDataType = '';
   /**
@@ -57,6 +87,22 @@ class Finding extends \Google\Model
     return $this->category;
   }
   /**
+   * Description of the finding category.
+   *
+   * @param string $details
+   */
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  /**
+   * @return string
+   */
+  public function getDetails()
+  {
+    return $this->details;
+  }
+  /**
    * Location (path and line) where the finding was detected.
    *
    * @param FindingLocation $location
@@ -75,14 +121,16 @@ class Finding extends \Google\Model
   /**
    * Scanner determines which engine (e.g. static, llm) emitted the finding.
    *
-   * @param string $scanner
+   * Accepted values: SCANNER_UNSPECIFIED, STATIC, LLM
+   *
+   * @param self::SCANNER_* $scanner
    */
   public function setScanner($scanner)
   {
     $this->scanner = $scanner;
   }
   /**
-   * @return string
+   * @return self::SCANNER_*
    */
   public function getScanner()
   {
@@ -91,14 +139,16 @@ class Finding extends \Google\Model
   /**
    * Severity of the finding.
    *
-   * @param string $severity
+   * Accepted values: SEVERITY_UNSPECIFIED, CRITICAL, HIGH
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
