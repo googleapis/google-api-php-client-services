@@ -17,15 +17,36 @@
 
 namespace Google\Service\SaaSServiceManagement;
 
-class UnitKind extends \Google\Collection
+class UnitGroup extends \Google\Model
 {
-  public const BOUNDARY_TYPE_BOUNDARY_TYPE_UNSPECIFIED = 'BOUNDARY_TYPE_UNSPECIFIED';
   /**
-   * Tenant project boundary.
+   * Unspecified state.
    */
-  public const BOUNDARY_TYPE_BOUNDARY_TYPE_TENANT_PROJECT = 'BOUNDARY_TYPE_TENANT_PROJECT';
-  public const BOUNDARY_TYPE_BOUNDARY_TYPE_MANAGED_PROJECT = 'BOUNDARY_TYPE_MANAGED_PROJECT';
-  protected $collection_key = 'outputVariableMappings';
+  public const STATE_UNIT_GROUP_STATE_UNSPECIFIED = 'UNIT_GROUP_STATE_UNSPECIFIED';
+  /**
+   * UnitGroup is not provisioned.
+   */
+  public const STATE_UNIT_GROUP_STATE_NOT_PROVISIONED = 'UNIT_GROUP_STATE_NOT_PROVISIONED';
+  /**
+   * UnitGroup is being provisioned.
+   */
+  public const STATE_UNIT_GROUP_STATE_PROVISIONING = 'UNIT_GROUP_STATE_PROVISIONING';
+  /**
+   * UnitGroup is being updated.
+   */
+  public const STATE_UNIT_GROUP_STATE_UPDATING = 'UNIT_GROUP_STATE_UPDATING';
+  /**
+   * UnitGroup is being deprovisioned.
+   */
+  public const STATE_UNIT_GROUP_STATE_DEPROVISIONING = 'UNIT_GROUP_STATE_DEPROVISIONING';
+  /**
+   * UnitGroup has been provisioned and is ready for use.
+   */
+  public const STATE_UNIT_GROUP_STATE_READY = 'UNIT_GROUP_STATE_READY';
+  /**
+   * UnitGroup has an error.
+   */
+  public const STATE_UNIT_GROUP_STATE_ERROR = 'UNIT_GROUP_STATE_ERROR';
   /**
    * Optional. Annotations is an unstructured key-value map stored with a
    * resource that may be set by external tools to store and retrieve arbitrary
@@ -36,35 +57,11 @@ class UnitKind extends \Google\Collection
    */
   public $annotations;
   /**
-   * Optional. Output only. BoundaryType describes the type of boundary the Unit
-   * Kind represents.
-   *
-   * @var string
-   */
-  public $boundaryType;
-  /**
    * Output only. The timestamp when the resource was created.
    *
    * @var string
    */
   public $createTime;
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units
-   * will use the flag default_flag_revisions present at the time of creation.
-   *
-   * @var string[]
-   */
-  public $defaultFlagRevisions;
-  /**
-   * Optional. A reference to the Release object to use as default for creating
-   * new units of this UnitKind (optional). If not specified, a new unit must
-   * explicitly reference which release to use for its creation.
-   *
-   * @var string
-   */
-  public $defaultRelease;
-  protected $dependenciesType = Dependency::class;
-  protected $dependenciesDataType = 'array';
   /**
    * Output only. An opaque value that uniquely identifies a version or
    * generation of a resource. It can be used to confirm that the client and
@@ -73,8 +70,6 @@ class UnitKind extends \Google\Collection
    * @var string
    */
   public $etag;
-  protected $inputVariableMappingsType = VariableMapping::class;
-  protected $inputVariableMappingsDataType = 'array';
   /**
    * Optional. The labels on the resource, which can be used for categorization.
    * similar to Kubernetes resource labels.
@@ -85,22 +80,30 @@ class UnitKind extends \Google\Collection
   /**
    * Identifier. The resource name (full URI of the resource) following the
    * standard naming scheme:
-   * "projects/{project}/locations/{location}/unitKinds/{unitKind}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    *
    * @var string
    */
   public $name;
-  protected $outputVariableMappingsType = VariableMapping::class;
-  protected $outputVariableMappingsDataType = 'array';
   /**
-   * Required. Immutable. A reference to the Saas that defines the product
-   * (managed service) that the producer wants to manage with App Lifecycle
-   * Manager. Part of the App Lifecycle Manager common data model. Immutable
-   * once set.
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
    *
    * @var string
    */
   public $saas;
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned
+   * with.
+   *
+   * @var string
+   */
+  public $saasRelease;
+  /**
+   * Optional. Output only. State of the UnitGroup.
+   *
+   * @var string
+   */
+  public $state;
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
    * time and space for this resource within the scope of the service. It is
@@ -140,26 +143,6 @@ class UnitKind extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * Optional. Output only. BoundaryType describes the type of boundary the Unit
-   * Kind represents.
-   *
-   * Accepted values: BOUNDARY_TYPE_UNSPECIFIED, BOUNDARY_TYPE_TENANT_PROJECT,
-   * BOUNDARY_TYPE_MANAGED_PROJECT
-   *
-   * @param self::BOUNDARY_TYPE_* $boundaryType
-   */
-  public function setBoundaryType($boundaryType)
-  {
-    $this->boundaryType = $boundaryType;
-  }
-  /**
-   * @return self::BOUNDARY_TYPE_*
-   */
-  public function getBoundaryType()
-  {
-    return $this->boundaryType;
-  }
-  /**
    * Output only. The timestamp when the resource was created.
    *
    * @param string $createTime
@@ -174,59 +157,6 @@ class UnitKind extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
-  }
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units
-   * will use the flag default_flag_revisions present at the time of creation.
-   *
-   * @param string[] $defaultFlagRevisions
-   */
-  public function setDefaultFlagRevisions($defaultFlagRevisions)
-  {
-    $this->defaultFlagRevisions = $defaultFlagRevisions;
-  }
-  /**
-   * @return string[]
-   */
-  public function getDefaultFlagRevisions()
-  {
-    return $this->defaultFlagRevisions;
-  }
-  /**
-   * Optional. A reference to the Release object to use as default for creating
-   * new units of this UnitKind (optional). If not specified, a new unit must
-   * explicitly reference which release to use for its creation.
-   *
-   * @param string $defaultRelease
-   */
-  public function setDefaultRelease($defaultRelease)
-  {
-    $this->defaultRelease = $defaultRelease;
-  }
-  /**
-   * @return string
-   */
-  public function getDefaultRelease()
-  {
-    return $this->defaultRelease;
-  }
-  /**
-   * Optional. Immutable. List of other unit kinds that this release will depend
-   * on. Dependencies will be automatically provisioned if not found. Maximum
-   * 10.
-   *
-   * @param Dependency[] $dependencies
-   */
-  public function setDependencies($dependencies)
-  {
-    $this->dependencies = $dependencies;
-  }
-  /**
-   * @return Dependency[]
-   */
-  public function getDependencies()
-  {
-    return $this->dependencies;
   }
   /**
    * Output only. An opaque value that uniquely identifies a version or
@@ -245,24 +175,6 @@ class UnitKind extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
-  }
-  /**
-   * Optional. List of inputVariables for this release that will either be
-   * retrieved from a dependency’s outputVariables, or will be passed on to a
-   * dependency’s inputVariables. Maximum 100.
-   *
-   * @param VariableMapping[] $inputVariableMappings
-   */
-  public function setInputVariableMappings($inputVariableMappings)
-  {
-    $this->inputVariableMappings = $inputVariableMappings;
-  }
-  /**
-   * @return VariableMapping[]
-   */
-  public function getInputVariableMappings()
-  {
-    return $this->inputVariableMappings;
   }
   /**
    * Optional. The labels on the resource, which can be used for categorization.
@@ -284,7 +196,7 @@ class UnitKind extends \Google\Collection
   /**
    * Identifier. The resource name (full URI of the resource) following the
    * standard naming scheme:
-   * "projects/{project}/locations/{location}/unitKinds/{unitKind}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    *
    * @param string $name
    */
@@ -300,27 +212,7 @@ class UnitKind extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. List of outputVariables for this unit kind will be passed to this
-   * unit's outputVariables. Maximum 100.
-   *
-   * @param VariableMapping[] $outputVariableMappings
-   */
-  public function setOutputVariableMappings($outputVariableMappings)
-  {
-    $this->outputVariableMappings = $outputVariableMappings;
-  }
-  /**
-   * @return VariableMapping[]
-   */
-  public function getOutputVariableMappings()
-  {
-    return $this->outputVariableMappings;
-  }
-  /**
-   * Required. Immutable. A reference to the Saas that defines the product
-   * (managed service) that the producer wants to manage with App Lifecycle
-   * Manager. Part of the App Lifecycle Manager common data model. Immutable
-   * once set.
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
    *
    * @param string $saas
    */
@@ -334,6 +226,44 @@ class UnitKind extends \Google\Collection
   public function getSaas()
   {
     return $this->saas;
+  }
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned
+   * with.
+   *
+   * @param string $saasRelease
+   */
+  public function setSaasRelease($saasRelease)
+  {
+    $this->saasRelease = $saasRelease;
+  }
+  /**
+   * @return string
+   */
+  public function getSaasRelease()
+  {
+    return $this->saasRelease;
+  }
+  /**
+   * Optional. Output only. State of the UnitGroup.
+   *
+   * Accepted values: UNIT_GROUP_STATE_UNSPECIFIED,
+   * UNIT_GROUP_STATE_NOT_PROVISIONED, UNIT_GROUP_STATE_PROVISIONING,
+   * UNIT_GROUP_STATE_UPDATING, UNIT_GROUP_STATE_DEPROVISIONING,
+   * UNIT_GROUP_STATE_READY, UNIT_GROUP_STATE_ERROR
+   *
+   * @param self::STATE_* $state
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return self::STATE_*
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
@@ -376,4 +306,4 @@ class UnitKind extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UnitKind::class, 'Google_Service_SaaSServiceManagement_UnitKind');
+class_alias(UnitGroup::class, 'Google_Service_SaaSServiceManagement_UnitGroup');

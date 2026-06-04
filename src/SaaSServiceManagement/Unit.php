@@ -215,6 +215,12 @@ class Unit extends \Google\Collection
    */
   public $uid;
   /**
+   * Optional. Output only. Reference to the UnitGroup this unit belongs to.
+   *
+   * @var string
+   */
+  public $unitGroup;
+  /**
    * Optional. Reference to the UnitKind this Unit belongs to. Immutable once
    * set.
    *
@@ -653,6 +659,22 @@ class Unit extends \Google\Collection
   public function getUid()
   {
     return $this->uid;
+  }
+  /**
+   * Optional. Output only. Reference to the UnitGroup this unit belongs to.
+   *
+   * @param string $unitGroup
+   */
+  public function setUnitGroup($unitGroup)
+  {
+    $this->unitGroup = $unitGroup;
+  }
+  /**
+   * @return string
+   */
+  public function getUnitGroup()
+  {
+    return $this->unitGroup;
   }
   /**
    * Optional. Reference to the UnitKind this Unit belongs to. Immutable once

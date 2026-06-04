@@ -37,24 +37,6 @@ class Saas extends \Google\Collection
    * ApplicationTemplate processing
    */
   public const STATE_STATE_FAILED = 'STATE_FAILED';
-  /**
-   * Deprecated: Use STATE_ACTIVE.
-   *
-   * @deprecated
-   */
-  public const STATE_ACTIVE = 'ACTIVE';
-  /**
-   * Deprecated: Use STATE_RUNNING.
-   *
-   * @deprecated
-   */
-  public const STATE_RUNNING = 'RUNNING';
-  /**
-   * Deprecated: Use STATE_FAILED.
-   *
-   * @deprecated
-   */
-  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'locations';
   /**
    * Optional. Annotations is an unstructured key-value map stored with a
@@ -101,7 +83,7 @@ class Saas extends \Google\Collection
    */
   public $name;
   /**
-   * Output only. State of the Saas. It is always in ACTIVE state if the
+   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the
    * application_template is empty.
    *
    * @var string
@@ -266,11 +248,11 @@ class Saas extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. State of the Saas. It is always in ACTIVE state if the
+   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the
    * application_template is empty.
    *
    * Accepted values: STATE_TYPE_UNSPECIFIED, STATE_ACTIVE, STATE_RUNNING,
-   * STATE_FAILED, ACTIVE, RUNNING, FAILED
+   * STATE_FAILED
    *
    * @param self::STATE_* $state
    */

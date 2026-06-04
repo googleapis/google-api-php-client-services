@@ -17,15 +17,8 @@
 
 namespace Google\Service\SaaSServiceManagement;
 
-class UnitKind extends \Google\Collection
+class UnitGroupOperation extends \Google\Model
 {
-  public const BOUNDARY_TYPE_BOUNDARY_TYPE_UNSPECIFIED = 'BOUNDARY_TYPE_UNSPECIFIED';
-  /**
-   * Tenant project boundary.
-   */
-  public const BOUNDARY_TYPE_BOUNDARY_TYPE_TENANT_PROJECT = 'BOUNDARY_TYPE_TENANT_PROJECT';
-  public const BOUNDARY_TYPE_BOUNDARY_TYPE_MANAGED_PROJECT = 'BOUNDARY_TYPE_MANAGED_PROJECT';
-  protected $collection_key = 'outputVariableMappings';
   /**
    * Optional. Annotations is an unstructured key-value map stored with a
    * resource that may be set by external tools to store and retrieve arbitrary
@@ -36,35 +29,15 @@ class UnitKind extends \Google\Collection
    */
   public $annotations;
   /**
-   * Optional. Output only. BoundaryType describes the type of boundary the Unit
-   * Kind represents.
-   *
-   * @var string
-   */
-  public $boundaryType;
-  /**
    * Output only. The timestamp when the resource was created.
    *
    * @var string
    */
   public $createTime;
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units
-   * will use the flag default_flag_revisions present at the time of creation.
-   *
-   * @var string[]
-   */
-  public $defaultFlagRevisions;
-  /**
-   * Optional. A reference to the Release object to use as default for creating
-   * new units of this UnitKind (optional). If not specified, a new unit must
-   * explicitly reference which release to use for its creation.
-   *
-   * @var string
-   */
-  public $defaultRelease;
-  protected $dependenciesType = Dependency::class;
-  protected $dependenciesDataType = 'array';
+  protected $deprovisionUnitGroupType = DeprovisionUnitGroup::class;
+  protected $deprovisionUnitGroupDataType = '';
+  protected $detachUnitGroupType = DetachUnitGroup::class;
+  protected $detachUnitGroupDataType = '';
   /**
    * Output only. An opaque value that uniquely identifies a version or
    * generation of a resource. It can be used to confirm that the client and
@@ -73,8 +46,6 @@ class UnitKind extends \Google\Collection
    * @var string
    */
   public $etag;
-  protected $inputVariableMappingsType = VariableMapping::class;
-  protected $inputVariableMappingsDataType = 'array';
   /**
    * Optional. The labels on the resource, which can be used for categorization.
    * similar to Kubernetes resource labels.
@@ -84,23 +55,20 @@ class UnitKind extends \Google\Collection
   public $labels;
   /**
    * Identifier. The resource name (full URI of the resource) following the
-   * standard naming scheme:
-   * "projects/{project}/locations/{location}/unitKinds/{unitKind}"
+   * standard naming scheme: "projects/{project}/locations/{location}/unitGroupO
+   * perations/{unitGroupOperation}"
    *
    * @var string
    */
   public $name;
-  protected $outputVariableMappingsType = VariableMapping::class;
-  protected $outputVariableMappingsDataType = 'array';
+  protected $provisionUnitGroupType = ProvisionUnitGroup::class;
+  protected $provisionUnitGroupDataType = '';
   /**
-   * Required. Immutable. A reference to the Saas that defines the product
-   * (managed service) that the producer wants to manage with App Lifecycle
-   * Manager. Part of the App Lifecycle Manager common data model. Immutable
-   * once set.
+   * Optional. Tier represents the tier level of the UnitGroupOperation.
    *
    * @var string
    */
-  public $saas;
+  public $tier;
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
    * time and space for this resource within the scope of the service. It is
@@ -140,26 +108,6 @@ class UnitKind extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * Optional. Output only. BoundaryType describes the type of boundary the Unit
-   * Kind represents.
-   *
-   * Accepted values: BOUNDARY_TYPE_UNSPECIFIED, BOUNDARY_TYPE_TENANT_PROJECT,
-   * BOUNDARY_TYPE_MANAGED_PROJECT
-   *
-   * @param self::BOUNDARY_TYPE_* $boundaryType
-   */
-  public function setBoundaryType($boundaryType)
-  {
-    $this->boundaryType = $boundaryType;
-  }
-  /**
-   * @return self::BOUNDARY_TYPE_*
-   */
-  public function getBoundaryType()
-  {
-    return $this->boundaryType;
-  }
-  /**
    * Output only. The timestamp when the resource was created.
    *
    * @param string $createTime
@@ -176,57 +124,36 @@ class UnitKind extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units
-   * will use the flag default_flag_revisions present at the time of creation.
+   * Optional. Represents a deprovision operation on a UnitGroup.
    *
-   * @param string[] $defaultFlagRevisions
+   * @param DeprovisionUnitGroup $deprovisionUnitGroup
    */
-  public function setDefaultFlagRevisions($defaultFlagRevisions)
+  public function setDeprovisionUnitGroup(DeprovisionUnitGroup $deprovisionUnitGroup)
   {
-    $this->defaultFlagRevisions = $defaultFlagRevisions;
+    $this->deprovisionUnitGroup = $deprovisionUnitGroup;
   }
   /**
-   * @return string[]
+   * @return DeprovisionUnitGroup
    */
-  public function getDefaultFlagRevisions()
+  public function getDeprovisionUnitGroup()
   {
-    return $this->defaultFlagRevisions;
+    return $this->deprovisionUnitGroup;
   }
   /**
-   * Optional. A reference to the Release object to use as default for creating
-   * new units of this UnitKind (optional). If not specified, a new unit must
-   * explicitly reference which release to use for its creation.
+   * Optional. Represents a detach operation on a UnitGroup.
    *
-   * @param string $defaultRelease
+   * @param DetachUnitGroup $detachUnitGroup
    */
-  public function setDefaultRelease($defaultRelease)
+  public function setDetachUnitGroup(DetachUnitGroup $detachUnitGroup)
   {
-    $this->defaultRelease = $defaultRelease;
+    $this->detachUnitGroup = $detachUnitGroup;
   }
   /**
-   * @return string
+   * @return DetachUnitGroup
    */
-  public function getDefaultRelease()
+  public function getDetachUnitGroup()
   {
-    return $this->defaultRelease;
-  }
-  /**
-   * Optional. Immutable. List of other unit kinds that this release will depend
-   * on. Dependencies will be automatically provisioned if not found. Maximum
-   * 10.
-   *
-   * @param Dependency[] $dependencies
-   */
-  public function setDependencies($dependencies)
-  {
-    $this->dependencies = $dependencies;
-  }
-  /**
-   * @return Dependency[]
-   */
-  public function getDependencies()
-  {
-    return $this->dependencies;
+    return $this->detachUnitGroup;
   }
   /**
    * Output only. An opaque value that uniquely identifies a version or
@@ -247,24 +174,6 @@ class UnitKind extends \Google\Collection
     return $this->etag;
   }
   /**
-   * Optional. List of inputVariables for this release that will either be
-   * retrieved from a dependency’s outputVariables, or will be passed on to a
-   * dependency’s inputVariables. Maximum 100.
-   *
-   * @param VariableMapping[] $inputVariableMappings
-   */
-  public function setInputVariableMappings($inputVariableMappings)
-  {
-    $this->inputVariableMappings = $inputVariableMappings;
-  }
-  /**
-   * @return VariableMapping[]
-   */
-  public function getInputVariableMappings()
-  {
-    return $this->inputVariableMappings;
-  }
-  /**
    * Optional. The labels on the resource, which can be used for categorization.
    * similar to Kubernetes resource labels.
    *
@@ -283,8 +192,8 @@ class UnitKind extends \Google\Collection
   }
   /**
    * Identifier. The resource name (full URI of the resource) following the
-   * standard naming scheme:
-   * "projects/{project}/locations/{location}/unitKinds/{unitKind}"
+   * standard naming scheme: "projects/{project}/locations/{location}/unitGroupO
+   * perations/{unitGroupOperation}"
    *
    * @param string $name
    */
@@ -300,40 +209,36 @@ class UnitKind extends \Google\Collection
     return $this->name;
   }
   /**
-   * Optional. List of outputVariables for this unit kind will be passed to this
-   * unit's outputVariables. Maximum 100.
+   * Optional. Represents a provision operation on a UnitGroup.
    *
-   * @param VariableMapping[] $outputVariableMappings
+   * @param ProvisionUnitGroup $provisionUnitGroup
    */
-  public function setOutputVariableMappings($outputVariableMappings)
+  public function setProvisionUnitGroup(ProvisionUnitGroup $provisionUnitGroup)
   {
-    $this->outputVariableMappings = $outputVariableMappings;
+    $this->provisionUnitGroup = $provisionUnitGroup;
   }
   /**
-   * @return VariableMapping[]
+   * @return ProvisionUnitGroup
    */
-  public function getOutputVariableMappings()
+  public function getProvisionUnitGroup()
   {
-    return $this->outputVariableMappings;
+    return $this->provisionUnitGroup;
   }
   /**
-   * Required. Immutable. A reference to the Saas that defines the product
-   * (managed service) that the producer wants to manage with App Lifecycle
-   * Manager. Part of the App Lifecycle Manager common data model. Immutable
-   * once set.
+   * Optional. Tier represents the tier level of the UnitGroupOperation.
    *
-   * @param string $saas
+   * @param string $tier
    */
-  public function setSaas($saas)
+  public function setTier($tier)
   {
-    $this->saas = $saas;
+    $this->tier = $tier;
   }
   /**
    * @return string
    */
-  public function getSaas()
+  public function getTier()
   {
-    return $this->saas;
+    return $this->tier;
   }
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
@@ -376,4 +281,4 @@ class UnitKind extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UnitKind::class, 'Google_Service_SaaSServiceManagement_UnitKind');
+class_alias(UnitGroupOperation::class, 'Google_Service_SaaSServiceManagement_UnitGroupOperation');
