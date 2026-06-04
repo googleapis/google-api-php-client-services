@@ -17,8 +17,8 @@
 
 namespace Google\Service\SA360\Resource;
 
-use Google\Service\SA360\GoogleAdsSearchads360V0ResourcesCustomColumn;
-use Google\Service\SA360\GoogleAdsSearchads360V0ServicesListCustomColumnsResponse;
+use Google\Service\SA360\GoogleAdsSearchads360V23ResourcesCustomColumn;
+use Google\Service\SA360\GoogleAdsSearchads360V23ServicesListCustomColumnsResponse;
 
 /**
  * The "customColumns" collection of methods.
@@ -36,14 +36,14 @@ class CustomersCustomColumns extends \Google\Service\Resource
    * @param string $resourceName Required. The resource name of the custom column
    * to fetch.
    * @param array $optParams Optional parameters.
-   * @return GoogleAdsSearchads360V0ResourcesCustomColumn
+   * @return GoogleAdsSearchads360V23ResourcesCustomColumn
    * @throws \Google\Service\Exception
    */
   public function get($resourceName, $optParams = [])
   {
     $params = ['resourceName' => $resourceName];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoogleAdsSearchads360V0ResourcesCustomColumn::class);
+    return $this->call('get', [$params], GoogleAdsSearchads360V23ResourcesCustomColumn::class);
   }
   /**
    * Returns all the custom columns associated with the customer in full detail.
@@ -52,14 +52,14 @@ class CustomersCustomColumns extends \Google\Service\Resource
    * @param string $customerId Required. The ID of the customer to apply the
    * CustomColumn list operation to.
    * @param array $optParams Optional parameters.
-   * @return GoogleAdsSearchads360V0ServicesListCustomColumnsResponse
+   * @return GoogleAdsSearchads360V23ServicesListCustomColumnsResponse
    * @throws \Google\Service\Exception
    */
   public function listCustomersCustomColumns($customerId, $optParams = [])
   {
     $params = ['customerId' => $customerId];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], GoogleAdsSearchads360V0ServicesListCustomColumnsResponse::class);
+    return $this->call('list', [$params], GoogleAdsSearchads360V23ServicesListCustomColumnsResponse::class);
   }
 }
 
