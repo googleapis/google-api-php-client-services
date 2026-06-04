@@ -58,6 +58,14 @@ class GitRemoteSettings extends \Google\Model
    * @var string
    */
   public $effectiveDefaultBranch;
+  /**
+   * Optional. Resource name for the GitRepositoryLink used for machine
+   * credentials. Must be in the format
+   * `projects/locations/connections/gitRepositoryLinks`
+   *
+   * @var string
+   */
+  public $gitRepositoryLink;
   protected $sshAuthenticationConfigType = SshAuthenticationConfig::class;
   protected $sshAuthenticationConfigDataType = '';
   /**
@@ -126,6 +134,24 @@ class GitRemoteSettings extends \Google\Model
   public function getEffectiveDefaultBranch()
   {
     return $this->effectiveDefaultBranch;
+  }
+  /**
+   * Optional. Resource name for the GitRepositoryLink used for machine
+   * credentials. Must be in the format
+   * `projects/locations/connections/gitRepositoryLinks`
+   *
+   * @param string $gitRepositoryLink
+   */
+  public function setGitRepositoryLink($gitRepositoryLink)
+  {
+    $this->gitRepositoryLink = $gitRepositoryLink;
+  }
+  /**
+   * @return string
+   */
+  public function getGitRepositoryLink()
+  {
+    return $this->gitRepositoryLink;
   }
   /**
    * Optional. Authentication fields for remote uris using SSH protocol.
