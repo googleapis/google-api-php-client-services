@@ -152,6 +152,12 @@ class GoogleChromeManagementV1InstalledApp extends \Google\Collection
    * @var string[]
    */
   public $permissions;
+  /**
+   * Output only. Count of Chrome Profiles with this app installed.
+   *
+   * @var string
+   */
+  public $profileCount;
   protected $riskAssessmentType = GoogleChromeManagementV1RiskAssessmentData::class;
   protected $riskAssessmentDataType = '';
 
@@ -340,6 +346,22 @@ class GoogleChromeManagementV1InstalledApp extends \Google\Collection
   public function getPermissions()
   {
     return $this->permissions;
+  }
+  /**
+   * Output only. Count of Chrome Profiles with this app installed.
+   *
+   * @param string $profileCount
+   */
+  public function setProfileCount($profileCount)
+  {
+    $this->profileCount = $profileCount;
+  }
+  /**
+   * @return string
+   */
+  public function getProfileCount()
+  {
+    return $this->profileCount;
   }
   /**
    * Output only. If available, the risk assessment data about this extension.
