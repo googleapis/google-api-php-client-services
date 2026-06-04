@@ -36,7 +36,7 @@ class AutoscalingPolicy extends \Google\Collection
   public const MODE_ONLY_SCALE_OUT = 'ONLY_SCALE_OUT';
   /**
    * Automatically create VMs according to the policy, but do not scale the MIG
-   * in.
+   * in. It's recommended to use ONLY_SCALE_OUT instead of ONLY_UP.
    */
   public const MODE_ONLY_UP = 'ONLY_UP';
   protected $collection_key = 'customMetricUtilizations';

@@ -17,54 +17,54 @@
 
 namespace Google\Service\Compute;
 
-class InstanceManagedByIgmErrorManagedInstanceError extends \Google\Model
+class TimeZone extends \Google\Model
 {
   /**
-   * Output only. Error code.
+   * IANA Time Zone Database time zone. For example "America/New_York".
    *
    * @var string
    */
-  public $code;
+  public $id;
   /**
-   * Output only. Error message.
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    *
    * @var string
    */
-  public $message;
+  public $version;
 
   /**
-   * Output only. Error code.
+   * IANA Time Zone Database time zone. For example "America/New_York".
    *
-   * @param string $code
+   * @param string $id
    */
-  public function setCode($code)
+  public function setId($id)
   {
-    $this->code = $code;
+    $this->id = $id;
   }
   /**
    * @return string
    */
-  public function getCode()
+  public function getId()
   {
-    return $this->code;
+    return $this->id;
   }
   /**
-   * Output only. Error message.
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    *
-   * @param string $message
+   * @param string $version
    */
-  public function setMessage($message)
+  public function setVersion($version)
   {
-    $this->message = $message;
+    $this->version = $version;
   }
   /**
    * @return string
    */
-  public function getMessage()
+  public function getVersion()
   {
-    return $this->message;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceManagedByIgmErrorManagedInstanceError::class, 'Google_Service_Compute_InstanceManagedByIgmErrorManagedInstanceError');
+class_alias(TimeZone::class, 'Google_Service_Compute_TimeZone');

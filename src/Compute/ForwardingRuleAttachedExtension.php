@@ -17,54 +17,32 @@
 
 namespace Google\Service\Compute;
 
-class InstanceManagedByIgmErrorManagedInstanceError extends \Google\Model
+class ForwardingRuleAttachedExtension extends \Google\Model
 {
   /**
-   * Output only. Error code.
+   * Output only. The resource name.
    *
    * @var string
    */
-  public $code;
-  /**
-   * Output only. Error message.
-   *
-   * @var string
-   */
-  public $message;
+  public $reference;
 
   /**
-   * Output only. Error code.
+   * Output only. The resource name.
    *
-   * @param string $code
+   * @param string $reference
    */
-  public function setCode($code)
+  public function setReference($reference)
   {
-    $this->code = $code;
+    $this->reference = $reference;
   }
   /**
    * @return string
    */
-  public function getCode()
+  public function getReference()
   {
-    return $this->code;
-  }
-  /**
-   * Output only. Error message.
-   *
-   * @param string $message
-   */
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  /**
-   * @return string
-   */
-  public function getMessage()
-  {
-    return $this->message;
+    return $this->reference;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceManagedByIgmErrorManagedInstanceError::class, 'Google_Service_Compute_InstanceManagedByIgmErrorManagedInstanceError');
+class_alias(ForwardingRuleAttachedExtension::class, 'Google_Service_Compute_ForwardingRuleAttachedExtension');

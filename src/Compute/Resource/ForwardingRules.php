@@ -167,6 +167,8 @@ class ForwardingRules extends \Google\Service\Resource
    * @param string $region Name of the region scoping this request.
    * @param string $forwardingRule Name of the ForwardingRule resource to return.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view
    * @return ForwardingRule
    * @throws \Google\Service\Exception
    */

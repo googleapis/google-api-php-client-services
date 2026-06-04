@@ -69,6 +69,8 @@ class GlobalForwardingRules extends \Google\Service\Resource
    * @param string $project Project ID for this request.
    * @param string $forwardingRule Name of the ForwardingRule resource to return.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view
    * @return ForwardingRule
    * @throws \Google\Service\Exception
    */

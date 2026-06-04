@@ -172,6 +172,8 @@ class ForwardingRule extends \Google\Collection
    * @var bool
    */
   public $allowPscGlobalAccess;
+  protected $attachedExtensionsType = ForwardingRuleAttachedExtension::class;
+  protected $attachedExtensionsDataType = 'array';
   /**
    * Identifies the backend service to which the forwarding rule sends traffic.
    * Required for internal and external passthrough Network Load Balancers; must
@@ -673,6 +675,23 @@ class ForwardingRule extends \Google\Collection
   public function getAllowPscGlobalAccess()
   {
     return $this->allowPscGlobalAccess;
+  }
+  /**
+   * Output only. [Output Only]. The extensions that are attached to this
+   * ForwardingRule.
+   *
+   * @param ForwardingRuleAttachedExtension[] $attachedExtensions
+   */
+  public function setAttachedExtensions($attachedExtensions)
+  {
+    $this->attachedExtensions = $attachedExtensions;
+  }
+  /**
+   * @return ForwardingRuleAttachedExtension[]
+   */
+  public function getAttachedExtensions()
+  {
+    return $this->attachedExtensions;
   }
   /**
    * Identifies the backend service to which the forwarding rule sends traffic.

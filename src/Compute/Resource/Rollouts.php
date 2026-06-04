@@ -32,6 +32,37 @@ use Google\Service\Compute\RolloutsListResponse;
 class Rollouts extends \Google\Service\Resource
 {
   /**
+   * Advances a Rollout to the next wave, or completes it if no waves remain.
+   * (rollouts.advance)
+   *
+   * @param string $project Required. Project ID for this request.
+   * @param string $rollout Required. Name of the Rollout resource to advance.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string currentWaveNumber Required. Wave number of the current
+   * wave.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function advance($project, $rollout, $optParams = [])
+  {
+    $params = ['project' => $project, 'rollout' => $rollout];
+    $params = array_merge($params, $optParams);
+    return $this->call('advance', [$params], Operation::class);
+  }
+  /**
    * Cancels a Rollout. (rollouts.cancel)
    *
    * @param string $project Project ID for this request.
@@ -189,6 +220,68 @@ class Rollouts extends \Google\Service\Resource
     $params = ['project' => $project];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], RolloutsListResponse::class);
+  }
+  /**
+   * Pauses a Rollout. (rollouts.pause)
+   *
+   * @param string $project Required. Project ID for this request.
+   * @param string $rollout Required. Name of the Rollout resource to pause.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string etag The etag of the Rollout. If this is provided, the
+   * request will only succeed if the etag matches the current etag of the
+   * Rollout.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function pause($project, $rollout, $optParams = [])
+  {
+    $params = ['project' => $project, 'rollout' => $rollout];
+    $params = array_merge($params, $optParams);
+    return $this->call('pause', [$params], Operation::class);
+  }
+  /**
+   * Resumes a Rollout. (rollouts.resume)
+   *
+   * @param string $project Required. Project ID for this request.
+   * @param string $rollout Required. Name of the Rollout resource to resume.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string etag The etag of the Rollout. If this is provided, the
+   * request will only succeed if the etag matches the current etag of the
+   * Rollout.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function resume($project, $rollout, $optParams = [])
+  {
+    $params = ['project' => $project, 'rollout' => $rollout];
+    $params = array_merge($params, $optParams);
+    return $this->call('resume', [$params], Operation::class);
   }
 }
 

@@ -19,6 +19,8 @@ namespace Google\Service\Compute;
 
 class ResourceStatusPhysicalHostTopology extends \Google\Model
 {
+  protected $additionalAttributesType = ResourceStatusPhysicalHostTopologyAdditionalAttributes::class;
+  protected $additionalAttributesDataType = '';
   /**
    * [Output Only] The ID of the block in which the running instance is located.
    * Instances within the same block experience low network latency.
@@ -49,6 +51,23 @@ class ResourceStatusPhysicalHostTopology extends \Google\Model
    */
   public $subblock;
 
+  /**
+   * Output only. [Output Only] Additional location information of the running
+   * instance.
+   *
+   * @param ResourceStatusPhysicalHostTopologyAdditionalAttributes $additionalAttributes
+   */
+  public function setAdditionalAttributes(ResourceStatusPhysicalHostTopologyAdditionalAttributes $additionalAttributes)
+  {
+    $this->additionalAttributes = $additionalAttributes;
+  }
+  /**
+   * @return ResourceStatusPhysicalHostTopologyAdditionalAttributes
+   */
+  public function getAdditionalAttributes()
+  {
+    return $this->additionalAttributes;
+  }
   /**
    * [Output Only] The ID of the block in which the running instance is located.
    * Instances within the same block experience low network latency.

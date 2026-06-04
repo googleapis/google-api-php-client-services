@@ -39,6 +39,10 @@ class BackendServiceLogConfig extends \Google\Collection
    * @var bool
    */
   public $enable;
+  protected $loggingHttpRequestHeadersType = BackendServiceLogConfigLoggingHttpHeader::class;
+  protected $loggingHttpRequestHeadersDataType = 'array';
+  protected $loggingHttpResponseHeadersType = BackendServiceLogConfigLoggingHttpHeader::class;
+  protected $loggingHttpResponseHeadersDataType = 'array';
   /**
    * This field can only be specified if logging is enabled for this backend
    * service and "logConfig.optionalMode" was set to CUSTOM. Contains a list of
@@ -84,6 +88,38 @@ class BackendServiceLogConfig extends \Google\Collection
   public function getEnable()
   {
     return $this->enable;
+  }
+  /**
+   * The list of request headers that will be logged to Stackdriver.
+   *
+   * @param BackendServiceLogConfigLoggingHttpHeader[] $loggingHttpRequestHeaders
+   */
+  public function setLoggingHttpRequestHeaders($loggingHttpRequestHeaders)
+  {
+    $this->loggingHttpRequestHeaders = $loggingHttpRequestHeaders;
+  }
+  /**
+   * @return BackendServiceLogConfigLoggingHttpHeader[]
+   */
+  public function getLoggingHttpRequestHeaders()
+  {
+    return $this->loggingHttpRequestHeaders;
+  }
+  /**
+   * The list of response headers that will be logged to Stackdriver.
+   *
+   * @param BackendServiceLogConfigLoggingHttpHeader[] $loggingHttpResponseHeaders
+   */
+  public function setLoggingHttpResponseHeaders($loggingHttpResponseHeaders)
+  {
+    $this->loggingHttpResponseHeaders = $loggingHttpResponseHeaders;
+  }
+  /**
+   * @return BackendServiceLogConfigLoggingHttpHeader[]
+   */
+  public function getLoggingHttpResponseHeaders()
+  {
+    return $this->loggingHttpResponseHeaders;
   }
   /**
    * This field can only be specified if logging is enabled for this backend

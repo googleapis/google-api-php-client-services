@@ -77,6 +77,12 @@ class Router extends \Google\Collection
   protected $natsType = RouterNat::class;
   protected $natsDataType = 'array';
   /**
+   * URI of the ncc_gateway to which this router associated.
+   *
+   * @var string
+   */
+  public $nccGateway;
+  /**
    * URI of the network to which this router belongs.
    *
    * @var string
@@ -291,6 +297,22 @@ class Router extends \Google\Collection
   public function getNats()
   {
     return $this->nats;
+  }
+  /**
+   * URI of the ncc_gateway to which this router associated.
+   *
+   * @param string $nccGateway
+   */
+  public function setNccGateway($nccGateway)
+  {
+    $this->nccGateway = $nccGateway;
+  }
+  /**
+   * @return string
+   */
+  public function getNccGateway()
+  {
+    return $this->nccGateway;
   }
   /**
    * URI of the network to which this router belongs.

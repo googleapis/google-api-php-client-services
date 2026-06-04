@@ -155,6 +155,18 @@ class Rollout extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * Output only. The timestamp at which the Rollout was paused.
+   *
+   * @var string
+   */
+  public $pauseTime;
+  /**
+   * Output only. The timestamp at which the Rollout was resumed.
+   *
+   * @var string
+   */
+  public $resumeTime;
   protected $rolloutEntityType = RolloutRolloutEntity::class;
   protected $rolloutEntityDataType = '';
   /**
@@ -339,6 +351,38 @@ class Rollout extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The timestamp at which the Rollout was paused.
+   *
+   * @param string $pauseTime
+   */
+  public function setPauseTime($pauseTime)
+  {
+    $this->pauseTime = $pauseTime;
+  }
+  /**
+   * @return string
+   */
+  public function getPauseTime()
+  {
+    return $this->pauseTime;
+  }
+  /**
+   * Output only. The timestamp at which the Rollout was resumed.
+   *
+   * @param string $resumeTime
+   */
+  public function setResumeTime($resumeTime)
+  {
+    $this->resumeTime = $resumeTime;
+  }
+  /**
+   * @return string
+   */
+  public function getResumeTime()
+  {
+    return $this->resumeTime;
   }
   /**
    * Required. The resource being rolled out.

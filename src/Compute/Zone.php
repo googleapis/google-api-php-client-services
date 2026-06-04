@@ -68,6 +68,8 @@ class Zone extends \Google\Collection
    * @var string
    */
   public $region;
+  protected $resourceStatusType = ZoneResourceStatus::class;
+  protected $resourceStatusDataType = '';
   /**
    * [Output Only] Server-defined URL for the resource.
    *
@@ -216,6 +218,20 @@ class Zone extends \Google\Collection
   public function getRegion()
   {
     return $this->region;
+  }
+  /**
+   * @param ZoneResourceStatus $resourceStatus
+   */
+  public function setResourceStatus(ZoneResourceStatus $resourceStatus)
+  {
+    $this->resourceStatus = $resourceStatus;
+  }
+  /**
+   * @return ZoneResourceStatus
+   */
+  public function getResourceStatus()
+  {
+    return $this->resourceStatus;
   }
   /**
    * [Output Only] Server-defined URL for the resource.

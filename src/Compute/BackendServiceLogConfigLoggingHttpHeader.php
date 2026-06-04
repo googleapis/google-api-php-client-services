@@ -17,54 +17,32 @@
 
 namespace Google\Service\Compute;
 
-class InstanceManagedByIgmErrorManagedInstanceError extends \Google\Model
+class BackendServiceLogConfigLoggingHttpHeader extends \Google\Model
 {
   /**
-   * Output only. Error code.
+   * The name of the header to be logged.
    *
    * @var string
    */
-  public $code;
-  /**
-   * Output only. Error message.
-   *
-   * @var string
-   */
-  public $message;
+  public $headerName;
 
   /**
-   * Output only. Error code.
+   * The name of the header to be logged.
    *
-   * @param string $code
+   * @param string $headerName
    */
-  public function setCode($code)
+  public function setHeaderName($headerName)
   {
-    $this->code = $code;
+    $this->headerName = $headerName;
   }
   /**
    * @return string
    */
-  public function getCode()
+  public function getHeaderName()
   {
-    return $this->code;
-  }
-  /**
-   * Output only. Error message.
-   *
-   * @param string $message
-   */
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  /**
-   * @return string
-   */
-  public function getMessage()
-  {
-    return $this->message;
+    return $this->headerName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceManagedByIgmErrorManagedInstanceError::class, 'Google_Service_Compute_InstanceManagedByIgmErrorManagedInstanceError');
+class_alias(BackendServiceLogConfigLoggingHttpHeader::class, 'Google_Service_Compute_BackendServiceLogConfigLoggingHttpHeader');

@@ -29,6 +29,12 @@ class RouterStatus extends \Google\Collection
   protected $natStatusType = RouterStatusNatStatus::class;
   protected $natStatusDataType = 'array';
   /**
+   * URI of the ncc_gateway to which this router associated.
+   *
+   * @var string
+   */
+  public $nccGateway;
+  /**
    * URI of the network to which this router belongs.
    *
    * @var string
@@ -106,6 +112,22 @@ class RouterStatus extends \Google\Collection
   public function getNatStatus()
   {
     return $this->natStatus;
+  }
+  /**
+   * URI of the ncc_gateway to which this router associated.
+   *
+   * @param string $nccGateway
+   */
+  public function setNccGateway($nccGateway)
+  {
+    $this->nccGateway = $nccGateway;
+  }
+  /**
+   * @return string
+   */
+  public function getNccGateway()
+  {
+    return $this->nccGateway;
   }
   /**
    * URI of the network to which this router belongs.
