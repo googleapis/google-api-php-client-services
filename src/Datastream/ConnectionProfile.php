@@ -27,6 +27,8 @@ class ConnectionProfile extends \Google\Model
    * @var string
    */
   public $createTime;
+  protected $dataverseProfileType = DataverseProfile::class;
+  protected $dataverseProfileDataType = '';
   /**
    * Required. Display name.
    *
@@ -59,6 +61,8 @@ class ConnectionProfile extends \Google\Model
   protected $postgresqlProfileDataType = '';
   protected $privateConnectivityType = PrivateConnectivity::class;
   protected $privateConnectivityDataType = '';
+  protected $salesforceMarketingCloudProfileType = SalesforceMarketingCloudProfile::class;
+  protected $salesforceMarketingCloudProfileDataType = '';
   protected $salesforceProfileType = SalesforceProfile::class;
   protected $salesforceProfileDataType = '';
   /**
@@ -73,6 +77,8 @@ class ConnectionProfile extends \Google\Model
    * @var bool
    */
   public $satisfiesPzs;
+  protected $serviceNowProfileType = ServiceNowProfile::class;
+  protected $serviceNowProfileDataType = '';
   protected $spannerProfileType = SpannerProfile::class;
   protected $spannerProfileDataType = '';
   protected $sqlServerProfileType = SqlServerProfile::class;
@@ -117,6 +123,22 @@ class ConnectionProfile extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Profile for connecting to a Dataverse source.
+   *
+   * @param DataverseProfile $dataverseProfile
+   */
+  public function setDataverseProfile(DataverseProfile $dataverseProfile)
+  {
+    $this->dataverseProfile = $dataverseProfile;
+  }
+  /**
+   * @return DataverseProfile
+   */
+  public function getDataverseProfile()
+  {
+    return $this->dataverseProfile;
   }
   /**
    * Required. Display name.
@@ -279,6 +301,22 @@ class ConnectionProfile extends \Google\Model
     return $this->privateConnectivity;
   }
   /**
+   * Profile for connecting to a Salesforce Marketing Cloud source.
+   *
+   * @param SalesforceMarketingCloudProfile $salesforceMarketingCloudProfile
+   */
+  public function setSalesforceMarketingCloudProfile(SalesforceMarketingCloudProfile $salesforceMarketingCloudProfile)
+  {
+    $this->salesforceMarketingCloudProfile = $salesforceMarketingCloudProfile;
+  }
+  /**
+   * @return SalesforceMarketingCloudProfile
+   */
+  public function getSalesforceMarketingCloudProfile()
+  {
+    return $this->salesforceMarketingCloudProfile;
+  }
+  /**
    * Profile for connecting to a Salesforce source.
    *
    * @param SalesforceProfile $salesforceProfile
@@ -325,6 +363,22 @@ class ConnectionProfile extends \Google\Model
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * Profile for connecting to a ServiceNow source.
+   *
+   * @param ServiceNowProfile $serviceNowProfile
+   */
+  public function setServiceNowProfile(ServiceNowProfile $serviceNowProfile)
+  {
+    $this->serviceNowProfile = $serviceNowProfile;
+  }
+  /**
+   * @return ServiceNowProfile
+   */
+  public function getServiceNowProfile()
+  {
+    return $this->serviceNowProfile;
   }
   /**
    * Profile for connecting to a Spanner source.

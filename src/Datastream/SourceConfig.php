@@ -19,6 +19,8 @@ namespace Google\Service\Datastream;
 
 class SourceConfig extends \Google\Model
 {
+  protected $dataverseSourceConfigType = DataverseSourceConfig::class;
+  protected $dataverseSourceConfigDataType = '';
   protected $mongodbSourceConfigType = MongodbSourceConfig::class;
   protected $mongodbSourceConfigDataType = '';
   protected $mysqlSourceConfigType = MysqlSourceConfig::class;
@@ -27,8 +29,12 @@ class SourceConfig extends \Google\Model
   protected $oracleSourceConfigDataType = '';
   protected $postgresqlSourceConfigType = PostgresqlSourceConfig::class;
   protected $postgresqlSourceConfigDataType = '';
+  protected $salesforceMarketingCloudSourceConfigType = SalesforceMarketingCloudSourceConfig::class;
+  protected $salesforceMarketingCloudSourceConfigDataType = '';
   protected $salesforceSourceConfigType = SalesforceSourceConfig::class;
   protected $salesforceSourceConfigDataType = '';
+  protected $serviceNowSourceConfigType = ServiceNowSourceConfig::class;
+  protected $serviceNowSourceConfigDataType = '';
   /**
    * Required. Source connection profile resource. Format:
    * `projects/{project}/locations/{location}/connectionProfiles/{name}`
@@ -41,6 +47,22 @@ class SourceConfig extends \Google\Model
   protected $sqlServerSourceConfigType = SqlServerSourceConfig::class;
   protected $sqlServerSourceConfigDataType = '';
 
+  /**
+   * Dataverse data source configuration.
+   *
+   * @param DataverseSourceConfig $dataverseSourceConfig
+   */
+  public function setDataverseSourceConfig(DataverseSourceConfig $dataverseSourceConfig)
+  {
+    $this->dataverseSourceConfig = $dataverseSourceConfig;
+  }
+  /**
+   * @return DataverseSourceConfig
+   */
+  public function getDataverseSourceConfig()
+  {
+    return $this->dataverseSourceConfig;
+  }
   /**
    * MongoDB data source configuration.
    *
@@ -106,6 +128,22 @@ class SourceConfig extends \Google\Model
     return $this->postgresqlSourceConfig;
   }
   /**
+   * Salesforce Marketing Cloud data source configuration.
+   *
+   * @param SalesforceMarketingCloudSourceConfig $salesforceMarketingCloudSourceConfig
+   */
+  public function setSalesforceMarketingCloudSourceConfig(SalesforceMarketingCloudSourceConfig $salesforceMarketingCloudSourceConfig)
+  {
+    $this->salesforceMarketingCloudSourceConfig = $salesforceMarketingCloudSourceConfig;
+  }
+  /**
+   * @return SalesforceMarketingCloudSourceConfig
+   */
+  public function getSalesforceMarketingCloudSourceConfig()
+  {
+    return $this->salesforceMarketingCloudSourceConfig;
+  }
+  /**
    * Salesforce data source configuration.
    *
    * @param SalesforceSourceConfig $salesforceSourceConfig
@@ -120,6 +158,22 @@ class SourceConfig extends \Google\Model
   public function getSalesforceSourceConfig()
   {
     return $this->salesforceSourceConfig;
+  }
+  /**
+   * ServiceNow data source configuration.
+   *
+   * @param ServiceNowSourceConfig $serviceNowSourceConfig
+   */
+  public function setServiceNowSourceConfig(ServiceNowSourceConfig $serviceNowSourceConfig)
+  {
+    $this->serviceNowSourceConfig = $serviceNowSourceConfig;
+  }
+  /**
+   * @return ServiceNowSourceConfig
+   */
+  public function getServiceNowSourceConfig()
+  {
+    return $this->serviceNowSourceConfig;
   }
   /**
    * Required. Source connection profile resource. Format:

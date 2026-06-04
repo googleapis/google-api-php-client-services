@@ -51,6 +51,8 @@ class DiscoverConnectionProfileRequest extends \Google\Model
   protected $postgresqlRdbmsDataType = '';
   protected $salesforceOrgType = SalesforceOrg::class;
   protected $salesforceOrgDataType = '';
+  protected $sourceCatalogType = SourceCatalog::class;
+  protected $sourceCatalogDataType = '';
   protected $spannerDatabaseType = SpannerDatabase::class;
   protected $spannerDatabaseDataType = '';
   protected $sqlServerRdbmsType = SqlServerRdbms::class;
@@ -202,6 +204,23 @@ class DiscoverConnectionProfileRequest extends \Google\Model
   public function getSalesforceOrg()
   {
     return $this->salesforceOrg;
+  }
+  /**
+   * Optional. Source catalog to enrich with child data objects and metadata.
+   * This is mainly used to represent SaaS sources databases.
+   *
+   * @param SourceCatalog $sourceCatalog
+   */
+  public function setSourceCatalog(SourceCatalog $sourceCatalog)
+  {
+    $this->sourceCatalog = $sourceCatalog;
+  }
+  /**
+   * @return SourceCatalog
+   */
+  public function getSourceCatalog()
+  {
+    return $this->sourceCatalog;
   }
   /**
    * Optional. Spanner database to enrich with child data objects and metadata.

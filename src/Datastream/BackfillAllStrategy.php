@@ -27,6 +27,8 @@ class BackfillAllStrategy extends \Google\Model
   protected $oracleExcludedObjectsDataType = '';
   protected $postgresqlExcludedObjectsType = PostgresqlRdbms::class;
   protected $postgresqlExcludedObjectsDataType = '';
+  protected $saasExcludedObjectsType = SourceCatalog::class;
+  protected $saasExcludedObjectsDataType = '';
   protected $salesforceExcludedObjectsType = SalesforceOrg::class;
   protected $salesforceExcludedObjectsDataType = '';
   protected $spannerExcludedObjectsType = SpannerDatabase::class;
@@ -97,6 +99,23 @@ class BackfillAllStrategy extends \Google\Model
   public function getPostgresqlExcludedObjects()
   {
     return $this->postgresqlExcludedObjects;
+  }
+  /**
+   * Source catalog data source objects to avoid backfilling. This is mainly
+   * used to represent SaaS applications objects.
+   *
+   * @param SourceCatalog $saasExcludedObjects
+   */
+  public function setSaasExcludedObjects(SourceCatalog $saasExcludedObjects)
+  {
+    $this->saasExcludedObjects = $saasExcludedObjects;
+  }
+  /**
+   * @return SourceCatalog
+   */
+  public function getSaasExcludedObjects()
+  {
+    return $this->saasExcludedObjects;
   }
   /**
    * Salesforce data source objects to avoid backfilling
