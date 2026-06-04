@@ -20,6 +20,28 @@ namespace Google\Service\HangoutsChat;
 class Membership extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const AFFILIATION_AFFILIATION_UNSPECIFIED = 'AFFILIATION_UNSPECIFIED';
+  /**
+   * An account managed by the same Google Workspace organization that owns the
+   * space.
+   */
+  public const AFFILIATION_INTERNAL = 'INTERNAL';
+  /**
+   * An account external to the Google Workspace organization that owns the
+   * space (e.g., a consumer account, or an account managed by a different
+   * Workspace organization).
+   */
+  public const AFFILIATION_EXTERNAL = 'EXTERNAL';
+  /**
+   * An account managed by the Workspace organization that owns the space, but
+   * provisioned for a user who is external to the organization (e.g., a Guest
+   * user). To learn more about guests, see
+   * https://support.google.com/chat/answer/16997417.
+   */
+  public const AFFILIATION_MANAGED_EXTERNAL = 'MANAGED_EXTERNAL';
+  /**
    * Default value. For users: they aren't a member of the space, but can be
    * invited. For Google Groups: they're always assigned this role (other enum
    * values might be used in the future).
@@ -77,6 +99,14 @@ class Membership extends \Google\Model
    */
   public const STATE_NOT_A_MEMBER = 'NOT_A_MEMBER';
   /**
+   * Output only. A user's relationship to the Workspace organization that owns
+   * the space. In spaces owned by consumer accounts, the affiliation of all
+   * members is `EXTERNAL`.
+   *
+   * @var string
+   */
+  public $affiliation;
+  /**
    * Optional. Immutable. The creation time of the membership, such as when a
    * member joined or was invited to join a space. This field is output only,
    * except when used to import historical memberships in import mode spaces.
@@ -118,6 +148,27 @@ class Membership extends \Google\Model
    */
   public $state;
 
+  /**
+   * Output only. A user's relationship to the Workspace organization that owns
+   * the space. In spaces owned by consumer accounts, the affiliation of all
+   * members is `EXTERNAL`.
+   *
+   * Accepted values: AFFILIATION_UNSPECIFIED, INTERNAL, EXTERNAL,
+   * MANAGED_EXTERNAL
+   *
+   * @param self::AFFILIATION_* $affiliation
+   */
+  public function setAffiliation($affiliation)
+  {
+    $this->affiliation = $affiliation;
+  }
+  /**
+   * @return self::AFFILIATION_*
+   */
+  public function getAffiliation()
+  {
+    return $this->affiliation;
+  }
   /**
    * Optional. Immutable. The creation time of the membership, such as when a
    * member joined or was invited to join a space. This field is output only,
