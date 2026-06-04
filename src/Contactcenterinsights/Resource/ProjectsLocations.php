@@ -21,7 +21,6 @@ use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkD
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkUploadFeedbackLabelsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CorrelationConfig;
-use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1EncryptionSpec;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1GenerativeInsightsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListAllFeedbackLabelsResponse;
@@ -90,24 +89,6 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('bulkUploadFeedbackLabels', [$params], GoogleLongrunningOperation::class);
-  }
-  /**
-   * Analyzes conversation data using specialized agentic workflows, such as
-   * ReAct, to diagnose issues and provide insights.
-   * (locations.diagnoseConversations)
-   *
-   * @param string $parent Required. The parent resource where the analysis will
-   * be performed.
-   * @param GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleLongrunningOperation
-   * @throws \Google\Service\Exception
-   */
-  public function diagnoseConversations($parent, GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('diagnoseConversations', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Natural language based Insights which powers the next generation of

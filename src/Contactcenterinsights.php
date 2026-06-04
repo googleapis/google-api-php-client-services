@@ -61,7 +61,6 @@ class Contactcenterinsights extends \Google\Service
   public $projects_locations_datasets_conversations;
   public $projects_locations_datasets_conversations_feedbackLabels;
   public $projects_locations_datasets_insightsdata;
-  public $projects_locations_diagnostics;
   public $projects_locations_encryptionSpec;
   public $projects_locations_insightsdata;
   public $projects_locations_issueModels;
@@ -121,16 +120,6 @@ class Contactcenterinsights extends \Google\Service
               ],
             ],'bulkUploadFeedbackLabels' => [
               'path' => 'v1/{+parent}:bulkUploadFeedbackLabels',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'diagnoseConversations' => [
-              'path' => 'v1/{+parent}:diagnoseConversations',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -2139,66 +2128,6 @@ class Contactcenterinsights extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_diagnostics = new Contactcenterinsights\Resource\ProjectsLocationsDiagnostics(
-        $this,
-        $this->serviceName,
-        'diagnostics',
-        [
-          'methods' => [
-            'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/diagnostics',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'appId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'appVersion' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
