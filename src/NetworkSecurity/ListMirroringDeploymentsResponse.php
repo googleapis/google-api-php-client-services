@@ -31,7 +31,8 @@ class ListMirroringDeploymentsResponse extends \Google\Collection
    */
   public $nextPageToken;
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached. See
+   * https://google.aip.dev/217 for more details.
    *
    * @var string[]
    */
@@ -72,7 +73,8 @@ class ListMirroringDeploymentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached. See
+   * https://google.aip.dev/217 for more details.
    *
    * @param string[] $unreachable
    */
