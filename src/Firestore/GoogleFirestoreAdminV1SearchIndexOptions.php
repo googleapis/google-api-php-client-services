@@ -32,8 +32,9 @@ class GoogleFirestoreAdminV1SearchIndexOptions extends \Google\Model
   public $textLanguage;
   /**
    * Optional. The field in the document that specifies which language to use
-   * for that specific document. If unspecified, the language is taken from the
-   * "language" field if it exists or from `text_language` if it does not.
+   * for that specific document. For indexes with MONGODB_COMPATIBLE_API
+   * ApiScope: if unspecified, the language is taken from the "language" field
+   * if it exists or from `text_language` if it does not.
    *
    * @var string
    */
@@ -62,8 +63,9 @@ class GoogleFirestoreAdminV1SearchIndexOptions extends \Google\Model
   }
   /**
    * Optional. The field in the document that specifies which language to use
-   * for that specific document. If unspecified, the language is taken from the
-   * "language" field if it exists or from `text_language` if it does not.
+   * for that specific document. For indexes with MONGODB_COMPATIBLE_API
+   * ApiScope: if unspecified, the language is taken from the "language" field
+   * if it exists or from `text_language` if it does not.
    *
    * @param string $textLanguageOverrideFieldPath
    */
