@@ -17,9 +17,9 @@
 
 namespace Google\Service\SA360\Resource;
 
-use Google\Service\SA360\GoogleAdsSearchads360V0ResourcesSearchAds360Field;
-use Google\Service\SA360\GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest;
-use Google\Service\SA360\GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse;
+use Google\Service\SA360\GoogleAdsSearchads360V23ResourcesSearchAds360Field;
+use Google\Service\SA360\GoogleAdsSearchads360V23ServicesSearchSearchAds360FieldsRequest;
+use Google\Service\SA360\GoogleAdsSearchads360V23ServicesSearchSearchAds360FieldsResponse;
 
 /**
  * The "searchAds360Fields" collection of methods.
@@ -38,14 +38,14 @@ class SearchAds360Fields extends \Google\Service\Resource
    *
    * @param string $resourceName Required. The resource name of the field to get.
    * @param array $optParams Optional parameters.
-   * @return GoogleAdsSearchads360V0ResourcesSearchAds360Field
+   * @return GoogleAdsSearchads360V23ResourcesSearchAds360Field
    * @throws \Google\Service\Exception
    */
   public function get($resourceName, $optParams = [])
   {
     $params = ['resourceName' => $resourceName];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoogleAdsSearchads360V0ResourcesSearchAds360Field::class);
+    return $this->call('get', [$params], GoogleAdsSearchads360V23ResourcesSearchAds360Field::class);
   }
   /**
    * Returns all fields that match the search [query](/search-
@@ -54,16 +54,16 @@ class SearchAds360Fields extends \Google\Service\Resource
    * [HeaderError]() [InternalError]() [QueryError]() [QuotaError]()
    * [RequestError]() (searchAds360Fields.search)
    *
-   * @param GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest $postBody
+   * @param GoogleAdsSearchads360V23ServicesSearchSearchAds360FieldsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse
+   * @return GoogleAdsSearchads360V23ServicesSearchSearchAds360FieldsResponse
    * @throws \Google\Service\Exception
    */
-  public function search(GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest $postBody, $optParams = [])
+  public function search(GoogleAdsSearchads360V23ServicesSearchSearchAds360FieldsRequest $postBody, $optParams = [])
   {
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('search', [$params], GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse::class);
+    return $this->call('search', [$params], GoogleAdsSearchads360V23ServicesSearchSearchAds360FieldsResponse::class);
   }
 }
 
