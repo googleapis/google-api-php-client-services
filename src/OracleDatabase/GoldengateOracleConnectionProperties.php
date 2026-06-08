@@ -57,9 +57,10 @@ class GoldengateOracleConnectionProperties extends \Google\Model
    */
   public $connectionString;
   /**
-   * Optional. Database instance id of database in Oracle Database @ Google
-   * Cloud. If gcp_oracle_database_id is provided, connection_string must be
-   * empty.
+   * Optional. Autonomous AI Database instance id of database in Oracle Database
+   * @ Google Cloud. If gcp_oracle_database_id is provided, connection_string
+   * must be empty. Format: projects/{project}/locations/{location}/autonomousDa
+   * tabases/{autonomous_database}
    *
    * @var string
    */
@@ -141,9 +142,10 @@ class GoldengateOracleConnectionProperties extends \Google\Model
     return $this->connectionString;
   }
   /**
-   * Optional. Database instance id of database in Oracle Database @ Google
-   * Cloud. If gcp_oracle_database_id is provided, connection_string must be
-   * empty.
+   * Optional. Autonomous AI Database instance id of database in Oracle Database
+   * @ Google Cloud. If gcp_oracle_database_id is provided, connection_string
+   * must be empty. Format: projects/{project}/locations/{location}/autonomousDa
+   * tabases/{autonomous_database}
    *
    * @param string $gcpOracleDatabaseId
    */
