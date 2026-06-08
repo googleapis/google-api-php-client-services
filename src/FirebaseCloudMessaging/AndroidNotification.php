@@ -113,6 +113,14 @@ class AndroidNotification extends \Google\Collection
    */
   public $bodyLocKey;
   /**
+   * Optional. If set, display notifications delivered to the device will be
+   * handled by the app instead of the proxy.
+   *
+   * @deprecated
+   * @var bool
+   */
+  public $bypassProxyNotification;
+  /**
    * The [notification's channel id](https://developer.android.com/guide/topics/
    * ui/notifiers/notifications#ManageChannels) (new in Android O). The app must
    * create a channel with this channel ID before any notification with this
@@ -375,6 +383,25 @@ class AndroidNotification extends \Google\Collection
   public function getBodyLocKey()
   {
     return $this->bodyLocKey;
+  }
+  /**
+   * Optional. If set, display notifications delivered to the device will be
+   * handled by the app instead of the proxy.
+   *
+   * @deprecated
+   * @param bool $bypassProxyNotification
+   */
+  public function setBypassProxyNotification($bypassProxyNotification)
+  {
+    $this->bypassProxyNotification = $bypassProxyNotification;
+  }
+  /**
+   * @deprecated
+   * @return bool
+   */
+  public function getBypassProxyNotification()
+  {
+    return $this->bypassProxyNotification;
   }
   /**
    * The [notification's channel id](https://developer.android.com/guide/topics/
