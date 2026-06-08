@@ -33,6 +33,9 @@ class GoogleCloudDataplexV1LookupContextRequest extends \Google\Collection
    * context_budget - If provided, the output will be intelligently truncated on
    * a best-effort basis to contain approximately the desired amount of
    * characters. There is no guarantee to achieve the specific amount.
+   * all_schema_fields - If set to true, all schema fields will be returned in
+   * the context (regardless of context_budget value). Otherwise, the list of
+   * schema fields is truncated. Default is false.
    *
    * @var string[]
    */
@@ -69,6 +72,9 @@ class GoogleCloudDataplexV1LookupContextRequest extends \Google\Collection
    * context_budget - If provided, the output will be intelligently truncated on
    * a best-effort basis to contain approximately the desired amount of
    * characters. There is no guarantee to achieve the specific amount.
+   * all_schema_fields - If set to true, all schema fields will be returned in
+   * the context (regardless of context_budget value). Otherwise, the list of
+   * schema fields is truncated. Default is false.
    *
    * @param string[] $options
    */
