@@ -32,6 +32,8 @@ class GoogleCloudDiscoveryengineV1BAPConfig extends \Google\Collection
    * @var string[]
    */
   public $supportedConnectorModes;
+  protected $toolspecOverrideType = GoogleCloudDiscoveryengineV1BAPConfigToolspecOverride::class;
+  protected $toolspecOverrideDataType = '';
 
   /**
    * Optional. The actions enabled on the associated BAP connection.
@@ -64,6 +66,30 @@ class GoogleCloudDiscoveryengineV1BAPConfig extends \Google\Collection
   public function getSupportedConnectorModes()
   {
     return $this->supportedConnectorModes;
+  }
+  /**
+   * Optional. Custom toolspec overrides for this connection. For Enterprise BAP
+   * connectors that support admin-curated tool definitions, this holds the
+   * (simplified) per-tool overrides. On Get, populated by the server by merging
+   * persisted overrides with live runtime tool definitions and trimming the
+   * result for UI consumption. On Update, the supplied value replaces the
+   * persisted overrides after server-side validation and merging: the
+   * `base_version` field MUST match the server's current base toolspec version
+   * (otherwise the request is rejected with a user-facing error directing the
+   * admin to re-download the latest tools first).
+   *
+   * @param GoogleCloudDiscoveryengineV1BAPConfigToolspecOverride $toolspecOverride
+   */
+  public function setToolspecOverride(GoogleCloudDiscoveryengineV1BAPConfigToolspecOverride $toolspecOverride)
+  {
+    $this->toolspecOverride = $toolspecOverride;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1BAPConfigToolspecOverride
+   */
+  public function getToolspecOverride()
+  {
+    return $this->toolspecOverride;
   }
 }
 

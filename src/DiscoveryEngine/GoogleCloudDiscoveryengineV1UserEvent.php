@@ -118,6 +118,8 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
    * @var string
    */
   public $eventType;
+  protected $feedbackType = GoogleCloudDiscoveryengineV1Feedback::class;
+  protected $feedbackDataType = '';
   /**
    * Optional. The filter syntax consists of an expression language for
    * constructing a predicate from one or more fields of the documents being
@@ -435,6 +437,22 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
   public function getEventType()
   {
     return $this->eventType;
+  }
+  /**
+   * Optional. This field is optional except for the `add-feedback` event types.
+   *
+   * @param GoogleCloudDiscoveryengineV1Feedback $feedback
+   */
+  public function setFeedback(GoogleCloudDiscoveryengineV1Feedback $feedback)
+  {
+    $this->feedback = $feedback;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1Feedback
+   */
+  public function getFeedback()
+  {
+    return $this->feedback;
   }
   /**
    * Optional. The filter syntax consists of an expression language for

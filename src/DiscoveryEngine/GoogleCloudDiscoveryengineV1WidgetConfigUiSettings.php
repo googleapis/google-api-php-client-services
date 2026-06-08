@@ -120,7 +120,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * `disable-image-generation` * `disable-video-generation` * `disable-
    * onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-
    * upload` * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-
-   * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups`
+   * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups` *
+   * `single-agent-orchestration` * `multi-agent-orchestration`
    *
    * @var string[]
    */
@@ -133,6 +134,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * @var string
    */
   public $interactionType;
+  protected $modelConfigInfoType = GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfo::class;
+  protected $modelConfigInfoDataType = '';
   /**
    * Output only. Maps a model name to its specific configuration for this
    * engine. This allows admin users to turn on/off individual models. This only
@@ -328,7 +331,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * `disable-image-generation` * `disable-video-generation` * `disable-
    * onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-
    * upload` * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-
-   * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups`
+   * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups` *
+   * `single-agent-orchestration` * `multi-agent-orchestration`
    *
    * @param string[] $features
    */
@@ -377,6 +381,28 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
   public function getInteractionType()
   {
     return $this->interactionType;
+  }
+  /**
+   * Output only. The resolved, server-side view of model selector
+   * configuration. Holds both the ordered list of models that should appear in
+   * the model selector dropdown and the model that should be selected by
+   * default. Clients should render this directly without applying their own
+   * filtering, ordering, or localization. The legacy `model_configs` map above
+   * is retained for backward compatibility with clients that have not yet
+   * migrated to consuming this field.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfo $modelConfigInfo
+   */
+  public function setModelConfigInfo(GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfo $modelConfigInfo)
+  {
+    $this->modelConfigInfo = $modelConfigInfo;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfo
+   */
+  public function getModelConfigInfo()
+  {
+    return $this->modelConfigInfo;
   }
   /**
    * Output only. Maps a model name to its specific configuration for this
