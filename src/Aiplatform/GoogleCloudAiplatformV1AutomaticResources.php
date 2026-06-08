@@ -26,8 +26,8 @@ class GoogleCloudAiplatformV1AutomaticResources extends \Google\Model
    * to that many replicas is guaranteed (barring service outages). If traffic
    * increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, a no upper bound
-   * for scaling under heavy traffic will be assume, though Vertex AI may be
-   * unable to scale beyond certain replica number.
+   * for scaling under heavy traffic will be assume, though Agent Platform may
+   * be unable to scale beyond certain replica number.
    *
    * @var int
    */
@@ -50,8 +50,8 @@ class GoogleCloudAiplatformV1AutomaticResources extends \Google\Model
    * to that many replicas is guaranteed (barring service outages). If traffic
    * increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, a no upper bound
-   * for scaling under heavy traffic will be assume, though Vertex AI may be
-   * unable to scale beyond certain replica number.
+   * for scaling under heavy traffic will be assume, though Agent Platform may
+   * be unable to scale beyond certain replica number.
    *
    * @param int $maxReplicaCount
    */

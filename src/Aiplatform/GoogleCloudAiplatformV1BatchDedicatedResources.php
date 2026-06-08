@@ -30,8 +30,8 @@ class GoogleCloudAiplatformV1BatchDedicatedResources extends \Google\Model
   public $maxReplicaCount;
   /**
    * Immutable. The number of machine replicas used at the start of the batch
-   * operation. If not set, Vertex AI decides starting number, not greater than
-   * max_replica_count
+   * operation. If not set, Agent Platform decides starting number, not greater
+   * than max_replica_count
    *
    * @var int
    */
@@ -72,8 +72,8 @@ class GoogleCloudAiplatformV1BatchDedicatedResources extends \Google\Model
   }
   /**
    * Immutable. The number of machine replicas used at the start of the batch
-   * operation. If not set, Vertex AI decides starting number, not greater than
-   * max_replica_count
+   * operation. If not set, Agent Platform decides starting number, not greater
+   * than max_replica_count
    *
    * @param int $startingReplicaCount
    */

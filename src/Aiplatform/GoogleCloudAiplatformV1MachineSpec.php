@@ -99,19 +99,19 @@ class GoogleCloudAiplatformV1MachineSpec extends \Google\Model
    */
   public const ACCELERATOR_TYPE_TPU_V5_LITEPOD = 'TPU_V5_LITEPOD';
   /**
-   * The number of accelerators to attach to the machine. For accelerator
-   * optimized machine types (https://cloud.google.com/compute/docs/accelerator-
+   * The number of accelerators to attach to the machine. For [accelerator
+   * optimized machine types](https://cloud.google.com/compute/docs/accelerator-
    * optimized-machines), One may set the accelerator_count from 1 to N for
    * machine with N GPUs. If accelerator_count is less than or equal to N / 2,
-   * Vertex will co-schedule the replicas of the model into the same VM to save
-   * cost. For example, if the machine type is a3-highgpu-8g, which has 8 H100
-   * GPUs, one can set accelerator_count to 1 to 8. If accelerator_count is 1,
-   * 2, 3, or 4, Vertex will co-schedule 8, 4, 2, or 2 replicas of the model
-   * into the same VM to save cost. When co-scheduling, CPU, memory and storage
-   * on the VM will be distributed to replicas on the VM. For example, one can
-   * expect a co-scheduled replica requesting 2 GPUs out of a 8-GPU VM will
-   * receive 25% of the CPU, memory and storage of the VM. Note that the feature
-   * is not compatible with multihost_gpu_node_count. When
+   * Agent Platform co-schedules the replicas of the model into the same VM to
+   * save cost. For example, if the machine type is a3-highgpu-8g, which has 8
+   * H100 GPUs, one can set accelerator_count to 1 to 8. If accelerator_count is
+   * 1, 2, 3, or 4, Agent Platform co-schedules 8, 4, 2, or 2 replicas of the
+   * model into the same VM to save cost. When co-scheduling, CPU, memory and
+   * storage on the VM will be distributed to replicas on the VM. For example,
+   * one can expect a co-scheduled replica requesting 2 GPUs out of a 8-GPU VM
+   * will receive 25% of the CPU, memory and storage of the VM. Note that the
+   * feature is not compatible with multihost_gpu_node_count. When
    * multihost_gpu_node_count is set, the co-scheduling will not be enabled.
    *
    * @var int
@@ -140,13 +140,14 @@ class GoogleCloudAiplatformV1MachineSpec extends \Google\Model
   public $gpuPartitionSize;
   /**
    * Immutable. The type of the machine. See the [list of machine types
-   * supported for prediction](https://cloud.google.com/vertex-
-   * ai/docs/predictions/configure-compute#machine-types) See the [list of
-   * machine types supported for custom
-   * training](https://cloud.google.com/vertex-ai/docs/training/configure-
-   * compute#machine-types). For DeployedModel this field is optional, and the
-   * default value is `n1-standard-2`. For BatchPredictionJob or as part of
-   * WorkerPoolSpec this field is required.
+   * supported for prediction](https://cloud.google.com/gemini-enterprise-agent-
+   * platform/machine-learning/predictions/configure-compute#machine-types) See
+   * the [list of machine types supported for custom
+   * training](https://cloud.google.com/gemini-enterprise-agent-
+   * platform/machine-learning/training/configure-compute#machine-types). For
+   * DeployedModel this field is optional, and the default value is
+   * `n1-standard-2`. For BatchPredictionJob or as part of WorkerPoolSpec this
+   * field is required.
    *
    * @var string
    */
@@ -162,19 +163,19 @@ class GoogleCloudAiplatformV1MachineSpec extends \Google\Model
   public $tpuTopology;
 
   /**
-   * The number of accelerators to attach to the machine. For accelerator
-   * optimized machine types (https://cloud.google.com/compute/docs/accelerator-
+   * The number of accelerators to attach to the machine. For [accelerator
+   * optimized machine types](https://cloud.google.com/compute/docs/accelerator-
    * optimized-machines), One may set the accelerator_count from 1 to N for
    * machine with N GPUs. If accelerator_count is less than or equal to N / 2,
-   * Vertex will co-schedule the replicas of the model into the same VM to save
-   * cost. For example, if the machine type is a3-highgpu-8g, which has 8 H100
-   * GPUs, one can set accelerator_count to 1 to 8. If accelerator_count is 1,
-   * 2, 3, or 4, Vertex will co-schedule 8, 4, 2, or 2 replicas of the model
-   * into the same VM to save cost. When co-scheduling, CPU, memory and storage
-   * on the VM will be distributed to replicas on the VM. For example, one can
-   * expect a co-scheduled replica requesting 2 GPUs out of a 8-GPU VM will
-   * receive 25% of the CPU, memory and storage of the VM. Note that the feature
-   * is not compatible with multihost_gpu_node_count. When
+   * Agent Platform co-schedules the replicas of the model into the same VM to
+   * save cost. For example, if the machine type is a3-highgpu-8g, which has 8
+   * H100 GPUs, one can set accelerator_count to 1 to 8. If accelerator_count is
+   * 1, 2, 3, or 4, Agent Platform co-schedules 8, 4, 2, or 2 replicas of the
+   * model into the same VM to save cost. When co-scheduling, CPU, memory and
+   * storage on the VM will be distributed to replicas on the VM. For example,
+   * one can expect a co-scheduled replica requesting 2 GPUs out of a 8-GPU VM
+   * will receive 25% of the CPU, memory and storage of the VM. Note that the
+   * feature is not compatible with multihost_gpu_node_count. When
    * multihost_gpu_node_count is set, the co-scheduling will not be enabled.
    *
    * @param int $acceleratorCount
@@ -239,13 +240,14 @@ class GoogleCloudAiplatformV1MachineSpec extends \Google\Model
   }
   /**
    * Immutable. The type of the machine. See the [list of machine types
-   * supported for prediction](https://cloud.google.com/vertex-
-   * ai/docs/predictions/configure-compute#machine-types) See the [list of
-   * machine types supported for custom
-   * training](https://cloud.google.com/vertex-ai/docs/training/configure-
-   * compute#machine-types). For DeployedModel this field is optional, and the
-   * default value is `n1-standard-2`. For BatchPredictionJob or as part of
-   * WorkerPoolSpec this field is required.
+   * supported for prediction](https://cloud.google.com/gemini-enterprise-agent-
+   * platform/machine-learning/predictions/configure-compute#machine-types) See
+   * the [list of machine types supported for custom
+   * training](https://cloud.google.com/gemini-enterprise-agent-
+   * platform/machine-learning/training/configure-compute#machine-types). For
+   * DeployedModel this field is optional, and the default value is
+   * `n1-standard-2`. For BatchPredictionJob or as part of WorkerPoolSpec this
+   * field is required.
    *
    * @param string $machineType
    */

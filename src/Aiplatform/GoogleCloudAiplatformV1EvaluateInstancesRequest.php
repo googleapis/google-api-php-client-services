@@ -101,7 +101,9 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
   protected $trajectorySingleToolUseInputDataType = '';
 
   /**
-   * Optional. Autorater config used for evaluation.
+   * Optional. Autorater config used for evaluation. Not applicable for
+   * predefined metrics (PredefinedMetricSpec); the server uses its own model
+   * configuration for predefined metrics and this field is ignored.
    *
    * @param GoogleCloudAiplatformV1AutoraterConfig $autoraterConfig
    */

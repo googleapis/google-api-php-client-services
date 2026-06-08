@@ -102,6 +102,12 @@ class GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataRecordError e
    */
   public const ERROR_TYPE_EMBEDDING_METADATA_EXCEEDS_SIZE_LIMIT = 'EMBEDDING_METADATA_EXCEEDS_SIZE_LIMIT';
   /**
+   * Multiple input records share the same datapoint id. The input conversion
+   * pipeline performs non-deterministic last-write-wins de-duplication and
+   * emits one error per duplicated id.
+   */
+  public const ERROR_TYPE_DUPLICATE_ID = 'DUPLICATE_ID';
+  /**
    * Empty if the embedding id is failed to parse.
    *
    * @var string
@@ -177,7 +183,8 @@ class GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataRecordError e
    * DUPLICATE_NAMESPACE, OP_IN_DATAPOINT, MULTIPLE_VALUES,
    * INVALID_NUMERIC_VALUE, INVALID_ENCODING, INVALID_SPARSE_DIMENSIONS,
    * INVALID_TOKEN_VALUE, INVALID_SPARSE_EMBEDDING, INVALID_EMBEDDING,
-   * INVALID_EMBEDDING_METADATA, EMBEDDING_METADATA_EXCEEDS_SIZE_LIMIT
+   * INVALID_EMBEDDING_METADATA, EMBEDDING_METADATA_EXCEEDS_SIZE_LIMIT,
+   * DUPLICATE_ID
    *
    * @param self::ERROR_TYPE_* $errorType
    */

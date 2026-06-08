@@ -32,10 +32,10 @@ class GoogleCloudAiplatformV1DedicatedResources extends \Google\Collection
    * increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, will use
    * min_replica_count as the default value. The value of this field impacts the
-   * charge against Vertex CPU and GPU quotas. Specifically, you will be charged
-   * for (max_replica_count * number of cores in the selected machine type) and
-   * (max_replica_count * number of GPUs per replica in the selected machine
-   * type).
+   * charge against Agent Platform CPU and GPU quotas. Specifically, you will be
+   * charged for (max_replica_count * number of cores in the selected machine
+   * type) and (max_replica_count * number of GPUs per replica in the selected
+   * machine type).
    *
    * @var int
    */
@@ -121,10 +121,10 @@ class GoogleCloudAiplatformV1DedicatedResources extends \Google\Collection
    * increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, will use
    * min_replica_count as the default value. The value of this field impacts the
-   * charge against Vertex CPU and GPU quotas. Specifically, you will be charged
-   * for (max_replica_count * number of cores in the selected machine type) and
-   * (max_replica_count * number of GPUs per replica in the selected machine
-   * type).
+   * charge against Agent Platform CPU and GPU quotas. Specifically, you will be
+   * charged for (max_replica_count * number of cores in the selected machine
+   * type) and (max_replica_count * number of GPUs per replica in the selected
+   * machine type).
    *
    * @param int $maxReplicaCount
    */

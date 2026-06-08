@@ -22,7 +22,15 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public const CODEC_VIDEO_CODEC_UNSPECIFIED = 'VIDEO_CODEC_UNSPECIFIED';
   public const CODEC_VIDEO_CODEC_H264 = 'VIDEO_CODEC_H264';
   public const CODEC_VIDEO_CODEC_PRORES = 'VIDEO_CODEC_PRORES';
+  public const CODEC_VIDEO_CODEC_DNXHR = 'VIDEO_CODEC_DNXHR';
   protected $collection_key = 'conditioningFrames';
+  /**
+   * Optional. If true, anchors the last frame in video generation by generating
+   * a custom border mask.
+   *
+   * @var bool
+   */
+  public $anchorLastFrame;
   /**
    * Optional. Video codec to use for output.
    *
@@ -31,6 +39,13 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public $codec;
   protected $conditioningFramesType = CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame::class;
   protected $conditioningFramesDataType = 'array';
+  /**
+   * Generic key-value pairs for experimental parameters. This allows adding new
+   * parameters without changing the dataplane binary.
+   *
+   * @var array[]
+   */
+  public $customParameters;
   protected $humanPoseType = CloudAiLargeModelsVisionHumanPose::class;
   protected $humanPoseDataType = '';
   /**
@@ -66,6 +81,10 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
    * @var string
    */
   public $requestOriginTag;
+  protected $schedulingConfigType = CloudAiLargeModelsVisionGenerateVideoExperimentsVESchedulingConfig::class;
+  protected $schedulingConfigDataType = '';
+  protected $seamlessType = CloudAiLargeModelsVisionSeamless::class;
+  protected $seamlessDataType = '';
   /**
    * If true (default), truncate input videos that exceed the model's maximum
    * frame count by applying a frame_selection_config to __video_file__ inputs.
@@ -89,10 +108,27 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public $videoTransformStrength;
 
   /**
+   * Optional. If true, anchors the last frame in video generation by generating
+   * a custom border mask.
+   *
+   * @param bool $anchorLastFrame
+   */
+  public function setAnchorLastFrame($anchorLastFrame)
+  {
+    $this->anchorLastFrame = $anchorLastFrame;
+  }
+  /**
+   * @return bool
+   */
+  public function getAnchorLastFrame()
+  {
+    return $this->anchorLastFrame;
+  }
+  /**
    * Optional. Video codec to use for output.
    *
    * Accepted values: VIDEO_CODEC_UNSPECIFIED, VIDEO_CODEC_H264,
-   * VIDEO_CODEC_PRORES
+   * VIDEO_CODEC_PRORES, VIDEO_CODEC_DNXHR
    *
    * @param self::CODEC_* $codec
    */
@@ -123,6 +159,23 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getConditioningFrames()
   {
     return $this->conditioningFrames;
+  }
+  /**
+   * Generic key-value pairs for experimental parameters. This allows adding new
+   * parameters without changing the dataplane binary.
+   *
+   * @param array[] $customParameters
+   */
+  public function setCustomParameters($customParameters)
+  {
+    $this->customParameters = $customParameters;
+  }
+  /**
+   * @return array[]
+   */
+  public function getCustomParameters()
+  {
+    return $this->customParameters;
   }
   /**
    * Human pose parameters for Pose Control
@@ -227,6 +280,39 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getRequestOriginTag()
   {
     return $this->requestOriginTag;
+  }
+  /**
+   * Optional. Scheduling configuration.
+   *
+   * @param CloudAiLargeModelsVisionGenerateVideoExperimentsVESchedulingConfig $schedulingConfig
+   */
+  public function setSchedulingConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsVESchedulingConfig $schedulingConfig)
+  {
+    $this->schedulingConfig = $schedulingConfig;
+  }
+  /**
+   * @return CloudAiLargeModelsVisionGenerateVideoExperimentsVESchedulingConfig
+   */
+  public function getSchedulingConfig()
+  {
+    return $this->schedulingConfig;
+  }
+  /**
+   * Parameters for seamless (edge-continuous) video generation, enabling
+   * temporal looping and/or spatial tessellation.
+   *
+   * @param CloudAiLargeModelsVisionSeamless $seamless
+   */
+  public function setSeamless(CloudAiLargeModelsVisionSeamless $seamless)
+  {
+    $this->seamless = $seamless;
+  }
+  /**
+   * @return CloudAiLargeModelsVisionSeamless
+   */
+  public function getSeamless()
+  {
+    return $this->seamless;
   }
   /**
    * If true (default), truncate input videos that exceed the model's maximum
