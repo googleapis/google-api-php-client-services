@@ -21,7 +21,7 @@ class BatchGetStatsResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
-   * Output only. Etag of this resource.
+   * Etag of this resource.
    *
    * @var string
    */
@@ -29,15 +29,15 @@ class BatchGetStatsResponse extends \Google\Collection
   protected $itemsType = VideoStat::class;
   protected $itemsDataType = 'array';
   /**
-   * Output only. Identifies what kind of resource this is. Value: the fixed
-   * string "youtube#batchGetStatsResponse".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#batchGetStatsResponse".
    *
    * @var string
    */
   public $kind;
 
   /**
-   * Output only. Etag of this resource.
+   * Etag of this resource.
    *
    * @param string $etag
    */
@@ -53,7 +53,7 @@ class BatchGetStatsResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * Output only. The videos' stats information.
+   * The videos' stats information.
    *
    * @param VideoStat[] $items
    */
@@ -69,8 +69,8 @@ class BatchGetStatsResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * Output only. Identifies what kind of resource this is. Value: the fixed
-   * string "youtube#batchGetStatsResponse".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#batchGetStatsResponse".
    *
    * @param string $kind
    */
