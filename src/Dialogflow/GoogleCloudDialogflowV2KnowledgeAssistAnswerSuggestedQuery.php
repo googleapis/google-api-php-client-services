@@ -17,12 +17,15 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery extends \Google\Model
+class GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery extends \Google\Collection
 {
+  protected $collection_key = 'searchContexts';
   /**
    * @var string
    */
   public $queryText;
+  protected $searchContextsType = GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuerySearchContext::class;
+  protected $searchContextsDataType = 'array';
 
   /**
    * @param string $queryText
@@ -37,6 +40,20 @@ class GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery extends \Google
   public function getQueryText()
   {
     return $this->queryText;
+  }
+  /**
+   * @param GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuerySearchContext[] $searchContexts
+   */
+  public function setSearchContexts($searchContexts)
+  {
+    $this->searchContexts = $searchContexts;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuerySearchContext[]
+   */
+  public function getSearchContexts()
+  {
+    return $this->searchContexts;
   }
 }
 

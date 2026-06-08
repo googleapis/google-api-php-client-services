@@ -17,8 +17,11 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse extends \Google\Model
+class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse extends \Google\Collection
 {
+  protected $collection_key = 'additionalSuggestedQueryResults';
+  protected $additionalSuggestedQueryResultsType = GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerAdditionalSuggestedQueryResult::class;
+  protected $additionalSuggestedQueryResultsDataType = 'array';
   /**
    * @var int
    */
@@ -30,6 +33,20 @@ class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse extends \Google
    */
   public $latestMessage;
 
+  /**
+   * @param GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerAdditionalSuggestedQueryResult[] $additionalSuggestedQueryResults
+   */
+  public function setAdditionalSuggestedQueryResults($additionalSuggestedQueryResults)
+  {
+    $this->additionalSuggestedQueryResults = $additionalSuggestedQueryResults;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerAdditionalSuggestedQueryResult[]
+   */
+  public function getAdditionalSuggestedQueryResults()
+  {
+    return $this->additionalSuggestedQueryResults;
+  }
   /**
    * @param int $contextSize
    */
