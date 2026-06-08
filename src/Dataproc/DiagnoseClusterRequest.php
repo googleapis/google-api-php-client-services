@@ -28,8 +28,7 @@ class DiagnoseClusterRequest extends \Google\Collection
    */
   public const TARBALL_ACCESS_GOOGLE_CLOUD_SUPPORT = 'GOOGLE_CLOUD_SUPPORT';
   /**
-   * Google Cloud Dataproc Diagnose service account has read access to the
-   * diagnostic tarball
+   * The diagnose service account has read access to the diagnostic tarball
    */
   public const TARBALL_ACCESS_GOOGLE_DATAPROC_DIAGNOSE = 'GOOGLE_DATAPROC_DIAGNOSE';
   protected $collection_key = 'yarnApplicationIds';

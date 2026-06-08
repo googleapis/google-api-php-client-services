@@ -28,7 +28,7 @@ class InstanceSelection extends \Google\Collection
   public $machineTypes;
   /**
    * Optional. Preference of this instance selection. Lower number means higher
-   * preference. Dataproc will first try to create a VM based on the machine-
+   * preference. The service will first try to create a VM based on the machine-
    * type with priority rank and fallback to next rank based on availability.
    * Machine types and instance selections with the same priority have the same
    * preference.
@@ -55,7 +55,7 @@ class InstanceSelection extends \Google\Collection
   }
   /**
    * Optional. Preference of this instance selection. Lower number means higher
-   * preference. Dataproc will first try to create a VM based on the machine-
+   * preference. The service will first try to create a VM based on the machine-
    * type with priority rank and fallback to next rank based on availability.
    * Machine types and instance selections with the same priority have the same
    * preference.

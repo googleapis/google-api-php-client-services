@@ -30,8 +30,8 @@ class RepairClusterRequest extends \Google\Collection
    */
   public $clusterUuid;
   /**
-   * Optional. Whether the request is submitted by Dataproc super user. If true,
-   * IAM will check 'dataproc.clusters.repair' permission instead of
+   * Optional. Whether the request is submitted by a super user. If true, IAM
+   * will check 'dataproc.clusters.repair' permission instead of
    * 'dataproc.clusters.update' permission. This is to give Dataproc superuser
    * the ability to repair clusters without granting the overly broad update
    * permission.
@@ -47,7 +47,7 @@ class RepairClusterRequest extends \Google\Collection
    * is 0 for forceful decommissioning, and the maximum timeout period is 1 day.
    * (see JSON Mapping—Duration (https://developers.google.com/protocol-
    * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in
-   * Dataproc image versions 1.2+.
+   * image versions 1.2+.
    *
    * @var string
    */
@@ -107,8 +107,8 @@ class RepairClusterRequest extends \Google\Collection
     return $this->clusterUuid;
   }
   /**
-   * Optional. Whether the request is submitted by Dataproc super user. If true,
-   * IAM will check 'dataproc.clusters.repair' permission instead of
+   * Optional. Whether the request is submitted by a super user. If true, IAM
+   * will check 'dataproc.clusters.repair' permission instead of
    * 'dataproc.clusters.update' permission. This is to give Dataproc superuser
    * the ability to repair clusters without granting the overly broad update
    * permission.
@@ -134,7 +134,7 @@ class RepairClusterRequest extends \Google\Collection
    * is 0 for forceful decommissioning, and the maximum timeout period is 1 day.
    * (see JSON Mapping—Duration (https://developers.google.com/protocol-
    * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in
-   * Dataproc image versions 1.2+.
+   * image versions 1.2+.
    *
    * @param string $gracefulDecommissionTimeout
    */

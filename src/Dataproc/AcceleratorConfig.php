@@ -32,10 +32,10 @@ class AcceleratorConfig extends \Google\Model
    * ww.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]/accelerator
    * Types/nvidia-tesla-t4
    * projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4 nvidia-
-   * tesla-t4Auto Zone Exception: If you are using the Dataproc Auto Zone
-   * Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-
-   * clusters/auto-zone#using_auto_zone_placement) feature, you must use the
-   * short name of the accelerator type resource, for example, nvidia-tesla-t4.
+   * tesla-t4Auto Zone Exception: If you are using Auto Zone Placement
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
+   * zone#using_auto_zone_placement), you must use the short name of the
+   * accelerator type resource, for example, nvidia-tesla-t4.
    *
    * @var string
    */
@@ -64,10 +64,10 @@ class AcceleratorConfig extends \Google\Model
    * ww.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]/accelerator
    * Types/nvidia-tesla-t4
    * projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4 nvidia-
-   * tesla-t4Auto Zone Exception: If you are using the Dataproc Auto Zone
-   * Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-
-   * clusters/auto-zone#using_auto_zone_placement) feature, you must use the
-   * short name of the accelerator type resource, for example, nvidia-tesla-t4.
+   * tesla-t4Auto Zone Exception: If you are using Auto Zone Placement
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
+   * zone#using_auto_zone_placement), you must use the short name of the
+   * accelerator type resource, for example, nvidia-tesla-t4.
    *
    * @param string $acceleratorTypeUri
    */

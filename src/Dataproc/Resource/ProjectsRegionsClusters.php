@@ -48,8 +48,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project that the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param Cluster $postBody
    * @param array $optParams Optional parameters.
    *
@@ -80,8 +79,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project that the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param string $clusterName Required. The cluster name.
    * @param array $optParams Optional parameters.
    *
@@ -124,8 +122,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project that the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param string $clusterName Required. The cluster name.
    * @param DiagnoseClusterRequest $postBody
    * @param array $optParams Optional parameters.
@@ -143,8 +140,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project that the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param string $clusterName Required. The cluster name.
    * @param array $optParams Optional parameters.
    * @return Cluster
@@ -202,8 +198,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project that the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. A filter constraining the clusters to
@@ -240,8 +235,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param string $clusterName Required. The cluster name.
    * @param Cluster $postBody
    * @param array $optParams Optional parameters.
@@ -253,8 +247,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    * potentially interrupting jobs). Default timeout is 0 (for forceful
    * decommission), and the maximum allowed timeout is 1 day. (see JSON
    * representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).Only supported on Dataproc image versions 1.2 and
-   * higher.
+   * buffers/docs/proto3#json)).Supported in image versions 1.2 and higher.
    * @opt_param string requestId Optional. A unique ID used to identify the
    * request. If the server receives two UpdateClusterRequest (https://cloud.googl
    * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap
@@ -293,8 +286,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param string $clusterName Required. The cluster name.
    * @param RepairClusterRequest $postBody
    * @param array $optParams Optional parameters.
@@ -332,8 +324,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param string $clusterName Required. The cluster name.
    * @param StartClusterRequest $postBody
    * @param array $optParams Optional parameters.
@@ -351,8 +342,7 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project the cluster belongs to.
-   * @param string $region Required. The Dataproc region in which to handle the
-   * request.
+   * @param string $region Required. The region in which to handle the request.
    * @param string $clusterName Required. The cluster name.
    * @param StopClusterRequest $postBody
    * @param array $optParams Optional parameters.

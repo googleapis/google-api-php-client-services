@@ -25,7 +25,7 @@ class AutoscalingConfig extends \Google\Model
    * googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]
    * /autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_
    * region]/autoscalingPolicies/[policy_id]Note that the policy must be in the
-   * same project and Dataproc region.
+   * same project and region.
    *
    * @var string
    */
@@ -37,7 +37,7 @@ class AutoscalingConfig extends \Google\Model
    * googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]
    * /autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_
    * region]/autoscalingPolicies/[policy_id]Note that the policy must be in the
-   * same project and Dataproc region.
+   * same project and region.
    *
    * @param string $policyUri
    */

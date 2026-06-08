@@ -20,7 +20,7 @@ namespace Google\Service\Dataproc;
 class MetastoreConfig extends \Google\Model
 {
   /**
-   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * Required. Resource name of an existing Metastore service.Example:
    * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    *
    * @var string
@@ -28,7 +28,7 @@ class MetastoreConfig extends \Google\Model
   public $dataprocMetastoreService;
 
   /**
-   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * Required. Resource name of an existing Metastore service.Example:
    * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    *
    * @param string $dataprocMetastoreService

@@ -57,9 +57,9 @@ class InstanceGroupConfig extends \Google\Collection
    * URI can represent an image or image family.Image examples: https://www.goog
    * leapis.com/compute/v1/projects/[project_id]/global/images/[image-id]
    * projects/[project_id]/global/images/[image-id] image-idImage family
-   * examples. Dataproc will use the most recent image from the family: https://
-   * www.googleapis.com/compute/v1/projects/[project_id]/global/images/family/[c
-   * ustom-image-family-name]
+   * examples. The service will use the most recent image from the family: https
+   * ://www.googleapis.com/compute/v1/projects/[project_id]/global/images/family
+   * /[custom-image-family-name]
    * projects/[project_id]/global/images/family/[custom-image-family-name]If the
    * URI is unspecified, it will be inferred from SoftwareConfig.image_version
    * or the system default.
@@ -70,8 +70,8 @@ class InstanceGroupConfig extends \Google\Collection
   protected $instanceFlexibilityPolicyType = InstanceFlexibilityPolicy::class;
   protected $instanceFlexibilityPolicyDataType = '';
   /**
-   * Output only. The list of instance names. Dataproc derives the names from
-   * cluster_name, num_instances, and the instance group.
+   * Output only. The list of instance names, derived from cluster_name,
+   * num_instances, and the instance group.
    *
    * @var string[]
    */
@@ -90,10 +90,10 @@ class InstanceGroupConfig extends \Google\Collection
    * URL, partial URI, or short name are valid. Examples: https://www.googleapis
    * .com/compute/v1/projects/[project_id]/zones/[zone]/machineTypes/n1-
    * standard-2 projects/[project_id]/zones/[zone]/machineTypes/n1-standard-2
-   * n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone
-   * Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-
-   * clusters/auto-zone#using_auto_zone_placement) feature, you must use the
-   * short name of the machine type resource, for example, n1-standard-2.
+   * n1-standard-2Auto Zone Exception: If you are using Auto Zone Placement
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
+   * zone#using_auto_zone_placement), you must use the short name of the machine
+   * type resource, for example, n1-standard-2.
    *
    * @var string
    */
@@ -102,7 +102,7 @@ class InstanceGroupConfig extends \Google\Collection
   protected $managedGroupConfigDataType = '';
   /**
    * Optional. Specifies the minimum cpu platform for the Instance Group. See
-   * Dataproc -> Minimum CPU Platform
+   * Minimum CPU Platform
    * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    *
    * @var string
@@ -177,9 +177,9 @@ class InstanceGroupConfig extends \Google\Collection
    * URI can represent an image or image family.Image examples: https://www.goog
    * leapis.com/compute/v1/projects/[project_id]/global/images/[image-id]
    * projects/[project_id]/global/images/[image-id] image-idImage family
-   * examples. Dataproc will use the most recent image from the family: https://
-   * www.googleapis.com/compute/v1/projects/[project_id]/global/images/family/[c
-   * ustom-image-family-name]
+   * examples. The service will use the most recent image from the family: https
+   * ://www.googleapis.com/compute/v1/projects/[project_id]/global/images/family
+   * /[custom-image-family-name]
    * projects/[project_id]/global/images/family/[custom-image-family-name]If the
    * URI is unspecified, it will be inferred from SoftwareConfig.image_version
    * or the system default.
@@ -215,8 +215,8 @@ class InstanceGroupConfig extends \Google\Collection
     return $this->instanceFlexibilityPolicy;
   }
   /**
-   * Output only. The list of instance names. Dataproc derives the names from
-   * cluster_name, num_instances, and the instance group.
+   * Output only. The list of instance names, derived from cluster_name,
+   * num_instances, and the instance group.
    *
    * @param string[] $instanceNames
    */
@@ -269,10 +269,10 @@ class InstanceGroupConfig extends \Google\Collection
    * URL, partial URI, or short name are valid. Examples: https://www.googleapis
    * .com/compute/v1/projects/[project_id]/zones/[zone]/machineTypes/n1-
    * standard-2 projects/[project_id]/zones/[zone]/machineTypes/n1-standard-2
-   * n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone
-   * Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-
-   * clusters/auto-zone#using_auto_zone_placement) feature, you must use the
-   * short name of the machine type resource, for example, n1-standard-2.
+   * n1-standard-2Auto Zone Exception: If you are using Auto Zone Placement
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
+   * zone#using_auto_zone_placement), you must use the short name of the machine
+   * type resource, for example, n1-standard-2.
    *
    * @param string $machineTypeUri
    */
@@ -306,7 +306,7 @@ class InstanceGroupConfig extends \Google\Collection
   }
   /**
    * Optional. Specifies the minimum cpu platform for the Instance Group. See
-   * Dataproc -> Minimum CPU Platform
+   * Minimum CPU Platform
    * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    *
    * @param string $minCpuPlatform

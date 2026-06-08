@@ -30,7 +30,7 @@ class Cluster extends \Google\Collection
    */
   public $clusterName;
   /**
-   * Output only. A cluster UUID (Unique Universal Identifier). Dataproc
+   * Output only. A cluster UUID (Unique Universal Identifier). The service
    * generates this value when it creates the cluster.
    *
    * @var string
@@ -84,7 +84,7 @@ class Cluster extends \Google\Collection
     return $this->clusterName;
   }
   /**
-   * Output only. A cluster UUID (Unique Universal Identifier). Dataproc
+   * Output only. A cluster UUID (Unique Universal Identifier). The service
    * generates this value when it creates the cluster.
    *
    * @param string $clusterUuid
@@ -102,7 +102,7 @@ class Cluster extends \Google\Collection
   }
   /**
    * Optional. The cluster config for a cluster of Compute Engine Instances.
-   * Note that Dataproc may set default values, and values may change when
+   * Note that the service may set default values, and values may change when
    * clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig
    * must be specified.
    *
@@ -207,11 +207,11 @@ class Cluster extends \Google\Collection
     return $this->statusHistory;
   }
   /**
-   * Optional. The virtual cluster config is used when creating a Dataproc
-   * cluster that does not directly control the underlying compute resources,
-   * for example, when creating a Dataproc-on-GKE cluster
+   * Optional. The virtual cluster config is used when creating a cluster that
+   * does not directly control the underlying compute resources, for example,
+   * when creating a GKE cluster
    * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-
-   * overview). Dataproc may set default values, and values may change when
+   * overview). the service may set default values, and values may change when
    * clusters are updated. Exactly one of config or virtual_cluster_config must
    * be specified.
    *

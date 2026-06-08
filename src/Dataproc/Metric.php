@@ -24,9 +24,9 @@ class Metric extends \Google\Collection
    */
   public const METRIC_SOURCE_METRIC_SOURCE_UNSPECIFIED = 'METRIC_SOURCE_UNSPECIFIED';
   /**
-   * Monitoring agent metrics. If this source is enabled, Dataproc enables the
-   * monitoring agent in Compute Engine, and collects monitoring agent metrics,
-   * which are published with an agent.googleapis.com prefix.
+   * Monitoring agent metrics. If this source is enabled, the service enables
+   * the monitoring agent in Compute Engine, and collects monitoring agent
+   * metrics, which are published with an agent.googleapis.com prefix.
    */
   public const METRIC_SOURCE_MONITORING_AGENT_DEFAULTS = 'MONITORING_AGENT_DEFAULTS';
   /**
