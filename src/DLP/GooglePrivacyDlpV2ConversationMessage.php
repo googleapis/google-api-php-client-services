@@ -45,7 +45,7 @@ class GooglePrivacyDlpV2ConversationMessage extends \Google\Model
    */
   public $messageType;
   /**
-   * Optional. The identifier of the participant. For example 'test-user' or
+   * Optional. The identifier of the participant, for example 'test-user' or
    * 'gemini'. The participant ID can contain lowercase letters, numbers, and
    * hyphens; that is, it must match the regular expression:
    * `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. The maximum length is 63 characters.
@@ -89,7 +89,7 @@ class GooglePrivacyDlpV2ConversationMessage extends \Google\Model
     return $this->messageType;
   }
   /**
-   * Optional. The identifier of the participant. For example 'test-user' or
+   * Optional. The identifier of the participant, for example 'test-user' or
    * 'gemini'. The participant ID can contain lowercase letters, numbers, and
    * hyphens; that is, it must match the regular expression:
    * `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. The maximum length is 63 characters.
