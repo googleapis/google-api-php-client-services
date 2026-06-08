@@ -42,6 +42,22 @@ class AudioContentTypeTargetingOptionDetails extends \Google\Model
    */
   public const AUDIO_CONTENT_TYPE_AUDIO_CONTENT_TYPE_PODCAST = 'AUDIO_CONTENT_TYPE_PODCAST';
   /**
+   * The audio content type is catch-up radio.
+   */
+  public const AUDIO_CONTENT_TYPE_AUDIO_CONTENT_TYPE_CATCH_UP_RADIO = 'AUDIO_CONTENT_TYPE_CATCH_UP_RADIO';
+  /**
+   * The audio content type is web radio.
+   */
+  public const AUDIO_CONTENT_TYPE_AUDIO_CONTENT_TYPE_WEB_RADIO = 'AUDIO_CONTENT_TYPE_WEB_RADIO';
+  /**
+   * The audio content type is video game.
+   */
+  public const AUDIO_CONTENT_TYPE_AUDIO_CONTENT_TYPE_VIDEO_GAME = 'AUDIO_CONTENT_TYPE_VIDEO_GAME';
+  /**
+   * The audio content type is text-to-speech.
+   */
+  public const AUDIO_CONTENT_TYPE_AUDIO_CONTENT_TYPE_TEXT_TO_SPEECH = 'AUDIO_CONTENT_TYPE_TEXT_TO_SPEECH';
+  /**
    * Output only. The audio content type.
    *
    * @var string
@@ -53,7 +69,9 @@ class AudioContentTypeTargetingOptionDetails extends \Google\Model
    *
    * Accepted values: AUDIO_CONTENT_TYPE_UNSPECIFIED,
    * AUDIO_CONTENT_TYPE_UNKNOWN, AUDIO_CONTENT_TYPE_MUSIC,
-   * AUDIO_CONTENT_TYPE_BROADCAST, AUDIO_CONTENT_TYPE_PODCAST
+   * AUDIO_CONTENT_TYPE_BROADCAST, AUDIO_CONTENT_TYPE_PODCAST,
+   * AUDIO_CONTENT_TYPE_CATCH_UP_RADIO, AUDIO_CONTENT_TYPE_WEB_RADIO,
+   * AUDIO_CONTENT_TYPE_VIDEO_GAME, AUDIO_CONTENT_TYPE_TEXT_TO_SPEECH
    *
    * @param self::AUDIO_CONTENT_TYPE_* $audioContentType
    */

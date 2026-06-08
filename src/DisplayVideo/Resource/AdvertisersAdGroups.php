@@ -42,8 +42,9 @@ class AdvertisersAdGroups extends \Google\Service\Resource
    * group, and then create the assigned targeting options provided in
    * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. This method
    * is only supported for Demand Gen ad groups. Retrieval and management of
-   * Demand Gen resources is currently in beta. This method is only available to
-   * allowlisted users. (adGroups.bulkEditAssignedTargetingOptions)
+   * Demand Gen resources is currently in beta. This method will begin rolling out
+   * to all partners on *June 10, 2026* and be available to all partners on *June
+   * 24, 2026*. (adGroups.bulkEditAssignedTargetingOptions)
    *
    * @param string $advertiserId Required. The ID of the advertiser the ad groups
    * belong to.
@@ -106,8 +107,9 @@ class AdvertisersAdGroups extends \Google\Service\Resource
   /**
    * Creates a new ad group. Returns the newly created ad group if successful.
    * This method is only supported for Demand Gen ad groups. Retrieval and
-   * management of Demand Gen resources is currently in beta. This method is only
-   * available to allowlisted users. (adGroups.create)
+   * management of Demand Gen resources is currently in beta. This method will
+   * begin rolling out to all partners on *June 10, 2026* and be available to all
+   * partners on *June 24, 2026*. (adGroups.create)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * ad group belongs to.
@@ -125,8 +127,9 @@ class AdvertisersAdGroups extends \Google\Service\Resource
   /**
    * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not
    * exist. This method is only supported for Demand Gen ad groups. Retrieval and
-   * management of Demand Gen resources is currently in beta. This method is only
-   * available to allowlisted users. (adGroups.delete)
+   * management of Demand Gen resources is currently in beta. This method will
+   * begin rolling out to all partners on *June 10, 2026* and be available to all
+   * partners on *June 24, 2026*. (adGroups.delete)
    *
    * @param string $advertiserId Required. The ID of the advertiser this ad group
    * belongs to.
@@ -201,8 +204,9 @@ class AdvertisersAdGroups extends \Google\Service\Resource
   /**
    * Updates an existing ad group. Returns the updated ad group if successful.
    * This method is only supported for Demand Gen ad groups. Retrieval and
-   * management of Demand Gen resources is currently in beta. This method is only
-   * available to allowlisted users. (adGroups.patch)
+   * management of Demand Gen resources is currently in beta. This method will
+   * begin rolling out to all partners on *June 10, 2026* and be available to all
+   * partners on *June 24, 2026*. (adGroups.patch)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * ad group belongs to.

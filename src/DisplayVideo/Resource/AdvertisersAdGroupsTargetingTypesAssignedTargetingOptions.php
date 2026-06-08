@@ -35,7 +35,8 @@ class AdvertisersAdGroupsTargetingTypesAssignedTargetingOptions extends \Google\
    * Assigns a targeting option to an ad group. Returns the assigned targeting
    * option if successful. This method is only supported for Demand Gen ad groups.
    * Retrieval and management of Demand Gen resources is currently in beta. This
-   * method is only available to allowlisted users.
+   * method will begin rolling out to all partners on *June 10, 2026* and be
+   * available to all partners on *June 24, 2026*.
    * (assignedTargetingOptions.create)
    *
    * @param string $advertiserId Required. The ID of the advertiser the ad group
@@ -66,8 +67,9 @@ class AdvertisersAdGroupsTargetingTypesAssignedTargetingOptions extends \Google\
    * Deletes an assigned targeting option from an ad group. This method is only
    * supported for Demand Gen ad groups with the AdGroupFormat
    * `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of Demand Gen
-   * resources is currently in beta. This method is only available to allowlisted
-   * users. (assignedTargetingOptions.delete)
+   * resources is currently in beta. This method will begin rolling out to all
+   * partners on *June 10, 2026* and be available to all partners on *June 24,
+   * 2026*. (assignedTargetingOptions.delete)
    *
    * @param string $advertiserId Required. The ID of the advertiser the ad group
    * belongs to.

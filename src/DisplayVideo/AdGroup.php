@@ -59,7 +59,8 @@ class AdGroup extends \Google\Model
   public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_MASTHEAD = 'AD_GROUP_FORMAT_MASTHEAD';
   /**
    * Demand Gen ads. Retrieval and management of Demand Gen resources is
-   * currently in beta. This enum value is only available to allowlisted users.
+   * currently in beta. This field will begin rolling out to all partners on
+   * *June 10, 2026* and be available to all partners on *June 24, 2026*.
    */
   public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_DEMAND_GEN = 'AD_GROUP_FORMAT_DEMAND_GEN';
   /**
