@@ -26,7 +26,7 @@ class DiskTargetEnvironment extends \Google\Model
    */
   public $project;
   /**
-   * Optional. Whether to use the project service account for the disk.
+   * Optional. Whether to use the project service account for the disk restore.
    *
    * @var bool
    */
@@ -55,7 +55,7 @@ class DiskTargetEnvironment extends \Google\Model
     return $this->project;
   }
   /**
-   * Optional. Whether to use the project service account for the disk.
+   * Optional. Whether to use the project service account for the disk restore.
    *
    * @param bool $useProjectServiceAccount
    */

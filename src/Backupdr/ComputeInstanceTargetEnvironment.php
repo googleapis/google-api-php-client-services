@@ -27,7 +27,7 @@ class ComputeInstanceTargetEnvironment extends \Google\Model
   public $project;
   /**
    * Optional. Whether to use the project service account for the Compute Engine
-   * instance.
+   * instance restore.
    *
    * @var bool
    */
@@ -57,7 +57,7 @@ class ComputeInstanceTargetEnvironment extends \Google\Model
   }
   /**
    * Optional. Whether to use the project service account for the Compute Engine
-   * instance.
+   * instance restore.
    *
    * @param bool $useProjectServiceAccount
    */

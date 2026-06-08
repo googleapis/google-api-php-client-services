@@ -39,7 +39,7 @@ class RegionDiskTargetEnvironment extends \Google\Collection
    */
   public $replicaZones;
   /**
-   * Optional. Whether to use the project service account for the disk.
+   * Optional. Whether to use the project service account for the disk restore.
    *
    * @var bool
    */
@@ -94,7 +94,7 @@ class RegionDiskTargetEnvironment extends \Google\Collection
     return $this->replicaZones;
   }
   /**
-   * Optional. Whether to use the project service account for the disk.
+   * Optional. Whether to use the project service account for the disk restore.
    *
    * @param bool $useProjectServiceAccount
    */
