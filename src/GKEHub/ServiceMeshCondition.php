@@ -241,6 +241,22 @@ class ServiceMeshCondition extends \Google\Model
    */
   public const CODE_MODERNIZATION_ROLLING_BACK_FLEET = 'MODERNIZATION_ROLLING_BACK_FLEET';
   /**
+   * Fleet is compatible for modernization.
+   */
+  public const CODE_MODERNIZATION_COMPATIBLE = 'MODERNIZATION_COMPATIBLE';
+  /**
+   * Fleet is not yet compatible for modernization.
+   */
+  public const CODE_MODERNIZATION_INCOMPATIBLE = 'MODERNIZATION_INCOMPATIBLE';
+  /**
+   * Fleet exceeds service mesh fleet-level scalability limits.
+   */
+  public const CODE_MODERNIZATION_INCOMPATIBLE_FLEET_SCALE = 'MODERNIZATION_INCOMPATIBLE_FLEET_SCALE';
+  /**
+   * Fleet exceeds service mesh fleet-level quota limits.
+   */
+  public const CODE_MODERNIZATION_INCOMPATIBLE_FLEET_QUOTA = 'MODERNIZATION_INCOMPATIBLE_FLEET_QUOTA';
+  /**
    * Unspecified severity
    */
   public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
@@ -311,7 +327,9 @@ class ServiceMeshCondition extends \Google\Model
    * MODERNIZATION_WILL_BE_SCHEDULED, MODERNIZATION_MANUAL,
    * MODERNIZATION_ELIGIBLE, MODERNIZATION_MODERNIZING,
    * MODERNIZATION_MODERNIZED_SOAKING, MODERNIZATION_FINALIZED,
-   * MODERNIZATION_ROLLING_BACK_FLEET
+   * MODERNIZATION_ROLLING_BACK_FLEET, MODERNIZATION_COMPATIBLE,
+   * MODERNIZATION_INCOMPATIBLE, MODERNIZATION_INCOMPATIBLE_FLEET_SCALE,
+   * MODERNIZATION_INCOMPATIBLE_FLEET_QUOTA
    *
    * @param self::CODE_* $code
    */
