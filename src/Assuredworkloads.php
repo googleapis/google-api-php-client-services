@@ -331,6 +331,16 @@ class Assuredworkloads extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'batchAcknowledgeViolations' => [
+              'path' => 'v1/{+parent}/violations:batchAcknowledgeViolations',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
