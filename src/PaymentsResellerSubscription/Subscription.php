@@ -36,6 +36,10 @@ class Subscription extends \Google\Collection
    */
   public const PROCESSING_STATE_PROCESSING_STATE_RESUMING = 'PROCESSING_STATE_RESUMING';
   /**
+   * The subscription is being suspended.
+   */
+  public const PROCESSING_STATE_PROCESSING_STATE_SUSPENDING = 'PROCESSING_STATE_SUSPENDING';
+  /**
    * The state is unspecified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -351,7 +355,8 @@ class Subscription extends \Google\Collection
    * n/reference/index/Receive.Notifications#payments-subscription-lifecycle).
    *
    * Accepted values: PROCESSING_STATE_UNSPECIFIED, PROCESSING_STATE_CANCELLING,
-   * PROCESSING_STATE_RECURRING, PROCESSING_STATE_RESUMING
+   * PROCESSING_STATE_RECURRING, PROCESSING_STATE_RESUMING,
+   * PROCESSING_STATE_SUSPENDING
    *
    * @param self::PROCESSING_STATE_* $processingState
    */
