@@ -104,6 +104,22 @@ class GoogleCloudRunV2Instance extends \Google\Collection
    * Policy](https://cloud.google.com/terms/deprecation) documentation.
    */
   public const LAUNCH_STAGE_DEPRECATED = 'DEPRECATED';
+  /**
+   * Unspecified restart policy.
+   */
+  public const RESTART_POLICY_RESTART_POLICY_UNSPECIFIED = 'RESTART_POLICY_UNSPECIFIED';
+  /**
+   * Always restart the instance.
+   */
+  public const RESTART_POLICY_ALWAYS = 'ALWAYS';
+  /**
+   * Restart if the instance terminates with non-zero exit code.
+   */
+  public const RESTART_POLICY_ON_FAILURE = 'ON_FAILURE';
+  /**
+   * Never restart the instance.
+   */
+  public const RESTART_POLICY_NEVER = 'NEVER';
   protected $collection_key = 'volumes';
   /**
    * @var string[]
@@ -297,6 +313,12 @@ class GoogleCloudRunV2Instance extends \Google\Collection
    * @var bool
    */
   public $reconciling;
+  /**
+   * Optional. Restart policy for the Instance.
+   *
+   * @var string
+   */
+  public $restartPolicy;
   /**
    * Output only. Reserved for future use.
    *
@@ -860,6 +882,24 @@ class GoogleCloudRunV2Instance extends \Google\Collection
   public function getReconciling()
   {
     return $this->reconciling;
+  }
+  /**
+   * Optional. Restart policy for the Instance.
+   *
+   * Accepted values: RESTART_POLICY_UNSPECIFIED, ALWAYS, ON_FAILURE, NEVER
+   *
+   * @param self::RESTART_POLICY_* $restartPolicy
+   */
+  public function setRestartPolicy($restartPolicy)
+  {
+    $this->restartPolicy = $restartPolicy;
+  }
+  /**
+   * @return self::RESTART_POLICY_*
+   */
+  public function getRestartPolicy()
+  {
+    return $this->restartPolicy;
   }
   /**
    * Output only. Reserved for future use.
