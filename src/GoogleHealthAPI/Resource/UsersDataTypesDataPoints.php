@@ -235,9 +235,9 @@ class UsersDataTypesDataPoints extends \Google\Service\Resource
    * 567890abcdef` The `{user}` ID is a system-generated identifier, as described
    * in Identity.health_user_id. The `{data_type}` ID corresponds to the kebab-
    * case version of the field names in the DataPoint data union field, e.g.
-   * `total-calories` for the `total_calories` field. The `{data_point}` ID can be
-   * client-provided or system-generated. If client-provided, it must be a string
-   * of 4-63 characters, containing only lowercase letters, numbers, and hyphens.
+   * `heart-rate` for the `heart_rate` field. The `{data_point}` ID can be client-
+   * provided or system-generated. If client-provided, it must be a string of 4-63
+   * characters, containing only lowercase letters, numbers, and hyphens.
    * @param DataPoint $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
