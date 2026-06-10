@@ -36,6 +36,13 @@ class GoogleAnalyticsAdminV1betaPropertySummary extends \Google\Model
    */
   public const PROPERTY_TYPE_PROPERTY_TYPE_ROLLUP = 'PROPERTY_TYPE_ROLLUP';
   /**
+   * If true, then the user has a Google Analytics role that permits them to
+   * edit the property.
+   *
+   * @var bool
+   */
+  public $canEdit;
+  /**
    * Display name for the property referred to in this property summary.
    *
    * @var string
@@ -63,6 +70,23 @@ class GoogleAnalyticsAdminV1betaPropertySummary extends \Google\Model
    */
   public $propertyType;
 
+  /**
+   * If true, then the user has a Google Analytics role that permits them to
+   * edit the property.
+   *
+   * @param bool $canEdit
+   */
+  public function setCanEdit($canEdit)
+  {
+    $this->canEdit = $canEdit;
+  }
+  /**
+   * @return bool
+   */
+  public function getCanEdit()
+  {
+    return $this->canEdit;
+  }
   /**
    * Display name for the property referred to in this property summary.
    *
