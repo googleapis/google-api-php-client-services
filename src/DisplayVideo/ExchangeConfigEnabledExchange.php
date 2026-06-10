@@ -376,6 +376,10 @@ class ExchangeConfigEnabledExchange extends \Google\Model
    */
   public const EXCHANGE_EXCHANGE_CADENT = 'EXCHANGE_CADENT';
   /**
+   * Exte.
+   */
+  public const EXCHANGE_EXCHANGE_EXTE = 'EXCHANGE_EXTE';
+  /**
    * The enabled exchange.
    *
    * @var string
@@ -431,7 +435,7 @@ class ExchangeConfigEnabledExchange extends \Google\Model
    * EXCHANGE_FYBER_GBID, EXCHANGE_UNITY_GBID, EXCHANGE_CHARTBOOST_GBID,
    * EXCHANGE_ADMOST_GBID, EXCHANGE_TOPON_GBID, EXCHANGE_NETFLIX, EXCHANGE_CORE,
    * EXCHANGE_COMMERCE_GRID, EXCHANGE_SPOTIFY, EXCHANGE_TUBI, EXCHANGE_SNAP,
-   * EXCHANGE_CADENT
+   * EXCHANGE_CADENT, EXCHANGE_EXTE
    *
    * @param self::EXCHANGE_* $exchange
    */

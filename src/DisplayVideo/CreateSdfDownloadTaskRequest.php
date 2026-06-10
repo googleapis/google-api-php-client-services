@@ -131,6 +131,10 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
    */
   public const VERSION_SDF_VERSION_9_2 = 'SDF_VERSION_9_2';
   /**
+   * SDF version 10.
+   */
+  public const VERSION_SDF_VERSION_10 = 'SDF_VERSION_10';
+  /**
    * The ID of the advertiser to download SDF for.
    *
    * @var string
@@ -250,7 +254,8 @@ class CreateSdfDownloadTaskRequest extends \Google\Model
    * SDF_VERSION_4_1, SDF_VERSION_4_2, SDF_VERSION_5, SDF_VERSION_5_1,
    * SDF_VERSION_5_2, SDF_VERSION_5_3, SDF_VERSION_5_4, SDF_VERSION_5_5,
    * SDF_VERSION_6, SDF_VERSION_7, SDF_VERSION_7_1, SDF_VERSION_8,
-   * SDF_VERSION_8_1, SDF_VERSION_9, SDF_VERSION_9_1, SDF_VERSION_9_2
+   * SDF_VERSION_8_1, SDF_VERSION_9, SDF_VERSION_9_1, SDF_VERSION_9_2,
+   * SDF_VERSION_10
    *
    * @param self::VERSION_* $version
    */
