@@ -121,7 +121,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-
    * upload` * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-
    * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups` *
-   * `single-agent-orchestration` * `multi-agent-orchestration`
+   * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence`
    *
    * @var string[]
    */
@@ -332,7 +333,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-
    * upload` * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-
    * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups` *
-   * `single-agent-orchestration` * `multi-agent-orchestration`
+   * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence`
    *
    * @param string[] $features
    */
