@@ -255,6 +255,8 @@ class GoogleCloudRunV2Revision extends \Google\Collection
    * @var bool
    */
   public $reconciling;
+  protected $sandboxesType = GoogleCloudRunV2SandboxConfiguration::class;
+  protected $sandboxesDataType = '';
   /**
    * Output only. Reserved for future use.
    *
@@ -732,6 +734,22 @@ class GoogleCloudRunV2Revision extends \Google\Collection
   public function getReconciling()
   {
     return $this->reconciling;
+  }
+  /**
+   * Output only. Configuration for sandboxes.
+   *
+   * @param GoogleCloudRunV2SandboxConfiguration $sandboxes
+   */
+  public function setSandboxes(GoogleCloudRunV2SandboxConfiguration $sandboxes)
+  {
+    $this->sandboxes = $sandboxes;
+  }
+  /**
+   * @return GoogleCloudRunV2SandboxConfiguration
+   */
+  public function getSandboxes()
+  {
+    return $this->sandboxes;
   }
   /**
    * Output only. Reserved for future use.
