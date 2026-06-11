@@ -19,6 +19,23 @@ namespace Google\Service\HomeGraphService;
 
 class QueryRequest extends \Google\Collection
 {
+  /**
+   * Default value. Equivalent to SMART_HOME_TRAIT_ONLY.
+   */
+  public const DEVICE_VIEW_DEVICE_VIEW_UNSPECIFIED = 'DEVICE_VIEW_UNSPECIFIED';
+  /**
+   * Return only standard Smart Home traits in the `devices` map.
+   */
+  public const DEVICE_VIEW_SMART_HOME_TRAIT_ONLY = 'SMART_HOME_TRAIT_ONLY';
+  /**
+   * Return only Unified Device Data Model (UDDM) traits in the
+   * `home_trait_payload` map.
+   */
+  public const DEVICE_VIEW_HOME_TRAIT_ONLY = 'HOME_TRAIT_ONLY';
+  /**
+   * Return both standard Smart Home traits and UDDM traits.
+   */
+  public const DEVICE_VIEW_HOME_TRAIT_AND_SMART_HOME_TRAIT = 'HOME_TRAIT_AND_SMART_HOME_TRAIT';
   protected $collection_key = 'inputs';
   /**
    * Required. Third-party user ID.
@@ -26,6 +43,15 @@ class QueryRequest extends \Google\Collection
    * @var string
    */
   public $agentUserId;
+  /**
+   * Optional. Specifies the type of device data to be returned in the response.
+   * This allows callers to request traditional Smart Home traits, Unified
+   * Device Data Model (UDDM) traits, or both. If unspecified, defaults to
+   * SMART_HOME_TRAIT_ONLY.
+   *
+   * @var string
+   */
+  public $deviceView;
   /**
    * Optional. If true, the response will include device metadata in the
    * device_metadata field.
@@ -57,6 +83,28 @@ class QueryRequest extends \Google\Collection
   public function getAgentUserId()
   {
     return $this->agentUserId;
+  }
+  /**
+   * Optional. Specifies the type of device data to be returned in the response.
+   * This allows callers to request traditional Smart Home traits, Unified
+   * Device Data Model (UDDM) traits, or both. If unspecified, defaults to
+   * SMART_HOME_TRAIT_ONLY.
+   *
+   * Accepted values: DEVICE_VIEW_UNSPECIFIED, SMART_HOME_TRAIT_ONLY,
+   * HOME_TRAIT_ONLY, HOME_TRAIT_AND_SMART_HOME_TRAIT
+   *
+   * @param self::DEVICE_VIEW_* $deviceView
+   */
+  public function setDeviceView($deviceView)
+  {
+    $this->deviceView = $deviceView;
+  }
+  /**
+   * @return self::DEVICE_VIEW_*
+   */
+  public function getDeviceView()
+  {
+    return $this->deviceView;
   }
   /**
    * Optional. If true, the response will include device metadata in the

@@ -28,6 +28,8 @@ class QueryResponsePayload extends \Google\Model
    * @var array[]
    */
   public $devices;
+  protected $homeTraitPayloadType = HomeTraitPayload::class;
+  protected $homeTraitPayloadDataType = 'map';
 
   /**
    * Map from the Trait ID (e.g., "action.devices.traits.OnOff") to its last
@@ -63,6 +65,24 @@ class QueryResponsePayload extends \Google\Model
   public function getDevices()
   {
     return $this->devices;
+  }
+  /**
+   * Map of device IDs to their Unified Device Data Model (UDDM) trait payloads.
+   * This field is populated when `device_view` is set to HOME_TRAIT_ONLY or
+   * HOME_TRAIT_AND_SMART_HOME_TRAIT.
+   *
+   * @param HomeTraitPayload[] $homeTraitPayload
+   */
+  public function setHomeTraitPayload($homeTraitPayload)
+  {
+    $this->homeTraitPayload = $homeTraitPayload;
+  }
+  /**
+   * @return HomeTraitPayload[]
+   */
+  public function getHomeTraitPayload()
+  {
+    return $this->homeTraitPayload;
   }
 }
 
