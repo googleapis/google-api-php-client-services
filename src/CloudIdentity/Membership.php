@@ -68,6 +68,10 @@ class Membership extends \Google\Collection
    */
   public const TYPE_CBCM_BROWSER = 'CBCM_BROWSER';
   /**
+   * Represents a ChromeOS-managed ChromeOS device type.
+   */
+  public const TYPE_CHROME_OS_DEVICE = 'CHROME_OS_DEVICE';
+  /**
    * Represents other type.
    */
   public const TYPE_OTHER = 'OTHER';
@@ -202,7 +206,7 @@ class Membership extends \Google\Collection
    * Output only. The type of the membership.
    *
    * Accepted values: TYPE_UNSPECIFIED, USER, SERVICE_ACCOUNT, GROUP,
-   * SHARED_DRIVE, CBCM_BROWSER, OTHER
+   * SHARED_DRIVE, CBCM_BROWSER, CHROME_OS_DEVICE, OTHER
    *
    * @param self::TYPE_* $type
    */
