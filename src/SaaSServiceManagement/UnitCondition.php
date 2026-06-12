@@ -62,6 +62,15 @@ class UnitCondition extends \Google\Model
    */
   public const TYPE_TYPE_FLAGS_CONFIG_INITIALIZED = 'TYPE_FLAGS_CONFIG_INITIALIZED';
   /**
+   * Indicates if AppHub app has been created or if Apphub app has already
+   * existed.
+   */
+  public const TYPE_TYPE_APP_CREATED_OR_ALREADY_EXISTS = 'TYPE_APP_CREATED_OR_ALREADY_EXISTS';
+  /**
+   * Indicates if services and workloads have been registered with AppHub.
+   */
+  public const TYPE_TYPE_APP_COMPONENTS_REGISTERED = 'TYPE_APP_COMPONENTS_REGISTERED';
+  /**
    * Required. Last time the condition transited from one status to another.
    *
    * @var string
@@ -165,7 +174,8 @@ class UnitCondition extends \Google\Model
    * Required. Type of the condition.
    *
    * Accepted values: TYPE_UNSPECIFIED, TYPE_READY, TYPE_UPDATING,
-   * TYPE_PROVISIONED, TYPE_OPERATION_ERROR, TYPE_FLAGS_CONFIG_INITIALIZED
+   * TYPE_PROVISIONED, TYPE_OPERATION_ERROR, TYPE_FLAGS_CONFIG_INITIALIZED,
+   * TYPE_APP_CREATED_OR_ALREADY_EXISTS, TYPE_APP_COMPONENTS_REGISTERED
    *
    * @param self::TYPE_* $type
    */

@@ -17,9 +17,8 @@
 
 namespace Google\Service\SaaSServiceManagement;
 
-class SaasRelease extends \Google\Collection
+class SaasRelease extends \Google\Model
 {
-  protected $collection_key = 'tierMappings';
   /**
    * Optional. Annotations is an unstructured key-value map stored with a
    * resource that may be set by external tools to store and retrieve arbitrary
@@ -58,14 +57,6 @@ class SaasRelease extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * Required. The Releases that are assigned to this SaasRelease.
-   *
-   * @var string[]
-   */
-  public $releases;
-  protected $tierMappingsType = TierMapping::class;
-  protected $tierMappingsDataType = 'array';
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
    * time and space for this resource within the scope of the service. It is
@@ -172,40 +163,6 @@ class SaasRelease extends \Google\Collection
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * Required. The Releases that are assigned to this SaasRelease.
-   *
-   * @param string[] $releases
-   */
-  public function setReleases($releases)
-  {
-    $this->releases = $releases;
-  }
-  /**
-   * @return string[]
-   */
-  public function getReleases()
-  {
-    return $this->releases;
-  }
-  /**
-   * Required. A mapping between Tiers and UnitKinds that are part of this
-   * SaasRelease. While Tiers are defined as top-level resources, the mapping
-   * between Tiers and Unit Kinds is defined per SaasRelease.
-   *
-   * @param TierMapping[] $tierMappings
-   */
-  public function setTierMappings($tierMappings)
-  {
-    $this->tierMappings = $tierMappings;
-  }
-  /**
-   * @return TierMapping[]
-   */
-  public function getTierMappings()
-  {
-    return $this->tierMappings;
   }
   /**
    * Output only. The unique identifier of the resource. UID is unique in the

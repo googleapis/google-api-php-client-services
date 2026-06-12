@@ -20,34 +20,6 @@ namespace Google\Service\SaaSServiceManagement;
 class UnitGroup extends \Google\Model
 {
   /**
-   * Unspecified state.
-   */
-  public const STATE_UNIT_GROUP_STATE_UNSPECIFIED = 'UNIT_GROUP_STATE_UNSPECIFIED';
-  /**
-   * UnitGroup is not provisioned.
-   */
-  public const STATE_UNIT_GROUP_STATE_NOT_PROVISIONED = 'UNIT_GROUP_STATE_NOT_PROVISIONED';
-  /**
-   * UnitGroup is being provisioned.
-   */
-  public const STATE_UNIT_GROUP_STATE_PROVISIONING = 'UNIT_GROUP_STATE_PROVISIONING';
-  /**
-   * UnitGroup is being updated.
-   */
-  public const STATE_UNIT_GROUP_STATE_UPDATING = 'UNIT_GROUP_STATE_UPDATING';
-  /**
-   * UnitGroup is being deprovisioned.
-   */
-  public const STATE_UNIT_GROUP_STATE_DEPROVISIONING = 'UNIT_GROUP_STATE_DEPROVISIONING';
-  /**
-   * UnitGroup has been provisioned and is ready for use.
-   */
-  public const STATE_UNIT_GROUP_STATE_READY = 'UNIT_GROUP_STATE_READY';
-  /**
-   * UnitGroup has an error.
-   */
-  public const STATE_UNIT_GROUP_STATE_ERROR = 'UNIT_GROUP_STATE_ERROR';
-  /**
    * Optional. Annotations is an unstructured key-value map stored with a
    * resource that may be set by external tools to store and retrieve arbitrary
    * metadata. They are not queryable and should be preserved when modifying
@@ -85,25 +57,6 @@ class UnitGroup extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * Required. Immutable. The SaaS that this UnitGroup is created for.
-   *
-   * @var string
-   */
-  public $saas;
-  /**
-   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned
-   * with.
-   *
-   * @var string
-   */
-  public $saasRelease;
-  /**
-   * Optional. Output only. State of the UnitGroup.
-   *
-   * @var string
-   */
-  public $state;
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
    * time and space for this resource within the scope of the service. It is
@@ -210,60 +163,6 @@ class UnitGroup extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * Required. Immutable. The SaaS that this UnitGroup is created for.
-   *
-   * @param string $saas
-   */
-  public function setSaas($saas)
-  {
-    $this->saas = $saas;
-  }
-  /**
-   * @return string
-   */
-  public function getSaas()
-  {
-    return $this->saas;
-  }
-  /**
-   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned
-   * with.
-   *
-   * @param string $saasRelease
-   */
-  public function setSaasRelease($saasRelease)
-  {
-    $this->saasRelease = $saasRelease;
-  }
-  /**
-   * @return string
-   */
-  public function getSaasRelease()
-  {
-    return $this->saasRelease;
-  }
-  /**
-   * Optional. Output only. State of the UnitGroup.
-   *
-   * Accepted values: UNIT_GROUP_STATE_UNSPECIFIED,
-   * UNIT_GROUP_STATE_NOT_PROVISIONED, UNIT_GROUP_STATE_PROVISIONING,
-   * UNIT_GROUP_STATE_UPDATING, UNIT_GROUP_STATE_DEPROVISIONING,
-   * UNIT_GROUP_STATE_READY, UNIT_GROUP_STATE_ERROR
-   *
-   * @param self::STATE_* $state
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return self::STATE_*
-   */
-  public function getState()
-  {
-    return $this->state;
   }
   /**
    * Output only. The unique identifier of the resource. UID is unique in the

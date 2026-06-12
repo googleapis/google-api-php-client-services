@@ -110,6 +110,8 @@ class RolloutKind extends \Google\Model
    * @var string
    */
   public $unitKind;
+  protected $unitUpdatePacingType = UnitUpdatePacing::class;
+  protected $unitUpdatePacingDataType = '';
   /**
    * Output only. The timestamp when the resource was last updated. Any change
    * to the resource made by users must refresh this value. Changes to a
@@ -311,6 +313,23 @@ class RolloutKind extends \Google\Model
   public function getUnitKind()
   {
     return $this->unitKind;
+  }
+  /**
+   * Optional. Settings for controlling the pacing of rollouts i.e. the number
+   * of units to be rolled out in parallel in a region.
+   *
+   * @param UnitUpdatePacing $unitUpdatePacing
+   */
+  public function setUnitUpdatePacing(UnitUpdatePacing $unitUpdatePacing)
+  {
+    $this->unitUpdatePacing = $unitUpdatePacing;
+  }
+  /**
+   * @return UnitUpdatePacing
+   */
+  public function getUnitUpdatePacing()
+  {
+    return $this->unitUpdatePacing;
   }
   /**
    * Output only. The timestamp when the resource was last updated. Any change

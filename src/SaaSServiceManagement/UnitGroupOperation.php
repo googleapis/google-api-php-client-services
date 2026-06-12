@@ -34,10 +34,6 @@ class UnitGroupOperation extends \Google\Model
    * @var string
    */
   public $createTime;
-  protected $deprovisionUnitGroupType = DeprovisionUnitGroup::class;
-  protected $deprovisionUnitGroupDataType = '';
-  protected $detachUnitGroupType = DetachUnitGroup::class;
-  protected $detachUnitGroupDataType = '';
   /**
    * Output only. An opaque value that uniquely identifies a version or
    * generation of a resource. It can be used to confirm that the client and
@@ -61,14 +57,6 @@ class UnitGroupOperation extends \Google\Model
    * @var string
    */
   public $name;
-  protected $provisionUnitGroupType = ProvisionUnitGroup::class;
-  protected $provisionUnitGroupDataType = '';
-  /**
-   * Optional. Tier represents the tier level of the UnitGroupOperation.
-   *
-   * @var string
-   */
-  public $tier;
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
    * time and space for this resource within the scope of the service. It is
@@ -124,38 +112,6 @@ class UnitGroupOperation extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. Represents a deprovision operation on a UnitGroup.
-   *
-   * @param DeprovisionUnitGroup $deprovisionUnitGroup
-   */
-  public function setDeprovisionUnitGroup(DeprovisionUnitGroup $deprovisionUnitGroup)
-  {
-    $this->deprovisionUnitGroup = $deprovisionUnitGroup;
-  }
-  /**
-   * @return DeprovisionUnitGroup
-   */
-  public function getDeprovisionUnitGroup()
-  {
-    return $this->deprovisionUnitGroup;
-  }
-  /**
-   * Optional. Represents a detach operation on a UnitGroup.
-   *
-   * @param DetachUnitGroup $detachUnitGroup
-   */
-  public function setDetachUnitGroup(DetachUnitGroup $detachUnitGroup)
-  {
-    $this->detachUnitGroup = $detachUnitGroup;
-  }
-  /**
-   * @return DetachUnitGroup
-   */
-  public function getDetachUnitGroup()
-  {
-    return $this->detachUnitGroup;
-  }
-  /**
    * Output only. An opaque value that uniquely identifies a version or
    * generation of a resource. It can be used to confirm that the client and
    * server agree on the ordering of a resource being written.
@@ -207,38 +163,6 @@ class UnitGroupOperation extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * Optional. Represents a provision operation on a UnitGroup.
-   *
-   * @param ProvisionUnitGroup $provisionUnitGroup
-   */
-  public function setProvisionUnitGroup(ProvisionUnitGroup $provisionUnitGroup)
-  {
-    $this->provisionUnitGroup = $provisionUnitGroup;
-  }
-  /**
-   * @return ProvisionUnitGroup
-   */
-  public function getProvisionUnitGroup()
-  {
-    return $this->provisionUnitGroup;
-  }
-  /**
-   * Optional. Tier represents the tier level of the UnitGroupOperation.
-   *
-   * @param string $tier
-   */
-  public function setTier($tier)
-  {
-    $this->tier = $tier;
-  }
-  /**
-   * @return string
-   */
-  public function getTier()
-  {
-    return $this->tier;
   }
   /**
    * Output only. The unique identifier of the resource. UID is unique in the
