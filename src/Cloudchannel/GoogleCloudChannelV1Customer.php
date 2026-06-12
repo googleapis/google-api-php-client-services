@@ -75,7 +75,10 @@ class GoogleCloudChannelV1Customer extends \Google\Model
   public $createTime;
   /**
    * Optional. Indicate if a customer is attesting about the correctness of
-   * provided information. Only required if creating a GCP Entitlement.
+   * provided information. Only required if creating a GCP Entitlement. NOTE:
+   * This field will be mandatory for all new GCP customers starting Aug 31st,
+   * 2026 and this field will also be required for all existing customers
+   * purchasing new GCP Entitlements.
    *
    * @var string
    */
@@ -225,7 +228,10 @@ class GoogleCloudChannelV1Customer extends \Google\Model
   }
   /**
    * Optional. Indicate if a customer is attesting about the correctness of
-   * provided information. Only required if creating a GCP Entitlement.
+   * provided information. Only required if creating a GCP Entitlement. NOTE:
+   * This field will be mandatory for all new GCP customers starting Aug 31st,
+   * 2026 and this field will also be required for all existing customers
+   * purchasing new GCP Entitlements.
    *
    * Accepted values: CUSTOMER_ATTESTATION_STATE_UNSPECIFIED, EXEMPT,
    * NON_EXEMPT_AND_INFO_VERIFIED
