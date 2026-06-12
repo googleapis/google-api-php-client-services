@@ -57,7 +57,7 @@ class NewFilestoreConfig extends \Google\Collection
   protected $fileSharesDataType = 'array';
   /**
    * Required. Immutable. Name of the Filestore instance to create, in the
-   * format `projects/{project}/locations/{location}/instances/{instance}`
+   * format `projects/{project}/locations/{location}/instances/{instance}`.
    *
    * @var string
    */
@@ -112,7 +112,7 @@ class NewFilestoreConfig extends \Google\Collection
   }
   /**
    * Required. Immutable. Name of the Filestore instance to create, in the
-   * format `projects/{project}/locations/{location}/instances/{instance}`
+   * format `projects/{project}/locations/{location}/instances/{instance}`.
    *
    * @param string $filestore
    */

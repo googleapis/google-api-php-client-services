@@ -45,7 +45,7 @@ class NetworkResource extends \Google\Model
     return $this->config;
   }
   /**
-   * Output only. Reference to a network in Google Compute Engine.
+   * Output only. A reference to a network in Google Compute Engine.
    *
    * @param NetworkReference $network
    */
