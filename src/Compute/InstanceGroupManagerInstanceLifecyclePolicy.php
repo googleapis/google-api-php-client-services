@@ -79,6 +79,8 @@ class InstanceGroupManagerInstanceLifecyclePolicy extends \Google\Model
    * @var string
    */
   public $onFailedHealthCheck;
+  protected $onRepairType = InstanceGroupManagerInstanceLifecyclePolicyOnRepair::class;
+  protected $onRepairDataType = '';
 
   /**
    * The action that a MIG performs on a failed or an unhealthy VM. A VM is
@@ -151,6 +153,22 @@ class InstanceGroupManagerInstanceLifecyclePolicy extends \Google\Model
   public function getOnFailedHealthCheck()
   {
     return $this->onFailedHealthCheck;
+  }
+  /**
+   * Configuration for VM repairs in the MIG.
+   *
+   * @param InstanceGroupManagerInstanceLifecyclePolicyOnRepair $onRepair
+   */
+  public function setOnRepair(InstanceGroupManagerInstanceLifecyclePolicyOnRepair $onRepair)
+  {
+    $this->onRepair = $onRepair;
+  }
+  /**
+   * @return InstanceGroupManagerInstanceLifecyclePolicyOnRepair
+   */
+  public function getOnRepair()
+  {
+    return $this->onRepair;
   }
 }
 

@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class TargetTcpProxy extends \Google\Model
 {
+  public const LOAD_BALANCING_SCHEME_EXTERNAL = 'EXTERNAL';
+  public const LOAD_BALANCING_SCHEME_EXTERNAL_MANAGED = 'EXTERNAL_MANAGED';
+  public const LOAD_BALANCING_SCHEME_INTERNAL_MANAGED = 'INTERNAL_MANAGED';
+  public const LOAD_BALANCING_SCHEME_LOAD_BALANCING_SCHEME_UNSPECIFIED = 'LOAD_BALANCING_SCHEME_UNSPECIFIED';
   public const PROXY_HEADER_NONE = 'NONE';
   public const PROXY_HEADER_PROXY_V1 = 'PROXY_V1';
   /**
@@ -48,6 +52,12 @@ class TargetTcpProxy extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   *
+   * @var string
+   */
+  public $loadBalancingScheme;
   /**
    * Name of the resource. Provided by the client when the resource is created.
    * The name must be 1-63 characters long, and comply withRFC1035.
@@ -169,6 +179,25 @@ class TargetTcpProxy extends \Google\Model
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   *
+   * Accepted values: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED,
+   * LOAD_BALANCING_SCHEME_UNSPECIFIED
+   *
+   * @param self::LOAD_BALANCING_SCHEME_* $loadBalancingScheme
+   */
+  public function setLoadBalancingScheme($loadBalancingScheme)
+  {
+    $this->loadBalancingScheme = $loadBalancingScheme;
+  }
+  /**
+   * @return self::LOAD_BALANCING_SCHEME_*
+   */
+  public function getLoadBalancingScheme()
+  {
+    return $this->loadBalancingScheme;
   }
   /**
    * Name of the resource. Provided by the client when the resource is created.

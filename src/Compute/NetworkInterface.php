@@ -76,6 +76,8 @@ class NetworkInterface extends \Google\Collection
   protected $accessConfigsDataType = 'array';
   protected $aliasIpRangesType = AliasIpRange::class;
   protected $aliasIpRangesDataType = 'array';
+  protected $aliasIpv6RangesType = AliasIpRange::class;
+  protected $aliasIpv6RangesDataType = 'array';
   /**
    * Optional. If true, DNS resolution will be enabled over this interface. Only
    * valid with network_attachment.
@@ -272,6 +274,23 @@ class NetworkInterface extends \Google\Collection
   public function getAliasIpRanges()
   {
     return $this->aliasIpRanges;
+  }
+  /**
+   * An array of alias IPv6 ranges for this network interface. You can only
+   * specify this field for network interfaces in VPC networks.
+   *
+   * @param AliasIpRange[] $aliasIpv6Ranges
+   */
+  public function setAliasIpv6Ranges($aliasIpv6Ranges)
+  {
+    $this->aliasIpv6Ranges = $aliasIpv6Ranges;
+  }
+  /**
+   * @return AliasIpRange[]
+   */
+  public function getAliasIpv6Ranges()
+  {
+    return $this->aliasIpv6Ranges;
   }
   /**
    * Optional. If true, DNS resolution will be enabled over this interface. Only
