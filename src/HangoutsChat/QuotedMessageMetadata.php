@@ -24,12 +24,17 @@ class QuotedMessageMetadata extends \Google\Model
    */
   public const QUOTE_TYPE_QUOTE_TYPE_UNSPECIFIED = 'QUOTE_TYPE_UNSPECIFIED';
   /**
-   * If quote_type is `REPLY`, you can do the following: * If you're replying in
-   * a thread, you can quote another message in that thread. * If you're
-   * creating a root message, you can quote another root message in that space.
-   * You can't quote a message reply from a different thread.
+   * When `quote_type` is `REPLY`, you can do the following: * If you're
+   * replying in a thread, you can quote another message in that thread. * If
+   * you're creating a root message, you can quote another root message in that
+   * space.
    */
   public const QUOTE_TYPE_REPLY = 'REPLY';
+  /**
+   * When `quote_type` is `FORWARD`, you can quote a: * Message from a different
+   * space. * Message reply from a different thread in the same space.
+   */
+  public const QUOTE_TYPE_FORWARD = 'FORWARD';
   protected $forwardedMetadataType = ForwardedMetadata::class;
   protected $forwardedMetadataDataType = '';
   /**
@@ -117,7 +122,7 @@ class QuotedMessageMetadata extends \Google\Model
    * Optional. Specifies the quote type. If not set, defaults to REPLY in the
    * message read/write path for backward compatibility.
    *
-   * Accepted values: QUOTE_TYPE_UNSPECIFIED, REPLY
+   * Accepted values: QUOTE_TYPE_UNSPECIFIED, REPLY, FORWARD
    *
    * @param self::QUOTE_TYPE_* $quoteType
    */

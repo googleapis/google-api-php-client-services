@@ -55,8 +55,11 @@ class SearchSpacesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * A page of the requested spaces.
+   * Deprecated: Please use the new `results` field instead. A page of the
+   * requested spaces. This field will be populated only when `useAdminAccess`
+   * is set to `true` and deprecated in favor of the new `results` field.
    *
+   * @deprecated
    * @param Space[] $spaces
    */
   public function setSpaces($spaces)
@@ -64,6 +67,7 @@ class SearchSpacesResponse extends \Google\Collection
     $this->spaces = $spaces;
   }
   /**
+   * @deprecated
    * @return Space[]
    */
   public function getSpaces()
