@@ -61,8 +61,9 @@ class AgentGateway extends \Google\Collection
   protected $networkConfigType = AgentGatewayNetworkConfig::class;
   protected $networkConfigDataType = '';
   /**
-   * Required. List of protocols supported by an Agent Gateway
+   * Optional. Deprecated.
    *
+   * @deprecated
    * @var string[]
    */
   public $protocols;
@@ -218,8 +219,9 @@ class AgentGateway extends \Google\Collection
     return $this->networkConfig;
   }
   /**
-   * Required. List of protocols supported by an Agent Gateway
+   * Optional. Deprecated.
    *
+   * @deprecated
    * @param string[] $protocols
    */
   public function setProtocols($protocols)
@@ -227,6 +229,7 @@ class AgentGateway extends \Google\Collection
     $this->protocols = $protocols;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getProtocols()
