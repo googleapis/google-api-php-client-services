@@ -20,10 +20,13 @@ namespace Google\Service\PagespeedInsights;
 class Categories extends \Google\Model
 {
   protected $internal_gapi_mappings = [
+        "agenticBrowsing" => "agentic-browsing",
         "bestPractices" => "best-practices",
   ];
   protected $accessibilityType = LighthouseCategoryV5::class;
   protected $accessibilityDataType = '';
+  protected $agenticBrowsingType = LighthouseCategoryV5::class;
+  protected $agenticBrowsingDataType = '';
   protected $bestPracticesType = LighthouseCategoryV5::class;
   protected $bestPracticesDataType = '';
   protected $performanceType = LighthouseCategoryV5::class;
@@ -48,6 +51,23 @@ class Categories extends \Google\Model
   public function getAccessibility()
   {
     return $this->accessibility;
+  }
+  /**
+   * The agentic browsing category, containing all agentic browsing related
+   * audits.
+   *
+   * @param LighthouseCategoryV5 $agenticBrowsing
+   */
+  public function setAgenticBrowsing(LighthouseCategoryV5 $agenticBrowsing)
+  {
+    $this->agenticBrowsing = $agenticBrowsing;
+  }
+  /**
+   * @return LighthouseCategoryV5
+   */
+  public function getAgenticBrowsing()
+  {
+    return $this->agenticBrowsing;
   }
   /**
    * The best practices category, containing all best practices related audits.
