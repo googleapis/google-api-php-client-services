@@ -90,7 +90,7 @@ class GoogleCloudContactcenterinsightsV1mainConversation extends \Google\Collect
    */
   public $medium;
   /**
-   * Input only. JSON metadata encoded as a string. This field is primarily used
+   * Optional. JSON metadata encoded as a string. This field is primarily used
    * by Insights integrations with various telephony systems and must be in one
    * of Insight's supported formats.
    *
@@ -358,7 +358,7 @@ class GoogleCloudContactcenterinsightsV1mainConversation extends \Google\Collect
     return $this->medium;
   }
   /**
-   * Input only. JSON metadata encoded as a string. This field is primarily used
+   * Optional. JSON metadata encoded as a string. This field is primarily used
    * by Insights integrations with various telephony systems and must be in one
    * of Insight's supported formats.
    *
