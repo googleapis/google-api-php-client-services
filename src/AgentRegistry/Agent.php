@@ -78,7 +78,7 @@ class Agent extends \Google\Collection
   public $name;
   protected $protocolsType = Protocol::class;
   protected $protocolsDataType = 'array';
-  protected $skillsType = Skill::class;
+  protected $skillsType = A2ASkill::class;
   protected $skillsDataType = 'array';
   /**
    * Output only. A universally unique identifier for the Agent.
@@ -260,14 +260,14 @@ class Agent extends \Google\Collection
    * Output only. Skills the agent possesses, often obtained from the A2A Agent
    * Card.
    *
-   * @param Skill[] $skills
+   * @param A2ASkill[] $skills
    */
   public function setSkills($skills)
   {
     $this->skills = $skills;
   }
   /**
-   * @return Skill[]
+   * @return A2ASkill[]
    */
   public function getSkills()
   {
