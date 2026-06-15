@@ -43,6 +43,12 @@ class Message extends \Google\Model
   protected $fcmOptionsType = FcmOptions::class;
   protected $fcmOptionsDataType = '';
   /**
+   * Optional. Firebase Installation ID to send a message to.
+   *
+   * @var string
+   */
+  public $fid;
+  /**
    * Output Only. The identifier of the message sent, in the format of
    * `projects/messages/{message_id}`.
    *
@@ -52,8 +58,11 @@ class Message extends \Google\Model
   protected $notificationType = Notification::class;
   protected $notificationDataType = '';
   /**
-   * Registration token to send a message to.
+   * Deprecated: Use `fid` instead. Registration token to send a message to.
+   * During the transition period, this field also accepts a Firebase
+   * Installation ID (FID).
    *
+   * @deprecated
    * @var string
    */
   public $token;
@@ -156,6 +165,22 @@ class Message extends \Google\Model
     return $this->fcmOptions;
   }
   /**
+   * Optional. Firebase Installation ID to send a message to.
+   *
+   * @param string $fid
+   */
+  public function setFid($fid)
+  {
+    $this->fid = $fid;
+  }
+  /**
+   * @return string
+   */
+  public function getFid()
+  {
+    return $this->fid;
+  }
+  /**
    * Output Only. The identifier of the message sent, in the format of
    * `projects/messages/{message_id}`.
    *
@@ -189,8 +214,11 @@ class Message extends \Google\Model
     return $this->notification;
   }
   /**
-   * Registration token to send a message to.
+   * Deprecated: Use `fid` instead. Registration token to send a message to.
+   * During the transition period, this field also accepts a Firebase
+   * Installation ID (FID).
    *
+   * @deprecated
    * @param string $token
    */
   public function setToken($token)
@@ -198,6 +226,7 @@ class Message extends \Google\Model
     $this->token = $token;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getToken()
