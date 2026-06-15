@@ -21,10 +21,13 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
 {
   protected $collection_key = 'webSearchQueries';
   /**
-   * Optional. Output only. A token that can be used to render a Google Maps
-   * widget with the contextual data. This field is populated only when the
-   * grounding source is Google Maps.
+   * Optional. Output only. Deprecated: The Google Maps contextual widget
+   * behavior in Grounding with Google Maps is being deprecated; this field is
+   * planned for removal and will no longer be populated once removed. A token
+   * that can be used to render a Google Maps widget with the contextual data.
+   * This field is populated only when the grounding source is Google Maps.
    *
+   * @deprecated
    * @var string
    */
   public $googleMapsWidgetContextToken;
@@ -55,10 +58,13 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
   public $webSearchQueries;
 
   /**
-   * Optional. Output only. A token that can be used to render a Google Maps
-   * widget with the contextual data. This field is populated only when the
-   * grounding source is Google Maps.
+   * Optional. Output only. Deprecated: The Google Maps contextual widget
+   * behavior in Grounding with Google Maps is being deprecated; this field is
+   * planned for removal and will no longer be populated once removed. A token
+   * that can be used to render a Google Maps widget with the contextual data.
+   * This field is populated only when the grounding source is Google Maps.
    *
+   * @deprecated
    * @param string $googleMapsWidgetContextToken
    */
   public function setGoogleMapsWidgetContextToken($googleMapsWidgetContextToken)
@@ -66,6 +72,7 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
     $this->googleMapsWidgetContextToken = $googleMapsWidgetContextToken;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getGoogleMapsWidgetContextToken()

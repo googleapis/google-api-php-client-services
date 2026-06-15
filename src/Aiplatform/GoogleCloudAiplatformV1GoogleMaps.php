@@ -20,15 +20,23 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GoogleMaps extends \Google\Model
 {
   /**
-   * Optional. If true, include the widget context token in the response.
+   * Optional. Deprecated: The Google Maps contextual widget behavior in
+   * Grounding with Google Maps is being deprecated; this field is planned for
+   * removal and no longer has any effect once removed. If true, include the
+   * widget context token in the response.
    *
+   * @deprecated
    * @var bool
    */
   public $enableWidget;
 
   /**
-   * Optional. If true, include the widget context token in the response.
+   * Optional. Deprecated: The Google Maps contextual widget behavior in
+   * Grounding with Google Maps is being deprecated; this field is planned for
+   * removal and no longer has any effect once removed. If true, include the
+   * widget context token in the response.
    *
+   * @deprecated
    * @param bool $enableWidget
    */
   public function setEnableWidget($enableWidget)
@@ -36,6 +44,7 @@ class GoogleCloudAiplatformV1GoogleMaps extends \Google\Model
     $this->enableWidget = $enableWidget;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableWidget()

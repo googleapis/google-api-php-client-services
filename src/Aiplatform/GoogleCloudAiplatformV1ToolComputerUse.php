@@ -27,7 +27,22 @@ class GoogleCloudAiplatformV1ToolComputerUse extends \Google\Collection
    * Operates in a web browser.
    */
   public const ENVIRONMENT_ENVIRONMENT_BROWSER = 'ENVIRONMENT_BROWSER';
+  /**
+   * Operates in a mobile environment.
+   */
+  public const ENVIRONMENT_ENVIRONMENT_MOBILE = 'ENVIRONMENT_MOBILE';
+  /**
+   * Operates in a desktop environment.
+   */
+  public const ENVIRONMENT_ENVIRONMENT_DESKTOP = 'ENVIRONMENT_DESKTOP';
   protected $collection_key = 'excludedPredefinedFunctions';
+  /**
+   * Optional. Enables the prompt injection detection check on computer-use
+   * request.
+   *
+   * @var bool
+   */
+  public $enablePromptInjectionDetection;
   /**
    * Required. The environment being operated.
    *
@@ -47,9 +62,27 @@ class GoogleCloudAiplatformV1ToolComputerUse extends \Google\Collection
   public $excludedPredefinedFunctions;
 
   /**
+   * Optional. Enables the prompt injection detection check on computer-use
+   * request.
+   *
+   * @param bool $enablePromptInjectionDetection
+   */
+  public function setEnablePromptInjectionDetection($enablePromptInjectionDetection)
+  {
+    $this->enablePromptInjectionDetection = $enablePromptInjectionDetection;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnablePromptInjectionDetection()
+  {
+    return $this->enablePromptInjectionDetection;
+  }
+  /**
    * Required. The environment being operated.
    *
-   * Accepted values: ENVIRONMENT_UNSPECIFIED, ENVIRONMENT_BROWSER
+   * Accepted values: ENVIRONMENT_UNSPECIFIED, ENVIRONMENT_BROWSER,
+   * ENVIRONMENT_MOBILE, ENVIRONMENT_DESKTOP
    *
    * @param self::ENVIRONMENT_* $environment
    */
