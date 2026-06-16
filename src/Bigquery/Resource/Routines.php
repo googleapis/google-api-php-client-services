@@ -36,8 +36,9 @@ use Google\Service\Bigquery\TestIamPermissionsResponse;
 class Routines extends \Google\Service\Resource
 {
   /**
-   * Deletes the routine specified by routineId from the dataset.
-   * (routines.delete)
+   * Deletes the routine specified by routineId from the dataset. # IAM
+   * Permissions Requires the `bigquery.routines.delete` permission on the
+   * routine. (routines.delete)
    *
    * @param string $projectId Required. Project ID of the routine to delete
    * @param string $datasetId Required. Dataset ID of the routine to delete
@@ -52,7 +53,8 @@ class Routines extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Gets the specified routine resource by routine ID. (routines.get)
+   * Gets the specified routine resource by routine ID. # IAM Permissions Requires
+   * the `bigquery.routines.get` permission on the routine. (routines.get)
    *
    * @param string $projectId Required. Project ID of the requested routine
    * @param string $datasetId Required. Dataset ID of the requested routine
@@ -90,7 +92,8 @@ class Routines extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Creates a new routine in the dataset. (routines.insert)
+   * Creates a new routine in the dataset. # IAM Permissions Requires the
+   * `bigquery.routines.create` permission on the dataset. (routines.insert)
    *
    * @param string $projectId Required. Project ID of the new routine
    * @param string $datasetId Required. Dataset ID of the new routine
@@ -107,7 +110,8 @@ class Routines extends \Google\Service\Resource
   }
   /**
    * Lists all routines in the specified dataset. Requires the READER dataset
-   * role. (routines.listRoutines)
+   * role. # IAM Permissions Requires the `bigquery.routines.list` permission on
+   * the dataset. (routines.listRoutines)
    *
    * @param string $projectId Required. Project ID of the routines to list
    * @param string $datasetId Required. Dataset ID of the routines to list
@@ -180,7 +184,8 @@ class Routines extends \Google\Service\Resource
   }
   /**
    * Updates information in an existing routine. The update method replaces the
-   * entire Routine resource. (routines.update)
+   * entire Routine resource. # IAM Permissions Requires the
+   * `bigquery.routines.update` permission on the routine. (routines.update)
    *
    * @param string $projectId Required. Project ID of the routine to update
    * @param string $datasetId Required. Dataset ID of the routine to update

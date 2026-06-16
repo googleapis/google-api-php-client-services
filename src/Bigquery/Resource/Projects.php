@@ -32,7 +32,10 @@ class Projects extends \Google\Service\Resource
 {
   /**
    * RPC to get the service account for a project used for interactions with
-   * Google Cloud KMS (projects.getServiceAccount)
+   * Google Cloud KMS. Requires the `bigquery.jobs.create` permission on the
+   * project resource. This permission is required to authorize the retrieval of
+   * the project's service identity for technical management tasks like encryption
+   * configuration. (projects.getServiceAccount)
    *
    * @param string $projectId Required. ID of the project.
    * @param array $optParams Optional parameters.
@@ -49,8 +52,11 @@ class Projects extends \Google\Service\Resource
    * RPC to list projects to which the user has been granted any project role.
    * Users of this method are encouraged to consider the [Resource
    * Manager](https://cloud.google.com/resource-manager/docs/) API, which provides
-   * the underlying data for this method and has more capabilities.
-   * (projects.listProjects)
+   * the underlying data for this method and has more capabilities. # IAM
+   * Permissions Requires no specific IAM permission(s) to use this method. The
+   * results are filtered to only include projects on which the caller has been
+   * granted a project-level role such as a BigQuery predefined IAM role or a
+   * basic role such as Viewer or Owner. (projects.listProjects)
    *
    * @param array $optParams Optional parameters.
    *

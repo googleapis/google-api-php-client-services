@@ -36,7 +36,10 @@ use Google\Service\Bigquery\TestIamPermissionsResponse;
 class RowAccessPolicies extends \Google\Service\Resource
 {
   /**
-   * Deletes provided row access policies. (rowAccessPolicies.batchDelete)
+   * Deletes provided row access policies. # IAM Permissions Requires the
+   * following IAM permission(s) on the table: -
+   * `bigquery.rowAccessPolicies.delete` -
+   * `bigquery.rowAccessPolicies.setIamPolicy` (rowAccessPolicies.batchDelete)
    *
    * @param string $projectId Required. Project ID of the table to delete the row
    * access policies.
@@ -55,7 +58,9 @@ class RowAccessPolicies extends \Google\Service\Resource
     return $this->call('batchDelete', [$params]);
   }
   /**
-   * Deletes a row access policy. (rowAccessPolicies.delete)
+   * Deletes a row access policy. # IAM Permissions Requires the following IAM
+   * permission(s) on the table: - `bigquery.rowAccessPolicies.delete` -
+   * `bigquery.rowAccessPolicies.setIamPolicy` (rowAccessPolicies.delete)
    *
    * @param string $projectId Required. Project ID of the table to delete the row
    * access policy.
@@ -78,7 +83,9 @@ class RowAccessPolicies extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Gets the specified row access policy by policy ID. (rowAccessPolicies.get)
+   * Gets the specified row access policy by policy ID. # IAM Permissions Requires
+   * the `bigquery.rowAccessPolicies.get` permission on the table.
+   * (rowAccessPolicies.get)
    *
    * @param string $projectId Required. Project ID of the table to get the row
    * access policy.
@@ -118,7 +125,10 @@ class RowAccessPolicies extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Creates a row access policy. (rowAccessPolicies.insert)
+   * Creates a row access policy. # IAM Permissions Requires the following IAM
+   * permission(s) on the table: - `bigquery.rowAccessPolicies.create` -
+   * `bigquery.rowAccessPolicies.setIamPolicy` - `bigquery.tables.getData`
+   * (rowAccessPolicies.insert)
    *
    * @param string $projectId Required. Project ID of the table to get the row
    * access policy.
@@ -138,7 +148,8 @@ class RowAccessPolicies extends \Google\Service\Resource
     return $this->call('insert', [$params], RowAccessPolicy::class);
   }
   /**
-   * Lists all row access policies on the specified table.
+   * Lists all row access policies on the specified table. # IAM Permissions
+   * Requires the `bigquery.rowAccessPolicies.list` permission on the table.
    * (rowAccessPolicies.listRowAccessPolicies)
    *
    * @param string $projectId Required. Project ID of the row access policies to
@@ -186,7 +197,10 @@ class RowAccessPolicies extends \Google\Service\Resource
     return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
   }
   /**
-   * Updates a row access policy. (rowAccessPolicies.update)
+   * Updates a row access policy. # IAM Permissions Requires the following IAM
+   * permission(s) on the table: - `bigquery.rowAccessPolicies.update` -
+   * `bigquery.rowAccessPolicies.setIamPolicy` - `bigquery.tables.getData`
+   * (rowAccessPolicies.update)
    *
    * @param string $projectId Required. Project ID of the table to get the row
    * access policy.

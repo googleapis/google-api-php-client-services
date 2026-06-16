@@ -33,7 +33,9 @@ class Tabledata extends \Google\Service\Resource
 {
   /**
    * Streams data into BigQuery one record at a time without needing to run a load
-   * job. (tabledata.insertAll)
+   * job. # IAM Permissions Requires the following IAM permission(s) to use this
+   * method: - `bigquery.tables.updateData` on the table. - `bigquery.tables.get`
+   * on the table. - `bigquery.datasets.get` on the dataset. (tabledata.insertAll)
    *
    * @param string $projectId Required. Project ID of the destination.
    * @param string $datasetId Required. Dataset ID of the destination.
@@ -50,7 +52,8 @@ class Tabledata extends \Google\Service\Resource
     return $this->call('insertAll', [$params], TableDataInsertAllResponse::class);
   }
   /**
-   * List the content of a table in rows. (tabledata.listTabledata)
+   * List the content of a table in rows. # IAM Permissions Requires the
+   * `bigquery.tables.getData` permission on the table. (tabledata.listTabledata)
    *
    * @param string $projectId Required. Project id of the table to list.
    * @param string $datasetId Required. Dataset id of the table to list.

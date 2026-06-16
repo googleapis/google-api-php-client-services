@@ -40,8 +40,9 @@ class ExternalRuntimeOptions extends \Google\Model
    */
   public $containerMemory;
   /**
-   * Optional. Maximum number of requests that a Cloud Run instance can handle
-   * concurrently. If absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF container instance
+   * can handle concurrently. If absent or if `0`, a default concurrency is
+   * used.
    *
    * @var string
    */
@@ -99,8 +100,9 @@ class ExternalRuntimeOptions extends \Google\Model
     return $this->containerMemory;
   }
   /**
-   * Optional. Maximum number of requests that a Cloud Run instance can handle
-   * concurrently. If absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF container instance
+   * can handle concurrently. If absent or if `0`, a default concurrency is
+   * used.
    *
    * @param string $containerRequestConcurrency
    */
