@@ -43,7 +43,7 @@ class PlaylistItemListResponse extends \Google\Collection
    * The token that can be used as the value of the pageToken parameter to
    * retrieve the next page in the result set.
    *
-   * @var string
+   * @var string|null
    */
   public $nextPageToken;
   protected $pageInfoType = PageInfo::class;
