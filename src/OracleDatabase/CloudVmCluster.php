@@ -61,6 +61,14 @@ class CloudVmCluster extends \Google\Model
    */
   public $exadataInfrastructure;
   /**
+   * Optional. The name of ExascaleDbStorageVault associated with the VM
+   * Cluster. Format: projects/{project}/locations/{location}/exascaleDbStorageV
+   * aults/{exascale_db_storage_vault}
+   *
+   * @var string
+   */
+  public $exascaleDbStorageVault;
+  /**
    * Output only. The GCP Oracle zone where Oracle CloudVmCluster is hosted.
    * This will be the same as the gcp_oracle_zone of the
    * CloudExadataInfrastructure. Example: us-east4-b-r2.
@@ -210,6 +218,24 @@ class CloudVmCluster extends \Google\Model
   public function getExadataInfrastructure()
   {
     return $this->exadataInfrastructure;
+  }
+  /**
+   * Optional. The name of ExascaleDbStorageVault associated with the VM
+   * Cluster. Format: projects/{project}/locations/{location}/exascaleDbStorageV
+   * aults/{exascale_db_storage_vault}
+   *
+   * @param string $exascaleDbStorageVault
+   */
+  public function setExascaleDbStorageVault($exascaleDbStorageVault)
+  {
+    $this->exascaleDbStorageVault = $exascaleDbStorageVault;
+  }
+  /**
+   * @return string
+   */
+  public function getExascaleDbStorageVault()
+  {
+    return $this->exascaleDbStorageVault;
   }
   /**
    * Output only. The GCP Oracle zone where Oracle CloudVmCluster is hosted.

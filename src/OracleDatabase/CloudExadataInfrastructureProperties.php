@@ -132,6 +132,8 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
    * @var string
    */
   public $dbServerVersion;
+  protected $exascaleConfigType = ExascaleConfig::class;
+  protected $exascaleConfigDataType = '';
   protected $maintenanceWindowType = MaintenanceWindow::class;
   protected $maintenanceWindowDataType = '';
   /**
@@ -424,6 +426,22 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
   public function getDbServerVersion()
   {
     return $this->dbServerVersion;
+  }
+  /**
+   * Output only. The Exascale configuration for the Exadata Infrastructure.
+   *
+   * @param ExascaleConfig $exascaleConfig
+   */
+  public function setExascaleConfig(ExascaleConfig $exascaleConfig)
+  {
+    $this->exascaleConfig = $exascaleConfig;
+  }
+  /**
+   * @return ExascaleConfig
+   */
+  public function getExascaleConfig()
+  {
+    return $this->exascaleConfig;
   }
   /**
    * Optional. Maintenance window for repair.

@@ -17,7 +17,6 @@
 
 namespace Google\Service\OracleDatabase\Resource;
 
-use Google\Service\OracleDatabase\GoldengateConnectionType;
 use Google\Service\OracleDatabase\ListGoldengateConnectionTypesResponse;
 
 /**
@@ -30,23 +29,6 @@ use Google\Service\OracleDatabase\ListGoldengateConnectionTypesResponse;
  */
 class ProjectsLocationsGoldengateConnectionTypes extends \Google\Service\Resource
 {
-  /**
-   * Gets details of a single GoldengateConnectionType.
-   * (goldengateConnectionTypes.get)
-   *
-   * @param string $name Required. Name of the resource in the format: projects/{p
-   * roject}/locations/{location}/goldengateConnectionTypes/{goldengate_connection
-   * _type}
-   * @param array $optParams Optional parameters.
-   * @return GoldengateConnectionType
-   * @throws \Google\Service\Exception
-   */
-  public function get($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoldengateConnectionType::class);
-  }
   /**
    * Lists GoldengateConnectionTypes in a given project and location.
    * (goldengateConnectionTypes.listProjectsLocationsGoldengateConnectionTypes)

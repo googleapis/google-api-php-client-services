@@ -17,7 +17,6 @@
 
 namespace Google\Service\OracleDatabase\Resource;
 
-use Google\Service\OracleDatabase\GoldengateDeploymentType;
 use Google\Service\OracleDatabase\ListGoldengateDeploymentTypesResponse;
 
 /**
@@ -30,23 +29,6 @@ use Google\Service\OracleDatabase\ListGoldengateDeploymentTypesResponse;
  */
 class ProjectsLocationsGoldengateDeploymentTypes extends \Google\Service\Resource
 {
-  /**
-   * Gets details of a single GoldenGateDeploymentType.
-   * (goldengateDeploymentTypes.get)
-   *
-   * @param string $name Required. The name of the GoldengateDeploymentType to
-   * retrieve. Format: projects/{project}/locations/{location}/goldengateDeploymen
-   * tTypes/{goldengate_deployment_type}
-   * @param array $optParams Optional parameters.
-   * @return GoldengateDeploymentType
-   * @throws \Google\Service\Exception
-   */
-  public function get($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoldengateDeploymentType::class);
-  }
   /**
    * Lists GoldenGateDeploymentTypes in a given project and location.
    * (goldengateDeploymentTypes.listProjectsLocationsGoldengateDeploymentTypes)

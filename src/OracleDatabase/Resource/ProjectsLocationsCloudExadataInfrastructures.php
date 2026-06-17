@@ -18,6 +18,7 @@
 namespace Google\Service\OracleDatabase\Resource;
 
 use Google\Service\OracleDatabase\CloudExadataInfrastructure;
+use Google\Service\OracleDatabase\ConfigureExascaleCloudExadataInfrastructureRequest;
 use Google\Service\OracleDatabase\ListCloudExadataInfrastructuresResponse;
 use Google\Service\OracleDatabase\Operation;
 
@@ -31,6 +32,24 @@ use Google\Service\OracleDatabase\Operation;
  */
 class ProjectsLocationsCloudExadataInfrastructures extends \Google\Service\Resource
 {
+  /**
+   * Configures Exascale for a single Exadata Infrastructure.
+   * (cloudExadataInfrastructures.configureExascale)
+   *
+   * @param string $name Required. The name of the Cloud Exadata Infrastructure in
+   * the following format: projects/{project}/locations/{location}/cloudExadataInf
+   * rastructures/{cloud_exadata_infrastructure}.
+   * @param ConfigureExascaleCloudExadataInfrastructureRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function configureExascale($name, ConfigureExascaleCloudExadataInfrastructureRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('configureExascale', [$params], Operation::class);
+  }
   /**
    * Creates a new Exadata Infrastructure in a given project and location.
    * (cloudExadataInfrastructures.create)

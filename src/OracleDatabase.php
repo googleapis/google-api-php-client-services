@@ -401,7 +401,17 @@ class OracleDatabase extends \Google\Service
         'cloudExadataInfrastructures',
         [
           'methods' => [
-            'create' => [
+            'configureExascale' => [
+              'path' => 'v1/{+name}:configureExascale',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/cloudExadataInfrastructures',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -1253,17 +1263,7 @@ class OracleDatabase extends \Google\Service
         'goldengateConnectionTypes',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
+            'list' => [
               'path' => 'v1/{+parent}/goldengateConnectionTypes',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1373,17 +1373,7 @@ class OracleDatabase extends \Google\Service
         'goldengateDeploymentEnvironments',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
+            'list' => [
               'path' => 'v1/{+parent}/goldengateDeploymentEnvironments',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1411,17 +1401,7 @@ class OracleDatabase extends \Google\Service
         'goldengateDeploymentTypes',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
+            'list' => [
               'path' => 'v1/{+parent}/goldengateDeploymentTypes',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1457,17 +1437,7 @@ class OracleDatabase extends \Google\Service
         'goldengateDeploymentVersions',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
+            'list' => [
               'path' => 'v1/{+parent}/goldengateDeploymentVersions',
               'httpMethod' => 'GET',
               'parameters' => [

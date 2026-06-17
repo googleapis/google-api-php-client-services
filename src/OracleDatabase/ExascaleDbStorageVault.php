@@ -41,6 +41,15 @@ class ExascaleDbStorageVault extends \Google\Model
    */
   public $entitlementId;
   /**
+   * Optional. The Exadata Infrastructure resource on which
+   * ExascaleDbStorageVault resource is created, in the following format: projec
+   * ts/{project}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata
+   * _infrastructure}
+   *
+   * @var string
+   */
+  public $exadataInfrastructure;
+  /**
    * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is
    * hosted. Example: us-east4-b-r2. If not specified, the system will pick a
    * zone based on availability.
@@ -115,6 +124,25 @@ class ExascaleDbStorageVault extends \Google\Model
   public function getEntitlementId()
   {
     return $this->entitlementId;
+  }
+  /**
+   * Optional. The Exadata Infrastructure resource on which
+   * ExascaleDbStorageVault resource is created, in the following format: projec
+   * ts/{project}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata
+   * _infrastructure}
+   *
+   * @param string $exadataInfrastructure
+   */
+  public function setExadataInfrastructure($exadataInfrastructure)
+  {
+    $this->exadataInfrastructure = $exadataInfrastructure;
+  }
+  /**
+   * @return string
+   */
+  public function getExadataInfrastructure()
+  {
+    return $this->exadataInfrastructure;
   }
   /**
    * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is

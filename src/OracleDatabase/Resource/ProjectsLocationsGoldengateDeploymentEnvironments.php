@@ -17,7 +17,6 @@
 
 namespace Google\Service\OracleDatabase\Resource;
 
-use Google\Service\OracleDatabase\GoldengateDeploymentEnvironment;
 use Google\Service\OracleDatabase\ListGoldengateDeploymentEnvironmentsResponse;
 
 /**
@@ -30,23 +29,6 @@ use Google\Service\OracleDatabase\ListGoldengateDeploymentEnvironmentsResponse;
  */
 class ProjectsLocationsGoldengateDeploymentEnvironments extends \Google\Service\Resource
 {
-  /**
-   * Gets details of a single GoldengateDeploymentEnvironment.
-   * (goldengateDeploymentEnvironments.get)
-   *
-   * @param string $name Required. Name of the resource with the format: projects/
-   * {project}/locations/{location}/goldengateDeploymentEnvironments/{goldengate_d
-   * eployment_environment}
-   * @param array $optParams Optional parameters.
-   * @return GoldengateDeploymentEnvironment
-   * @throws \Google\Service\Exception
-   */
-  public function get($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoldengateDeploymentEnvironment::class);
-  }
   /**
    * Lists GoldengateDeploymentEnvironments in a given project and location. (gold
    * engateDeploymentEnvironments.listProjectsLocationsGoldengateDeploymentEnviron

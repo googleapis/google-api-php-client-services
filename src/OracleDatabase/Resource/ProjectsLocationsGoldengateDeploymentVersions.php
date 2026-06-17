@@ -17,7 +17,6 @@
 
 namespace Google\Service\OracleDatabase\Resource;
 
-use Google\Service\OracleDatabase\GoldengateDeploymentVersion;
 use Google\Service\OracleDatabase\ListGoldengateDeploymentVersionsResponse;
 
 /**
@@ -30,23 +29,6 @@ use Google\Service\OracleDatabase\ListGoldengateDeploymentVersionsResponse;
  */
 class ProjectsLocationsGoldengateDeploymentVersions extends \Google\Service\Resource
 {
-  /**
-   * Gets details of a single GoldengateDeploymentVersion.
-   * (goldengateDeploymentVersions.get)
-   *
-   * @param string $name Required. The name of the GoldengateDeploymentVersion to
-   * retrieve. Format: projects/{project}/locations/{location}/goldengateDeploymen
-   * tVersions/{goldengate_deployment_version}
-   * @param array $optParams Optional parameters.
-   * @return GoldengateDeploymentVersion
-   * @throws \Google\Service\Exception
-   */
-  public function get($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoldengateDeploymentVersion::class);
-  }
   /**
    * Lists GoldengateDeploymentVersions in a given project and location. (goldenga
    * teDeploymentVersions.listProjectsLocationsGoldengateDeploymentVersions)

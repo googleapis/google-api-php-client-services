@@ -89,6 +89,18 @@ class CloudVmClusterProperties extends \Google\Collection
    * Indicates that the resource is in maintenance in progress state.
    */
   public const STATE_MAINTENANCE_IN_PROGRESS = 'MAINTENANCE_IN_PROGRESS';
+  /**
+   * Unspecified storage management type.
+   */
+  public const STORAGE_MANAGEMENT_TYPE_STORAGE_MANAGEMENT_TYPE_UNSPECIFIED = 'STORAGE_MANAGEMENT_TYPE_UNSPECIFIED';
+  /**
+   * Automatic Storage Management.
+   */
+  public const STORAGE_MANAGEMENT_TYPE_ASM = 'ASM';
+  /**
+   * Exascale storage management.
+   */
+  public const STORAGE_MANAGEMENT_TYPE_EXASCALE = 'EXASCALE';
   protected $collection_key = 'sshPublicKeys';
   /**
    * Optional. OCI Cluster name.
@@ -269,6 +281,12 @@ class CloudVmClusterProperties extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * Output only. The storage management type of the VM Cluster.
+   *
+   * @var string
+   */
+  public $storageManagementType;
   /**
    * Output only. The storage allocation for the disk group, in gigabytes (GB).
    *
@@ -769,6 +787,24 @@ class CloudVmClusterProperties extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. The storage management type of the VM Cluster.
+   *
+   * Accepted values: STORAGE_MANAGEMENT_TYPE_UNSPECIFIED, ASM, EXASCALE
+   *
+   * @param self::STORAGE_MANAGEMENT_TYPE_* $storageManagementType
+   */
+  public function setStorageManagementType($storageManagementType)
+  {
+    $this->storageManagementType = $storageManagementType;
+  }
+  /**
+   * @return self::STORAGE_MANAGEMENT_TYPE_*
+   */
+  public function getStorageManagementType()
+  {
+    return $this->storageManagementType;
   }
   /**
    * Output only. The storage allocation for the disk group, in gigabytes (GB).
