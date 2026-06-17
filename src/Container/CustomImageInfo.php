@@ -17,54 +17,32 @@
 
 namespace Google\Service\Container;
 
-class CustomImageConfig extends \Google\Model
+class CustomImageInfo extends \Google\Model
 {
   /**
-   * The name of the image to use for this node.
+   * Output only. The human-readable upgrade message for the custom image.
    *
    * @var string
    */
-  public $image;
-  /**
-   * The project containing the image to use for this node.
-   *
-   * @var string
-   */
-  public $imageProject;
+  public $upgradeMessage;
 
   /**
-   * The name of the image to use for this node.
+   * Output only. The human-readable upgrade message for the custom image.
    *
-   * @param string $image
+   * @param string $upgradeMessage
    */
-  public function setImage($image)
+  public function setUpgradeMessage($upgradeMessage)
   {
-    $this->image = $image;
+    $this->upgradeMessage = $upgradeMessage;
   }
   /**
    * @return string
    */
-  public function getImage()
+  public function getUpgradeMessage()
   {
-    return $this->image;
-  }
-  /**
-   * The project containing the image to use for this node.
-   *
-   * @param string $imageProject
-   */
-  public function setImageProject($imageProject)
-  {
-    $this->imageProject = $imageProject;
-  }
-  /**
-   * @return string
-   */
-  public function getImageProject()
-  {
-    return $this->imageProject;
+    return $this->upgradeMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CustomImageConfig::class, 'Google_Service_Container_CustomImageConfig');
+class_alias(CustomImageInfo::class, 'Google_Service_Container_CustomImageInfo');

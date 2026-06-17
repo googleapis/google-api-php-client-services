@@ -26,6 +26,8 @@ class NodePoolUpgradeInfo extends \Google\Collection
    * @var string[]
    */
   public $autoUpgradeStatus;
+  protected $customImageInfoType = CustomImageInfo::class;
+  protected $customImageInfoDataType = '';
   /**
    * The node pool's current minor version's end of extended support timestamp.
    *
@@ -74,6 +76,23 @@ class NodePoolUpgradeInfo extends \Google\Collection
   public function getAutoUpgradeStatus()
   {
     return $this->autoUpgradeStatus;
+  }
+  /**
+   * Output only. Upgrade info for the node pool specific to the usage of custom
+   * images.
+   *
+   * @param CustomImageInfo $customImageInfo
+   */
+  public function setCustomImageInfo(CustomImageInfo $customImageInfo)
+  {
+    $this->customImageInfo = $customImageInfo;
+  }
+  /**
+   * @return CustomImageInfo
+   */
+  public function getCustomImageInfo()
+  {
+    return $this->customImageInfo;
   }
   /**
    * The node pool's current minor version's end of extended support timestamp.
