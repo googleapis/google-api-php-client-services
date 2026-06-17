@@ -1885,6 +1885,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'patch' => [
               'path' => 'v1/{+name}',
@@ -2807,6 +2811,10 @@ class DiscoveryEngine extends \Google\Service
                 'getWidgetConfigRequestOption.turnOffCollectionComponents' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'patch' => [
@@ -4094,6 +4102,10 @@ class DiscoveryEngine extends \Google\Service
                 'getWidgetConfigRequestOption.turnOffCollectionComponents' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'patch' => [

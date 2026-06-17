@@ -17,7 +17,7 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends \Google\Collection
 {
   /**
    * Unspecified update type.
@@ -39,6 +39,9 @@ class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends \
    * Subscription was scaled down (thresholds decreased).
    */
   public const UPDATE_TYPE_SCALE_DOWN = 'SCALE_DOWN';
+  protected $collection_key = 'agentSearchTokenSubscriptionStatuses';
+  protected $agentSearchTokenSubscriptionStatusesType = GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatusAgentSearchTokenSubscriptionStatus::class;
+  protected $agentSearchTokenSubscriptionStatusesDataType = 'array';
   /**
    * Optional. The currently effective Indexing Core threshold. This is the
    * threshold against which Indexing Core usage is compared for overage
@@ -95,6 +98,22 @@ class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends \
    */
   public $updateType;
 
+  /**
+   * Output only. Per-model Agent Search TPM subscription status.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatusAgentSearchTokenSubscriptionStatus[] $agentSearchTokenSubscriptionStatuses
+   */
+  public function setAgentSearchTokenSubscriptionStatuses($agentSearchTokenSubscriptionStatuses)
+  {
+    $this->agentSearchTokenSubscriptionStatuses = $agentSearchTokenSubscriptionStatuses;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatusAgentSearchTokenSubscriptionStatus[]
+   */
+  public function getAgentSearchTokenSubscriptionStatuses()
+  {
+    return $this->agentSearchTokenSubscriptionStatuses;
+  }
   /**
    * Optional. The currently effective Indexing Core threshold. This is the
    * threshold against which Indexing Core usage is compared for overage

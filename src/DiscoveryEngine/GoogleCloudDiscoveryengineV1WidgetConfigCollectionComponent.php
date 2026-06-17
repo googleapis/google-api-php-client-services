@@ -20,6 +20,8 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Google\Collection
 {
   protected $collection_key = 'dataStoreComponents';
+  protected $connectorAuthStateType = GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState::class;
+  protected $connectorAuthStateDataType = '';
   /**
    * Output only. The icon link of the connector source.
    *
@@ -65,6 +67,22 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
    */
   public $name;
 
+  /**
+   * Output only. The auth uri of the connector source.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState $connectorAuthState
+   */
+  public function setConnectorAuthState(GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState $connectorAuthState)
+  {
+    $this->connectorAuthState = $connectorAuthState;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState
+   */
+  public function getConnectorAuthState()
+  {
+    return $this->connectorAuthState;
+  }
   /**
    * Output only. The icon link of the connector source.
    *

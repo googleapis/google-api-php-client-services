@@ -176,13 +176,12 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * `prompt-gallery` * `model-selector` * `notebook-lm` * `people-search` *
    * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
    * sharing` * `personalization-memory` * `personalization-suggested-
-   * highlights` * `disable-mobile-app-access` * `disable-agent-sharing` *
-   * `disable-image-generation` * `disable-video-generation` * `disable-
-   * onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-
-   * upload` * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-
-   * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups` *
-   * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
-   * product-intelligence`
+   * highlights` * `mobile-app-access` * `disable-agent-sharing` * `disable-
+   * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
+   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
+   * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
+   * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
+   * `multi-agent-orchestration` * `cross-product-intelligence`
    *
    * @var string[]
    */
@@ -468,13 +467,12 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * `prompt-gallery` * `model-selector` * `notebook-lm` * `people-search` *
    * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
    * sharing` * `personalization-memory` * `personalization-suggested-
-   * highlights` * `disable-mobile-app-access` * `disable-agent-sharing` *
-   * `disable-image-generation` * `disable-video-generation` * `disable-
-   * onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-
-   * upload` * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-
-   * workspace` * `disable-skills` * `enable-end-user-sharing-with-groups` *
-   * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
-   * product-intelligence`
+   * highlights` * `mobile-app-access` * `disable-agent-sharing` * `disable-
+   * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
+   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
+   * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
+   * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
+   * `multi-agent-orchestration` * `cross-product-intelligence`
    *
    * @param string[] $features
    */

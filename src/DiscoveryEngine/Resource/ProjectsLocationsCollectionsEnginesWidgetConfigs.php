@@ -46,6 +46,11 @@ class ProjectsLocationsCollectionsEnginesWidgetConfigs extends \Google\Service\R
    * @opt_param bool getWidgetConfigRequestOption.turnOffCollectionComponents
    * Optional. Whether to turn off collection_components in WidgetConfig to reduce
    * latency and data transmission.
+   * @opt_param string languageCode Optional. BCP-47 language tag (e.g. "en", "fr-
+   * CA"). Used to localize human-readable strings in the response, such as the
+   * model selector `display_name` / `description` on
+   * `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the
+   * default language (English).
    * @return GoogleCloudDiscoveryengineV1WidgetConfig
    * @throws \Google\Service\Exception
    */
