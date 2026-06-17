@@ -17,6 +17,8 @@
 
 namespace Google\Service\TravelImpactModel\Resource;
 
+use Google\Service\TravelImpactModel\ComputeDetailedFlightEmissionsRequest;
+use Google\Service\TravelImpactModel\ComputeDetailedFlightEmissionsResponse;
 use Google\Service\TravelImpactModel\ComputeFlightEmissionsRequest;
 use Google\Service\TravelImpactModel\ComputeFlightEmissionsResponse;
 use Google\Service\TravelImpactModel\ComputeScope3FlightEmissionsRequest;
@@ -34,6 +36,34 @@ use Google\Service\TravelImpactModel\ComputeTypicalFlightEmissionsResponse;
  */
 class Flights extends \Google\Service\Resource
 {
+  /**
+   * Retrieves detailed emission estimates. Detailed Flight Emissions are
+   * transparent per-passenger greenhouse gas emission estimates supplemented by
+   * comprehensive metadata detailing the calculation methodology, emissions
+   * breakdown, contrail impact, and data provenance. Details on how emission
+   * estimates are computed are in [GitHub](https://github.com/google/travel-
+   * impact-model). The response will contain all entries that match the input
+   * flight legs, in the same order. If there are no estimates available for a
+   * certain flight leg, the response will return the flight leg object with empty
+   * emission fields. The request will still be considered successful. Reasons for
+   * missing emission estimates include: * The flight is unknown to the server. *
+   * The input flight leg is missing one or more identifiers. * The flight date is
+   * in the past. * The aircraft type is not supported by the model. * Missing
+   * seat configuration. The request can contain up to 100 flight legs. If the
+   * request has more than 100 flight legs, it will fail with an INVALID_ARGUMENT
+   * error. (flights.computeDetailedFlightEmissions)
+   *
+   * @param ComputeDetailedFlightEmissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ComputeDetailedFlightEmissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function computeDetailedFlightEmissions(ComputeDetailedFlightEmissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('computeDetailedFlightEmissions', [$params], ComputeDetailedFlightEmissionsResponse::class);
+  }
   /**
    * Retrieves emission estimates. Details on how emission estimates are computed
    * are in [GitHub](https://github.com/google/travel-impact-model). The response

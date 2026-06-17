@@ -62,7 +62,11 @@ class TravelImpactModel extends \Google\Service
         'flights',
         [
           'methods' => [
-            'computeFlightEmissions' => [
+            'computeDetailedFlightEmissions' => [
+              'path' => 'v1/flights:computeDetailedFlightEmissions',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'computeFlightEmissions' => [
               'path' => 'v1/flights:computeFlightEmissions',
               'httpMethod' => 'POST',
               'parameters' => [],
