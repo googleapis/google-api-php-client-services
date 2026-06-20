@@ -73,6 +73,10 @@ class ExternalExposure extends \Google\Collection
   /**
    * @var string
    */
+  public $networkPathInsightsGenerationTime;
+  /**
+   * @var string
+   */
   public $privateIpAddress;
   /**
    * @var string
@@ -280,6 +284,20 @@ class ExternalExposure extends \Google\Collection
   public function getNetworkIngressFirewallPolicy()
   {
     return $this->networkIngressFirewallPolicy;
+  }
+  /**
+   * @param string $networkPathInsightsGenerationTime
+   */
+  public function setNetworkPathInsightsGenerationTime($networkPathInsightsGenerationTime)
+  {
+    $this->networkPathInsightsGenerationTime = $networkPathInsightsGenerationTime;
+  }
+  /**
+   * @return string
+   */
+  public function getNetworkPathInsightsGenerationTime()
+  {
+    return $this->networkPathInsightsGenerationTime;
   }
   /**
    * @param string $privateIpAddress
