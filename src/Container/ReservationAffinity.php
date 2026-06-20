@@ -36,6 +36,11 @@ class ReservationAffinity extends \Google\Collection
    * specifying the reservations.
    */
   public const CONSUME_RESERVATION_TYPE_SPECIFIC_RESERVATION = 'SPECIFIC_RESERVATION';
+  /**
+   * Consume any reservation available. If no reservation is available, fail the
+   * node creation.
+   */
+  public const CONSUME_RESERVATION_TYPE_ANY_RESERVATION_THEN_FAIL = 'ANY_RESERVATION_THEN_FAIL';
   protected $collection_key = 'values';
   /**
    * Corresponds to the type of reservation consumption.
@@ -62,7 +67,7 @@ class ReservationAffinity extends \Google\Collection
    * Corresponds to the type of reservation consumption.
    *
    * Accepted values: UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION,
-   * SPECIFIC_RESERVATION
+   * SPECIFIC_RESERVATION, ANY_RESERVATION_THEN_FAIL
    *
    * @param self::CONSUME_RESERVATION_TYPE_* $consumeReservationType
    */

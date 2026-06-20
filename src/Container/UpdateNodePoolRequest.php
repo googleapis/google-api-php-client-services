@@ -136,6 +136,8 @@ class UpdateNodePoolRequest extends \Google\Collection
    * @var string
    */
   public $machineType;
+  protected $maintenancePolicyType = NodePoolMaintenancePolicy::class;
+  protected $maintenancePolicyDataType = '';
   /**
    * The maximum duration for the nodes to exist. If unspecified, the nodes can
    * exist indefinitely.
@@ -607,6 +609,23 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getMachineType()
   {
     return $this->machineType;
+  }
+  /**
+   * Optional. Specifies the maintenance policy for the node pool, including
+   * maintenance exclusion options.
+   *
+   * @param NodePoolMaintenancePolicy $maintenancePolicy
+   */
+  public function setMaintenancePolicy(NodePoolMaintenancePolicy $maintenancePolicy)
+  {
+    $this->maintenancePolicy = $maintenancePolicy;
+  }
+  /**
+   * @return NodePoolMaintenancePolicy
+   */
+  public function getMaintenancePolicy()
+  {
+    return $this->maintenancePolicy;
   }
   /**
    * The maximum duration for the nodes to exist. If unspecified, the nodes can
