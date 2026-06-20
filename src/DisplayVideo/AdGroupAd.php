@@ -232,9 +232,8 @@ class AdGroupAd extends \Google\Collection
   /**
    * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To
    * remove the DCM tracking ad info, please leave this field empty. Retrieval
-   * and management of Demand Gen resources is currently in beta. This field
-   * will begin rolling out to all partners on *June 10, 2026* and be available
-   * to all partners on *June 24, 2026*.
+   * and management of Demand Gen resources is currently rolling out. This field
+   * will be available to all partners by *June 24, 2026*.
    *
    * @param DcmTrackingInfo $dcmTrackingInfo
    */
@@ -252,9 +251,8 @@ class AdGroupAd extends \Google\Collection
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/ans
    * wer/15598924?&sjid=11207068802760924844-NC#CarouselAd). Retrieval and
-   * management of Demand Gen resources is currently in beta. This field will
-   * begin rolling out to all partners on *June 10, 2026* and be available to
-   * all partners on *June 24, 2026*.
+   * management of Demand Gen resources is currently rolling out. This field
+   * will be available to all partners by *June 24, 2026*.
    *
    * @param DemandGenCarouselAd $demandGenCarouselAd
    */
@@ -272,9 +270,8 @@ class AdGroupAd extends \Google\Collection
   /**
    * Details of a [Demand Gen image ad](//support.google.com/displayvideo/answer
    * /15598924?&sjid=11207068802760924844-NC#ImageAd). Retrieval and management
-   * of Demand Gen resources is currently in beta. This field will begin rolling
-   * out to all partners on *June 10, 2026* and be available to all partners on
-   * *June 24, 2026*.
+   * of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    *
    * @param DemandGenImageAd $demandGenImageAd
    */
@@ -292,9 +289,8 @@ class AdGroupAd extends \Google\Collection
   /**
    * Details of a [Demand Gen product ad](//support.google.com/displayvideo/answ
    * er/15598924?&sjid=11207068802760924844-NC#Product-onlyAd). Retrieval and
-   * management of Demand Gen resources is currently in beta. This field will
-   * begin rolling out to all partners on *June 10, 2026* and be available to
-   * all partners on *June 24, 2026*.
+   * management of Demand Gen resources is currently rolling out. This field
+   * will be available to all partners by *June 24, 2026*.
    *
    * @param DemandGenProductAd $demandGenProductAd
    */
@@ -312,9 +308,8 @@ class AdGroupAd extends \Google\Collection
   /**
    * Details of a [Demand Gen video ad](//support.google.com/displayvideo/answer
    * /15598924?&sjid=11207068802760924844-NC#VideoAd). Retrieval and management
-   * of Demand Gen resources is currently in beta. This field will begin rolling
-   * out to all partners on *June 10, 2026* and be available to all partners on
-   * *June 24, 2026*.
+   * of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    *
    * @param DemandGenVideoAd $demandGenVideoAd
    */

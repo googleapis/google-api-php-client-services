@@ -33,9 +33,9 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
 {
   /**
    * Creates an ad group ad. This method is only supported for Demand Gen ads.
-   * Retrieval and management of Demand Gen resources is currently in beta. This
-   * method will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*. (adGroupAds.create)
+   * Retrieval and management of Demand Gen resources is currently rolling out.
+   * This method will be available to all partners by *June 24, 2026*.
+   * (adGroupAds.create)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * ad belongs to.
@@ -52,9 +52,9 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
   }
   /**
    * Deletes an ad group ad. This method is only supported for Demand Gen ads.
-   * Retrieval and management of Demand Gen resources is currently in beta. This
-   * method will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*. (adGroupAds.delete)
+   * Retrieval and management of Demand Gen resources is currently rolling out.
+   * This method will be available to all partners by *June 24, 2026*.
+   * (adGroupAds.delete)
    *
    * @param string $advertiserId Required. The ID of the advertiser the ad belongs
    * to.
@@ -128,9 +128,9 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
   }
   /**
    * Updates an ad group ad. This method is only supported for Demand Gen ads.
-   * Retrieval and management of Demand Gen resources is currently in beta. This
-   * method will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*. (adGroupAds.patch)
+   * Retrieval and management of Demand Gen resources is currently rolling out.
+   * This method will be available to all partners by *June 24, 2026*.
+   * (adGroupAds.patch)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * ad belongs to.

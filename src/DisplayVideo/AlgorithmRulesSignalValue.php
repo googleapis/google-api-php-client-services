@@ -54,6 +54,11 @@ class AlgorithmRulesSignalValue extends \Google\Model
    */
   public const ACTIVE_VIEW_SIGNAL_COMPLETED_IN_VIEW_AUDIBLE = 'COMPLETED_IN_VIEW_AUDIBLE';
   /**
+   * Whether the audio ad was completed. Value is stored in the boolValue field
+   * of the comparison value.
+   */
+  public const ACTIVE_VIEW_SIGNAL_AUDIO_COMPLETED = 'AUDIO_COMPLETED';
+  /**
    * Signal based on active views. Only `TIME_ON_SCREEN` is supported. This
    * field is only supported for allowlisted partners.
    *
@@ -75,7 +80,7 @@ class AlgorithmRulesSignalValue extends \Google\Model
    *
    * Accepted values: ACTIVE_VIEW_SIGNAL_UNSPECIFIED, ACTIVE_VIEW_VIEWED,
    * AUDIBLE, VIDEO_COMPLETED, TIME_ON_SCREEN, VIDEO_PLAYER_SIZE,
-   * COMPLETED_IN_VIEW_AUDIBLE
+   * COMPLETED_IN_VIEW_AUDIBLE, AUDIO_COMPLETED
    *
    * @param self::ACTIVE_VIEW_SIGNAL_* $activeViewSignal
    */
