@@ -20,12 +20,12 @@ namespace Google\Service\Compute;
 class InstanceGroupManagerInstanceLifecyclePolicy extends \Google\Model
 {
   /**
-   * MIG does not repair a failed or an unhealthy VM.
+   * MIG does not repair a failed VM.
    */
   public const DEFAULT_ACTION_ON_FAILURE_DO_NOTHING = 'DO_NOTHING';
   /**
-   * (Default) MIG automatically repairs a failed or an unhealthy VM by
-   * recreating it. For more information, see About repairing VMs in a MIG.
+   * (default): MIG automatically repairs a failed VM by recreating it. For more
+   * information, see About repairing VMs in a MIG.
    */
   public const DEFAULT_ACTION_ON_FAILURE_REPAIR = 'REPAIR';
   public const FORCE_UPDATE_ON_REPAIR_NO = 'NO';
@@ -44,12 +44,12 @@ class InstanceGroupManagerInstanceLifecyclePolicy extends \Google\Model
    */
   public const ON_FAILED_HEALTH_CHECK_REPAIR = 'REPAIR';
   /**
-   * The action that a MIG performs on a failed or an unhealthy VM. A VM is
-   * marked as unhealthy when the application running on that VM fails a health
-   * check. Valid values are         - REPAIR (default): MIG automatically
-   * repairs a failed or    an unhealthy VM by recreating it. For more
-   * information, see About    repairing VMs in a MIG.    - DO_NOTHING: MIG does
-   * not repair a failed or an unhealthy    VM.
+   * The action that a MIG performs on a failed VM. If the value of the
+   * onFailedHealthCheck field is `DEFAULT_ACTION`, then the same action also
+   * applies to the VMs on which your application fails a health check. Valid
+   * values are         - REPAIR (default): MIG automatically repairs a failed
+   * VM    by recreating it. For more information, see About    repairing VMs in
+   * a MIG.    - DO_NOTHING: MIG does not repair a failed VM.
    *
    * @var string
    */
@@ -83,12 +83,12 @@ class InstanceGroupManagerInstanceLifecyclePolicy extends \Google\Model
   protected $onRepairDataType = '';
 
   /**
-   * The action that a MIG performs on a failed or an unhealthy VM. A VM is
-   * marked as unhealthy when the application running on that VM fails a health
-   * check. Valid values are         - REPAIR (default): MIG automatically
-   * repairs a failed or    an unhealthy VM by recreating it. For more
-   * information, see About    repairing VMs in a MIG.    - DO_NOTHING: MIG does
-   * not repair a failed or an unhealthy    VM.
+   * The action that a MIG performs on a failed VM. If the value of the
+   * onFailedHealthCheck field is `DEFAULT_ACTION`, then the same action also
+   * applies to the VMs on which your application fails a health check. Valid
+   * values are         - REPAIR (default): MIG automatically repairs a failed
+   * VM    by recreating it. For more information, see About    repairing VMs in
+   * a MIG.    - DO_NOTHING: MIG does not repair a failed VM.
    *
    * Accepted values: DO_NOTHING, REPAIR
    *
