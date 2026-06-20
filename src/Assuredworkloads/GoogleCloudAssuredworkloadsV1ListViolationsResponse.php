@@ -26,6 +26,12 @@ class GoogleCloudAssuredworkloadsV1ListViolationsResponse extends \Google\Collec
    * @var string
    */
   public $nextPageToken;
+  /**
+   * The total number of violations.
+   *
+   * @var int
+   */
+  public $totalSize;
   protected $violationsType = GoogleCloudAssuredworkloadsV1Violation::class;
   protected $violationsDataType = 'array';
 
@@ -44,6 +50,22 @@ class GoogleCloudAssuredworkloadsV1ListViolationsResponse extends \Google\Collec
   public function getNextPageToken()
   {
     return $this->nextPageToken;
+  }
+  /**
+   * The total number of violations.
+   *
+   * @param int $totalSize
+   */
+  public function setTotalSize($totalSize)
+  {
+    $this->totalSize = $totalSize;
+  }
+  /**
+   * @return int
+   */
+  public function getTotalSize()
+  {
+    return $this->totalSize;
   }
   /**
    * List of Violations under a Workload.

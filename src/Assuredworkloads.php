@@ -372,6 +372,10 @@ class Assuredworkloads extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
