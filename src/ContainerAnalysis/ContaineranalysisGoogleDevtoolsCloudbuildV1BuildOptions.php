@@ -104,6 +104,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
    */
   public const MACHINE_TYPE_E2_MEDIUM = 'E2_MEDIUM';
   /**
+   * E2 machine with 2 CPUs.
+   */
+  public const MACHINE_TYPE_E2_STANDARD_2 = 'E2_STANDARD_2';
+  /**
    * Not a verifiable build (the default).
    */
   public const REQUESTED_VERIFY_OPTION_NOT_VERIFIED = 'NOT_VERIFIED';
@@ -391,7 +395,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
    * Compute Engine machine type on which to run the build.
    *
    * Accepted values: UNSPECIFIED, N1_HIGHCPU_8, N1_HIGHCPU_32, E2_HIGHCPU_8,
-   * E2_HIGHCPU_32, E2_MEDIUM
+   * E2_HIGHCPU_32, E2_MEDIUM, E2_STANDARD_2
    *
    * @param self::MACHINE_TYPE_* $machineType
    */
