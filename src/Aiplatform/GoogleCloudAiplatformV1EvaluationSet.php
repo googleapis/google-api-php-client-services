@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
 {
   protected $collection_key = 'evaluationItems';
+  protected $agentConfigsType = GoogleCloudAiplatformV1AgentConfig::class;
+  protected $agentConfigsDataType = 'map';
   /**
    * Output only. Timestamp when this item was created.
    *
@@ -58,6 +60,24 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Optional. Static configurations for each agent associated with the items in
+   * this set. Key: `agent_id` (matches the `author` field in `events`). Value:
+   * The static configuration of the agent.
+   *
+   * @param GoogleCloudAiplatformV1AgentConfig[] $agentConfigs
+   */
+  public function setAgentConfigs($agentConfigs)
+  {
+    $this->agentConfigs = $agentConfigs;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AgentConfig[]
+   */
+  public function getAgentConfigs()
+  {
+    return $this->agentConfigs;
+  }
   /**
    * Output only. Timestamp when this item was created.
    *

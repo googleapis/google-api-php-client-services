@@ -33,6 +33,12 @@ class GoogleCloudAiplatformV1UserScenario extends \Google\Model
    * @var string
    */
   public $startingPrompt;
+  /**
+   * Represents a short 3-5 word title for eval test case.
+   *
+   * @var string
+   */
+  public $testCaseTitle;
 
   /**
    * Conversation plan to drive multi-turn agent run and get simulated agent
@@ -67,6 +73,22 @@ class GoogleCloudAiplatformV1UserScenario extends \Google\Model
   public function getStartingPrompt()
   {
     return $this->startingPrompt;
+  }
+  /**
+   * Represents a short 3-5 word title for eval test case.
+   *
+   * @param string $testCaseTitle
+   */
+  public function setTestCaseTitle($testCaseTitle)
+  {
+    $this->testCaseTitle = $testCaseTitle;
+  }
+  /**
+   * @return string
+   */
+  public function getTestCaseTitle()
+  {
+    return $this->testCaseTitle;
   }
 }
 

@@ -18,6 +18,7 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1EvaluationSet;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1ImportEvaluationSetRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListEvaluationSetsResponse;
 use Google\Service\Aiplatform\GoogleLongrunningOperation;
 
@@ -77,6 +78,21 @@ class ProjectsLocationsEvaluationSets extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleCloudAiplatformV1EvaluationSet::class);
+  }
+  /**
+   * Imports an Evaluation Set. (evaluationSets.import)
+   *
+   * @param string $parent Required. Parent resource name.
+   * @param GoogleCloudAiplatformV1ImportEvaluationSetRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function import($parent, GoogleCloudAiplatformV1ImportEvaluationSetRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('import', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Lists Evaluation Sets. (evaluationSets.listProjectsLocationsEvaluationSets)

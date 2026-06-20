@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\Collection
 {
   protected $collection_key = 'secretEnv';
+  protected $agentGatewayConfigType = GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpecAgentGatewayConfig::class;
+  protected $agentGatewayConfigDataType = '';
   /**
    * Optional. Concurrency for each container and agent server. Recommended
    * value: 2 * cpu + 1. Defaults to 9.
@@ -63,6 +65,22 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
   protected $secretEnvType = GoogleCloudAiplatformV1SecretEnvVar::class;
   protected $secretEnvDataType = 'array';
 
+  /**
+   * Optional. Agent Gateway configuration for the Reasoning Engine deployment.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpecAgentGatewayConfig $agentGatewayConfig
+   */
+  public function setAgentGatewayConfig(GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpecAgentGatewayConfig $agentGatewayConfig)
+  {
+    $this->agentGatewayConfig = $agentGatewayConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpecAgentGatewayConfig
+   */
+  public function getAgentGatewayConfig()
+  {
+    return $this->agentGatewayConfig;
+  }
   /**
    * Optional. Concurrency for each container and agent server. Recommended
    * value: 2 * cpu + 1. Defaults to 9.

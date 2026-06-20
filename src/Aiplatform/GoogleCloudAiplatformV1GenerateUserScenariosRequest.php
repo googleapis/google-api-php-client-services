@@ -22,6 +22,17 @@ class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends \Google\Model
   protected $agentsType = GoogleCloudAiplatformV1AgentConfig::class;
   protected $agentsDataType = 'map';
   /**
+   * Optional. Allows the scenario generation to use cross region models. When
+   * this flag is set, the service may route traffic to other regions if a model
+   * is unavailable in the current region (e.g., to a `global` endpoint). If a
+   * fully-qualified model endpoint resource name with a different region than
+   * the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   *
+   * @var bool
+   */
+  public $allowCrossRegionModel;
+  /**
    * Required. The agent id to identify the root agent.
    *
    * @var string
@@ -47,6 +58,27 @@ class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends \Google\Model
   public function getAgents()
   {
     return $this->agents;
+  }
+  /**
+   * Optional. Allows the scenario generation to use cross region models. When
+   * this flag is set, the service may route traffic to other regions if a model
+   * is unavailable in the current region (e.g., to a `global` endpoint). If a
+   * fully-qualified model endpoint resource name with a different region than
+   * the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   *
+   * @param bool $allowCrossRegionModel
+   */
+  public function setAllowCrossRegionModel($allowCrossRegionModel)
+  {
+    $this->allowCrossRegionModel = $allowCrossRegionModel;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowCrossRegionModel()
+  {
+    return $this->allowCrossRegionModel;
   }
   /**
    * Required. The agent id to identify the root agent.
