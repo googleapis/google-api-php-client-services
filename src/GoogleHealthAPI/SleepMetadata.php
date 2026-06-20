@@ -83,7 +83,10 @@ class SleepMetadata extends \Google\Model
    */
   public $nap;
   /**
-   * Output only. Sleep and sleep stages algorithms finished processing.
+   * Output only. Sleep and sleep stages algorithms finished processing. A
+   * `true` value indicates whether all data processing for the session is
+   * complete. A `false` value means sleep period is detected but sleep stages
+   * is still processing.
    *
    * @var bool
    */
@@ -145,7 +148,10 @@ class SleepMetadata extends \Google\Model
     return $this->nap;
   }
   /**
-   * Output only. Sleep and sleep stages algorithms finished processing.
+   * Output only. Sleep and sleep stages algorithms finished processing. A
+   * `true` value indicates whether all data processing for the session is
+   * complete. A `false` value means sleep period is detected but sleep stages
+   * is still processing.
    *
    * @param bool $processed
    */
