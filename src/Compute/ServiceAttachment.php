@@ -120,6 +120,13 @@ class ServiceAttachment extends \Google\Collection
    */
   public $name;
   /**
+   * The number of NAT IP addresses to be allocated per connected endpoint. If
+   * not specified, the default value is 1.
+   *
+   * @var string
+   */
+  public $natIpsPerEndpoint;
+  /**
    * An array of URLs where each entry is the URL of a subnet provided by the
    * service producer to use for NAT in this service attachment.
    *
@@ -434,6 +441,23 @@ class ServiceAttachment extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * The number of NAT IP addresses to be allocated per connected endpoint. If
+   * not specified, the default value is 1.
+   *
+   * @param string $natIpsPerEndpoint
+   */
+  public function setNatIpsPerEndpoint($natIpsPerEndpoint)
+  {
+    $this->natIpsPerEndpoint = $natIpsPerEndpoint;
+  }
+  /**
+   * @return string
+   */
+  public function getNatIpsPerEndpoint()
+  {
+    return $this->natIpsPerEndpoint;
   }
   /**
    * An array of URLs where each entry is the URL of a subnet provided by the

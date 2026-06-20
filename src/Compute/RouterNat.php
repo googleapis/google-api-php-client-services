@@ -97,6 +97,15 @@ class RouterNat extends \Google\Collection
    */
   public $drainNatIps;
   /**
+   * Output only. Effective timeout (in seconds) for TCP connections that are in
+   * TIME_WAIT state. This value is equal to tcp_time_wait_timeout_sec. If
+   * tcp_time_wait_timeout_sec isn't set, the effective timeout is 30s or 120s.
+   * The field is output only.
+   *
+   * @var int
+   */
+  public $effectiveTcpTimeWaitTimeoutSec;
+  /**
    * Enable Dynamic Port Allocation.
    *
    * If not specified, it is disabled by default.
@@ -289,6 +298,25 @@ class RouterNat extends \Google\Collection
   public function getDrainNatIps()
   {
     return $this->drainNatIps;
+  }
+  /**
+   * Output only. Effective timeout (in seconds) for TCP connections that are in
+   * TIME_WAIT state. This value is equal to tcp_time_wait_timeout_sec. If
+   * tcp_time_wait_timeout_sec isn't set, the effective timeout is 30s or 120s.
+   * The field is output only.
+   *
+   * @param int $effectiveTcpTimeWaitTimeoutSec
+   */
+  public function setEffectiveTcpTimeWaitTimeoutSec($effectiveTcpTimeWaitTimeoutSec)
+  {
+    $this->effectiveTcpTimeWaitTimeoutSec = $effectiveTcpTimeWaitTimeoutSec;
+  }
+  /**
+   * @return int
+   */
+  public function getEffectiveTcpTimeWaitTimeoutSec()
+  {
+    return $this->effectiveTcpTimeWaitTimeoutSec;
   }
   /**
    * Enable Dynamic Port Allocation.

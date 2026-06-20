@@ -32,6 +32,8 @@ class ReservationBlock extends \Google\Model
    * Reservation block has allocated all its resources.
    */
   public const STATUS_READY = 'READY';
+  protected $blockHealthInfoType = ReservationBlockHealthInfo::class;
+  protected $blockHealthInfoDataType = '';
   /**
    * Output only. [Output Only] The number of resources that are allocated in
    * this reservation block.
@@ -45,8 +47,6 @@ class ReservationBlock extends \Google\Model
    * @var string
    */
   public $creationTimestamp;
-  protected $healthInfoType = ReservationBlockHealthInfo::class;
-  protected $healthInfoDataType = '';
   /**
    * Output only. [Output Only] The unique identifier for the resource. This
    * identifier is defined by the server.
@@ -130,6 +130,22 @@ class ReservationBlock extends \Google\Model
   public $zone;
 
   /**
+   * Output only. [Output Only] Health information for the reservation block.
+   *
+   * @param ReservationBlockHealthInfo $blockHealthInfo
+   */
+  public function setBlockHealthInfo(ReservationBlockHealthInfo $blockHealthInfo)
+  {
+    $this->blockHealthInfo = $blockHealthInfo;
+  }
+  /**
+   * @return ReservationBlockHealthInfo
+   */
+  public function getBlockHealthInfo()
+  {
+    return $this->blockHealthInfo;
+  }
+  /**
    * Output only. [Output Only] The number of resources that are allocated in
    * this reservation block.
    *
@@ -161,22 +177,6 @@ class ReservationBlock extends \Google\Model
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
-  }
-  /**
-   * Output only. [Output Only] Health information for the reservation block.
-   *
-   * @param ReservationBlockHealthInfo $healthInfo
-   */
-  public function setHealthInfo(ReservationBlockHealthInfo $healthInfo)
-  {
-    $this->healthInfo = $healthInfo;
-  }
-  /**
-   * @return ReservationBlockHealthInfo
-   */
-  public function getHealthInfo()
-  {
-    return $this->healthInfo;
   }
   /**
    * Output only. [Output Only] The unique identifier for the resource. This
