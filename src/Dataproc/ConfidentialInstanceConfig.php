@@ -20,6 +20,32 @@ namespace Google\Service\Dataproc;
 class ConfidentialInstanceConfig extends \Google\Model
 {
   /**
+   * Confidential Instance Type is not specified.
+   */
+  public const CONFIDENTIAL_INSTANCE_TYPE_CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED = 'CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED';
+  /**
+   * AMD Secure Encrypted Virtualization (https://cloud.google.com/confidential-
+   * computing/confidential-vm/docs/confidential-vm-overview#amd_sev)
+   */
+  public const CONFIDENTIAL_INSTANCE_TYPE_SEV = 'SEV';
+  /**
+   * AMD Secure Encrypted Virtualization-Secure Nested Paging
+   * (https://cloud.google.com/confidential-computing/confidential-
+   * vm/docs/confidential-vm-overview#amd_sev-snp)
+   */
+  public const CONFIDENTIAL_INSTANCE_TYPE_SEV_SNP = 'SEV_SNP';
+  /**
+   * Intel Trust Domain Extensions (https://cloud.google.com/confidential-
+   * computing/confidential-vm/docs/confidential-vm-overview#intel_tdx)
+   */
+  public const CONFIDENTIAL_INSTANCE_TYPE_TDX = 'TDX';
+  /**
+   * Optional. Defines the type of Confidential Compute technology to use.
+   *
+   * @var string
+   */
+  public $confidentialInstanceType;
+  /**
    * Optional. Deprecated: Use 'confidential_instance_type' instead. Defines
    * whether the instance should have confidential compute enabled.
    *
@@ -28,6 +54,24 @@ class ConfidentialInstanceConfig extends \Google\Model
    */
   public $enableConfidentialCompute;
 
+  /**
+   * Optional. Defines the type of Confidential Compute technology to use.
+   *
+   * Accepted values: CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED, SEV, SEV_SNP, TDX
+   *
+   * @param self::CONFIDENTIAL_INSTANCE_TYPE_* $confidentialInstanceType
+   */
+  public function setConfidentialInstanceType($confidentialInstanceType)
+  {
+    $this->confidentialInstanceType = $confidentialInstanceType;
+  }
+  /**
+   * @return self::CONFIDENTIAL_INSTANCE_TYPE_*
+   */
+  public function getConfidentialInstanceType()
+  {
+    return $this->confidentialInstanceType;
+  }
   /**
    * Optional. Deprecated: Use 'confidential_instance_type' instead. Defines
    * whether the instance should have confidential compute enabled.

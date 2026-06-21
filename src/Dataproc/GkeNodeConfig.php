@@ -69,6 +69,17 @@ class GkeNodeConfig extends \Google\Collection
    */
   public $preemptible;
   /**
+   * Optional. Specifies the service account
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-iam) to
+   * be used by the node pools. Specify the email address of the service account
+   * or its full resource name.Format:
+   * projects/{project}/serviceAccounts/{service_account_email} or
+   * {service_account_email}.
+   *
+   * @var string
+   */
+  public $serviceAccount;
+  /**
    * Optional. Whether the nodes are created as Spot VM instances
    * (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the
    * latest update to legacy preemptible VMs. Spot VMs do not have a maximum
@@ -192,6 +203,27 @@ class GkeNodeConfig extends \Google\Collection
   public function getPreemptible()
   {
     return $this->preemptible;
+  }
+  /**
+   * Optional. Specifies the service account
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-iam) to
+   * be used by the node pools. Specify the email address of the service account
+   * or its full resource name.Format:
+   * projects/{project}/serviceAccounts/{service_account_email} or
+   * {service_account_email}.
+   *
+   * @param string $serviceAccount
+   */
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   /**
    * Optional. Whether the nodes are created as Spot VM instances

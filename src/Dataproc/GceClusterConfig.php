@@ -198,7 +198,7 @@ class GceClusterConfig extends \Google\Collection
   }
   /**
    * Optional. Confidential Instance Config for clusters using Confidential VMs
-   * (https://cloud.google.com/compute/confidential-vm/docs).
+   * (https://cloud.google.com/confidential-computing/confidential-vm/docs).
    *
    * @param ConfidentialInstanceConfig $confidentialInstanceConfig
    */
