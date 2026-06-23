@@ -32,11 +32,7 @@ spl_autoload_register(function ($class) {
         if ($classExists) {
             return true;
         }
-    }
-}, true, true);
-
-spl_autoload_register(function ($class) {
-    if (0 === strpos($class, 'Google\\Service\\')) {
+    } elseif (0 === strpos($class, 'Google\\Service\\')) {
         $relativeClass = substr($class, strlen('Google\\Service\\'));
         $parts = explode('\\', $relativeClass);
         $leaf = array_pop($parts);
