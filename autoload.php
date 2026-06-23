@@ -34,3 +34,21 @@ spl_autoload_register(function ($class) {
         }
     }
 }, true, true);
+
+spl_autoload_register(function ($class) {
+    if (0 === strpos($class, 'Google\\Service\\')) {
+        $relativeClass = substr($class, strlen('Google\\Service\\'));
+        $parts = explode('\\', $relativeClass);
+        $leaf = array_pop($parts);
+        if (strlen($leaf) > 90) {
+            $shortenedLeaf = substr($leaf, 0, 80) . '_' . strtoupper(substr(md5($leaf), 0, 8));
+            $subPath = implode('/', $parts);
+            $filePath = __DIR__ . '/src/' . ($subPath ? $subPath . '/' : '') . $shortenedLeaf . '.php';
+            if (file_exists($filePath)) {
+                require_once $filePath;
+                return true;
+            }
+        }
+    }
+}, true, true);
+

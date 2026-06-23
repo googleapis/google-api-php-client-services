@@ -62,14 +62,20 @@ class ServiceTest extends TestCase
     $classes[] = 'Google\Service\\' . $service;
     $classes[] = 'Google_Service_' . $service; // legacy name
     foreach (glob(__DIR__ . "/../src/$service/*.php") as $file) {
-      $className = basename($file, '.php');
-      $classes[] = "Google\Service\\$service\\" . $className;
-      $classes[] = "Google_Service_{$service}_" . $className; // legacy name
+      $content = file_get_contents($file);
+      if (preg_match('/^\s*class\s+(\w+)/m', $content, $matches)) {
+        $className = $matches[1];
+        $classes[] = "Google\\Service\\$service\\" . $className;
+        $classes[] = "Google_Service_{$service}_" . $className; // legacy name
+      }
     }
     foreach (glob(__DIR__ . "/../src/$service/Resource/*.php") as $file) {
-      $className = basename($file, '.php');
-      $classes[] = "Google\Service\\$service\Resource\\" . $className;
-      $classes[] = "Google_Service_{$service}_Resource_" . $className; // legacy name
+      $content = file_get_contents($file);
+      if (preg_match('/^\s*class\s+(\w+)/m', $content, $matches)) {
+        $className = $matches[1];
+        $classes[] = "Google\\Service\\$service\\Resource\\" . $className;
+        $classes[] = "Google_Service_{$service}_Resource_" . $className; // legacy name
+      }
     }
 
     return $classes;

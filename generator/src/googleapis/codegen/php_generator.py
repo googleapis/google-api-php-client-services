@@ -28,8 +28,10 @@ Features:
 __author__ = 'chirags@google.com (Chirag Shah)'
 
 import collections
+import hashlib
 import json
 import operator
+import os
 
 from googleapis.codegen import api
 from googleapis.codegen import api_library_generator
@@ -52,6 +54,25 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
     super(PHPGenerator, self).__init__(PHPApi, discovery, 'php',
                                        language_model=PhpLanguageModel(),
                                        options=options)
+
+  def _GetOutputFilePath(self, output_path):
+    """Shortens the output path if the filename component is too long."""
+    directory, filename = os.path.split(output_path)
+    if filename.endswith('.php'):
+      classname, ext = os.path.splitext(filename)
+      if len(classname) > 90:
+        md5_hash = hashlib.md5(classname.encode('utf-8')).hexdigest().upper()[:8]
+        shortened_classname = '%s_%s' % (classname[:80], md5_hash)
+        filename = shortened_classname + ext
+        return os.path.join(directory, filename)
+    return output_path
+
+  def RenderTemplateToFile(self, template_path, context_dict, package,
+                           output_path):
+    """Override to shorten long output paths."""
+    shortened_path = self._GetOutputFilePath(output_path)
+    super(PHPGenerator, self).RenderTemplateToFile(
+        template_path, context_dict, package, shortened_path)
 
   def AnnotateResource(self, the_api, resource):
     """Add the discovery dictionary as data to each resource.
