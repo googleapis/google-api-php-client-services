@@ -60,7 +60,7 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
     directory, filename = os.path.split(output_path)
     if filename.endswith('.php'):
       classname, ext = os.path.splitext(filename)
-      if len(classname) > 90:
+      if len(classname) > 139:
         md5_hash = hashlib.md5(classname.encode('utf-8')).hexdigest().upper()[:8]
         shortened_classname = '%s_%s' % (classname[:80], md5_hash)
         filename = shortened_classname + ext

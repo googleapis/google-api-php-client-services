@@ -40,7 +40,7 @@ spl_autoload_register(function ($class) {
         $relativeClass = substr($class, strlen('Google\\Service\\'));
         $parts = explode('\\', $relativeClass);
         $leaf = array_pop($parts);
-        if (strlen($leaf) > 90) {
+        if (strlen($leaf) > 139) {
             $shortenedLeaf = substr($leaf, 0, 80) . '_' . strtoupper(substr(md5($leaf), 0, 8));
             $subPath = implode('/', $parts);
             $filePath = __DIR__ . '/src/' . ($subPath ? $subPath . '/' : '') . $shortenedLeaf . '.php';

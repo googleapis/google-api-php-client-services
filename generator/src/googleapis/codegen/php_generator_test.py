@@ -146,20 +146,20 @@ class PHPApiTest(absltest.TestCase):
     path = 'Speech/SomeModel.php'
     self.assertEqual(path, self.generator._GetOutputFilePath(path))
 
-    # Long class name (90 chars) - should not be shortened
-    classname_90 = 'A' * 90
-    path_90 = 'Speech/%s.php' % classname_90
-    self.assertEqual(path_90, self.generator._GetOutputFilePath(path_90))
+    # Long class name (139 chars) - should not be shortened
+    classname_139 = 'A' * 139
+    path_139 = 'Speech/%s.php' % classname_139
+    self.assertEqual(path_139, self.generator._GetOutputFilePath(path_139))
 
-    # Long class name (91 chars) - should be shortened
-    classname_91 = 'A' * 91
-    expected_hash = hashlib.md5(classname_91.encode('utf-8')).hexdigest().upper()[:8]
+    # Long class name (140 chars) - should be shortened
+    classname_140 = 'A' * 140
+    expected_hash = hashlib.md5(classname_140.encode('utf-8')).hexdigest().upper()[:8]
     expected_classname = 'A' * 80 + '_' + expected_hash
     expected_path = 'Speech/%s.php' % expected_classname
-    self.assertEqual(expected_path, self.generator._GetOutputFilePath('Speech/%s.php' % classname_91))
+    self.assertEqual(expected_path, self.generator._GetOutputFilePath('Speech/%s.php' % classname_140))
 
     # Path without .php extension (should not be shortened even if long)
-    long_txt = 'A' * 100
+    long_txt = 'A' * 150
     self.assertEqual('Speech/%s.txt' % long_txt, self.generator._GetOutputFilePath('Speech/%s.txt' % long_txt))
 
 if __name__ == '__main__':
