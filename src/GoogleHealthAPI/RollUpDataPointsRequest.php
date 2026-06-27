@@ -50,7 +50,7 @@ class RollUpDataPointsRequest extends \Google\Model
   protected $rangeDataType = '';
   /**
    * Required. The size of the time window to group data points into before
-   * applying the aggregation functions.
+   * applying the aggregation functions. Must be at least 1 second.
    *
    * @var string
    */
@@ -134,7 +134,7 @@ class RollUpDataPointsRequest extends \Google\Model
   }
   /**
    * Required. The size of the time window to group data points into before
-   * applying the aggregation functions.
+   * applying the aggregation functions. Must be at least 1 second.
    *
    * @param string $windowSize
    */
