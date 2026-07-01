@@ -10,7 +10,7 @@ on:
 name: codegen
 jobs:
   discovery:
-    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
+    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master # zizmor: ignore[unpinned-uses]
   batch:
     runs-on: ubuntu-24.04
     needs: discovery
