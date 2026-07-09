@@ -62,6 +62,8 @@ class GoogleCloudDataplexV1DataDomain extends \Google\Model
    * @var string
    */
   public $parentDataDomain;
+  protected $policyMemberType = GoogleIamV1ResourcePolicyMember::class;
+  protected $policyMemberDataType = '';
   /**
    * Output only. System-generated globally unique ID for the DataDomain.
    *
@@ -191,6 +193,22 @@ class GoogleCloudDataplexV1DataDomain extends \Google\Model
   public function getParentDataDomain()
   {
     return $this->parentDataDomain;
+  }
+  /**
+   * Output only. Output-only policy member strings of this resource.
+   *
+   * @param GoogleIamV1ResourcePolicyMember $policyMember
+   */
+  public function setPolicyMember(GoogleIamV1ResourcePolicyMember $policyMember)
+  {
+    $this->policyMember = $policyMember;
+  }
+  /**
+   * @return GoogleIamV1ResourcePolicyMember
+   */
+  public function getPolicyMember()
+  {
+    return $this->policyMember;
   }
   /**
    * Output only. System-generated globally unique ID for the DataDomain.
