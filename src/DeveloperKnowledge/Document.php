@@ -26,8 +26,8 @@ class Document extends \Google\Model
   public const VIEW_DOCUMENT_VIEW_UNSPECIFIED = 'DOCUMENT_VIEW_UNSPECIFIED';
   /**
    * Includes only the basic metadata fields: - `name` - `uri` - `data_source` -
-   * `title` - `description` - `update_time` - `view` This is the default of
-   * view for DeveloperKnowledge.SearchDocumentChunks.
+   * `title` - `description` - `update_time` - `view` - `content_length_bytes`
+   * This is the default of view for DeveloperKnowledge.SearchDocumentChunks.
    */
   public const VIEW_DOCUMENT_VIEW_BASIC = 'DOCUMENT_VIEW_BASIC';
   /**
@@ -46,6 +46,12 @@ class Document extends \Google\Model
    * @var string
    */
   public $content;
+  /**
+   * Output only. The length of the `content` field in bytes.
+   *
+   * @var int
+   */
+  public $contentLengthBytes;
   /**
    * Output only. Specifies the data source of the document. Example data
    * source: `firebase.google.com`
@@ -109,6 +115,22 @@ class Document extends \Google\Model
   public function getContent()
   {
     return $this->content;
+  }
+  /**
+   * Output only. The length of the `content` field in bytes.
+   *
+   * @param int $contentLengthBytes
+   */
+  public function setContentLengthBytes($contentLengthBytes)
+  {
+    $this->contentLengthBytes = $contentLengthBytes;
+  }
+  /**
+   * @return int
+   */
+  public function getContentLengthBytes()
+  {
+    return $this->contentLengthBytes;
   }
   /**
    * Output only. Specifies the data source of the document. Example data
