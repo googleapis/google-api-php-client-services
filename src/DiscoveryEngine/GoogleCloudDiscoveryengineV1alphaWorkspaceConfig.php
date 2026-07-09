@@ -56,6 +56,10 @@ class GoogleCloudDiscoveryengineV1alphaWorkspaceConfig extends \Google\Model
    */
   public const TYPE_GOOGLE_PEOPLE = 'GOOGLE_PEOPLE';
   /**
+   * Workspace Data Store contains all Workspace apps data
+   */
+  public const TYPE_GOOGLE_WORKSPACE = 'GOOGLE_WORKSPACE';
+  /**
    * Output only. Obfuscated Dasher customer ID. Derived by the server from the
    * project's GCP organization at data store creation time; any value supplied
    * in the request payload is ignored.
@@ -144,7 +148,8 @@ class GoogleCloudDiscoveryengineV1alphaWorkspaceConfig extends \Google\Model
    * The Google Workspace data source.
    *
    * Accepted values: TYPE_UNSPECIFIED, GOOGLE_DRIVE, GOOGLE_MAIL, GOOGLE_SITES,
-   * GOOGLE_CALENDAR, GOOGLE_CHAT, GOOGLE_GROUPS, GOOGLE_KEEP, GOOGLE_PEOPLE
+   * GOOGLE_CALENDAR, GOOGLE_CHAT, GOOGLE_GROUPS, GOOGLE_KEEP, GOOGLE_PEOPLE,
+   * GOOGLE_WORKSPACE
    *
    * @param self::TYPE_* $type
    */

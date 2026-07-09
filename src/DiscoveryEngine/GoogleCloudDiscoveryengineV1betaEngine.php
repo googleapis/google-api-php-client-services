@@ -116,9 +116,9 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    */
   public $appType;
   /**
-   * Optional. The Agent registry containing the agents, MCP servers and tools
-   * associated with this engine. Field is required if the engine has an Agent
-   * Gateway setting.
+   * Output only. The Agent registry containing the agents, MCP servers and
+   * tools associated with this engine. Derived server-side from the linked
+   * Agent Gateway's registry.
    *
    * @var string
    */
@@ -188,9 +188,9 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
    * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
-   * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
-   * `multi-agent-orchestration` * `cross-product-intelligence` * `deep-
-   * research`
+   * * `disable-projects` * `enable-end-user-sharing-with-groups` * `single-
+   * agent-orchestration` * `multi-agent-orchestration` * `cross-product-
+   * intelligence` * `deep-research`
    *
    * @var string[]
    */
@@ -295,9 +295,9 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
     return $this->appType;
   }
   /**
-   * Optional. The Agent registry containing the agents, MCP servers and tools
-   * associated with this engine. Field is required if the engine has an Agent
-   * Gateway setting.
+   * Output only. The Agent registry containing the agents, MCP servers and
+   * tools associated with this engine. Derived server-side from the linked
+   * Agent Gateway's registry.
    *
    * @param string $associatedAgentRegistry
    */
@@ -498,9 +498,9 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
    * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
-   * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
-   * `multi-agent-orchestration` * `cross-product-intelligence` * `deep-
-   * research`
+   * * `disable-projects` * `enable-end-user-sharing-with-groups` * `single-
+   * agent-orchestration` * `multi-agent-orchestration` * `cross-product-
+   * intelligence` * `deep-research`
    *
    * @param string[] $features
    */

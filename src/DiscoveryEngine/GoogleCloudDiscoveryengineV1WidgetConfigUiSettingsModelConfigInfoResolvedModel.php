@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModel extends \Google\Model
 {
+  protected $adminViewType = GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModelAdminView::class;
+  protected $adminViewDataType = '';
   /**
    * Output only. Localized description text (e.g. `State-of-the-art
    * reasoning`). Localized using the same locale as `display_name`.
@@ -59,6 +61,23 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedM
    */
   public $modelId;
 
+  /**
+   * Output only. Admin-surface metadata; populated only for the Console admin
+   * Feature Control page (see `AdminView`). Unset for end-user surfaces.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModelAdminView $adminView
+   */
+  public function setAdminView(GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModelAdminView $adminView)
+  {
+    $this->adminView = $adminView;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModelAdminView
+   */
+  public function getAdminView()
+  {
+    return $this->adminView;
+  }
   /**
    * Output only. Localized description text (e.g. `State-of-the-art
    * reasoning`). Localized using the same locale as `display_name`.

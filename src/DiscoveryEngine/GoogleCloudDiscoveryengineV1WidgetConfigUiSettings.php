@@ -120,15 +120,23 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
    * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
-   * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
-   * `multi-agent-orchestration` * `cross-product-intelligence` * `deep-
-   * research`
+   * * `disable-projects` * `enable-end-user-sharing-with-groups` * `single-
+   * agent-orchestration` * `multi-agent-orchestration` * `cross-product-
+   * intelligence` * `deep-research`
    *
    * @var string[]
    */
   public $features;
   protected $generativeAnswerConfigType = GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig::class;
   protected $generativeAnswerConfigDataType = '';
+  /**
+   * Output only. Whether the Google Drive file picker is available to end-
+   * users. Declared `optional` for the same field-presence reason as
+   * `onedrive_picker_enabled` above.
+   *
+   * @var bool
+   */
+  public $googleDrivePickerEnabled;
   /**
    * Describes widget (or web app) interaction type
    *
@@ -149,6 +157,19 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * @var string[]
    */
   public $modelConfigs;
+  /**
+   * Output only. Whether the OneDrive file picker is available to end-users.
+   * Computed by the backend from admin connector enablement (Business edition)
+   * or attached OneDrive connectors (Enterprise edition), combined with the
+   * existing `disable-onedrive-upload` admin feature. Declared `optional` so an
+   * explicitly-computed `false` is serialized with field presence. A plain
+   * proto3 `bool` drops a default `false` on the wire, which prevented clients
+   * from distinguishing "picker disabled" (`false`) from "field not populated"
+   * (unset).
+   *
+   * @var bool
+   */
+  public $onedrivePickerEnabled;
   /**
    * Controls whether result extract is display and how (snippet or extractive
    * answer). Default to no result if unspecified.
@@ -332,9 +353,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
    * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills`
-   * * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` *
-   * `multi-agent-orchestration` * `cross-product-intelligence` * `deep-
-   * research`
+   * * `disable-projects` * `enable-end-user-sharing-with-groups` * `single-
+   * agent-orchestration` * `multi-agent-orchestration` * `cross-product-
+   * intelligence` * `deep-research`
    *
    * @param string[] $features
    */
@@ -364,6 +385,24 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
   public function getGenerativeAnswerConfig()
   {
     return $this->generativeAnswerConfig;
+  }
+  /**
+   * Output only. Whether the Google Drive file picker is available to end-
+   * users. Declared `optional` for the same field-presence reason as
+   * `onedrive_picker_enabled` above.
+   *
+   * @param bool $googleDrivePickerEnabled
+   */
+  public function setGoogleDrivePickerEnabled($googleDrivePickerEnabled)
+  {
+    $this->googleDrivePickerEnabled = $googleDrivePickerEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getGoogleDrivePickerEnabled()
+  {
+    return $this->googleDrivePickerEnabled;
   }
   /**
    * Describes widget (or web app) interaction type
@@ -427,6 +466,29 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
   public function getModelConfigs()
   {
     return $this->modelConfigs;
+  }
+  /**
+   * Output only. Whether the OneDrive file picker is available to end-users.
+   * Computed by the backend from admin connector enablement (Business edition)
+   * or attached OneDrive connectors (Enterprise edition), combined with the
+   * existing `disable-onedrive-upload` admin feature. Declared `optional` so an
+   * explicitly-computed `false` is serialized with field presence. A plain
+   * proto3 `bool` drops a default `false` on the wire, which prevented clients
+   * from distinguishing "picker disabled" (`false`) from "field not populated"
+   * (unset).
+   *
+   * @param bool $onedrivePickerEnabled
+   */
+  public function setOnedrivePickerEnabled($onedrivePickerEnabled)
+  {
+    $this->onedrivePickerEnabled = $onedrivePickerEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getOnedrivePickerEnabled()
+  {
+    return $this->onedrivePickerEnabled;
   }
   /**
    * Controls whether result extract is display and how (snippet or extractive

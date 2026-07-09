@@ -32,6 +32,13 @@ class GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata extends \Google\M
    * @var string
    */
   public $successCount;
+  /**
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
+   * @var string
+   */
+  public $updateTime;
 
   /**
    * The number of end users under the user store that failed to be deleted.
@@ -65,6 +72,23 @@ class GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata extends \Google\M
   public function getSuccessCount()
   {
     return $this->successCount;
+  }
+  /**
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
+   * @param string $updateTime
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }
 

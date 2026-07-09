@@ -96,10 +96,11 @@ class GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig extends \Google\C
   public const SEARCH_TIER_SEARCH_TIER_ENTERPRISE = 'SEARCH_TIER_ENTERPRISE';
   protected $collection_key = 'searchAddOns';
   /**
-   * Optional. The required subscription tier of this engine. They cannot be
-   * modified after engine creation. If the required subscription tier is
-   * search, user with higher license tier like assist can still access the
-   * standalone app associated with this engine.
+   * Optional. The required subscription tier of this engine. If the required
+   * subscription tier is search, user with higher license tier like assist can
+   * still access the standalone app associated with this engine. Web grounding
+   * feature is only available on the app if it is set as
+   * SubscriptionTier.SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT.
    *
    * @var string
    */
@@ -120,10 +121,11 @@ class GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig extends \Google\C
   public $searchTier;
 
   /**
-   * Optional. The required subscription tier of this engine. They cannot be
-   * modified after engine creation. If the required subscription tier is
-   * search, user with higher license tier like assist can still access the
-   * standalone app associated with this engine.
+   * Optional. The required subscription tier of this engine. If the required
+   * subscription tier is search, user with higher license tier like assist can
+   * still access the standalone app associated with this engine. Web grounding
+   * feature is only available on the app if it is set as
+   * SubscriptionTier.SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT.
    *
    * Accepted values: SUBSCRIPTION_TIER_UNSPECIFIED, SUBSCRIPTION_TIER_SEARCH,
    * SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT, SUBSCRIPTION_TIER_NOTEBOOK_LM,

@@ -402,6 +402,16 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   protected $nextSyncTimeType = GoogleTypeDateTime::class;
   protected $nextSyncTimeDataType = '';
   /**
+   * Output only. The static IP addresses used by this connector for OAuth APIs
+   * (e.g. end user authentication). These are surfaced separately from
+   * `static_ip_addresses` so that customers can apply granular firewall
+   * settings for OAuth endpoints. Only populated for connectors that have
+   * static IP enabled and are used for actions and/or federated search.
+   *
+   * @var string[]
+   */
+  public $oauthStaticIpAddresses;
+  /**
    * Required data connector parameters in structured json format.
    *
    * @var array[]
@@ -1060,6 +1070,26 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   public function getNextSyncTime()
   {
     return $this->nextSyncTime;
+  }
+  /**
+   * Output only. The static IP addresses used by this connector for OAuth APIs
+   * (e.g. end user authentication). These are surfaced separately from
+   * `static_ip_addresses` so that customers can apply granular firewall
+   * settings for OAuth endpoints. Only populated for connectors that have
+   * static IP enabled and are used for actions and/or federated search.
+   *
+   * @param string[] $oauthStaticIpAddresses
+   */
+  public function setOauthStaticIpAddresses($oauthStaticIpAddresses)
+  {
+    $this->oauthStaticIpAddresses = $oauthStaticIpAddresses;
+  }
+  /**
+   * @return string[]
+   */
+  public function getOauthStaticIpAddresses()
+  {
+    return $this->oauthStaticIpAddresses;
   }
   /**
    * Required data connector parameters in structured json format.
