@@ -119,6 +119,34 @@ class Calendars extends \Google\Service\Resource
     return $this->call('patch', [$params], Calendar::class);
   }
   /**
+   * Transfers a secondary calendar between users within a Google Workspace
+   * organization. Requires user authentication with Manage Calendars
+   * administrator privilege, and one of the following authorization scopes: -
+   * https://www.googleapis.com/auth/calendar  -
+   * https://www.googleapis.com/auth/calendar.calendars In the request, set
+   * useAdminAccess to true. The secondary calendar must be active to be
+   * transferred. Transferring disabled or deleted calendars isn't supported.
+   * (calendars.transferOwnership)
+   *
+   * @param string $calendarId Calendar identifier. To retrieve calendar IDs, call
+   * the calendarList.list method.
+   * @param string $newDataOwner The email address of a user who will become the
+   * data owner of the calendar.
+   * @param bool $useAdminAccess When true, the method runs using the user's
+   * Google Workspace administrator privileges. The calling user must be a Google
+   * Workspace administrator with the Manage Calendars privilege. This method
+   * currently only supports admin access, thus only true is accepted for this
+   * field.
+   * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
+   */
+  public function transferOwnership($calendarId, $newDataOwner, $useAdminAccess, $optParams = [])
+  {
+    $params = ['calendarId' => $calendarId, 'newDataOwner' => $newDataOwner, 'useAdminAccess' => $useAdminAccess];
+    $params = array_merge($params, $optParams);
+    return $this->call('transferOwnership', [$params]);
+  }
+  /**
    * Updates metadata for a calendar. (calendars.update)
    *
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call

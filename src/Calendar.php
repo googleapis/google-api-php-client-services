@@ -432,6 +432,26 @@ class Calendar extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'transferOwnership' => [
+              'path' => 'calendars/{calendarId}/transferOwnership',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'calendarId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'newDataOwner' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'useAdminAccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                  'required' => true,
+                ],
+              ],
             ],'update' => [
               'path' => 'calendars/{calendarId}',
               'httpMethod' => 'PUT',
@@ -543,6 +563,10 @@ class Calendar extends \Google\Service
                   'location' => 'query',
                   'type' => 'integer',
                 ],
+                'eventLabelVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
                 'supportsAttachments' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -558,6 +582,10 @@ class Calendar extends \Google\Service
                   'required' => true,
                 ],
                 'conferenceDataVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'eventLabelVersion' => [
                   'location' => 'query',
                   'type' => 'integer',
                 ],
@@ -764,6 +792,10 @@ class Calendar extends \Google\Service
                   'location' => 'query',
                   'type' => 'integer',
                 ],
+                'eventLabelVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
                 'maxAttendees' => [
                   'location' => 'query',
                   'type' => 'integer',
@@ -823,6 +855,10 @@ class Calendar extends \Google\Service
                   'type' => 'boolean',
                 ],
                 'conferenceDataVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'eventLabelVersion' => [
                   'location' => 'query',
                   'type' => 'integer',
                 ],

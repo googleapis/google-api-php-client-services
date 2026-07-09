@@ -17,8 +17,31 @@
 
 namespace Google\Service\Calendar;
 
-class LabelProperties extends \Google\Model
+class LabelProperties extends \Google\Collection
 {
+  protected $collection_key = 'eventLabels';
+  protected $eventLabelsType = EventLabel::class;
+  protected $eventLabelsDataType = 'array';
+
+  /**
+   * Event labels defined on this calendar. If this is present when updating the
+   * calendar, it will replace the existing event labels. Extend the list to add
+   * a new event label, and remove entities from the list to delete a label from
+   * calendar. Each calendar can have a maximum of 200 labels.
+   *
+   * @param EventLabel[] $eventLabels
+   */
+  public function setEventLabels($eventLabels)
+  {
+    $this->eventLabels = $eventLabels;
+  }
+  /**
+   * @return EventLabel[]
+   */
+  public function getEventLabels()
+  {
+    return $this->eventLabels;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

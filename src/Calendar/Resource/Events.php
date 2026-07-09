@@ -102,6 +102,11 @@ class Events extends \Google\Service\Resource
    * ignores conference data in the event's body. Version 1 enables support for
    * copying of ConferenceData as well as for creating new conferences using the
    * createRequest field of conferenceData. The default is 0.
+   * @opt_param int eventLabelVersion Version number of the event label feature
+   * supported by the API client. Version 0 assumes no event label support and
+   * processes the colorId field for color management. Version 1 enables support
+   * for event labels, and processes the eventLabelId in the event's body. In this
+   * case, the colorId field is ignored. The default is 0.
    * @opt_param bool supportsAttachments Whether API client performing operation
    * supports event attachments. Optional. The default is False.
    * @return Event
@@ -127,6 +132,11 @@ class Events extends \Google\Service\Resource
    * ignores conference data in the event's body. Version 1 enables support for
    * copying of ConferenceData as well as for creating new conferences using the
    * createRequest field of conferenceData. The default is 0.
+   * @opt_param int eventLabelVersion Version number of the event label feature
+   * supported by the API client. Version 0 assumes no event label support and
+   * processes the colorId field for color management. Version 1 enables support
+   * for event labels, and processes the eventLabelId in the event's body. In this
+   * case, the colorId field is ignored. The default is 0.
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
@@ -342,6 +352,11 @@ class Events extends \Google\Service\Resource
    * ignores conference data in the event's body. Version 1 enables support for
    * copying of ConferenceData as well as for creating new conferences using the
    * createRequest field of conferenceData. The default is 0.
+   * @opt_param int eventLabelVersion Version number of the event label feature
+   * supported by the API client. Version 0 assumes no event label support and
+   * processes the colorId field for color management. Version 1 enables support
+   * for event labels, and processes the eventLabelId in the event's body. In this
+   * case, the colorId field is ignored. The default is 0.
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
@@ -407,6 +422,11 @@ class Events extends \Google\Service\Resource
    * ignores conference data in the event's body. Version 1 enables support for
    * copying of ConferenceData as well as for creating new conferences using the
    * createRequest field of conferenceData. The default is 0.
+   * @opt_param int eventLabelVersion Version number of the event label feature
+   * supported by the API client. Version 0 assumes no event label support and
+   * processes the colorId field for color management. Version 1 enables support
+   * for event labels, and processes the eventLabelId in the event's body. In this
+   * case, the colorId field is ignored. The default is 0.
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.

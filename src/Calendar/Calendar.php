@@ -60,6 +60,8 @@ class Calendar extends \Google\Model
    * @var string
    */
   public $kind;
+  protected $labelPropertiesType = LabelProperties::class;
+  protected $labelPropertiesDataType = '';
   /**
    * Geographic location of the calendar as free-form text. Optional.
    *
@@ -195,6 +197,24 @@ class Calendar extends \Google\Model
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * Label properties defined on this calendar. If specified, overwrites the
+   * existing label properties. If not specified, the label properties remain
+   * unchanged.
+   *
+   * @param LabelProperties $labelProperties
+   */
+  public function setLabelProperties(LabelProperties $labelProperties)
+  {
+    $this->labelProperties = $labelProperties;
+  }
+  /**
+   * @return LabelProperties
+   */
+  public function getLabelProperties()
+  {
+    return $this->labelProperties;
   }
   /**
    * Geographic location of the calendar as free-form text. Optional.
