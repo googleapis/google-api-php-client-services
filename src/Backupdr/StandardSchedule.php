@@ -70,7 +70,7 @@ class StandardSchedule extends \Google\Collection
    * This is required for `recurrence_type`, `HOURLY` and is not applicable
    * otherwise. A validation error will occur if a value is supplied and
    * `recurrence_type` is not `HOURLY`. The supported values for each resource
-   * type are as follows: * `compute.googleapis.com/Instance`: 4-23 *
+   * type are as follows: * `compute.googleapis.com/Instance`: 1-23 *
    * `compute.googleapis.com/Disk`: 1-23 * `sqladmin.googleapis.com/Instance`:
    * 6-23 * `alloydb.googleapis.com/Cluster`: 1-23 *
    * `file.googleapis.com/Instance`: 1-23 Refer to link
@@ -169,7 +169,7 @@ class StandardSchedule extends \Google\Collection
    * This is required for `recurrence_type`, `HOURLY` and is not applicable
    * otherwise. A validation error will occur if a value is supplied and
    * `recurrence_type` is not `HOURLY`. The supported values for each resource
-   * type are as follows: * `compute.googleapis.com/Instance`: 4-23 *
+   * type are as follows: * `compute.googleapis.com/Instance`: 1-23 *
    * `compute.googleapis.com/Disk`: 1-23 * `sqladmin.googleapis.com/Instance`:
    * 6-23 * `alloydb.googleapis.com/Cluster`: 1-23 *
    * `file.googleapis.com/Instance`: 1-23 Refer to link
