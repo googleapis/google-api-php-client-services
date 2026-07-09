@@ -131,6 +131,12 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredDnsConfigType = DNSConfig::class;
   protected $desiredDnsConfigDataType = '';
   /**
+   * Optional. The desired emulated version for the cluster.
+   *
+   * @var string
+   */
+  public $desiredEmulatedVersion;
+  /**
    * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
    *
    * @var bool
@@ -328,6 +334,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredReleaseChannelDataType = '';
   protected $desiredResourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $desiredResourceUsageExportConfigDataType = '';
+  protected $desiredRollbackSafeUpgradeType = RollbackSafeUpgrade::class;
+  protected $desiredRollbackSafeUpgradeDataType = '';
   protected $desiredSecretManagerConfigType = SecretManagerConfig::class;
   protected $desiredSecretManagerConfigDataType = '';
   protected $desiredSecretSyncConfigType = SecretSyncConfig::class;
@@ -715,6 +723,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredDnsConfig()
   {
     return $this->desiredDnsConfig;
+  }
+  /**
+   * Optional. The desired emulated version for the cluster.
+   *
+   * @param string $desiredEmulatedVersion
+   */
+  public function setDesiredEmulatedVersion($desiredEmulatedVersion)
+  {
+    $this->desiredEmulatedVersion = $desiredEmulatedVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getDesiredEmulatedVersion()
+  {
+    return $this->desiredEmulatedVersion;
   }
   /**
    * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
@@ -1544,6 +1568,22 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredResourceUsageExportConfig()
   {
     return $this->desiredResourceUsageExportConfig;
+  }
+  /**
+   * Optional. The desired rollback safe upgrade configuration.
+   *
+   * @param RollbackSafeUpgrade $desiredRollbackSafeUpgrade
+   */
+  public function setDesiredRollbackSafeUpgrade(RollbackSafeUpgrade $desiredRollbackSafeUpgrade)
+  {
+    $this->desiredRollbackSafeUpgrade = $desiredRollbackSafeUpgrade;
+  }
+  /**
+   * @return RollbackSafeUpgrade
+   */
+  public function getDesiredRollbackSafeUpgrade()
+  {
+    return $this->desiredRollbackSafeUpgrade;
   }
   /**
    * Enable/Disable Secret Manager Config.

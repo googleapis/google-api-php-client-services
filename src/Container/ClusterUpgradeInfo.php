@@ -56,6 +56,8 @@ class ClusterUpgradeInfo extends \Google\Collection
    * @var string[]
    */
   public $pausedReason;
+  protected $rollbackSafeUpgradeStatusType = RollbackSafeUpgradeStatus::class;
+  protected $rollbackSafeUpgradeStatusDataType = '';
   protected $upgradeDetailsType = UpgradeDetails::class;
   protected $upgradeDetailsDataType = 'array';
 
@@ -154,6 +156,22 @@ class ClusterUpgradeInfo extends \Google\Collection
   public function getPausedReason()
   {
     return $this->pausedReason;
+  }
+  /**
+   * Output only. The cluster's rollback-safe upgrade status.
+   *
+   * @param RollbackSafeUpgradeStatus $rollbackSafeUpgradeStatus
+   */
+  public function setRollbackSafeUpgradeStatus(RollbackSafeUpgradeStatus $rollbackSafeUpgradeStatus)
+  {
+    $this->rollbackSafeUpgradeStatus = $rollbackSafeUpgradeStatus;
+  }
+  /**
+   * @return RollbackSafeUpgradeStatus
+   */
+  public function getRollbackSafeUpgradeStatus()
+  {
+    return $this->rollbackSafeUpgradeStatus;
   }
   /**
    * The list of past auto upgrades.

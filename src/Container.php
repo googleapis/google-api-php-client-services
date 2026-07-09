@@ -150,6 +150,16 @@ class Container extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'completeControlPlaneUpgrade' => [
+              'path' => 'v1/{+name}:completeControlPlaneUpgrade',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'completeIpRotation' => [
               'path' => 'v1/{+name}:completeIpRotation',
               'httpMethod' => 'POST',
@@ -678,6 +688,16 @@ class Container extends \Google\Service
                   'required' => true,
                 ],
                 'clusterId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'completeControlPlaneUpgrade' => [
+              'path' => 'v1/{+name}:completeControlPlaneUpgrade',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

@@ -58,6 +58,12 @@ class UpgradeDetails extends \Google\Model
    */
   public $endTime;
   /**
+   * Output only. The emulated version before the upgrade.
+   *
+   * @var string
+   */
+  public $initialEmulatedVersion;
+  /**
    * The version before the upgrade.
    *
    * @var string
@@ -82,6 +88,12 @@ class UpgradeDetails extends \Google\Model
    */
   public $state;
   /**
+   * Output only. The emulated version after the upgrade.
+   *
+   * @var string
+   */
+  public $targetEmulatedVersion;
+  /**
    * The version after the upgrade.
    *
    * @var string
@@ -103,6 +115,22 @@ class UpgradeDetails extends \Google\Model
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * Output only. The emulated version before the upgrade.
+   *
+   * @param string $initialEmulatedVersion
+   */
+  public function setInitialEmulatedVersion($initialEmulatedVersion)
+  {
+    $this->initialEmulatedVersion = $initialEmulatedVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getInitialEmulatedVersion()
+  {
+    return $this->initialEmulatedVersion;
   }
   /**
    * The version before the upgrade.
@@ -171,6 +199,22 @@ class UpgradeDetails extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. The emulated version after the upgrade.
+   *
+   * @param string $targetEmulatedVersion
+   */
+  public function setTargetEmulatedVersion($targetEmulatedVersion)
+  {
+    $this->targetEmulatedVersion = $targetEmulatedVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetEmulatedVersion()
+  {
+    return $this->targetEmulatedVersion;
   }
   /**
    * The version after the upgrade.

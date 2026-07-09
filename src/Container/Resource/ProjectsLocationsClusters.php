@@ -20,6 +20,7 @@ namespace Google\Service\Container\Resource;
 use Google\Service\Container\CheckAutopilotCompatibilityResponse;
 use Google\Service\Container\Cluster;
 use Google\Service\Container\ClusterUpgradeInfo;
+use Google\Service\Container\CompleteControlPlaneUpgradeRequest;
 use Google\Service\Container\CompleteIPRotationRequest;
 use Google\Service\Container\CreateClusterRequest;
 use Google\Service\Container\GetJSONWebKeysResponse;
@@ -63,6 +64,25 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('checkAutopilotCompatibility', [$params], CheckAutopilotCompatibilityResponse::class);
+  }
+  /**
+   * CompleteControlPlaneUpgrade completes the rollback-safe upgrade by performing
+   * the step two upgrade for a specific cluster.
+   * (clusters.completeControlPlaneUpgrade)
+   *
+   * @param string $name Required. The name (project, location, cluster) of the
+   * cluster to complete upgrade. Specified in the format
+   * `projects/locations/clusters`.
+   * @param CompleteControlPlaneUpgradeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function completeControlPlaneUpgrade($name, CompleteControlPlaneUpgradeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('completeControlPlaneUpgrade', [$params], Operation::class);
   }
   /**
    * Completes master IP rotation. (clusters.completeIpRotation)

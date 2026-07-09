@@ -79,6 +79,12 @@ class UpgradeInfoEvent extends \Google\Model
    */
   public const STATE_CANCELED = 'CANCELED';
   /**
+   * Output only. The current emulated version before the upgrade.
+   *
+   * @var string
+   */
+  public $currentEmulatedVersion;
+  /**
    * The current version before the upgrade.
    *
    * @var string
@@ -148,12 +154,34 @@ class UpgradeInfoEvent extends \Google\Model
    */
   public $state;
   /**
+   * Output only. The target emulated version for the upgrade.
+   *
+   * @var string
+   */
+  public $targetEmulatedVersion;
+  /**
    * The target version for the upgrade.
    *
    * @var string
    */
   public $targetVersion;
 
+  /**
+   * Output only. The current emulated version before the upgrade.
+   *
+   * @param string $currentEmulatedVersion
+   */
+  public function setCurrentEmulatedVersion($currentEmulatedVersion)
+  {
+    $this->currentEmulatedVersion = $currentEmulatedVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getCurrentEmulatedVersion()
+  {
+    return $this->currentEmulatedVersion;
+  }
   /**
    * The current version before the upgrade.
    *
@@ -355,6 +383,22 @@ class UpgradeInfoEvent extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. The target emulated version for the upgrade.
+   *
+   * @param string $targetEmulatedVersion
+   */
+  public function setTargetEmulatedVersion($targetEmulatedVersion)
+  {
+    $this->targetEmulatedVersion = $targetEmulatedVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetEmulatedVersion()
+  {
+    return $this->targetEmulatedVersion;
   }
   /**
    * The target version for the upgrade.

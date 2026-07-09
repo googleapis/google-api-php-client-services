@@ -102,6 +102,14 @@ class Cluster extends \Google\Collection
    */
   public $createTime;
   /**
+   * Output only. The current emulated version of the master endpoint. The
+   * version is in minor version format, e.g. 1.30. No value or empty string
+   * means the cluster has no emulated version.
+   *
+   * @var string
+   */
+  public $currentEmulatedVersion;
+  /**
    * Output only. The current software version of the master endpoint.
    *
    * @var string
@@ -369,6 +377,8 @@ class Cluster extends \Google\Collection
   public $resourceLabels;
   protected $resourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $resourceUsageExportConfigDataType = '';
+  protected $rollbackSafeUpgradeType = RollbackSafeUpgrade::class;
+  protected $rollbackSafeUpgradeDataType = '';
   /**
    * Output only. Reserved for future use.
    *
@@ -706,6 +716,24 @@ class Cluster extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Output only. The current emulated version of the master endpoint. The
+   * version is in minor version format, e.g. 1.30. No value or empty string
+   * means the cluster has no emulated version.
+   *
+   * @param string $currentEmulatedVersion
+   */
+  public function setCurrentEmulatedVersion($currentEmulatedVersion)
+  {
+    $this->currentEmulatedVersion = $currentEmulatedVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getCurrentEmulatedVersion()
+  {
+    return $this->currentEmulatedVersion;
   }
   /**
    * Output only. The current software version of the master endpoint.
@@ -1668,6 +1696,23 @@ class Cluster extends \Google\Collection
   public function getResourceUsageExportConfig()
   {
     return $this->resourceUsageExportConfig;
+  }
+  /**
+   * Optional. The rollback safe upgrade information of the cluster. This field
+   * is used when user manually triggers a rollback safe upgrade.
+   *
+   * @param RollbackSafeUpgrade $rollbackSafeUpgrade
+   */
+  public function setRollbackSafeUpgrade(RollbackSafeUpgrade $rollbackSafeUpgrade)
+  {
+    $this->rollbackSafeUpgrade = $rollbackSafeUpgrade;
+  }
+  /**
+   * @return RollbackSafeUpgrade
+   */
+  public function getRollbackSafeUpgrade()
+  {
+    return $this->rollbackSafeUpgrade;
   }
   /**
    * Output only. Reserved for future use.
