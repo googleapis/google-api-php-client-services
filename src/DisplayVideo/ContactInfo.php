@@ -21,29 +21,29 @@ class ContactInfo extends \Google\Collection
 {
   protected $collection_key = 'zipCodes';
   /**
-   * Country code of the member. Must also be set with the following fields: *
-   * hashed_first_name * hashed_last_name * zip_codes
+   * Optional. Country code of the member. Must also be set with the following
+   * fields: * country_code * hashed_first_name * hashed_last_name * zip_codes
    *
    * @var string
    */
   public $countryCode;
   /**
-   * A list of SHA256 hashed email of the member. Before hashing, remove all
-   * whitespace and make sure the string is all lowercase.
+   * Optional. A list of SHA256 hashed email of the member. Before hashing,
+   * remove all whitespace and make sure the string is all lowercase.
    *
    * @var string[]
    */
   public $hashedEmails;
   /**
-   * SHA256 hashed first name of the member. Before hashing, remove all
-   * whitespace and make sure the string is all lowercase. Must also be set with
-   * the following fields: * country_code * hashed_last_name * zip_codes
+   * Optional. SHA256 hashed first name of the member. Before hashing, remove
+   * all whitespace and make sure the string is all lowercase. Must also be set
+   * with the following fields: * country_code * hashed_last_name * zip_codes
    *
    * @var string
    */
   public $hashedFirstName;
   /**
-   * SHA256 hashed last name of the member. Before hashing, remove all
+   * Optional. SHA256 hashed last name of the member. Before hashing, remove all
    * whitespace and make sure the string is all lowercase. Must also be set with
    * the following fields: * country_code * hashed_first_name * zip_codes
    *
@@ -51,25 +51,25 @@ class ContactInfo extends \Google\Collection
    */
   public $hashedLastName;
   /**
-   * A list of SHA256 hashed phone numbers of the member. Before hashing, all
-   * phone numbers must be formatted using the [E.164
-   * format](//en.wikipedia.org/wiki/E.164) and include the country calling
-   * code.
+   * Optional. A list of SHA256 hashed phone numbers of the member. Before
+   * hashing, all phone numbers must be formatted using the [E.164
+   * format](https://en.wikipedia.org/wiki/E.164) and include the country
+   * calling code.
    *
    * @var string[]
    */
   public $hashedPhoneNumbers;
   /**
-   * A list of zip codes of the member. Must also be set with the following
-   * fields: * country_code * hashed_first_name * hashed_last_name
+   * Optional. A list of zip codes of the member. Must also be set with the
+   * following fields: * country_code * hashed_first_name * hashed_last_name
    *
    * @var string[]
    */
   public $zipCodes;
 
   /**
-   * Country code of the member. Must also be set with the following fields: *
-   * hashed_first_name * hashed_last_name * zip_codes
+   * Optional. Country code of the member. Must also be set with the following
+   * fields: * country_code * hashed_first_name * hashed_last_name * zip_codes
    *
    * @param string $countryCode
    */
@@ -85,8 +85,8 @@ class ContactInfo extends \Google\Collection
     return $this->countryCode;
   }
   /**
-   * A list of SHA256 hashed email of the member. Before hashing, remove all
-   * whitespace and make sure the string is all lowercase.
+   * Optional. A list of SHA256 hashed email of the member. Before hashing,
+   * remove all whitespace and make sure the string is all lowercase.
    *
    * @param string[] $hashedEmails
    */
@@ -102,9 +102,9 @@ class ContactInfo extends \Google\Collection
     return $this->hashedEmails;
   }
   /**
-   * SHA256 hashed first name of the member. Before hashing, remove all
-   * whitespace and make sure the string is all lowercase. Must also be set with
-   * the following fields: * country_code * hashed_last_name * zip_codes
+   * Optional. SHA256 hashed first name of the member. Before hashing, remove
+   * all whitespace and make sure the string is all lowercase. Must also be set
+   * with the following fields: * country_code * hashed_last_name * zip_codes
    *
    * @param string $hashedFirstName
    */
@@ -120,7 +120,7 @@ class ContactInfo extends \Google\Collection
     return $this->hashedFirstName;
   }
   /**
-   * SHA256 hashed last name of the member. Before hashing, remove all
+   * Optional. SHA256 hashed last name of the member. Before hashing, remove all
    * whitespace and make sure the string is all lowercase. Must also be set with
    * the following fields: * country_code * hashed_first_name * zip_codes
    *
@@ -138,10 +138,10 @@ class ContactInfo extends \Google\Collection
     return $this->hashedLastName;
   }
   /**
-   * A list of SHA256 hashed phone numbers of the member. Before hashing, all
-   * phone numbers must be formatted using the [E.164
-   * format](//en.wikipedia.org/wiki/E.164) and include the country calling
-   * code.
+   * Optional. A list of SHA256 hashed phone numbers of the member. Before
+   * hashing, all phone numbers must be formatted using the [E.164
+   * format](https://en.wikipedia.org/wiki/E.164) and include the country
+   * calling code.
    *
    * @param string[] $hashedPhoneNumbers
    */
@@ -157,8 +157,8 @@ class ContactInfo extends \Google\Collection
     return $this->hashedPhoneNumbers;
   }
   /**
-   * A list of zip codes of the member. Must also be set with the following
-   * fields: * country_code * hashed_first_name * hashed_last_name
+   * Optional. A list of zip codes of the member. Must also be set with the
+   * following fields: * country_code * hashed_first_name * hashed_last_name
    *
    * @param string[] $zipCodes
    */

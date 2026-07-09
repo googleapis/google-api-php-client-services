@@ -58,9 +58,7 @@ class AdGroup extends \Google\Model
    */
   public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_MASTHEAD = 'AD_GROUP_FORMAT_MASTHEAD';
   /**
-   * Demand Gen ads. Retrieval and management of Demand Gen resources is
-   * currently rolling out. This field will be available to all partners by
-   * *June 24, 2026*.
+   * Demand Gen ads.
    */
   public const AD_GROUP_FORMAT_AD_GROUP_FORMAT_DEMAND_GEN = 'AD_GROUP_FORMAT_DEMAND_GEN';
   /**

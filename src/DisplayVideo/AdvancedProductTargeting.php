@@ -147,6 +147,22 @@ class AdvancedProductTargeting extends \Google\Collection
    * 65+ years old.
    */
   public const AGE_RANGE_PLANNABLE_AGE_RANGE_65_UP = 'PLANNABLE_AGE_RANGE_65_UP';
+  /**
+   * Not specified.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_UNSPECIFIED = 'PLANNABLE_NETWORK_UNSPECIFIED';
+  /**
+   * YouTube.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_YOUTUBE = 'PLANNABLE_NETWORK_YOUTUBE';
+  /**
+   * Google Video Partners.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS = 'PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS';
+  /**
+   * YouTube and Google Video Partners.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS = 'PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS';
   protected $collection_key = 'userListIds';
   /**
    * Optional. The age range to target.
@@ -170,6 +186,12 @@ class AdvancedProductTargeting extends \Google\Collection
    * @var string[]
    */
   public $genders;
+  /**
+   * Optional. The network to target.
+   *
+   * @var string
+   */
+  public $network;
   /**
    * Optional. Plannable location IDs to target.
    *
@@ -294,6 +316,26 @@ class AdvancedProductTargeting extends \Google\Collection
   public function getGenders()
   {
     return $this->genders;
+  }
+  /**
+   * Optional. The network to target.
+   *
+   * Accepted values: PLANNABLE_NETWORK_UNSPECIFIED, PLANNABLE_NETWORK_YOUTUBE,
+   * PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS,
+   * PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS
+   *
+   * @param self::NETWORK_* $network
+   */
+  public function setNetwork($network)
+  {
+    $this->network = $network;
+  }
+  /**
+   * @return self::NETWORK_*
+   */
+  public function getNetwork()
+  {
+    return $this->network;
   }
   /**
    * Optional. Plannable location IDs to target.

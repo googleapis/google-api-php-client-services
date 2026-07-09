@@ -66,14 +66,14 @@ class FirstPartyAndPartnerAudience extends \Google\Model
    */
   public const AUDIENCE_TYPE_CUSTOMER_MATCH_USER_ID = 'CUSTOMER_MATCH_USER_ID';
   /**
-   * Audience was created based on campaign activity.
+   * Deprecated: Audience was created based on campaign activity.
    *
    * @deprecated
    */
   public const AUDIENCE_TYPE_ACTIVITY_BASED = 'ACTIVITY_BASED';
   /**
-   * Audience was created based on excluding the number of impressions they were
-   * served.
+   * Deprecated: Audience was created based on excluding the number of
+   * impressions they were served.
    *
    * @deprecated
    */

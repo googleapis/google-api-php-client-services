@@ -32,6 +32,8 @@ class ProductMetadata extends \Google\Model
    * @var string
    */
   public $plannableProductCode;
+  protected $plannableProductCoreAttributesType = PlannableProductCoreAttributes::class;
+  protected $plannableProductCoreAttributesDataType = '';
   /**
    * Output only. The plain-text description of the ad product.
    *
@@ -73,6 +75,22 @@ class ProductMetadata extends \Google\Model
   public function getPlannableProductCode()
   {
     return $this->plannableProductCode;
+  }
+  /**
+   * Output only. Core attributes for this product.
+   *
+   * @param PlannableProductCoreAttributes $plannableProductCoreAttributes
+   */
+  public function setPlannableProductCoreAttributes(PlannableProductCoreAttributes $plannableProductCoreAttributes)
+  {
+    $this->plannableProductCoreAttributes = $plannableProductCoreAttributes;
+  }
+  /**
+   * @return PlannableProductCoreAttributes
+   */
+  public function getPlannableProductCoreAttributes()
+  {
+    return $this->plannableProductCoreAttributes;
   }
   /**
    * Output only. The plain-text description of the ad product.

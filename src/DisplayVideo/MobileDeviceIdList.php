@@ -23,8 +23,8 @@ class MobileDeviceIdList extends \Google\Collection
   protected $consentType = Consent::class;
   protected $consentDataType = '';
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The
-   * size of mobile_device_ids mustn't be greater than 500,000.
+   * Optional. A list of mobile device IDs defining Customer Match audience
+   * members. The size of mobile_device_ids mustn't be greater than 500,000.
    *
    * @var string[]
    */
@@ -50,8 +50,8 @@ class MobileDeviceIdList extends \Google\Collection
     return $this->consent;
   }
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The
-   * size of mobile_device_ids mustn't be greater than 500,000.
+   * Optional. A list of mobile device IDs defining Customer Match audience
+   * members. The size of mobile_device_ids mustn't be greater than 500,000.
    *
    * @param string[] $mobileDeviceIds
    */

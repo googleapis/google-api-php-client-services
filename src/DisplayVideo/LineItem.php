@@ -172,9 +172,7 @@ class LineItem extends \Google\Collection
    */
   public const LINE_ITEM_TYPE_LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME = 'LINE_ITEM_TYPE_VIDEO_OUT_OF_HOME';
   /**
-   * Demand Gen ads. Retrieval and management of Demand Gen resources is
-   * currently rolling out. This field will be available to all partners by
-   * *June 24, 2026*.
+   * Demand Gen ads.
    */
   public const LINE_ITEM_TYPE_LINE_ITEM_TYPE_DEMAND_GEN = 'LINE_ITEM_TYPE_DEMAND_GEN';
   /**
@@ -471,9 +469,7 @@ class LineItem extends \Google\Collection
   }
   /**
    * Optional. Settings specific to Demand Gen line items. Only applicable to
-   * Demand Gen line items. Retrieval and management of Demand Gen resources is
-   * currently rolling out. This field will be available to all partners by
-   * *June 24, 2026*.
+   * Demand Gen line items.
    *
    * @param DemandGenSettings $demandGenSettings
    */

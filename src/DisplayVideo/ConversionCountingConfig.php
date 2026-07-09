@@ -35,9 +35,7 @@ class ConversionCountingConfig extends \Google\Collection
    * attribution model will determine how conversions are counted. The Primary
    * model can be set by you for a floodlight config or group. More details
    * [here](https://support.google.com/displayvideo/answer/7409983). Only
-   * applicable to Demand Gen line items. Retrieval and management of Demand Gen
-   * resources is currently rolling out. This field will be available to all
-   * partners by *June 24, 2026*.
+   * applicable to Demand Gen line items.
    *
    * @var string
    */
@@ -88,9 +86,7 @@ class ConversionCountingConfig extends \Google\Collection
    * attribution model will determine how conversions are counted. The Primary
    * model can be set by you for a floodlight config or group. More details
    * [here](https://support.google.com/displayvideo/answer/7409983). Only
-   * applicable to Demand Gen line items. Retrieval and management of Demand Gen
-   * resources is currently rolling out. This field will be available to all
-   * partners by *June 24, 2026*.
+   * applicable to Demand Gen line items.
    *
    * @param string $primaryAttributionModelId
    */

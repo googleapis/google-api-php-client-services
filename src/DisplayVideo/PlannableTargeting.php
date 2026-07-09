@@ -19,6 +19,22 @@ namespace Google\Service\DisplayVideo;
 
 class PlannableTargeting extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_UNSPECIFIED = 'PLANNABLE_NETWORK_UNSPECIFIED';
+  /**
+   * YouTube.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_YOUTUBE = 'PLANNABLE_NETWORK_YOUTUBE';
+  /**
+   * Google Video Partners.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS = 'PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS';
+  /**
+   * YouTube and Google Video Partners.
+   */
+  public const NETWORK_PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS = 'PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS';
   protected $collection_key = 'youtubeSelectLineups';
   /**
    * Output only. Allowed plannable age ranges for the product. Actual targeting
@@ -27,6 +43,8 @@ class PlannableTargeting extends \Google\Collection
    * @var string[]
    */
   public $ageRanges;
+  protected $defaultYoutubeSelectLineupType = YouTubeSelectLineUp::class;
+  protected $defaultYoutubeSelectLineupDataType = '';
   /**
    * Output only. Targetable devices for the ad product.
    *
@@ -40,11 +58,11 @@ class PlannableTargeting extends \Google\Collection
    */
   public $genders;
   /**
-   * Output only. Targetable networks for the ad product.
+   * Output only. Targetable network for the ad product.
    *
-   * @var string[]
+   * @var string
    */
-  public $networks;
+  public $network;
   protected $surfaceTargetingCombinationsType = SurfaceTargetingCombinations::class;
   protected $surfaceTargetingCombinationsDataType = '';
   protected $youtubeSelectLineupsType = YouTubeSelectLineUp::class;
@@ -66,6 +84,23 @@ class PlannableTargeting extends \Google\Collection
   public function getAgeRanges()
   {
     return $this->ageRanges;
+  }
+  /**
+   * Output only. The default YouTube Select Lineup for this product, if
+   * applicable.
+   *
+   * @param YouTubeSelectLineUp $defaultYoutubeSelectLineup
+   */
+  public function setDefaultYoutubeSelectLineup(YouTubeSelectLineUp $defaultYoutubeSelectLineup)
+  {
+    $this->defaultYoutubeSelectLineup = $defaultYoutubeSelectLineup;
+  }
+  /**
+   * @return YouTubeSelectLineUp
+   */
+  public function getDefaultYoutubeSelectLineup()
+  {
+    return $this->defaultYoutubeSelectLineup;
   }
   /**
    * Output only. Targetable devices for the ad product.
@@ -100,20 +135,24 @@ class PlannableTargeting extends \Google\Collection
     return $this->genders;
   }
   /**
-   * Output only. Targetable networks for the ad product.
+   * Output only. Targetable network for the ad product.
    *
-   * @param string[] $networks
+   * Accepted values: PLANNABLE_NETWORK_UNSPECIFIED, PLANNABLE_NETWORK_YOUTUBE,
+   * PLANNABLE_NETWORK_GOOGLE_VIDEO_PARTNERS,
+   * PLANNABLE_NETWORK_YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS
+   *
+   * @param self::NETWORK_* $network
    */
-  public function setNetworks($networks)
+  public function setNetwork($network)
   {
-    $this->networks = $networks;
+    $this->network = $network;
   }
   /**
-   * @return string[]
+   * @return self::NETWORK_*
    */
-  public function getNetworks()
+  public function getNetwork()
   {
-    return $this->networks;
+    return $this->network;
   }
   /**
    * Output only. Targetable surface combinations for the ad product.

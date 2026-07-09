@@ -45,9 +45,9 @@ class ContactInfoList extends \Google\Collection
     return $this->consent;
   }
   /**
-   * A list of ContactInfo objects defining Customer Match audience members. The
-   * size of members after splitting the contact_infos mustn't be greater than
-   * 500,000.
+   * Optional. A list of ContactInfo objects defining Customer Match audience
+   * members. The size of members after splitting the contact_infos mustn't be
+   * greater than 500,000.
    *
    * @param ContactInfo[] $contactInfos
    */

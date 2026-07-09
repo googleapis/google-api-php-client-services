@@ -26,6 +26,12 @@ class SurfaceTargetingCombinations extends \Google\Collection
    * @var string[]
    */
   public $availableSurfaceTypes;
+  /**
+   * Output only. The default surface types for this product.
+   *
+   * @var string[]
+   */
+  public $defaultSurfaceTypes;
   protected $validSurfaceCombinationsType = SurfaceTargetingCombination::class;
   protected $validSurfaceCombinationsDataType = 'array';
 
@@ -44,6 +50,22 @@ class SurfaceTargetingCombinations extends \Google\Collection
   public function getAvailableSurfaceTypes()
   {
     return $this->availableSurfaceTypes;
+  }
+  /**
+   * Output only. The default surface types for this product.
+   *
+   * @param string[] $defaultSurfaceTypes
+   */
+  public function setDefaultSurfaceTypes($defaultSurfaceTypes)
+  {
+    $this->defaultSurfaceTypes = $defaultSurfaceTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDefaultSurfaceTypes()
+  {
+    return $this->defaultSurfaceTypes;
   }
   /**
    * Output only. Valid combinations of surfaces that can be selected together.

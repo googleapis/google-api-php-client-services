@@ -198,6 +198,13 @@ class PlannableLocation extends \Google\Model
    */
   public $name;
   /**
+   * Output only. The parent plannable location ID, for example the country ID
+   * for subgeos.
+   *
+   * @var string
+   */
+  public $parentPlannableLocationId;
+  /**
    * Output only. The plannable location ID.
    *
    * @var string
@@ -277,6 +284,23 @@ class PlannableLocation extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The parent plannable location ID, for example the country ID
+   * for subgeos.
+   *
+   * @param string $parentPlannableLocationId
+   */
+  public function setParentPlannableLocationId($parentPlannableLocationId)
+  {
+    $this->parentPlannableLocationId = $parentPlannableLocationId;
+  }
+  /**
+   * @return string
+   */
+  public function getParentPlannableLocationId()
+  {
+    return $this->parentPlannableLocationId;
   }
   /**
    * Output only. The plannable location ID.

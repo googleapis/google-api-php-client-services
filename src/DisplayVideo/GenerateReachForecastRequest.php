@@ -29,24 +29,11 @@ class GenerateReachForecastRequest extends \Google\Collection
    */
   public $currencyCode;
   /**
-   * Optional. The highest minimum effective frequency to include in
-   * PlannedProductForecast.effective_frequency_breakdowns. Must be between 1
-   * and 10, inclusive. If not specified,
-   * PlannedProductForecast.effective_frequency_breakdowns will not be
-   * populated. If set, this value will also be used as the minimum effective
-   * frequency for reach metrics reporting. This field cannot be combined with
-   * the min_effective_frequency field.
-   *
-   * @var int
-   */
-  public $effectiveFrequencyBreakdownLimit;
-  /**
    * Optional. The minimum effective frequency for the reported reach metrics.
    * This is the smallest number of times a customer must be exposed to the ad
    * for it to be considered effective. This setting only impacts reporting.
    * Must be between 1 and 10, inclusive. If not specified, a default of 1 is
-   * applied. This field cannot be combined with
-   * effective_frequency_breakdown_limit.
+   * applied.
    *
    * @var int
    */
@@ -89,34 +76,11 @@ class GenerateReachForecastRequest extends \Google\Collection
     return $this->currencyCode;
   }
   /**
-   * Optional. The highest minimum effective frequency to include in
-   * PlannedProductForecast.effective_frequency_breakdowns. Must be between 1
-   * and 10, inclusive. If not specified,
-   * PlannedProductForecast.effective_frequency_breakdowns will not be
-   * populated. If set, this value will also be used as the minimum effective
-   * frequency for reach metrics reporting. This field cannot be combined with
-   * the min_effective_frequency field.
-   *
-   * @param int $effectiveFrequencyBreakdownLimit
-   */
-  public function setEffectiveFrequencyBreakdownLimit($effectiveFrequencyBreakdownLimit)
-  {
-    $this->effectiveFrequencyBreakdownLimit = $effectiveFrequencyBreakdownLimit;
-  }
-  /**
-   * @return int
-   */
-  public function getEffectiveFrequencyBreakdownLimit()
-  {
-    return $this->effectiveFrequencyBreakdownLimit;
-  }
-  /**
    * Optional. The minimum effective frequency for the reported reach metrics.
    * This is the smallest number of times a customer must be exposed to the ad
    * for it to be considered effective. This setting only impacts reporting.
    * Must be between 1 and 10, inclusive. If not specified, a default of 1 is
-   * applied. This field cannot be combined with
-   * effective_frequency_breakdown_limit.
+   * applied.
    *
    * @param int $minEffectiveFrequency
    */

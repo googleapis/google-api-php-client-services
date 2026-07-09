@@ -17,11 +17,8 @@
 
 namespace Google\Service\DisplayVideo;
 
-class PlannedProductForecast extends \Google\Collection
+class PlannedProductForecast extends \Google\Model
 {
-  protected $collection_key = 'effectiveFrequencyBreakdowns';
-  protected $effectiveFrequencyBreakdownsType = EffectiveFrequencyBreakdown::class;
-  protected $effectiveFrequencyBreakdownsDataType = 'array';
   /**
    * Number of on-target impressions.
    *
@@ -59,22 +56,6 @@ class PlannedProductForecast extends \Google\Collection
    */
   public $viewableImpressions;
 
-  /**
-   * A list of effective frequency breakdowns.
-   *
-   * @param EffectiveFrequencyBreakdown[] $effectiveFrequencyBreakdowns
-   */
-  public function setEffectiveFrequencyBreakdowns($effectiveFrequencyBreakdowns)
-  {
-    $this->effectiveFrequencyBreakdowns = $effectiveFrequencyBreakdowns;
-  }
-  /**
-   * @return EffectiveFrequencyBreakdown[]
-   */
-  public function getEffectiveFrequencyBreakdowns()
-  {
-    return $this->effectiveFrequencyBreakdowns;
-  }
   /**
    * Number of on-target impressions.
    *

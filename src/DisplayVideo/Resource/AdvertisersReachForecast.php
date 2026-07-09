@@ -117,13 +117,15 @@ class AdvertisersReachForecast extends \Google\Service\Resource
    * properties. Supported syntax: * Filter expressions are made up of one or more
    * restrictions. * Restrictions can be combined by `AND` or `OR` logical
    * operators. * A restriction has the form of `{field} {operator} {value}`. *
-   * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS
-   * THAN OR EQUAL TO (<=)` operators. * All other fields must use the `EQUALS
-   * (=)` operator. Supported fields: * `plannableStatus` Examples: * All
-   * plannable user lists: `plannableStatus="PLANNABLE"` The length of this field
-   * should be no more than 500 characters. Reference our [filter `LIST`
-   * requests](/display-video/api/guides/how-tos/filters) guide for more
-   * information.
+   * The `displayName` field must use the `HAS (:)` operator. * All other fields
+   * must use the `EQUALS (=)` operator. Supported fields: * `plannableStatus` *
+   * `displayName` * `userListType` * `name` Examples: * All plannable user lists:
+   * `plannableStatus="PLANNABLE"` * Plannable user lists with display name
+   * containing "Shopping": `plannableStatus="PLANNABLE" AND
+   * displayName:"Shopping"` * First party user lists:
+   * `userListType="FIRST_PARTY"` The length of this field should be no more than
+   * 500 characters. Reference our [filter `LIST` requests](/display-
+   * video/api/guides/how-tos/filters) guide for more information.
    * @opt_param int pageSize Optional. Requested page size. Must be between `1`
    * and `5000`. If unspecified will default to `5000`.
    * @opt_param string pageToken Optional. A token identifying a page of results
