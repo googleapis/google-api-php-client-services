@@ -69,7 +69,8 @@ class DatabaseResourceId extends \Google\Model
    * start alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
+   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
+   * redis.googleapis.com/Cluster,
    * oracledatabase.googleapis.com/CloudExadataInfrastructure
    * oracledatabase.googleapis.com/CloudVmCluster
    * oracledatabase.googleapis.com/AutonomousDatabase
@@ -128,7 +129,8 @@ class DatabaseResourceId extends \Google\Model
    * start alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
+   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
+   * redis.googleapis.com/Cluster,
    * oracledatabase.googleapis.com/CloudExadataInfrastructure
    * oracledatabase.googleapis.com/CloudVmCluster
    * oracledatabase.googleapis.com/AutonomousDatabase
