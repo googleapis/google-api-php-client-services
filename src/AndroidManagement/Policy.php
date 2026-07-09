@@ -1444,7 +1444,10 @@ class Policy extends \Google\Collection
    * default application is successfully set for at least one app type on a
    * profile, users are prevented from changing any default applications on that
    * profile.Only one DefaultApplicationSetting is allowed for each
-   * DefaultApplicationType.See Default application settings
+   * DefaultApplicationType.Warning: Do not configure this and
+   * persistent_preferred_activities for the same intent domain, such as web
+   * browsing. Setting both for the same intent domain can lead to unpredictable
+   * behavior.See Default application settings
    * (https://developers.google.com/android/management/default-application-
    * settings) guide for more details.
    *
@@ -2123,7 +2126,10 @@ class Policy extends \Google\Collection
     return $this->permittedInputMethods;
   }
   /**
-   * Default intent handler activities.
+   * Default intent handler activities.Warning: Do not configure this and
+   * default_application_settings for the same intent domain, such as web
+   * browsing. Setting both for the same intent domain can lead to unpredictable
+   * behavior.
    *
    * @param PersistentPreferredActivity[] $persistentPreferredActivities
    */
