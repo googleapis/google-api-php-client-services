@@ -52,6 +52,14 @@ class ChannelProfile extends \Google\Model
    */
   public const CHANNEL_TYPE_CONTACT_CENTER_INTEGRATION = 'CONTACT_CENTER_INTEGRATION';
   /**
+   * WhatsApp channel.
+   */
+  public const CHANNEL_TYPE_WHATSAPP = 'WHATSAPP';
+  /**
+   * Instagram channel.
+   */
+  public const CHANNEL_TYPE_INSTAGRAM = 'INSTAGRAM';
+  /**
    * Optional. The type of the channel profile.
    *
    * @var string
@@ -72,6 +80,8 @@ class ChannelProfile extends \Google\Model
    * @var bool
    */
   public $disableDtmf;
+  protected $instagramConfigType = ChannelProfileInstagramConfig::class;
+  protected $instagramConfigDataType = '';
   /**
    * Optional. The noise suppression level of the channel profile. Available
    * values are "low", "moderate", "high", "very_high".
@@ -89,12 +99,15 @@ class ChannelProfile extends \Google\Model
   public $profileId;
   protected $webWidgetConfigType = ChannelProfileWebWidgetConfig::class;
   protected $webWidgetConfigDataType = '';
+  protected $whatsappConfigType = ChannelProfileWhatsAppConfig::class;
+  protected $whatsappConfigDataType = '';
 
   /**
    * Optional. The type of the channel profile.
    *
    * Accepted values: UNKNOWN, WEB_UI, API, TWILIO, GOOGLE_TELEPHONY_PLATFORM,
-   * CONTACT_CENTER_AS_A_SERVICE, FIVE9, CONTACT_CENTER_INTEGRATION
+   * CONTACT_CENTER_AS_A_SERVICE, FIVE9, CONTACT_CENTER_INTEGRATION, WHATSAPP,
+   * INSTAGRAM
    *
    * @param self::CHANNEL_TYPE_* $channelType
    */
@@ -143,6 +156,22 @@ class ChannelProfile extends \Google\Model
   public function getDisableDtmf()
   {
     return $this->disableDtmf;
+  }
+  /**
+   * Optional. Configuration specific to Instagram deployments.
+   *
+   * @param ChannelProfileInstagramConfig $instagramConfig
+   */
+  public function setInstagramConfig(ChannelProfileInstagramConfig $instagramConfig)
+  {
+    $this->instagramConfig = $instagramConfig;
+  }
+  /**
+   * @return ChannelProfileInstagramConfig
+   */
+  public function getInstagramConfig()
+  {
+    return $this->instagramConfig;
   }
   /**
    * Optional. The noise suppression level of the channel profile. Available
@@ -208,6 +237,22 @@ class ChannelProfile extends \Google\Model
   public function getWebWidgetConfig()
   {
     return $this->webWidgetConfig;
+  }
+  /**
+   * Optional. Configuration specific to WhatsApp deployments.
+   *
+   * @param ChannelProfileWhatsAppConfig $whatsappConfig
+   */
+  public function setWhatsappConfig(ChannelProfileWhatsAppConfig $whatsappConfig)
+  {
+    $this->whatsappConfig = $whatsappConfig;
+  }
+  /**
+   * @return ChannelProfileWhatsAppConfig
+   */
+  public function getWhatsappConfig()
+  {
+    return $this->whatsappConfig;
   }
 }
 

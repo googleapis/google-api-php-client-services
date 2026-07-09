@@ -186,6 +186,16 @@ class CustomerEngagementSuite extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getExtendedAgentCard' => [
+              'path' => 'v1/{+tenant}/extendedAgentCard',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'importApp' => [
               'path' => 'v1/{+parent}/apps:importApp',
               'httpMethod' => 'POST',

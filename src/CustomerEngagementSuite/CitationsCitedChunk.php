@@ -20,6 +20,12 @@ namespace Google\Service\CustomerEngagementSuite;
 class CitationsCitedChunk extends \Google\Model
 {
   /**
+   * Whether this citation requires attribution to be shown to the end users.
+   *
+   * @var bool
+   */
+  public $requiresAttribution;
+  /**
    * Text used for citation.
    *
    * @var string
@@ -38,6 +44,22 @@ class CitationsCitedChunk extends \Google\Model
    */
   public $uri;
 
+  /**
+   * Whether this citation requires attribution to be shown to the end users.
+   *
+   * @param bool $requiresAttribution
+   */
+  public function setRequiresAttribution($requiresAttribution)
+  {
+    $this->requiresAttribution = $requiresAttribution;
+  }
+  /**
+   * @return bool
+   */
+  public function getRequiresAttribution()
+  {
+    return $this->requiresAttribution;
+  }
   /**
    * Text used for citation.
    *

@@ -17,8 +17,9 @@
 
 namespace Google\Service\CustomerEngagementSuite;
 
-class SessionOutput extends \Google\Model
+class SessionOutput extends \Google\Collection
 {
+  protected $collection_key = 'context';
   /**
    * Output audio from the CES agent.
    *
@@ -27,6 +28,12 @@ class SessionOutput extends \Google\Model
   public $audio;
   protected $citationsType = Citations::class;
   protected $citationsDataType = '';
+  /**
+   * Context messages for external supervision guardrails.
+   *
+   * @var array[]
+   */
+  public $context;
   protected $diagnosticInfoType = SessionOutputDiagnosticInfo::class;
   protected $diagnosticInfoDataType = '';
   protected $endSessionType = EndSession::class;
@@ -94,6 +101,22 @@ class SessionOutput extends \Google\Model
   public function getCitations()
   {
     return $this->citations;
+  }
+  /**
+   * Context messages for external supervision guardrails.
+   *
+   * @param array[] $context
+   */
+  public function setContext($context)
+  {
+    $this->context = $context;
+  }
+  /**
+   * @return array[]
+   */
+  public function getContext()
+  {
+    return $this->context;
   }
   /**
    * Optional. Diagnostic information contains execution details during the

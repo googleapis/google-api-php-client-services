@@ -17,47 +17,30 @@
 
 namespace Google\Service\CustomerEngagementSuite;
 
-class AgentTool extends \Google\Model
+class LfA2aV1APIKeySecurityScheme extends \Google\Model
 {
   /**
-   * Optional. The resource name of the agent that is the entry point of the
-   * tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
-   *
-   * @var string
-   */
-  public $agent;
-  /**
-   * Optional. Description of the tool's purpose.
+   * An optional description for the security scheme.
    *
    * @var string
    */
   public $description;
   /**
-   * Required. The name of the agent tool.
+   * Required. The location of the API key. Valid values are "query", "header",
+   * or "cookie".
+   *
+   * @var string
+   */
+  public $location;
+  /**
+   * Required. The name of the header, query, or cookie parameter to be used.
    *
    * @var string
    */
   public $name;
 
   /**
-   * Optional. The resource name of the agent that is the entry point of the
-   * tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
-   *
-   * @param string $agent
-   */
-  public function setAgent($agent)
-  {
-    $this->agent = $agent;
-  }
-  /**
-   * @return string
-   */
-  public function getAgent()
-  {
-    return $this->agent;
-  }
-  /**
-   * Optional. Description of the tool's purpose.
+   * An optional description for the security scheme.
    *
    * @param string $description
    */
@@ -73,7 +56,24 @@ class AgentTool extends \Google\Model
     return $this->description;
   }
   /**
-   * Required. The name of the agent tool.
+   * Required. The location of the API key. Valid values are "query", "header",
+   * or "cookie".
+   *
+   * @param string $location
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
+  }
+  /**
+   * Required. The name of the header, query, or cookie parameter to be used.
    *
    * @param string $name
    */
@@ -91,4 +91,4 @@ class AgentTool extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AgentTool::class, 'Google_Service_CustomerEngagementSuite_AgentTool');
+class_alias(LfA2aV1APIKeySecurityScheme::class, 'Google_Service_CustomerEngagementSuite_LfA2aV1APIKeySecurityScheme');

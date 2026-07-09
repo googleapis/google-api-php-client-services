@@ -35,6 +35,8 @@ class LoggingSettings extends \Google\Model
   protected $redactionConfigDataType = '';
   protected $unredactedAudioRecordingConfigType = AudioRecordingConfig::class;
   protected $unredactedAudioRecordingConfigDataType = '';
+  protected $unredactedBigqueryExportSettingsType = BigQueryExportSettings::class;
+  protected $unredactedBigqueryExportSettingsDataType = '';
 
   /**
    * Optional. Configuration for how audio interactions should be recorded. The
@@ -171,6 +173,24 @@ class LoggingSettings extends \Google\Model
   public function getUnredactedAudioRecordingConfig()
   {
     return $this->unredactedAudioRecordingConfig;
+  }
+  /**
+   * Optional. Configures the BigQuery export behaviors for the app. The
+   * unredacted conversation data will be exported to BigQuery tables if it is
+   * enabled.
+   *
+   * @param BigQueryExportSettings $unredactedBigqueryExportSettings
+   */
+  public function setUnredactedBigqueryExportSettings(BigQueryExportSettings $unredactedBigqueryExportSettings)
+  {
+    $this->unredactedBigqueryExportSettings = $unredactedBigqueryExportSettings;
+  }
+  /**
+   * @return BigQueryExportSettings
+   */
+  public function getUnredactedBigqueryExportSettings()
+  {
+    return $this->unredactedBigqueryExportSettings;
   }
 }
 

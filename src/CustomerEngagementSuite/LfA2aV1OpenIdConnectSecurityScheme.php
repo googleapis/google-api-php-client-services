@@ -17,47 +17,25 @@
 
 namespace Google\Service\CustomerEngagementSuite;
 
-class AgentTool extends \Google\Model
+class LfA2aV1OpenIdConnectSecurityScheme extends \Google\Model
 {
   /**
-   * Optional. The resource name of the agent that is the entry point of the
-   * tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
-   *
-   * @var string
-   */
-  public $agent;
-  /**
-   * Optional. Description of the tool's purpose.
+   * An optional description for the security scheme.
    *
    * @var string
    */
   public $description;
   /**
-   * Required. The name of the agent tool.
+   * Required. The [OpenID Connect Discovery
+   * URL](https://openid.net/specs/openid-connect-discovery-1_0.html) for the
+   * OIDC provider's metadata.
    *
    * @var string
    */
-  public $name;
+  public $openIdConnectUrl;
 
   /**
-   * Optional. The resource name of the agent that is the entry point of the
-   * tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
-   *
-   * @param string $agent
-   */
-  public function setAgent($agent)
-  {
-    $this->agent = $agent;
-  }
-  /**
-   * @return string
-   */
-  public function getAgent()
-  {
-    return $this->agent;
-  }
-  /**
-   * Optional. Description of the tool's purpose.
+   * An optional description for the security scheme.
    *
    * @param string $description
    */
@@ -73,22 +51,24 @@ class AgentTool extends \Google\Model
     return $this->description;
   }
   /**
-   * Required. The name of the agent tool.
+   * Required. The [OpenID Connect Discovery
+   * URL](https://openid.net/specs/openid-connect-discovery-1_0.html) for the
+   * OIDC provider's metadata.
    *
-   * @param string $name
+   * @param string $openIdConnectUrl
    */
-  public function setName($name)
+  public function setOpenIdConnectUrl($openIdConnectUrl)
   {
-    $this->name = $name;
+    $this->openIdConnectUrl = $openIdConnectUrl;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getOpenIdConnectUrl()
   {
-    return $this->name;
+    return $this->openIdConnectUrl;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AgentTool::class, 'Google_Service_CustomerEngagementSuite_AgentTool');
+class_alias(LfA2aV1OpenIdConnectSecurityScheme::class, 'Google_Service_CustomerEngagementSuite_LfA2aV1OpenIdConnectSecurityScheme');

@@ -52,6 +52,8 @@ class Deployment extends \Google\Model
   public $etag;
   protected $experimentConfigType = ExperimentConfig::class;
   protected $experimentConfigDataType = '';
+  protected $instagramCredentialsType = InstagramCredentials::class;
+  protected $instagramCredentialsDataType = '';
   /**
    * Identifier. The resource name of the deployment. Format: `projects/{project
    * }/locations/{location}/apps/{app}/deployments/{deployment}`
@@ -65,6 +67,8 @@ class Deployment extends \Google\Model
    * @var string
    */
   public $updateTime;
+  protected $whatsappCredentialsType = WhatsAppCredentials::class;
+  protected $whatsappCredentialsDataType = '';
 
   /**
    * Optional. The resource name of the app version to deploy. Format:
@@ -168,6 +172,23 @@ class Deployment extends \Google\Model
     return $this->experimentConfig;
   }
   /**
+   * Optional. Input only. Ephemeral Instagram credentials required when
+   * configuring a Instagram channel profile.
+   *
+   * @param InstagramCredentials $instagramCredentials
+   */
+  public function setInstagramCredentials(InstagramCredentials $instagramCredentials)
+  {
+    $this->instagramCredentials = $instagramCredentials;
+  }
+  /**
+   * @return InstagramCredentials
+   */
+  public function getInstagramCredentials()
+  {
+    return $this->instagramCredentials;
+  }
+  /**
    * Identifier. The resource name of the deployment. Format: `projects/{project
    * }/locations/{location}/apps/{app}/deployments/{deployment}`
    *
@@ -199,6 +220,23 @@ class Deployment extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * Optional. Input only. Ephemeral WhatsApp credentials required when
+   * configuring a WhatsApp channel profile.
+   *
+   * @param WhatsAppCredentials $whatsappCredentials
+   */
+  public function setWhatsappCredentials(WhatsAppCredentials $whatsappCredentials)
+  {
+    $this->whatsappCredentials = $whatsappCredentials;
+  }
+  /**
+   * @return WhatsAppCredentials
+   */
+  public function getWhatsappCredentials()
+  {
+    return $this->whatsappCredentials;
   }
 }
 

@@ -29,10 +29,10 @@ class BargeInConfig extends \Google\Model
    */
   public $bargeInAwareness;
   /**
-   * Optional. Disables user barge-in while the agent is speaking. If true, user
-   * input during agent response playback will be ignored. Deprecated:
-   * `disable_barge_in` is deprecated in favor of `disable_barge_in_control` in
-   * ChannelProfile.
+   * Optional. Deprecated: `disable_barge_in` is deprecated in favor of
+   * `disable_barge_in_control` in ChannelProfile. Disables user barge-in while
+   * the agent is speaking. If true, user input during agent response playback
+   * will be ignored.
    *
    * @deprecated
    * @var bool
@@ -59,10 +59,10 @@ class BargeInConfig extends \Google\Model
     return $this->bargeInAwareness;
   }
   /**
-   * Optional. Disables user barge-in while the agent is speaking. If true, user
-   * input during agent response playback will be ignored. Deprecated:
-   * `disable_barge_in` is deprecated in favor of `disable_barge_in_control` in
-   * ChannelProfile.
+   * Optional. Deprecated: `disable_barge_in` is deprecated in favor of
+   * `disable_barge_in_control` in ChannelProfile. Disables user barge-in while
+   * the agent is speaking. If true, user input during agent response playback
+   * will be ignored.
    *
    * @deprecated
    * @param bool $disableBargeIn

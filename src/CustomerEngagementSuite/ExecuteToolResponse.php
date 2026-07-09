@@ -19,6 +19,10 @@ namespace Google\Service\CustomerEngagementSuite;
 
 class ExecuteToolResponse extends \Google\Model
 {
+  protected $citationsType = Citations::class;
+  protected $citationsDataType = '';
+  protected $googleSearchSuggestionsType = GoogleSearchSuggestions::class;
+  protected $googleSearchSuggestionsDataType = '';
   /**
    * The tool execution result in JSON object format. Use "output" key to
    * specify tool response and "error" key to specify error details (if any). If
@@ -44,6 +48,39 @@ class ExecuteToolResponse extends \Google\Model
    */
   public $variables;
 
+  /**
+   * Citations that provide the source information for the tool's execution.
+   *
+   * @param Citations $citations
+   */
+  public function setCitations(Citations $citations)
+  {
+    $this->citations = $citations;
+  }
+  /**
+   * @return Citations
+   */
+  public function getCitations()
+  {
+    return $this->citations;
+  }
+  /**
+   * The suggestions returned from Google Search as a result of invoking the
+   * Google Search Tool during the tool execution.
+   *
+   * @param GoogleSearchSuggestions $googleSearchSuggestions
+   */
+  public function setGoogleSearchSuggestions(GoogleSearchSuggestions $googleSearchSuggestions)
+  {
+    $this->googleSearchSuggestions = $googleSearchSuggestions;
+  }
+  /**
+   * @return GoogleSearchSuggestions
+   */
+  public function getGoogleSearchSuggestions()
+  {
+    return $this->googleSearchSuggestions;
+  }
   /**
    * The tool execution result in JSON object format. Use "output" key to
    * specify tool response and "error" key to specify error details (if any). If

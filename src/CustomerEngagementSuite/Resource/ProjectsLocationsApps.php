@@ -22,6 +22,7 @@ use Google\Service\CustomerEngagementSuite\ExecuteToolRequest;
 use Google\Service\CustomerEngagementSuite\ExecuteToolResponse;
 use Google\Service\CustomerEngagementSuite\ExportAppRequest;
 use Google\Service\CustomerEngagementSuite\ImportAppRequest;
+use Google\Service\CustomerEngagementSuite\LfA2aV1AgentCard;
 use Google\Service\CustomerEngagementSuite\ListAppsResponse;
 use Google\Service\CustomerEngagementSuite\Operation;
 use Google\Service\CustomerEngagementSuite\RetrieveToolSchemaRequest;
@@ -121,6 +122,21 @@ class ProjectsLocationsApps extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], App::class);
+  }
+  /**
+   * Gets the extended agent card for the authenticated agent.
+   * (apps.getExtendedAgentCard)
+   *
+   * @param string $tenant Optional. Tenant ID, provided as a path parameter.
+   * @param array $optParams Optional parameters.
+   * @return LfA2aV1AgentCard
+   * @throws \Google\Service\Exception
+   */
+  public function getExtendedAgentCard($tenant, $optParams = [])
+  {
+    $params = ['tenant' => $tenant];
+    $params = array_merge($params, $optParams);
+    return $this->call('getExtendedAgentCard', [$params], LfA2aV1AgentCard::class);
   }
   /**
    * Imports the specified app. (apps.importApp)
