@@ -40,6 +40,8 @@ class AccessSettings extends \Google\Model
    * authorize-chat-user).
    */
   public const ACCESS_STATE_DISCOVERABLE = 'DISCOVERABLE';
+  protected $accessPermissionSettingsType = AccessPermissionSettings::class;
+  protected $accessPermissionSettingsDataType = '';
   /**
    * Output only. Indicates the access state of the space.
    *
@@ -72,6 +74,24 @@ class AccessSettings extends \Google\Model
    */
   public $audience;
 
+  /**
+   * Optional. Access permission settings for the space. To set the target
+   * audience when creating a space, specify the `accessSettings.audience` field
+   * in your request.
+   *
+   * @param AccessPermissionSettings $accessPermissionSettings
+   */
+  public function setAccessPermissionSettings(AccessPermissionSettings $accessPermissionSettings)
+  {
+    $this->accessPermissionSettings = $accessPermissionSettings;
+  }
+  /**
+   * @return AccessPermissionSettings
+   */
+  public function getAccessPermissionSettings()
+  {
+    return $this->accessPermissionSettings;
+  }
   /**
    * Output only. Indicates the access state of the space.
    *

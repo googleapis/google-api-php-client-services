@@ -42,8 +42,7 @@ class UsersAvailability extends \Google\Service\Resource
    * scopes](https://developers.google.com/workspace/chat/authenticate-
    * authorize#chat-api-scopes): -
    * `https://www.googleapis.com/auth/chat.users.availability.readonly` -
-   * `https://www.googleapis.com/auth/chat.users.availability`
-   * (availability.getAvailability)
+   * `https://www.googleapis.com/auth/chat.users.availability` (availability.get)
    *
    * @param string $name Required. The resource name of the availability to
    * retrieve. Format: users/{user}/availability `{user}` is the id for the Person
@@ -54,11 +53,11 @@ class UsersAvailability extends \Google\Service\Resource
    * @return Availability
    * @throws \Google\Service\Exception
    */
-  public function getAvailability($name, $optParams = [])
+  public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('getAvailability', [$params], Availability::class);
+    return $this->call('get', [$params], Availability::class);
   }
   /**
    * Marks user as `ACTIVE` in Google Chat. Sets the user's availability state to
@@ -119,7 +118,7 @@ class UsersAvailability extends \Google\Service\Resource
     return $this->call('markAsAway', [$params], Availability::class);
   }
   /**
-   * Marks user as`DO_NOT_DISTURB` in Google Chat. Sets a user's availability
+   * Marks user as `DO_NOT_DISTURB` in Google Chat. Sets a user's availability
    * state to `DO_NOT_DISTURB` until a specified expiration time. When in
    * `DO_NOT_DISTURB`, users typically won't receive notifications. This method
    * only updates the authenticated user's availability. Requires [user
@@ -156,7 +155,7 @@ class UsersAvailability extends \Google\Service\Resource
    * scopes](https://developers.google.com/workspace/chat/authenticate-
    * authorize#chat-api-scopes): -
    * `https://www.googleapis.com/auth/chat.users.availability`
-   * (availability.updateAvailability)
+   * (availability.patch)
    *
    * @param string $name Identifier. Resource name of the user's availability.
    * Format: `users/{user}/availability` `{user}` is the id for the Person in the
@@ -171,11 +170,11 @@ class UsersAvailability extends \Google\Service\Resource
    * @return Availability
    * @throws \Google\Service\Exception
    */
-  public function updateAvailability($name, Availability $postBody, $optParams = [])
+  public function patch($name, Availability $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('updateAvailability', [$params], Availability::class);
+    return $this->call('patch', [$params], Availability::class);
   }
 }
 

@@ -764,7 +764,7 @@ class HangoutsChat extends \Google\Service
         'availability',
         [
           'methods' => [
-            'getAvailability' => [
+            'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -804,7 +804,7 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'updateAvailability' => [
+            ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
