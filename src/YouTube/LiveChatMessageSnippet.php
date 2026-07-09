@@ -30,7 +30,13 @@ class LiveChatMessageSnippet extends \Google\Model
   public const TYPE_memberMilestoneChatEvent = 'memberMilestoneChatEvent';
   public const TYPE_membershipGiftingEvent = 'membershipGiftingEvent';
   public const TYPE_giftMembershipReceivedEvent = 'giftMembershipReceivedEvent';
+  /**
+   * @deprecated
+   */
   public const TYPE_messageDeletedEvent = 'messageDeletedEvent';
+  /**
+   * @deprecated
+   */
   public const TYPE_messageRetractedEvent = 'messageRetractedEvent';
   public const TYPE_userBannedEvent = 'userBannedEvent';
   public const TYPE_superChatEvent = 'superChatEvent';
@@ -47,8 +53,8 @@ class LiveChatMessageSnippet extends \Google\Model
    * became a sponsor memberMilestoneChatEvent - the member that sent the
    * message membershipGiftingEvent - the user that made the purchase
    * giftMembershipReceivedEvent - the user that received the gift membership
-   * messageDeletedEvent - the moderator that took the action
-   * messageRetractedEvent - the author that retracted their message
+   * messageDeletedEvent - the moderator that took the action. Unused.
+   * messageRetractedEvent - the author that retracted their message. Unused.
    * userBannedEvent - the moderator that took the action superChatEvent - the
    * user that made the purchase superStickerEvent - the user that made the
    * purchase pollEvent - the user that created the poll
@@ -121,8 +127,8 @@ class LiveChatMessageSnippet extends \Google\Model
    * became a sponsor memberMilestoneChatEvent - the member that sent the
    * message membershipGiftingEvent - the user that made the purchase
    * giftMembershipReceivedEvent - the user that received the gift membership
-   * messageDeletedEvent - the moderator that took the action
-   * messageRetractedEvent - the author that retracted their message
+   * messageDeletedEvent - the moderator that took the action. Unused.
+   * messageRetractedEvent - the author that retracted their message. Unused.
    * userBannedEvent - the moderator that took the action superChatEvent - the
    * user that made the purchase superStickerEvent - the user that made the
    * purchase pollEvent - the user that created the poll
@@ -275,6 +281,7 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->membershipGiftingDetails;
   }
   /**
+   * @deprecated
    * @param LiveChatMessageDeletedDetails $messageDeletedDetails
    */
   public function setMessageDeletedDetails(LiveChatMessageDeletedDetails $messageDeletedDetails)
@@ -282,6 +289,7 @@ class LiveChatMessageSnippet extends \Google\Model
     $this->messageDeletedDetails = $messageDeletedDetails;
   }
   /**
+   * @deprecated
    * @return LiveChatMessageDeletedDetails
    */
   public function getMessageDeletedDetails()
@@ -289,6 +297,7 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->messageDeletedDetails;
   }
   /**
+   * @deprecated
    * @param LiveChatMessageRetractedDetails $messageRetractedDetails
    */
   public function setMessageRetractedDetails(LiveChatMessageRetractedDetails $messageRetractedDetails)
@@ -296,6 +305,7 @@ class LiveChatMessageSnippet extends \Google\Model
     $this->messageRetractedDetails = $messageRetractedDetails;
   }
   /**
+   * @deprecated
    * @return LiveChatMessageRetractedDetails
    */
   public function getMessageRetractedDetails()
