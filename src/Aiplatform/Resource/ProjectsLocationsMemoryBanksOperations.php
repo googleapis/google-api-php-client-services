@@ -26,10 +26,10 @@ use Google\Service\Aiplatform\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $aiplatformService = new Google\Service\Aiplatform(...);
- *   $operations = $aiplatformService->projects_locations_tuningJobs_operations;
+ *   $operations = $aiplatformService->projects_locations_memoryBanks_operations;
  *  </code>
  */
-class ProjectsLocationsTuningJobsOperations extends \Google\Service\Resource
+class ProjectsLocationsMemoryBanksOperations extends \Google\Service\Resource
 {
   /**
    * Starts asynchronous cancellation on a long-running operation. The server
@@ -89,7 +89,7 @@ class ProjectsLocationsTuningJobsOperations extends \Google\Service\Resource
   /**
    * Lists operations that match the specified filter in the request. If the
    * server doesn't support this method, it returns `UNIMPLEMENTED`.
-   * (operations.listProjectsLocationsTuningJobsOperations)
+   * (operations.listProjectsLocationsMemoryBanksOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
@@ -107,7 +107,7 @@ class ProjectsLocationsTuningJobsOperations extends \Google\Service\Resource
    * @return GoogleLongrunningListOperationsResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsLocationsTuningJobsOperations($name, $optParams = [])
+  public function listProjectsLocationsMemoryBanksOperations($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
@@ -143,4 +143,4 @@ class ProjectsLocationsTuningJobsOperations extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsTuningJobsOperations::class, 'Google_Service_Aiplatform_Resource_ProjectsLocationsTuningJobsOperations');
+class_alias(ProjectsLocationsMemoryBanksOperations::class, 'Google_Service_Aiplatform_Resource_ProjectsLocationsMemoryBanksOperations');

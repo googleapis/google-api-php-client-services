@@ -20,24 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1AgentData extends \Google\Collection
 {
   protected $collection_key = 'turns';
-  protected $agentsType = GoogleCloudAiplatformV1AgentDataAgentConfig::class;
+  protected $agentsType = GoogleCloudAiplatformV1AgentConfig::class;
   protected $agentsDataType = 'map';
-  protected $turnsType = GoogleCloudAiplatformV1AgentDataConversationTurn::class;
+  protected $turnsType = GoogleCloudAiplatformV1ConversationTurn::class;
   protected $turnsDataType = 'array';
 
   /**
-   * Optional. The static agent spec. This map defines the graph structure of
-   * the agent system. Key: agent_id (matches the `author` field in events).
-   * Value: The static configuration of the agents.
+   * Optional. A map containing the static configurations for each agent in the
+   * system. Key: agent_id (matches the `author` field in events). Value: The
+   * static configuration of the agent.
    *
-   * @param GoogleCloudAiplatformV1AgentDataAgentConfig[] $agents
+   * @param GoogleCloudAiplatformV1AgentConfig[] $agents
    */
   public function setAgents($agents)
   {
     $this->agents = $agents;
   }
   /**
-   * @return GoogleCloudAiplatformV1AgentDataAgentConfig[]
+   * @return GoogleCloudAiplatformV1AgentConfig[]
    */
   public function getAgents()
   {
@@ -47,14 +47,14 @@ class GoogleCloudAiplatformV1AgentData extends \Google\Collection
    * Optional. A chronological list of conversation turns. Each turn represents
    * a logical execution cycle (e.g., User Input -> Agent Response).
    *
-   * @param GoogleCloudAiplatformV1AgentDataConversationTurn[] $turns
+   * @param GoogleCloudAiplatformV1ConversationTurn[] $turns
    */
   public function setTurns($turns)
   {
     $this->turns = $turns;
   }
   /**
-   * @return GoogleCloudAiplatformV1AgentDataConversationTurn[]
+   * @return GoogleCloudAiplatformV1ConversationTurn[]
    */
   public function getTurns()
   {

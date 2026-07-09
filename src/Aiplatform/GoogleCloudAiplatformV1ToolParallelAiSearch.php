@@ -42,6 +42,17 @@ class GoogleCloudAiplatformV1ToolParallelAiSearch extends \Google\Model
    */
   public $customConfigs;
   /**
+   * Optional. Deprecated: Use `enable_zero_data_retention` instead. Instructs
+   * Vertex Grounding to use Parallel's Zero Data Retention Marketplace product.
+   * If this value is "false" or omitted, the Parallel Web Search for Grounding
+   * standard subscription will be used. If this value is "true", the Parallel
+   * Web Search for Grounding - ZDR subscription will be used.
+   *
+   * @deprecated
+   * @var bool
+   */
+  public $enableDataRetention;
+  /**
    * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention
    * Marketplace product. If this value is "false" or omitted, the Parallel Web
    * Search for Grounding standard subscription will be used. If this value is
@@ -50,7 +61,7 @@ class GoogleCloudAiplatformV1ToolParallelAiSearch extends \Google\Model
    *
    * @var bool
    */
-  public $enableDataRetention;
+  public $enableZeroDataRetention;
 
   /**
    * Optional. The API key for ParallelAiSearch. If an API key is not provided,
@@ -95,12 +106,13 @@ class GoogleCloudAiplatformV1ToolParallelAiSearch extends \Google\Model
     return $this->customConfigs;
   }
   /**
-   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention
-   * Marketplace product. If this value is "false" or omitted, the Parallel Web
-   * Search for Grounding standard subscription will be used. If this value is
-   * "true", the Parallel Web Search for Grounding - ZDR subscription will be
-   * used.
+   * Optional. Deprecated: Use `enable_zero_data_retention` instead. Instructs
+   * Vertex Grounding to use Parallel's Zero Data Retention Marketplace product.
+   * If this value is "false" or omitted, the Parallel Web Search for Grounding
+   * standard subscription will be used. If this value is "true", the Parallel
+   * Web Search for Grounding - ZDR subscription will be used.
    *
+   * @deprecated
    * @param bool $enableDataRetention
    */
   public function setEnableDataRetention($enableDataRetention)
@@ -108,11 +120,32 @@ class GoogleCloudAiplatformV1ToolParallelAiSearch extends \Google\Model
     $this->enableDataRetention = $enableDataRetention;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableDataRetention()
   {
     return $this->enableDataRetention;
+  }
+  /**
+   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention
+   * Marketplace product. If this value is "false" or omitted, the Parallel Web
+   * Search for Grounding standard subscription will be used. If this value is
+   * "true", the Parallel Web Search for Grounding - ZDR subscription will be
+   * used.
+   *
+   * @param bool $enableZeroDataRetention
+   */
+  public function setEnableZeroDataRetention($enableZeroDataRetention)
+  {
+    $this->enableZeroDataRetention = $enableZeroDataRetention;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableZeroDataRetention()
+  {
+    return $this->enableZeroDataRetention;
   }
 }
 

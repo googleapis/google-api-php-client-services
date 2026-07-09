@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
 {
+  protected $agentDataType = GoogleCloudAiplatformV1AgentData::class;
+  protected $agentDataDataType = '';
   protected $promptTemplateDataType = GoogleCloudAiplatformV1EvaluationPromptPromptTemplateData::class;
   protected $promptTemplateDataDataType = '';
   /**
@@ -27,6 +29,8 @@ class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
    * @var string
    */
   public $text;
+  protected $userScenarioType = GoogleCloudAiplatformV1EvaluationPromptUserScenario::class;
+  protected $userScenarioDataType = '';
   /**
    * Fields and values that can be used to populate the prompt template.
    *
@@ -34,6 +38,24 @@ class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
    */
   public $value;
 
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn
+   * conversation, which can involve single or multiple agents. This serves as
+   * the input context for agent scraping.
+   *
+   * @param GoogleCloudAiplatformV1AgentData $agentData
+   */
+  public function setAgentData(GoogleCloudAiplatformV1AgentData $agentData)
+  {
+    $this->agentData = $agentData;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AgentData
+   */
+  public function getAgentData()
+  {
+    return $this->agentData;
+  }
   /**
    * Prompt template data.
    *
@@ -65,6 +87,23 @@ class GoogleCloudAiplatformV1EvaluationPrompt extends \Google\Model
   public function getText()
   {
     return $this->text;
+  }
+  /**
+   * Optional. The generated user scenario used to drive multi-turn agent
+   * running results.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationPromptUserScenario $userScenario
+   */
+  public function setUserScenario(GoogleCloudAiplatformV1EvaluationPromptUserScenario $userScenario)
+  {
+    $this->userScenario = $userScenario;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationPromptUserScenario
+   */
+  public function getUserScenario()
+  {
+    return $this->userScenario;
   }
   /**
    * Fields and values that can be used to populate the prompt template.

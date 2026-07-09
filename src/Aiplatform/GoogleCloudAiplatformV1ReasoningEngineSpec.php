@@ -44,6 +44,8 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
    * @var string
    */
   public $agentFramework;
+  protected $buildSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec::class;
+  protected $buildSpecDataType = '';
   /**
    * Optional. Declarations for object class methods in OpenAPI specification
    * format.
@@ -108,6 +110,22 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
   public function getAgentFramework()
   {
     return $this->agentFramework;
+  }
+  /**
+   * Optional. Configuration for building container image.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec $buildSpec
+   */
+  public function setBuildSpec(GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec $buildSpec)
+  {
+    $this->buildSpec = $buildSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec
+   */
+  public function getBuildSpec()
+  {
+    return $this->buildSpec;
   }
   /**
    * Optional. Declarations for object class methods in OpenAPI specification

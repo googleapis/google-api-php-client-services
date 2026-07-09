@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
 {
   protected $agentRunConfigType = GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig::class;
   protected $agentRunConfigDataType = '';
+  protected $agentsType = GoogleCloudAiplatformV1AgentConfig::class;
+  protected $agentsDataType = 'map';
   protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
@@ -44,6 +46,8 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
    * @var int
    */
   public $parallelism;
+  protected $promptTemplateType = GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate::class;
+  protected $promptTemplateDataType = '';
 
   /**
    * Optional. Agent run config.
@@ -60,6 +64,24 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
   public function getAgentRunConfig()
   {
     return $this->agentRunConfig;
+  }
+  /**
+   * Optional. Contains the static configurations for each agent in the system.
+   * Key: agent_id (matches the `author` field in events). Value: The static
+   * configuration of the agent.
+   *
+   * @param GoogleCloudAiplatformV1AgentConfig[] $agents
+   */
+  public function setAgents($agents)
+  {
+    $this->agents = $agents;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AgentConfig[]
+   */
+  public function getAgents()
+  {
+    return $this->agents;
   }
   /**
    * Optional. Generation config.
@@ -117,6 +139,25 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends \Google\Model
   public function getParallelism()
   {
     return $this->parallelism;
+  }
+  /**
+   * Optional. The prompt template used for inference. The values for variables
+   * in the prompt template are defined in
+   * EvaluationItem.EvaluationPrompt.PromptTemplateData.values. If not
+   * specified, the prompt template in the EvaluationConfig will be used.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate $promptTemplate
+   */
+  public function setPromptTemplate(GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate $promptTemplate)
+  {
+    $this->promptTemplate = $promptTemplate;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate
+   */
+  public function getPromptTemplate()
+  {
+    return $this->promptTemplate;
   }
 }
 

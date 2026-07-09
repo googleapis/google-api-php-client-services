@@ -41,6 +41,13 @@ class GoogleCloudAiplatformV1MemoryGenerationTriggerConfigGenerationTriggerRule 
    * @var string
    */
   public $idleDuration;
+  /**
+   * Optional. Re-include the last N already-processed events in the next
+   * window.
+   *
+   * @var int
+   */
+  public $overlapEventCount;
 
   /**
    * Optional. Specifies to trigger generation when the event count reaches this
@@ -93,6 +100,23 @@ class GoogleCloudAiplatformV1MemoryGenerationTriggerConfigGenerationTriggerRule 
   public function getIdleDuration()
   {
     return $this->idleDuration;
+  }
+  /**
+   * Optional. Re-include the last N already-processed events in the next
+   * window.
+   *
+   * @param int $overlapEventCount
+   */
+  public function setOverlapEventCount($overlapEventCount)
+  {
+    $this->overlapEventCount = $overlapEventCount;
+  }
+  /**
+   * @return int
+   */
+  public function getOverlapEventCount()
+  {
+    return $this->overlapEventCount;
   }
 }
 

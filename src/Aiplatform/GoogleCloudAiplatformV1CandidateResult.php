@@ -33,6 +33,8 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
    * @var string
    */
   public $candidate;
+  protected $errorType = GoogleRpcStatus::class;
+  protected $errorDataType = '';
   /**
    * Optional. The explanation for the metric.
    *
@@ -86,6 +88,22 @@ class GoogleCloudAiplatformV1CandidateResult extends \Google\Collection
   public function getCandidate()
   {
     return $this->candidate;
+  }
+  /**
+   * Output only. Error while evaluating the candidate for the metric.
+   *
+   * @param GoogleRpcStatus $error
+   */
+  public function setError(GoogleRpcStatus $error)
+  {
+    $this->error = $error;
+  }
+  /**
+   * @return GoogleRpcStatus
+   */
+  public function getError()
+  {
+    return $this->error;
   }
   /**
    * Optional. The explanation for the metric.
