@@ -26,7 +26,7 @@ class GeneratedExpressionInfo extends \Google\Model
    */
   public $asynchronous;
   /**
-   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generated
+   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generate
    * the field.
    *
    * @var string
@@ -56,7 +56,7 @@ class GeneratedExpressionInfo extends \Google\Model
     return $this->asynchronous;
   }
   /**
-   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generated
+   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generate
    * the field.
    *
    * @param string $generationExpression

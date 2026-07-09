@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class QueryResponse extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  protected $arrowRecordBatchType = ArrowRecordBatch::class;
+  protected $arrowRecordBatchDataType = '';
+  protected $arrowSchemaType = ArrowSchema::class;
+  protected $arrowSchemaDataType = '';
   /**
    * Whether the query result was fetched from the query cache.
    *
@@ -77,6 +81,13 @@ class QueryResponse extends \Google\Collection
    * @var string
    */
   public $numDmlAffectedRows;
+  /**
+   * Output only. The number of rows out of `total_rows` returned in this
+   * response. This feature is not yet available.
+   *
+   * @var string
+   */
+  public $pageRowCount;
   /**
    * A token used for paging results. A non-empty token indicates that
    * additional results are available. To see additional results, query the [`jo
@@ -138,6 +149,38 @@ class QueryResponse extends \Google\Collection
    */
   public $totalSlotMs;
 
+  /**
+   * Output only. Serialized row data in Arrow RecordBatch format.
+   *
+   * @param ArrowRecordBatch $arrowRecordBatch
+   */
+  public function setArrowRecordBatch(ArrowRecordBatch $arrowRecordBatch)
+  {
+    $this->arrowRecordBatch = $arrowRecordBatch;
+  }
+  /**
+   * @return ArrowRecordBatch
+   */
+  public function getArrowRecordBatch()
+  {
+    return $this->arrowRecordBatch;
+  }
+  /**
+   * Output only. Arrow schema
+   *
+   * @param ArrowSchema $arrowSchema
+   */
+  public function setArrowSchema(ArrowSchema $arrowSchema)
+  {
+    $this->arrowSchema = $arrowSchema;
+  }
+  /**
+   * @return ArrowSchema
+   */
+  public function getArrowSchema()
+  {
+    return $this->arrowSchema;
+  }
   /**
    * Whether the query result was fetched from the query cache.
    *
@@ -334,6 +377,23 @@ class QueryResponse extends \Google\Collection
   public function getNumDmlAffectedRows()
   {
     return $this->numDmlAffectedRows;
+  }
+  /**
+   * Output only. The number of rows out of `total_rows` returned in this
+   * response. This feature is not yet available.
+   *
+   * @param string $pageRowCount
+   */
+  public function setPageRowCount($pageRowCount)
+  {
+    $this->pageRowCount = $pageRowCount;
+  }
+  /**
+   * @return string
+   */
+  public function getPageRowCount()
+  {
+    return $this->pageRowCount;
   }
   /**
    * A token used for paging results. A non-empty token indicates that

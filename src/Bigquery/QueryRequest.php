@@ -35,7 +35,23 @@ class QueryRequest extends \Google\Collection
    * be used, which is the default.
    */
   public const JOB_CREATION_MODE_JOB_CREATION_OPTIONAL = 'JOB_CREATION_OPTIONAL';
+  /**
+   * If unspecified it will default to struct `QueryResponse.rows`
+   * (`STRUCT_ENCODING`)
+   */
+  public const QUERY_RESULTS_FORMAT_QUERY_RESULTS_FORMAT_UNSPECIFIED = 'QUERY_RESULTS_FORMAT_UNSPECIFIED';
+  /**
+   * Default encoding of results as struct in `QueryResponse.rows`
+   */
+  public const QUERY_RESULTS_FORMAT_STRUCT_ENCODING = 'STRUCT_ENCODING';
+  /**
+   * Arrow is a standard open source column-based message format. See
+   * https://arrow.apache.org/ for more details.
+   */
+  public const QUERY_RESULTS_FORMAT_ARROW = 'ARROW';
   protected $collection_key = 'queryParameters';
+  protected $arrowSerializationOptionsType = ArrowSerializationOptions::class;
+  protected $arrowSerializationOptionsDataType = '';
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
   /**
@@ -167,6 +183,18 @@ class QueryRequest extends \Google\Collection
   protected $queryParametersType = QueryParameter::class;
   protected $queryParametersDataType = 'array';
   /**
+   * Optional. The query results format. If the value is anything other than
+   * `STRUCT_ENCODING` or unspecified: * The schema of the results will be
+   * provided in `QueryResponse.results_schema` field. * The results of the
+   * first page will be provided in `QueryResponse.results` field. * The
+   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema`
+   * for `QueryResponse.rows` will also not be populated since it is the schema
+   * of the `QueryResponse.rows`. This feature is not yet available.
+   *
+   * @var string
+   */
+  public $queryResultsFormat;
+  /**
    * Optional. A unique user provided identifier to ensure idempotent behavior
    * for queries. Note that this is different from the job_id. It has the
    * following properties: 1. It is case-sensitive, limited to up to 36 ASCII
@@ -242,6 +270,22 @@ class QueryRequest extends \Google\Collection
    */
   public $writeIncrementalResults;
 
+  /**
+   * Optional. Options specific to the Apache Arrow output format.
+   *
+   * @param ArrowSerializationOptions $arrowSerializationOptions
+   */
+  public function setArrowSerializationOptions(ArrowSerializationOptions $arrowSerializationOptions)
+  {
+    $this->arrowSerializationOptions = $arrowSerializationOptions;
+  }
+  /**
+   * @return ArrowSerializationOptions
+   */
+  public function getArrowSerializationOptions()
+  {
+    return $this->arrowSerializationOptions;
+  }
   /**
    * Optional. Connection properties which can modify the query behavior.
    *
@@ -587,6 +631,30 @@ class QueryRequest extends \Google\Collection
   public function getQueryParameters()
   {
     return $this->queryParameters;
+  }
+  /**
+   * Optional. The query results format. If the value is anything other than
+   * `STRUCT_ENCODING` or unspecified: * The schema of the results will be
+   * provided in `QueryResponse.results_schema` field. * The results of the
+   * first page will be provided in `QueryResponse.results` field. * The
+   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema`
+   * for `QueryResponse.rows` will also not be populated since it is the schema
+   * of the `QueryResponse.rows`. This feature is not yet available.
+   *
+   * Accepted values: QUERY_RESULTS_FORMAT_UNSPECIFIED, STRUCT_ENCODING, ARROW
+   *
+   * @param self::QUERY_RESULTS_FORMAT_* $queryResultsFormat
+   */
+  public function setQueryResultsFormat($queryResultsFormat)
+  {
+    $this->queryResultsFormat = $queryResultsFormat;
+  }
+  /**
+   * @return self::QUERY_RESULTS_FORMAT_*
+   */
+  public function getQueryResultsFormat()
+  {
+    return $this->queryResultsFormat;
   }
   /**
    * Optional. A unique user provided identifier to ensure idempotent behavior
