@@ -2403,6 +2403,21 @@ class AndroidPublisher extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'reviewrefund' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/orders/{orderId}:reviewrefund',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'orderId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]

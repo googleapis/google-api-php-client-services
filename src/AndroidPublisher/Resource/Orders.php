@@ -19,6 +19,7 @@ namespace Google\Service\AndroidPublisher\Resource;
 
 use Google\Service\AndroidPublisher\BatchGetOrdersResponse;
 use Google\Service\AndroidPublisher\Order;
+use Google\Service\AndroidPublisher\OrdersReviewRefundRequest;
 
 /**
  * The "orders" collection of methods.
@@ -91,6 +92,25 @@ class Orders extends \Google\Service\Resource
     $params = ['packageName' => $packageName, 'orderId' => $orderId];
     $params = array_merge($params, $optParams);
     return $this->call('refund', [$params]);
+  }
+  /**
+   * Provide refund preference and purchase usage for a chargeback request
+   * (orders.reviewrefund)
+   *
+   * @param string $packageName Required. The package name of the application for
+   * which this subscription or in-app item was purchased (for example,
+   * 'com.some.thing').
+   * @param string $orderId Required. The order ID provided to the user when the
+   * subscription or in-app order was purchased.
+   * @param OrdersReviewRefundRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
+   */
+  public function reviewrefund($packageName, $orderId, OrdersReviewRefundRequest $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'orderId' => $orderId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reviewrefund', [$params]);
   }
 }
 
