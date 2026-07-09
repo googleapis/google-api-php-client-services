@@ -40,8 +40,8 @@ class SecurityProfileGroup extends \Google\Model
    */
   public $customMirroringProfile;
   /**
-   * Output only. Identifier used by the data-path. Unique within {container,
-   * location}.
+   * Output only. Identifier used by the data-path. Unique within \{container,
+   * location\}.
    *
    * @var string
    */
@@ -147,8 +147,8 @@ class SecurityProfileGroup extends \Google\Model
     return $this->customMirroringProfile;
   }
   /**
-   * Output only. Identifier used by the data-path. Unique within {container,
-   * location}.
+   * Output only. Identifier used by the data-path. Unique within \{container,
+   * location\}.
    *
    * @param string $dataPathId
    */
