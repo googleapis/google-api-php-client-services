@@ -195,6 +195,10 @@ class ManagedInstance extends \Google\Collection
   protected $preservedStateFromPolicyDataType = '';
   protected $propertiesFromFlexibilityPolicyType = ManagedInstancePropertiesFromFlexibilityPolicy::class;
   protected $propertiesFromFlexibilityPolicyDataType = '';
+  protected $schedulingType = ManagedInstanceScheduling::class;
+  protected $schedulingDataType = '';
+  protected $shutdownDetailsType = ManagedInstanceShutdownDetails::class;
+  protected $shutdownDetailsDataType = '';
   protected $versionType = ManagedInstanceVersion::class;
   protected $versionDataType = '';
 
@@ -391,6 +395,40 @@ class ManagedInstance extends \Google\Collection
   public function getPropertiesFromFlexibilityPolicy()
   {
     return $this->propertiesFromFlexibilityPolicy;
+  }
+  /**
+   * Output only. Information about the termination timestamp of the instance,
+   * if applicable.
+   *
+   * @param ManagedInstanceScheduling $scheduling
+   */
+  public function setScheduling(ManagedInstanceScheduling $scheduling)
+  {
+    $this->scheduling = $scheduling;
+  }
+  /**
+   * @return ManagedInstanceScheduling
+   */
+  public function getScheduling()
+  {
+    return $this->scheduling;
+  }
+  /**
+   * Output only. Specifies the graceful shutdown details if the instance is in
+   * `PENDING_STOP` state or there is a programmed stop scheduled.
+   *
+   * @param ManagedInstanceShutdownDetails $shutdownDetails
+   */
+  public function setShutdownDetails(ManagedInstanceShutdownDetails $shutdownDetails)
+  {
+    $this->shutdownDetails = $shutdownDetails;
+  }
+  /**
+   * @return ManagedInstanceShutdownDetails
+   */
+  public function getShutdownDetails()
+  {
+    return $this->shutdownDetails;
   }
   /**
    * Output only. [Output Only] Intended version of this instance.

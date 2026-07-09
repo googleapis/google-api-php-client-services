@@ -17,28 +17,48 @@
 
 namespace Google\Service\Compute;
 
-class SslPolicyReference extends \Google\Model
+class RoutersGetNamedSetResponse extends \Google\Model
 {
   /**
+   * end_interface: MixerGetResponseWithEtagBuilder
+   *
    * @var string
    */
-  public $sslPolicy;
+  public $etag;
+  protected $resourceType = NamedSet::class;
+  protected $resourceDataType = '';
 
   /**
-   * @param string $sslPolicy
+   * end_interface: MixerGetResponseWithEtagBuilder
+   *
+   * @param string $etag
    */
-  public function setSslPolicy($sslPolicy)
+  public function setEtag($etag)
   {
-    $this->sslPolicy = $sslPolicy;
+    $this->etag = $etag;
   }
   /**
    * @return string
    */
-  public function getSslPolicy()
+  public function getEtag()
   {
-    return $this->sslPolicy;
+    return $this->etag;
+  }
+  /**
+   * @param NamedSet $resource
+   */
+  public function setResource(NamedSet $resource)
+  {
+    $this->resource = $resource;
+  }
+  /**
+   * @return NamedSet
+   */
+  public function getResource()
+  {
+    return $this->resource;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SslPolicyReference::class, 'Google_Service_Compute_SslPolicyReference');
+class_alias(RoutersGetNamedSetResponse::class, 'Google_Service_Compute_RoutersGetNamedSetResponse');

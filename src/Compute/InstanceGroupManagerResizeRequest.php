@@ -17,7 +17,7 @@
 
 namespace Google\Service\Compute;
 
-class InstanceGroupManagerResizeRequest extends \Google\Model
+class InstanceGroupManagerResizeRequest extends \Google\Collection
 {
   /**
    * The request was created successfully and was accepted for provisioning when
@@ -46,6 +46,7 @@ class InstanceGroupManagerResizeRequest extends \Google\Model
    * The request succeeded.
    */
   public const STATE_SUCCEEDED = 'SUCCEEDED';
+  protected $collection_key = 'instances';
   /**
    * Output only. The creation timestamp for this resize request inRFC3339 text
    * format.
@@ -66,6 +67,8 @@ class InstanceGroupManagerResizeRequest extends \Google\Model
    * @var string
    */
   public $id;
+  protected $instancesType = PerInstanceConfig::class;
+  protected $instancesDataType = 'array';
   /**
    * Output only. The resource type, which is
    * alwayscompute#instanceGroupManagerResizeRequest for resize requests.
@@ -174,6 +177,25 @@ class InstanceGroupManagerResizeRequest extends \Google\Model
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * The names of instances to be created by this resize request. The number of
+   * names specified determines the number of instances to create. The group's
+   * target size will be increased by this number. This field cannot be used
+   * together with 'resize_by'.
+   *
+   * @param PerInstanceConfig[] $instances
+   */
+  public function setInstances($instances)
+  {
+    $this->instances = $instances;
+  }
+  /**
+   * @return PerInstanceConfig[]
+   */
+  public function getInstances()
+  {
+    return $this->instances;
   }
   /**
    * Output only. The resource type, which is

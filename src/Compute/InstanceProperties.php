@@ -32,6 +32,21 @@ class InstanceProperties extends \Google\Collection
    */
   public const KEY_REVOCATION_ACTION_TYPE_STOP = 'STOP';
   /**
+   * The given VM will opt-in for using ephemeral key for encryption of Local
+   * SSDs. The Local SSDs will not be able to recover data in case of VM crash.
+   */
+  public const LOCAL_SSD_ENCRYPTION_MODE_EPHEMERAL_KEY_ENCRYPTION = 'EPHEMERAL_KEY_ENCRYPTION';
+  /**
+   * The given VM will be encrypted using keys managed by the cloud
+   * infrastructure and the keys will be deleted when the VM is deleted.
+   */
+  public const LOCAL_SSD_ENCRYPTION_MODE_LOCAL_SSD_ENCRYPTION_MODE_UNSPECIFIED = 'LOCAL_SSD_ENCRYPTION_MODE_UNSPECIFIED';
+  /**
+   * The given VM will be encrypted using keys managed by the cloud
+   * infrastructure and the keys will be deleted when the VM is deleted.
+   */
+  public const LOCAL_SSD_ENCRYPTION_MODE_STANDARD_ENCRYPTION = 'STANDARD_ENCRYPTION';
+  /**
    * Bidirectional private IPv6 access to/from Google services. If specified,
    * the subnetwork who is attached to the instance's default network interface
    * will be assigned an internal IPv6 prefix if it doesn't have before.
@@ -89,6 +104,13 @@ class InstanceProperties extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * Specifies which method should be used for encrypting the Local SSDs
+   * attached to the VM.
+   *
+   * @var string
+   */
+  public $localSsdEncryptionMode;
   /**
    * The machine type to use for instances that are created from these
    * properties. This field only accepts a machine type name, for example
@@ -295,6 +317,26 @@ class InstanceProperties extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * Specifies which method should be used for encrypting the Local SSDs
+   * attached to the VM.
+   *
+   * Accepted values: EPHEMERAL_KEY_ENCRYPTION,
+   * LOCAL_SSD_ENCRYPTION_MODE_UNSPECIFIED, STANDARD_ENCRYPTION
+   *
+   * @param self::LOCAL_SSD_ENCRYPTION_MODE_* $localSsdEncryptionMode
+   */
+  public function setLocalSsdEncryptionMode($localSsdEncryptionMode)
+  {
+    $this->localSsdEncryptionMode = $localSsdEncryptionMode;
+  }
+  /**
+   * @return self::LOCAL_SSD_ENCRYPTION_MODE_*
+   */
+  public function getLocalSsdEncryptionMode()
+  {
+    return $this->localSsdEncryptionMode;
   }
   /**
    * The machine type to use for instances that are created from these

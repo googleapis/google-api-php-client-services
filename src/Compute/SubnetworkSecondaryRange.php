@@ -19,6 +19,12 @@ namespace Google\Service\Compute;
 
 class SubnetworkSecondaryRange extends \Google\Model
 {
+  public const IP_VERSION_IPV4 = 'IPV4';
+  public const IP_VERSION_IPV6 = 'IPV6';
+  /**
+   * Treated as IPV4 for backward-compatibility.
+   */
+  public const IP_VERSION_IP_VERSION_UNSPECIFIED = 'IP_VERSION_UNSPECIFIED';
   /**
    * The range of IP addresses belonging to this subnetwork secondary range.
    * Provide this property when you create the subnetwork. Ranges must be unique
@@ -38,6 +44,21 @@ class SubnetworkSecondaryRange extends \Google\Model
    * @var string
    */
   public $ipCidrRange;
+  /**
+   * Reference to a Public Delegated Prefix (PDP) for BYOIP. This field should
+   * be specified for configuring BYOGUA internal IPv6 secondary range. When
+   * specified along with the ip_cidr_range, the ip_cidr_range must lie within
+   * the PDP referenced by the `ipCollection` field. When specified without the
+   * ip_cidr_range, the range is auto-allocated from the PDP referenced by the
+   * `ipCollection` field.
+   *
+   * @var string
+   */
+  public $ipCollection;
+  /**
+   * @var string
+   */
+  public $ipVersion;
   /**
    * The name associated with this subnetwork secondary range, used when adding
    * an alias IP/IPv6 range to a VM instance. The name must be 1-63 characters
@@ -82,6 +103,41 @@ class SubnetworkSecondaryRange extends \Google\Model
   public function getIpCidrRange()
   {
     return $this->ipCidrRange;
+  }
+  /**
+   * Reference to a Public Delegated Prefix (PDP) for BYOIP. This field should
+   * be specified for configuring BYOGUA internal IPv6 secondary range. When
+   * specified along with the ip_cidr_range, the ip_cidr_range must lie within
+   * the PDP referenced by the `ipCollection` field. When specified without the
+   * ip_cidr_range, the range is auto-allocated from the PDP referenced by the
+   * `ipCollection` field.
+   *
+   * @param string $ipCollection
+   */
+  public function setIpCollection($ipCollection)
+  {
+    $this->ipCollection = $ipCollection;
+  }
+  /**
+   * @return string
+   */
+  public function getIpCollection()
+  {
+    return $this->ipCollection;
+  }
+  /**
+   * @param self::IP_VERSION_* $ipVersion
+   */
+  public function setIpVersion($ipVersion)
+  {
+    $this->ipVersion = $ipVersion;
+  }
+  /**
+   * @return self::IP_VERSION_*
+   */
+  public function getIpVersion()
+  {
+    return $this->ipVersion;
   }
   /**
    * The name associated with this subnetwork secondary range, used when adding

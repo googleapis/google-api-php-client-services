@@ -158,6 +158,8 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * delete.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool noGracefulShutdown When set, graceful shutdown is skipped for
+   * instance deletion even if it's configured for the instances.
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.
@@ -201,6 +203,8 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * @param RegionInstanceGroupManagersDeleteInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool noGracefulShutdown When set, graceful shutdown is skipped for
+   * instance deletion even if it's configured for the instances.
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.
@@ -754,6 +758,8 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * @param RegionInstanceGroupManagersRecreateRequest $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool noGracefulShutdown When set, graceful shutdown is skipped for
+   * instance recreation even if it's configured for the instances.
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.
@@ -1004,6 +1010,8 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * @param RegionInstanceGroupManagersStopInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool noGracefulShutdown When set, graceful shutdown is skipped for
+   * instance stopping even if it's configured for the instances.
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.

@@ -86,15 +86,17 @@ class NetworkAttachment extends \Google\Collection
    */
   public $network;
   /**
-   * Projects that are allowed to connect to this network attachment. The
-   * project can be specified using its id or number.
+   * Projects or service class ids that are allowed to connect to this network
+   * attachment. The project can be specified using its id or number. Service
+   * class id can be specified as "serviceclasses/{service_class_id}".
    *
    * @var string[]
    */
   public $producerAcceptLists;
   /**
-   * Projects that are not allowed to connect to this network attachment. The
-   * project can be specified using its id or number.
+   * Projects or service class ids that are not allowed to connect to this
+   * network attachment. The project can be specified using its id or number.
+   * Service class id can be specified as "serviceclasses/{service_class_id}".
    *
    * @var string[]
    */
@@ -288,8 +290,9 @@ class NetworkAttachment extends \Google\Collection
     return $this->network;
   }
   /**
-   * Projects that are allowed to connect to this network attachment. The
-   * project can be specified using its id or number.
+   * Projects or service class ids that are allowed to connect to this network
+   * attachment. The project can be specified using its id or number. Service
+   * class id can be specified as "serviceclasses/{service_class_id}".
    *
    * @param string[] $producerAcceptLists
    */
@@ -305,8 +308,9 @@ class NetworkAttachment extends \Google\Collection
     return $this->producerAcceptLists;
   }
   /**
-   * Projects that are not allowed to connect to this network attachment. The
-   * project can be specified using its id or number.
+   * Projects or service class ids that are not allowed to connect to this
+   * network attachment. The project can be specified using its id or number.
+   * Service class id can be specified as "serviceclasses/{service_class_id}".
    *
    * @param string[] $producerRejectLists
    */

@@ -27,8 +27,10 @@ class FirewallPolicyRule extends \Google\Collection
   /**
    * The Action to perform when the client connection triggers the rule. Valid
    * actions for firewall rules are: "allow", "deny",
-   * "apply_security_profile_group" and "goto_next". Valid actions for packet
-   * mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
+   * "apply_security_profile_group" and "goto_next" (
+   * "apply_security_profile_group" can be specified only for global network
+   * firewall policies or hierarchical firewall policies). Valid actions for
+   * packet mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
    *
    * @var string
    */
@@ -96,11 +98,12 @@ class FirewallPolicyRule extends \Google\Collection
    */
   public $ruleTupleCount;
   /**
-   * A fully-qualified URL of a SecurityProfile resource instance. Example: http
-   * s://networksecurity.googleapis.com/v1/projects/{project}/locations/{locatio
-   * n}/securityProfileGroups/my-security-profile-group Must be specified if
+   * A fully-qualified URL of a SecurityProfileGroup resource instance. Example:
+   * https://networksecurity.googleapis.com/v1/projects/{project}/locations/{loc
+   * ation}/securityProfileGroups/my-security-profile-group Must be specified if
    * action is one of 'apply_security_profile_group' or 'mirror'. Cannot be
-   * specified for other actions.
+   * specified for other actions. Can be specified only for global network
+   * firewall policies or hierarchical firewall policies.
    *
    * @var string
    */
@@ -153,8 +156,10 @@ class FirewallPolicyRule extends \Google\Collection
   /**
    * The Action to perform when the client connection triggers the rule. Valid
    * actions for firewall rules are: "allow", "deny",
-   * "apply_security_profile_group" and "goto_next". Valid actions for packet
-   * mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
+   * "apply_security_profile_group" and "goto_next" (
+   * "apply_security_profile_group" can be specified only for global network
+   * firewall policies or hierarchical firewall policies). Valid actions for
+   * packet mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
    *
    * @param string $action
    */
@@ -329,11 +334,12 @@ class FirewallPolicyRule extends \Google\Collection
     return $this->ruleTupleCount;
   }
   /**
-   * A fully-qualified URL of a SecurityProfile resource instance. Example: http
-   * s://networksecurity.googleapis.com/v1/projects/{project}/locations/{locatio
-   * n}/securityProfileGroups/my-security-profile-group Must be specified if
+   * A fully-qualified URL of a SecurityProfileGroup resource instance. Example:
+   * https://networksecurity.googleapis.com/v1/projects/{project}/locations/{loc
+   * ation}/securityProfileGroups/my-security-profile-group Must be specified if
    * action is one of 'apply_security_profile_group' or 'mirror'. Cannot be
-   * specified for other actions.
+   * specified for other actions. Can be specified only for global network
+   * firewall policies or hierarchical firewall policies.
    *
    * @param string $securityProfileGroup
    */
