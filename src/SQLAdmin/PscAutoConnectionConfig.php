@@ -20,6 +20,38 @@ namespace Google\Service\SQLAdmin;
 class PscAutoConnectionConfig extends \Google\Model
 {
   /**
+   * Unspecified status. This means status is missing from dependency service.
+   */
+  public const INSTANCE_AUTO_DNS_STATUS_AUTO_DNS_STATUS_UNSPECIFIED = 'AUTO_DNS_STATUS_UNSPECIFIED';
+  /**
+   * DNS provisioning is OK.
+   */
+  public const INSTANCE_AUTO_DNS_STATUS_AUTO_DNS_OK = 'AUTO_DNS_OK';
+  /**
+   * DNS provisioning failed.
+   */
+  public const INSTANCE_AUTO_DNS_STATUS_AUTO_DNS_FAILED = 'AUTO_DNS_FAILED';
+  /**
+   * DNS provisioning status is not recognized by Cloud SQL.
+   */
+  public const INSTANCE_AUTO_DNS_STATUS_AUTO_DNS_UNKNOWN = 'AUTO_DNS_UNKNOWN';
+  /**
+   * Unspecified status. This means status is missing from dependency service.
+   */
+  public const WRITE_ENDPOINT_AUTO_DNS_STATUS_AUTO_DNS_STATUS_UNSPECIFIED = 'AUTO_DNS_STATUS_UNSPECIFIED';
+  /**
+   * DNS provisioning is OK.
+   */
+  public const WRITE_ENDPOINT_AUTO_DNS_STATUS_AUTO_DNS_OK = 'AUTO_DNS_OK';
+  /**
+   * DNS provisioning failed.
+   */
+  public const WRITE_ENDPOINT_AUTO_DNS_STATUS_AUTO_DNS_FAILED = 'AUTO_DNS_FAILED';
+  /**
+   * DNS provisioning status is not recognized by Cloud SQL.
+   */
+  public const WRITE_ENDPOINT_AUTO_DNS_STATUS_AUTO_DNS_UNKNOWN = 'AUTO_DNS_UNKNOWN';
+  /**
    * Optional. The consumer network of this consumer endpoint. This must be a
    * resource path that includes both the host project and the network name. For
    * example, `projects/project1/global/networks/network1`. The consumer host
@@ -43,6 +75,12 @@ class PscAutoConnectionConfig extends \Google\Model
    * @var string
    */
   public $consumerProject;
+  /**
+   * Output only. The status of automated DNS provisioning.
+   *
+   * @var string
+   */
+  public $instanceAutoDnsStatus;
   /**
    * The IP address of the consumer endpoint.
    *
@@ -71,6 +109,13 @@ class PscAutoConnectionConfig extends \Google\Model
    * @var string
    */
   public $status;
+  /**
+   * Output only. The status of automated DNS provisioning for the write
+   * endpoint.
+   *
+   * @var string
+   */
+  public $writeEndpointAutoDnsStatus;
 
   /**
    * Optional. The consumer network of this consumer endpoint. This must be a
@@ -125,6 +170,25 @@ class PscAutoConnectionConfig extends \Google\Model
   public function getConsumerProject()
   {
     return $this->consumerProject;
+  }
+  /**
+   * Output only. The status of automated DNS provisioning.
+   *
+   * Accepted values: AUTO_DNS_STATUS_UNSPECIFIED, AUTO_DNS_OK, AUTO_DNS_FAILED,
+   * AUTO_DNS_UNKNOWN
+   *
+   * @param self::INSTANCE_AUTO_DNS_STATUS_* $instanceAutoDnsStatus
+   */
+  public function setInstanceAutoDnsStatus($instanceAutoDnsStatus)
+  {
+    $this->instanceAutoDnsStatus = $instanceAutoDnsStatus;
+  }
+  /**
+   * @return self::INSTANCE_AUTO_DNS_STATUS_*
+   */
+  public function getInstanceAutoDnsStatus()
+  {
+    return $this->instanceAutoDnsStatus;
   }
   /**
    * The IP address of the consumer endpoint.
@@ -193,6 +257,26 @@ class PscAutoConnectionConfig extends \Google\Model
   public function getStatus()
   {
     return $this->status;
+  }
+  /**
+   * Output only. The status of automated DNS provisioning for the write
+   * endpoint.
+   *
+   * Accepted values: AUTO_DNS_STATUS_UNSPECIFIED, AUTO_DNS_OK, AUTO_DNS_FAILED,
+   * AUTO_DNS_UNKNOWN
+   *
+   * @param self::WRITE_ENDPOINT_AUTO_DNS_STATUS_* $writeEndpointAutoDnsStatus
+   */
+  public function setWriteEndpointAutoDnsStatus($writeEndpointAutoDnsStatus)
+  {
+    $this->writeEndpointAutoDnsStatus = $writeEndpointAutoDnsStatus;
+  }
+  /**
+   * @return self::WRITE_ENDPOINT_AUTO_DNS_STATUS_*
+   */
+  public function getWriteEndpointAutoDnsStatus()
+  {
+    return $this->writeEndpointAutoDnsStatus;
   }
 }
 

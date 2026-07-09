@@ -276,15 +276,15 @@ class SQLAdmin extends \Google\Service
                 ],
               ],
             ],'resolve' => [
-              'path' => 'v1/dns/{dnsName}/locations/{location}:resolveConnectSettings',
+              'path' => 'v1/locations/{location}/dns/{dnsName}:resolveConnectSettings',
               'httpMethod' => 'GET',
               'parameters' => [
-                'dnsName' => [
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ],
-                'location' => [
+                'dnsName' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -774,6 +774,14 @@ class SQLAdmin extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'reconcilePscNetworking' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'reconcilePscNetworkingForce' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'pointInTimeRestore' => [

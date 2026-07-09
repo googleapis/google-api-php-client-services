@@ -295,6 +295,13 @@ class ConnectSettings extends \Google\Collection
    */
   public $backendType;
   /**
+   * Optional. Output only. Connection name of the Cloud SQL instance used in
+   * connection strings, in the format project:region:instance.
+   *
+   * @var string
+   */
+  public $connectionName;
+  /**
    * Custom subject alternative names for the server certificate.
    *
    * @var string[]
@@ -390,6 +397,23 @@ class ConnectSettings extends \Google\Collection
   public function getBackendType()
   {
     return $this->backendType;
+  }
+  /**
+   * Optional. Output only. Connection name of the Cloud SQL instance used in
+   * connection strings, in the format project:region:instance.
+   *
+   * @param string $connectionName
+   */
+  public function setConnectionName($connectionName)
+  {
+    $this->connectionName = $connectionName;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectionName()
+  {
+    return $this->connectionName;
   }
   /**
    * Custom subject alternative names for the server certificate.

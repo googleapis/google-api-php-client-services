@@ -470,6 +470,11 @@ class Instances extends \Google\Service\Resource
    * project ID.
    * @param DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool reconcilePscNetworking Optional. Set PSC config to the same
+   * value as the existing config to reconcile the PSC networking.
+   * @opt_param bool reconcilePscNetworkingForce Optional. Set PSC config to the
+   * same value as the existing config and force reconcile the PSC networking.
    * @return Operation
    * @throws \Google\Service\Exception
    */

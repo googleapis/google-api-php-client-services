@@ -103,8 +103,11 @@ class BackupConfiguration extends \Google\Model
    */
   public $pointInTimeRecoveryEnabled;
   /**
-   * Reserved for future use.
+   * Optional. Deprecated: replication_log_archiving_enabled is deprecated and
+   * will be removed from a future version of the API. Use
+   * point_in_time_recovery_enabled instead.
    *
+   * @deprecated
    * @var bool
    */
   public $replicationLogArchivingEnabled;
@@ -246,8 +249,11 @@ class BackupConfiguration extends \Google\Model
     return $this->pointInTimeRecoveryEnabled;
   }
   /**
-   * Reserved for future use.
+   * Optional. Deprecated: replication_log_archiving_enabled is deprecated and
+   * will be removed from a future version of the API. Use
+   * point_in_time_recovery_enabled instead.
    *
+   * @deprecated
    * @param bool $replicationLogArchivingEnabled
    */
   public function setReplicationLogArchivingEnabled($replicationLogArchivingEnabled)
@@ -255,6 +261,7 @@ class BackupConfiguration extends \Google\Model
     $this->replicationLogArchivingEnabled = $replicationLogArchivingEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getReplicationLogArchivingEnabled()
