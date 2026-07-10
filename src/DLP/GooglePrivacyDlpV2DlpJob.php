@@ -67,13 +67,13 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
   protected $actionDetailsType = GooglePrivacyDlpV2ActionDetails::class;
   protected $actionDetailsDataType = 'array';
   /**
-   * Time when the job was created.
+   * Output only. Time when the job was created.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Time when the job finished.
+   * Output only. Time when the job finished.
    *
    * @var string
    */
@@ -83,20 +83,20 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
   protected $inspectDetailsType = GooglePrivacyDlpV2InspectDataSourceDetails::class;
   protected $inspectDetailsDataType = '';
   /**
-   * If created by a job trigger, the resource name of the trigger that
-   * instantiated the job.
+   * Output only. If created by a job trigger, the resource name of the trigger
+   * that instantiated the job.
    *
    * @var string
    */
   public $jobTriggerName;
   /**
-   * Time when the job was last modified by the system.
+   * Output only. Time when the job was last modified by the system.
    *
    * @var string
    */
   public $lastModified;
   /**
-   * The server-assigned name.
+   * Output only. The server-assigned name.
    *
    * @var string
    */
@@ -104,13 +104,13 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
   protected $riskDetailsType = GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails::class;
   protected $riskDetailsDataType = '';
   /**
-   * Time when the job started.
+   * Output only. Time when the job started.
    *
    * @var string
    */
   public $startTime;
   /**
-   * State of a job.
+   * Output only. State of a job.
    *
    * @var string
    */
@@ -139,7 +139,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->actionDetails;
   }
   /**
-   * Time when the job was created.
+   * Output only. Time when the job was created.
    *
    * @param string $createTime
    */
@@ -155,7 +155,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Time when the job finished.
+   * Output only. Time when the job finished.
    *
    * @param string $endTime
    */
@@ -171,7 +171,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * A stream of errors encountered running the job.
+   * Output only. A stream of errors encountered running the job.
    *
    * @param GooglePrivacyDlpV2Error[] $errors
    */
@@ -203,8 +203,8 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->inspectDetails;
   }
   /**
-   * If created by a job trigger, the resource name of the trigger that
-   * instantiated the job.
+   * Output only. If created by a job trigger, the resource name of the trigger
+   * that instantiated the job.
    *
    * @param string $jobTriggerName
    */
@@ -220,7 +220,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->jobTriggerName;
   }
   /**
-   * Time when the job was last modified by the system.
+   * Output only. Time when the job was last modified by the system.
    *
    * @param string $lastModified
    */
@@ -236,7 +236,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->lastModified;
   }
   /**
-   * The server-assigned name.
+   * Output only. The server-assigned name.
    *
    * @param string $name
    */
@@ -268,7 +268,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->riskDetails;
   }
   /**
-   * Time when the job started.
+   * Output only. Time when the job started.
    *
    * @param string $startTime
    */
@@ -284,7 +284,7 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * State of a job.
+   * Output only. State of a job.
    *
    * Accepted values: JOB_STATE_UNSPECIFIED, PENDING, RUNNING, DONE, CANCELED,
    * FAILED, ACTIVE
