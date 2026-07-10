@@ -488,6 +488,10 @@ class AdditionalDetail extends \Google\Model
    * Indicates both a low cache hit rate and a risk of maintenance downtime.
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_LOW_CACHE_HIT_AND_MAINTENANCE_DOWNTIME = 'SIGNAL_TYPE_LOW_CACHE_HIT_AND_MAINTENANCE_DOWNTIME';
+  /**
+   * Indicates that the resource is missing enhanced protection.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_MISSING_ENHANCED_PROTECTION = 'SIGNAL_TYPE_MISSING_ENHANCED_PROTECTION';
   protected $automatedBackupPolicyInfoType = AutomatedBackupPolicyInfo::class;
   protected $automatedBackupPolicyInfoDataType = '';
   protected $backupRunInfoType = BackupRunInfo::class;
@@ -805,7 +809,8 @@ class AdditionalDetail extends \Google\Model
    * SIGNAL_TYPE_RECOMMENDED_MAINTENANCE_POLICIES, SIGNAL_TYPE_EXTENDED_SUPPORT,
    * SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE,
    * SIGNAL_TYPE_HIGH_MAINTENANCE_DOWNTIME_RISK,
-   * SIGNAL_TYPE_LOW_CACHE_HIT_AND_MAINTENANCE_DOWNTIME
+   * SIGNAL_TYPE_LOW_CACHE_HIT_AND_MAINTENANCE_DOWNTIME,
+   * SIGNAL_TYPE_MISSING_ENHANCED_PROTECTION
    *
    * @param self::SIGNAL_TYPE_* $signalType
    */
