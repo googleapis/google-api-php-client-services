@@ -34,6 +34,9 @@ use Google\Client;
  */
 class Backupdr extends \Google\Service
 {
+  /** See, edit, configure, and delete your Google Cloud Backup and DR data and see the email address for your Google Account. */
+  const CLOUD_BACKUPDR =
+      "https://www.googleapis.com/auth/cloud-backupdr";
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
