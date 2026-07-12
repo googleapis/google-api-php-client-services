@@ -42,6 +42,8 @@ class BatchGetDocumentsRequest extends \Google\Collection
    * @var string
    */
   public $readTime;
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
   /**
    * Reads documents in a transaction.
    *
@@ -122,6 +124,22 @@ class BatchGetDocumentsRequest extends \Google\Collection
   public function getReadTime()
   {
     return $this->readTime;
+  }
+  /**
+   * Optional. The request options for this request.
+   *
+   * @param RequestOptions $requestOptions
+   */
+  public function setRequestOptions(RequestOptions $requestOptions)
+  {
+    $this->requestOptions = $requestOptions;
+  }
+  /**
+   * @return RequestOptions
+   */
+  public function getRequestOptions()
+  {
+    return $this->requestOptions;
   }
   /**
    * Reads documents in a transaction.

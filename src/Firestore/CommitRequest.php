@@ -20,6 +20,8 @@ namespace Google\Service\Firestore;
 class CommitRequest extends \Google\Collection
 {
   protected $collection_key = 'writes';
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
   /**
    * If set, applies all writes in this transaction, and commits it.
    *
@@ -29,6 +31,22 @@ class CommitRequest extends \Google\Collection
   protected $writesType = Write::class;
   protected $writesDataType = 'array';
 
+  /**
+   * Optional. The request options for this request.
+   *
+   * @param RequestOptions $requestOptions
+   */
+  public function setRequestOptions(RequestOptions $requestOptions)
+  {
+    $this->requestOptions = $requestOptions;
+  }
+  /**
+   * @return RequestOptions
+   */
+  public function getRequestOptions()
+  {
+    return $this->requestOptions;
+  }
   /**
    * If set, applies all writes in this transaction, and commits it.
    *

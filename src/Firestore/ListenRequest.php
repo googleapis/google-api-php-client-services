@@ -33,6 +33,8 @@ class ListenRequest extends \Google\Model
    * @var int
    */
   public $removeTarget;
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
 
   /**
    * A target to add to this stream.
@@ -81,6 +83,22 @@ class ListenRequest extends \Google\Model
   public function getRemoveTarget()
   {
     return $this->removeTarget;
+  }
+  /**
+   * Optional. The request options for the request.
+   *
+   * @param RequestOptions $requestOptions
+   */
+  public function setRequestOptions(RequestOptions $requestOptions)
+  {
+    $this->requestOptions = $requestOptions;
+  }
+  /**
+   * @return RequestOptions
+   */
+  public function getRequestOptions()
+  {
+    return $this->requestOptions;
   }
 }
 

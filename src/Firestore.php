@@ -447,6 +447,11 @@ class Firestore extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                 ],
+                'requestOptions.requestTags' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -464,6 +469,11 @@ class Firestore extends \Google\Service
                 'currentDocument.updateTime' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'requestOptions.requestTags' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],'executePipeline' => [
@@ -493,6 +503,11 @@ class Firestore extends \Google\Service
                 'readTime' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'requestOptions.requestTags' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
                 'transaction' => [
                   'location' => 'query',
@@ -533,6 +548,15 @@ class Firestore extends \Google\Service
                 'readTime' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'recursive' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'requestOptions.requestTags' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
                 'showMissing' => [
                   'location' => 'query',
@@ -588,6 +612,15 @@ class Firestore extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'recursive' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'requestOptions.requestTags' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'showMissing' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -635,6 +668,11 @@ class Firestore extends \Google\Service
                   'type' => 'string',
                 ],
                 'mask.fieldPaths' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'requestOptions.requestTags' => [
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,

@@ -19,6 +19,8 @@ namespace Google\Service\Firestore;
 
 class RollbackRequest extends \Google\Model
 {
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
   /**
    * Required. The transaction to roll back.
    *
@@ -26,6 +28,22 @@ class RollbackRequest extends \Google\Model
    */
   public $transaction;
 
+  /**
+   * Optional. The request options for this request.
+   *
+   * @param RequestOptions $requestOptions
+   */
+  public function setRequestOptions(RequestOptions $requestOptions)
+  {
+    $this->requestOptions = $requestOptions;
+  }
+  /**
+   * @return RequestOptions
+   */
+  public function getRequestOptions()
+  {
+    return $this->requestOptions;
+  }
   /**
    * Required. The transaction to roll back.
    *

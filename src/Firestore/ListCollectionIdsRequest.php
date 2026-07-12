@@ -40,6 +40,8 @@ class ListCollectionIdsRequest extends \Google\Model
    * @var string
    */
   public $readTime;
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
 
   /**
    * The maximum number of results to return.
@@ -91,6 +93,22 @@ class ListCollectionIdsRequest extends \Google\Model
   public function getReadTime()
   {
     return $this->readTime;
+  }
+  /**
+   * Optional. The request options for this request.
+   *
+   * @param RequestOptions $requestOptions
+   */
+  public function setRequestOptions(RequestOptions $requestOptions)
+  {
+    $this->requestOptions = $requestOptions;
+  }
+  /**
+   * @return RequestOptions
+   */
+  public function getRequestOptions()
+  {
+    return $this->requestOptions;
   }
 }
 

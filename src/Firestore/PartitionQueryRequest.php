@@ -64,6 +64,8 @@ class PartitionQueryRequest extends \Google\Model
    * @var string
    */
   public $readTime;
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
   protected $structuredQueryType = StructuredQuery::class;
   protected $structuredQueryDataType = '';
 
@@ -151,6 +153,22 @@ class PartitionQueryRequest extends \Google\Model
   public function getReadTime()
   {
     return $this->readTime;
+  }
+  /**
+   * Optional. The request options for the request.
+   *
+   * @param RequestOptions $requestOptions
+   */
+  public function setRequestOptions(RequestOptions $requestOptions)
+  {
+    $this->requestOptions = $requestOptions;
+  }
+  /**
+   * @return RequestOptions
+   */
+  public function getRequestOptions()
+  {
+    return $this->requestOptions;
   }
   /**
    * A structured query. Query must specify collection with all descendants and

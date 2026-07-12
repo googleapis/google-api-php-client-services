@@ -26,6 +26,8 @@ class WriteRequest extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
   /**
    * The ID of the write stream to resume. This may only be set in the first
    * message. When left empty, a new write stream will be created.
@@ -64,6 +66,22 @@ class WriteRequest extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * Optional. The request options for the request.
+   *
+   * @param RequestOptions $requestOptions
+   */
+  public function setRequestOptions(RequestOptions $requestOptions)
+  {
+    $this->requestOptions = $requestOptions;
+  }
+  /**
+   * @return RequestOptions
+   */
+  public function getRequestOptions()
+  {
+    return $this->requestOptions;
   }
   /**
    * The ID of the write stream to resume. This may only be set in the first

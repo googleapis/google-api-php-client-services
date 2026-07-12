@@ -141,6 +141,8 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * document. Optional. If not specified, an ID will be assigned by the service.
    * @opt_param string mask.fieldPaths The list of field paths in the mask. See
    * Document.fields for a field path syntax reference.
+   * @opt_param string requestOptions.requestTags Optional. The request tags for
+   * the request.
    * @return Document
    * @throws \Google\Service\Exception
    */
@@ -163,6 +165,8 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * @opt_param string currentDocument.updateTime When set, the target document
    * must exist and have been last updated at that time. Timestamp must be
    * microsecond aligned.
+   * @opt_param string requestOptions.requestTags Optional. The request tags for
+   * the request.
    * @return FirestoreEmpty
    * @throws \Google\Service\Exception
    */
@@ -202,6 +206,8 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * time. This must be a microsecond precision timestamp within the past one
    * hour, or if Point-in-Time Recovery is enabled, can additionally be a whole
    * minute timestamp within the past 7 days.
+   * @opt_param string requestOptions.requestTags Optional. The request tags for
+   * the request.
    * @opt_param string transaction Reads the document in a transaction.
    * @return Document
    * @throws \Google\Service\Exception
@@ -242,6 +248,14 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * be a microsecond precision timestamp within the past one hour, or if Point-
    * in-Time Recovery is enabled, can additionally be a whole minute timestamp
    * within the past 7 days.
+   * @opt_param bool recursive Optional. If the list should recursively include
+   * all documents nested under the parent at any level. If the request specifies
+   * a `collection_id`, then the list will include all nested documents in the
+   * collection under the parent. This is optional, and when not provided,
+   * Firestore will only list documents nested immediately under the parent.
+   * Requests with `recursive` may not specify `show_missing`.
+   * @opt_param string requestOptions.requestTags Optional. The request tags for
+   * the request.
    * @opt_param bool showMissing If the list should show missing documents. A
    * document is missing if it does not exist, but there are sub-documents nested
    * underneath it. When true, such missing documents will be returned with a key
@@ -309,6 +323,14 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * be a microsecond precision timestamp within the past one hour, or if Point-
    * in-Time Recovery is enabled, can additionally be a whole minute timestamp
    * within the past 7 days.
+   * @opt_param bool recursive Optional. If the list should recursively include
+   * all documents nested under the parent at any level. If the request specifies
+   * a `collection_id`, then the list will include all nested documents in the
+   * collection under the parent. This is optional, and when not provided,
+   * Firestore will only list documents nested immediately under the parent.
+   * Requests with `recursive` may not specify `show_missing`.
+   * @opt_param string requestOptions.requestTags Optional. The request tags for
+   * the request.
    * @opt_param bool showMissing If the list should show missing documents. A
    * document is missing if it does not exist, but there are sub-documents nested
    * underneath it. When true, such missing documents will be returned with a key
@@ -377,6 +399,8 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * microsecond aligned.
    * @opt_param string mask.fieldPaths The list of field paths in the mask. See
    * Document.fields for a field path syntax reference.
+   * @opt_param string requestOptions.requestTags Optional. The request tags for
+   * the request.
    * @opt_param string updateMask.fieldPaths The list of field paths in the mask.
    * See Document.fields for a field path syntax reference.
    * @return Document
