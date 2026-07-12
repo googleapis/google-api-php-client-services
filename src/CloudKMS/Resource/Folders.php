@@ -19,6 +19,7 @@ namespace Google\Service\CloudKMS\Resource;
 
 use Google\Service\CloudKMS\AutokeyConfig;
 use Google\Service\CloudKMS\KeyAccessJustificationsPolicyConfig;
+use Google\Service\CloudKMS\ShowEffectiveAutokeyConfigResponse;
 
 /**
  * The "folders" collection of methods.
@@ -62,6 +63,24 @@ class Folders extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('getKajPolicyConfig', [$params], KeyAccessJustificationsPolicyConfig::class);
+  }
+  /**
+   * Returns the effective Cloud KMS Autokey configuration for a given project or
+   * folder. (folders.showEffectiveAutokeyConfig)
+   *
+   * @param string $parent Required. Name of the resource project or folder to
+   * show the effective Cloud KMS Autokey configuration for. This may be helpful
+   * for interrogating the effect of nested folder configurations on a given
+   * resource project. Format: * projects/{project} * folders/{folder}
+   * @param array $optParams Optional parameters.
+   * @return ShowEffectiveAutokeyConfigResponse
+   * @throws \Google\Service\Exception
+   */
+  public function showEffectiveAutokeyConfig($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('showEffectiveAutokeyConfig', [$params], ShowEffectiveAutokeyConfigResponse::class);
   }
   /**
    * Updates the AutokeyConfig for a folder or a project. The caller must have

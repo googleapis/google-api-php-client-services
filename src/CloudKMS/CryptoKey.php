@@ -52,6 +52,10 @@ class CryptoKey extends \Google\Model
    */
   public const PURPOSE_KEY_ENCAPSULATION = 'KEY_ENCAPSULATION';
   /**
+   * CryptoKeys with this purpose may be used for AES key
+   */
+  public const PURPOSE_AES_WRAPPING = 'AES_WRAPPING';
+  /**
    * Output only. The time at which this CryptoKey was created.
    *
    * @var string
@@ -313,7 +317,7 @@ class CryptoKey extends \Google\Model
    *
    * Accepted values: CRYPTO_KEY_PURPOSE_UNSPECIFIED, ENCRYPT_DECRYPT,
    * ASYMMETRIC_SIGN, ASYMMETRIC_DECRYPT, RAW_ENCRYPT_DECRYPT, MAC,
-   * KEY_ENCAPSULATION
+   * KEY_ENCAPSULATION, AES_WRAPPING
    *
    * @param self::PURPOSE_* $purpose
    */

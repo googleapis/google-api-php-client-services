@@ -20,24 +20,55 @@ namespace Google\Service\CloudKMS;
 class ExternalProtectionLevelOptions extends \Google\Model
 {
   /**
-   * The path to the external key material on the EKM when using EkmConnection
-   * e.g., "v0/my/key". Set this field instead of external_key_uri when using an
-   * EkmConnection.
+   * Optional. The resource name of the backend environment where the key
+   * material of CryptoKeyVersions is associated with. Setting this field
+   * overrides the CryptoKeyBackend. This field may be set when
+   * CryptoKeyVersions is set to EXTERNAL_VPC. Format:
+   * `projects/locations/ekmConnections`.
+   *
+   * @var string
+   */
+  public $ekmConnectionBackendOverride;
+  /**
+   * Optional. The path to the external key material on the EKM when using
+   * EkmConnection e.g., "v0/my/key". Set this field instead of external_key_uri
+   * when using an EkmConnection.
    *
    * @var string
    */
   public $ekmConnectionKeyPath;
   /**
-   * The URI for an external resource that this CryptoKeyVersion represents.
+   * Optional. The URI for an external resource that this CryptoKeyVersion
+   * represents.
    *
    * @var string
    */
   public $externalKeyUri;
 
   /**
-   * The path to the external key material on the EKM when using EkmConnection
-   * e.g., "v0/my/key". Set this field instead of external_key_uri when using an
-   * EkmConnection.
+   * Optional. The resource name of the backend environment where the key
+   * material of CryptoKeyVersions is associated with. Setting this field
+   * overrides the CryptoKeyBackend. This field may be set when
+   * CryptoKeyVersions is set to EXTERNAL_VPC. Format:
+   * `projects/locations/ekmConnections`.
+   *
+   * @param string $ekmConnectionBackendOverride
+   */
+  public function setEkmConnectionBackendOverride($ekmConnectionBackendOverride)
+  {
+    $this->ekmConnectionBackendOverride = $ekmConnectionBackendOverride;
+  }
+  /**
+   * @return string
+   */
+  public function getEkmConnectionBackendOverride()
+  {
+    return $this->ekmConnectionBackendOverride;
+  }
+  /**
+   * Optional. The path to the external key material on the EKM when using
+   * EkmConnection e.g., "v0/my/key". Set this field instead of external_key_uri
+   * when using an EkmConnection.
    *
    * @param string $ekmConnectionKeyPath
    */
@@ -53,7 +84,8 @@ class ExternalProtectionLevelOptions extends \Google\Model
     return $this->ekmConnectionKeyPath;
   }
   /**
-   * The URI for an external resource that this CryptoKeyVersion represents.
+   * Optional. The URI for an external resource that this CryptoKeyVersion
+   * represents.
    *
    * @param string $externalKeyUri
    */

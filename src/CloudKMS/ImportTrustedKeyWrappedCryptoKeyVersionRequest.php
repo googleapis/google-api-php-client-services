@@ -17,7 +17,7 @@
 
 namespace Google\Service\CloudKMS;
 
-class PublicKey extends \Google\Model
+class ImportTrustedKeyWrappedCryptoKeyVersionRequest extends \Google\Model
 {
   /**
    * Not specified.
@@ -232,116 +232,46 @@ class PublicKey extends \Google\Model
    */
   public const ALGORITHM_AES_256_KWP = 'AES_256_KWP';
   /**
-   * Not specified.
-   */
-  public const PROTECTION_LEVEL_PROTECTION_LEVEL_UNSPECIFIED = 'PROTECTION_LEVEL_UNSPECIFIED';
-  /**
-   * Crypto operations are performed in software.
-   */
-  public const PROTECTION_LEVEL_SOFTWARE = 'SOFTWARE';
-  /**
-   * Crypto operations are performed in a Hardware Security Module.
-   */
-  public const PROTECTION_LEVEL_HSM = 'HSM';
-  /**
-   * Crypto operations are performed by an external key manager.
-   */
-  public const PROTECTION_LEVEL_EXTERNAL = 'EXTERNAL';
-  /**
-   * Crypto operations are performed in an EKM-over-VPC backend.
-   */
-  public const PROTECTION_LEVEL_EXTERNAL_VPC = 'EXTERNAL_VPC';
-  /**
-   * Crypto operations are performed in a single-tenant HSM.
-   */
-  public const PROTECTION_LEVEL_HSM_SINGLE_TENANT = 'HSM_SINGLE_TENANT';
-  /**
-   * If the public_key_format field is not specified: - For PQC algorithms, an
-   * error will be returned. - For non-PQC algorithms, the default format is
-   * PEM, and the field pem will be populated. Otherwise, the public key will be
-   * exported through the public_key field in the requested format.
-   */
-  public const PUBLIC_KEY_FORMAT_PUBLIC_KEY_FORMAT_UNSPECIFIED = 'PUBLIC_KEY_FORMAT_UNSPECIFIED';
-  /**
-   * The returned public key will be encoded in PEM format. See the
-   * [RFC7468](https://tools.ietf.org/html/rfc7468) sections for [General
-   * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
-   * Encoding of Subject Public Key Info]
-   * (https://tools.ietf.org/html/rfc7468#section-13) for more information.
-   */
-  public const PUBLIC_KEY_FORMAT_PEM = 'PEM';
-  /**
-   * The returned public key will be encoded in DER format (the PrivateKeyInfo
-   * structure from RFC 5208).
-   */
-  public const PUBLIC_KEY_FORMAT_DER = 'DER';
-  /**
-   * This is supported only for PQC algorithms. The key material is returned in
-   * the format defined by NIST PQC standards (FIPS 203, FIPS 204, and FIPS
-   * 205).
-   */
-  public const PUBLIC_KEY_FORMAT_NIST_PQC = 'NIST_PQC';
-  /**
-   * The returned public key is in raw bytes format defined in its standard
-   * https://datatracker.ietf.org/doc/draft-connolly-cfrg-xwing-kem.
-   */
-  public const PUBLIC_KEY_FORMAT_XWING_RAW_BYTES = 'XWING_RAW_BYTES';
-  /**
-   * The Algorithm associated with this key.
+   * Required. Required - The algorithm of the key being imported. This does not
+   * need to match the version_template of the CryptoKey this version imports
+   * into.
    *
    * @var string
    */
   public $algorithm;
   /**
-   * The name of the CryptoKeyVersion public key. Provided here for
-   * verification. NOTE: This field is in Beta.
+   * Optional. The optional name of an existing CryptoKeyVersion to target for
+   * an import operation. If this field is not present, a new CryptoKeyVersion
+   * containing the supplied key material is created. If this field is present,
+   * the supplied key material is imported into the existing CryptoKeyVersion.
+   * To import into an existing CryptoKeyVersion, the CryptoKeyVersion must be a
+   * child of ImportTrustedKeyWrappedCryptoKeyVersionRequest.parent, have been
+   * previously created via ImportTrustedKeyWrappedCryptoKeyVersion, and be in
+   * DESTROYED or IMPORT_FAILED state. The key material and algorithm must match
+   * the previous CryptoKeyVersion exactly if the CryptoKeyVersion has ever
+   * contained key material
    *
    * @var string
    */
-  public $name;
+  public $cryptoKeyVersion;
   /**
-   * The public key, encoded in PEM format. For more information, see the [RFC
-   * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
-   * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
-   * Encoding of Subject Public Key Info]
-   * (https://tools.ietf.org/html/rfc7468#section-13).
+   * Required. Required - the CKV of the trusted key used to import. This can be
+   * the name of a CryptoKeyVersion or a CryptoKey.
    *
    * @var string
    */
-  public $pem;
+  public $importingKey;
   /**
-   * Integrity verification field. A CRC32C checksum of the returned
-   * PublicKey.pem. An integrity check of PublicKey.pem can be performed by
-   * computing the CRC32C checksum of PublicKey.pem and comparing your results
-   * to this field. Discard the response in case of non-matching checksum
-   * values, and perform a limited number of retries. A persistent mismatch may
-   * indicate an issue in your computation of the CRC32C checksum. Note: This
-   * field is defined as int64 for reasons of compatibility across different
-   * languages. However, it is a non-negative integer, which will never exceed
-   * `2^32-1`, and can be safely downconverted to uint32 in languages that
-   * support this type. NOTE: This field is in Beta.
+   * Required. The target key pre-wrapped on premises.
    *
    * @var string
    */
-  public $pemCrc32c;
-  /**
-   * The ProtectionLevel of the CryptoKeyVersion public key.
-   *
-   * @var string
-   */
-  public $protectionLevel;
-  protected $publicKeyType = ChecksummedData::class;
-  protected $publicKeyDataType = '';
-  /**
-   * The PublicKey format specified by the customer through the
-   * public_key_format field.
-   *
-   * @var string
-   */
-  public $publicKeyFormat;
+  public $wrappedKey;
 
   /**
-   * The Algorithm associated with this key.
+   * Required. Required - The algorithm of the key being imported. This does not
+   * need to match the version_template of the CryptoKey this version imports
+   * into.
    *
    * Accepted values: CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED,
    * GOOGLE_SYMMETRIC_ENCRYPTION, AES_128_GCM, AES_256_GCM, AES_128_CBC,
@@ -376,124 +306,64 @@ class PublicKey extends \Google\Model
     return $this->algorithm;
   }
   /**
-   * The name of the CryptoKeyVersion public key. Provided here for
-   * verification. NOTE: This field is in Beta.
+   * Optional. The optional name of an existing CryptoKeyVersion to target for
+   * an import operation. If this field is not present, a new CryptoKeyVersion
+   * containing the supplied key material is created. If this field is present,
+   * the supplied key material is imported into the existing CryptoKeyVersion.
+   * To import into an existing CryptoKeyVersion, the CryptoKeyVersion must be a
+   * child of ImportTrustedKeyWrappedCryptoKeyVersionRequest.parent, have been
+   * previously created via ImportTrustedKeyWrappedCryptoKeyVersion, and be in
+   * DESTROYED or IMPORT_FAILED state. The key material and algorithm must match
+   * the previous CryptoKeyVersion exactly if the CryptoKeyVersion has ever
+   * contained key material
    *
-   * @param string $name
+   * @param string $cryptoKeyVersion
    */
-  public function setName($name)
+  public function setCryptoKeyVersion($cryptoKeyVersion)
   {
-    $this->name = $name;
+    $this->cryptoKeyVersion = $cryptoKeyVersion;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getCryptoKeyVersion()
   {
-    return $this->name;
+    return $this->cryptoKeyVersion;
   }
   /**
-   * The public key, encoded in PEM format. For more information, see the [RFC
-   * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
-   * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
-   * Encoding of Subject Public Key Info]
-   * (https://tools.ietf.org/html/rfc7468#section-13).
+   * Required. Required - the CKV of the trusted key used to import. This can be
+   * the name of a CryptoKeyVersion or a CryptoKey.
    *
-   * @param string $pem
+   * @param string $importingKey
    */
-  public function setPem($pem)
+  public function setImportingKey($importingKey)
   {
-    $this->pem = $pem;
+    $this->importingKey = $importingKey;
   }
   /**
    * @return string
    */
-  public function getPem()
+  public function getImportingKey()
   {
-    return $this->pem;
+    return $this->importingKey;
   }
   /**
-   * Integrity verification field. A CRC32C checksum of the returned
-   * PublicKey.pem. An integrity check of PublicKey.pem can be performed by
-   * computing the CRC32C checksum of PublicKey.pem and comparing your results
-   * to this field. Discard the response in case of non-matching checksum
-   * values, and perform a limited number of retries. A persistent mismatch may
-   * indicate an issue in your computation of the CRC32C checksum. Note: This
-   * field is defined as int64 for reasons of compatibility across different
-   * languages. However, it is a non-negative integer, which will never exceed
-   * `2^32-1`, and can be safely downconverted to uint32 in languages that
-   * support this type. NOTE: This field is in Beta.
+   * Required. The target key pre-wrapped on premises.
    *
-   * @param string $pemCrc32c
+   * @param string $wrappedKey
    */
-  public function setPemCrc32c($pemCrc32c)
+  public function setWrappedKey($wrappedKey)
   {
-    $this->pemCrc32c = $pemCrc32c;
+    $this->wrappedKey = $wrappedKey;
   }
   /**
    * @return string
    */
-  public function getPemCrc32c()
+  public function getWrappedKey()
   {
-    return $this->pemCrc32c;
-  }
-  /**
-   * The ProtectionLevel of the CryptoKeyVersion public key.
-   *
-   * Accepted values: PROTECTION_LEVEL_UNSPECIFIED, SOFTWARE, HSM, EXTERNAL,
-   * EXTERNAL_VPC, HSM_SINGLE_TENANT
-   *
-   * @param self::PROTECTION_LEVEL_* $protectionLevel
-   */
-  public function setProtectionLevel($protectionLevel)
-  {
-    $this->protectionLevel = $protectionLevel;
-  }
-  /**
-   * @return self::PROTECTION_LEVEL_*
-   */
-  public function getProtectionLevel()
-  {
-    return $this->protectionLevel;
-  }
-  /**
-   * This field contains the public key (with integrity verification), formatted
-   * according to the public_key_format field.
-   *
-   * @param ChecksummedData $publicKey
-   */
-  public function setPublicKey(ChecksummedData $publicKey)
-  {
-    $this->publicKey = $publicKey;
-  }
-  /**
-   * @return ChecksummedData
-   */
-  public function getPublicKey()
-  {
-    return $this->publicKey;
-  }
-  /**
-   * The PublicKey format specified by the customer through the
-   * public_key_format field.
-   *
-   * Accepted values: PUBLIC_KEY_FORMAT_UNSPECIFIED, PEM, DER, NIST_PQC,
-   * XWING_RAW_BYTES
-   *
-   * @param self::PUBLIC_KEY_FORMAT_* $publicKeyFormat
-   */
-  public function setPublicKeyFormat($publicKeyFormat)
-  {
-    $this->publicKeyFormat = $publicKeyFormat;
-  }
-  /**
-   * @return self::PUBLIC_KEY_FORMAT_*
-   */
-  public function getPublicKeyFormat()
-  {
-    return $this->publicKeyFormat;
+    return $this->wrappedKey;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PublicKey::class, 'Google_Service_CloudKMS_PublicKey');
+class_alias(ImportTrustedKeyWrappedCryptoKeyVersionRequest::class, 'Google_Service_CloudKMS_ImportTrustedKeyWrappedCryptoKeyVersionRequest');

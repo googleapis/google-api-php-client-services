@@ -102,6 +102,16 @@ class CloudKMS extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'showEffectiveAutokeyConfig' => [
+              'path' => 'v1/{+parent}:showEffectiveAutokeyConfig',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'updateAutokeyConfig' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
@@ -672,6 +682,10 @@ class CloudKMS extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'trustedWrappingEnabled' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'decrypt' => [
               'path' => 'v1/{+name}:decrypt',
@@ -871,6 +885,20 @@ class CloudKMS extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'exportTrustedKeyWrappedCryptoKeyVersion' => [
+              'path' => 'v1/{+name}:exportTrustedKeyWrappedCryptoKeyVersion',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'wrappingKey' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -897,6 +925,16 @@ class CloudKMS extends \Google\Service
               ],
             ],'import' => [
               'path' => 'v1/{+parent}/cryptoKeyVersions:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'importTrustedKeyWrappedCryptoKeyVersion' => [
+              'path' => 'v1/{+parent}/cryptoKeyVersions:importTrustedKeyWrappedCryptoKeyVersion',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [

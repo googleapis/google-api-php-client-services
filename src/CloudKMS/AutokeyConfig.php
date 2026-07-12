@@ -20,8 +20,10 @@ namespace Google\Service\CloudKMS;
 class AutokeyConfig extends \Google\Model
 {
   /**
-   * Default value. KeyProjectResolutionMode when not specified will act as
-   * `DEDICATED_KEY_PROJECT`.
+   * Default value. When KeyProjectResolutionMode is set to
+   * KEY_PROJECT_RESOLUTION_MODE_UNSPECIFIED for a folder and that folder has a
+   * key_project set, the folder acts like its KeyProjectResolutionMode is
+   * DEDICATED_KEY_PROJECT.
    */
   public const KEY_PROJECT_RESOLUTION_MODE_KEY_PROJECT_RESOLUTION_MODE_UNSPECIFIED = 'KEY_PROJECT_RESOLUTION_MODE_UNSPECIFIED';
   /**

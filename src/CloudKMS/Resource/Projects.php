@@ -68,13 +68,13 @@ class Projects extends \Google\Service\Resource
     return $this->call('getKajPolicyConfig', [$params], KeyAccessJustificationsPolicyConfig::class);
   }
   /**
-   * Returns the effective Cloud KMS Autokey configuration for a given project.
-   * (projects.showEffectiveAutokeyConfig)
+   * Returns the effective Cloud KMS Autokey configuration for a given project or
+   * folder. (projects.showEffectiveAutokeyConfig)
    *
-   * @param string $parent Required. Name of the resource project to the show
-   * effective Cloud KMS Autokey configuration for. This may be helpful for
-   * interrogating the effect of nested folder configurations on a given resource
-   * project.
+   * @param string $parent Required. Name of the resource project or folder to
+   * show the effective Cloud KMS Autokey configuration for. This may be helpful
+   * for interrogating the effect of nested folder configurations on a given
+   * resource project. Format: * projects/{project} * folders/{folder}
    * @param array $optParams Optional parameters.
    * @return ShowEffectiveAutokeyConfigResponse
    * @throws \Google\Service\Exception

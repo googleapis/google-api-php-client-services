@@ -55,6 +55,11 @@ class ProjectsLocationsKeyRingsCryptoKeys extends \Google\Service\Resource
    * create a CryptoKey without any CryptoKeyVersions. You must manually call
    * CreateCryptoKeyVersion or ImportCryptoKeyVersion before you can use this
    * CryptoKey.
+   * @opt_param bool trustedWrappingEnabled Optional. Whether trusted wrapping
+   * will be enabled on the first CryptoKeyVersions created for this CryptoKey.
+   * This field is only supported for keys with
+   * CryptoKeyVersionTemplate.protection_level HSM_SINGLE_TENANT. This field is
+   * supported for all CryptoKeyPurposes except ENCRYPT_DECRYPT.
    * @return CryptoKey
    * @throws \Google\Service\Exception
    */

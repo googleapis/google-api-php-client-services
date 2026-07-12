@@ -227,6 +227,11 @@ class CryptoKeyVersion extends \Google\Model
    */
   public const ALGORITHM_PQ_SIGN_ML_DSA_87_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_87_EXTERNAL_MU';
   /**
+   * AES key wrap with zero padding algorithm (RFC 5649). Can only be used by
+   * keys with purpose AES_WRAPPING.
+   */
+  public const ALGORITHM_AES_256_KWP = 'AES_256_KWP';
+  /**
    * Not specified.
    */
   public const PROTECTION_LEVEL_PROTECTION_LEVEL_UNSPECIFIED = 'PROTECTION_LEVEL_UNSPECIFIED';
@@ -364,6 +369,14 @@ class CryptoKeyVersion extends \Google\Model
    */
   public $generationFailureReason;
   /**
+   * Output only. Field indicating that the key wrapping key is trusted. This
+   * field is only valid for key purpose AES_256_WRAPPING, and protection level
+   * HSM_SINGLE_TENANT.
+   *
+   * @var bool
+   */
+  public $hsmTrusted;
+  /**
    * Output only. The root cause of the most recent import failure. Only present
    * if state is IMPORT_FAILED.
    *
@@ -413,6 +426,16 @@ class CryptoKeyVersion extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * Immutable. Field indicating that the key may be wrapped by a trusted key.
+   * This field can be set for all key purposes except ENCRYPT_DECRYPT, and is
+   * only valid for keys with protection level HSM_SINGLE_TENANT. This field can
+   * only be set at creation or import time via CreateCryptoKeyVersion, or
+   * ImportCryptoKeyVersion.
+   *
+   * @var bool
+   */
+  public $trustedWrappingEnabled;
 
   /**
    * Output only. The CryptoKeyVersionAlgorithm that this CryptoKeyVersion
@@ -435,7 +458,7 @@ class CryptoKeyVersion extends \Google\Model
    * ML_KEM_768, ML_KEM_1024, KEM_XWING, PQ_SIGN_ML_DSA_44, PQ_SIGN_ML_DSA_65,
    * PQ_SIGN_ML_DSA_87, PQ_SIGN_SLH_DSA_SHA2_128S,
    * PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256, PQ_SIGN_ML_DSA_44_EXTERNAL_MU,
-   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU
+   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU, AES_256_KWP
    *
    * @param self::ALGORITHM_* $algorithm
    */
@@ -588,6 +611,24 @@ class CryptoKeyVersion extends \Google\Model
     return $this->generationFailureReason;
   }
   /**
+   * Output only. Field indicating that the key wrapping key is trusted. This
+   * field is only valid for key purpose AES_256_WRAPPING, and protection level
+   * HSM_SINGLE_TENANT.
+   *
+   * @param bool $hsmTrusted
+   */
+  public function setHsmTrusted($hsmTrusted)
+  {
+    $this->hsmTrusted = $hsmTrusted;
+  }
+  /**
+   * @return bool
+   */
+  public function getHsmTrusted()
+  {
+    return $this->hsmTrusted;
+  }
+  /**
    * Output only. The root cause of the most recent import failure. Only present
    * if state is IMPORT_FAILED.
    *
@@ -714,6 +755,26 @@ class CryptoKeyVersion extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Immutable. Field indicating that the key may be wrapped by a trusted key.
+   * This field can be set for all key purposes except ENCRYPT_DECRYPT, and is
+   * only valid for keys with protection level HSM_SINGLE_TENANT. This field can
+   * only be set at creation or import time via CreateCryptoKeyVersion, or
+   * ImportCryptoKeyVersion.
+   *
+   * @param bool $trustedWrappingEnabled
+   */
+  public function setTrustedWrappingEnabled($trustedWrappingEnabled)
+  {
+    $this->trustedWrappingEnabled = $trustedWrappingEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getTrustedWrappingEnabled()
+  {
+    return $this->trustedWrappingEnabled;
   }
 }
 

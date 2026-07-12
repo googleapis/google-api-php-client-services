@@ -127,6 +127,8 @@ class SingleTenantHsmInstanceProposal extends \Google\Model
    * @var string
    */
   public $ttl;
+  protected $upgradeKeyTrustType = UpgradeKeyTrust::class;
+  protected $upgradeKeyTrustDataType = '';
 
   /**
    * Add a quorum member to the SingleTenantHsmInstance. This will increase the
@@ -430,6 +432,23 @@ class SingleTenantHsmInstanceProposal extends \Google\Model
   public function getTtl()
   {
     return $this->ttl;
+  }
+  /**
+   * Promotes a key with the AES_WRAPPING purpose to a trusted wrapping key. The
+   * key must be in the ACTIVE state to perform this operation.
+   *
+   * @param UpgradeKeyTrust $upgradeKeyTrust
+   */
+  public function setUpgradeKeyTrust(UpgradeKeyTrust $upgradeKeyTrust)
+  {
+    $this->upgradeKeyTrust = $upgradeKeyTrust;
+  }
+  /**
+   * @return UpgradeKeyTrust
+   */
+  public function getUpgradeKeyTrust()
+  {
+    return $this->upgradeKeyTrust;
   }
 }
 

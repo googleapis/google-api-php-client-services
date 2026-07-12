@@ -227,6 +227,11 @@ class ImportCryptoKeyVersionRequest extends \Google\Model
    */
   public const ALGORITHM_PQ_SIGN_ML_DSA_87_EXTERNAL_MU = 'PQ_SIGN_ML_DSA_87_EXTERNAL_MU';
   /**
+   * AES key wrap with zero padding algorithm (RFC 5649). Can only be used by
+   * keys with purpose AES_WRAPPING.
+   */
+  public const ALGORITHM_AES_256_KWP = 'AES_256_KWP';
+  /**
    * Required. The algorithm of the key being imported. This does not need to
    * match the version_template of the CryptoKey this version imports into.
    *
@@ -262,6 +267,15 @@ class ImportCryptoKeyVersionRequest extends \Google\Model
    * @var string
    */
   public $rsaAesWrappedKey;
+  /**
+   * Optional. Whether trusted wrapping will be enabled on the imported
+   * [CryptoKeyVersion]. This field is only supported for keys with
+   * CryptoKeyVersionTemplate.protection_level HSM_SINGLE_TENANT. This field is
+   * supported for all CryptoKeyPurposes besides ENCRYPT_DECRYPT.
+   *
+   * @var bool
+   */
+  public $trustedWrappingEnabled;
   /**
    * Optional. The wrapped key material to import. Before wrapping, key material
    * must be formatted. If importing symmetric key material, the expected key
@@ -305,7 +319,7 @@ class ImportCryptoKeyVersionRequest extends \Google\Model
    * ML_KEM_768, ML_KEM_1024, KEM_XWING, PQ_SIGN_ML_DSA_44, PQ_SIGN_ML_DSA_65,
    * PQ_SIGN_ML_DSA_87, PQ_SIGN_SLH_DSA_SHA2_128S,
    * PQ_SIGN_HASH_SLH_DSA_SHA2_128S_SHA256, PQ_SIGN_ML_DSA_44_EXTERNAL_MU,
-   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU
+   * PQ_SIGN_ML_DSA_65_EXTERNAL_MU, PQ_SIGN_ML_DSA_87_EXTERNAL_MU, AES_256_KWP
    *
    * @param self::ALGORITHM_* $algorithm
    */
@@ -378,6 +392,25 @@ class ImportCryptoKeyVersionRequest extends \Google\Model
   public function getRsaAesWrappedKey()
   {
     return $this->rsaAesWrappedKey;
+  }
+  /**
+   * Optional. Whether trusted wrapping will be enabled on the imported
+   * [CryptoKeyVersion]. This field is only supported for keys with
+   * CryptoKeyVersionTemplate.protection_level HSM_SINGLE_TENANT. This field is
+   * supported for all CryptoKeyPurposes besides ENCRYPT_DECRYPT.
+   *
+   * @param bool $trustedWrappingEnabled
+   */
+  public function setTrustedWrappingEnabled($trustedWrappingEnabled)
+  {
+    $this->trustedWrappingEnabled = $trustedWrappingEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getTrustedWrappingEnabled()
+  {
+    return $this->trustedWrappingEnabled;
   }
   /**
    * Optional. The wrapped key material to import. Before wrapping, key material
