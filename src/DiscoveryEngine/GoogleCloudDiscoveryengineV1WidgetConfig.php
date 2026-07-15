@@ -116,6 +116,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
   public $allowlistedDomains;
   protected $assistantSettingsType = GoogleCloudDiscoveryengineV1WidgetConfigAssistantSettings::class;
   protected $assistantSettingsDataType = '';
+  protected $batchAuthStatusesType = GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus::class;
+  protected $batchAuthStatusesDataType = 'array';
   protected $collectionComponentsType = GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent::class;
   protected $collectionComponentsDataType = 'array';
   /**
@@ -372,10 +374,34 @@ class GoogleCloudDiscoveryengineV1WidgetConfig extends \Google\Collection
     return $this->assistantSettings;
   }
   /**
+   * Output only. The batch authorization statuses for the widget's connectors.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus[] $batchAuthStatuses
+   */
+  public function setBatchAuthStatuses($batchAuthStatuses)
+  {
+    $this->batchAuthStatuses = $batchAuthStatuses;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus[]
+   */
+  public function getBatchAuthStatuses()
+  {
+    return $this->batchAuthStatuses;
+  }
+  /**
    * Output only. Collection components that lists all collections and child
    * data stores associated with the widget config, those data sources can be
    * used for filtering in widget service APIs, users can return results that
-   * from selected data sources.
+   * from selected data sources. For SaaS / Business engines, when
+   * `LookupWidgetConfig` is called with `view = WITH_AVAILABLE_CONNECTORS`,
+   * this list is additionally augmented with synthetic placeholder entries for
+   * connectors the caller may attach but has not yet attached (see
+   * `CollectionComponent` for the placeholder contract). The frontend can
+   * therefore render a unified list of already-attached and available-to-attach
+   * sources by iterating this single field. For Enterprise engines and for the
+   * default `view`, only already-attached connectors are returned (today's
+   * behavior).
    *
    * @param GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent[] $collectionComponents
    */

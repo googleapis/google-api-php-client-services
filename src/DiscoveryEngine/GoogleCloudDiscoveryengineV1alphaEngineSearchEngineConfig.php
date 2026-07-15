@@ -83,6 +83,10 @@ class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig extends \Google\
    */
   public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_CONSUMPTION_ONLY = 'SUBSCRIPTION_TIER_CONSUMPTION_ONLY';
   /**
+   * Gemini Enterprise EDU tier for government in emerging markets.
+   */
+  public const REQUIRED_SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_GOV_EMERGING = 'SUBSCRIPTION_TIER_EDU_GOV_EMERGING';
+  /**
    * Default value when the enum is unspecified. This is invalid to use.
    */
   public const SEARCH_TIER_SEARCH_TIER_UNSPECIFIED = 'SEARCH_TIER_UNSPECIFIED';
@@ -134,7 +138,7 @@ class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig extends \Google\
    * SUBSCRIPTION_TIER_ENTERPRISE_EMERGING, SUBSCRIPTION_TIER_EDU,
    * SUBSCRIPTION_TIER_EDU_PRO, SUBSCRIPTION_TIER_EDU_EMERGING,
    * SUBSCRIPTION_TIER_EDU_PRO_EMERGING, SUBSCRIPTION_TIER_FRONTLINE_STARTER,
-   * SUBSCRIPTION_TIER_CONSUMPTION_ONLY
+   * SUBSCRIPTION_TIER_CONSUMPTION_ONLY, SUBSCRIPTION_TIER_EDU_GOV_EMERGING
    *
    * @param self::REQUIRED_SUBSCRIPTION_TIER_* $requiredSubscriptionTier
    */

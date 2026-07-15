@@ -52,7 +52,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   /**
    * Output only. the identifier of the collection, used for widget service. For
    * now it refers to collection_id, in the future we will migrate the field to
-   * encrypted collection name UUID.
+   * encrypted collection name UUID. For synthetic placeholder entries (see
+   * message-level comment) this is a synthetic placeholder id, not a real
+   * collection_id.
    *
    * @var string
    */
@@ -61,7 +63,11 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For
    * APIs under WidgetService, such as WidgetService.LookupWidgetConfig, the
-   * project number and location part is erased in this field.
+   * project number and location part is erased in this field. For synthetic
+   * placeholder entries (see message-level comment) this carries a synthetic
+   * placeholder collection id that does not correspond to a real collection.
+   * Callers must not attempt to resolve / GET this resource until the user
+   * authorizes the connector.
    *
    * @var string
    */
@@ -167,7 +173,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   /**
    * Output only. the identifier of the collection, used for widget service. For
    * now it refers to collection_id, in the future we will migrate the field to
-   * encrypted collection name UUID.
+   * encrypted collection name UUID. For synthetic placeholder entries (see
+   * message-level comment) this is a synthetic placeholder id, not a real
+   * collection_id.
    *
    * @param string $id
    */
@@ -186,7 +194,11 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For
    * APIs under WidgetService, such as WidgetService.LookupWidgetConfig, the
-   * project number and location part is erased in this field.
+   * project number and location part is erased in this field. For synthetic
+   * placeholder entries (see message-level comment) this carries a synthetic
+   * placeholder collection id that does not correspond to a real collection.
+   * Callers must not attempt to resolve / GET this resource until the user
+   * authorizes the connector.
    *
    * @param string $name
    */

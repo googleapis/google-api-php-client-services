@@ -20,7 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState extends \Google\Model
 {
   /**
-   * Default value. This value is unused.
+   * Default value. Also returned for synthetic placeholder
+   * `CollectionComponent` entries surfaced by `LookupWidgetConfig` with `view =
+   * WITH_AVAILABLE_CONNECTORS` (SaaS / Business only) — those entries represent
+   * connectors the caller may attach but has not yet attached.
    */
   public const AUTH_STATE_AUTH_STATE_UNSPECIFIED = 'AUTH_STATE_UNSPECIFIED';
   /**
@@ -36,7 +39,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState extends \Google
    */
   public const AUTH_STATE_ACTIONS_DISABLED = 'ACTIONS_DISABLED';
   /**
-   * The data connector does not require any authorization.
+   * The data connector does not require any authorization. Also used for
+   * placeholder entries whose underlying connector does not require user OAuth.
    */
   public const AUTH_STATE_NO_AUTH = 'NO_AUTH';
   /**
@@ -46,7 +50,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState extends \Google
    */
   public $authState;
   /**
-   * Output only. The authorization uri for the data connector.
+   * Output only. The authorization uri for the data connector. For synthetic
+   * placeholder `CollectionComponent` entries (returned by `LookupWidgetConfig`
+   * with `view = WITH_AVAILABLE_CONNECTORS` on SaaS / Business engines), this
+   * field is left empty. The widget should call
+   * `WidgetService.WidgetBuildAuthorizationUrl` on the user's "Connect" click
+   * to obtain a freshly-built authorization URL.
    *
    * @var string
    */
@@ -78,7 +87,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState extends \Google
     return $this->authState;
   }
   /**
-   * Output only. The authorization uri for the data connector.
+   * Output only. The authorization uri for the data connector. For synthetic
+   * placeholder `CollectionComponent` entries (returned by `LookupWidgetConfig`
+   * with `view = WITH_AVAILABLE_CONNECTORS` on SaaS / Business engines), this
+   * field is left empty. The widget should call
+   * `WidgetService.WidgetBuildAuthorizationUrl` on the user's "Connect" click
+   * to obtain a freshly-built authorization URL.
    *
    * @param string $authorizationUri
    */

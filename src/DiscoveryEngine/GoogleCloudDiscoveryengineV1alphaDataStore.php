@@ -138,6 +138,17 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   protected $healthcareFhirConfigType = GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig::class;
   protected $healthcareFhirConfigDataType = '';
   /**
+   * Output only. Provides the icon URI of the data store's connector source, if
+   * this is a connector-backed data store. Empty for data stores without an
+   * associated connector source. In DataStoreService.ListDataStores and
+   * DataStoreService.GetDataStore, this is only populated when
+   * DataStoreView.DATA_STORE_VIEW_FULL is requested via
+   * ListDataStoresRequest.view or GetDataStoreRequest.view respectively.
+   *
+   * @var string
+   */
+  public $iconUri;
+  /**
    * Immutable. The fully qualified resource name of the associated
    * IdentityMappingStore. This field can only be set for acl_enabled DataStores
    * with `THIRD_PARTY` or `GSUITE` IdP. Format: `projects/{project}/locations/{
@@ -437,6 +448,27 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   public function getHealthcareFhirConfig()
   {
     return $this->healthcareFhirConfig;
+  }
+  /**
+   * Output only. Provides the icon URI of the data store's connector source, if
+   * this is a connector-backed data store. Empty for data stores without an
+   * associated connector source. In DataStoreService.ListDataStores and
+   * DataStoreService.GetDataStore, this is only populated when
+   * DataStoreView.DATA_STORE_VIEW_FULL is requested via
+   * ListDataStoresRequest.view or GetDataStoreRequest.view respectively.
+   *
+   * @param string $iconUri
+   */
+  public function setIconUri($iconUri)
+  {
+    $this->iconUri = $iconUri;
+  }
+  /**
+   * @return string
+   */
+  public function getIconUri()
+  {
+    return $this->iconUri;
   }
   /**
    * Immutable. The fully qualified resource name of the associated
