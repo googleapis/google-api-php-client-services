@@ -32,6 +32,12 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
    */
   public $anchorLastFrame;
   /**
+   * CFG scale for video-transform, perf-generation, a2v, video-textures models.
+   *
+   * @var float
+   */
+  public $cfgScale;
+  /**
    * Optional. Video codec to use for output.
    *
    * @var string
@@ -123,6 +129,22 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getAnchorLastFrame()
   {
     return $this->anchorLastFrame;
+  }
+  /**
+   * CFG scale for video-transform, perf-generation, a2v, video-textures models.
+   *
+   * @param float $cfgScale
+   */
+  public function setCfgScale($cfgScale)
+  {
+    $this->cfgScale = $cfgScale;
+  }
+  /**
+   * @return float
+   */
+  public function getCfgScale()
+  {
+    return $this->cfgScale;
   }
   /**
    * Optional. Video codec to use for output.

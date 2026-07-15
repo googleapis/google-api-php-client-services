@@ -139,6 +139,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_indexes_operations;
   public $projects_locations_memoryBanks_memories;
   public $projects_locations_memoryBanks_memories_operations;
+  public $projects_locations_memoryBanks_memories_revisions;
   public $projects_locations_memoryBanks_operations;
   public $projects_locations_metadataStores;
   public $projects_locations_metadataStores_artifacts;
@@ -8178,9 +8179,113 @@ class Aiplatform extends \Google\Service
         'memories',
         [
           'methods' => [
-            'get' => [
+            'create' => [
+              'path' => 'v1/{+parent}/memories',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'memoryId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generate' => [
+              'path' => 'v1/{+parent}/memories:generate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/memories',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'purge' => [
+              'path' => 'v1/{+parent}/memories:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'retrieve' => [
+              'path' => 'v1/{+parent}/memories:retrieve',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'rollback' => [
+              'path' => 'v1/{+name}:rollback',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
                   'location' => 'path',
@@ -8264,6 +8369,48 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
                 'timeout' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_memoryBanks_memories_revisions = new Aiplatform\Resource\ProjectsLocationsMemoryBanksMemoriesRevisions(
+        $this,
+        $this->serviceName,
+        'revisions',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/revisions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

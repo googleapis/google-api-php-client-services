@@ -37,6 +37,8 @@ class GoogleCloudAiplatformV1EvaluationMetric extends \Google\Model
    * @var string
    */
   public $displayName;
+  protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
+  protected $encryptionSpecDataType = '';
   /**
    * Optional. The Google Cloud Storage URI that stores the metric
    * specification..
@@ -113,6 +115,23 @@ class GoogleCloudAiplatformV1EvaluationMetric extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationMetric.
+   * If set, this EvaluationMetric will be secured by this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
+   */
+  public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
+  {
+    $this->encryptionSpec = $encryptionSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public function getEncryptionSpec()
+  {
+    return $this->encryptionSpec;
   }
   /**
    * Optional. The Google Cloud Storage URI that stores the metric

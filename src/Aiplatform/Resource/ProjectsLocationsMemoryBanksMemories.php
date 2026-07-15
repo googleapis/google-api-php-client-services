@@ -17,7 +17,14 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateMemoriesRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListMemoriesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1Memory;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1PurgeMemoriesRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveMemoriesRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveMemoriesResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1RollbackMemoryRequest;
+use Google\Service\Aiplatform\GoogleLongrunningOperation;
 
 /**
  * The "memories" collection of methods.
@@ -29,6 +36,62 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1Memory;
  */
 class ProjectsLocationsMemoryBanksMemories extends \Google\Service\Resource
 {
+  /**
+   * Create a Memory. (memories.create)
+   *
+   * @param string $parent Required. The resource name of the ReasoningEngine to
+   * create the Memory under. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1Memory $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string memoryId Optional. The user defined ID to use for memory,
+   * which will become the final component of the memory resource name. If not
+   * provided, Vertex AI will generate a value for this ID. This value may be up
+   * to 63 characters, and valid characters are `[a-z0-9-]`. The first character
+   * must be a letter, and the last character must be a letter or number.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, GoogleCloudAiplatformV1Memory $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Delete a Memory. (memories.delete)
+   *
+   * @param string $name Required. The resource name of the Memory to delete.
+   * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_
+   * engine}/memories/{memory}`
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Generate memories. (memories.generate)
+   *
+   * @param string $parent Required. The resource name of the ReasoningEngine to
+   * generate memories for. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1GenerateMemoriesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function generate($parent, GoogleCloudAiplatformV1GenerateMemoriesRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generate', [$params], GoogleLongrunningOperation::class);
+  }
   /**
    * Get a Memory. (memories.get)
    *
@@ -44,6 +107,106 @@ class ProjectsLocationsMemoryBanksMemories extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleCloudAiplatformV1Memory::class);
+  }
+  /**
+   * List Memories. (memories.listProjectsLocationsMemoryBanksMemories)
+   *
+   * @param string $parent Required. The resource name of the ReasoningEngine to
+   * list the Memories under. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. The standard list filter. More detail in
+   * [AIP-160](https://google.aip.dev/160). Supported fields: * `scope` (as a JSON
+   * string with equality match only) * `topics` (i.e.
+   * `topics.custom_memory_topic_label: "example topic" OR
+   * topics.managed_memory_topic: USER_PREFERENCES`)
+   * @opt_param string orderBy Optional. The standard list order by string. If not
+   * specified, the default order is `create_time desc`. If specified, the default
+   * sorting order of provided fields is ascending. More detail in
+   * [AIP-132](https://google.aip.dev/132). Supported fields: * `create_time` *
+   * `update_time`
+   * @opt_param int pageSize Optional. The standard list page size.
+   * @opt_param string pageToken Optional. The standard list page token.
+   * @return GoogleCloudAiplatformV1ListMemoriesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsMemoryBanksMemories($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudAiplatformV1ListMemoriesResponse::class);
+  }
+  /**
+   * Update a Memory. (memories.patch)
+   *
+   * @param string $name Identifier. Represents the resource name of the Memory.
+   * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_
+   * engine}/memories/{memory}`
+   * @param GoogleCloudAiplatformV1Memory $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. Mask specifying which fields to
+   * update. The following fields are immutable: * `scope` * `memory_type`
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudAiplatformV1Memory $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Purge memories. (memories.purge)
+   *
+   * @param string $parent Required. The resource name of the ReasoningEngine to
+   * purge memories from. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1PurgeMemoriesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function purge($parent, GoogleCloudAiplatformV1PurgeMemoriesRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('purge', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Retrieve memories. (memories.retrieve)
+   *
+   * @param string $parent Required. The resource name of the ReasoningEngine to
+   * retrieve memories from. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1RetrieveMemoriesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1RetrieveMemoriesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function retrieve($parent, GoogleCloudAiplatformV1RetrieveMemoriesRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('retrieve', [$params], GoogleCloudAiplatformV1RetrieveMemoriesResponse::class);
+  }
+  /**
+   * Rollback Memory to a specific revision. (memories.rollback)
+   *
+   * @param string $name Required. The resource name of the Memory to rollback.
+   * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_
+   * engine}/memories/{memory}`
+   * @param GoogleCloudAiplatformV1RollbackMemoryRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function rollback($name, GoogleCloudAiplatformV1RollbackMemoryRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('rollback', [$params], GoogleLongrunningOperation::class);
   }
 }
 
