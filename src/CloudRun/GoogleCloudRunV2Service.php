@@ -312,6 +312,12 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public $satisfiesPzs;
   protected $scalingType = GoogleCloudRunV2ServiceScaling::class;
   protected $scalingDataType = '';
+  /**
+   * Optional. Enables SSH access to the Service.
+   *
+   * @var bool
+   */
+  public $sshEnabled;
   protected $templateType = GoogleCloudRunV2RevisionTemplate::class;
   protected $templateDataType = '';
   protected $terminalConditionType = GoogleCloudRunV2Condition::class;
@@ -892,6 +898,22 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public function getScaling()
   {
     return $this->scaling;
+  }
+  /**
+   * Optional. Enables SSH access to the Service.
+   *
+   * @param bool $sshEnabled
+   */
+  public function setSshEnabled($sshEnabled)
+  {
+    $this->sshEnabled = $sshEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getSshEnabled()
+  {
+    return $this->sshEnabled;
   }
   /**
    * Required. The template used to create revisions for this Service.

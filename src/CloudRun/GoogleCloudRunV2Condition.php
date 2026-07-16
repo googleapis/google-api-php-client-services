@@ -51,6 +51,26 @@ class GoogleCloudRunV2Condition extends \Google\Model
   /**
    * Default value.
    */
+  public const INSTANCE_REASON_INSTANCE_REASON_UNSPECIFIED = 'INSTANCE_REASON_UNSPECIFIED';
+  /**
+   * Instance deleted.
+   */
+  public const INSTANCE_REASON_INSTANCE_DELETED = 'INSTANCE_DELETED';
+  /**
+   * Instance stopped.
+   */
+  public const INSTANCE_REASON_INSTANCE_STOPPED = 'INSTANCE_STOPPED';
+  /**
+   * Instance stopping.
+   */
+  public const INSTANCE_REASON_INSTANCE_STOPPING = 'INSTANCE_STOPPING';
+  /**
+   * Instance exited with a non-zero exit code.
+   */
+  public const INSTANCE_REASON_INSTANCE_NON_ZERO_EXIT_CODE = 'INSTANCE_NON_ZERO_EXIT_CODE';
+  /**
+   * Default value.
+   */
   public const REASON_COMMON_REASON_UNDEFINED = 'COMMON_REASON_UNDEFINED';
   /**
    * Reason unknown. Further details will be in message.
@@ -213,6 +233,12 @@ class GoogleCloudRunV2Condition extends \Google\Model
    */
   public $executionReason;
   /**
+   * Output only. A reason for the instance condition.
+   *
+   * @var string
+   */
+  public $instanceReason;
+  /**
    * Last time the condition transitioned from one status to another.
    *
    * @var string
@@ -278,6 +304,25 @@ class GoogleCloudRunV2Condition extends \Google\Model
   public function getExecutionReason()
   {
     return $this->executionReason;
+  }
+  /**
+   * Output only. A reason for the instance condition.
+   *
+   * Accepted values: INSTANCE_REASON_UNSPECIFIED, INSTANCE_DELETED,
+   * INSTANCE_STOPPED, INSTANCE_STOPPING, INSTANCE_NON_ZERO_EXIT_CODE
+   *
+   * @param self::INSTANCE_REASON_* $instanceReason
+   */
+  public function setInstanceReason($instanceReason)
+  {
+    $this->instanceReason = $instanceReason;
+  }
+  /**
+   * @return self::INSTANCE_REASON_*
+   */
+  public function getInstanceReason()
+  {
+    return $this->instanceReason;
   }
   /**
    * Last time the condition transitioned from one status to another.
