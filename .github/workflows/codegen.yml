@@ -1,3 +1,6 @@
+permissions:
+  contents: read
+
 on:
   schedule:
     # daily at 12:30 am
@@ -7,19 +10,21 @@ on:
 name: codegen
 jobs:
   discovery:
-    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
+    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master # zizmor: ignore[unpinned-uses]
   batch:
     runs-on: ubuntu-24.04
     needs: discovery
     outputs:
       services: ${{ steps.chunk.outputs.result }}
     steps:
-      - uses: actions/github-script@v9
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         id: chunk
+        env:
+          SERVICES_LIST: ${{ needs.discovery.outputs.services }}
         with:
           script: |
             console.log('splitting service names list into batches')
-            const services = ${{ needs.discovery.outputs.services }}
+            const services = JSON.parse(process.env.SERVICES_LIST)
             const result = {
               "one": [],
               "two": [],
@@ -40,25 +45,34 @@ jobs:
       matrix:
         service: ${{fromJson(needs.batch.outputs.services).one}}
     steps:
-      - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v7
+      - run: echo generating ${MATRIX_SERVICE}
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 1
           path: google-api-php-client-services
-      - uses: actions/checkout@v7
+          persist-credentials: false
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
-      - uses: actions/setup-python@v6
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.14"
       - id: find-preferred-versions
         run: |
-          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "admin" or .preferred).version] | join(",")' )
+          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${MATRIX_SERVICE}") | select(.name == "admin" or .preferred).version] | join(",")' )
           echo "::set-output name=versions::$versions"
-      - run: ./google-api-php-client-services/.github/workflows/generate.sh ${{ matrix.service }} ${{ steps.find-preferred-versions.outputs.versions }}
-      - uses: googleapis/code-suggester@v5
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+      - run: ./google-api-php-client-services/.github/workflows/generate.sh ${MATRIX_SERVICE} ${STEPS_FIND_PREFERRED_VERSIONS_OUTPUTS_VERSIONS}
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+          STEPS_FIND_PREFERRED_VERSIONS_OUTPUTS_VERSIONS: ${{ steps.find-preferred-versions.outputs.versions }}
+      - uses: googleapis/code-suggester@f9fef85aa02459e30e62526abe950341cbbd768b # v5
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
         with:
@@ -83,25 +97,34 @@ jobs:
       matrix:
         service: ${{fromJson(needs.batch.outputs.services).two}}
     steps:
-      - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v7
+      - run: echo generating ${MATRIX_SERVICE}
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 1
           path: google-api-php-client-services
-      - uses: actions/checkout@v7
+          persist-credentials: false
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
-      - uses: actions/setup-python@v6
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.14"
       - id: find-preferred-versions
         run: |
-          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "admin" or .preferred).version] | join(",")' )
+          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${MATRIX_SERVICE}") | select(.name == "admin" or .preferred).version] | join(",")' )
           echo "::set-output name=versions::$versions"
-      - run: ./google-api-php-client-services/.github/workflows/generate.sh ${{ matrix.service }} ${{ steps.find-preferred-versions.outputs.versions }}
-      - uses: googleapis/code-suggester@v5
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+      - run: ./google-api-php-client-services/.github/workflows/generate.sh ${MATRIX_SERVICE} ${STEPS_FIND_PREFERRED_VERSIONS_OUTPUTS_VERSIONS}
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+          STEPS_FIND_PREFERRED_VERSIONS_OUTPUTS_VERSIONS: ${{ steps.find-preferred-versions.outputs.versions }}
+      - uses: googleapis/code-suggester@f9fef85aa02459e30e62526abe950341cbbd768b # v5
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
         with:

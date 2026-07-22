@@ -23,9 +23,10 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@v7
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       with:
         fetch-depth: '0'
+        persist-credentials: false
     - name: Bump version and push tag
       id: tag_version
       uses: mathieudutour/github-tag-action@a22cf08638b34d5badda920f9daf6e72c477b07b # v6.2
@@ -33,7 +34,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         default_bump: minor
     - name: Create a GitHub release
-      uses: actions/create-release@v1
+      uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
