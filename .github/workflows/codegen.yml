@@ -50,7 +50,7 @@ jobs:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.14"
       - id: find-preferred-versions
@@ -93,7 +93,7 @@ jobs:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.14"
       - id: find-preferred-versions
