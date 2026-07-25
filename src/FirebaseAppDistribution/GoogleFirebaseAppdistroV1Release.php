@@ -36,6 +36,53 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    */
   public const ANDROID_PACKAGE_REGISTRATION_STATE_REGISTERED_WITH_ANOTHER_CERTIFICATE_FINGERPRINT = 'REGISTERED_WITH_ANOTHER_CERTIFICATE_FINGERPRINT';
   /**
+   * unspecified binary type
+   */
+  public const BINARY_TYPE_BINARY_TYPE_UNSPECIFIED = 'BINARY_TYPE_UNSPECIFIED';
+  /**
+   * iOS App Store package
+   */
+  public const BINARY_TYPE_IPA = 'IPA';
+  /**
+   * Android Application package
+   */
+  public const BINARY_TYPE_APK = 'APK';
+  /**
+   * Android App Bundle
+   */
+  public const BINARY_TYPE_AAB = 'AAB';
+  /**
+   * No test state specified
+   */
+  public const TEST_STATE_TEST_STATE_UNSPECIFIED = 'TEST_STATE_UNSPECIFIED';
+  /**
+   * No tests have been requested for this release
+   */
+  public const TEST_STATE_NO_TESTS_REQUESTED = 'NO_TESTS_REQUESTED';
+  /**
+   * One or more device executions are in progress
+   */
+  public const TEST_STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * All device executions passed during the most recent test
+   */
+  public const TEST_STATE_PASSED = 'PASSED';
+  /**
+   * Some device executions failed during the most recent test
+   */
+  public const TEST_STATE_FAILED = 'FAILED';
+  /**
+   * Some device executions were inconclusive, but none failed, during the most
+   * recent test
+   */
+  public const TEST_STATE_INCONCLUSIVE = 'INCONCLUSIVE';
+  /**
+   * Output only. Number of testers with accepted invitations.
+   *
+   * @var int
+   */
+  public $acceptedInvitationCount;
+  /**
    * Output only. Registration state of the Android package (BinaryType.APK).
    *
    * @var string
@@ -48,6 +95,12 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    * @var string
    */
   public $binaryDownloadUri;
+  /**
+   * Output only. Type of binary.
+   *
+   * @var string
+   */
+  public $binaryType;
   /**
    * Output only. Build version of the release. For an Android release, the
    * build version is the `versionCode`. For an iOS release, the build version
@@ -77,11 +130,23 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    */
   public $expireTime;
   /**
+   * Output only. Number of feedback reports left by testers.
+   *
+   * @var int
+   */
+  public $feedbackCount;
+  /**
    * Output only. A link to the Firebase console displaying a single release.
    *
    * @var string
    */
   public $firebaseConsoleUri;
+  /**
+   * Output only. Number of testers who have downloaded this release.
+   *
+   * @var int
+   */
+  public $installationCount;
   /**
    * The name of the release resource. Format:
    * `projects/{project_number}/apps/{app}/releases/{release}`
@@ -89,8 +154,21 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * Output only. Number of testers who were invited (incl. expired
+   * invitations), but did not (yet) accept the invitation.
+   *
+   * @var int
+   */
+  public $openInvitationCount;
   protected $releaseNotesType = GoogleFirebaseAppdistroV1ReleaseNotes::class;
   protected $releaseNotesDataType = '';
+  /**
+   * Output only. The overall state of tests run on this release
+   *
+   * @var string
+   */
+  public $testState;
   /**
    * Output only. A link to the release in the tester web clip or Android app
    * that lets testers (which were granted access to the app) view release notes
@@ -106,6 +184,22 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    */
   public $updateTime;
 
+  /**
+   * Output only. Number of testers with accepted invitations.
+   *
+   * @param int $acceptedInvitationCount
+   */
+  public function setAcceptedInvitationCount($acceptedInvitationCount)
+  {
+    $this->acceptedInvitationCount = $acceptedInvitationCount;
+  }
+  /**
+   * @return int
+   */
+  public function getAcceptedInvitationCount()
+  {
+    return $this->acceptedInvitationCount;
+  }
   /**
    * Output only. Registration state of the Android package (BinaryType.APK).
    *
@@ -141,6 +235,24 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
   public function getBinaryDownloadUri()
   {
     return $this->binaryDownloadUri;
+  }
+  /**
+   * Output only. Type of binary.
+   *
+   * Accepted values: BINARY_TYPE_UNSPECIFIED, IPA, APK, AAB
+   *
+   * @param self::BINARY_TYPE_* $binaryType
+   */
+  public function setBinaryType($binaryType)
+  {
+    $this->binaryType = $binaryType;
+  }
+  /**
+   * @return self::BINARY_TYPE_*
+   */
+  public function getBinaryType()
+  {
+    return $this->binaryType;
   }
   /**
    * Output only. Build version of the release. For an Android release, the
@@ -211,6 +323,22 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
     return $this->expireTime;
   }
   /**
+   * Output only. Number of feedback reports left by testers.
+   *
+   * @param int $feedbackCount
+   */
+  public function setFeedbackCount($feedbackCount)
+  {
+    $this->feedbackCount = $feedbackCount;
+  }
+  /**
+   * @return int
+   */
+  public function getFeedbackCount()
+  {
+    return $this->feedbackCount;
+  }
+  /**
    * Output only. A link to the Firebase console displaying a single release.
    *
    * @param string $firebaseConsoleUri
@@ -225,6 +353,22 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
   public function getFirebaseConsoleUri()
   {
     return $this->firebaseConsoleUri;
+  }
+  /**
+   * Output only. Number of testers who have downloaded this release.
+   *
+   * @param int $installationCount
+   */
+  public function setInstallationCount($installationCount)
+  {
+    $this->installationCount = $installationCount;
+  }
+  /**
+   * @return int
+   */
+  public function getInstallationCount()
+  {
+    return $this->installationCount;
   }
   /**
    * The name of the release resource. Format:
@@ -244,6 +388,23 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
     return $this->name;
   }
   /**
+   * Output only. Number of testers who were invited (incl. expired
+   * invitations), but did not (yet) accept the invitation.
+   *
+   * @param int $openInvitationCount
+   */
+  public function setOpenInvitationCount($openInvitationCount)
+  {
+    $this->openInvitationCount = $openInvitationCount;
+  }
+  /**
+   * @return int
+   */
+  public function getOpenInvitationCount()
+  {
+    return $this->openInvitationCount;
+  }
+  /**
    * Notes about the release.
    *
    * @param GoogleFirebaseAppdistroV1ReleaseNotes $releaseNotes
@@ -258,6 +419,25 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
   public function getReleaseNotes()
   {
     return $this->releaseNotes;
+  }
+  /**
+   * Output only. The overall state of tests run on this release
+   *
+   * Accepted values: TEST_STATE_UNSPECIFIED, NO_TESTS_REQUESTED, IN_PROGRESS,
+   * PASSED, FAILED, INCONCLUSIVE
+   *
+   * @param self::TEST_STATE_* $testState
+   */
+  public function setTestState($testState)
+  {
+    $this->testState = $testState;
+  }
+  /**
+   * @return self::TEST_STATE_*
+   */
+  public function getTestState()
+  {
+    return $this->testState;
   }
   /**
    * Output only. A link to the release in the tester web clip or Android app
