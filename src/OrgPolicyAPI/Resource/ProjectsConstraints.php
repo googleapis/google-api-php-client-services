@@ -35,8 +35,8 @@ class ProjectsConstraints extends \Google\Service\Resource
    *
    * @param string $parent Required. The Google Cloud resource that parents the
    * constraint. Must be in one of the following forms: *
-   * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}`
-   * * `organizations/{organization_id}`
+   * `projects/{project_number}` * `projects/{project_id}` *
+   * `folders/{folder_number}` * `organizations/{organization_number}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Size of the pages to be returned. This is not used,

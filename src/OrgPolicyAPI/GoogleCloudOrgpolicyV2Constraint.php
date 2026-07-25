@@ -71,8 +71,8 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
    * Immutable. The resource name of the constraint. Must be in one of the
    * following forms: *
    * `projects/{project_number}/constraints/{constraint_name}` *
-   * `folders/{folder_id}/constraints/{constraint_name}` *
-   * `organizations/{organization_id}/constraints/{constraint_name}` For
+   * `folders/{folder_number}/constraints/{constraint_name}` *
+   * `organizations/{organization_number}/constraints/{constraint_name}` For
    * example, "/projects/123/constraints/compute.disableSerialPortAccess".
    *
    * @var string
@@ -198,8 +198,8 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
    * Immutable. The resource name of the constraint. Must be in one of the
    * following forms: *
    * `projects/{project_number}/constraints/{constraint_name}` *
-   * `folders/{folder_id}/constraints/{constraint_name}` *
-   * `organizations/{organization_id}/constraints/{constraint_name}` For
+   * `folders/{folder_number}/constraints/{constraint_name}` *
+   * `organizations/{organization_number}/constraints/{constraint_name}` For
    * example, "/projects/123/constraints/compute.disableSerialPortAccess".
    *
    * @param string $name
