@@ -33,7 +33,9 @@ class ProjectsLocationsAppsMessage extends \Google\Service\Resource
   /**
    * Sends a message to an agent. (message.send)
    *
-   * @param string $tenant Optional. Tenant ID, provided as a path parameter.
+   * @param string $tenant Optional. Opaque routing identifier. Must match the
+   * `tenant` value from the selected `AgentInterface` in the Agent Card when that
+   * field is set.
    * @param LfA2aV1SendMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return LfA2aV1SendMessageResponse

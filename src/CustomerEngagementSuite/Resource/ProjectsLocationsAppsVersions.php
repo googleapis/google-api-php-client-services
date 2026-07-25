@@ -92,7 +92,9 @@ class ProjectsLocationsAppsVersions extends \Google\Service\Resource
    * Gets the extended agent card for the authenticated agent.
    * (versions.getExtendedAgentCard)
    *
-   * @param string $tenant Optional. Tenant ID, provided as a path parameter.
+   * @param string $tenant Optional. Opaque routing identifier. Must match the
+   * `tenant` value from the selected `AgentInterface` in the Agent Card when that
+   * field is set.
    * @param array $optParams Optional parameters.
    * @return LfA2aV1AgentCard
    * @throws \Google\Service\Exception

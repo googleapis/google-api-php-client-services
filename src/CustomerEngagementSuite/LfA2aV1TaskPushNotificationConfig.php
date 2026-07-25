@@ -35,7 +35,8 @@ class LfA2aV1TaskPushNotificationConfig extends \Google\Model
    */
   public $taskId;
   /**
-   * Optional. Tenant ID.
+   * Optional. Opaque routing identifier. Must match the `tenant` value from the
+   * selected `AgentInterface` in the Agent Card when that field is set.
    *
    * @var string
    */
@@ -103,7 +104,8 @@ class LfA2aV1TaskPushNotificationConfig extends \Google\Model
     return $this->taskId;
   }
   /**
-   * Optional. Tenant ID.
+   * Optional. Opaque routing identifier. Must match the `tenant` value from the
+   * selected `AgentInterface` in the Agent Card when that field is set.
    *
    * @param string $tenant
    */

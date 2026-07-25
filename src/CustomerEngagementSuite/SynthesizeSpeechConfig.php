@@ -20,6 +20,12 @@ namespace Google\Service\CustomerEngagementSuite;
 class SynthesizeSpeechConfig extends \Google\Model
 {
   /**
+   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   *
+   * @var string
+   */
+  public $consentAudioGcsUri;
+  /**
    * Optional. The instruction used to synthesize speech when using a generative
    * model.
    *
@@ -62,6 +68,22 @@ class SynthesizeSpeechConfig extends \Google\Model
    */
   public $voiceSampleGcsUri;
 
+  /**
+   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   *
+   * @param string $consentAudioGcsUri
+   */
+  public function setConsentAudioGcsUri($consentAudioGcsUri)
+  {
+    $this->consentAudioGcsUri = $consentAudioGcsUri;
+  }
+  /**
+   * @return string
+   */
+  public function getConsentAudioGcsUri()
+  {
+    return $this->consentAudioGcsUri;
+  }
   /**
    * Optional. The instruction used to synthesize speech when using a generative
    * model.
