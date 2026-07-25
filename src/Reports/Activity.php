@@ -43,6 +43,12 @@ class Activity extends \Google\Collection
    */
   public $ipAddress;
   /**
+   * Whether the activity was performed by an agent.
+   *
+   * @var bool
+   */
+  public $isAgenticAction;
+  /**
    * The type of API resource. For an activity report, the value is
    * `audit#activity`.
    *
@@ -60,6 +66,8 @@ class Activity extends \Google\Collection
   public $ownerDomain;
   protected $resourceDetailsType = ResourceDetails::class;
   protected $resourceDetailsDataType = 'array';
+  protected $userDeviceInfoType = ActivityUserDeviceInfo::class;
+  protected $userDeviceInfoDataType = '';
 
   /**
    * User doing the action.
@@ -146,6 +154,22 @@ class Activity extends \Google\Collection
     return $this->ipAddress;
   }
   /**
+   * Whether the activity was performed by an agent.
+   *
+   * @param bool $isAgenticAction
+   */
+  public function setIsAgenticAction($isAgenticAction)
+  {
+    $this->isAgenticAction = $isAgenticAction;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsAgenticAction()
+  {
+    return $this->isAgenticAction;
+  }
+  /**
    * The type of API resource. For an activity report, the value is
    * `audit#activity`.
    *
@@ -210,6 +234,22 @@ class Activity extends \Google\Collection
   public function getResourceDetails()
   {
     return $this->resourceDetails;
+  }
+  /**
+   * Device details of the user doing the action.
+   *
+   * @param ActivityUserDeviceInfo $userDeviceInfo
+   */
+  public function setUserDeviceInfo(ActivityUserDeviceInfo $userDeviceInfo)
+  {
+    $this->userDeviceInfo = $userDeviceInfo;
+  }
+  /**
+   * @return ActivityUserDeviceInfo
+   */
+  public function getUserDeviceInfo()
+  {
+    return $this->userDeviceInfo;
   }
 }
 

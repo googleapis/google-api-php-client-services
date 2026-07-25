@@ -19,6 +19,8 @@ namespace Google\Service\Reports;
 
 class ActivityActor extends \Google\Model
 {
+  protected $agentAttributionInfoType = AgentAttributionInfo::class;
+  protected $agentAttributionInfoDataType = '';
   protected $applicationInfoType = ActivityActorApplicationInfo::class;
   protected $applicationInfoDataType = '';
   /**
@@ -50,6 +52,22 @@ class ActivityActor extends \Google\Model
    */
   public $profileId;
 
+  /**
+   * Details of the AI agent that was the actor for the activity.
+   *
+   * @param AgentAttributionInfo $agentAttributionInfo
+   */
+  public function setAgentAttributionInfo(AgentAttributionInfo $agentAttributionInfo)
+  {
+    $this->agentAttributionInfo = $agentAttributionInfo;
+  }
+  /**
+   * @return AgentAttributionInfo
+   */
+  public function getAgentAttributionInfo()
+  {
+    return $this->agentAttributionInfo;
+  }
   /**
    * Details of the application that was the actor for the activity.
    *
