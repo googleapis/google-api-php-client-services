@@ -20,6 +20,28 @@ namespace Google\Service\FirebaseDataConnect;
 class CloudSqlInstance extends \Google\Model
 {
   /**
+   * Unspecified edition.
+   */
+  public const EDITION_EDITION_UNSPECIFIED = 'EDITION_UNSPECIFIED';
+  /**
+   * Enterprise edition.
+   */
+  public const EDITION_EDITION_ENTERPRISE = 'EDITION_ENTERPRISE';
+  /**
+   * Enterprise Plus edition.
+   */
+  public const EDITION_EDITION_ENTERPRISE_PLUS = 'EDITION_ENTERPRISE_PLUS';
+  /**
+   * Developer edition (includes AI Developer edition).
+   */
+  public const EDITION_EDITION_DEVELOPER = 'EDITION_DEVELOPER';
+  /**
+   * Output only. [Output only] The Cloud SQL instance edition.
+   *
+   * @var string
+   */
+  public $edition;
+  /**
    * Required. Name of the CloudSQL instance, in the format: ```
    * projects/{project}/locations/{location}/instances/{instance} ```
    *
@@ -27,6 +49,25 @@ class CloudSqlInstance extends \Google\Model
    */
   public $instance;
 
+  /**
+   * Output only. [Output only] The Cloud SQL instance edition.
+   *
+   * Accepted values: EDITION_UNSPECIFIED, EDITION_ENTERPRISE,
+   * EDITION_ENTERPRISE_PLUS, EDITION_DEVELOPER
+   *
+   * @param self::EDITION_* $edition
+   */
+  public function setEdition($edition)
+  {
+    $this->edition = $edition;
+  }
+  /**
+   * @return self::EDITION_*
+   */
+  public function getEdition()
+  {
+    return $this->edition;
+  }
   /**
    * Required. Name of the CloudSQL instance, in the format: ```
    * projects/{project}/locations/{location}/instances/{instance} ```
