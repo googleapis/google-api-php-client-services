@@ -65,6 +65,7 @@ class APIhub extends \Google\Service
   public $projects_locations_plugins_instances;
   public $projects_locations_plugins_styleGuide;
   public $projects_locations_runtimeProjectAttachments;
+  public $projects_locations_servers;
   public $rootUrlTemplate;
 
   /**
@@ -1601,6 +1602,26 @@ class APIhub extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_servers = new APIhub\Resource\ProjectsLocationsServers(
+        $this,
+        $this->serviceName,
+        'servers',
+        [
+          'methods' => [
+            'configureAndDeployServer' => [
+              'path' => 'v1/{+parent}/servers:configureAndDeployServer',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
