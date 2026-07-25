@@ -57,6 +57,18 @@ class AdAsset extends \Google\Model
    */
   public const ENTITY_STATUS_ENTITY_STATUS_SCHEDULED_FOR_DELETION = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION';
   /**
+   * Attestation status is unspecified.
+   */
+  public const SYNTHETIC_CONTENT_ATTESTATION_STATUS_SYNTHETIC_CONTENT_ATTESTATION_STATUS_UNSPECIFIED = 'SYNTHETIC_CONTENT_ATTESTATION_STATUS_UNSPECIFIED';
+  /**
+   * Not synthetic content.
+   */
+  public const SYNTHETIC_CONTENT_ATTESTATION_STATUS_NOT_SYNTHETIC = 'NOT_SYNTHETIC';
+  /**
+   * Is synthetic content.
+   */
+  public const SYNTHETIC_CONTENT_ATTESTATION_STATUS_IS_SYNTHETIC = 'IS_SYNTHETIC';
+  /**
    * Output only. The ID of the ad asset. Referred to as the asset ID when
    * assigned to an ad.
    *
@@ -81,6 +93,13 @@ class AdAsset extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using
+   * AI.
+   *
+   * @var string
+   */
+  public $syntheticContentAttestationStatus;
   protected $youtubeVideoAssetType = YoutubeVideoAsset::class;
   protected $youtubeVideoAssetDataType = '';
 
@@ -155,6 +174,26 @@ class AdAsset extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using
+   * AI.
+   *
+   * Accepted values: SYNTHETIC_CONTENT_ATTESTATION_STATUS_UNSPECIFIED,
+   * NOT_SYNTHETIC, IS_SYNTHETIC
+   *
+   * @param self::SYNTHETIC_CONTENT_ATTESTATION_STATUS_* $syntheticContentAttestationStatus
+   */
+  public function setSyntheticContentAttestationStatus($syntheticContentAttestationStatus)
+  {
+    $this->syntheticContentAttestationStatus = $syntheticContentAttestationStatus;
+  }
+  /**
+   * @return self::SYNTHETIC_CONTENT_ATTESTATION_STATUS_*
+   */
+  public function getSyntheticContentAttestationStatus()
+  {
+    return $this->syntheticContentAttestationStatus;
   }
   /**
    * Youtube video asset data.

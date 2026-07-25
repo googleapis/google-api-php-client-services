@@ -20,6 +20,19 @@ namespace Google\Service\DisplayVideo;
 class PlannedProductForecast extends \Google\Model
 {
   /**
+   * Number of on-target impressions including co-viewers.
+   *
+   * @var string
+   */
+  public $onTargetCoviewImpressions;
+  /**
+   * Number of unique people reached that match the on-target definition
+   * including co-viewers.
+   *
+   * @var string
+   */
+  public $onTargetCoviewReach;
+  /**
    * Number of on-target impressions.
    *
    * @var string
@@ -31,6 +44,18 @@ class PlannedProductForecast extends \Google\Model
    * @var string
    */
   public $onTargetReach;
+  /**
+   * Total number of impressions including co-viewers.
+   *
+   * @var string
+   */
+  public $totalCoviewImpressions;
+  /**
+   * Total number of unique people reached including co-viewers.
+   *
+   * @var string
+   */
+  public $totalCoviewReach;
   /**
    * Total number of impressions.
    *
@@ -56,6 +81,39 @@ class PlannedProductForecast extends \Google\Model
    */
   public $viewableImpressions;
 
+  /**
+   * Number of on-target impressions including co-viewers.
+   *
+   * @param string $onTargetCoviewImpressions
+   */
+  public function setOnTargetCoviewImpressions($onTargetCoviewImpressions)
+  {
+    $this->onTargetCoviewImpressions = $onTargetCoviewImpressions;
+  }
+  /**
+   * @return string
+   */
+  public function getOnTargetCoviewImpressions()
+  {
+    return $this->onTargetCoviewImpressions;
+  }
+  /**
+   * Number of unique people reached that match the on-target definition
+   * including co-viewers.
+   *
+   * @param string $onTargetCoviewReach
+   */
+  public function setOnTargetCoviewReach($onTargetCoviewReach)
+  {
+    $this->onTargetCoviewReach = $onTargetCoviewReach;
+  }
+  /**
+   * @return string
+   */
+  public function getOnTargetCoviewReach()
+  {
+    return $this->onTargetCoviewReach;
+  }
   /**
    * Number of on-target impressions.
    *
@@ -87,6 +145,38 @@ class PlannedProductForecast extends \Google\Model
   public function getOnTargetReach()
   {
     return $this->onTargetReach;
+  }
+  /**
+   * Total number of impressions including co-viewers.
+   *
+   * @param string $totalCoviewImpressions
+   */
+  public function setTotalCoviewImpressions($totalCoviewImpressions)
+  {
+    $this->totalCoviewImpressions = $totalCoviewImpressions;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalCoviewImpressions()
+  {
+    return $this->totalCoviewImpressions;
+  }
+  /**
+   * Total number of unique people reached including co-viewers.
+   *
+   * @param string $totalCoviewReach
+   */
+  public function setTotalCoviewReach($totalCoviewReach)
+  {
+    $this->totalCoviewReach = $totalCoviewReach;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalCoviewReach()
+  {
+    return $this->totalCoviewReach;
   }
   /**
    * Total number of impressions.

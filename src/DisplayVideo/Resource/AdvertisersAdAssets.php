@@ -126,6 +126,30 @@ class AdvertisersAdAssets extends \Google\Service\Resource
     return $this->call('list', [$params], ListAdAssetsResponse::class);
   }
   /**
+   * Updates an ad asset. Returns the updated ad asset if successful. Supports
+   * updating assets of AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO` and
+   * `AD_ASSET_TYPE_IMAGE`. Only the `synthetic_content_attestation_status` field
+   * is mutable. (adAssets.patch)
+   *
+   * @param string $advertiserId Required. The ID of the advertiser this ad asset
+   * belongs to.
+   * @param string $adAssetId Output only. The ID of the ad asset. Referred to as
+   * the asset ID when assigned to an ad.
+   * @param AdAsset $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The list of fields to update. Only
+   * AdAsset.synthetic_content_attestation_status is mutable.
+   * @return AdAsset
+   * @throws \Google\Service\Exception
+   */
+  public function patch($advertiserId, $adAssetId, AdAsset $postBody, $optParams = [])
+  {
+    $params = ['advertiserId' => $advertiserId, 'adAssetId' => $adAssetId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], AdAsset::class);
+  }
+  /**
    * Uploads and creates an ad asset. Returns the ID of the newly-created ad asset
    * if successful. Only supports the uploading of assets with the AdAssetType
    * `AD_ASSET_TYPE_IMAGE`. (adAssets.upload)

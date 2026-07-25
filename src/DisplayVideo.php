@@ -303,6 +303,25 @@ class DisplayVideo extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'patch' => [
+              'path' => 'v4/advertisers/{+advertiserId}/adAssets/{+adAssetId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'adAssetId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'upload' => [
               'path' => 'v4/advertisers/{+advertiserId}/adAssets:uploadAdAsset',
               'httpMethod' => 'POST',

@@ -32,6 +32,18 @@ class UploadAdAssetRequest extends \Google\Model
    */
   public const AD_ASSET_TYPE_AD_ASSET_TYPE_YOUTUBE_VIDEO = 'AD_ASSET_TYPE_YOUTUBE_VIDEO';
   /**
+   * Attestation status is unspecified.
+   */
+  public const SYNTHETIC_CONTENT_ATTESTATION_STATUS_SYNTHETIC_CONTENT_ATTESTATION_STATUS_UNSPECIFIED = 'SYNTHETIC_CONTENT_ATTESTATION_STATUS_UNSPECIFIED';
+  /**
+   * Not synthetic content.
+   */
+  public const SYNTHETIC_CONTENT_ATTESTATION_STATUS_NOT_SYNTHETIC = 'NOT_SYNTHETIC';
+  /**
+   * Is synthetic content.
+   */
+  public const SYNTHETIC_CONTENT_ATTESTATION_STATUS_IS_SYNTHETIC = 'IS_SYNTHETIC';
+  /**
    * Required. The type of the ad asset. Only `AD_ASSET_TYPE_IMAGE` is
    * supported.
    *
@@ -45,6 +57,13 @@ class UploadAdAssetRequest extends \Google\Model
    * @var string
    */
   public $filename;
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using
+   * AI.
+   *
+   * @var string
+   */
+  public $syntheticContentAttestationStatus;
 
   /**
    * Required. The type of the ad asset. Only `AD_ASSET_TYPE_IMAGE` is
@@ -82,6 +101,26 @@ class UploadAdAssetRequest extends \Google\Model
   public function getFilename()
   {
     return $this->filename;
+  }
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using
+   * AI.
+   *
+   * Accepted values: SYNTHETIC_CONTENT_ATTESTATION_STATUS_UNSPECIFIED,
+   * NOT_SYNTHETIC, IS_SYNTHETIC
+   *
+   * @param self::SYNTHETIC_CONTENT_ATTESTATION_STATUS_* $syntheticContentAttestationStatus
+   */
+  public function setSyntheticContentAttestationStatus($syntheticContentAttestationStatus)
+  {
+    $this->syntheticContentAttestationStatus = $syntheticContentAttestationStatus;
+  }
+  /**
+   * @return self::SYNTHETIC_CONTENT_ATTESTATION_STATUS_*
+   */
+  public function getSyntheticContentAttestationStatus()
+  {
+    return $this->syntheticContentAttestationStatus;
   }
 }
 
