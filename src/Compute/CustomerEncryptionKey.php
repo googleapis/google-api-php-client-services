@@ -46,19 +46,22 @@ class CustomerEncryptionKey extends \Google\Model
    */
   public $kmsKeyServiceAccount;
   /**
-   * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648
-   * base64 to either encrypt or decrypt this resource. You can provide either
-   * the rawKey or thersaEncryptedKey. For example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies a
+   * 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to
+   * either encrypt or decrypt this resource. You can provide either the rawKey
+   * or thersaEncryptedKey. For example:
    *
    * "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    *
+   * @deprecated
    * @var string
    */
   public $rawKey;
   /**
-   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-
-   * supplied encryption key to either encrypt or decrypt this resource. You can
-   * provide either the rawKey or thersaEncryptedKey. For example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies an
+   * RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption
+   * key to either encrypt or decrypt this resource. You can provide either the
+   * rawKey or thersaEncryptedKey. For example:
    *
    * "rsaEncryptedKey":
    * "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
@@ -74,13 +77,16 @@ class CustomerEncryptionKey extends \Google\Model
    *
    * https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
    *
+   * @deprecated
    * @var string
    */
   public $rsaEncryptedKey;
   /**
-   * [Output only] TheRFC 4648 base64 encoded SHA-256 hash of the customer-
-   * supplied encryption key that protects this resource.
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. [Output only]
+   * TheRFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption
+   * key that protects this resource.
    *
+   * @deprecated
    * @var string
    */
   public $sha256;
@@ -132,12 +138,14 @@ class CustomerEncryptionKey extends \Google\Model
     return $this->kmsKeyServiceAccount;
   }
   /**
-   * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648
-   * base64 to either encrypt or decrypt this resource. You can provide either
-   * the rawKey or thersaEncryptedKey. For example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies a
+   * 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to
+   * either encrypt or decrypt this resource. You can provide either the rawKey
+   * or thersaEncryptedKey. For example:
    *
    * "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    *
+   * @deprecated
    * @param string $rawKey
    */
   public function setRawKey($rawKey)
@@ -145,6 +153,7 @@ class CustomerEncryptionKey extends \Google\Model
     $this->rawKey = $rawKey;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getRawKey()
@@ -152,9 +161,10 @@ class CustomerEncryptionKey extends \Google\Model
     return $this->rawKey;
   }
   /**
-   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-
-   * supplied encryption key to either encrypt or decrypt this resource. You can
-   * provide either the rawKey or thersaEncryptedKey. For example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies an
+   * RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption
+   * key to either encrypt or decrypt this resource. You can provide either the
+   * rawKey or thersaEncryptedKey. For example:
    *
    * "rsaEncryptedKey":
    * "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
@@ -170,6 +180,7 @@ class CustomerEncryptionKey extends \Google\Model
    *
    * https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
    *
+   * @deprecated
    * @param string $rsaEncryptedKey
    */
   public function setRsaEncryptedKey($rsaEncryptedKey)
@@ -177,6 +188,7 @@ class CustomerEncryptionKey extends \Google\Model
     $this->rsaEncryptedKey = $rsaEncryptedKey;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getRsaEncryptedKey()
@@ -184,9 +196,11 @@ class CustomerEncryptionKey extends \Google\Model
     return $this->rsaEncryptedKey;
   }
   /**
-   * [Output only] TheRFC 4648 base64 encoded SHA-256 hash of the customer-
-   * supplied encryption key that protects this resource.
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. [Output only]
+   * TheRFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption
+   * key that protects this resource.
    *
+   * @deprecated
    * @param string $sha256
    */
   public function setSha256($sha256)
@@ -194,6 +208,7 @@ class CustomerEncryptionKey extends \Google\Model
     $this->sha256 = $sha256;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getSha256()

@@ -111,12 +111,12 @@ class HealthCheck extends \Google\Collection
    * region names must be valid names of Google Cloud regions. This can only be
    * set for global health check. If this list is non-empty, then there are
    * restrictions on what other health check fields are supported and what other
-   * resources can use this health check:        - SSL, HTTP2, and GRPC
-   * protocols are not supported.    - The TCP request field is not supported.
-   * - The proxyHeader field for HTTP, HTTPS, and TCP is not    supported.    -
-   * The checkIntervalSec field must be at least 30.    - The health check
-   * cannot be used with BackendService nor with managed    instance group auto-
-   * healing.
+   * resources can use this health check:        - SSL, HTTP2, GRPC, and
+   * GRPC_WITH_TLS protocols are not supported.    - The TCP request field is
+   * not supported.    - The proxyHeader field for HTTP, HTTPS, and TCP is not
+   * supported.    - The checkIntervalSec field must be at least 30.    - The
+   * health check cannot be used with BackendService nor with managed
+   * instance group auto-healing.
    *
    * @var string[]
    */
@@ -134,9 +134,9 @@ class HealthCheck extends \Google\Collection
    */
   public $timeoutSec;
   /**
-   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or
-   * GRPC. Exactly one of the protocol-specific health check fields must be
-   * specified, which must matchtype field.
+   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2,
+   * GRPC or GRPC_WITH_TLS. Exactly one of the protocol-specific health check
+   * fields must be specified, which must match type field.
    *
    * @var string
    */
@@ -396,12 +396,12 @@ class HealthCheck extends \Google\Collection
    * region names must be valid names of Google Cloud regions. This can only be
    * set for global health check. If this list is non-empty, then there are
    * restrictions on what other health check fields are supported and what other
-   * resources can use this health check:        - SSL, HTTP2, and GRPC
-   * protocols are not supported.    - The TCP request field is not supported.
-   * - The proxyHeader field for HTTP, HTTPS, and TCP is not    supported.    -
-   * The checkIntervalSec field must be at least 30.    - The health check
-   * cannot be used with BackendService nor with managed    instance group auto-
-   * healing.
+   * resources can use this health check:        - SSL, HTTP2, GRPC, and
+   * GRPC_WITH_TLS protocols are not supported.    - The TCP request field is
+   * not supported.    - The proxyHeader field for HTTP, HTTPS, and TCP is not
+   * supported.    - The checkIntervalSec field must be at least 30.    - The
+   * health check cannot be used with BackendService nor with managed
+   * instance group auto-healing.
    *
    * @param string[] $sourceRegions
    */
@@ -463,9 +463,9 @@ class HealthCheck extends \Google\Collection
     return $this->timeoutSec;
   }
   /**
-   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or
-   * GRPC. Exactly one of the protocol-specific health check fields must be
-   * specified, which must matchtype field.
+   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2,
+   * GRPC or GRPC_WITH_TLS. Exactly one of the protocol-specific health check
+   * fields must be specified, which must match type field.
    *
    * Accepted values: GRPC, GRPC_WITH_TLS, HTTP, HTTP2, HTTPS, INVALID, SSL, TCP
    *

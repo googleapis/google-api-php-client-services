@@ -75,6 +75,10 @@ class Instance extends \Google\Collection
    */
   public const STATUS_PENDING = 'PENDING';
   /**
+   * The instance is gracefully shutting down.
+   */
+  public const STATUS_PENDING_STOP = 'PENDING_STOP';
+  /**
    * Resources are being allocated for the instance.
    */
   public const STATUS_PROVISIONING = 'PROVISIONING';
@@ -1146,8 +1150,9 @@ class Instance extends \Google\Collection
    * REPAIRING, andTERMINATED. For more information about the status of the
    * instance, see  Instance life cycle.
    *
-   * Accepted values: DEPROVISIONING, PENDING, PROVISIONING, REPAIRING, RUNNING,
-   * STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING, TERMINATED
+   * Accepted values: DEPROVISIONING, PENDING, PENDING_STOP, PROVISIONING,
+   * REPAIRING, RUNNING, STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING,
+   * TERMINATED
    *
    * @param self::STATUS_* $status
    */

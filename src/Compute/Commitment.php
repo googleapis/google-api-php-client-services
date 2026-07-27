@@ -90,6 +90,10 @@ class Commitment extends \Google\Collection
    * CUD bucket for X4 machine with 960 vCPUs and 16TB of memory.
    */
   public const TYPE_MEMORY_OPTIMIZED_X4_960_16T = 'MEMORY_OPTIMIZED_X4_960_16T';
+  /**
+   * CUD bucket for C4N (dual Diorite) machines.
+   */
+  public const TYPE_NETWORK_OPTIMIZED_C4N = 'NETWORK_OPTIMIZED_C4N';
   public const TYPE_STORAGE_OPTIMIZED_Z3 = 'STORAGE_OPTIMIZED_Z3';
   /**
    * Note for internal users: When adding a new enum Type for v1, make sure to
@@ -723,7 +727,7 @@ class Commitment extends \Google\Collection
    * MEMORY_OPTIMIZED_X4_24TB, MEMORY_OPTIMIZED_X4_32TB,
    * MEMORY_OPTIMIZED_X4_480_6T, MEMORY_OPTIMIZED_X4_480_8T,
    * MEMORY_OPTIMIZED_X4_960_12T, MEMORY_OPTIMIZED_X4_960_16T,
-   * STORAGE_OPTIMIZED_Z3, TYPE_UNSPECIFIED
+   * NETWORK_OPTIMIZED_C4N, STORAGE_OPTIMIZED_Z3, TYPE_UNSPECIFIED
    *
    * @param self::TYPE_* $type
    */

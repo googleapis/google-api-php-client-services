@@ -30,6 +30,10 @@ class InstanceWithNamedPorts extends \Google\Collection
    */
   public const STATUS_PENDING = 'PENDING';
   /**
+   * The instance is gracefully shutting down.
+   */
+  public const STATUS_PENDING_STOP = 'PENDING_STOP';
+  /**
    * Resources are being allocated for the instance.
    */
   public const STATUS_PROVISIONING = 'PROVISIONING';
@@ -118,8 +122,9 @@ class InstanceWithNamedPorts extends \Google\Collection
   /**
    * Output only. [Output Only] The status of the instance.
    *
-   * Accepted values: DEPROVISIONING, PENDING, PROVISIONING, REPAIRING, RUNNING,
-   * STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING, TERMINATED
+   * Accepted values: DEPROVISIONING, PENDING, PENDING_STOP, PROVISIONING,
+   * REPAIRING, RUNNING, STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING,
+   * TERMINATED
    *
    * @param self::STATUS_* $status
    */

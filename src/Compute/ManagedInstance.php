@@ -95,6 +95,10 @@ class ManagedInstance extends \Google\Collection
    */
   public const INSTANCE_STATUS_PENDING = 'PENDING';
   /**
+   * The instance is gracefully shutting down.
+   */
+  public const INSTANCE_STATUS_PENDING_STOP = 'PENDING_STOP';
+  /**
    * Resources are being allocated for the instance.
    */
   public const INSTANCE_STATUS_PROVISIONING = 'PROVISIONING';
@@ -295,8 +299,9 @@ class ManagedInstance extends \Google\Collection
    * Output only. [Output Only] The status of the instance. This field is empty
    * when the instance does not exist.
    *
-   * Accepted values: DEPROVISIONING, PENDING, PROVISIONING, REPAIRING, RUNNING,
-   * STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING, TERMINATED
+   * Accepted values: DEPROVISIONING, PENDING, PENDING_STOP, PROVISIONING,
+   * REPAIRING, RUNNING, STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING,
+   * TERMINATED
    *
    * @param self::INSTANCE_STATUS_* $instanceStatus
    */

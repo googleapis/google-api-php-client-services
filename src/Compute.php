@@ -75,6 +75,7 @@ class Compute extends \Google\Service
   public $globalPublicDelegatedPrefixes;
   public $globalVmExtensionPolicies;
   public $healthChecks;
+  public $hosts;
   public $httpHealthChecks;
   public $httpsHealthChecks;
   public $imageFamilyViews;
@@ -145,6 +146,7 @@ class Compute extends \Google\Service
   public $regionUrlMaps;
   public $regionZones;
   public $regions;
+  public $reliabilityRisks;
   public $reservationBlocks;
   public $reservationSlots;
   public $reservationSubBlocks;
@@ -4166,6 +4168,110 @@ class Compute extends \Google\Service
           ]
         ]
     );
+    $this->hosts = new Compute\Resource\Hosts(
+        $this,
+        $this->serviceName,
+        'hosts',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'projects/{project}/zones/{zone}/{association}/hosts/{host}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'association' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'host' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getVersion' => [
+              'path' => 'projects/{project}/zones/{zone}/{association}/hosts/{host}/getVersion',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'association' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'host' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/zones/{zone}/{association}/hosts',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'association' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->httpHealthChecks = new Compute\Resource\HttpHealthChecks(
         $this,
         $this->serviceName,
@@ -6195,6 +6301,10 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'noGracefulShutdown' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -7141,6 +7251,10 @@ class Compute extends \Google\Service
                   'required' => true,
                 ],
                 'discardLocalSsd' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'noGracefulShutdown' => [
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
@@ -18515,6 +18629,61 @@ class Compute extends \Google\Service
               ],
             ],'list' => [
               'path' => 'projects/{project}/regions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->reliabilityRisks = new Compute\Resource\ReliabilityRisks(
+        $this,
+        $this->serviceName,
+        'reliabilityRisks',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'projects/{project}/global/reliabilityRisks/{reliabilityRisk}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'reliabilityRisk' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/global/reliabilityRisks',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [

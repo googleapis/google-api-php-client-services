@@ -337,6 +337,8 @@ class Instances extends \Google\Service\Resource
    * @param string $instance Name of the instance resource to delete.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool noGracefulShutdown If set to true, Graceful Shutdown is
+   * skipped.
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.
@@ -1534,6 +1536,8 @@ class Instances extends \Google\Service\Resource
    * any attached Local SSD disks. If false, Local SSD data will be preserved when
    * the instance is suspended. If true, the contents of any attached Local SSD
    * disks will be discarded.
+   * @opt_param bool noGracefulShutdown If set to true, Graceful Shutdown is
+   * skipped.
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.

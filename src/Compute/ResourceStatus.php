@@ -35,6 +35,8 @@ class ResourceStatus extends \Google\Model
   protected $reservationConsumptionInfoDataType = '';
   protected $schedulingType = ResourceStatusScheduling::class;
   protected $schedulingDataType = '';
+  protected $shutdownDetailsType = ResourceStatusShutdownDetails::class;
+  protected $shutdownDetailsDataType = '';
   protected $upcomingMaintenanceType = UpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
 
@@ -123,6 +125,22 @@ class ResourceStatus extends \Google\Model
   public function getScheduling()
   {
     return $this->scheduling;
+  }
+  /**
+   * Output only. [Output Only] Details about the instance stopping state.
+   *
+   * @param ResourceStatusShutdownDetails $shutdownDetails
+   */
+  public function setShutdownDetails(ResourceStatusShutdownDetails $shutdownDetails)
+  {
+    $this->shutdownDetails = $shutdownDetails;
+  }
+  /**
+   * @return ResourceStatusShutdownDetails
+   */
+  public function getShutdownDetails()
+  {
+    return $this->shutdownDetails;
   }
   /**
    * @param UpcomingMaintenance $upcomingMaintenance
