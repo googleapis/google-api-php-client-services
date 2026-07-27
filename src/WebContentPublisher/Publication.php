@@ -52,6 +52,18 @@ class Publication extends \Google\Collection
    * Publication supports voluntary contributions.
    */
   public const PAYMENT_OPTION_CONTRIBUTIONS = 'CONTRIBUTIONS';
+  /**
+   * Unspecified publication type.
+   */
+  public const PUBLICATION_TYPE_PUBLICATION_TYPE_UNSPECIFIED = 'PUBLICATION_TYPE_UNSPECIFIED';
+  /**
+   * For-profit entity.
+   */
+  public const PUBLICATION_TYPE_FOR_PROFIT = 'FOR_PROFIT';
+  /**
+   * Non-profit entity.
+   */
+  public const PUBLICATION_TYPE_NON_PROFIT = 'NON_PROFIT';
   protected $collection_key = 'products';
   protected $additionalDomainsType = DomainProperty::class;
   protected $additionalDomainsDataType = 'array';
@@ -123,6 +135,13 @@ class Publication extends \Google\Collection
    * @var string
    */
   public $publicationTosUrl;
+  /**
+   * Optional. The publication entity type (for-profit vs non-profit). Defaults
+   * to FOR_PROFIT if omitted.
+   *
+   * @var string
+   */
+  public $publicationType;
   /**
    * Required. The ISO 3166-1 alpha-2 region code where the publication is
    * registered (e.g., "US").
@@ -352,6 +371,25 @@ class Publication extends \Google\Collection
   public function getPublicationTosUrl()
   {
     return $this->publicationTosUrl;
+  }
+  /**
+   * Optional. The publication entity type (for-profit vs non-profit). Defaults
+   * to FOR_PROFIT if omitted.
+   *
+   * Accepted values: PUBLICATION_TYPE_UNSPECIFIED, FOR_PROFIT, NON_PROFIT
+   *
+   * @param self::PUBLICATION_TYPE_* $publicationType
+   */
+  public function setPublicationType($publicationType)
+  {
+    $this->publicationType = $publicationType;
+  }
+  /**
+   * @return self::PUBLICATION_TYPE_*
+   */
+  public function getPublicationType()
+  {
+    return $this->publicationType;
   }
   /**
    * Required. The ISO 3166-1 alpha-2 region code where the publication is

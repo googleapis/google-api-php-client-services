@@ -20,6 +20,13 @@ namespace Google\Service\WebContentPublisher;
 class TosAcceptance extends \Google\Model
 {
   /**
+   * Optional. Whether the user opted in to receive product updates and email
+   * communications.
+   *
+   * @var bool
+   */
+  public $emailOptIn;
+  /**
    * Optional. The name of the person who accepted the TOS.
    *
    * @var string
@@ -38,6 +45,23 @@ class TosAcceptance extends \Google\Model
    */
   public $userAccepted;
 
+  /**
+   * Optional. Whether the user opted in to receive product updates and email
+   * communications.
+   *
+   * @param bool $emailOptIn
+   */
+  public function setEmailOptIn($emailOptIn)
+  {
+    $this->emailOptIn = $emailOptIn;
+  }
+  /**
+   * @return bool
+   */
+  public function getEmailOptIn()
+  {
+    return $this->emailOptIn;
+  }
   /**
    * Optional. The name of the person who accepted the TOS.
    *
