@@ -35,23 +35,27 @@ class Attributes extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string categoryName The primary category stable ID to find
-   * available attributes. Must be of the format categories/{category_id}.
-   * @opt_param string languageCode The BCP 47 code of language to get attribute
-   * display names in. If this language is not available, they will be provided in
-   * English.
+   * @opt_param string categoryName Optional. The primary category stable ID to
+   * find available attributes. Must be of the format `categories/{category_id}`
+   * (e.g., `categories/gcid:restaurant`). Required if `parent` is not set and
+   * `show_all` is false.
+   * @opt_param string languageCode Optional. The BCP 47 code of language to get
+   * attribute display names in. If this language is not available, they will be
+   * provided in English.
    * @opt_param int pageSize How many attributes to include per page. Default is
    * 200, minimum is 1.
    * @opt_param string pageToken If specified, the next page of attribute metadata
    * is retrieved.
-   * @opt_param string parent Resource name of the location to look up available
-   * attributes. If this field is set, category_name, region_code, language_code
-   * and show_all are not required and must not be set.
-   * @opt_param string regionCode The ISO 3166-1 alpha-2 country code to find
-   * available attributes.
-   * @opt_param bool showAll Metadata for all available attributes are returned
-   * when this field is set to true, disregarding parent and category_name fields.
-   * language_code and region_code are required when show_all is set to true.
+   * @opt_param string parent Optional. Resource name of the location to look up
+   * available attributes. If this field is set, `category_name`, `region_code`,
+   * `language_code` and `show_all` are not required and must not be set. Format:
+   * `locations/{location_id}` (e.g., `locations/1234567890`).
+   * @opt_param string regionCode Optional. The ISO 3166-1 alpha-2 country code to
+   * find available attributes. Required if `parent` is not set.
+   * @opt_param bool showAll Optional. If set to true, metadata for all available
+   * attributes are returned, disregarding `parent` and `category_name` fields.
+   * `language_code` and `region_code` are required when `show_all` is set to
+   * true.
    * @return ListAttributeMetadataResponse
    * @throws \Google\Service\Exception
    */
