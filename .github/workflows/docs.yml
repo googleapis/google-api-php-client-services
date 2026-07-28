@@ -14,7 +14,7 @@ permissions:
 jobs:
     docs:
         name: "Generate and Deploy Documentation"
-        uses: GoogleCloudPlatform/php-tools/.github/workflows/doctum.yml@main
+        uses: GoogleCloudPlatform/php-tools/.github/workflows/doctum.yml@8d707553d2c90c3b614941950814dcc10c19ce47 # main
         with:
           title: "Google Cloud PHP Client Services"
           # use a custom theme so that namespaces that share the same name as classes
