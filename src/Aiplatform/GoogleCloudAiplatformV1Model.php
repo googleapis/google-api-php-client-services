@@ -310,10 +310,10 @@ class GoogleCloudAiplatformV1Model extends \Google\Collection
     return $this->checkpoints;
   }
   /**
-   * Input only. The specification of the container that is to be used when
-   * deploying this Model. The specification is ingested upon
-   * ModelService.UploadModel, and all binaries it contains are copied and
-   * stored internally by Vertex AI. Not required for AutoML Models.
+   * The specification of the container that is to be used when deploying this
+   * Model. The specification is ingested upon ModelService.UploadModel, and all
+   * binaries it contains are copied and stored internally by Vertex AI. Not
+   * required for AutoML Models.
    *
    * @param GoogleCloudAiplatformV1ModelContainerSpec $containerSpec
    */

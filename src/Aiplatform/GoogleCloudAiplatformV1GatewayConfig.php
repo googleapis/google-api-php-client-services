@@ -17,7 +17,7 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GatewayConfig extends \Google\Model
+class GoogleCloudAiplatformV1GatewayConfig extends \Google\Collection
 {
   /**
    * The default value. This value is used if the state is omitted.
@@ -43,6 +43,19 @@ class GoogleCloudAiplatformV1GatewayConfig extends \Google\Model
    * The Gateway failed to be provisioned.
    */
   public const STATE_FAILED = 'FAILED';
+  protected $collection_key = 'allowedProjects';
+  /**
+   * Optional. Additional consumer projects permitted to attach their own PSC
+   * endpoint to this gateway's ServiceAttachment. This is the "decoupled" mode,
+   * where the customer creates the PSC endpoint in a project other than this
+   * gateway's `network` project. Each listed project is VPC-SC enforced: it
+   * must be within the caller's service perimeter. The owning
+   * SemanticGovernancePolicyEngine's own project is always permitted implicitly
+   * and need not be listed. Format: project ID or number.
+   *
+   * @var string[]
+   */
+  public $allowedProjects;
   /**
    * Output only. The fully qualified record name of the created A-record in
    * Cloud DNS.
@@ -94,6 +107,28 @@ class GoogleCloudAiplatformV1GatewayConfig extends \Google\Model
    */
   public $subnetwork;
 
+  /**
+   * Optional. Additional consumer projects permitted to attach their own PSC
+   * endpoint to this gateway's ServiceAttachment. This is the "decoupled" mode,
+   * where the customer creates the PSC endpoint in a project other than this
+   * gateway's `network` project. Each listed project is VPC-SC enforced: it
+   * must be within the caller's service perimeter. The owning
+   * SemanticGovernancePolicyEngine's own project is always permitted implicitly
+   * and need not be listed. Format: project ID or number.
+   *
+   * @param string[] $allowedProjects
+   */
+  public function setAllowedProjects($allowedProjects)
+  {
+    $this->allowedProjects = $allowedProjects;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAllowedProjects()
+  {
+    return $this->allowedProjects;
+  }
   /**
    * Output only. The fully qualified record name of the created A-record in
    * Cloud DNS.

@@ -27,6 +27,12 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecContainerSpec extends \Google\Mo
    * @var string
    */
   public $imageUri;
+  /**
+   * Optional. The port the container listens on. Defaults to 8080 if unset.
+   *
+   * @var int
+   */
+  public $port;
 
   /**
    * Required. The Artifact Registry Docker image URI (e.g., us-
@@ -45,6 +51,22 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecContainerSpec extends \Google\Mo
   public function getImageUri()
   {
     return $this->imageUri;
+  }
+  /**
+   * Optional. The port the container listens on. Defaults to 8080 if unset.
+   *
+   * @param int $port
+   */
+  public function setPort($port)
+  {
+    $this->port = $port;
+  }
+  /**
+   * @return int
+   */
+  public function getPort()
+  {
+    return $this->port;
   }
 }
 

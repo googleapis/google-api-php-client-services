@@ -34,6 +34,8 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
    * @var string
    */
   public $displayName;
+  protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
+  protected $encryptionSpecDataType = '';
   /**
    * Required. The EvaluationItems that are part of this dataset.
    *
@@ -109,6 +111,23 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationSet. If
+   * set, this EvaluationSet and its sub-resources will be secured by this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
+   */
+  public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
+  {
+    $this->encryptionSpec = $encryptionSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public function getEncryptionSpec()
+  {
+    return $this->encryptionSpec;
   }
   /**
    * Required. The EvaluationItems that are part of this dataset.

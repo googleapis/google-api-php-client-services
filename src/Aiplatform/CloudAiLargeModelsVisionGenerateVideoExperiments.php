@@ -68,6 +68,8 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
    * @var int
    */
   public $numDiffusionSteps;
+  protected $omniRewriterType = CloudAiLargeModelsVisionGenerateVideoExperimentsOmniRewriterConfig::class;
+  protected $omniRewriterDataType = '';
   /**
    * The original REST API request JSON sent by the user, in the
    * instances/parameters format. Preserved for saving alongside output
@@ -266,6 +268,22 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getNumDiffusionSteps()
   {
     return $this->numDiffusionSteps;
+  }
+  /**
+   * Optional. Omni Rewriter configuration.
+   *
+   * @param CloudAiLargeModelsVisionGenerateVideoExperimentsOmniRewriterConfig $omniRewriter
+   */
+  public function setOmniRewriter(CloudAiLargeModelsVisionGenerateVideoExperimentsOmniRewriterConfig $omniRewriter)
+  {
+    $this->omniRewriter = $omniRewriter;
+  }
+  /**
+   * @return CloudAiLargeModelsVisionGenerateVideoExperimentsOmniRewriterConfig
+   */
+  public function getOmniRewriter()
+  {
+    return $this->omniRewriter;
   }
   /**
    * The original REST API request JSON sent by the user, in the

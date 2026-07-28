@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplateDefaultContainerEnvironme
    */
   public const DEFAULT_CONTAINER_CATEGORY_DEFAULT_CONTAINER_CATEGORY_COMPUTER_USE = 'DEFAULT_CONTAINER_CATEGORY_COMPUTER_USE';
   /**
+   * The default container image for Shell Sandbox.
+   */
+  public const DEFAULT_CONTAINER_CATEGORY_DEFAULT_CONTAINER_CATEGORY_SHELL_SANDBOX = 'DEFAULT_CONTAINER_CATEGORY_SHELL_SANDBOX';
+  /**
    * Required. The category of the default container image.
    *
    * @var string
@@ -40,7 +44,8 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplateDefaultContainerEnvironme
    * Required. The category of the default container image.
    *
    * Accepted values: DEFAULT_CONTAINER_CATEGORY_UNSPECIFIED,
-   * DEFAULT_CONTAINER_CATEGORY_COMPUTER_USE
+   * DEFAULT_CONTAINER_CATEGORY_COMPUTER_USE,
+   * DEFAULT_CONTAINER_CATEGORY_SHELL_SANDBOX
    *
    * @param self::DEFAULT_CONTAINER_CATEGORY_* $defaultContainerCategory
    */

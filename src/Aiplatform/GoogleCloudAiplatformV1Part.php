@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Part extends \Google\Model
 {
+  protected $audioTranscriptionType = GoogleCloudAiplatformV1AudioTranscription::class;
+  protected $audioTranscriptionDataType = '';
   protected $codeExecutionResultType = GoogleCloudAiplatformV1CodeExecutionResult::class;
   protected $codeExecutionResultDataType = '';
   protected $executableCodeType = GoogleCloudAiplatformV1ExecutableCode::class;
@@ -59,6 +61,23 @@ class GoogleCloudAiplatformV1Part extends \Google\Model
   protected $videoMetadataType = GoogleCloudAiplatformV1VideoMetadata::class;
   protected $videoMetadataDataType = '';
 
+  /**
+   * Optional. Audio (input or output) transcription. This is only set when this
+   * Part contains audio data.
+   *
+   * @param GoogleCloudAiplatformV1AudioTranscription $audioTranscription
+   */
+  public function setAudioTranscription(GoogleCloudAiplatformV1AudioTranscription $audioTranscription)
+  {
+    $this->audioTranscription = $audioTranscription;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AudioTranscription
+   */
+  public function getAudioTranscription()
+  {
+    return $this->audioTranscription;
+  }
   /**
    * Optional. The result of executing the ExecutableCode.
    *

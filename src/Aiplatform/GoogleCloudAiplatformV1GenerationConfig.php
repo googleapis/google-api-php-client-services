@@ -44,6 +44,8 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * @var bool
    */
   public $audioTimestamp;
+  protected $audioTranscriptionConfigType = GoogleCloudAiplatformV1AudioTranscriptionConfig::class;
+  protected $audioTranscriptionConfigDataType = '';
   /**
    * Optional. The number of candidate responses to generate. A higher
    * `candidate_count` can provide more options to choose from, but it also
@@ -227,6 +229,22 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getAudioTimestamp()
   {
     return $this->audioTimestamp;
+  }
+  /**
+   * Optional. Config for audio transcription (speech recognition).
+   *
+   * @param GoogleCloudAiplatformV1AudioTranscriptionConfig $audioTranscriptionConfig
+   */
+  public function setAudioTranscriptionConfig(GoogleCloudAiplatformV1AudioTranscriptionConfig $audioTranscriptionConfig)
+  {
+    $this->audioTranscriptionConfig = $audioTranscriptionConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AudioTranscriptionConfig
+   */
+  public function getAudioTranscriptionConfig()
+  {
+    return $this->audioTranscriptionConfig;
   }
   /**
    * Optional. The number of candidate responses to generate. A higher

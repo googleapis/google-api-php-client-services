@@ -17,6 +17,9 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1IngestEventsRequest;
+use Google\Service\Aiplatform\GoogleLongrunningOperation;
+
 /**
  * The "memoryBanks" collection of methods.
  * Typical usage is:
@@ -27,6 +30,23 @@ namespace Google\Service\Aiplatform\Resource;
  */
 class ProjectsLocationsMemoryBanks extends \Google\Service\Resource
 {
+  /**
+   * Ingests events for a Memory Bank. (memoryBanks.ingestEvents)
+   *
+   * @param string $parent Required. The resource name of the ReasoningEngine to
+   * ingest events to. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1IngestEventsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function ingestEvents($parent, GoogleCloudAiplatformV1IngestEventsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('ingestEvents', [$params], GoogleLongrunningOperation::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

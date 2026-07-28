@@ -20,6 +20,17 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec extends \Google\Model
 {
   /**
+   * Optional. The service account that Cloud Build uses to run the build. This
+   * field is only applicable when `worker_pool` is specified (i.e., for custom
+   * worker pools). If `worker_pool` is not specified, this field is ignored and
+   * the build runs using the Google-managed service agent. Format:
+   * `projects/{project}/serviceAccounts/{service_account}` or
+   * `{service_account}@{project}.iam.gserviceaccount.com`
+   *
+   * @var string
+   */
+  public $serviceAccount;
+  /**
    * Optional. Identifier. The resource name of the Cloud Build WorkerPool to
    * use for the build. Format:
    * `projects/{project}/locations/{location}/workerPools/{worker_pool}`
@@ -28,6 +39,27 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec extends \Google\Model
    */
   public $workerPool;
 
+  /**
+   * Optional. The service account that Cloud Build uses to run the build. This
+   * field is only applicable when `worker_pool` is specified (i.e., for custom
+   * worker pools). If `worker_pool` is not specified, this field is ignored and
+   * the build runs using the Google-managed service agent. Format:
+   * `projects/{project}/serviceAccounts/{service_account}` or
+   * `{service_account}@{project}.iam.gserviceaccount.com`
+   *
+   * @param string $serviceAccount
+   */
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
+  }
   /**
    * Optional. Identifier. The resource name of the Cloud Build WorkerPool to
    * use for the build. Format:

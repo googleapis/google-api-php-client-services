@@ -65,7 +65,7 @@ class GoogleCloudAiplatformV1OnlineEvaluator extends \Google\Collection
    */
   public $createTime;
   /**
-   * Optional. Human-readable name for the `OnlineEvaluator`. The name doesn't
+   * Optional. Human-readable name for the OnlineEvaluator. The name doesn't
    * have to be unique. The name can consist of any UTF-8 characters. The
    * maximum length is `63` characters. If the display name exceeds max
    * characters, an `INVALID_ARGUMENT` error is returned.
@@ -166,7 +166,7 @@ class GoogleCloudAiplatformV1OnlineEvaluator extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. Human-readable name for the `OnlineEvaluator`. The name doesn't
+   * Optional. Human-readable name for the OnlineEvaluator. The name doesn't
    * have to be unique. The name can consist of any UTF-8 characters. The
    * maximum length is `63` characters. If the display name exceeds max
    * characters, an `INVALID_ARGUMENT` error is returned.

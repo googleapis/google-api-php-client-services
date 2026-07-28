@@ -137,6 +137,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_indexEndpoints_operations;
   public $projects_locations_indexes;
   public $projects_locations_indexes_operations;
+  public $projects_locations_memoryBanks;
   public $projects_locations_memoryBanks_memories;
   public $projects_locations_memoryBanks_memories_operations;
   public $projects_locations_memoryBanks_memories_revisions;
@@ -7875,6 +7876,10 @@ class Aiplatform extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'patch' => [
               'path' => 'v1/{+name}',
@@ -8168,6 +8173,26 @@ class Aiplatform extends \Google\Service
                 'timeout' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_memoryBanks = new Aiplatform\Resource\ProjectsLocationsMemoryBanks(
+        $this,
+        $this->serviceName,
+        'memoryBanks',
+        [
+          'methods' => [
+            'ingestEvents' => [
+              'path' => 'v1/{+parent}:ingestEvents',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
