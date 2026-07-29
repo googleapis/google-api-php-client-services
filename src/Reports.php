@@ -91,6 +91,10 @@ class Reports extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'agentInfoFilter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'applicationInfoFilter' => [
                   'location' => 'query',
                   'type' => 'string',

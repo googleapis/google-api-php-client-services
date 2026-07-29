@@ -55,6 +55,10 @@ class Activities extends \Google\Service\Resource
    * example, the IP address can be the user's proxy server's address or a virtual
    * private network (VPN) address. This parameter supports both IPv4 and IPv6
    * address versions.
+   * @opt_param string agentInfoFilter Optional. Filters on agent info fields in
+   * the activity. This filter gets applied in conjunction(AND) with other
+   * filters. Example: "agentInfoFilter=agentId=\"agent-id\" AND
+   * agentName=\"agent-name\" AND agentOwnerEmail=\"agent-owner-email\""
    * @opt_param string applicationInfoFilter Optional. Used to filter on the
    * `oAuthClientId` field present in [`ApplicationInfo`](#applicationinfo)
    * message. **Usage** ``` GET...&applicationInfoFilter=oAuthClientId="clientId"
