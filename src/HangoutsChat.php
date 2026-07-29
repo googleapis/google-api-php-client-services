@@ -50,6 +50,15 @@ class HangoutsChat extends \Google\Service
   /** View display name, description, and other metadata for all Google Chat conversations owned by your organization. */
   const CHAT_ADMIN_SPACES_READONLY =
       "https://www.googleapis.com/auth/chat.admin.spaces.readonly";
+  /** On their own behalf, apps in Google Chat can see all members in Google Chat spaces and conversations throughout your Workspace organization, even when the Chat app isn't a member. */
+  const CHAT_APP_ALL_MEMBERSHIPS_READONLY =
+      "https://www.googleapis.com/auth/chat.app.all.memberships.readonly";
+  /** On their own behalf, apps in Google Chat can see all messages and reactions throughout your Workspace organization, even when the Chat app isn't a member of a space or conversation. */
+  const CHAT_APP_ALL_MESSAGES_READONLY =
+      "https://www.googleapis.com/auth/chat.app.all.messages.readonly";
+  /** On their own behalf, apps in Google Chat can see metadata about all spaces and conversations in Google Chat throughout your Workspace organization, even when the Chat app isn't a member. */
+  const CHAT_APP_ALL_SPACES_READONLY =
+      "https://www.googleapis.com/auth/chat.app.all.spaces.readonly";
   /** On their own behalf, apps in Google Chat can delete conversations and spaces and remove access to associated files. */
   const CHAT_APP_DELETE =
       "https://www.googleapis.com/auth/chat.app.delete";
