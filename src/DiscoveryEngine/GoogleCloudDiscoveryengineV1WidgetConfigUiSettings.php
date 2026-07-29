@@ -177,6 +177,14 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * @var string
    */
   public $resultDescriptionType;
+  /**
+   * Optional. Whether to show the admin-configured display name for data
+   * connectors in the widget sources UI (instead of the connector kind). Opt-
+   * in; defaults to false.
+   *
+   * @var bool
+   */
+  public $sourceAdminDisplayNameEnabled;
 
   /**
    * Per data store configuration.
@@ -509,6 +517,24 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
   public function getResultDescriptionType()
   {
     return $this->resultDescriptionType;
+  }
+  /**
+   * Optional. Whether to show the admin-configured display name for data
+   * connectors in the widget sources UI (instead of the connector kind). Opt-
+   * in; defaults to false.
+   *
+   * @param bool $sourceAdminDisplayNameEnabled
+   */
+  public function setSourceAdminDisplayNameEnabled($sourceAdminDisplayNameEnabled)
+  {
+    $this->sourceAdminDisplayNameEnabled = $sourceAdminDisplayNameEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getSourceAdminDisplayNameEnabled()
+  {
+    return $this->sourceAdminDisplayNameEnabled;
   }
 }
 

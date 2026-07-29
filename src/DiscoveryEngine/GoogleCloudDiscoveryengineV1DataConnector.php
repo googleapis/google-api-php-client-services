@@ -280,20 +280,10 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
    */
   public $createTime;
   /**
-   * Required. The identifier for the data source. This is a partial list of
-   * supported connectors. Please refer to the [documentation](https://docs.clou
-   * d.google.com/gemini/enterprise/docs/connectors/introduction-to-connectors-
-   * and-data-stores) for the full list of connectors. Supported first-party
-   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` *
-   * `google_drive` * `google_calendar` * `google_chat` Supported third-party
-   * connectors include: Generally available (GA) connectors: * `onedrive` *
-   * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint` Preview
-   * connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
-   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` *
-   * `dynamics365` * `github` * `gitlab` * `hubspot` * `jira_server` * `linear`
-   * * `native_cloud_identity` * `notion` * `okta` * `pagerduty` * `peoplesoft`
-   * * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` * `trello` *
-   * `workday` * `zendesk`
+   * Required. The identifier for the data source. For the full, up-to-date list
+   * of supported connectors and their values, see [Connect a third-party data s
+   * ource](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/conn
+   * ect-third-party-data-source#sources-by-launch-stage).
    *
    * @var string
    */
@@ -392,6 +382,8 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
    * @var string
    */
   public $latestPauseTime;
+  protected $metadataType = GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata::class;
+  protected $metadataDataType = '';
   /**
    * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
@@ -729,20 +721,10 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Required. The identifier for the data source. This is a partial list of
-   * supported connectors. Please refer to the [documentation](https://docs.clou
-   * d.google.com/gemini/enterprise/docs/connectors/introduction-to-connectors-
-   * and-data-stores) for the full list of connectors. Supported first-party
-   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` *
-   * `google_drive` * `google_calendar` * `google_chat` Supported third-party
-   * connectors include: Generally available (GA) connectors: * `onedrive` *
-   * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint` Preview
-   * connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
-   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` *
-   * `dynamics365` * `github` * `gitlab` * `hubspot` * `jira_server` * `linear`
-   * * `native_cloud_identity` * `notion` * `okta` * `pagerduty` * `peoplesoft`
-   * * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` * `trello` *
-   * `workday` * `zendesk`
+   * Required. The identifier for the data source. For the full, up-to-date list
+   * of supported connectors and their values, see [Connect a third-party data s
+   * ource](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/conn
+   * ect-third-party-data-source#sources-by-launch-stage).
    *
    * @param string $dataSource
    */
@@ -1044,6 +1026,23 @@ class GoogleCloudDiscoveryengineV1DataConnector extends \Google\Collection
   public function getLatestPauseTime()
   {
     return $this->latestPauseTime;
+  }
+  /**
+   * Optional. User-facing metadata for the connector. Populated from the
+   * connector's generated metadata / registry `ConnectorSource`.
+   *
+   * @param GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata $metadata
+   */
+  public function setMetadata(GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * Identifier. The full resource name of the Data Connector. Format:

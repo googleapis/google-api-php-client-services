@@ -20,8 +20,8 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1UserInfoPreciseLocation extends \Google\Model
 {
   /**
-   * Optional. Location represented by a natural language address. Will later be
-   * geocoded and converted to either a point or a polygon.
+   * Location represented by a natural language address. Will later be geocoded
+   * and converted to either a point or a polygon.
    *
    * @var string
    */
@@ -30,8 +30,8 @@ class GoogleCloudDiscoveryengineV1UserInfoPreciseLocation extends \Google\Model
   protected $pointDataType = '';
 
   /**
-   * Optional. Location represented by a natural language address. Will later be
-   * geocoded and converted to either a point or a polygon.
+   * Location represented by a natural language address. Will later be geocoded
+   * and converted to either a point or a polygon.
    *
    * @param string $address
    */
