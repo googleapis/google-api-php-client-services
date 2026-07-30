@@ -631,6 +631,16 @@ class HangoutsChat extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'search' => [
+              'path' => 'v1/{+parent}/messages:search',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'update' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PUT',
