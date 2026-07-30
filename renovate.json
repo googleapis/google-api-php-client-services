@@ -2,6 +2,6 @@
   "extends": [
     "config:best-practices"
   ],
-  "pinVersions": false,
-  "rebaseStalePrs": true
+  "rangeStrategy": "replace",
+  "rebaseWhen": "behind-base-branch"
 }
