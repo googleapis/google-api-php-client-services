@@ -96,7 +96,8 @@ class Sleep extends \Google\Collection
     return $this->interval;
   }
   /**
-   * Optional. Sleep metadata: processing, main, manually edited, stages status.
+   * Optional. Sleep metadata: `processed`, `main_sleep`, `manually_edited`, and
+   * `stages_status`.
    *
    * @param SleepMetadata $metadata
    */

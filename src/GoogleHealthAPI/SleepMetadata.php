@@ -70,6 +70,15 @@ class SleepMetadata extends \Google\Model
    */
   public $externalId;
   /**
+   * Output only. `main_sleep`: the longest sleep session with stages within one
+   * day. If no sleep session has stages, then the longest sleep is the
+   * `main_sleep`. If there are multiple days of sleep in the response, there is
+   * one `main_sleep` per day.
+   *
+   * @var bool
+   */
+  public $mainSleep;
+  /**
    * Output only. Some sleeps autodetected by algorithms can be manually edited
    * by users.
    *
@@ -113,6 +122,25 @@ class SleepMetadata extends \Google\Model
   public function getExternalId()
   {
     return $this->externalId;
+  }
+  /**
+   * Output only. `main_sleep`: the longest sleep session with stages within one
+   * day. If no sleep session has stages, then the longest sleep is the
+   * `main_sleep`. If there are multiple days of sleep in the response, there is
+   * one `main_sleep` per day.
+   *
+   * @param bool $mainSleep
+   */
+  public function setMainSleep($mainSleep)
+  {
+    $this->mainSleep = $mainSleep;
+  }
+  /**
+   * @return bool
+   */
+  public function getMainSleep()
+  {
+    return $this->mainSleep;
   }
   /**
    * Output only. Some sleeps autodetected by algorithms can be manually edited
