@@ -20,20 +20,20 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainResourceFlags extends \Google\Model
 {
   /**
-   * Optional. Key of the resource flag.
+   * Optional. Disable validation warnings
    *
    * @var string
    */
   public $key;
   /**
-   * Optional. Value of the resource flag.
+   * Optional. Disable validation warnings
    *
    * @var string
    */
   public $value;
 
   /**
-   * Optional. Key of the resource flag.
+   * Optional. Disable validation warnings
    *
    * @param string $key
    */
@@ -49,7 +49,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceFlags extends \Google\Model
     return $this->key;
   }
   /**
-   * Optional. Value of the resource flag.
+   * Optional. Disable validation warnings
    *
    * @param string $value
    */

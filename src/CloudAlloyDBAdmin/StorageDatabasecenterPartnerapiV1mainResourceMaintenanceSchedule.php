@@ -52,39 +52,33 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule extends \
    */
   public const DAY_SUNDAY = 'SUNDAY';
   /**
-   * Phase is unspecified.
+   * Disable validation warnings
    */
   public const PHASE_PHASE_UNSPECIFIED = 'PHASE_UNSPECIFIED';
   /**
-   * Any phase.
+   * Disable validation warnings
    */
   public const PHASE_ANY = 'ANY';
   /**
-   * Week 1.
+   * Disable validation warnings
    */
   public const PHASE_WEEK1 = 'WEEK1';
   /**
-   * Week 2.
+   * Disable validation warnings
    */
   public const PHASE_WEEK2 = 'WEEK2';
   /**
-   * Week 5.
+   * Disable validation warnings
    */
   public const PHASE_WEEK5 = 'WEEK5';
   /**
-   * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY,
-   * etc.
+   * Optional. Disable validation warnings
    *
    * @var string
    */
   public $day;
   /**
-   * Optional. Phase of the maintenance window. This is to capture order of
-   * maintenance. For example, for Cloud SQL resources, this can be used to
-   * capture if the maintenance window is in Week1, Week2, Week5, etc. Non
-   * production resources are usually part of early phase. For more details,
-   * refer to Cloud SQL resources -
-   * https://cloud.google.com/sql/docs/mysql/maintenance
+   * Optional. Disable validation warnings
    *
    * @var string
    */
@@ -93,8 +87,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule extends \
   protected $timeDataType = '';
 
   /**
-   * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY,
-   * etc.
+   * Optional. Disable validation warnings
    *
    * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
    * THURSDAY, FRIDAY, SATURDAY, SUNDAY
@@ -113,12 +106,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule extends \
     return $this->day;
   }
   /**
-   * Optional. Phase of the maintenance window. This is to capture order of
-   * maintenance. For example, for Cloud SQL resources, this can be used to
-   * capture if the maintenance window is in Week1, Week2, Week5, etc. Non
-   * production resources are usually part of early phase. For more details,
-   * refer to Cloud SQL resources -
-   * https://cloud.google.com/sql/docs/mysql/maintenance
+   * Optional. Disable validation warnings
    *
    * Accepted values: PHASE_UNSPECIFIED, ANY, WEEK1, WEEK2, WEEK5
    *
@@ -136,8 +124,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule extends \
     return $this->phase;
   }
   /**
-   * Optional. Preferred time to start the maintenance operation on the
-   * specified day.
+   * Optional. Disable validation warnings
    *
    * @param GoogleTypeTimeOfDay $time
    */

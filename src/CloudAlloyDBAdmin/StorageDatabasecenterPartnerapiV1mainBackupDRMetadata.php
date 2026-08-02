@@ -26,13 +26,13 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
   protected $backupdrConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration::class;
   protected $backupdrConfigurationDataType = '';
   /**
-   * Required. Full resource name of this instance.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $fullResourceName;
   /**
-   * Required. Last time backup configuration was refreshed.
+   * Required. Disable validation warnings
    *
    * @var string
    */
@@ -41,7 +41,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
   protected $resourceIdDataType = '';
 
   /**
-   * Backup configuration for this instance.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainBackupConfiguration $backupConfiguration
    */
@@ -57,7 +57,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->backupConfiguration;
   }
   /**
-   * Latest backup run information for this instance.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun
    */
@@ -73,7 +73,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->backupRun;
   }
   /**
-   * BackupDR configuration for this instance.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration $backupdrConfiguration
    */
@@ -89,7 +89,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->backupdrConfiguration;
   }
   /**
-   * Required. Full resource name of this instance.
+   * Required. Disable validation warnings
    *
    * @param string $fullResourceName
    */
@@ -105,7 +105,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->fullResourceName;
   }
   /**
-   * Required. Last time backup configuration was refreshed.
+   * Required. Disable validation warnings
    *
    * @param string $lastRefreshTime
    */
@@ -121,7 +121,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends \Google\Mode
     return $this->lastRefreshTime;
   }
   /**
-   * Required. Database resource id.
+   * Required. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $resourceId
    */

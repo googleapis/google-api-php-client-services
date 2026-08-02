@@ -20,31 +20,31 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Google\Collection
 {
   /**
-   * Unspecified state.
+   * Disable validation warnings
    */
   public const MAINTENANCE_STATE_MAINTENANCE_STATE_UNSPECIFIED = 'MAINTENANCE_STATE_UNSPECIFIED';
   /**
-   * Database resource is being created.
+   * Disable validation warnings
    */
   public const MAINTENANCE_STATE_CREATING = 'CREATING';
   /**
-   * Database resource has been created and is ready to use.
+   * Disable validation warnings
    */
   public const MAINTENANCE_STATE_READY = 'READY';
   /**
-   * Database resource is being updated.
+   * Disable validation warnings
    */
   public const MAINTENANCE_STATE_UPDATING = 'UPDATING';
   /**
-   * Database resource is unheathy and under repair.
+   * Disable validation warnings
    */
   public const MAINTENANCE_STATE_REPAIRING = 'REPAIRING';
   /**
-   * Database resource is being deleted.
+   * Disable validation warnings
    */
   public const MAINTENANCE_STATE_DELETING = 'DELETING';
   /**
-   * Database resource encountered an error and is in indeterministic state.
+   * Disable validation warnings
    */
   public const MAINTENANCE_STATE_ERROR = 'ERROR';
   protected $collection_key = 'nextAvailableMaintenanceVersions';
@@ -53,9 +53,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   protected $denyMaintenanceSchedulesType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule::class;
   protected $denyMaintenanceSchedulesDataType = 'array';
   /**
-   * Optional. Whether the instance is in stopped state. This information is
-   * temporarily being captured in maintenanceInfo, till STOPPED state is
-   * supported by DB Center.
+   * Optional. Disable validation warnings
    *
    * @var bool
    */
@@ -63,20 +61,19 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   protected $maintenanceScheduleType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
   /**
-   * Output only. Current state of maintenance on the database resource.
+   * Output only. Disable validation warnings
    *
    * @var string
    */
   public $maintenanceState;
   /**
-   * Optional. Current Maintenance version of the database resource. Example:
-   * "MYSQL_8_0_41.R20250531.01_15"
+   * Optional. Disable validation warnings
    *
    * @var string
    */
   public $maintenanceVersion;
   /**
-   * Optional. List of next available maintenance versions.
+   * Optional. Disable validation warnings
    *
    * @var string[]
    */
@@ -85,7 +82,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   protected $upcomingMaintenanceDataType = '';
 
   /**
-   * Optional. The date when the current maintenance version was released.
+   * Optional. Disable validation warnings
    *
    * @param GoogleTypeDate $currentVersionReleaseDate
    */
@@ -101,7 +98,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->currentVersionReleaseDate;
   }
   /**
-   * Optional. List of Deny maintenance period for the database resource.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule[] $denyMaintenanceSchedules
    */
@@ -117,9 +114,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->denyMaintenanceSchedules;
   }
   /**
-   * Optional. Whether the instance is in stopped state. This information is
-   * temporarily being captured in maintenanceInfo, till STOPPED state is
-   * supported by DB Center.
+   * Optional. Disable validation warnings
    *
    * @param bool $isInstanceStopped
    */
@@ -135,7 +130,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->isInstanceStopped;
   }
   /**
-   * Optional. Maintenance window for the database resource.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule $maintenanceSchedule
    */
@@ -151,7 +146,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->maintenanceSchedule;
   }
   /**
-   * Output only. Current state of maintenance on the database resource.
+   * Output only. Disable validation warnings
    *
    * Accepted values: MAINTENANCE_STATE_UNSPECIFIED, CREATING, READY, UPDATING,
    * REPAIRING, DELETING, ERROR
@@ -170,8 +165,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->maintenanceState;
   }
   /**
-   * Optional. Current Maintenance version of the database resource. Example:
-   * "MYSQL_8_0_41.R20250531.01_15"
+   * Optional. Disable validation warnings
    *
    * @param string $maintenanceVersion
    */
@@ -187,7 +181,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->maintenanceVersion;
   }
   /**
-   * Optional. List of next available maintenance versions.
+   * Optional. Disable validation warnings
    *
    * @param string[] $nextAvailableMaintenanceVersions
    */
@@ -203,8 +197,7 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->nextAvailableMaintenanceVersions;
   }
   /**
-   * Optional. Upcoming maintenance for the database resource. This field is
-   * populated once SLM generates and publishes upcoming maintenance window.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance $upcomingMaintenance
    */

@@ -20,22 +20,20 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainCompliance extends \Google\Model
 {
   /**
-   * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and
-   * OWASP.
+   * Disable validation warnings
    *
    * @var string
    */
   public $standard;
   /**
-   * Version of the standard or benchmark, for example, 1.1
+   * Disable validation warnings
    *
    * @var string
    */
   public $version;
 
   /**
-   * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and
-   * OWASP.
+   * Disable validation warnings
    *
    * @param string $standard
    */
@@ -51,7 +49,7 @@ class StorageDatabasecenterPartnerapiV1mainCompliance extends \Google\Model
     return $this->standard;
   }
   /**
-   * Version of the standard or benchmark, for example, 1.1
+   * Disable validation warnings
    *
    * @param string $version
    */

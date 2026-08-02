@@ -20,88 +20,75 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData extends \Google\Collection
 {
   /**
-   * Unspecified provider.
+   * Disable validation warnings
    */
   public const PROVIDER_PROVIDER_UNSPECIFIED = 'PROVIDER_UNSPECIFIED';
   /**
-   * Google cloud platform provider
+   * Disable validation warnings
    */
   public const PROVIDER_GCP = 'GCP';
   /**
-   * Amazon web service
+   * Disable validation warnings
    */
   public const PROVIDER_AWS = 'AWS';
   /**
-   * Azure web service
+   * Disable validation warnings
    */
   public const PROVIDER_AZURE = 'AZURE';
   /**
-   * On-prem database resources.
+   * Disable validation warnings
    */
   public const PROVIDER_ONPREM = 'ONPREM';
   /**
-   * Self-managed database provider. These are resources on a cloud platform,
-   * e.g., database resource installed in a GCE VM, but not a managed database
-   * service.
+   * Disable validation warnings
    */
   public const PROVIDER_SELFMANAGED = 'SELFMANAGED';
   /**
-   * For the rest of the other categories. Other refers to the rest of other
-   * database service providers, this could be smaller cloud provider. This
-   * needs to be provided when the provider is known, but it is not present in
-   * the existing set of enum values.
+   * Disable validation warnings
    */
   public const PROVIDER_PROVIDER_OTHER = 'PROVIDER_OTHER';
   /**
-   * Unspecified signal class.
+   * Disable validation warnings
    */
   public const SIGNAL_CLASS_CLASS_UNSPECIFIED = 'CLASS_UNSPECIFIED';
   /**
-   * Describes unwanted or malicious activity.
+   * Disable validation warnings
    */
   public const SIGNAL_CLASS_THREAT = 'THREAT';
   /**
-   * Describes a potential weakness in software that increases risk to
-   * Confidentiality & Integrity & Availability.
+   * Disable validation warnings
    */
   public const SIGNAL_CLASS_VULNERABILITY = 'VULNERABILITY';
   /**
-   * Describes a potential weakness in cloud resource/asset configuration that
-   * increases risk.
+   * Disable validation warnings
    */
   public const SIGNAL_CLASS_MISCONFIGURATION = 'MISCONFIGURATION';
   /**
-   * Describes a security observation that is for informational purposes.
+   * Disable validation warnings
    */
   public const SIGNAL_CLASS_OBSERVATION = 'OBSERVATION';
   /**
-   * Describes an error that prevents some SCC functionality.
+   * Disable validation warnings
    */
   public const SIGNAL_CLASS_ERROR = 'ERROR';
   /**
-   * This value is used for findings when a source doesn't write a severity
-   * value.
+   * Disable validation warnings
    */
   public const SIGNAL_SEVERITY_SIGNAL_SEVERITY_UNSPECIFIED = 'SIGNAL_SEVERITY_UNSPECIFIED';
   /**
-   * A critical vulnerability is easily discoverable by an external actor,
-   * exploitable.
+   * Disable validation warnings
    */
   public const SIGNAL_SEVERITY_CRITICAL = 'CRITICAL';
   /**
-   * A high risk vulnerability can be easily discovered and exploited in
-   * combination with other vulnerabilities.
+   * Disable validation warnings
    */
   public const SIGNAL_SEVERITY_HIGH = 'HIGH';
   /**
-   * A medium risk vulnerability could be used by an actor to gain access to
-   * resources or privileges that enable them to eventually gain access and the
-   * ability to execute arbitrary code or exfiltrate data.
+   * Disable validation warnings
    */
   public const SIGNAL_SEVERITY_MEDIUM = 'MEDIUM';
   /**
-   * A low risk vulnerability hampers a security organization's ability to
-   * detect vulnerabilities or active threats in their deployment.
+   * Disable validation warnings
    */
   public const SIGNAL_SEVERITY_LOW = 'LOW';
   /**
@@ -597,25 +584,24 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_MISSING_ENHANCED_PROTECTION = 'SIGNAL_TYPE_MISSING_ENHANCED_PROTECTION';
   /**
-   * Unspecified state.
+   * Disable validation warnings
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * The signal requires attention and has not been addressed yet.
+   * Disable validation warnings
    */
   public const STATE_ACTIVE = 'ACTIVE';
   /**
-   * The signal has been fixed, triaged as a non-issue or otherwise addressed
-   * and is no longer active.
+   * Disable validation warnings
    */
   public const STATE_RESOLVED = 'RESOLVED';
   /**
-   * The signal has been muted.
+   * Disable validation warnings
    */
   public const STATE_MUTED = 'MUTED';
   protected $collection_key = 'compliance';
   /**
-   * Any other additional metadata
+   * Disable validation warnings
    *
    * @var array[]
    */
@@ -623,100 +609,86 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
   protected $complianceType = StorageDatabasecenterPartnerapiV1mainCompliance::class;
   protected $complianceDataType = 'array';
   /**
-   * Description associated with signal
+   * Disable validation warnings
    *
    * @var string
    */
   public $description;
   /**
-   * Required. The last time at which the event described by this signal took
-   * place
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $eventTime;
   /**
-   * The external-uri of the signal, using which more information about this
-   * signal can be obtained. In GCP, this will take user to SCC page to get more
-   * details about signals.
+   * Disable validation warnings
    *
    * @var string
    */
   public $externalUri;
   /**
-   * This is used to identify the location of the resource. Example: "us-
-   * central1"
+   * Disable validation warnings
    *
    * @var string
    */
   public $location;
   /**
-   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE,
-   * SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $name;
   /**
-   * Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Disable validation warnings
    *
    * @var string
    */
   public $provider;
   /**
-   * Closest parent container of this resource. In GCP, 'container' refers to a
-   * Cloud Resource Manager project. It must be resource name of a Cloud
-   * Resource Manager project with the format of "provider//", such as
-   * "projects/123". For GCP provided resources, number should be project
-   * number.
+   * Disable validation warnings
    *
    * @var string
    */
   public $resourceContainer;
   /**
-   * Required. Database resource name associated with the signal. Resource name
-   * to follow CAIS resource_name format as noted here go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $resourceName;
   /**
-   * Required. The class of the signal, such as if it's a THREAT or
-   * VULNERABILITY.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $signalClass;
   /**
-   * Required. Unique identifier for the signal. This is an unique id which
-   * would be mainatined by partner to identify a signal.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $signalId;
   /**
-   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * Disable validation warnings
    *
    * @var string
    */
   public $signalSeverity;
   /**
-   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`,
-   * `LOGGING_MOST_ERRORS`, etc.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $signalType;
   /**
-   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $state;
 
   /**
-   * Any other additional metadata
+   * Disable validation warnings
    *
    * @param array[] $additionalMetadata
    */
@@ -732,12 +704,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->additionalMetadata;
   }
   /**
-   * Industry standards associated with this signal; if this signal is an issue,
-   * that could be a violation of the associated industry standard(s). For
-   * example, AUTO_BACKUP_DISABLED signal is associated with CIS GCP 1.1, CIS
-   * GCP 1.2, CIS GCP 1.3, NIST 800-53 and ISO-27001 compliance standards. If a
-   * database resource does not have automated backup enable, it will violate
-   * these following industry standards.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainCompliance[] $compliance
    */
@@ -753,7 +720,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->compliance;
   }
   /**
-   * Description associated with signal
+   * Disable validation warnings
    *
    * @param string $description
    */
@@ -769,8 +736,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->description;
   }
   /**
-   * Required. The last time at which the event described by this signal took
-   * place
+   * Required. Disable validation warnings
    *
    * @param string $eventTime
    */
@@ -786,9 +752,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->eventTime;
   }
   /**
-   * The external-uri of the signal, using which more information about this
-   * signal can be obtained. In GCP, this will take user to SCC page to get more
-   * details about signals.
+   * Disable validation warnings
    *
    * @param string $externalUri
    */
@@ -804,8 +768,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->externalUri;
   }
   /**
-   * This is used to identify the location of the resource. Example: "us-
-   * central1"
+   * Disable validation warnings
    *
    * @param string $location
    */
@@ -821,8 +784,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->location;
   }
   /**
-   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE,
-   * SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. Disable validation warnings
    *
    * @param string $name
    */
@@ -838,7 +800,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->name;
   }
   /**
-   * Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Disable validation warnings
    *
    * Accepted values: PROVIDER_UNSPECIFIED, GCP, AWS, AZURE, ONPREM,
    * SELFMANAGED, PROVIDER_OTHER
@@ -857,11 +819,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->provider;
   }
   /**
-   * Closest parent container of this resource. In GCP, 'container' refers to a
-   * Cloud Resource Manager project. It must be resource name of a Cloud
-   * Resource Manager project with the format of "provider//", such as
-   * "projects/123". For GCP provided resources, number should be project
-   * number.
+   * Disable validation warnings
    *
    * @param string $resourceContainer
    */
@@ -877,9 +835,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->resourceContainer;
   }
   /**
-   * Required. Database resource name associated with the signal. Resource name
-   * to follow CAIS resource_name format as noted here go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    *
    * @param string $resourceName
    */
@@ -895,8 +851,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->resourceName;
   }
   /**
-   * Required. The class of the signal, such as if it's a THREAT or
-   * VULNERABILITY.
+   * Required. Disable validation warnings
    *
    * Accepted values: CLASS_UNSPECIFIED, THREAT, VULNERABILITY,
    * MISCONFIGURATION, OBSERVATION, ERROR
@@ -915,8 +870,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->signalClass;
   }
   /**
-   * Required. Unique identifier for the signal. This is an unique id which
-   * would be mainatined by partner to identify a signal.
+   * Required. Disable validation warnings
    *
    * @param string $signalId
    */
@@ -932,7 +886,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->signalId;
   }
   /**
-   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * Disable validation warnings
    *
    * Accepted values: SIGNAL_SEVERITY_UNSPECIFIED, CRITICAL, HIGH, MEDIUM, LOW
    *
@@ -950,8 +904,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->signalSeverity;
   }
   /**
-   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`,
-   * `LOGGING_MOST_ERRORS`, etc.
+   * Required. Disable validation warnings
    *
    * Accepted values: SIGNAL_TYPE_UNSPECIFIED,
    * SIGNAL_TYPE_NOT_PROTECTED_BY_AUTOMATIC_FAILOVER,
@@ -1048,7 +1001,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
     return $this->signalType;
   }
   /**
-   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
+   * Required. Disable validation warnings
    *
    * Accepted values: STATE_UNSPECIFIED, ACTIVE, RESOLVED, MUTED
    *

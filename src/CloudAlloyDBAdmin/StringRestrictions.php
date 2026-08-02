@@ -27,6 +27,12 @@ class StringRestrictions extends \Google\Collection
    * @var string[]
    */
   public $allowedValues;
+  /**
+   * Output only. Whether the allowed values are case agnostic.
+   *
+   * @var bool
+   */
+  public $caseAgnostic;
 
   /**
    * The list of allowed values, if bounded. This field will be empty if there
@@ -44,6 +50,22 @@ class StringRestrictions extends \Google\Collection
   public function getAllowedValues()
   {
     return $this->allowedValues;
+  }
+  /**
+   * Output only. Whether the allowed values are case agnostic.
+   *
+   * @param bool $caseAgnostic
+   */
+  public function setCaseAgnostic($caseAgnostic)
+  {
+    $this->caseAgnostic = $caseAgnostic;
+  }
+  /**
+   * @return bool
+   */
+  public function getCaseAgnostic()
+  {
+    return $this->caseAgnostic;
   }
 }
 

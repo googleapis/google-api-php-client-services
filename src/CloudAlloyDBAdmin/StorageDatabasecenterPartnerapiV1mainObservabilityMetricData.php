@@ -81,27 +81,25 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
    */
   public const METRIC_TYPE_PROCESSING_UNIT_COUNT = 'PROCESSING_UNIT_COUNT';
   /**
-   * Required. Type of aggregation performed on the metric.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $aggregationType;
   /**
-   * Required. Type of metric like CPU, Memory, etc.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $metricType;
   /**
-   * Required. The time the metric value was observed.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $observationTime;
   /**
-   * Required. Database resource name associated with the signal. Resource name
-   * to follow CAIS resource_name format as noted here go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    *
    * @var string
    */
@@ -110,7 +108,7 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
   protected $valueDataType = '';
 
   /**
-   * Required. Type of aggregation performed on the metric.
+   * Required. Disable validation warnings
    *
    * Accepted values: AGGREGATION_TYPE_UNSPECIFIED, PEAK, P99, P95, CURRENT
    *
@@ -128,7 +126,7 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
     return $this->aggregationType;
   }
   /**
-   * Required. Type of metric like CPU, Memory, etc.
+   * Required. Disable validation warnings
    *
    * Accepted values: METRIC_TYPE_UNSPECIFIED, CPU_UTILIZATION,
    * MEMORY_UTILIZATION, NETWORK_CONNECTIONS, STORAGE_UTILIZATION,
@@ -148,7 +146,7 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
     return $this->metricType;
   }
   /**
-   * Required. The time the metric value was observed.
+   * Required. Disable validation warnings
    *
    * @param string $observationTime
    */
@@ -164,9 +162,7 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
     return $this->observationTime;
   }
   /**
-   * Required. Database resource name associated with the signal. Resource name
-   * to follow CAIS resource_name format as noted here go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    *
    * @param string $resourceName
    */
@@ -182,7 +178,7 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
     return $this->resourceName;
   }
   /**
-   * Required. Value of the metric type.
+   * Required. Disable validation warnings
    *
    * @param StorageDatabasecenterProtoCommonTypedValue $value
    */

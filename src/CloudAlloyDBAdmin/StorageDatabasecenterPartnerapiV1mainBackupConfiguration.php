@@ -20,7 +20,7 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends \Google\Model
 {
   /**
-   * Whether customer visible automated backups are enabled on the instance.
+   * Disable validation warnings
    *
    * @var bool
    */
@@ -28,16 +28,14 @@ class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends \Google\M
   protected $backupRetentionSettingsType = StorageDatabasecenterPartnerapiV1mainRetentionSettings::class;
   protected $backupRetentionSettingsDataType = '';
   /**
-   * Whether point-in-time recovery is enabled. This is optional field, if the
-   * database service does not have this feature or metadata is not available in
-   * control plane, this can be omitted.
+   * Disable validation warnings
    *
    * @var bool
    */
   public $pointInTimeRecoveryEnabled;
 
   /**
-   * Whether customer visible automated backups are enabled on the instance.
+   * Disable validation warnings
    *
    * @param bool $automatedBackupEnabled
    */
@@ -53,7 +51,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends \Google\M
     return $this->automatedBackupEnabled;
   }
   /**
-   * Backup retention settings.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainRetentionSettings $backupRetentionSettings
    */
@@ -69,9 +67,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends \Google\M
     return $this->backupRetentionSettings;
   }
   /**
-   * Whether point-in-time recovery is enabled. This is optional field, if the
-   * database service does not have this feature or metadata is not available in
-   * control plane, this can be omitted.
+   * Disable validation warnings
    *
    * @param bool $pointInTimeRecoveryEnabled
    */

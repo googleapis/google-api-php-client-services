@@ -20,11 +20,15 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainUserLabels extends \Google\Model
 {
   /**
+   * Disable validation warnings
+   *
    * @var string[]
    */
   public $labels;
 
   /**
+   * Disable validation warnings
+   *
    * @param string[] $labels
    */
   public function setLabels($labels)

@@ -20,14 +20,14 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration extends \Google\Model
 {
   /**
-   * Indicates if the resource is managed by BackupDR.
+   * Disable validation warnings
    *
    * @var bool
    */
   public $backupdrManaged;
 
   /**
-   * Indicates if the resource is managed by BackupDR.
+   * Disable validation warnings
    *
    * @param bool $backupdrManaged
    */

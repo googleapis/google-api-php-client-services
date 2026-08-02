@@ -751,6 +751,8 @@ class Cluster extends \Google\Model
     return $this->network;
   }
   /**
+   * Optional.
+   *
    * @param NetworkConfig $networkConfig
    */
   public function setNetworkConfig(NetworkConfig $networkConfig)

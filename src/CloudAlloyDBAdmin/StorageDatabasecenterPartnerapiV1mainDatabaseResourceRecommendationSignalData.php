@@ -19,33 +19,28 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData extends \Google\Model
 {
+  /**
+   * Disable validation warnings
+   */
   public const RECOMMENDATION_STATE_UNSPECIFIED = 'UNSPECIFIED';
   /**
-   * Recommendation is active and can be applied. ACTIVE recommendations can be
-   * marked as CLAIMED, SUCCEEDED, or FAILED.
+   * Disable validation warnings
    */
   public const RECOMMENDATION_STATE_ACTIVE = 'ACTIVE';
   /**
-   * Recommendation is in claimed state. Recommendations content is immutable
-   * and cannot be updated by Google. CLAIMED recommendations can be marked as
-   * CLAIMED, SUCCEEDED, or FAILED.
+   * Disable validation warnings
    */
   public const RECOMMENDATION_STATE_CLAIMED = 'CLAIMED';
   /**
-   * Recommendation is in succeeded state. Recommendations content is immutable
-   * and cannot be updated by Google. SUCCEEDED recommendations can be marked as
-   * SUCCEEDED, or FAILED.
+   * Disable validation warnings
    */
   public const RECOMMENDATION_STATE_SUCCEEDED = 'SUCCEEDED';
   /**
-   * Recommendation is in failed state. Recommendations content is immutable and
-   * cannot be updated by Google. FAILED recommendations can be marked as
-   * SUCCEEDED, or FAILED.
+   * Disable validation warnings
    */
   public const RECOMMENDATION_STATE_FAILED = 'FAILED';
   /**
-   * Recommendation is in dismissed state. Recommendation content can be updated
-   * by Google. DISMISSED recommendations can be marked as ACTIVE.
+   * Disable validation warnings
    */
   public const RECOMMENDATION_STATE_DISMISSED = 'DISMISSED';
   /**
@@ -541,69 +536,56 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_MISSING_ENHANCED_PROTECTION = 'SIGNAL_TYPE_MISSING_ENHANCED_PROTECTION';
   /**
-   * Optional. Any other additional metadata specific to recommendation
+   * Optional. Disable validation warnings
    *
    * @var array[]
    */
   public $additionalMetadata;
   /**
-   * Required. last time recommendationw as refreshed
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $lastRefreshTime;
   /**
-   * Required. Recommendation state
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $recommendationState;
   /**
-   * Required. Name of recommendation. Examples:
-   * organizations/1234/locations/us-central1/recommenders/google.cloudsql.insta
-   * nce.PerformanceRecommender/recommendations/9876
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $recommender;
   /**
-   * Required. ID of recommender. Examples:
-   * "google.cloudsql.instance.PerformanceRecommender"
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $recommenderId;
   /**
-   * Required. Contains an identifier for a subtype of recommendations produced
-   * for the same recommender. Subtype is a function of content and impact,
-   * meaning a new subtype might be added when significant changes to `content`
-   * or `primary_impact.category` are introduced. See the Recommenders section
-   * to see a list of subtypes for a given Recommender. Examples: For
-   * recommender = "google.cloudsql.instance.PerformanceRecommender",
-   * recommender_subtype can be "MYSQL_HIGH_NUMBER_OF_OPEN_TABLES_BEST_PRACTICE"
-   * /"POSTGRES_HIGH_TRANSACTION_ID_UTILIZATION_BEST_PRACTICE"
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $recommenderSubtype;
   /**
-   * Required. Database resource name associated with the signal. Resource name
-   * to follow CAIS resource_name format as noted here go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $resourceName;
   /**
-   * Required. Type of signal, for example, `SIGNAL_TYPE_IDLE`,
-   * `SIGNAL_TYPE_HIGH_NUMBER_OF_TABLES`, etc.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $signalType;
 
   /**
-   * Optional. Any other additional metadata specific to recommendation
+   * Optional. Disable validation warnings
    *
    * @param array[] $additionalMetadata
    */
@@ -619,7 +601,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
     return $this->additionalMetadata;
   }
   /**
-   * Required. last time recommendationw as refreshed
+   * Required. Disable validation warnings
    *
    * @param string $lastRefreshTime
    */
@@ -635,7 +617,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
     return $this->lastRefreshTime;
   }
   /**
-   * Required. Recommendation state
+   * Required. Disable validation warnings
    *
    * Accepted values: UNSPECIFIED, ACTIVE, CLAIMED, SUCCEEDED, FAILED, DISMISSED
    *
@@ -653,9 +635,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
     return $this->recommendationState;
   }
   /**
-   * Required. Name of recommendation. Examples:
-   * organizations/1234/locations/us-central1/recommenders/google.cloudsql.insta
-   * nce.PerformanceRecommender/recommendations/9876
+   * Required. Disable validation warnings
    *
    * @param string $recommender
    */
@@ -671,8 +651,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
     return $this->recommender;
   }
   /**
-   * Required. ID of recommender. Examples:
-   * "google.cloudsql.instance.PerformanceRecommender"
+   * Required. Disable validation warnings
    *
    * @param string $recommenderId
    */
@@ -688,14 +667,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
     return $this->recommenderId;
   }
   /**
-   * Required. Contains an identifier for a subtype of recommendations produced
-   * for the same recommender. Subtype is a function of content and impact,
-   * meaning a new subtype might be added when significant changes to `content`
-   * or `primary_impact.category` are introduced. See the Recommenders section
-   * to see a list of subtypes for a given Recommender. Examples: For
-   * recommender = "google.cloudsql.instance.PerformanceRecommender",
-   * recommender_subtype can be "MYSQL_HIGH_NUMBER_OF_OPEN_TABLES_BEST_PRACTICE"
-   * /"POSTGRES_HIGH_TRANSACTION_ID_UTILIZATION_BEST_PRACTICE"
+   * Required. Disable validation warnings
    *
    * @param string $recommenderSubtype
    */
@@ -711,9 +683,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
     return $this->recommenderSubtype;
   }
   /**
-   * Required. Database resource name associated with the signal. Resource name
-   * to follow CAIS resource_name format as noted here go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    *
    * @param string $resourceName
    */
@@ -729,8 +699,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalD
     return $this->resourceName;
   }
   /**
-   * Required. Type of signal, for example, `SIGNAL_TYPE_IDLE`,
-   * `SIGNAL_TYPE_HIGH_NUMBER_OF_TABLES`, etc.
+   * Required. Disable validation warnings
    *
    * Accepted values: SIGNAL_TYPE_UNSPECIFIED,
    * SIGNAL_TYPE_NOT_PROTECTED_BY_AUTOMATIC_FAILOVER,

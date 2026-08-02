@@ -22,14 +22,14 @@ class StorageDatabasecenterPartnerapiV1mainSignalMetadata extends \Google\Model
   protected $backupRunType = StorageDatabasecenterPartnerapiV1mainBackupRun::class;
   protected $backupRunDataType = '';
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    *
    * @var bool
    */
   public $signalBoolValue;
 
   /**
-   * Signal data for backup runs.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun
    */
@@ -45,7 +45,7 @@ class StorageDatabasecenterPartnerapiV1mainSignalMetadata extends \Google\Model
     return $this->backupRun;
   }
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    *
    * @param bool $signalBoolValue
    */

@@ -20,62 +20,58 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Google\Model
 {
   /**
-   * Unspecified availability type.
+   * Disable validation warnings
    */
   public const AVAILABILITY_TYPE_AVAILABILITY_TYPE_UNSPECIFIED = 'AVAILABILITY_TYPE_UNSPECIFIED';
   /**
-   * Zonal available instance.
+   * Disable validation warnings
    */
   public const AVAILABILITY_TYPE_ZONAL = 'ZONAL';
   /**
-   * Regional available instance.
+   * Disable validation warnings
    */
   public const AVAILABILITY_TYPE_REGIONAL = 'REGIONAL';
   /**
-   * Multi regional instance
+   * Disable validation warnings
    */
   public const AVAILABILITY_TYPE_MULTI_REGIONAL = 'MULTI_REGIONAL';
   /**
-   * For rest of the other category
+   * Disable validation warnings
    */
   public const AVAILABILITY_TYPE_AVAILABILITY_TYPE_OTHER = 'AVAILABILITY_TYPE_OTHER';
   /**
-   * Checks for existence of (multi-cluster) routing configuration that allows
-   * automatic failover to a different zone/region in case of an outage.
-   * Applicable to Bigtable resources.
+   * Disable validation warnings
    *
    * @var bool
    */
   public $automaticFailoverRoutingConfigured;
   /**
-   * Availability type. Potential values: * `ZONAL`: The instance serves data
-   * from only one zone. Outages in that zone affect data accessibility. *
-   * `REGIONAL`: The instance can serve data from more than one zone in a region
-   * (it is highly available).
+   * Disable validation warnings
    *
    * @var string
    */
   public $availabilityType;
   /**
-   * Checks for resources that are configured to have redundancy, and ongoing
-   * replication across regions
+   * Disable validation warnings
    *
    * @var bool
    */
   public $crossRegionReplicaConfigured;
   /**
+   * Disable validation warnings
+   *
    * @var bool
    */
   public $externalReplicaConfigured;
   /**
+   * Disable validation warnings
+   *
    * @var bool
    */
   public $promotableReplicaConfigured;
 
   /**
-   * Checks for existence of (multi-cluster) routing configuration that allows
-   * automatic failover to a different zone/region in case of an outage.
-   * Applicable to Bigtable resources.
+   * Disable validation warnings
    *
    * @param bool $automaticFailoverRoutingConfigured
    */
@@ -91,10 +87,7 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
     return $this->automaticFailoverRoutingConfigured;
   }
   /**
-   * Availability type. Potential values: * `ZONAL`: The instance serves data
-   * from only one zone. Outages in that zone affect data accessibility. *
-   * `REGIONAL`: The instance can serve data from more than one zone in a region
-   * (it is highly available).
+   * Disable validation warnings
    *
    * Accepted values: AVAILABILITY_TYPE_UNSPECIFIED, ZONAL, REGIONAL,
    * MULTI_REGIONAL, AVAILABILITY_TYPE_OTHER
@@ -113,8 +106,7 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
     return $this->availabilityType;
   }
   /**
-   * Checks for resources that are configured to have redundancy, and ongoing
-   * replication across regions
+   * Disable validation warnings
    *
    * @param bool $crossRegionReplicaConfigured
    */
@@ -130,6 +122,8 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
     return $this->crossRegionReplicaConfigured;
   }
   /**
+   * Disable validation warnings
+   *
    * @param bool $externalReplicaConfigured
    */
   public function setExternalReplicaConfigured($externalReplicaConfigured)
@@ -144,6 +138,8 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
     return $this->externalReplicaConfigured;
   }
   /**
+   * Disable validation warnings
+   *
    * @param bool $promotableReplicaConfigured
    */
   public function setPromotableReplicaConfigured($promotableReplicaConfigured)

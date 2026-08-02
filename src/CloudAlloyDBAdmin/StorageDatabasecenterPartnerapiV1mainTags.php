@@ -20,14 +20,14 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainTags extends \Google\Model
 {
   /**
-   * The Tag key/value mappings.
+   * Disable validation warnings
    *
    * @var string[]
    */
   public $tags;
 
   /**
-   * The Tag key/value mappings.
+   * Disable validation warnings
    *
    * @param string[] $tags
    */

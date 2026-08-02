@@ -20,25 +20,20 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainIpAddress extends \Google\Model
 {
   /**
-   * The private IP address assigned to the resource within a Virtual Private
-   * Cloud (VPC). This IP is only reachable from within the same VPC network.
-   * Stored in standard string format (e.g., "10.0.0.2").
+   * Disable validation warnings
    *
    * @var string
    */
   public $privateIp;
   /**
-   * The public IP address assigned to the resource. This IP is reachable from
-   * the internet. Stored in standard string format (e.g., "34.72.1.1").
+   * Disable validation warnings
    *
    * @var string
    */
   public $publicIp;
 
   /**
-   * The private IP address assigned to the resource within a Virtual Private
-   * Cloud (VPC). This IP is only reachable from within the same VPC network.
-   * Stored in standard string format (e.g., "10.0.0.2").
+   * Disable validation warnings
    *
    * @param string $privateIp
    */
@@ -54,8 +49,7 @@ class StorageDatabasecenterPartnerapiV1mainIpAddress extends \Google\Model
     return $this->privateIp;
   }
   /**
-   * The public IP address assigned to the resource. This IP is reachable from
-   * the internet. Stored in standard string format (e.g., "34.72.1.1").
+   * Disable validation warnings
    *
    * @param string $publicIp
    */

@@ -20,59 +20,57 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google\Model
 {
   /**
-   * Unspecified signal type.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_UNSPECIFIED = 'SIGNAL_TYPE_UNSPECIFIED';
   /**
-   * Outdated Minor Version
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_OUTDATED_MINOR_VERSION = 'SIGNAL_TYPE_OUTDATED_MINOR_VERSION';
   /**
-   * Represents database auditing is disabled.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_DATABASE_AUDITING_DISABLED = 'SIGNAL_TYPE_DATABASE_AUDITING_DISABLED';
   /**
-   * Represents if a database has a password configured for the root account or
-   * not.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_NO_ROOT_PASSWORD = 'SIGNAL_TYPE_NO_ROOT_PASSWORD';
   /**
-   * Represents if a resource is exposed to public access.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS = 'SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS';
   /**
-   * Represents if a resources requires all incoming connections to use SSL or
-   * not.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS = 'SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS';
   /**
-   * Represents if a resource version is in extended support.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXTENDED_SUPPORT = 'SIGNAL_TYPE_EXTENDED_SUPPORT';
   /**
-   * Represents if a resource has no automated backup policy.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY = 'SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY';
   /**
-   * Represents if a resource version is nearing end of life.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE = 'SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE';
   /**
-   * Represents if the last backup of a resource is older than 24 hours.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_LAST_BACKUP_OLD = 'SIGNAL_TYPE_LAST_BACKUP_OLD';
   /**
-   * Represents if a resource is not protected by automatic failover.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_NOT_PROTECTED_BY_AUTOMATIC_FAILOVER = 'SIGNAL_TYPE_NOT_PROTECTED_BY_AUTOMATIC_FAILOVER';
   /**
-   * Required. Full Resource name of the source resource.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $fullResourceName;
   /**
-   * Required. Last time signal was refreshed
+   * Required. Disable validation warnings
    *
    * @var string
    */
@@ -80,20 +78,20 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
   protected $resourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $resourceIdDataType = '';
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    *
    * @var bool
    */
   public $signalBoolValue;
   /**
-   * Required. Signal type of the signal
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $signalType;
 
   /**
-   * Required. Full Resource name of the source resource.
+   * Required. Disable validation warnings
    *
    * @param string $fullResourceName
    */
@@ -109,7 +107,7 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->fullResourceName;
   }
   /**
-   * Required. Last time signal was refreshed
+   * Required. Disable validation warnings
    *
    * @param string $lastRefreshTime
    */
@@ -125,7 +123,7 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->lastRefreshTime;
   }
   /**
-   * Database resource id.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $resourceId
    */
@@ -141,7 +139,7 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->resourceId;
   }
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    *
    * @param bool $signalBoolValue
    */
@@ -157,7 +155,7 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->signalBoolValue;
   }
   /**
-   * Required. Signal type of the signal
+   * Required. Disable validation warnings
    *
    * Accepted values: SIGNAL_TYPE_UNSPECIFIED,
    * SIGNAL_TYPE_OUTDATED_MINOR_VERSION, SIGNAL_TYPE_DATABASE_AUDITING_DISABLED,

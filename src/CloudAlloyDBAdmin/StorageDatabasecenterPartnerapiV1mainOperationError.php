@@ -49,24 +49,26 @@ class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
    */
   public const ERROR_TYPE_INTERNAL_ERROR = 'INTERNAL_ERROR';
   /**
-   * Identifies the specific error that occurred. REQUIRED
+   * Disable validation warnings
    *
    * @var string
    */
   public $code;
   /**
+   * Disable validation warnings
+   *
    * @var string
    */
   public $errorType;
   /**
-   * Additional information about the error encountered. REQUIRED
+   * Disable validation warnings
    *
    * @var string
    */
   public $message;
 
   /**
-   * Identifies the specific error that occurred. REQUIRED
+   * Disable validation warnings
    *
    * @param string $code
    */
@@ -82,6 +84,12 @@ class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
     return $this->code;
   }
   /**
+   * Disable validation warnings
+   *
+   * Accepted values: OPERATION_ERROR_TYPE_UNSPECIFIED, KMS_KEY_ERROR,
+   * DATABASE_ERROR, STOCKOUT_ERROR, CANCELLATION_ERROR, SQLSERVER_ERROR,
+   * INTERNAL_ERROR
+   *
    * @param self::ERROR_TYPE_* $errorType
    */
   public function setErrorType($errorType)
@@ -96,7 +104,7 @@ class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
     return $this->errorType;
   }
   /**
-   * Additional information about the error encountered. REQUIRED
+   * Disable validation warnings
    *
    * @param string $message
    */

@@ -19,70 +19,76 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Google\Collection
 {
+  /**
+   * Disable validation warnings
+   */
   public const CURRENT_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * The instance is running.
+   * Disable validation warnings
    */
   public const CURRENT_STATE_HEALTHY = 'HEALTHY';
   /**
-   * Instance being created, updated, deleted or under maintenance
+   * Disable validation warnings
    */
   public const CURRENT_STATE_UNHEALTHY = 'UNHEALTHY';
   /**
-   * When instance is suspended
+   * Disable validation warnings
    */
   public const CURRENT_STATE_SUSPENDED = 'SUSPENDED';
   /**
-   * Instance is deleted.
+   * Disable validation warnings
    */
   public const CURRENT_STATE_DELETED = 'DELETED';
   /**
-   * For rest of the other category
+   * Disable validation warnings
    */
   public const CURRENT_STATE_STATE_OTHER = 'STATE_OTHER';
   /**
-   * Instance is in STOPPED state.
+   * Disable validation warnings
    */
   public const CURRENT_STATE_STOPPED = 'STOPPED';
   /**
-   * Default, to make it consistent with instance edition enum.
+   * Disable validation warnings
    */
   public const EDITION_EDITION_UNSPECIFIED = 'EDITION_UNSPECIFIED';
   /**
-   * Represents the enterprise edition.
+   * Disable validation warnings
    */
   public const EDITION_EDITION_ENTERPRISE = 'EDITION_ENTERPRISE';
   /**
-   * Represents the enterprise plus edition.
+   * Disable validation warnings
    */
   public const EDITION_EDITION_ENTERPRISE_PLUS = 'EDITION_ENTERPRISE_PLUS';
   /**
-   * Represents the standard edition.
+   * Disable validation warnings
    */
   public const EDITION_EDITION_STANDARD = 'EDITION_STANDARD';
+  /**
+   * Disable validation warnings
+   */
   public const EXPECTED_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
   /**
-   * The instance is running.
+   * Disable validation warnings
    */
   public const EXPECTED_STATE_HEALTHY = 'HEALTHY';
   /**
-   * Instance being created, updated, deleted or under maintenance
+   * Disable validation warnings
    */
   public const EXPECTED_STATE_UNHEALTHY = 'UNHEALTHY';
   /**
-   * When instance is suspended
+   * Disable validation warnings
    */
   public const EXPECTED_STATE_SUSPENDED = 'SUSPENDED';
   /**
-   * Instance is deleted.
+   * Disable validation warnings
    */
   public const EXPECTED_STATE_DELETED = 'DELETED';
   /**
-   * For rest of the other category
+   * Disable validation warnings
    */
   public const EXPECTED_STATE_STATE_OTHER = 'STATE_OTHER';
   /**
-   * Instance is in STOPPED state.
+   * Disable validation warnings
    */
   public const EXPECTED_STATE_STOPPED = 'STOPPED';
   /**
@@ -181,7 +187,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public const SUSPENSION_REASON_REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE = 'REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE';
   protected $collection_key = 'resourceFlags';
   /**
-   * Field to ingest additional metadata whichd does not support proto format.
+   * Disable validation warnings
    *
    * @var array[]
    */
@@ -195,14 +201,13 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $backupdrConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration::class;
   protected $backupdrConfigurationDataType = '';
   /**
-   * The creation time of the resource, i.e. the time when resource is created
-   * and recorded in partner service.
+   * Disable validation warnings
    *
    * @var string
    */
   public $creationTime;
   /**
-   * Current state of the instance.
+   * Disable validation warnings
    *
    * @var string
    */
@@ -210,9 +215,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $customMetadataType = StorageDatabasecenterPartnerapiV1mainCustomMetadataData::class;
   protected $customMetadataDataType = '';
   /**
-   * Optional. Edition represents whether the instance is ENTERPRISE or
-   * ENTERPRISE_PLUS. This information is core to Cloud SQL only and is used to
-   * identify the edition of the instance.
+   * Optional. Disable validation warnings
    *
    * @var string
    */
@@ -220,9 +223,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $entitlementsType = StorageDatabasecenterPartnerapiV1mainEntitlement::class;
   protected $entitlementsDataType = 'array';
   /**
-   * The state that the instance is expected to be in. For example, an instance
-   * state can transition to UNHEALTHY due to wrong patch update, while the
-   * expected state will remain at the HEALTHY.
+   * Disable validation warnings
    *
    * @var string
    */
@@ -232,13 +233,13 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $idType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $idDataType = '';
   /**
-   * The type of the instance. Specified at creation time.
+   * Disable validation warnings
    *
    * @var string
    */
   public $instanceType;
   /**
-   * Field to ingest additional metadata which support proto format.
+   * Disable validation warnings
    *
    * @var array[]
    */
@@ -246,13 +247,13 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $ipAddressType = StorageDatabasecenterPartnerapiV1mainIpAddress::class;
   protected $ipAddressDataType = '';
   /**
-   * Optional. Whether deletion protection is enabled for this resource.
+   * Optional. Disable validation warnings
    *
    * @var bool
    */
   public $isDeletionProtectionEnabled;
   /**
-   * The resource location. REQUIRED
+   * Disable validation warnings
    *
    * @var string
    */
@@ -262,7 +263,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $maintenanceInfoType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo::class;
   protected $maintenanceInfoDataType = '';
   /**
-   * Optional. The modes of the database resource.
+   * Optional. Disable validation warnings
    *
    * @var string[]
    */
@@ -270,8 +271,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $primaryResourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
   /**
-   * Primary resource location. REQUIRED if the immediate parent exists when
-   * first time resource is getting ingested, otherwise optional.
+   * Disable validation warnings
    *
    * @var string
    */
@@ -279,10 +279,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $productType = StorageDatabasecenterProtoCommonProduct::class;
   protected $productDataType = '';
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must
-   * be resource name of a Cloud Resource Manager project with the format of
-   * "/", such as "projects/123". For GCP provided resources, number should be
-   * project number.
+   * Disable validation warnings
    *
    * @var string
    */
@@ -290,17 +287,13 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $resourceFlagsType = StorageDatabasecenterPartnerapiV1mainResourceFlags::class;
   protected $resourceFlagsDataType = 'array';
   /**
-   * Required. Different from DatabaseResourceId.unique_id, a resource name can
-   * be reused over time. That is, after a resource named "ABC" is deleted, the
-   * name "ABC" can be used to to create a new resource within the same source.
-   * Resource name to follow CAIS resource_name format as noted here go/condor-
-   * common-datamodel
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $resourceName;
   /**
-   * Optional. Suspension reason for the resource.
+   * Optional. Disable validation warnings
    *
    * @var string
    */
@@ -308,7 +301,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $tagsSetType = StorageDatabasecenterPartnerapiV1mainTags::class;
   protected $tagsSetDataType = '';
   /**
-   * The time at which the resource was updated and recorded at partner service.
+   * Disable validation warnings
    *
    * @var string
    */
@@ -316,15 +309,14 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $userLabelSetType = StorageDatabasecenterPartnerapiV1mainUserLabels::class;
   protected $userLabelSetDataType = '';
   /**
-   * The resource zone. This is only applicable for zonal resources and will be
-   * empty for regional and multi-regional resources.
+   * Disable validation warnings
    *
    * @var string
    */
   public $zone;
 
   /**
-   * Field to ingest additional metadata whichd does not support proto format.
+   * Disable validation warnings
    *
    * @param array[] $additionalMetadata
    */
@@ -340,7 +332,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->additionalMetadata;
   }
   /**
-   * Availability configuration for this instance
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration $availabilityConfiguration
    */
@@ -356,7 +348,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->availabilityConfiguration;
   }
   /**
-   * Backup configuration for this instance
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainBackupConfiguration $backupConfiguration
    */
@@ -372,7 +364,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->backupConfiguration;
   }
   /**
-   * Latest backup run information for this instance
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun
    */
@@ -388,7 +380,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->backupRun;
   }
   /**
-   * Optional. BackupDR Configuration for the resource.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration $backupdrConfiguration
    */
@@ -404,8 +396,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->backupdrConfiguration;
   }
   /**
-   * The creation time of the resource, i.e. the time when resource is created
-   * and recorded in partner service.
+   * Disable validation warnings
    *
    * @param string $creationTime
    */
@@ -421,7 +412,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->creationTime;
   }
   /**
-   * Current state of the instance.
+   * Disable validation warnings
    *
    * Accepted values: STATE_UNSPECIFIED, HEALTHY, UNHEALTHY, SUSPENDED, DELETED,
    * STATE_OTHER, STOPPED
@@ -440,7 +431,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->currentState;
   }
   /**
-   * Any custom metadata associated with the resource
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainCustomMetadataData $customMetadata
    */
@@ -456,9 +447,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->customMetadata;
   }
   /**
-   * Optional. Edition represents whether the instance is ENTERPRISE or
-   * ENTERPRISE_PLUS. This information is core to Cloud SQL only and is used to
-   * identify the edition of the instance.
+   * Optional. Disable validation warnings
    *
    * Accepted values: EDITION_UNSPECIFIED, EDITION_ENTERPRISE,
    * EDITION_ENTERPRISE_PLUS, EDITION_STANDARD
@@ -477,7 +466,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->edition;
   }
   /**
-   * Entitlements associated with the resource
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainEntitlement[] $entitlements
    */
@@ -493,9 +482,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->entitlements;
   }
   /**
-   * The state that the instance is expected to be in. For example, an instance
-   * state can transition to UNHEALTHY due to wrong patch update, while the
-   * expected state will remain at the HEALTHY.
+   * Disable validation warnings
    *
    * Accepted values: STATE_UNSPECIFIED, HEALTHY, UNHEALTHY, SUSPENDED, DELETED,
    * STATE_OTHER, STOPPED
@@ -514,7 +501,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->expectedState;
   }
   /**
-   * GCBDR configuration for the resource.
+   * Disable validation warnings
    *
    * @deprecated
    * @param StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration $gcbdrConfiguration
@@ -532,7 +519,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->gcbdrConfiguration;
   }
   /**
-   * Required. Unique identifier for a Database resource
+   * Required. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $id
    */
@@ -548,7 +535,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->id;
   }
   /**
-   * The type of the instance. Specified at creation time.
+   * Disable validation warnings
    *
    * Accepted values: INSTANCE_TYPE_UNSPECIFIED, SUB_RESOURCE_TYPE_UNSPECIFIED,
    * PRIMARY, SECONDARY, READ_REPLICA, OTHER, SUB_RESOURCE_TYPE_PRIMARY,
@@ -571,7 +558,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->instanceType;
   }
   /**
-   * Field to ingest additional metadata which support proto format.
+   * Disable validation warnings
    *
    * @param array[] $internalAdditionalMetadata
    */
@@ -587,7 +574,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->internalAdditionalMetadata;
   }
   /**
-   * Optional. Private and public IP address of the resource.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainIpAddress $ipAddress
    */
@@ -603,7 +590,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->ipAddress;
   }
   /**
-   * Optional. Whether deletion protection is enabled for this resource.
+   * Optional. Disable validation warnings
    *
    * @param bool $isDeletionProtectionEnabled
    */
@@ -619,7 +606,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->isDeletionProtectionEnabled;
   }
   /**
-   * The resource location. REQUIRED
+   * Disable validation warnings
    *
    * @param string $location
    */
@@ -635,7 +622,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->location;
   }
   /**
-   * Machine configuration for this resource.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainMachineConfiguration $machineConfiguration
    */
@@ -651,7 +638,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->machineConfiguration;
   }
   /**
-   * Optional. Maintenance info for the resource.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo $maintenanceInfo
    */
@@ -667,7 +654,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->maintenanceInfo;
   }
   /**
-   * Optional. The modes of the database resource.
+   * Optional. Disable validation warnings
    *
    * @param string[] $modes
    */
@@ -683,10 +670,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->modes;
   }
   /**
-   * Identifier for this resource's immediate parent/primary resource if the
-   * current resource is a replica or derived form of another Database resource.
-   * Else it would be NULL. REQUIRED if the immediate parent exists when first
-   * time resource is getting ingested, otherwise optional.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $primaryResourceId
    */
@@ -702,8 +686,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->primaryResourceId;
   }
   /**
-   * Primary resource location. REQUIRED if the immediate parent exists when
-   * first time resource is getting ingested, otherwise optional.
+   * Disable validation warnings
    *
    * @param string $primaryResourceLocation
    */
@@ -719,7 +702,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->primaryResourceLocation;
   }
   /**
-   * The product this resource represents.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterProtoCommonProduct $product
    */
@@ -735,10 +718,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->product;
   }
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must
-   * be resource name of a Cloud Resource Manager project with the format of
-   * "/", such as "projects/123". For GCP provided resources, number should be
-   * project number.
+   * Disable validation warnings
    *
    * @param string $resourceContainer
    */
@@ -754,7 +734,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->resourceContainer;
   }
   /**
-   * Optional. List of resource flags for the database resource.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainResourceFlags[] $resourceFlags
    */
@@ -770,11 +750,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->resourceFlags;
   }
   /**
-   * Required. Different from DatabaseResourceId.unique_id, a resource name can
-   * be reused over time. That is, after a resource named "ABC" is deleted, the
-   * name "ABC" can be used to to create a new resource within the same source.
-   * Resource name to follow CAIS resource_name format as noted here go/condor-
-   * common-datamodel
+   * Required. Disable validation warnings
    *
    * @param string $resourceName
    */
@@ -790,7 +766,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->resourceName;
   }
   /**
-   * Optional. Suspension reason for the resource.
+   * Optional. Disable validation warnings
    *
    * Accepted values: SUSPENSION_REASON_UNSPECIFIED, WIPEOUT_HIDE_EVENT,
    * WIPEOUT_PURGE_EVENT, BILLING_DISABLED, ABUSER_DETECTED,
@@ -810,7 +786,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->suspensionReason;
   }
   /**
-   * Optional. Tags associated with this resources.
+   * Optional. Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainTags $tagsSet
    */
@@ -826,7 +802,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->tagsSet;
   }
   /**
-   * The time at which the resource was updated and recorded at partner service.
+   * Disable validation warnings
    *
    * @param string $updationTime
    */
@@ -842,7 +818,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->updationTime;
   }
   /**
-   * User-provided labels associated with the resource
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainUserLabels $userLabelSet
    */
@@ -858,8 +834,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->userLabelSet;
   }
   /**
-   * The resource zone. This is only applicable for zonal resources and will be
-   * empty for regional and multi-regional resources.
+   * Disable validation warnings
    *
    * @param string $zone
    */

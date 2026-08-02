@@ -20,84 +20,82 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \Google\Collection
 {
   /**
-   * Unspecified signal state.
+   * Disable validation warnings
    */
   public const SIGNAL_STATE_SIGNAL_STATE_UNSPECIFIED = 'SIGNAL_STATE_UNSPECIFIED';
   /**
-   * Signal is active and requires attention.
+   * Disable validation warnings
    */
   public const SIGNAL_STATE_ACTIVE = 'ACTIVE';
   /**
-   * Signal is inactive and does not require attention.
+   * Disable validation warnings
    */
   public const SIGNAL_STATE_INACTIVE = 'INACTIVE';
   /**
-   * Signal is dismissed by the user and should not be shown to the user again.
+   * Disable validation warnings
    */
   public const SIGNAL_STATE_DISMISSED = 'DISMISSED';
   /**
-   * Unspecified signal type.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_UNSPECIFIED = 'SIGNAL_TYPE_UNSPECIFIED';
   /**
-   * Outdated Minor Version
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_OUTDATED_MINOR_VERSION = 'SIGNAL_TYPE_OUTDATED_MINOR_VERSION';
   /**
-   * Represents database auditing is disabled.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_DATABASE_AUDITING_DISABLED = 'SIGNAL_TYPE_DATABASE_AUDITING_DISABLED';
   /**
-   * Represents if a database has a password configured for the root account or
-   * not.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_NO_ROOT_PASSWORD = 'SIGNAL_TYPE_NO_ROOT_PASSWORD';
   /**
-   * Represents if a resource is exposed to public access.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS = 'SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS';
   /**
-   * Represents if a resources requires all incoming connections to use SSL or
-   * not.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS = 'SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS';
   /**
-   * Represents if a resource version is in extended support.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXTENDED_SUPPORT = 'SIGNAL_TYPE_EXTENDED_SUPPORT';
   /**
-   * Represents if a resource has no automated backup policy.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY = 'SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY';
   /**
-   * Represents if a resource version is nearing end of life.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE = 'SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE';
   /**
-   * Represents if the last backup of a resource is older than 24 hours.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_LAST_BACKUP_OLD = 'SIGNAL_TYPE_LAST_BACKUP_OLD';
   /**
-   * Represents if a resource is not protected by automatic failover.
+   * Disable validation warnings
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_NOT_PROTECTED_BY_AUTOMATIC_FAILOVER = 'SIGNAL_TYPE_NOT_PROTECTED_BY_AUTOMATIC_FAILOVER';
   protected $collection_key = 'signalMetadataList';
   protected $backupRunType = StorageDatabasecenterPartnerapiV1mainBackupRun::class;
   protected $backupRunDataType = '';
   /**
-   * Required. Full Resource name of the source resource.
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $fullResourceName;
   /**
-   * Required. Last time signal was refreshed
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $lastRefreshTime;
   /**
-   * Required. Resource location.
+   * Required. Disable validation warnings
    *
    * @var string
    */
@@ -105,7 +103,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
   protected $resourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $resourceIdDataType = '';
   /**
-   * Deprecated: Use signal_metadata_list instead.
+   * Disable validation warnings
    *
    * @deprecated
    * @var bool
@@ -114,20 +112,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
   protected $signalMetadataListType = StorageDatabasecenterPartnerapiV1mainSignalMetadata::class;
   protected $signalMetadataListDataType = 'array';
   /**
-   * Required. Output only. Signal state of the signal
+   * Required. Output only. Disable validation warnings
    *
    * @var string
    */
   public $signalState;
   /**
-   * Required. Signal type of the signal
+   * Required. Disable validation warnings
    *
    * @var string
    */
   public $signalType;
 
   /**
-   * Deprecated: Use signal_metadata_list instead.
+   * Disable validation warnings
    *
    * @deprecated
    * @param StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun
@@ -145,7 +143,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->backupRun;
   }
   /**
-   * Required. Full Resource name of the source resource.
+   * Required. Disable validation warnings
    *
    * @param string $fullResourceName
    */
@@ -161,7 +159,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->fullResourceName;
   }
   /**
-   * Required. Last time signal was refreshed
+   * Required. Disable validation warnings
    *
    * @param string $lastRefreshTime
    */
@@ -177,7 +175,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->lastRefreshTime;
   }
   /**
-   * Required. Resource location.
+   * Required. Disable validation warnings
    *
    * @param string $location
    */
@@ -193,7 +191,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->location;
   }
   /**
-   * Database resource id.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $resourceId
    */
@@ -209,7 +207,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->resourceId;
   }
   /**
-   * Deprecated: Use signal_metadata_list instead.
+   * Disable validation warnings
    *
    * @deprecated
    * @param bool $signalBoolValue
@@ -227,8 +225,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->signalBoolValue;
   }
   /**
-   * This will support array of OneOf signal metadata information for a given
-   * signal type.
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainSignalMetadata[] $signalMetadataList
    */
@@ -244,7 +241,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->signalMetadataList;
   }
   /**
-   * Required. Output only. Signal state of the signal
+   * Required. Output only. Disable validation warnings
    *
    * Accepted values: SIGNAL_STATE_UNSPECIFIED, ACTIVE, INACTIVE, DISMISSED
    *
@@ -262,7 +259,7 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends \G
     return $this->signalState;
   }
   /**
-   * Required. Signal type of the signal
+   * Required. Disable validation warnings
    *
    * Accepted values: SIGNAL_TYPE_UNSPECIFIED,
    * SIGNAL_TYPE_OUTDATED_MINOR_VERSION, SIGNAL_TYPE_DATABASE_AUDITING_DISABLED,

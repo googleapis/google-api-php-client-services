@@ -19,52 +19,51 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainEntitlement extends \Google\Model
 {
+  /**
+   * Disable validation warnings
+   */
   public const ENTITLEMENT_STATE_ENTITLEMENT_STATE_UNSPECIFIED = 'ENTITLEMENT_STATE_UNSPECIFIED';
   /**
-   * User is entitled to a feature/benefit, but whether it has been successfully
-   * provisioned is decided by provisioning state.
+   * Disable validation warnings
    */
   public const ENTITLEMENT_STATE_ENTITLED = 'ENTITLED';
   /**
-   * User is entitled to a feature/benefit, but it was requested to be revoked.
-   * Whether the revoke has been successful is decided by provisioning state.
+   * Disable validation warnings
    */
   public const ENTITLEMENT_STATE_REVOKED = 'REVOKED';
   /**
-   * The entitlement type is unspecified.
+   * Disable validation warnings
    */
   public const TYPE_ENTITLEMENT_TYPE_UNSPECIFIED = 'ENTITLEMENT_TYPE_UNSPECIFIED';
   /**
-   * The root entitlement representing Gemini package ownership.This will no
-   * longer be supported in the future.
+   * Disable validation warnings
    *
    * @deprecated
    */
   public const TYPE_GEMINI = 'GEMINI';
   /**
-   * The entitlement representing Native Tier, This will be the default
-   * Entitlement going forward with GCA Enablement.
+   * Disable validation warnings
    */
   public const TYPE_NATIVE = 'NATIVE';
   /**
-   * The entitlement representing GCA-Standard Tier.
+   * Disable validation warnings
    */
   public const TYPE_GCA_STANDARD = 'GCA_STANDARD';
   /**
-   * The current state of user's accessibility to a feature/benefit.
+   * Disable validation warnings
    *
    * @var string
    */
   public $entitlementState;
   /**
-   * An enum that represents the type of this entitlement.
+   * Disable validation warnings
    *
    * @var string
    */
   public $type;
 
   /**
-   * The current state of user's accessibility to a feature/benefit.
+   * Disable validation warnings
    *
    * Accepted values: ENTITLEMENT_STATE_UNSPECIFIED, ENTITLED, REVOKED
    *
@@ -82,7 +81,7 @@ class StorageDatabasecenterPartnerapiV1mainEntitlement extends \Google\Model
     return $this->entitlementState;
   }
   /**
-   * An enum that represents the type of this entitlement.
+   * Disable validation warnings
    *
    * Accepted values: ENTITLEMENT_TYPE_UNSPECIFIED, GEMINI, NATIVE, GCA_STANDARD
    *

@@ -20,62 +20,60 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainRetentionSettings extends \Google\Model
 {
   /**
-   * Backup retention unit is unspecified, will be treated as COUNT.
+   * Disable validation warnings
    */
   public const RETENTION_UNIT_RETENTION_UNIT_UNSPECIFIED = 'RETENTION_UNIT_UNSPECIFIED';
   /**
-   * Retention will be by count, eg. "retain the most recent 7 backups".
+   * Disable validation warnings
    */
   public const RETENTION_UNIT_COUNT = 'COUNT';
   /**
-   * Retention will be by Time, eg. "retain backups till a specific time" i.e.
-   * till 2024-05-01T00:00:00Z.
+   * Disable validation warnings
    */
   public const RETENTION_UNIT_TIME = 'TIME';
   /**
-   * Retention will be by duration, eg. "retain the backups for 172800 seconds
-   * (2 days)".
+   * Disable validation warnings
    */
   public const RETENTION_UNIT_DURATION = 'DURATION';
   /**
-   * For rest of the other category
+   * Disable validation warnings
    */
   public const RETENTION_UNIT_RETENTION_UNIT_OTHER = 'RETENTION_UNIT_OTHER';
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    *
    * @var string
    */
   public $durationBasedRetention;
   /**
-   * Quantity based retention period i.e. 7 backups
+   * Disable validation warnings
    *
    * @var int
    */
   public $quantityBasedRetention;
   /**
-   * The unit that 'retained_backups' represents.
+   * Disable validation warnings
    *
    * @deprecated
    * @var string
    */
   public $retentionUnit;
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    *
    * @deprecated
    * @var string
    */
   public $timeBasedRetention;
   /**
-   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * Disable validation warnings
    *
    * @var string
    */
   public $timestampBasedRetentionTime;
 
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    *
    * @param string $durationBasedRetention
    */
@@ -91,7 +89,7 @@ class StorageDatabasecenterPartnerapiV1mainRetentionSettings extends \Google\Mod
     return $this->durationBasedRetention;
   }
   /**
-   * Quantity based retention period i.e. 7 backups
+   * Disable validation warnings
    *
    * @param int $quantityBasedRetention
    */
@@ -107,7 +105,7 @@ class StorageDatabasecenterPartnerapiV1mainRetentionSettings extends \Google\Mod
     return $this->quantityBasedRetention;
   }
   /**
-   * The unit that 'retained_backups' represents.
+   * Disable validation warnings
    *
    * Accepted values: RETENTION_UNIT_UNSPECIFIED, COUNT, TIME, DURATION,
    * RETENTION_UNIT_OTHER
@@ -128,7 +126,7 @@ class StorageDatabasecenterPartnerapiV1mainRetentionSettings extends \Google\Mod
     return $this->retentionUnit;
   }
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    *
    * @deprecated
    * @param string $timeBasedRetention
@@ -146,7 +144,7 @@ class StorageDatabasecenterPartnerapiV1mainRetentionSettings extends \Google\Mod
     return $this->timeBasedRetention;
   }
   /**
-   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * Disable validation warnings
    *
    * @param string $timestampBasedRetentionTime
    */

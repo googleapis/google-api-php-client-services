@@ -20,20 +20,20 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance extends \Google\Model
 {
   /**
-   * Optional. The end time of the upcoming maintenance.
+   * Optional. Disable validation warnings
    *
    * @var string
    */
   public $endTime;
   /**
-   * Optional. The start time of the upcoming maintenance.
+   * Optional. Disable validation warnings
    *
    * @var string
    */
   public $startTime;
 
   /**
-   * Optional. The end time of the upcoming maintenance.
+   * Optional. Disable validation warnings
    *
    * @param string $endTime
    */
@@ -49,7 +49,7 @@ class StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance extends \Google\M
     return $this->endTime;
   }
   /**
-   * Optional. The start time of the upcoming maintenance.
+   * Optional. Disable validation warnings
    *
    * @param string $startTime
    */

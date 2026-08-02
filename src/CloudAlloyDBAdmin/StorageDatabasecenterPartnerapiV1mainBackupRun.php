@@ -20,19 +20,19 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainBackupRun extends \Google\Model
 {
   /**
-   * Unspecified status.
+   * Disable validation warnings
    */
   public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
   /**
-   * The backup was successful.
+   * Disable validation warnings
    */
   public const STATUS_SUCCESSFUL = 'SUCCESSFUL';
   /**
-   * The backup was unsuccessful.
+   * Disable validation warnings
    */
   public const STATUS_FAILED = 'FAILED';
   /**
-   * The time the backup operation completed. REQUIRED
+   * Disable validation warnings
    *
    * @var string
    */
@@ -40,20 +40,20 @@ class StorageDatabasecenterPartnerapiV1mainBackupRun extends \Google\Model
   protected $errorType = StorageDatabasecenterPartnerapiV1mainOperationError::class;
   protected $errorDataType = '';
   /**
-   * The time the backup operation started. REQUIRED
+   * Disable validation warnings
    *
    * @var string
    */
   public $startTime;
   /**
-   * The status of this run. REQUIRED
+   * Disable validation warnings
    *
    * @var string
    */
   public $status;
 
   /**
-   * The time the backup operation completed. REQUIRED
+   * Disable validation warnings
    *
    * @param string $endTime
    */
@@ -69,8 +69,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupRun extends \Google\Model
     return $this->endTime;
   }
   /**
-   * Information about why the backup operation failed. This is only present if
-   * the run has the FAILED status. OPTIONAL
+   * Disable validation warnings
    *
    * @param StorageDatabasecenterPartnerapiV1mainOperationError $error
    */
@@ -86,7 +85,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupRun extends \Google\Model
     return $this->error;
   }
   /**
-   * The time the backup operation started. REQUIRED
+   * Disable validation warnings
    *
    * @param string $startTime
    */
@@ -102,7 +101,7 @@ class StorageDatabasecenterPartnerapiV1mainBackupRun extends \Google\Model
     return $this->startTime;
   }
   /**
-   * The status of this run. REQUIRED
+   * Disable validation warnings
    *
    * Accepted values: STATUS_UNSPECIFIED, SUCCESSFUL, FAILED
    *
