@@ -75,6 +75,10 @@ class DataPoint extends \Google\Model
   protected $hydrationLogDataType = '';
   protected $irregularRhythmNotificationType = IrregularRhythmNotification::class;
   protected $irregularRhythmNotificationDataType = '';
+  protected $menstrualPeriodType = MenstrualPeriod::class;
+  protected $menstrualPeriodDataType = '';
+  protected $moodsType = Moods::class;
+  protected $moodsDataType = '';
   /**
    * Identifier. Data point name, only supported for the subset of identifiable
    * data types. For the majority of the data types, individual data points do
@@ -93,6 +97,8 @@ class DataPoint extends \Google\Model
   public $name;
   protected $nutritionLogType = NutritionLog::class;
   protected $nutritionLogDataType = '';
+  protected $ovulationTestType = OvulationTest::class;
+  protected $ovulationTestDataType = '';
   protected $oxygenSaturationType = OxygenSaturation::class;
   protected $oxygenSaturationDataType = '';
   protected $respiratoryRateSleepSummaryType = RespiratoryRateSleepSummary::class;
@@ -107,6 +113,8 @@ class DataPoint extends \Google\Model
   protected $stepsDataType = '';
   protected $swimLengthsDataType = SwimLengthsData::class;
   protected $swimLengthsDataDataType = '';
+  protected $symptomsType = Symptoms::class;
+  protected $symptomsDataType = '';
   protected $timeInHeartRateZoneType = TimeInHeartRateZone::class;
   protected $timeInHeartRateZoneDataType = '';
   protected $vo2MaxType = VO2Max::class;
@@ -581,6 +589,39 @@ class DataPoint extends \Google\Model
     return $this->irregularRhythmNotification;
   }
   /**
+   * Optional. Data for points in the `menstrual-period` interval data type
+   * collection.
+   *
+   * @param MenstrualPeriod $menstrualPeriod
+   */
+  public function setMenstrualPeriod(MenstrualPeriod $menstrualPeriod)
+  {
+    $this->menstrualPeriod = $menstrualPeriod;
+  }
+  /**
+   * @return MenstrualPeriod
+   */
+  public function getMenstrualPeriod()
+  {
+    return $this->menstrualPeriod;
+  }
+  /**
+   * Optional. Data for points in the `moods` sample data type collection.
+   *
+   * @param Moods $moods
+   */
+  public function setMoods(Moods $moods)
+  {
+    $this->moods = $moods;
+  }
+  /**
+   * @return Moods
+   */
+  public function getMoods()
+  {
+    return $this->moods;
+  }
+  /**
    * Identifier. Data point name, only supported for the subset of identifiable
    * data types. For the majority of the data types, individual data points do
    * not need to be identified and this field would be empty. Format:
@@ -622,6 +663,23 @@ class DataPoint extends \Google\Model
   public function getNutritionLog()
   {
     return $this->nutritionLog;
+  }
+  /**
+   * Optional. Data for points in the `ovulation-test` sample data type
+   * collection.
+   *
+   * @param OvulationTest $ovulationTest
+   */
+  public function setOvulationTest(OvulationTest $ovulationTest)
+  {
+    $this->ovulationTest = $ovulationTest;
+  }
+  /**
+   * @return OvulationTest
+   */
+  public function getOvulationTest()
+  {
+    return $this->ovulationTest;
   }
   /**
    * Optional. Data for points in the `oxygen-saturation` sample data type
@@ -738,6 +796,22 @@ class DataPoint extends \Google\Model
   public function getSwimLengthsData()
   {
     return $this->swimLengthsData;
+  }
+  /**
+   * Optional. Data for points in the `symptoms` sample data type collection.
+   *
+   * @param Symptoms $symptoms
+   */
+  public function setSymptoms(Symptoms $symptoms)
+  {
+    $this->symptoms = $symptoms;
+  }
+  /**
+   * @return Symptoms
+   */
+  public function getSymptoms()
+  {
+    return $this->symptoms;
   }
   /**
    * Optional. Data for points in the `time-in-heart-rate-zone` interval data

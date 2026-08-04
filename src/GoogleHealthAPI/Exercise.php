@@ -761,7 +761,11 @@ class Exercise extends \Google\Collection
    */
   public $createTime;
   /**
-   * Required. Exercise display name.
+   * Required. The localized, human-readable name of the exercise. For all
+   * exercise types other than `OTHER`, the system ignores client input and
+   * overrides this field with a generated name based on `exercise_type` (e.g.,
+   * "Walking" for `WALKING`). If `exercise_type` is `OTHER`, this field can
+   * contain the user's custom, free-form display name.
    *
    * @var string
    */
@@ -830,7 +834,11 @@ class Exercise extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Required. Exercise display name.
+   * Required. The localized, human-readable name of the exercise. For all
+   * exercise types other than `OTHER`, the system ignores client input and
+   * overrides this field with a generated name based on `exercise_type` (e.g.,
+   * "Walking" for `WALKING`). If `exercise_type` is `OTHER`, this field can
+   * contain the user's custom, free-form display name.
    *
    * @param string $displayName
    */
