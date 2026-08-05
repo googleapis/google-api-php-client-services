@@ -86,6 +86,24 @@ class OrganizationsPublicationsCtas extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListCtasResponse::class);
   }
+  /**
+   * Updates a CTA. (ctas.patch)
+   *
+   * @param string $name Identifier. The resource name of the Cta. Format:
+   * organizations/{organization}/publications/{publication}/ctas/{cta}
+   * @param Cta $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The list of fields to update.
+   * @return Cta
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, Cta $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Cta::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
