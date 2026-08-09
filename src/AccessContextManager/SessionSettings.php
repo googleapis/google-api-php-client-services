@@ -50,7 +50,9 @@ class SessionSettings extends \Google\Model
    * Optional. The session length. Setting this field to zero is equal to
    * disabling session. Also can set infinite session by flipping the enabled
    * bit to false below. If use_oidc_max_age is true, for OIDC apps, the session
-   * length will be the minimum of this field and OIDC max_age param.
+   * length will be the minimum of this field and OIDC max_age param. If this
+   * field is set to zero, session_length_enabled must be set to false or left
+   * unset.
    *
    * @var string
    */
@@ -58,7 +60,8 @@ class SessionSettings extends \Google\Model
   /**
    * Optional. This field enables or disables Google Cloud session length. When
    * false, all fields set above will be disregarded and the session length is
-   * basically infinite.
+   * basically infinite. If session_length is set to zero, this field must be
+   * false.
    *
    * @var bool
    */
@@ -100,7 +103,9 @@ class SessionSettings extends \Google\Model
    * Optional. The session length. Setting this field to zero is equal to
    * disabling session. Also can set infinite session by flipping the enabled
    * bit to false below. If use_oidc_max_age is true, for OIDC apps, the session
-   * length will be the minimum of this field and OIDC max_age param.
+   * length will be the minimum of this field and OIDC max_age param. If this
+   * field is set to zero, session_length_enabled must be set to false or left
+   * unset.
    *
    * @param string $sessionLength
    */
@@ -118,7 +123,8 @@ class SessionSettings extends \Google\Model
   /**
    * Optional. This field enables or disables Google Cloud session length. When
    * false, all fields set above will be disregarded and the session length is
-   * basically infinite.
+   * basically infinite. If session_length is set to zero, this field must be
+   * false.
    *
    * @param bool $sessionLengthEnabled
    */
