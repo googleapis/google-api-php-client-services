@@ -21,15 +21,19 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints extends \Goog
 {
   protected $collection_key = 'languageCodes';
   /**
-   * Required. BCP-47 language codes. At least one must be specified.
+   * Required. Deprecated: Use top-level `language_codes` instead. BCP-47
+   * language codes. At least one must be specified.
    *
+   * @deprecated
    * @var string[]
    */
   public $languageCodes;
 
   /**
-   * Required. BCP-47 language codes. At least one must be specified.
+   * Required. Deprecated: Use top-level `language_codes` instead. BCP-47
+   * language codes. At least one must be specified.
    *
+   * @deprecated
    * @param string[] $languageCodes
    */
   public function setLanguageCodes($languageCodes)
@@ -37,6 +41,7 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints extends \Goog
     $this->languageCodes = $languageCodes;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getLanguageCodes()

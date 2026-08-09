@@ -33,6 +33,8 @@ class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends \Google\Model
   protected $gcsSourceDataType = '';
   protected $inlineSourceType = GoogleCloudAiplatformV1ImportEvaluationSetRequestInlineSource::class;
   protected $inlineSourceDataType = '';
+  protected $interactionsSourceType = GoogleCloudAiplatformV1ImportEvaluationSetRequestInteractionsSource::class;
+  protected $interactionsSourceDataType = '';
 
   /**
    * Source for loading Agent Engine sessions.
@@ -148,6 +150,22 @@ class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends \Google\Model
   public function getInlineSource()
   {
     return $this->inlineSource;
+  }
+  /**
+   * Optional. Source for importing Interactions API interactions.
+   *
+   * @param GoogleCloudAiplatformV1ImportEvaluationSetRequestInteractionsSource $interactionsSource
+   */
+  public function setInteractionsSource(GoogleCloudAiplatformV1ImportEvaluationSetRequestInteractionsSource $interactionsSource)
+  {
+    $this->interactionsSource = $interactionsSource;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ImportEvaluationSetRequestInteractionsSource
+   */
+  public function getInteractionsSource()
+  {
+    return $this->interactionsSource;
   }
 }
 

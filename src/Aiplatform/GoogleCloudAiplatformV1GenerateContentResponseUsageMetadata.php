@@ -36,6 +36,10 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
    */
   public const TRAFFIC_TYPE_ON_DEMAND_FLEX = 'ON_DEMAND_FLEX';
   /**
+   * Type for Off-Peak Pay-As-You-Go traffic.
+   */
+  public const TRAFFIC_TYPE_ON_DEMAND_OFFPEAK = 'ON_DEMAND_OFFPEAK';
+  /**
    * Type for Provisioned Throughput traffic.
    */
   public const TRAFFIC_TYPE_PROVISIONED_THROUGHPUT = 'PROVISIONED_THROUGHPUT';
@@ -273,7 +277,7 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
    * Output only. The traffic type for this request.
    *
    * Accepted values: TRAFFIC_TYPE_UNSPECIFIED, ON_DEMAND, ON_DEMAND_PRIORITY,
-   * ON_DEMAND_FLEX, PROVISIONED_THROUGHPUT
+   * ON_DEMAND_FLEX, ON_DEMAND_OFFPEAK, PROVISIONED_THROUGHPUT
    *
    * @param self::TRAFFIC_TYPE_* $trafficType
    */

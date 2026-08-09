@@ -68,6 +68,13 @@ class GoogleCloudAiplatformV1VideoResponseFormat extends \Google\Model
    * @var string
    */
   public $gcsUri;
+  /**
+   * Optional. The video output resolution. Supported values: "360p", "720p",
+   * "1080p", "4k".
+   *
+   * @var string
+   */
+  public $resolution;
 
   /**
    * The aspect ratio for the video output.
@@ -138,6 +145,23 @@ class GoogleCloudAiplatformV1VideoResponseFormat extends \Google\Model
   public function getGcsUri()
   {
     return $this->gcsUri;
+  }
+  /**
+   * Optional. The video output resolution. Supported values: "360p", "720p",
+   * "1080p", "4k".
+   *
+   * @param string $resolution
+   */
+  public function setResolution($resolution)
+  {
+    $this->resolution = $resolution;
+  }
+  /**
+   * @return string
+   */
+  public function getResolution()
+  {
+    return $this->resolution;
   }
 }
 

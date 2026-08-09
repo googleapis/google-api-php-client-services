@@ -75,6 +75,8 @@ class GoogleCloudAiplatformV1EvaluationRun extends \Google\Model
    * @var string
    */
   public $displayName;
+  protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
+  protected $encryptionSpecDataType = '';
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   protected $evaluationConfigType = GoogleCloudAiplatformV1EvaluationRunEvaluationConfig::class;
@@ -182,6 +184,23 @@ class GoogleCloudAiplatformV1EvaluationRun extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationRun. If
+   * set, this EvaluationRun will be secured by this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
+   */
+  public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
+  {
+    $this->encryptionSpec = $encryptionSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public function getEncryptionSpec()
+  {
+    return $this->encryptionSpec;
   }
   /**
    * Output only. Only populated when the evaluation run's state is FAILED or

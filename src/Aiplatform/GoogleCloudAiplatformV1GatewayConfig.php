@@ -51,7 +51,7 @@ class GoogleCloudAiplatformV1GatewayConfig extends \Google\Collection
    * gateway's `network` project. Each listed project is VPC-SC enforced: it
    * must be within the caller's service perimeter. The owning
    * SemanticGovernancePolicyEngine's own project is always permitted implicitly
-   * and need not be listed. Format: project ID or number.
+   * and need not be listed. Format: `projects/{project}` (ID or number).
    *
    * @var string[]
    */
@@ -114,7 +114,7 @@ class GoogleCloudAiplatformV1GatewayConfig extends \Google\Collection
    * gateway's `network` project. Each listed project is VPC-SC enforced: it
    * must be within the caller's service perimeter. The owning
    * SemanticGovernancePolicyEngine's own project is always permitted implicitly
-   * and need not be listed. Format: project ID or number.
+   * and need not be listed. Format: `projects/{project}` (ID or number).
    *
    * @param string[] $allowedProjects
    */

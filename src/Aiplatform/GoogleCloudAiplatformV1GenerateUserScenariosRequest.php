@@ -32,6 +32,8 @@ class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends \Google\Model
    * @var bool
    */
   public $allowCrossRegionModel;
+  protected $geminiAgentConfigType = GoogleCloudAiplatformV1GeminiAgentConfig::class;
+  protected $geminiAgentConfigDataType = '';
   /**
    * Optional. The agent id to identify the root agent. Required unless
    * `gemini_agent_config` is set, in which case it is derived from the
@@ -83,6 +85,22 @@ class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends \Google\Model
   public function getAllowCrossRegionModel()
   {
     return $this->allowCrossRegionModel;
+  }
+  /**
+   * Optional. Config for a Gemini Agent to generate user scenarios for.
+   *
+   * @param GoogleCloudAiplatformV1GeminiAgentConfig $geminiAgentConfig
+   */
+  public function setGeminiAgentConfig(GoogleCloudAiplatformV1GeminiAgentConfig $geminiAgentConfig)
+  {
+    $this->geminiAgentConfig = $geminiAgentConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GeminiAgentConfig
+   */
+  public function getGeminiAgentConfig()
+  {
+    return $this->geminiAgentConfig;
   }
   /**
    * Optional. The agent id to identify the root agent. Required unless

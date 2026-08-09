@@ -35,8 +35,8 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig exten
    */
   public $internetAccess;
   /**
-   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC
-   * interface IP into the customer VPC for sandbox egress.
+   * Optional. The name of the customer VPC `NetworkAttachment` used to draw a
+   * PSC interface IP into the customer VPC for sandbox egress.
    *
    * @var string
    */
@@ -92,8 +92,8 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig exten
     return $this->internetAccess;
   }
   /**
-   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC
-   * interface IP into the customer VPC for sandbox egress.
+   * Optional. The name of the customer VPC `NetworkAttachment` used to draw a
+   * PSC interface IP into the customer VPC for sandbox egress.
    *
    * @param string $networkAttachment
    */

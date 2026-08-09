@@ -27,6 +27,8 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig extends 
    * @var string
    */
   public $agentEngine;
+  protected $geminiAgentConfigType = GoogleCloudAiplatformV1GeminiAgentConfig::class;
+  protected $geminiAgentConfigDataType = '';
   protected $sessionInputType = GoogleCloudAiplatformV1EvaluationRunInferenceConfigSessionInput::class;
   protected $sessionInputDataType = '';
   protected $userSimulatorConfigType = GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfigUserSimulatorConfig::class;
@@ -49,6 +51,24 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig extends 
   public function getAgentEngine()
   {
     return $this->agentEngine;
+  }
+  /**
+   * Optional. Config for scraping a Gemini Agent via the Interactions API. The
+   * scraping service creates interactions against the agent and returns the
+   * resulting interaction traces for evaluation.
+   *
+   * @param GoogleCloudAiplatformV1GeminiAgentConfig $geminiAgentConfig
+   */
+  public function setGeminiAgentConfig(GoogleCloudAiplatformV1GeminiAgentConfig $geminiAgentConfig)
+  {
+    $this->geminiAgentConfig = $geminiAgentConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GeminiAgentConfig
+   */
+  public function getGeminiAgentConfig()
+  {
+    return $this->geminiAgentConfig;
   }
   /**
    * Optional. The session input to get agent running results.

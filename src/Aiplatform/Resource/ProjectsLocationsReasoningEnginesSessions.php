@@ -18,6 +18,7 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1AppendEventResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1CompactSessionRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListSessionsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1Session;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1SessionEvent;
@@ -49,6 +50,27 @@ class ProjectsLocationsReasoningEnginesSessions extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('appendEvent', [$params], GoogleCloudAiplatformV1AppendEventResponse::class);
+  }
+  /**
+   * Compacts the event history of a given Session, which may run an LLM
+   * summarization call and rewrite the full event history. Compaction is a
+   * storage-side rewrite that can apply a stackable pipeline of rules (event-
+   * horizon preservation, tool-response truncation, thought stripping, and LLM
+   * summarization etc.) (sessions.compact)
+   *
+   * @param string $name Required. The resource name of the session to compact.
+   * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_
+   * engine}/sessions/{session}`
+   * @param GoogleCloudAiplatformV1CompactSessionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function compact($name, GoogleCloudAiplatformV1CompactSessionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('compact', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Creates a new Session. (sessions.create)

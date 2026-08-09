@@ -43,6 +43,16 @@ class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo extends \Google\Mo
    * @var string
    */
   public $sandboxInternalIp;
+  /**
+   * Output only. The name of the PSC-E service attachment created for private
+   * ingress to this SandboxEnvironment. Only populated when the template
+   * enables private ingress (see
+   * SandboxEnvironmentTemplate.ingress_control_config). VPC-SC customers use
+   * this to create a PSC endpoint in their VPC.
+   *
+   * @var string
+   */
+  public $serviceAttachment;
 
   /**
    * Output only. The hostname of the load balancer.
@@ -107,6 +117,26 @@ class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo extends \Google\Mo
   public function getSandboxInternalIp()
   {
     return $this->sandboxInternalIp;
+  }
+  /**
+   * Output only. The name of the PSC-E service attachment created for private
+   * ingress to this SandboxEnvironment. Only populated when the template
+   * enables private ingress (see
+   * SandboxEnvironmentTemplate.ingress_control_config). VPC-SC customers use
+   * this to create a PSC endpoint in their VPC.
+   *
+   * @param string $serviceAttachment
+   */
+  public function setServiceAttachment($serviceAttachment)
+  {
+    $this->serviceAttachment = $serviceAttachment;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAttachment()
+  {
+    return $this->serviceAttachment;
   }
 }
 

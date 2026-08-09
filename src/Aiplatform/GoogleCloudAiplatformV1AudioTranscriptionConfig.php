@@ -19,7 +19,7 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
 {
-  protected $collection_key = 'customVocabulary';
+  protected $collection_key = 'languageCodes';
   /**
    * Optional. A list of phrases to bias the ASR model towards.
    *
@@ -42,6 +42,14 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
   public $diarization;
   protected $languageAutoType = GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageAuto::class;
   protected $languageAutoDataType = '';
+  /**
+   * Optional. BCP-47 language codes providing hints about the languages present
+   * in the audio. If omitted or empty, defaults to automatic language
+   * detection.
+   *
+   * @var string[]
+   */
+  public $languageCodes;
   protected $languageHintsType = GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints::class;
   protected $languageHintsDataType = '';
   /**
@@ -103,8 +111,10 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
     return $this->diarization;
   }
   /**
-   * Optional. The model will detect the language automatically.
+   * Optional. Deprecated: Use top-level `language_codes` instead. The model
+   * will detect the language automatically.
    *
+   * @deprecated
    * @param GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageAuto $languageAuto
    */
   public function setLanguageAuto(GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageAuto $languageAuto)
@@ -112,6 +122,7 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
     $this->languageAuto = $languageAuto;
   }
   /**
+   * @deprecated
    * @return GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageAuto
    */
   public function getLanguageAuto()
@@ -119,8 +130,28 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
     return $this->languageAuto;
   }
   /**
-   * Optional. Specifies one or more languages in the audio.
+   * Optional. BCP-47 language codes providing hints about the languages present
+   * in the audio. If omitted or empty, defaults to automatic language
+   * detection.
    *
+   * @param string[] $languageCodes
+   */
+  public function setLanguageCodes($languageCodes)
+  {
+    $this->languageCodes = $languageCodes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLanguageCodes()
+  {
+    return $this->languageCodes;
+  }
+  /**
+   * Optional. Deprecated: Use top-level `language_codes` instead. Specifies one
+   * or more languages in the audio.
+   *
+   * @deprecated
    * @param GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints $languageHints
    */
   public function setLanguageHints(GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints $languageHints)
@@ -128,6 +159,7 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
     $this->languageHints = $languageHints;
   }
   /**
+   * @deprecated
    * @return GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints
    */
   public function getLanguageHints()

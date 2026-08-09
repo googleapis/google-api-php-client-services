@@ -62,6 +62,8 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends \Google\Model
   public $displayName;
   protected $egressControlConfigType = GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig::class;
   protected $egressControlConfigDataType = '';
+  protected $ingressControlConfigType = GoogleCloudAiplatformV1PrivateServiceConnectConfig::class;
+  protected $ingressControlConfigDataType = '';
   /**
    * Identifier. The resource name of the SandboxEnvironmentTemplate. Format: `p
    * rojects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/
@@ -164,6 +166,32 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends \Google\Model
   public function getEgressControlConfig()
   {
     return $this->egressControlConfig;
+  }
+  /**
+   * Optional. The configuration for private ingress (PSC-E) of this template.
+   * When set, the sandbox router is exposed privately via a PSC service
+   * attachment so VPC-SC customers can connect from their VPC over a private
+   * endpoint instead of the public internet. The resulting service attachment
+   * is surfaced on `SandboxEnvironment.connection_info.service_attachment`.
+   * Only the PSC-E (service-attachment/ingress) portion of
+   * `PrivateServiceConnectConfig` applies here:
+   * `enable_private_service_connect` and `project_allowlist` (the consumer
+   * projects allowed to connect). The nested `psc_interface_config` (PSC-I /
+   * egress) is not used for sandbox ingress; sandbox egress is configured via
+   * `egress_control_config` instead.
+   *
+   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig $ingressControlConfig
+   */
+  public function setIngressControlConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig $ingressControlConfig)
+  {
+    $this->ingressControlConfig = $ingressControlConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   */
+  public function getIngressControlConfig()
+  {
+    return $this->ingressControlConfig;
   }
   /**
    * Identifier. The resource name of the SandboxEnvironmentTemplate. Format: `p
