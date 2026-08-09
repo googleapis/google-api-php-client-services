@@ -40,12 +40,12 @@ class EgressNetworkConfig extends \Google\Model
    * @var string
    */
   public $networkAttachment;
-  protected $tlsConfigType = EgressNetworkConfigTlsConfig::class;
-  protected $tlsConfigDataType = '';
   /**
-   * Optional. The trust config resource name. Format:
+   * Optional. Deprecated: Use tls_config instead. The trust config resource
+   * name. Format:
    * projects/{project}/locations/{location}/trustConfigs/{trust_config}
    *
+   * @deprecated
    * @var string
    */
   public $trustConfig;
@@ -90,25 +90,11 @@ class EgressNetworkConfig extends \Google\Model
     return $this->networkAttachment;
   }
   /**
-   * Optional. The TLS configuration for the egress traffic.
-   *
-   * @param EgressNetworkConfigTlsConfig $tlsConfig
-   */
-  public function setTlsConfig(EgressNetworkConfigTlsConfig $tlsConfig)
-  {
-    $this->tlsConfig = $tlsConfig;
-  }
-  /**
-   * @return EgressNetworkConfigTlsConfig
-   */
-  public function getTlsConfig()
-  {
-    return $this->tlsConfig;
-  }
-  /**
-   * Optional. The trust config resource name. Format:
+   * Optional. Deprecated: Use tls_config instead. The trust config resource
+   * name. Format:
    * projects/{project}/locations/{location}/trustConfigs/{trust_config}
    *
+   * @deprecated
    * @param string $trustConfig
    */
   public function setTrustConfig($trustConfig)
@@ -116,6 +102,7 @@ class EgressNetworkConfig extends \Google\Model
     $this->trustConfig = $trustConfig;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTrustConfig()

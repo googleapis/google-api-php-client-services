@@ -20,6 +20,13 @@ namespace Google\Service\NetworkServices;
 class AgentGateway extends \Google\Collection
 {
   protected $collection_key = 'registries';
+  /**
+   * Optional. The resource name of the AgentConnectivityTemplate. Format: proje
+   * cts/{project}/locations/{location}/agentConnectivityTemplates/{template}
+   *
+   * @var string
+   */
+  public $agentConnectivityTemplate;
   protected $agentGatewayCardType = AgentGatewayAgentGatewayOutputCard::class;
   protected $agentGatewayCardDataType = '';
   /**
@@ -85,6 +92,23 @@ class AgentGateway extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Optional. The resource name of the AgentConnectivityTemplate. Format: proje
+   * cts/{project}/locations/{location}/agentConnectivityTemplates/{template}
+   *
+   * @param string $agentConnectivityTemplate
+   */
+  public function setAgentConnectivityTemplate($agentConnectivityTemplate)
+  {
+    $this->agentConnectivityTemplate = $agentConnectivityTemplate;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentConnectivityTemplate()
+  {
+    return $this->agentConnectivityTemplate;
+  }
   /**
    * Output only. Field for populated AgentGateway card.
    *
