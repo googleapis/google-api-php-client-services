@@ -42,7 +42,8 @@ class WorkAccountSetupConfig extends \Google\Model
    * field is only relevant if authenticationType is GOOGLE_AUTHENTICATED. This
    * must be an enterprise account and not a consumer account. Once set and a
    * Google authenticated account is added to the device, changing this field
-   * will have no effect, and thus recommended to be set only once.
+   * will have no effect, and thus recommended to be set only once. The email
+   * address must be all lowercase.
    *
    * @var string
    */
@@ -72,7 +73,8 @@ class WorkAccountSetupConfig extends \Google\Model
    * field is only relevant if authenticationType is GOOGLE_AUTHENTICATED. This
    * must be an enterprise account and not a consumer account. Once set and a
    * Google authenticated account is added to the device, changing this field
-   * will have no effect, and thus recommended to be set only once.
+   * will have no effect, and thus recommended to be set only once. The email
+   * address must be all lowercase.
    *
    * @param string $requiredAccountEmail
    */
