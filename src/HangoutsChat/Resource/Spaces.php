@@ -493,6 +493,7 @@ class Spaces extends \Google\Service\Resource
    * `membership_count.joined_direct_human_user_count ASC` - `last_active_time
    * DESC` - `last_active_time ASC` - `create_time DESC` - `create_time ASC` When
    * `useAdminAccess` is set to `false`: - `create_time DESC` - `relevance DESC`
+   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @opt_param int pageSize The maximum number of spaces to return. The service
    * may return fewer than this value. If unspecified, at most 100 spaces are
    * returned. The maximum value is 1000. If you use a value more than 1000, it's
