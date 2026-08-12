@@ -23,7 +23,7 @@ class ActivityContentDetailsFavorite extends \Google\Model
   protected $resourceIdDataType = '';
 
   /**
-   * The resourceId object contains information that identifies the resource
+   * The `resourceId` object contains information that identifies the resource
    * that was marked as a favorite.
    *
    * @param ResourceId $resourceId

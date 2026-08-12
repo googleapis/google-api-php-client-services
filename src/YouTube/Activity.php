@@ -34,8 +34,8 @@ class Activity extends \Google\Model
    */
   public $id;
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#activity".
+   * Identifies what kind of resource this is. Value: The fixed string
+   * `"youtube#activity"`.
    *
    * @var string
    */
@@ -44,9 +44,10 @@ class Activity extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * The contentDetails object contains information about the content associated
-   * with the activity. For example, if the snippet.type value is videoRated,
-   * then the contentDetails object's content identifies the rated video.
+   * The `contentDetails` object contains information about the content
+   * associated with the activity. For example, if the `snippet.type` value is
+   * `videoRated`, then the `contentDetails` object's content identifies the
+   * rated video.
    *
    * @param ActivityContentDetails $contentDetails
    */
@@ -94,8 +95,8 @@ class Activity extends \Google\Model
     return $this->id;
   }
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#activity".
+   * Identifies what kind of resource this is. Value: The fixed string
+   * `"youtube#activity"`.
    *
    * @param string $kind
    */
@@ -111,8 +112,8 @@ class Activity extends \Google\Model
     return $this->kind;
   }
   /**
-   * The snippet object contains basic details about the activity, including the
-   * activity's type and group ID.
+   * The `snippet` object contains basic details about the activity, including
+   * the activity's type and group ID.
    *
    * @param ActivitySnippet $snippet
    */

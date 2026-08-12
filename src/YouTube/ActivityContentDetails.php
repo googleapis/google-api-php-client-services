@@ -43,8 +43,8 @@ class ActivityContentDetails extends \Google\Model
   protected $uploadDataType = '';
 
   /**
-   * The bulletin object contains details about a channel bulletin post. This
-   * object is only present if the snippet.type is bulletin.
+   * The `bulletin` object contains details about a channel bulletin post. This
+   * object is only present if the `snippet.type` is `bulletin`.
    *
    * @param ActivityContentDetailsBulletin $bulletin
    */
@@ -60,9 +60,9 @@ class ActivityContentDetails extends \Google\Model
     return $this->bulletin;
   }
   /**
-   * The channelItem object contains details about a resource which was added to
-   * a channel. This property is only present if the snippet.type is
-   * channelItem.
+   * The `channelItem` object contains details about a resource which was added
+   * to a channel. This property is only present if the `snippet.type` is
+   * `channelItem`.
    *
    * @param ActivityContentDetailsChannelItem $channelItem
    */
@@ -78,8 +78,8 @@ class ActivityContentDetails extends \Google\Model
     return $this->channelItem;
   }
   /**
-   * The comment object contains information about a resource that received a
-   * comment. This property is only present if the snippet.type is comment.
+   * The `comment` object contains information about a resource that received a
+   * comment. This property is only present if the `snippet.type` is `comment`.
    *
    * @param ActivityContentDetailsComment $comment
    */
@@ -95,9 +95,9 @@ class ActivityContentDetails extends \Google\Model
     return $this->comment;
   }
   /**
-   * The favorite object contains information about a video that was marked as a
-   * favorite video. This property is only present if the snippet.type is
-   * favorite.
+   * The `favorite` object contains information about a video that was marked as
+   * a favorite video. This property is only present if the `snippet.type` is
+   * `favorite`. Deprecated: This property is no longer returned.
    *
    * @param ActivityContentDetailsFavorite $favorite
    */
@@ -113,9 +113,9 @@ class ActivityContentDetails extends \Google\Model
     return $this->favorite;
   }
   /**
-   * The like object contains information about a resource that received a
-   * positive (like) rating. This property is only present if the snippet.type
-   * is like.
+   * The `like` object contains information about a resource that received a
+   * positive (like) rating. This property is only present if the `snippet.type`
+   * is `like`. Deprecated: This property is no longer returned.
    *
    * @param ActivityContentDetailsLike $like
    */
@@ -131,8 +131,8 @@ class ActivityContentDetails extends \Google\Model
     return $this->like;
   }
   /**
-   * The playlistItem object contains information about a new playlist item.
-   * This property is only present if the snippet.type is playlistItem.
+   * The `playlistItem` object contains information about a new playlist item.
+   * This property is only present if the `snippet.type` is `playlistItem`.
    *
    * @param ActivityContentDetailsPlaylistItem $playlistItem
    */
@@ -148,9 +148,9 @@ class ActivityContentDetails extends \Google\Model
     return $this->playlistItem;
   }
   /**
-   * The promotedItem object contains details about a resource which is being
-   * promoted. This property is only present if the snippet.type is
-   * promotedItem.
+   * The `promotedItem` object contains details about a resource which is being
+   * promoted. This property is only present if the `snippet.type` is
+   * `promotedItem`.
    *
    * @param ActivityContentDetailsPromotedItem $promotedItem
    */
@@ -166,9 +166,9 @@ class ActivityContentDetails extends \Google\Model
     return $this->promotedItem;
   }
   /**
-   * The recommendation object contains information about a recommended
-   * resource. This property is only present if the snippet.type is
-   * recommendation.
+   * The `recommendation` object contains information about a recommended
+   * resource. This property is only present if the `snippet.type` is
+   * `recommendation`.
    *
    * @param ActivityContentDetailsRecommendation $recommendation
    */
@@ -184,8 +184,8 @@ class ActivityContentDetails extends \Google\Model
     return $this->recommendation;
   }
   /**
-   * The social object contains details about a social network post. This
-   * property is only present if the snippet.type is social.
+   * The `social` object contains details about a social network post. This
+   * property is only present if the `snippet.type` is `social`.
    *
    * @param ActivityContentDetailsSocial $social
    */
@@ -201,9 +201,9 @@ class ActivityContentDetails extends \Google\Model
     return $this->social;
   }
   /**
-   * The subscription object contains information about a channel that a user
-   * subscribed to. This property is only present if the snippet.type is
-   * subscription.
+   * The `subscription` object contains information about a channel that a user
+   * subscribed to. This property is only present if the `snippet.type` is
+   * `subscription`. Deprecated: This property is no longer returned.
    *
    * @param ActivityContentDetailsSubscription $subscription
    */
@@ -219,8 +219,8 @@ class ActivityContentDetails extends \Google\Model
     return $this->subscription;
   }
   /**
-   * The upload object contains information about the uploaded video. This
-   * property is only present if the snippet.type is upload.
+   * The `upload` object contains information about the uploaded video. This
+   * property is only present if the `snippet.type` is `upload`.
    *
    * @param ActivityContentDetailsUpload $upload
    */

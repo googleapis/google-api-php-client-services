@@ -99,8 +99,8 @@ class ActivityContentDetailsSocial extends \Google\Model
     return $this->referenceUrl;
   }
   /**
-   * The resourceId object encapsulates information that identifies the resource
-   * associated with a social network post.
+   * The `resourceId` object encapsulates information that identifies the
+   * resource associated with a social network post.
    *
    * @param ResourceId $resourceId
    */

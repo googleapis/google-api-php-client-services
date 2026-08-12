@@ -20,7 +20,13 @@ namespace Google\Service\YouTube;
 class ActivityContentDetailsRecommendation extends \Google\Model
 {
   public const REASON_reasonUnspecified = 'reasonUnspecified';
+  /**
+   * Deprecated: This reason is no longer used.
+   */
   public const REASON_videoFavorited = 'videoFavorited';
+  /**
+   * Deprecated: This reason is no longer used.
+   */
   public const REASON_videoLiked = 'videoLiked';
   public const REASON_videoWatched = 'videoWatched';
   /**
@@ -54,8 +60,8 @@ class ActivityContentDetailsRecommendation extends \Google\Model
     return $this->reason;
   }
   /**
-   * The resourceId object contains information that identifies the recommended
-   * resource.
+   * The `resourceId` object contains information that identifies the
+   * recommended resource.
    *
    * @param ResourceId $resourceId
    */
@@ -71,7 +77,7 @@ class ActivityContentDetailsRecommendation extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * The seedResourceId object contains information about the resource that
+   * The `seedResourceId` object contains information about the resource that
    * caused the recommendation.
    *
    * @param ResourceId $seedResourceId

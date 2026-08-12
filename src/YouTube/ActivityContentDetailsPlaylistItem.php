@@ -67,7 +67,7 @@ class ActivityContentDetailsPlaylistItem extends \Google\Model
     return $this->playlistItemId;
   }
   /**
-   * The resourceId object contains information about the resource that was
+   * The `resourceId` object contains information about the resource that was
    * added to the playlist.
    *
    * @param ResourceId $resourceId

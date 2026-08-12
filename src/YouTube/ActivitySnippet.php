@@ -21,9 +21,18 @@ class ActivitySnippet extends \Google\Model
 {
   public const TYPE_typeUnspecified = 'typeUnspecified';
   public const TYPE_upload = 'upload';
+  /**
+   * Deprecated: This type is no longer supported.
+   */
   public const TYPE_like = 'like';
+  /**
+   * Deprecated: This type is no longer supported.
+   */
   public const TYPE_favorite = 'favorite';
   public const TYPE_comment = 'comment';
+  /**
+   * Deprecated: This type is no longer supported.
+   */
   public const TYPE_subscription = 'subscription';
   public const TYPE_playlistItem = 'playlistItem';
   public const TYPE_recommendation = 'recommendation';
@@ -54,10 +63,10 @@ class ActivitySnippet extends \Google\Model
   /**
    * The group ID associated with the activity. A group ID identifies user
    * events that are associated with the same user and resource. For example, if
-   * a user rates a video and marks the same video as a favorite, the entries
-   * for those events would have the same group ID in the user's activity feed.
-   * In your user interface, you can avoid repetition by grouping events with
-   * the same groupId value.
+   * a user uploads a video and watches the same video, the entries for those
+   * events would have the same group ID in the user's activity feed. In your
+   * user interface, you can avoid repetition by grouping events with the same
+   * `groupId` value.
    *
    * @var string
    */
@@ -136,10 +145,10 @@ class ActivitySnippet extends \Google\Model
   /**
    * The group ID associated with the activity. A group ID identifies user
    * events that are associated with the same user and resource. For example, if
-   * a user rates a video and marks the same video as a favorite, the entries
-   * for those events would have the same group ID in the user's activity feed.
-   * In your user interface, you can avoid repetition by grouping events with
-   * the same groupId value.
+   * a user uploads a video and watches the same video, the entries for those
+   * events would have the same group ID in the user's activity feed. In your
+   * user interface, you can avoid repetition by grouping events with the same
+   * `groupId` value.
    *
    * @param string $groupId
    */
