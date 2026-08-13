@@ -56,6 +56,7 @@ class CloudRun extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_services;
   public $projects_locations_services_revisions;
+  public $projects_locations_sourceUploads;
   public $projects_locations_workerPools;
   public $projects_locations_workerPools_revisions;
   public $rootUrlTemplate;
@@ -841,6 +842,26 @@ class CloudRun extends \Google\Service
                 'showDeleted' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_sourceUploads = new CloudRun\Resource\ProjectsLocationsSourceUploads(
+        $this,
+        $this->serviceName,
+        'sourceUploads',
+        [
+          'methods' => [
+            'upload' => [
+              'path' => 'v2/{+parent}:uploadSource',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
