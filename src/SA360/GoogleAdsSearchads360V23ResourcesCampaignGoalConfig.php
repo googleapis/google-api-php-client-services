@@ -39,6 +39,10 @@ class GoogleAdsSearchads360V23ResourcesCampaignGoalConfig extends \Google\Model
    * @var string
    */
   public $campaign;
+  protected $campaignLoyaltyRetentionSettingsType = GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignLoyaltyRetentionGoalSettings::class;
+  protected $campaignLoyaltyRetentionSettingsDataType = '';
+  protected $campaignNewCustomerAcquisitionSettingsType = GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignNewCustomerAcquisitionGoalSettings::class;
+  protected $campaignNewCustomerAcquisitionSettingsDataType = '';
   protected $campaignRetentionSettingsType = GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignRetentionGoalSettings::class;
   protected $campaignRetentionSettingsDataType = '';
   /**
@@ -77,6 +81,38 @@ class GoogleAdsSearchads360V23ResourcesCampaignGoalConfig extends \Google\Model
   public function getCampaign()
   {
     return $this->campaign;
+  }
+  /**
+   * Loyalty retention goal campaign settings.
+   *
+   * @param GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignLoyaltyRetentionGoalSettings $campaignLoyaltyRetentionSettings
+   */
+  public function setCampaignLoyaltyRetentionSettings(GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignLoyaltyRetentionGoalSettings $campaignLoyaltyRetentionSettings)
+  {
+    $this->campaignLoyaltyRetentionSettings = $campaignLoyaltyRetentionSettings;
+  }
+  /**
+   * @return GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignLoyaltyRetentionGoalSettings
+   */
+  public function getCampaignLoyaltyRetentionSettings()
+  {
+    return $this->campaignLoyaltyRetentionSettings;
+  }
+  /**
+   * New customer acquisition goal campaign settings.
+   *
+   * @param GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignNewCustomerAcquisitionGoalSettings $campaignNewCustomerAcquisitionSettings
+   */
+  public function setCampaignNewCustomerAcquisitionSettings(GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignNewCustomerAcquisitionGoalSettings $campaignNewCustomerAcquisitionSettings)
+  {
+    $this->campaignNewCustomerAcquisitionSettings = $campaignNewCustomerAcquisitionSettings;
+  }
+  /**
+   * @return GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignNewCustomerAcquisitionGoalSettings
+   */
+  public function getCampaignNewCustomerAcquisitionSettings()
+  {
+    return $this->campaignNewCustomerAcquisitionSettings;
   }
   /**
    * Retention goal campaign settings.

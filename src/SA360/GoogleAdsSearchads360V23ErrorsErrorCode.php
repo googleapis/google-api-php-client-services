@@ -3680,6 +3680,26 @@ class GoogleAdsSearchads360V23ErrorsErrorCode extends \Google\Model
    */
   public const CAMPAIGN_GOAL_CONFIG_ERROR_CUSTOMER_NOT_ALLOWLISTED_FOR_RETENTION_ONLY = 'CUSTOMER_NOT_ALLOWLISTED_FOR_RETENTION_ONLY';
   /**
+   * New customer acquisition customer lifecycle optimization goal targeting
+   * only new customers should not have campaign override values set.
+   */
+  public const CAMPAIGN_GOAL_CONFIG_ERROR_CAMPAIGN_OVERRIDE_VALUES_SET_FOR_NEW_CUSTOMER_ACQUISITION_TARGET_SPECIFIC_OPTION = 'CAMPAIGN_OVERRIDE_VALUES_SET_FOR_NEW_CUSTOMER_ACQUISITION_TARGET_SPECIFIC_OPTION';
+  /**
+   * New customer acquisition customer lifecycle optimization goal campaign
+   * override high lifetime values should only be set for supported campaign
+   * type.
+   */
+  public const CAMPAIGN_GOAL_CONFIG_ERROR_CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE = 'CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE';
+  /**
+   * Error when the campaign is attempting to combine incompatible CLO goals.
+   */
+  public const CAMPAIGN_GOAL_CONFIG_ERROR_CANNOT_USE_INCOMPATIBLE_CLO_GOALS = 'CANNOT_USE_INCOMPATIBLE_CLO_GOALS';
+  /**
+   * At least one mode (either enabling bid adjustments or showing benefits in
+   * PLA) must be enabled for loyalty retention goal.
+   */
+  public const CAMPAIGN_GOAL_CONFIG_ERROR_LOYALTY_RETENTION_GOAL_INVALID_MODE = 'LOYALTY_RETENTION_GOAL_INVALID_MODE';
+  /**
    * Enum unspecified.
    */
   public const CAMPAIGN_LIFECYCLE_GOAL_ERROR_UNSPECIFIED = 'UNSPECIFIED';
@@ -12956,7 +12976,10 @@ class GoogleAdsSearchads360V23ErrorsErrorCode extends \Google\Model
    * HIGH_LIFETIME_VALUE_PRESENT_BUT_VALUE_ABSENT,
    * HIGH_LIFETIME_VALUE_LESS_THAN_OR_EQUAL_TO_VALUE,
    * CUSTOMER_LIFECYCLE_OPTIMIZATION_CAMPAIGN_TYPE_NOT_SUPPORTED,
-   * CUSTOMER_NOT_ALLOWLISTED_FOR_RETENTION_ONLY
+   * CUSTOMER_NOT_ALLOWLISTED_FOR_RETENTION_ONLY, CAMPAIGN_OVERRIDE_VALUES_SET_F
+   * OR_NEW_CUSTOMER_ACQUISITION_TARGET_SPECIFIC_OPTION,
+   * CAMPAIGN_OVERRIDE_HIGH_LIFETIME_VALUE_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE,
+   * CANNOT_USE_INCOMPATIBLE_CLO_GOALS, LOYALTY_RETENTION_GOAL_INVALID_MODE
    *
    * @param self::CAMPAIGN_GOAL_CONFIG_ERROR_* $campaignGoalConfigError
    */
