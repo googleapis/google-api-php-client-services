@@ -20,6 +20,14 @@ namespace Google\Service\Backupdr;
 class ComputeInstanceBackupPlanProperties extends \Google\Model
 {
   /**
+   * Optional. If true, only the boot disk will be backed up.
+   *
+   * @var bool
+   */
+  public $bootDiskOnly;
+  protected $diskExclusionLabelsType = DiskExclusionLabels::class;
+  protected $diskExclusionLabelsDataType = '';
+  /**
    * Optional. Indicates whether to perform a guest flush operation before
    * taking a compute backup. When set to false, the system will create crash-
    * consistent backups. Default value is false.
@@ -28,6 +36,39 @@ class ComputeInstanceBackupPlanProperties extends \Google\Model
    */
   public $guestFlush;
 
+  /**
+   * Optional. If true, only the boot disk will be backed up.
+   *
+   * @param bool $bootDiskOnly
+   */
+  public function setBootDiskOnly($bootDiskOnly)
+  {
+    $this->bootDiskOnly = $bootDiskOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getBootDiskOnly()
+  {
+    return $this->bootDiskOnly;
+  }
+  /**
+   * Optional. Labels used to identify disks for exclusion from the backup. If a
+   * disk carries any of these labels, it will be excluded (OR logic).
+   *
+   * @param DiskExclusionLabels $diskExclusionLabels
+   */
+  public function setDiskExclusionLabels(DiskExclusionLabels $diskExclusionLabels)
+  {
+    $this->diskExclusionLabels = $diskExclusionLabels;
+  }
+  /**
+   * @return DiskExclusionLabels
+   */
+  public function getDiskExclusionLabels()
+  {
+    return $this->diskExclusionLabels;
+  }
   /**
    * Optional. Indicates whether to perform a guest flush operation before
    * taking a compute backup. When set to false, the system will create crash-
