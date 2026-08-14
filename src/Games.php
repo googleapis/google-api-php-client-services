@@ -52,6 +52,7 @@ class Games extends \Google\Service
   public $events;
   public $leaderboards;
   public $metagame;
+  public $playerGameEvents;
   public $players;
   public $recall;
   public $revisions;
@@ -422,6 +423,26 @@ class Games extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->playerGameEvents = new Games\Resource\PlayerGameEvents(
+        $this,
+        $this->serviceName,
+        'playerGameEvents',
+        [
+          'methods' => [
+            'batchRecordEvents' => [
+              'path' => 'games/v1/players/{playerId}/gameEvents:batchRecordEvents',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'playerId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
