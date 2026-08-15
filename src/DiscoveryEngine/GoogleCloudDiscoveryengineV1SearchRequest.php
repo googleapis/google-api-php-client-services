@@ -316,6 +316,8 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
    * @var string
    */
   public $rankingExpressionBackend;
+  protected $relevanceFilterSpecType = GoogleCloudDiscoveryengineV1SearchRequestRelevanceFilterSpec::class;
+  protected $relevanceFilterSpecDataType = '';
   protected $relevanceScoreSpecType = GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec::class;
   protected $relevanceScoreSpecDataType = '';
   /**
@@ -961,6 +963,26 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public function getRankingExpressionBackend()
   {
     return $this->rankingExpressionBackend;
+  }
+  /**
+   * Optional. The granular relevance filtering specification. If not specified,
+   * the global `relevance_threshold` will be used for all sub-searches. If
+   * specified, this overrides the global `relevance_threshold` to use
+   * thresholds on a per sub-search basis. This feature is currently supported
+   * only for custom and site search.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchRequestRelevanceFilterSpec $relevanceFilterSpec
+   */
+  public function setRelevanceFilterSpec(GoogleCloudDiscoveryengineV1SearchRequestRelevanceFilterSpec $relevanceFilterSpec)
+  {
+    $this->relevanceFilterSpec = $relevanceFilterSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1SearchRequestRelevanceFilterSpec
+   */
+  public function getRelevanceFilterSpec()
+  {
+    return $this->relevanceFilterSpec;
   }
   /**
    * Optional. The specification for returning the relevance score.

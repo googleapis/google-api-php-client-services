@@ -33,6 +33,8 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResult extends \Google\Mod
   protected $modelScoresDataType = 'map';
   protected $rankSignalsType = GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals::class;
   protected $rankSignalsDataType = '';
+  protected $retrievalSignalsType = GoogleCloudDiscoveryengineV1SearchResponseSearchResultRetrievalSignals::class;
+  protected $retrievalSignalsDataType = '';
 
   /**
    * The chunk data in the search response if the
@@ -115,6 +117,23 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResult extends \Google\Mod
   public function getRankSignals()
   {
     return $this->rankSignals;
+  }
+  /**
+   * Optional. A set of signals used by the relevance filter meant for use to
+   * fine-tune the relevance filter thresholds.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSearchResultRetrievalSignals $retrievalSignals
+   */
+  public function setRetrievalSignals(GoogleCloudDiscoveryengineV1SearchResponseSearchResultRetrievalSignals $retrievalSignals)
+  {
+    $this->retrievalSignals = $retrievalSignals;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1SearchResponseSearchResultRetrievalSignals
+   */
+  public function getRetrievalSignals()
+  {
+    return $this->retrievalSignals;
   }
 }
 

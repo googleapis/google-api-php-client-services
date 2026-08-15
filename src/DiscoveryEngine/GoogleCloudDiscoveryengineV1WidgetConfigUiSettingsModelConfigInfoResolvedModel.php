@@ -51,6 +51,15 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedM
    */
   public $isPreview;
   /**
+   * Output only. Short label shown in the compact selector bar chip (e.g. `3.x
+   * Flash`) as opposed to the full `display_name` (`Gemini 3.x Flash`). Falls
+   * back to `display_name` when the backend registry does not specify a
+   * distinct short label.
+   *
+   * @var string
+   */
+  public $label;
+  /**
    * Output only. Unique identifier of the model (e.g. `gemini-2.5-flash`,
    * `gemini-3.1-pro-preview`). This is the same identifier that clients pass
    * back to the assistant service to select this model. Virtual / "pseudo"
@@ -146,6 +155,25 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedM
   public function getIsPreview()
   {
     return $this->isPreview;
+  }
+  /**
+   * Output only. Short label shown in the compact selector bar chip (e.g. `3.x
+   * Flash`) as opposed to the full `display_name` (`Gemini 3.x Flash`). Falls
+   * back to `display_name` when the backend registry does not specify a
+   * distinct short label.
+   *
+   * @param string $label
+   */
+  public function setLabel($label)
+  {
+    $this->label = $label;
+  }
+  /**
+   * @return string
+   */
+  public function getLabel()
+  {
+    return $this->label;
   }
   /**
    * Output only. Unique identifier of the model (e.g. `gemini-2.5-flash`,
