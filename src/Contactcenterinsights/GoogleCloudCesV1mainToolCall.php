@@ -20,6 +20,13 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudCesV1mainToolCall extends \Google\Model
 {
   /**
+   * Output only. Human-readable name of the agent that issued this call, e.g.
+   * "Contract Architect". Empty when the root agent issued it.
+   *
+   * @var string
+   */
+  public $agentName;
+  /**
    * Optional. The input parameters and values for the tool in JSON object
    * format.
    *
@@ -40,6 +47,15 @@ class GoogleCloudCesV1mainToolCall extends \Google\Model
    */
   public $id;
   /**
+   * Output only. The id of the tool call that caused this one, when it was
+   * issued by a sub-agent working on behalf of a parent call. Empty for top-
+   * level calls. Lets a client group a sub-agent's work under the call that
+   * started it instead of rendering every step as a sibling.
+   *
+   * @var string
+   */
+  public $parentToolCallId;
+  /**
    * Optional. The name of the tool to execute. Format:
    * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}`
    *
@@ -49,6 +65,23 @@ class GoogleCloudCesV1mainToolCall extends \Google\Model
   protected $toolsetToolType = GoogleCloudCesV1mainToolsetTool::class;
   protected $toolsetToolDataType = '';
 
+  /**
+   * Output only. Human-readable name of the agent that issued this call, e.g.
+   * "Contract Architect". Empty when the root agent issued it.
+   *
+   * @param string $agentName
+   */
+  public function setAgentName($agentName)
+  {
+    $this->agentName = $agentName;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentName()
+  {
+    return $this->agentName;
+  }
   /**
    * Optional. The input parameters and values for the tool in JSON object
    * format.
@@ -98,6 +131,25 @@ class GoogleCloudCesV1mainToolCall extends \Google\Model
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * Output only. The id of the tool call that caused this one, when it was
+   * issued by a sub-agent working on behalf of a parent call. Empty for top-
+   * level calls. Lets a client group a sub-agent's work under the call that
+   * started it instead of rendering every step as a sibling.
+   *
+   * @param string $parentToolCallId
+   */
+  public function setParentToolCallId($parentToolCallId)
+  {
+    $this->parentToolCallId = $parentToolCallId;
+  }
+  /**
+   * @return string
+   */
+  public function getParentToolCallId()
+  {
+    return $this->parentToolCallId;
   }
   /**
    * Optional. The name of the tool to execute. Format:

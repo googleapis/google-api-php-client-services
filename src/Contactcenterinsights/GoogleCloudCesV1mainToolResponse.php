@@ -20,6 +20,13 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudCesV1mainToolResponse extends \Google\Model
 {
   /**
+   * Output only. Human-readable name of the agent that issued this call, e.g.
+   * "Contract Architect". Empty when the root agent issued it.
+   *
+   * @var string
+   */
+  public $agentName;
+  /**
    * Output only. Display name of the tool.
    *
    * @var string
@@ -31,6 +38,15 @@ class GoogleCloudCesV1mainToolResponse extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * Output only. The id of the tool call that caused this one, when it was
+   * issued by a sub-agent working on behalf of a parent call. Empty for top-
+   * level calls. Lets a client group a sub-agent's work under the call that
+   * started it instead of rendering every step as a sibling.
+   *
+   * @var string
+   */
+  public $parentToolCallId;
   /**
    * Required. The tool execution result in JSON object format. Use "output" key
    * to specify tool response and "error" key to specify error details (if any).
@@ -50,6 +66,23 @@ class GoogleCloudCesV1mainToolResponse extends \Google\Model
   protected $toolsetToolType = GoogleCloudCesV1mainToolsetTool::class;
   protected $toolsetToolDataType = '';
 
+  /**
+   * Output only. Human-readable name of the agent that issued this call, e.g.
+   * "Contract Architect". Empty when the root agent issued it.
+   *
+   * @param string $agentName
+   */
+  public function setAgentName($agentName)
+  {
+    $this->agentName = $agentName;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentName()
+  {
+    return $this->agentName;
+  }
   /**
    * Output only. Display name of the tool.
    *
@@ -81,6 +114,25 @@ class GoogleCloudCesV1mainToolResponse extends \Google\Model
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * Output only. The id of the tool call that caused this one, when it was
+   * issued by a sub-agent working on behalf of a parent call. Empty for top-
+   * level calls. Lets a client group a sub-agent's work under the call that
+   * started it instead of rendering every step as a sibling.
+   *
+   * @param string $parentToolCallId
+   */
+  public function setParentToolCallId($parentToolCallId)
+  {
+    $this->parentToolCallId = $parentToolCallId;
+  }
+  /**
+   * @return string
+   */
+  public function getParentToolCallId()
+  {
+    return $this->parentToolCallId;
   }
   /**
    * Required. The tool execution result in JSON object format. Use "output" key
