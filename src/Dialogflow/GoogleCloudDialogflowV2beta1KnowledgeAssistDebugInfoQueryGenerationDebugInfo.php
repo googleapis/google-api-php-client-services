@@ -28,6 +28,22 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugIn
    */
   public $promptTokenCount;
   /**
+   * @var float
+   */
+  public $similarityToLastQuery;
+  /**
+   * @var float
+   */
+  public $similarityToLastQueryThreshold;
+  /**
+   * @var int
+   */
+  public $thinkingBudgetTokens;
+  /**
+   * @var string
+   */
+  public $thinkingLevel;
+  /**
    * @var int
    */
   public $totalTokenCount;
@@ -59,6 +75,62 @@ class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugIn
   public function getPromptTokenCount()
   {
     return $this->promptTokenCount;
+  }
+  /**
+   * @param float $similarityToLastQuery
+   */
+  public function setSimilarityToLastQuery($similarityToLastQuery)
+  {
+    $this->similarityToLastQuery = $similarityToLastQuery;
+  }
+  /**
+   * @return float
+   */
+  public function getSimilarityToLastQuery()
+  {
+    return $this->similarityToLastQuery;
+  }
+  /**
+   * @param float $similarityToLastQueryThreshold
+   */
+  public function setSimilarityToLastQueryThreshold($similarityToLastQueryThreshold)
+  {
+    $this->similarityToLastQueryThreshold = $similarityToLastQueryThreshold;
+  }
+  /**
+   * @return float
+   */
+  public function getSimilarityToLastQueryThreshold()
+  {
+    return $this->similarityToLastQueryThreshold;
+  }
+  /**
+   * @param int $thinkingBudgetTokens
+   */
+  public function setThinkingBudgetTokens($thinkingBudgetTokens)
+  {
+    $this->thinkingBudgetTokens = $thinkingBudgetTokens;
+  }
+  /**
+   * @return int
+   */
+  public function getThinkingBudgetTokens()
+  {
+    return $this->thinkingBudgetTokens;
+  }
+  /**
+   * @param string $thinkingLevel
+   */
+  public function setThinkingLevel($thinkingLevel)
+  {
+    $this->thinkingLevel = $thinkingLevel;
+  }
+  /**
+   * @return string
+   */
+  public function getThinkingLevel()
+  {
+    return $this->thinkingLevel;
   }
   /**
    * @param int $totalTokenCount

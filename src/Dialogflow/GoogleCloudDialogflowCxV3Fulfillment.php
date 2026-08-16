@@ -22,6 +22,10 @@ class GoogleCloudDialogflowCxV3Fulfillment extends \Google\Collection
   protected $collection_key = 'setParameterActions';
   protected $advancedSettingsType = GoogleCloudDialogflowCxV3AdvancedSettings::class;
   protected $advancedSettingsDataType = '';
+  /**
+   * @var string
+   */
+  public $codeBlockFunction;
   protected $conditionalCasesType = GoogleCloudDialogflowCxV3FulfillmentConditionalCases::class;
   protected $conditionalCasesDataType = 'array';
   /**
@@ -60,6 +64,20 @@ class GoogleCloudDialogflowCxV3Fulfillment extends \Google\Collection
   public function getAdvancedSettings()
   {
     return $this->advancedSettings;
+  }
+  /**
+   * @param string $codeBlockFunction
+   */
+  public function setCodeBlockFunction($codeBlockFunction)
+  {
+    $this->codeBlockFunction = $codeBlockFunction;
+  }
+  /**
+   * @return string
+   */
+  public function getCodeBlockFunction()
+  {
+    return $this->codeBlockFunction;
   }
   /**
    * @param GoogleCloudDialogflowCxV3FulfillmentConditionalCases[] $conditionalCases
