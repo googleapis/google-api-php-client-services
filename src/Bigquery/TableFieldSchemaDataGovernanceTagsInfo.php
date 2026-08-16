@@ -23,11 +23,11 @@ class TableFieldSchemaDataGovernanceTagsInfo extends \Google\Model
    * Optional. The data governance tags added to this field are used for field-
    * level access control. Only one data governance tag is currently supported
    * on a field. Tag keys are globally unique. Tag key is expected to be in the
-   * namespaced format, for example "123456789012/pii" where 123456789012 is the
-   * ID of the parent organization or project resource for this tag key. Tag
-   * value is expected to be the short name, for example "sensitive". See [Tag
+   * namespaced format, for example "parent-id/pii" where parent-id is the ID of
+   * the parent organization or project resource for this tag key. Tag value is
+   * expected to be the short name, for example "sensitive". See [Tag
    * definitions](https://cloud.google.com/iam/docs/tags-access-
-   * control#definitions) for more details. For example: "123456789012/pii":
+   * control#definitions) for more details. For example: "parent-id/pii":
    * "sensitive", "myProject/cost_center": "sales"
    *
    * @var string[]
@@ -38,11 +38,11 @@ class TableFieldSchemaDataGovernanceTagsInfo extends \Google\Model
    * Optional. The data governance tags added to this field are used for field-
    * level access control. Only one data governance tag is currently supported
    * on a field. Tag keys are globally unique. Tag key is expected to be in the
-   * namespaced format, for example "123456789012/pii" where 123456789012 is the
-   * ID of the parent organization or project resource for this tag key. Tag
-   * value is expected to be the short name, for example "sensitive". See [Tag
+   * namespaced format, for example "parent-id/pii" where parent-id is the ID of
+   * the parent organization or project resource for this tag key. Tag value is
+   * expected to be the short name, for example "sensitive". See [Tag
    * definitions](https://cloud.google.com/iam/docs/tags-access-
-   * control#definitions) for more details. For example: "123456789012/pii":
+   * control#definitions) for more details. For example: "parent-id/pii":
    * "sensitive", "myProject/cost_center": "sales"
    *
    * @param string[] $dataGovernanceTags

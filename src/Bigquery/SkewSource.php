@@ -20,12 +20,80 @@ namespace Google\Service\Bigquery;
 class SkewSource extends \Google\Model
 {
   /**
+   * Output only. Max partition output size (in bytes) for this stage.
+   *
+   * @var string
+   */
+  public $outputBytesMax;
+  /**
+   * Output only. Median partition output size (in bytes) for this stage.
+   *
+   * @var string
+   */
+  public $outputBytesMedian;
+  /**
+   * Output only. 95-th percentile of partition output size (in bytes) for this
+   * stage.
+   *
+   * @var string
+   */
+  public $outputBytesP95;
+  /**
    * Output only. Stage id of the skew source stage.
    *
    * @var string
    */
   public $stageId;
 
+  /**
+   * Output only. Max partition output size (in bytes) for this stage.
+   *
+   * @param string $outputBytesMax
+   */
+  public function setOutputBytesMax($outputBytesMax)
+  {
+    $this->outputBytesMax = $outputBytesMax;
+  }
+  /**
+   * @return string
+   */
+  public function getOutputBytesMax()
+  {
+    return $this->outputBytesMax;
+  }
+  /**
+   * Output only. Median partition output size (in bytes) for this stage.
+   *
+   * @param string $outputBytesMedian
+   */
+  public function setOutputBytesMedian($outputBytesMedian)
+  {
+    $this->outputBytesMedian = $outputBytesMedian;
+  }
+  /**
+   * @return string
+   */
+  public function getOutputBytesMedian()
+  {
+    return $this->outputBytesMedian;
+  }
+  /**
+   * Output only. 95-th percentile of partition output size (in bytes) for this
+   * stage.
+   *
+   * @param string $outputBytesP95
+   */
+  public function setOutputBytesP95($outputBytesP95)
+  {
+    $this->outputBytesP95 = $outputBytesP95;
+  }
+  /**
+   * @return string
+   */
+  public function getOutputBytesP95()
+  {
+    return $this->outputBytesP95;
+  }
   /**
    * Output only. Stage id of the skew source stage.
    *

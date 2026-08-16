@@ -197,17 +197,17 @@ class TableFieldSchema extends \Google\Collection
   }
   /**
    * Optional. Specifies the data governance tags on this field. This field
-   * works with other column-level security fields as follows: - Precedence: If
-   * a data governance tag is attached to a column, it takes precedence over the
-   * policy tag attached to the column. However, if a data policy is attached to
-   * a column, it takes precedence over the data governance tag. - Patching
-   * behavior (how this field behaves during a `Table.patch` schema update): -
-   * Unset: If the `data_governance_tags_info` field is omitted from the update
-   * request, the existing tags on the column are preserved. - Empty Field: To
-   * clear data governance tags from a column, send the
-   * `data_governance_tags_info` field as an empty object. This will remove all
-   * tags from the column. - Updating tags: To replace existing tag, send the
-   * field with the new tag.
+   * works with other column-level security fields as follows: * **Precedence**:
+   * If a data governance tag is attached to a column, it takes precedence over
+   * the policy tag attached to the column. However, if a data policy is
+   * attached to a column, it takes precedence over the data governance tag. *
+   * **Patching behavior**: Describes how this field behaves during a
+   * `Table.patch` schema update: * **Unset**: If the
+   * `data_governance_tags_info` field is omitted from the update request, the
+   * existing tags on the column are preserved. * **Empty Field**: To clear data
+   * governance tags from a column, send the `data_governance_tags_info` field
+   * as an empty object. This removes all tags from the column. * **Updating
+   * tags**: To replace an existing tag, send the field with the new tag.
    *
    * @param TableFieldSchemaDataGovernanceTagsInfo $dataGovernanceTagsInfo
    */
