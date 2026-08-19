@@ -34,6 +34,12 @@ class LiveBroadcastSnippet extends \Google\Model
    */
   public $actualStartTime;
   /**
+   * The YouTube video category associated with the video broadcast.
+   *
+   * @var string
+   */
+  public $categoryId;
+  /**
    * The ID that YouTube uses to uniquely identify the channel that is
    * publishing the broadcast.
    *
@@ -123,6 +129,22 @@ class LiveBroadcastSnippet extends \Google\Model
   public function getActualStartTime()
   {
     return $this->actualStartTime;
+  }
+  /**
+   * The YouTube video category associated with the video broadcast.
+   *
+   * @param string $categoryId
+   */
+  public function setCategoryId($categoryId)
+  {
+    $this->categoryId = $categoryId;
+  }
+  /**
+   * @return string
+   */
+  public function getCategoryId()
+  {
+    return $this->categoryId;
   }
   /**
    * The ID that YouTube uses to uniquely identify the channel that is
