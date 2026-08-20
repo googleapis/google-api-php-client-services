@@ -24,7 +24,7 @@ class DeviceIdentifier extends \Google\Model
    */
   public const DEVICE_TYPE_DEVICE_TYPE_UNSPECIFIED = 'DEVICE_TYPE_UNSPECIFIED';
   /**
-   * Android device
+   * Android mobile and Desktop except Googlebooks and Chromebooks
    */
   public const DEVICE_TYPE_DEVICE_TYPE_ANDROID = 'DEVICE_TYPE_ANDROID';
   /**
