@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1SandboxEnvironmentSpec extends \Google\Model
 {
   protected $codeExecutionEnvironmentType = GoogleCloudAiplatformV1SandboxEnvironmentSpecCodeExecutionEnvironment::class;
   protected $codeExecutionEnvironmentDataType = '';
+  protected $shellEnvironmentType = GoogleCloudAiplatformV1SandboxEnvironmentSpecShellEnvironment::class;
+  protected $shellEnvironmentDataType = '';
 
   /**
    * Optional. The code execution environment.
@@ -37,6 +39,22 @@ class GoogleCloudAiplatformV1SandboxEnvironmentSpec extends \Google\Model
   public function getCodeExecutionEnvironment()
   {
     return $this->codeExecutionEnvironment;
+  }
+  /**
+   * Optional. The shell environment for executing shell commands and scripts.
+   *
+   * @param GoogleCloudAiplatformV1SandboxEnvironmentSpecShellEnvironment $shellEnvironment
+   */
+  public function setShellEnvironment(GoogleCloudAiplatformV1SandboxEnvironmentSpecShellEnvironment $shellEnvironment)
+  {
+    $this->shellEnvironment = $shellEnvironment;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SandboxEnvironmentSpecShellEnvironment
+   */
+  public function getShellEnvironment()
+  {
+    return $this->shellEnvironment;
   }
 }
 

@@ -25,6 +25,14 @@ class GoogleCloudAiplatformV1RayMetricSpec extends \Google\Model
    * @var bool
    */
   public $disabled;
+  /**
+   * Optional. Flag to enable the Ray usage stats collection by Anyscale.
+   * https://docs.ray.io/en/latest/cluster/usage-stats.html#usage-stats-
+   * collection Disable by default.
+   *
+   * @var bool
+   */
+  public $enableUsageStatsCollection;
 
   /**
    * Optional. Flag to disable the Ray metrics collection.
@@ -41,6 +49,24 @@ class GoogleCloudAiplatformV1RayMetricSpec extends \Google\Model
   public function getDisabled()
   {
     return $this->disabled;
+  }
+  /**
+   * Optional. Flag to enable the Ray usage stats collection by Anyscale.
+   * https://docs.ray.io/en/latest/cluster/usage-stats.html#usage-stats-
+   * collection Disable by default.
+   *
+   * @param bool $enableUsageStatsCollection
+   */
+  public function setEnableUsageStatsCollection($enableUsageStatsCollection)
+  {
+    $this->enableUsageStatsCollection = $enableUsageStatsCollection;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableUsageStatsCollection()
+  {
+    return $this->enableUsageStatsCollection;
   }
 }
 

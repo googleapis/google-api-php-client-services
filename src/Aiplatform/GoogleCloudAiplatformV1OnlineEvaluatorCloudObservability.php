@@ -28,6 +28,8 @@ class GoogleCloudAiplatformV1OnlineEvaluatorCloudObservability extends \Google\M
   public $logView;
   protected $openTelemetryType = GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityOpenTelemetry::class;
   protected $openTelemetryDataType = '';
+  protected $sessionScopeType = GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessionScope::class;
+  protected $sessionScopeDataType = '';
   protected $traceScopeType = GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityTraceScope::class;
   protected $traceScopeDataType = '';
   /**
@@ -71,6 +73,23 @@ class GoogleCloudAiplatformV1OnlineEvaluatorCloudObservability extends \Google\M
   public function getOpenTelemetry()
   {
     return $this->openTelemetry;
+  }
+  /**
+   * Scope online evaluation to OTel sessions (i.e. group of traces with the
+   * same conversation ID).
+   *
+   * @param GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessionScope $sessionScope
+   */
+  public function setSessionScope(GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessionScope $sessionScope)
+  {
+    $this->sessionScope = $sessionScope;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessionScope
+   */
+  public function getSessionScope()
+  {
+    return $this->sessionScope;
   }
   /**
    * Scope online evaluation to single traces.

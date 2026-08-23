@@ -39,6 +39,8 @@ class GoogleCloudAiplatformV1RaySpec extends \Google\Model
    * @var string
    */
   public $imageUri;
+  protected $rayClusterAutoscalingSpecType = GoogleCloudAiplatformV1RayClusterAutoscalingSpec::class;
+  protected $rayClusterAutoscalingSpecDataType = '';
   protected $rayLogsSpecType = GoogleCloudAiplatformV1RayLogsSpec::class;
   protected $rayLogsSpecDataType = '';
   protected $rayMetricSpecType = GoogleCloudAiplatformV1RayMetricSpec::class;
@@ -93,6 +95,22 @@ class GoogleCloudAiplatformV1RaySpec extends \Google\Model
   public function getImageUri()
   {
     return $this->imageUri;
+  }
+  /**
+   * Optional. Optional Ray autoscaling configurations.
+   *
+   * @param GoogleCloudAiplatformV1RayClusterAutoscalingSpec $rayClusterAutoscalingSpec
+   */
+  public function setRayClusterAutoscalingSpec(GoogleCloudAiplatformV1RayClusterAutoscalingSpec $rayClusterAutoscalingSpec)
+  {
+    $this->rayClusterAutoscalingSpec = $rayClusterAutoscalingSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1RayClusterAutoscalingSpec
+   */
+  public function getRayClusterAutoscalingSpec()
+  {
+    return $this->rayClusterAutoscalingSpec;
   }
   /**
    * Optional. OSS Ray logging configurations.

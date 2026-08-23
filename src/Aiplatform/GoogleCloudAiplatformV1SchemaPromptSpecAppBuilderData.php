@@ -42,6 +42,14 @@ class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData extends \Google\Coll
    */
   public $codeRepositoryState;
   /**
+   * Optional. The Cloud Run regions in which the application is currently
+   * deployed. Used to rediscover and redeploy the app in the regions it already
+   * runs in, which may differ from the prompt's location.
+   *
+   * @var string[]
+   */
+  public $deployedRegions;
+  /**
    * Optional. Framework used to build the application.
    *
    * @var string
@@ -68,6 +76,24 @@ class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData extends \Google\Coll
   public function getCodeRepositoryState()
   {
     return $this->codeRepositoryState;
+  }
+  /**
+   * Optional. The Cloud Run regions in which the application is currently
+   * deployed. Used to rediscover and redeploy the app in the regions it already
+   * runs in, which may differ from the prompt's location.
+   *
+   * @param string[] $deployedRegions
+   */
+  public function setDeployedRegions($deployedRegions)
+  {
+    $this->deployedRegions = $deployedRegions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDeployedRegions()
+  {
+    return $this->deployedRegions;
   }
   /**
    * Optional. Framework used to build the application.

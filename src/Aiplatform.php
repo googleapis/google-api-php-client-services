@@ -112,6 +112,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_endpoints_invoke;
   public $projects_locations_endpoints_openapi;
   public $projects_locations_endpoints_operations;
+  public $projects_locations_endpoints_responses;
   public $projects_locations_evaluationItems;
   public $projects_locations_evaluationMetrics;
   public $projects_locations_evaluationRuns;
@@ -5769,6 +5770,36 @@ class Aiplatform extends \Google\Service
                 'timeout' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_endpoints_responses = new Aiplatform\Resource\ProjectsLocationsEndpointsResponses(
+        $this,
+        $this->serviceName,
+        'responses',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -11607,6 +11638,26 @@ class Aiplatform extends \Google\Service
                 'deployedModelId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

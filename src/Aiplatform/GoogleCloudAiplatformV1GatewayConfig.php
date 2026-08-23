@@ -64,8 +64,13 @@ class GoogleCloudAiplatformV1GatewayConfig extends \Google\Collection
    */
   public $dnsRecord;
   /**
-   * Optional. FQDN of the private DNS zone to create DNS record set for PSC
-   * endpoint.
+   * Optional. Name of the private Cloud DNS managed zone in which to create the
+   * gateway's A-record. This is the managed zone's own name, not its DNS name:
+   * for a zone serving `example.internal.`, this field takes the zone name,
+   * such as `my-private-zone`. The zone's DNS name is combined with a generated
+   * per-gateway label to form the record's fully qualified name, which must
+   * stay within the 255-octet DNS limit. If the full name is too long, gateway
+   * provisioning fails when it attempts to create the DNS record.
    *
    * @var string
    */
@@ -147,8 +152,13 @@ class GoogleCloudAiplatformV1GatewayConfig extends \Google\Collection
     return $this->dnsRecord;
   }
   /**
-   * Optional. FQDN of the private DNS zone to create DNS record set for PSC
-   * endpoint.
+   * Optional. Name of the private Cloud DNS managed zone in which to create the
+   * gateway's A-record. This is the managed zone's own name, not its DNS name:
+   * for a zone serving `example.internal.`, this field takes the zone name,
+   * such as `my-private-zone`. The zone's DNS name is combined with a generated
+   * per-gateway label to form the record's fully qualified name, which must
+   * stay within the 255-octet DNS limit. If the full name is too long, gateway
+   * provisioning fails when it attempts to create the DNS record.
    *
    * @param string $dnsZoneName
    */
