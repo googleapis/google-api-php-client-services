@@ -33,6 +33,15 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency e
    */
   public $destPath;
   /**
+   * Optional. True if remote tags should be fetched too (default false). Note:
+   * when depth is 1 (default), git fetch only retrieves tags pointing to
+   * commits within the shallow boundary. Set depth to -1 to fetch all
+   * historical tags.
+   *
+   * @var bool
+   */
+  public $fetchTags;
+  /**
    * Optional. True if submodules should be fetched too (default false).
    *
    * @var bool
@@ -79,6 +88,25 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency e
   public function getDestPath()
   {
     return $this->destPath;
+  }
+  /**
+   * Optional. True if remote tags should be fetched too (default false). Note:
+   * when depth is 1 (default), git fetch only retrieves tags pointing to
+   * commits within the shallow boundary. Set depth to -1 to fetch all
+   * historical tags.
+   *
+   * @param bool $fetchTags
+   */
+  public function setFetchTags($fetchTags)
+  {
+    $this->fetchTags = $fetchTags;
+  }
+  /**
+   * @return bool
+   */
+  public function getFetchTags()
+  {
+    return $this->fetchTags;
   }
   /**
    * Optional. True if submodules should be fetched too (default false).
