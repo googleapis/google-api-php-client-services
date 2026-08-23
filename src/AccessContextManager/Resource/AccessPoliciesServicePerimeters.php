@@ -105,6 +105,9 @@ class AccessPoliciesServicePerimeters extends \Google\Service\Resource
    * Format:
    * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string deletedPrincipalSyntax Optional. If true, the response will
+   * contain the deleted principal syntax for identities that support it.
    * @return ServicePerimeter
    * @throws \Google\Service\Exception
    */
@@ -122,6 +125,8 @@ class AccessPoliciesServicePerimeters extends \Google\Service\Resource
    * Service Perimeters from. Format: `accessPolicies/{policy_id}`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string deletedPrincipalSyntax Optional. If true, the response will
+   * contain the deleted principal syntax for identities that support it.
    * @opt_param int pageSize Number of Service Perimeters to include in the list.
    * Default 100.
    * @opt_param string pageToken Next page token for the next batch of Service
@@ -150,6 +155,9 @@ class AccessPoliciesServicePerimeters extends \Google\Service\Resource
    * @param ServicePerimeter $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string deletedPrincipalSyntax Optional. If true, the response will
+   * contain the deleted principal syntax for identities that support it and the
+   * request can contain identities with deleted principal syntax.
    * @opt_param string updateMask Required. Mask to control which fields get
    * updated. Must be non-empty.
    * @return Operation

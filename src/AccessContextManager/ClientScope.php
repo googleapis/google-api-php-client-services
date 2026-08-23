@@ -41,7 +41,7 @@ class ClientScope extends \Google\Model
     return $this->restrictedClientApplication;
   }
   /**
-   * Optional. The GCP project that is subject to this binding's scope.
+   * Optional. The Google Cloud project that is subject to this binding's scope.
    *
    * @param Project $restrictedProject
    */

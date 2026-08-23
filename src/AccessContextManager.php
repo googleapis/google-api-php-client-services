@@ -386,6 +386,10 @@ class AccessContextManager extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'deletedPrincipalSyntax' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/servicePerimeters',
@@ -395,6 +399,10 @@ class AccessContextManager extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'deletedPrincipalSyntax' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'pageSize' => [
                   'location' => 'query',
@@ -413,6 +421,10 @@ class AccessContextManager extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'deletedPrincipalSyntax' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'updateMask' => [
                   'location' => 'query',

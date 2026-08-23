@@ -20,18 +20,18 @@ namespace Google\Service\AccessContextManager;
 class Project extends \Google\Model
 {
   /**
-   * The GCP project resource name. Format: "projects/{project_number}" (Only
-   * the numeric project name variation is supported). Example:
-   * "projects/1234567890"
+   * The Google Cloud project resource name. Format:
+   * `projects/{project_number}`. Only the project number is supported. Example:
+   * `projects/1234567890`
    *
    * @var string
    */
   public $name;
 
   /**
-   * The GCP project resource name. Format: "projects/{project_number}" (Only
-   * the numeric project name variation is supported). Example:
-   * "projects/1234567890"
+   * The Google Cloud project resource name. Format:
+   * `projects/{project_number}`. Only the project number is supported. Example:
+   * `projects/1234567890`
    *
    * @param string $name
    */
