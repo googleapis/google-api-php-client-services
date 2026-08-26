@@ -128,6 +128,12 @@ class HangoutsChat extends \Google\Service
   /** Create new conversations and spaces in Google Chat. */
   const CHAT_SPACES_CREATE =
       "https://www.googleapis.com/auth/chat.spaces.create";
+  /** See, add, and remove pins in your Google Chat spaces. */
+  const CHAT_SPACES_PINS =
+      "https://www.googleapis.com/auth/chat.spaces.pins";
+  /** See pins in your Google Chat spaces. */
+  const CHAT_SPACES_PINS_READONLY =
+      "https://www.googleapis.com/auth/chat.spaces.pins.readonly";
   /** View chat and spaces in Google Chat. */
   const CHAT_SPACES_READONLY =
       "https://www.googleapis.com/auth/chat.spaces.readonly";
@@ -157,6 +163,7 @@ class HangoutsChat extends \Google\Service
   public $media;
   public $spaces;
   public $spaces_members;
+  public $spaces_messagePins;
   public $spaces_messages;
   public $spaces_messages_attachments;
   public $spaces_messages_reactions;
@@ -517,6 +524,54 @@ class HangoutsChat extends \Google\Service
                 'useAdminAccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->spaces_messagePins = new HangoutsChat\Resource\SpacesMessagePins(
+        $this,
+        $this->serviceName,
+        'messagePins',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/messagePins',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/messagePins',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

@@ -22,7 +22,8 @@ class SearchSpacesResponse extends \Google\Collection
   protected $collection_key = 'spaces';
   /**
    * A token that can be used to retrieve the next page. If this field is empty,
-   * there are no subsequent pages.
+   * there are no subsequent pages. Only populated when `useAdminAccess` is set
+   * to `true`.
    *
    * @var string
    */
@@ -33,7 +34,8 @@ class SearchSpacesResponse extends \Google\Collection
   protected $spacesDataType = 'array';
   /**
    * The total number of spaces that match the query, across all pages. If the
-   * result is over 10,000 spaces, this value is an estimate.
+   * result is over 10,000 spaces, this value is an estimate. Only populated
+   * when `useAdminAccess` is set to `true`.
    *
    * @var int
    */
@@ -41,7 +43,8 @@ class SearchSpacesResponse extends \Google\Collection
 
   /**
    * A token that can be used to retrieve the next page. If this field is empty,
-   * there are no subsequent pages.
+   * there are no subsequent pages. Only populated when `useAdminAccess` is set
+   * to `true`.
    *
    * @param string $nextPageToken
    */
@@ -94,7 +97,8 @@ class SearchSpacesResponse extends \Google\Collection
   }
   /**
    * The total number of spaces that match the query, across all pages. If the
-   * result is over 10,000 spaces, this value is an estimate.
+   * result is over 10,000 spaces, this value is an estimate. Only populated
+   * when `useAdminAccess` is set to `true`.
    *
    * @param int $totalSize
    */

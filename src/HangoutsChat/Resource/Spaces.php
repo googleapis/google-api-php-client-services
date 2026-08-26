@@ -496,8 +496,9 @@ class Spaces extends \Google\Service\Resource
    * [Developer Preview](https://developers.google.com/workspace/preview).
    * @opt_param int pageSize The maximum number of spaces to return. The service
    * may return fewer than this value. If unspecified, at most 100 spaces are
-   * returned. The maximum value is 1000. If you use a value more than 1000, it's
-   * automatically changed to 1000.
+   * returned. The maximum value is 1000 when `useAdminAccess` is set to `true`.
+   * Otherwise, the maximum value is 100. If you use a value more than the maximum
+   * value, it's automatically changed to the maximum value.
    * @opt_param string pageToken A token, received from the previous search spaces
    * call. Provide this parameter to retrieve the subsequent page. When
    * paginating, all other parameters provided should match the call that provided
@@ -550,7 +551,9 @@ class Spaces extends \Google\Service\Resource
    * space_type = "SPACE" (display_name:"Hello" OR display_name:"Fun") AND
    * space_type = "SPACE" (external_user_allowed = "true" AND space_type =
    * "SPACE") // Returns an empty response. (external_user_allowed = "true" AND
-   * display_name:"Hello" AND space_type = "SPACE") ```
+   * display_name:"Hello" AND space_type = "SPACE") ``` The maximum query length
+   * is 1,000 characters. Invalid queries are rejected by the server with an
+   * `INVALID_ARGUMENT` error.
    * @opt_param bool useAdminAccess When `true`, the method runs using the user's
    * Google Workspace administrator privileges. The calling user must be a Google
    * Workspace administrator with the [manage chat and spaces conversations
