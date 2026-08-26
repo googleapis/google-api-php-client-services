@@ -27,18 +27,6 @@ class TosAcceptance extends \Google\Model
    */
   public $emailOptIn;
   /**
-   * Optional. The name of the person who accepted the TOS.
-   *
-   * @var string
-   */
-  public $signer;
-  /**
-   * Optional. The job title or role of the signer.
-   *
-   * @var string
-   */
-  public $signerTitle;
-  /**
    * Required. Whether the user has accepted the Terms of Service.
    *
    * @var bool
@@ -61,38 +49,6 @@ class TosAcceptance extends \Google\Model
   public function getEmailOptIn()
   {
     return $this->emailOptIn;
-  }
-  /**
-   * Optional. The name of the person who accepted the TOS.
-   *
-   * @param string $signer
-   */
-  public function setSigner($signer)
-  {
-    $this->signer = $signer;
-  }
-  /**
-   * @return string
-   */
-  public function getSigner()
-  {
-    return $this->signer;
-  }
-  /**
-   * Optional. The job title or role of the signer.
-   *
-   * @param string $signerTitle
-   */
-  public function setSignerTitle($signerTitle)
-  {
-    $this->signerTitle = $signerTitle;
-  }
-  /**
-   * @return string
-   */
-  public function getSignerTitle()
-  {
-    return $this->signerTitle;
   }
   /**
    * Required. Whether the user has accepted the Terms of Service.
