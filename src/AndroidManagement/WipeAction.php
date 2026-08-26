@@ -21,7 +21,8 @@ class WipeAction extends \Google\Model
 {
   /**
    * Whether the factory-reset protection data is preserved on the device. This
-   * setting doesn’t apply to work profiles.
+   * setting applies to fully managed devices and work profiles on company-owned
+   * devices.
    *
    * @var bool
    */
@@ -36,7 +37,8 @@ class WipeAction extends \Google\Model
 
   /**
    * Whether the factory-reset protection data is preserved on the device. This
-   * setting doesn’t apply to work profiles.
+   * setting applies to fully managed devices and work profiles on company-owned
+   * devices.
    *
    * @param bool $preserveFrp
    */
