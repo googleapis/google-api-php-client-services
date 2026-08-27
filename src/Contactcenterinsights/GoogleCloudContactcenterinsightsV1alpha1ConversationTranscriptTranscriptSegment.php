@@ -51,6 +51,8 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
    * @var string
    */
   public $messageTime;
+  protected $partsType = GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentTranscriptPart::class;
+  protected $partsDataType = 'array';
   protected $segmentParticipantType = GoogleCloudContactcenterinsightsV1alpha1ConversationParticipant::class;
   protected $segmentParticipantDataType = '';
   protected $sentimentType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
@@ -150,6 +152,22 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSe
   public function getMessageTime()
   {
     return $this->messageTime;
+  }
+  /**
+   * Optional. The structured parts that make up this transcript segment.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentTranscriptPart[] $parts
+   */
+  public function setParts($parts)
+  {
+    $this->parts = $parts;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegmentTranscriptPart[]
+   */
+  public function getParts()
+  {
+    return $this->parts;
   }
   /**
    * The participant of this segment.
