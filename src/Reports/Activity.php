@@ -236,7 +236,10 @@ class Activity extends \Google\Collection
     return $this->resourceDetails;
   }
   /**
-   * Device details of the user doing the action.
+   * Device details of the user doing the action. This field is only exposed for
+   * the `contacts`, `gemini_in_workspace_apps`, `keep`, `meet_hardware`,
+   * `meet`, `chat`, `chrome`, `directory_sync`, `drive`, `groups`, `rules`,
+   * `data_studio`, `saml` applications.
    *
    * @param ActivityUserDeviceInfo $userDeviceInfo
    */
