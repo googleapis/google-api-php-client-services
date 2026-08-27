@@ -26,9 +26,11 @@ class Destination extends \Google\Model
   protected $operatingAccountType = ProductAccount::class;
   protected $operatingAccountDataType = '';
   /**
-   * Required. The object within the product account to ingest into. For
+   * Optional. The object within the product account to ingest into. For
    * example, a Google Ads audience ID, a Display & Video 360 audience ID or a
-   * Google Ads conversion action ID.
+   * Google Ads conversion action ID. This field is optional for Google Ad
+   * Manager event ingestion and User ingestion. Required for all other use
+   * cases.
    *
    * @var string
    */
@@ -99,9 +101,11 @@ class Destination extends \Google\Model
     return $this->operatingAccount;
   }
   /**
-   * Required. The object within the product account to ingest into. For
+   * Optional. The object within the product account to ingest into. For
    * example, a Google Ads audience ID, a Display & Video 360 audience ID or a
-   * Google Ads conversion action ID.
+   * Google Ads conversion action ID. This field is optional for Google Ad
+   * Manager event ingestion and User ingestion. Required for all other use
+   * cases.
    *
    * @param string $productDestinationId
    */
