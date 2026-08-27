@@ -69,6 +69,13 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedM
    * @var string
    */
   public $modelId;
+  /**
+   * Output only. Whether this model should be promoted in the GE chat homepage
+   * banner.
+   *
+   * @var bool
+   */
+  public $promoted;
 
   /**
    * Output only. Admin-surface metadata; populated only for the Console admin
@@ -194,6 +201,23 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedM
   public function getModelId()
   {
     return $this->modelId;
+  }
+  /**
+   * Output only. Whether this model should be promoted in the GE chat homepage
+   * banner.
+   *
+   * @param bool $promoted
+   */
+  public function setPromoted($promoted)
+  {
+    $this->promoted = $promoted;
+  }
+  /**
+   * @return bool
+   */
+  public function getPromoted()
+  {
+    return $this->promoted;
   }
 }
 

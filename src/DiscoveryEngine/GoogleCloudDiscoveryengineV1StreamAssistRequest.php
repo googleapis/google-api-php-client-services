@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
 {
+  protected $agentsSpecType = GoogleCloudDiscoveryengineV1StreamAssistRequestAgentsSpec::class;
+  protected $agentsSpecDataType = '';
   protected $generationSpecType = GoogleCloudDiscoveryengineV1StreamAssistRequestGenerationSpec::class;
   protected $generationSpecDataType = '';
   protected $queryType = GoogleCloudDiscoveryengineV1Query::class;
@@ -39,6 +41,22 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
   protected $userMetadataType = GoogleCloudDiscoveryengineV1AssistUserMetadata::class;
   protected $userMetadataDataType = '';
 
+  /**
+   * Optional. Specification of agents that are used to serve the request.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestAgentsSpec $agentsSpec
+   */
+  public function setAgentsSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestAgentsSpec $agentsSpec)
+  {
+    $this->agentsSpec = $agentsSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1StreamAssistRequestAgentsSpec
+   */
+  public function getAgentsSpec()
+  {
+    return $this->agentsSpec;
+  }
   /**
    * Optional. Specification of the generation configuration for the request.
    *

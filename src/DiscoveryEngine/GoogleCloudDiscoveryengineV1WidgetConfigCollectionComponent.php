@@ -77,9 +77,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   /**
    * Output only. Whether this is a first-party (Google-owned) connector, as
    * opposed to a third-party connector. Used by the frontend to group 1P vs 3P
-   * connectors. Sourced from `ConnectorSource.is_first_party` once that field
-   * is universally populated (b/534727761); until then derived from
-   * `ConnectorSource.connector_type == FIRST_PARTY`.
+   * connectors.
    *
    * @var bool
    */
@@ -246,9 +244,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   /**
    * Output only. Whether this is a first-party (Google-owned) connector, as
    * opposed to a third-party connector. Used by the frontend to group 1P vs 3P
-   * connectors. Sourced from `ConnectorSource.is_first_party` once that field
-   * is universally populated (b/534727761); until then derived from
-   * `ConnectorSource.connector_type == FIRST_PARTY`.
+   * connectors.
    *
    * @param bool $isFirstParty
    */
