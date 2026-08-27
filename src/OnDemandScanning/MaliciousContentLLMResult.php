@@ -50,6 +50,12 @@ class MaliciousContentLLMResult extends \Google\Model
    */
   public $maxSeverity;
   /**
+   * The base name of the model that performed the scan.
+   *
+   * @var string
+   */
+  public $modelId;
+  /**
    * Status of the scan.
    *
    * @var string
@@ -73,6 +79,22 @@ class MaliciousContentLLMResult extends \Google\Model
   public function getMaxSeverity()
   {
     return $this->maxSeverity;
+  }
+  /**
+   * The base name of the model that performed the scan.
+   *
+   * @param string $modelId
+   */
+  public function setModelId($modelId)
+  {
+    $this->modelId = $modelId;
+  }
+  /**
+   * @return string
+   */
+  public function getModelId()
+  {
+    return $this->modelId;
   }
   /**
    * Status of the scan.
