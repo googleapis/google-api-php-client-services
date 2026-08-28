@@ -27,7 +27,8 @@ class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation extends \Google\M
    */
   public $attachTime;
   /**
-   * Immutable. Name of the environment that the profile is attached to.
+   * Immutable. The environment ID that the profile is attached to, e.g. `prod`.
+   * This is the bare environment ID, not a full resource name; see b/288477507.
    *
    * @var string
    */
@@ -58,7 +59,8 @@ class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation extends \Google\M
     return $this->attachTime;
   }
   /**
-   * Immutable. Name of the environment that the profile is attached to.
+   * Immutable. The environment ID that the profile is attached to, e.g. `prod`.
+   * This is the bare environment ID, not a full resource name; see b/288477507.
    *
    * @param string $name
    */
