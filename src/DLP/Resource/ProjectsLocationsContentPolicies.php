@@ -37,9 +37,8 @@ class ProjectsLocationsContentPolicies extends \Google\Service\Resource
    * Create a ContentPolicy. (contentPolicies.create)
    *
    * @param string $parent Required. Parent resource name. The format of this
-   * value varies depending on the scope of the request (project or organization):
-   * + Projects scope: `projects/{project_id}/locations/{location_id}` +
-   * Organizations scope: `organizations/{org_id}/locations/{location_id}`
+   * value varies depending on the scope of the request (project): + Projects
+   * scope: `projects/{project_id}/locations/{location_id}`
    * @param GooglePrivacyDlpV2CreateContentPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2ContentPolicy
@@ -86,9 +85,8 @@ class ProjectsLocationsContentPolicies extends \Google\Service\Resource
    * Lists ContentPolicies in a parent.
    * (contentPolicies.listProjectsLocationsContentPolicies)
    *
-   * @param string $parent Required. Resource name of the organization or project,
-   * for example, `organizations/433245324/locations/europe` or `projects/project-
-   * id/locations/asia`.
+   * @param string $parent Required. Resource name of the project, for example,
+   * `projects/project-id/locations/asia`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. Number of results per page, max 1000.
