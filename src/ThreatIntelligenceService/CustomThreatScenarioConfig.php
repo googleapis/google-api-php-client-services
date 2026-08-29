@@ -32,6 +32,8 @@ class CustomThreatScenarioConfig extends \Google\Model
    * @var string
    */
   public $documentCondition;
+  protected $documentQueryType = DocumentQuery::class;
+  protected $documentQueryDataType = '';
   protected $legacyMonitorMetadataType = LegacyMetadata::class;
   protected $legacyMonitorMetadataDataType = '';
 
@@ -67,6 +69,22 @@ class CustomThreatScenarioConfig extends \Google\Model
   public function getDocumentCondition()
   {
     return $this->documentCondition;
+  }
+  /**
+   * Optional. The query used to match documents.
+   *
+   * @param DocumentQuery $documentQuery
+   */
+  public function setDocumentQuery(DocumentQuery $documentQuery)
+  {
+    $this->documentQuery = $documentQuery;
+  }
+  /**
+   * @return DocumentQuery
+   */
+  public function getDocumentQuery()
+  {
+    return $this->documentQuery;
   }
   /**
    * Optional. Legacy metadata associated with this scenario/monitor.

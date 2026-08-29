@@ -30,6 +30,8 @@ class ConfigurationDetail extends \Google\Model
    * @var string
    */
   public $detailType;
+  protected $domainConfigurationType = DomainConfiguration::class;
+  protected $domainConfigurationDataType = '';
   protected $technologyWatchlistType = TechnologyWatchListConfig::class;
   protected $technologyWatchlistDataType = '';
 
@@ -81,6 +83,22 @@ class ConfigurationDetail extends \Google\Model
   public function getDetailType()
   {
     return $this->detailType;
+  }
+  /**
+   * Domain Configuration detail config.
+   *
+   * @param DomainConfiguration $domainConfiguration
+   */
+  public function setDomainConfiguration(DomainConfiguration $domainConfiguration)
+  {
+    $this->domainConfiguration = $domainConfiguration;
+  }
+  /**
+   * @return DomainConfiguration
+   */
+  public function getDomainConfiguration()
+  {
+    return $this->domainConfiguration;
   }
   /**
    * Technology Watchlist detail config.
