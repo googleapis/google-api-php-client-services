@@ -19,6 +19,7 @@ namespace Google\Service\CustomerEngagementSuite\Resource;
 
 use Google\Service\CustomerEngagementSuite\LfA2aV1SendMessageRequest;
 use Google\Service\CustomerEngagementSuite\LfA2aV1SendMessageResponse;
+use Google\Service\CustomerEngagementSuite\LfA2aV1StreamResponse;
 
 /**
  * The "message" collection of methods.
@@ -46,6 +47,24 @@ class ProjectsLocationsAppsDeploymentsMessage extends \Google\Service\Resource
     $params = ['tenant' => $tenant, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('send', [$params], LfA2aV1SendMessageResponse::class);
+  }
+  /**
+   * Sends a streaming message to an agent, allowing for real-time interaction and
+   * status updates. Streaming version of `SendMessage` (message.stream)
+   *
+   * @param string $tenant Optional. Opaque routing identifier. Must match the
+   * `tenant` value from the selected `AgentInterface` in the Agent Card when that
+   * field is set.
+   * @param LfA2aV1SendMessageRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return LfA2aV1StreamResponse
+   * @throws \Google\Service\Exception
+   */
+  public function stream($tenant, LfA2aV1SendMessageRequest $postBody, $optParams = [])
+  {
+    $params = ['tenant' => $tenant, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('stream', [$params], LfA2aV1StreamResponse::class);
   }
 }
 

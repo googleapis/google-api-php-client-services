@@ -443,10 +443,6 @@ class CustomerEngagementSuite extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/conversations',
@@ -585,6 +581,16 @@ class CustomerEngagementSuite extends \Google\Service
           'methods' => [
             'send' => [
               'path' => 'v1/{+tenant}/message:send',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'stream' => [
+              'path' => 'v1/{+tenant}/message:stream',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
@@ -785,6 +791,16 @@ class CustomerEngagementSuite extends \Google\Service
           'methods' => [
             'send' => [
               'path' => 'v1/{+tenant}/message:send',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'stream' => [
+              'path' => 'v1/{+tenant}/message:stream',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [
@@ -1133,6 +1149,16 @@ class CustomerEngagementSuite extends \Google\Service
           'methods' => [
             'send' => [
               'path' => 'v1/{+tenant}/message:send',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'tenant' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'stream' => [
+              'path' => 'v1/{+tenant}/message:stream',
               'httpMethod' => 'POST',
               'parameters' => [
                 'tenant' => [

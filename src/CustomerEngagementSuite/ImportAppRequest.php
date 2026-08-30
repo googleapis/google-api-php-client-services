@@ -63,6 +63,19 @@ class ImportAppRequest extends \Google\Model
   public $ignoreAppLock;
   protected $importOptionsType = ImportAppRequestImportOptions::class;
   protected $importOptionsDataType = '';
+  /**
+   * Optional. Patch content as a JSON string.
+   *
+   * @var string
+   */
+  public $jsonPatchContent;
+  /**
+   * Optional. A Cloud Storage URI pointing to a JSON file containing the
+   * patches.
+   *
+   * @var string
+   */
+  public $jsonPatchGcsUri;
 
   /**
    * Raw bytes representing the compressed zip file with the app folder
@@ -171,6 +184,39 @@ class ImportAppRequest extends \Google\Model
   public function getImportOptions()
   {
     return $this->importOptions;
+  }
+  /**
+   * Optional. Patch content as a JSON string.
+   *
+   * @param string $jsonPatchContent
+   */
+  public function setJsonPatchContent($jsonPatchContent)
+  {
+    $this->jsonPatchContent = $jsonPatchContent;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonPatchContent()
+  {
+    return $this->jsonPatchContent;
+  }
+  /**
+   * Optional. A Cloud Storage URI pointing to a JSON file containing the
+   * patches.
+   *
+   * @param string $jsonPatchGcsUri
+   */
+  public function setJsonPatchGcsUri($jsonPatchGcsUri)
+  {
+    $this->jsonPatchGcsUri = $jsonPatchGcsUri;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonPatchGcsUri()
+  {
+    return $this->jsonPatchGcsUri;
   }
 }
 

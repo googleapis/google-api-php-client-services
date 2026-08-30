@@ -77,8 +77,6 @@ class ProjectsLocationsAppsConversations extends \Google\Service\Resource
    *
    * @opt_param string source Optional. Indicate the source of the conversation.
    * If not set, all source will be searched.
-   * @opt_param string view Optional. The view specifying which fields in the
-   * response should be populated.
    * @return Conversation
    * @throws \Google\Service\Exception
    */

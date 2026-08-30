@@ -40,6 +40,8 @@ class SessionOutput extends \Google\Collection
   protected $endSessionDataType = '';
   protected $googleSearchSuggestionsType = GoogleSearchSuggestions::class;
   protected $googleSearchSuggestionsDataType = '';
+  protected $imageType = Image::class;
+  protected $imageDataType = '';
   /**
    * Custom payload with structured output from the CES agent.
    *
@@ -168,6 +170,22 @@ class SessionOutput extends \Google\Collection
   public function getGoogleSearchSuggestions()
   {
     return $this->googleSearchSuggestions;
+  }
+  /**
+   * Output image from the CES agent.
+   *
+   * @param Image $image
+   */
+  public function setImage(Image $image)
+  {
+    $this->image = $image;
+  }
+  /**
+   * @return Image
+   */
+  public function getImage()
+  {
+    return $this->image;
   }
   /**
    * Custom payload with structured output from the CES agent.

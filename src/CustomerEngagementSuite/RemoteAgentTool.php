@@ -21,6 +21,8 @@ class RemoteAgentTool extends \Google\Model
 {
   protected $agentCardType = AgentCard::class;
   protected $agentCardDataType = '';
+  protected $apiAuthenticationType = ApiAuthentication::class;
+  protected $apiAuthenticationDataType = '';
   /**
    * Required. The description of the tool.
    *
@@ -49,6 +51,22 @@ class RemoteAgentTool extends \Google\Model
   public function getAgentCard()
   {
     return $this->agentCard;
+  }
+  /**
+   * Optional. Authentication configuration for calling the remote agent.
+   *
+   * @param ApiAuthentication $apiAuthentication
+   */
+  public function setApiAuthentication(ApiAuthentication $apiAuthentication)
+  {
+    $this->apiAuthentication = $apiAuthentication;
+  }
+  /**
+   * @return ApiAuthentication
+   */
+  public function getApiAuthentication()
+  {
+    return $this->apiAuthentication;
   }
   /**
    * Required. The description of the tool.

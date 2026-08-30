@@ -48,6 +48,8 @@ class App extends \Google\Collection
    * @var string
    */
   public $createTime;
+  protected $dashboardSettingsType = DashboardSettings::class;
+  protected $dashboardSettingsDataType = '';
   protected $dataStoreSettingsType = DataStoreSettings::class;
   protected $dataStoreSettingsDataType = '';
   protected $defaultChannelProfileType = ChannelProfile::class;
@@ -212,6 +214,23 @@ class App extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Optional. App-specific dashboard settings for linking and configuring
+   * Contact Center Insights dashboards.
+   *
+   * @param DashboardSettings $dashboardSettings
+   */
+  public function setDashboardSettings(DashboardSettings $dashboardSettings)
+  {
+    $this->dashboardSettings = $dashboardSettings;
+  }
+  /**
+   * @return DashboardSettings
+   */
+  public function getDashboardSettings()
+  {
+    return $this->dashboardSettings;
   }
   /**
    * Optional. The data store settings for the app.

@@ -22,24 +22,8 @@ class ConversationTurn extends \Google\Collection
   protected $collection_key = 'messages';
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
-  /**
-   * Output only. The full dynamically resolved developer instruction generated
-   * from templates. This field is only populated on-demand when requested
-   * during history retrieval. It is not persisted.
-   *
-   * @var string
-   */
-  public $resolvedDeveloperInstruction;
   protected $rootSpanType = Span::class;
   protected $rootSpanDataType = '';
-  /**
-   * Optional. Variables or configurations referenced by the template engine
-   * during dynamic prompt generation. This allows reconstructing the exact
-   * prompt sent to the model for this turn.
-   *
-   * @var array[]
-   */
-  public $templateAttributes;
   /**
    * Optional. The intended ground-truth text from the Simulated Caller
    * (Polysynth). Only populated when word error rate metrics are enabled.
@@ -66,24 +50,6 @@ class ConversationTurn extends \Google\Collection
     return $this->messages;
   }
   /**
-   * Output only. The full dynamically resolved developer instruction generated
-   * from templates. This field is only populated on-demand when requested
-   * during history retrieval. It is not persisted.
-   *
-   * @param string $resolvedDeveloperInstruction
-   */
-  public function setResolvedDeveloperInstruction($resolvedDeveloperInstruction)
-  {
-    $this->resolvedDeveloperInstruction = $resolvedDeveloperInstruction;
-  }
-  /**
-   * @return string
-   */
-  public function getResolvedDeveloperInstruction()
-  {
-    return $this->resolvedDeveloperInstruction;
-  }
-  /**
    * Optional. The root span of the action processing.
    *
    * @param Span $rootSpan
@@ -98,24 +64,6 @@ class ConversationTurn extends \Google\Collection
   public function getRootSpan()
   {
     return $this->rootSpan;
-  }
-  /**
-   * Optional. Variables or configurations referenced by the template engine
-   * during dynamic prompt generation. This allows reconstructing the exact
-   * prompt sent to the model for this turn.
-   *
-   * @param array[] $templateAttributes
-   */
-  public function setTemplateAttributes($templateAttributes)
-  {
-    $this->templateAttributes = $templateAttributes;
-  }
-  /**
-   * @return array[]
-   */
-  public function getTemplateAttributes()
-  {
-    return $this->templateAttributes;
   }
   /**
    * Optional. The intended ground-truth text from the Simulated Caller

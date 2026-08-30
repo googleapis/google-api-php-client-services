@@ -25,6 +25,13 @@ class DataStoreToolSnippetsConfig extends \Google\Model
    * @var bool
    */
   public $enableSnippets;
+  /**
+   * Optional. Number of snippets to return per query. If unset, returns all
+   * snippets from the service by default.
+   *
+   * @var int
+   */
+  public $maxSnippets;
 
   /**
    * Optional. Whether snippets are enabled.
@@ -41,6 +48,23 @@ class DataStoreToolSnippetsConfig extends \Google\Model
   public function getEnableSnippets()
   {
     return $this->enableSnippets;
+  }
+  /**
+   * Optional. Number of snippets to return per query. If unset, returns all
+   * snippets from the service by default.
+   *
+   * @param int $maxSnippets
+   */
+  public function setMaxSnippets($maxSnippets)
+  {
+    $this->maxSnippets = $maxSnippets;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxSnippets()
+  {
+    return $this->maxSnippets;
   }
 }
 

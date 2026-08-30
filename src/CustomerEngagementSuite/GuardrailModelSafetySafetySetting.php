@@ -40,6 +40,14 @@ class GuardrailModelSafetySafetySetting extends \Google\Model
    */
   public const CATEGORY_HARM_CATEGORY_SEXUALLY_EXPLICIT = 'HARM_CATEGORY_SEXUALLY_EXPLICIT';
   /**
+   * The harm category is profanity.
+   */
+  public const CATEGORY_HARM_CATEGORY_PROFANITY = 'HARM_CATEGORY_PROFANITY';
+  /**
+   * The harm category is toxic.
+   */
+  public const CATEGORY_HARM_CATEGORY_TOXIC = 'HARM_CATEGORY_TOXIC';
+  /**
    * Unspecified harm block threshold.
    */
   public const THRESHOLD_HARM_BLOCK_THRESHOLD_UNSPECIFIED = 'HARM_BLOCK_THRESHOLD_UNSPECIFIED';
@@ -81,7 +89,8 @@ class GuardrailModelSafetySafetySetting extends \Google\Model
    *
    * Accepted values: HARM_CATEGORY_UNSPECIFIED, HARM_CATEGORY_HATE_SPEECH,
    * HARM_CATEGORY_DANGEROUS_CONTENT, HARM_CATEGORY_HARASSMENT,
-   * HARM_CATEGORY_SEXUALLY_EXPLICIT
+   * HARM_CATEGORY_SEXUALLY_EXPLICIT, HARM_CATEGORY_PROFANITY,
+   * HARM_CATEGORY_TOXIC
    *
    * @param self::CATEGORY_* $category
    */
