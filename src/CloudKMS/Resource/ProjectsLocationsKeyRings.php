@@ -19,6 +19,7 @@ namespace Google\Service\CloudKMS\Resource;
 
 use Google\Service\CloudKMS\KeyRing;
 use Google\Service\CloudKMS\ListKeyRingsResponse;
+use Google\Service\CloudKMS\Operation;
 use Google\Service\CloudKMS\Policy;
 use Google\Service\CloudKMS\SetIamPolicyRequest;
 use Google\Service\CloudKMS\TestIamPermissionsRequest;
@@ -52,6 +53,25 @@ class ProjectsLocationsKeyRings extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('create', [$params], KeyRing::class);
+  }
+  /**
+   * Permanently deletes the given KeyRing. All child resources of the KeyRing
+   * must have been previously deleted using their corresponding Delete
+   * operations. The specified key ring will be immediately and permanently
+   * deleted upon calling this method. This action cannot be undone. Note: the key
+   * ring and its metadata will be remembered by KeyManagementService to prevent
+   * re-use of the key ring's resource name. (keyRings.delete)
+   *
+   * @param string $name Required. The name of the KeyRing to delete.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
   }
   /**
    * Returns metadata for a given KeyRing. (keyRings.get)
