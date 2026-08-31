@@ -65,6 +65,13 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   protected $humanPoseType = CloudAiLargeModelsVisionHumanPose::class;
   protected $humanPoseDataType = '';
   /**
+   * Optional. BNS override for model backend. Enabled only for local and
+   * autopush environments by the flag `lvm_allow_model_zoo_bns_override`.
+   *
+   * @var string
+   */
+  public $modelEndpointOverride;
+  /**
    * Model names, as defined in: xyz
    *
    * @var string
@@ -282,6 +289,23 @@ class CloudAiLargeModelsVisionGenerateVideoExperiments extends \Google\Collectio
   public function getHumanPose()
   {
     return $this->humanPose;
+  }
+  /**
+   * Optional. BNS override for model backend. Enabled only for local and
+   * autopush environments by the flag `lvm_allow_model_zoo_bns_override`.
+   *
+   * @param string $modelEndpointOverride
+   */
+  public function setModelEndpointOverride($modelEndpointOverride)
+  {
+    $this->modelEndpointOverride = $modelEndpointOverride;
+  }
+  /**
+   * @return string
+   */
+  public function getModelEndpointOverride()
+  {
+    return $this->modelEndpointOverride;
   }
   /**
    * Model names, as defined in: xyz

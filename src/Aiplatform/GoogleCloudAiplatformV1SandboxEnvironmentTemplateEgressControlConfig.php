@@ -20,12 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig extends \Google\Collection
 {
   protected $collection_key = 'dnsPeeringConfigs';
-  /**
-   * Optional. The customer VPC network that sandbox egress is routed into.
-   *
-   * @var string
-   */
-  public $customerVpcNetwork;
   protected $dnsPeeringConfigsType = GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfigDnsPeeringConfig::class;
   protected $dnsPeeringConfigsDataType = 'array';
   /**
@@ -42,22 +36,6 @@ class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig exten
    */
   public $networkAttachment;
 
-  /**
-   * Optional. The customer VPC network that sandbox egress is routed into.
-   *
-   * @param string $customerVpcNetwork
-   */
-  public function setCustomerVpcNetwork($customerVpcNetwork)
-  {
-    $this->customerVpcNetwork = $customerVpcNetwork;
-  }
-  /**
-   * @return string
-   */
-  public function getCustomerVpcNetwork()
-  {
-    return $this->customerVpcNetwork;
-  }
   /**
    * Optional. DNS peering configurations that allow sandbox egress to resolve
    * customer-internal domains via the customer VPC.

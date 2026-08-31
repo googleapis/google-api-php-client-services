@@ -21,6 +21,14 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
 {
   protected $collection_key = 'extractedMemories';
   /**
+   * Output only. Represents the context of the Memory Revision. The context may
+   * include context from both the historical revisions and the extracted
+   * content.
+   *
+   * @var string
+   */
+  public $context;
+  /**
    * Output only. Represents the timestamp when this Memory Revision was
    * created.
    *
@@ -67,6 +75,24 @@ class GoogleCloudAiplatformV1MemoryRevision extends \Google\Collection
    */
   public $structuredData;
 
+  /**
+   * Output only. Represents the context of the Memory Revision. The context may
+   * include context from both the historical revisions and the extracted
+   * content.
+   *
+   * @param string $context
+   */
+  public function setContext($context)
+  {
+    $this->context = $context;
+  }
+  /**
+   * @return string
+   */
+  public function getContext()
+  {
+    return $this->context;
+  }
   /**
    * Output only. Represents the timestamp when this Memory Revision was
    * created.

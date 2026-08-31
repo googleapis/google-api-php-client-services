@@ -21,6 +21,12 @@ class GoogleCloudAiplatformV1Memory extends \Google\Collection
 {
   protected $collection_key = 'topics';
   /**
+   * Optional. Represents the context of the memory.
+   *
+   * @var string
+   */
+  public $context;
+  /**
    * Output only. Represents the timestamp when this Memory was created.
    *
    * @var string
@@ -117,6 +123,22 @@ class GoogleCloudAiplatformV1Memory extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Optional. Represents the context of the memory.
+   *
+   * @param string $context
+   */
+  public function setContext($context)
+  {
+    $this->context = $context;
+  }
+  /**
+   * @return string
+   */
+  public function getContext()
+  {
+    return $this->context;
+  }
   /**
    * Output only. Represents the timestamp when this Memory was created.
    *

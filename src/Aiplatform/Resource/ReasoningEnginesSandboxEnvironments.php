@@ -17,6 +17,8 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1AuthorizeSandboxEnvironmentAccessRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1AuthorizeSandboxEnvironmentAccessResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExecuteSandboxEnvironmentRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExecuteSandboxEnvironmentResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListSandboxEnvironmentsResponse;
@@ -36,6 +38,28 @@ use Google\Service\Aiplatform\GoogleLongrunningOperation;
  */
 class ReasoningEnginesSandboxEnvironments extends \Google\Service\Resource
 {
+  /**
+   * Checks whether the caller is authorized to access the sandbox environment.
+   * Authorization is performed entirely by the API infrastructure from the
+   * `method_policy` below; the handler is a no-op. A successful response means
+   * the caller holds `sandboxEnvironments.execute` on the named sandbox. Used by
+   * the sandbox data-plane proxy, which forwards the caller's credential and
+   * proxies traffic only on success. (sandboxEnvironments.authorizeAccess)
+   *
+   * @param string $name Required. The resource name of the sandbox environment to
+   * authorize access to. Format: `projects/{project}/locations/{location}/reasoni
+   * ngEngines/{reasoning_engine}/sandboxEnvironments/{sandbox_environment}`
+   * @param GoogleCloudAiplatformV1AuthorizeSandboxEnvironmentAccessRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1AuthorizeSandboxEnvironmentAccessResponse
+   * @throws \Google\Service\Exception
+   */
+  public function authorizeAccess($name, GoogleCloudAiplatformV1AuthorizeSandboxEnvironmentAccessRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('authorizeAccess', [$params], GoogleCloudAiplatformV1AuthorizeSandboxEnvironmentAccessResponse::class);
+  }
   /**
    * Creates a SandboxEnvironment in a given reasoning engine.
    * (sandboxEnvironments.create)
