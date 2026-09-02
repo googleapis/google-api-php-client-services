@@ -20,6 +20,12 @@ namespace Google\Service\CustomerEngagementSuite;
 class Image extends \Google\Model
 {
   /**
+   * Optional. The alternative text for the image.
+   *
+   * @var string
+   */
+  public $altText;
+  /**
    * Required. Raw bytes of the image.
    *
    * @var string
@@ -33,6 +39,22 @@ class Image extends \Google\Model
    */
   public $mimeType;
 
+  /**
+   * Optional. The alternative text for the image.
+   *
+   * @param string $altText
+   */
+  public function setAltText($altText)
+  {
+    $this->altText = $altText;
+  }
+  /**
+   * @return string
+   */
+  public function getAltText()
+  {
+    return $this->altText;
+  }
   /**
    * Required. Raw bytes of the image.
    *

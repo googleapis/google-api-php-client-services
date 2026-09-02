@@ -35,6 +35,8 @@ class Deployment extends \Google\Model
    * Video modality.
    */
   public const MODALITY_MODALITY_VIDEO = 'MODALITY_VIDEO';
+  protected $agentRegistryDeploymentType = AgentRegistryDeployment::class;
+  protected $agentRegistryDeploymentDataType = '';
   /**
    * Optional. The resource name of the app version to deploy. Format:
    * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use
@@ -96,6 +98,23 @@ class Deployment extends \Google\Model
   protected $whatsappCredentialsType = WhatsAppCredentials::class;
   protected $whatsappCredentialsDataType = '';
 
+  /**
+   * Optional. Configuration for deploying this deployment to Agent Registry. If
+   * present, this deployment will be published to Agent Registry.
+   *
+   * @param AgentRegistryDeployment $agentRegistryDeployment
+   */
+  public function setAgentRegistryDeployment(AgentRegistryDeployment $agentRegistryDeployment)
+  {
+    $this->agentRegistryDeployment = $agentRegistryDeployment;
+  }
+  /**
+   * @return AgentRegistryDeployment
+   */
+  public function getAgentRegistryDeployment()
+  {
+    return $this->agentRegistryDeployment;
+  }
   /**
    * Optional. The resource name of the app version to deploy. Format:
    * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use

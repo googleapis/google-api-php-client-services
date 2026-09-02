@@ -60,6 +60,12 @@ class AppVersion extends \Google\Model
   public $name;
   protected $snapshotType = AppSnapshot::class;
   protected $snapshotDataType = '';
+  /**
+   * Output only. Timestamp when the app version was last updated.
+   *
+   * @var string
+   */
+  public $updateTime;
 
   /**
    * Output only. Timestamp when the app version was created.
@@ -175,6 +181,22 @@ class AppVersion extends \Google\Model
   public function getSnapshot()
   {
     return $this->snapshot;
+  }
+  /**
+   * Output only. Timestamp when the app version was last updated.
+   *
+   * @param string $updateTime
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }
 

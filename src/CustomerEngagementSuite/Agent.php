@@ -96,6 +96,8 @@ class Agent extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $remoteA2aAgentType = AgentRemoteA2aAgent::class;
+  protected $remoteA2aAgentDataType = '';
   protected $remoteDialogflowAgentType = AgentRemoteDialogflowAgent::class;
   protected $remoteDialogflowAgentDataType = '';
   /**
@@ -422,6 +424,23 @@ class Agent extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. The remote [A2A](https://github.com/a2aproject/A2A) agent to be
+   * used for the agent execution.
+   *
+   * @param AgentRemoteA2aAgent $remoteA2aAgent
+   */
+  public function setRemoteA2aAgent(AgentRemoteA2aAgent $remoteA2aAgent)
+  {
+    $this->remoteA2aAgent = $remoteA2aAgent;
+  }
+  /**
+   * @return AgentRemoteA2aAgent
+   */
+  public function getRemoteA2aAgent()
+  {
+    return $this->remoteA2aAgent;
   }
   /**
    * Optional. The remote

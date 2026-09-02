@@ -133,6 +133,26 @@ class ProjectsLocationsAppsVersions extends \Google\Service\Resource
     return $this->call('list', [$params], ListAppVersionsResponse::class);
   }
   /**
+   * Updates the specified app version. (versions.patch)
+   *
+   * @param string $name Identifier. The unique identifier of the app version.
+   * Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
+   * @param AppVersion $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The list of fields to update. If
+   * empty, fields `display_name` and `description` will be updated.
+   * @return AppVersion
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, AppVersion $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], AppVersion::class);
+  }
+  /**
    * Restores the specified app version. This will create a new app version from
    * the current draft app and overwrite the current draft with the specified app
    * version. (versions.restore)

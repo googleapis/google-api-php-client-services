@@ -19,9 +19,11 @@ namespace Google\Service\CustomerEngagementSuite;
 
 class Citations extends \Google\Collection
 {
-  protected $collection_key = 'citedChunks';
+  protected $collection_key = 'inlineCitations';
   protected $citedChunksType = CitationsCitedChunk::class;
   protected $citedChunksDataType = 'array';
+  protected $inlineCitationsType = CitationsInlineCitation::class;
+  protected $inlineCitationsDataType = 'array';
 
   /**
    * List of cited pieces of information.
@@ -38,6 +40,22 @@ class Citations extends \Google\Collection
   public function getCitedChunks()
   {
     return $this->citedChunks;
+  }
+  /**
+   * Optional. List of inline citations in the agent response.
+   *
+   * @param CitationsInlineCitation[] $inlineCitations
+   */
+  public function setInlineCitations($inlineCitations)
+  {
+    $this->inlineCitations = $inlineCitations;
+  }
+  /**
+   * @return CitationsInlineCitation[]
+   */
+  public function getInlineCitations()
+  {
+    return $this->inlineCitations;
   }
 }
 
