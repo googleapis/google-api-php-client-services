@@ -26,6 +26,7 @@ use Google\Service\CloudWorkstations\Policy;
 use Google\Service\CloudWorkstations\SetIamPolicyRequest;
 use Google\Service\CloudWorkstations\StartWorkstationRequest;
 use Google\Service\CloudWorkstations\StopWorkstationRequest;
+use Google\Service\CloudWorkstations\SuspendWorkstationRequest;
 use Google\Service\CloudWorkstations\TestIamPermissionsRequest;
 use Google\Service\CloudWorkstations\TestIamPermissionsResponse;
 use Google\Service\CloudWorkstations\Workstation;
@@ -257,6 +258,21 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigsWorkstations extends
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('stop', [$params], Operation::class);
+  }
+  /**
+   * Suspends a workstation to reduce costs. (workstations.suspend)
+   *
+   * @param string $name Required. Name of the workstation to suspend.
+   * @param SuspendWorkstationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function suspend($name, SuspendWorkstationRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('suspend', [$params], Operation::class);
   }
   /**
    * Returns permissions that a caller has on the specified resource. If the

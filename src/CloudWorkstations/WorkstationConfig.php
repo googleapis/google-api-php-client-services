@@ -19,6 +19,18 @@ namespace Google\Service\CloudWorkstations;
 
 class WorkstationConfig extends \Google\Collection
 {
+  /**
+   * Defaults to STOP.
+   */
+  public const IDLE_ACTION_IDLE_ACTION_UNSPECIFIED = 'IDLE_ACTION_UNSPECIFIED';
+  /**
+   * Stop the workstation after idle_timeout.
+   */
+  public const IDLE_ACTION_STOP = 'STOP';
+  /**
+   * Suspend the workstation after idle_timeout.
+   */
+  public const IDLE_ACTION_SUSPEND = 'SUSPEND';
   protected $collection_key = 'replicaZones';
   protected $allowedPortsType = PortRange::class;
   protected $allowedPortsDataType = 'array';
@@ -108,10 +120,18 @@ class WorkstationConfig extends \Google\Collection
   protected $hostType = Host::class;
   protected $hostDataType = '';
   /**
-   * Optional. Number of seconds to wait before automatically stopping a
-   * workstation after it last received user traffic. A value of `"0s"`
-   * indicates that Cloud Workstations VMs created with this configuration
-   * should never time out due to idleness. Provide
+   * Optional. The action to take when the workstation has been idle for the
+   * duration specified in idle_timeout. Defaults to STOP.
+   *
+   * @var string
+   */
+  public $idleAction;
+  /**
+   * Optional. Number of seconds to wait before automatically stopping or
+   * suspending a workstation after it last received user traffic. See
+   * idle_action to configure whether to stop or suspend idle workstations. A
+   * value of `"0s"` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for
    * seconds—for example, `"7200s"` (2 hours). The default is `"1200s"` (20
@@ -175,14 +195,17 @@ class WorkstationConfig extends \Google\Collection
    * security updates can be applied upon restart. The idle_timeout and
    * running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time,
-   * regardless of whether or not the workstations are idle. Provide duration
-   * terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults
-   * to `"43200s"` (12 hours). A value of `"0s"` indicates that workstations
-   * using this configuration should never time out. If encryption_key is set,
-   * it must be greater than `"0s"` and less than `"86400s"` (24 hours).
-   * Warning: A value of `"0s"` indicates that Cloud Workstations VMs created
-   * with this configuration have no maximum running time. This is strongly
-   * discouraged because you incur costs and will not pick up security updates.
+   * regardless of whether or not the workstations are idle. Note: This timeout
+   * applies to workstations in the following states: * STATE_RUNNING *
+   * STATE_SUSPENDED Suspending a workstation does not reset this timeout.
+   * Provide duration terminated by `s` for seconds—for example, `"54000s"` (15
+   * hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If
+   * encryption_key is set, it must be greater than `"0s"` and less than
+   * `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that Cloud
+   * Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not
+   * pick up security updates.
    *
    * @var string
    */
@@ -481,10 +504,30 @@ class WorkstationConfig extends \Google\Collection
     return $this->host;
   }
   /**
-   * Optional. Number of seconds to wait before automatically stopping a
-   * workstation after it last received user traffic. A value of `"0s"`
-   * indicates that Cloud Workstations VMs created with this configuration
-   * should never time out due to idleness. Provide
+   * Optional. The action to take when the workstation has been idle for the
+   * duration specified in idle_timeout. Defaults to STOP.
+   *
+   * Accepted values: IDLE_ACTION_UNSPECIFIED, STOP, SUSPEND
+   *
+   * @param self::IDLE_ACTION_* $idleAction
+   */
+  public function setIdleAction($idleAction)
+  {
+    $this->idleAction = $idleAction;
+  }
+  /**
+   * @return self::IDLE_ACTION_*
+   */
+  public function getIdleAction()
+  {
+    return $this->idleAction;
+  }
+  /**
+   * Optional. Number of seconds to wait before automatically stopping or
+   * suspending a workstation after it last received user traffic. See
+   * idle_action to configure whether to stop or suspend idle workstations. A
+   * value of `"0s"` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for
    * seconds—for example, `"7200s"` (2 hours). The default is `"1200s"` (20
@@ -638,14 +681,17 @@ class WorkstationConfig extends \Google\Collection
    * security updates can be applied upon restart. The idle_timeout and
    * running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time,
-   * regardless of whether or not the workstations are idle. Provide duration
-   * terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults
-   * to `"43200s"` (12 hours). A value of `"0s"` indicates that workstations
-   * using this configuration should never time out. If encryption_key is set,
-   * it must be greater than `"0s"` and less than `"86400s"` (24 hours).
-   * Warning: A value of `"0s"` indicates that Cloud Workstations VMs created
-   * with this configuration have no maximum running time. This is strongly
-   * discouraged because you incur costs and will not pick up security updates.
+   * regardless of whether or not the workstations are idle. Note: This timeout
+   * applies to workstations in the following states: * STATE_RUNNING *
+   * STATE_SUSPENDED Suspending a workstation does not reset this timeout.
+   * Provide duration terminated by `s` for seconds—for example, `"54000s"` (15
+   * hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If
+   * encryption_key is set, it must be greater than `"0s"` and less than
+   * `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that Cloud
+   * Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not
+   * pick up security updates.
    *
    * @param string $runningTimeout
    */

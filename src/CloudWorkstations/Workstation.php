@@ -41,6 +41,14 @@ class Workstation extends \Google\Collection
    * it is started.
    */
   public const STATE_STATE_STOPPED = 'STATE_STOPPED';
+  /**
+   * The workstation is being suspended.
+   */
+  public const STATE_STATE_SUSPENDING = 'STATE_SUSPENDING';
+  /**
+   * The workstation is suspended.
+   */
+  public const STATE_STATE_SUSPENDED = 'STATE_SUSPENDED';
   protected $collection_key = 'persistentDirectories';
   /**
    * Optional. Client-specified annotations.
@@ -418,7 +426,7 @@ class Workstation extends \Google\Collection
    * Output only. Current state of the workstation.
    *
    * Accepted values: STATE_UNSPECIFIED, STATE_STARTING, STATE_RUNNING,
-   * STATE_STOPPING, STATE_STOPPED
+   * STATE_STOPPING, STATE_STOPPED, STATE_SUSPENDING, STATE_SUSPENDED
    *
    * @param self::STATE_* $state
    */
