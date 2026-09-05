@@ -42,8 +42,6 @@ class GooglePrivacyDlpV2ContentPolicy extends \Google\Collection
   protected $inputTooLargeDataType = '';
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
-  protected $inspectTemplateType = GooglePrivacyDlpV2InspectTemplate::class;
-  protected $inspectTemplateDataType = '';
   protected $loggingConfigsType = GooglePrivacyDlpV2LoggingConfig::class;
   protected $loggingConfigsDataType = 'array';
   /**
@@ -181,25 +179,6 @@ class GooglePrivacyDlpV2ContentPolicy extends \Google\Collection
   public function getInspectConfig()
   {
     return $this->inspectConfig;
-  }
-  /**
-   * Optional. InspectTemplate to use to produce findings. Deprecated: use
-   * inspect_config instead.
-   *
-   * @deprecated
-   * @param GooglePrivacyDlpV2InspectTemplate $inspectTemplate
-   */
-  public function setInspectTemplate(GooglePrivacyDlpV2InspectTemplate $inspectTemplate)
-  {
-    $this->inspectTemplate = $inspectTemplate;
-  }
-  /**
-   * @deprecated
-   * @return GooglePrivacyDlpV2InspectTemplate
-   */
-  public function getInspectTemplate()
-  {
-    return $this->inspectTemplate;
   }
   /**
    * Optional. Log the actions taken by the content policy to external systems.

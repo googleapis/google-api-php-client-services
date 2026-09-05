@@ -17,7 +17,7 @@
 
 namespace Google\Service\DLP;
 
-class GooglePrivacyDlpV2ConversationMessage extends \Google\Model
+class GooglePrivacyDlpV2ConversationMessage extends \Google\Collection
 {
   /**
    * Unused.
@@ -32,12 +32,17 @@ class GooglePrivacyDlpV2ConversationMessage extends \Google\Model
    * during inspection or redacted from it during de-identification.
    */
   public const MESSAGE_TYPE_CONTEXT = 'CONTEXT';
+  protected $collection_key = 'messageParts';
   /**
-   * The contents of this message.
+   * Deprecated: Use `message_parts` instead. The contents of this message. Only
+   * one of `content` and `message_parts` can be set.
    *
+   * @deprecated
    * @var string
    */
   public $content;
+  protected $messagePartsType = GooglePrivacyDlpV2MessagePart::class;
+  protected $messagePartsDataType = 'array';
   /**
    * The type of message.
    *
@@ -55,8 +60,10 @@ class GooglePrivacyDlpV2ConversationMessage extends \Google\Model
   public $participantId;
 
   /**
-   * The contents of this message.
+   * Deprecated: Use `message_parts` instead. The contents of this message. Only
+   * one of `content` and `message_parts` can be set.
    *
+   * @deprecated
    * @param string $content
    */
   public function setContent($content)
@@ -64,11 +71,29 @@ class GooglePrivacyDlpV2ConversationMessage extends \Google\Model
     $this->content = $content;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getContent()
   {
     return $this->content;
+  }
+  /**
+   * Optional. The parts of the message. Restricted to being at most a single
+   * text item. Only one of `content` and `message_parts` can be set.
+   *
+   * @param GooglePrivacyDlpV2MessagePart[] $messageParts
+   */
+  public function setMessageParts($messageParts)
+  {
+    $this->messageParts = $messageParts;
+  }
+  /**
+   * @return GooglePrivacyDlpV2MessagePart[]
+   */
+  public function getMessageParts()
+  {
+    return $this->messageParts;
   }
   /**
    * The type of message.
