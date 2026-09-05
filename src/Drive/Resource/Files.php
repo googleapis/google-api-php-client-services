@@ -47,6 +47,8 @@ class Files extends \Google\Service\Resource
    * @param DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool copyComments Whether to copy the comments associated with the
+   * file.
    * @opt_param bool enforceSingleParent Deprecated: Copying files into multiple
    * folders is no longer supported. Use shortcuts instead.
    * @opt_param bool ignoreDefaultVisibility Whether to ignore the domain's

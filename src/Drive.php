@@ -721,6 +721,10 @@ class Drive extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'copyComments' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'enforceSingleParent' => [
                   'location' => 'query',
                   'type' => 'boolean',
