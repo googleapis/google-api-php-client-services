@@ -20,8 +20,8 @@ namespace Google\Service\WebContentPublisher;
 class DomainProperty extends \Google\Model
 {
   /**
-   * Optional. Whether the domain ownership has been verified (e.g., via Google
-   * Search Console).
+   * Output only. Whether the domain ownership has been verified (e.g., via
+   * Google Search Console).
    *
    * @var bool
    */
@@ -34,8 +34,8 @@ class DomainProperty extends \Google\Model
   public $url;
 
   /**
-   * Optional. Whether the domain ownership has been verified (e.g., via Google
-   * Search Console).
+   * Output only. Whether the domain ownership has been verified (e.g., via
+   * Google Search Console).
    *
    * @param bool $ownershipVerified
    */
