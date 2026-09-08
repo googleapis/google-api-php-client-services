@@ -54,7 +54,10 @@ class DailyRollUpDataPointsRequest extends \Google\Model
   protected $rangeDataType = '';
   /**
    * Optional. Aggregation window size, in number of days. Defaults to 1 if not
-   * specified.
+   * specified. If the requested range is not an exact multiple of
+   * `window_size_days`, the final bucket chronologically will be truncated at
+   * the upper endpoint of the range and will cover a duration shorter than
+   * `window_size_days`.
    *
    * @var int
    */
@@ -143,7 +146,10 @@ class DailyRollUpDataPointsRequest extends \Google\Model
   }
   /**
    * Optional. Aggregation window size, in number of days. Defaults to 1 if not
-   * specified.
+   * specified. If the requested range is not an exact multiple of
+   * `window_size_days`, the final bucket chronologically will be truncated at
+   * the upper endpoint of the range and will cover a duration shorter than
+   * `window_size_days`.
    *
    * @param int $windowSizeDays
    */

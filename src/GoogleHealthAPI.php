@@ -59,9 +59,15 @@ class GoogleHealthAPI extends \Google\Service
   /** See exercise GPS location data in Google Health. */
   const GOOGLEHEALTH_LOCATION_READONLY =
       "https://www.googleapis.com/auth/googlehealth.location.readonly";
+  /** See your Google Health logged symptoms data. */
+  const GOOGLEHEALTH_LOGGED_SYMPTOMS_READONLY =
+      "https://www.googleapis.com/auth/googlehealth.logged_symptoms.readonly";
   /** Add logged symptoms data to Google Health, and edit or delete the data it adds. */
   const GOOGLEHEALTH_LOGGED_SYMPTOMS_WRITEONLY =
       "https://www.googleapis.com/auth/googlehealth.logged_symptoms.writeonly";
+  /** See your Google Health mindfulness data. */
+  const GOOGLEHEALTH_MINDFULNESS_READONLY =
+      "https://www.googleapis.com/auth/googlehealth.mindfulness.readonly";
   /** Add mindfulness data to Google Health, and edit or delete the data it adds. */
   const GOOGLEHEALTH_MINDFULNESS_WRITEONLY =
       "https://www.googleapis.com/auth/googlehealth.mindfulness.writeonly";
@@ -74,6 +80,9 @@ class GoogleHealthAPI extends \Google\Service
   /** Add profile data to Google Health, and edit or delete the data it adds.. */
   const GOOGLEHEALTH_PROFILE_WRITEONLY =
       "https://www.googleapis.com/auth/googlehealth.profile.writeonly";
+  /** See your Google Health reproductive health data. */
+  const GOOGLEHEALTH_REPRODUCTIVE_HEALTH_READONLY =
+      "https://www.googleapis.com/auth/googlehealth.reproductive_health.readonly";
   /** Add reproductive health data to Google Health, and edit or delete the data it adds. */
   const GOOGLEHEALTH_REPRODUCTIVE_HEALTH_WRITEONLY =
       "https://www.googleapis.com/auth/googlehealth.reproductive_health.writeonly";
