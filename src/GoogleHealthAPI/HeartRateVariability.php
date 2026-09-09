@@ -19,6 +19,8 @@ namespace Google\Service\GoogleHealthAPI;
 
 class HeartRateVariability extends \Google\Model
 {
+  protected $metadataType = HeartRateVariabilityMetadata::class;
+  protected $metadataDataType = '';
   /**
    * Optional. The root mean square of successive differences between normal
    * heartbeats. This is a measure of heart rate variability used by Google
@@ -36,6 +38,22 @@ class HeartRateVariability extends \Google\Model
    */
   public $standardDeviationMilliseconds;
 
+  /**
+   * Optional. Metadata used in 1P surfaces.
+   *
+   * @param HeartRateVariabilityMetadata $metadata
+   */
+  public function setMetadata(HeartRateVariabilityMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return HeartRateVariabilityMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
+  }
   public function setRootMeanSquareOfSuccessiveDifferencesMilliseconds($rootMeanSquareOfSuccessiveDifferencesMilliseconds)
   {
     $this->rootMeanSquareOfSuccessiveDifferencesMilliseconds = $rootMeanSquareOfSuccessiveDifferencesMilliseconds;
