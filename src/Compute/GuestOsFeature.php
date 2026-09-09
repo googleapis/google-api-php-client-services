@@ -20,6 +20,11 @@ namespace Google\Service\Compute;
 class GuestOsFeature extends \Google\Model
 {
   public const TYPE_BARE_METAL_LINUX_COMPATIBLE = 'BARE_METAL_LINUX_COMPATIBLE';
+  /**
+   * Indicates the guest OS is capable of Bare Metal Secure AI (BMSAI)
+   * confidential computing.
+   */
+  public const TYPE_BMSAI_CAPABLE = 'BMSAI_CAPABLE';
   public const TYPE_CCA_CAPABLE = 'CCA_CAPABLE';
   public const TYPE_FEATURE_TYPE_UNSPECIFIED = 'FEATURE_TYPE_UNSPECIFIED';
   public const TYPE_GVNIC = 'GVNIC';
@@ -64,7 +69,7 @@ class GuestOsFeature extends \Google\Model
    *
    * For more information, see Enabling guest operating system features.
    *
-   * Accepted values: BARE_METAL_LINUX_COMPATIBLE, CCA_CAPABLE,
+   * Accepted values: BARE_METAL_LINUX_COMPATIBLE, BMSAI_CAPABLE, CCA_CAPABLE,
    * FEATURE_TYPE_UNSPECIFIED, GVNIC, IDPF, MULTI_IP_SUBNET, SECURE_BOOT,
    * SEV_CAPABLE, SEV_LIVE_MIGRATABLE, SEV_LIVE_MIGRATABLE_V2, SEV_SNP_CAPABLE,
    * SNP_SVSM_CAPABLE, SUSPEND_SAFE_FPR, TDX_CAPABLE, UEFI_COMPATIBLE,

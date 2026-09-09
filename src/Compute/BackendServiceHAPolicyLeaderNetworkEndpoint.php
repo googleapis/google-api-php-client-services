@@ -24,9 +24,9 @@ class BackendServiceHAPolicyLeaderNetworkEndpoint extends \Google\Model
    * must already be attached to the NEG specified in the
    * haPolicy.leader.backendGroup.
    *
-   * The name must be 1-63 characters long, and comply with RFC1035.
-   * Authorization requires the following IAM permission on the specified
-   * resource instance: compute.instances.use
+   * The value must be a valid RFC1035 name (1-63 characters) or a valid
+   * instance URL. Authorization requires the following IAM permission on the
+   * specified resource instance: compute.instances.use
    *
    * @var string
    */
@@ -37,9 +37,9 @@ class BackendServiceHAPolicyLeaderNetworkEndpoint extends \Google\Model
    * must already be attached to the NEG specified in the
    * haPolicy.leader.backendGroup.
    *
-   * The name must be 1-63 characters long, and comply with RFC1035.
-   * Authorization requires the following IAM permission on the specified
-   * resource instance: compute.instances.use
+   * The value must be a valid RFC1035 name (1-63 characters) or a valid
+   * instance URL. Authorization requires the following IAM permission on the
+   * specified resource instance: compute.instances.use
    *
    * @param string $instance
    */

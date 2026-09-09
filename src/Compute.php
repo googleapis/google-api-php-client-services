@@ -110,6 +110,7 @@ class Compute extends \Google\Service
   public $organizationSecurityPolicies;
   public $packetMirrorings;
   public $previewFeatures;
+  public $projectViews;
   public $projects;
   public $publicAdvertisedPrefixes;
   public $publicDelegatedPrefixes;
@@ -524,6 +525,36 @@ class Compute extends \Google\Service
           'methods' => [
             'calendarMode' => [
               'path' => 'projects/{project}/regions/{region}/advice/calendarMode',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'capacity' => [
+              'path' => 'projects/{project}/regions/{region}/advice/capacity',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'capacityHistory' => [
+              'path' => 'projects/{project}/regions/{region}/advice/capacityHistory',
               'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
@@ -11873,6 +11904,31 @@ class Compute extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projectViews = new Compute\Resource\ProjectViews(
+        $this,
+        $this->serviceName,
+        'projectViews',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'projects/{project}/regions/{region}/projectViews',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

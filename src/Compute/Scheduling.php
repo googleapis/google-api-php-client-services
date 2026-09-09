@@ -82,6 +82,13 @@ class Scheduling extends \Google\Collection
    * @var int
    */
   public $availabilityDomain;
+  /**
+   * This optional flag exposes the hashed physical host ID in the
+   * ResourceStatus resource of the VM.
+   *
+   * @var bool
+   */
+  public $exposeHostTopology;
   protected $gracefulShutdownType = SchedulingGracefulShutdown::class;
   protected $gracefulShutdownDataType = '';
   /**
@@ -201,6 +208,23 @@ class Scheduling extends \Google\Collection
   public function getAvailabilityDomain()
   {
     return $this->availabilityDomain;
+  }
+  /**
+   * This optional flag exposes the hashed physical host ID in the
+   * ResourceStatus resource of the VM.
+   *
+   * @param bool $exposeHostTopology
+   */
+  public function setExposeHostTopology($exposeHostTopology)
+  {
+    $this->exposeHostTopology = $exposeHostTopology;
+  }
+  /**
+   * @return bool
+   */
+  public function getExposeHostTopology()
+  {
+    return $this->exposeHostTopology;
   }
   /**
    * @param SchedulingGracefulShutdown $gracefulShutdown

@@ -19,6 +19,10 @@ namespace Google\Service\Compute\Resource;
 
 use Google\Service\Compute\CalendarModeAdviceRequest;
 use Google\Service\Compute\CalendarModeAdviceResponse;
+use Google\Service\Compute\CapacityAdviceRequest;
+use Google\Service\Compute\CapacityAdviceResponse;
+use Google\Service\Compute\CapacityHistoryRequest;
+use Google\Service\Compute\CapacityHistoryResponse;
 
 /**
  * The "advice" collection of methods.
@@ -48,6 +52,40 @@ class Advice extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('calendarMode', [$params], CalendarModeAdviceResponse::class);
+  }
+  /**
+   * Advice on making real-time decisions (such as choosing zone or machine types)
+   * during deployment to maximize your chances of obtaining capacity.
+   * (advice.capacity)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region for this request.
+   * @param CapacityAdviceRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CapacityAdviceResponse
+   * @throws \Google\Service\Exception
+   */
+  public function capacity($project, $region, CapacityAdviceRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('capacity', [$params], CapacityAdviceResponse::class);
+  }
+  /**
+   * Gets the capacity history. (advice.capacityHistory)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region for this request.
+   * @param CapacityHistoryRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CapacityHistoryResponse
+   * @throws \Google\Service\Exception
+   */
+  public function capacityHistory($project, $region, CapacityHistoryRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('capacityHistory', [$params], CapacityHistoryResponse::class);
   }
 }
 
