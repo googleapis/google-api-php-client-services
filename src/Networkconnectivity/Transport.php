@@ -134,6 +134,15 @@ class Transport extends \Google\Collection
    */
   public $advertisedRoutes;
   /**
+   * Optional. Immutable. Controls whether resources proposed by the Transport
+   * are automatically accepted on behalf of the user. List of actions that can
+   * be automatically accepted are: 1. VPC Peering creation 2. Routing VPC Spoke
+   * creation 3. Hybrid Spoke creation
+   *
+   * @var bool
+   */
+  public $autoAccept;
+  /**
    * Optional. Bandwidth of the Transport. This must be one of the supported
    * bandwidths for the remote profile, and must be set when no activation key
    * is being provided.
@@ -163,6 +172,14 @@ class Transport extends \Google\Collection
    * @var string
    */
   public $generatedActivationKey;
+  /**
+   * Optional. Immutable. The NCC Hub that the Transport should attach to. The
+   * hub must be in the same project as the Transport. Format: `{hub}` or
+   * `projects/{project}/locations/global/hubs/{hub}`
+   *
+   * @var string
+   */
+  public $hub;
   /**
    * Optional. Labels as key value pairs.
    *
@@ -206,6 +223,15 @@ class Transport extends \Google\Collection
    * @var string
    */
   public $providedActivationKey;
+  /**
+   * Optional. Immutable. Controls whether a Routing VPC Spoke should be created
+   * and attached to the NCC Hub. This will provide Private Service Connect
+   * (PSC) connectivity through NCC. This can only be set when the Transport is
+   * first created.
+   *
+   * @var bool
+   */
+  public $pscRoutingEnabled;
   /**
    * Optional. Immutable. The user supplied account id for the CSP associated
    * with the remote profile.
@@ -255,6 +281,25 @@ class Transport extends \Google\Collection
   public function getAdvertisedRoutes()
   {
     return $this->advertisedRoutes;
+  }
+  /**
+   * Optional. Immutable. Controls whether resources proposed by the Transport
+   * are automatically accepted on behalf of the user. List of actions that can
+   * be automatically accepted are: 1. VPC Peering creation 2. Routing VPC Spoke
+   * creation 3. Hybrid Spoke creation
+   *
+   * @param bool $autoAccept
+   */
+  public function setAutoAccept($autoAccept)
+  {
+    $this->autoAccept = $autoAccept;
+  }
+  /**
+   * @return bool
+   */
+  public function getAutoAccept()
+  {
+    return $this->autoAccept;
   }
   /**
    * Optional. Bandwidth of the Transport. This must be one of the supported
@@ -329,6 +374,24 @@ class Transport extends \Google\Collection
   public function getGeneratedActivationKey()
   {
     return $this->generatedActivationKey;
+  }
+  /**
+   * Optional. Immutable. The NCC Hub that the Transport should attach to. The
+   * hub must be in the same project as the Transport. Format: `{hub}` or
+   * `projects/{project}/locations/global/hubs/{hub}`
+   *
+   * @param string $hub
+   */
+  public function setHub($hub)
+  {
+    $this->hub = $hub;
+  }
+  /**
+   * @return string
+   */
+  public function getHub()
+  {
+    return $this->hub;
   }
   /**
    * Optional. Labels as key value pairs.
@@ -432,6 +495,25 @@ class Transport extends \Google\Collection
   public function getProvidedActivationKey()
   {
     return $this->providedActivationKey;
+  }
+  /**
+   * Optional. Immutable. Controls whether a Routing VPC Spoke should be created
+   * and attached to the NCC Hub. This will provide Private Service Connect
+   * (PSC) connectivity through NCC. This can only be set when the Transport is
+   * first created.
+   *
+   * @param bool $pscRoutingEnabled
+   */
+  public function setPscRoutingEnabled($pscRoutingEnabled)
+  {
+    $this->pscRoutingEnabled = $pscRoutingEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPscRoutingEnabled()
+  {
+    return $this->pscRoutingEnabled;
   }
   /**
    * Optional. Immutable. The user supplied account id for the CSP associated
