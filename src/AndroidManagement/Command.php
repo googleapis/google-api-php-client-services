@@ -94,15 +94,19 @@ class Command extends \Google\Collection
   /**
    * Adds an eSIM profile to the device. This is supported on Android 15 and
    * above. See also addEsimParams. To remove an eSIM profile, use the
-   * REMOVE_ESIM command. To determine what happens to the eSIM profile when a
-   * device is wiped, set wipeDataFlags in the policy. Note: To provision
-   * multiple eSIMs on a single device, it is recommended to introduce a delay
-   * of a few minutes between successive executions of the command.
+   * REMOVE_ESIM command. Note that REMOVE_ESIM is not supported on company-
+   * owned devices with a work profile running Android 16 QPR2 or Android 16
+   * QPR3. To determine what happens to the eSIM profile when a device is wiped,
+   * set wipeDataFlags in the policy. Note: To provision multiple eSIMs on a
+   * single device, it is recommended to introduce a delay of a few minutes
+   * between successive executions of the command.
    */
   public const TYPE_ADD_ESIM = 'ADD_ESIM';
   /**
    * Removes an eSIM profile from the device. This is supported on Android 15
-   * and above. See also removeEsimParams.
+   * and above. This command is not supported on company-owned devices with a
+   * work profile running Android 16 QPR2 or Android 16 QPR3. See also
+   * removeEsimParams.
    */
   public const TYPE_REMOVE_ESIM = 'REMOVE_ESIM';
   /**
