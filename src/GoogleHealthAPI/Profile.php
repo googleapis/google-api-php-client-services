@@ -52,7 +52,7 @@ class Profile extends \Google\Model
    * `users/me/profile` The {user} ID is a system-generated Google Health API
    * user ID, a string of 1-63 characters consisting of lowercase and uppercase
    * letters, numbers, and hyphens. The literal `me` can also be used to refer
-   * to the authenticated user.
+   * to the authenticated user. This field is read-only.
    *
    * @var string
    */
@@ -154,7 +154,7 @@ class Profile extends \Google\Model
    * `users/me/profile` The {user} ID is a system-generated Google Health API
    * user ID, a string of 1-63 characters consisting of lowercase and uppercase
    * letters, numbers, and hyphens. The literal `me` can also be used to refer
-   * to the authenticated user.
+   * to the authenticated user. This field is read-only.
    *
    * @param string $name
    */

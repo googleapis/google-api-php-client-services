@@ -106,7 +106,7 @@ class Users extends \Google\Service\Resource
    * `users/me/profile` The {user} ID is a system-generated Google Health API user
    * ID, a string of 1-63 characters consisting of lowercase and uppercase
    * letters, numbers, and hyphens. The literal `me` can also be used to refer to
-   * the authenticated user.
+   * the authenticated user. This field is read-only.
    * @param Profile $postBody
    * @param array $optParams Optional parameters.
    *
@@ -128,7 +128,7 @@ class Users extends \Google\Service\Resource
    * `users/me/settings` The {user} ID is a system-generated Google Health API
    * user ID, a string of 1-63 characters consisting of lowercase and uppercase
    * letters, numbers, and hyphens. The literal `me` can also be used to refer to
-   * the authenticated user.
+   * the authenticated user. This field is read-only.
    * @param Settings $postBody
    * @param array $optParams Optional parameters.
    *

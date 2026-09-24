@@ -29,7 +29,16 @@ class DailyRollUpDataPointsRequest extends \Google\Model
    * and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
    * Excludes manually logged data. - `users/me/dataSourceFamilies/google-
    * sources` - Includes first-party Google data, such as data from tracker
-   * devices, manually logged data, and Health Connect.
+   * devices, manually logged data, and Health Connect. -
+   * `users/me/dataSourceFamilies/self-sources` - Includes only the data the
+   * calling client wrote through this API, that is, data points whose data
+   * source was registered through this API with the same OAuth client ID as the
+   * caller. Callers that were only granted write scopes for the requested data
+   * type may only read the data they wrote themselves: their requests are
+   * implicitly restricted to `self-sources`, and requesting any other data
+   * source family fails with `PERMISSION_DENIED`. If no data point matches the
+   * requested data source family, the response is an empty list rather than an
+   * error.
    *
    * @var string
    */
@@ -73,7 +82,16 @@ class DailyRollUpDataPointsRequest extends \Google\Model
    * and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
    * Excludes manually logged data. - `users/me/dataSourceFamilies/google-
    * sources` - Includes first-party Google data, such as data from tracker
-   * devices, manually logged data, and Health Connect.
+   * devices, manually logged data, and Health Connect. -
+   * `users/me/dataSourceFamilies/self-sources` - Includes only the data the
+   * calling client wrote through this API, that is, data points whose data
+   * source was registered through this API with the same OAuth client ID as the
+   * caller. Callers that were only granted write scopes for the requested data
+   * type may only read the data they wrote themselves: their requests are
+   * implicitly restricted to `self-sources`, and requesting any other data
+   * source family fails with `PERMISSION_DENIED`. If no data point matches the
+   * requested data source family, the response is an empty list rather than an
+   * error.
    *
    * @param string $dataSourceFamily
    */
