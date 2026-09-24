@@ -28,6 +28,8 @@ class FindingDetail extends \Google\Model
    * @var string
    */
   public $detailType;
+  protected $domainMonitoringType = DomainMonitoringFindingDetail::class;
+  protected $domainMonitoringDataType = '';
   protected $initialAccessBrokerType = InitialAccessBrokerFindingDetail::class;
   protected $initialAccessBrokerDataType = '';
   protected $insiderThreatType = InsiderThreatFindingDetail::class;
@@ -67,6 +69,22 @@ class FindingDetail extends \Google\Model
   public function getDetailType()
   {
     return $this->detailType;
+  }
+  /**
+   * Domain Monitoring finding detail type.
+   *
+   * @param DomainMonitoringFindingDetail $domainMonitoring
+   */
+  public function setDomainMonitoring(DomainMonitoringFindingDetail $domainMonitoring)
+  {
+    $this->domainMonitoring = $domainMonitoring;
+  }
+  /**
+   * @return DomainMonitoringFindingDetail
+   */
+  public function getDomainMonitoring()
+  {
+    return $this->domainMonitoring;
   }
   /**
    * Initial Access Broker finding detail type.

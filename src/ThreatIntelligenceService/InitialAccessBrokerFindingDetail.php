@@ -19,10 +19,25 @@ namespace Google\Service\ThreatIntelligenceService;
 
 class InitialAccessBrokerFindingDetail extends \Google\Model
 {
+  /**
+   * Default value, should never be set.
+   */
   public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * Low severity.
+   */
   public const SEVERITY_LOW = 'LOW';
+  /**
+   * Medium severity.
+   */
   public const SEVERITY_MEDIUM = 'MEDIUM';
+  /**
+   * High severity.
+   */
   public const SEVERITY_HIGH = 'HIGH';
+  /**
+   * Critical severity.
+   */
   public const SEVERITY_CRITICAL = 'CRITICAL';
   /**
    * Required. The unique identifier of the document that triggered the IAB

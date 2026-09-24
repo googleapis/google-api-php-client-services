@@ -28,6 +28,8 @@ class AlertDetail extends \Google\Model
    * @var string
    */
   public $detailType;
+  protected $domainMonitoringType = DomainMonitoringAlertDetail::class;
+  protected $domainMonitoringDataType = '';
   protected $initialAccessBrokerType = InitialAccessBrokerAlertDetail::class;
   protected $initialAccessBrokerDataType = '';
   protected $insiderThreatType = InsiderThreatAlertDetail::class;
@@ -67,6 +69,22 @@ class AlertDetail extends \Google\Model
   public function getDetailType()
   {
     return $this->detailType;
+  }
+  /**
+   * Domain Monitoring alert detail type.
+   *
+   * @param DomainMonitoringAlertDetail $domainMonitoring
+   */
+  public function setDomainMonitoring(DomainMonitoringAlertDetail $domainMonitoring)
+  {
+    $this->domainMonitoring = $domainMonitoring;
+  }
+  /**
+   * @return DomainMonitoringAlertDetail
+   */
+  public function getDomainMonitoring()
+  {
+    return $this->domainMonitoring;
   }
   /**
    * Initial Access Broker alert detail type.

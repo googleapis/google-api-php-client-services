@@ -32,6 +32,8 @@ class ConfigurationDetail extends \Google\Model
   public $detailType;
   protected $domainConfigurationType = DomainConfiguration::class;
   protected $domainConfigurationDataType = '';
+  protected $domainMonitoringType = DomainMonitoringConfig::class;
+  protected $domainMonitoringDataType = '';
   protected $technologyWatchlistType = TechnologyWatchListConfig::class;
   protected $technologyWatchlistDataType = '';
 
@@ -99,6 +101,22 @@ class ConfigurationDetail extends \Google\Model
   public function getDomainConfiguration()
   {
     return $this->domainConfiguration;
+  }
+  /**
+   * Domain Monitoring detail config.
+   *
+   * @param DomainMonitoringConfig $domainMonitoring
+   */
+  public function setDomainMonitoring(DomainMonitoringConfig $domainMonitoring)
+  {
+    $this->domainMonitoring = $domainMonitoring;
+  }
+  /**
+   * @return DomainMonitoringConfig
+   */
+  public function getDomainMonitoring()
+  {
+    return $this->domainMonitoring;
   }
   /**
    * Technology Watchlist detail config.

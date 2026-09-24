@@ -19,13 +19,17 @@ namespace Google\Service\ThreatIntelligenceService;
 
 class InitialAccessBrokerAlertDetail extends \Google\Collection
 {
-  protected $collection_key = 'discoveryDocumentIds';
+  protected $collection_key = 'discoveryDocuments';
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to
+   * accommodate multiple discovery documents.
    *
+   * @deprecated
    * @var string[]
    */
   public $discoveryDocumentIds;
+  protected $discoveryDocumentsType = DiscoveryDocument::class;
+  protected $discoveryDocumentsDataType = 'array';
   /**
    * Required. The severity of the Initial Access Broker (IAB) alert. Allowed
    * values are: * `LOW` * `MEDIUM` * `HIGH` * `CRITICAL`
@@ -35,8 +39,10 @@ class InitialAccessBrokerAlertDetail extends \Google\Collection
   public $severity;
 
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to
+   * accommodate multiple discovery documents.
    *
+   * @deprecated
    * @param string[] $discoveryDocumentIds
    */
   public function setDiscoveryDocumentIds($discoveryDocumentIds)
@@ -44,11 +50,28 @@ class InitialAccessBrokerAlertDetail extends \Google\Collection
     $this->discoveryDocumentIds = $discoveryDocumentIds;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getDiscoveryDocumentIds()
   {
     return $this->discoveryDocumentIds;
+  }
+  /**
+   * Output only. New structured metadata payload.
+   *
+   * @param DiscoveryDocument[] $discoveryDocuments
+   */
+  public function setDiscoveryDocuments($discoveryDocuments)
+  {
+    $this->discoveryDocuments = $discoveryDocuments;
+  }
+  /**
+   * @return DiscoveryDocument[]
+   */
+  public function getDiscoveryDocuments()
+  {
+    return $this->discoveryDocuments;
   }
   /**
    * Required. The severity of the Initial Access Broker (IAB) alert. Allowed
