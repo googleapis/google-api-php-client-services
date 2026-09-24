@@ -21,15 +21,15 @@ class ExternalId extends \Google\Model
 {
   /**
    * Required. The unique identifier assigned by the external identity provider.
-   * The API does not enforce uniqueness of IDs across entities, but clients
-   * should ensure IDs are unique within their namespace.
+   * The API does not enforce unique IDs across entities, but clients **must**
+   * ensure IDs are unique within their namespace.
    *
    * @var string
    */
   public $id;
   /**
-   * Required. The namespace in which the entity exists. Cannot be empty.
-   * Currently, the only allowable namespace is `"system/external"`.
+   * Required. The namespace in which the entity exists. The only supported
+   * namespace is `system/external`.
    *
    * @var string
    */
@@ -37,8 +37,8 @@ class ExternalId extends \Google\Model
 
   /**
    * Required. The unique identifier assigned by the external identity provider.
-   * The API does not enforce uniqueness of IDs across entities, but clients
-   * should ensure IDs are unique within their namespace.
+   * The API does not enforce unique IDs across entities, but clients **must**
+   * ensure IDs are unique within their namespace.
    *
    * @param string $id
    */
@@ -54,8 +54,8 @@ class ExternalId extends \Google\Model
     return $this->id;
   }
   /**
-   * Required. The namespace in which the entity exists. Cannot be empty.
-   * Currently, the only allowable namespace is `"system/external"`.
+   * Required. The namespace in which the entity exists. The only supported
+   * namespace is `system/external`.
    *
    * @param string $namespace
    */

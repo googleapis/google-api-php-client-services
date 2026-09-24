@@ -176,10 +176,10 @@ class Group extends \Google\Collection
     return $this->dynamicGroupMetadata;
   }
   /**
-   * Optional. External identifiers associated with the `Group`. Enables
-   * external identity providers and directory sync tools to link their native
-   * unique identifiers with this group. Currently, the only allowable namespace
-   * is `"system/external"`.
+   * Optional. External identifiers associated with the `Group`. Allows external
+   * identity providers and directory sync tools link their native unique
+   * identifiers with this group. The only supported namespace is
+   * `system/external`.
    *
    * @param ExternalId[] $externalIds
    */
