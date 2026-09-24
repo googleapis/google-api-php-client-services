@@ -52,7 +52,7 @@ class DeviceTypeAssignedTargetingOptionDetails extends \Google\Model
    */
   public $deviceType;
   /**
-   * Output only. Bid multiplier allows you to show your ads more or less
+   * Optional. Bid multiplier allows you to show your ads more or less
    * frequently based on the device type. It will apply a multiplier on the
    * original bid price. When this field is 0, it indicates this field is not
    * applicable instead of multiplying 0 on the original bid price. For example,
