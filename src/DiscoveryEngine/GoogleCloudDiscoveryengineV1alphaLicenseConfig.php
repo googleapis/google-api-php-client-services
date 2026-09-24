@@ -145,6 +145,13 @@ class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends \Google\Model
    */
   public $autoRenew;
   /**
+   * Output only. The name of the BillingAccountLicenseConfig from which this
+   * LicenseConfig is assigned, if this field is set.
+   *
+   * @var string
+   */
+  public $billingAccountLicenseConfig;
+  /**
    * Output only. Indication of whether the subscription is terminated earlier
    * than the expiration date. This is usually terminated by pipeline once the
    * subscription gets terminated from subsv3.
@@ -245,6 +252,23 @@ class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends \Google\Model
   public function getAutoRenew()
   {
     return $this->autoRenew;
+  }
+  /**
+   * Output only. The name of the BillingAccountLicenseConfig from which this
+   * LicenseConfig is assigned, if this field is set.
+   *
+   * @param string $billingAccountLicenseConfig
+   */
+  public function setBillingAccountLicenseConfig($billingAccountLicenseConfig)
+  {
+    $this->billingAccountLicenseConfig = $billingAccountLicenseConfig;
+  }
+  /**
+   * @return string
+   */
+  public function getBillingAccountLicenseConfig()
+  {
+    return $this->billingAccountLicenseConfig;
   }
   /**
    * Output only. Indication of whether the subscription is terminated earlier

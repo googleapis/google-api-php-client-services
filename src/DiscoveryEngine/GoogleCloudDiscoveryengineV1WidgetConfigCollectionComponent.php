@@ -97,6 +97,22 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
    * @var string
    */
   public $name;
+  /**
+   * Output only. The version-independent label of the connector backing this
+   * collection, mirroring `DataConnector.tag`. Unlike the version-pinned data
+   * store id it survives a connector version upgrade, so an upgraded connector
+   * keeps the same tag. Not a unique key. As `DataConnector.tag` documents,
+   * several connectors may share a tag under the same (project, location,
+   * collection, data_source), and tag-based lookup resolves to the one with the
+   * greatest create_time. Clients must not treat this as a connector
+   * identifier. Empty when the connector was created before the tag-write
+   * launch, and for synthetic placeholder entries, which have no underlying
+   * `DataConnector`. Populated only when
+   * `ConnectorsFeature.enable_connector_tag` is on.
+   *
+   * @var string
+   */
+  public $tag;
 
   /**
    * Output only. The auth uri of the connector source.
@@ -300,6 +316,32 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. The version-independent label of the connector backing this
+   * collection, mirroring `DataConnector.tag`. Unlike the version-pinned data
+   * store id it survives a connector version upgrade, so an upgraded connector
+   * keeps the same tag. Not a unique key. As `DataConnector.tag` documents,
+   * several connectors may share a tag under the same (project, location,
+   * collection, data_source), and tag-based lookup resolves to the one with the
+   * greatest create_time. Clients must not treat this as a connector
+   * identifier. Empty when the connector was created before the tag-write
+   * launch, and for synthetic placeholder entries, which have no underlying
+   * `DataConnector`. Populated only when
+   * `ConnectorsFeature.enable_connector_tag` is on.
+   *
+   * @param string $tag
+   */
+  public function setTag($tag)
+  {
+    $this->tag = $tag;
+  }
+  /**
+   * @return string
+   */
+  public function getTag()
+  {
+    return $this->tag;
   }
 }
 

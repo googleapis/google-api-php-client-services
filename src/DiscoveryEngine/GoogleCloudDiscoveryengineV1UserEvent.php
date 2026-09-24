@@ -193,8 +193,8 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
   public $userPseudoId;
 
   /**
-   * Extra user event features to include in the recommendation model. These
-   * attributes must NOT contain data that needs to be parsed or processed
+   * Optional. Extra user event features to include in the recommendation model.
+   * These attributes must NOT contain data that needs to be parsed or processed
    * further, e.g. JSON or other encodings. If you provide custom attributes for
    * ingested user events, also include them in the user events that you
    * associate with prediction requests. Custom attribute formatting must be

@@ -42,11 +42,11 @@ class GoogleCloudDiscoveryengineV1SearchInfo extends \Google\Model
    */
   public $orderBy;
   /**
-   * The user's search query. See SearchRequest.query for definition. The value
-   * must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an `INVALID_ARGUMENT` error is returned. At least one of
-   * search_query or PageInfo.page_category is required for `search` events.
-   * Other event types should not set this field. Otherwise, an
+   * Optional. The user's search query. See SearchRequest.query for definition.
+   * The value must be a UTF-8 encoded string with a length limit of 5,000
+   * characters. Otherwise, an `INVALID_ARGUMENT` error is returned. At least
+   * one of search_query or PageInfo.page_category is required for `search`
+   * events. Other event types should not set this field. Otherwise, an
    * `INVALID_ARGUMENT` error is returned.
    *
    * @var string
@@ -96,11 +96,11 @@ class GoogleCloudDiscoveryengineV1SearchInfo extends \Google\Model
     return $this->orderBy;
   }
   /**
-   * The user's search query. See SearchRequest.query for definition. The value
-   * must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an `INVALID_ARGUMENT` error is returned. At least one of
-   * search_query or PageInfo.page_category is required for `search` events.
-   * Other event types should not set this field. Otherwise, an
+   * Optional. The user's search query. See SearchRequest.query for definition.
+   * The value must be a UTF-8 encoded string with a length limit of 5,000
+   * characters. Otherwise, an `INVALID_ARGUMENT` error is returned. At least
+   * one of search_query or PageInfo.page_category is required for `search`
+   * events. Other event types should not set this field. Otherwise, an
    * `INVALID_ARGUMENT` error is returned.
    *
    * @param string $searchQuery

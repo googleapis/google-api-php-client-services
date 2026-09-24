@@ -27,7 +27,8 @@ class GoogleCloudDiscoveryengineV1CompletionInfo extends \Google\Model
    */
   public $selectedPosition;
   /**
-   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
+   * Optional. End user selected
+   * CompleteQueryResponse.QuerySuggestion.suggestion.
    *
    * @var string
    */
@@ -51,7 +52,8 @@ class GoogleCloudDiscoveryengineV1CompletionInfo extends \Google\Model
     return $this->selectedPosition;
   }
   /**
-   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
+   * Optional. End user selected
+   * CompleteQueryResponse.QuerySuggestion.suggestion.
    *
    * @param string $selectedSuggestion
    */
