@@ -21,18 +21,7 @@ class ActivitySnippet extends \Google\Model
 {
   public const TYPE_typeUnspecified = 'typeUnspecified';
   public const TYPE_upload = 'upload';
-  /**
-   * Deprecated: This type is no longer supported.
-   */
-  public const TYPE_like = 'like';
-  /**
-   * Deprecated: This type is no longer supported.
-   */
-  public const TYPE_favorite = 'favorite';
   public const TYPE_comment = 'comment';
-  /**
-   * Deprecated: This type is no longer supported.
-   */
   public const TYPE_subscription = 'subscription';
   public const TYPE_playlistItem = 'playlistItem';
   public const TYPE_recommendation = 'recommendation';
@@ -217,9 +206,8 @@ class ActivitySnippet extends \Google\Model
   /**
    * The type of activity that the resource describes.
    *
-   * Accepted values: typeUnspecified, upload, like, favorite, comment,
-   * subscription, playlistItem, recommendation, bulletin, social, channelItem,
-   * promotedItem
+   * Accepted values: typeUnspecified, upload, comment, subscription,
+   * playlistItem, recommendation, bulletin, social, channelItem, promotedItem
    *
    * @param self::TYPE_* $type
    */

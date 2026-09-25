@@ -32,6 +32,9 @@ class CommentSnippet extends \Google\Model
    * The comment is unfit for display.
    */
   public const MODERATION_STATUS_rejected = 'rejected';
+  /**
+   * The entity has not been rated.
+   */
   public const VIEWER_RATING_none = 'none';
   /**
    * The entity is liked.

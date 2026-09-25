@@ -19,6 +19,9 @@ namespace Google\Service\YouTube;
 
 class VideoSnippet extends \Google\Collection
 {
+  /**
+   * The resource does not have live broadcast content.
+   */
   public const LIVE_BROADCAST_CONTENT_none = 'none';
   /**
    * The live broadcast is upcoming.

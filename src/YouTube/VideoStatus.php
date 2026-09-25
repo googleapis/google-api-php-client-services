@@ -43,7 +43,13 @@ class VideoStatus extends \Google\Model
    * Upload wasn't finished.
    */
   public const FAILURE_REASON_uploadAborted = 'uploadAborted';
+  /**
+   * Standard YouTube license.
+   */
   public const LICENSE_youtube = 'youtube';
+  /**
+   * Creative Commons license.
+   */
   public const LICENSE_creativeCommon = 'creativeCommon';
   public const PRIVACY_STATUS_public = 'public';
   public const PRIVACY_STATUS_unlisted = 'unlisted';

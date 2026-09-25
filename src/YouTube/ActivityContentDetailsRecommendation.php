@@ -20,14 +20,6 @@ namespace Google\Service\YouTube;
 class ActivityContentDetailsRecommendation extends \Google\Model
 {
   public const REASON_reasonUnspecified = 'reasonUnspecified';
-  /**
-   * Deprecated: This reason is no longer used.
-   */
-  public const REASON_videoFavorited = 'videoFavorited';
-  /**
-   * Deprecated: This reason is no longer used.
-   */
-  public const REASON_videoLiked = 'videoLiked';
   public const REASON_videoWatched = 'videoWatched';
   /**
    * The reason that the resource is recommended to the user.
@@ -43,8 +35,7 @@ class ActivityContentDetailsRecommendation extends \Google\Model
   /**
    * The reason that the resource is recommended to the user.
    *
-   * Accepted values: reasonUnspecified, videoFavorited, videoLiked,
-   * videoWatched
+   * Accepted values: reasonUnspecified, videoWatched
    *
    * @param self::REASON_* $reason
    */

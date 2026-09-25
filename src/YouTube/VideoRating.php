@@ -19,6 +19,9 @@ namespace Google\Service\YouTube;
 
 class VideoRating extends \Google\Model
 {
+  /**
+   * The entity has not been rated.
+   */
   public const RATING_none = 'none';
   /**
    * The entity is liked.

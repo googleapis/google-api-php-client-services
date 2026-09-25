@@ -25,10 +25,6 @@ class ActivityContentDetails extends \Google\Model
   protected $channelItemDataType = '';
   protected $commentType = ActivityContentDetailsComment::class;
   protected $commentDataType = '';
-  protected $favoriteType = ActivityContentDetailsFavorite::class;
-  protected $favoriteDataType = '';
-  protected $likeType = ActivityContentDetailsLike::class;
-  protected $likeDataType = '';
   protected $playlistItemType = ActivityContentDetailsPlaylistItem::class;
   protected $playlistItemDataType = '';
   protected $promotedItemType = ActivityContentDetailsPromotedItem::class;
@@ -93,42 +89,6 @@ class ActivityContentDetails extends \Google\Model
   public function getComment()
   {
     return $this->comment;
-  }
-  /**
-   * The `favorite` object contains information about a video that was marked as
-   * a favorite video. This property is only present if the `snippet.type` is
-   * `favorite`. Deprecated: This property is no longer returned.
-   *
-   * @param ActivityContentDetailsFavorite $favorite
-   */
-  public function setFavorite(ActivityContentDetailsFavorite $favorite)
-  {
-    $this->favorite = $favorite;
-  }
-  /**
-   * @return ActivityContentDetailsFavorite
-   */
-  public function getFavorite()
-  {
-    return $this->favorite;
-  }
-  /**
-   * The `like` object contains information about a resource that received a
-   * positive (like) rating. This property is only present if the `snippet.type`
-   * is `like`. Deprecated: This property is no longer returned.
-   *
-   * @param ActivityContentDetailsLike $like
-   */
-  public function setLike(ActivityContentDetailsLike $like)
-  {
-    $this->like = $like;
-  }
-  /**
-   * @return ActivityContentDetailsLike
-   */
-  public function getLike()
-  {
-    return $this->like;
   }
   /**
    * The `playlistItem` object contains information about a new playlist item.
@@ -203,7 +163,7 @@ class ActivityContentDetails extends \Google\Model
   /**
    * The `subscription` object contains information about a channel that a user
    * subscribed to. This property is only present if the `snippet.type` is
-   * `subscription`. Deprecated: This property is no longer returned.
+   * `subscription`.
    *
    * @param ActivityContentDetailsSubscription $subscription
    */
