@@ -38,7 +38,7 @@ class YoutubeVideoDetails extends \Google\Model
    */
   public $id;
   /**
-   * The reason why the video data is not available.
+   * Output only. The reason why the video data is not available.
    *
    * @var string
    */
@@ -68,7 +68,7 @@ class YoutubeVideoDetails extends \Google\Model
     return $this->id;
   }
   /**
-   * The reason why the video data is not available.
+   * Output only. The reason why the video data is not available.
    *
    * Accepted values: VIDEO_UNAVAILABLE_REASON_UNSPECIFIED,
    * VIDEO_UNAVAILABLE_REASON_PRIVATE, VIDEO_UNAVAILABLE_REASON_DELETED

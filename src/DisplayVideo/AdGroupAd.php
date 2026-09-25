@@ -212,7 +212,7 @@ class AdGroupAd extends \Google\Collection
     return $this->audioAd;
   }
   /**
-   * Output only. Details of a [non-skippable short video
+   * Optional. Details of a [non-skippable short video
    * ad](//support.google.com/displayvideo/answer/6274216), equal to or less
    * than 6 seconds, used for reach.
    *
@@ -247,8 +247,8 @@ class AdGroupAd extends \Google\Collection
     return $this->dcmTrackingInfo;
   }
   /**
-   * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/ans
-   * wer/15598924?&sjid=11207068802760924844-NC#CarouselAd).
+   * Optional. Details of a [Demand Gen carousel ad](//support.google.com/displa
+   * yvideo/answer/15598924?&sjid=11207068802760924844-NC#CarouselAd).
    *
    * @param DemandGenCarouselAd $demandGenCarouselAd
    */
@@ -264,8 +264,8 @@ class AdGroupAd extends \Google\Collection
     return $this->demandGenCarouselAd;
   }
   /**
-   * Details of a [Demand Gen image ad](//support.google.com/displayvideo/answer
-   * /15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * Optional. Details of a [Demand Gen image ad](//support.google.com/displayvi
+   * deo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
    *
    * @param DemandGenImageAd $demandGenImageAd
    */
@@ -281,8 +281,8 @@ class AdGroupAd extends \Google\Collection
     return $this->demandGenImageAd;
   }
   /**
-   * Details of a [Demand Gen product ad](//support.google.com/displayvideo/answ
-   * er/15598924?&sjid=11207068802760924844-NC#Product-onlyAd).
+   * Optional. Details of a [Demand Gen product ad](//support.google.com/display
+   * video/answer/15598924?&sjid=11207068802760924844-NC#Product-onlyAd).
    *
    * @param DemandGenProductAd $demandGenProductAd
    */
@@ -298,8 +298,8 @@ class AdGroupAd extends \Google\Collection
     return $this->demandGenProductAd;
   }
   /**
-   * Details of a [Demand Gen video ad](//support.google.com/displayvideo/answer
-   * /15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * Optional. Details of a [Demand Gen video ad](//support.google.com/displayvi
+   * deo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
    *
    * @param DemandGenVideoAd $demandGenVideoAd
    */
@@ -368,7 +368,7 @@ class AdGroupAd extends \Google\Collection
     return $this->entityStatus;
   }
   /**
-   * Output only. Details of an [in-stream ad skippable after 5
+   * Optional. Details of an [in-stream ad skippable after 5
    * seconds](//support.google.com/displayvideo/answer/6274216), used for brand
    * awareness or reach marketing objectives.
    *
@@ -419,7 +419,7 @@ class AdGroupAd extends \Google\Collection
     return $this->name;
   }
   /**
-   * Output only. Details of a [non-skippable short in-stream video
+   * Optional. Details of a [non-skippable short in-stream video
    * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15
    * seconds, used for reach marketing objectives.
    *
@@ -455,7 +455,7 @@ class AdGroupAd extends \Google\Collection
     return $this->videoDiscoverAd;
   }
   /**
-   * Output only. Details of an [ad used in a video action
+   * Optional. Details of an [ad used in a video action
    * campaign](//support.google.com/google-ads/answer/10147229) to drive actions
    * to the business, service or product.
    *

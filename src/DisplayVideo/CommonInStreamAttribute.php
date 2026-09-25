@@ -20,13 +20,13 @@ namespace Google\Service\DisplayVideo;
 class CommonInStreamAttribute extends \Google\Model
 {
   /**
-   * The text on the call-to-action button.
+   * Optional. The text on the call-to-action button.
    *
    * @var string
    */
   public $actionButtonLabel;
   /**
-   * The headline of the call-to-action banner.
+   * Optional. The headline of the call-to-action banner.
    *
    * @var string
    */
@@ -34,19 +34,21 @@ class CommonInStreamAttribute extends \Google\Model
   protected $companionBannerType = ImageAsset::class;
   protected $companionBannerDataType = '';
   /**
-   * The webpage address that appears with the ad.
+   * Required. The webpage address that appears with the ad.
    *
    * @var string
    */
   public $displayUrl;
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click
+   * the ad.
    *
    * @var string
    */
   public $finalUrl;
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking
+   * purposes.
    *
    * @var string
    */
@@ -55,7 +57,7 @@ class CommonInStreamAttribute extends \Google\Model
   protected $videoDataType = '';
 
   /**
-   * The text on the call-to-action button.
+   * Optional. The text on the call-to-action button.
    *
    * @param string $actionButtonLabel
    */
@@ -71,7 +73,7 @@ class CommonInStreamAttribute extends \Google\Model
     return $this->actionButtonLabel;
   }
   /**
-   * The headline of the call-to-action banner.
+   * Optional. The headline of the call-to-action banner.
    *
    * @param string $actionHeadline
    */
@@ -87,7 +89,7 @@ class CommonInStreamAttribute extends \Google\Model
     return $this->actionHeadline;
   }
   /**
-   * The image which shows next to the video ad.
+   * Optional. The image which shows next to the video ad.
    *
    * @param ImageAsset $companionBanner
    */
@@ -103,7 +105,7 @@ class CommonInStreamAttribute extends \Google\Model
     return $this->companionBanner;
   }
   /**
-   * The webpage address that appears with the ad.
+   * Required. The webpage address that appears with the ad.
    *
    * @param string $displayUrl
    */
@@ -119,7 +121,8 @@ class CommonInStreamAttribute extends \Google\Model
     return $this->displayUrl;
   }
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click
+   * the ad.
    *
    * @param string $finalUrl
    */
@@ -135,7 +138,8 @@ class CommonInStreamAttribute extends \Google\Model
     return $this->finalUrl;
   }
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking
+   * purposes.
    *
    * @param string $trackingUrl
    */
@@ -151,7 +155,7 @@ class CommonInStreamAttribute extends \Google\Model
     return $this->trackingUrl;
   }
   /**
-   * The YouTube video of the ad.
+   * Required. The YouTube video of the ad.
    *
    * @param YoutubeVideoDetails $video
    */
