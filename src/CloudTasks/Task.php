@@ -115,6 +115,8 @@ class Task extends \Google\Model
    * @var int
    */
   public $responseCount;
+  protected $retryConfigType = RetryConfig::class;
+  protected $retryConfigDataType = '';
   /**
    * The time when the task is scheduled to be attempted or retried.
    * `schedule_time` will be truncated to the nearest microsecond.
@@ -316,6 +318,23 @@ class Task extends \Google\Model
   public function getResponseCount()
   {
     return $this->responseCount;
+  }
+  /**
+   * Optional. Specifies the task-level RetryConfig. If present, this overrides
+   * the Queue.retry_config for this task.
+   *
+   * @param RetryConfig $retryConfig
+   */
+  public function setRetryConfig(RetryConfig $retryConfig)
+  {
+    $this->retryConfig = $retryConfig;
+  }
+  /**
+   * @return RetryConfig
+   */
+  public function getRetryConfig()
+  {
+    return $this->retryConfig;
   }
   /**
    * The time when the task is scheduled to be attempted or retried.

@@ -37,6 +37,14 @@ class CreateTaskRequest extends \Google\Model
    */
   public const RESPONSE_VIEW_FULL = 'FULL';
   /**
+   * Required. The queue name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must
+   * already exist.
+   *
+   * @var string
+   */
+  public $parent;
+  /**
    * The response_view specifies which subset of the Task will be returned. By
    * default response_view is BASIC; not all information is retrieved by default
    * because some data, such as payloads, might be desirable to return only when
@@ -51,6 +59,24 @@ class CreateTaskRequest extends \Google\Model
   protected $taskType = Task::class;
   protected $taskDataType = '';
 
+  /**
+   * Required. The queue name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must
+   * already exist.
+   *
+   * @param string $parent
+   */
+  public function setParent($parent)
+  {
+    $this->parent = $parent;
+  }
+  /**
+   * @return string
+   */
+  public function getParent()
+  {
+    return $this->parent;
+  }
   /**
    * The response_view specifies which subset of the Task will be returned. By
    * default response_view is BASIC; not all information is retrieved by default

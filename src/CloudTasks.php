@@ -294,7 +294,27 @@ class CloudTasks extends \Google\Service
         'tasks',
         [
           'methods' => [
-            'buffer' => [
+            'batchCreate' => [
+              'path' => 'v2/{+parent}/tasks:batchCreate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchDelete' => [
+              'path' => 'v2/{+parent}/tasks:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'buffer' => [
               'path' => 'v2/{+queue}/tasks/{taskId}:buffer',
               'httpMethod' => 'POST',
               'parameters' => [

@@ -17,11 +17,14 @@
 
 namespace Google\Service\CloudTasks\Resource;
 
+use Google\Service\CloudTasks\BatchCreateTasksRequest;
+use Google\Service\CloudTasks\BatchDeleteTasksRequest;
 use Google\Service\CloudTasks\BufferTaskRequest;
 use Google\Service\CloudTasks\BufferTaskResponse;
 use Google\Service\CloudTasks\CloudtasksEmpty;
 use Google\Service\CloudTasks\CreateTaskRequest;
 use Google\Service\CloudTasks\ListTasksResponse;
+use Google\Service\CloudTasks\Operation;
 use Google\Service\CloudTasks\RunTaskRequest;
 use Google\Service\CloudTasks\Task;
 
@@ -35,6 +38,44 @@ use Google\Service\CloudTasks\Task;
  */
 class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
 {
+  /**
+   * Creates a batch of tasks and adds them to a queue. All tasks must be for the
+   * same queue. A maximum of 100 tasks can be created in a single batch.
+   * (tasks.batchCreate)
+   *
+   * @param string $parent Required. The queue name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must
+   * already exist.
+   * @param BatchCreateTasksRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function batchCreate($parent, BatchCreateTasksRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchCreate', [$params], Operation::class);
+  }
+  /**
+   * Deletes a batch of tasks. This is a non-atomic operation: if deletion fails
+   * for some tasks, it can still succeed for others. The metadata field of
+   * google.longrunning.Operation contains details of failed deletions. A maximum
+   * of 1000 tasks can be deleted in a batch. (tasks.batchDelete)
+   *
+   * @param string $parent Required. The queue name. For example: Format:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+   * @param BatchDeleteTasksRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function batchDelete($parent, BatchDeleteTasksRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchDelete', [$params], Operation::class);
+  }
   /**
    * Creates and buffers a new task without the need to explicitly define a Task
    * message. The queue must have HTTP target. To create the task with a custom
