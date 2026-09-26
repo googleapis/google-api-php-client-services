@@ -29,14 +29,14 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
    */
   public $createTime;
   /**
-   * Optional. Description of the external API. Max length is 2000 characters
+   * Optional. Description of the external API. Max length is 500000 characters
    * (Unicode Code Points).
    *
    * @var string
    */
   public $description;
   /**
-   * Required. Display name of the external API. Max length is 63 characters
+   * Required. Display name of the external API. Max length is 500 characters
    * (Unicode Code Points).
    *
    * @var string
@@ -106,7 +106,7 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. Description of the external API. Max length is 2000 characters
+   * Optional. Description of the external API. Max length is 500000 characters
    * (Unicode Code Points).
    *
    * @param string $description
@@ -123,7 +123,7 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->description;
   }
   /**
-   * Required. Display name of the external API. Max length is 63 characters
+   * Required. Display name of the external API. Max length is 500 characters
    * (Unicode Code Points).
    *
    * @param string $displayName

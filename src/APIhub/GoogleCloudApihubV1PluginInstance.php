@@ -71,7 +71,7 @@ class GoogleCloudApihubV1PluginInstance extends \Google\Collection
    */
   public $createTime;
   /**
-   * Required. The display name for this plugin instance. Max length is 255
+   * Required. The display name for this plugin instance. Max length is 500
    * characters.
    *
    * @var string
@@ -188,7 +188,7 @@ class GoogleCloudApihubV1PluginInstance extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Required. The display name for this plugin instance. Max length is 255
+   * Required. The display name for this plugin instance. Max length is 500
    * characters.
    *
    * @param string $displayName

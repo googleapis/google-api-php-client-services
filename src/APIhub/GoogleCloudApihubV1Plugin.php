@@ -110,14 +110,14 @@ class GoogleCloudApihubV1Plugin extends \Google\Collection
    */
   public $createTime;
   /**
-   * Optional. The plugin description. Max length is 2000 characters (Unicode
+   * Optional. The plugin description. Max length is 500000 characters (Unicode
    * code points).
    *
    * @var string
    */
   public $description;
   /**
-   * Required. The display name of the plugin. Max length is 50 characters
+   * Required. The display name of the plugin. Max length is 500 characters
    * (Unicode code points).
    *
    * @var string
@@ -222,7 +222,7 @@ class GoogleCloudApihubV1Plugin extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. The plugin description. Max length is 2000 characters (Unicode
+   * Optional. The plugin description. Max length is 500000 characters (Unicode
    * code points).
    *
    * @param string $description
@@ -239,7 +239,7 @@ class GoogleCloudApihubV1Plugin extends \Google\Collection
     return $this->description;
   }
   /**
-   * Required. The display name of the plugin. Max length is 50 characters
+   * Required. The display name of the plugin. Max length is 500 characters
    * (Unicode code points).
    *
    * @param string $displayName

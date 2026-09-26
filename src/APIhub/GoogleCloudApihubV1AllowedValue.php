@@ -37,8 +37,8 @@ class GoogleCloudApihubV1AllowedValue extends \Google\Model
    * by another allowed value in the same attribute resource. * If not provided,
    * a system generated id derived from the display name will be used. In this
    * case, the service will handle conflict resolution by adding a system
-   * generated suffix in case of duplicates. This value should be 4-63
-   * characters, and valid characters are /a-z-/.
+   * generated suffix in case of duplicates. This value should be 3-500
+   * characters, and valid characters are /a-z[0-9]-_/.
    *
    * @var string
    */
@@ -89,8 +89,8 @@ class GoogleCloudApihubV1AllowedValue extends \Google\Model
    * by another allowed value in the same attribute resource. * If not provided,
    * a system generated id derived from the display name will be used. In this
    * case, the service will handle conflict resolution by adding a system
-   * generated suffix in case of duplicates. This value should be 4-63
-   * characters, and valid characters are /a-z-/.
+   * generated suffix in case of duplicates. This value should be 3-500
+   * characters, and valid characters are /a-z[0-9]-_/.
    *
    * @param string $id
    */
