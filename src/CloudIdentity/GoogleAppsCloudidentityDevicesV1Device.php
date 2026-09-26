@@ -64,6 +64,10 @@ class GoogleAppsCloudidentityDevicesV1Device extends \Google\Collection
    */
   public const DEVICE_TYPE_CHROME_OS = 'CHROME_OS';
   /**
+   * Device is a Googlebook device.
+   */
+  public const DEVICE_TYPE_GOOGLEBOOK = 'GOOGLEBOOK';
+  /**
    * Encryption Status is not set.
    */
   public const ENCRYPTION_STATE_ENCRYPTION_STATE_UNSPECIFIED = 'ENCRYPTION_STATE_UNSPECIFIED';
@@ -467,7 +471,7 @@ class GoogleAppsCloudidentityDevicesV1Device extends \Google\Collection
    * Output only. Type of device.
    *
    * Accepted values: DEVICE_TYPE_UNSPECIFIED, ANDROID, IOS, GOOGLE_SYNC,
-   * WINDOWS, MAC_OS, LINUX, CHROME_OS
+   * WINDOWS, MAC_OS, LINUX, CHROME_OS, GOOGLEBOOK
    *
    * @param self::DEVICE_TYPE_* $deviceType
    */
