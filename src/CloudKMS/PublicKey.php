@@ -304,7 +304,7 @@ class PublicKey extends \Google\Model
   public $algorithm;
   /**
    * The name of the CryptoKeyVersion public key. Provided here for
-   * verification. NOTE: This field is in Beta.
+   * verification.
    *
    * @var string
    */
@@ -329,7 +329,7 @@ class PublicKey extends \Google\Model
    * field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed
    * `2^32-1`, and can be safely downconverted to uint32 in languages that
-   * support this type. NOTE: This field is in Beta.
+   * support this type.
    *
    * @var string
    */
@@ -388,7 +388,7 @@ class PublicKey extends \Google\Model
   }
   /**
    * The name of the CryptoKeyVersion public key. Provided here for
-   * verification. NOTE: This field is in Beta.
+   * verification.
    *
    * @param string $name
    */
@@ -433,7 +433,7 @@ class PublicKey extends \Google\Model
    * field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed
    * `2^32-1`, and can be safely downconverted to uint32 in languages that
-   * support this type. NOTE: This field is in Beta.
+   * support this type.
    *
    * @param string $pemCrc32c
    */
