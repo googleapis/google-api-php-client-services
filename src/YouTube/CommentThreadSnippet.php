@@ -41,12 +41,6 @@ class CommentThreadSnippet extends \Google\Model
    * @var bool
    */
   public $isPublic;
-  /**
-   * The ID of the post the comments refer to, if any.
-   *
-   * @var string
-   */
-  public $postId;
   protected $topLevelCommentType = Comment::class;
   protected $topLevelCommentDataType = '';
   /**
@@ -113,22 +107,6 @@ class CommentThreadSnippet extends \Google\Model
   public function getIsPublic()
   {
     return $this->isPublic;
-  }
-  /**
-   * The ID of the post the comments refer to, if any.
-   *
-   * @param string $postId
-   */
-  public function setPostId($postId)
-  {
-    $this->postId = $postId;
-  }
-  /**
-   * @return string
-   */
-  public function getPostId()
-  {
-    return $this->postId;
   }
   /**
    * The top level comment of this thread.

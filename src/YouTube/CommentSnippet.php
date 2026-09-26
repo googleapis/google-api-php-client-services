@@ -98,12 +98,6 @@ class CommentSnippet extends \Google\Model
    */
   public $parentId;
   /**
-   * The ID of the post the comment refers to, if any.
-   *
-   * @var string
-   */
-  public $postId;
-  /**
    * The date and time when the comment was originally published.
    *
    * @var string
@@ -293,22 +287,6 @@ class CommentSnippet extends \Google\Model
   public function getParentId()
   {
     return $this->parentId;
-  }
-  /**
-   * The ID of the post the comment refers to, if any.
-   *
-   * @param string $postId
-   */
-  public function setPostId($postId)
-  {
-    $this->postId = $postId;
-  }
-  /**
-   * @return string
-   */
-  public function getPostId()
-  {
-    return $this->postId;
   }
   /**
    * The date and time when the comment was originally published.
