@@ -109,6 +109,20 @@ class ProjectsAppsEvents extends \Google\Service\Resource
    * @opt_param string filter.version.displayNames Only counts events in the given
    * app version. This string matches Version.display_name. Format:
    * "display_version (build_version)" e.g. "1.2.3 (456)".
+   * @opt_param string filterExpression Optional. Filters events by custom keys
+   * (https://firebase.google.com/docs/crashlytics/customize-crash-reports#add-
+   * keys). Supported forms: * Equality: `custom_keys.level = "vip"` or
+   * `custom_keys.level:"vip"` * Presence: `custom_keys.level:*` * OR across
+   * values of one key: `custom_keys.level = "vip" OR custom_keys.level =
+   * "enterprise"` * AND across different keys: `custom_keys.level = "vip" AND
+   * custom_keys.region = "us"` Keys are case-sensitive. Keys and values
+   * containing spaces must be double-quoted, for example `custom_keys."app state"
+   * = "background"`. OR across different keys, repeating a key within an AND,
+   * NOT, and comparators other than `=` and `:` are rejected with
+   * INVALID_ARGUMENT. Wildcards are not supported in values; use `custom_keys.:*`
+   * to match events that set a key to any value. Only supported for Android and
+   * iOS. This filter expression applies in addition to the `filter` field above.
+   * The syntax is a subset of AIP-160 (https://google.aip.dev/160).
    * @opt_param int pageSize Optional. The maximum number of events per page. If
    * omitted, defaults to 10.
    * @opt_param string pageToken Optional. A page token, received from a previous
