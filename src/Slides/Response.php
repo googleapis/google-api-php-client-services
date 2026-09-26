@@ -19,6 +19,8 @@ namespace Google\Service\Slides;
 
 class Response extends \Google\Model
 {
+  protected $addCommentReplyType = AddCommentReplyResponse::class;
+  protected $addCommentReplyDataType = '';
   protected $createImageType = CreateImageResponse::class;
   protected $createImageDataType = '';
   protected $createLineType = CreateLineResponse::class;
@@ -37,6 +39,8 @@ class Response extends \Google\Model
   protected $duplicateObjectDataType = '';
   protected $groupObjectsType = GroupObjectsResponse::class;
   protected $groupObjectsDataType = '';
+  protected $insertCommentType = InsertCommentResponse::class;
+  protected $insertCommentDataType = '';
   protected $replaceAllShapesWithImageType = ReplaceAllShapesWithImageResponse::class;
   protected $replaceAllShapesWithImageDataType = '';
   protected $replaceAllShapesWithSheetsChartType = ReplaceAllShapesWithSheetsChartResponse::class;
@@ -44,6 +48,23 @@ class Response extends \Google\Model
   protected $replaceAllTextType = ReplaceAllTextResponse::class;
   protected $replaceAllTextDataType = '';
 
+  /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param AddCommentReplyResponse $addCommentReply
+   */
+  public function setAddCommentReply(AddCommentReplyResponse $addCommentReply)
+  {
+    $this->addCommentReply = $addCommentReply;
+  }
+  /**
+   * @return AddCommentReplyResponse
+   */
+  public function getAddCommentReply()
+  {
+    return $this->addCommentReply;
+  }
   /**
    * The result of creating an image.
    *
@@ -187,6 +208,23 @@ class Response extends \Google\Model
   public function getGroupObjects()
   {
     return $this->groupObjects;
+  }
+  /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param InsertCommentResponse $insertComment
+   */
+  public function setInsertComment(InsertCommentResponse $insertComment)
+  {
+    $this->insertComment = $insertComment;
+  }
+  /**
+   * @return InsertCommentResponse
+   */
+  public function getInsertComment()
+  {
+    return $this->insertComment;
   }
   /**
    * The result of replacing all shapes matching some criteria with an image.

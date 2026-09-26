@@ -19,6 +19,8 @@ namespace Google\Service\Slides;
 
 class Request extends \Google\Model
 {
+  protected $addCommentReplyType = AddCommentReplyRequest::class;
+  protected $addCommentReplyDataType = '';
   protected $createImageType = CreateImageRequest::class;
   protected $createImageDataType = '';
   protected $createLineType = CreateLineRequest::class;
@@ -35,6 +37,10 @@ class Request extends \Google\Model
   protected $createTableDataType = '';
   protected $createVideoType = CreateVideoRequest::class;
   protected $createVideoDataType = '';
+  protected $deleteCommentType = DeleteCommentRequest::class;
+  protected $deleteCommentDataType = '';
+  protected $deleteCommentReplyType = DeleteCommentReplyRequest::class;
+  protected $deleteCommentReplyDataType = '';
   protected $deleteObjectType = DeleteObjectRequest::class;
   protected $deleteObjectDataType = '';
   protected $deleteParagraphBulletsType = DeleteParagraphBulletsRequest::class;
@@ -49,6 +55,8 @@ class Request extends \Google\Model
   protected $duplicateObjectDataType = '';
   protected $groupObjectsType = GroupObjectsRequest::class;
   protected $groupObjectsDataType = '';
+  protected $insertCommentType = InsertCommentRequest::class;
+  protected $insertCommentDataType = '';
   protected $insertTableColumnsType = InsertTableColumnsRequest::class;
   protected $insertTableColumnsDataType = '';
   protected $insertTableRowsType = InsertTableRowsRequest::class;
@@ -73,6 +81,8 @@ class Request extends \Google\Model
   protected $ungroupObjectsDataType = '';
   protected $unmergeTableCellsType = UnmergeTableCellsRequest::class;
   protected $unmergeTableCellsDataType = '';
+  protected $updateCommentPostType = UpdateCommentPostRequest::class;
+  protected $updateCommentPostDataType = '';
   protected $updateImagePropertiesType = UpdateImagePropertiesRequest::class;
   protected $updateImagePropertiesDataType = '';
   protected $updateLineCategoryType = UpdateLineCategoryRequest::class;
@@ -108,6 +118,23 @@ class Request extends \Google\Model
   protected $updateVideoPropertiesType = UpdateVideoPropertiesRequest::class;
   protected $updateVideoPropertiesDataType = '';
 
+  /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param AddCommentReplyRequest $addCommentReply
+   */
+  public function setAddCommentReply(AddCommentReplyRequest $addCommentReply)
+  {
+    $this->addCommentReply = $addCommentReply;
+  }
+  /**
+   * @return AddCommentReplyRequest
+   */
+  public function getAddCommentReply()
+  {
+    return $this->addCommentReply;
+  }
   /**
    * Creates an image.
    *
@@ -237,6 +264,40 @@ class Request extends \Google\Model
     return $this->createVideo;
   }
   /**
+   * Deletes a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param DeleteCommentRequest $deleteComment
+   */
+  public function setDeleteComment(DeleteCommentRequest $deleteComment)
+  {
+    $this->deleteComment = $deleteComment;
+  }
+  /**
+   * @return DeleteCommentRequest
+   */
+  public function getDeleteComment()
+  {
+    return $this->deleteComment;
+  }
+  /**
+   * Deletes a reply Post from a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param DeleteCommentReplyRequest $deleteCommentReply
+   */
+  public function setDeleteCommentReply(DeleteCommentReplyRequest $deleteCommentReply)
+  {
+    $this->deleteCommentReply = $deleteCommentReply;
+  }
+  /**
+   * @return DeleteCommentReplyRequest
+   */
+  public function getDeleteCommentReply()
+  {
+    return $this->deleteCommentReply;
+  }
+  /**
    * Deletes a page or page element from the presentation.
    *
    * @param DeleteObjectRequest $deleteObject
@@ -347,6 +408,23 @@ class Request extends \Google\Model
   public function getGroupObjects()
   {
     return $this->groupObjects;
+  }
+  /**
+   * Inserts a CommentThread into the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param InsertCommentRequest $insertComment
+   */
+  public function setInsertComment(InsertCommentRequest $insertComment)
+  {
+    $this->insertComment = $insertComment;
+  }
+  /**
+   * @return InsertCommentRequest
+   */
+  public function getInsertComment()
+  {
+    return $this->insertComment;
   }
   /**
    * Inserts columns into a table.
@@ -540,6 +618,23 @@ class Request extends \Google\Model
   public function getUnmergeTableCells()
   {
     return $this->unmergeTableCells;
+  }
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread.
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param UpdateCommentPostRequest $updateCommentPost
+   */
+  public function setUpdateCommentPost(UpdateCommentPostRequest $updateCommentPost)
+  {
+    $this->updateCommentPost = $updateCommentPost;
+  }
+  /**
+   * @return UpdateCommentPostRequest
+   */
+  public function getUpdateCommentPost()
+  {
+    return $this->updateCommentPost;
   }
   /**
    * Updates the properties of an Image.

@@ -106,6 +106,10 @@ class Slides extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'commentsViewMode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]
@@ -130,6 +134,10 @@ class Slides extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'commentsViewMode' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'getThumbnail' => [

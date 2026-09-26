@@ -19,7 +19,30 @@ namespace Google\Service\Slides;
 
 class BatchUpdatePresentationResponse extends \Google\Collection
 {
+  /**
+   * The status of comment updates is unspecified.
+   */
+  public const COMMENT_UPDATE_STATE_COMMENT_UPDATE_STATE_UNSPECIFIED = 'COMMENT_UPDATE_STATE_UNSPECIFIED';
+  /**
+   * No comment updates were requested in the batch request.
+   */
+  public const COMMENT_UPDATE_STATE_NO_UPDATES_REQUESTED = 'NO_UPDATES_REQUESTED';
+  /**
+   * All requested comment updates were applied in the batch request.
+   */
+  public const COMMENT_UPDATE_STATE_ALL_SAVED = 'ALL_SAVED';
+  /**
+   * All requested comment updates failed.
+   */
+  public const COMMENT_UPDATE_STATE_ALL_FAILED_UNKNOWN_REASON = 'ALL_FAILED_UNKNOWN_REASON';
   protected $collection_key = 'replies';
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @var string
+   */
+  public $commentUpdateState;
   /**
    * The presentation the updates were applied to.
    *
@@ -31,6 +54,26 @@ class BatchUpdatePresentationResponse extends \Google\Collection
   protected $writeControlType = WriteControl::class;
   protected $writeControlDataType = '';
 
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * Accepted values: COMMENT_UPDATE_STATE_UNSPECIFIED, NO_UPDATES_REQUESTED,
+   * ALL_SAVED, ALL_FAILED_UNKNOWN_REASON
+   *
+   * @param self::COMMENT_UPDATE_STATE_* $commentUpdateState
+   */
+  public function setCommentUpdateState($commentUpdateState)
+  {
+    $this->commentUpdateState = $commentUpdateState;
+  }
+  /**
+   * @return self::COMMENT_UPDATE_STATE_*
+   */
+  public function getCommentUpdateState()
+  {
+    return $this->commentUpdateState;
+  }
   /**
    * The presentation the updates were applied to.
    *

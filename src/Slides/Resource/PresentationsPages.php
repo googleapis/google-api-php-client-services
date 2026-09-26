@@ -37,6 +37,11 @@ class PresentationsPages extends \Google\Service\Resource
    * @param string $presentationId The ID of the presentation to retrieve.
    * @param string $pageObjectId The object ID of the page to retrieve.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string commentsViewMode The comments view mode to apply to the
+   * page. This allows viewing the page with comments omitted or included. If one
+   * is not specified, COMMENTS_VIEW_MODE_OMITTED is used. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
    * @return Page
    * @throws \Google\Service\Exception
    */

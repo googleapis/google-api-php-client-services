@@ -20,6 +20,27 @@ namespace Google\Service\Slides;
 class Page extends \Google\Collection
 {
   /**
+   * The CommentsViewMode is unspecified; COMMENTS_VIEW_MODE_OMITTED is applied.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_UNSPECIFIED = 'COMMENTS_VIEW_MODE_UNSPECIFIED';
+  /**
+   * The CommentsViewMode applied to the returned presentation depends on the
+   * user's current access level. If the user only has view access,
+   * COMMENTS_VIEW_MODE_OMITTED is applied. Otherwise,
+   * COMMENTS_VIEW_MODE_INCLUDED is applied.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS = 'COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS';
+  /**
+   * The returned presentation has comments omitted.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_OMITTED = 'COMMENTS_VIEW_MODE_OMITTED';
+  /**
+   * The returned presentation has comments included. Requests to retrieve a
+   * presentation using this mode will return a 403 error if the user does not
+   * have permission to view comments.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_INCLUDED = 'COMMENTS_VIEW_MODE_INCLUDED';
+  /**
    * A slide page.
    */
   public const PAGE_TYPE_SLIDE = 'SLIDE';
@@ -40,6 +61,19 @@ class Page extends \Google\Collection
    */
   public const PAGE_TYPE_NOTES_MASTER = 'NOTES_MASTER';
   protected $collection_key = 'pageElements';
+  protected $commentAnchorsType = CommentAnchor::class;
+  protected $commentAnchorsDataType = 'array';
+  protected $commentsType = CommentThread::class;
+  protected $commentsDataType = 'array';
+  /**
+   * Output only. The comments view mode applied to the page. Only populated if
+   * the page was fetched via a GetPageRequest with a populated
+   * comments_view_mode. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @var string
+   */
+  public $commentsViewMode;
   protected $layoutPropertiesType = LayoutProperties::class;
   protected $layoutPropertiesDataType = '';
   protected $masterPropertiesType = MasterProperties::class;
@@ -82,6 +116,66 @@ class Page extends \Google\Collection
   protected $slidePropertiesType = SlideProperties::class;
   protected $slidePropertiesDataType = '';
 
+  /**
+   * Output only. The comment anchors present on the page. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param CommentAnchor[] $commentAnchors
+   */
+  public function setCommentAnchors($commentAnchors)
+  {
+    $this->commentAnchors = $commentAnchors;
+  }
+  /**
+   * @return CommentAnchor[]
+   */
+  public function getCommentAnchors()
+  {
+    return $this->commentAnchors;
+  }
+  /**
+   * Output only. The comment threads associated with the page. Only populated
+   * if the page was fetched via a GetPageRequest with a populated
+   * comments_view_mode. Otherwise, comments are returned in the Presentation
+   * via the GetPresentationRequest. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param CommentThread[] $comments
+   */
+  public function setComments($comments)
+  {
+    $this->comments = $comments;
+  }
+  /**
+   * @return CommentThread[]
+   */
+  public function getComments()
+  {
+    return $this->comments;
+  }
+  /**
+   * Output only. The comments view mode applied to the page. Only populated if
+   * the page was fetched via a GetPageRequest with a populated
+   * comments_view_mode. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * Accepted values: COMMENTS_VIEW_MODE_UNSPECIFIED,
+   * COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, COMMENTS_VIEW_MODE_OMITTED,
+   * COMMENTS_VIEW_MODE_INCLUDED
+   *
+   * @param self::COMMENTS_VIEW_MODE_* $commentsViewMode
+   */
+  public function setCommentsViewMode($commentsViewMode)
+  {
+    $this->commentsViewMode = $commentsViewMode;
+  }
+  /**
+   * @return self::COMMENTS_VIEW_MODE_*
+   */
+  public function getCommentsViewMode()
+  {
+    return $this->commentsViewMode;
+  }
   /**
    * Layout specific properties. Only set if page_type = LAYOUT.
    *
