@@ -31,6 +31,19 @@ class User extends \Google\Collection
    * Database user that can authenticate via IAM-Based authentication.
    */
   public const USER_TYPE_ALLOYDB_IAM_USER = 'ALLOYDB_IAM_USER';
+  /**
+   * Database user that represents an IAM group whose members can authenticate
+   * via IAM group-based authentication.
+   */
+  public const USER_TYPE_ALLOYDB_IAM_GROUP = 'ALLOYDB_IAM_GROUP';
+  /**
+   * Represents a user that belongs to an IAM group.
+   */
+  public const USER_TYPE_ALLOYDB_IAM_GROUP_USER = 'ALLOYDB_IAM_GROUP_USER';
+  /**
+   * Represents a service account that belongs to an IAM group.
+   */
+  public const USER_TYPE_ALLOYDB_IAM_GROUP_SERVICE_ACCOUNT = 'ALLOYDB_IAM_GROUP_SERVICE_ACCOUNT';
   protected $collection_key = 'databaseRoles';
   /**
    * Optional. List of database roles this user has. The database role strings
@@ -136,7 +149,9 @@ class User extends \Google\Collection
   /**
    * Optional. Type of this user.
    *
-   * Accepted values: USER_TYPE_UNSPECIFIED, ALLOYDB_BUILT_IN, ALLOYDB_IAM_USER
+   * Accepted values: USER_TYPE_UNSPECIFIED, ALLOYDB_BUILT_IN, ALLOYDB_IAM_USER,
+   * ALLOYDB_IAM_GROUP, ALLOYDB_IAM_GROUP_USER,
+   * ALLOYDB_IAM_GROUP_SERVICE_ACCOUNT
    *
    * @param self::USER_TYPE_* $userType
    */
