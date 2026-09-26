@@ -51,6 +51,17 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
    * @var string[]
    */
   public $assistSkippedReasons;
+  /**
+   * Output only. Maps an internal connector agent name (the machine identifier
+   * embedded in tool names, e.g. `custom_mcp__agent`) to the connector's human-
+   * readable display name. Populated at serving time for custom MCP / agent
+   * gateway connectors so user-facing surfaces (e.g. the tool-call chip) can
+   * show the connector name instead of its internal identifier. Empty when
+   * there are no such connectors.
+   *
+   * @var string[]
+   */
+  public $connectorDisplayNames;
   protected $customerPolicyEnforcementResultType = GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult::class;
   protected $customerPolicyEnforcementResultDataType = '';
   /**
@@ -86,6 +97,27 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
   public function getAssistSkippedReasons()
   {
     return $this->assistSkippedReasons;
+  }
+  /**
+   * Output only. Maps an internal connector agent name (the machine identifier
+   * embedded in tool names, e.g. `custom_mcp__agent`) to the connector's human-
+   * readable display name. Populated at serving time for custom MCP / agent
+   * gateway connectors so user-facing surfaces (e.g. the tool-call chip) can
+   * show the connector name instead of its internal identifier. Empty when
+   * there are no such connectors.
+   *
+   * @param string[] $connectorDisplayNames
+   */
+  public function setConnectorDisplayNames($connectorDisplayNames)
+  {
+    $this->connectorDisplayNames = $connectorDisplayNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getConnectorDisplayNames()
+  {
+    return $this->connectorDisplayNames;
   }
   /**
    * Optional. The field contains information about the various policy checks'
