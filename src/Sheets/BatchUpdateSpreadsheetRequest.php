@@ -19,7 +19,38 @@ namespace Google\Service\Sheets;
 
 class BatchUpdateSpreadsheetRequest extends \Google\Collection
 {
+  /**
+   * The CommentsViewMode is unspecified; COMMENTS_VIEW_MODE_OMITTED is applied.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_UNSPECIFIED = 'COMMENTS_VIEW_MODE_UNSPECIFIED';
+  /**
+   * The CommentsViewMode applied to the returned spreadsheet depends on the
+   * user's current access level. If the user only has view access,
+   * COMMENTS_VIEW_MODE_OMITTED is applied. Otherwise,
+   * COMMENTS_VIEW_MODE_INCLUDED is applied.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS = 'COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS';
+  /**
+   * The returned spreadsheet has comments omitted.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_OMITTED = 'COMMENTS_VIEW_MODE_OMITTED';
+  /**
+   * The returned spreadsheet has comments included. Requests to retrieve a
+   * spreadsheet using this mode will return a 403 error if the user does not
+   * have permission to view comments.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_INCLUDED = 'COMMENTS_VIEW_MODE_INCLUDED';
   protected $collection_key = 'responseRanges';
+  /**
+   * The comments view mode to apply to the spreadsheet. This allows viewing the
+   * spreadsheet with comments omitted or included. If one is not specified,
+   * COMMENTS_VIEW_MODE_OMITTED is used. Meaningful only if
+   * include_spreadsheet_in_response is 'true'. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @var string
+   */
+  public $commentsViewMode;
   /**
    * Determines if the update response should include the spreadsheet resource.
    *
@@ -44,6 +75,30 @@ class BatchUpdateSpreadsheetRequest extends \Google\Collection
    */
   public $responseRanges;
 
+  /**
+   * The comments view mode to apply to the spreadsheet. This allows viewing the
+   * spreadsheet with comments omitted or included. If one is not specified,
+   * COMMENTS_VIEW_MODE_OMITTED is used. Meaningful only if
+   * include_spreadsheet_in_response is 'true'. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * Accepted values: COMMENTS_VIEW_MODE_UNSPECIFIED,
+   * COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, COMMENTS_VIEW_MODE_OMITTED,
+   * COMMENTS_VIEW_MODE_INCLUDED
+   *
+   * @param self::COMMENTS_VIEW_MODE_* $commentsViewMode
+   */
+  public function setCommentsViewMode($commentsViewMode)
+  {
+    $this->commentsViewMode = $commentsViewMode;
+  }
+  /**
+   * @return self::COMMENTS_VIEW_MODE_*
+   */
+  public function getCommentsViewMode()
+  {
+    return $this->commentsViewMode;
+  }
   /**
    * Determines if the update response should include the spreadsheet resource.
    *

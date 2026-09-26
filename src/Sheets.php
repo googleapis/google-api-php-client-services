@@ -102,6 +102,10 @@ class Sheets extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'commentsViewMode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'excludeTablesInBandedRanges' => [
                   'location' => 'query',
                   'type' => 'boolean',

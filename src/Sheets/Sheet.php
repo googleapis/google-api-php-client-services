@@ -28,6 +28,8 @@ class Sheet extends \Google\Collection
   protected $chartsDataType = 'array';
   protected $columnGroupsType = DimensionGroup::class;
   protected $columnGroupsDataType = 'array';
+  protected $commentAnchorsType = CommentAnchor::class;
+  protected $commentAnchorsDataType = 'array';
   protected $conditionalFormatsType = ConditionalFormatRule::class;
   protected $conditionalFormatsDataType = 'array';
   protected $dataType = GridData::class;
@@ -113,6 +115,23 @@ class Sheet extends \Google\Collection
   public function getColumnGroups()
   {
     return $this->columnGroups;
+  }
+  /**
+   * The comment anchors on this sheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param CommentAnchor[] $commentAnchors
+   */
+  public function setCommentAnchors($commentAnchors)
+  {
+    $this->commentAnchors = $commentAnchors;
+  }
+  /**
+   * @return CommentAnchor[]
+   */
+  public function getCommentAnchors()
+  {
+    return $this->commentAnchors;
   }
   /**
    * The conditional format rules in this sheet.

@@ -19,7 +19,30 @@ namespace Google\Service\Sheets;
 
 class BatchUpdateSpreadsheetResponse extends \Google\Collection
 {
+  /**
+   * The status of comment updates is unspecified.
+   */
+  public const COMMENT_UPDATE_STATE_COMMENT_UPDATE_STATE_UNSPECIFIED = 'COMMENT_UPDATE_STATE_UNSPECIFIED';
+  /**
+   * No comment updates were requested in the batch request.
+   */
+  public const COMMENT_UPDATE_STATE_NO_UPDATES_REQUESTED = 'NO_UPDATES_REQUESTED';
+  /**
+   * All requested comment updates were applied in the batch request.
+   */
+  public const COMMENT_UPDATE_STATE_ALL_SAVED = 'ALL_SAVED';
+  /**
+   * All requested comment updates failed.
+   */
+  public const COMMENT_UPDATE_STATE_ALL_FAILED_UNKNOWN_REASON = 'ALL_FAILED_UNKNOWN_REASON';
   protected $collection_key = 'replies';
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @var string
+   */
+  public $commentUpdateState;
   protected $repliesType = Response::class;
   protected $repliesDataType = 'array';
   /**
@@ -31,6 +54,26 @@ class BatchUpdateSpreadsheetResponse extends \Google\Collection
   protected $updatedSpreadsheetType = Spreadsheet::class;
   protected $updatedSpreadsheetDataType = '';
 
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * Accepted values: COMMENT_UPDATE_STATE_UNSPECIFIED, NO_UPDATES_REQUESTED,
+   * ALL_SAVED, ALL_FAILED_UNKNOWN_REASON
+   *
+   * @param self::COMMENT_UPDATE_STATE_* $commentUpdateState
+   */
+  public function setCommentUpdateState($commentUpdateState)
+  {
+    $this->commentUpdateState = $commentUpdateState;
+  }
+  /**
+   * @return self::COMMENT_UPDATE_STATE_*
+   */
+  public function getCommentUpdateState()
+  {
+    return $this->commentUpdateState;
+  }
   /**
    * The reply of the updates. This maps 1:1 with the updates, although replies
    * to some requests may be empty.

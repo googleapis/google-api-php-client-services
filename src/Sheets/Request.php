@@ -23,6 +23,8 @@ class Request extends \Google\Model
   protected $addBandingDataType = '';
   protected $addChartType = AddChartRequest::class;
   protected $addChartDataType = '';
+  protected $addCommentReplyType = AddCommentReplyRequest::class;
+  protected $addCommentReplyDataType = '';
   protected $addConditionalFormatRuleType = AddConditionalFormatRuleRequest::class;
   protected $addConditionalFormatRuleDataType = '';
   protected $addDataSourceType = AddDataSourceRequest::class;
@@ -61,6 +63,10 @@ class Request extends \Google\Model
   protected $cutPasteDataType = '';
   protected $deleteBandingType = DeleteBandingRequest::class;
   protected $deleteBandingDataType = '';
+  protected $deleteCommentType = DeleteCommentRequest::class;
+  protected $deleteCommentDataType = '';
+  protected $deleteCommentReplyType = DeleteCommentReplyRequest::class;
+  protected $deleteCommentReplyDataType = '';
   protected $deleteConditionalFormatRuleType = DeleteConditionalFormatRuleRequest::class;
   protected $deleteConditionalFormatRuleDataType = '';
   protected $deleteDataSourceType = DeleteDataSourceRequest::class;
@@ -93,6 +99,8 @@ class Request extends \Google\Model
   protected $duplicateSheetDataType = '';
   protected $findReplaceType = FindReplaceRequest::class;
   protected $findReplaceDataType = '';
+  protected $insertCommentType = InsertCommentRequest::class;
+  protected $insertCommentDataType = '';
   protected $insertDimensionType = InsertDimensionRequest::class;
   protected $insertDimensionDataType = '';
   protected $insertRangeType = InsertRangeRequest::class;
@@ -129,6 +137,8 @@ class Request extends \Google\Model
   protected $updateCellsDataType = '';
   protected $updateChartSpecType = UpdateChartSpecRequest::class;
   protected $updateChartSpecDataType = '';
+  protected $updateCommentPostType = UpdateCommentPostRequest::class;
+  protected $updateCommentPostDataType = '';
   protected $updateConditionalFormatRuleType = UpdateConditionalFormatRuleRequest::class;
   protected $updateConditionalFormatRuleDataType = '';
   protected $updateDataSourceType = UpdateDataSourceRequest::class;
@@ -189,6 +199,23 @@ class Request extends \Google\Model
   public function getAddChart()
   {
     return $this->addChart;
+  }
+  /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param AddCommentReplyRequest $addCommentReply
+   */
+  public function setAddCommentReply(AddCommentReplyRequest $addCommentReply)
+  {
+    $this->addCommentReply = $addCommentReply;
+  }
+  /**
+   * @return AddCommentReplyRequest
+   */
+  public function getAddCommentReply()
+  {
+    return $this->addCommentReply;
   }
   /**
    * Adds a new conditional format rule.
@@ -496,6 +523,40 @@ class Request extends \Google\Model
     return $this->deleteBanding;
   }
   /**
+   * Deletes a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param DeleteCommentRequest $deleteComment
+   */
+  public function setDeleteComment(DeleteCommentRequest $deleteComment)
+  {
+    $this->deleteComment = $deleteComment;
+  }
+  /**
+   * @return DeleteCommentRequest
+   */
+  public function getDeleteComment()
+  {
+    return $this->deleteComment;
+  }
+  /**
+   * Deletes a reply Post from a CommentThread [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param DeleteCommentReplyRequest $deleteCommentReply
+   */
+  public function setDeleteCommentReply(DeleteCommentReplyRequest $deleteCommentReply)
+  {
+    $this->deleteCommentReply = $deleteCommentReply;
+  }
+  /**
+   * @return DeleteCommentReplyRequest
+   */
+  public function getDeleteCommentReply()
+  {
+    return $this->deleteCommentReply;
+  }
+  /**
    * Deletes an existing conditional format rule.
    *
    * @param DeleteConditionalFormatRuleRequest $deleteConditionalFormatRule
@@ -751,6 +812,23 @@ class Request extends \Google\Model
   public function getFindReplace()
   {
     return $this->findReplace;
+  }
+  /**
+   * Inserts a CommentThread into the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param InsertCommentRequest $insertComment
+   */
+  public function setInsertComment(InsertCommentRequest $insertComment)
+  {
+    $this->insertComment = $insertComment;
+  }
+  /**
+   * @return InsertCommentRequest
+   */
+  public function getInsertComment()
+  {
+    return $this->insertComment;
   }
   /**
    * Inserts new rows or columns in a sheet.
@@ -1039,6 +1117,23 @@ class Request extends \Google\Model
   public function getUpdateChartSpec()
   {
     return $this->updateChartSpec;
+  }
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread.
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param UpdateCommentPostRequest $updateCommentPost
+   */
+  public function setUpdateCommentPost(UpdateCommentPostRequest $updateCommentPost)
+  {
+    $this->updateCommentPost = $updateCommentPost;
+  }
+  /**
+   * @return UpdateCommentPostRequest
+   */
+  public function getUpdateCommentPost()
+  {
+    return $this->updateCommentPost;
   }
   /**
    * Updates an existing conditional format rule.

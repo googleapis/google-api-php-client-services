@@ -23,6 +23,8 @@ class Response extends \Google\Model
   protected $addBandingDataType = '';
   protected $addChartType = AddChartResponse::class;
   protected $addChartDataType = '';
+  protected $addCommentReplyType = AddCommentReplyResponse::class;
+  protected $addCommentReplyDataType = '';
   protected $addDataSourceType = AddDataSourceResponse::class;
   protected $addDataSourceDataType = '';
   protected $addDimensionGroupType = AddDimensionGroupResponse::class;
@@ -57,6 +59,8 @@ class Response extends \Google\Model
   protected $duplicateSheetDataType = '';
   protected $findReplaceType = FindReplaceResponse::class;
   protected $findReplaceDataType = '';
+  protected $insertCommentType = InsertCommentResponse::class;
+  protected $insertCommentDataType = '';
   protected $refreshDataSourceType = RefreshDataSourceResponse::class;
   protected $refreshDataSourceDataType = '';
   protected $trimWhitespaceType = TrimWhitespaceResponse::class;
@@ -101,6 +105,23 @@ class Response extends \Google\Model
   public function getAddChart()
   {
     return $this->addChart;
+  }
+  /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param AddCommentReplyResponse $addCommentReply
+   */
+  public function setAddCommentReply(AddCommentReplyResponse $addCommentReply)
+  {
+    $this->addCommentReply = $addCommentReply;
+  }
+  /**
+   * @return AddCommentReplyResponse
+   */
+  public function getAddCommentReply()
+  {
+    return $this->addCommentReply;
   }
   /**
    * A reply from adding a data source.
@@ -373,6 +394,23 @@ class Response extends \Google\Model
   public function getFindReplace()
   {
     return $this->findReplace;
+  }
+  /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param InsertCommentResponse $insertComment
+   */
+  public function setInsertComment(InsertCommentResponse $insertComment)
+  {
+    $this->insertComment = $insertComment;
+  }
+  /**
+   * @return InsertCommentResponse
+   */
+  public function getInsertComment()
+  {
+    return $this->insertComment;
   }
   /**
    * A reply from refreshing data source objects.

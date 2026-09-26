@@ -95,6 +95,10 @@ class Spreadsheets extends \Google\Service\Resource
    * @param string $spreadsheetId The spreadsheet to request.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string commentsViewMode The comments view mode to apply to the
+   * spreadsheet. This allows viewing the spreadsheet with comments omitted or
+   * included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
+   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @opt_param bool excludeTablesInBandedRanges True if tables should be excluded
    * in the banded ranges. False if not set.
    * @opt_param bool includeGridData True if grid data should be returned. This
