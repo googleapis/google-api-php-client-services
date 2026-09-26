@@ -52,6 +52,7 @@ class DataManager extends \Google\Service
   public $audienceMembers;
   public $events;
   public $requestStatus;
+  public $users;
   public $rootUrlTemplate;
 
   /**
@@ -460,6 +461,24 @@ class DataManager extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],
+          ]
+        ]
+    );
+    $this->users = new DataManager\Resource\Users(
+        $this,
+        $this->serviceName,
+        'users',
+        [
+          'methods' => [
+            'ingest' => [
+              'path' => 'v1/users:ingest',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'remove' => [
+              'path' => 'v1/users:remove',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]
