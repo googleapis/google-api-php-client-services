@@ -44,6 +44,7 @@ class CustomerEngagementSuite extends \Google\Service
   public $projects_locations;
   public $projects_locations_apps;
   public $projects_locations_apps_agents;
+  public $projects_locations_apps_assistantSessions;
   public $projects_locations_apps_changelogs;
   public $projects_locations_apps_conversations;
   public $projects_locations_apps_deployments;
@@ -170,6 +171,16 @@ class CustomerEngagementSuite extends \Google\Service
               ],
             ],'exportApp' => [
               'path' => 'v1/{+name}:exportApp',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generateOnboardingSuggestions' => [
+              'path' => 'v1/{+name}:generateOnboardingSuggestions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -348,6 +359,36 @@ class CustomerEngagementSuite extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_apps_assistantSessions = new CustomerEngagementSuite\Resource\ProjectsLocationsAppsAssistantSessions(
+        $this,
+        $this->serviceName,
+        'assistantSessions',
+        [
+          'methods' => [
+            'cancelAssistantTurn' => [
+              'path' => 'v1/{+name}:cancelAssistantTurn',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'streamChatAiAssistant' => [
+              'path' => 'v1/{+name}:streamChatAiAssistant',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

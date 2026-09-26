@@ -20,6 +20,26 @@ namespace Google\Service\CustomerEngagementSuite;
 class ModelSettings extends \Google\Model
 {
   /**
+   * Thinking level is unspecified.
+   */
+  public const THINKING_LEVEL_THINKING_LEVEL_UNSPECIFIED = 'THINKING_LEVEL_UNSPECIFIED';
+  /**
+   * Default thinking level.
+   */
+  public const THINKING_LEVEL_DEFAULT = 'DEFAULT';
+  /**
+   * Low thinking level.
+   */
+  public const THINKING_LEVEL_LOW = 'LOW';
+  /**
+   * Medium thinking level.
+   */
+  public const THINKING_LEVEL_MEDIUM = 'MEDIUM';
+  /**
+   * High thinking level.
+   */
+  public const THINKING_LEVEL_HIGH = 'HIGH';
+  /**
    * Optional. The LLM model that the agent should use. If not set, the agent
    * will inherit the model from its parent agent.
    *
@@ -35,6 +55,12 @@ class ModelSettings extends \Google\Model
    * @var 
    */
   public $temperature;
+  /**
+   * Optional. The thinking level of the model.
+   *
+   * @var string
+   */
+  public $thinkingLevel;
 
   /**
    * Optional. The LLM model that the agent should use. If not set, the agent
@@ -60,6 +86,24 @@ class ModelSettings extends \Google\Model
   public function getTemperature()
   {
     return $this->temperature;
+  }
+  /**
+   * Optional. The thinking level of the model.
+   *
+   * Accepted values: THINKING_LEVEL_UNSPECIFIED, DEFAULT, LOW, MEDIUM, HIGH
+   *
+   * @param self::THINKING_LEVEL_* $thinkingLevel
+   */
+  public function setThinkingLevel($thinkingLevel)
+  {
+    $this->thinkingLevel = $thinkingLevel;
+  }
+  /**
+   * @return self::THINKING_LEVEL_*
+   */
+  public function getThinkingLevel()
+  {
+    return $this->thinkingLevel;
   }
 }
 

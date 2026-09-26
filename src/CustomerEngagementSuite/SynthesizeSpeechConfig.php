@@ -20,14 +20,6 @@ namespace Google\Service\CustomerEngagementSuite;
 class SynthesizeSpeechConfig extends \Google\Model
 {
   /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig
-   * instead. The Cloud Storage URI to the consent audio for voice cloning.
-   *
-   * @deprecated
-   * @var string
-   */
-  public $consentAudioGcsUri;
-  /**
    * Optional. The instruction used to synthesize speech when using a generative
    * model.
    *
@@ -60,37 +52,7 @@ class SynthesizeSpeechConfig extends \Google\Model
    * @var string
    */
   public $voice;
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig
-   * instead. The Cloud Storage URI to the audio sample for voice cloning. The
-   * audio sample should be a mono-channel, 24kHz WAV file. Note: Please make
-   * sure the CES service agent `service-@gcp-sa-ces.iam.gserviceaccount.com`
-   * has `storage.objects.get` permission to the Cloud Storage object.
-   *
-   * @deprecated
-   * @var string
-   */
-  public $voiceSampleGcsUri;
 
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig
-   * instead. The Cloud Storage URI to the consent audio for voice cloning.
-   *
-   * @deprecated
-   * @param string $consentAudioGcsUri
-   */
-  public function setConsentAudioGcsUri($consentAudioGcsUri)
-  {
-    $this->consentAudioGcsUri = $consentAudioGcsUri;
-  }
-  /**
-   * @deprecated
-   * @return string
-   */
-  public function getConsentAudioGcsUri()
-  {
-    return $this->consentAudioGcsUri;
-  }
   /**
    * Optional. The instruction used to synthesize speech when using a generative
    * model.
@@ -152,28 +114,6 @@ class SynthesizeSpeechConfig extends \Google\Model
   public function getVoice()
   {
     return $this->voice;
-  }
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig
-   * instead. The Cloud Storage URI to the audio sample for voice cloning. The
-   * audio sample should be a mono-channel, 24kHz WAV file. Note: Please make
-   * sure the CES service agent `service-@gcp-sa-ces.iam.gserviceaccount.com`
-   * has `storage.objects.get` permission to the Cloud Storage object.
-   *
-   * @deprecated
-   * @param string $voiceSampleGcsUri
-   */
-  public function setVoiceSampleGcsUri($voiceSampleGcsUri)
-  {
-    $this->voiceSampleGcsUri = $voiceSampleGcsUri;
-  }
-  /**
-   * @deprecated
-   * @return string
-   */
-  public function getVoiceSampleGcsUri()
-  {
-    return $this->voiceSampleGcsUri;
   }
 }
 

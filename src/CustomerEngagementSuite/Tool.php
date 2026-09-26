@@ -98,6 +98,13 @@ class Tool extends \Google\Model
   protected $openApiToolDataType = '';
   protected $pythonFunctionType = PythonFunction::class;
   protected $pythonFunctionDataType = '';
+  /**
+   * Output only. Indicates whether the tool is read-only. If true, the tool
+   * cannot be modified by the user.
+   *
+   * @var bool
+   */
+  public $readOnly;
   protected $remoteAgentToolType = RemoteAgentTool::class;
   protected $remoteAgentToolDataType = '';
   protected $systemToolType = SystemTool::class;
@@ -373,6 +380,23 @@ class Tool extends \Google\Model
   public function getPythonFunction()
   {
     return $this->pythonFunction;
+  }
+  /**
+   * Output only. Indicates whether the tool is read-only. If true, the tool
+   * cannot be modified by the user.
+   *
+   * @param bool $readOnly
+   */
+  public function setReadOnly($readOnly)
+  {
+    $this->readOnly = $readOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getReadOnly()
+  {
+    return $this->readOnly;
   }
   /**
    * Optional. The remote agent tool.

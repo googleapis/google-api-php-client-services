@@ -66,6 +66,10 @@ class GuardrailSupervisor extends \Google\Model
    */
   public const TYPE_CHOPPY_AUDIO = 'CHOPPY_AUDIO';
   /**
+   * Agent profanity issue type.
+   */
+  public const TYPE_PROFANITY = 'PROFANITY';
+  /**
    * Optional. The detection mode of the supervisor.
    *
    * @var string
@@ -100,7 +104,8 @@ class GuardrailSupervisor extends \Google\Model
    * Optional. The type of the supervisor.
    *
    * Accepted values: TYPE_UNSPECIFIED, INVALID_TEXT, LANGUAGE_SHIFT,
-   * SPEAKER_SHIFT, AUDIO_MISMATCH, MISSING_TOOL_CALL, CUSTOM, CHOPPY_AUDIO
+   * SPEAKER_SHIFT, AUDIO_MISMATCH, MISSING_TOOL_CALL, CUSTOM, CHOPPY_AUDIO,
+   * PROFANITY
    *
    * @param self::TYPE_* $type
    */
