@@ -209,6 +209,12 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
    */
   public $requestedVerifyOption;
   /**
+   * Output only. Worker release resolved from the release channel.
+   *
+   * @var string
+   */
+  public $resolvedWorkerRelease;
+  /**
    * A list of global environment variables, which are encrypted using a Cloud
    * Key Management Service crypto key. These values must be specified in the
    * build's `Secret`. These variables will be available to all build steps in
@@ -240,6 +246,13 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
    * @var string
    */
   public $workerPool;
+  /**
+   * Optional. Option to specify which release or release channel
+   * (rapid|regular|stable) to use to run this build.
+   *
+   * @var string
+   */
+  public $workerRelease;
 
   /**
    * Option to include built-in and custom substitutions as env variables for
@@ -464,6 +477,22 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
     return $this->requestedVerifyOption;
   }
   /**
+   * Output only. Worker release resolved from the release channel.
+   *
+   * @param string $resolvedWorkerRelease
+   */
+  public function setResolvedWorkerRelease($resolvedWorkerRelease)
+  {
+    $this->resolvedWorkerRelease = $resolvedWorkerRelease;
+  }
+  /**
+   * @return string
+   */
+  public function getResolvedWorkerRelease()
+  {
+    return $this->resolvedWorkerRelease;
+  }
+  /**
    * A list of global environment variables, which are encrypted using a Cloud
    * Key Management Service crypto key. These values must be specified in the
    * build's `Secret`. These variables will be available to all build steps in
@@ -556,6 +585,23 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
   public function getWorkerPool()
   {
     return $this->workerPool;
+  }
+  /**
+   * Optional. Option to specify which release or release channel
+   * (rapid|regular|stable) to use to run this build.
+   *
+   * @param string $workerRelease
+   */
+  public function setWorkerRelease($workerRelease)
+  {
+    $this->workerRelease = $workerRelease;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkerRelease()
+  {
+    return $this->workerRelease;
   }
 }
 
