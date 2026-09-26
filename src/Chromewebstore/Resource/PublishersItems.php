@@ -19,7 +19,6 @@ namespace Google\Service\Chromewebstore\Resource;
 
 use Google\Service\Chromewebstore\CancelSubmissionRequest;
 use Google\Service\Chromewebstore\CancelSubmissionResponse;
-use Google\Service\Chromewebstore\FetchItemReviewsResponse;
 use Google\Service\Chromewebstore\FetchItemStatusResponse;
 use Google\Service\Chromewebstore\PublishItemRequest;
 use Google\Service\Chromewebstore\PublishItemResponse;
@@ -52,36 +51,6 @@ class PublishersItems extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('cancelSubmission', [$params], CancelSubmissionResponse::class);
-  }
-  /**
-   * Fetch user reviews for an item. (items.fetchReviews)
-   *
-   * @param string $name Required. The item resource name whose reviews are being
-   * fetched. Format: publishers/{publisher_id}/items/{item_id}
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter Optional. A filter to apply to the reviews. Only
-   * equality comparison on rating is supported, e.g. `rating = 5`.
-   * @opt_param string orderBy Optional. An optional comma-separated list of
-   * fields by which to sort the results. Supported fields are `rating` and
-   * `create_time`. Supported orders are `asc` (default) and `desc`. Example:
-   * "rating desc, create_time".
-   * @opt_param int pageSize Optional. The maximum number of reviews to return.
-   * The service may return fewer than this value. If unspecified, at most 50
-   * reviews will be returned. The maximum value is 200; values above 200 will be
-   * coerced to 200.
-   * @opt_param string pageToken Optional. A page token, received from a previous
-   * `FetchItemReviews` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `FetchItemReviews` must match
-   * the call that provided the page token.
-   * @return FetchItemReviewsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function fetchReviews($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('fetchReviews', [$params], FetchItemReviewsResponse::class);
   }
   /**
    * Fetch the status of an item. (items.fetchStatus)
