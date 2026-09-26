@@ -27,6 +27,21 @@ class GoogleDevtoolsCloudbuildV1PoolOption extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * Output only. OUTPUT_ONLY. Worker release resolved from the release channel.
+   *
+   * @var string
+   */
+  public $resolvedWorkerRelease;
+  /**
+   * Output only. OUTPUT_ONLY. The release or release channel used to run the
+   * Build. This is set to the same value as
+   * `PrivatePoolV1Config.WorkerConfig.worker_release` for the UI to easily
+   * access.
+   *
+   * @var string
+   */
+  public $workerRelease;
 
   /**
    * The `WorkerPool` resource to execute the build on. You must have
@@ -45,6 +60,41 @@ class GoogleDevtoolsCloudbuildV1PoolOption extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. OUTPUT_ONLY. Worker release resolved from the release channel.
+   *
+   * @param string $resolvedWorkerRelease
+   */
+  public function setResolvedWorkerRelease($resolvedWorkerRelease)
+  {
+    $this->resolvedWorkerRelease = $resolvedWorkerRelease;
+  }
+  /**
+   * @return string
+   */
+  public function getResolvedWorkerRelease()
+  {
+    return $this->resolvedWorkerRelease;
+  }
+  /**
+   * Output only. OUTPUT_ONLY. The release or release channel used to run the
+   * Build. This is set to the same value as
+   * `PrivatePoolV1Config.WorkerConfig.worker_release` for the UI to easily
+   * access.
+   *
+   * @param string $workerRelease
+   */
+  public function setWorkerRelease($workerRelease)
+  {
+    $this->workerRelease = $workerRelease;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkerRelease()
+  {
+    return $this->workerRelease;
   }
 }
 
