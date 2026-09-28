@@ -24,17 +24,17 @@ class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfigFrameSource 
    */
   public $globPattern;
   /**
-   * Horizontal offset in pixels to shift the input frame from center. Positive
-   * values shift right, negative values shift left. Optional. Default is 0
-   * (centered).
+   * Horizontal offset in pixels of the frame's left edge from the canvas's left
+   * edge. Values outside the canvas crop the frame. Optional. Default is 0
+   * (frame flush with the canvas's left edge).
    *
    * @var int
    */
   public $horizontalOffset;
   /**
-   * Vertical offset in pixels to shift the input frame from center. Positive
-   * values shift down, negative values shift up. Optional. Default is 0
-   * (centered).
+   * Vertical offset in pixels of the frame's top edge from the canvas's top
+   * edge. Values outside the canvas crop the frame. Optional. Default is 0
+   * (frame flush with the canvas's top edge).
    *
    * @var int
    */
@@ -55,9 +55,9 @@ class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfigFrameSource 
     return $this->globPattern;
   }
   /**
-   * Horizontal offset in pixels to shift the input frame from center. Positive
-   * values shift right, negative values shift left. Optional. Default is 0
-   * (centered).
+   * Horizontal offset in pixels of the frame's left edge from the canvas's left
+   * edge. Values outside the canvas crop the frame. Optional. Default is 0
+   * (frame flush with the canvas's left edge).
    *
    * @param int $horizontalOffset
    */
@@ -73,9 +73,9 @@ class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfigFrameSource 
     return $this->horizontalOffset;
   }
   /**
-   * Vertical offset in pixels to shift the input frame from center. Positive
-   * values shift down, negative values shift up. Optional. Default is 0
-   * (centered).
+   * Vertical offset in pixels of the frame's top edge from the canvas's top
+   * edge. Values outside the canvas crop the frame. Optional. Default is 0
+   * (frame flush with the canvas's top edge).
    *
    * @param int $verticalOffset
    */

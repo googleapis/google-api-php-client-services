@@ -32,6 +32,11 @@ class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig extends \Go
    * Low spec: 960x544 resolution, 432 total frames.
    */
   public const OUTPUT_SPEC_OUTPUT_SPEC_960X544x432 = 'OUTPUT_SPEC_960X544x432';
+  /**
+   * Medium spec at 1280x720, 144 total frames. Shorter than
+   * OUTPUT_SPEC_1280X720x192 and higher quality at the same resolution.
+   */
+  public const OUTPUT_SPEC_OUTPUT_SPEC_1280X720x144 = 'OUTPUT_SPEC_1280X720x144';
   protected $collection_key = 'inputFrames';
   protected $inputFramesType = CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfigFrameSource::class;
   protected $inputFramesDataType = 'array';
@@ -64,7 +69,7 @@ class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig extends \Go
    * Required.
    *
    * Accepted values: OUTPUT_SPEC_UNSPECIFIED, OUTPUT_SPEC_1920X1072x72,
-   * OUTPUT_SPEC_1280X720x192, OUTPUT_SPEC_960X544x432
+   * OUTPUT_SPEC_1280X720x192, OUTPUT_SPEC_960X544x432, OUTPUT_SPEC_1280X720x144
    *
    * @param self::OUTPUT_SPEC_* $outputSpec
    */
