@@ -20,6 +20,20 @@ namespace Google\Service\FirebaseCrashlytics;
 class IntervalMetrics extends \Google\Model
 {
   /**
+   * Mobile only. Percentage of crash-free sessions. (total_sessions_count -
+   * impacted_sessions_count) / total_sessions_count * 100.
+   *
+   * @var float
+   */
+  public $crashFreeSessionsPercentage;
+  /**
+   * Mobile only. Percentage of crash-free users. (total_users_count -
+   * impacted_users_count) / total_users_count * 100
+   *
+   * @var float
+   */
+  public $crashFreeUsersPercentage;
+  /**
    * The end of the interval covered by the computation.
    *
    * @var string
@@ -32,14 +46,22 @@ class IntervalMetrics extends \Google\Model
    */
   public $eventsCount;
   /**
+   * The number of distinct sessions in the set of events.
+   *
+   * @var string
+   */
+  public $impactedSessionsCount;
+  /**
    * The number of distinct users in the set of events.
    *
    * @var string
    */
   public $impactedUsersCount;
   /**
-   * The number of distinct sessions in the set of events.
+   * Deprecated: Prefer `impacted_sessions_count`. The number of distinct
+   * sessions in the set of events.
    *
+   * @deprecated
    * @var string
    */
   public $sessionsCount;
@@ -49,7 +71,53 @@ class IntervalMetrics extends \Google\Model
    * @var string
    */
   public $startTime;
+  /**
+   * The number of distinct sessions.
+   *
+   * @var string
+   */
+  public $totalSessionsCount;
+  /**
+   * The number of distinct users.
+   *
+   * @var string
+   */
+  public $totalUsersCount;
 
+  /**
+   * Mobile only. Percentage of crash-free sessions. (total_sessions_count -
+   * impacted_sessions_count) / total_sessions_count * 100.
+   *
+   * @param float $crashFreeSessionsPercentage
+   */
+  public function setCrashFreeSessionsPercentage($crashFreeSessionsPercentage)
+  {
+    $this->crashFreeSessionsPercentage = $crashFreeSessionsPercentage;
+  }
+  /**
+   * @return float
+   */
+  public function getCrashFreeSessionsPercentage()
+  {
+    return $this->crashFreeSessionsPercentage;
+  }
+  /**
+   * Mobile only. Percentage of crash-free users. (total_users_count -
+   * impacted_users_count) / total_users_count * 100
+   *
+   * @param float $crashFreeUsersPercentage
+   */
+  public function setCrashFreeUsersPercentage($crashFreeUsersPercentage)
+  {
+    $this->crashFreeUsersPercentage = $crashFreeUsersPercentage;
+  }
+  /**
+   * @return float
+   */
+  public function getCrashFreeUsersPercentage()
+  {
+    return $this->crashFreeUsersPercentage;
+  }
   /**
    * The end of the interval covered by the computation.
    *
@@ -83,6 +151,22 @@ class IntervalMetrics extends \Google\Model
     return $this->eventsCount;
   }
   /**
+   * The number of distinct sessions in the set of events.
+   *
+   * @param string $impactedSessionsCount
+   */
+  public function setImpactedSessionsCount($impactedSessionsCount)
+  {
+    $this->impactedSessionsCount = $impactedSessionsCount;
+  }
+  /**
+   * @return string
+   */
+  public function getImpactedSessionsCount()
+  {
+    return $this->impactedSessionsCount;
+  }
+  /**
    * The number of distinct users in the set of events.
    *
    * @param string $impactedUsersCount
@@ -99,8 +183,10 @@ class IntervalMetrics extends \Google\Model
     return $this->impactedUsersCount;
   }
   /**
-   * The number of distinct sessions in the set of events.
+   * Deprecated: Prefer `impacted_sessions_count`. The number of distinct
+   * sessions in the set of events.
    *
+   * @deprecated
    * @param string $sessionsCount
    */
   public function setSessionsCount($sessionsCount)
@@ -108,6 +194,7 @@ class IntervalMetrics extends \Google\Model
     $this->sessionsCount = $sessionsCount;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getSessionsCount()
@@ -129,6 +216,38 @@ class IntervalMetrics extends \Google\Model
   public function getStartTime()
   {
     return $this->startTime;
+  }
+  /**
+   * The number of distinct sessions.
+   *
+   * @param string $totalSessionsCount
+   */
+  public function setTotalSessionsCount($totalSessionsCount)
+  {
+    $this->totalSessionsCount = $totalSessionsCount;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalSessionsCount()
+  {
+    return $this->totalSessionsCount;
+  }
+  /**
+   * The number of distinct users.
+   *
+   * @param string $totalUsersCount
+   */
+  public function setTotalUsersCount($totalUsersCount)
+  {
+    $this->totalUsersCount = $totalUsersCount;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalUsersCount()
+  {
+    return $this->totalUsersCount;
   }
 }
 
