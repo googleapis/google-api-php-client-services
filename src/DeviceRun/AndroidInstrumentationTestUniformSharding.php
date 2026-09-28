@@ -1,0 +1,54 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\DeviceRun;
+
+class AndroidInstrumentationTestUniformSharding extends \Google\Model
+{
+  /**
+   * Required. The total number of shards to create. This must always be a
+   * positive number that is no greater than the total number of test cases.
+   * Limits: - For physical devices, the number of shards must be <= 20. - For
+   * virtual devices, the number of shards must be <= 200.
+   *
+   * @var int
+   */
+  public $shardCount;
+
+  /**
+   * Required. The total number of shards to create. This must always be a
+   * positive number that is no greater than the total number of test cases.
+   * Limits: - For physical devices, the number of shards must be <= 20. - For
+   * virtual devices, the number of shards must be <= 200.
+   *
+   * @param int $shardCount
+   */
+  public function setShardCount($shardCount)
+  {
+    $this->shardCount = $shardCount;
+  }
+  /**
+   * @return int
+   */
+  public function getShardCount()
+  {
+    return $this->shardCount;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(AndroidInstrumentationTestUniformSharding::class, 'Google_Service_DeviceRun_AndroidInstrumentationTestUniformSharding');
