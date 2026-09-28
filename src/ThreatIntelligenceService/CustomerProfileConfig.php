@@ -50,6 +50,8 @@ class CustomerProfileConfig extends \Google\Collection
   protected $securityConsiderationsDataType = '';
   protected $summaryType = CustomerProfileSummary::class;
   protected $summaryDataType = '';
+  protected $technologiesType = CustomerProfileTechnology::class;
+  protected $technologiesDataType = 'array';
   /**
    * Optional. Technology presence of the organization.
    *
@@ -234,6 +236,22 @@ class CustomerProfileConfig extends \Google\Collection
   public function getSummary()
   {
     return $this->summary;
+  }
+  /**
+   * Optional. Technologies associated with the organization.
+   *
+   * @param CustomerProfileTechnology[] $technologies
+   */
+  public function setTechnologies($technologies)
+  {
+    $this->technologies = $technologies;
+  }
+  /**
+   * @return CustomerProfileTechnology[]
+   */
+  public function getTechnologies()
+  {
+    return $this->technologies;
   }
   /**
    * Optional. Technology presence of the organization.

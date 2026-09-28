@@ -39,11 +39,15 @@ class InsiderThreatFindingDetail extends \Google\Model
    * Critical severity.
    */
   public const SEVERITY_CRITICAL = 'CRITICAL';
+  protected $discoveryDocumentType = DiscoveryDocument::class;
+  protected $discoveryDocumentDataType = '';
   /**
-   * Required. The unique identifier of the document that triggered the
-   * InsiderThreat finding. This ID can be used to retrieve the content of the
-   * document for further analysis.
+   * Optional. Deprecated: Use `discovery_document` instead. The unique
+   * identifier of the document that triggered the InsiderThreat finding. This
+   * ID can be used to retrieve the content of the document for further
+   * analysis.
    *
+   * @deprecated
    * @var string
    */
   public $documentId;
@@ -65,10 +69,29 @@ class InsiderThreatFindingDetail extends \Google\Model
   public $severity;
 
   /**
-   * Required. The unique identifier of the document that triggered the
-   * InsiderThreat finding. This ID can be used to retrieve the content of the
-   * document for further analysis.
+   * Optional. The discovery document associated with the Insider Threat
+   * finding.
    *
+   * @param DiscoveryDocument $discoveryDocument
+   */
+  public function setDiscoveryDocument(DiscoveryDocument $discoveryDocument)
+  {
+    $this->discoveryDocument = $discoveryDocument;
+  }
+  /**
+   * @return DiscoveryDocument
+   */
+  public function getDiscoveryDocument()
+  {
+    return $this->discoveryDocument;
+  }
+  /**
+   * Optional. Deprecated: Use `discovery_document` instead. The unique
+   * identifier of the document that triggered the InsiderThreat finding. This
+   * ID can be used to retrieve the content of the document for further
+   * analysis.
+   *
+   * @deprecated
    * @param string $documentId
    */
   public function setDocumentId($documentId)
@@ -76,6 +99,7 @@ class InsiderThreatFindingDetail extends \Google\Model
     $this->documentId = $documentId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getDocumentId()

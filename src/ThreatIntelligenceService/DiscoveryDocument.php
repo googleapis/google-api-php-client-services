@@ -19,6 +19,8 @@ namespace Google\Service\ThreatIntelligenceService;
 
 class DiscoveryDocument extends \Google\Model
 {
+  protected $communicationContextType = CommunicationContext::class;
+  protected $communicationContextDataType = '';
   /**
    * Output only. The identifier of the discovery document.
    *
@@ -33,6 +35,23 @@ class DiscoveryDocument extends \Google\Model
    */
   public $documentType;
 
+  /**
+   * Optional. Detailed communication context metadata for documents originating
+   * from deep and dark web communication channels.
+   *
+   * @param CommunicationContext $communicationContext
+   */
+  public function setCommunicationContext(CommunicationContext $communicationContext)
+  {
+    $this->communicationContext = $communicationContext;
+  }
+  /**
+   * @return CommunicationContext
+   */
+  public function getCommunicationContext()
+  {
+    return $this->communicationContext;
+  }
   /**
    * Output only. The identifier of the discovery document.
    *
