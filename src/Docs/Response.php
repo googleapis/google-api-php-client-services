@@ -19,6 +19,8 @@ namespace Google\Service\Docs;
 
 class Response extends \Google\Model
 {
+  protected $addCommentReplyType = AddCommentReplyResponse::class;
+  protected $addCommentReplyDataType = '';
   protected $addDocumentTabType = AddDocumentTabResponse::class;
   protected $addDocumentTabDataType = '';
   protected $createFooterType = CreateFooterResponse::class;
@@ -29,6 +31,8 @@ class Response extends \Google\Model
   protected $createHeaderDataType = '';
   protected $createNamedRangeType = CreateNamedRangeResponse::class;
   protected $createNamedRangeDataType = '';
+  protected $insertCommentType = InsertCommentResponse::class;
+  protected $insertCommentDataType = '';
   protected $insertInlineImageType = InsertInlineImageResponse::class;
   protected $insertInlineImageDataType = '';
   protected $insertInlineSheetsChartType = InsertInlineSheetsChartResponse::class;
@@ -36,6 +40,23 @@ class Response extends \Google\Model
   protected $replaceAllTextType = ReplaceAllTextResponse::class;
   protected $replaceAllTextDataType = '';
 
+  /**
+   * The result of adding a reply to a comment or suggestion. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param AddCommentReplyResponse $addCommentReply
+   */
+  public function setAddCommentReply(AddCommentReplyResponse $addCommentReply)
+  {
+    $this->addCommentReply = $addCommentReply;
+  }
+  /**
+   * @return AddCommentReplyResponse
+   */
+  public function getAddCommentReply()
+  {
+    return $this->addCommentReply;
+  }
   /**
    * The result of adding a document tab.
    *
@@ -115,6 +136,23 @@ class Response extends \Google\Model
   public function getCreateNamedRange()
   {
     return $this->createNamedRange;
+  }
+  /**
+   * The result of inserting a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param InsertCommentResponse $insertComment
+   */
+  public function setInsertComment(InsertCommentResponse $insertComment)
+  {
+    $this->insertComment = $insertComment;
+  }
+  /**
+   * @return InsertCommentResponse
+   */
+  public function getInsertComment()
+  {
+    return $this->insertComment;
   }
   /**
    * The result of inserting an inline image.

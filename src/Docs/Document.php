@@ -20,6 +20,28 @@ namespace Google\Service\Docs;
 class Document extends \Google\Collection
 {
   /**
+   * The CommentsViewMode is unspecified. COMMENTS_VIEW_MODE_OMITTED is applied.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_UNSPECIFIED = 'COMMENTS_VIEW_MODE_UNSPECIFIED';
+  /**
+   * The CommentsViewMode applied to the returned document depends on the user's
+   * current access level. If the user only has view access,
+   * COMMENTS_VIEW_MODE_OMITTED is applied. Otherwise,
+   * COMMENTS_VIEW_MODE_INCLUDED is applied.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS = 'COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS';
+  /**
+   * The returned document has comments omitted.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_OMITTED = 'COMMENTS_VIEW_MODE_OMITTED';
+  /**
+   * The returned document has comments included. Requests to retrieve a
+   * document using this mode will return a 403 error if the user does not have
+   * permission to view comments. When set, suggestions_view_mode must also be
+   * set to SUGGESTIONS_INLINE. Returns a 400 bad request error otherwise.
+   */
+  public const COMMENTS_VIEW_MODE_COMMENTS_VIEW_MODE_INCLUDED = 'COMMENTS_VIEW_MODE_INCLUDED';
+  /**
    * The SuggestionsViewMode applied to the returned document depends on the
    * user's current access level. If the user only has view access,
    * PREVIEW_WITHOUT_SUGGESTIONS is applied. Otherwise, SUGGESTIONS_INLINE is
@@ -47,6 +69,15 @@ class Document extends \Google\Collection
   protected $collection_key = 'tabs';
   protected $bodyType = Body::class;
   protected $bodyDataType = '';
+  protected $commentsType = CommentThread::class;
+  protected $commentsDataType = 'array';
+  /**
+   * Output only. The comments view mode applied to the document. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @var string
+   */
+  public $commentsViewMode;
   /**
    * Output only. The ID of the document.
    *
@@ -91,6 +122,8 @@ class Document extends \Google\Collection
   protected $suggestedDocumentStyleChangesDataType = 'map';
   protected $suggestedNamedStylesChangesType = SuggestedNamedStyles::class;
   protected $suggestedNamedStylesChangesDataType = 'map';
+  protected $suggestionsType = SuggestionThread::class;
+  protected $suggestionsDataType = 'array';
   /**
    * Output only. The suggestions view mode applied to the document. Note: When
    * editing a document, changes must be based on a document with
@@ -127,6 +160,46 @@ class Document extends \Google\Collection
   public function getBody()
   {
     return $this->body;
+  }
+  /**
+   * Output only. The comments associated with the document. Only populated if
+   * the commentsViewMode parameter is set to require comments (such as
+   * `COMMENTS_VIEW_MODE_INCLUDED`). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param CommentThread[] $comments
+   */
+  public function setComments($comments)
+  {
+    $this->comments = $comments;
+  }
+  /**
+   * @return CommentThread[]
+   */
+  public function getComments()
+  {
+    return $this->comments;
+  }
+  /**
+   * Output only. The comments view mode applied to the document. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * Accepted values: COMMENTS_VIEW_MODE_UNSPECIFIED,
+   * COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, COMMENTS_VIEW_MODE_OMITTED,
+   * COMMENTS_VIEW_MODE_INCLUDED
+   *
+   * @param self::COMMENTS_VIEW_MODE_* $commentsViewMode
+   */
+  public function setCommentsViewMode($commentsViewMode)
+  {
+    $this->commentsViewMode = $commentsViewMode;
+  }
+  /**
+   * @return self::COMMENTS_VIEW_MODE_*
+   */
+  public function getCommentsViewMode()
+  {
+    return $this->commentsViewMode;
   }
   /**
    * Output only. The ID of the document.
@@ -391,6 +464,25 @@ class Document extends \Google\Collection
   public function getSuggestedNamedStylesChanges()
   {
     return $this->suggestedNamedStylesChanges;
+  }
+  /**
+   * Output only. The suggestions associated with the document. Only populated
+   * if the commentsViewMode parameter is set to require comments (such as
+   * `COMMENTS_VIEW_MODE_INCLUDED`). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param SuggestionThread[] $suggestions
+   */
+  public function setSuggestions($suggestions)
+  {
+    $this->suggestions = $suggestions;
+  }
+  /**
+   * @return SuggestionThread[]
+   */
+  public function getSuggestions()
+  {
+    return $this->suggestions;
   }
   /**
    * Output only. The suggestions view mode applied to the document. Note: When

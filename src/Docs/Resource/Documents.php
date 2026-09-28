@@ -80,6 +80,18 @@ class Documents extends \Google\Service\Resource
    * @param string $documentId The ID of the document to retrieve.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string commentsViewMode The comments view mode to apply to the
+   * document. This allows viewing the document with comments omitted or included.
+   * If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used. If you set
+   * comments_view_mode to any value, you must also set include_tabs_content to
+   * `true` or use a field mask that references the Document.tabs field (or any
+   * subfield). If you set comments_view_mode to COMMENTS_VIEW_MODE_INCLUDED, you
+   * must also explicitly set suggestions_view_mode to SUGGESTIONS_INLINE. If you
+   * set comments_view_mode to COMMENTS_VIEW_MODE_INCLUDED or
+   * COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, you may not set
+   * suggestions_view_mode to PREVIEW_WITHOUT_SUGGESTIONS or
+   * PREVIEW_SUGGESTIONS_ACCEPTED. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
    * @opt_param bool includeTabsContent Whether to populate the `Document.tabs`
    * field instead of the text content fields like `body` and `documentStyle` on
    * `Document`. - When `true`: Document content populates in the `Document.tabs`

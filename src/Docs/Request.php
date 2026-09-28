@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class Request extends \Google\Model
 {
+  protected $acceptSuggestionType = AcceptSuggestionRequest::class;
+  protected $acceptSuggestionDataType = '';
+  protected $addCommentReplyType = AddCommentReplyRequest::class;
+  protected $addCommentReplyDataType = '';
   protected $addDocumentTabType = AddDocumentTabRequest::class;
   protected $addDocumentTabDataType = '';
   protected $createFooterType = CreateFooterRequest::class;
@@ -31,6 +35,10 @@ class Request extends \Google\Model
   protected $createNamedRangeDataType = '';
   protected $createParagraphBulletsType = CreateParagraphBulletsRequest::class;
   protected $createParagraphBulletsDataType = '';
+  protected $deleteCommentType = DeleteCommentRequest::class;
+  protected $deleteCommentDataType = '';
+  protected $deleteCommentReplyType = DeleteCommentReplyRequest::class;
+  protected $deleteCommentReplyDataType = '';
   protected $deleteContentRangeType = DeleteContentRangeRequest::class;
   protected $deleteContentRangeDataType = '';
   protected $deleteFooterType = DeleteFooterRequest::class;
@@ -43,12 +51,16 @@ class Request extends \Google\Model
   protected $deleteParagraphBulletsDataType = '';
   protected $deletePositionedObjectType = DeletePositionedObjectRequest::class;
   protected $deletePositionedObjectDataType = '';
+  protected $deleteSuggestionType = DeleteSuggestionRequest::class;
+  protected $deleteSuggestionDataType = '';
   protected $deleteTabType = DeleteTabRequest::class;
   protected $deleteTabDataType = '';
   protected $deleteTableColumnType = DeleteTableColumnRequest::class;
   protected $deleteTableColumnDataType = '';
   protected $deleteTableRowType = DeleteTableRowRequest::class;
   protected $deleteTableRowDataType = '';
+  protected $insertCommentType = InsertCommentRequest::class;
+  protected $insertCommentDataType = '';
   protected $insertDateType = InsertDateRequest::class;
   protected $insertDateDataType = '';
   protected $insertInlineImageType = InsertInlineImageRequest::class;
@@ -73,6 +85,8 @@ class Request extends \Google\Model
   protected $mergeTableCellsDataType = '';
   protected $pinTableHeaderRowsType = PinTableHeaderRowsRequest::class;
   protected $pinTableHeaderRowsDataType = '';
+  protected $rejectSuggestionType = RejectSuggestionRequest::class;
+  protected $rejectSuggestionDataType = '';
   protected $replaceAllTextType = ReplaceAllTextRequest::class;
   protected $replaceAllTextDataType = '';
   protected $replaceImageType = ReplaceImageRequest::class;
@@ -81,6 +95,8 @@ class Request extends \Google\Model
   protected $replaceNamedRangeContentDataType = '';
   protected $unmergeTableCellsType = UnmergeTableCellsRequest::class;
   protected $unmergeTableCellsDataType = '';
+  protected $updateCommentPostType = UpdateCommentPostRequest::class;
+  protected $updateCommentPostDataType = '';
   protected $updateDocumentStyleType = UpdateDocumentStyleRequest::class;
   protected $updateDocumentStyleDataType = '';
   protected $updateDocumentTabPropertiesType = UpdateDocumentTabPropertiesRequest::class;
@@ -100,6 +116,40 @@ class Request extends \Google\Model
   protected $updateTextStyleType = UpdateTextStyleRequest::class;
   protected $updateTextStyleDataType = '';
 
+  /**
+   * Accepts a suggestion. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param AcceptSuggestionRequest $acceptSuggestion
+   */
+  public function setAcceptSuggestion(AcceptSuggestionRequest $acceptSuggestion)
+  {
+    $this->acceptSuggestion = $acceptSuggestion;
+  }
+  /**
+   * @return AcceptSuggestionRequest
+   */
+  public function getAcceptSuggestion()
+  {
+    return $this->acceptSuggestion;
+  }
+  /**
+   * Adds a reply to a CommentThread or SuggestionThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param AddCommentReplyRequest $addCommentReply
+   */
+  public function setAddCommentReply(AddCommentReplyRequest $addCommentReply)
+  {
+    $this->addCommentReply = $addCommentReply;
+  }
+  /**
+   * @return AddCommentReplyRequest
+   */
+  public function getAddCommentReply()
+  {
+    return $this->addCommentReply;
+  }
   /**
    * Adds a document tab.
    *
@@ -195,6 +245,40 @@ class Request extends \Google\Model
   public function getCreateParagraphBullets()
   {
     return $this->createParagraphBullets;
+  }
+  /**
+   * Deletes a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param DeleteCommentRequest $deleteComment
+   */
+  public function setDeleteComment(DeleteCommentRequest $deleteComment)
+  {
+    $this->deleteComment = $deleteComment;
+  }
+  /**
+   * @return DeleteCommentRequest
+   */
+  public function getDeleteComment()
+  {
+    return $this->deleteComment;
+  }
+  /**
+   * Deletes a reply Post from a CommentThread or SuggestionThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param DeleteCommentReplyRequest $deleteCommentReply
+   */
+  public function setDeleteCommentReply(DeleteCommentReplyRequest $deleteCommentReply)
+  {
+    $this->deleteCommentReply = $deleteCommentReply;
+  }
+  /**
+   * @return DeleteCommentReplyRequest
+   */
+  public function getDeleteCommentReply()
+  {
+    return $this->deleteCommentReply;
   }
   /**
    * Deletes content from the document.
@@ -293,6 +377,23 @@ class Request extends \Google\Model
     return $this->deletePositionedObject;
   }
   /**
+   * Deletes a suggestion. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param DeleteSuggestionRequest $deleteSuggestion
+   */
+  public function setDeleteSuggestion(DeleteSuggestionRequest $deleteSuggestion)
+  {
+    $this->deleteSuggestion = $deleteSuggestion;
+  }
+  /**
+   * @return DeleteSuggestionRequest
+   */
+  public function getDeleteSuggestion()
+  {
+    return $this->deleteSuggestion;
+  }
+  /**
    * Deletes a document tab.
    *
    * @param DeleteTabRequest $deleteTab
@@ -339,6 +440,23 @@ class Request extends \Google\Model
   public function getDeleteTableRow()
   {
     return $this->deleteTableRow;
+  }
+  /**
+   * Inserts a CommentThread into the document. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param InsertCommentRequest $insertComment
+   */
+  public function setInsertComment(InsertCommentRequest $insertComment)
+  {
+    $this->insertComment = $insertComment;
+  }
+  /**
+   * @return InsertCommentRequest
+   */
+  public function getInsertComment()
+  {
+    return $this->insertComment;
   }
   /**
    * Inserts a date.
@@ -533,6 +651,23 @@ class Request extends \Google\Model
     return $this->pinTableHeaderRows;
   }
   /**
+   * Rejects a suggestion. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param RejectSuggestionRequest $rejectSuggestion
+   */
+  public function setRejectSuggestion(RejectSuggestionRequest $rejectSuggestion)
+  {
+    $this->rejectSuggestion = $rejectSuggestion;
+  }
+  /**
+   * @return RejectSuggestionRequest
+   */
+  public function getRejectSuggestion()
+  {
+    return $this->rejectSuggestion;
+  }
+  /**
    * Replaces all instances of the specified text.
    *
    * @param ReplaceAllTextRequest $replaceAllText
@@ -595,6 +730,24 @@ class Request extends \Google\Model
   public function getUnmergeTableCells()
   {
     return $this->unmergeTableCells;
+  }
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread or
+   * SuggestionThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   *
+   * @param UpdateCommentPostRequest $updateCommentPost
+   */
+  public function setUpdateCommentPost(UpdateCommentPostRequest $updateCommentPost)
+  {
+    $this->updateCommentPost = $updateCommentPost;
+  }
+  /**
+   * @return UpdateCommentPostRequest
+   */
+  public function getUpdateCommentPost()
+  {
+    return $this->updateCommentPost;
   }
   /**
    * Updates the style of the document.

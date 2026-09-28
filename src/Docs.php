@@ -99,6 +99,10 @@ class Docs extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'commentsViewMode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'includeTabsContent' => [
                   'location' => 'query',
                   'type' => 'boolean',
