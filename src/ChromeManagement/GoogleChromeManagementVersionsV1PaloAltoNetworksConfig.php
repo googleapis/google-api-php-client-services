@@ -20,14 +20,15 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1PaloAltoNetworksConfig extends \Google\Model
 {
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be at most
+   * 256 characters.
    *
    * @var string
    */
   public $apiKey;
   /**
    * Required. Host to identify the customer specific server to receive the
-   * events.
+   * events. Must be at most 256 characters.
    *
    * @var string
    */
@@ -36,7 +37,8 @@ class GoogleChromeManagementVersionsV1PaloAltoNetworksConfig extends \Google\Mod
   protected $reportingSettingsDataType = '';
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be at most
+   * 256 characters.
    *
    * @param string $apiKey
    */
@@ -53,7 +55,7 @@ class GoogleChromeManagementVersionsV1PaloAltoNetworksConfig extends \Google\Mod
   }
   /**
    * Required. Host to identify the customer specific server to receive the
-   * events.
+   * events. Must be at most 256 characters.
    *
    * @param string $host
    */

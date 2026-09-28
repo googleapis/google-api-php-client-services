@@ -20,7 +20,8 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends \Google\Model
 {
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be 39
+   * characters.
    *
    * @var string
    */
@@ -28,7 +29,7 @@ class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends \Google\Model
   /**
    * Required. Host of ingestion API endpoint. Allows customer to upload events
    * to servers in specific geographical regions. Existing configs that don't
-   * have this setting default to US.
+   * have this setting default to US. Must be at most 256 characters.
    *
    * @var string
    */
@@ -37,7 +38,8 @@ class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends \Google\Model
   protected $reportingSettingsDataType = '';
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be 39
+   * characters.
    *
    * @param string $apiKey
    */
@@ -55,7 +57,7 @@ class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends \Google\Model
   /**
    * Required. Host of ingestion API endpoint. Allows customer to upload events
    * to servers in specific geographical regions. Existing configs that don't
-   * have this setting default to US.
+   * have this setting default to US. Must be at most 256 characters.
    *
    * @param string $host
    */

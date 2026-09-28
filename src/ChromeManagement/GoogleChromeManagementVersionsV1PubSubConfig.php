@@ -22,7 +22,8 @@ class GoogleChromeManagementVersionsV1PubSubConfig extends \Google\Model
   protected $reportingSettingsType = GoogleChromeManagementVersionsV1ReportingSettings::class;
   protected $reportingSettingsDataType = '';
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most
+   * 1000 characters.
    *
    * @var string
    */
@@ -45,7 +46,8 @@ class GoogleChromeManagementVersionsV1PubSubConfig extends \Google\Model
     return $this->reportingSettings;
   }
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most
+   * 1000 characters.
    *
    * @param string $topicFullPath
    */

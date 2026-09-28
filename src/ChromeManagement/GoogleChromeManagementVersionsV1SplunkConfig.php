@@ -21,14 +21,14 @@ class GoogleChromeManagementVersionsV1SplunkConfig extends \Google\Model
 {
   /**
    * Required. Input only. The data input's HTTP Event Collector token to use as
-   * an Authorization header.
+   * an Authorization header. Must be at most 50 characters.
    *
    * @var string
    */
   public $hecToken;
   /**
    * Required. Host to identify the customer specific server to receive the
-   * events.
+   * events. Must be at most 256 characters.
    *
    * @var string
    */
@@ -44,7 +44,7 @@ class GoogleChromeManagementVersionsV1SplunkConfig extends \Google\Model
   protected $reportingSettingsDataType = '';
   /**
    * Optional. Optional source name to override the default one set in the
-   * Splunk admin console.
+   * Splunk admin console. Must be at most 100 characters.
    *
    * @var string
    */
@@ -59,7 +59,7 @@ class GoogleChromeManagementVersionsV1SplunkConfig extends \Google\Model
 
   /**
    * Required. Input only. The data input's HTTP Event Collector token to use as
-   * an Authorization header.
+   * an Authorization header. Must be at most 50 characters.
    *
    * @param string $hecToken
    */
@@ -76,7 +76,7 @@ class GoogleChromeManagementVersionsV1SplunkConfig extends \Google\Model
   }
   /**
    * Required. Host to identify the customer specific server to receive the
-   * events.
+   * events. Must be at most 256 characters.
    *
    * @param string $host
    */
@@ -126,7 +126,7 @@ class GoogleChromeManagementVersionsV1SplunkConfig extends \Google\Model
   }
   /**
    * Optional. Optional source name to override the default one set in the
-   * Splunk admin console.
+   * Splunk admin console. Must be at most 100 characters.
    *
    * @param string $source
    */

@@ -20,7 +20,8 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1PubSubXdrConfig extends \Google\Model
 {
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most
+   * 1000 characters.
    *
    * @var string
    */
@@ -29,7 +30,8 @@ class GoogleChromeManagementVersionsV1PubSubXdrConfig extends \Google\Model
   protected $xdrSettingsDataType = '';
 
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most
+   * 1000 characters.
    *
    * @param string $topicFullPath
    */

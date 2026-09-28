@@ -58,7 +58,7 @@ class GoogleChromeManagementVersionsV1ConnectorConfig extends \Google\Model
   protected $detailsType = GoogleChromeManagementVersionsV1ConnectorConfigDetails::class;
   protected $detailsDataType = '';
   /**
-   * Required. The display name of the config.
+   * Required. The display name of the config. Must be at most 100 characters.
    *
    * @var string
    */
@@ -96,7 +96,7 @@ class GoogleChromeManagementVersionsV1ConnectorConfig extends \Google\Model
     return $this->details;
   }
   /**
-   * Required. The display name of the config.
+   * Required. The display name of the config. Must be at most 100 characters.
    *
    * @param string $displayName
    */

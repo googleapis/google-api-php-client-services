@@ -27,7 +27,8 @@ class GoogleChromeManagementVersionsV1SecureGatewayConfig extends \Google\Collec
    */
   public $enabledPlatforms;
   /**
-   * Required. The resource ID of the secure gateway connector config.
+   * Required. The resource ID of the secure gateway connector config. Must be
+   * at most 256 characters.
    *
    * @var string
    */
@@ -50,7 +51,8 @@ class GoogleChromeManagementVersionsV1SecureGatewayConfig extends \Google\Collec
     return $this->enabledPlatforms;
   }
   /**
-   * Required. The resource ID of the secure gateway connector config.
+   * Required. The resource ID of the secure gateway connector config. Must be
+   * at most 256 characters.
    *
    * @param string $resourceId
    */
