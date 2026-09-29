@@ -268,6 +268,10 @@ class PaymentsResellerSubscription extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
