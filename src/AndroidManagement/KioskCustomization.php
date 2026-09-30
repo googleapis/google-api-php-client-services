@@ -96,42 +96,43 @@ class KioskCustomization extends \Google\Model
    */
   public const SYSTEM_NAVIGATION_HOME_BUTTON_ONLY = 'HOME_BUTTON_ONLY';
   /**
-   * Specifies whether the Settings app is allowed in kiosk mode.
+   * Optional. Specifies whether the Settings app is allowed in kiosk mode.
    *
    * @var string
    */
   public $deviceSettings;
   /**
-   * Sets the behavior of a device in kiosk mode when a user presses and holds
-   * (long-presses) the Power button.
+   * Optional. Sets the behavior of a device in kiosk mode when a user presses
+   * and holds (long-presses) the Power button.
    *
    * @var string
    */
   public $powerButtonActions;
   /**
-   * Specifies whether system info and notifications are disabled in kiosk mode.
+   * Optional. Specifies whether system info and notifications are disabled in
+   * kiosk mode.
    *
    * @var string
    */
   public $statusBar;
   /**
-   * Specifies whether system error dialogs for crashed or unresponsive apps are
-   * blocked in kiosk mode. When blocked, the system will force-stop the app as
-   * if the user chooses the "close app" option on the UI.
+   * Optional. Specifies whether system error dialogs for crashed or
+   * unresponsive apps are blocked in kiosk mode. When blocked, the system will
+   * force-stop the app as if the user chooses the "close app" option on the UI.
    *
    * @var string
    */
   public $systemErrorWarnings;
   /**
-   * Specifies which navigation features are enabled (e.g. Home, Overview
-   * buttons) in kiosk mode.
+   * Optional. Specifies which navigation features are enabled (e.g. Home,
+   * Overview buttons) in kiosk mode.
    *
    * @var string
    */
   public $systemNavigation;
 
   /**
-   * Specifies whether the Settings app is allowed in kiosk mode.
+   * Optional. Specifies whether the Settings app is allowed in kiosk mode.
    *
    * Accepted values: DEVICE_SETTINGS_UNSPECIFIED, SETTINGS_ACCESS_ALLOWED,
    * SETTINGS_ACCESS_BLOCKED
@@ -150,8 +151,8 @@ class KioskCustomization extends \Google\Model
     return $this->deviceSettings;
   }
   /**
-   * Sets the behavior of a device in kiosk mode when a user presses and holds
-   * (long-presses) the Power button.
+   * Optional. Sets the behavior of a device in kiosk mode when a user presses
+   * and holds (long-presses) the Power button.
    *
    * Accepted values: POWER_BUTTON_ACTIONS_UNSPECIFIED, POWER_BUTTON_AVAILABLE,
    * POWER_BUTTON_BLOCKED
@@ -170,7 +171,8 @@ class KioskCustomization extends \Google\Model
     return $this->powerButtonActions;
   }
   /**
-   * Specifies whether system info and notifications are disabled in kiosk mode.
+   * Optional. Specifies whether system info and notifications are disabled in
+   * kiosk mode.
    *
    * Accepted values: STATUS_BAR_UNSPECIFIED,
    * NOTIFICATIONS_AND_SYSTEM_INFO_ENABLED,
@@ -190,9 +192,9 @@ class KioskCustomization extends \Google\Model
     return $this->statusBar;
   }
   /**
-   * Specifies whether system error dialogs for crashed or unresponsive apps are
-   * blocked in kiosk mode. When blocked, the system will force-stop the app as
-   * if the user chooses the "close app" option on the UI.
+   * Optional. Specifies whether system error dialogs for crashed or
+   * unresponsive apps are blocked in kiosk mode. When blocked, the system will
+   * force-stop the app as if the user chooses the "close app" option on the UI.
    *
    * Accepted values: SYSTEM_ERROR_WARNINGS_UNSPECIFIED,
    * ERROR_AND_WARNINGS_ENABLED, ERROR_AND_WARNINGS_MUTED
@@ -211,8 +213,8 @@ class KioskCustomization extends \Google\Model
     return $this->systemErrorWarnings;
   }
   /**
-   * Specifies which navigation features are enabled (e.g. Home, Overview
-   * buttons) in kiosk mode.
+   * Optional. Specifies which navigation features are enabled (e.g. Home,
+   * Overview buttons) in kiosk mode.
    *
    * Accepted values: SYSTEM_NAVIGATION_UNSPECIFIED, NAVIGATION_ENABLED,
    * NAVIGATION_DISABLED, HOME_BUTTON_ONLY

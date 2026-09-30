@@ -58,6 +58,22 @@ class CrossDevicePolicies extends \Google\Model
    */
   public const NEARBY_NOTIFICATION_STREAMING_NEARBY_NOTIFICATION_STREAMING_USER_CHOICE_SAME_MANAGED_ACCOUNT = 'NEARBY_NOTIFICATION_STREAMING_USER_CHOICE_SAME_MANAGED_ACCOUNT';
   /**
+   * Defaults to TASK_CONTINUITY_HANDOFF_ALLOWED.
+   */
+  public const TASK_CONTINUITY_HANDOFF_TASK_CONTINUITY_HANDOFF_UNSPECIFIED = 'TASK_CONTINUITY_HANDOFF_UNSPECIFIED';
+  /**
+   * Allows the user to enable or disable the task continuity handoff feature in
+   * settings. A NonComplianceDetail with API_LEVEL is reported if the Android
+   * version is lower than Android 17 QPR1.
+   */
+  public const TASK_CONTINUITY_HANDOFF_TASK_CONTINUITY_HANDOFF_ALLOWED = 'TASK_CONTINUITY_HANDOFF_ALLOWED';
+  /**
+   * The task continuity handoff feature is disallowed. A NonComplianceDetail
+   * with API_LEVEL is reported if the Android version is lower than Android 17
+   * QPR1.
+   */
+  public const TASK_CONTINUITY_HANDOFF_TASK_CONTINUITY_HANDOFF_DISALLOWED = 'TASK_CONTINUITY_HANDOFF_DISALLOWED';
+  /**
    * Optional. Manages video streaming of apps on the device for fully managed
    * devices or in the work profile for devices with work profiles to nearby
    * devices. This is supported on Android 13 and above.
@@ -73,6 +89,16 @@ class CrossDevicePolicies extends \Google\Model
    * @var string
    */
   public $nearbyNotificationStreaming;
+  /**
+   * Optional. Controls the task continuity handoff
+   * (https://developer.android.com/partners/android-17/features#handoff)
+   * feature. This policy applies to the entire device for fully managed
+   * devices, and to the work profile for devices with a work profile. Requires
+   * Android 17 QPR1 or higher.
+   *
+   * @var string
+   */
+  public $taskContinuityHandoff;
 
   /**
    * Optional. Manages video streaming of apps on the device for fully managed
@@ -118,6 +144,29 @@ class CrossDevicePolicies extends \Google\Model
   public function getNearbyNotificationStreaming()
   {
     return $this->nearbyNotificationStreaming;
+  }
+  /**
+   * Optional. Controls the task continuity handoff
+   * (https://developer.android.com/partners/android-17/features#handoff)
+   * feature. This policy applies to the entire device for fully managed
+   * devices, and to the work profile for devices with a work profile. Requires
+   * Android 17 QPR1 or higher.
+   *
+   * Accepted values: TASK_CONTINUITY_HANDOFF_UNSPECIFIED,
+   * TASK_CONTINUITY_HANDOFF_ALLOWED, TASK_CONTINUITY_HANDOFF_DISALLOWED
+   *
+   * @param self::TASK_CONTINUITY_HANDOFF_* $taskContinuityHandoff
+   */
+  public function setTaskContinuityHandoff($taskContinuityHandoff)
+  {
+    $this->taskContinuityHandoff = $taskContinuityHandoff;
+  }
+  /**
+   * @return self::TASK_CONTINUITY_HANDOFF_*
+   */
+  public function getTaskContinuityHandoff()
+  {
+    return $this->taskContinuityHandoff;
   }
 }
 

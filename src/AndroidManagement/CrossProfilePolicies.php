@@ -133,18 +133,18 @@ class CrossProfilePolicies extends \Google\Model
    */
   public $crossProfileAppFunctions;
   /**
-   * Whether text copied from one profile (personal or work) can be pasted in
-   * the other profile.
+   * Optional. Whether text copied from one profile (personal or work) can be
+   * pasted in the other profile.
    *
    * @var string
    */
   public $crossProfileCopyPaste;
   /**
-   * Whether data from one profile (personal or work) can be shared with apps in
-   * the other profile. Specifically controls simple data sharing via intents.
-   * Management of other cross-profile communication channels, such as contact
-   * search, copy/paste, or connected work & personal apps, are configured
-   * separately.
+   * Optional. Whether data from one profile (personal or work) can be shared
+   * with apps in the other profile. Specifically controls simple data sharing
+   * via intents. Management of other cross-profile communication channels, such
+   * as contact search, copy/paste, or connected work & personal apps, are
+   * configured separately.
    *
    * @var string
    */
@@ -152,16 +152,16 @@ class CrossProfilePolicies extends \Google\Model
   protected $exemptionsToShowWorkContactsInPersonalProfileType = PackageNameList::class;
   protected $exemptionsToShowWorkContactsInPersonalProfileDataType = '';
   /**
-   * Whether personal apps can access contacts stored in the work profile.See
-   * also exemptions_to_show_work_contacts_in_personal_profile.
+   * Optional. Whether personal apps can access contacts stored in the work
+   * profile.See also exemptions_to_show_work_contacts_in_personal_profile.
    *
    * @var string
    */
   public $showWorkContactsInPersonalProfile;
   /**
-   * Specifies the default behaviour for work profile widgets. If the policy
-   * does not specify work_profile_widgets for a specific application, it will
-   * behave according to the value specified here.
+   * Optional. Specifies the default behaviour for work profile widgets. If the
+   * policy does not specify work_profile_widgets for a specific application, it
+   * will behave according to the value specified here.
    *
    * @var string
    */
@@ -188,8 +188,8 @@ class CrossProfilePolicies extends \Google\Model
     return $this->crossProfileAppFunctions;
   }
   /**
-   * Whether text copied from one profile (personal or work) can be pasted in
-   * the other profile.
+   * Optional. Whether text copied from one profile (personal or work) can be
+   * pasted in the other profile.
    *
    * Accepted values: CROSS_PROFILE_COPY_PASTE_UNSPECIFIED,
    * COPY_FROM_WORK_TO_PERSONAL_DISALLOWED, CROSS_PROFILE_COPY_PASTE_ALLOWED
@@ -208,11 +208,11 @@ class CrossProfilePolicies extends \Google\Model
     return $this->crossProfileCopyPaste;
   }
   /**
-   * Whether data from one profile (personal or work) can be shared with apps in
-   * the other profile. Specifically controls simple data sharing via intents.
-   * Management of other cross-profile communication channels, such as contact
-   * search, copy/paste, or connected work & personal apps, are configured
-   * separately.
+   * Optional. Whether data from one profile (personal or work) can be shared
+   * with apps in the other profile. Specifically controls simple data sharing
+   * via intents. Management of other cross-profile communication channels, such
+   * as contact search, copy/paste, or connected work & personal apps, are
+   * configured separately.
    *
    * Accepted values: CROSS_PROFILE_DATA_SHARING_UNSPECIFIED,
    * CROSS_PROFILE_DATA_SHARING_DISALLOWED,
@@ -233,10 +233,10 @@ class CrossProfilePolicies extends \Google\Model
     return $this->crossProfileDataSharing;
   }
   /**
-   * List of apps which are excluded from the ShowWorkContactsInPersonalProfile
-   * setting. For this to be set, ShowWorkContactsInPersonalProfile must be set
-   * to one of the following values:
-   * SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these
+   * Optional. List of apps which are excluded from the
+   * ShowWorkContactsInPersonalProfile setting. For this to be set,
+   * ShowWorkContactsInPersonalProfile must be set to one of the following
+   * values: SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these
    * exemptions act as a blocklist.
    * SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED. In this case, these
    * exemptions act as an allowlist.
@@ -260,8 +260,8 @@ class CrossProfilePolicies extends \Google\Model
     return $this->exemptionsToShowWorkContactsInPersonalProfile;
   }
   /**
-   * Whether personal apps can access contacts stored in the work profile.See
-   * also exemptions_to_show_work_contacts_in_personal_profile.
+   * Optional. Whether personal apps can access contacts stored in the work
+   * profile.See also exemptions_to_show_work_contacts_in_personal_profile.
    *
    * Accepted values: SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_UNSPECIFIED,
    * SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED,
@@ -282,9 +282,9 @@ class CrossProfilePolicies extends \Google\Model
     return $this->showWorkContactsInPersonalProfile;
   }
   /**
-   * Specifies the default behaviour for work profile widgets. If the policy
-   * does not specify work_profile_widgets for a specific application, it will
-   * behave according to the value specified here.
+   * Optional. Specifies the default behaviour for work profile widgets. If the
+   * policy does not specify work_profile_widgets for a specific application, it
+   * will behave according to the value specified here.
    *
    * Accepted values: WORK_PROFILE_WIDGETS_DEFAULT_UNSPECIFIED,
    * WORK_PROFILE_WIDGETS_DEFAULT_ALLOWED,

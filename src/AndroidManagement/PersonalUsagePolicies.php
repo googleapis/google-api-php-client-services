@@ -90,6 +90,8 @@ class PersonalUsagePolicies extends \Google\Collection
    * @var bool
    */
   public $cameraDisabled;
+  protected $crossDevicePoliciesType = PersonalCrossDevicePolicies::class;
+  protected $crossDevicePoliciesDataType = '';
   /**
    * Controls how long the work profile can stay off. The minimum duration must
    * be at least 3 days. Other details are as follows: - If the duration is set
@@ -174,6 +176,23 @@ class PersonalUsagePolicies extends \Google\Collection
   public function getCameraDisabled()
   {
     return $this->cameraDisabled;
+  }
+  /**
+   * Optional. Policies controlling cross-device communication in the personal
+   * profile.
+   *
+   * @param PersonalCrossDevicePolicies $crossDevicePolicies
+   */
+  public function setCrossDevicePolicies(PersonalCrossDevicePolicies $crossDevicePolicies)
+  {
+    $this->crossDevicePolicies = $crossDevicePolicies;
+  }
+  /**
+   * @return PersonalCrossDevicePolicies
+   */
+  public function getCrossDevicePolicies()
+  {
+    return $this->crossDevicePolicies;
   }
   /**
    * Controls how long the work profile can stay off. The minimum duration must

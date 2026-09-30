@@ -143,92 +143,93 @@ class PasswordRequirements extends \Google\Model
    */
   public const UNIFIED_LOCK_SETTINGS_REQUIRE_SEPARATE_WORK_LOCK = 'REQUIRE_SEPARATE_WORK_LOCK';
   /**
-   * Number of incorrect device-unlock passwords that can be entered before a
-   * device is wiped. A value of 0 means there is no restriction.
+   * Optional. Number of incorrect device-unlock passwords that can be entered
+   * before a device is wiped. A value of 0 means there is no restriction.
    *
    * @var int
    */
   public $maximumFailedPasswordsForWipe;
   /**
-   * Password expiration timeout.
+   * Optional. Password expiration timeout.
    *
    * @var string
    */
   public $passwordExpirationTimeout;
   /**
-   * The length of the password history. After setting this field, the user
-   * won't be able to enter a new password that is the same as any password in
-   * the history. A value of 0 means there is no restriction.
+   * Optional. The length of the password history. After setting this field, the
+   * user won't be able to enter a new password that is the same as any password
+   * in the history. A value of 0 means there is no restriction.
    *
    * @var int
    */
   public $passwordHistoryLength;
   /**
-   * The minimum allowed password length. A value of 0 means there is no
-   * restriction. Only enforced when password_quality is NUMERIC,
+   * Optional. The minimum allowed password length. A value of 0 means there is
+   * no restriction. Only enforced when password_quality is NUMERIC,
    * NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or COMPLEX.
    *
    * @var int
    */
   public $passwordMinimumLength;
   /**
-   * Minimum number of letters required in the password. Only enforced when
-   * password_quality is COMPLEX.
+   * Optional. Minimum number of letters required in the password. Only enforced
+   * when password_quality is COMPLEX.
    *
    * @var int
    */
   public $passwordMinimumLetters;
   /**
-   * Minimum number of lower case letters required in the password. Only
-   * enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of lower case letters required in the password.
+   * Only enforced when password_quality is COMPLEX.
    *
    * @var int
    */
   public $passwordMinimumLowerCase;
   /**
-   * Minimum number of non-letter characters (numerical digits or symbols)
-   * required in the password. Only enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of non-letter characters (numerical digits or
+   * symbols) required in the password. Only enforced when password_quality is
+   * COMPLEX.
    *
    * @var int
    */
   public $passwordMinimumNonLetter;
   /**
-   * Minimum number of numerical digits required in the password. Only enforced
-   * when password_quality is COMPLEX.
+   * Optional. Minimum number of numerical digits required in the password. Only
+   * enforced when password_quality is COMPLEX.
    *
    * @var int
    */
   public $passwordMinimumNumeric;
   /**
-   * Minimum number of symbols required in the password. Only enforced when
-   * password_quality is COMPLEX.
+   * Optional. Minimum number of symbols required in the password. Only enforced
+   * when password_quality is COMPLEX.
    *
    * @var int
    */
   public $passwordMinimumSymbols;
   /**
-   * Minimum number of upper case letters required in the password. Only
-   * enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of upper case letters required in the password.
+   * Only enforced when password_quality is COMPLEX.
    *
    * @var int
    */
   public $passwordMinimumUpperCase;
   /**
-   * The required password quality.
+   * Optional. The required password quality.
    *
    * @var string
    */
   public $passwordQuality;
   /**
-   * The scope that the password requirement applies to.
+   * Optional. The scope that the password requirement applies to.
    *
    * @var string
    */
   public $passwordScope;
   /**
-   * The length of time after a device or work profile is unlocked using a
-   * strong form of authentication (password, PIN, pattern) that it can be
-   * unlocked using any other authentication method (e.g. fingerprint, trust
+   * Optional. The length of time after a device or work profile is unlocked
+   * using a strong form of authentication (password, PIN, pattern) that it can
+   * be unlocked using any other authentication method (e.g. fingerprint, trust
    * agents, face). After the specified time period elapses, only strong forms
    * of authentication can be used to unlock the device or work profile.
    *
@@ -236,11 +237,11 @@ class PasswordRequirements extends \Google\Model
    */
   public $requirePasswordUnlock;
   /**
-   * Controls whether a unified lock is allowed for the device and the work
-   * profile, on devices running Android 9 and above with a work profile. This
-   * can be set only if password_scope is set to SCOPE_PROFILE, the policy will
-   * be rejected otherwise. If user has not set a separate work lock and this
-   * field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is
+   * Optional. Controls whether a unified lock is allowed for the device and the
+   * work profile, on devices running Android 9 and above with a work profile.
+   * This can be set only if password_scope is set to SCOPE_PROFILE, the policy
+   * will be rejected otherwise. If user has not set a separate work lock and
+   * this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is
    * reported with nonComplianceReason set to USER_ACTION.
    *
    * @var string
@@ -248,8 +249,8 @@ class PasswordRequirements extends \Google\Model
   public $unifiedLockSettings;
 
   /**
-   * Number of incorrect device-unlock passwords that can be entered before a
-   * device is wiped. A value of 0 means there is no restriction.
+   * Optional. Number of incorrect device-unlock passwords that can be entered
+   * before a device is wiped. A value of 0 means there is no restriction.
    *
    * @param int $maximumFailedPasswordsForWipe
    */
@@ -265,7 +266,7 @@ class PasswordRequirements extends \Google\Model
     return $this->maximumFailedPasswordsForWipe;
   }
   /**
-   * Password expiration timeout.
+   * Optional. Password expiration timeout.
    *
    * @param string $passwordExpirationTimeout
    */
@@ -281,9 +282,9 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordExpirationTimeout;
   }
   /**
-   * The length of the password history. After setting this field, the user
-   * won't be able to enter a new password that is the same as any password in
-   * the history. A value of 0 means there is no restriction.
+   * Optional. The length of the password history. After setting this field, the
+   * user won't be able to enter a new password that is the same as any password
+   * in the history. A value of 0 means there is no restriction.
    *
    * @param int $passwordHistoryLength
    */
@@ -299,8 +300,8 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordHistoryLength;
   }
   /**
-   * The minimum allowed password length. A value of 0 means there is no
-   * restriction. Only enforced when password_quality is NUMERIC,
+   * Optional. The minimum allowed password length. A value of 0 means there is
+   * no restriction. Only enforced when password_quality is NUMERIC,
    * NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or COMPLEX.
    *
    * @param int $passwordMinimumLength
@@ -317,8 +318,8 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordMinimumLength;
   }
   /**
-   * Minimum number of letters required in the password. Only enforced when
-   * password_quality is COMPLEX.
+   * Optional. Minimum number of letters required in the password. Only enforced
+   * when password_quality is COMPLEX.
    *
    * @param int $passwordMinimumLetters
    */
@@ -334,8 +335,8 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordMinimumLetters;
   }
   /**
-   * Minimum number of lower case letters required in the password. Only
-   * enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of lower case letters required in the password.
+   * Only enforced when password_quality is COMPLEX.
    *
    * @param int $passwordMinimumLowerCase
    */
@@ -351,8 +352,9 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordMinimumLowerCase;
   }
   /**
-   * Minimum number of non-letter characters (numerical digits or symbols)
-   * required in the password. Only enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of non-letter characters (numerical digits or
+   * symbols) required in the password. Only enforced when password_quality is
+   * COMPLEX.
    *
    * @param int $passwordMinimumNonLetter
    */
@@ -368,8 +370,8 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordMinimumNonLetter;
   }
   /**
-   * Minimum number of numerical digits required in the password. Only enforced
-   * when password_quality is COMPLEX.
+   * Optional. Minimum number of numerical digits required in the password. Only
+   * enforced when password_quality is COMPLEX.
    *
    * @param int $passwordMinimumNumeric
    */
@@ -385,8 +387,8 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordMinimumNumeric;
   }
   /**
-   * Minimum number of symbols required in the password. Only enforced when
-   * password_quality is COMPLEX.
+   * Optional. Minimum number of symbols required in the password. Only enforced
+   * when password_quality is COMPLEX.
    *
    * @param int $passwordMinimumSymbols
    */
@@ -402,8 +404,8 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordMinimumSymbols;
   }
   /**
-   * Minimum number of upper case letters required in the password. Only
-   * enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of upper case letters required in the password.
+   * Only enforced when password_quality is COMPLEX.
    *
    * @param int $passwordMinimumUpperCase
    */
@@ -419,7 +421,7 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordMinimumUpperCase;
   }
   /**
-   * The required password quality.
+   * Optional. The required password quality.
    *
    * Accepted values: PASSWORD_QUALITY_UNSPECIFIED, BIOMETRIC_WEAK, SOMETHING,
    * NUMERIC, NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, COMPLEX,
@@ -439,7 +441,7 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordQuality;
   }
   /**
-   * The scope that the password requirement applies to.
+   * Optional. The scope that the password requirement applies to.
    *
    * Accepted values: SCOPE_UNSPECIFIED, SCOPE_DEVICE, SCOPE_PROFILE
    *
@@ -457,9 +459,9 @@ class PasswordRequirements extends \Google\Model
     return $this->passwordScope;
   }
   /**
-   * The length of time after a device or work profile is unlocked using a
-   * strong form of authentication (password, PIN, pattern) that it can be
-   * unlocked using any other authentication method (e.g. fingerprint, trust
+   * Optional. The length of time after a device or work profile is unlocked
+   * using a strong form of authentication (password, PIN, pattern) that it can
+   * be unlocked using any other authentication method (e.g. fingerprint, trust
    * agents, face). After the specified time period elapses, only strong forms
    * of authentication can be used to unlock the device or work profile.
    *
@@ -480,11 +482,11 @@ class PasswordRequirements extends \Google\Model
     return $this->requirePasswordUnlock;
   }
   /**
-   * Controls whether a unified lock is allowed for the device and the work
-   * profile, on devices running Android 9 and above with a work profile. This
-   * can be set only if password_scope is set to SCOPE_PROFILE, the policy will
-   * be rejected otherwise. If user has not set a separate work lock and this
-   * field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is
+   * Optional. Controls whether a unified lock is allowed for the device and the
+   * work profile, on devices running Android 9 and above with a work profile.
+   * This can be set only if password_scope is set to SCOPE_PROFILE, the policy
+   * will be rejected otherwise. If user has not set a separate work lock and
+   * this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is
    * reported with nonComplianceReason set to USER_ACTION.
    *
    * Accepted values: UNIFIED_LOCK_SETTINGS_UNSPECIFIED,
