@@ -47,6 +47,18 @@ class GoogleCloudContactcenterinsightsV1AssessmentRule extends \Google\Model
   public $name;
   protected $sampleRuleType = GoogleCloudContactcenterinsightsV1SampleRule::class;
   protected $sampleRuleDataType = '';
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzi;
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzs;
   protected $scheduleInfoType = GoogleCloudContactcenterinsightsV1ScheduleInfo::class;
   protected $scheduleInfoDataType = '';
   /**
@@ -138,6 +150,38 @@ class GoogleCloudContactcenterinsightsV1AssessmentRule extends \Google\Model
   public function getSampleRule()
   {
     return $this->sampleRule;
+  }
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @param bool $satisfiesPzi
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
+  }
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @param bool $satisfiesPzs
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * Schedule info for the assessment rule.

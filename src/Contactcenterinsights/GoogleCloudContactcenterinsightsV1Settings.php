@@ -76,6 +76,18 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   protected $redactionConfigType = GoogleCloudContactcenterinsightsV1RedactionConfig::class;
   protected $redactionConfigDataType = '';
   /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzi;
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * Optional. The path to a Cloud Storage bucket containing conversation screen
    * recordings. If provided, Insights will search in the bucket for a screen
    * recording file matching the conversation data source object name prefix. If
@@ -254,6 +266,38 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   public function getRedactionConfig()
   {
     return $this->redactionConfig;
+  }
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @param bool $satisfiesPzi
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
+  }
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @param bool $satisfiesPzs
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * Optional. The path to a Cloud Storage bucket containing conversation screen

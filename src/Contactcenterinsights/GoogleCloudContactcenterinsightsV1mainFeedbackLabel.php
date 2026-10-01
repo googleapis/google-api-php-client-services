@@ -52,6 +52,18 @@ class GoogleCloudContactcenterinsightsV1mainFeedbackLabel extends \Google\Model
   protected $qaAnswerLabelType = GoogleCloudContactcenterinsightsV1mainQaAnswerAnswerValue::class;
   protected $qaAnswerLabelDataType = '';
   /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzi;
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * Output only. Update time of the label.
    *
    * @var string
@@ -143,6 +155,38 @@ class GoogleCloudContactcenterinsightsV1mainFeedbackLabel extends \Google\Model
   public function getQaAnswerLabel()
   {
     return $this->qaAnswerLabel;
+  }
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @param bool $satisfiesPzi
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
+  }
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @param bool $satisfiesPzs
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * Output only. Update time of the label.

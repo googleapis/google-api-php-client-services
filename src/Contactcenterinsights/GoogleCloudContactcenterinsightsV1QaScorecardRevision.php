@@ -68,6 +68,18 @@ class GoogleCloudContactcenterinsightsV1QaScorecardRevision extends \Google\Coll
    * @var string
    */
   public $name;
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzi;
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzs;
   protected $snapshotType = GoogleCloudContactcenterinsightsV1QaScorecard::class;
   protected $snapshotDataType = '';
   /**
@@ -127,6 +139,38 @@ class GoogleCloudContactcenterinsightsV1QaScorecardRevision extends \Google\Coll
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @param bool $satisfiesPzi
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
+  }
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @param bool $satisfiesPzs
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * The snapshot of the scorecard at the time of this revision's creation.

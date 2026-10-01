@@ -115,6 +115,18 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   protected $runtimeAnnotationsType = GoogleCloudContactcenterinsightsV1RuntimeAnnotation::class;
   protected $runtimeAnnotationsDataType = 'array';
   /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzi;
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * The time at which the conversation started.
    *
    * @var string
@@ -440,6 +452,38 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   public function getRuntimeAnnotations()
   {
     return $this->runtimeAnnotations;
+  }
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @param bool $satisfiesPzi
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
+  }
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @param bool $satisfiesPzs
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * The time at which the conversation started.

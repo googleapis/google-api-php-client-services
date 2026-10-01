@@ -89,6 +89,18 @@ class GoogleCloudContactcenterinsightsV1QaQuestion extends \Google\Collection
    */
   public $questionType;
   /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzi;
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * Questions are tagged for categorization and scoring. Tags can either be: -
    * Default Tags: These are predefined categories. They are identified by their
    * string value (e.g., "BUSINESS", "COMPLIANCE", and "CUSTOMER"). - Custom
@@ -294,6 +306,38 @@ class GoogleCloudContactcenterinsightsV1QaQuestion extends \Google\Collection
   public function getQuestionType()
   {
     return $this->questionType;
+  }
+  /**
+   * Output only. Whether this resource is zone isolated.
+   *
+   * @param bool $satisfiesPzi
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
+  }
+  /**
+   * Output only. Whether this resource is zone separated.
+   *
+   * @param bool $satisfiesPzs
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * Questions are tagged for categorization and scoring. Tags can either be: -
