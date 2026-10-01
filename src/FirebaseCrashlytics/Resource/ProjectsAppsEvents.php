@@ -120,9 +120,9 @@ class ProjectsAppsEvents extends \Google\Service\Resource
    * = "background"`. OR across different keys, repeating a key within an AND,
    * NOT, and comparators other than `=` and `:` are rejected with
    * INVALID_ARGUMENT. Wildcards are not supported in values; use `custom_keys.:*`
-   * to match events that set a key to any value. Only supported for Android and
-   * iOS. This filter expression applies in addition to the `filter` field above.
-   * The syntax is a subset of AIP-160 (https://google.aip.dev/160).
+   * to match events that set a key to any value. This filter expression applies
+   * in addition to the `filter` field above. The syntax is a subset of AIP-160
+   * (https://google.aip.dev/160).
    * @opt_param int pageSize Optional. The maximum number of events per page. If
    * omitted, defaults to 10.
    * @opt_param string pageToken Optional. A page token, received from a previous
