@@ -20,6 +20,31 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends \Google\Model
 {
   /**
+   * Optional. Runs the test asynchronously, by enqueueing it through the real
+   * execution queue under `trigger_id` instead of running the task graph
+   * inline. Default `false`, which preserves the existing synchronous behavior.
+   * The enqueued request carries no caller identity, so it is drained under the
+   * integration's run-as service account, exactly as a real Cloud Scheduler,
+   * cron, Pub/Sub, Salesforce or connector fire would be. That is the only way
+   * to verify the credential path an asynchronous trigger actually takes; a
+   * synchronous test always carries the caller's own credential and so
+   * exercises the opposite branch. When `true`: * Only the **published**
+   * (`ACTIVE`) version runs. The asynchronous path resolves the integration
+   * from storage by `trigger_id`, so a draft cannot be tested this way.
+   * `integration_version` must therefore carry only `name`; supplying any other
+   * field is rejected, rather than silently running something other than what
+   * was passed. * The response carries `execution_id` only. `execution_failed`,
+   * `event_parameters`, `parameters` and `parameter_entries` describe a
+   * finished run and are left unset, because nothing has run yet. In
+   * particular, do not read `execution_failed` as a pass signal. * The run is
+   * real, with real side effects, quota and concurrency. No actual Pub/Sub push
+   * or Cloud Scheduler tick occurs; only the enqueue is simulated, which does
+   * not change the credential path.
+   *
+   * @var bool
+   */
+  public $asyncExecution;
+  /**
    * Required. This is used to identify the client on whose behalf the event
    * will be executed.
    *
@@ -63,6 +88,41 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends \Google\Mode
    */
   public $triggerId;
 
+  /**
+   * Optional. Runs the test asynchronously, by enqueueing it through the real
+   * execution queue under `trigger_id` instead of running the task graph
+   * inline. Default `false`, which preserves the existing synchronous behavior.
+   * The enqueued request carries no caller identity, so it is drained under the
+   * integration's run-as service account, exactly as a real Cloud Scheduler,
+   * cron, Pub/Sub, Salesforce or connector fire would be. That is the only way
+   * to verify the credential path an asynchronous trigger actually takes; a
+   * synchronous test always carries the caller's own credential and so
+   * exercises the opposite branch. When `true`: * Only the **published**
+   * (`ACTIVE`) version runs. The asynchronous path resolves the integration
+   * from storage by `trigger_id`, so a draft cannot be tested this way.
+   * `integration_version` must therefore carry only `name`; supplying any other
+   * field is rejected, rather than silently running something other than what
+   * was passed. * The response carries `execution_id` only. `execution_failed`,
+   * `event_parameters`, `parameters` and `parameter_entries` describe a
+   * finished run and are left unset, because nothing has run yet. In
+   * particular, do not read `execution_failed` as a pass signal. * The run is
+   * real, with real side effects, quota and concurrency. No actual Pub/Sub push
+   * or Cloud Scheduler tick occurs; only the enqueue is simulated, which does
+   * not change the credential path.
+   *
+   * @param bool $asyncExecution
+   */
+  public function setAsyncExecution($asyncExecution)
+  {
+    $this->asyncExecution = $asyncExecution;
+  }
+  /**
+   * @return bool
+   */
+  public function getAsyncExecution()
+  {
+    return $this->asyncExecution;
+  }
   /**
    * Required. This is used to identify the client on whose behalf the event
    * will be executed.

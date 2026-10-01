@@ -32,7 +32,7 @@ class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest extends \Goo
    */
   public const FILE_FORMAT_YAML = 'YAML';
   /**
-   * The textproto of the IntegrationVersion.
+   * Optional. The textproto of the IntegrationVersion.
    *
    * @var string
    */
@@ -45,7 +45,7 @@ class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest extends \Goo
   public $fileFormat;
 
   /**
-   * The textproto of the IntegrationVersion.
+   * Optional. The textproto of the IntegrationVersion.
    *
    * @param string $content
    */

@@ -22,6 +22,13 @@ class GoogleCloudIntegrationsV1alphaCustomerConfig extends \Google\Model
   protected $cloudKmsConfigType = GoogleCloudIntegrationsV1alphaCloudKmsConfig::class;
   protected $cloudKmsConfigDataType = '';
   /**
+   * Optional. True if every integration in this region should run under the
+   * hardened end-user-credential flow. See go/ip-euc-harden.
+   *
+   * @var bool
+   */
+  public $enableEucHardenedFlow;
+  /**
    * Optional. Indicates if the client should be allowed to make HTTP calls.
    * True if http call feature should be turned on for this region.
    *
@@ -66,6 +73,23 @@ class GoogleCloudIntegrationsV1alphaCustomerConfig extends \Google\Model
   public function getCloudKmsConfig()
   {
     return $this->cloudKmsConfig;
+  }
+  /**
+   * Optional. True if every integration in this region should run under the
+   * hardened end-user-credential flow. See go/ip-euc-harden.
+   *
+   * @param bool $enableEucHardenedFlow
+   */
+  public function setEnableEucHardenedFlow($enableEucHardenedFlow)
+  {
+    $this->enableEucHardenedFlow = $enableEucHardenedFlow;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableEucHardenedFlow()
+  {
+    return $this->enableEucHardenedFlow;
   }
   /**
    * Optional. Indicates if the client should be allowed to make HTTP calls.

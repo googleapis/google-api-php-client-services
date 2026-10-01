@@ -399,11 +399,11 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
     return $this->integrationParameters;
   }
   /**
-   * Optional. Parameters that are expected to be passed to the integration when
-   * an event is triggered. This consists of all the parameters that are
-   * expected in the integration execution. This gives the user the ability to
-   * provide default values, add information like PII and also provide data
-   * types of each parameter.
+   * Optional. Deprecated: Use `integration_parameters` instead. Parameters that
+   * are expected to be passed to the integration when an event is triggered.
+   * This consists of all the parameters that are expected in the integration
+   * execution. This gives the user the ability to provide default values, add
+   * information like PII and also provide data types of each parameter.
    *
    * @deprecated
    * @param EnterpriseCrmFrontendsEventbusProtoWorkflowParameters $integrationParametersInternal
@@ -603,8 +603,9 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
     return $this->taskConfigs;
   }
   /**
-   * Optional. Task configuration for the integration. It's optional, but the
-   * integration doesn't do anything without task_configs.
+   * Optional. Deprecated: Use `task_configs` instead. Task configuration for
+   * the integration. It's optional, but the integration doesn't do anything
+   * without task_configs.
    *
    * @deprecated
    * @param EnterpriseCrmFrontendsEventbusProtoTaskConfig[] $taskConfigsInternal
@@ -658,7 +659,8 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
     return $this->triggerConfigs;
   }
   /**
-   * Optional. Trigger configurations.
+   * Optional. Deprecated: Use `trigger_configs` instead. Trigger
+   * configurations.
    *
    * @deprecated
    * @param EnterpriseCrmFrontendsEventbusProtoTriggerConfig[] $triggerConfigsInternal

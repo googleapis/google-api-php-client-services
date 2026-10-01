@@ -47,6 +47,13 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
    * @var string
    */
   public $eventsListenerIngressEndpoint;
+  /**
+   * Optional. Filter to be applied on the events to be received by the
+   * connection.
+   *
+   * @var string
+   */
+  public $globalEventFilter;
   protected $listenerAuthConfigType = GoogleCloudConnectorsV1AuthConfig::class;
   protected $listenerAuthConfigDataType = '';
   /**
@@ -181,6 +188,23 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   public function getEventsListenerIngressEndpoint()
   {
     return $this->eventsListenerIngressEndpoint;
+  }
+  /**
+   * Optional. Filter to be applied on the events to be received by the
+   * connection.
+   *
+   * @param string $globalEventFilter
+   */
+  public function setGlobalEventFilter($globalEventFilter)
+  {
+    $this->globalEventFilter = $globalEventFilter;
+  }
+  /**
+   * @return string
+   */
+  public function getGlobalEventFilter()
+  {
+    return $this->globalEventFilter;
   }
   /**
    * Optional. Auth details for the event listener.

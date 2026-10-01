@@ -68,6 +68,8 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
    */
   public const SUBSCRIPTION_TYPE_PAID = 'PAID';
   protected $collection_key = 'trafficShapingConfigs';
+  protected $adminFiltersType = GoogleCloudConnectorsV1AdminFilters::class;
+  protected $adminFiltersDataType = 'array';
   /**
    * Optional. Async operations enabled for the connection. If Async Operations
    * is enabled, Connection allows the customers to initiate async long running
@@ -244,6 +246,23 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * Optional. Admin filters for the connection. These are used by Gemini
+   * Enterprise.
+   *
+   * @param GoogleCloudConnectorsV1AdminFilters[] $adminFilters
+   */
+  public function setAdminFilters($adminFilters)
+  {
+    $this->adminFilters = $adminFilters;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1AdminFilters[]
+   */
+  public function getAdminFilters()
+  {
+    return $this->adminFilters;
+  }
   /**
    * Optional. Async operations enabled for the connection. If Async Operations
    * is enabled, Connection allows the customers to initiate async long running

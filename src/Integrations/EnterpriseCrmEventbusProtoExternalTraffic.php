@@ -20,6 +20,13 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoExternalTraffic extends \Google\Model
 {
   public const SOURCE_SOURCE_UNSPECIFIED = 'SOURCE_UNSPECIFIED';
+  /**
+   * WARNING: not the Apigee product. Marks external CUSTOMER traffic, including
+   * live Standalone IP clients, so deleting an `== APIGEE` branch breaks every
+   * external customer. SECURITY is the other external source (see
+   * ExternalTrafficUtils.EXTERNAL_SOURCES). Real Apigee test:
+   * !is_branded_as_standalone.
+   */
   public const SOURCE_APIGEE = 'APIGEE';
   public const SOURCE_SECURITY = 'SECURITY';
   /**

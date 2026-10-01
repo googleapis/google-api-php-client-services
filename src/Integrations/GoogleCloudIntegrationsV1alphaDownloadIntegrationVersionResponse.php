@@ -46,7 +46,7 @@ class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends \
     return $this->content;
   }
   /**
-   * List containing String represendation for multiple file with type.
+   * List containing String representation for multiple file with type.
    *
    * @param GoogleCloudIntegrationsV1alphaSerializedFile[] $files
    */

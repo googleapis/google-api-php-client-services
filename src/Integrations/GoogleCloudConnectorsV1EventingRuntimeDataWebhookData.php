@@ -19,7 +19,7 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Collection
 {
-  protected $collection_key = 'additionalVariables';
+  protected $collection_key = 'eventTypes';
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   /**
@@ -28,6 +28,19 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
    * @var string
    */
   public $createTime;
+  /**
+   * Output only. List of event subscriptions which are using the webhook.
+   *
+   * @var string[]
+   */
+  public $eventSubscriptions;
+  /**
+   * Output only. List of event types for the webhook. This is the event types
+   * subscribed by the current webhook.
+   *
+   * @var string[]
+   */
+  public $eventTypes;
   /**
    * Output only. ID to uniquely identify webhook.
    *
@@ -85,6 +98,39 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Output only. List of event subscriptions which are using the webhook.
+   *
+   * @param string[] $eventSubscriptions
+   */
+  public function setEventSubscriptions($eventSubscriptions)
+  {
+    $this->eventSubscriptions = $eventSubscriptions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getEventSubscriptions()
+  {
+    return $this->eventSubscriptions;
+  }
+  /**
+   * Output only. List of event types for the webhook. This is the event types
+   * subscribed by the current webhook.
+   *
+   * @param string[] $eventTypes
+   */
+  public function setEventTypes($eventTypes)
+  {
+    $this->eventTypes = $eventTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getEventTypes()
+  {
+    return $this->eventTypes;
   }
   /**
    * Output only. ID to uniquely identify webhook.
