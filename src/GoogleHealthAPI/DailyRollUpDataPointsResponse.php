@@ -20,9 +20,33 @@ namespace Google\Service\GoogleHealthAPI;
 class DailyRollUpDataPointsResponse extends \Google\Collection
 {
   protected $collection_key = 'rollupDataPoints';
+  /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @var string
+   */
+  public $nextPageToken;
   protected $rollupDataPointsType = DailyRollupDataPoint::class;
   protected $rollupDataPointsDataType = 'array';
 
+  /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
+   */
+  public function setNextPageToken($nextPageToken)
+  {
+    $this->nextPageToken = $nextPageToken;
+  }
+  /**
+   * @return string
+   */
+  public function getNextPageToken()
+  {
+    return $this->nextPageToken;
+  }
   /**
    * Values for each aggregation time window.
    *

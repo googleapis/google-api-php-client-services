@@ -52,7 +52,7 @@ class DailyRollUpDataPointsRequest extends \Google\Model
    */
   public $pageSize;
   /**
-   * Optional. The `next_page_token` from a previous request, if any. All other
+   * Optional. The next_page_token from a previous request, if any. All other
    * request fields need to be the same as in the initial request when the page
    * token is specified.
    *
@@ -125,7 +125,7 @@ class DailyRollUpDataPointsRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * Optional. The `next_page_token` from a previous request, if any. All other
+   * Optional. The next_page_token from a previous request, if any. All other
    * request fields need to be the same as in the initial request when the page
    * token is specified.
    *
