@@ -98,6 +98,8 @@ class ProjectsAppsReports extends \Google\Service\Resource
    * call. The page token is only valid for the exact same set of filters, which
    * must also be sent in subsequent requests. This token is valid for 10 minutes
    * after the first request.
+   * @opt_param string view Optional. Response view. If not set, defaults to
+   * `REPORT_VIEW_FULL`.
    * @return Report
    * @throws \Google\Service\Exception
    */
@@ -113,6 +115,9 @@ class ProjectsAppsReports extends \Google\Service\Resource
    * @param string $parent Required. The firebase application. Format:
    * "projects/{project}/apps/{app_id}".
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. Response view. If not set, defaults to
+   * `REPORT_VIEW_BASIC`. `REPORT_VIEW_FULL` is not supported for list operations.
    * @return ListReportsResponse
    * @throws \Google\Service\Exception
    */
