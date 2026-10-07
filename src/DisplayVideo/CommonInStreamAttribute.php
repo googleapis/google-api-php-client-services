@@ -155,7 +155,7 @@ class CommonInStreamAttribute extends \Google\Model
     return $this->trackingUrl;
   }
   /**
-   * Required. The YouTube video of the ad.
+   * Required. Immutable. The YouTube video of the ad.
    *
    * @param YoutubeVideoDetails $video
    */

@@ -22,8 +22,6 @@ class DigitalContentLabelTargetingOptionDetails extends \Google\Model
   /**
    * Content label is not specified in this version. This enum is a place holder
    * for a default value and does not represent a real content rating.
-   * **Starting on *October 1, 2026*, this value will be deprecated and no
-   * longer be accepted as a valid value when assigning targeting.**
    */
   public const CONTENT_RATING_TIER_CONTENT_RATING_TIER_UNSPECIFIED = 'CONTENT_RATING_TIER_UNSPECIFIED';
   /**
@@ -31,34 +29,40 @@ class DigitalContentLabelTargetingOptionDetails extends \Google\Model
    */
   public const CONTENT_RATING_TIER_CONTENT_RATING_TIER_UNRATED = 'CONTENT_RATING_TIER_UNRATED';
   /**
-   * Content suitable for general audiences. **Starting on *October 1, 2026*,
-   * this value will be deprecated and no longer be accepted as a valid value
-   * when assigning targeting.**
+   * Deprecated: This content rating tier is no longer supported. Content
+   * suitable for general audiences.
+   *
+   * @deprecated
    */
   public const CONTENT_RATING_TIER_CONTENT_RATING_TIER_GENERAL = 'CONTENT_RATING_TIER_GENERAL';
   /**
-   * Content suitable for most audiences with parental guidance. **Starting on
-   * *October 1, 2026*, this value will be deprecated and no longer be accepted
-   * as a valid value when assigning targeting.**
+   * Deprecated: This content rating tier is no longer supported. Content
+   * suitable for most audiences with parental guidance.
+   *
+   * @deprecated
    */
   public const CONTENT_RATING_TIER_CONTENT_RATING_TIER_PARENTAL_GUIDANCE = 'CONTENT_RATING_TIER_PARENTAL_GUIDANCE';
   /**
-   * Content suitable for teen and older audiences. **Starting on *October 1,
-   * 2026*, this value will be deprecated and no longer be accepted as a valid
-   * value when assigning targeting.**
+   * Deprecated: This content rating tier is no longer supported. Content
+   * suitable for teen and older audiences.
+   *
+   * @deprecated
    */
   public const CONTENT_RATING_TIER_CONTENT_RATING_TIER_TEENS = 'CONTENT_RATING_TIER_TEENS';
   /**
-   * Content suitable only for mature audiences. **Starting on *October 1,
-   * 2026*, this value will be deprecated and no longer be accepted as a valid
-   * value when assigning targeting.**
+   * Deprecated: This content rating tier is no longer supported. Content
+   * suitable only for mature audiences.
+   *
+   * @deprecated
    */
   public const CONTENT_RATING_TIER_CONTENT_RATING_TIER_MATURE = 'CONTENT_RATING_TIER_MATURE';
   /**
-   * Content suitable for family audiences. It is a subset of
+   * Deprecated: This content rating tier is no longer supported. Content
+   * suitable for family audiences. It is a subset of
    * CONTENT_RATING_TIER_GENERAL. Only applicable to YouTube and Partners line
-   * items. **Starting on *October 1, 2026*, this value will be deprecated and
-   * no longer be accepted as a valid value when assigning targeting.**
+   * items.
+   *
+   * @deprecated
    */
   public const CONTENT_RATING_TIER_CONTENT_RATING_TIER_FAMILIES = 'CONTENT_RATING_TIER_FAMILIES';
   /**

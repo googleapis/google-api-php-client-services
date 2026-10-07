@@ -58,7 +58,7 @@ class TargetFrequency extends \Google\Model
   public $targetCount;
   /**
    * The unit of time in which the target frequency will be applied. The
-   * following time unit is applicable: * `TIME_UNIT_WEEKS`
+   * following time unit is applicable: * `TIME_UNIT_WEEKS` * `TIME_UNIT_MONTHS`
    *
    * @var string
    */
@@ -66,7 +66,7 @@ class TargetFrequency extends \Google\Model
   /**
    * The number of time_unit the target frequency will last. The following
    * restrictions apply based on the value of time_unit: * `TIME_UNIT_WEEKS` -
-   * must be 1
+   * must be 1 * `TIME_UNIT_MONTHS` - must be 1
    *
    * @var int
    */
@@ -91,7 +91,7 @@ class TargetFrequency extends \Google\Model
   }
   /**
    * The unit of time in which the target frequency will be applied. The
-   * following time unit is applicable: * `TIME_UNIT_WEEKS`
+   * following time unit is applicable: * `TIME_UNIT_WEEKS` * `TIME_UNIT_MONTHS`
    *
    * Accepted values: TIME_UNIT_UNSPECIFIED, TIME_UNIT_LIFETIME,
    * TIME_UNIT_MONTHS, TIME_UNIT_WEEKS, TIME_UNIT_DAYS, TIME_UNIT_HOURS,
@@ -113,7 +113,7 @@ class TargetFrequency extends \Google\Model
   /**
    * The number of time_unit the target frequency will last. The following
    * restrictions apply based on the value of time_unit: * `TIME_UNIT_WEEKS` -
-   * must be 1
+   * must be 1 * `TIME_UNIT_MONTHS` - must be 1
    *
    * @param int $timeUnitCount
    */

@@ -180,90 +180,6 @@ class GeoRegionTargetingOptionDetails extends \Google\Model
    */
   public const GEO_REGION_TYPE_GEO_REGION_TYPE_WARD = 'GEO_REGION_TYPE_WARD';
   /**
-   * The geographic region is a town.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_TOWN = 'GEO_REGION_TYPE_TOWN';
-  /**
-   * The geographic region is a village.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_VILLAGE = 'GEO_REGION_TYPE_VILLAGE';
-  /**
-   * The geographic region is a city district.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_CITY_DISTRICT = 'GEO_REGION_TYPE_CITY_DISTRICT';
-  /**
-   * The geographic region is a suburb.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_SUBURB = 'GEO_REGION_TYPE_SUBURB';
-  /**
-   * The geographic region is a hamlet.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_HAMLET = 'GEO_REGION_TYPE_HAMLET';
-  /**
-   * The geographic region is a municipal district.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_MUNICIPAL_DISTRICT = 'GEO_REGION_TYPE_MUNICIPAL_DISTRICT';
-  /**
-   * The geographic region is a community.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_COMMUNITY = 'GEO_REGION_TYPE_COMMUNITY';
-  /**
-   * The geographic region is a township.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_TOWNSHIP = 'GEO_REGION_TYPE_TOWNSHIP';
-  /**
-   * The geographic region is an urban district.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_URBAN_DISTRICT = 'GEO_REGION_TYPE_URBAN_DISTRICT';
-  /**
-   * The geographic region is a residential area.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_RESIDENTIAL_AREA = 'GEO_REGION_TYPE_RESIDENTIAL_AREA';
-  /**
-   * The geographic region is an independent city.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_INDEPENDENT_CITY = 'GEO_REGION_TYPE_INDEPENDENT_CITY';
-  /**
-   * The geographic region is a sector.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_SECTOR = 'GEO_REGION_TYPE_SECTOR';
-  /**
-   * The geographic region is an area.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_AREA = 'GEO_REGION_TYPE_AREA';
-  /**
-   * The geographic region is an estate.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_ESTATE = 'GEO_REGION_TYPE_ESTATE';
-  /**
-   * The geographic region is a parish.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_PARISH = 'GEO_REGION_TYPE_PARISH';
-  /**
-   * The geographic region is a settlement.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_SETTLEMENT = 'GEO_REGION_TYPE_SETTLEMENT';
-  /**
-   * The geographic region is a zone.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_ZONE = 'GEO_REGION_TYPE_ZONE';
-  /**
-   * The geographic region is a colony.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_COLONY = 'GEO_REGION_TYPE_COLONY';
-  /**
-   * The geographic region is an industrial area.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_INDUSTRIAL_AREA = 'GEO_REGION_TYPE_INDUSTRIAL_AREA';
-  /**
-   * The geographic region is a provincial city.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_PROVINCIAL_CITY = 'GEO_REGION_TYPE_PROVINCIAL_CITY';
-  /**
-   * The geographic region is a rural district.
-   */
-  public const GEO_REGION_TYPE_GEO_REGION_TYPE_RURAL_DISTRICT = 'GEO_REGION_TYPE_RURAL_DISTRICT';
-  /**
    * Output only. The display name of the geographic region (e.g., "Ontario,
    * Canada").
    *
@@ -315,16 +231,7 @@ class GeoRegionTargetingOptionDetails extends \Google\Model
    * GEO_REGION_TYPE_SUB_DISTRICT, GEO_REGION_TYPE_QUARTER,
    * GEO_REGION_TYPE_DIVISION, GEO_REGION_TYPE_COMMUNE,
    * GEO_REGION_TYPE_COLLOQUIAL_AREA, GEO_REGION_TYPE_POST_TOWN,
-   * GEO_REGION_TYPE_WARD, GEO_REGION_TYPE_TOWN, GEO_REGION_TYPE_VILLAGE,
-   * GEO_REGION_TYPE_CITY_DISTRICT, GEO_REGION_TYPE_SUBURB,
-   * GEO_REGION_TYPE_HAMLET, GEO_REGION_TYPE_MUNICIPAL_DISTRICT,
-   * GEO_REGION_TYPE_COMMUNITY, GEO_REGION_TYPE_TOWNSHIP,
-   * GEO_REGION_TYPE_URBAN_DISTRICT, GEO_REGION_TYPE_RESIDENTIAL_AREA,
-   * GEO_REGION_TYPE_INDEPENDENT_CITY, GEO_REGION_TYPE_SECTOR,
-   * GEO_REGION_TYPE_AREA, GEO_REGION_TYPE_ESTATE, GEO_REGION_TYPE_PARISH,
-   * GEO_REGION_TYPE_SETTLEMENT, GEO_REGION_TYPE_ZONE, GEO_REGION_TYPE_COLONY,
-   * GEO_REGION_TYPE_INDUSTRIAL_AREA, GEO_REGION_TYPE_PROVINCIAL_CITY,
-   * GEO_REGION_TYPE_RURAL_DISTRICT
+   * GEO_REGION_TYPE_WARD
    *
    * @param self::GEO_REGION_TYPE_* $geoRegionType
    */

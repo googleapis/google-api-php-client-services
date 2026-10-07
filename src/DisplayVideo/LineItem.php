@@ -847,7 +847,7 @@ class LineItem extends \Google\Collection
     return $this->warningMessages;
   }
   /**
-   * Output only. Settings specific to YouTube and Partners line items.
+   * Optional. Settings specific to YouTube and Partners line items.
    *
    * @param YoutubeAndPartnersSettings $youtubeAndPartnersSettings
    */
