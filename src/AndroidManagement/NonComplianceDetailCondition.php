@@ -70,6 +70,10 @@ class NonComplianceDetailCondition extends \Google\Model
    */
   public const NON_COMPLIANCE_REASON_APP_NOT_UPDATED = 'APP_NOT_UPDATED';
   /**
+   * This OS version is not permitted by the policy
+   */
+  public const NON_COMPLIANCE_REASON_OS_NOT_PERMITTED = 'OS_NOT_PERMITTED';
+  /**
    * The device is incompatible with the policy requirements.
    */
   public const NON_COMPLIANCE_REASON_DEVICE_INCOMPATIBLE = 'DEVICE_INCOMPATIBLE';
@@ -111,7 +115,8 @@ class NonComplianceDetailCondition extends \Google\Model
    * Accepted values: NON_COMPLIANCE_REASON_UNSPECIFIED, API_LEVEL,
    * MANAGEMENT_MODE, USER_ACTION, INVALID_VALUE, APP_NOT_INSTALLED,
    * UNSUPPORTED, APP_INSTALLED, PENDING, APP_INCOMPATIBLE, APP_NOT_UPDATED,
-   * DEVICE_INCOMPATIBLE, APP_SIGNING_CERT_MISMATCH, PROJECT_NOT_PERMITTED
+   * OS_NOT_PERMITTED, DEVICE_INCOMPATIBLE, APP_SIGNING_CERT_MISMATCH,
+   * PROJECT_NOT_PERMITTED
    *
    * @param self::NON_COMPLIANCE_REASON_* $nonComplianceReason
    */
