@@ -17,6 +17,7 @@
 
 namespace Google\Service\DeviceRun\Resource;
 
+use Google\Service\DeviceRun\BatchGetSessionsResponse;
 use Google\Service\DeviceRun\CancelSessionRequest;
 use Google\Service\DeviceRun\CancelSessionResponse;
 use Google\Service\DeviceRun\GoogleLongrunningOperation;
@@ -33,6 +34,37 @@ use Google\Service\DeviceRun\Session;
  */
 class ProjectsLocationsSessions extends \Google\Service\Resource
 {
+  /**
+   * Retrieves multiple automation sessions in a single batch request. Sessions
+   * are returned in the same order as the `names` in the request. If any of the
+   * requested sessions does not exist, the whole request fails with `NOT_FOUND`
+   * and no sessions are returned. When calling this method over HTTP/REST with a
+   * large number of `names`, the request URL may exceed the maximum URL length
+   * (about 16 KB) and be rejected. In that case, send a `POST` request to the
+   * same URL with the `X-HTTP-Method-Override: GET` header and pass the request
+   * parameters in a JSON (`application/json`) or form-encoded
+   * (`application/x-www-form-urlencoded`) body. See
+   * https://cloud.google.com/apis/docs/http#long_request_urls.
+   * (sessions.batchGet)
+   *
+   * @param string $parent Required. The parent resource shared by all sessions
+   * being retrieved. Format: `projects/{project}/locations/{location}`. The
+   * `parent` field in the `BatchGetSessionsRequest` message must match the
+   * `parent` of all `Session` resource names in `names`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string names Required. The names of the sessions to retrieve. A
+   * maximum of 500 sessions can be retrieved in a batch. Format:
+   * `projects/{project}/locations/{location}/sessions/{session}`.
+   * @return BatchGetSessionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function batchGet($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchGet', [$params], BatchGetSessionsResponse::class);
+  }
   /**
    * Cancels an in-progress automation session. This RPC returns immediately and
    * cancellation proceeds asynchronously. If the session is already finished,

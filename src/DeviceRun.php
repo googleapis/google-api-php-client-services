@@ -224,7 +224,22 @@ class DeviceRun extends \Google\Service
         'sessions',
         [
           'methods' => [
-            'cancel' => [
+            'batchGet' => [
+              'path' => 'v1alpha/{+parent}/sessions:batchGet',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'names' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
+            ],'cancel' => [
               'path' => 'v1alpha/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
