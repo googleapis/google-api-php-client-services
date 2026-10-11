@@ -466,8 +466,8 @@ class Unit extends \Google\Collection
   /**
    * Optional. Output only. Set of key/value pairs corresponding to output
    * variables from execution of actuation templates. The variables are declared
-   * in actuation configs (e.g in helm chart or terraform) and the values are
-   * fetched and returned by the actuation engine upon completion of execution.
+   * in actuation configs (in Terraform for example) and the values are fetched
+   * and returned by the actuation engine upon completion of execution.
    *
    * @param UnitVariable[] $outputVariables
    */

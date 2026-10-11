@@ -20,8 +20,8 @@ namespace Google\Service\SaaSServiceManagement;
 class Blueprint extends \Google\Model
 {
   /**
-   * Output only. Type of the engine used to actuate the blueprint. e.g.
-   * terraform, helm etc.
+   * Output only. Type of the engine used to actuate the blueprint. (Terraform,
+   * for example)
    *
    * @var string
    */
@@ -41,8 +41,8 @@ class Blueprint extends \Google\Model
   public $version;
 
   /**
-   * Output only. Type of the engine used to actuate the blueprint. e.g.
-   * terraform, helm etc.
+   * Output only. Type of the engine used to actuate the blueprint. (Terraform,
+   * for example)
    *
    * @param string $engine
    */

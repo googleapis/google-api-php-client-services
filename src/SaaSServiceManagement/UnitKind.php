@@ -69,6 +69,13 @@ class UnitKind extends \Google\Collection
    * @var string
    */
   public $defaultRelease;
+  /**
+   * Output only. The timestamp when the resource was marked for deletion
+   * (deletion is an asynchronous operation).
+   *
+   * @var string
+   */
+  public $deleteTime;
   protected $dependenciesType = Dependency::class;
   protected $dependenciesDataType = 'array';
   /**
@@ -215,6 +222,23 @@ class UnitKind extends \Google\Collection
   public function getDefaultRelease()
   {
     return $this->defaultRelease;
+  }
+  /**
+   * Output only. The timestamp when the resource was marked for deletion
+   * (deletion is an asynchronous operation).
+   *
+   * @param string $deleteTime
+   */
+  public function setDeleteTime($deleteTime)
+  {
+    $this->deleteTime = $deleteTime;
+  }
+  /**
+   * @return string
+   */
+  public function getDeleteTime()
+  {
+    return $this->deleteTime;
   }
   /**
    * Optional. Immutable. List of other unit kinds that this release will depend

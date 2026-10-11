@@ -93,7 +93,7 @@ class RolloutKind extends \Google\Model
    */
   public $uid;
   /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string
+   * Optional. [CEL](https://github.com/google/cel-spec) formatted filter string
    * against Unit. The filter will be applied to determine the eligible unit
    * population. This filter can only reduce, but not expand the scope of the
    * rollout.
@@ -277,7 +277,7 @@ class RolloutKind extends \Google\Model
     return $this->uid;
   }
   /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string
+   * Optional. [CEL](https://github.com/google/cel-spec) formatted filter string
    * against Unit. The filter will be applied to determine the eligible unit
    * population. This filter can only reduce, but not expand the scope of the
    * rollout.
