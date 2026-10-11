@@ -72,10 +72,6 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
    */
   public const TYPE_DATA_DOCUMENTATION = 'DATA_DOCUMENTATION';
   /**
-   * Unstructured data profile scan.
-   */
-  public const TYPE_UNSTRUCTURED_DATA_PROFILE = 'UNSTRUCTURED_DATA_PROFILE';
-  /**
    * Output only. The time when the DataScanJob was created.
    *
    * @var string
@@ -148,10 +144,6 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
    * @var string
    */
   public $uid;
-  protected $unstructuredDataProfileResultType = GoogleCloudDataplexV1UnstructuredDataProfileResult::class;
-  protected $unstructuredDataProfileResultDataType = '';
-  protected $unstructuredDataProfileSpecType = GoogleCloudDataplexV1UnstructuredDataProfileSpec::class;
-  protected $unstructuredDataProfileSpecDataType = '';
 
   /**
    * Output only. The time when the DataScanJob was created.
@@ -403,7 +395,7 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
    * Output only. The type of the parent DataScan.
    *
    * Accepted values: DATA_SCAN_TYPE_UNSPECIFIED, DATA_QUALITY, DATA_PROFILE,
-   * DATA_DISCOVERY, DATA_DOCUMENTATION, UNSTRUCTURED_DATA_PROFILE
+   * DATA_DISCOVERY, DATA_DOCUMENTATION
    *
    * @param self::TYPE_* $type
    */
@@ -433,38 +425,6 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
   public function getUid()
   {
     return $this->uid;
-  }
-  /**
-   * Output only. The result of an unstructured data profile scan.
-   *
-   * @param GoogleCloudDataplexV1UnstructuredDataProfileResult $unstructuredDataProfileResult
-   */
-  public function setUnstructuredDataProfileResult(GoogleCloudDataplexV1UnstructuredDataProfileResult $unstructuredDataProfileResult)
-  {
-    $this->unstructuredDataProfileResult = $unstructuredDataProfileResult;
-  }
-  /**
-   * @return GoogleCloudDataplexV1UnstructuredDataProfileResult
-   */
-  public function getUnstructuredDataProfileResult()
-  {
-    return $this->unstructuredDataProfileResult;
-  }
-  /**
-   * Output only. Settings for an unstructured data profile scan.
-   *
-   * @param GoogleCloudDataplexV1UnstructuredDataProfileSpec $unstructuredDataProfileSpec
-   */
-  public function setUnstructuredDataProfileSpec(GoogleCloudDataplexV1UnstructuredDataProfileSpec $unstructuredDataProfileSpec)
-  {
-    $this->unstructuredDataProfileSpec = $unstructuredDataProfileSpec;
-  }
-  /**
-   * @return GoogleCloudDataplexV1UnstructuredDataProfileSpec
-   */
-  public function getUnstructuredDataProfileSpec()
-  {
-    return $this->unstructuredDataProfileSpec;
   }
 }
 
