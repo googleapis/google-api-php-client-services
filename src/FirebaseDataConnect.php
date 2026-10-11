@@ -45,6 +45,8 @@ class FirebaseDataConnect extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_services;
   public $projects_locations_services_connectors;
+  public $projects_locations_services_postgrest;
+  public $projects_locations_services_postgrest_rpc;
   public $projects_locations_services_schemas;
   public $rootUrlTemplate;
 
@@ -510,6 +512,131 @@ class FirebaseDataConnect extends \Google\Service
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_services_postgrest = new FirebaseDataConnect\Resource\ProjectsLocationsServicesPostgrest(
+        $this,
+        $this->serviceName,
+        'postgrest',
+        [
+          'methods' => [
+            'postgrestDelete' => [
+              'path' => 'v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'firebasedataconnectService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firebasedataconnectTable' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'postgrestInsert' => [
+              'path' => 'v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'firebasedataconnectService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firebasedataconnectTable' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'postgrestSelect' => [
+              'path' => 'v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'firebasedataconnectService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firebasedataconnectTable' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'postgrestUpdate' => [
+              'path' => 'v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'firebasedataconnectService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firebasedataconnectTable' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'postgrestUpsert' => [
+              'path' => 'v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'firebasedataconnectService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firebasedataconnectTable' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_services_postgrest_rpc = new FirebaseDataConnect\Resource\ProjectsLocationsServicesPostgrestRpc(
+        $this,
+        $this->serviceName,
+        'rpc',
+        [
+          'methods' => [
+            'postgrestCallFunction' => [
+              'path' => 'v1/{+firebasedataconnectService}/postgrest/rpc/{+firebasedataconnectFunction}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'firebasedataconnectService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firebasedataconnectFunction' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'postgrestQueryFunction' => [
+              'path' => 'v1/{+firebasedataconnectService}/postgrest/rpc/{+firebasedataconnectFunction}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'firebasedataconnectService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firebasedataconnectFunction' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
