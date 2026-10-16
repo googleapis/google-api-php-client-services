@@ -26,7 +26,7 @@ class CloudExadataInfrastructure extends \Google\Model
    */
   public $createTime;
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    *
    * @var string
    */
@@ -39,9 +39,9 @@ class CloudExadataInfrastructure extends \Google\Model
    */
   public $entitlementId;
   /**
-   * Optional. The GCP Oracle zone where Oracle Exadata Infrastructure is
-   * hosted. Example: us-east4-b-r2. If not specified, the system will pick a
-   * zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle Exadata
+   * Infrastructure is hosted. Example: us-east4-b-r2. If not specified, the
+   * system will pick a zone based on availability.
    *
    * @var string
    */
@@ -80,7 +80,7 @@ class CloudExadataInfrastructure extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    *
    * @param string $displayName
    */
@@ -113,9 +113,9 @@ class CloudExadataInfrastructure extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The GCP Oracle zone where Oracle Exadata Infrastructure is
-   * hosted. Example: us-east4-b-r2. If not specified, the system will pick a
-   * zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle Exadata
+   * Infrastructure is hosted. Example: us-east4-b-r2. If not specified, the
+   * system will pick a zone based on availability.
    *
    * @param string $gcpOracleZone
    */
@@ -165,7 +165,7 @@ class CloudExadataInfrastructure extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. Various properties of the infra.
+   * Optional. Immutable. Various properties of the infra.
    *
    * @param CloudExadataInfrastructureProperties $properties
    */

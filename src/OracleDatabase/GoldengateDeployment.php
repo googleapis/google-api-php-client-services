@@ -26,7 +26,7 @@ class GoldengateDeployment extends \Google\Model
    */
   public $createTime;
   /**
-   * Required. The display name for the GoldengateDeployment.
+   * Required. Immutable. The display name for the GoldengateDeployment.
    *
    * @var string
    */
@@ -39,9 +39,9 @@ class GoldengateDeployment extends \Google\Model
    */
   public $entitlementId;
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateDeployment is hosted.
-   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
-   * on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateDeployment
+   * is hosted. Example: us-east4-b-r2. If not specified, the system will pick a
+   * zone based on availability.
    *
    * @var string
    */
@@ -68,14 +68,14 @@ class GoldengateDeployment extends \Google\Model
    */
   public $ociUrl;
   /**
-   * Optional. The name of the OdbNetwork associated with the
+   * Optional. Immutable. The name of the OdbNetwork associated with the
    * GoldengateDeployment.
    *
    * @var string
    */
   public $odbNetwork;
   /**
-   * Required. The name of the OdbSubnet associated with the
+   * Required. Immutable. The name of the OdbSubnet associated with the
    * GoldengateDeployment for IP allocation.
    *
    * @var string
@@ -101,7 +101,7 @@ class GoldengateDeployment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. The display name for the GoldengateDeployment.
+   * Required. Immutable. The display name for the GoldengateDeployment.
    *
    * @param string $displayName
    */
@@ -134,9 +134,9 @@ class GoldengateDeployment extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateDeployment is hosted.
-   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
-   * on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateDeployment
+   * is hosted. Example: us-east4-b-r2. If not specified, the system will pick a
+   * zone based on availability.
    *
    * @param string $gcpOracleZone
    */
@@ -203,7 +203,7 @@ class GoldengateDeployment extends \Google\Model
     return $this->ociUrl;
   }
   /**
-   * Optional. The name of the OdbNetwork associated with the
+   * Optional. Immutable. The name of the OdbNetwork associated with the
    * GoldengateDeployment.
    *
    * @param string $odbNetwork
@@ -220,7 +220,7 @@ class GoldengateDeployment extends \Google\Model
     return $this->odbNetwork;
   }
   /**
-   * Required. The name of the OdbSubnet associated with the
+   * Required. Immutable. The name of the OdbSubnet associated with the
    * GoldengateDeployment for IP allocation.
    *
    * @param string $odbSubnet
@@ -237,7 +237,7 @@ class GoldengateDeployment extends \Google\Model
     return $this->odbSubnet;
   }
   /**
-   * Required. The properties of the GoldengateDeployment.
+   * Required. Immutable. The properties of the GoldengateDeployment.
    *
    * @param GoldengateDeploymentProperties $properties
    */

@@ -52,7 +52,7 @@ class OdbSubnet extends \Google\Model
    */
   public const STATE_FAILED = 'FAILED';
   /**
-   * Required. The CIDR range of the subnet.
+   * Required. Immutable. The CIDR range of the subnet.
    *
    * @var string
    */
@@ -78,7 +78,7 @@ class OdbSubnet extends \Google\Model
    */
   public $name;
   /**
-   * Required. Purpose of the subnet.
+   * Required. Immutable. Purpose of the subnet.
    *
    * @var string
    */
@@ -91,7 +91,7 @@ class OdbSubnet extends \Google\Model
   public $state;
 
   /**
-   * Required. The CIDR range of the subnet.
+   * Required. Immutable. The CIDR range of the subnet.
    *
    * @param string $cidrRange
    */
@@ -157,7 +157,7 @@ class OdbSubnet extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. Purpose of the subnet.
+   * Required. Immutable. Purpose of the subnet.
    *
    * Accepted values: PURPOSE_UNSPECIFIED, CLIENT_SUBNET, BACKUP_SUBNET
    *

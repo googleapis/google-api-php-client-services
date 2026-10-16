@@ -32,7 +32,8 @@ class GoldengateOggDeployment extends \Google\Model
    */
   public const CREDENTIAL_STORE_IAM = 'IAM';
   /**
-   * Optional. The Goldengate deployment console password in plain text.
+   * Optional. Input only. The Goldengate deployment console password in plain
+   * text.
    *
    * @var string
    */
@@ -92,7 +93,8 @@ class GoldengateOggDeployment extends \Google\Model
   public $passwordSecretId;
 
   /**
-   * Optional. The Goldengate deployment console password in plain text.
+   * Optional. Input only. The Goldengate deployment console password in plain
+   * text.
    *
    * @param string $adminPassword
    */

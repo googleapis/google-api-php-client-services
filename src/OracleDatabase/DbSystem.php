@@ -26,8 +26,8 @@ class DbSystem extends \Google\Model
    */
   public $createTime;
   /**
-   * Required. The display name for the System db. The name does not have to be
-   * unique within your project.
+   * Required. Immutable. The display name for the System db. The name does not
+   * have to be unique within your project.
    *
    * @var string
    */
@@ -40,9 +40,9 @@ class DbSystem extends \Google\Model
    */
   public $entitlementId;
   /**
-   * Optional. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on
-   * availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle DbSystem is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
+   * on availability.
    *
    * @var string
    */
@@ -68,7 +68,8 @@ class DbSystem extends \Google\Model
    */
   public $ociUrl;
   /**
-   * Optional. The name of the OdbNetwork associated with the DbSystem. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the
+   * DbSystem. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
    * optional but if specified, this should match the parent ODBNetwork of the
    * OdbSubnet.
@@ -77,9 +78,9 @@ class DbSystem extends \Google\Model
    */
   public $odbNetwork;
   /**
-   * Required. The name of the OdbSubnet associated with the DbSystem for IP
-   * allocation. Format: projects/{project}/locations/{location}/odbNetworks/{od
-   * b_network}/odbSubnets/{odb_subnet}
+   * Required. Immutable. The name of the OdbSubnet associated with the DbSystem
+   * for IP allocation. Format: projects/{project}/locations/{location}/odbNetwo
+   * rks/{odb_network}/odbSubnets/{odb_subnet}
    *
    * @var string
    */
@@ -104,8 +105,8 @@ class DbSystem extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. The display name for the System db. The name does not have to be
-   * unique within your project.
+   * Required. Immutable. The display name for the System db. The name does not
+   * have to be unique within your project.
    *
    * @param string $displayName
    */
@@ -138,9 +139,9 @@ class DbSystem extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on
-   * availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle DbSystem is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
+   * on availability.
    *
    * @param string $gcpOracleZone
    */
@@ -206,7 +207,8 @@ class DbSystem extends \Google\Model
     return $this->ociUrl;
   }
   /**
-   * Optional. The name of the OdbNetwork associated with the DbSystem. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the
+   * DbSystem. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
    * optional but if specified, this should match the parent ODBNetwork of the
    * OdbSubnet.
@@ -225,9 +227,9 @@ class DbSystem extends \Google\Model
     return $this->odbNetwork;
   }
   /**
-   * Required. The name of the OdbSubnet associated with the DbSystem for IP
-   * allocation. Format: projects/{project}/locations/{location}/odbNetworks/{od
-   * b_network}/odbSubnets/{odb_subnet}
+   * Required. Immutable. The name of the OdbSubnet associated with the DbSystem
+   * for IP allocation. Format: projects/{project}/locations/{location}/odbNetwo
+   * rks/{odb_network}/odbSubnets/{odb_subnet}
    *
    * @param string $odbSubnet
    */
@@ -243,7 +245,7 @@ class DbSystem extends \Google\Model
     return $this->odbSubnet;
   }
   /**
-   * Optional. The properties of the DbSystem.
+   * Optional. Immutable. The properties of the DbSystem.
    *
    * @param DbSystemProperties $properties
    */

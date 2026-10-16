@@ -26,7 +26,8 @@ class GoldengateConnectionAssignment extends \Google\Model
    */
   public $createTime;
   /**
-   * Optional. The display name for the GoldengateConnectionAssignment.
+   * Optional. Immutable. The display name for the
+   * GoldengateConnectionAssignment.
    *
    * @var string
    */
@@ -72,7 +73,8 @@ class GoldengateConnectionAssignment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. The display name for the GoldengateConnectionAssignment.
+   * Optional. Immutable. The display name for the
+   * GoldengateConnectionAssignment.
    *
    * @param string $displayName
    */
@@ -139,7 +141,7 @@ class GoldengateConnectionAssignment extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The properties of the GoldengateConnectionAssignment.
+   * Required. Immutable. The properties of the GoldengateConnectionAssignment.
    *
    * @param GoldengateConnectionAssignmentProperties $properties
    */

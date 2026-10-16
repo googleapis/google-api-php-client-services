@@ -20,21 +20,22 @@ namespace Google\Service\OracleDatabase;
 class CloudVmCluster extends \Google\Model
 {
   /**
-   * Optional. The name of the backup OdbSubnet associated with the VM Cluster.
-   * Format: projects/{project}/locations/{location}/odbNetworks/{odb_network}/o
-   * dbSubnets/{odb_subnet}
+   * Optional. Immutable. The name of the backup OdbSubnet associated with the
+   * VM Cluster. Format: projects/{project}/locations/{location}/odbNetworks/{od
+   * b_network}/odbSubnets/{odb_subnet}
    *
    * @var string
    */
   public $backupOdbSubnet;
   /**
-   * Optional. CIDR range of the backup subnet.
+   * Optional. Immutable. CIDR range of the backup subnet.
    *
    * @var string
    */
   public $backupSubnetCidr;
   /**
-   * Optional. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Immutable. Network settings. CIDR to use for cluster IP
+   * allocation.
    *
    * @var string
    */
@@ -46,24 +47,24 @@ class CloudVmCluster extends \Google\Model
    */
   public $createTime;
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    *
    * @var string
    */
   public $displayName;
   /**
-   * Required. The name of the Exadata Infrastructure resource on which VM
-   * cluster resource is created, in the following format: projects/{project}/lo
-   * cations/{region}/cloudExadataInfrastuctures/{cloud_extradata_infrastructure
-   * }
+   * Required. Immutable. The name of the Exadata Infrastructure resource on
+   * which VM cluster resource is created, in the following format: projects/{pr
+   * oject}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata_infra
+   * structure}
    *
    * @var string
    */
   public $exadataInfrastructure;
   /**
-   * Optional. The name of ExascaleDbStorageVault associated with the VM
-   * Cluster. Format: projects/{project}/locations/{location}/exascaleDbStorageV
-   * aults/{exascale_db_storage_vault}
+   * Optional. Immutable. The name of ExascaleDbStorageVault associated with the
+   * VM Cluster. Format: projects/{project}/locations/{location}/exascaleDbStora
+   * geVaults/{exascale_db_storage_vault}
    *
    * @var string
    */
@@ -92,25 +93,26 @@ class CloudVmCluster extends \Google\Model
    */
   public $name;
   /**
-   * Optional. The name of the VPC network. Format:
+   * Optional. Immutable. The name of the VPC network. Format:
    * projects/{project}/global/networks/{network}
    *
    * @var string
    */
   public $network;
   /**
-   * Optional. The name of the OdbNetwork associated with the VM Cluster.
-   * Format: projects/{project}/locations/{location}/odbNetworks/{odb_network}
-   * It is optional but if specified, this should match the parent ODBNetwork of
-   * the odb_subnet and backup_odb_subnet.
+   * Optional. Immutable. The name of the OdbNetwork associated with the VM
+   * Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
+   * optional but if specified, this should match the parent ODBNetwork of the
+   * odb_subnet and backup_odb_subnet.
    *
    * @var string
    */
   public $odbNetwork;
   /**
-   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP
-   * allocation. Format: projects/{project}/locations/{location}/odbNetworks/{od
-   * b_network}/odbSubnets/{odb_subnet}
+   * Optional. Immutable. The name of the OdbSubnet associated with the VM
+   * Cluster for IP allocation. Format: projects/{project}/locations/{location}/
+   * odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    *
    * @var string
    */
@@ -119,9 +121,9 @@ class CloudVmCluster extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * Optional. The name of the backup OdbSubnet associated with the VM Cluster.
-   * Format: projects/{project}/locations/{location}/odbNetworks/{odb_network}/o
-   * dbSubnets/{odb_subnet}
+   * Optional. Immutable. The name of the backup OdbSubnet associated with the
+   * VM Cluster. Format: projects/{project}/locations/{location}/odbNetworks/{od
+   * b_network}/odbSubnets/{odb_subnet}
    *
    * @param string $backupOdbSubnet
    */
@@ -137,7 +139,7 @@ class CloudVmCluster extends \Google\Model
     return $this->backupOdbSubnet;
   }
   /**
-   * Optional. CIDR range of the backup subnet.
+   * Optional. Immutable. CIDR range of the backup subnet.
    *
    * @param string $backupSubnetCidr
    */
@@ -153,7 +155,8 @@ class CloudVmCluster extends \Google\Model
     return $this->backupSubnetCidr;
   }
   /**
-   * Optional. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Immutable. Network settings. CIDR to use for cluster IP
+   * allocation.
    *
    * @param string $cidr
    */
@@ -185,7 +188,7 @@ class CloudVmCluster extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    *
    * @param string $displayName
    */
@@ -201,10 +204,10 @@ class CloudVmCluster extends \Google\Model
     return $this->displayName;
   }
   /**
-   * Required. The name of the Exadata Infrastructure resource on which VM
-   * cluster resource is created, in the following format: projects/{project}/lo
-   * cations/{region}/cloudExadataInfrastuctures/{cloud_extradata_infrastructure
-   * }
+   * Required. Immutable. The name of the Exadata Infrastructure resource on
+   * which VM cluster resource is created, in the following format: projects/{pr
+   * oject}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata_infra
+   * structure}
    *
    * @param string $exadataInfrastructure
    */
@@ -220,9 +223,9 @@ class CloudVmCluster extends \Google\Model
     return $this->exadataInfrastructure;
   }
   /**
-   * Optional. The name of ExascaleDbStorageVault associated with the VM
-   * Cluster. Format: projects/{project}/locations/{location}/exascaleDbStorageV
-   * aults/{exascale_db_storage_vault}
+   * Optional. Immutable. The name of ExascaleDbStorageVault associated with the
+   * VM Cluster. Format: projects/{project}/locations/{location}/exascaleDbStora
+   * geVaults/{exascale_db_storage_vault}
    *
    * @param string $exascaleDbStorageVault
    */
@@ -306,7 +309,7 @@ class CloudVmCluster extends \Google\Model
     return $this->name;
   }
   /**
-   * Optional. The name of the VPC network. Format:
+   * Optional. Immutable. The name of the VPC network. Format:
    * projects/{project}/global/networks/{network}
    *
    * @param string $network
@@ -323,10 +326,11 @@ class CloudVmCluster extends \Google\Model
     return $this->network;
   }
   /**
-   * Optional. The name of the OdbNetwork associated with the VM Cluster.
-   * Format: projects/{project}/locations/{location}/odbNetworks/{odb_network}
-   * It is optional but if specified, this should match the parent ODBNetwork of
-   * the odb_subnet and backup_odb_subnet.
+   * Optional. Immutable. The name of the OdbNetwork associated with the VM
+   * Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
+   * optional but if specified, this should match the parent ODBNetwork of the
+   * odb_subnet and backup_odb_subnet.
    *
    * @param string $odbNetwork
    */
@@ -342,9 +346,9 @@ class CloudVmCluster extends \Google\Model
     return $this->odbNetwork;
   }
   /**
-   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP
-   * allocation. Format: projects/{project}/locations/{location}/odbNetworks/{od
-   * b_network}/odbSubnets/{odb_subnet}
+   * Optional. Immutable. The name of the OdbSubnet associated with the VM
+   * Cluster for IP allocation. Format: projects/{project}/locations/{location}/
+   * odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    *
    * @param string $odbSubnet
    */
@@ -360,7 +364,7 @@ class CloudVmCluster extends \Google\Model
     return $this->odbSubnet;
   }
   /**
-   * Optional. Various properties of the VM Cluster.
+   * Optional. Immutable. Various properties of the VM Cluster.
    *
    * @param CloudVmClusterProperties $properties
    */

@@ -33,9 +33,9 @@ class GoldengateConnection extends \Google\Model
    */
   public $entitlementId;
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateConnection is hosted.
-   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
-   * on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateConnection
+   * is hosted. Example: us-east4-b-r2. If not specified, the system will pick a
+   * zone based on availability.
    *
    * @var string
    */
@@ -62,7 +62,7 @@ class GoldengateConnection extends \Google\Model
    */
   public $ociUrl;
   /**
-   * Optional. The name of the OdbNetwork associated with the
+   * Optional. Immutable. The name of the OdbNetwork associated with the
    * GoldengateConnection. The format is
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is
    * optional but if specified, this should match the parent ODBNetwork of the
@@ -72,7 +72,7 @@ class GoldengateConnection extends \Google\Model
    */
   public $odbNetwork;
   /**
-   * Optional. The name of the OdbSubnet associated with the
+   * Optional. Immutable. The name of the OdbSubnet associated with the
    * GoldengateConnection for IP allocation. Format: projects/{project}/location
    * s/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    *
@@ -116,9 +116,9 @@ class GoldengateConnection extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateConnection is hosted.
-   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
-   * on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateConnection
+   * is hosted. Example: us-east4-b-r2. If not specified, the system will pick a
+   * zone based on availability.
    *
    * @param string $gcpOracleZone
    */
@@ -185,7 +185,7 @@ class GoldengateConnection extends \Google\Model
     return $this->ociUrl;
   }
   /**
-   * Optional. The name of the OdbNetwork associated with the
+   * Optional. Immutable. The name of the OdbNetwork associated with the
    * GoldengateConnection. The format is
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is
    * optional but if specified, this should match the parent ODBNetwork of the
@@ -205,7 +205,7 @@ class GoldengateConnection extends \Google\Model
     return $this->odbNetwork;
   }
   /**
-   * Optional. The name of the OdbSubnet associated with the
+   * Optional. Immutable. The name of the OdbSubnet associated with the
    * GoldengateConnection for IP allocation. Format: projects/{project}/location
    * s/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    *
@@ -223,7 +223,7 @@ class GoldengateConnection extends \Google\Model
     return $this->odbSubnet;
   }
   /**
-   * Required. The properties of the GoldengateConnection.
+   * Required. Immutable. The properties of the GoldengateConnection.
    *
    * @param GoldengateConnectionProperties $properties
    */

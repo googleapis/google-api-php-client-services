@@ -26,8 +26,8 @@ class ExascaleDbStorageVault extends \Google\Model
    */
   public $createTime;
   /**
-   * Required. The display name for the ExascaleDbStorageVault. The name does
-   * not have to be unique within your project. The name must be 1-255
+   * Required. Immutable. The display name for the ExascaleDbStorageVault. The
+   * name does not have to be unique within your project. The name must be 1-255
    * characters long and can only contain alphanumeric characters.
    *
    * @var string
@@ -41,7 +41,7 @@ class ExascaleDbStorageVault extends \Google\Model
    */
   public $entitlementId;
   /**
-   * Optional. The Exadata Infrastructure resource on which
+   * Optional. Immutable. The Exadata Infrastructure resource on which
    * ExascaleDbStorageVault resource is created, in the following format: projec
    * ts/{project}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata
    * _infrastructure}
@@ -50,9 +50,9 @@ class ExascaleDbStorageVault extends \Google\Model
    */
   public $exadataInfrastructure;
   /**
-   * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is
-   * hosted. Example: us-east4-b-r2. If not specified, the system will pick a
-   * zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle
+   * ExascaleDbStorageVault is hosted. Example: us-east4-b-r2. If not specified,
+   * the system will pick a zone based on availability.
    *
    * @var string
    */
@@ -91,8 +91,8 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Required. The display name for the ExascaleDbStorageVault. The name does
-   * not have to be unique within your project. The name must be 1-255
+   * Required. Immutable. The display name for the ExascaleDbStorageVault. The
+   * name does not have to be unique within your project. The name must be 1-255
    * characters long and can only contain alphanumeric characters.
    *
    * @param string $displayName
@@ -126,7 +126,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The Exadata Infrastructure resource on which
+   * Optional. Immutable. The Exadata Infrastructure resource on which
    * ExascaleDbStorageVault resource is created, in the following format: projec
    * ts/{project}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata
    * _infrastructure}
@@ -145,9 +145,9 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->exadataInfrastructure;
   }
   /**
-   * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is
-   * hosted. Example: us-east4-b-r2. If not specified, the system will pick a
-   * zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle
+   * ExascaleDbStorageVault is hosted. Example: us-east4-b-r2. If not specified,
+   * the system will pick a zone based on availability.
    *
    * @param string $gcpOracleZone
    */
@@ -197,7 +197,7 @@ class ExascaleDbStorageVault extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The properties of the ExascaleDbStorageVault.
+   * Required. Immutable. The properties of the ExascaleDbStorageVault.
    *
    * @param ExascaleDbStorageVaultProperties $properties
    */
