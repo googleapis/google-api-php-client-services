@@ -356,6 +356,10 @@ class FirebaseCrashlytics extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                 ],
+                'filterExpression' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'granularity' => [
                   'location' => 'query',
                   'type' => 'string',
