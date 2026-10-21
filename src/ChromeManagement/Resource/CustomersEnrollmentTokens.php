@@ -79,11 +79,11 @@ class CustomersEnrollmentTokens extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter to apply to list results. The
-   * following fields can be used in the filter: * device_type (currently only
-   * 'CHROME_BROWSER' is supported) * token_state (supported values: 'ACTIVE',
-   * 'EXPIRED', 'REVOKED') * org_unit_path The full path of the org unit, such as
-   * /Montreal/Sales. * org_unit_id The obfuscated id of the org unit, not the
-   * full path.
+   * following fields can be used in the filter: * `device_type` (currently only
+   * `"CHROME_BROWSER"` is supported) * `token_state` (supported values:
+   * `"ACTIVE"`, `"EXPIRED"`, `"REVOKED"`) * `org_unit_path` The full path of the
+   * org unit, such as `/Montreal/Sales`. * `org_unit_id` The obfuscated id of the
+   * org unit, not the full path.
    * @opt_param int pageSize Optional. Maximum number of results to return.
    * Maximum and default are 100.
    * @opt_param string pageToken Optional. Token to specify next page in the list.
