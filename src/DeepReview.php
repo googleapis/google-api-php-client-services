@@ -23,11 +23,11 @@ use Google\Client;
  * Service definition for DeepReview (v1).
  *
  * <p>
- * Deep Review API for automated conference-quality scientific paper reviews.</p>
+ * Deep Review API for automated, in-depth document reviews.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://research.google/" target="_blank">Documentation</a>
+ * <a href="https://research.google/deepreview" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
