@@ -28,7 +28,10 @@ class InAppProduct extends \Google\Model
    */
   public const PURCHASE_TYPE_managedUser = 'managedUser';
   /**
-   * In-app product with a recurring period.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
+   *
+   * @deprecated
    */
   public const PURCHASE_TYPE_subscription = 'subscription';
   /**
@@ -52,12 +55,10 @@ class InAppProduct extends \Google\Model
   protected $defaultPriceType = Price::class;
   protected $defaultPriceDataType = '';
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Allows
-   * developers to give their subscribers a grace period when the payment for
-   * the new recurrence period is declined. Acceptable values are P0D (zero
-   * days), P3D (three days), P7D (seven days), P14D (14 days), and P30D (30
-   * days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @var string
    */
   public $gracePeriod;
@@ -92,19 +93,20 @@ class InAppProduct extends \Google\Model
    */
   public $status;
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are
-   * P1W (one week), P1M (one month), P3M (three months), P6M (six months), and
-   * P1Y (one year).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @var string
    */
   public $subscriptionPeriod;
   protected $subscriptionTaxesAndComplianceSettingsType = SubscriptionTaxAndComplianceSettings::class;
   protected $subscriptionTaxesAndComplianceSettingsDataType = '';
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything
-   * between P7D (seven days) and P999D (999 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @var string
    */
   public $trialPeriod;
@@ -143,12 +145,10 @@ class InAppProduct extends \Google\Model
     return $this->defaultPrice;
   }
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Allows
-   * developers to give their subscribers a grace period when the payment for
-   * the new recurrence period is declined. Acceptable values are P0D (zero
-   * days), P3D (three days), P7D (seven days), P14D (14 days), and P30D (30
-   * days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @param string $gracePeriod
    */
   public function setGracePeriod($gracePeriod)
@@ -156,6 +156,7 @@ class InAppProduct extends \Google\Model
     $this->gracePeriod = $gracePeriod;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getGracePeriod()
@@ -282,10 +283,10 @@ class InAppProduct extends \Google\Model
     return $this->status;
   }
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are
-   * P1W (one week), P1M (one month), P3M (three months), P6M (six months), and
-   * P1Y (one year).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @param string $subscriptionPeriod
    */
   public function setSubscriptionPeriod($subscriptionPeriod)
@@ -293,6 +294,7 @@ class InAppProduct extends \Google\Model
     $this->subscriptionPeriod = $subscriptionPeriod;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getSubscriptionPeriod()
@@ -300,9 +302,10 @@ class InAppProduct extends \Google\Model
     return $this->subscriptionPeriod;
   }
   /**
-   * Details about taxes and legal compliance. Only applicable to subscription
-   * products.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @param SubscriptionTaxAndComplianceSettings $subscriptionTaxesAndComplianceSettings
    */
   public function setSubscriptionTaxesAndComplianceSettings(SubscriptionTaxAndComplianceSettings $subscriptionTaxesAndComplianceSettings)
@@ -310,6 +313,7 @@ class InAppProduct extends \Google\Model
     $this->subscriptionTaxesAndComplianceSettings = $subscriptionTaxesAndComplianceSettings;
   }
   /**
+   * @deprecated
    * @return SubscriptionTaxAndComplianceSettings
    */
   public function getSubscriptionTaxesAndComplianceSettings()
@@ -317,9 +321,10 @@ class InAppProduct extends \Google\Model
     return $this->subscriptionTaxesAndComplianceSettings;
   }
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything
-   * between P7D (seven days) and P999D (999 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @param string $trialPeriod
    */
   public function setTrialPeriod($trialPeriod)
@@ -327,6 +332,7 @@ class InAppProduct extends \Google\Model
     $this->trialPeriod = $trialPeriod;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTrialPeriod()

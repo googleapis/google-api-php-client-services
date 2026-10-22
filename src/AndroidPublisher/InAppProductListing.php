@@ -21,8 +21,10 @@ class InAppProductListing extends \Google\Collection
 {
   protected $collection_key = 'benefits';
   /**
-   * Localized entitlement benefits for a subscription.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @var string[]
    */
   public $benefits;
@@ -40,8 +42,10 @@ class InAppProductListing extends \Google\Collection
   public $title;
 
   /**
-   * Localized entitlement benefits for a subscription.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API.
+   * Use the Subscriptions API instead.
    *
+   * @deprecated
    * @param string[] $benefits
    */
   public function setBenefits($benefits)
@@ -49,6 +53,7 @@ class InAppProductListing extends \Google\Collection
     $this->benefits = $benefits;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getBenefits()
