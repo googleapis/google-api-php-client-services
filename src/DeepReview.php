@@ -34,6 +34,9 @@ use Google\Client;
  */
 class DeepReview extends \Google\Service
 {
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
+  const CLOUD_PLATFORM =
+      "https://www.googleapis.com/auth/cloud-platform";
   /** See, edit, create, and delete only the specific Google Drive files you use with this app. */
   const DRIVE_FILE =
       "https://www.googleapis.com/auth/drive.file";
@@ -85,6 +88,16 @@ class DeepReview extends \Google\Service
                 'force' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'estimateReviewCost' => [
+              'path' => 'v1/{+document}:estimateReviewCost',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'document' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'get' => [

@@ -19,6 +19,8 @@ namespace Google\Service\DeepReview\Resource;
 
 use Google\Service\DeepReview\DeepreviewEmpty;
 use Google\Service\DeepReview\Document;
+use Google\Service\DeepReview\EstimateReviewCostRequest;
+use Google\Service\DeepReview\EstimateReviewCostResponse;
 use Google\Service\DeepReview\ListDocumentsResponse;
 
 /**
@@ -51,6 +53,26 @@ class Documents extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], DeepreviewEmpty::class);
+  }
+  /**
+   * Estimates what a review of a document would cost on the caller's Gemini API
+   * key. The estimate comes from what past reviews with the same model and depth
+   * cost, adjusted to this document's size and repriced at the Gemini API's
+   * current list prices. It covers one review attempt that runs to completion,
+   * and doesn't include retries after errors. (documents.estimateReviewCost)
+   *
+   * @param string $document Required. The document to review. Format:
+   * `documents/{document}`
+   * @param EstimateReviewCostRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return EstimateReviewCostResponse
+   * @throws \Google\Service\Exception
+   */
+  public function estimateReviewCost($document, EstimateReviewCostRequest $postBody, $optParams = [])
+  {
+    $params = ['document' => $document, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('estimateReviewCost', [$params], EstimateReviewCostResponse::class);
   }
   /**
    * Retrieves document metadata and review history. (documents.get)
