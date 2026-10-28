@@ -47,9 +47,11 @@ class InternalErrorDetails extends \Google\Model
    */
   public const ERROR_CODE_DETAIL_ERROR_ADDRESS_MISSING = 'ERROR_ADDRESS_MISSING';
   /**
-   * See EuiccManager.ERROR_INVALID_CONFIRMATION_CODE (https://developer.android
-   * .com/reference/android/telephony/euicc/EuiccManager#ERROR_INVALID_CONFIRMAT
-   * ION_CODE) for details.
+   * The confirmation code is invalid. When ADD_ESIM is issued, this is reported
+   * when the carrier rejects the provided confirmation_code. See
+   * EuiccManager.ERROR_INVALID_CONFIRMATION_CODE (https://developer.android.com
+   * /reference/android/telephony/euicc/EuiccManager#ERROR_INVALID_CONFIRMATION_
+   * CODE) for details.
    */
   public const ERROR_CODE_DETAIL_ERROR_INVALID_CONFIRMATION_CODE = 'ERROR_INVALID_CONFIRMATION_CODE';
   /**

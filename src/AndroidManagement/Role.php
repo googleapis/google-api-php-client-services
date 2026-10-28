@@ -68,6 +68,8 @@ class Role extends \Google\Model
    * USER_CONTROL_ALLOWED for the app with this role.
    */
   public const ROLE_TYPE_SYSTEM_HEALTH_MONITORING = 'SYSTEM_HEALTH_MONITORING';
+  protected $extraCapabilitiesType = ExtraCapabilities::class;
+  protected $extraCapabilitiesDataType = '';
   /**
    * Required. The type of the role an app can have.
    *
@@ -75,6 +77,23 @@ class Role extends \Google\Model
    */
   public $roleType;
 
+  /**
+   * Optional. Extra capabilities configured specifically for this role. Not all
+   * role types support or utilize extra capabilities.
+   *
+   * @param ExtraCapabilities $extraCapabilities
+   */
+  public function setExtraCapabilities(ExtraCapabilities $extraCapabilities)
+  {
+    $this->extraCapabilities = $extraCapabilities;
+  }
+  /**
+   * @return ExtraCapabilities
+   */
+  public function getExtraCapabilities()
+  {
+    return $this->extraCapabilities;
+  }
   /**
    * Required. The type of the role an app can have.
    *

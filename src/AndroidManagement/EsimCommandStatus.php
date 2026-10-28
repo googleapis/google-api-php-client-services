@@ -32,7 +32,10 @@ class EsimCommandStatus extends \Google\Model
    */
   public const STATUS_IN_PROGRESS = 'IN_PROGRESS';
   /**
-   * The user needs to take an action for the eSIM operation to proceed.
+   * The user needs to take an action for the eSIM operation to proceed. When
+   * ADD_ESIM is issued, this can happen when the device requires user consent
+   * to install or activate the eSIM, or when the eSIM profile requires a
+   * confirmation code that was not provided in confirmation_code.
    */
   public const STATUS_PENDING_USER_ACTION = 'PENDING_USER_ACTION';
   /**
