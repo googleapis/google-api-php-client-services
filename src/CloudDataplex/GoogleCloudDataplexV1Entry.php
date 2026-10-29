@@ -28,6 +28,14 @@ class GoogleCloudDataplexV1Entry extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * Output only. The type of the EntryGroup that this entry belongs to. The
+   * default value is an empty string. Recognised values include: * context-set:
+   * EntryGroup containing context set data assets.
+   *
+   * @var string
+   */
+  public $entryGroupType;
   protected $entrySourceType = GoogleCloudDataplexV1EntrySource::class;
   protected $entrySourceDataType = '';
   /**
@@ -108,6 +116,24 @@ class GoogleCloudDataplexV1Entry extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Output only. The type of the EntryGroup that this entry belongs to. The
+   * default value is an empty string. Recognised values include: * context-set:
+   * EntryGroup containing context set data assets.
+   *
+   * @param string $entryGroupType
+   */
+  public function setEntryGroupType($entryGroupType)
+  {
+    $this->entryGroupType = $entryGroupType;
+  }
+  /**
+   * @return string
+   */
+  public function getEntryGroupType()
+  {
+    return $this->entryGroupType;
   }
   /**
    * Optional. Information related to the source system of the data resource

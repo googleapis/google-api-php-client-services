@@ -19,11 +19,29 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataDocumentationResult extends \Google\Model
 {
+  protected $dataProductResultType = GoogleCloudDataplexV1DataDocumentationResultDataProductResult::class;
+  protected $dataProductResultDataType = '';
   protected $datasetResultType = GoogleCloudDataplexV1DataDocumentationResultDatasetResult::class;
   protected $datasetResultDataType = '';
   protected $tableResultType = GoogleCloudDataplexV1DataDocumentationResultTableResult::class;
   protected $tableResultDataType = '';
 
+  /**
+   * Output only. Insights for a data product.
+   *
+   * @param GoogleCloudDataplexV1DataDocumentationResultDataProductResult $dataProductResult
+   */
+  public function setDataProductResult(GoogleCloudDataplexV1DataDocumentationResultDataProductResult $dataProductResult)
+  {
+    $this->dataProductResult = $dataProductResult;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataDocumentationResultDataProductResult
+   */
+  public function getDataProductResult()
+  {
+    return $this->dataProductResult;
+  }
   /**
    * Output only. Insights for a Dataset resource.
    *

@@ -85,6 +85,14 @@ class GoogleCloudDataplexV1EntryGroup extends \Google\Model
    */
   public $transferStatus;
   /**
+   * Optional. Immutable. The type of this EntryGroup. The default value is an
+   * empty string. Recognised values include: * context-set: EntryGroup
+   * containing context set data assets.
+   *
+   * @var string
+   */
+  public $type;
+  /**
    * Output only. System generated globally unique ID for the EntryGroup. If you
    * delete and recreate the EntryGroup with the same name, this ID will be
    * different.
@@ -235,6 +243,24 @@ class GoogleCloudDataplexV1EntryGroup extends \Google\Model
   public function getTransferStatus()
   {
     return $this->transferStatus;
+  }
+  /**
+   * Optional. Immutable. The type of this EntryGroup. The default value is an
+   * empty string. Recognised values include: * context-set: EntryGroup
+   * containing context set data assets.
+   *
+   * @param string $type
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
   /**
    * Output only. System generated globally unique ID for the EntryGroup. If you
