@@ -23,9 +23,7 @@ class Dialog extends \Google\Model
   protected $bodyDataType = '';
 
   /**
-   * Input only. Body of the dialog, which is rendered in a modal. Google Chat
-   * apps don't support the following card entities: `DateTimePicker`,
-   * `OnChangeAction`.
+   * Input only. Body of the dialog, which is rendered in a modal.
    *
    * @param GoogleAppsCardV1Card $body
    */

@@ -200,7 +200,10 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->icon;
   }
   /**
-   * This action is triggered when users click `topLabel` or `bottomLabel`.
+   * This action is triggered when users click anywhere on the `DecoratedText`
+   * widget (including `text`, `top_label`, `bottom_label`, and icons), except
+   * when clicking a separate interactive control (`button` or
+   * `switch_control`).
    *
    * @param GoogleAppsCardV1OnClick $onClick
    */

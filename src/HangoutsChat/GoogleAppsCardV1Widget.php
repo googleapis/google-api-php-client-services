@@ -124,11 +124,12 @@ class GoogleAppsCardV1Widget extends \Google\Collection
     return $this->buttonList;
   }
   /**
-   * A carousel contains a collection of nested widgets. For example, this is a
-   * JSON representation of a carousel that contains two text paragraphs. ``` {
-   * "widgets": [ { "textParagraph": { "text": "First text paragraph in the
-   * carousel." } }, { "textParagraph": { "text": "Second text paragraph in the
-   * carousel." } } ] } ```
+   * Contains a collection of `CarouselCard` items, each of which contains
+   * nested widgets. For example, this is a JSON representation of a carousel
+   * that contains two carousel cards, each with a text paragraph: ``` {
+   * "carouselCards": [ { "widgets": [ { "textParagraph": { "text": "First text
+   * paragraph in the carousel." } } ] }, { "widgets": [ { "textParagraph": {
+   * "text": "Second text paragraph in the carousel." } } ] } ] } ```
    *
    * @param GoogleAppsCardV1Carousel $carousel
    */
@@ -146,7 +147,7 @@ class GoogleAppsCardV1Widget extends \Google\Collection
   /**
    * A list of chips. For example, the following JSON creates two chips. The
    * first is a text chip and the second is an icon chip that opens a link: ```
-   * "chipList": { "chips": [ { "text": "Edit", "disabled": true, }, { "icon": {
+   * "chipList": { "chips": [ { "label": "Edit", "disabled": true }, { "icon": {
    * "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": {
    * "openLink": { "url": "https://example.com/calendar" } } } ] } ```
    *

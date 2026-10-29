@@ -93,7 +93,8 @@ class GoogleAppsCardV1Grid extends \Google\Collection
   }
   /**
    * This callback is reused by each individual grid item, but with the item's
-   * identifier and index in the items list added to the callback's parameters.
+   * identifier added to the callback's parameters (under the key
+   * `"grid_item_identifier"`).
    *
    * @param GoogleAppsCardV1OnClick $onClick
    */

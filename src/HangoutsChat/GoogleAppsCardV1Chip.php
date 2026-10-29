@@ -36,8 +36,8 @@ class GoogleAppsCardV1Chip extends \Google\Model
    */
   public $disabled;
   /**
-   * Whether the chip is in an active state and responds to user actions.
-   * Defaults to `true`. Deprecated. Use `disabled` instead.
+   * Deprecated: Use `disabled` instead. Whether the chip is in an active state
+   * and responds to user actions.
    *
    * @deprecated
    * @var bool
@@ -91,8 +91,8 @@ class GoogleAppsCardV1Chip extends \Google\Model
     return $this->disabled;
   }
   /**
-   * Whether the chip is in an active state and responds to user actions.
-   * Defaults to `true`. Deprecated. Use `disabled` instead.
+   * Deprecated: Use `disabled` instead. Whether the chip is in an active state
+   * and responds to user actions.
    *
    * @deprecated
    * @param bool $enabled
@@ -110,8 +110,8 @@ class GoogleAppsCardV1Chip extends \Google\Model
     return $this->enabled;
   }
   /**
-   * The icon image. If both `icon` and `text` are set, then the icon appears
-   * before the text.
+   * The icon image. If both `icon` and `label` are set, then the icon appears
+   * before the label.
    *
    * @param GoogleAppsCardV1Icon $icon
    */

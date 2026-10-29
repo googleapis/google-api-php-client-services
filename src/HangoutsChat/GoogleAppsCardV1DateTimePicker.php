@@ -54,7 +54,9 @@ class GoogleAppsCardV1DateTimePicker extends \Google\Model
   /**
    * The number representing the time zone offset from UTC, in minutes. If set,
    * the `value_ms_epoch` is displayed in the specified time zone. If unset, the
-   * value defaults to the user's time zone setting.
+   * value defaults to the user's time zone setting. Note: This field is in
+   * minutes, whereas user interaction event payloads typically provide time
+   * zone offsets in milliseconds (divide by `60000` to convert).
    *
    * @var int
    */
@@ -154,7 +156,9 @@ class GoogleAppsCardV1DateTimePicker extends \Google\Model
   /**
    * The number representing the time zone offset from UTC, in minutes. If set,
    * the `value_ms_epoch` is displayed in the specified time zone. If unset, the
-   * value defaults to the user's time zone setting.
+   * value defaults to the user's time zone setting. Note: This field is in
+   * minutes, whereas user interaction event payloads typically provide time
+   * zone offsets in milliseconds (divide by `60000` to convert).
    *
    * @param int $timezoneOffsetDate
    */
