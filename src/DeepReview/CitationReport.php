@@ -36,7 +36,7 @@ class CitationReport extends \Google\Collection
    */
   public const FINAL_VERDICT_MAJOR_MISMATCH = 'MAJOR_MISMATCH';
   /**
-   * Reference verified via Google Search grounding.
+   * Reference verified using Google Search grounding.
    */
   public const FINAL_VERDICT_VERIFIED_BY_SEARCH = 'VERIFIED_BY_SEARCH';
   /**
@@ -68,7 +68,7 @@ class CitationReport extends \Google\Collection
    */
   public const LOOKUP_VERDICT_MAJOR_MISMATCH = 'MAJOR_MISMATCH';
   /**
-   * Reference verified via Google Search grounding.
+   * Reference verified using Google Search grounding.
    */
   public const LOOKUP_VERDICT_VERIFIED_BY_SEARCH = 'VERIFIED_BY_SEARCH';
   /**

@@ -34,7 +34,7 @@ class V1 extends \Google\Service\Resource
    * authenticated caller. (v1.getUserQuota)
    *
    * @param string $name Required. The resource name of the singleton user quota
-   * to retrieve. Format: `userQuota`
+   * to retrieve.
    * @param array $optParams Optional parameters.
    * @return UserQuota
    * @throws \Google\Service\Exception

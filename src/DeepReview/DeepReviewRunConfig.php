@@ -20,8 +20,7 @@ namespace Google\Service\DeepReview;
 class DeepReviewRunConfig extends \Google\Model
 {
   /**
-   * Default unspecified topology. The backend defaults to standard high
-   * quality.
+   * Default unspecified topology. The server uses its default topology (`MID`).
    */
   public const TOPOLOGY_TOPOLOGY_UNSPECIFIED = 'TOPOLOGY_UNSPECIFIED';
   /**
@@ -58,8 +57,9 @@ class DeepReviewRunConfig extends \Google\Model
    */
   public $geminiApiKeySet;
   /**
-   * Optional. The Gemini model name/version to use (e.g., "gemini-1.5-pro",
-   * "gemini-2.0-flash").
+   * Optional. The Gemini model identifier to use for the review. If omitted,
+   * the server uses its default model. Unsupported values return
+   * INVALID_ARGUMENT.
    *
    * @var string
    */
@@ -116,8 +116,9 @@ class DeepReviewRunConfig extends \Google\Model
     return $this->geminiApiKeySet;
   }
   /**
-   * Optional. The Gemini model name/version to use (e.g., "gemini-1.5-pro",
-   * "gemini-2.0-flash").
+   * Optional. The Gemini model identifier to use for the review. If omitted,
+   * the server uses its default model. Unsupported values return
+   * INVALID_ARGUMENT.
    *
    * @param string $model
    */

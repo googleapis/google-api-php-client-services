@@ -33,10 +33,12 @@ class DocumentsReviews extends \Google\Service\Resource
 {
   /**
    * Creates and initiates an asynchronous multi-agent review for a document.
-   * (reviews.create)
+   * Returns a google.longrunning.Operation. When the operation completes, the
+   * `response` field contains a `Review` and the `metadata` field contains
+   * `CreateReviewMetadata`. (reviews.create)
    *
    * @param string $parent Required. The parent Document resource name where this
-   * review will be created. Format: `documents/{document}`
+   * review will be created.
    * @param Review $postBody
    * @param array $optParams Optional parameters.
    *
@@ -58,7 +60,6 @@ class DocumentsReviews extends \Google\Service\Resource
    * Retrieves a specific review execution result. (reviews.get)
    *
    * @param string $name Required. The resource name of the review to retrieve.
-   * Format: `documents/{document}/reviews/{review}`
    * @param array $optParams Optional parameters.
    * @return Review
    * @throws \Google\Service\Exception
@@ -73,16 +74,17 @@ class DocumentsReviews extends \Google\Service\Resource
    * Lists all review execution runs for a document.
    * (reviews.listDocumentsReviews)
    *
-   * @param string $parent Required. The parent Document resource name. Format:
-   * `documents/{document}`
+   * @param string $parent Required. The parent Document resource name.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Supported AIP-160 filter expressions.
-   * @opt_param string orderBy Optional. Supported AIP-132 order_by field.
+   * @opt_param string filter Optional. Custom filter expressions are not
+   * currently supported; non-empty values return INVALID_ARGUMENT.
+   * @opt_param string orderBy Optional. Custom order_by expressions are not
+   * currently supported; non-empty values return INVALID_ARGUMENT.
    * @opt_param int pageSize Optional. The maximum number of reviews to return in
    * a single page. The server may return fewer than this value. If unspecified,
-   * at most 50 reviews will be returned. The maximum value is 1000; values above
-   * 1000 will be coerced to 1000.
+   * at most 50 reviews will be returned. The maximum value is 100; values above
+   * 100 will be coerced to 100.
    * @opt_param string pageToken Optional. A page token received from a previous
    * `ListReviews` call.
    * @return ListReviewsResponse

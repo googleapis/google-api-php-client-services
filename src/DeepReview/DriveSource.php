@@ -46,8 +46,8 @@ class DriveSource extends \Google\Model
    */
   public $resourceKeySet;
   /**
-   * Optional. Input only. Immutable. Specific revision ID to import (defaults
-   * to latest head revision).
+   * Optional. Input only. Immutable. Importing a specific revision is not
+   * currently supported; non-empty values return INVALID_ARGUMENT.
    *
    * @var string
    */
@@ -110,8 +110,8 @@ class DriveSource extends \Google\Model
     return $this->resourceKeySet;
   }
   /**
-   * Optional. Input only. Immutable. Specific revision ID to import (defaults
-   * to latest head revision).
+   * Optional. Input only. Immutable. Importing a specific revision is not
+   * currently supported; non-empty values return INVALID_ARGUMENT.
    *
    * @param string $revisionId
    */

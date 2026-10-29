@@ -34,17 +34,17 @@ use Google\Service\DeepReview\ListDocumentsResponse;
 class Documents extends \Google\Service\Resource
 {
   /**
-   * Deletes a document and all associated reviews and stored blobs.
-   * (documents.delete)
+   * Deletes a document and its stored content. If `force` is set to `true`, any
+   * associated reviews are also deleted. (documents.delete)
    *
    * @param string $name Required. The resource name of the document to delete.
-   * Format: `documents/{document}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing Optional. If set to true, and the document is
+   * @opt_param bool allowMissing Optional. If set to `true`, and the document is
    * not found, the request succeeds.
-   * @opt_param bool force Optional. If set to true, any child resources (e.g.
-   * review resources) are also deleted.
+   * @opt_param bool force Optional. If set to `true`, any child resources (e.g.
+   * review resources) are also deleted. If `false` and the document has existing
+   * reviews, the request fails with `FAILED_PRECONDITION`.
    * @return DeepreviewEmpty
    * @throws \Google\Service\Exception
    */
@@ -61,8 +61,7 @@ class Documents extends \Google\Service\Resource
    * current list prices. It covers one review attempt that runs to completion,
    * and doesn't include retries after errors. (documents.estimateReviewCost)
    *
-   * @param string $document Required. The document to review. Format:
-   * `documents/{document}`
+   * @param string $document Required. The document to review.
    * @param EstimateReviewCostRequest $postBody
    * @param array $optParams Optional parameters.
    * @return EstimateReviewCostResponse
@@ -75,10 +74,10 @@ class Documents extends \Google\Service\Resource
     return $this->call('estimateReviewCost', [$params], EstimateReviewCostResponse::class);
   }
   /**
-   * Retrieves document metadata and review history. (documents.get)
+   * Retrieves document metadata. The returned document includes its
+   * `latest_review_summary` when a review exists. (documents.get)
    *
    * @param string $name Required. The resource name of the document to retrieve.
-   * Format: `documents/{document}`
    * @param array $optParams Optional parameters.
    * @return Document
    * @throws \Google\Service\Exception
@@ -90,18 +89,20 @@ class Documents extends \Google\Service\Resource
     return $this->call('get', [$params], Document::class);
   }
   /**
-   * Lists documents for the authenticated caller with cursor pagination.
+   * Lists documents for the authenticated caller with cursor pagination. Each
+   * returned document includes its `latest_review_summary` when a review exists.
    * (documents.listDocuments)
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Supported AIP-160 filter expressions
-   * (e.g., `display_name = "..."`).
-   * @opt_param string orderBy Optional. Supported AIP-132 order_by field.
+   * @opt_param string filter Optional. Custom filter expressions are not
+   * currently supported; non-empty values return INVALID_ARGUMENT.
+   * @opt_param string orderBy Optional. Custom order_by expressions are not
+   * currently supported; non-empty values return INVALID_ARGUMENT.
    * @opt_param int pageSize Optional. The maximum number of documents to return
    * in a single page. The server may return fewer than this value. If
-   * unspecified, at most 50 documents will be returned. The maximum value is
-   * 1000; values above 1000 will be coerced to 1000.
+   * unspecified, at most 50 documents will be returned. The maximum value is 100;
+   * values above 100 will be coerced to 100.
    * @opt_param string pageToken Optional. A page token received from a previous
    * `ListDocuments` call.
    * @return ListDocumentsResponse

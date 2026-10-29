@@ -46,8 +46,7 @@ class ReviewSummary extends \Google\Model
    */
   public $createTime;
   /**
-   * Output only. Resource name of the Review. Format:
-   * `documents/{document}/reviews/{review}`
+   * Output only. Resource name of the Review.
    *
    * @var string
    */
@@ -76,8 +75,7 @@ class ReviewSummary extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. Resource name of the Review. Format:
-   * `documents/{document}/reviews/{review}`
+   * Output only. Resource name of the Review.
    *
    * @param string $review
    */

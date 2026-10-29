@@ -92,7 +92,8 @@ class Document extends \Google\Model
   }
   /**
    * Output only. Summary of the most recent review run for this document, if
-   * any.
+   * any. Populated by `GetDocument` and `ListDocuments`; unset on the document
+   * returned by `CreateDocument`, which has no reviews yet.
    *
    * @param ReviewSummary $latestReviewSummary
    */

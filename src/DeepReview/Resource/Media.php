@@ -31,11 +31,11 @@ use Google\Service\DeepReview\DownloadDocumentResponse;
 class Media extends \Google\Service\Resource
 {
   /**
-   * Downloads the original document content (PDF binary) via Scotty media
-   * streaming (AIP-136 custom method). (media.download)
+   * Downloads the original document content (PDF binary) using media streaming.
+   * Pass `alt=media` as a query parameter to stream the binary PDF bytes. Without
+   * `alt=media`, a JSON response is returned. (media.download)
    *
    * @param string $name Required. The resource name of the document to download.
-   * Format: `documents/{document}`
    * @param array $optParams Optional parameters.
    * @return DownloadDocumentResponse
    * @throws \Google\Service\Exception
@@ -47,8 +47,8 @@ class Media extends \Google\Service\Resource
     return $this->call('download', [$params], DownloadDocumentResponse::class);
   }
   /**
-   * Creates a new Document resource and ingests the manuscript via Scotty or
-   * Google Drive. (media.upload)
+   * Creates a new Document resource and ingests the manuscript using media upload
+   * or Google Drive. (media.upload)
    *
    * @param Document $postBody
    * @param array $optParams Optional parameters.
