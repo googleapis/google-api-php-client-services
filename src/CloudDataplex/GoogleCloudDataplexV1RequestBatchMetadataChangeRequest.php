@@ -22,6 +22,15 @@ class GoogleCloudDataplexV1RequestBatchMetadataChangeRequest extends \Google\Mod
   protected $changePayloadType = GoogleCloudDataplexV1BatchChangeMetadataRequest::class;
   protected $changePayloadDataType = '';
   /**
+   * Optional. If set to true, defers reference validation between entries to
+   * when the change request is approved and applied. Structural validation of
+   * entries and aspects is still performed at the time of submission. The
+   * default is false.
+   *
+   * @var bool
+   */
+  public $deferredValidation;
+  /**
    * Optional. Justification for the metadata change request.
    *
    * @var string
@@ -51,6 +60,25 @@ class GoogleCloudDataplexV1RequestBatchMetadataChangeRequest extends \Google\Mod
   public function getChangePayload()
   {
     return $this->changePayload;
+  }
+  /**
+   * Optional. If set to true, defers reference validation between entries to
+   * when the change request is approved and applied. Structural validation of
+   * entries and aspects is still performed at the time of submission. The
+   * default is false.
+   *
+   * @param bool $deferredValidation
+   */
+  public function setDeferredValidation($deferredValidation)
+  {
+    $this->deferredValidation = $deferredValidation;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeferredValidation()
+  {
+    return $this->deferredValidation;
   }
   /**
    * Optional. Justification for the metadata change request.
