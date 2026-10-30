@@ -20,6 +20,25 @@ namespace Google\Service\DeepReview;
 class DeepReviewRunConfig extends \Google\Model
 {
   /**
+   * Default unspecified thinking level. The server uses its default thinking
+   * level (`THINKING_LEVEL_MEDIUM`).
+   */
+  public const THINKING_LEVEL_THINKING_LEVEL_UNSPECIFIED = 'THINKING_LEVEL_UNSPECIFIED';
+  /**
+   * Low reasoning effort for faster turnaround and lower token cost.
+   */
+  public const THINKING_LEVEL_THINKING_LEVEL_LOW = 'THINKING_LEVEL_LOW';
+  /**
+   * Balanced reasoning effort. Used by default and for all reviews created
+   * without a developer Bring-Your-Own-Key Gemini API key.
+   */
+  public const THINKING_LEVEL_THINKING_LEVEL_MEDIUM = 'THINKING_LEVEL_MEDIUM';
+  /**
+   * Maximum reasoning effort for deep mathematical, theoretical, and logical
+   * verification.
+   */
+  public const THINKING_LEVEL_THINKING_LEVEL_HIGH = 'THINKING_LEVEL_HIGH';
+  /**
    * Default unspecified topology. The server uses its default topology (`MID`).
    */
   public const TOPOLOGY_TOPOLOGY_UNSPECIFIED = 'TOPOLOGY_UNSPECIFIED';
@@ -64,6 +83,16 @@ class DeepReviewRunConfig extends \Google\Model
    * @var string
    */
   public $model;
+  /**
+   * Optional. Reasoning effort level for model calls in the review pipeline.
+   * Defaults to `THINKING_LEVEL_MEDIUM` when omitted or
+   * `THINKING_LEVEL_UNSPECIFIED`. Non-`THINKING_LEVEL_MEDIUM` thinking levels
+   * require `gemini_api_key` when calling `CreateReview`; otherwise
+   * `CreateReview` returns `INVALID_ARGUMENT`.
+   *
+   * @var string
+   */
+  public $thinkingLevel;
   /**
    * Optional. Review execution topology profile to use.
    *
@@ -132,6 +161,29 @@ class DeepReviewRunConfig extends \Google\Model
   public function getModel()
   {
     return $this->model;
+  }
+  /**
+   * Optional. Reasoning effort level for model calls in the review pipeline.
+   * Defaults to `THINKING_LEVEL_MEDIUM` when omitted or
+   * `THINKING_LEVEL_UNSPECIFIED`. Non-`THINKING_LEVEL_MEDIUM` thinking levels
+   * require `gemini_api_key` when calling `CreateReview`; otherwise
+   * `CreateReview` returns `INVALID_ARGUMENT`.
+   *
+   * Accepted values: THINKING_LEVEL_UNSPECIFIED, THINKING_LEVEL_LOW,
+   * THINKING_LEVEL_MEDIUM, THINKING_LEVEL_HIGH
+   *
+   * @param self::THINKING_LEVEL_* $thinkingLevel
+   */
+  public function setThinkingLevel($thinkingLevel)
+  {
+    $this->thinkingLevel = $thinkingLevel;
+  }
+  /**
+   * @return self::THINKING_LEVEL_*
+   */
+  public function getThinkingLevel()
+  {
+    return $this->thinkingLevel;
   }
   /**
    * Optional. Review execution topology profile to use.
