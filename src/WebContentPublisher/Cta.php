@@ -59,7 +59,7 @@ class Cta extends \Google\Model
   protected $newsletterConfigType = NewsletterConfig::class;
   protected $newsletterConfigDataType = '';
   /**
-   * Output only. The current state of this CTA.
+   * Optional. The current state of this CTA.
    *
    * @var string
    */
@@ -124,7 +124,7 @@ class Cta extends \Google\Model
     return $this->newsletterConfig;
   }
   /**
-   * Output only. The current state of this CTA.
+   * Optional. The current state of this CTA.
    *
    * Accepted values: STATE_UNSPECIFIED, DRAFT, ACTIVE
    *

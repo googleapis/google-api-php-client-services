@@ -30,6 +30,12 @@ class SurveyConfig extends \Google\Collection
   public $customMessage;
   protected $questionsType = SurveyQuestion::class;
   protected $questionsDataType = 'array';
+  /**
+   * Output only. Link to the Looker Studio dashboard.
+   *
+   * @var string
+   */
+  public $reportUrl;
 
   /**
    * Optional. Header prompt shown to readers. If omitted, the server populates
@@ -65,6 +71,22 @@ class SurveyConfig extends \Google\Collection
   public function getQuestions()
   {
     return $this->questions;
+  }
+  /**
+   * Output only. Link to the Looker Studio dashboard.
+   *
+   * @param string $reportUrl
+   */
+  public function setReportUrl($reportUrl)
+  {
+    $this->reportUrl = $reportUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getReportUrl()
+  {
+    return $this->reportUrl;
   }
 }
 

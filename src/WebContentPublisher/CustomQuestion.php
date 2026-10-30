@@ -30,7 +30,7 @@ class CustomQuestion extends \Google\Collection
    */
   public $categoryLabel;
   /**
-   * Required. The question prompt displayed to readers.
+   * Optional. The question prompt displayed to readers (up to 140 characters).
    *
    * @var string
    */
@@ -77,7 +77,7 @@ class CustomQuestion extends \Google\Collection
     return $this->categoryLabel;
   }
   /**
-   * Required. The question prompt displayed to readers.
+   * Optional. The question prompt displayed to readers (up to 140 characters).
    *
    * @param string $displayText
    */
