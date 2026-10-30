@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for DeviceRun (v1alpha).
+ * Service definition for DeviceRun (v1).
  *
  * <p>
  * The Device Run API allows management, scheduling, and execution of automated
@@ -42,7 +42,6 @@ class DeviceRun extends \Google\Service
   public $projects_locations;
   public $projects_locations_devices;
   public $projects_locations_operations;
-  public $projects_locations_sessions;
   public $projects_locations_softwareVersions;
   public $rootUrlTemplate;
 
@@ -60,7 +59,7 @@ class DeviceRun extends \Google\Service
     $this->rootUrlTemplate = $rootUrl ?: 'https://devicerun.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1alpha';
+    $this->version = 'v1';
     $this->serviceName = 'devicerun';
 
     $this->projects_locations = new DeviceRun\Resource\ProjectsLocations(
@@ -70,7 +69,7 @@ class DeviceRun extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -80,7 +79,7 @@ class DeviceRun extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+name}/locations',
+              'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -117,7 +116,7 @@ class DeviceRun extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -127,7 +126,7 @@ class DeviceRun extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+parent}/devices',
+              'path' => 'v1/{+parent}/devices',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -159,7 +158,7 @@ class DeviceRun extends \Google\Service
         [
           'methods' => [
             'cancel' => [
-              'path' => 'v1alpha/{+name}:cancel',
+              'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -169,7 +168,7 @@ class DeviceRun extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -179,7 +178,7 @@ class DeviceRun extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -189,7 +188,7 @@ class DeviceRun extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -218,117 +217,6 @@ class DeviceRun extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_sessions = new DeviceRun\Resource\ProjectsLocationsSessions(
-        $this,
-        $this->serviceName,
-        'sessions',
-        [
-          'methods' => [
-            'batchGet' => [
-              'path' => 'v1alpha/{+parent}/sessions:batchGet',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'names' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-              ],
-            ],'cancel' => [
-              'path' => 'v1alpha/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
-              'path' => 'v1alpha/{+parent}/sessions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'sessionId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1alpha/{+parent}/sessions',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'orderBy' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects_locations_softwareVersions = new DeviceRun\Resource\ProjectsLocationsSoftwareVersions(
         $this,
         $this->serviceName,
@@ -336,7 +224,7 @@ class DeviceRun extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -346,7 +234,7 @@ class DeviceRun extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1alpha/{+parent}/softwareVersions',
+              'path' => 'v1/{+parent}/softwareVersions',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
