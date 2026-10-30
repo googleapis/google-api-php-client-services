@@ -59,7 +59,7 @@ class VendorTest extends TestCase
     {
         return [
             ['dev-main'],
-            ['2.18.4'],
+            ['2.20.1'],
         ];
     }
 
