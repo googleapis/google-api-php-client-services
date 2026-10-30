@@ -543,7 +543,27 @@ class DeveloperConnect extends \Google\Service
         'gitRepositoryLinks',
         [
           'methods' => [
-            'create' => [
+            'addPullRequestComment' => [
+              'path' => 'v1/{+name}:addPullRequestComment',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'addPullRequestReviewComment' => [
+              'path' => 'v1/{+name}:addPullRequestReviewComment',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/gitRepositoryLinks',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -587,6 +607,104 @@ class DeveloperConnect extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'diffCommit' => [
+              'path' => 'v1/{+name}:diffCommit',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'baseSha' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'headSha' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pathFilters' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
+            ],'fetchCommit' => [
+              'path' => 'v1/{+name}:fetchCommit',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'commitSha' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pathFilters' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'fetchCommitList' => [
+              'path' => 'v1/{+name}:fetchCommitList',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'ref' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'fetchFileBlame' => [
+              'path' => 'v1/{+name}:fetchFileBlame',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'firstLine' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'lastLine' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'path' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'ref' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'fetchGitRefs' => [
               'path' => 'v1/{+gitRepositoryLink}:fetchGitRefs',
               'httpMethod' => 'GET',
@@ -605,6 +723,42 @@ class DeveloperConnect extends \Google\Service
                   'type' => 'string',
                 ],
                 'refType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'fetchPullRequest' => [
+              'path' => 'v1/{+name}:fetchPullRequest',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pullRequestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'fetchPullRequestList' => [
+              'path' => 'v1/{+name}:fetchPullRequestList',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -663,6 +817,26 @@ class DeveloperConnect extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'modifyPullRequest' => [
+              'path' => 'v1/{+name}:modifyPullRequest',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'openPullRequest' => [
+              'path' => 'v1/{+name}:openPullRequest',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'processBitbucketCloudWebhook' => [

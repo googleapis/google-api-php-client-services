@@ -36,7 +36,7 @@ class ListGitRepositoryLinksResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * The list of GitRepositoryLinks
+   * The list of GitRepositoryLinks.
    *
    * @param GitRepositoryLink[] $gitRepositoryLinks
    */

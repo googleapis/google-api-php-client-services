@@ -36,7 +36,7 @@ class ListConnectionsResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * The list of Connection
+   * The list of Connections.
    *
    * @param Connection[] $connections
    */

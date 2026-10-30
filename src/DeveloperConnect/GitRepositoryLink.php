@@ -32,13 +32,13 @@ class GitRepositoryLink extends \Google\Model
    */
   public $cloneUri;
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    *
    * @var string
    */
@@ -52,8 +52,8 @@ class GitRepositoryLink extends \Google\Model
    */
   public $etag;
   /**
-   * Output only. URI to access the linked repository through the Git Proxy.
-   * This field is only populated if the git proxy is enabled for the
+   * Output only. URI to access the linked repository through the Git proxy.
+   * This field is only populated if the Git proxy is enabled for the
    * connection.
    *
    * @var string
@@ -86,7 +86,7 @@ class GitRepositoryLink extends \Google\Model
    */
   public $uid;
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    *
    * @var string
    */
@@ -131,7 +131,7 @@ class GitRepositoryLink extends \Google\Model
     return $this->cloneUri;
   }
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    *
    * @param string $createTime
    */
@@ -147,7 +147,7 @@ class GitRepositoryLink extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    *
    * @param string $deleteTime
    */
@@ -181,8 +181,8 @@ class GitRepositoryLink extends \Google\Model
     return $this->etag;
   }
   /**
-   * Output only. URI to access the linked repository through the Git Proxy.
-   * This field is only populated if the git proxy is enabled for the
+   * Output only. URI to access the linked repository through the Git proxy.
+   * This field is only populated if the Git proxy is enabled for the
    * connection.
    *
    * @param string $gitProxyUri
@@ -265,7 +265,7 @@ class GitRepositoryLink extends \Google\Model
     return $this->uid;
   }
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    *
    * @param string $updateTime
    */

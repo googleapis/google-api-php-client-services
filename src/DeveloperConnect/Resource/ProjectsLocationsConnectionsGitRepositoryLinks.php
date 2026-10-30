@@ -17,19 +17,31 @@
 
 namespace Google\Service\DeveloperConnect\Resource;
 
+use Google\Service\DeveloperConnect\AddGitRepositoryLinkPullRequestCommentRequest;
+use Google\Service\DeveloperConnect\AddGitRepositoryLinkPullRequestReviewCommentRequest;
 use Google\Service\DeveloperConnect\DeveloperconnectEmpty;
+use Google\Service\DeveloperConnect\DiffGitRepositoryLinkCommitResponse;
 use Google\Service\DeveloperConnect\FetchGitRefsResponse;
+use Google\Service\DeveloperConnect\FetchGitRepositoryLinkCommitListResponse;
+use Google\Service\DeveloperConnect\FetchGitRepositoryLinkCommitResponse;
+use Google\Service\DeveloperConnect\FetchGitRepositoryLinkFileBlameResponse;
+use Google\Service\DeveloperConnect\FetchGitRepositoryLinkPullRequestListResponse;
 use Google\Service\DeveloperConnect\FetchReadTokenRequest;
 use Google\Service\DeveloperConnect\FetchReadTokenResponse;
 use Google\Service\DeveloperConnect\FetchReadWriteTokenRequest;
 use Google\Service\DeveloperConnect\FetchReadWriteTokenResponse;
 use Google\Service\DeveloperConnect\GitRepositoryLink;
 use Google\Service\DeveloperConnect\ListGitRepositoryLinksResponse;
+use Google\Service\DeveloperConnect\ModifyGitRepositoryLinkPullRequestRequest;
+use Google\Service\DeveloperConnect\OpenGitRepositoryLinkPullRequestRequest;
 use Google\Service\DeveloperConnect\Operation;
 use Google\Service\DeveloperConnect\ProcessBitbucketCloudWebhookRequest;
 use Google\Service\DeveloperConnect\ProcessBitbucketDataCenterWebhookRequest;
 use Google\Service\DeveloperConnect\ProcessGitLabEnterpriseWebhookRequest;
 use Google\Service\DeveloperConnect\ProcessGitLabWebhookRequest;
+use Google\Service\DeveloperConnect\PullRequest;
+use Google\Service\DeveloperConnect\PullRequestComment;
+use Google\Service\DeveloperConnect\PullRequestReviewComment;
 
 /**
  * The "gitRepositoryLinks" collection of methods.
@@ -41,6 +53,39 @@ use Google\Service\DeveloperConnect\ProcessGitLabWebhookRequest;
  */
 class ProjectsLocationsConnectionsGitRepositoryLinks extends \Google\Service\Resource
 {
+  /**
+   * Add a comment to a Pull Request. (gitRepositoryLinks.addPullRequestComment)
+   *
+   * @param string $name Required. The resource name of the GitRepositoryLink in
+   * the format `projects/locations/connections/gitRepositoryLinks`.
+   * @param AddGitRepositoryLinkPullRequestCommentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return PullRequestComment
+   * @throws \Google\Service\Exception
+   */
+  public function addPullRequestComment($name, AddGitRepositoryLinkPullRequestCommentRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('addPullRequestComment', [$params], PullRequestComment::class);
+  }
+  /**
+   * Add a review comment (inline on diff) to a Pull Request.
+   * (gitRepositoryLinks.addPullRequestReviewComment)
+   *
+   * @param string $name Required. The resource name of the GitRepositoryLink in
+   * the format `projects/locations/connections/gitRepositoryLinks`.
+   * @param AddGitRepositoryLinkPullRequestReviewCommentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return PullRequestReviewComment
+   * @throws \Google\Service\Exception
+   */
+  public function addPullRequestReviewComment($name, AddGitRepositoryLinkPullRequestReviewCommentRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('addPullRequestReviewComment', [$params], PullRequestReviewComment::class);
+  }
   /**
    * Creates a GitRepositoryLink. Upon linking a Git Repository, Developer Connect
    * will configure the Git Repository to send webhook events to Developer
@@ -112,6 +157,113 @@ class ProjectsLocationsConnectionsGitRepositoryLinks extends \Google\Service\Res
     return $this->call('delete', [$params], Operation::class);
   }
   /**
+   * Diff commits for a GitRepositoryLink. (gitRepositoryLinks.diffCommit)
+   *
+   * @param string $name Required. The resource name of the GitRepositoryLink.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string baseSha Required. The base commit SHA or ref.
+   * @opt_param string headSha Required. The head commit SHA or ref.
+   * @opt_param string pathFilters Optional. Path patterns or exact paths to
+   * filter returned files. When `path_filters` is specified, `FileDiff.patch` is
+   * populated for all matching files (use `["**"]` to include patches for all
+   * changed files). When `path_filters` is omitted or empty, the full list of
+   * `FileDiff` is returned without patch diffs (`FileDiff.patch` is empty).
+   * @return DiffGitRepositoryLinkCommitResponse
+   * @throws \Google\Service\Exception
+   */
+  public function diffCommit($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('diffCommit', [$params], DiffGitRepositoryLinkCommitResponse::class);
+  }
+  /**
+   * Fetch Commit details from a Git repository link.
+   * (gitRepositoryLinks.fetchCommit)
+   *
+   * @param string $name Required. The resource name of the GitRepositoryLink in
+   * the format `projects/locations/connections/gitRepositoryLinks`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string commitSha Required. The commit SHA, or symbolic revision
+   * (for example, branch name, tag, or Git reference).
+   * @opt_param string pathFilters Optional. Path patterns or exact paths to
+   * filter returned files (only applicable in `FULL` view). When `path_filters`
+   * is specified, `FileDiff.patch` is populated for all matching files (use
+   * `["**"]` to include patches for all changed files). When `path_filters` is
+   * omitted or empty, the full list of `FileDiff` is returned without patch diffs
+   * (`FileDiff.patch` is empty).
+   * @opt_param string view Optional. The level of commit details to return in the
+   * response. Defaults to `FULL` if unspecified. In `FULL` view, `files` metadata
+   * (paths and statuses) are returned; `path_filters` must also be specified to
+   * populate line patch hunks.
+   * @return FetchGitRepositoryLinkCommitResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchCommit($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchCommit', [$params], FetchGitRepositoryLinkCommitResponse::class);
+  }
+  /**
+   * Fetch a list of Commits from a Git repository link.
+   * (gitRepositoryLinks.fetchCommitList)
+   *
+   * @param string $name Required. The resource name of the GitRepositoryLink in
+   * the format `projects/locations/connections/gitRepositoryLinks`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. Number of results to return in the list.
+   * Default is 50. Max is 100.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `FetchGitRepositoryLinkCommitList` call. Provide this to retrieve the
+   * subsequent page. When paginating, all other parameters provided to
+   * `FetchGitRepositoryLinkCommitList` must match the call that provided the page
+   * token.
+   * @opt_param string ref Optional. The commit SHA, or symbolic revision (for
+   * example, branch name, tag, or Git reference) from which to start listing
+   * commits.
+   * @opt_param string view Optional. The level of commit details to return in the
+   * response. Only `BASIC` is supported; `FULL` returns `INVALID_ARGUMENT`.
+   * Defaults to `BASIC` if unspecified. Use `FetchGitRepositoryLinkCommit` to get
+   * file diffs for a single commit.
+   * @return FetchGitRepositoryLinkCommitListResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchCommitList($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchCommitList', [$params], FetchGitRepositoryLinkCommitListResponse::class);
+  }
+  /**
+   * Fetches blame information for a file or line range in a file.
+   * (gitRepositoryLinks.fetchFileBlame)
+   *
+   * @param string $name Required. The resource name of the GitRepositoryLink in
+   * the format `projects/locations/connections/gitRepositoryLinks`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int firstLine Optional. The 1-indexed starting line number of the
+   * range to blame (inclusive). If not specified, blame begins at line 1.
+   * @opt_param int lastLine Optional. The 1-indexed ending line number of the
+   * range to blame (inclusive). If not specified, blame extends to the end of the
+   * file.
+   * @opt_param string path Required. The file path within the repository.
+   * @opt_param string ref Required. The SCM commit SHA, or symbolic revision (for
+   * example, branch name, tag) from which to fetch the blame.
+   * @return FetchGitRepositoryLinkFileBlameResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchFileBlame($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchFileBlame', [$params], FetchGitRepositoryLinkFileBlameResponse::class);
+  }
+  /**
    * Fetch the list of branches or tags for a given repository.
    * (gitRepositoryLinks.fetchGitRefs)
    *
@@ -132,6 +284,56 @@ class ProjectsLocationsConnectionsGitRepositoryLinks extends \Google\Service\Res
     $params = ['gitRepositoryLink' => $gitRepositoryLink];
     $params = array_merge($params, $optParams);
     return $this->call('fetchGitRefs', [$params], FetchGitRefsResponse::class);
+  }
+  /**
+   * Fetch Pull Request details from a Git repository link.
+   * (gitRepositoryLinks.fetchPullRequest)
+   *
+   * @param string $name Required. The resource name of the GitRepositoryLink in
+   * the format `projects/locations/connections/gitRepositoryLinks`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string pullRequestId Required. The ID of the Pull Request.
+   * @return PullRequest
+   * @throws \Google\Service\Exception
+   */
+  public function fetchPullRequest($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchPullRequest', [$params], PullRequest::class);
+  }
+  /**
+   * Fetches a list of Pull Requests from the remote repository.
+   * (gitRepositoryLinks.fetchPullRequestList)
+   *
+   * @param string $name Required. The GitRepositoryLink resource name in the
+   * format `projects/locations/connections/gitRepositoryLinks`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. A filter expression that filters the pull
+   * requests returned in the response. Only a single equality comparison on
+   * `state` is supported, for example `state = "OPEN"`. Supported values are
+   * `OPEN`, `CLOSED`, and `MERGED`. `DECLINED` is only supported for SCM
+   * providers that support declining pull requests, and returns
+   * `INVALID_ARGUMENT` for GitHub, GitHub Enterprise, GitLab, and GitLab
+   * Enterprise. Other values or expressions return `INVALID_ARGUMENT`. Defaults
+   * to `state = "OPEN"` if unspecified.
+   * @opt_param int pageSize Optional. Number of results to return in the list.
+   * Default is 20. Max is 100. A page may contain fewer than `page_size` results
+   * even when more results are available; use `next_page_token` to check for more
+   * pages.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `FetchGitRepositoryLinkPullRequestList` call. Provide this to retrieve the
+   * subsequent page.
+   * @return FetchGitRepositoryLinkPullRequestListResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchPullRequestList($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchPullRequestList', [$params], FetchGitRepositoryLinkPullRequestListResponse::class);
   }
   /**
    * Fetches read token of a given gitRepositoryLink.
@@ -188,11 +390,11 @@ class ProjectsLocationsConnectionsGitRepositoryLinks extends \Google\Service\Res
    * (gitRepositoryLinks.listProjectsLocationsConnectionsGitRepositoryLinks)
    *
    * @param string $parent Required. Parent value for
-   * ListGitRepositoryLinksRequest
+   * ListGitRepositoryLinksRequest.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.
@@ -206,6 +408,40 @@ class ProjectsLocationsConnectionsGitRepositoryLinks extends \Google\Service\Res
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListGitRepositoryLinksResponse::class);
+  }
+  /**
+   * Modifies a Pull Request in the remote SCM repository associated with a
+   * GitRepositoryLink. (gitRepositoryLinks.modifyPullRequest)
+   *
+   * @param string $name Required. The GitRepositoryLink resource name in the
+   * format `projects/locations/connections/gitRepositoryLinks`.
+   * @param ModifyGitRepositoryLinkPullRequestRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return PullRequest
+   * @throws \Google\Service\Exception
+   */
+  public function modifyPullRequest($name, ModifyGitRepositoryLinkPullRequestRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('modifyPullRequest', [$params], PullRequest::class);
+  }
+  /**
+   * Opens a Pull Request in the remote SCM repository associated with a
+   * GitRepositoryLink. (gitRepositoryLinks.openPullRequest)
+   *
+   * @param string $name Required. The GitRepositoryLink resource name in the
+   * format `projects/locations/connections/gitRepositoryLinks`.
+   * @param OpenGitRepositoryLinkPullRequestRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return PullRequest
+   * @throws \Google\Service\Exception
+   */
+  public function openPullRequest($name, OpenGitRepositoryLinkPullRequestRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('openPullRequest', [$params], PullRequest::class);
   }
   /**
    * ProcessBitbucketCloudWebhook is called by the external Bitbucket Cloud

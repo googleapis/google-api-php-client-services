@@ -147,8 +147,8 @@ class ProjectsLocationsAccountConnectors extends \Google\Service\Resource
    * @param string $parent Required. Parent value for ListAccountConnectorsRequest
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.

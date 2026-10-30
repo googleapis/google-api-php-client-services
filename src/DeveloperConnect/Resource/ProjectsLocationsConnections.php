@@ -43,9 +43,8 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param Connection $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string connectionId Required. Id of the requesting object If auto-
-   * generating Id server-side, remove this field and connection_id from the
-   * method_signature of Create RPC
+   * @opt_param string connectionId Required. The ID to use for the connection,
+   * which becomes the final component of the connection's resource name.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -159,8 +158,8 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param string $parent Required. Parent value for ListConnectionsRequest
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.

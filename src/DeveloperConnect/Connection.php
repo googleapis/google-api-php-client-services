@@ -30,7 +30,7 @@ class Connection extends \Google\Model
   protected $bitbucketDataCenterConfigType = BitbucketDataCenterConfig::class;
   protected $bitbucketDataCenterConfigDataType = '';
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    *
    * @var string
    */
@@ -38,7 +38,7 @@ class Connection extends \Google\Model
   protected $cryptoKeyConfigType = CryptoKeyConfig::class;
   protected $cryptoKeyConfigDataType = '';
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    *
    * @var string
    */
@@ -102,7 +102,7 @@ class Connection extends \Google\Model
    */
   public $uid;
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    *
    * @var string
    */
@@ -157,7 +157,7 @@ class Connection extends \Google\Model
     return $this->bitbucketDataCenterConfig;
   }
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    *
    * @param string $createTime
    */
@@ -190,7 +190,7 @@ class Connection extends \Google\Model
     return $this->cryptoKeyConfig;
   }
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    *
    * @param string $deleteTime
    */
@@ -242,8 +242,8 @@ class Connection extends \Google\Model
     return $this->etag;
   }
   /**
-   * Optional. Configuration for the git proxy feature. Enabling the git proxy
-   * allows clients to perform git operations on the repositories linked in the
+   * Optional. Configuration for the Git proxy feature. Enabling the Git proxy
+   * allows clients to perform Git operations on the repositories linked in the
    * connection. [Learn more](https://docs.cloud.google.com/developer-
    * connect/docs/configure-git-proxy).
    *
@@ -439,7 +439,7 @@ class Connection extends \Google\Model
     return $this->uid;
   }
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    *
    * @param string $updateTime
    */
