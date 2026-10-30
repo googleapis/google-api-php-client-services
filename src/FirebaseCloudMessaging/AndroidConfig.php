@@ -208,7 +208,7 @@ class AndroidConfig extends \Google\Model
     return $this->fcmOptions;
   }
   /**
-   * Notification to send to android devices.
+   * Notification to send to Android devices.
    *
    * @param AndroidNotification $notification
    */

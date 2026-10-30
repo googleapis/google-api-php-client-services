@@ -216,7 +216,7 @@ class AndroidNotification extends \Google\Collection
   public $localOnly;
   /**
    * Sets the number of items this notification represents. May be displayed as
-   * a badge count for launchers that support badging.See [Notification
+   * a badge count for launchers that support badging. See [Notification
    * Badge](https://developer.android.com/training/notify-user/badges). For
    * example, this might be useful if you're using just one notification to
    * represent multiple new messages but you want the count here to represent
@@ -615,7 +615,7 @@ class AndroidNotification extends \Google\Collection
   }
   /**
    * Sets the number of items this notification represents. May be displayed as
-   * a badge count for launchers that support badging.See [Notification
+   * a badge count for launchers that support badging. See [Notification
    * Badge](https://developer.android.com/training/notify-user/badges). For
    * example, this might be useful if you're using just one notification to
    * represent multiple new messages but you want the count here to represent

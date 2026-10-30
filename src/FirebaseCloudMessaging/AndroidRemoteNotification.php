@@ -29,12 +29,12 @@ class AndroidRemoteNotification extends \Google\Model
   protected $notificationType = AndroidNotificationV2::class;
   protected $notificationDataType = '';
   /**
-   * Optional. If set to true, this RemoteNotification message will be delivered
-   * to legacy V1 clients as data messages by omitting the
-   * google.firebase.fcm.v1.Message.android_v2.remote_notification.notification.
-   * This should only be enabled when migration from legacy V1 data messages.
-   * Note that by default (when set to false), RemoteNotification messages are
-   * automatically translated to V1 notification message for legacy clients;
+   * Optional. If set to `true`, this RemoteNotification message will be
+   * delivered to legacy V1 clients as a data message by omitting the
+   * google.firebase.fcm.v1.AndroidRemoteNotification.notification. This should
+   * only be enabled when migrating from legacy V1 data messages. Note that by
+   * default (when set to false), RemoteNotification messages are automatically
+   * translated to V1 notification messages for legacy clients.
    *
    * @var bool
    */
@@ -58,7 +58,7 @@ class AndroidRemoteNotification extends \Google\Model
     return $this->mutableContent;
   }
   /**
-   * Optional. Notification to send to android devices.
+   * Optional. Notification to send to Android devices.
    *
    * @param AndroidNotificationV2 $notification
    */
@@ -74,12 +74,12 @@ class AndroidRemoteNotification extends \Google\Model
     return $this->notification;
   }
   /**
-   * Optional. If set to true, this RemoteNotification message will be delivered
-   * to legacy V1 clients as data messages by omitting the
-   * google.firebase.fcm.v1.Message.android_v2.remote_notification.notification.
-   * This should only be enabled when migration from legacy V1 data messages.
-   * Note that by default (when set to false), RemoteNotification messages are
-   * automatically translated to V1 notification message for legacy clients;
+   * Optional. If set to `true`, this RemoteNotification message will be
+   * delivered to legacy V1 clients as a data message by omitting the
+   * google.firebase.fcm.v1.AndroidRemoteNotification.notification. This should
+   * only be enabled when migrating from legacy V1 data messages. Note that by
+   * default (when set to false), RemoteNotification messages are automatically
+   * translated to V1 notification messages for legacy clients.
    *
    * @param bool $useAsV1DataMessage
    */
