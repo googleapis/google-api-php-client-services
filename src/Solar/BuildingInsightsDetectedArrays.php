@@ -17,7 +17,7 @@
 
 namespace Google\Service\Solar;
 
-class BuildingInsightsDetectedArrays extends \Google\Model
+class BuildingInsightsDetectedArrays extends \Google\Collection
 {
   /**
    * Unspecified status.
@@ -35,6 +35,9 @@ class BuildingInsightsDetectedArrays extends \Google\Model
    * No solar arrays detected for this building.
    */
   public const DETECTION_STATUS_DETECTION_STATUS_NO_ARRAYS_DETECTED = 'DETECTION_STATUS_NO_ARRAYS_DETECTED';
+  protected $collection_key = 'arrays';
+  protected $arraysType = BuildingInsightsDetectedArraysSolarArray::class;
+  protected $arraysDataType = 'array';
   /**
    * Indicates the detection status of solar arrays for this building.
    *
@@ -44,6 +47,22 @@ class BuildingInsightsDetectedArrays extends \Google\Model
   protected $latestCaptureDateType = Date::class;
   protected $latestCaptureDateDataType = '';
 
+  /**
+   * A list of solar arrays detected on the building.
+   *
+   * @param BuildingInsightsDetectedArraysSolarArray[] $arrays
+   */
+  public function setArrays($arrays)
+  {
+    $this->arrays = $arrays;
+  }
+  /**
+   * @return BuildingInsightsDetectedArraysSolarArray[]
+   */
+  public function getArrays()
+  {
+    return $this->arrays;
+  }
   /**
    * Indicates the detection status of solar arrays for this building.
    *
