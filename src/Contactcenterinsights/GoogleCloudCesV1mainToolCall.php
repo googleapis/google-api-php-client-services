@@ -56,6 +56,15 @@ class GoogleCloudCesV1mainToolCall extends \Google\Model
    */
   public $parentToolCallId;
   /**
+   * Output only. The app this call targets, derived by the assistant from the
+   * call's resource arguments: an app resource name, `PROJECT` for location-
+   * scoped tools, or empty for session-local tools. Set only in project-scoped
+   * assistant sessions.
+   *
+   * @var string
+   */
+  public $targetApp;
+  /**
    * Optional. The name of the tool to execute. Format:
    * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}`
    *
@@ -150,6 +159,25 @@ class GoogleCloudCesV1mainToolCall extends \Google\Model
   public function getParentToolCallId()
   {
     return $this->parentToolCallId;
+  }
+  /**
+   * Output only. The app this call targets, derived by the assistant from the
+   * call's resource arguments: an app resource name, `PROJECT` for location-
+   * scoped tools, or empty for session-local tools. Set only in project-scoped
+   * assistant sessions.
+   *
+   * @param string $targetApp
+   */
+  public function setTargetApp($targetApp)
+  {
+    $this->targetApp = $targetApp;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetApp()
+  {
+    return $this->targetApp;
   }
   /**
    * Optional. The name of the tool to execute. Format:
