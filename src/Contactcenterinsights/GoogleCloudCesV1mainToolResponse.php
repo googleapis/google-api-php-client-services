@@ -57,6 +57,13 @@ class GoogleCloudCesV1mainToolResponse extends \Google\Model
    */
   public $response;
   /**
+   * Output only. The app the executed tool targeted; mirrors
+   * ToolCall.target_app.
+   *
+   * @var string
+   */
+  public $targetApp;
+  /**
    * Optional. The name of the tool to execute. Format:
    * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}`
    *
@@ -152,6 +159,23 @@ class GoogleCloudCesV1mainToolResponse extends \Google\Model
   public function getResponse()
   {
     return $this->response;
+  }
+  /**
+   * Output only. The app the executed tool targeted; mirrors
+   * ToolCall.target_app.
+   *
+   * @param string $targetApp
+   */
+  public function setTargetApp($targetApp)
+  {
+    $this->targetApp = $targetApp;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetApp()
+  {
+    return $this->targetApp;
   }
   /**
    * Optional. The name of the tool to execute. Format:
