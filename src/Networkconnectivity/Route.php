@@ -83,6 +83,11 @@ class Route extends \Google\Model
    */
   public const TYPE_DYNAMIC_ROUTE = 'DYNAMIC_ROUTE';
   /**
+   * The route leads to a destination within the Private Service Connect Global
+   * Google API range of the VPC network.
+   */
+  public const TYPE_PSC_GLOBAL_GAPI = 'PSC_GLOBAL_GAPI';
+  /**
    * Output only. The time the route was created.
    *
    * @var string
@@ -420,7 +425,7 @@ class Route extends \Google\Model
    * its IP address range.
    *
    * Accepted values: ROUTE_TYPE_UNSPECIFIED, VPC_PRIMARY_SUBNET,
-   * VPC_SECONDARY_SUBNET, DYNAMIC_ROUTE
+   * VPC_SECONDARY_SUBNET, DYNAMIC_ROUTE, PSC_GLOBAL_GAPI
    *
    * @param self::TYPE_* $type
    */
