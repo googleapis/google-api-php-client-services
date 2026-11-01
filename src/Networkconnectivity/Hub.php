@@ -114,6 +114,8 @@ class Hub extends \Google\Collection
    * @var bool
    */
   public $exportPsc;
+  protected $exportPscConfigType = ExportPscConfig::class;
+  protected $exportPscConfigDataType = '';
   /**
    * Optional labels in key-value pair format. For more information about
    * labels, see [Requirements for labels](https://cloud.google.com/resource-
@@ -231,6 +233,23 @@ class Hub extends \Google\Collection
   public function getExportPsc()
   {
     return $this->exportPsc;
+  }
+  /**
+   * Optional. Config for more granular control of Private Service Connect
+   * transitivity.
+   *
+   * @param ExportPscConfig $exportPscConfig
+   */
+  public function setExportPscConfig(ExportPscConfig $exportPscConfig)
+  {
+    $this->exportPscConfig = $exportPscConfig;
+  }
+  /**
+   * @return ExportPscConfig
+   */
+  public function getExportPscConfig()
+  {
+    return $this->exportPscConfig;
   }
   /**
    * Optional labels in key-value pair format. For more information about
