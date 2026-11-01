@@ -92,6 +92,10 @@ class GooglePrivacyDlpV2ByteContentItem extends \Google\Model
    */
   public const TYPE_AI_MODEL = 'AI_MODEL';
   /**
+   * TIFF image format.
+   */
+  public const TYPE_IMAGE_TIFF = 'IMAGE_TIFF';
+  /**
    * Content data to inspect or redact.
    *
    * @var string
@@ -125,7 +129,8 @@ class GooglePrivacyDlpV2ByteContentItem extends \Google\Model
    *
    * Accepted values: BYTES_TYPE_UNSPECIFIED, IMAGE, IMAGE_JPEG, IMAGE_BMP,
    * IMAGE_PNG, IMAGE_SVG, TEXT_UTF8, WORD_DOCUMENT, PDF, POWERPOINT_DOCUMENT,
-   * EXCEL_DOCUMENT, AVRO, CSV, TSV, AUDIO, VIDEO, EXECUTABLE, AI_MODEL
+   * EXCEL_DOCUMENT, AVRO, CSV, TSV, AUDIO, VIDEO, EXECUTABLE, AI_MODEL,
+   * IMAGE_TIFF
    *
    * @param self::TYPE_* $type
    */
