@@ -21,8 +21,12 @@ class CommonLanguageSettings extends \Google\Collection
 {
   protected $collection_key = 'destinations';
   /**
-   * The destination where API teams want this client library to be published.
+   * Deprecated: Client libraries are published for all supported languages by
+   * default when a `library_settings` entry is present with a `version` and
+   * `launch_stage`. The destination where API teams want this client library to
+   * be published.
    *
+   * @deprecated
    * @var string[]
    */
   public $destinations;
@@ -38,8 +42,12 @@ class CommonLanguageSettings extends \Google\Collection
   protected $selectiveGapicGenerationDataType = '';
 
   /**
-   * The destination where API teams want this client library to be published.
+   * Deprecated: Client libraries are published for all supported languages by
+   * default when a `library_settings` entry is present with a `version` and
+   * `launch_stage`. The destination where API teams want this client library to
+   * be published.
    *
+   * @deprecated
    * @param string[] $destinations
    */
   public function setDestinations($destinations)
@@ -47,6 +55,7 @@ class CommonLanguageSettings extends \Google\Collection
     $this->destinations = $destinations;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getDestinations()
