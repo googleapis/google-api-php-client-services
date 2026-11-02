@@ -29,10 +29,6 @@ class Finding extends \Google\Collection
    */
   public const FINDING_CLASS_VULNERABILITY = 'VULNERABILITY';
   /**
-   * Describes a security observation that is for informational purposes.
-   */
-  public const FINDING_CLASS_OBSERVATION = 'OBSERVATION';
-  /**
    * Describes a potential security risk due to plaintext credentials, keys, or
    * tokens being exposed in an asset or workload.
    */
@@ -59,12 +55,6 @@ class Finding extends \Google\Collection
    */
   public const SEVERITY_SEVERITY_LOW = 'SEVERITY_LOW';
   protected $collection_key = 'files';
-  /**
-   * Optional. Category of the finding.
-   *
-   * @var string
-   */
-  public $category;
   /**
    * Output only. Create time.
    *
@@ -118,22 +108,6 @@ class Finding extends \Google\Collection
   public $updateTime;
 
   /**
-   * Optional. Category of the finding.
-   *
-   * @param string $category
-   */
-  public function setCategory($category)
-  {
-    $this->category = $category;
-  }
-  /**
-   * @return string
-   */
-  public function getCategory()
-  {
-    return $this->category;
-  }
-  /**
    * Output only. Create time.
    *
    * @param string $createTime
@@ -184,8 +158,7 @@ class Finding extends \Google\Collection
   /**
    * Optional. Class of the finding.
    *
-   * Accepted values: FINDING_CLASS_UNSPECIFIED, VULNERABILITY, OBSERVATION,
-   * SECRET
+   * Accepted values: FINDING_CLASS_UNSPECIFIED, VULNERABILITY, SECRET
    *
    * @param self::FINDING_CLASS_* $findingClass
    */
