@@ -19,6 +19,16 @@ namespace Google\Service\AgentRegistry;
 
 class Tool extends \Google\Model
 {
+  protected $internal_gapi_mappings = [
+        "meta" => "_meta",
+  ];
+  /**
+   * Output only. Protocol-level tool metadata conforming to MCP _meta
+   * specification. Output only.
+   *
+   * @var array[]
+   */
+  public $meta;
   protected $annotationsType = Annotations::class;
   protected $annotationsDataType = '';
   /**
@@ -34,6 +44,23 @@ class Tool extends \Google\Model
    */
   public $name;
 
+  /**
+   * Output only. Protocol-level tool metadata conforming to MCP _meta
+   * specification. Output only.
+   *
+   * @param array[] $meta
+   */
+  public function setMeta($meta)
+  {
+    $this->meta = $meta;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMeta()
+  {
+    return $this->meta;
+  }
   /**
    * Output only. Annotations associated with the tool.
    *

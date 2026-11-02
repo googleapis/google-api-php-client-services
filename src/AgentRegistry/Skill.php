@@ -105,7 +105,7 @@ class Skill extends \Google\Model
    */
   public $description;
   /**
-   * Required. Human-readable display name of the skill. Maximum length is 128
+   * Optional. Human-readable display name of the skill. Maximum length is 128
    * characters.
    *
    * @var string
@@ -232,7 +232,7 @@ class Skill extends \Google\Model
     return $this->description;
   }
   /**
-   * Required. Human-readable display name of the skill. Maximum length is 128
+   * Optional. Human-readable display name of the skill. Maximum length is 128
    * characters.
    *
    * @param string $displayName
