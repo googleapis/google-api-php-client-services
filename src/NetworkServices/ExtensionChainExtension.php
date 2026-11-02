@@ -191,8 +191,8 @@ class ExtensionChainExtension extends \Google\Collection
    * the format: `projects/{project}/locations/{location}/wasmPlugins/{plugin}`
    * or `//networkservices.googleapis.com/projects/{project}/locations/{location
    * }/wasmPlugins/{wasmPlugin}`. Plugin extensions are currently supported for
-   * the `LbTrafficExtension`, the `LbRouteExtension`, and the `LbEdgeExtension`
-   * resources.
+   * the `LbTrafficExtension`, the `LbRouteExtension`, the `LbEdgeExtension`,
+   * and the `CdnEdgeExtension` resources.
    *
    * @var string
    */
@@ -447,8 +447,8 @@ class ExtensionChainExtension extends \Google\Collection
    * the format: `projects/{project}/locations/{location}/wasmPlugins/{plugin}`
    * or `//networkservices.googleapis.com/projects/{project}/locations/{location
    * }/wasmPlugins/{wasmPlugin}`. Plugin extensions are currently supported for
-   * the `LbTrafficExtension`, the `LbRouteExtension`, and the `LbEdgeExtension`
-   * resources.
+   * the `LbTrafficExtension`, the `LbRouteExtension`, the `LbEdgeExtension`,
+   * and the `CdnEdgeExtension` resources.
    *
    * @param string $service
    */

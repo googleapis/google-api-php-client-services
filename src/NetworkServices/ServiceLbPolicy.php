@@ -25,25 +25,29 @@ class ServiceLbPolicy extends \Google\Model
   public const LOAD_BALANCING_ALGORITHM_LOAD_BALANCING_ALGORITHM_UNSPECIFIED = 'LOAD_BALANCING_ALGORITHM_UNSPECIFIED';
   /**
    * Balance traffic across all backends across the world proportionally based
-   * on capacity.
+   * on capacity. Only supported for global ServiceLbPolicy with Cloud Service
+   * Mesh, not supported for regional ServiceLbPolicy.
    */
   public const LOAD_BALANCING_ALGORITHM_SPRAY_TO_WORLD = 'SPRAY_TO_WORLD';
   /**
    * Direct traffic to the nearest region with endpoints and capacity before
    * spilling over to other regions and spread the traffic from each client to
-   * all the MIGs/NEGs in a region.
+   * all the MIGs/NEGs in a region. For regional ServiceLbPolicy, traffic stays
+   * within the configured region and does not spill over to other regions.
    */
   public const LOAD_BALANCING_ALGORITHM_SPRAY_TO_REGION = 'SPRAY_TO_REGION';
   /**
    * Direct traffic to the nearest region with endpoints and capacity before
    * spilling over to other regions. All MIGs/NEGs within a region are evenly
    * loaded but each client might not spread the traffic to all the MIGs/NEGs in
-   * the region.
+   * the region. For regional ServiceLbPolicy, traffic stays within the
+   * configured region and does not spill over to other regions.
    */
   public const LOAD_BALANCING_ALGORITHM_WATERFALL_BY_REGION = 'WATERFALL_BY_REGION';
   /**
    * Attempt to keep traffic in a single zone closest to the client, before
-   * spilling over to other zones.
+   * spilling over to other zones. For regional ServiceLbPolicy, traffic only
+   * spills over to other zones within the same region.
    */
   public const LOAD_BALANCING_ALGORITHM_WATERFALL_BY_ZONE = 'WATERFALL_BY_ZONE';
   protected $autoCapacityDrainType = ServiceLbPolicyAutoCapacityDrain::class;
