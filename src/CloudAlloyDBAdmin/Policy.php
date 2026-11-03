@@ -19,6 +19,8 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class Policy extends \Google\Model
 {
+  protected $connectionsCountType = ConnectionsCount::class;
+  protected $connectionsCountDataType = '';
   /**
    * The period of time in seconds after a new node is created before the
    * autoscaler will incorporate its resource usage (e.g. CPU utilization) into
@@ -43,6 +45,23 @@ class Policy extends \Google\Model
    */
   public $maxNodeCount;
 
+  /**
+   * Optional. Connections count policy for the autoscaler. If not set, the
+   * autoscaler will not use connection count for scaling.
+   *
+   * @param ConnectionsCount $connectionsCount
+   */
+  public function setConnectionsCount(ConnectionsCount $connectionsCount)
+  {
+    $this->connectionsCount = $connectionsCount;
+  }
+  /**
+   * @return ConnectionsCount
+   */
+  public function getConnectionsCount()
+  {
+    return $this->connectionsCount;
+  }
   /**
    * The period of time in seconds after a new node is created before the
    * autoscaler will incorporate its resource usage (e.g. CPU utilization) into
