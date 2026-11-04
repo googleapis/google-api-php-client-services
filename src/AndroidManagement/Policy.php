@@ -544,6 +544,8 @@ class Policy extends \Google\Collection
   protected $deviceOwnerLockScreenInfoDataType = '';
   protected $deviceRadioStateType = DeviceRadioState::class;
   protected $deviceRadioStateDataType = '';
+  protected $deviceWidePoliciesType = DeviceWidePolicies::class;
+  protected $deviceWidePoliciesDataType = '';
   protected $displaySettingsType = DisplaySettings::class;
   protected $displaySettingsDataType = '';
   /**
@@ -1603,6 +1605,22 @@ class Policy extends \Google\Collection
   public function getDeviceRadioState()
   {
     return $this->deviceRadioState;
+  }
+  /**
+   * Optional. Policies controlling the device on company-owned devices.
+   *
+   * @param DeviceWidePolicies $deviceWidePolicies
+   */
+  public function setDeviceWidePolicies(DeviceWidePolicies $deviceWidePolicies)
+  {
+    $this->deviceWidePolicies = $deviceWidePolicies;
+  }
+  /**
+   * @return DeviceWidePolicies
+   */
+  public function getDeviceWidePolicies()
+  {
+    return $this->deviceWidePolicies;
   }
   /**
    * Optional. Controls for the display settings.
