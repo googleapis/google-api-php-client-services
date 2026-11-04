@@ -137,6 +137,15 @@ class Endpoint extends \Google\Model
    */
   public $cloudSqlInstance;
   /**
+   * A [Datastream Private Connection](https://docs.cloud.google.com/datastream/
+   * docs/reference/rest/v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnecti
+   * on}.
+   *
+   * @var string
+   */
+  public $datastreamPrivateConnection;
+  /**
    * A [DMS Private Connection](https://docs.cloud.google.com/database-
    * migration/docs/reference/rest/v1/projects.locations.privateConnections)
    * name format: projects/{project}/locations/{location}/privateConnections/{pr
@@ -346,6 +355,25 @@ class Endpoint extends \Google\Model
   public function getCloudSqlInstance()
   {
     return $this->cloudSqlInstance;
+  }
+  /**
+   * A [Datastream Private Connection](https://docs.cloud.google.com/datastream/
+   * docs/reference/rest/v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnecti
+   * on}.
+   *
+   * @param string $datastreamPrivateConnection
+   */
+  public function setDatastreamPrivateConnection($datastreamPrivateConnection)
+  {
+    $this->datastreamPrivateConnection = $datastreamPrivateConnection;
+  }
+  /**
+   * @return string
+   */
+  public function getDatastreamPrivateConnection()
+  {
+    return $this->datastreamPrivateConnection;
   }
   /**
    * A [DMS Private Connection](https://docs.cloud.google.com/database-
