@@ -29,11 +29,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus extends \Google\Mo
   protected $connectorAuthStateDataType = '';
   /**
    * Output only. It is the batch authorization group placeholder full resource
-   * name. This is not a real data connector (not existed in DataConnector table
-   * in spanner). It's a resource name existing only in the
-   * connector_authorization in the user table. E.g. projects/{project}/location
-   * s/{location}/collections/oauth_placeholder_google_workspace/dataStores/data
-   * Connector.
+   * name. This is not a real data connector resource. E.g. projects/{project}/l
+   * ocations/{location}/collections/oauth_placeholder_google_workspace/dataStor
+   * es/dataConnector.
    *
    * @var string
    */
@@ -73,11 +71,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus extends \Google\Mo
   }
   /**
    * Output only. It is the batch authorization group placeholder full resource
-   * name. This is not a real data connector (not existed in DataConnector table
-   * in spanner). It's a resource name existing only in the
-   * connector_authorization in the user table. E.g. projects/{project}/location
-   * s/{location}/collections/oauth_placeholder_google_workspace/dataStores/data
-   * Connector.
+   * name. This is not a real data connector resource. E.g. projects/{project}/l
+   * ocations/{location}/collections/oauth_placeholder_google_workspace/dataStor
+   * es/dataConnector.
    *
    * @param string $placeholder
    */

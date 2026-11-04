@@ -76,8 +76,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   public $id;
   /**
    * Output only. Whether this is a first-party (Google-owned) connector, as
-   * opposed to a third-party connector. Used by the frontend to group 1P vs 3P
-   * connectors.
+   * opposed to a third-party connector.
    *
    * @var bool
    */
@@ -259,8 +258,7 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends \Googl
   }
   /**
    * Output only. Whether this is a first-party (Google-owned) connector, as
-   * opposed to a third-party connector. Used by the frontend to group 1P vs 3P
-   * connectors.
+   * opposed to a third-party connector.
    *
    * @param bool $isFirstParty
    */

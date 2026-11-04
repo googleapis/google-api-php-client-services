@@ -144,8 +144,7 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
   public $autoRenew;
   /**
    * Output only. Indication of whether the subscription is terminated earlier
-   * than the expiration date. This is usually terminated by pipeline once the
-   * subscription gets terminated from subsv3.
+   * than the expiration date.
    *
    * @var bool
    */
@@ -230,8 +229,7 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
   }
   /**
    * Output only. Indication of whether the subscription is terminated earlier
-   * than the expiration date. This is usually terminated by pipeline once the
-   * subscription gets terminated from subsv3.
+   * than the expiration date.
    *
    * @param bool $earlyTerminated
    */

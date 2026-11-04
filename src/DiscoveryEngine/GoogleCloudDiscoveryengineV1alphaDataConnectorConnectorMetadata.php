@@ -21,8 +21,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetadata extends \G
 {
   /**
    * Optional. The party that authored the connector, e.g. "Google" or a third-
-   * party provider name. Lets end users see who authored a connector (future:
-   * third-party-authored connectors).
+   * party provider name. Lets end users see who authored a connector.
    *
    * @var string
    */
@@ -57,8 +56,7 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetadata extends \G
 
   /**
    * Optional. The party that authored the connector, e.g. "Google" or a third-
-   * party provider name. Lets end users see who authored a connector (future:
-   * third-party-authored connectors).
+   * party provider name. Lets end users see who authored a connector.
    *
    * @param string $author
    */

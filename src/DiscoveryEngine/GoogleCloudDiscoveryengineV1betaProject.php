@@ -19,6 +19,23 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaProject extends \Google\Model
 {
+  /**
+   * No experience is stated for this location.
+   */
+  public const EXPERIENCE_STATE_EXPERIENCE_STATE_UNSPECIFIED = 'EXPERIENCE_STATE_UNSPECIFIED';
+  /**
+   * Only the new Gemini Enterprise experience.
+   */
+  public const EXPERIENCE_STATE_SOBI_ONLY = 'SOBI_ONLY';
+  /**
+   * Only the classic Gemini Enterprise experience.
+   */
+  public const EXPERIENCE_STATE_LEGACY_ONLY = 'LEGACY_ONLY';
+  /**
+   * Legacy engines serve the classic experience, the Sobi engine serves the
+   * Sobi experience.
+   */
+  public const EXPERIENCE_STATE_LEGACY_AND_SOBI = 'LEGACY_AND_SOBI';
   protected $configurableBillingStatusType = GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus::class;
   protected $configurableBillingStatusDataType = '';
   /**
@@ -29,6 +46,12 @@ class GoogleCloudDiscoveryengineV1betaProject extends \Google\Model
   public $createTime;
   protected $customerProvidedConfigType = GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig::class;
   protected $customerProvidedConfigDataType = '';
+  /**
+   * Output only. The current experience state of the project.
+   *
+   * @var string
+   */
+  public $experienceState;
   /**
    * Output only. Full resource name of the project, for example
    * `projects/{project}`. Note that when making requests, project number and
@@ -96,6 +119,25 @@ class GoogleCloudDiscoveryengineV1betaProject extends \Google\Model
   public function getCustomerProvidedConfig()
   {
     return $this->customerProvidedConfig;
+  }
+  /**
+   * Output only. The current experience state of the project.
+   *
+   * Accepted values: EXPERIENCE_STATE_UNSPECIFIED, SOBI_ONLY, LEGACY_ONLY,
+   * LEGACY_AND_SOBI
+   *
+   * @param self::EXPERIENCE_STATE_* $experienceState
+   */
+  public function setExperienceState($experienceState)
+  {
+    $this->experienceState = $experienceState;
+  }
+  /**
+   * @return self::EXPERIENCE_STATE_*
+   */
+  public function getExperienceState()
+  {
+    return $this->experienceState;
   }
   /**
    * Output only. Full resource name of the project, for example
