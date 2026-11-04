@@ -132,6 +132,8 @@ class VmwareNodePool extends \Google\Model
    * @var string
    */
   public $updateTime;
+  protected $validationCheckType = ValidationCheck::class;
+  protected $validationCheckDataType = '';
 
   /**
    * Annotations on the node pool. This field has the same restrictions as
@@ -370,6 +372,22 @@ class VmwareNodePool extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * The validation check for the node pool.
+   *
+   * @param ValidationCheck $validationCheck
+   */
+  public function setValidationCheck(ValidationCheck $validationCheck)
+  {
+    $this->validationCheck = $validationCheck;
+  }
+  /**
+   * @return ValidationCheck
+   */
+  public function getValidationCheck()
+  {
+    return $this->validationCheck;
   }
 }
 
