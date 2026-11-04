@@ -23,11 +23,12 @@ use Google\Client;
  * Service definition for MapsPlaces (v1).
  *
  * <p>
-</p>
+ * The Places API allows developers to access a variety of search and retrieval
+ * endpoints for a Place.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://mapsplatform.google.com/maps-products/#places-section" target="_blank">Documentation</a>
+ * <a href="https://developers.google.com/maps/documentation/places/web-service" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
