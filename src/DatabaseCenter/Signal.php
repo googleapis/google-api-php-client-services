@@ -80,6 +80,13 @@ class Signal extends \Google\Collection
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_GROUP_MULTIREGIONAL = 'SIGNAL_TYPE_GROUP_MULTIREGIONAL';
   /**
+   * Deprecated: This signal is not supported. Represents if a resource has a
+   * promotable replica.
+   *
+   * @deprecated
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_NO_PROMOTABLE_REPLICA = 'SIGNAL_TYPE_NO_PROMOTABLE_REPLICA';
+  /**
    * Represents if a resource has an automated backup policy.
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY = 'SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY';
@@ -269,6 +276,14 @@ class Signal extends \Google\Collection
    * Cloud SQL for SQL Server instance is not set to off.
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_SERVER_AUTHENTICATION_NOT_REQUIRED = 'SIGNAL_TYPE_SERVER_AUTHENTICATION_NOT_REQUIRED';
+  /**
+   * Deprecated: This signal is not supported. Represents if the
+   * cross_db_ownership_chaining database flag for a Cloud SQL for SQL Server
+   * instance is not set to off.
+   *
+   * @deprecated
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_EXPOSED_BY_OWNERSHIP_CHAINING = 'SIGNAL_TYPE_EXPOSED_BY_OWNERSHIP_CHAINING';
   /**
    * Represents if he external scripts enabled database flag for a Cloud SQL for
    * SQL Server instance is not set to off.
@@ -481,9 +496,21 @@ class Signal extends \Google\Collection
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_SCHEMA_NOT_OPTIMIZED = 'SIGNAL_TYPE_SCHEMA_NOT_OPTIMIZED';
   /**
+   * Deprecated: This signal is not supported. High number of idle connections.
+   *
+   * @deprecated
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_MANY_IDLE_CONNECTIONS = 'SIGNAL_TYPE_MANY_IDLE_CONNECTIONS';
+  /**
    * Replication delay.
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_REPLICATION_LAG = 'SIGNAL_TYPE_REPLICATION_LAG';
+  /**
+   * Deprecated: This signal is not supported. Outdated version.
+   *
+   * @deprecated
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_OUTDATED_VERSION = 'SIGNAL_TYPE_OUTDATED_VERSION';
   /**
    * Outdated client.
    */
@@ -500,6 +527,10 @@ class Signal extends \Google\Collection
    * Resource version is in extended support.
    */
   public const SIGNAL_TYPE_SIGNAL_TYPE_EXTENDED_SUPPORT = 'SIGNAL_TYPE_EXTENDED_SUPPORT';
+  /**
+   * Represents a change in performance KPIs.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_PERFORMANCE_KPI_CHANGE = 'SIGNAL_TYPE_PERFORMANCE_KPI_CHANGE';
   /**
    * Represents a database version nearing end of life.
    */
@@ -624,9 +655,9 @@ class Signal extends \Google\Collection
    *
    * Accepted values: SIGNAL_TYPE_UNSPECIFIED,
    * SIGNAL_TYPE_RESOURCE_FAILOVER_PROTECTED, SIGNAL_TYPE_GROUP_MULTIREGIONAL,
-   * SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY, SIGNAL_TYPE_SHORT_BACKUP_RETENTION,
-   * SIGNAL_TYPE_LAST_BACKUP_FAILED, SIGNAL_TYPE_LAST_BACKUP_OLD,
-   * SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_2_0,
+   * SIGNAL_TYPE_NO_PROMOTABLE_REPLICA, SIGNAL_TYPE_NO_AUTOMATED_BACKUP_POLICY,
+   * SIGNAL_TYPE_SHORT_BACKUP_RETENTION, SIGNAL_TYPE_LAST_BACKUP_FAILED,
+   * SIGNAL_TYPE_LAST_BACKUP_OLD, SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_2_0,
    * SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_1_3,
    * SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_1_2,
    * SIGNAL_TYPE_VIOLATES_CIS_GCP_FOUNDATION_1_1,
@@ -654,6 +685,7 @@ class Signal extends \Google\Collection
    * SIGNAL_TYPE_WEAK_ROOT_PASSWORD,
    * SIGNAL_TYPE_ENCRYPTION_KEY_NOT_CUSTOMER_MANAGED,
    * SIGNAL_TYPE_SERVER_AUTHENTICATION_NOT_REQUIRED,
+   * SIGNAL_TYPE_EXPOSED_BY_OWNERSHIP_CHAINING,
    * SIGNAL_TYPE_EXPOSED_TO_EXTERNAL_SCRIPTS,
    * SIGNAL_TYPE_EXPOSED_TO_LOCAL_DATA_LOADS,
    * SIGNAL_TYPE_CONNECTION_ATTEMPTS_NOT_LOGGED,
@@ -688,9 +720,11 @@ class Signal extends \Google\Collection
    * SIGNAL_TYPE_ENCRYPTION_ORG_POLICY_NOT_SATISFIED,
    * SIGNAL_TYPE_LOCATION_ORG_POLICY_NOT_SATISFIED,
    * SIGNAL_TYPE_OUTDATED_MINOR_VERSION, SIGNAL_TYPE_SCHEMA_NOT_OPTIMIZED,
-   * SIGNAL_TYPE_REPLICATION_LAG, SIGNAL_TYPE_OUTDATED_CLIENT,
+   * SIGNAL_TYPE_MANY_IDLE_CONNECTIONS, SIGNAL_TYPE_REPLICATION_LAG,
+   * SIGNAL_TYPE_OUTDATED_VERSION, SIGNAL_TYPE_OUTDATED_CLIENT,
    * SIGNAL_TYPE_DATABOOST_DISABLED,
    * SIGNAL_TYPE_RECOMMENDED_MAINTENANCE_POLICIES, SIGNAL_TYPE_EXTENDED_SUPPORT,
+   * SIGNAL_TYPE_PERFORMANCE_KPI_CHANGE,
    * SIGNAL_TYPE_VERSION_NEARING_END_OF_LIFE,
    * SIGNAL_TYPE_HIGH_MAINTENANCE_DOWNTIME_RISK,
    * SIGNAL_TYPE_LOW_CACHE_HIT_AND_MAINTENANCE_DOWNTIME,

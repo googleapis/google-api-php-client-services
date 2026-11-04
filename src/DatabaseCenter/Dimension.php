@@ -68,6 +68,20 @@ class Dimension extends \Google\Model
    */
   public const PRODUCT_ENGINE_ENGINE_NATIVE = 'ENGINE_NATIVE';
   /**
+   * Deprecated: Use ENGINE_NATIVE instead for PRODUCT_TYPE_SPANNER. Cloud
+   * Spanner with PostgreSQL dialect.
+   *
+   * @deprecated
+   */
+  public const PRODUCT_ENGINE_ENGINE_CLOUD_SPANNER_WITH_POSTGRES_DIALECT = 'ENGINE_CLOUD_SPANNER_WITH_POSTGRES_DIALECT';
+  /**
+   * Deprecated: Use ENGINE_NATIVE instead for PRODUCT_TYPE_SPANNER. Cloud
+   * Spanner with Google SQL dialect.
+   *
+   * @deprecated
+   */
+  public const PRODUCT_ENGINE_ENGINE_CLOUD_SPANNER_WITH_GOOGLESQL_DIALECT = 'ENGINE_CLOUD_SPANNER_WITH_GOOGLESQL_DIALECT';
+  /**
    * Memorystore with Redis dialect.
    */
   public const PRODUCT_ENGINE_ENGINE_MEMORYSTORE_FOR_REDIS = 'ENGINE_MEMORYSTORE_FOR_REDIS';
@@ -127,6 +141,13 @@ class Dimension extends \Google\Model
    * Spanner product area in Google Cloud
    */
   public const PRODUCT_TYPE_PRODUCT_TYPE_SPANNER = 'PRODUCT_TYPE_SPANNER';
+  /**
+   * Deprecated: Use PRODUCT_TYPE_CLOUDSQL with instance type as
+   * EXTERNAL_PRIMARY instead. On premises database product.
+   *
+   * @deprecated
+   */
+  public const PRODUCT_TYPE_PRODUCT_TYPE_ON_PREM = 'PRODUCT_TYPE_ON_PREM';
   /**
    * Bigtable product area in Google Cloud
    */
@@ -492,7 +513,9 @@ class Dimension extends \Google\Model
    * Engine refers to underlying database binary running in an instance.
    *
    * Accepted values: ENGINE_UNSPECIFIED, ENGINE_MYSQL, ENGINE_POSTGRES,
-   * ENGINE_SQL_SERVER, ENGINE_NATIVE, ENGINE_MEMORYSTORE_FOR_REDIS,
+   * ENGINE_SQL_SERVER, ENGINE_NATIVE,
+   * ENGINE_CLOUD_SPANNER_WITH_POSTGRES_DIALECT,
+   * ENGINE_CLOUD_SPANNER_WITH_GOOGLESQL_DIALECT, ENGINE_MEMORYSTORE_FOR_REDIS,
    * ENGINE_MEMORYSTORE_FOR_REDIS_CLUSTER, ENGINE_MEMORSTORE_FOR_VALKEY,
    * ENGINE_MEMORYSTORE_FOR_VALKEY, ENGINE_FIRESTORE_WITH_NATIVE_MODE,
    * ENGINE_FIRESTORE_WITH_DATASTORE_MODE, ENGINE_EXADATA_ORACLE,
@@ -516,8 +539,8 @@ class Dimension extends \Google\Model
    * Type to identify a product
    *
    * Accepted values: PRODUCT_TYPE_UNSPECIFIED, PRODUCT_TYPE_CLOUD_SQL,
-   * PRODUCT_TYPE_ALLOYDB, PRODUCT_TYPE_SPANNER, PRODUCT_TYPE_BIGTABLE,
-   * PRODUCT_TYPE_MEMORYSTORE, PRODUCT_TYPE_FIRESTORE,
+   * PRODUCT_TYPE_ALLOYDB, PRODUCT_TYPE_SPANNER, PRODUCT_TYPE_ON_PREM,
+   * PRODUCT_TYPE_BIGTABLE, PRODUCT_TYPE_MEMORYSTORE, PRODUCT_TYPE_FIRESTORE,
    * PRODUCT_TYPE_COMPUTE_ENGINE, PRODUCT_TYPE_ORACLE_ON_GCP,
    * PRODUCT_TYPE_BIGQUERY, PRODUCT_TYPE_OTHER
    *
