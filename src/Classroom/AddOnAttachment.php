@@ -33,6 +33,15 @@ class AddOnAttachment extends \Google\Collection
   protected $dueTimeType = TimeOfDay::class;
   protected $dueTimeDataType = '';
   /**
+   * Output only. Whether changes to `pointsEarned` values on this attachment's
+   * student submissions will be copied to the `pointsEarned` field on the
+   * students' CourseWork submissions. This field can be `true` for at most one
+   * add-on attachment per stream item.
+   *
+   * @var bool
+   */
+  public $gradeSyncEnabled;
+  /**
    * Immutable. Classroom-assigned identifier for this attachment, unique per
    * post.
    *
@@ -146,6 +155,25 @@ class AddOnAttachment extends \Google\Collection
   public function getDueTime()
   {
     return $this->dueTime;
+  }
+  /**
+   * Output only. Whether changes to `pointsEarned` values on this attachment's
+   * student submissions will be copied to the `pointsEarned` field on the
+   * students' CourseWork submissions. This field can be `true` for at most one
+   * add-on attachment per stream item.
+   *
+   * @param bool $gradeSyncEnabled
+   */
+  public function setGradeSyncEnabled($gradeSyncEnabled)
+  {
+    $this->gradeSyncEnabled = $gradeSyncEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getGradeSyncEnabled()
+  {
+    return $this->gradeSyncEnabled;
   }
   /**
    * Immutable. Classroom-assigned identifier for this attachment, unique per
