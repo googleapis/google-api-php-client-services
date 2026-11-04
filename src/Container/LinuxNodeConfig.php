@@ -17,7 +17,7 @@
 
 namespace Google\Service\Container;
 
-class LinuxNodeConfig extends \Google\Model
+class LinuxNodeConfig extends \Google\Collection
 {
   /**
    * CGROUP_MODE_UNSPECIFIED is when unspecified cgroup configuration is used.
@@ -85,8 +85,15 @@ class LinuxNodeConfig extends \Google\Model
    * Transparent hugepage support for anonymous memory is disabled.
    */
   public const TRANSPARENT_HUGEPAGE_ENABLED_TRANSPARENT_HUGEPAGE_ENABLED_NEVER = 'TRANSPARENT_HUGEPAGE_ENABLED_NEVER';
+  protected $collection_key = 'additionalEtcSystemdResolvedConf';
   protected $accurateTimeConfigType = AccurateTimeConfig::class;
   protected $accurateTimeConfigDataType = '';
+  protected $additionalEtcHostsType = EtcHostsEntry::class;
+  protected $additionalEtcHostsDataType = 'array';
+  protected $additionalEtcResolvConfType = ResolvedConfEntry::class;
+  protected $additionalEtcResolvConfDataType = 'array';
+  protected $additionalEtcSystemdResolvedConfType = ResolvedConfEntry::class;
+  protected $additionalEtcSystemdResolvedConfDataType = 'array';
   /**
    * cgroup_mode specifies the cgroup mode to be used on the node.
    *
@@ -99,6 +106,8 @@ class LinuxNodeConfig extends \Google\Model
   protected $diskIoSchedulerDataType = '';
   protected $hugepagesType = HugepagesConfig::class;
   protected $hugepagesDataType = '';
+  protected $kernelOverridesType = KernelOverrides::class;
+  protected $kernelOverridesDataType = '';
   protected $nodeKernelModuleLoadingType = NodeKernelModuleLoading::class;
   protected $nodeKernelModuleLoadingDataType = '';
   protected $nodeVfioConfigType = NodeVfioConfig::class;
@@ -136,6 +145,12 @@ class LinuxNodeConfig extends \Google\Model
    */
   public $sysctls;
   /**
+   * Optional. Configures the timezone of the node.
+   *
+   * @var string
+   */
+  public $timeZone;
+  /**
    * Optional. Defines the transparent hugepage defrag configuration on the
    * node. VM hugepage allocation can be managed by either limiting
    * defragmentation for delayed allocation or skipping it entirely for
@@ -171,6 +186,54 @@ class LinuxNodeConfig extends \Google\Model
   public function getAccurateTimeConfig()
   {
     return $this->accurateTimeConfig;
+  }
+  /**
+   * Optional. Additional entries to be added to /etc/hosts.
+   *
+   * @param EtcHostsEntry[] $additionalEtcHosts
+   */
+  public function setAdditionalEtcHosts($additionalEtcHosts)
+  {
+    $this->additionalEtcHosts = $additionalEtcHosts;
+  }
+  /**
+   * @return EtcHostsEntry[]
+   */
+  public function getAdditionalEtcHosts()
+  {
+    return $this->additionalEtcHosts;
+  }
+  /**
+   * Optional. Additional entries to be added to /etc/resolv.conf.
+   *
+   * @param ResolvedConfEntry[] $additionalEtcResolvConf
+   */
+  public function setAdditionalEtcResolvConf($additionalEtcResolvConf)
+  {
+    $this->additionalEtcResolvConf = $additionalEtcResolvConf;
+  }
+  /**
+   * @return ResolvedConfEntry[]
+   */
+  public function getAdditionalEtcResolvConf()
+  {
+    return $this->additionalEtcResolvConf;
+  }
+  /**
+   * Optional. Additional entries to be added to /etc/systemd/resolved.conf.
+   *
+   * @param ResolvedConfEntry[] $additionalEtcSystemdResolvedConf
+   */
+  public function setAdditionalEtcSystemdResolvedConf($additionalEtcSystemdResolvedConf)
+  {
+    $this->additionalEtcSystemdResolvedConf = $additionalEtcSystemdResolvedConf;
+  }
+  /**
+   * @return ResolvedConfEntry[]
+   */
+  public function getAdditionalEtcSystemdResolvedConf()
+  {
+    return $this->additionalEtcSystemdResolvedConf;
   }
   /**
    * cgroup_mode specifies the cgroup mode to be used on the node.
@@ -238,6 +301,23 @@ class LinuxNodeConfig extends \Google\Model
   public function getHugepages()
   {
     return $this->hugepages;
+  }
+  /**
+   * Optional. Defines the kernel overrides to be applied to the nodes. Note:
+   * sysctl changes are defined separately in the sysctls fields.
+   *
+   * @param KernelOverrides $kernelOverrides
+   */
+  public function setKernelOverrides(KernelOverrides $kernelOverrides)
+  {
+    $this->kernelOverrides = $kernelOverrides;
+  }
+  /**
+   * @return KernelOverrides
+   */
+  public function getKernelOverrides()
+  {
+    return $this->kernelOverrides;
   }
   /**
    * Optional. Configuration for kernel module loading on nodes. When enabled,
@@ -329,6 +409,22 @@ class LinuxNodeConfig extends \Google\Model
   public function getSysctls()
   {
     return $this->sysctls;
+  }
+  /**
+   * Optional. Configures the timezone of the node.
+   *
+   * @param string $timeZone
+   */
+  public function setTimeZone($timeZone)
+  {
+    $this->timeZone = $timeZone;
+  }
+  /**
+   * @return string
+   */
+  public function getTimeZone()
+  {
+    return $this->timeZone;
   }
   /**
    * Optional. Defines the transparent hugepage defrag configuration on the
