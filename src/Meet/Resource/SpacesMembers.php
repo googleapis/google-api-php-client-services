@@ -140,7 +140,7 @@ class SpacesMembers extends \Google\Service\Resource
    * space-members). (members.patch)
    *
    * @param string $name Identifier. Resource name of the member. Format:
-   * spaces/{space}/members/{member}
+   * `spaces/{space}/members/{member}`
    * @param Member $postBody
    * @param array $optParams Optional parameters.
    *

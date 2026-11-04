@@ -33,8 +33,8 @@ class TranscriptEntry extends \Google\Model
    */
   public $languageCode;
   /**
-   * Output only. Resource name of the entry. Format: "conferenceRecords/{confer
-   * ence_record}/transcripts/{transcript}/entries/{entry}"
+   * Output only. Resource name of the entry. Format: `conferenceRecords/{confer
+   * ence_record}/transcripts/{transcript}/entries/{entry}`
    *
    * @var string
    */
@@ -93,8 +93,8 @@ class TranscriptEntry extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * Output only. Resource name of the entry. Format: "conferenceRecords/{confer
-   * ence_record}/transcripts/{transcript}/entries/{entry}"
+   * Output only. Resource name of the entry. Format: `conferenceRecords/{confer
+   * ence_record}/transcripts/{transcript}/entries/{entry}`
    *
    * @param string $name
    */

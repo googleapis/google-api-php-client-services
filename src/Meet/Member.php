@@ -39,7 +39,7 @@ class Member extends \Google\Model
   public $email;
   /**
    * Identifier. Resource name of the member. Format:
-   * spaces/{space}/members/{member}
+   * `spaces/{space}/members/{member}`
    *
    * @var string
    */
@@ -69,7 +69,7 @@ class Member extends \Google\Model
   }
   /**
    * Identifier. Resource name of the member. Format:
-   * spaces/{space}/members/{member}
+   * `spaces/{space}/members/{member}`
    *
    * @param string $name
    */
