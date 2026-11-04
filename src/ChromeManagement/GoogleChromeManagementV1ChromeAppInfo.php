@@ -85,6 +85,8 @@ class GoogleChromeManagementV1ChromeAppInfo extends \Google\Collection
   public $minUserCount;
   protected $permissionsType = GoogleChromeManagementV1ChromeAppPermission::class;
   protected $permissionsDataType = 'array';
+  protected $riskAssessmentType = GoogleChromeManagementV1RiskAssessmentData::class;
+  protected $riskAssessmentDataType = '';
   protected $siteAccessType = GoogleChromeManagementV1ChromeAppSiteAccess::class;
   protected $siteAccessDataType = 'array';
   /**
@@ -249,6 +251,22 @@ class GoogleChromeManagementV1ChromeAppInfo extends \Google\Collection
   public function getPermissions()
   {
     return $this->permissions;
+  }
+  /**
+   * Output only. Contains risk assessment data for the Chrome extension.
+   *
+   * @param GoogleChromeManagementV1RiskAssessmentData $riskAssessment
+   */
+  public function setRiskAssessment(GoogleChromeManagementV1RiskAssessmentData $riskAssessment)
+  {
+    $this->riskAssessment = $riskAssessment;
+  }
+  /**
+   * @return GoogleChromeManagementV1RiskAssessmentData
+   */
+  public function getRiskAssessment()
+  {
+    return $this->riskAssessment;
   }
   /**
    * Output only. Every permission giving access to domains or broad host
