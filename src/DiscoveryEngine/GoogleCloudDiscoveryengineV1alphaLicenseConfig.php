@@ -153,8 +153,7 @@ class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends \Google\Model
   public $billingAccountLicenseConfig;
   /**
    * Output only. Indication of whether the subscription is terminated earlier
-   * than the expiration date. This is usually terminated by pipeline once the
-   * subscription gets terminated from subsv3.
+   * than the expiration date.
    *
    * @var bool
    */
@@ -272,8 +271,7 @@ class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends \Google\Model
   }
   /**
    * Output only. Indication of whether the subscription is terminated earlier
-   * than the expiration date. This is usually terminated by pipeline once the
-   * subscription gets terminated from subsv3.
+   * than the expiration date.
    *
    * @param bool $earlyTerminated
    */

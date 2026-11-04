@@ -37,6 +37,29 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    */
   public const CONFIGURABLE_BILLING_APPROACH_CONFIGURABLE_BILLING_APPROACH_ENABLED = 'CONFIGURABLE_BILLING_APPROACH_ENABLED';
   /**
+   * Unspecified feature toggle state. Treated as `GENERAL`.
+   */
+  public const GLOBAL_FEATURE_TOGGLE_STATE_GLOBAL_FEATURE_TOGGLE_STATE_UNSPECIFIED = 'GLOBAL_FEATURE_TOGGLE_STATE_UNSPECIFIED';
+  /**
+   * Gets features and models 4 weeks post GA. Features will be ON at the 4
+   * weeks mark post GA.
+   */
+  public const GLOBAL_FEATURE_TOGGLE_STATE_DELAYED = 'DELAYED';
+  /**
+   * Gets features and models 2 weeks post GA. Features will be ON at the 2
+   * weeks mark post GA.
+   */
+  public const GLOBAL_FEATURE_TOGGLE_STATE_SCHEDULED = 'SCHEDULED';
+  /**
+   * Gets features and models at GA. Features will be ON at GA.
+   */
+  public const GLOBAL_FEATURE_TOGGLE_STATE_GENERAL = 'GENERAL';
+  /**
+   * Gets features and models at EAP (if in EAP). Features will only be ON if
+   * the project is allowlisted.
+   */
+  public const GLOBAL_FEATURE_TOGGLE_STATE_EARLY = 'EARLY';
+  /**
    * Value used when unset.
    */
   public const INDUSTRY_VERTICAL_INDUSTRY_VERTICAL_UNSPECIFIED = 'INDUSTRY_VERTICAL_UNSPECIFIED';
@@ -164,6 +187,13 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    */
   public $dataStoreIds;
   /**
+   * Output only. Whether the project is allowed to set
+   * `global_feature_toggle_state` to `DELAYED`.
+   *
+   * @var bool
+   */
+  public $delayedGlobalFeatureToggleStateAllowed;
+  /**
    * Optional. Whether to disable analytics for searches performed on this
    * engine.
    *
@@ -178,6 +208,15 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    */
   public $displayName;
   /**
+   * Output only. The complete, server-resolved state of every known feature
+   * toggle. Unlike `features`, which stores only explicit admin overrides, this
+   * map always contains an entry for every toggle. Clients should read toggle
+   * state from this field.
+   *
+   * @var string[]
+   */
+  public $effectiveFeatures;
+  /**
    * Optional. Feature config for the engine to opt in or opt out of features.
    * Supported keys: * `*`: all features, if it's present, all other feature
    * state settings are ignored. * `agent-gallery` * `no-code-agent-builder` *
@@ -186,18 +225,25 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * `feedback` * `session-sharing` * `personalization-memory` *
    * `personalization-suggested-highlights` * `mobile-app-access` * `disable-
    * agent-sharing` * `disable-image-generation` * `disable-video-generation` *
-   * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-
-   * drive-upload` * `disable-welcome-emails` * `disable-canvas` * `canvas-
-   * workspace` * `canvas-app-builder` * `skills` * `skill-sharing` * `skill-
-   * sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
-   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
-   * badge`
+   * `music-generation` * `speech-generation` * `disable-onedrive-upload` *
+   * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
+   * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
+   * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
+   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
+   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
+   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
+   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
+   * marketplace` * `agent-scheduling` * `preview-agents`
    *
    * @var string[]
    */
   public $features;
+  /**
+   * Optional. Controls the global feature toggle state for the engine.
+   *
+   * @var string
+   */
+  public $globalFeatureToggleState;
   /**
    * Optional. The industry vertical that the engine registers. The restriction
    * of the Engine industry vertical is based on DataStore: Vertical on Engine
@@ -459,6 +505,23 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
     return $this->dataStoreIds;
   }
   /**
+   * Output only. Whether the project is allowed to set
+   * `global_feature_toggle_state` to `DELAYED`.
+   *
+   * @param bool $delayedGlobalFeatureToggleStateAllowed
+   */
+  public function setDelayedGlobalFeatureToggleStateAllowed($delayedGlobalFeatureToggleStateAllowed)
+  {
+    $this->delayedGlobalFeatureToggleStateAllowed = $delayedGlobalFeatureToggleStateAllowed;
+  }
+  /**
+   * @return bool
+   */
+  public function getDelayedGlobalFeatureToggleStateAllowed()
+  {
+    return $this->delayedGlobalFeatureToggleStateAllowed;
+  }
+  /**
    * Optional. Whether to disable analytics for searches performed on this
    * engine.
    *
@@ -493,6 +556,25 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
     return $this->displayName;
   }
   /**
+   * Output only. The complete, server-resolved state of every known feature
+   * toggle. Unlike `features`, which stores only explicit admin overrides, this
+   * map always contains an entry for every toggle. Clients should read toggle
+   * state from this field.
+   *
+   * @param string[] $effectiveFeatures
+   */
+  public function setEffectiveFeatures($effectiveFeatures)
+  {
+    $this->effectiveFeatures = $effectiveFeatures;
+  }
+  /**
+   * @return string[]
+   */
+  public function getEffectiveFeatures()
+  {
+    return $this->effectiveFeatures;
+  }
+  /**
    * Optional. Feature config for the engine to opt in or opt out of features.
    * Supported keys: * `*`: all features, if it's present, all other feature
    * state settings are ignored. * `agent-gallery` * `no-code-agent-builder` *
@@ -501,14 +583,15 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * `feedback` * `session-sharing` * `personalization-memory` *
    * `personalization-suggested-highlights` * `mobile-app-access` * `disable-
    * agent-sharing` * `disable-image-generation` * `disable-video-generation` *
-   * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-
-   * drive-upload` * `disable-welcome-emails` * `disable-canvas` * `canvas-
-   * workspace` * `canvas-app-builder` * `skills` * `skill-sharing` * `skill-
-   * sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
-   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
-   * badge`
+   * `music-generation` * `speech-generation` * `disable-onedrive-upload` *
+   * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
+   * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
+   * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
+   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
+   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
+   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
+   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
+   * marketplace` * `agent-scheduling` * `preview-agents`
    *
    * @param string[] $features
    */
@@ -522,6 +605,25 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   public function getFeatures()
   {
     return $this->features;
+  }
+  /**
+   * Optional. Controls the global feature toggle state for the engine.
+   *
+   * Accepted values: GLOBAL_FEATURE_TOGGLE_STATE_UNSPECIFIED, DELAYED,
+   * SCHEDULED, GENERAL, EARLY
+   *
+   * @param self::GLOBAL_FEATURE_TOGGLE_STATE_* $globalFeatureToggleState
+   */
+  public function setGlobalFeatureToggleState($globalFeatureToggleState)
+  {
+    $this->globalFeatureToggleState = $globalFeatureToggleState;
+  }
+  /**
+   * @return self::GLOBAL_FEATURE_TOGGLE_STATE_*
+   */
+  public function getGlobalFeatureToggleState()
+  {
+    return $this->globalFeatureToggleState;
   }
   /**
    * Optional. The industry vertical that the engine registers. The restriction

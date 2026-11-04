@@ -43,6 +43,13 @@ class GoogleCloudDiscoveryengineV1alphaDynamicTool extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * Optional. Indicates whether the tool is read-only and does not perform
+   * write operations.
+   *
+   * @var bool
+   */
+  public $readonly;
 
   /**
    * Optional. The description of the tool.
@@ -107,6 +114,23 @@ class GoogleCloudDiscoveryengineV1alphaDynamicTool extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. Indicates whether the tool is read-only and does not perform
+   * write operations.
+   *
+   * @param bool $readonly
+   */
+  public function setReadonly($readonly)
+  {
+    $this->readonly = $readonly;
+  }
+  /**
+   * @return bool
+   */
+  public function getReadonly()
+  {
+    return $this->readonly;
   }
 }
 

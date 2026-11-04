@@ -53,11 +53,10 @@ class ProjectsLocationsCollectionsEnginesWidgetConfigs extends \Google\Service\R
    * default language (English).
    * @opt_param string modelInfoView Optional. Selects which view of
    * `WidgetConfig.UiSettings.ModelConfigInfo` the backend computes. `ADMIN` is
-   * set by the Cloud Console admin "Feature Management" page
-   * (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with
-   * `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
-   * Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-   * returns the end-user web selector.
+   * set by the Cloud Console admin "Feature Management" page to receive the
+   * admin-surfaced model set with `ResolvedModel.admin_view` populated;
+   * `END_USER_MOBILE` is set by the Gemini Enterprise mobile app to receive the
+   * mobile model set; unset / `END_USER_WEB` returns the end-user web selector.
    * @return GoogleCloudDiscoveryengineV1WidgetConfig
    * @throws \Google\Service\Exception
    */

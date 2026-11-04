@@ -81,6 +81,17 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * Output only. Maps a tool name (for example, `Internal-KB-Search` or
+   * `custom_mcp__agent__Internal-KB-Search`) to its human-readable display
+   * title (for example, `@Internal-KB Search`), populated from MCP tool `title`
+   * or `annotations.title` metadata so user-facing surfaces can display the
+   * tool title instead of the raw function declaration identifier. Empty when
+   * no tool display titles are present.
+   *
+   * @var string[]
+   */
+  public $toolDisplayNames;
 
   /**
    * Reasons for not answering the assist call.
@@ -190,6 +201,27 @@ class GoogleCloudDiscoveryengineV1AssistAnswer extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. Maps a tool name (for example, `Internal-KB-Search` or
+   * `custom_mcp__agent__Internal-KB-Search`) to its human-readable display
+   * title (for example, `@Internal-KB Search`), populated from MCP tool `title`
+   * or `annotations.title` metadata so user-facing surfaces can display the
+   * tool title instead of the raw function declaration identifier. Empty when
+   * no tool display titles are present.
+   *
+   * @param string[] $toolDisplayNames
+   */
+  public function setToolDisplayNames($toolDisplayNames)
+  {
+    $this->toolDisplayNames = $toolDisplayNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getToolDisplayNames()
+  {
+    return $this->toolDisplayNames;
   }
 }
 

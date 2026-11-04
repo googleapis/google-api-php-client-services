@@ -20,6 +20,18 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const PROVISION_INTENT_PROVISION_INTENT_UNSPECIFIED = 'PROVISION_INTENT_UNSPECIFIED';
+  /**
+   * The caller is provisioning for the new Gemini Enterprise experience.
+   */
+  public const PROVISION_INTENT_PROVISION_INTENT_SOBI = 'PROVISION_INTENT_SOBI';
+  /**
+   * The caller is provisioning for the classic Gemini Enterprise experience.
+   */
+  public const PROVISION_INTENT_PROVISION_INTENT_LEGACY = 'PROVISION_INTENT_LEGACY';
+  /**
    * Required. Set to `true` to specify that caller has read and would like to
    * give consent to the [Terms for data
    * use](https://cloud.google.com/retail/data-use-terms).
@@ -38,6 +50,13 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
   public $dataUseTermsVersion;
   protected $idpConfigType = GoogleCloudDiscoveryengineV1IdpConfig::class;
   protected $idpConfigDataType = '';
+  /**
+   * Optional. The caller states whether the provisioning is for the new or the
+   * classic Gemini Enterprise experience.
+   *
+   * @var string
+   */
+  public $provisionIntent;
   protected $saasParamsType = GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams::class;
   protected $saasParamsDataType = '';
 
@@ -94,6 +113,26 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
   public function getIdpConfig()
   {
     return $this->idpConfig;
+  }
+  /**
+   * Optional. The caller states whether the provisioning is for the new or the
+   * classic Gemini Enterprise experience.
+   *
+   * Accepted values: PROVISION_INTENT_UNSPECIFIED, PROVISION_INTENT_SOBI,
+   * PROVISION_INTENT_LEGACY
+   *
+   * @param self::PROVISION_INTENT_* $provisionIntent
+   */
+  public function setProvisionIntent($provisionIntent)
+  {
+    $this->provisionIntent = $provisionIntent;
+  }
+  /**
+   * @return self::PROVISION_INTENT_*
+   */
+  public function getProvisionIntent()
+  {
+    return $this->provisionIntent;
   }
   /**
    * Optional. Parameters for Agentspace.

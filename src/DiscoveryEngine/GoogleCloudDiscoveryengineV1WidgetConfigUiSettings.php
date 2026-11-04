@@ -110,6 +110,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * @var bool
    */
   public $enableVisualContentSummary;
+  protected $featureToggleInfoType = GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsFeatureToggleInfo::class;
+  protected $featureToggleInfoDataType = '';
   /**
    * Output only. Feature config for the engine to opt in or opt out of
    * features. Supported keys: * `agent-gallery` * `no-code-agent-builder` *
@@ -118,14 +120,15 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * `feedback` * `session-sharing` * `personalization-memory` *
    * `personalization-suggested-highlights` * `mobile-app-access` * `disable-
    * agent-sharing` * `disable-image-generation` * `disable-video-generation` *
-   * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-
-   * drive-upload` * `disable-welcome-emails` * `disable-canvas` * `canvas-
-   * workspace` * `canvas-app-builder` * `skills` * `skill-sharing` * `skill-
-   * sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
-   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
-   * badge`
+   * `music-generation` * `speech-generation` * `disable-onedrive-upload` *
+   * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
+   * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
+   * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
+   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
+   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
+   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
+   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
+   * marketplace` * `agent-scheduling` * `preview-agents`
    *
    * @var string[]
    */
@@ -357,6 +360,23 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enableVisualContentSummary;
   }
   /**
+   * Output only. The resolved, server-side view of the feature toggle registry
+   * (launch stage per toggle).
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsFeatureToggleInfo $featureToggleInfo
+   */
+  public function setFeatureToggleInfo(GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsFeatureToggleInfo $featureToggleInfo)
+  {
+    $this->featureToggleInfo = $featureToggleInfo;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsFeatureToggleInfo
+   */
+  public function getFeatureToggleInfo()
+  {
+    return $this->featureToggleInfo;
+  }
+  /**
    * Output only. Feature config for the engine to opt in or opt out of
    * features. Supported keys: * `agent-gallery` * `no-code-agent-builder` *
    * `prompt-gallery` * `model-selector` * `notebook-lm` * `people-search` *
@@ -364,14 +384,15 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * `feedback` * `session-sharing` * `personalization-memory` *
    * `personalization-suggested-highlights` * `mobile-app-access` * `disable-
    * agent-sharing` * `disable-image-generation` * `disable-video-generation` *
-   * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-
-   * drive-upload` * `disable-welcome-emails` * `disable-canvas` * `canvas-
-   * workspace` * `canvas-app-builder` * `skills` * `skill-sharing` * `skill-
-   * sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
-   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
-   * badge`
+   * `music-generation` * `speech-generation` * `disable-onedrive-upload` *
+   * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
+   * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
+   * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
+   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
+   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
+   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
+   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
+   * marketplace` * `agent-scheduling` * `preview-agents`
    *
    * @param string[] $features
    */
