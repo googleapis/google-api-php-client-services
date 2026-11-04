@@ -20,6 +20,20 @@ namespace Google\Service\CloudResourceManager;
 class Project extends \Google\Collection
 {
   /**
+   * Unspecified type.
+   */
+  public const MANAGEMENT_TYPE_MANAGEMENT_TYPE_UNSPECIFIED = 'MANAGEMENT_TYPE_UNSPECIFIED';
+  /**
+   * The Management Project is a self-managed project that constitutes its own
+   * boundary.
+   */
+  public const MANAGEMENT_TYPE_SELF_MANAGED = 'SELF_MANAGED';
+  /**
+   * The Management Project is a hub project that manages resources across a
+   * boundary.
+   */
+  public const MANAGEMENT_TYPE_HUB = 'HUB';
+  /**
    * Unspecified state. This is only used/useful for distinguishing unset
    * values.
    */
@@ -94,6 +108,13 @@ class Project extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * Output only. The type of Management Project. This field is only populated
+   * if `is_management_project` is `true`.
+   *
+   * @var string
+   */
+  public $managementType;
   /**
    * Output only. The unique resource name of the project. It is an int64
    * generated number prefixed by "projects/". Example: `projects/415104041262`
@@ -266,6 +287,25 @@ class Project extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * Output only. The type of Management Project. This field is only populated
+   * if `is_management_project` is `true`.
+   *
+   * Accepted values: MANAGEMENT_TYPE_UNSPECIFIED, SELF_MANAGED, HUB
+   *
+   * @param self::MANAGEMENT_TYPE_* $managementType
+   */
+  public function setManagementType($managementType)
+  {
+    $this->managementType = $managementType;
+  }
+  /**
+   * @return self::MANAGEMENT_TYPE_*
+   */
+  public function getManagementType()
+  {
+    return $this->managementType;
   }
   /**
    * Output only. The unique resource name of the project. It is an int64
