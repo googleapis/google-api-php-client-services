@@ -130,7 +130,10 @@ class Message extends \Google\Collection
   public $lastUpdateTime;
   /**
    * Optional. Specifies how the server interprets the message `text` field
-   * content.
+   * content when creating a message or updating the `text` field of a message.
+   * When calling `UpdateMessage`, set `markup_syntax` and `text` on the
+   * `Message` resource and include `text` (not `markup_syntax`) in
+   * `update_mask`.
    *
    * @var string
    */
@@ -537,7 +540,10 @@ class Message extends \Google\Collection
   }
   /**
    * Optional. Specifies how the server interprets the message `text` field
-   * content.
+   * content when creating a message or updating the `text` field of a message.
+   * When calling `UpdateMessage`, set `markup_syntax` and `text` on the
+   * `Message` resource and include `text` (not `markup_syntax`) in
+   * `update_mask`.
    *
    * Accepted values: MARKUP_SYNTAX_UNSPECIFIED, MARKUP_SYNTAX_CHAT,
    * MARKUP_SYNTAX_MARKDOWN
