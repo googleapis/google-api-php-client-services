@@ -130,6 +130,8 @@ class ClusterConfig extends \Google\Collection
   protected $masterFlexibleConfigDataType = '';
   protected $metastoreConfigType = MetastoreConfig::class;
   protected $metastoreConfigDataType = '';
+  protected $schedulingConfigType = SchedulingConfig::class;
+  protected $schedulingConfigDataType = '';
   protected $secondaryWorkerConfigType = InstanceGroupConfig::class;
   protected $secondaryWorkerConfigDataType = '';
   protected $secondaryWorkerFlexibleConfigType = FlexibleInstanceGroupConfig::class;
@@ -472,6 +474,23 @@ class ClusterConfig extends \Google\Collection
   public function getMetastoreConfig()
   {
     return $this->metastoreConfig;
+  }
+  /**
+   * Optional. Config for scheduling the resources to be allocated when
+   * available.
+   *
+   * @param SchedulingConfig $schedulingConfig
+   */
+  public function setSchedulingConfig(SchedulingConfig $schedulingConfig)
+  {
+    $this->schedulingConfig = $schedulingConfig;
+  }
+  /**
+   * @return SchedulingConfig
+   */
+  public function getSchedulingConfig()
+  {
+    return $this->schedulingConfig;
   }
   /**
    * Optional. The Compute Engine config settings for a cluster's secondary
