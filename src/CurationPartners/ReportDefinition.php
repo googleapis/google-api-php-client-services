@@ -37,6 +37,10 @@ class ReportDefinition extends \Google\Collection
    * request time.
    */
   public const TIME_ZONE_SOURCE_PROVIDED = 'PROVIDED';
+  /**
+   * Use the time zone from the curator's account settings.
+   */
+  public const TIME_ZONE_SOURCE_CURATOR = 'CURATOR';
   protected $collection_key = 'sorts';
   /**
    * Optional. The ISO 4217 currency code for this report. Defaults to account
@@ -204,7 +208,8 @@ class ReportDefinition extends \Google\Collection
    * Pacific time zone (PT). If source is PROVIDED, the time_zone field in the
    * report definition must also set a time zone.
    *
-   * Accepted values: TIME_ZONE_SOURCE_UNSPECIFIED, AD_EXCHANGE, UTC, PROVIDED
+   * Accepted values: TIME_ZONE_SOURCE_UNSPECIFIED, AD_EXCHANGE, UTC, PROVIDED,
+   * CURATOR
    *
    * @param self::TIME_ZONE_SOURCE_* $timeZoneSource
    */
