@@ -20,6 +20,8 @@ namespace Google\Service\OnDemandScanning;
 class GrafeasV1LayerDetails extends \Google\Collection
 {
   protected $collection_key = 'baseImages';
+  protected $attributesType = GrafeasV1LayerAttribute::class;
+  protected $attributesDataType = 'array';
   protected $baseImagesType = GrafeasV1BaseImage::class;
   protected $baseImagesDataType = 'array';
   /**
@@ -50,6 +52,22 @@ class GrafeasV1LayerDetails extends \Google\Collection
    */
   public $index;
 
+  /**
+   * Attributes that apply to the layer, such as buildpacks metadata.
+   *
+   * @param GrafeasV1LayerAttribute[] $attributes
+   */
+  public function setAttributes($attributes)
+  {
+    $this->attributes = $attributes;
+  }
+  /**
+   * @return GrafeasV1LayerAttribute[]
+   */
+  public function getAttributes()
+  {
+    return $this->attributes;
+  }
   /**
    * The base images the layer is found within.
    *
