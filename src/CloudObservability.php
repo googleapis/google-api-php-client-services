@@ -481,6 +481,16 @@ class CloudObservability extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'reprovision' => [
+              'path' => 'v1/{+name}:reprovision',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
