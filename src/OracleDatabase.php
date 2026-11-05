@@ -51,6 +51,7 @@ class OracleDatabase extends \Google\Service
   public $projects_locations_databaseCharacterSets;
   public $projects_locations_databaseConnections;
   public $projects_locations_databases;
+  public $projects_locations_dbSystemComputePerformances;
   public $projects_locations_dbSystemInitialStorageSizes;
   public $projects_locations_dbSystemShapes;
   public $projects_locations_dbSystems;
@@ -59,6 +60,7 @@ class OracleDatabase extends \Google\Service
   public $projects_locations_exadbVmClusters;
   public $projects_locations_exadbVmClusters_dbNodes;
   public $projects_locations_exascaleDbStorageVaults;
+  public $projects_locations_flexComponents;
   public $projects_locations_giVersions;
   public $projects_locations_giVersions_minorVersions;
   public $projects_locations_goldengateConnectionAssignments;
@@ -869,6 +871,38 @@ class OracleDatabase extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_dbSystemComputePerformances = new OracleDatabase\Resource\ProjectsLocationsDbSystemComputePerformances(
+        $this,
+        $this->serviceName,
+        'dbSystemComputePerformances',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/dbSystemComputePerformances',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_dbSystemInitialStorageSizes = new OracleDatabase\Resource\ProjectsLocationsDbSystemInitialStorageSizes(
         $this,
         $this->serviceName,
@@ -1307,6 +1341,38 @@ class OracleDatabase extends \Google\Service
                   'type' => 'string',
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_flexComponents = new OracleDatabase\Resource\ProjectsLocationsFlexComponents(
+        $this,
+        $this->serviceName,
+        'flexComponents',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/flexComponents',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

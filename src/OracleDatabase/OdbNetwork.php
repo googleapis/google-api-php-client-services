@@ -53,9 +53,9 @@ class OdbNetwork extends \Google\Model
    */
   public $entitlementId;
   /**
-   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on
-   * availability.
+   * Optional. Immutable. The GCP Oracle zone where OdbNetwork is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
+   * on availability.
    *
    * @var string
    */
@@ -74,7 +74,7 @@ class OdbNetwork extends \Google\Model
    */
   public $name;
   /**
-   * Required. The name of the VPC network in the following format:
+   * Required. Immutable. The name of the VPC network in the following format:
    * projects/{project}/global/networks/{network}
    *
    * @var string
@@ -130,9 +130,9 @@ class OdbNetwork extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on
-   * availability.
+   * Optional. Immutable. The GCP Oracle zone where OdbNetwork is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based
+   * on availability.
    *
    * @param string $gcpOracleZone
    */
@@ -181,7 +181,7 @@ class OdbNetwork extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The name of the VPC network in the following format:
+   * Required. Immutable. The name of the VPC network in the following format:
    * projects/{project}/global/networks/{network}
    *
    * @param string $network
