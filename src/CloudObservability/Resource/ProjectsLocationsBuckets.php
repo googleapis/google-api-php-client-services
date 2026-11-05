@@ -20,6 +20,7 @@ namespace Google\Service\CloudObservability\Resource;
 use Google\Service\CloudObservability\Bucket;
 use Google\Service\CloudObservability\ListBucketsResponse;
 use Google\Service\CloudObservability\Operation;
+use Google\Service\CloudObservability\ReprovisionBucketRequest;
 
 /**
  * The "buckets" collection of methods.
@@ -105,6 +106,25 @@ class ProjectsLocationsBuckets extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Initiates reprovisioning of a bucket. This is allowed only a single time for
+   * a bucket and results in data loss. Subsequent calls to this method for the
+   * same bucket will result in a FAILED_PRECONDITION (400 Bad Request) error.
+   * (buckets.reprovision)
+   *
+   * @param string $name Required. Name of the bucket to reprovision. The format
+   * is: projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+   * @param ReprovisionBucketRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function reprovision($name, ReprovisionBucketRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reprovision', [$params], Operation::class);
   }
 }
 
