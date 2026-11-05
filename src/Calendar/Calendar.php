@@ -81,6 +81,8 @@ class Calendar extends \Google\Model
    * @var string
    */
   public $timeZone;
+  protected $workingHoursType = CalendarWorkingHours::class;
+  protected $workingHoursDataType = '';
 
   /**
    * Whether this calendar automatically accepts invitations. Only valid for
@@ -264,6 +266,28 @@ class Calendar extends \Google\Model
   public function getTimeZone()
   {
     return $this->timeZone;
+  }
+  /**
+   * Represents the information about the user's working hours. Only available
+   * for primary calendars of Google Workspace users. To update the working
+   * hours, the entire working hours object must be passed. If not specified (or
+   * passed as null or an empty object), the existing working hours remain
+   * unchanged. To disable working hours or clear the schedule, set
+   * workingHoursEnabled to false (and omit availableTimes or pass an empty
+   * list).
+   *
+   * @param CalendarWorkingHours $workingHours
+   */
+  public function setWorkingHours(CalendarWorkingHours $workingHours)
+  {
+    $this->workingHours = $workingHours;
+  }
+  /**
+   * @return CalendarWorkingHours
+   */
+  public function getWorkingHours()
+  {
+    return $this->workingHours;
   }
 }
 
