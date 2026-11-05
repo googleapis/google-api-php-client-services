@@ -20,23 +20,25 @@ namespace Google\Service\HomeGraphService;
 class JsonTraitEvent extends \Google\Model
 {
   /**
-   * Optional. Event payload fields conforming to the event's registered JSON
-   * Schema.
+   * Optional. Holds the event payload fields, which conform to the event's
+   * registered JSON Schema.
    *
    * @var array[]
    */
   public $data;
   /**
-   * Required. Fully qualified event ID: `.` (e.g.,
-   * `matter.doorLock.lockOperation`, `ghp.acme.warranty.claimUpdated`).
+   * Required. Identifies the event as `.`, where `` is the PascalCase key in
+   * the schema's `x-capability-info.events`, for example
+   * `capability.matter.standard.DoorLock.LockOperation` or
+   * `capability.generic.acme.Warranty.ClaimUpdated`.
    *
    * @var string
    */
   public $id;
 
   /**
-   * Optional. Event payload fields conforming to the event's registered JSON
-   * Schema.
+   * Optional. Holds the event payload fields, which conform to the event's
+   * registered JSON Schema.
    *
    * @param array[] $data
    */
@@ -52,8 +54,10 @@ class JsonTraitEvent extends \Google\Model
     return $this->data;
   }
   /**
-   * Required. Fully qualified event ID: `.` (e.g.,
-   * `matter.doorLock.lockOperation`, `ghp.acme.warranty.claimUpdated`).
+   * Required. Identifies the event as `.`, where `` is the PascalCase key in
+   * the schema's `x-capability-info.events`, for example
+   * `capability.matter.standard.DoorLock.LockOperation` or
+   * `capability.generic.acme.Warranty.ClaimUpdated`.
    *
    * @param string $id
    */
