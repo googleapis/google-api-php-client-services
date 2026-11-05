@@ -53,6 +53,12 @@ class InvocationConfig extends \Google\Collection
    */
   public const QUERY_PRIORITY_BATCH = 'BATCH';
   protected $collection_key = 'includedTargets';
+  /**
+   * Optional. Maximum number of actions that can be executed concurrently.
+   *
+   * @var int
+   */
+  public $concurrentActionsLimit;
   protected $endUserAuthConfigType = EndUserAuthenticationConfig::class;
   protected $endUserAuthConfigDataType = '';
   /**
@@ -104,6 +110,22 @@ class InvocationConfig extends \Google\Collection
    */
   public $transitiveDependentsIncluded;
 
+  /**
+   * Optional. Maximum number of actions that can be executed concurrently.
+   *
+   * @param int $concurrentActionsLimit
+   */
+  public function setConcurrentActionsLimit($concurrentActionsLimit)
+  {
+    $this->concurrentActionsLimit = $concurrentActionsLimit;
+  }
+  /**
+   * @return int
+   */
+  public function getConcurrentActionsLimit()
+  {
+    return $this->concurrentActionsLimit;
+  }
   /**
    * Optional. Configuration for end user authentication. Do not set if
    * `service_account` is used.
