@@ -20,26 +20,28 @@ namespace Google\Service\HomeGraphService;
 class JsonTrait extends \Google\Model
 {
   /**
-   * Optional. Trait attribute map conforming to the trait's registered JSON
-   * Schema.
+   * Optional. Holds the trait attributes, which conform to the trait's
+   * registered JSON Schema.
    *
    * @var array[]
    */
   public $data;
   /**
-   * Required. Canonical symbolic trait ID per `json_trait_schema.md`: -
-   * Standard Matter (Cat 1): `matter.` (e.g., `matter.thermostat`) - Google /
-   * vendor Matter (Cat 1/2): `matter..` (e.g., `matter.google.`,
-   * `matter.eve.utility`) - Non-Matter (Cat 3, any provider incl. Google):
-   * `ghp..` (e.g., `ghp.acme.warranty`, `ghp.google.`)
+   * Required. Identifies the trait by its canonical four-segment capability ID,
+   * `capability...`: * Standard or Google Matter (Category 1):
+   * `capability.matter.standard.` or `capability.matter.google.`, for example
+   * `capability.matter.standard.Thermostat`. * Vendor Matter (Category 2):
+   * `capability.matter..`. * Non-Matter (Category 3, from any provider
+   * including Google): `capability.generic..`, for example
+   * `capability.generic.acme.Warranty`.
    *
    * @var string
    */
   public $id;
 
   /**
-   * Optional. Trait attribute map conforming to the trait's registered JSON
-   * Schema.
+   * Optional. Holds the trait attributes, which conform to the trait's
+   * registered JSON Schema.
    *
    * @param array[] $data
    */
@@ -55,11 +57,13 @@ class JsonTrait extends \Google\Model
     return $this->data;
   }
   /**
-   * Required. Canonical symbolic trait ID per `json_trait_schema.md`: -
-   * Standard Matter (Cat 1): `matter.` (e.g., `matter.thermostat`) - Google /
-   * vendor Matter (Cat 1/2): `matter..` (e.g., `matter.google.`,
-   * `matter.eve.utility`) - Non-Matter (Cat 3, any provider incl. Google):
-   * `ghp..` (e.g., `ghp.acme.warranty`, `ghp.google.`)
+   * Required. Identifies the trait by its canonical four-segment capability ID,
+   * `capability...`: * Standard or Google Matter (Category 1):
+   * `capability.matter.standard.` or `capability.matter.google.`, for example
+   * `capability.matter.standard.Thermostat`. * Vendor Matter (Category 2):
+   * `capability.matter..`. * Non-Matter (Category 3, from any provider
+   * including Google): `capability.generic..`, for example
+   * `capability.generic.acme.Warranty`.
    *
    * @param string $id
    */
