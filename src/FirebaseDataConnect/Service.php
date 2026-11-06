@@ -110,7 +110,10 @@ class Service extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * Output only. The list of connectors in this service.
+   * Output only. The list of connectors in this service. Connectors returned in
+   * this collection are a summary view. Authoritative lifecycle metadata and
+   * entity tags are omitted from embedded representations. Call `GetConnector`
+   * to retrieve the complete resource.
    *
    * @param Connector[] $connectors
    */
@@ -247,7 +250,10 @@ class Service extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * Optional. The list of schemas in this service.
+   * Optional. The list of schemas in this service. Schemas returned in this
+   * collection are a summary view. Authoritative lifecycle metadata and entity
+   * tags are omitted from embedded representations. Call `GetSchema` to
+   * retrieve the complete resource.
    *
    * @param Schema[] $schemas
    */
