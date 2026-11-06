@@ -34,6 +34,9 @@ use Google\Client;
  */
 class WebContentPublisher extends \Google\Service
 {
+  /** Private Service: https://www.googleapis.com/auth/webcontentpublisher.publications.entitlements.readonly.system. */
+  const WEBCONTENTPUBLISHER_PUBLICATIONS_ENTITLEMENTS_READONLY_SYSTEM =
+      "https://www.googleapis.com/auth/webcontentpublisher.publications.entitlements.readonly.system";
   /** Private Service: https://www.googleapis.com/auth/webcontentpublisher.publications.manage.system. */
   const WEBCONTENTPUBLISHER_PUBLICATIONS_MANAGE_SYSTEM =
       "https://www.googleapis.com/auth/webcontentpublisher.publications.manage.system";
@@ -231,6 +234,24 @@ class WebContentPublisher extends \Google\Service
                   'type' => 'string',
                 ],
                 'uri' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'checkProgramAccess' => [
+              'path' => 'v1/{+name}:checkProgramAccess',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'swgUserToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
