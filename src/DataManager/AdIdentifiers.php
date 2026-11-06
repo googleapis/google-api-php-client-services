@@ -43,6 +43,10 @@ class AdIdentifiers extends \Google\Collection
   /**
    * @var string
    */
+  public $leadId;
+  /**
+   * @var string
+   */
   public $matchId;
   /**
    * @var string
@@ -148,6 +152,20 @@ class AdIdentifiers extends \Google\Collection
   public function getLandingPageDeviceInfo()
   {
     return $this->landingPageDeviceInfo;
+  }
+  /**
+   * @param string $leadId
+   */
+  public function setLeadId($leadId)
+  {
+    $this->leadId = $leadId;
+  }
+  /**
+   * @return string
+   */
+  public function getLeadId()
+  {
+    return $this->leadId;
   }
   /**
    * @param string $matchId

@@ -17,7 +17,7 @@
 
 namespace Google\Service\DataManager;
 
-class WarningCount extends \Google\Model
+class WarningCount extends \Google\Collection
 {
   public const REASON_PROCESSING_WARNING_REASON_UNSPECIFIED = 'PROCESSING_WARNING_REASON_UNSPECIFIED';
   public const REASON_PROCESSING_WARNING_REASON_KEK_PERMISSION_DENIED = 'PROCESSING_WARNING_REASON_KEK_PERMISSION_DENIED';
@@ -29,6 +29,9 @@ class WarningCount extends \Google\Model
   public const REASON_PROCESSING_WARNING_REASON_USER_IDENTIFIER_DECRYPTION_ERROR = 'PROCESSING_WARNING_REASON_USER_IDENTIFIER_DECRYPTION_ERROR';
   public const REASON_PROCESSING_WARNING_REASON_INTERNAL_ERROR = 'PROCESSING_WARNING_REASON_INTERNAL_ERROR';
   public const REASON_PROCESSING_WARNING_REASON_AWS_AUTH_FAILED = 'PROCESSING_WARNING_REASON_AWS_AUTH_FAILED';
+  public const REASON_PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_ENABLED = 'PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_ENABLED';
+  public const REASON_PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_PREDEFINED = 'PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_PREDEFINED';
+  protected $collection_key = 'recordIndices';
   /**
    * @var string
    */
@@ -37,6 +40,10 @@ class WarningCount extends \Google\Model
    * @var string
    */
   public $recordCount;
+  /**
+   * @var int[]
+   */
+  public $recordIndices;
 
   /**
    * @param self::REASON_* $reason
@@ -65,6 +72,20 @@ class WarningCount extends \Google\Model
   public function getRecordCount()
   {
     return $this->recordCount;
+  }
+  /**
+   * @param int[] $recordIndices
+   */
+  public function setRecordIndices($recordIndices)
+  {
+    $this->recordIndices = $recordIndices;
+  }
+  /**
+   * @return int[]
+   */
+  public function getRecordIndices()
+  {
+    return $this->recordIndices;
   }
 }
 

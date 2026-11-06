@@ -35,6 +35,8 @@ class Event extends \Google\Collection
    * @var string
    */
   public $appInstanceId;
+  protected $callInfoType = CallInfo::class;
+  protected $callInfoDataType = '';
   protected $cartDataType = CartData::class;
   protected $cartDataDataType = '';
   /**
@@ -133,6 +135,20 @@ class Event extends \Google\Collection
   public function getAppInstanceId()
   {
     return $this->appInstanceId;
+  }
+  /**
+   * @param CallInfo $callInfo
+   */
+  public function setCallInfo(CallInfo $callInfo)
+  {
+    $this->callInfo = $callInfo;
+  }
+  /**
+   * @return CallInfo
+   */
+  public function getCallInfo()
+  {
+    return $this->callInfo;
   }
   /**
    * @param CartData $cartData
