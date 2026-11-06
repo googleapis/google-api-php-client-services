@@ -49,6 +49,34 @@ class LinkedInterconnectAttachments extends \Google\Collection
    */
   public $includeImportRanges;
   /**
+   * Output only. The proposed exclude export IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @var string[]
+   */
+  public $proposedExcludeExportRanges;
+  /**
+   * Output only. The proposed exclude import IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @var string[]
+   */
+  public $proposedExcludeImportRanges;
+  /**
+   * Output only. The proposed include export IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @var string[]
+   */
+  public $proposedIncludeExportRanges;
+  /**
+   * Output only. The proposed include import IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @var string[]
+   */
+  public $proposedIncludeImportRanges;
+  /**
    * A value that controls whether site-to-site data transfer is enabled for
    * these resources. Data transfer is available only in [supported
    * locations](https://cloud.google.com/network-connectivity/docs/network-
@@ -137,6 +165,74 @@ class LinkedInterconnectAttachments extends \Google\Collection
   public function getIncludeImportRanges()
   {
     return $this->includeImportRanges;
+  }
+  /**
+   * Output only. The proposed exclude export IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @param string[] $proposedExcludeExportRanges
+   */
+  public function setProposedExcludeExportRanges($proposedExcludeExportRanges)
+  {
+    $this->proposedExcludeExportRanges = $proposedExcludeExportRanges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getProposedExcludeExportRanges()
+  {
+    return $this->proposedExcludeExportRanges;
+  }
+  /**
+   * Output only. The proposed exclude import IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @param string[] $proposedExcludeImportRanges
+   */
+  public function setProposedExcludeImportRanges($proposedExcludeImportRanges)
+  {
+    $this->proposedExcludeImportRanges = $proposedExcludeImportRanges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getProposedExcludeImportRanges()
+  {
+    return $this->proposedExcludeImportRanges;
+  }
+  /**
+   * Output only. The proposed include export IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @param string[] $proposedIncludeExportRanges
+   */
+  public function setProposedIncludeExportRanges($proposedIncludeExportRanges)
+  {
+    $this->proposedIncludeExportRanges = $proposedIncludeExportRanges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getProposedIncludeExportRanges()
+  {
+    return $this->proposedIncludeExportRanges;
+  }
+  /**
+   * Output only. The proposed include import IP ranges waiting for hub
+   * administrator's approval.
+   *
+   * @param string[] $proposedIncludeImportRanges
+   */
+  public function setProposedIncludeImportRanges($proposedIncludeImportRanges)
+  {
+    $this->proposedIncludeImportRanges = $proposedIncludeImportRanges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getProposedIncludeImportRanges()
+  {
+    return $this->proposedIncludeImportRanges;
   }
   /**
    * A value that controls whether site-to-site data transfer is enabled for
