@@ -34,6 +34,8 @@ class GoogleCloudRunV2Container extends \Google\Collection
    * @var string
    */
   public $baseImageUri;
+  protected $buildConfigType = GoogleCloudRunV2BuildConfiguration::class;
+  protected $buildConfigDataType = '';
   protected $buildInfoType = GoogleCloudRunV2BuildInfo::class;
   protected $buildInfoDataType = '';
   /**
@@ -127,6 +129,22 @@ class GoogleCloudRunV2Container extends \Google\Collection
   public function getBaseImageUri()
   {
     return $this->baseImageUri;
+  }
+  /**
+   * Optional. The build configuration for the container image.
+   *
+   * @param GoogleCloudRunV2BuildConfiguration $buildConfig
+   */
+  public function setBuildConfig(GoogleCloudRunV2BuildConfiguration $buildConfig)
+  {
+    $this->buildConfig = $buildConfig;
+  }
+  /**
+   * @return GoogleCloudRunV2BuildConfiguration
+   */
+  public function getBuildConfig()
+  {
+    return $this->buildConfig;
   }
   /**
    * Output only. The build info of the container image.
