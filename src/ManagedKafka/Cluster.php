@@ -70,8 +70,9 @@ class Cluster extends \Google\Collection
   protected $gcpConfigType = GcpConfig::class;
   protected $gcpConfigDataType = '';
   /**
-   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`,
-   * `4.3.x`). If not specified during cluster creation, defaults to `3.7.x`.
+   * Optional. The Apache Kafka version of the cluster. Specifically, this value
+   * is the finalized metadata version. If not specified during cluster
+   * creation, defaults to `3.7.x`. Supported values: `3.7.x`.
    *
    * @var string
    */
@@ -246,8 +247,9 @@ class Cluster extends \Google\Collection
     return $this->gcpConfig;
   }
   /**
-   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`,
-   * `4.3.x`). If not specified during cluster creation, defaults to `3.7.x`.
+   * Optional. The Apache Kafka version of the cluster. Specifically, this value
+   * is the finalized metadata version. If not specified during cluster
+   * creation, defaults to `3.7.x`. Supported values: `3.7.x`.
    *
    * @param string $kafkaVersion
    */
