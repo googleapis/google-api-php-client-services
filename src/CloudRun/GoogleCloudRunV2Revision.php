@@ -121,6 +121,8 @@ class GoogleCloudRunV2Revision extends \Google\Collection
   public $clientVersion;
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
+  protected $containerStatusesType = GoogleCloudRunV2ContainerStatus::class;
+  protected $containerStatusesDataType = 'array';
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
   /**
@@ -401,6 +403,23 @@ class GoogleCloudRunV2Revision extends \Google\Collection
   public function getConditions()
   {
     return $this->conditions;
+  }
+  /**
+   * Output only. Status information for each of the specified containers. The
+   * status includes the resolved digest for specified images.
+   *
+   * @param GoogleCloudRunV2ContainerStatus[] $containerStatuses
+   */
+  public function setContainerStatuses($containerStatuses)
+  {
+    $this->containerStatuses = $containerStatuses;
+  }
+  /**
+   * @return GoogleCloudRunV2ContainerStatus[]
+   */
+  public function getContainerStatuses()
+  {
+    return $this->containerStatuses;
   }
   /**
    * Holds the list which define the units of execution for this Revision.

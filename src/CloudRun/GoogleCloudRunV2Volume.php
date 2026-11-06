@@ -23,6 +23,8 @@ class GoogleCloudRunV2Volume extends \Google\Model
   protected $cloudSqlInstanceDataType = '';
   protected $emptyDirType = GoogleCloudRunV2EmptyDirVolumeSource::class;
   protected $emptyDirDataType = '';
+  protected $filestoreType = GoogleCloudRunV2FilestoreVolumeSource::class;
+  protected $filestoreDataType = '';
   protected $gcsType = GoogleCloudRunV2GCSVolumeSource::class;
   protected $gcsDataType = '';
   /**
@@ -69,6 +71,22 @@ class GoogleCloudRunV2Volume extends \Google\Model
   public function getEmptyDir()
   {
     return $this->emptyDir;
+  }
+  /**
+   * Optional. Represents a volume backed by a Filestore instance.
+   *
+   * @param GoogleCloudRunV2FilestoreVolumeSource $filestore
+   */
+  public function setFilestore(GoogleCloudRunV2FilestoreVolumeSource $filestore)
+  {
+    $this->filestore = $filestore;
+  }
+  /**
+   * @return GoogleCloudRunV2FilestoreVolumeSource
+   */
+  public function getFilestore()
+  {
+    return $this->filestore;
   }
   /**
    * Persistent storage backed by a Google Cloud Storage bucket.

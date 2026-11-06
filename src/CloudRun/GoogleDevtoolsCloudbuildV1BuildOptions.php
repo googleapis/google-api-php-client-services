@@ -30,7 +30,10 @@ class GoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Collection
    */
   public const DEFAULT_LOGS_BUCKET_BEHAVIOR_REGIONAL_USER_OWNED_BUCKET = 'REGIONAL_USER_OWNED_BUCKET';
   /**
-   * Bucket is located in a Google-owned project and is not regionalized.
+   * Deprecated: Use `REGIONAL_USER_OWNED_BUCKET` instead. Bucket is located in
+   * a Google-owned project and is not regionalized.
+   *
+   * @deprecated
    */
   public const DEFAULT_LOGS_BUCKET_BEHAVIOR_LEGACY_BUCKET = 'LEGACY_BUCKET';
   /**
