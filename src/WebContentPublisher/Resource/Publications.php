@@ -18,6 +18,7 @@
 namespace Google\Service\WebContentPublisher\Resource;
 
 use Google\Service\WebContentPublisher\CheckFreeAccessResponse;
+use Google\Service\WebContentPublisher\CheckProgramAccessResponse;
 
 /**
  * The "publications" collection of methods.
@@ -34,7 +35,7 @@ class Publications extends \Google\Service\Resource
    * (publications.checkFreeAccess)
    *
    * @param string $name Required. The resource name of the publication. Format:
-   * publications/{publication_id}
+   * publications/{publication}
    * @param array $optParams Optional parameters.
    *
    * @opt_param string httpReferrer Required. The HTTP referrer.
@@ -47,6 +48,26 @@ class Publications extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('checkFreeAccess', [$params], CheckFreeAccessResponse::class);
+  }
+  /**
+   * Checks if a reader has active program access.
+   * (publications.checkProgramAccess)
+   *
+   * @param string $name Required. The resource name of the publication. Format:
+   * publications/{publication}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string productId Required. The specific product ID being accessed.
+   * @opt_param string swgUserToken Required. The encrypted site token string
+   * received from the Chrome HTTP header.
+   * @return CheckProgramAccessResponse
+   * @throws \Google\Service\Exception
+   */
+  public function checkProgramAccess($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkProgramAccess', [$params], CheckProgramAccessResponse::class);
   }
 }
 
