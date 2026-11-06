@@ -44,6 +44,7 @@ class DataManager extends \Google\Service
 
   public $accountTypes_accounts_insights;
   public $accountTypes_accounts_partnerLinks;
+  public $accountTypes_accounts_reports;
   public $accountTypes_accounts_userListDirectLicenses;
   public $accountTypes_accounts_userListGlobalLicenses;
   public $accountTypes_accounts_userListGlobalLicenses_userListGlobalLicenseCustomerInfos;
@@ -136,6 +137,50 @@ class DataManager extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->accountTypes_accounts_reports = new DataManager\Resource\AccountTypesAccountsReports(
+        $this,
+        $this->serviceName,
+        'reports',
+        [
+          'methods' => [
+            'retrievePartnerMatchReport' => [
+              'path' => 'v1/{+parent}/reports:retrievePartnerMatchReport',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'currencyCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'endDate' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'startDate' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
