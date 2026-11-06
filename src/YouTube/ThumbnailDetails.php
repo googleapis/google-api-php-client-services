@@ -31,6 +31,8 @@ class ThumbnailDetails extends \Google\Model
   protected $mediumDataType = '';
   protected $qhdType = Thumbnail::class;
   protected $qhdDataType = '';
+  protected $shortsAspectRatioType = Thumbnail::class;
+  protected $shortsAspectRatioDataType = '';
   protected $standardType = Thumbnail::class;
   protected $standardDataType = '';
   protected $uhdType = Thumbnail::class;
@@ -131,6 +133,22 @@ class ThumbnailDetails extends \Google\Model
   public function getQhd()
   {
     return $this->qhd;
+  }
+  /**
+   * The Shorts aspect ratio (9:16) image for this resource.
+   *
+   * @param Thumbnail $shortsAspectRatio
+   */
+  public function setShortsAspectRatio(Thumbnail $shortsAspectRatio)
+  {
+    $this->shortsAspectRatio = $shortsAspectRatio;
+  }
+  /**
+   * @return Thumbnail
+   */
+  public function getShortsAspectRatio()
+  {
+    return $this->shortsAspectRatio;
   }
   /**
    * The standard quality image for this resource.
