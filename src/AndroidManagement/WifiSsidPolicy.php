@@ -66,11 +66,8 @@ class WifiSsidPolicy extends \Google\Collection
   }
   /**
    * Optional. List of Wi-Fi SSIDs that should be applied in the policy. This
-   * field must be non-empty when WifiSsidPolicyType is set to
-   * WIFI_SSID_ALLOWLIST. If this is set to a non-empty list, then a
-   * NonComplianceDetail detail with API_LEVEL is reported if the Android
-   * version is less than 13 and a NonComplianceDetail with MANAGEMENT_MODE is
-   * reported for non-company-owned devices.
+   * field must be non-empty when wifiSsidPolicyType is set to
+   * WIFI_SSID_ALLOWLIST.
    *
    * @param WifiSsid[] $wifiSsids
    */
