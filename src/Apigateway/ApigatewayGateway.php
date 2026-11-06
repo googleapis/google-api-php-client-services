@@ -120,7 +120,7 @@ class ApigatewayGateway extends \Google\Model
    */
   public $labels;
   /**
-   * Output only. Resource name of the Gateway. Format:
+   * Identifier. Resource name of the Gateway. Format:
    * projects/{project}/locations/{location}/gateways/{gateway}
    *
    * @var string
@@ -255,7 +255,7 @@ class ApigatewayGateway extends \Google\Model
     return $this->labels;
   }
   /**
-   * Output only. Resource name of the Gateway. Format:
+   * Identifier. Resource name of the Gateway. Format:
    * projects/{project}/locations/{location}/gateways/{gateway}
    *
    * @param string $name

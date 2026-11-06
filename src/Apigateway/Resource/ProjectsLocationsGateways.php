@@ -123,10 +123,10 @@ class ProjectsLocationsGateways extends \Google\Service\Resource
    * `projects/locations`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filter.
-   * @opt_param string orderBy Order by parameters.
-   * @opt_param int pageSize Page size.
-   * @opt_param string pageToken Page token.
+   * @opt_param string filter Optional. Filter.
+   * @opt_param string orderBy Optional. Order by parameters.
+   * @opt_param int pageSize Optional. Page size.
+   * @opt_param string pageToken Optional. Page token.
    * @return ApigatewayListGatewaysResponse
    * @throws \Google\Service\Exception
    */
@@ -139,16 +139,16 @@ class ProjectsLocationsGateways extends \Google\Service\Resource
   /**
    * Updates the parameters of a single Gateway. (gateways.patch)
    *
-   * @param string $name Output only. Resource name of the Gateway. Format:
+   * @param string $name Identifier. Resource name of the Gateway. Format:
    * projects/{project}/locations/{location}/gateways/{gateway}
    * @param ApigatewayGateway $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Field mask is used to specify the fields to be
-   * overwritten in the Gateway resource by the update. The fields specified in
-   * the update_mask are relative to the resource, not the full request. A field
-   * will be overwritten if it is in the mask. If the user does not provide a mask
-   * then all fields will be overwritten.
+   * @opt_param string updateMask Optional. Field mask is used to specify the
+   * fields to be overwritten in the Gateway resource by the update. The fields
+   * specified in the update_mask are relative to the resource, not the full
+   * request. A field will be overwritten if it is in the mask. The request fails
+   * if `update_mask` is missing or empty.
    * @return ApigatewayOperation
    * @throws \Google\Service\Exception
    */
