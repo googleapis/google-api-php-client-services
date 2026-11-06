@@ -349,8 +349,12 @@ class DeviceConnectivityManagement extends \Google\Model
   }
   /**
    * Optional. Restrictions on which Wi-Fi SSIDs the device can connect to. Note
-   * that this does not affect which networks can be configured on the device.
-   * Supported on company-owned devices running Android 13 and above.
+   * that this does not affect which networks can be configured on the
+   * device.Supported on Android 13 (API level 33) and higher on fully managed
+   * devices and work profiles on company-owned devices. A NonComplianceDetail
+   * with MANAGEMENT_MODE is reported on other management modes. A
+   * NonComplianceDetail with API_LEVEL is reported if the Android version is
+   * less than 13 (API level 33).
    *
    * @param WifiSsidPolicy $wifiSsidPolicy
    */
