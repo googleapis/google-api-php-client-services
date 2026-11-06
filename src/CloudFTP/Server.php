@@ -97,6 +97,8 @@ class Server extends \Google\Model
    * @var string[]
    */
   public $labels;
+  protected $loggingConfigType = LoggingConfig::class;
+  protected $loggingConfigDataType = '';
   /**
    * Identifier. name of resource
    *
@@ -247,6 +249,22 @@ class Server extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * Optional. Configuration for Cloud Logging on the Server.
+   *
+   * @param LoggingConfig $loggingConfig
+   */
+  public function setLoggingConfig(LoggingConfig $loggingConfig)
+  {
+    $this->loggingConfig = $loggingConfig;
+  }
+  /**
+   * @return LoggingConfig
+   */
+  public function getLoggingConfig()
+  {
+    return $this->loggingConfig;
   }
   /**
    * Identifier. name of resource

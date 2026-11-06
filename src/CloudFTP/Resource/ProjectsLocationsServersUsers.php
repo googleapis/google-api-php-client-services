@@ -67,8 +67,8 @@ class ProjectsLocationsServersUsers extends \Google\Service\Resource
    * @param string $name Required. Name of the resource
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool force Optional. If set to true, the request will force the
-   * deletion of the User.
+   * @opt_param bool force Optional. If set to `true`, the request will `force`
+   * the deletion of the User.
    * @return Operation
    * @throws \Google\Service\Exception
    */
