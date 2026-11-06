@@ -73,7 +73,7 @@ class ApigatewayApi extends \Google\Model
    */
   public $managedService;
   /**
-   * Output only. Resource name of the API. Format:
+   * Identifier. Resource name of the API. Format:
    * projects/{project}/locations/global/apis/{api}
    *
    * @var string
@@ -162,7 +162,7 @@ class ApigatewayApi extends \Google\Model
     return $this->managedService;
   }
   /**
-   * Output only. Resource name of the API. Format:
+   * Identifier. Resource name of the API. Format:
    * projects/{project}/locations/global/apis/{api}
    *
    * @param string $name

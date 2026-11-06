@@ -85,7 +85,7 @@ class ApigatewayApiConfig extends \Google\Collection
   protected $managedServiceConfigsType = ApigatewayApiConfigFile::class;
   protected $managedServiceConfigsDataType = 'array';
   /**
-   * Output only. Resource name of the API Config. Format:
+   * Identifier. Resource name of the API Config. Format:
    * projects/{project}/locations/global/apis/{api}/configs/{api_config}
    *
    * @var string
@@ -226,7 +226,7 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->managedServiceConfigs;
   }
   /**
-   * Output only. Resource name of the API Config. Format:
+   * Identifier. Resource name of the API Config. Format:
    * projects/{project}/locations/global/apis/{api}/configs/{api_config}
    *
    * @param string $name

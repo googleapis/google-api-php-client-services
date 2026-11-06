@@ -76,8 +76,8 @@ class ProjectsLocationsApisConfigs extends \Google\Service\Resource
    * `projects/locations/global/apis/configs`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Specifies which fields of the API Config are returned
-   * in the response. Defaults to `BASIC` view.
+   * @opt_param string view Optional. Specifies which fields of the API Config are
+   * returned in the response. Defaults to `BASIC` view.
    * @return ApigatewayApiConfig
    * @throws \Google\Service\Exception
    */
@@ -126,10 +126,10 @@ class ProjectsLocationsApisConfigs extends \Google\Service\Resource
    * form: `projects/locations/global/apis`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filter.
-   * @opt_param string orderBy Order by parameters.
-   * @opt_param int pageSize Page size.
-   * @opt_param string pageToken Page token.
+   * @opt_param string filter Optional. Filter.
+   * @opt_param string orderBy Optional. Order by parameters.
+   * @opt_param int pageSize Optional. Page size.
+   * @opt_param string pageToken Optional. Page token.
    * @return ApigatewayListApiConfigsResponse
    * @throws \Google\Service\Exception
    */
@@ -142,16 +142,16 @@ class ProjectsLocationsApisConfigs extends \Google\Service\Resource
   /**
    * Updates the parameters of a single ApiConfig. (configs.patch)
    *
-   * @param string $name Output only. Resource name of the API Config. Format:
+   * @param string $name Identifier. Resource name of the API Config. Format:
    * projects/{project}/locations/global/apis/{api}/configs/{api_config}
    * @param ApigatewayApiConfig $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Field mask is used to specify the fields to be
-   * overwritten in the ApiConfig resource by the update. The fields specified in
-   * the update_mask are relative to the resource, not the full request. A field
-   * will be overwritten if it is in the mask. If the user does not provide a mask
-   * then all fields will be overwritten.
+   * @opt_param string updateMask Optional. Field mask is used to specify the
+   * fields to be overwritten in the ApiConfig resource by the update. The fields
+   * specified in the update_mask are relative to the resource, not the full
+   * request. A field will be overwritten if it is in the mask. The request fails
+   * if `update_mask` is missing or empty.
    * @return ApigatewayOperation
    * @throws \Google\Service\Exception
    */
