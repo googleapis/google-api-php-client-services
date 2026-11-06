@@ -117,7 +117,7 @@ class BuildConfig extends \Google\Model
    */
   public $sourceToken;
   /**
-   * Name of the Cloud Build Custom Worker Pool that should be used to build the
+   * Name of the Cloud Build private pool that should be used to build the
    * function. The format of this field is
    * `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * {project} and {region} are the project id and region respectively where the
@@ -349,7 +349,7 @@ class BuildConfig extends \Google\Model
     return $this->sourceToken;
   }
   /**
-   * Name of the Cloud Build Custom Worker Pool that should be used to build the
+   * Name of the Cloud Build private pool that should be used to build the
    * function. The format of this field is
    * `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * {project} and {region} are the project id and region respectively where the
