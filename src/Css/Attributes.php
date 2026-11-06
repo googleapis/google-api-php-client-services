@@ -109,7 +109,8 @@ class Attributes extends \Google\Collection
   public $description;
   /**
    * The list of destinations to exclude for this target (corresponds to
-   * unchecked check boxes in Merchant Center).
+   * unchecked check boxes in Merchant Center). Supported values are: -
+   * `css_ads_experiences` - `css_organic_experiences`
    *
    * @var string[]
    */
@@ -187,7 +188,8 @@ class Attributes extends \Google\Collection
   /**
    * The list of destinations to include for this target (corresponds to checked
    * check boxes in Merchant Center). Default destinations are always included
-   * unless provided in `excludedDestinations`.
+   * unless provided in `excluded_destinations`. Supported values are: -
+   * `css_ads_experiences` - `css_organic_experiences`
    *
    * @var string[]
    */
@@ -569,7 +571,8 @@ class Attributes extends \Google\Collection
   }
   /**
    * The list of destinations to exclude for this target (corresponds to
-   * unchecked check boxes in Merchant Center).
+   * unchecked check boxes in Merchant Center). Supported values are: -
+   * `css_ads_experiences` - `css_organic_experiences`
    *
    * @param string[] $excludedDestinations
    */
@@ -808,7 +811,8 @@ class Attributes extends \Google\Collection
   /**
    * The list of destinations to include for this target (corresponds to checked
    * check boxes in Merchant Center). Default destinations are always included
-   * unless provided in `excludedDestinations`.
+   * unless provided in `excluded_destinations`. Supported values are: -
+   * `css_ads_experiences` - `css_organic_experiences`
    *
    * @param string[] $includedDestinations
    */
