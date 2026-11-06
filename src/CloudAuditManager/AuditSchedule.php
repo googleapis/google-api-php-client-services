@@ -110,6 +110,8 @@ class AuditSchedule extends \Google\Model
    * @var string
    */
   public $nextRunTime;
+  protected $parameterOverridesType = ParameterOverrides::class;
+  protected $parameterOverridesDataType = 'map';
   /**
    * Required. Format for the audit report.
    *
@@ -266,6 +268,25 @@ class AuditSchedule extends \Google\Model
   public function getNextRunTime()
   {
     return $this->nextRunTime;
+  }
+  /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name
+   * at execution time. For example,
+   * `{"organizations/123/locations/global/cloudControls/control-1":
+   * {parameters: [...]}}`
+   *
+   * @param ParameterOverrides[] $parameterOverrides
+   */
+  public function setParameterOverrides($parameterOverrides)
+  {
+    $this->parameterOverrides = $parameterOverrides;
+  }
+  /**
+   * @return ParameterOverrides[]
+   */
+  public function getParameterOverrides()
+  {
+    return $this->parameterOverrides;
   }
   /**
    * Required. Format for the audit report.

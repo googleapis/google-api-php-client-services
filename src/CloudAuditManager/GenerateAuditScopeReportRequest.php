@@ -43,6 +43,8 @@ class GenerateAuditScopeReportRequest extends \Google\Model
    * @var string
    */
   public $complianceStandard;
+  protected $parameterOverridesType = ParameterOverrides::class;
+  protected $parameterOverridesDataType = 'map';
   /**
    * Required. Format for the audit scope report.
    *
@@ -101,6 +103,25 @@ class GenerateAuditScopeReportRequest extends \Google\Model
   public function getComplianceStandard()
   {
     return $this->complianceStandard;
+  }
+  /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name
+   * at execution time. For example,
+   * `{"organizations/123/locations/global/cloudControls/control-1":
+   * {parameters: [...]}}`
+   *
+   * @param ParameterOverrides[] $parameterOverrides
+   */
+  public function setParameterOverrides($parameterOverrides)
+  {
+    $this->parameterOverrides = $parameterOverrides;
+  }
+  /**
+   * @return ParameterOverrides[]
+   */
+  public function getParameterOverrides()
+  {
+    return $this->parameterOverrides;
   }
   /**
    * Required. Format for the audit scope report.
