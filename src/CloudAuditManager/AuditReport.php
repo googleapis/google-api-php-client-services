@@ -42,6 +42,8 @@ class AuditReport extends \Google\Collection
    */
   public const REPORT_GENERATION_STATE_SUMMARY_UNKNOWN = 'SUMMARY_UNKNOWN';
   protected $collection_key = 'controlDetails';
+  protected $cloudControlParameterStatesType = CloudControlParameterStates::class;
+  protected $cloudControlParameterStatesDataType = 'map';
   /**
    * Output only. Compliance framework to use for the audit report. For example,
    * `CIS_GCP_FOUNDATIONS_V1_2_0`.
@@ -108,6 +110,23 @@ class AuditReport extends \Google\Collection
    */
   public $scopeId;
 
+  /**
+   * Output only. Parameter values provided by the user and values for tunable
+   * parameters, stored in the DB, keyed by control name.
+   *
+   * @param CloudControlParameterStates[] $cloudControlParameterStates
+   */
+  public function setCloudControlParameterStates($cloudControlParameterStates)
+  {
+    $this->cloudControlParameterStates = $cloudControlParameterStates;
+  }
+  /**
+   * @return CloudControlParameterStates[]
+   */
+  public function getCloudControlParameterStates()
+  {
+    return $this->cloudControlParameterStates;
+  }
   /**
    * Output only. Compliance framework to use for the audit report. For example,
    * `CIS_GCP_FOUNDATIONS_V1_2_0`.
