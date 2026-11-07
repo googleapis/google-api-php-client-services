@@ -36,8 +36,8 @@ class Users extends \Google\Service\Resource
 {
   /**
    * Create a guest user with access to a [subset of Workspace
-   * capabilities](https://support.google.com/a/answer/16558545). This feature is
-   * currently in Open Beta. (users.createGuest)
+   * capabilities](https://support.google.com/a/answer/16558545).
+   * (users.createGuest)
    *
    * @param DirectoryUsersCreateGuestRequest $postBody
    * @param array $optParams Optional parameters.
