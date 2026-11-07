@@ -80,7 +80,7 @@ class GooglePrivacyDlpV2ByteContentItem extends \Google\Model
    */
   public const TYPE_AUDIO = 'AUDIO';
   /**
-   * Video file types. Only used for profiling.
+   * Video file types.
    */
   public const TYPE_VIDEO = 'VIDEO';
   /**
