@@ -139,6 +139,16 @@ class BigQueryReservation extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'upgradeEdition' => [
+              'path' => 'v1/{+parent}:upgradeEdition',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
