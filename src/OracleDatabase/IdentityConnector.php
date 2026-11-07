@@ -46,6 +46,21 @@ class IdentityConnector extends \Google\Model
    */
   public $connectionState;
   /**
+   * Output only. The unique partner identifier for the Identity Connector, used
+   * to establish secure cross-cloud access between Google Cloud and OCI. This
+   * corresponds directly to the ID of the OracleDbGcpIdentityConnector resource
+   * in Oracle Cloud Infrastructure (OCI).
+   *
+   * @var string
+   */
+  public $identityConnectorId;
+  /**
+   * Output only. Additional information about the current lifecycle state.
+   *
+   * @var string
+   */
+  public $lifecycleStateDetails;
+  /**
    * Output only. A google managed service account on which customers can grant
    * roles to access resources in the customer project. Example:
    * `p176944527254-55-75119d87fd8f@gcp-sa-oci.iam.gserviceaccount.com`
@@ -53,6 +68,15 @@ class IdentityConnector extends \Google\Model
    * @var string
    */
   public $serviceAgentEmail;
+  /**
+   * Output only. The resource name of the Workload Identity Pool configured for
+   * identity federation with OCI. This exact pool name can be used to configure
+   * VPC Service Controls (VPC-SC) egress rules. Format: `projects/{project}/loc
+   * ations/global/workloadIdentityPools/{workload_identity_pool}`
+   *
+   * @var string
+   */
+  public $workloadIdentityPool;
 
   /**
    * Output only. The connection state of the identity connector.
@@ -74,6 +98,41 @@ class IdentityConnector extends \Google\Model
     return $this->connectionState;
   }
   /**
+   * Output only. The unique partner identifier for the Identity Connector, used
+   * to establish secure cross-cloud access between Google Cloud and OCI. This
+   * corresponds directly to the ID of the OracleDbGcpIdentityConnector resource
+   * in Oracle Cloud Infrastructure (OCI).
+   *
+   * @param string $identityConnectorId
+   */
+  public function setIdentityConnectorId($identityConnectorId)
+  {
+    $this->identityConnectorId = $identityConnectorId;
+  }
+  /**
+   * @return string
+   */
+  public function getIdentityConnectorId()
+  {
+    return $this->identityConnectorId;
+  }
+  /**
+   * Output only. Additional information about the current lifecycle state.
+   *
+   * @param string $lifecycleStateDetails
+   */
+  public function setLifecycleStateDetails($lifecycleStateDetails)
+  {
+    $this->lifecycleStateDetails = $lifecycleStateDetails;
+  }
+  /**
+   * @return string
+   */
+  public function getLifecycleStateDetails()
+  {
+    return $this->lifecycleStateDetails;
+  }
+  /**
    * Output only. A google managed service account on which customers can grant
    * roles to access resources in the customer project. Example:
    * `p176944527254-55-75119d87fd8f@gcp-sa-oci.iam.gserviceaccount.com`
@@ -90,6 +149,25 @@ class IdentityConnector extends \Google\Model
   public function getServiceAgentEmail()
   {
     return $this->serviceAgentEmail;
+  }
+  /**
+   * Output only. The resource name of the Workload Identity Pool configured for
+   * identity federation with OCI. This exact pool name can be used to configure
+   * VPC Service Controls (VPC-SC) egress rules. Format: `projects/{project}/loc
+   * ations/global/workloadIdentityPools/{workload_identity_pool}`
+   *
+   * @param string $workloadIdentityPool
+   */
+  public function setWorkloadIdentityPool($workloadIdentityPool)
+  {
+    $this->workloadIdentityPool = $workloadIdentityPool;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkloadIdentityPool()
+  {
+    return $this->workloadIdentityPool;
   }
 }
 

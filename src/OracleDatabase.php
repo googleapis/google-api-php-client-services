@@ -599,6 +599,26 @@ class OracleDatabase extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'disableIdentityConnector' => [
+              'path' => 'v1/{+name}:disableIdentityConnector',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'enableIdentityConnector' => [
+              'path' => 'v1/{+name}:enableIdentityConnector',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -1155,6 +1175,26 @@ class OracleDatabase extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'disableIdentityConnector' => [
+              'path' => 'v1/{+name}:disableIdentityConnector',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'enableIdentityConnector' => [
+              'path' => 'v1/{+name}:enableIdentityConnector',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'get' => [

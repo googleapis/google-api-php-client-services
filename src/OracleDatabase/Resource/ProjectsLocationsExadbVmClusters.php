@@ -17,6 +17,8 @@
 
 namespace Google\Service\OracleDatabase\Resource;
 
+use Google\Service\OracleDatabase\DisableExadbVmClusterIdentityConnectorRequest;
+use Google\Service\OracleDatabase\EnableExadbVmClusterIdentityConnectorRequest;
 use Google\Service\OracleDatabase\ExadbVmCluster;
 use Google\Service\OracleDatabase\ListExadbVmClustersResponse;
 use Google\Service\OracleDatabase\Operation;
@@ -87,6 +89,42 @@ class ProjectsLocationsExadbVmClusters extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Disables the Workload Identity Connector for an Exadb VM Cluster.
+   * (exadbVmClusters.disableIdentityConnector)
+   *
+   * @param string $name Required. The name of the Exadb VM Cluster in the
+   * following format:
+   * projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+   * @param DisableExadbVmClusterIdentityConnectorRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function disableIdentityConnector($name, DisableExadbVmClusterIdentityConnectorRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('disableIdentityConnector', [$params], Operation::class);
+  }
+  /**
+   * Enables the Workload Identity Connector for an Exadb VM Cluster.
+   * (exadbVmClusters.enableIdentityConnector)
+   *
+   * @param string $name Required. The name of the Exadb VM Cluster in the
+   * following format:
+   * projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+   * @param EnableExadbVmClusterIdentityConnectorRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function enableIdentityConnector($name, EnableExadbVmClusterIdentityConnectorRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('enableIdentityConnector', [$params], Operation::class);
   }
   /**
    * Gets details of a single Exadb (Exascale) VM Cluster. (exadbVmClusters.get)

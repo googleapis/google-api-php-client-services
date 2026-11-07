@@ -80,6 +80,16 @@ class CloudVmCluster extends \Google\Model
   protected $identityConnectorType = IdentityConnector::class;
   protected $identityConnectorDataType = '';
   /**
+   * Optional. Input only. Immutable. If set to true, disables the automatic
+   * provisioning of the Workload Identity Connector during creation. If set to
+   * false or omitted, the Workload Identity Connector will be automatically
+   * provisioned by default. Note: Provisioning the Workload Identity Connector
+   * is a prerequisite for enabling Google Cloud CMEK.
+   *
+   * @var bool
+   */
+  public $identityConnectorDisabled;
+  /**
    * Optional. Labels or tags associated with the VM Cluster.
    *
    * @var string[]
@@ -282,6 +292,26 @@ class CloudVmCluster extends \Google\Model
   public function getIdentityConnector()
   {
     return $this->identityConnector;
+  }
+  /**
+   * Optional. Input only. Immutable. If set to true, disables the automatic
+   * provisioning of the Workload Identity Connector during creation. If set to
+   * false or omitted, the Workload Identity Connector will be automatically
+   * provisioned by default. Note: Provisioning the Workload Identity Connector
+   * is a prerequisite for enabling Google Cloud CMEK.
+   *
+   * @param bool $identityConnectorDisabled
+   */
+  public function setIdentityConnectorDisabled($identityConnectorDisabled)
+  {
+    $this->identityConnectorDisabled = $identityConnectorDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getIdentityConnectorDisabled()
+  {
+    return $this->identityConnectorDisabled;
   }
   /**
    * Optional. Labels or tags associated with the VM Cluster.

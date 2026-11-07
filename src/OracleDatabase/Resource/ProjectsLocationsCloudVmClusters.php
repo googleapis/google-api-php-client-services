@@ -18,6 +18,8 @@
 namespace Google\Service\OracleDatabase\Resource;
 
 use Google\Service\OracleDatabase\CloudVmCluster;
+use Google\Service\OracleDatabase\DisableCloudVmClusterIdentityConnectorRequest;
+use Google\Service\OracleDatabase\EnableCloudVmClusterIdentityConnectorRequest;
 use Google\Service\OracleDatabase\ListCloudVmClustersResponse;
 use Google\Service\OracleDatabase\Operation;
 
@@ -86,6 +88,42 @@ class ProjectsLocationsCloudVmClusters extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Disables the Workload Identity Connector for a Cloud VM Cluster.
+   * (cloudVmClusters.disableIdentityConnector)
+   *
+   * @param string $name Required. The name of the Cloud VM Cluster in the
+   * following format:
+   * projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+   * @param DisableCloudVmClusterIdentityConnectorRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function disableIdentityConnector($name, DisableCloudVmClusterIdentityConnectorRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('disableIdentityConnector', [$params], Operation::class);
+  }
+  /**
+   * Enables the Workload Identity Connector for a Cloud VM Cluster.
+   * (cloudVmClusters.enableIdentityConnector)
+   *
+   * @param string $name Required. The name of the Cloud VM Cluster in the
+   * following format:
+   * projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+   * @param EnableCloudVmClusterIdentityConnectorRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function enableIdentityConnector($name, EnableCloudVmClusterIdentityConnectorRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('enableIdentityConnector', [$params], Operation::class);
   }
   /**
    * Gets details of a single VM Cluster. (cloudVmClusters.get)
