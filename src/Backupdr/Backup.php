@@ -206,6 +206,8 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  protected $verificationSummaryType = VerificationSummary::class;
+  protected $verificationSummaryDataType = '';
 
   /**
    * Output only. AlloyDB specific backup properties.
@@ -657,6 +659,22 @@ class Backup extends \Google\Collection
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * Output only. The restore verification status of the backup.
+   *
+   * @param VerificationSummary $verificationSummary
+   */
+  public function setVerificationSummary(VerificationSummary $verificationSummary)
+  {
+    $this->verificationSummary = $verificationSummary;
+  }
+  /**
+   * @return VerificationSummary
+   */
+  public function getVerificationSummary()
+  {
+    return $this->verificationSummary;
   }
 }
 
