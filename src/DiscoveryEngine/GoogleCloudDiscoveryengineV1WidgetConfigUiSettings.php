@@ -124,11 +124,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
    * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
-   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
-   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
-   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
-   * marketplace` * `agent-scheduling` * `preview-agents`
+   * approval` * `skill-security-scan` * `disable-projects` * `sobi` * `enable-
+   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
+   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
+   * badge` * `canvas-app-sharing` * `agent-marketplace` * `agent-scheduling` *
+   * `preview-agents` * `plugins`
    *
    * @var string[]
    */
@@ -388,11 +389,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
    * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
    * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
-   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
-   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
-   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
-   * marketplace` * `agent-scheduling` * `preview-agents`
+   * approval` * `skill-security-scan` * `disable-projects` * `sobi` * `enable-
+   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
+   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
+   * badge` * `canvas-app-sharing` * `agent-marketplace` * `agent-scheduling` *
+   * `preview-agents` * `plugins`
    *
    * @param string[] $features
    */
