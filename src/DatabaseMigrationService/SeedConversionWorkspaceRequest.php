@@ -32,6 +32,8 @@ class SeedConversionWorkspaceRequest extends \Google\Model
    * @var string
    */
   public $destinationConnectionProfile;
+  protected $gcsSourceType = GcsSource::class;
+  protected $gcsSourceDataType = '';
   /**
    * Optional. Fully qualified (Uri) name of the source connection profile.
    *
@@ -71,6 +73,22 @@ class SeedConversionWorkspaceRequest extends \Google\Model
   public function getDestinationConnectionProfile()
   {
     return $this->destinationConnectionProfile;
+  }
+  /**
+   * Optional. Cloud Storage source details for seeding.
+   *
+   * @param GcsSource $gcsSource
+   */
+  public function setGcsSource(GcsSource $gcsSource)
+  {
+    $this->gcsSource = $gcsSource;
+  }
+  /**
+   * @return GcsSource
+   */
+  public function getGcsSource()
+  {
+    return $this->gcsSource;
   }
   /**
    * Optional. Fully qualified (Uri) name of the source connection profile.
