@@ -33,6 +33,8 @@ class SourceObjectsConfig extends \Google\Collection
    */
   public const OBJECTS_SELECTION_TYPE_SPECIFIED_OBJECTS = 'SPECIFIED_OBJECTS';
   protected $collection_key = 'objectConfigs';
+  protected $excludedObjectConfigsType = SourceObjectConfig::class;
+  protected $excludedObjectConfigsDataType = 'array';
   protected $objectConfigsType = SourceObjectConfig::class;
   protected $objectConfigsDataType = 'array';
   /**
@@ -43,7 +45,24 @@ class SourceObjectsConfig extends \Google\Collection
   public $objectsSelectionType;
 
   /**
-   * Optional. The list of the objects to be migrated.
+   * Optional. The list of the objects to be excluded from the migration.
+   * Exclusion takes precedence over inclusion in `object_configs`.
+   *
+   * @param SourceObjectConfig[] $excludedObjectConfigs
+   */
+  public function setExcludedObjectConfigs($excludedObjectConfigs)
+  {
+    $this->excludedObjectConfigs = $excludedObjectConfigs;
+  }
+  /**
+   * @return SourceObjectConfig[]
+   */
+  public function getExcludedObjectConfigs()
+  {
+    return $this->excludedObjectConfigs;
+  }
+  /**
+   * Optional. The list of the objects to be included in the migration.
    *
    * @param SourceObjectConfig[] $objectConfigs
    */
