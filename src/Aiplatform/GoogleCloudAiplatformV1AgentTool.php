@@ -37,8 +37,10 @@ class GoogleCloudAiplatformV1AgentTool extends \Google\Model
    */
   public $name;
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` *
-   * `endpoint` * `filesystem` * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `audio_generation` *
+   * `code_execution` * `endpoint` * `filesystem` * `google_search` *
+   * `image_generation` * `mcp_server` * `speech_generation` * `url_context` *
+   * `video_generation`
    *
    * @var string
    */
@@ -92,8 +94,10 @@ class GoogleCloudAiplatformV1AgentTool extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` *
-   * `endpoint` * `filesystem` * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `audio_generation` *
+   * `code_execution` * `endpoint` * `filesystem` * `google_search` *
+   * `image_generation` * `mcp_server` * `speech_generation` * `url_context` *
+   * `video_generation`
    *
    * @param string $type
    */

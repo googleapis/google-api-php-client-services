@@ -28,6 +28,10 @@ class GenaiVertexV1CodeExecutionCallContentCodeExecutionCallArguments extends \G
    */
   public const LANGUAGE_PYTHON = 'PYTHON';
   /**
+   * Bash. Only available for Gemini 3.0 model or above.
+   */
+  public const LANGUAGE_BASH = 'BASH';
+  /**
    * The code to be executed.
    *
    * @var string
@@ -59,7 +63,7 @@ class GenaiVertexV1CodeExecutionCallContentCodeExecutionCallArguments extends \G
   /**
    * Programming language of the `code`.
    *
-   * Accepted values: LANGUAGE_UNSPECIFIED, PYTHON
+   * Accepted values: LANGUAGE_UNSPECIFIED, PYTHON, BASH
    *
    * @param self::LANGUAGE_* $language
    */

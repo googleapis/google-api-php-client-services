@@ -106,6 +106,11 @@ class GoogleCloudAiplatformV1Candidate extends \Google\Collection
    * continued via a subsequent request using the returned `continuation_token`.
    */
   public const FINISH_REASON_CONTINUATION = 'CONTINUATION';
+  /**
+   * The model made too many tool calls in a single request, so the server-side
+   * tool loop stopped before the model returned a final answer.
+   */
+  public const FINISH_REASON_TOO_MANY_TOOL_CALLS = 'TOO_MANY_TOOL_CALLS';
   protected $collection_key = 'safetyRatings';
   /**
    * Output only. The average log probability of the tokens in this candidate.
@@ -242,7 +247,8 @@ class GoogleCloudAiplatformV1Candidate extends \Google\Collection
    * RECITATION, OTHER, BLOCKLIST, PROHIBITED_CONTENT, SPII,
    * MALFORMED_FUNCTION_CALL, MODEL_ARMOR, IMAGE_SAFETY,
    * IMAGE_PROHIBITED_CONTENT, IMAGE_RECITATION, IMAGE_OTHER,
-   * UNEXPECTED_TOOL_CALL, NO_IMAGE, MALFORMED_RESPONSE, CONTINUATION
+   * UNEXPECTED_TOOL_CALL, NO_IMAGE, MALFORMED_RESPONSE, CONTINUATION,
+   * TOO_MANY_TOOL_CALLS
    *
    * @param self::FINISH_REASON_* $finishReason
    */

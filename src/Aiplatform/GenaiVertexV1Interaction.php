@@ -73,6 +73,12 @@ class GenaiVertexV1Interaction extends \Google\Collection
    * peak capacity).
    */
   public const STATUS_QUEUED = 'QUEUED';
+  /**
+   * The interaction requires at least one more request for it to be completed.
+   * The next request should set the continuation_token to the one returned by
+   * this request.
+   */
+  public const STATUS_REQUIRES_CONTINUATION = 'REQUIRES_CONTINUATION';
   protected $collection_key = 'tools';
   protected $agentInteractionType = GenaiVertexV1AgentInteraction::class;
   protected $agentInteractionDataType = '';
@@ -407,7 +413,7 @@ class GenaiVertexV1Interaction extends \Google\Collection
    * Required. Output only. The status of the interaction.
    *
    * Accepted values: UNSPECIFIED, IN_PROGRESS, REQUIRES_ACTION, COMPLETED,
-   * FAILED, CANCELLED, INCOMPLETE, QUEUED
+   * FAILED, CANCELLED, INCOMPLETE, QUEUED, REQUIRES_CONTINUATION
    *
    * @param self::STATUS_* $status
    */

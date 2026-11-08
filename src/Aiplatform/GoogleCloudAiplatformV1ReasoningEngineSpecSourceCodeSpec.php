@@ -23,6 +23,8 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\M
   protected $agentConfigSourceDataType = '';
   protected $developerConnectSourceType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource::class;
   protected $developerConnectSourceDataType = '';
+  protected $gitSourceType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecGitSource::class;
+  protected $gitSourceDataType = '';
   protected $imageSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecImageSpec::class;
   protected $imageSpecDataType = '';
   protected $inlineSourceType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource::class;
@@ -61,6 +63,22 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\M
   public function getDeveloperConnectSource()
   {
     return $this->developerConnectSource;
+  }
+  /**
+   * Source code is in a public Git repository.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecGitSource $gitSource
+   */
+  public function setGitSource(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecGitSource $gitSource)
+  {
+    $this->gitSource = $gitSource;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecGitSource
+   */
+  public function getGitSource()
+  {
+    return $this->gitSource;
   }
   /**
    * Optional. Configuration for building an image with custom config file.
