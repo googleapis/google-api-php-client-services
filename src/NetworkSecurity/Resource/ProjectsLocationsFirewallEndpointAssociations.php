@@ -32,27 +32,31 @@ use Google\Service\NetworkSecurity\Operation;
 class ProjectsLocationsFirewallEndpointAssociations extends \Google\Service\Resource
 {
   /**
-   * Creates a new FirewallEndpointAssociation in a given project and location.
+   * Creates a new firewall endpoint association in a given project and location.
    * (firewallEndpointAssociations.create)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. The parent resource where this firewall
+   * endpoint association is created. Format:
+   * `projects/{project}/locations/{location}`.
    * @param FirewallEndpointAssociation $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string firewallEndpointAssociationId Optional. Id of the
-   * requesting object. If auto-generating Id server-side, remove this field and
-   * firewall_endpoint_association_id from the method_signature of Create RPC.
+   * @opt_param string firewallEndpointAssociationId Optional. The ID to use for
+   * the firewall endpoint association, which becomes the final component of the
+   * association's resource name. This value must be 1-63 characters long, start
+   * with a lowercase letter, contain only lowercase letters, numbers, and
+   * hyphens, and cannot end with a hyphen.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
-   * the server will know to ignore the request if it has already been completed.
-   * The server will guarantee that for at least 60 minutes since the first
-   * request. For example, consider a situation where you make an initial request
-   * and the request times out. If you make the request again with the same
-   * request ID, the server can check if original operation with the same request
-   * ID was received, and if so, will ignore the second request. This prevents
-   * clients from accidentally creating duplicate commitments. The request ID must
-   * be a valid UUID with the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
+   * the server knows to ignore the request if it has already been completed. The
+   * server guarantees that for at least 60 minutes since the first request. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if the original operation with the same request ID was
+   * received, and if so, ignores the second request. This prevents clients from
+   * accidentally creating duplicate commitments. The request ID must be a valid
+   * UUID with the exception that zero UUID is not supported
+   * (`00000000-0000-0000-0000-000000000000`).
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -63,23 +67,23 @@ class ProjectsLocationsFirewallEndpointAssociations extends \Google\Service\Reso
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a single FirewallEndpointAssociation.
+   * Deletes a single firewall endpoint association.
    * (firewallEndpointAssociations.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The name of the resource.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
-   * the server will know to ignore the request if it has already been completed.
-   * The server will guarantee that for at least 60 minutes after the first
-   * request. For example, consider a situation where you make an initial request
-   * and the request times out. If you make the request again with the same
-   * request ID, the server can check if original operation with the same request
-   * ID was received, and if so, will ignore the second request. This prevents
-   * clients from accidentally creating duplicate commitments. The request ID must
-   * be a valid UUID with the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
+   * the server knows to ignore the request if it has already been completed. The
+   * server guarantees that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if the original operation with the same request ID was
+   * received, and if so, ignores the second request. This prevents clients from
+   * accidentally creating duplicate commitments. The request ID must be a valid
+   * UUID with the exception that zero UUID is not supported
+   * (`00000000-0000-0000-0000-000000000000`).
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -90,10 +94,10 @@ class ProjectsLocationsFirewallEndpointAssociations extends \Google\Service\Reso
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Gets details of a single FirewallEndpointAssociation.
+   * Gets details of a single firewall endpoint association.
    * (firewallEndpointAssociations.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. The name of the resource.
    * @param array $optParams Optional parameters.
    * @return FirewallEndpointAssociation
    * @throws \Google\Service\Exception
@@ -105,19 +109,25 @@ class ProjectsLocationsFirewallEndpointAssociations extends \Google\Service\Reso
     return $this->call('get', [$params], FirewallEndpointAssociation::class);
   }
   /**
-   * Lists Associations in a given project and location. (firewallEndpointAssociat
+   * Lists associations in a given project and location. (firewallEndpointAssociat
    * ions.listProjectsLocationsFirewallEndpointAssociations)
    *
-   * @param string $parent Required. Parent value for ListAssociationsRequest
+   * @param string $parent Required. The parent resource from which the firewall
+   * endpoint associations are listed. Format:
+   * `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Hint for how to order the results
-   * @opt_param int pageSize Optional. Requested page size. Server may return
-   * fewer items than requested. If unspecified, server will pick an appropriate
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Hint for how to order the results.
+   * @opt_param int pageSize Optional. Requested page size. The server might
+   * return fewer items than requested. The maximum value is 1000; values above
+   * 1000 are coerced to 1000. If unspecified, the server picks an appropriate
    * default.
-   * @opt_param string pageToken A token identifying a page of results the server
-   * should return.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListFirewallEndpointAssociations` call. Provide this to retrieve the
+   * subsequent page. When paginating, all other parameters provided to
+   * `ListFirewallEndpointAssociations` must match the call that provided the page
+   * token.
    * @return ListFirewallEndpointAssociationsResponse
    * @throws \Google\Service\Exception
    */
@@ -128,29 +138,30 @@ class ProjectsLocationsFirewallEndpointAssociations extends \Google\Service\Reso
     return $this->call('list', [$params], ListFirewallEndpointAssociationsResponse::class);
   }
   /**
-   * Update a single FirewallEndpointAssociation.
+   * Updates a single firewall endpoint association.
    * (firewallEndpointAssociations.patch)
    *
-   * @param string $name Immutable. Identifier. name of resource
+   * @param string $name Immutable. Identifier. The name of the resource.
    * @param FirewallEndpointAssociation $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
-   * the server will know to ignore the request if it has already been completed.
-   * The server will guarantee that for at least 60 minutes since the first
-   * request. For example, consider a situation where you make an initial request
-   * and the request times out. If you make the request again with the same
-   * request ID, the server can check if original operation with the same request
-   * ID was received, and if so, will ignore the second request. This prevents
-   * clients from accidentally creating duplicate commitments. The request ID must
-   * be a valid UUID with the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string updateMask Required. Field mask is used to specify the
-   * fields to be overwritten in the Association resource by the update. The
-   * fields specified in the update_mask are relative to the resource, not the
-   * full request. A field will be overwritten if it is in the mask. If the user
-   * does not provide a mask then all fields will be overwritten.
+   * the server knows to ignore the request if it has already been completed. The
+   * server guarantees that for at least 60 minutes since the first request. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if the original operation with the same request ID was
+   * received, and if so, ignores the second request. This prevents clients from
+   * accidentally creating duplicate commitments. The request ID must be a valid
+   * UUID with the exception that zero UUID is not supported
+   * (`00000000-0000-0000-0000-000000000000`).
+   * @opt_param string updateMask Required. Field mask used to specify the fields
+   * to be overwritten in the `FirewallEndpointAssociation` resource by the
+   * update. The fields specified in the `update_mask` are relative to the
+   * resource, not the full request. A field is overwritten if it is in the mask.
+   * If the user does not provide a mask, then all fields present in the request
+   * are overwritten.
    * @return Operation
    * @throws \Google\Service\Exception
    */

@@ -32,19 +32,20 @@ use Google\Service\NetworkSecurity\SecurityProfileGroup;
 class ProjectsLocationsSecurityProfileGroups extends \Google\Service\Resource
 {
   /**
-   * Creates a new SecurityProfileGroup in a given project and location.
+   * Creates a new security profile group in a given project and location.
    * (securityProfileGroups.create)
    *
    * @param string $parent Required. The parent resource of the
-   * SecurityProfileGroup. Must be in the format
-   * `projects|organizations/locations/{location}`.
+   * `SecurityProfileGroup`. Format:
+   * `organizations/{organization}/locations/{location}` or
+   * `projects/{project}/locations/{location}`.
    * @param SecurityProfileGroup $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string securityProfileGroupId Required. Short name of the
-   * SecurityProfileGroup resource to be created. This value should be 1-63
-   * characters long, containing only letters, numbers, hyphens, and underscores,
-   * and should not start with a number. E.g. "security_profile_group1".
+   * `SecurityProfileGroup` resource to be created. This value must be 1 to 63
+   * characters long, contain only lowercase letters, numbers, and hyphens, and
+   * must not start with a number. For example, `security-profile-group1`.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -55,15 +56,16 @@ class ProjectsLocationsSecurityProfileGroups extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a single SecurityProfileGroup. (securityProfileGroups.delete)
+   * Deletes a single security profile group. (securityProfileGroups.delete)
    *
-   * @param string $name Required. A name of the SecurityProfileGroup to delete.
-   * Must be in the format `projects|organizations/locations/{location}/securityPr
-   * ofileGroups/{security_profile_group}`.
+   * @param string $name Required. The name of the `SecurityProfileGroup` to
+   * delete. Format: `organizations/{organization}/locations/{location}/securityPr
+   * ofileGroups/{security_profile_group}` or `projects/{project}/locations/{locat
+   * ion}/securityProfileGroups/{security_profile_group}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string etag Optional. If client provided etag is out of date,
-   * delete will return FAILED_PRECONDITION error.
+   * @opt_param string etag Optional. If the client-provided `etag` is out of
+   * date, the delete request returns an `ABORTED` error.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -74,11 +76,12 @@ class ProjectsLocationsSecurityProfileGroups extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Gets details of a single SecurityProfileGroup. (securityProfileGroups.get)
+   * Gets details of a single security profile group. (securityProfileGroups.get)
    *
-   * @param string $name Required. A name of the SecurityProfileGroup to get. Must
-   * be in the format `projects|organizations/locations/{location}/securityProfile
-   * Groups/{security_profile_group}`.
+   * @param string $name Required. The name of the `SecurityProfileGroup` to get.
+   * Format: `organizations/{organization}/locations/{location}/securityProfileGro
+   * ups/{security_profile_group}` or `projects/{project}/locations/{location}/sec
+   * urityProfileGroups/{security_profile_group}`.
    * @param array $optParams Optional parameters.
    * @return SecurityProfileGroup
    * @throws \Google\Service\Exception
@@ -90,20 +93,22 @@ class ProjectsLocationsSecurityProfileGroups extends \Google\Service\Resource
     return $this->call('get', [$params], SecurityProfileGroup::class);
   }
   /**
-   * Lists SecurityProfileGroups in a given project and location.
+   * Lists security profile group resources in a given project and location.
    * (securityProfileGroups.listProjectsLocationsSecurityProfileGroups)
    *
    * @param string $parent Required. The project or organization and location from
-   * which the SecurityProfileGroups should be listed, specified in the format
-   * `projects|organizations/locations/{location}`.
+   * which the `SecurityProfileGroup` resources are listed. Format:
+   * `organizations/{organization}/locations/{location}` or
+   * `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. Maximum number of SecurityProfileGroups to
-   * return per call.
-   * @opt_param string pageToken Optional. The value returned by the last
-   * `ListSecurityProfileGroupsResponse` Indicates that this is a continuation of
-   * a prior `ListSecurityProfileGroups` call, and that the system should return
-   * the next page of data.
+   * @opt_param int pageSize Optional. Maximum number of `SecurityProfileGroup`
+   * resources to return per call. The maximum value is 1000; values above 1000
+   * are coerced to 1000. If unspecified, the server picks an appropriate default.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `ListSecurityProfileGroups` call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to
+   * `ListSecurityProfileGroups` must match the call that provided the page token.
    * @return ListSecurityProfileGroupsResponse
    * @throws \Google\Service\Exception
    */
@@ -114,19 +119,20 @@ class ProjectsLocationsSecurityProfileGroups extends \Google\Service\Resource
     return $this->call('list', [$params], ListSecurityProfileGroupsResponse::class);
   }
   /**
-   * Updates the parameters of a single SecurityProfileGroup.
+   * Updates the parameters of a single security profile group.
    * (securityProfileGroups.patch)
    *
-   * @param string $name Immutable. Identifier. Name of the SecurityProfileGroup
-   * resource. It matches pattern `projects|organizations/locations/{location}/sec
-   * urityProfileGroups/{security_profile_group}`.
+   * @param string $name Immutable. Identifier. Name of the `SecurityProfileGroup`
+   * resource. Format: `organizations/{organization}/locations/{location}/security
+   * ProfileGroups/{security_profile_group}` or `projects/{project}/locations/{loc
+   * ation}/securityProfileGroups/{security_profile_group}`.
    * @param SecurityProfileGroup $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. Field mask is used to specify the
-   * fields to be overwritten in the SecurityProfileGroup resource by the update.
-   * The fields specified in the update_mask are relative to the resource, not the
-   * full request. A field will be overwritten if it is in the mask.
+   * fields to be overwritten in the `SecurityProfileGroup` resource by the
+   * update. The fields specified in the `update_mask` are relative to the
+   * resource, not the full request. A field is overwritten if it is in the mask.
    * @return Operation
    * @throws \Google\Service\Exception
    */

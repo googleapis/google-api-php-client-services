@@ -23,20 +23,22 @@ class ListFirewallEndpointAssociationsResponse extends \Google\Collection
   protected $firewallEndpointAssociationsType = FirewallEndpointAssociation::class;
   protected $firewallEndpointAssociationsDataType = 'array';
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
    *
    * @var string
    */
   public $nextPageToken;
   /**
-   * Locations that could not be reached.
+   * Locations that could not be reached. The list of unreachable locations
+   * might expand in the future.
    *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * The list of Association
+   * The list of associations.
    *
    * @param FirewallEndpointAssociation[] $firewallEndpointAssociations
    */
@@ -52,7 +54,8 @@ class ListFirewallEndpointAssociationsResponse extends \Google\Collection
     return $this->firewallEndpointAssociations;
   }
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
    *
    * @param string $nextPageToken
    */
@@ -68,7 +71,8 @@ class ListFirewallEndpointAssociationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * Locations that could not be reached.
+   * Locations that could not be reached. The list of unreachable locations
+   * might expand in the future.
    *
    * @param string[] $unreachable
    */

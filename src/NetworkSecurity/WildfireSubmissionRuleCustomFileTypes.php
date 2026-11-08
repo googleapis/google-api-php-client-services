@@ -21,14 +21,14 @@ class WildfireSubmissionRuleCustomFileTypes extends \Google\Collection
 {
   protected $collection_key = 'fileTypes';
   /**
-   * Required. File types to be submitted for WildFire analysis.
+   * Required. File types to be submitted for Advanced malware sandbox analysis.
    *
    * @var string[]
    */
   public $fileTypes;
 
   /**
-   * Required. File types to be submitted for WildFire analysis.
+   * Required. File types to be submitted for Advanced malware sandbox analysis.
    *
    * @param string[] $fileTypes
    */

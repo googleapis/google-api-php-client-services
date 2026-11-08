@@ -20,23 +20,23 @@ namespace Google\Service\NetworkSecurity;
 class WildfireInlineCloudAnalysisRule extends \Google\Model
 {
   /**
-   * WildFire Inline Cloud Analysis action not specified.
+   * Advanced malware sandbox inline cloud analysis action not specified.
    */
   public const ACTION_WILDFIRE_INLINE_CLOUD_ANALYSIS_ACTION_UNSPECIFIED = 'WILDFIRE_INLINE_CLOUD_ANALYSIS_ACTION_UNSPECIFIED';
   /**
-   * The files caught by WildFire Inline Cloud Analysis will be allowed to
-   * transmit.
+   * Files detected by Advanced malware sandbox inline cloud analysis are
+   * allowed to transmit.
    */
   public const ACTION_ALLOW = 'ALLOW';
   /**
-   * The files caught by WildFire Inline Cloud Analysis will be denied to
-   * transmit.
+   * Files detected by Advanced malware sandbox inline cloud analysis are not
+   * allowed to transmit.
    */
   public const ACTION_DENY = 'DENY';
   /**
-   * The files caught by WildFire Inline Cloud Analysis will be allowed to
-   * transmit, but a wildfire_submission_log entry will be sent to the consumer
-   * project.
+   * Files detected by Advanced malware sandbox inline cloud analysis are
+   * allowed to transmit, and a `wildfire_submission_log` entry is sent to the
+   * consumer project.
    */
   public const ACTION_ALERT = 'ALERT';
   /**
@@ -60,16 +60,16 @@ class WildfireInlineCloudAnalysisRule extends \Google\Model
    */
   public const FILE_SELECTION_MODE_FILE_SELECTION_MODE_UNSPECIFIED = 'FILE_SELECTION_MODE_UNSPECIFIED';
   /**
-   * Submit all the file types for scan.
+   * Submit all file types for scanning.
    */
   public const FILE_SELECTION_MODE_ALL_FILE_TYPES = 'ALL_FILE_TYPES';
   /**
-   * Submit a custom list of file types for scan.
+   * Submit a custom list of file types for scanning.
    */
   public const FILE_SELECTION_MODE_CUSTOM_FILE_TYPES = 'CUSTOM_FILE_TYPES';
   /**
-   * Required. Action to take when a threat is detected using WildFire Inline
-   * Cloud Analysis. The default Value is DENY.
+   * Required. Action to take when a threat is detected using Advanced malware
+   * sandbox inline cloud analysis. The default value is `DENY`.
    *
    * @var string
    */
@@ -77,22 +77,23 @@ class WildfireInlineCloudAnalysisRule extends \Google\Model
   protected $customFileTypesType = WildfireInlineCloudAnalysisRuleCustomFileTypes::class;
   protected $customFileTypesDataType = '';
   /**
-   * Required. Direction for the file to be analyzed by WildFire Inline Cloud
-   * Analysis.
+   * Required. Direction for the files to be analyzed by Advanced malware
+   * sandbox inline cloud analysis.
    *
    * @var string
    */
   public $direction;
   /**
-   * Required. File selection mode for WildFire inline cloud analysis.
+   * Required. File selection mode for Advanced malware sandbox inline cloud
+   * analysis.
    *
    * @var string
    */
   public $fileSelectionMode;
 
   /**
-   * Required. Action to take when a threat is detected using WildFire Inline
-   * Cloud Analysis. The default Value is DENY.
+   * Required. Action to take when a threat is detected using Advanced malware
+   * sandbox inline cloud analysis. The default value is `DENY`.
    *
    * Accepted values: WILDFIRE_INLINE_CLOUD_ANALYSIS_ACTION_UNSPECIFIED, ALLOW,
    * DENY, ALERT
@@ -111,7 +112,8 @@ class WildfireInlineCloudAnalysisRule extends \Google\Model
     return $this->action;
   }
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox inline
+   * cloud analysis.
    *
    * @param WildfireInlineCloudAnalysisRuleCustomFileTypes $customFileTypes
    */
@@ -127,8 +129,8 @@ class WildfireInlineCloudAnalysisRule extends \Google\Model
     return $this->customFileTypes;
   }
   /**
-   * Required. Direction for the file to be analyzed by WildFire Inline Cloud
-   * Analysis.
+   * Required. Direction for the files to be analyzed by Advanced malware
+   * sandbox inline cloud analysis.
    *
    * Accepted values: DIRECTION_UNSPECIFIED, UPLOAD, DOWNLOAD, BOTH
    *
@@ -146,7 +148,8 @@ class WildfireInlineCloudAnalysisRule extends \Google\Model
     return $this->direction;
   }
   /**
-   * Required. File selection mode for WildFire inline cloud analysis.
+   * Required. File selection mode for Advanced malware sandbox inline cloud
+   * analysis.
    *
    * Accepted values: FILE_SELECTION_MODE_UNSPECIFIED, ALL_FILE_TYPES,
    * CUSTOM_FILE_TYPES

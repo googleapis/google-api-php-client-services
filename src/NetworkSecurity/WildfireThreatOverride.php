@@ -28,17 +28,17 @@ class WildfireThreatOverride extends \Google\Model
    */
   public const ACTION_WILDFIRE_DEFAULT_ACTION = 'WILDFIRE_DEFAULT_ACTION';
   /**
-   * The packet matching this rule will be allowed to transmit.
+   * Packets matching this rule are allowed to transmit.
    */
   public const ACTION_WILDFIRE_ALLOW = 'WILDFIRE_ALLOW';
   /**
-   * The packet matching this rule will be allowed to transmit, but a threat_log
-   * entry will be sent to the consumer project.
+   * Packets matching this rule are allowed to transmit, and a `threat_log`
+   * entry is sent to the consumer project.
    */
   public const ACTION_WILDFIRE_ALERT = 'WILDFIRE_ALERT';
   /**
-   * The packet matching this rule will be dropped, and a threat_log entry will
-   * be sent to the consumer project.
+   * Packets matching this rule are dropped, and a `threat_log` entry is sent to
+   * the consumer project.
    */
   public const ACTION_WILDFIRE_DENY = 'WILDFIRE_DENY';
   /**

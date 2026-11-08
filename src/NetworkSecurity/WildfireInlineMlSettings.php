@@ -26,7 +26,8 @@ class WildfireInlineMlSettings extends \Google\Collection
   protected $inlineMlConfigsDataType = 'array';
 
   /**
-   * Optional. List of files to exclude from WildFire Inline ML analysis.
+   * Optional. List of files to exclude from Advanced malware sandbox inline ML
+   * analysis.
    *
    * @param WildfireInlineMlFileException[] $fileExceptions
    */
@@ -42,8 +43,8 @@ class WildfireInlineMlSettings extends \Google\Collection
     return $this->fileExceptions;
   }
   /**
-   * Optional. List of Inline ML configs to enable in WildFire Inline ML
-   * analysis.
+   * Optional. List of inline ML configurations to enable in Advanced malware
+   * sandbox inline ML analysis.
    *
    * @param WildfireInlineMlSettingsInlineMlConfig[] $inlineMlConfigs
    */

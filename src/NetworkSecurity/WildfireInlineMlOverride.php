@@ -28,17 +28,17 @@ class WildfireInlineMlOverride extends \Google\Model
    */
   public const ACTION_WILDFIRE_DEFAULT_ACTION = 'WILDFIRE_DEFAULT_ACTION';
   /**
-   * The packet matching this rule will be allowed to transmit.
+   * Packets matching this rule are allowed to transmit.
    */
   public const ACTION_WILDFIRE_ALLOW = 'WILDFIRE_ALLOW';
   /**
-   * The packet matching this rule will be allowed to transmit, but a threat_log
-   * entry will be sent to the consumer project.
+   * Packets matching this rule are allowed to transmit, and a `threat_log`
+   * entry is sent to the consumer project.
    */
   public const ACTION_WILDFIRE_ALERT = 'WILDFIRE_ALERT';
   /**
-   * The packet matching this rule will be dropped, and a threat_log entry will
-   * be sent to the consumer project.
+   * Packets matching this rule are dropped, and a `threat_log` entry is sent to
+   * the consumer project.
    */
   public const ACTION_WILDFIRE_DENY = 'WILDFIRE_DENY';
   /**
@@ -46,48 +46,51 @@ class WildfireInlineMlOverride extends \Google\Model
    */
   public const PROTOCOL_WILDFIRE_PROTOCOL_UNSPECIFIED = 'WILDFIRE_PROTOCOL_UNSPECIFIED';
   /**
-   * SMTP protocol
+   * SMTP protocol.
    */
   public const PROTOCOL_WILDFIRE_SMTP = 'WILDFIRE_SMTP';
   /**
-   * SMB protocol
+   * SMB protocol.
    */
   public const PROTOCOL_WILDFIRE_SMB = 'WILDFIRE_SMB';
   /**
-   * POP3 protocol
+   * POP3 protocol.
    */
   public const PROTOCOL_WILDFIRE_POP3 = 'WILDFIRE_POP3';
   /**
-   * IMAP protocol
+   * IMAP protocol.
    */
   public const PROTOCOL_WILDFIRE_IMAP = 'WILDFIRE_IMAP';
   /**
-   * HTTP2 protocol
+   * HTTP2 protocol.
    */
   public const PROTOCOL_WILDFIRE_HTTP2 = 'WILDFIRE_HTTP2';
   /**
-   * HTTP protocol
+   * HTTP protocol.
    */
   public const PROTOCOL_WILDFIRE_HTTP = 'WILDFIRE_HTTP';
   /**
-   * FTP protocol
+   * FTP protocol.
    */
   public const PROTOCOL_WILDFIRE_FTP = 'WILDFIRE_FTP';
   /**
-   * Required. The action to take for WildFire Inline ML override.
+   * Required. The action to take for Advanced malware sandbox inline ML
+   * override.
    *
    * @var string
    */
   public $action;
   /**
-   * Required. Protocol to match for WildFire Inline ML override.
+   * Required. Protocol to match for Advanced malware sandbox inline ML
+   * override.
    *
    * @var string
    */
   public $protocol;
 
   /**
-   * Required. The action to take for WildFire Inline ML override.
+   * Required. The action to take for Advanced malware sandbox inline ML
+   * override.
    *
    * Accepted values: WILDFIRE_THREAT_ACTION_UNSPECIFIED,
    * WILDFIRE_DEFAULT_ACTION, WILDFIRE_ALLOW, WILDFIRE_ALERT, WILDFIRE_DENY
@@ -106,7 +109,8 @@ class WildfireInlineMlOverride extends \Google\Model
     return $this->action;
   }
   /**
-   * Required. Protocol to match for WildFire Inline ML override.
+   * Required. Protocol to match for Advanced malware sandbox inline ML
+   * override.
    *
    * Accepted values: WILDFIRE_PROTOCOL_UNSPECIFIED, WILDFIRE_SMTP,
    * WILDFIRE_SMB, WILDFIRE_POP3, WILDFIRE_IMAP, WILDFIRE_HTTP2, WILDFIRE_HTTP,

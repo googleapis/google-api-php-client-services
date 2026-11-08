@@ -44,32 +44,32 @@ class FirewallEndpointAssociation extends \Google\Model
    */
   public const STATE_ORPHAN = 'ORPHAN';
   /**
-   * Output only. Create time stamp
+   * Output only. Create timestamp.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. Whether the association is disabled. True indicates that traffic
-   * won't be intercepted
+   * Optional. Whether the association is disabled. Setting this to `true`
+   * indicates that traffic isn't intercepted. The default value is `false`.
    *
    * @var bool
    */
   public $disabled;
   /**
-   * Required. The URL of the FirewallEndpoint that is being associated.
+   * Required. The URL of the `FirewallEndpoint` that is being associated.
    *
    * @var string
    */
   public $firewallEndpoint;
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. The name of the resource.
    *
    * @var string
    */
@@ -81,8 +81,7 @@ class FirewallEndpointAssociation extends \Google\Model
    */
   public $network;
   /**
-   * Output only. Whether reconciling is in progress, recommended per
-   * https://google.aip.dev/128.
+   * Output only. Whether reconciliation is in progress.
    *
    * @var bool
    */
@@ -94,20 +93,20 @@ class FirewallEndpointAssociation extends \Google\Model
    */
   public $state;
   /**
-   * Optional. The URL of the TlsInspectionPolicy that is being associated.
+   * Optional. The URL of the `TlsInspectionPolicy` that is being associated.
    *
    * @var string
    */
   public $tlsInspectionPolicy;
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    *
    * @var string
    */
   public $updateTime;
 
   /**
-   * Output only. Create time stamp
+   * Output only. Create timestamp.
    *
    * @param string $createTime
    */
@@ -123,8 +122,8 @@ class FirewallEndpointAssociation extends \Google\Model
     return $this->createTime;
   }
   /**
-   * Optional. Whether the association is disabled. True indicates that traffic
-   * won't be intercepted
+   * Optional. Whether the association is disabled. Setting this to `true`
+   * indicates that traffic isn't intercepted. The default value is `false`.
    *
    * @param bool $disabled
    */
@@ -140,7 +139,7 @@ class FirewallEndpointAssociation extends \Google\Model
     return $this->disabled;
   }
   /**
-   * Required. The URL of the FirewallEndpoint that is being associated.
+   * Required. The URL of the `FirewallEndpoint` that is being associated.
    *
    * @param string $firewallEndpoint
    */
@@ -156,7 +155,7 @@ class FirewallEndpointAssociation extends \Google\Model
     return $this->firewallEndpoint;
   }
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    *
    * @param string[] $labels
    */
@@ -172,7 +171,7 @@ class FirewallEndpointAssociation extends \Google\Model
     return $this->labels;
   }
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. The name of the resource.
    *
    * @param string $name
    */
@@ -204,8 +203,7 @@ class FirewallEndpointAssociation extends \Google\Model
     return $this->network;
   }
   /**
-   * Output only. Whether reconciling is in progress, recommended per
-   * https://google.aip.dev/128.
+   * Output only. Whether reconciliation is in progress.
    *
    * @param bool $reconciling
    */
@@ -240,7 +238,7 @@ class FirewallEndpointAssociation extends \Google\Model
     return $this->state;
   }
   /**
-   * Optional. The URL of the TlsInspectionPolicy that is being associated.
+   * Optional. The URL of the `TlsInspectionPolicy` that is being associated.
    *
    * @param string $tlsInspectionPolicy
    */
@@ -256,7 +254,7 @@ class FirewallEndpointAssociation extends \Google\Model
     return $this->tlsInspectionPolicy;
   }
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    *
    * @param string $updateTime
    */
