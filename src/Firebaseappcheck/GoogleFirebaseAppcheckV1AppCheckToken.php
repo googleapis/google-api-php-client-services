@@ -20,12 +20,12 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1AppCheckToken extends \Google\Model
 {
   /**
-   * The App Check token. App Check tokens are signed
-   * [JWTs](https://tools.ietf.org/html/rfc7519) containing claims that identify
-   * the attested app and GCP project. This token is used to access Google
-   * services protected by App Check. These tokens can also be [verified by your
-   * own custom backends](https://firebase.google.com/docs/app-check/custom-
-   * resource-backend) using the Firebase Admin SDK or third-party libraries.
+   * The App Check token. App Check tokens are signed [JWTs](https://www.rfc-
+   * editor.org/info/rfc7519/) containing claims that identify the attested app
+   * and GCP project. This token is used to access Google services protected by
+   * App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-
+   * backend) using the Firebase Admin SDK or third-party libraries.
    *
    * @var string
    */
@@ -40,12 +40,12 @@ class GoogleFirebaseAppcheckV1AppCheckToken extends \Google\Model
   public $ttl;
 
   /**
-   * The App Check token. App Check tokens are signed
-   * [JWTs](https://tools.ietf.org/html/rfc7519) containing claims that identify
-   * the attested app and GCP project. This token is used to access Google
-   * services protected by App Check. These tokens can also be [verified by your
-   * own custom backends](https://firebase.google.com/docs/app-check/custom-
-   * resource-backend) using the Firebase Admin SDK or third-party libraries.
+   * The App Check token. App Check tokens are signed [JWTs](https://www.rfc-
+   * editor.org/info/rfc7519/) containing claims that identify the attested app
+   * and GCP project. This token is used to access Google services protected by
+   * App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-
+   * backend) using the Firebase Admin SDK or third-party libraries.
    *
    * @param string $token
    */
