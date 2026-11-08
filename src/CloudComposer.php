@@ -145,6 +145,16 @@ class CloudComposer extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'hibernate' => [
+              'path' => 'v1/{+name}:hibernate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/environments',
               'httpMethod' => 'GET',
@@ -199,6 +209,16 @@ class CloudComposer extends \Google\Service
               ],
             ],'restartWebServer' => [
               'path' => 'v1/{+name}:restartWebServer',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'resume' => [
+              'path' => 'v1/{+name}:resume',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [

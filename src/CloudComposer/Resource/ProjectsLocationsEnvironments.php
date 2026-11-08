@@ -23,12 +23,14 @@ use Google\Service\CloudComposer\Environment;
 use Google\Service\CloudComposer\ExecuteAirflowCommandRequest;
 use Google\Service\CloudComposer\ExecuteAirflowCommandResponse;
 use Google\Service\CloudComposer\FetchDatabasePropertiesResponse;
+use Google\Service\CloudComposer\HibernateEnvironmentRequest;
 use Google\Service\CloudComposer\ListEnvironmentsResponse;
 use Google\Service\CloudComposer\LoadSnapshotRequest;
 use Google\Service\CloudComposer\Operation;
 use Google\Service\CloudComposer\PollAirflowCommandRequest;
 use Google\Service\CloudComposer\PollAirflowCommandResponse;
 use Google\Service\CloudComposer\RestartWebServerRequest;
+use Google\Service\CloudComposer\ResumeEnvironmentRequest;
 use Google\Service\CloudComposer\SaveSnapshotRequest;
 use Google\Service\CloudComposer\StopAirflowCommandRequest;
 use Google\Service\CloudComposer\StopAirflowCommandResponse;
@@ -156,6 +158,27 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Environment::class);
+  }
+  /**
+   * Hibernates (pauses) a running environment. It requests the environment to
+   * switch to the `HIBERNATED` state, keeping its data and minimizing cost, but
+   * not running any DAGs. This method is supported for Cloud Composer
+   * environments in development mode in versions composer-3-airflow-*.*.*-build.*
+   * and newer. (environments.hibernate)
+   *
+   * @param string $name Required. The resource name of the environment to
+   * hibernate, in the form:
+   * "projects/{project}/locations/{location}/environments/{environment}"
+   * @param HibernateEnvironmentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function hibernate($name, HibernateEnvironmentRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('hibernate', [$params], Operation::class);
   }
   /**
    * List environments. (environments.listProjectsLocationsEnvironments)
@@ -320,6 +343,26 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('restartWebServer', [$params], Operation::class);
+  }
+  /**
+   * Resumes (unpauses) a hibernated environment. It requests the environment to
+   * switch to the `RUNNING` state, so that it is ready to use and run DAGs. This
+   * method is supported for Cloud Composer environments in development mode in
+   * versions composer-3-airflow-*.*.*-build.* and newer. (environments.resume)
+   *
+   * @param string $name Required. The resource name of the environment to resume,
+   * in the form:
+   * "projects/{project}/locations/{location}/environments/{environment}"
+   * @param ResumeEnvironmentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function resume($name, ResumeEnvironmentRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('resume', [$params], Operation::class);
   }
   /**
    * Creates a snapshots of a Cloud Composer environment. As a result of this
