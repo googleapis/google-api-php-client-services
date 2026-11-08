@@ -216,6 +216,8 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * @var string[]
    */
   public $effectiveFeatures;
+  protected $featurePoliciesType = GoogleCloudDiscoveryengineV1betaEngineFeaturePolicy::class;
+  protected $featurePoliciesDataType = 'map';
   /**
    * Optional. Feature config for the engine to opt in or opt out of features.
    * Supported keys: * `*`: all features, if it's present, all other feature
@@ -229,11 +231,12 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
    * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
-   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
-   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
-   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
-   * marketplace` * `agent-scheduling` * `preview-agents`
+   * approval` * `skill-security-scan` * `disable-projects` * `sobi` * `enable-
+   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
+   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
+   * badge` * `canvas-app-sharing` * `agent-marketplace` * `agent-scheduling` *
+   * `preview-agents` * `plugins`
    *
    * @var string[]
    */
@@ -575,6 +578,24 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
     return $this->effectiveFeatures;
   }
   /**
+   * Optional. Per-feature access policies, keyed by feature toggle name (see
+   * `features`). A feature with no entry is available to every user when it is
+   * on. Only features that support access policies are accepted.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaEngineFeaturePolicy[] $featurePolicies
+   */
+  public function setFeaturePolicies($featurePolicies)
+  {
+    $this->featurePolicies = $featurePolicies;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaEngineFeaturePolicy[]
+   */
+  public function getFeaturePolicies()
+  {
+    return $this->featurePolicies;
+  }
+  /**
    * Optional. Feature config for the engine to opt in or opt out of features.
    * Supported keys: * `*`: all features, if it's present, all other feature
    * state settings are ignored. * `agent-gallery` * `no-code-agent-builder` *
@@ -587,11 +608,12 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-
    * welcome-emails` * `disable-canvas` * `canvas-workspace` * `canvas-app-
    * builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-
-   * approval` * `disable-projects` * `sobi` * `enable-end-user-sharing-with-
-   * groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
-   * `code-extraction` * `remote-vm` * `license-tier-badge` * `agent-
-   * marketplace` * `agent-scheduling` * `preview-agents`
+   * approval` * `skill-security-scan` * `disable-projects` * `sobi` * `enable-
+   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `workflow-agents` *
+   * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-
+   * badge` * `canvas-app-sharing` * `agent-marketplace` * `agent-scheduling` *
+   * `preview-agents` * `plugins`
    *
    * @param string[] $features
    */

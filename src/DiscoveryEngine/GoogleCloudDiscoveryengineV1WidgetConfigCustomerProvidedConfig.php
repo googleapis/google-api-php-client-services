@@ -37,6 +37,10 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCustomerProvidedConfig extends \Go
    */
   public const COMPLIANCE_LEVEL_COMPLIANCE_LEVEL_IL5 = 'COMPLIANCE_LEVEL_IL5';
   /**
+   * International Traffic in Arms Regulations (ITAR) compliance level.
+   */
+  public const COMPLIANCE_LEVEL_COMPLIANCE_LEVEL_ITAR = 'COMPLIANCE_LEVEL_ITAR';
+  /**
    * Default customer type.
    */
   public const CUSTOMER_TYPE_DEFAULT_CUSTOMER = 'DEFAULT_CUSTOMER';
@@ -70,7 +74,8 @@ class GoogleCloudDiscoveryengineV1WidgetConfigCustomerProvidedConfig extends \Go
    * field instead.
    *
    * Accepted values: COMPLIANCE_LEVEL_UNSPECIFIED,
-   * COMPLIANCE_LEVEL_FEDRAMP_HIGH, COMPLIANCE_LEVEL_IL4, COMPLIANCE_LEVEL_IL5
+   * COMPLIANCE_LEVEL_FEDRAMP_HIGH, COMPLIANCE_LEVEL_IL4, COMPLIANCE_LEVEL_IL5,
+   * COMPLIANCE_LEVEL_ITAR
    *
    * @param self::COMPLIANCE_LEVEL_* $complianceLevel
    */
