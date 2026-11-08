@@ -41,10 +41,6 @@ class ProjectsLocationsAgents extends \Google\Service\Resource
    * the agent in. Format: `projects/{project}/locations/{location}`.
    * @param GoogleCloudAiplatformV1Agent $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string idpNonce Optional. Optional. One-time cryptographic nonce
-   * issued by the trusted IdP provisioning iframe for session and device non-
-   * repudiation.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

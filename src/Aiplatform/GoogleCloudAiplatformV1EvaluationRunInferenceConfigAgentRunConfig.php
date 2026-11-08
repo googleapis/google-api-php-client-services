@@ -27,6 +27,8 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig extends 
    * @var string
    */
   public $agentEngine;
+  protected $dataAgentConfigType = GoogleCloudAiplatformV1DataAgentConfig::class;
+  protected $dataAgentConfigDataType = '';
   protected $geminiAgentConfigType = GoogleCloudAiplatformV1GeminiAgentConfig::class;
   protected $geminiAgentConfigDataType = '';
   protected $sessionInputType = GoogleCloudAiplatformV1EvaluationRunInferenceConfigSessionInput::class;
@@ -51,6 +53,24 @@ class GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig extends 
   public function getAgentEngine()
   {
     return $this->agentEngine;
+  }
+  /**
+   * Optional. Config for scraping a Gemini Data Analytics data agent. The
+   * scraping service runs the agent via the DataChatService Chat API and
+   * returns the resulting trajectory for evaluation.
+   *
+   * @param GoogleCloudAiplatformV1DataAgentConfig $dataAgentConfig
+   */
+  public function setDataAgentConfig(GoogleCloudAiplatformV1DataAgentConfig $dataAgentConfig)
+  {
+    $this->dataAgentConfig = $dataAgentConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1DataAgentConfig
+   */
+  public function getDataAgentConfig()
+  {
+    return $this->dataAgentConfig;
   }
   /**
    * Optional. Config for scraping a Gemini Agent via the Interactions API. The

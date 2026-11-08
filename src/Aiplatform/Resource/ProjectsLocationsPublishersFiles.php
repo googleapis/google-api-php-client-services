@@ -92,10 +92,6 @@ class ProjectsLocationsPublishersFiles extends \Google\Service\Resource
    * @param string $publishersId
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string ids Optional. Batch fetch: return only these files, up to
-   * 100 IDs after de-duplication. Mutually exclusive with both `page` and
-   * `limit`. Serialised as a repeated `ids` query parameter, one occurrence per
-   * ID.
    * @opt_param int limit Optional. The number of files to return per page.
    * Defaults to 20 if unset, maximum 1000. Mutually exclusive with `ids`.
    * @opt_param string page Optional. Opaque pagination cursor. Pass the previous

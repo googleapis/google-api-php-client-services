@@ -103,8 +103,9 @@ class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends \Google\Model
     return $this->evaluationSet;
   }
   /**
-   * Required. The Cloud Storage location where the resulting EvaluationItem
-   * payloads will be stored.
+   * Optional. The Cloud Storage location where the resulting EvaluationItem
+   * payloads will be stored. Required for every source except `harbor_dataset`,
+   * which must not set it.
    *
    * @param GoogleCloudAiplatformV1GcsDestination $gcsDestination
    */

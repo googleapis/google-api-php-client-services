@@ -3796,10 +3796,6 @@ class Aiplatform extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'idpNonce' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -10771,6 +10767,16 @@ class Aiplatform extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'setDefault' => [
+              'path' => 'v1/{+parent}/notebookRuntimeTemplates:setDefault',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
@@ -11719,11 +11725,6 @@ class Aiplatform extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'ids' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ],
                 'limit' => [
                   'location' => 'query',

@@ -45,6 +45,10 @@ class GenaiVertexV1VideoConfig extends \Google\Model
    */
   public const TASK_EXTEND = 'EXTEND';
   /**
+   * Increases the resolution of an existing input video.
+   */
+  public const TASK_UPSCALE = 'UPSCALE';
+  /**
    * Optional task mode for video generation. If not specified, the model
    * automatically determines the appropriate mode based on the provided text
    * prompt and input media.
@@ -59,7 +63,7 @@ class GenaiVertexV1VideoConfig extends \Google\Model
    * prompt and input media.
    *
    * Accepted values: TASK_UNSPECIFIED, TEXT_TO_VIDEO, IMAGE_TO_VIDEO,
-   * REFERENCE_TO_VIDEO, EDIT, EXTEND
+   * REFERENCE_TO_VIDEO, EDIT, EXTEND, UPSCALE
    *
    * @param self::TASK_* $task
    */

@@ -115,6 +115,21 @@ class GoogleCloudAiplatformV1EvaluationRun extends \Google\Model
    */
   public $name;
   /**
+   * Optional. The service account to run the evaluation run as. If set, the run
+   * uses this service account to access Google Cloud resources. Access is
+   * limited to the IAM permissions that you grant to the service account. Must
+   * be provided if an inference config sets `harbor_run_config`,
+   * `data_agent_config`. If no inference config requires this field, setting it
+   * returns an error. The caller must have the `iam.serviceAccounts.actAs`
+   * permission on this service account, and the project's [Vertex AI Service
+   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) must have the
+   * `roles/iam.serviceAccountTokenCreator` role on it.
+   *
+   * @var string
+   */
+  public $serviceAccount;
+  /**
    * Output only. The state of the evaluation run.
    *
    * @var string
@@ -339,6 +354,31 @@ class GoogleCloudAiplatformV1EvaluationRun extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * Optional. The service account to run the evaluation run as. If set, the run
+   * uses this service account to access Google Cloud resources. Access is
+   * limited to the IAM permissions that you grant to the service account. Must
+   * be provided if an inference config sets `harbor_run_config`,
+   * `data_agent_config`. If no inference config requires this field, setting it
+   * returns an error. The caller must have the `iam.serviceAccounts.actAs`
+   * permission on this service account, and the project's [Vertex AI Service
+   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) must have the
+   * `roles/iam.serviceAccountTokenCreator` role on it.
+   *
+   * @param string $serviceAccount
+   */
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   /**
    * Output only. The state of the evaluation run.

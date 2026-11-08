@@ -78,6 +78,15 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
    */
   public $mode;
   /**
+   * Optional. The source text to be edited or rewritten via voice instructions.
+   * When provided in `SMART` mode, the model evaluates the audio input against
+   * this text and emits the complete replacement text in the candidate response
+   * rather than appending to it.
+   *
+   * @var string
+   */
+  public $sourceText;
+  /**
    * Optional. Configures word-level timestamp generation.
    *
    * @var bool
@@ -215,6 +224,25 @@ class GoogleCloudAiplatformV1AudioTranscriptionConfig extends \Google\Collection
   public function getMode()
   {
     return $this->mode;
+  }
+  /**
+   * Optional. The source text to be edited or rewritten via voice instructions.
+   * When provided in `SMART` mode, the model evaluates the audio input against
+   * this text and emits the complete replacement text in the candidate response
+   * rather than appending to it.
+   *
+   * @param string $sourceText
+   */
+  public function setSourceText($sourceText)
+  {
+    $this->sourceText = $sourceText;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceText()
+  {
+    return $this->sourceText;
   }
   /**
    * Optional. Configures word-level timestamp generation.

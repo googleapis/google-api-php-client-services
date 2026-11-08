@@ -20,6 +20,17 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
 {
   protected $collection_key = 'metrics';
+  /**
+   * Optional. Allows the evaluation run to use cross region models. When this
+   * flag is set, the service may route traffic to other regions if a model is
+   * unavailable in the current region (e.g., to a `global` endpoint). If a
+   * fully-qualified model endpoint resource name with a different region than
+   * the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   *
+   * @var bool
+   */
+  public $allowCrossRegionModel;
   protected $autoraterConfigType = GoogleCloudAiplatformV1AutoraterConfig::class;
   protected $autoraterConfigDataType = '';
   protected $bleuInputType = GoogleCloudAiplatformV1BleuInput::class;
@@ -100,6 +111,27 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
   protected $trajectorySingleToolUseInputType = GoogleCloudAiplatformV1TrajectorySingleToolUseInput::class;
   protected $trajectorySingleToolUseInputDataType = '';
 
+  /**
+   * Optional. Allows the evaluation run to use cross region models. When this
+   * flag is set, the service may route traffic to other regions if a model is
+   * unavailable in the current region (e.g., to a `global` endpoint). If a
+   * fully-qualified model endpoint resource name with a different region than
+   * the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   *
+   * @param bool $allowCrossRegionModel
+   */
+  public function setAllowCrossRegionModel($allowCrossRegionModel)
+  {
+    $this->allowCrossRegionModel = $allowCrossRegionModel;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowCrossRegionModel()
+  {
+    return $this->allowCrossRegionModel;
+  }
   /**
    * Optional. Autorater config used for evaluation. Not applicable for
    * predefined metrics (PredefinedMetricSpec); the server uses its own model

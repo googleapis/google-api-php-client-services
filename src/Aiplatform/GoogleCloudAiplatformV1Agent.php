@@ -25,6 +25,8 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
         "baseEnvironment" => "base_environment",
         "systemInstruction" => "system_instruction",
   ];
+  protected $agentIdentityType = GoogleCloudAiplatformV1AgentIdentity::class;
+  protected $agentIdentityDataType = '';
   /**
    * Output only. The resource name of the AI Application provisioned for this
    * agent. Format:
@@ -33,6 +35,8 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
    * @var string
    */
   public $aiApplication;
+  protected $allowedTeammatesType = GoogleCloudAiplatformV1AllowedTeammates::class;
+  protected $allowedTeammatesDataType = '';
   /**
    * Required. Immutable. The base agent for the agent. Supported values: *
    * `antigravity-preview-05-2026` Immutable: `UpdateAgent` rejects a change,
@@ -70,6 +74,8 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
    * @var string
    */
   public $effectiveIdentity;
+  protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
+  protected $encryptionSpecDataType = '';
   /**
    * Immutable. The user-specified ID for the agent. This ID becomes the final
    * component of the agent resource name. If not provided, Vertex AI will
@@ -79,6 +85,8 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
    * @var string
    */
   public $id;
+  protected $memoryConfigType = GoogleCloudAiplatformV1AgentMemoryConfig::class;
+  protected $memoryConfigDataType = '';
   /**
    * Optional. The metadata for the agent.
    *
@@ -103,6 +111,12 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
   public $object;
   protected $observabilityConfigType = GoogleCloudAiplatformV1ObservabilityConfig::class;
   protected $observabilityConfigDataType = '';
+  protected $ownerType = GoogleCloudAiplatformV1Principal::class;
+  protected $ownerDataType = '';
+  protected $personaType = GoogleCloudAiplatformV1Persona::class;
+  protected $personaDataType = '';
+  protected $statusType = GoogleCloudAiplatformV1AgentStatus::class;
+  protected $statusDataType = '';
   /**
    * Optional. The instructions for the agent to follow. These instructions are
    * passed to the LLM as a system instruction.
@@ -120,6 +134,24 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
   public $updated;
 
   /**
+   * Optional. Immutable. The identity configuration of the agent. Immutable:
+   * the agent's own identity determines the A2 (CoWorker) archetype and the
+   * minted SPIFFE, so it cannot change after creation (no A1<->A2 transition).
+   *
+   * @param GoogleCloudAiplatformV1AgentIdentity $agentIdentity
+   */
+  public function setAgentIdentity(GoogleCloudAiplatformV1AgentIdentity $agentIdentity)
+  {
+    $this->agentIdentity = $agentIdentity;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AgentIdentity
+   */
+  public function getAgentIdentity()
+  {
+    return $this->agentIdentity;
+  }
+  /**
    * Output only. The resource name of the AI Application provisioned for this
    * agent. Format:
    * `projects/{project}/locations/{location}/aiApplications/{ai_application}`.
@@ -136,6 +168,24 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
   public function getAiApplication()
   {
     return $this->aiApplication;
+  }
+  /**
+   * Optional. The identities this agent is allowed to contact outbound (for
+   * example over Gmail or Chat). Stored on the agent and always returned by
+   * `GetAgent`; see the field comments on `AllowedTeammates`.
+   *
+   * @param GoogleCloudAiplatformV1AllowedTeammates $allowedTeammates
+   */
+  public function setAllowedTeammates(GoogleCloudAiplatformV1AllowedTeammates $allowedTeammates)
+  {
+    $this->allowedTeammates = $allowedTeammates;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AllowedTeammates
+   */
+  public function getAllowedTeammates()
+  {
+    return $this->allowedTeammates;
   }
   /**
    * Required. Immutable. The base agent for the agent. Supported values: *
@@ -225,6 +275,25 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
     return $this->effectiveIdentity;
   }
   /**
+   * Optional. Immutable. Customer-managed encryption key spec for an Agent. If
+   * set, this agent's user data will be secured by this key; if not set, it is
+   * secured by a Google-managed key. Cannot be changed after the agent is
+   * created.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
+   */
+  public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
+  {
+    $this->encryptionSpec = $encryptionSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public function getEncryptionSpec()
+  {
+    return $this->encryptionSpec;
+  }
+  /**
    * Immutable. The user-specified ID for the agent. This ID becomes the final
    * component of the agent resource name. If not provided, Vertex AI will
    * generate a value for this ID. The ID can be up to 63 characters and must
@@ -242,6 +311,22 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * Optional. Memory settings for the agent.
+   *
+   * @param GoogleCloudAiplatformV1AgentMemoryConfig $memoryConfig
+   */
+  public function setMemoryConfig(GoogleCloudAiplatformV1AgentMemoryConfig $memoryConfig)
+  {
+    $this->memoryConfig = $memoryConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AgentMemoryConfig
+   */
+  public function getMemoryConfig()
+  {
+    return $this->memoryConfig;
   }
   /**
    * Optional. The metadata for the agent.
@@ -326,6 +411,68 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
   public function getObservabilityConfig()
   {
     return $this->observabilityConfig;
+  }
+  /**
+   * Optional. The human owner (principal) the agent acts on behalf of (A1
+   * Personal). Mutable by design: ownership is meant to be reassignable (e.g.
+   * by an admin). On create an A1 (Personal) agent may omit it and the control
+   * plane defaults it to the caller; an A2 (CoWorker) agent must set it
+   * explicitly. `owner.id` must be an *obfuscated* Gaia id. A raw Gaia id is
+   * rejected with INVALID_ARGUMENT naming the rule -- both forms are strings of
+   * decimal digits, so the surface would otherwise have two indistinguishable
+   * spellings of one identity. Not yet: `UpdateAgent` currently rejects a
+   * change to this field. The control plane authorizes every agent method
+   * against the owner Gaia id it persists internally at create time, and the
+   * update path does not maintain that copy — so a field write here would move
+   * the reported owner without moving the one access control uses. The guard
+   * comes out once reassignment moves both, along with the Workspace identity
+   * provisioned under the owner.
+   *
+   * @param GoogleCloudAiplatformV1Principal $owner
+   */
+  public function setOwner(GoogleCloudAiplatformV1Principal $owner)
+  {
+    $this->owner = $owner;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Principal
+   */
+  public function getOwner()
+  {
+    return $this->owner;
+  }
+  /**
+   * Optional. The persona (presentation) of the agent. Mutable: presentation
+   * only, not an archetype-derivation signal.
+   *
+   * @param GoogleCloudAiplatformV1Persona $persona
+   */
+  public function setPersona(GoogleCloudAiplatformV1Persona $persona)
+  {
+    $this->persona = $persona;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Persona
+   */
+  public function getPersona()
+  {
+    return $this->persona;
+  }
+  /**
+   * Output only. The current operational state of the agent.
+   *
+   * @param GoogleCloudAiplatformV1AgentStatus $status
+   */
+  public function setStatus(GoogleCloudAiplatformV1AgentStatus $status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AgentStatus
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
   /**
    * Optional. The instructions for the agent to follow. These instructions are

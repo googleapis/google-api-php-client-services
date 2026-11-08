@@ -30,6 +30,8 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
    * @var string
    */
   public $model;
+  protected $outputConfigType = GoogleCloudAiplatformV1SchemaPromptSpecPromptMessageOutputConfig::class;
+  protected $outputConfigDataType = '';
   protected $safetySettingsType = GoogleCloudAiplatformV1SafetySetting::class;
   protected $safetySettingsDataType = 'array';
   protected $systemInstructionType = GoogleCloudAiplatformV1Content::class;
@@ -88,6 +90,22 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
   public function getModel()
   {
     return $this->model;
+  }
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecPromptMessageOutputConfig $outputConfig
+   */
+  public function setOutputConfig(GoogleCloudAiplatformV1SchemaPromptSpecPromptMessageOutputConfig $outputConfig)
+  {
+    $this->outputConfig = $outputConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SchemaPromptSpecPromptMessageOutputConfig
+   */
+  public function getOutputConfig()
+  {
+    return $this->outputConfig;
   }
   /**
    * Per request settings for blocking unsafe content. Enforced on

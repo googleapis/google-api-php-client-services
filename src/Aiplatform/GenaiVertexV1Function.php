@@ -67,7 +67,10 @@ class GenaiVertexV1Function extends \Google\Model
     return $this->name;
   }
   /**
-   * The JSON Schema for the function's parameters.
+   * The JSON Schema for the function's parameters. Supports a subset of JSON
+   * Schema. `minLength`, `maxLength`, `minProperties`, `maxProperties`,
+   * `uniqueItems`, `contains`, `minContains`, and `maxContains` are ignored and
+   * not enforced.
    *
    * @param GenaiVertexV1Value $parameters
    */

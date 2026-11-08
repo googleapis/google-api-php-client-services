@@ -24,6 +24,12 @@ class GenaiVertexV1InteractionUsage extends \Google\Collection
   protected $cachedTokensByModalityDataType = 'array';
   protected $groundingToolCountType = GenaiVertexV1InteractionUsageGroundingToolCount::class;
   protected $groundingToolCountDataType = 'array';
+  /**
+   * Number of input tokens used in the first turn of this interaction.
+   *
+   * @var int
+   */
+  public $initialInputTokens;
   protected $inputTokensByModalityType = GenaiVertexV1InteractionUsageModalityTokens::class;
   protected $inputTokensByModalityDataType = 'array';
   protected $outputTokensByModalityType = GenaiVertexV1InteractionUsageModalityTokens::class;
@@ -99,6 +105,22 @@ class GenaiVertexV1InteractionUsage extends \Google\Collection
   public function getGroundingToolCount()
   {
     return $this->groundingToolCount;
+  }
+  /**
+   * Number of input tokens used in the first turn of this interaction.
+   *
+   * @param int $initialInputTokens
+   */
+  public function setInitialInputTokens($initialInputTokens)
+  {
+    $this->initialInputTokens = $initialInputTokens;
+  }
+  /**
+   * @return int
+   */
+  public function getInitialInputTokens()
+  {
+    return $this->initialInputTokens;
   }
   /**
    * A breakdown of input token usage by modality.

@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListNotebookRuntimeTemplatesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1NotebookRuntimeTemplate;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateResponse;
 use Google\Service\Aiplatform\GoogleIamV1Policy;
 use Google\Service\Aiplatform\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\Aiplatform\GoogleIamV1TestIamPermissionsResponse;
@@ -183,6 +185,24 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleCloudAiplatformV1NotebookRuntimeTemplate::class);
+  }
+  /**
+   * Sets the default NotebookRuntimeTemplate for a Location.
+   * (notebookRuntimeTemplates.setDefault)
+   *
+   * @param string $parent Required. The resource name of the Location to set the
+   * default NotebookRuntimeTemplate. Format:
+   * `projects/{project}/locations/{location}`
+   * @param GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateResponse
+   * @throws \Google\Service\Exception
+   */
+  public function setDefault($parent, GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setDefault', [$params], GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateResponse::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
