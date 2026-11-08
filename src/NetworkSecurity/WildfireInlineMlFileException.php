@@ -20,21 +20,23 @@ namespace Google\Service\NetworkSecurity;
 class WildfireInlineMlFileException extends \Google\Model
 {
   /**
-   * Optional. Name of the file to exclude from WildFire Inline ML analysis.
+   * Optional. Name of the file to exclude from Advanced malware sandbox inline
+   * ML analysis.
    *
    * @var string
    */
   public $filename;
   /**
    * Required. Machine learning partial hash of the file to exclude from
-   * WildFire Inline ML analysis.
+   * Advanced malware sandbox inline ML analysis.
    *
    * @var string
    */
   public $partialHash;
 
   /**
-   * Optional. Name of the file to exclude from WildFire Inline ML analysis.
+   * Optional. Name of the file to exclude from Advanced malware sandbox inline
+   * ML analysis.
    *
    * @param string $filename
    */
@@ -51,7 +53,7 @@ class WildfireInlineMlFileException extends \Google\Model
   }
   /**
    * Required. Machine learning partial hash of the file to exclude from
-   * WildFire Inline ML analysis.
+   * Advanced malware sandbox inline ML analysis.
    *
    * @param string $partialHash
    */

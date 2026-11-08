@@ -24,77 +24,87 @@ class FirewallEndpointEndpointSettings extends \Google\Model
    */
   public const CONTENT_CLOUD_REGION_CONTENT_CLOUD_REGION_UNSPECIFIED = 'CONTENT_CLOUD_REGION_UNSPECIFIED';
   /**
-   * us.hawkeye.services-edge.paloaltonetworks.com
+   * US Central content cloud portal: `us.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_US_CENTRAL = 'US_CENTRAL';
   /**
-   * APAC content cloud portal: apac.hawkeye.services-edge.paloaltonetworks.com
+   * APAC content cloud portal: `apac.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_APAC = 'APAC';
   /**
-   * India content cloud portal: in.hawkeye.services-edge.paloaltonetworks.com
+   * India content cloud portal: `in.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_INDIA = 'INDIA';
   /**
-   * UK content cloud portal: uk.hawkeye.services-edge.paloaltonetworks.com
+   * UK content cloud portal: `uk.hawkeye.services-edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_UK = 'UK';
   /**
-   * France content cloud portal: fr.hawkeye.services-edge.paloaltonetworks.com
+   * France content cloud portal: `fr.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_FRANCE = 'FRANCE';
   /**
-   * Japan content cloud portal: jp.hawkeye.services-edge.paloaltonetworks.com
+   * Japan content cloud portal: `jp.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_JAPAN = 'JAPAN';
   /**
-   * Australia content cloud portal: au.hawkeye.services-
-   * edge.paloaltonetworks.com
+   * Australia content cloud portal: `au.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_AUSTRALIA = 'AUSTRALIA';
   /**
-   * Canada content cloud portal: ca.hawkeye.services-edge.paloaltonetworks.com
+   * Canada content cloud portal: `ca.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_CANADA = 'CANADA';
   /**
-   * Switzerland content cloud portal: ch.hawkeye.services-
-   * edge.paloaltonetworks.com
+   * Switzerland content cloud portal: `ch.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_SWITZERLAND = 'SWITZERLAND';
   /**
-   * Netherlands content cloud portal: nl.hawkeye.services-
-   * edge.paloaltonetworks.com
+   * Netherlands content cloud portal: `nl.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_NETHERLANDS = 'NETHERLANDS';
   /**
-   * Indonesia content cloud portal: id.hawkeye.services-
-   * edge.paloaltonetworks.com
+   * Indonesia content cloud portal: `id.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_INDONESIA = 'INDONESIA';
   /**
-   * Qatar content cloud portal: qa.hawkeye.services-edge.paloaltonetworks.com
+   * Qatar content cloud portal: `qa.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_QATAR = 'QATAR';
   /**
-   * Taiwan content cloud portal: tw.hawkeye.services-edge.paloaltonetworks.com
+   * Taiwan content cloud portal: `tw.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_TAIWAN = 'TAIWAN';
   /**
-   * Poland content cloud portal: pl.hawkeye.services-edge.paloaltonetworks.com
+   * Poland content cloud portal: `pl.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_POLAND = 'POLAND';
   /**
-   * South Korea content cloud portal: kr.hawkeye.services-
-   * edge.paloaltonetworks.com
+   * South Korea content cloud portal: `kr.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_SOUTH_KOREA = 'SOUTH_KOREA';
   /**
-   * Saudi Arabia content cloud portal: sa.hawkeye.services-
-   * edge.paloaltonetworks.com
+   * Saudi Arabia content cloud portal: `sa.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_SAUDI_ARABIA = 'SAUDI_ARABIA';
   /**
-   * Italy content cloud portal: it.hawkeye.services-edge.paloaltonetworks.com
+   * Italy content cloud portal: `it.hawkeye.services-
+   * edge.paloaltonetworks.com`.
    */
   public const CONTENT_CLOUD_REGION_ITALY = 'ITALY';
   /**
@@ -105,16 +115,16 @@ class FirewallEndpointEndpointSettings extends \Google\Model
   public $contentCloudRegion;
   /**
    * Optional. Whether to block HTTP partial responses for the endpoint. When
-   * this is true, resumption of blocked malicious HTTP file downloads will be
-   * blocked by the firewall. False provides maximum availability, true provides
-   * maximum security.
+   * set to `true`, the firewall blocks the resumption of HTTP file downloads.
+   * Setting this to `false` provides maximum availability, while `true`
+   * provides maximum security.
    *
    * @var bool
    */
   public $httpPartialResponseBlocked;
   /**
-   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default
-   * value is false.
+   * Optional. Immutable. Indicates whether jumbo frames are enabled. The
+   * default value is `false`.
    *
    * @var bool
    */
@@ -142,9 +152,9 @@ class FirewallEndpointEndpointSettings extends \Google\Model
   }
   /**
    * Optional. Whether to block HTTP partial responses for the endpoint. When
-   * this is true, resumption of blocked malicious HTTP file downloads will be
-   * blocked by the firewall. False provides maximum availability, true provides
-   * maximum security.
+   * set to `true`, the firewall blocks the resumption of HTTP file downloads.
+   * Setting this to `false` provides maximum availability, while `true`
+   * provides maximum security.
    *
    * @param bool $httpPartialResponseBlocked
    */
@@ -160,8 +170,8 @@ class FirewallEndpointEndpointSettings extends \Google\Model
     return $this->httpPartialResponseBlocked;
   }
   /**
-   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default
-   * value is false.
+   * Optional. Immutable. Indicates whether jumbo frames are enabled. The
+   * default value is `false`.
    *
    * @param bool $jumboFramesEnabled
    */

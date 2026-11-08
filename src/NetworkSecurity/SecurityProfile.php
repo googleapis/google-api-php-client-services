@@ -28,11 +28,11 @@ class SecurityProfile extends \Google\Model
    */
   public const TYPE_THREAT_PREVENTION = 'THREAT_PREVENTION';
   /**
-   * Profile type for packet mirroring v2
+   * Profile type for network security out-of-band integration.
    */
   public const TYPE_CUSTOM_MIRRORING = 'CUSTOM_MIRRORING';
   /**
-   * Profile type for TPPI.
+   * Profile type for network security in-band integration.
    */
   public const TYPE_CUSTOM_INTERCEPT = 'CUSTOM_INTERCEPT';
   /**
@@ -40,7 +40,7 @@ class SecurityProfile extends \Google\Model
    */
   public const TYPE_URL_FILTERING = 'URL_FILTERING';
   /**
-   * Profile type for WildFire Analysis.
+   * Profile type for Advanced malware sandbox (WildFire) analysis.
    */
   public const TYPE_WILDFIRE_ANALYSIS = 'WILDFIRE_ANALYSIS';
   /**
@@ -54,7 +54,7 @@ class SecurityProfile extends \Google\Model
   protected $customMirroringProfileType = CustomMirroringProfile::class;
   protected $customMirroringProfileDataType = '';
   /**
-   * Optional. An optional description of the profile. Max length 512
+   * Optional. An optional description of the profile. The maximum length is 512
    * characters.
    *
    * @var string
@@ -69,14 +69,15 @@ class SecurityProfile extends \Google\Model
    */
   public $etag;
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Immutable. Identifier. Name of the SecurityProfile resource. It matches
-   * pattern `projects|organizations/locations/{location}/securityProfiles/{secu
+   * Immutable. Identifier. Name of the `SecurityProfile` resource. Format: `org
+   * anizations/{organization}/locations/{location}/securityProfiles/{security_p
+   * rofile}` or `projects/{project}/locations/{location}/securityProfiles/{secu
    * rity_profile}`.
    *
    * @var string
@@ -85,7 +86,7 @@ class SecurityProfile extends \Google\Model
   protected $threatPreventionProfileType = ThreatPreventionProfile::class;
   protected $threatPreventionProfileDataType = '';
   /**
-   * Immutable. The single ProfileType that the SecurityProfile resource
+   * Immutable. The single `ProfileType` that the `SecurityProfile` resource
    * configures.
    *
    * @var string
@@ -119,7 +120,8 @@ class SecurityProfile extends \Google\Model
     return $this->createTime;
   }
   /**
-   * The custom TPPI configuration for the SecurityProfile.
+   * The custom network security in-band integration configuration for the
+   * `SecurityProfile`.
    *
    * @param CustomInterceptProfile $customInterceptProfile
    */
@@ -135,7 +137,8 @@ class SecurityProfile extends \Google\Model
     return $this->customInterceptProfile;
   }
   /**
-   * The custom Packet Mirroring v2 configuration for the SecurityProfile.
+   * The custom network security out-of-band integration configuration for the
+   * `SecurityProfile`.
    *
    * @param CustomMirroringProfile $customMirroringProfile
    */
@@ -151,7 +154,7 @@ class SecurityProfile extends \Google\Model
     return $this->customMirroringProfile;
   }
   /**
-   * Optional. An optional description of the profile. Max length 512
+   * Optional. An optional description of the profile. The maximum length is 512
    * characters.
    *
    * @param string $description
@@ -186,7 +189,7 @@ class SecurityProfile extends \Google\Model
     return $this->etag;
   }
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    *
    * @param string[] $labels
    */
@@ -202,8 +205,9 @@ class SecurityProfile extends \Google\Model
     return $this->labels;
   }
   /**
-   * Immutable. Identifier. Name of the SecurityProfile resource. It matches
-   * pattern `projects|organizations/locations/{location}/securityProfiles/{secu
+   * Immutable. Identifier. Name of the `SecurityProfile` resource. Format: `org
+   * anizations/{organization}/locations/{location}/securityProfiles/{security_p
+   * rofile}` or `projects/{project}/locations/{location}/securityProfiles/{secu
    * rity_profile}`.
    *
    * @param string $name
@@ -220,7 +224,7 @@ class SecurityProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * The threat prevention configuration for the SecurityProfile.
+   * The threat prevention configuration for the `SecurityProfile`.
    *
    * @param ThreatPreventionProfile $threatPreventionProfile
    */
@@ -236,7 +240,7 @@ class SecurityProfile extends \Google\Model
     return $this->threatPreventionProfile;
   }
   /**
-   * Immutable. The single ProfileType that the SecurityProfile resource
+   * Immutable. The single `ProfileType` that the `SecurityProfile` resource
    * configures.
    *
    * Accepted values: PROFILE_TYPE_UNSPECIFIED, THREAT_PREVENTION,
@@ -272,7 +276,7 @@ class SecurityProfile extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * The URL filtering configuration for the SecurityProfile.
+   * The URL filtering configuration for the `SecurityProfile`.
    *
    * @param UrlFilteringProfile $urlFilteringProfile
    */
@@ -288,7 +292,8 @@ class SecurityProfile extends \Google\Model
     return $this->urlFilteringProfile;
   }
   /**
-   * The WildFire Analysis configurations for SecurityProfile.
+   * The Advanced malware sandbox analysis configuration for the
+   * `SecurityProfile`.
    *
    * @param WildfireAnalysisProfile $wildfireAnalysisProfile
    */

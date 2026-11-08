@@ -20,16 +20,16 @@ namespace Google\Service\NetworkSecurity;
 class FirewallEndpointWildfireSettings extends \Google\Model
 {
   /**
-   * WildFire real time signature lookup timeout action not specified.
+   * Advanced malware sandbox real-time signature lookup timeout action not
+   * specified.
    */
   public const WILDFIRE_REALTIME_LOOKUP_TIMEOUT_ACTION_WILDFIRE_REALTIME_SIGNATURE_LOOKUP_TIMEOUT_ACTION_UNSPECIFIED = 'WILDFIRE_REALTIME_SIGNATURE_LOOKUP_TIMEOUT_ACTION_UNSPECIFIED';
   /**
-   * The files that timed out in the signature lookup will be allowed to
-   * transmit.
+   * Files that time out during the signature lookup are allowed to transmit.
    */
   public const WILDFIRE_REALTIME_LOOKUP_TIMEOUT_ACTION_ALLOW = 'ALLOW';
   /**
-   * The files that timed out in the signature lookup will be denied to
+   * Files that time out during the signature lookup are not allowed to
    * transmit.
    */
   public const WILDFIRE_REALTIME_LOOKUP_TIMEOUT_ACTION_DENY = 'DENY';
@@ -110,8 +110,8 @@ class FirewallEndpointWildfireSettings extends \Google\Model
    */
   public const WILDFIRE_REGION_SPAIN = 'SPAIN';
   /**
-   * Optional. Indicates whether WildFire analysis is enabled. Default value is
-   * false.
+   * Optional. Indicates whether Advanced malware sandbox analysis is enabled.
+   * The default value is `false`.
    *
    * @var bool
    */
@@ -119,33 +119,36 @@ class FirewallEndpointWildfireSettings extends \Google\Model
   protected $wildfireInlineCloudAnalysisSettingsType = FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings::class;
   protected $wildfireInlineCloudAnalysisSettingsDataType = '';
   /**
-   * Optional. Duration in milliseconds on a file being held while the WildFire
-   * real time signature cloud performs a signature lookup. Value between 1 to
-   * 5000 is valid. Default value is 1000.
+   * Optional. The duration that a file is held while the Advanced malware
+   * sandbox real-time signature cloud performs a signature lookup. Valid values
+   * are from 1 to 5000 milliseconds. In canonical JSON encoding, this is
+   * represented as a string ending in `s` (for example, `"0.001s"` to `"5s"`).
+   * The default value is `1000` milliseconds (`"1s"` in JSON).
    *
    * @var string
    */
   public $wildfireRealtimeLookupDuration;
   /**
-   * Optional. Action to take on WildFire real time signature lookup timeout.
-   * Default value is ALLOW.
+   * Optional. The action to take on an Advanced malware sandbox real-time
+   * signature lookup timeout. The default value is `ALLOW`.
    *
    * @var string
    */
   public $wildfireRealtimeLookupTimeoutAction;
   /**
-   * Optional. The region where WildFire analysis will be performed. Palo Alto
-   * Networks supports regions: https://docs.paloaltonetworks.com/advanced-
+   * Optional. The region where Advanced malware sandbox analysis is performed.
+   * For a list of Palo Alto Networks supported regions, see [Advanced WildFire
+   * global cloud](https://docs.paloaltonetworks.com/advanced-
    * wildfire/administration/advanced-wildfire-overview/advanced-wildfire-
-   * deployments/advanced-wildfire-global-cloud
+   * deployments/advanced-wildfire-global-cloud).
    *
    * @var string
    */
   public $wildfireRegion;
 
   /**
-   * Optional. Indicates whether WildFire analysis is enabled. Default value is
-   * false.
+   * Optional. Indicates whether Advanced malware sandbox analysis is enabled.
+   * The default value is `false`.
    *
    * @param bool $enabled
    */
@@ -161,7 +164,7 @@ class FirewallEndpointWildfireSettings extends \Google\Model
     return $this->enabled;
   }
   /**
-   * Optional. Settings for WildFire inline cloud analysis.
+   * Optional. Settings for Advanced malware sandbox inline cloud analysis.
    *
    * @param FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings $wildfireInlineCloudAnalysisSettings
    */
@@ -177,9 +180,11 @@ class FirewallEndpointWildfireSettings extends \Google\Model
     return $this->wildfireInlineCloudAnalysisSettings;
   }
   /**
-   * Optional. Duration in milliseconds on a file being held while the WildFire
-   * real time signature cloud performs a signature lookup. Value between 1 to
-   * 5000 is valid. Default value is 1000.
+   * Optional. The duration that a file is held while the Advanced malware
+   * sandbox real-time signature cloud performs a signature lookup. Valid values
+   * are from 1 to 5000 milliseconds. In canonical JSON encoding, this is
+   * represented as a string ending in `s` (for example, `"0.001s"` to `"5s"`).
+   * The default value is `1000` milliseconds (`"1s"` in JSON).
    *
    * @param string $wildfireRealtimeLookupDuration
    */
@@ -195,8 +200,8 @@ class FirewallEndpointWildfireSettings extends \Google\Model
     return $this->wildfireRealtimeLookupDuration;
   }
   /**
-   * Optional. Action to take on WildFire real time signature lookup timeout.
-   * Default value is ALLOW.
+   * Optional. The action to take on an Advanced malware sandbox real-time
+   * signature lookup timeout. The default value is `ALLOW`.
    *
    * Accepted values:
    * WILDFIRE_REALTIME_SIGNATURE_LOOKUP_TIMEOUT_ACTION_UNSPECIFIED, ALLOW, DENY
@@ -215,10 +220,11 @@ class FirewallEndpointWildfireSettings extends \Google\Model
     return $this->wildfireRealtimeLookupTimeoutAction;
   }
   /**
-   * Optional. The region where WildFire analysis will be performed. Palo Alto
-   * Networks supports regions: https://docs.paloaltonetworks.com/advanced-
+   * Optional. The region where Advanced malware sandbox analysis is performed.
+   * For a list of Palo Alto Networks supported regions, see [Advanced WildFire
+   * global cloud](https://docs.paloaltonetworks.com/advanced-
    * wildfire/administration/advanced-wildfire-overview/advanced-wildfire-
-   * deployments/advanced-wildfire-global-cloud
+   * deployments/advanced-wildfire-global-cloud).
    *
    * Accepted values: WILDFIRE_REGION_UNSPECIFIED, CANADA, UNITED_STATES, JAPAN,
    * SINGAPORE, UNITED_KINGDOM, AUSTRALIA, GERMANY, INDIA, SWITZERLAND, POLAND,

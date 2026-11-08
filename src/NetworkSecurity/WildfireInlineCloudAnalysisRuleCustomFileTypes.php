@@ -21,14 +21,16 @@ class WildfireInlineCloudAnalysisRuleCustomFileTypes extends \Google\Collection
 {
   protected $collection_key = 'fileTypes';
   /**
-   * Required. File types to be submitted for WildFire inline cloud analysis.
+   * Required. File types to be submitted for Advanced malware sandbox inline
+   * cloud analysis.
    *
    * @var string[]
    */
   public $fileTypes;
 
   /**
-   * Required. File types to be submitted for WildFire inline cloud analysis.
+   * Required. File types to be submitted for Advanced malware sandbox inline
+   * cloud analysis.
    *
    * @param string[] $fileTypes
    */

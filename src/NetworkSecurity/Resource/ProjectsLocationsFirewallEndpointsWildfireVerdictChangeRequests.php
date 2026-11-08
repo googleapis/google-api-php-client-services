@@ -31,13 +31,15 @@ use Google\Service\NetworkSecurity\WildfireVerdictChangeRequest;
 class ProjectsLocationsFirewallEndpointsWildfireVerdictChangeRequests extends \Google\Service\Resource
 {
   /**
-   * Create WildfireVerdictChangeRequest in a given Firewall Endpoint in a project
-   * and location. (wildfireVerdictChangeRequests.create)
+   * Creates an Advanced malware sandbox verdict change request in a given
+   * firewall endpoint in a project and location.
+   * (wildfireVerdictChangeRequests.create)
    *
    * @param string $parent Required. Parent value for
-   * CreateWildfireVerdictChangeRequestRequest. The parent is a firewall endpoint
-   * resource. Format: organizations|projects/{project_or_organization}/locations/
-   * {location}/firewallEndpoints/{firewall_endpoint}
+   * `CreateWildfireVerdictChangeRequestRequest`. The parent is a firewall
+   * endpoint resource. Format: `organizations/{organization}/locations/{location}
+   * /firewallEndpoints/{firewall_endpoint}` or `projects/{project}/locations/{loc
+   * ation}/firewallEndpoints/{firewall_endpoint}`.
    * @param WildfireVerdictChangeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return WildfireVerdictChangeRequest
@@ -50,15 +52,17 @@ class ProjectsLocationsFirewallEndpointsWildfireVerdictChangeRequests extends \G
     return $this->call('create', [$params], WildfireVerdictChangeRequest::class);
   }
   /**
-   * Get WildfireVerdictChangeRequest in a given Firewall Endpoint in a project
-   * and location. (wildfireVerdictChangeRequests.get)
+   * Gets an Advanced malware sandbox verdict change request in a given firewall
+   * endpoint in a project and location. (wildfireVerdictChangeRequests.get)
    *
-   * @param string $name Required. Name of the WildfireVerdictChangeRequest to
-   * retrieve. Format: organizations|projects/{project_or_organization}/locations/
-   * {location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequest
-   * s/{wildfire_verdict_change_request_id} Where
-   * {wildfire_verdict_change_request_id} is the ID in the format:
-   * ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+   * @param string $name Required. The name of the `WildfireVerdictChangeRequest`
+   * to retrieve. Format: `organizations/{organization}/locations/{location}/firew
+   * allEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verd
+   * ict_change_request_id}` or `projects/{project}/locations/{location}/firewallE
+   * ndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_
+   * change_request_id}`. Where `{wildfire_verdict_change_request_id}` is an ID in
+   * the format `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-
+   * 9a-fA-F]{12}$`.
    * @param array $optParams Optional parameters.
    * @return WildfireVerdictChangeRequest
    * @throws \Google\Service\Exception
@@ -70,26 +74,33 @@ class ProjectsLocationsFirewallEndpointsWildfireVerdictChangeRequests extends \G
     return $this->call('get', [$params], WildfireVerdictChangeRequest::class);
   }
   /**
-   * Lists WildfireVerdictChangeRequests in a given Firewall Endpoint in a project
-   * and location. (wildfireVerdictChangeRequests.listProjectsLocationsFirewallEnd
-   * pointsWildfireVerdictChangeRequests)
+   * Lists the Advanced malware sandbox verdict change requests in a given
+   * firewall endpoint in a project and location. (wildfireVerdictChangeRequests.l
+   * istProjectsLocationsFirewallEndpointsWildfireVerdictChangeRequests)
    *
    * @param string $parent Required. Parent value for
-   * ListWildfireVerdictChangeRequestsRequest. The parent is a firewall endpoint
-   * resource. Format: organizations|projects/{project_or_organization}/locations/
-   * {location}/firewallEndpoints/{firewall_endpoint}
+   * `ListWildfireVerdictChangeRequestsRequest`. The parent is a firewall endpoint
+   * resource. Format: `organizations/{organization}/locations/{location}/firewall
+   * Endpoints/{firewall_endpoint}` or `projects/{project}/locations/{location}/fi
+   * rewallEndpoints/{firewall_endpoint}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter expression to filter the results.
-   * See AIP-160 for filtering syntax. Supported fields are: - `sha256` (string,
-   * equality only, e.g. `sha256 = "..."`) - `state` (enum, equality only, e.g.
-   * `state = "ACTIVE"`) - `create_time` (timestamp, comparisons, e.g.
-   * `create_time > "2026-01-01T00:00:00Z"`)
-   * @opt_param int pageSize Optional. Requested page size. Server may return
-   * fewer items than requested. If unspecified, server will pick an appropriate
-   * default.
-   * @opt_param string pageToken Optional. A token identifying a page of results
-   * the server should return.
+   * Supported fields are: - `sha256` (string, equality only, for example, `sha256
+   * = "..."`) - `state` (enum, equality only, valid values are `OPEN`, `CLOSED`,
+   * or `PENDING`, for example, `state = "PENDING"`) - `create_time` (timestamp,
+   * comparisons, for example, `create_time >= "2026-01-01T00:00:00Z" AND
+   * create_time <= "2026-01-31T23:59:59Z"`). If filtering by `create_time`, you
+   * must specify both a start time and an end time. If `create_time` is not
+   * specified, the query defaults to the past 30 days.
+   * @opt_param int pageSize Optional. Requested page size. The server might
+   * return fewer items than requested. If unspecified, the server picks an
+   * appropriate default.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `ListWildfireVerdictChangeRequests` call. Provide this to retrieve the
+   * subsequent page. When paginating, all other parameters provided to
+   * `ListWildfireVerdictChangeRequests` must match the call that provided the
+   * page token.
    * @return ListWildfireVerdictChangeRequestsResponse
    * @throws \Google\Service\Exception
    */

@@ -41,11 +41,12 @@ class FirewallEndpoint extends \Google\Collection
   public const STATE_INACTIVE = 'INACTIVE';
   protected $collection_key = 'associations';
   /**
-   * Output only. Deprecated: List of networks that are associated with this
-   * endpoint in the local zone. This is a projection of the
-   * FirewallEndpointAssociations pointing at this endpoint. A network will only
-   * appear in this list after traffic routing is fully configured. Format:
-   * projects/{project}/global/networks/{name}.
+   * Output only. Deprecated: Use the `network` field in the `associations`
+   * message instead. List of networks that are associated with this endpoint in
+   * the local zone. This is a projection of the firewall endpoint association
+   * resources pointing at this endpoint. A network only appears in this list
+   * after traffic routing is fully configured. Format:
+   * `projects/{project}/global/networks/{name}`.
    *
    * @deprecated
    * @var string[]
@@ -62,13 +63,14 @@ class FirewallEndpoint extends \Google\Collection
    */
   public $billingProjectId;
   /**
-   * Output only. Create time stamp.
+   * Output only. Create timestamp.
    *
    * @var string
    */
   public $createTime;
   /**
-   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * Optional. Description of the firewall endpoint. The maximum length is 2048
+   * characters.
    *
    * @var string
    */
@@ -76,13 +78,13 @@ class FirewallEndpoint extends \Google\Collection
   protected $endpointSettingsType = FirewallEndpointEndpointSettings::class;
   protected $endpointSettingsDataType = '';
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    *
    * @var string[]
    */
   public $labels;
   /**
-   * Immutable. Identifier. Name of resource.
+   * Immutable. Identifier. The name of the resource.
    *
    * @var string
    */
@@ -95,13 +97,13 @@ class FirewallEndpoint extends \Google\Collection
    */
   public $reconciling;
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    *
    * @var bool
    */
   public $satisfiesPzi;
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    *
    * @var bool
    */
@@ -113,7 +115,7 @@ class FirewallEndpoint extends \Google\Collection
    */
   public $state;
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    *
    * @var string
    */
@@ -122,11 +124,12 @@ class FirewallEndpoint extends \Google\Collection
   protected $wildfireSettingsDataType = '';
 
   /**
-   * Output only. Deprecated: List of networks that are associated with this
-   * endpoint in the local zone. This is a projection of the
-   * FirewallEndpointAssociations pointing at this endpoint. A network will only
-   * appear in this list after traffic routing is fully configured. Format:
-   * projects/{project}/global/networks/{name}.
+   * Output only. Deprecated: Use the `network` field in the `associations`
+   * message instead. List of networks that are associated with this endpoint in
+   * the local zone. This is a projection of the firewall endpoint association
+   * resources pointing at this endpoint. A network only appears in this list
+   * after traffic routing is fully configured. Format:
+   * `projects/{project}/global/networks/{name}`.
    *
    * @deprecated
    * @param string[] $associatedNetworks
@@ -144,9 +147,9 @@ class FirewallEndpoint extends \Google\Collection
     return $this->associatedNetworks;
   }
   /**
-   * Output only. List of FirewallEndpointAssociations that are associated to
-   * this endpoint. An association will only appear in this list after traffic
-   * routing is fully configured.
+   * Output only. List of firewall endpoint association resources that are
+   * associated with this endpoint. An association only appears in this list
+   * after traffic routing is fully configured.
    *
    * @param FirewallEndpointAssociationReference[] $associations
    */
@@ -180,7 +183,7 @@ class FirewallEndpoint extends \Google\Collection
     return $this->billingProjectId;
   }
   /**
-   * Output only. Create time stamp.
+   * Output only. Create timestamp.
    *
    * @param string $createTime
    */
@@ -196,7 +199,8 @@ class FirewallEndpoint extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * Optional. Description of the firewall endpoint. The maximum length is 2048
+   * characters.
    *
    * @param string $description
    */
@@ -228,7 +232,7 @@ class FirewallEndpoint extends \Google\Collection
     return $this->endpointSettings;
   }
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    *
    * @param string[] $labels
    */
@@ -244,7 +248,7 @@ class FirewallEndpoint extends \Google\Collection
     return $this->labels;
   }
   /**
-   * Immutable. Identifier. Name of resource.
+   * Immutable. Identifier. The name of the resource.
    *
    * @param string $name
    */
@@ -277,7 +281,7 @@ class FirewallEndpoint extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    *
    * @param bool $satisfiesPzi
    */
@@ -293,7 +297,7 @@ class FirewallEndpoint extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    *
    * @param bool $satisfiesPzs
    */
@@ -327,7 +331,7 @@ class FirewallEndpoint extends \Google\Collection
     return $this->state;
   }
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    *
    * @param string $updateTime
    */
@@ -343,7 +347,7 @@ class FirewallEndpoint extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * Optional. Settings for WildFire analysis.
+   * Optional. Settings for Advanced malware sandbox (WildFire) analysis.
    *
    * @param FirewallEndpointWildfireSettings $wildfireSettings
    */

@@ -40,30 +40,31 @@ class WildfireSubmissionRule extends \Google\Model
    */
   public const FILE_SELECTION_MODE_FILE_SELECTION_MODE_UNSPECIFIED = 'FILE_SELECTION_MODE_UNSPECIFIED';
   /**
-   * Submit all the file types for scan.
+   * Submit all file types for scanning.
    */
   public const FILE_SELECTION_MODE_ALL_FILE_TYPES = 'ALL_FILE_TYPES';
   /**
-   * Submit a custom list of file types for scan.
+   * Submit a custom list of file types for scanning.
    */
   public const FILE_SELECTION_MODE_CUSTOM_FILE_TYPES = 'CUSTOM_FILE_TYPES';
   protected $customFileTypesType = WildfireSubmissionRuleCustomFileTypes::class;
   protected $customFileTypesDataType = '';
   /**
-   * Required. Direction for the files to be analyzed by WildFire.
+   * Required. Direction for the files to be analyzed by Advanced malware
+   * sandbox.
    *
    * @var string
    */
   public $direction;
   /**
-   * Required. File selection mode for WildFire analysis.
+   * Required. File selection mode for Advanced malware sandbox analysis.
    *
    * @var string
    */
   public $fileSelectionMode;
 
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox analysis.
    *
    * @param WildfireSubmissionRuleCustomFileTypes $customFileTypes
    */
@@ -79,7 +80,8 @@ class WildfireSubmissionRule extends \Google\Model
     return $this->customFileTypes;
   }
   /**
-   * Required. Direction for the files to be analyzed by WildFire.
+   * Required. Direction for the files to be analyzed by Advanced malware
+   * sandbox.
    *
    * Accepted values: DIRECTION_UNSPECIFIED, UPLOAD, DOWNLOAD, BOTH
    *
@@ -97,7 +99,7 @@ class WildfireSubmissionRule extends \Google\Model
     return $this->direction;
   }
   /**
-   * Required. File selection mode for WildFire analysis.
+   * Required. File selection mode for Advanced malware sandbox analysis.
    *
    * Accepted values: FILE_SELECTION_MODE_UNSPECIFIED, ALL_FILE_TYPES,
    * CUSTOM_FILE_TYPES

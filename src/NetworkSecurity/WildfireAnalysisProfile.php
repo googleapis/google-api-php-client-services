@@ -31,8 +31,9 @@ class WildfireAnalysisProfile extends \Google\Collection
   protected $wildfireOverridesType = WildfireOverride::class;
   protected $wildfireOverridesDataType = 'array';
   /**
-   * Optional. Whether to hold the transfer of a file while the WildFire real-
-   * time signature cloud performs a signature lookup. Default value is false.
+   * Optional. Whether to hold the transfer of a file while the Advanced malware
+   * sandbox real-time signature cloud performs a signature lookup. The default
+   * value is `false`.
    *
    * @var bool
    */
@@ -43,7 +44,7 @@ class WildfireAnalysisProfile extends \Google\Collection
   protected $wildfireThreatOverridesDataType = 'array';
 
   /**
-   * Optional. Configuration for WildFire inline cloud analysis.
+   * Optional. Configuration for Advanced malware sandbox inline cloud analysis.
    *
    * @param WildfireInlineCloudAnalysisRule[] $wildfireInlineCloudAnalysisRules
    */
@@ -59,8 +60,8 @@ class WildfireAnalysisProfile extends \Google\Collection
     return $this->wildfireInlineCloudAnalysisRules;
   }
   /**
-   * Optional. Configuration for overriding inline ML WildFire actions per
-   * protocol.
+   * Optional. Configuration for overriding inline ML Advanced malware sandbox
+   * actions per protocol.
    *
    * @param WildfireInlineMlOverride[] $wildfireInlineMlOverrides
    */
@@ -76,7 +77,7 @@ class WildfireAnalysisProfile extends \Google\Collection
     return $this->wildfireInlineMlOverrides;
   }
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Settings for Advanced malware sandbox inline ML analysis.
    *
    * @param WildfireInlineMlSettings $wildfireInlineMlSetting
    */
@@ -92,7 +93,8 @@ class WildfireAnalysisProfile extends \Google\Collection
     return $this->wildfireInlineMlSetting;
   }
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Deprecated: Use `wildfire_inline_ml_setting` instead. Settings
+   * for Advanced malware sandbox inline ML analysis.
    *
    * @deprecated
    * @param WildfireInlineMlSettings[] $wildfireInlineMlSettings
@@ -110,7 +112,8 @@ class WildfireAnalysisProfile extends \Google\Collection
     return $this->wildfireInlineMlSettings;
   }
   /**
-   * Optional. Configuration for overriding WildFire actions per protocol.
+   * Optional. Configuration for overriding Advanced malware sandbox actions per
+   * protocol.
    *
    * @param WildfireOverride[] $wildfireOverrides
    */
@@ -126,8 +129,9 @@ class WildfireAnalysisProfile extends \Google\Collection
     return $this->wildfireOverrides;
   }
   /**
-   * Optional. Whether to hold the transfer of a file while the WildFire real-
-   * time signature cloud performs a signature lookup. Default value is false.
+   * Optional. Whether to hold the transfer of a file while the Advanced malware
+   * sandbox real-time signature cloud performs a signature lookup. The default
+   * value is `false`.
    *
    * @param bool $wildfireRealtimeLookup
    */
@@ -143,7 +147,8 @@ class WildfireAnalysisProfile extends \Google\Collection
     return $this->wildfireRealtimeLookup;
   }
   /**
-   * Optional. Configurations for WildFire file submissions.
+   * Optional. Configurations for Advanced malware sandbox (WildFire) file
+   * submissions.
    *
    * @param WildfireSubmissionRule[] $wildfireSubmissionRules
    */
@@ -159,8 +164,8 @@ class WildfireAnalysisProfile extends \Google\Collection
     return $this->wildfireSubmissionRules;
   }
   /**
-   * Optional. Configuration for overriding WildFire threats action by threat_id
-   * match.
+   * Optional. Configuration for overriding the Advanced malware sandbox threat
+   * action by `threat_id` match.
    *
    * @param WildfireThreatOverride[] $wildfireThreatOverrides
    */

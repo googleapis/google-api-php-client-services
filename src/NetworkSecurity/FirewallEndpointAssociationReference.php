@@ -20,23 +20,25 @@ namespace Google\Service\NetworkSecurity;
 class FirewallEndpointAssociationReference extends \Google\Model
 {
   /**
-   * Output only. The resource name of the FirewallEndpointAssociation. Format:
-   * projects/{project}/locations/{location}/firewallEndpointAssociations/{id}
+   * Output only. The resource name of the `FirewallEndpointAssociation`.
+   * Format: `projects/{project}/locations/{location}/firewallEndpointAssociatio
+   * ns/{id}`.
    *
    * @var string
    */
   public $name;
   /**
-   * Output only. The VPC network associated. Format:
-   * projects/{project}/global/networks/{name}.
+   * Output only. The associated VPC network. Format:
+   * `projects/{project}/global/networks/{name}`.
    *
    * @var string
    */
   public $network;
 
   /**
-   * Output only. The resource name of the FirewallEndpointAssociation. Format:
-   * projects/{project}/locations/{location}/firewallEndpointAssociations/{id}
+   * Output only. The resource name of the `FirewallEndpointAssociation`.
+   * Format: `projects/{project}/locations/{location}/firewallEndpointAssociatio
+   * ns/{id}`.
    *
    * @param string $name
    */
@@ -52,8 +54,8 @@ class FirewallEndpointAssociationReference extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. The VPC network associated. Format:
-   * projects/{project}/global/networks/{name}.
+   * Output only. The associated VPC network. Format:
+   * `projects/{project}/global/networks/{name}`.
    *
    * @param string $network
    */

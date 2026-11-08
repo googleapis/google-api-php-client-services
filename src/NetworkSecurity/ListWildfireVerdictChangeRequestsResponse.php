@@ -21,7 +21,8 @@ class ListWildfireVerdictChangeRequestsResponse extends \Google\Collection
 {
   protected $collection_key = 'wildfireVerdictChangeRequests';
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
    *
    * @var string
    */
@@ -36,7 +37,8 @@ class ListWildfireVerdictChangeRequestsResponse extends \Google\Collection
   protected $wildfireVerdictChangeRequestsDataType = 'array';
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
    *
    * @param string $nextPageToken
    */
@@ -68,7 +70,7 @@ class ListWildfireVerdictChangeRequestsResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * The list of WildfireVerdictChangeRequests
+   * The list of `WildfireVerdictChangeRequest` resources.
    *
    * @param WildfireVerdictChangeRequest[] $wildfireVerdictChangeRequests
    */
