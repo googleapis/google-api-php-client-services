@@ -20,6 +20,34 @@ namespace Google\Service\ArtifactRegistry;
 class PrewarmedArtifact extends \Google\Model
 {
   /**
+   * State not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The artifact is currently being cached.
+   */
+  public const STATE_CACHING = 'CACHING';
+  /**
+   * The artifact is cached and ready for streaming.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Caching the artifact failed. See `error_message` for details.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Output only. The time the artifact was first prewarmed.
+   *
+   * @var string
+   */
+  public $createTime;
+  /**
+   * Output only. The error message if the state is `FAILED`.
+   *
+   * @var string
+   */
+  public $errorMessage;
+  /**
    * The expiration time of the prewarmed artifact.
    *
    * @var string
@@ -32,6 +60,19 @@ class PrewarmedArtifact extends \Google\Model
    */
   public $location;
   /**
+   * Output only. The compressed size of the prewarmed artifact in bytes. This
+   * is the size counted against the prewarm storage quota.
+   *
+   * @var string
+   */
+  public $sizeBytes;
+  /**
+   * Output only. The caching state of the prewarmed artifact.
+   *
+   * @var string
+   */
+  public $state;
+  /**
    * URL to access the image. Example: us-west4-docker.pkg.dev/test-
    * project/test-repo/nginx@sha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf07
    * 2163515467d6a823c7cf
@@ -40,6 +81,38 @@ class PrewarmedArtifact extends \Google\Model
    */
   public $uri;
 
+  /**
+   * Output only. The time the artifact was first prewarmed.
+   *
+   * @param string $createTime
+   */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
+  }
+  /**
+   * Output only. The error message if the state is `FAILED`.
+   *
+   * @param string $errorMessage
+   */
+  public function setErrorMessage($errorMessage)
+  {
+    $this->errorMessage = $errorMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getErrorMessage()
+  {
+    return $this->errorMessage;
+  }
   /**
    * The expiration time of the prewarmed artifact.
    *
@@ -71,6 +144,41 @@ class PrewarmedArtifact extends \Google\Model
   public function getLocation()
   {
     return $this->location;
+  }
+  /**
+   * Output only. The compressed size of the prewarmed artifact in bytes. This
+   * is the size counted against the prewarm storage quota.
+   *
+   * @param string $sizeBytes
+   */
+  public function setSizeBytes($sizeBytes)
+  {
+    $this->sizeBytes = $sizeBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getSizeBytes()
+  {
+    return $this->sizeBytes;
+  }
+  /**
+   * Output only. The caching state of the prewarmed artifact.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CACHING, ACTIVE, FAILED
+   *
+   * @param self::STATE_* $state
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return self::STATE_*
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * URL to access the image. Example: us-west4-docker.pkg.dev/test-
