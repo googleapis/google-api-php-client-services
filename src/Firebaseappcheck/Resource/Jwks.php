@@ -30,10 +30,10 @@ use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1PublicJwkSet;
 class Jwks extends \Google\Service\Resource
 {
   /**
-   * Returns a public JWK set as specified by [RFC
-   * 7517](https://tools.ietf.org/html/rfc7517) that can be used to verify App
-   * Check tokens. Exactly one of the public keys in the returned set will
-   * successfully validate any App Check token that is currently valid. (jwks.get)
+   * Returns a public JWK set as specified by [RFC 7517](https://www.rfc-
+   * editor.org/info/rfc7517/) that can be used to verify App Check tokens.
+   * Exactly one of the public keys in the returned set will successfully validate
+   * any App Check token that is currently valid. (jwks.get)
    *
    * @param string $name Required. The relative resource name to the public JWK
    * set. Must always be exactly the string `jwks`.
