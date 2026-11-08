@@ -40,6 +40,10 @@ class EnvironmentConfig extends \Google\Model
    */
   public const ENVIRONMENT_SIZE_ENVIRONMENT_SIZE_EXTRA_LARGE = 'ENVIRONMENT_SIZE_EXTRA_LARGE';
   /**
+   * The environment size is double extra large.
+   */
+  public const ENVIRONMENT_SIZE_ENVIRONMENT_SIZE_X_EXTRA_LARGE = 'ENVIRONMENT_SIZE_X_EXTRA_LARGE';
+  /**
    * Default mode doesn't change environment parameters.
    */
   public const RESILIENCE_MODE_RESILIENCE_MODE_UNSPECIFIED = 'RESILIENCE_MODE_UNSPECIFIED';
@@ -246,7 +250,7 @@ class EnvironmentConfig extends \Google\Model
    *
    * Accepted values: ENVIRONMENT_SIZE_UNSPECIFIED, ENVIRONMENT_SIZE_SMALL,
    * ENVIRONMENT_SIZE_MEDIUM, ENVIRONMENT_SIZE_LARGE,
-   * ENVIRONMENT_SIZE_EXTRA_LARGE
+   * ENVIRONMENT_SIZE_EXTRA_LARGE, ENVIRONMENT_SIZE_X_EXTRA_LARGE
    *
    * @param self::ENVIRONMENT_SIZE_* $environmentSize
    */
