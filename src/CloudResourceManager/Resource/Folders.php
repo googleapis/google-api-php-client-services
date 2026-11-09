@@ -240,7 +240,7 @@ class Folders extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
-   * Search for folders that match specific filter criteria. `search()` provides
+   * Searches for folders that match specific filter criteria. `search()` provides
    * an eventually consistent view of the folders a user has access to which meet
    * the specified filter criteria. This will only return folders on which the
    * caller has the permission `resourcemanager.folders.get`. (folders.search)

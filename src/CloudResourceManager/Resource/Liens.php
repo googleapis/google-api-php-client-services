@@ -32,7 +32,7 @@ use Google\Service\CloudResourceManager\ListLiensResponse;
 class Liens extends \Google\Service\Resource
 {
   /**
-   * Create a Lien which applies to the resource denoted by the `parent` field.
+   * Creates a Lien which applies to the resource denoted by the `parent` field.
    * Callers of this method will require permission on the `parent` resource. For
    * example, applying to `projects/1234` requires permission
    * `resourcemanager.projects.updateLiens`. NOTE: Some resources may limit the
@@ -50,7 +50,7 @@ class Liens extends \Google\Service\Resource
     return $this->call('create', [$params], Lien::class);
   }
   /**
-   * Delete a Lien by `name`. Callers of this method will require permission on
+   * Deletes a Lien by `name`. Callers of this method will require permission on
    * the `parent` resource. For example, a Lien with a `parent` of `projects/1234`
    * requires permission `resourcemanager.projects.updateLiens`. (liens.delete)
    *
@@ -66,7 +66,7 @@ class Liens extends \Google\Service\Resource
     return $this->call('delete', [$params], CloudresourcemanagerEmpty::class);
   }
   /**
-   * Retrieve a Lien by `name`. Callers of this method will require permission on
+   * Retrieves a Lien by `name`. Callers of this method will require permission on
    * the `parent` resource. For example, a Lien with a `parent` of `projects/1234`
    * requires permission `resourcemanager.projects.get` (liens.get)
    *
@@ -82,7 +82,7 @@ class Liens extends \Google\Service\Resource
     return $this->call('get', [$params], Lien::class);
   }
   /**
-   * List all Liens applied to the `parent` resource. Callers of this method will
+   * Lists all Liens applied to the `parent` resource. Callers of this method will
    * require permission on the `parent` resource. For example, a Lien with a
    * `parent` of `projects/1234` requires permission
    * `resourcemanager.projects.get`. (liens.listLiens)
