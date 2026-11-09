@@ -21,8 +21,8 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
 {
   /**
    * Optional. Unique account identifier for this user. If using Account
-   * defense, this should match the hashed_account_id field. Otherwise, a unique
-   * and persistent identifier for this account.
+   * defense, this should match the `user_info.account_id` field. Otherwise, a
+   * unique and persistent identifier for this account.
    *
    * @var string
    */
@@ -62,8 +62,8 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
 
   /**
    * Optional. Unique account identifier for this user. If using Account
-   * defense, this should match the hashed_account_id field. Otherwise, a unique
-   * and persistent identifier for this account.
+   * defense, this should match the `user_info.account_id` field. Otherwise, a
+   * unique and persistent identifier for this account.
    *
    * @param string $accountId
    */

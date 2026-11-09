@@ -34,9 +34,9 @@ class GoogleCloudRecaptchaenterpriseV1TestingOptions extends \Google\Model
    */
   public const TESTING_CHALLENGE_UNSOLVABLE_CHALLENGE = 'UNSOLVABLE_CHALLENGE';
   /**
-   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all
-   * challenge requests for this site return nocaptcha if NOCAPTCHA, or an
-   * unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (`CHECKBOX`, `INVISIBLE`), all
+   * challenge requests for this site do not show a challenge if `NOCAPTCHA`, or
+   * show an unsolvable challenge if `UNSOLVABLE_CHALLENGE`.
    *
    * @var string
    */
@@ -50,9 +50,9 @@ class GoogleCloudRecaptchaenterpriseV1TestingOptions extends \Google\Model
   public $testingScore;
 
   /**
-   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all
-   * challenge requests for this site return nocaptcha if NOCAPTCHA, or an
-   * unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (`CHECKBOX`, `INVISIBLE`), all
+   * challenge requests for this site do not show a challenge if `NOCAPTCHA`, or
+   * show an unsolvable challenge if `UNSOLVABLE_CHALLENGE`.
    *
    * Accepted values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA,
    * UNSOLVABLE_CHALLENGE

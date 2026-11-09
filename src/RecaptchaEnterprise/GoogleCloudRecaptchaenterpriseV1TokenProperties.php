@@ -51,10 +51,10 @@ class GoogleCloudRecaptchaenterpriseV1TokenProperties extends \Google\Model
   /**
    * The action provided at token generation was different than the
    * `expected_action` in the assessment request. The comparison is case-
-   * insensitive. This reason can only be returned if all of the following are
-   * true: - your `site_key` has the POLICY_BASED_CHALLENGE integration type -
-   * you set an action score threshold higher than 0.0 - you provided a non-
-   * empty `expected_action`
+   * insensitive. This reason can only be returned if an `expected_action` is
+   * provided and either: - your `site_key` is a Universal key, or - your
+   * `site_key` has the `POLICY_BASED_CHALLENGE` integration type with an action
+   * score threshold higher than 0.0
    */
   public const INVALID_REASON_UNEXPECTED_ACTION = 'UNEXPECTED_ACTION';
   /**

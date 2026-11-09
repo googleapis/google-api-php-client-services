@@ -188,8 +188,9 @@ class GoogleCloudRecaptchaenterpriseV1Assessment extends \Google\Model
     return $this->name;
   }
   /**
-   * Output only. Assessment returned when a site key, a token, and a phone
-   * number as `user_id` are provided. SMS defense needs to be enabled.
+   * Output only. Assessment returned when a site key, a token,
+   * `user_info.account_id`, and a phone number in `user_info.user_ids` are
+   * provided. SMS defense must be enabled.
    *
    * @param GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment $phoneFraudAssessment
    */
