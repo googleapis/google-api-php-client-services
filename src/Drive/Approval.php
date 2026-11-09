@@ -62,6 +62,13 @@ class Approval extends \Google\Collection
    */
   public $approvalId;
   /**
+   * The revision ID of the file when the approval completed successfully. This
+   * is only set when the approval status is APPROVED.
+   *
+   * @var string
+   */
+  public $approvedRevisionId;
+  /**
    * The time the approval was completed.
    *
    * @var string
@@ -129,6 +136,23 @@ class Approval extends \Google\Collection
   public function getApprovalId()
   {
     return $this->approvalId;
+  }
+  /**
+   * The revision ID of the file when the approval completed successfully. This
+   * is only set when the approval status is APPROVED.
+   *
+   * @param string $approvedRevisionId
+   */
+  public function setApprovedRevisionId($approvedRevisionId)
+  {
+    $this->approvedRevisionId = $approvedRevisionId;
+  }
+  /**
+   * @return string
+   */
+  public function getApprovedRevisionId()
+  {
+    return $this->approvedRevisionId;
   }
   /**
    * The time the approval was completed.
