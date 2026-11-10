@@ -106,7 +106,7 @@ class GoogleAppsCardV1Widget extends \Google\Collection
    * A list of buttons. For example, the following JSON creates two buttons. The
    * first is a blue text button and the second is an image button that opens a
    * link: ``` "buttonList": { "buttons": [ { "text": "Edit", "color": { "red":
-   * 0, "green": 0, "blue": 1, }, "disabled": true, }, { "icon": { "knownIcon":
+   * 0, "green": 0, "blue": 1 }, "disabled": true }, { "icon": { "knownIcon":
    * "INVITE", "altText": "check calendar" }, "onClick": { "openLink": { "url":
    * "https://example.com/calendar" } } } ] } ```
    *
@@ -210,11 +210,11 @@ class GoogleAppsCardV1Widget extends \Google\Collection
   }
   /**
    * Displays a decorated text item. For example, the following JSON creates a
-   * decorated text widget showing email address: ``` "decoratedText": { "icon":
-   * { "knownIcon": "EMAIL" }, "topLabel": "Email Address", "text":
+   * decorated text widget showing email address: ``` "decoratedText": {
+   * "startIcon": { "knownIcon": "EMAIL" }, "topLabel": "Email Address", "text":
    * "sasha@example.com", "bottomLabel": "This is a new Email address!",
    * "switchControl": { "name": "has_send_welcome_email_to_sasha", "selected":
-   * false, "controlType": "CHECKBOX" } } ```
+   * false, "controlType": "CHECK_BOX" } } ```
    *
    * @param GoogleAppsCardV1DecoratedText $decoratedText
    */
@@ -275,9 +275,8 @@ class GoogleAppsCardV1Widget extends \Google\Collection
    * "title": "A fine collection of items", "columnCount": 2, "borderStyle": {
    * "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
    * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" },
-   * "borderStyle": { "type": "STROKE" } }, "title": "An item", "textAlignment":
-   * "CENTER" } ], "onClick": { "openLink": { "url": "https://www.example.com" }
-   * } } ```
+   * "borderStyle": { "type": "STROKE" } }, "title": "An item" } ], "onClick": {
+   * "openLink": { "url": "https://www.example.com" } } } ```
    *
    * @param GoogleAppsCardV1Grid $grid
    */
@@ -352,7 +351,7 @@ class GoogleAppsCardV1Widget extends \Google\Collection
    * Displays a selection control that lets users select items. Selection
    * controls can be checkboxes, radio buttons, switches, or dropdown menus. For
    * example, the following JSON creates a dropdown menu that lets users choose
-   * a size: ``` "selectionInput": { "name": "size", "label": "Size" "type":
+   * a size: ``` "selectionInput": { "name": "size", "label": "Size", "type":
    * "DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false
    * }, { "text": "M", "value": "medium", "selected": true }, { "text": "L",
    * "value": "large", "selected": false }, { "text": "XL", "value":

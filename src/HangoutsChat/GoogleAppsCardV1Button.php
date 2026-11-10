@@ -115,7 +115,7 @@ class GoogleAppsCardV1Button extends \Google\Model
    * (0/255) represents the absence of color and `1` (255/255) represents the
    * maximum intensity of the color. For example, the following sets the color
    * to red at its maximum intensity: ``` "color": { "red": 1, "green": 0,
-   * "blue": 0, } ``` The `alpha` field is unavailable for button color. If
+   * "blue": 0 } ``` The `alpha` field is unavailable for button color. If
    * specified, this field is ignored.
    *
    * @param Color $color

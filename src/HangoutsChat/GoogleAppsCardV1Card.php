@@ -88,11 +88,11 @@ class GoogleAppsCardV1Card extends \Google\Collection
    * up to 10 `CardAction` items. [Google Workspace add-
    * ons](https://developers.google.com/workspace/add-ons): For example, the
    * following JSON constructs a card action menu with `Settings` and `Send
-   * Feedback` options: ``` "card_actions": [ { "actionLabel": "Settings",
-   * "onClick": { "action": { "functionName": "goToView", "parameters": [ {
-   * "key": "viewType", "value": "SETTING" } ], "loadIndicator":
-   * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick":
-   * { "openLink": { "url": "https://example.com/feedback" } } } ] ```
+   * Feedback` options: ``` "cardActions": [ { "actionLabel": "Settings",
+   * "onClick": { "action": { "function": "goToView", "parameters": [ { "key":
+   * "viewType", "value": "SETTING" } ], "loadIndicator": "SPINNER" } } }, {
+   * "actionLabel": "Send Feedback", "onClick": { "openLink": { "url":
+   * "https://example.com/feedback" } } } ] ```
    *
    * @param GoogleAppsCardV1CardAction[] $cardActions
    */
