@@ -59,6 +59,7 @@ class APIhub extends \Google\Service
   public $projects_locations_discoveredApiObservations;
   public $projects_locations_discoveredApiObservations_discoveredApiOperations;
   public $projects_locations_externalApis;
+  public $projects_locations_generatedSpecApis;
   public $projects_locations_hostProjectRegistrations;
   public $projects_locations_operations;
   public $projects_locations_plugins;
@@ -1154,6 +1155,58 @@ class APIhub extends \Google\Service
                   'required' => true,
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_generatedSpecApis = new APIhub\Resource\ProjectsLocationsGeneratedSpecApis(
+        $this,
+        $this->serviceName,
+        'generatedSpecApis',
+        [
+          'methods' => [
+            'generateSpec' => [
+              'path' => 'v1/{+name}:generateSpec',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/generatedSpecApis',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

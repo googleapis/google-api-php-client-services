@@ -33,9 +33,9 @@ class ProjectsLocationsHostProjectRegistrations extends \Google\Service\Resource
   /**
    * Create a host project registration. A Google cloud project can be registered
    * as a host project if it is not attached as a runtime project to another host
-   * project. A project can be registered as a host project only once. Subsequent
-   * register calls for the same project will fail.
-   * (hostProjectRegistrations.create)
+   * project. A project can have only one host project registration at a time.
+   * Subsequent register calls for the same project will fail until the existing
+   * registration is deleted. (hostProjectRegistrations.create)
    *
    * @param string $parent Required. The parent resource for the host project.
    * Format: `projects/{project}/locations/{location}`

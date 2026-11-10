@@ -20,7 +20,9 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1SpecContents extends \Google\Model
 {
   /**
-   * Required. The contents of the spec.
+   * Required. The contents of the spec. The contents should be base64 encoded
+   * while calling the OnePlatform APIs like CreateSpec, UpdateSpec and
+   * CollectApiData.
    *
    * @var string
    */
@@ -34,7 +36,9 @@ class GoogleCloudApihubV1SpecContents extends \Google\Model
   public $mimeType;
 
   /**
-   * Required. The contents of the spec.
+   * Required. The contents of the spec. The contents should be base64 encoded
+   * while calling the OnePlatform APIs like CreateSpec, UpdateSpec and
+   * CollectApiData.
    *
    * @param string $contents
    */
