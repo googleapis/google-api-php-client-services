@@ -50,6 +50,12 @@ class RequestOptions extends \Google\Model
    */
   public $languageCode;
   /**
+   * Optional. The BCP-47 language code representing the language of the query.
+   *
+   * @var string
+   */
+  public $queryLanguageCode;
+  /**
    * The ID generated when you create a search application using the [admin
    * console](https://support.google.com/a/answer/9043922).
    *
@@ -142,6 +148,22 @@ class RequestOptions extends \Google\Model
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  /**
+   * Optional. The BCP-47 language code representing the language of the query.
+   *
+   * @param string $queryLanguageCode
+   */
+  public function setQueryLanguageCode($queryLanguageCode)
+  {
+    $this->queryLanguageCode = $queryLanguageCode;
+  }
+  /**
+   * @return string
+   */
+  public function getQueryLanguageCode()
+  {
+    return $this->queryLanguageCode;
   }
   /**
    * The ID generated when you create a search application using the [admin

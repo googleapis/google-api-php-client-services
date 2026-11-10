@@ -57,6 +57,8 @@ class QuerySources extends \Google\Service\Resource
    * field to the known user language. When specified, the documents in search
    * results are biased towards the specified language. The Suggest API uses this
    * field as a hint to make better third-party autocomplete predictions.
+   * @opt_param string requestOptions.queryLanguageCode Optional. The BCP-47
+   * language code representing the language of the query.
    * @opt_param string requestOptions.searchApplicationId The ID generated when
    * you create a search application using the [admin
    * console](https://support.google.com/a/answer/9043922).
