@@ -156,7 +156,7 @@ class GoogleAppsCardV1Icon extends \Google\Model
    * Display one of the [Google Material Icons](https://fonts.google.com/icons).
    * For example, to display a [checkbox icon](https://fonts.google.com/icons?se
    * lected=Material%20Symbols%20Outlined%3Acheck_box%3AFILL%400%3Bwght%40400%3B
-   * GRAD%400%3Bopsz%4048), use ``` "material_icon": { "name": "check_box" } ```
+   * GRAD%400%3Bopsz%4048), use ``` "materialIcon": { "name": "check_box" } ```
    * [Google Chat apps](https://developers.google.com/workspace/chat):
    *
    * @param GoogleAppsCardV1MaterialIcon $materialIcon
