@@ -20,6 +20,8 @@ namespace Google\Service\Batch;
 class AllocationPolicy extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  protected $instanceFlexibilityPolicyType = InstanceFlexibilityPolicy::class;
+  protected $instanceFlexibilityPolicyDataType = '';
   protected $instancesType = InstancePolicyOrTemplate::class;
   protected $instancesDataType = 'array';
   /**
@@ -54,6 +56,24 @@ class AllocationPolicy extends \Google\Collection
    */
   public $tags;
 
+  /**
+   * Optional. The instance flexibility policy for the job. This configuration
+   * overrides the `instances` configuration. Only allowed in job level. Not
+   * allowed in task group level.
+   *
+   * @param InstanceFlexibilityPolicy $instanceFlexibilityPolicy
+   */
+  public function setInstanceFlexibilityPolicy(InstanceFlexibilityPolicy $instanceFlexibilityPolicy)
+  {
+    $this->instanceFlexibilityPolicy = $instanceFlexibilityPolicy;
+  }
+  /**
+   * @return InstanceFlexibilityPolicy
+   */
+  public function getInstanceFlexibilityPolicy()
+  {
+    return $this->instanceFlexibilityPolicy;
+  }
   /**
    * Describe instances that can be created by this AllocationPolicy. Only
    * instances[0] is supported now.
