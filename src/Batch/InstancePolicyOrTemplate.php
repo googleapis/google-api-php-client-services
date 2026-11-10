@@ -57,10 +57,28 @@ class InstancePolicyOrTemplate extends \Google\Model
    */
   public $installOpsAgent;
   /**
-   * Name of an instance template used to create VMs. Named the field as
-   * 'instance_template' instead of 'template' to avoid C++ keyword conflict.
-   * Batch only supports global instance templates from the same project as the
-   * job. You can specify the global instance template as a full or partial URL.
+   * An instance template used to create VMs. Batch supports global and regional
+   * instance templates from the same project as the job. In case of a regional
+   * instance template, the job and the instance template must be in the same
+   * region. As shown in the following examples, you can specify the instance
+   * template as either only its ID, only its name (not unique), or a partial or
+   * full URL. If you specify only its name, then Batch checks for a global
+   * instance template first. The following formats are valid for global
+   * instance templates: * `{instance_template_id_number}` *
+   * `{instance_template_name}` (not unique) *
+   * `projects/{project}/global/instanceTemplates/{instance_template_id_number}`
+   * * `projects/{project}/global/instanceTemplates/{instance_template_name}` *
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/instanceTe
+   * mplates/{instance_template_id_number}` * `https://www.googleapis.com/comput
+   * e/v1/projects/{project}/global/instanceTemplates/{instance_template_name}`
+   * The following formats are valid for regional instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_i
+   * d_number}` * `projects/{project}/regions/{region}/instanceTemplates/{instan
+   * ce_template_name}` * `https://www.googleapis.com/compute/v1/projects/{proje
+   * ct}/regions/{region}/instanceTemplates/{instance_template_id_number}` * `ht
+   * tps://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/ins
+   * tanceTemplates/{instance_template_name}`
    *
    * @var string
    */
@@ -136,10 +154,28 @@ class InstancePolicyOrTemplate extends \Google\Model
     return $this->installOpsAgent;
   }
   /**
-   * Name of an instance template used to create VMs. Named the field as
-   * 'instance_template' instead of 'template' to avoid C++ keyword conflict.
-   * Batch only supports global instance templates from the same project as the
-   * job. You can specify the global instance template as a full or partial URL.
+   * An instance template used to create VMs. Batch supports global and regional
+   * instance templates from the same project as the job. In case of a regional
+   * instance template, the job and the instance template must be in the same
+   * region. As shown in the following examples, you can specify the instance
+   * template as either only its ID, only its name (not unique), or a partial or
+   * full URL. If you specify only its name, then Batch checks for a global
+   * instance template first. The following formats are valid for global
+   * instance templates: * `{instance_template_id_number}` *
+   * `{instance_template_name}` (not unique) *
+   * `projects/{project}/global/instanceTemplates/{instance_template_id_number}`
+   * * `projects/{project}/global/instanceTemplates/{instance_template_name}` *
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/instanceTe
+   * mplates/{instance_template_id_number}` * `https://www.googleapis.com/comput
+   * e/v1/projects/{project}/global/instanceTemplates/{instance_template_name}`
+   * The following formats are valid for regional instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_i
+   * d_number}` * `projects/{project}/regions/{region}/instanceTemplates/{instan
+   * ce_template_name}` * `https://www.googleapis.com/compute/v1/projects/{proje
+   * ct}/regions/{region}/instanceTemplates/{instance_template_id_number}` * `ht
+   * tps://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/ins
+   * tanceTemplates/{instance_template_name}`
    *
    * @param string $instanceTemplate
    */
