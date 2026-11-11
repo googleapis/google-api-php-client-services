@@ -53,12 +53,39 @@ class Gmail extends \Google\Service
   /** Manage drafts and send emails. */
   const GMAIL_COMPOSE =
       "https://www.googleapis.com/auth/gmail.compose";
+  /** Read, compose, send, update, and permanently delete your draft emails. */
+  const GMAIL_DRAFTS =
+      "https://www.googleapis.com/auth/gmail.drafts";
+  /** Compose new draft emails. */
+  const GMAIL_DRAFTS_CREATE =
+      "https://www.googleapis.com/auth/gmail.drafts.create";
+  /** Read your draft emails. */
+  const GMAIL_DRAFTS_READONLY =
+      "https://www.googleapis.com/auth/gmail.drafts.readonly";
   /** Add emails into your Gmail mailbox. */
   const GMAIL_INSERT =
       "https://www.googleapis.com/auth/gmail.insert";
   /** See and edit your email labels. */
   const GMAIL_LABELS =
       "https://www.googleapis.com/auth/gmail.labels";
+  /** Create new email labels. */
+  const GMAIL_LABELS_CREATE =
+      "https://www.googleapis.com/auth/gmail.labels.create";
+  /** Read your email labels. */
+  const GMAIL_LABELS_READONLY =
+      "https://www.googleapis.com/auth/gmail.labels.readonly";
+  /** Read, update, and permanently delete all your emails. */
+  const GMAIL_MESSAGES =
+      "https://www.googleapis.com/auth/gmail.messages";
+  /** Permanently delete all your emails. */
+  const GMAIL_MESSAGES_DELETE =
+      "https://www.googleapis.com/auth/gmail.messages.delete";
+  /** Update but not delete your emails. */
+  const GMAIL_MESSAGES_MODIFY =
+      "https://www.googleapis.com/auth/gmail.messages.modify";
+  /** Read your emails. */
+  const GMAIL_MESSAGES_READONLY =
+      "https://www.googleapis.com/auth/gmail.messages.readonly";
   /** View your email message metadata such as labels and headers, but not the email body. */
   const GMAIL_METADATA =
       "https://www.googleapis.com/auth/gmail.metadata";
@@ -71,9 +98,18 @@ class Gmail extends \Google\Service
   /** Send email on your behalf. */
   const GMAIL_SEND =
       "https://www.googleapis.com/auth/gmail.send";
+  /** Send email to yourself. */
+  const GMAIL_SEND_SELF =
+      "https://www.googleapis.com/auth/gmail.send.self";
   /** See, edit, create, or change your email settings and filters in Gmail. */
   const GMAIL_SETTINGS_BASIC =
       "https://www.googleapis.com/auth/gmail.settings.basic";
+  /** Read, create, and delete your filters. */
+  const GMAIL_SETTINGS_FILTERS =
+      "https://www.googleapis.com/auth/gmail.settings.filters";
+  /** Read your filters. */
+  const GMAIL_SETTINGS_FILTERS_READONLY =
+      "https://www.googleapis.com/auth/gmail.settings.filters.readonly";
   /** Manage your sensitive mail settings, including who can manage your mail. */
   const GMAIL_SETTINGS_SHARING =
       "https://www.googleapis.com/auth/gmail.settings.sharing";
