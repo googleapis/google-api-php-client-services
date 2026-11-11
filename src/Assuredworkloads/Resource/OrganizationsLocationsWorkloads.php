@@ -43,7 +43,7 @@ class OrganizationsLocationsWorkloads extends \Google\Service\Resource
    * surface compliance risks. The analysis is best effort and is not guaranteed
    * to be exhaustive. (workloads.analyzeWorkloadMove)
    *
-   * @param string $target Required. The resource ID of the folder-based
+   * @param string $target Required. The resource name of the folder-based
    * destination workload. This workload is where the source resource will
    * hypothetically be moved to. Specify the workload's relative resource name,
    * formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/worklo
