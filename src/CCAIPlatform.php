@@ -40,6 +40,7 @@ class CCAIPlatform extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_contactCenters;
+  public $projects_locations_contactCenters_phoneNumbers;
   public $projects_locations_operations;
   public $rootUrlTemplate;
 
@@ -215,6 +216,34 @@ class CCAIPlatform extends \Google\Service
                   'type' => 'string',
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_contactCenters_phoneNumbers = new CCAIPlatform\Resource\ProjectsLocationsContactCentersPhoneNumbers(
+        $this,
+        $this->serviceName,
+        'phoneNumbers',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1alpha1/{+parent}/phoneNumbers',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
