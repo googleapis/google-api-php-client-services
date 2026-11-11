@@ -82,8 +82,8 @@ class StreamChatAiAssistantResponse extends \Google\Model
   protected $uiEventDataType = '';
 
   /**
-   * Generated-document artifact event (live preview deltas + final GCS
-   * pointer).
+   * Generated-document artifact event (live preview deltas + final Cloud
+   * Storage pointer).
    *
    * @param ArtifactChunk $artifactChunk
    */

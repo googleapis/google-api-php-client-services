@@ -66,7 +66,8 @@ class ArtifactChunk extends \Google\Model
    */
   public $displayName;
   /**
-   * The GCS object the artifact was persisted to. Set on FINALIZED chunks.
+   * The Cloud Storage object the artifact was persisted to. Set on FINALIZED
+   * chunks.
    *
    * @var string
    */
@@ -83,6 +84,13 @@ class ArtifactChunk extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * Output only. The app this artifact was produced for, when it was produced
+   * for one. Format: `projects/{project}/locations/{location}/apps/{app}`
+   *
+   * @var string
+   */
+  public $targetApp;
 
   /**
    * Identifier of the artifact, stable across all chunks of one artifact within
@@ -135,7 +143,8 @@ class ArtifactChunk extends \Google\Model
     return $this->displayName;
   }
   /**
-   * The GCS object the artifact was persisted to. Set on FINALIZED chunks.
+   * The Cloud Storage object the artifact was persisted to. Set on FINALIZED
+   * chunks.
    *
    * @param string $gcsUri
    */
@@ -184,6 +193,23 @@ class ArtifactChunk extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Output only. The app this artifact was produced for, when it was produced
+   * for one. Format: `projects/{project}/locations/{location}/apps/{app}`
+   *
+   * @param string $targetApp
+   */
+  public function setTargetApp($targetApp)
+  {
+    $this->targetApp = $targetApp;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetApp()
+  {
+    return $this->targetApp;
   }
 }
 
