@@ -68,7 +68,9 @@ class ExperimentConfigVersionRelease extends \Google\Collection
     return $this->state;
   }
   /**
-   * Optional. Traffic allocations for the version release.
+   * Optional. Traffic allocations for the version release. When non-empty, the
+   * `traffic_percentage` values across all allocations must sum to `100`,
+   * representing the split of remaining non-study traffic.
    *
    * @param ExperimentConfigVersionReleaseTrafficAllocation[] $trafficAllocations
    */

@@ -17,7 +17,7 @@
 
 namespace Google\Service\CustomerEngagementSuite;
 
-class TurnCompletedEvent extends \Google\Model
+class TurnCompletedEvent extends \Google\Collection
 {
   /**
    * Unspecified.
@@ -37,6 +37,7 @@ class TurnCompletedEvent extends \Google\Model
    * tailed; the client should reload the session instead.
    */
   public const REASON_RESUME_UNAVAILABLE = 'RESUME_UNAVAILABLE';
+  protected $collection_key = 'touchedApps';
   /**
    * Sequence number of the last event the turn produced. A client whose cursor
    * is lower missed content and should reload the session to see it.
@@ -50,6 +51,14 @@ class TurnCompletedEvent extends \Google\Model
    * @var string
    */
   public $reason;
+  /**
+   * Apps this turn targeted or changed, so the console can refresh exactly
+   * those apps' stores. Project-scoped sessions only. Format:
+   * `projects/{project}/locations/{location}/apps/{app}`
+   *
+   * @var string[]
+   */
+  public $touchedApps;
   /**
    * Identifier of the turn that ended; matches TurnResumeSnapshot.turn_id and
    * ActiveTurnInfo.turn_id.
@@ -93,6 +102,24 @@ class TurnCompletedEvent extends \Google\Model
   public function getReason()
   {
     return $this->reason;
+  }
+  /**
+   * Apps this turn targeted or changed, so the console can refresh exactly
+   * those apps' stores. Project-scoped sessions only. Format:
+   * `projects/{project}/locations/{location}/apps/{app}`
+   *
+   * @param string[] $touchedApps
+   */
+  public function setTouchedApps($touchedApps)
+  {
+    $this->touchedApps = $touchedApps;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTouchedApps()
+  {
+    return $this->touchedApps;
   }
   /**
    * Identifier of the turn that ended; matches TurnResumeSnapshot.turn_id and

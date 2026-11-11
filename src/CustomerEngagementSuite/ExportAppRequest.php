@@ -48,7 +48,7 @@ class ExportAppRequest extends \Google\Model
    * Optional. The [Google Cloud
    * Storage](https://cloud.google.com/storage/docs/) URI to which to export the
    * app. The format of this URI must be `gs:`. The exported app archive will be
-   * written directly to the specified GCS object.
+   * written directly to the specified Cloud Storage object.
    *
    * @var string
    */
@@ -93,7 +93,7 @@ class ExportAppRequest extends \Google\Model
    * Optional. The [Google Cloud
    * Storage](https://cloud.google.com/storage/docs/) URI to which to export the
    * app. The format of this URI must be `gs:`. The exported app archive will be
-   * written directly to the specified GCS object.
+   * written directly to the specified Cloud Storage object.
    *
    * @param string $gcsUri
    */

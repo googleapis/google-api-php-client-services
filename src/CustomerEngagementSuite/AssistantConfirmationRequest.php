@@ -19,7 +19,7 @@ namespace Google\Service\CustomerEngagementSuite;
 
 class AssistantConfirmationRequest extends \Google\Collection
 {
-  protected $collection_key = 'questions';
+  protected $collection_key = 'targets';
   /**
    * Display label of the agent that raised the confirmation (e.g. `"Contract
    * Architect"`), for the card header.
@@ -66,6 +66,8 @@ class AssistantConfirmationRequest extends \Google\Collection
   public $positiveLabel;
   protected $questionsType = OptionQuestionsChunkQuestion::class;
   protected $questionsDataType = 'array';
+  protected $targetsType = AssistantConfirmationRequestTarget::class;
+  protected $targetsDataType = 'array';
   /**
    * Name of the tool call the agent paused on (e.g. "update_app"), for the card
    * header. Unset for pure questions.
@@ -195,6 +197,24 @@ class AssistantConfirmationRequest extends \Google\Collection
   public function getQuestions()
   {
     return $this->questions;
+  }
+  /**
+   * Everything the confirmed action will change, so the console can render
+   * "Update 2 apps" and one badge per app. Empty for legacy single-target
+   * cards.
+   *
+   * @param AssistantConfirmationRequestTarget[] $targets
+   */
+  public function setTargets($targets)
+  {
+    $this->targets = $targets;
+  }
+  /**
+   * @return AssistantConfirmationRequestTarget[]
+   */
+  public function getTargets()
+  {
+    return $this->targets;
   }
   /**
    * Name of the tool call the agent paused on (e.g. "update_app"), for the card

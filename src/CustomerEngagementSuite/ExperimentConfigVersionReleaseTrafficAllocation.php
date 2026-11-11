@@ -34,8 +34,8 @@ class ExperimentConfigVersionReleaseTrafficAllocation extends \Google\Model
    */
   public $id;
   /**
-   * Optional. Traffic percentage of the traffic allocation. Must be between 0
-   * and 100.
+   * Optional. Traffic percentage of the traffic allocation, relative to the
+   * remaining non-study traffic. Must be between `0` and `100`.
    *
    * @var int
    */
@@ -76,8 +76,8 @@ class ExperimentConfigVersionReleaseTrafficAllocation extends \Google\Model
     return $this->id;
   }
   /**
-   * Optional. Traffic percentage of the traffic allocation. Must be between 0
-   * and 100.
+   * Optional. Traffic percentage of the traffic allocation, relative to the
+   * remaining non-study traffic. Must be between `0` and `100`.
    *
    * @param int $trafficPercentage
    */
