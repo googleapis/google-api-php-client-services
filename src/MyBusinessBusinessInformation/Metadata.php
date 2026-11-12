@@ -26,8 +26,11 @@ class Metadata extends \Google\Model
    */
   public $canDelete;
   /**
-   * Output only. Indicates if the listing is eligible for business calls.
+   * Output only. Deprecated: Relates to the Call Tracking feature which is no
+   * longer supported. Indicates whether the location is eligible for business
+   * calls.
    *
+   * @deprecated
    * @var bool
    */
   public $canHaveBusinessCalls;
@@ -116,7 +119,7 @@ class Metadata extends \Google\Model
    */
   public $newReviewUri;
   /**
-   * Output only. If this locationappears on Google Maps, this field is
+   * Output only. If this location appears on Google Maps, this field is
    * populated with the place ID for the location. This ID can be used in
    * various Places APIs. This field can be set during Create calls, but not for
    * Update.
@@ -142,8 +145,11 @@ class Metadata extends \Google\Model
     return $this->canDelete;
   }
   /**
-   * Output only. Indicates if the listing is eligible for business calls.
+   * Output only. Deprecated: Relates to the Call Tracking feature which is no
+   * longer supported. Indicates whether the location is eligible for business
+   * calls.
    *
+   * @deprecated
    * @param bool $canHaveBusinessCalls
    */
   public function setCanHaveBusinessCalls($canHaveBusinessCalls)
@@ -151,6 +157,7 @@ class Metadata extends \Google\Model
     $this->canHaveBusinessCalls = $canHaveBusinessCalls;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getCanHaveBusinessCalls()
@@ -363,7 +370,7 @@ class Metadata extends \Google\Model
     return $this->newReviewUri;
   }
   /**
-   * Output only. If this locationappears on Google Maps, this field is
+   * Output only. If this location appears on Google Maps, this field is
    * populated with the place ID for the location. This ID can be used in
    * various Places APIs. This field can be set during Create calls, but not for
    * Update.
