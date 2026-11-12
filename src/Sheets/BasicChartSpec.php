@@ -149,7 +149,7 @@ class BasicChartSpec extends \Google\Collection
   public $legendPosition;
   /**
    * Gets whether all lines should be rendered smooth or straight by default.
-   * Applies to Line charts.
+   * Applies to Line and Combo charts.
    *
    * @var bool
    */
@@ -302,7 +302,7 @@ class BasicChartSpec extends \Google\Collection
   }
   /**
    * Gets whether all lines should be rendered smooth or straight by default.
-   * Applies to Line charts.
+   * Applies to Line and Combo charts.
    *
    * @param bool $lineSmoothing
    */
