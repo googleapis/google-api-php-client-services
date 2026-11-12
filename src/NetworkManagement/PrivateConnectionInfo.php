@@ -20,16 +20,16 @@ namespace Google\Service\NetworkManagement;
 class PrivateConnectionInfo extends \Google\Model
 {
   /**
-   * URI of the Private Connection in format "projects/{project_id}/locations/{l
-   * ocation}/privateConnections/{private_connection_id}"
+   * URI of the Private Connection in format "projects/{project}/locations/{loca
+   * tion}/privateConnections/{private_connection}"
    *
    * @var string
    */
   public $uri;
 
   /**
-   * URI of the Private Connection in format "projects/{project_id}/locations/{l
-   * ocation}/privateConnections/{private_connection_id}"
+   * URI of the Private Connection in format "projects/{project}/locations/{loca
+   * tion}/privateConnections/{private_connection}"
    *
    * @param string $uri
    */

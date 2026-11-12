@@ -33,7 +33,7 @@ class CloudFunctionInfo extends \Google\Model
   public $location;
   /**
    * URI of the Cloud Function. Format:
-   * `projects/{project_id}/locations/{location}/functions/{function_id}`
+   * `projects/{project}/locations/{location}/functions/{function}`
    *
    * @var string
    */
@@ -79,7 +79,7 @@ class CloudFunctionInfo extends \Google\Model
   }
   /**
    * URI of the Cloud Function. Format:
-   * `projects/{project_id}/locations/{location}/functions/{function_id}`
+   * `projects/{project}/locations/{location}/functions/{function}`
    *
    * @param string $uri
    */

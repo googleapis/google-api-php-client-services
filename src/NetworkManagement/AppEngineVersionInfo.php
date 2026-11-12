@@ -39,7 +39,7 @@ class AppEngineVersionInfo extends \Google\Model
   public $runtime;
   /**
    * URI of the App Engine version. Format:
-   * `apps/{app_id}/services/{service_id}/versions/{version_id}`
+   * `apps/{app}/services/{service}/versions/{version}`
    *
    * @var string
    */
@@ -95,7 +95,7 @@ class AppEngineVersionInfo extends \Google\Model
   }
   /**
    * URI of the App Engine version. Format:
-   * `apps/{app_id}/services/{service_id}/versions/{version_id}`
+   * `apps/{app}/services/{service}/versions/{version}`
    *
    * @param string $uri
    */

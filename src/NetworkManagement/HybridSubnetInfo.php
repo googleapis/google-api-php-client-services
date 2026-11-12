@@ -33,7 +33,7 @@ class HybridSubnetInfo extends \Google\Model
   public $region;
   /**
    * URI of the hybrid subnet. Format:
-   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+   * `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    *
    * @var string
    */
@@ -73,7 +73,7 @@ class HybridSubnetInfo extends \Google\Model
   }
   /**
    * URI of the hybrid subnet. Format:
-   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+   * `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    *
    * @param string $uri
    */

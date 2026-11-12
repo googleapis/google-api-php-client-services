@@ -591,8 +591,11 @@ class DropInfo extends \Google\Model
   public $region;
   /**
    * URI of the resource that caused the drop. Format: *
-   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
-   * `projects/{project_id}/global/routes/{route_id}` (route)
+   * `projects/{project}/global/firewalls/{firewall}` (firewall rule) *
+   * `projects/{project}/global/routes/{route}` (subnet, static or peering
+   * subnet route) *
+   * `projects/{project}/locations/{location}/policyBasedRoutes/{route}`
+   * (policy-based route)
    *
    * @var string
    */
@@ -752,8 +755,11 @@ class DropInfo extends \Google\Model
   }
   /**
    * URI of the resource that caused the drop. Format: *
-   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
-   * `projects/{project_id}/global/routes/{route_id}` (route)
+   * `projects/{project}/global/firewalls/{firewall}` (firewall rule) *
+   * `projects/{project}/global/routes/{route}` (subnet, static or peering
+   * subnet route) *
+   * `projects/{project}/locations/{location}/policyBasedRoutes/{route}`
+   * (policy-based route)
    *
    * @param string $resourceUri
    */

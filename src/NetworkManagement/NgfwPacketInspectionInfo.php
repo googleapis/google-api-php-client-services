@@ -21,8 +21,8 @@ class NgfwPacketInspectionInfo extends \Google\Model
 {
   /**
    * URI of the security profile group associated with this firewall packet
-   * inspection. Format: `organizations/{organization_id}/locations/global/secur
-   * ityProfileGroups/{security_profile_group_id}`
+   * inspection. Format: `organizations/{organization}/locations/global/security
+   * ProfileGroups/{security_profile_group}`
    *
    * @var string
    */
@@ -30,8 +30,8 @@ class NgfwPacketInspectionInfo extends \Google\Model
 
   /**
    * URI of the security profile group associated with this firewall packet
-   * inspection. Format: `organizations/{organization_id}/locations/global/secur
-   * ityProfileGroups/{security_profile_group_id}`
+   * inspection. Format: `organizations/{organization}/locations/global/security
+   * ProfileGroups/{security_profile_group}`
    *
    * @param string $securityProfileGroupUri
    */

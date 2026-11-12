@@ -75,9 +75,9 @@ class ForwardInfo extends \Google\Model
   public $ipAddress;
   /**
    * URI of the resource that the packet is forwarded to. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC peering network)
-   * * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}`
-   * (VPN gateway)
+   * `projects/{project}/global/networks/{network}` (VPC peering network) *
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (VPN
+   * gateway)
    *
    * @var string
    */
@@ -107,9 +107,9 @@ class ForwardInfo extends \Google\Model
   }
   /**
    * URI of the resource that the packet is forwarded to. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC peering network)
-   * * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}`
-   * (VPN gateway)
+   * `projects/{project}/global/networks/{network}` (VPC peering network) *
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (VPN
+   * gateway)
    *
    * @param string $resourceUri
    */

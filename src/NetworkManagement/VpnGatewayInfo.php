@@ -33,7 +33,7 @@ class VpnGatewayInfo extends \Google\Model
   public $ipAddress;
   /**
    * URI of the VPC network where the VPN gateway is configured. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    *
    * @var string
    */
@@ -46,9 +46,9 @@ class VpnGatewayInfo extends \Google\Model
   public $region;
   /**
    * URI of the VPN gateway. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA
-   * VPN gateway) * `projects/{project_id}/regions/{region}/targetVpnGateways/{t
-   * arget_vpn_gateway_id}` (Classic VPN gateway)
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (HA VPN
+   * gateway) * `projects/{project}/regions/{region}/targetVpnGateways/{target_v
+   * pn_gateway}` (Classic VPN gateway)
    *
    * @var string
    */
@@ -57,7 +57,7 @@ class VpnGatewayInfo extends \Google\Model
    * URI of the VPN tunnel associated with the VPN gateway. There may be
    * multiple VPN tunnels configured on a VPN gateway, and only the one relevant
    * to the test is displayed. Format:
-   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
+   * `projects/{project}/regions/{region}/vpnTunnels/{vpn_tunnel}`
    *
    * @var string
    */
@@ -97,7 +97,7 @@ class VpnGatewayInfo extends \Google\Model
   }
   /**
    * URI of the VPC network where the VPN gateway is configured. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    *
    * @param string $networkUri
    */
@@ -130,9 +130,9 @@ class VpnGatewayInfo extends \Google\Model
   }
   /**
    * URI of the VPN gateway. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA
-   * VPN gateway) * `projects/{project_id}/regions/{region}/targetVpnGateways/{t
-   * arget_vpn_gateway_id}` (Classic VPN gateway)
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (HA VPN
+   * gateway) * `projects/{project}/regions/{region}/targetVpnGateways/{target_v
+   * pn_gateway}` (Classic VPN gateway)
    *
    * @param string $uri
    */
@@ -151,7 +151,7 @@ class VpnGatewayInfo extends \Google\Model
    * URI of the VPN tunnel associated with the VPN gateway. There may be
    * multiple VPN tunnels configured on a VPN gateway, and only the one relevant
    * to the test is displayed. Format:
-   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
+   * `projects/{project}/regions/{region}/vpnTunnels/{vpn_tunnel}`
    *
    * @param string $vpnTunnelUri
    */

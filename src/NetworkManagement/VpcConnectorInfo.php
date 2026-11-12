@@ -33,7 +33,7 @@ class VpcConnectorInfo extends \Google\Model
   public $location;
   /**
    * URI of a VPC connector. Format:
-   * `projects/{project_id}/locations/{location}/connectors/{connector_id}`
+   * `projects/{project}/locations/{location}/connectors/{connector}`
    *
    * @var string
    */
@@ -73,7 +73,7 @@ class VpcConnectorInfo extends \Google\Model
   }
   /**
    * URI of a VPC connector. Format:
-   * `projects/{project_id}/locations/{location}/connectors/{connector_id}`
+   * `projects/{project}/locations/{location}/connectors/{connector}`
    *
    * @param string $uri
    */

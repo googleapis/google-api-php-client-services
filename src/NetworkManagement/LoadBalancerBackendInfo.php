@@ -78,9 +78,9 @@ class LoadBalancerBackendInfo extends \Google\Model
   public $healthCheckFirewallsConfigState;
   /**
    * URI of the health check attached to this backend (if applicable). Format: *
-   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
+   * `projects/{project}/global/healthChecks/{health_check}` *
+   * `projects/{project}/regions/{region}/healthChecks/{health_check}` *
+   * `projects/{project}/global/httpHealthChecks/{health_check}` (legacy)
    *
    * @var string
    */
@@ -110,12 +110,10 @@ class LoadBalancerBackendInfo extends \Google\Model
   public $name;
   /**
    * URI of the network endpoint group this backend belongs to (if applicable)
-   * Format: *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal
-   * NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}`
-   * (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * Format: * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}`
+   * (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional
+   * NEG) * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    *
    * @var string
    */
@@ -199,9 +197,9 @@ class LoadBalancerBackendInfo extends \Google\Model
   }
   /**
    * URI of the health check attached to this backend (if applicable). Format: *
-   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
+   * `projects/{project}/global/healthChecks/{health_check}` *
+   * `projects/{project}/regions/{region}/healthChecks/{health_check}` *
+   * `projects/{project}/global/httpHealthChecks/{health_check}` (legacy)
    *
    * @param string $healthCheckUri
    */
@@ -271,12 +269,10 @@ class LoadBalancerBackendInfo extends \Google\Model
   }
   /**
    * URI of the network endpoint group this backend belongs to (if applicable)
-   * Format: *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal
-   * NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}`
-   * (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * Format: * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}`
+   * (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional
+   * NEG) * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    *
    * @param string $networkEndpointGroupUri
    */

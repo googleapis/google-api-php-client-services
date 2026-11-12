@@ -43,7 +43,7 @@ class VpnTunnelInfo extends \Google\Model
   public $displayName;
   /**
    * URI of the VPC network where the VPN tunnel is configured. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    *
    * @var string
    */
@@ -56,10 +56,9 @@ class VpnTunnelInfo extends \Google\Model
   public $region;
   /**
    * URI of a VPN gateway at remote end of the tunnel. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (GCP
-   * HA VPN gateway) *
-   * `projects/{project_id}/global/peerVpnGateways/{peer_vpn_gateway_id}` (GCP
-   * peer VPN gateway)
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (GCP HA VPN
+   * gateway) * `projects/{project}/global/peerVpnGateways/{peer_vpn_gateway}`
+   * (GCP peer VPN gateway)
    *
    * @var string
    */
@@ -78,9 +77,9 @@ class VpnTunnelInfo extends \Google\Model
   public $routingType;
   /**
    * URI of the VPN gateway at local end of the tunnel. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA
-   * VPN gateway) * `projects/{project_id}/regions/{region}/targetVpnGateways/{t
-   * arget_vpn_gateway_id}` (Classic VPN gateway)
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (HA VPN
+   * gateway) * `projects/{project}/regions/{region}/targetVpnGateways/{target_v
+   * pn_gateway}` (Classic VPN gateway)
    *
    * @var string
    */
@@ -93,7 +92,7 @@ class VpnTunnelInfo extends \Google\Model
   public $sourceGatewayIp;
   /**
    * URI of the VPN tunnel. Format:
-   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
+   * `projects/{project}/regions/{region}/vpnTunnels/{vpn_tunnel}`
    *
    * @var string
    */
@@ -117,7 +116,7 @@ class VpnTunnelInfo extends \Google\Model
   }
   /**
    * URI of the VPC network where the VPN tunnel is configured. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    *
    * @param string $networkUri
    */
@@ -150,10 +149,9 @@ class VpnTunnelInfo extends \Google\Model
   }
   /**
    * URI of a VPN gateway at remote end of the tunnel. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (GCP
-   * HA VPN gateway) *
-   * `projects/{project_id}/global/peerVpnGateways/{peer_vpn_gateway_id}` (GCP
-   * peer VPN gateway)
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (GCP HA VPN
+   * gateway) * `projects/{project}/global/peerVpnGateways/{peer_vpn_gateway}`
+   * (GCP peer VPN gateway)
    *
    * @param string $remoteGateway
    */
@@ -205,9 +203,9 @@ class VpnTunnelInfo extends \Google\Model
   }
   /**
    * URI of the VPN gateway at local end of the tunnel. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA
-   * VPN gateway) * `projects/{project_id}/regions/{region}/targetVpnGateways/{t
-   * arget_vpn_gateway_id}` (Classic VPN gateway)
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (HA VPN
+   * gateway) * `projects/{project}/regions/{region}/targetVpnGateways/{target_v
+   * pn_gateway}` (Classic VPN gateway)
    *
    * @param string $sourceGateway
    */
@@ -240,7 +238,7 @@ class VpnTunnelInfo extends \Google\Model
   }
   /**
    * URI of the VPN tunnel. Format:
-   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
+   * `projects/{project}/regions/{region}/vpnTunnels/{vpn_tunnel}`
    *
    * @param string $uri
    */

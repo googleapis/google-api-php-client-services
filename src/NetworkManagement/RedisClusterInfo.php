@@ -40,7 +40,7 @@ class RedisClusterInfo extends \Google\Model
   public $location;
   /**
    * URI of the network containing the Redis Cluster endpoints in format
-   * "projects/{project_id}/global/networks/{network_id}".
+   * "projects/{project}/global/networks/{network}".
    *
    * @var string
    */
@@ -53,7 +53,7 @@ class RedisClusterInfo extends \Google\Model
   public $secondaryEndpointIpAddress;
   /**
    * URI of a Redis Cluster in format
-   * "projects/{project_id}/locations/{location}/clusters/{cluster_id}"
+   * "projects/{project}/locations/{location}/clusters/{cluster}"
    *
    * @var string
    */
@@ -110,7 +110,7 @@ class RedisClusterInfo extends \Google\Model
   }
   /**
    * URI of the network containing the Redis Cluster endpoints in format
-   * "projects/{project_id}/global/networks/{network_id}".
+   * "projects/{project}/global/networks/{network}".
    *
    * @param string $networkUri
    */
@@ -143,7 +143,7 @@ class RedisClusterInfo extends \Google\Model
   }
   /**
    * URI of a Redis Cluster in format
-   * "projects/{project_id}/locations/{location}/clusters/{cluster_id}"
+   * "projects/{project}/locations/{location}/clusters/{cluster}"
    *
    * @param string $uri
    */
