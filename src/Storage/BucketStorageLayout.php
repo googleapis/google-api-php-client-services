@@ -48,6 +48,8 @@ class BucketStorageLayout extends \Google\Model
    * @var string
    */
   public $locationType;
+  protected $rapidCacheInfoType = BucketStorageLayoutRapidCacheInfo::class;
+  protected $rapidCacheInfoDataType = '';
 
   /**
    * The name of the bucket.
@@ -145,6 +147,22 @@ class BucketStorageLayout extends \Google\Model
   public function getLocationType()
   {
     return $this->locationType;
+  }
+  /**
+   * The Rapid Cache configuration for the bucket.
+   *
+   * @param BucketStorageLayoutRapidCacheInfo $rapidCacheInfo
+   */
+  public function setRapidCacheInfo(BucketStorageLayoutRapidCacheInfo $rapidCacheInfo)
+  {
+    $this->rapidCacheInfo = $rapidCacheInfo;
+  }
+  /**
+   * @return BucketStorageLayoutRapidCacheInfo
+   */
+  public function getRapidCacheInfo()
+  {
+    return $this->rapidCacheInfo;
   }
 }
 

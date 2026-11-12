@@ -97,22 +97,7 @@ class AnywhereCaches extends \Google\Service\Resource
     return $this->call('list', [$params], AnywhereCachesModel::class);
   }
   /**
-   * Pauses an Anywhere Cache instance. (anywhereCaches.pause)
-   *
-   * @param string $bucket Name of the parent bucket.
-   * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
-   * @param array $optParams Optional parameters.
-   * @return AnywhereCache
-   * @throws \Google\Service\Exception
-   */
-  public function pause($bucket, $anywhereCacheId, $optParams = [])
-  {
-    $params = ['bucket' => $bucket, 'anywhereCacheId' => $anywhereCacheId];
-    $params = array_merge($params, $optParams);
-    return $this->call('pause', [$params], AnywhereCache::class);
-  }
-  /**
-   * Resumes a paused or disabled Anywhere Cache instance. (anywhereCaches.resume)
+   * Resumes a disabled Anywhere Cache instance. (anywhereCaches.resume)
    *
    * @param string $bucket Name of the parent bucket.
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
