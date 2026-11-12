@@ -30,7 +30,7 @@ class RegionalSubscriptionOfferConfig extends \Google\Model
   public $newSubscriberAvailability;
   /**
    * Required. Immutable. Region code this configuration applies to, as defined
-   * by ISO 3166-2, e.g. "US".
+   * by ISO 3166-1 alpha-2, e.g. "US".
    *
    * @var string
    */
@@ -57,7 +57,7 @@ class RegionalSubscriptionOfferConfig extends \Google\Model
   }
   /**
    * Required. Immutable. Region code this configuration applies to, as defined
-   * by ISO 3166-2, e.g. "US".
+   * by ISO 3166-1 alpha-2, e.g. "US".
    *
    * @param string $regionCode
    */

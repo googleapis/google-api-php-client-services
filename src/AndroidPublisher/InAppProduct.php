@@ -215,7 +215,7 @@ class InAppProduct extends \Google\Model
   }
   /**
    * Prices per buyer region. None of these can be zero, as in-app products are
-   * never free. Map key is region code, as defined by ISO 3166-2.
+   * never free. Map key is region code, as defined by ISO 3166-1 alpha-2.
    *
    * @param Price[] $prices
    */

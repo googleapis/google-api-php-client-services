@@ -44,7 +44,7 @@ class OneTimeProductOfferRegionalPricingAndAvailabilityConfig extends \Google\Mo
   protected $noOverrideDataType = '';
   /**
    * Required. Region code this configuration applies to, as defined by ISO
-   * 3166-2, e.g., "US".
+   * 3166-1 alpha-2, e.g., "US".
    *
    * @var string
    */
@@ -115,7 +115,7 @@ class OneTimeProductOfferRegionalPricingAndAvailabilityConfig extends \Google\Mo
   }
   /**
    * Required. Region code this configuration applies to, as defined by ISO
-   * 3166-2, e.g., "US".
+   * 3166-1 alpha-2, e.g., "US".
    *
    * @param string $regionCode
    */

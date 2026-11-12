@@ -46,8 +46,8 @@ class RegionalProductAgeRatingInfo extends \Google\Model
    */
   public $productAgeRatingTier;
   /**
-   * Region code this configuration applies to, as defined by ISO 3166-2, e.g.
-   * "US".
+   * Region code this configuration applies to, as defined by ISO 3166-1
+   * alpha-2, e.g. "US".
    *
    * @var string
    */
@@ -76,8 +76,8 @@ class RegionalProductAgeRatingInfo extends \Google\Model
     return $this->productAgeRatingTier;
   }
   /**
-   * Region code this configuration applies to, as defined by ISO 3166-2, e.g.
-   * "US".
+   * Region code this configuration applies to, as defined by ISO 3166-1
+   * alpha-2, e.g. "US".
    *
    * @param string $regionCode
    */
