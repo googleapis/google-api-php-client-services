@@ -146,21 +146,6 @@ class Storage extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'pause' => [
-              'path' => 'b/{bucket}/anywhereCaches/{anywhereCacheId}/pause',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'bucket' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'anywhereCacheId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'resume' => [
               'path' => 'b/{bucket}/anywhereCaches/{anywhereCacheId}/resume',
               'httpMethod' => 'POST',
