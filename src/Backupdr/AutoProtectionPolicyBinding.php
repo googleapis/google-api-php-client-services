@@ -51,8 +51,8 @@ class AutoProtectionPolicyBinding extends \Google\Model
    */
   public $description;
   /**
-   * Optional. Output only. The etag for the binding. If this is provided on
-   * update, it must match the server's etag.
+   * Output only. The etag for the binding. If this is provided on update, it
+   * must match the server's etag.
    *
    * @var string
    */
@@ -136,8 +136,8 @@ class AutoProtectionPolicyBinding extends \Google\Model
     return $this->description;
   }
   /**
-   * Optional. Output only. The etag for the binding. If this is provided on
-   * update, it must match the server's etag.
+   * Output only. The etag for the binding. If this is provided on update, it
+   * must match the server's etag.
    *
    * @param string $etag
    */
