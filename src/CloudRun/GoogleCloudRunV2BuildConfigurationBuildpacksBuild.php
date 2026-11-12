@@ -32,8 +32,10 @@ class GoogleCloudRunV2BuildConfigurationBuildpacksBuild extends \Google\Model
    */
   public $cacheImageUri;
   /**
-   * Optional. Environment variables for the build.
+   * Optional. Deprecated: Use environment_variables in BuildConfiguration
+   * instead.
    *
+   * @deprecated
    * @var string[]
    */
   public $environmentVariables;
@@ -71,8 +73,10 @@ class GoogleCloudRunV2BuildConfigurationBuildpacksBuild extends \Google\Model
     return $this->cacheImageUri;
   }
   /**
-   * Optional. Environment variables for the build.
+   * Optional. Deprecated: Use environment_variables in BuildConfiguration
+   * instead.
    *
+   * @deprecated
    * @param string[] $environmentVariables
    */
   public function setEnvironmentVariables($environmentVariables)
@@ -80,6 +84,7 @@ class GoogleCloudRunV2BuildConfigurationBuildpacksBuild extends \Google\Model
     $this->environmentVariables = $environmentVariables;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getEnvironmentVariables()

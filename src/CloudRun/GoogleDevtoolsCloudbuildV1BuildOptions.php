@@ -211,12 +211,11 @@ class GoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Collection
    */
   public $pubsubTopic;
   /**
-   * Optional. Ranked list (earlier items have higher priority) of Machine
-   * Series to consider when provisioning Worker VMs. A concrete machine type
-   * will be selected based on machine availability in the given region. This
-   * field must be empty for the Build to be eligible to be paired with a pre-
-   * provisioned worker VM.
+   * Optional. Deprecated: Use
+   * PrivatePoolV1Config.WorkerConfig.ranked_machine_series instead. This field
+   * has no effect.
    *
+   * @deprecated
    * @var string[]
    */
   public $rankedMachineSeries;
@@ -477,12 +476,11 @@ class GoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Collection
     return $this->pubsubTopic;
   }
   /**
-   * Optional. Ranked list (earlier items have higher priority) of Machine
-   * Series to consider when provisioning Worker VMs. A concrete machine type
-   * will be selected based on machine availability in the given region. This
-   * field must be empty for the Build to be eligible to be paired with a pre-
-   * provisioned worker VM.
+   * Optional. Deprecated: Use
+   * PrivatePoolV1Config.WorkerConfig.ranked_machine_series instead. This field
+   * has no effect.
    *
+   * @deprecated
    * @param string[] $rankedMachineSeries
    */
   public function setRankedMachineSeries($rankedMachineSeries)
@@ -490,6 +488,7 @@ class GoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Collection
     $this->rankedMachineSeries = $rankedMachineSeries;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getRankedMachineSeries()

@@ -33,9 +33,9 @@ class GoogleCloudRunV2EmptyDirVolumeSource extends \Google\Model
    */
   public const MEDIUM_DISK = 'DISK';
   /**
-   * The medium on which the data is stored. Acceptable values today is only
-   * MEMORY or none. When none, the default will currently be backed by memory
-   * but could change over time. +optional
+   * The medium on which the data is stored. Acceptable values are `MEMORY`,
+   * `DISK`, or unset (`MEDIUM_UNSPECIFIED`). When unset, the default is
+   * currently memory-backed but could change over time.
    *
    * @var string
    */
@@ -45,19 +45,19 @@ class GoogleCloudRunV2EmptyDirVolumeSource extends \Google\Model
    * applicable for memory medium. The maximum usage on memory medium EmptyDir
    * would be the minimum value between the SizeLimit specified here and the sum
    * of memory limits of all containers. The default is nil which means that the
-   * limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-
-   * volume. Info in Kubernetes:
-   * https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-
+   * volumes#configure-volume) and the [Kubernetes `emptyDir` volume documentati
+   * on](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    *
    * @var string
    */
   public $sizeLimit;
 
   /**
-   * The medium on which the data is stored. Acceptable values today is only
-   * MEMORY or none. When none, the default will currently be backed by memory
-   * but could change over time. +optional
+   * The medium on which the data is stored. Acceptable values are `MEMORY`,
+   * `DISK`, or unset (`MEDIUM_UNSPECIFIED`). When unset, the default is
+   * currently memory-backed but could change over time.
    *
    * Accepted values: MEDIUM_UNSPECIFIED, MEMORY, DISK
    *
@@ -79,10 +79,10 @@ class GoogleCloudRunV2EmptyDirVolumeSource extends \Google\Model
    * applicable for memory medium. The maximum usage on memory medium EmptyDir
    * would be the minimum value between the SizeLimit specified here and the sum
    * of memory limits of all containers. The default is nil which means that the
-   * limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-
-   * volume. Info in Kubernetes:
-   * https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-
+   * volumes#configure-volume) and the [Kubernetes `emptyDir` volume documentati
+   * on](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    *
    * @param string $sizeLimit
    */
