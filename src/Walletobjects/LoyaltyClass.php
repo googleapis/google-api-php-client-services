@@ -192,7 +192,10 @@ class LoyaltyClass extends \Google\Collection
   protected $infoModuleDataDataType = '';
   /**
    * Required. The issuer name. Recommended maximum length is 20 characters to
-   * ensure full string is displayed on smaller screens.
+   * ensure full string is displayed on smaller screens. Ignored if
+   * `localizedIssuerName` is set, including when a patch request sets only this
+   * field. To change the issuer name of a class that has `localizedIssuerName`,
+   * update `localizedIssuerName` instead.
    *
    * @var string
    */
@@ -606,7 +609,10 @@ class LoyaltyClass extends \Google\Collection
   }
   /**
    * Required. The issuer name. Recommended maximum length is 20 characters to
-   * ensure full string is displayed on smaller screens.
+   * ensure full string is displayed on smaller screens. Ignored if
+   * `localizedIssuerName` is set, including when a patch request sets only this
+   * field. To change the issuer name of a class that has `localizedIssuerName`,
+   * update `localizedIssuerName` instead.
    *
    * @param string $issuerName
    */
@@ -693,7 +699,8 @@ class LoyaltyClass extends \Google\Collection
   }
   /**
    * Translated strings for the issuer_name. Recommended maximum length is 20
-   * characters to ensure full string is displayed on smaller screens.
+   * characters to ensure full string is displayed on smaller screens. If set,
+   * this field takes precedence over `issuerName`.
    *
    * @param LocalizedString $localizedIssuerName
    */
