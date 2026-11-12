@@ -179,8 +179,8 @@ class RouteInfo extends \Google\Collection
   /**
    * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC
    * Hub, the URI of the corresponding route in NCC Hub's routing table. Format:
-   * `projects/{project_id}/locations/global/hubs/{hub_id}/routeTables/{route_ta
-   * ble_id}/routes/{route_id}`
+   * `projects/{project}/locations/global/hubs/{hub}/routeTables/{route_table}/r
+   * outes/{route}`
    *
    * @var string
    */
@@ -247,8 +247,7 @@ class RouteInfo extends \Google\Collection
   public $originatingRouteDisplayName;
   /**
    * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating
-   * SUBNET/STATIC route. Format:
-   * `projects/{project_id}/global/routes/{route_id}`
+   * SUBNET/STATIC route. Format: `projects/{project}/global/routes/{route}`
    *
    * @var string
    */
@@ -302,9 +301,11 @@ class RouteInfo extends \Google\Collection
    */
   public $srcPortRanges;
   /**
-   * URI of a route in format "projects/{project}/global/routes/{route}".
-   * SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
-   * routes only.
+   * For SUBNET, STATIC and PEERING_SUBNET (only for peering network) URI of a
+   * route in format "projects/{project}/global/routes/{route}". For
+   * POLICY_BASED routes URI of a route in format
+   * "projects/{project}/locations/{location}/policyBasedRoutes/{route}". Not
+   * set for other route types.
    *
    * @var string
    */
@@ -417,8 +418,8 @@ class RouteInfo extends \Google\Collection
   /**
    * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC
    * Hub, the URI of the corresponding route in NCC Hub's routing table. Format:
-   * `projects/{project_id}/locations/global/hubs/{hub_id}/routeTables/{route_ta
-   * ble_id}/routes/{route_id}`
+   * `projects/{project}/locations/global/hubs/{hub}/routeTables/{route_table}/r
+   * outes/{route}`
    *
    * @param string $nccHubRouteUri
    */
@@ -582,8 +583,7 @@ class RouteInfo extends \Google\Collection
   }
   /**
    * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating
-   * SUBNET/STATIC route. Format:
-   * `projects/{project_id}/global/routes/{route_id}`
+   * SUBNET/STATIC route. Format: `projects/{project}/global/routes/{route}`
    *
    * @param string $originatingRouteUri
    */
@@ -723,9 +723,11 @@ class RouteInfo extends \Google\Collection
     return $this->srcPortRanges;
   }
   /**
-   * URI of a route in format "projects/{project}/global/routes/{route}".
-   * SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
-   * routes only.
+   * For SUBNET, STATIC and PEERING_SUBNET (only for peering network) URI of a
+   * route in format "projects/{project}/global/routes/{route}". For
+   * POLICY_BASED routes URI of a route in format
+   * "projects/{project}/locations/{location}/policyBasedRoutes/{route}". Not
+   * set for other route types.
    *
    * @param string $uri
    */

@@ -41,7 +41,7 @@ class InterconnectAttachmentInfo extends \Google\Model
   public const TYPE_L2_DEDICATED = 'L2_DEDICATED';
   /**
    * URI of the Cloud Router to be used for dynamic routing. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    *
    * @var string
    */
@@ -54,7 +54,7 @@ class InterconnectAttachmentInfo extends \Google\Model
   public $displayName;
   /**
    * URI of the Interconnect. Format:
-   * `projects/{project_id}/global/interconnects/{interconnect_id}`
+   * `projects/{project}/global/interconnects/{interconnect}`
    *
    * @var string
    */
@@ -79,8 +79,8 @@ class InterconnectAttachmentInfo extends \Google\Model
    */
   public $type;
   /**
-   * URI of the Interconnect attachment. Format: `projects/{project_id}/regions/
-   * {region}/interconnectAttachments/{attachment_id}`
+   * URI of the Interconnect attachment. Format:
+   * `projects/{project}/regions/{region}/interconnectAttachments/{attachment}`
    *
    * @var string
    */
@@ -88,7 +88,7 @@ class InterconnectAttachmentInfo extends \Google\Model
 
   /**
    * URI of the Cloud Router to be used for dynamic routing. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    *
    * @param string $cloudRouterUri
    */
@@ -121,7 +121,7 @@ class InterconnectAttachmentInfo extends \Google\Model
   }
   /**
    * URI of the Interconnect. Format:
-   * `projects/{project_id}/global/interconnects/{interconnect_id}`
+   * `projects/{project}/global/interconnects/{interconnect}`
    *
    * @param string $interconnectUri
    */
@@ -189,8 +189,8 @@ class InterconnectAttachmentInfo extends \Google\Model
     return $this->type;
   }
   /**
-   * URI of the Interconnect attachment. Format: `projects/{project_id}/regions/
-   * {region}/interconnectAttachments/{attachment_id}`
+   * URI of the Interconnect attachment. Format:
+   * `projects/{project}/regions/{region}/interconnectAttachments/{attachment}`
    *
    * @param string $uri
    */

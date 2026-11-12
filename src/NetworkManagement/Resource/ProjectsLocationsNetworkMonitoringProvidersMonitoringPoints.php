@@ -42,8 +42,11 @@ class ProjectsLocationsNetworkMonitoringProvidersMonitoringPoints extends \Googl
    *
    * @opt_param string _password Optional. Password for logging into the
    * MonitoringPoint.
-   * @opt_param string cloudDeploymentType Optional. The deployment type for Cloud
-   * Monitoring Points.
+   * @opt_param string cloudDeploymentType Optional. Specifies the deployment type
+   * for Cloud Monitoring Points. Supported values: `TERRAFORM` for `GCE_VM`;
+   * `BICEP` or `TERRAFORM` for `AZURE_VM`; and `CLOUD_FORMATION` or `TERRAFORM`
+   * for `AWS_EC2`. If unspecified, defaults to `TERRAFORM`, `BICEP`, and
+   * `CLOUD_FORMATION`, respectively. Leave it unspecified for other types.
    * @opt_param string hostname Required. The hostname of the MonitoringPoint,
    * e.g. "test-vm"
    * @opt_param string monitoringPointType Required. The type of the monitoring

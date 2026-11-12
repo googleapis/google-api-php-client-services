@@ -152,12 +152,11 @@ class FirewallInfo extends \Google\Collection
   /**
    * The URI of the firewall policy that this rule is associated with. This
    * field is not applicable to VPC firewall rules and implied VPC firewall
-   * rules. Format: * `locations/global/firewallPolicies/{policy_id}`
-   * (hierarchical policy) *
-   * `projects/{project_id}/global/firewallPolicies/{policy_id}` (global network
-   * firewall policy) *
-   * `projects/{project_id}/regions/{region}/firewallPolicies/{policy_id}`
-   * (regional network firewall policy)
+   * rules. Format: * `locations/global/firewallPolicies/{policy}` (hierarchical
+   * policy) * `projects/{project}/global/firewallPolicies/{policy}` (global
+   * network firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}` (regional
+   * network firewall policy)
    *
    * @var string
    */
@@ -188,9 +187,14 @@ class FirewallInfo extends \Google\Collection
    */
   public $targetType;
   /**
-   * The URI of the firewall rule in format
-   * "projects/{project}/global/firewalls/{firewall}". This field is not
-   * applicable to implied VPC firewall rules.
+   * The URI of the firewall rule in format *
+   * `locations/global/firewallPolicies/{policy}/priority/{priority}`
+   * (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}/priority/{priority}`
+   * (global network firewall policy) * `projects/{project}/regions/{region}/fir
+   * ewallPolicies/{policy}/priority/{priority}` (regional network firewall
+   * policy) * `projects/{project}/global/firewalls/{firewall}` (VPC firewall
+   * rule). This field is not applicable to implied VPC firewall rules.
    *
    * @var string
    */
@@ -326,12 +330,11 @@ class FirewallInfo extends \Google\Collection
   /**
    * The URI of the firewall policy that this rule is associated with. This
    * field is not applicable to VPC firewall rules and implied VPC firewall
-   * rules. Format: * `locations/global/firewallPolicies/{policy_id}`
-   * (hierarchical policy) *
-   * `projects/{project_id}/global/firewallPolicies/{policy_id}` (global network
-   * firewall policy) *
-   * `projects/{project_id}/regions/{region}/firewallPolicies/{policy_id}`
-   * (regional network firewall policy)
+   * rules. Format: * `locations/global/firewallPolicies/{policy}` (hierarchical
+   * policy) * `projects/{project}/global/firewallPolicies/{policy}` (global
+   * network firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}` (regional
+   * network firewall policy)
    *
    * @param string $policyUri
    */
@@ -414,9 +417,14 @@ class FirewallInfo extends \Google\Collection
     return $this->targetType;
   }
   /**
-   * The URI of the firewall rule in format
-   * "projects/{project}/global/firewalls/{firewall}". This field is not
-   * applicable to implied VPC firewall rules.
+   * The URI of the firewall rule in format *
+   * `locations/global/firewallPolicies/{policy}/priority/{priority}`
+   * (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}/priority/{priority}`
+   * (global network firewall policy) * `projects/{project}/regions/{region}/fir
+   * ewallPolicies/{policy}/priority/{priority}` (regional network firewall
+   * policy) * `projects/{project}/global/firewalls/{firewall}` (VPC firewall
+   * rule). This field is not applicable to implied VPC firewall rules.
    *
    * @param string $uri
    */

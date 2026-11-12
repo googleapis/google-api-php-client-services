@@ -41,7 +41,7 @@ class CloudRunRevisionInfo extends \Google\Model
   public $location;
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually
+   * `projects/{project}/locations/{location}/services/{service}` Mutually
    * exclusive with `worker_pool_uri`.
    *
    * @var string
@@ -49,14 +49,14 @@ class CloudRunRevisionInfo extends \Google\Model
   public $serviceUri;
   /**
    * URI of the Cloud Run revision. Format:
-   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
+   * `projects/{project}/locations/{location}/revisions/{revision}`
    *
    * @var string
    */
   public $uri;
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`
    * Mutually exclusive with `service_uri`.
    *
    * @var string
@@ -115,7 +115,7 @@ class CloudRunRevisionInfo extends \Google\Model
   }
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually
+   * `projects/{project}/locations/{location}/services/{service}` Mutually
    * exclusive with `worker_pool_uri`.
    *
    * @param string $serviceUri
@@ -133,7 +133,7 @@ class CloudRunRevisionInfo extends \Google\Model
   }
   /**
    * URI of the Cloud Run revision. Format:
-   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
+   * `projects/{project}/locations/{location}/revisions/{revision}`
    *
    * @param string $uri
    */
@@ -150,7 +150,7 @@ class CloudRunRevisionInfo extends \Google\Model
   }
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`
    * Mutually exclusive with `service_uri`.
    *
    * @param string $workerPoolUri
