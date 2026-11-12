@@ -20,75 +20,156 @@ namespace Google\Service\Merchant;
 class PriceInsightsProductView extends \Google\Model
 {
   /**
+   * Effectiveness is unknown.
+   */
+  public const EFFECTIVENESS_EFFECTIVENESS_UNSPECIFIED = 'EFFECTIVENESS_UNSPECIFIED';
+  /**
+   * Effectiveness is low.
+   */
+  public const EFFECTIVENESS_LOW = 'LOW';
+  /**
+   * Effectiveness is medium.
+   */
+  public const EFFECTIVENESS_MEDIUM = 'MEDIUM';
+  /**
+   * Effectiveness is high.
+   */
+  public const EFFECTIVENESS_HIGH = 'HIGH';
+  /**
+   * Brand of the product.
+   *
    * @var string
    */
   public $brand;
   /**
+   * Product category (1st level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL1;
   /**
+   * Product category (2nd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL2;
   /**
+   * Product category (3rd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL3;
   /**
+   * Product category (4th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL4;
   /**
+   * Product category (5th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL5;
   /**
+   * The predicted effectiveness of applying the price suggestion, bucketed.
+   *
    * @var string
    */
   public $effectiveness;
   /**
+   * REST ID of the product, in the form of
+   * `channel~languageCode~feedLabel~offerId`. Can be used to join data with the
+   * `product_view` table. Required in the `SELECT` clause.
+   *
    * @var string
    */
   public $id;
   /**
+   * Merchant-provided id of the product.
+   *
    * @var string
    */
   public $offerId;
+  /**
+   * Predicted change in clicks as a fraction after introducing the suggested
+   * price compared to current active price. For example, 0.05 is a 5% predicted
+   * increase in clicks.
+   *
+   * @var 
+   */
   public $predictedClicksChangeFraction;
+  /**
+   * Predicted change in conversions as a fraction after introducing the
+   * suggested price compared to current active price. For example, 0.05 is a 5%
+   * predicted increase in conversions).
+   *
+   * @var 
+   */
   public $predictedConversionsChangeFraction;
+  /**
+   * Predicted change in impressions as a fraction after introducing the
+   * suggested price compared to current active price. For example, 0.05 is a 5%
+   * predicted increase in impressions.
+   *
+   * @var 
+   */
   public $predictedImpressionsChangeFraction;
   protected $priceType = Price::class;
   protected $priceDataType = '';
   /**
+   * Product type (1st level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL1;
   /**
+   * Product type (2nd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL2;
   /**
+   * Product type (3rd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL3;
   /**
+   * Product type (4th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL4;
   /**
+   * Product type (5th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL5;
   protected $suggestedPriceType = Price::class;
   protected $suggestedPriceDataType = '';
   /**
+   * Title of the product.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Brand of the product.
+   *
+   * @param string $brand
    */
   public function setBrand($brand)
   {
@@ -102,7 +183,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->brand;
   }
   /**
-   * @param string
+   * Product category (1st level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL1
    */
   public function setCategoryL1($categoryL1)
   {
@@ -116,7 +200,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->categoryL1;
   }
   /**
-   * @param string
+   * Product category (2nd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL2
    */
   public function setCategoryL2($categoryL2)
   {
@@ -130,7 +217,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->categoryL2;
   }
   /**
-   * @param string
+   * Product category (3rd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL3
    */
   public function setCategoryL3($categoryL3)
   {
@@ -144,7 +234,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->categoryL3;
   }
   /**
-   * @param string
+   * Product category (4th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL4
    */
   public function setCategoryL4($categoryL4)
   {
@@ -158,7 +251,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->categoryL4;
   }
   /**
-   * @param string
+   * Product category (5th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL5
    */
   public function setCategoryL5($categoryL5)
   {
@@ -172,21 +268,29 @@ class PriceInsightsProductView extends \Google\Model
     return $this->categoryL5;
   }
   /**
-   * @param string
+   * The predicted effectiveness of applying the price suggestion, bucketed.
+   *
+   * Accepted values: EFFECTIVENESS_UNSPECIFIED, LOW, MEDIUM, HIGH
+   *
+   * @param self::EFFECTIVENESS_* $effectiveness
    */
   public function setEffectiveness($effectiveness)
   {
     $this->effectiveness = $effectiveness;
   }
   /**
-   * @return string
+   * @return self::EFFECTIVENESS_*
    */
   public function getEffectiveness()
   {
     return $this->effectiveness;
   }
   /**
-   * @param string
+   * REST ID of the product, in the form of
+   * `channel~languageCode~feedLabel~offerId`. Can be used to join data with the
+   * `product_view` table. Required in the `SELECT` clause.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -200,7 +304,9 @@ class PriceInsightsProductView extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Merchant-provided id of the product.
+   *
+   * @param string $offerId
    */
   public function setOfferId($offerId)
   {
@@ -238,7 +344,9 @@ class PriceInsightsProductView extends \Google\Model
     return $this->predictedImpressionsChangeFraction;
   }
   /**
-   * @param Price
+   * Current price of the product.
+   *
+   * @param Price $price
    */
   public function setPrice(Price $price)
   {
@@ -252,7 +360,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->price;
   }
   /**
-   * @param string
+   * Product type (1st level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL1
    */
   public function setProductTypeL1($productTypeL1)
   {
@@ -266,7 +377,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->productTypeL1;
   }
   /**
-   * @param string
+   * Product type (2nd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL2
    */
   public function setProductTypeL2($productTypeL2)
   {
@@ -280,7 +394,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->productTypeL2;
   }
   /**
-   * @param string
+   * Product type (3rd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL3
    */
   public function setProductTypeL3($productTypeL3)
   {
@@ -294,7 +411,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->productTypeL3;
   }
   /**
-   * @param string
+   * Product type (4th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL4
    */
   public function setProductTypeL4($productTypeL4)
   {
@@ -308,7 +428,10 @@ class PriceInsightsProductView extends \Google\Model
     return $this->productTypeL4;
   }
   /**
-   * @param string
+   * Product type (5th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL5
    */
   public function setProductTypeL5($productTypeL5)
   {
@@ -322,7 +445,9 @@ class PriceInsightsProductView extends \Google\Model
     return $this->productTypeL5;
   }
   /**
-   * @param Price
+   * Latest suggested price for the product.
+   *
+   * @param Price $suggestedPrice
    */
   public function setSuggestedPrice(Price $suggestedPrice)
   {
@@ -336,7 +461,9 @@ class PriceInsightsProductView extends \Google\Model
     return $this->suggestedPrice;
   }
   /**
-   * @param string
+   * Title of the product.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

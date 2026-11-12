@@ -20,20 +20,37 @@ namespace Google\Service\Merchant;
 class SearchRequest extends \Google\Model
 {
   /**
+   * Optional. Number of `ReportRows` to retrieve in a single page. Defaults to
+   * 1000. Values above 100,000 are coerced to 100,000.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * Optional. Token of the page to retrieve. If not specified, the first page
+   * of results is returned. In order to request the next page of results, the
+   * value obtained from `next_page_token` in the previous response should be
+   * used.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Required. Query that defines a report to be retrieved. For details on how
+   * to construct your query, see the [Query Language
+   * guide](https://developers.google.com/merchant/api/guides/reports/query-
+   * language). For the full list of available tables and fields, see the
+   * Available fields.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param int
+   * Optional. Number of `ReportRows` to retrieve in a single page. Defaults to
+   * 1000. Values above 100,000 are coerced to 100,000.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -47,7 +64,12 @@ class SearchRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * Optional. Token of the page to retrieve. If not specified, the first page
+   * of results is returned. In order to request the next page of results, the
+   * value obtained from `next_page_token` in the previous response should be
+   * used.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -61,7 +83,13 @@ class SearchRequest extends \Google\Model
     return $this->pageToken;
   }
   /**
-   * @param string
+   * Required. Query that defines a report to be retrieved. For details on how
+   * to construct your query, see the [Query Language
+   * guide](https://developers.google.com/merchant/api/guides/reports/query-
+   * language). For the full list of available tables and fields, see the
+   * Available fields.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

@@ -19,33 +19,110 @@ namespace Google\Service\Merchant;
 
 class CompetitiveVisibilityCompetitorView extends \Google\Model
 {
+  /**
+   * Not specified.
+   */
+  public const TRAFFIC_SOURCE_TRAFFIC_SOURCE_ENUM_UNSPECIFIED = 'TRAFFIC_SOURCE_ENUM_UNSPECIFIED';
+  /**
+   * Organic traffic.
+   */
+  public const TRAFFIC_SOURCE_ORGANIC = 'ORGANIC';
+  /**
+   * Traffic from ads.
+   */
+  public const TRAFFIC_SOURCE_ADS = 'ADS';
+  /**
+   * Organic and ads traffic.
+   */
+  public const TRAFFIC_SOURCE_ALL = 'ALL';
+  /**
+   * [Ads / organic ratio]
+   * (https://support.google.com/merchants/answer/11366442#zippy=%2Cads-free-
+   * ratio) shows how often the domain receives impressions from Shopping ads
+   * compared to organic traffic. The number is rounded and bucketed. Cannot be
+   * filtered on in the 'WHERE' clause.
+   *
+   * @var 
+   */
   public $adsOrganicRatio;
   protected $dateType = Date::class;
   protected $dateDataType = '';
   /**
+   * Domain of your competitor or your domain, if `is_your_domain` is true.
+   * Required in the `SELECT` clause. Cannot be filtered on in the 'WHERE'
+   * clause.
+   *
    * @var string
    */
   public $domain;
+  /**
+   * [Higher position rate]
+   * (https://support.google.com/merchants/answer/11366442#zippy=%2Chigher-
+   * position-rate) shows how often a competitor’s offer got placed in a higher
+   * position on the page than your offer. Cannot be filtered on in the 'WHERE'
+   * clause.
+   *
+   * @var 
+   */
   public $higherPositionRate;
   /**
+   * True if this row contains data for your domain. Cannot be filtered on in
+   * the 'WHERE' clause.
+   *
    * @var bool
    */
   public $isYourDomain;
+  /**
+   * [Page overlap rate]
+   * (https://support.google.com/merchants/answer/11366442#zippy=%2Cpage-
+   * overlap-rate) shows how frequently competing retailers’ offers are shown
+   * together with your offers on the same page. Cannot be filtered on in the
+   * 'WHERE' clause.
+   *
+   * @var 
+   */
   public $pageOverlapRate;
   /**
+   * Position of the domain in the similar businesses ranking for the selected
+   * keys (`date`, `report_category_id`, `report_country_code`,
+   * `traffic_source`) based on impressions. 1 is the highest. Cannot be
+   * filtered on in the 'WHERE' clause.
+   *
    * @var string
    */
   public $rank;
+  /**
+   * [Relative visibility]
+   * (https://support.google.com/merchants/answer/11366442#zippy=%2Crelative-
+   * visibility) shows how often your competitors’ offers are shown compared to
+   * your offers. In other words, this is the number of displayed impressions of
+   * a competitor retailer divided by the number of your displayed impressions
+   * during a selected time range for a selected product category and country.
+   * Cannot be filtered on in the 'WHERE' clause.
+   *
+   * @var 
+   */
   public $relativeVisibility;
   /**
+   * Google product category ID to calculate the report for, represented in
+   * [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436). Required in
+   * the `SELECT` clause. A condition on `report_category_id` is required in the
+   * `WHERE` clause.
+   *
    * @var string
    */
   public $reportCategoryId;
   /**
+   * Country where impressions appeared. Required in the `SELECT` clause. A
+   * condition on `report_country_code` is required in the `WHERE` clause.
+   *
    * @var string
    */
   public $reportCountryCode;
   /**
+   * Traffic source of impressions. Required in the `SELECT` clause.
+   *
    * @var string
    */
   public $trafficSource;
@@ -59,7 +136,9 @@ class CompetitiveVisibilityCompetitorView extends \Google\Model
     return $this->adsOrganicRatio;
   }
   /**
-   * @param Date
+   * Date of this row. A condition on `date` is required in the `WHERE` clause.
+   *
+   * @param Date $date
    */
   public function setDate(Date $date)
   {
@@ -73,7 +152,11 @@ class CompetitiveVisibilityCompetitorView extends \Google\Model
     return $this->date;
   }
   /**
-   * @param string
+   * Domain of your competitor or your domain, if `is_your_domain` is true.
+   * Required in the `SELECT` clause. Cannot be filtered on in the 'WHERE'
+   * clause.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -95,7 +178,10 @@ class CompetitiveVisibilityCompetitorView extends \Google\Model
     return $this->higherPositionRate;
   }
   /**
-   * @param bool
+   * True if this row contains data for your domain. Cannot be filtered on in
+   * the 'WHERE' clause.
+   *
+   * @param bool $isYourDomain
    */
   public function setIsYourDomain($isYourDomain)
   {
@@ -117,7 +203,12 @@ class CompetitiveVisibilityCompetitorView extends \Google\Model
     return $this->pageOverlapRate;
   }
   /**
-   * @param string
+   * Position of the domain in the similar businesses ranking for the selected
+   * keys (`date`, `report_category_id`, `report_country_code`,
+   * `traffic_source`) based on impressions. 1 is the highest. Cannot be
+   * filtered on in the 'WHERE' clause.
+   *
+   * @param string $rank
    */
   public function setRank($rank)
   {
@@ -139,7 +230,13 @@ class CompetitiveVisibilityCompetitorView extends \Google\Model
     return $this->relativeVisibility;
   }
   /**
-   * @param string
+   * Google product category ID to calculate the report for, represented in
+   * [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436). Required in
+   * the `SELECT` clause. A condition on `report_category_id` is required in the
+   * `WHERE` clause.
+   *
+   * @param string $reportCategoryId
    */
   public function setReportCategoryId($reportCategoryId)
   {
@@ -153,7 +250,10 @@ class CompetitiveVisibilityCompetitorView extends \Google\Model
     return $this->reportCategoryId;
   }
   /**
-   * @param string
+   * Country where impressions appeared. Required in the `SELECT` clause. A
+   * condition on `report_country_code` is required in the `WHERE` clause.
+   *
+   * @param string $reportCountryCode
    */
   public function setReportCountryCode($reportCountryCode)
   {
@@ -167,14 +267,18 @@ class CompetitiveVisibilityCompetitorView extends \Google\Model
     return $this->reportCountryCode;
   }
   /**
-   * @param string
+   * Traffic source of impressions. Required in the `SELECT` clause.
+   *
+   * Accepted values: TRAFFIC_SOURCE_ENUM_UNSPECIFIED, ORGANIC, ADS, ALL
+   *
+   * @param self::TRAFFIC_SOURCE_* $trafficSource
    */
   public function setTrafficSource($trafficSource)
   {
     $this->trafficSource = $trafficSource;
   }
   /**
-   * @return string
+   * @return self::TRAFFIC_SOURCE_*
    */
   public function getTrafficSource()
   {

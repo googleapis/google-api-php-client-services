@@ -20,16 +20,24 @@ namespace Google\Service\Merchant;
 class ItemIssueType extends \Google\Model
 {
   /**
+   * Canonical attribute name for attribute-specific issues.
+   *
    * @var string
    */
   public $canonicalAttribute;
   /**
+   * Error code of the issue, equivalent to the `code` of [Product
+   * issues](https://developers.google.com/merchant/api/guides/products/list-
+   * products-data-issues).
+   *
    * @var string
    */
   public $code;
 
   /**
-   * @param string
+   * Canonical attribute name for attribute-specific issues.
+   *
+   * @param string $canonicalAttribute
    */
   public function setCanonicalAttribute($canonicalAttribute)
   {
@@ -43,7 +51,11 @@ class ItemIssueType extends \Google\Model
     return $this->canonicalAttribute;
   }
   /**
-   * @param string
+   * Error code of the issue, equivalent to the `code` of [Product
+   * issues](https://developers.google.com/merchant/api/guides/products/list-
+   * products-data-issues).
+   *
+   * @param string $code
    */
   public function setCode($code)
   {

@@ -19,21 +19,63 @@ namespace Google\Service\Merchant;
 
 class CompetitiveVisibilityBenchmarkView extends \Google\Model
 {
+  /**
+   * Not specified.
+   */
+  public const TRAFFIC_SOURCE_TRAFFIC_SOURCE_ENUM_UNSPECIFIED = 'TRAFFIC_SOURCE_ENUM_UNSPECIFIED';
+  /**
+   * Organic traffic.
+   */
+  public const TRAFFIC_SOURCE_ORGANIC = 'ORGANIC';
+  /**
+   * Traffic from ads.
+   */
+  public const TRAFFIC_SOURCE_ADS = 'ADS';
+  /**
+   * Organic and ads traffic.
+   */
+  public const TRAFFIC_SOURCE_ALL = 'ALL';
+  /**
+   * Change in visibility based on impressions with respect to the start of the
+   * selected time range (or first day with non-zero impressions) for a combined
+   * set of merchants with highest visibility approximating the market. Cannot
+   * be filtered on in the 'WHERE' clause.
+   *
+   * @var 
+   */
   public $categoryBenchmarkVisibilityTrend;
   protected $dateType = Date::class;
   protected $dateDataType = '';
   /**
+   * Google product category ID to calculate the report for, represented in
+   * [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436). Required in
+   * the `SELECT` clause. A condition on `report_category_id` is required in the
+   * `WHERE` clause.
+   *
    * @var string
    */
   public $reportCategoryId;
   /**
+   * Country where impressions appeared. Required in the `SELECT` clause. A
+   * condition on `report_country_code` is required in the `WHERE` clause.
+   *
    * @var string
    */
   public $reportCountryCode;
   /**
+   * Traffic source of impressions. Required in the `SELECT` clause.
+   *
    * @var string
    */
   public $trafficSource;
+  /**
+   * Change in visibility based on impressions for your domain with respect to
+   * the start of the selected time range (or first day with non-zero
+   * impressions). Cannot be filtered on in the 'WHERE' clause.
+   *
+   * @var 
+   */
   public $yourDomainVisibilityTrend;
 
   public function setCategoryBenchmarkVisibilityTrend($categoryBenchmarkVisibilityTrend)
@@ -45,7 +87,10 @@ class CompetitiveVisibilityBenchmarkView extends \Google\Model
     return $this->categoryBenchmarkVisibilityTrend;
   }
   /**
-   * @param Date
+   * Date of this row. Required in the `SELECT` clause. A condition on `date` is
+   * required in the `WHERE` clause.
+   *
+   * @param Date $date
    */
   public function setDate(Date $date)
   {
@@ -59,7 +104,13 @@ class CompetitiveVisibilityBenchmarkView extends \Google\Model
     return $this->date;
   }
   /**
-   * @param string
+   * Google product category ID to calculate the report for, represented in
+   * [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436). Required in
+   * the `SELECT` clause. A condition on `report_category_id` is required in the
+   * `WHERE` clause.
+   *
+   * @param string $reportCategoryId
    */
   public function setReportCategoryId($reportCategoryId)
   {
@@ -73,7 +124,10 @@ class CompetitiveVisibilityBenchmarkView extends \Google\Model
     return $this->reportCategoryId;
   }
   /**
-   * @param string
+   * Country where impressions appeared. Required in the `SELECT` clause. A
+   * condition on `report_country_code` is required in the `WHERE` clause.
+   *
+   * @param string $reportCountryCode
    */
   public function setReportCountryCode($reportCountryCode)
   {
@@ -87,14 +141,18 @@ class CompetitiveVisibilityBenchmarkView extends \Google\Model
     return $this->reportCountryCode;
   }
   /**
-   * @param string
+   * Traffic source of impressions. Required in the `SELECT` clause.
+   *
+   * Accepted values: TRAFFIC_SOURCE_ENUM_UNSPECIFIED, ORGANIC, ADS, ALL
+   *
+   * @param self::TRAFFIC_SOURCE_* $trafficSource
    */
   public function setTrafficSource($trafficSource)
   {
     $this->trafficSource = $trafficSource;
   }
   /**
-   * @return string
+   * @return self::TRAFFIC_SOURCE_*
    */
   public function getTrafficSource()
   {

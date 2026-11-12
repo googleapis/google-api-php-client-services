@@ -41,7 +41,9 @@ class ReportRow extends \Google\Model
   protected $productViewDataType = '';
 
   /**
-   * @param BestSellersBrandView
+   * Fields available for query in `best_sellers_brand_view` table.
+   *
+   * @param BestSellersBrandView $bestSellersBrandView
    */
   public function setBestSellersBrandView(BestSellersBrandView $bestSellersBrandView)
   {
@@ -55,7 +57,9 @@ class ReportRow extends \Google\Model
     return $this->bestSellersBrandView;
   }
   /**
-   * @param BestSellersProductClusterView
+   * Fields available for query in `best_sellers_product_cluster_view` table.
+   *
+   * @param BestSellersProductClusterView $bestSellersProductClusterView
    */
   public function setBestSellersProductClusterView(BestSellersProductClusterView $bestSellersProductClusterView)
   {
@@ -69,7 +73,10 @@ class ReportRow extends \Google\Model
     return $this->bestSellersProductClusterView;
   }
   /**
-   * @param CompetitiveVisibilityBenchmarkView
+   * Fields available for query in `competitive_visibility_benchmark_view`
+   * table.
+   *
+   * @param CompetitiveVisibilityBenchmarkView $competitiveVisibilityBenchmarkView
    */
   public function setCompetitiveVisibilityBenchmarkView(CompetitiveVisibilityBenchmarkView $competitiveVisibilityBenchmarkView)
   {
@@ -83,7 +90,10 @@ class ReportRow extends \Google\Model
     return $this->competitiveVisibilityBenchmarkView;
   }
   /**
-   * @param CompetitiveVisibilityCompetitorView
+   * Fields available for query in `competitive_visibility_competitor_view`
+   * table.
+   *
+   * @param CompetitiveVisibilityCompetitorView $competitiveVisibilityCompetitorView
    */
   public function setCompetitiveVisibilityCompetitorView(CompetitiveVisibilityCompetitorView $competitiveVisibilityCompetitorView)
   {
@@ -97,7 +107,10 @@ class ReportRow extends \Google\Model
     return $this->competitiveVisibilityCompetitorView;
   }
   /**
-   * @param CompetitiveVisibilityTopMerchantView
+   * Fields available for query in `competitive_visibility_top_merchant_view`
+   * table.
+   *
+   * @param CompetitiveVisibilityTopMerchantView $competitiveVisibilityTopMerchantView
    */
   public function setCompetitiveVisibilityTopMerchantView(CompetitiveVisibilityTopMerchantView $competitiveVisibilityTopMerchantView)
   {
@@ -111,7 +124,9 @@ class ReportRow extends \Google\Model
     return $this->competitiveVisibilityTopMerchantView;
   }
   /**
-   * @param NonProductPerformanceView
+   * Fields available for query in `non_product_performance_view` table.
+   *
+   * @param NonProductPerformanceView $nonProductPerformanceView
    */
   public function setNonProductPerformanceView(NonProductPerformanceView $nonProductPerformanceView)
   {
@@ -125,7 +140,9 @@ class ReportRow extends \Google\Model
     return $this->nonProductPerformanceView;
   }
   /**
-   * @param PriceCompetitivenessProductView
+   * Fields available for query in `price_competitiveness_product_view` table.
+   *
+   * @param PriceCompetitivenessProductView $priceCompetitivenessProductView
    */
   public function setPriceCompetitivenessProductView(PriceCompetitivenessProductView $priceCompetitivenessProductView)
   {
@@ -139,7 +156,9 @@ class ReportRow extends \Google\Model
     return $this->priceCompetitivenessProductView;
   }
   /**
-   * @param PriceInsightsProductView
+   * Fields available for query in `price_insights_product_view` table.
+   *
+   * @param PriceInsightsProductView $priceInsightsProductView
    */
   public function setPriceInsightsProductView(PriceInsightsProductView $priceInsightsProductView)
   {
@@ -153,7 +172,9 @@ class ReportRow extends \Google\Model
     return $this->priceInsightsProductView;
   }
   /**
-   * @param ProductPerformanceView
+   * Fields available for query in `product_performance_view` table.
+   *
+   * @param ProductPerformanceView $productPerformanceView
    */
   public function setProductPerformanceView(ProductPerformanceView $productPerformanceView)
   {
@@ -167,7 +188,9 @@ class ReportRow extends \Google\Model
     return $this->productPerformanceView;
   }
   /**
-   * @param ProductView
+   * Fields available for query in `product_view` table.
+   *
+   * @param ProductView $productView
    */
   public function setProductView(ProductView $productView)
   {

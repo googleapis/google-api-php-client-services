@@ -33,10 +33,17 @@ class AccountsReports extends \Google\Service\Resource
   /**
    * Retrieves a report defined by a search query. The response might contain
    * fewer rows than specified by `page_size`. Rely on `next_page_token` to
-   * determine if there are more rows to be requested. (reports.search)
+   * determine if there are more rows to be requested. For more information, see
+   * [Get started](https://developers.google.com/merchant/api/guides/reports/get-
+   * started), [Use Merchant Center Query
+   * Language](https://developers.google.com/merchant/api/guides/reports/query-
+   * language), and [Paginate query
+   * results](https://developers.google.com/merchant/api/guides/reports/paging).
+   * (reports.search)
    *
    * @param string $parent Required. Id of the account making the call. Must be a
-   * standalone account or an MCA subaccount. Format: accounts/{account}
+   * standalone account or a subaccount of an advanced account. Format:
+   * accounts/{account}
    * @param SearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SearchResponse

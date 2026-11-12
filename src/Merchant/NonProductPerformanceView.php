@@ -19,14 +19,27 @@ namespace Google\Service\Merchant;
 
 class NonProductPerformanceView extends \Google\Model
 {
+  /**
+   * Click-through rate - the number of clicks (`clicks`) divided by the number
+   * of impressions (`impressions`) of images and online store links leading to
+   * your non-product pages. Metric.
+   *
+   * @var 
+   */
   public $clickThroughRate;
   /**
+   * Number of clicks on images and online store links leading to your non-
+   * product pages. Metric.
+   *
    * @var string
    */
   public $clicks;
   protected $dateType = Date::class;
   protected $dateDataType = '';
   /**
+   * Number of times images and online store links leading to your non-product
+   * pages were shown. Metric.
+   *
    * @var string
    */
   public $impressions;
@@ -42,7 +55,10 @@ class NonProductPerformanceView extends \Google\Model
     return $this->clickThroughRate;
   }
   /**
-   * @param string
+   * Number of clicks on images and online store links leading to your non-
+   * product pages. Metric.
+   *
+   * @param string $clicks
    */
   public function setClicks($clicks)
   {
@@ -56,7 +72,10 @@ class NonProductPerformanceView extends \Google\Model
     return $this->clicks;
   }
   /**
-   * @param Date
+   * Date in the Merchant Center account timezone to which metrics apply.
+   * Segment. Condition on `date` is required in the `WHERE` clause.
+   *
+   * @param Date $date
    */
   public function setDate(Date $date)
   {
@@ -70,7 +89,10 @@ class NonProductPerformanceView extends \Google\Model
     return $this->date;
   }
   /**
-   * @param string
+   * Number of times images and online store links leading to your non-product
+   * pages were shown. Metric.
+   *
+   * @param string $impressions
    */
   public function setImpressions($impressions)
   {
@@ -84,7 +106,10 @@ class NonProductPerformanceView extends \Google\Model
     return $this->impressions;
   }
   /**
-   * @param Date
+   * First day of the week (Monday) of the metrics date in the Merchant Center
+   * account timezone. Segment.
+   *
+   * @param Date $week
    */
   public function setWeek(Date $week)
   {

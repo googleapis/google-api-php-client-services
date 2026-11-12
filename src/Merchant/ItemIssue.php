@@ -20,6 +20,22 @@ namespace Google\Service\Merchant;
 class ItemIssue extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const RESOLUTION_ITEM_ISSUE_RESOLUTION_UNSPECIFIED = 'ITEM_ISSUE_RESOLUTION_UNSPECIFIED';
+  /**
+   * The merchant has to fix the issue.
+   */
+  public const RESOLUTION_MERCHANT_ACTION = 'MERCHANT_ACTION';
+  /**
+   * The issue will be resolved automatically (for example, image crawl) or
+   * through a Google review. No merchant action is required now. Resolution
+   * might lead to another issue (for example, if crawl fails).
+   */
+  public const RESOLUTION_PENDING_PROCESSING = 'PENDING_PROCESSING';
+  /**
+   * Item issue resolution.
+   *
    * @var string
    */
   public $resolution;
@@ -29,21 +45,28 @@ class ItemIssue extends \Google\Model
   protected $typeDataType = '';
 
   /**
-   * @param string
+   * Item issue resolution.
+   *
+   * Accepted values: ITEM_ISSUE_RESOLUTION_UNSPECIFIED, MERCHANT_ACTION,
+   * PENDING_PROCESSING
+   *
+   * @param self::RESOLUTION_* $resolution
    */
   public function setResolution($resolution)
   {
     $this->resolution = $resolution;
   }
   /**
-   * @return string
+   * @return self::RESOLUTION_*
    */
   public function getResolution()
   {
     return $this->resolution;
   }
   /**
-   * @param ItemIssueSeverity
+   * Item issue severity.
+   *
+   * @param ItemIssueSeverity $severity
    */
   public function setSeverity(ItemIssueSeverity $severity)
   {
@@ -57,7 +80,9 @@ class ItemIssue extends \Google\Model
     return $this->severity;
   }
   /**
-   * @param ItemIssueType
+   * Item issue type.
+   *
+   * @param ItemIssueType $type
    */
   public function setType(ItemIssueType $type)
   {
