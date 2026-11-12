@@ -69,7 +69,7 @@ class RegionalTaxConfig extends \Google\Model
   public $eligibleForStreamingServiceTaxRate;
   /**
    * Required. Region code this configuration applies to, as defined by ISO
-   * 3166-2, e.g. "US".
+   * 3166-1 alpha-2, e.g. "US".
    *
    * @var string
    */
@@ -114,7 +114,7 @@ class RegionalTaxConfig extends \Google\Model
   }
   /**
    * Required. Region code this configuration applies to, as defined by ISO
-   * 3166-2, e.g. "US".
+   * 3166-1 alpha-2, e.g. "US".
    *
    * @param string $regionCode
    */
