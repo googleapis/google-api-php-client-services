@@ -227,7 +227,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     return $this->call('stop', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Returns permissions that a caller has on the specified Project. There are no
+   * Returns permissions that a caller has on the specified Instance. There are no
    * permissions required for making this API call. (instances.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is

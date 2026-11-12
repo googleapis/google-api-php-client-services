@@ -24,6 +24,8 @@ class GoogleCloudRunV2BuildConfiguration extends \Google\Collection
   protected $buildpacksBuildDataType = '';
   protected $dockerBuildType = GoogleCloudRunV2BuildConfigurationDockerBuild::class;
   protected $dockerBuildDataType = '';
+  protected $environmentVariablesType = GoogleCloudRunV2EnvVar::class;
+  protected $environmentVariablesDataType = 'array';
   /**
    * Required. Artifact Registry URI to store the built image.
    *
@@ -77,6 +79,22 @@ class GoogleCloudRunV2BuildConfiguration extends \Google\Collection
   public function getDockerBuild()
   {
     return $this->dockerBuild;
+  }
+  /**
+   * Optional. Environment variables for the build.
+   *
+   * @param GoogleCloudRunV2EnvVar[] $environmentVariables
+   */
+  public function setEnvironmentVariables($environmentVariables)
+  {
+    $this->environmentVariables = $environmentVariables;
+  }
+  /**
+   * @return GoogleCloudRunV2EnvVar[]
+   */
+  public function getEnvironmentVariables()
+  {
+    return $this->environmentVariables;
   }
   /**
    * Required. Artifact Registry URI to store the built image.

@@ -243,13 +243,15 @@ class GoogleCloudRunV2Condition extends \Google\Model
    */
   public $instanceReason;
   /**
-   * Last time the condition transitioned from one status to another.
+   * Output only. Last time the condition transitioned from one status to
+   * another.
    *
    * @var string
    */
   public $lastTransitionTime;
   /**
-   * Human readable message indicating details about the current status.
+   * Output only. Human readable message indicating details about the current
+   * status.
    *
    * @var string
    */
@@ -267,20 +269,21 @@ class GoogleCloudRunV2Condition extends \Google\Model
    */
   public $revisionReason;
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info
+   * Output only. How to interpret failures of this condition, one of Error,
+   * Warning, Info
    *
    * @var string
    */
   public $severity;
   /**
-   * State of the condition.
+   * Output only. State of the condition.
    *
    * @var string
    */
   public $state;
   /**
-   * type is used to communicate the status of the reconciliation process. See
-   * also:
+   * Output only. type is used to communicate the status of the reconciliation
+   * process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-
    * conditions-and-reporting Types common to all resources include: * "Ready":
    * True when the Resource is ready.
@@ -330,7 +333,8 @@ class GoogleCloudRunV2Condition extends \Google\Model
     return $this->instanceReason;
   }
   /**
-   * Last time the condition transitioned from one status to another.
+   * Output only. Last time the condition transitioned from one status to
+   * another.
    *
    * @param string $lastTransitionTime
    */
@@ -346,7 +350,8 @@ class GoogleCloudRunV2Condition extends \Google\Model
     return $this->lastTransitionTime;
   }
   /**
-   * Human readable message indicating details about the current status.
+   * Output only. Human readable message indicating details about the current
+   * status.
    *
    * @param string $message
    */
@@ -407,7 +412,8 @@ class GoogleCloudRunV2Condition extends \Google\Model
     return $this->revisionReason;
   }
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info
+   * Output only. How to interpret failures of this condition, one of Error,
+   * Warning, Info
    *
    * Accepted values: SEVERITY_UNSPECIFIED, ERROR, WARNING, INFO
    *
@@ -425,7 +431,7 @@ class GoogleCloudRunV2Condition extends \Google\Model
     return $this->severity;
   }
   /**
-   * State of the condition.
+   * Output only. State of the condition.
    *
    * Accepted values: STATE_UNSPECIFIED, CONDITION_PENDING,
    * CONDITION_RECONCILING, CONDITION_FAILED, CONDITION_SUCCEEDED
@@ -444,8 +450,8 @@ class GoogleCloudRunV2Condition extends \Google\Model
     return $this->state;
   }
   /**
-   * type is used to communicate the status of the reconciliation process. See
-   * also:
+   * Output only. type is used to communicate the status of the reconciliation
+   * process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-
    * conditions-and-reporting Types common to all resources include: * "Ready":
    * True when the Resource is ready.
