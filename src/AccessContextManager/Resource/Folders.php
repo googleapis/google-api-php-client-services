@@ -30,12 +30,12 @@ use Google\Service\AccessContextManager\LookupConfiguredServicePerimeterResponse
 class Folders extends \Google\Service\Resource
 {
   /**
-   * Looks up the configured service perimeter for a given resource. Format:
-   * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
+   * Looks up the configured ServicePerimeter for a given resource.
    * (folders.lookupConfiguredServicePerimeter)
    *
-   * @param string $resource Required. The resource to resolve (for example,
-   * `projects/123` or `folders/456`).
+   * @param string $resource Required. The resource name. Format:
+   * `projects/{project_number}` or `folders/{folder_number}` (for example,
+   * `projects/123` or `folders/456`)
    * @param array $optParams Optional parameters.
    * @return LookupConfiguredServicePerimeterResponse
    * @throws \Google\Service\Exception

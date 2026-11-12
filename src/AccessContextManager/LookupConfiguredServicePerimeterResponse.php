@@ -34,17 +34,17 @@ class LookupConfiguredServicePerimeterResponse extends \Google\Model
    */
   public $restrictedResourceDryRun;
   /**
-   * Fully qualified name of the configured enforced perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field
-   * is empty if no enforced perimeter applies.
+   * Fully qualified name of the configured enforced perimeter. This field is
+   * empty if no enforced perimeter applies. Format:
+   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    *
    * @var string
    */
   public $servicePerimeter;
   /**
-   * Fully qualified name of the configured dry-run perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field
-   * is empty if no dry-run perimeter configuration applies.
+   * Fully qualified name of the configured dry-run perimeter. This field is
+   * empty if no dry-run perimeter configuration applies. Format:
+   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    *
    * @var string
    */
@@ -85,9 +85,9 @@ class LookupConfiguredServicePerimeterResponse extends \Google\Model
     return $this->restrictedResourceDryRun;
   }
   /**
-   * Fully qualified name of the configured enforced perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field
-   * is empty if no enforced perimeter applies.
+   * Fully qualified name of the configured enforced perimeter. This field is
+   * empty if no enforced perimeter applies. Format:
+   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    *
    * @param string $servicePerimeter
    */
@@ -103,9 +103,9 @@ class LookupConfiguredServicePerimeterResponse extends \Google\Model
     return $this->servicePerimeter;
   }
   /**
-   * Fully qualified name of the configured dry-run perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field
-   * is empty if no dry-run perimeter configuration applies.
+   * Fully qualified name of the configured dry-run perimeter. This field is
+   * empty if no dry-run perimeter configuration applies. Format:
+   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    *
    * @param string $servicePerimeterDryRun
    */
