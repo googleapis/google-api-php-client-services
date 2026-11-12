@@ -67,10 +67,10 @@ class RestoreVerificationPlanAssociation extends \Google\Model
    */
   public $labels;
   /**
-   * Output only. Identifier. The resource name of
-   * RestoreVerificationPlanAssociation in below format Format : projects/{proje
-   * ct}/locations/{location}/restoreVerificationPlans/{restore_verification_pla
-   * n}/associations/{association}
+   * Output only. Identifier. The resource name of the
+   * `RestoreVerificationPlanAssociation`. Format: `projects/{project}/locations
+   * /{location}/restoreVerificationPlans/{restore_verification_plan}/associatio
+   * ns/{association}`
    *
    * @var string
    */
@@ -153,10 +153,10 @@ class RestoreVerificationPlanAssociation extends \Google\Model
     return $this->labels;
   }
   /**
-   * Output only. Identifier. The resource name of
-   * RestoreVerificationPlanAssociation in below format Format : projects/{proje
-   * ct}/locations/{location}/restoreVerificationPlans/{restore_verification_pla
-   * n}/associations/{association}
+   * Output only. Identifier. The resource name of the
+   * `RestoreVerificationPlanAssociation`. Format: `projects/{project}/locations
+   * /{location}/restoreVerificationPlans/{restore_verification_plan}/associatio
+   * ns/{association}`
    *
    * @param string $name
    */

@@ -29,20 +29,20 @@ class BindingMatchingResource extends \Google\Model
    */
   public $lastEvaluationTime;
   /**
-   * Identifier. The resource name of the `BindingMatchingResource`. Format: `pr
-   * ojects/{project}/locations/{location}/autoProtectionPolicies/{auto_protecti
-   * on_policy}/bindings/{binding}/matchingResources/{matching_resource}`
+   * Output only. Identifier. The resource name of the
+   * `BindingMatchingResource`. Format: `projects/{project}/locations/{location}
+   * /autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchin
+   * gResources/{matching_resource}`
    *
    * @var string
    */
   public $name;
   /**
-   * Required. Immutable. Resource name of the workload that matches the
-   * criteria of the binding. The format can be either a relative resource name
-   * (e.g., `projects/my-project/zones/us-central1-a/instances/my-instance`) or
-   * a schemeless full resource name (e.g.,
-   * `//compute.googleapis.com/projects/my-project/zones/us-
-   * central1-a/instances/my-instance`).
+   * Output only. Resource name of the workload that matches the criteria of the
+   * binding. The format can be either a relative resource name (e.g.,
+   * `projects/my-project/zones/us-central1-a/instances/my-instance`) or a
+   * schemeless full resource name (e.g., `//compute.googleapis.com/projects/my-
+   * project/zones/us-central1-a/instances/my-instance`).
    *
    * @var string
    */
@@ -83,9 +83,10 @@ class BindingMatchingResource extends \Google\Model
     return $this->lastEvaluationTime;
   }
   /**
-   * Identifier. The resource name of the `BindingMatchingResource`. Format: `pr
-   * ojects/{project}/locations/{location}/autoProtectionPolicies/{auto_protecti
-   * on_policy}/bindings/{binding}/matchingResources/{matching_resource}`
+   * Output only. Identifier. The resource name of the
+   * `BindingMatchingResource`. Format: `projects/{project}/locations/{location}
+   * /autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchin
+   * gResources/{matching_resource}`
    *
    * @param string $name
    */
@@ -101,12 +102,11 @@ class BindingMatchingResource extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. Immutable. Resource name of the workload that matches the
-   * criteria of the binding. The format can be either a relative resource name
-   * (e.g., `projects/my-project/zones/us-central1-a/instances/my-instance`) or
-   * a schemeless full resource name (e.g.,
-   * `//compute.googleapis.com/projects/my-project/zones/us-
-   * central1-a/instances/my-instance`).
+   * Output only. Resource name of the workload that matches the criteria of the
+   * binding. The format can be either a relative resource name (e.g.,
+   * `projects/my-project/zones/us-central1-a/instances/my-instance`) or a
+   * schemeless full resource name (e.g., `//compute.googleapis.com/projects/my-
+   * project/zones/us-central1-a/instances/my-instance`).
    *
    * @param string $resource
    */
