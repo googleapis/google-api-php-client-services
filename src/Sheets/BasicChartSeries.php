@@ -97,8 +97,8 @@ class BasicChartSeries extends \Google\Collection
   public $targetAxis;
   /**
    * The type of this series. Valid only if the chartType is COMBO. Different
-   * types will change the way the series is visualized. Only LINE, AREA, and
-   * COLUMN are supported.
+   * types will change the way the series is visualized. Only LINE, AREA,
+   * STEPPED_AREA, and COLUMN are supported.
    *
    * @var string
    */
@@ -161,7 +161,7 @@ class BasicChartSeries extends \Google\Collection
   /**
    * The line style of this series. Valid only if the chartType is AREA, LINE,
    * or SCATTER. COMBO charts are also supported if the series chart type is
-   * AREA or LINE.
+   * AREA, STEPPED_AREA, or LINE.
    *
    * @param LineStyle $lineStyle
    */
@@ -252,8 +252,8 @@ class BasicChartSeries extends \Google\Collection
   }
   /**
    * The type of this series. Valid only if the chartType is COMBO. Different
-   * types will change the way the series is visualized. Only LINE, AREA, and
-   * COLUMN are supported.
+   * types will change the way the series is visualized. Only LINE, AREA,
+   * STEPPED_AREA, and COLUMN are supported.
    *
    * Accepted values: BASIC_CHART_TYPE_UNSPECIFIED, BAR, LINE, AREA, COLUMN,
    * SCATTER, COMBO, STEPPED_AREA
