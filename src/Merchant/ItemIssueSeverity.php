@@ -19,8 +19,29 @@ namespace Google\Service\Merchant;
 
 class ItemIssueSeverity extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const AGGREGATED_SEVERITY_AGGREGATED_ISSUE_SEVERITY_UNSPECIFIED = 'AGGREGATED_ISSUE_SEVERITY_UNSPECIFIED';
+  /**
+   * Issue disapproves the product in at least one reporting context.
+   */
+  public const AGGREGATED_SEVERITY_DISAPPROVED = 'DISAPPROVED';
+  /**
+   * Issue demotes the product in all reporting contexts it affects.
+   */
+  public const AGGREGATED_SEVERITY_DEMOTED = 'DEMOTED';
+  /**
+   * Issue resolution is `PENDING_PROCESSING`.
+   */
+  public const AGGREGATED_SEVERITY_PENDING = 'PENDING';
   protected $collection_key = 'severityPerReportingContext';
   /**
+   * Aggregated severity of the issue for all reporting contexts it affects.
+   * Reporting contexts included in the computation of the aggregated severity
+   * can be restricted using a filter on the `reporting_context` field. **This
+   * field can be used for filtering the results.**
+   *
    * @var string
    */
   public $aggregatedSeverity;
@@ -28,21 +49,32 @@ class ItemIssueSeverity extends \Google\Collection
   protected $severityPerReportingContextDataType = 'array';
 
   /**
-   * @param string
+   * Aggregated severity of the issue for all reporting contexts it affects.
+   * Reporting contexts included in the computation of the aggregated severity
+   * can be restricted using a filter on the `reporting_context` field. **This
+   * field can be used for filtering the results.**
+   *
+   * Accepted values: AGGREGATED_ISSUE_SEVERITY_UNSPECIFIED, DISAPPROVED,
+   * DEMOTED, PENDING
+   *
+   * @param self::AGGREGATED_SEVERITY_* $aggregatedSeverity
    */
   public function setAggregatedSeverity($aggregatedSeverity)
   {
     $this->aggregatedSeverity = $aggregatedSeverity;
   }
   /**
-   * @return string
+   * @return self::AGGREGATED_SEVERITY_*
    */
   public function getAggregatedSeverity()
   {
     return $this->aggregatedSeverity;
   }
   /**
-   * @param IssueSeverityPerReportingContext[]
+   * Issue severity per reporting context. Reporting contexts included in this
+   * list can be restricted using a filter on the `reporting_context` field.
+   *
+   * @param IssueSeverityPerReportingContext[] $severityPerReportingContext
    */
   public function setSeverityPerReportingContext($severityPerReportingContext)
   {

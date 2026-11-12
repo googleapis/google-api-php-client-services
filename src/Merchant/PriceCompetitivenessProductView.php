@@ -22,70 +22,116 @@ class PriceCompetitivenessProductView extends \Google\Model
   protected $benchmarkPriceType = Price::class;
   protected $benchmarkPriceDataType = '';
   /**
+   * Brand of the product.
+   *
    * @var string
    */
   public $brand;
   /**
+   * Product category (1st level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL1;
   /**
+   * Product category (2nd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL2;
   /**
+   * Product category (3rd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL3;
   /**
+   * Product category (4th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL4;
   /**
+   * Product category (5th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
    * @var string
    */
   public $categoryL5;
   /**
+   * REST ID of the product, in the form of
+   * `channel~languageCode~feedLabel~offerId`. Can be used to join data with the
+   * `product_view` table. Required in the `SELECT` clause.
+   *
    * @var string
    */
   public $id;
   /**
+   * Merchant-provided id of the product.
+   *
    * @var string
    */
   public $offerId;
   protected $priceType = Price::class;
   protected $priceDataType = '';
   /**
+   * Product type (1st level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL1;
   /**
+   * Product type (2nd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL2;
   /**
+   * Product type (3rd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL3;
   /**
+   * Product type (4th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL4;
   /**
+   * Product type (5th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
    * @var string
    */
   public $productTypeL5;
   /**
+   * Country of the price benchmark. Represented in the ISO 3166 format.
+   * Required in the `SELECT` clause.
+   *
    * @var string
    */
   public $reportCountryCode;
   /**
+   * Title of the product.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param Price
+   * Latest available price benchmark for the product's catalog in the benchmark
+   * country.
+   *
+   * @param Price $benchmarkPrice
    */
   public function setBenchmarkPrice(Price $benchmarkPrice)
   {
@@ -99,7 +145,9 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->benchmarkPrice;
   }
   /**
-   * @param string
+   * Brand of the product.
+   *
+   * @param string $brand
    */
   public function setBrand($brand)
   {
@@ -113,7 +161,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->brand;
   }
   /**
-   * @param string
+   * Product category (1st level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL1
    */
   public function setCategoryL1($categoryL1)
   {
@@ -127,7 +178,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->categoryL1;
   }
   /**
-   * @param string
+   * Product category (2nd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL2
    */
   public function setCategoryL2($categoryL2)
   {
@@ -141,7 +195,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->categoryL2;
   }
   /**
-   * @param string
+   * Product category (3rd level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL3
    */
   public function setCategoryL3($categoryL3)
   {
@@ -155,7 +212,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->categoryL3;
   }
   /**
-   * @param string
+   * Product category (4th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL4
    */
   public function setCategoryL4($categoryL4)
   {
@@ -169,7 +229,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->categoryL4;
   }
   /**
-   * @param string
+   * Product category (5th level) in [Google's product
+   * taxonomy](https://support.google.com/merchants/answer/6324436).
+   *
+   * @param string $categoryL5
    */
   public function setCategoryL5($categoryL5)
   {
@@ -183,7 +246,11 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->categoryL5;
   }
   /**
-   * @param string
+   * REST ID of the product, in the form of
+   * `channel~languageCode~feedLabel~offerId`. Can be used to join data with the
+   * `product_view` table. Required in the `SELECT` clause.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -197,7 +264,9 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Merchant-provided id of the product.
+   *
+   * @param string $offerId
    */
   public function setOfferId($offerId)
   {
@@ -211,7 +280,9 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->offerId;
   }
   /**
-   * @param Price
+   * Current price of the product.
+   *
+   * @param Price $price
    */
   public function setPrice(Price $price)
   {
@@ -225,7 +296,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->price;
   }
   /**
-   * @param string
+   * Product type (1st level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL1
    */
   public function setProductTypeL1($productTypeL1)
   {
@@ -239,7 +313,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->productTypeL1;
   }
   /**
-   * @param string
+   * Product type (2nd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL2
    */
   public function setProductTypeL2($productTypeL2)
   {
@@ -253,7 +330,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->productTypeL2;
   }
   /**
-   * @param string
+   * Product type (3rd level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL3
    */
   public function setProductTypeL3($productTypeL3)
   {
@@ -267,7 +347,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->productTypeL3;
   }
   /**
-   * @param string
+   * Product type (4th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL4
    */
   public function setProductTypeL4($productTypeL4)
   {
@@ -281,7 +364,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->productTypeL4;
   }
   /**
-   * @param string
+   * Product type (5th level) in merchant's own [product
+   * taxonomy](https://support.google.com/merchants/answer/6324406).
+   *
+   * @param string $productTypeL5
    */
   public function setProductTypeL5($productTypeL5)
   {
@@ -295,7 +381,10 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->productTypeL5;
   }
   /**
-   * @param string
+   * Country of the price benchmark. Represented in the ISO 3166 format.
+   * Required in the `SELECT` clause.
+   *
+   * @param string $reportCountryCode
    */
   public function setReportCountryCode($reportCountryCode)
   {
@@ -309,7 +398,9 @@ class PriceCompetitivenessProductView extends \Google\Model
     return $this->reportCountryCode;
   }
   /**
-   * @param string
+   * Title of the product.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
