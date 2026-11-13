@@ -956,6 +956,20 @@ class Dataform extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'createLongRunning' => [
+              'path' => 'v1/{+parent}/workspaces:createLongRunning',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'workspaceId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',

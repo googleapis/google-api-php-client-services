@@ -32,6 +32,7 @@ use Google\Service\Dataform\MoveDirectoryRequest;
 use Google\Service\Dataform\MoveDirectoryResponse;
 use Google\Service\Dataform\MoveFileRequest;
 use Google\Service\Dataform\MoveFileResponse;
+use Google\Service\Dataform\Operation;
 use Google\Service\Dataform\Policy;
 use Google\Service\Dataform\PullGitCommitsRequest;
 use Google\Service\Dataform\PullGitCommitsResponse;
@@ -97,6 +98,26 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('create', [$params], Workspace::class);
+  }
+  /**
+   * Creates a new Workspace in a given Repository asynchronously.
+   * (workspaces.createLongRunning)
+   *
+   * @param string $parent Required. The repository in which to create the
+   * workspace. Must be in the format `projects/locations/repositories`.
+   * @param Workspace $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string workspaceId Required. The ID to use for the workspace,
+   * which will become the final component of the workspace's resource name.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function createLongRunning($parent, Workspace $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('createLongRunning', [$params], Operation::class);
   }
   /**
    * Deletes a single Workspace. (workspaces.delete)
