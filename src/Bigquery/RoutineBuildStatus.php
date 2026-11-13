@@ -17,7 +17,7 @@
 
 namespace Google\Service\Bigquery;
 
-class RoutineBuildStatus extends \Google\Model
+class RoutineBuildStatus extends \Google\Collection
 {
   /**
    * Default value.
@@ -35,6 +35,7 @@ class RoutineBuildStatus extends \Google\Model
    * The build has failed.
    */
   public const BUILD_STATE_FAILED = 'FAILED';
+  protected $collection_key = 'installedPackages';
   /**
    * Output only. The time taken for the image build. Populated only after the
    * build succeeds or fails.
@@ -63,6 +64,8 @@ class RoutineBuildStatus extends \Google\Model
    * @var string
    */
   public $imageSizeBytes;
+  protected $installedPackagesType = InstalledPackage::class;
+  protected $installedPackagesDataType = 'array';
 
   /**
    * Output only. The time taken for the image build. Populated only after the
@@ -148,6 +151,23 @@ class RoutineBuildStatus extends \Google\Model
   public function getImageSizeBytes()
   {
     return $this->imageSizeBytes;
+  }
+  /**
+   * Output only. The list of installed packages in the routine's execution
+   * environment. Populated only after the build succeeds.
+   *
+   * @param InstalledPackage[] $installedPackages
+   */
+  public function setInstalledPackages($installedPackages)
+  {
+    $this->installedPackages = $installedPackages;
+  }
+  /**
+   * @return InstalledPackage[]
+   */
+  public function getInstalledPackages()
+  {
+    return $this->installedPackages;
   }
 }
 

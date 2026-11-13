@@ -21,12 +21,32 @@ class PythonOptions extends \Google\Collection
 {
   protected $collection_key = 'packages';
   /**
+   * Optional. Fully qualified name of the connection whose service account will
+   * be used to authenticate to private package repositories during build-time.
+   * Format:
+   * "projects/{project_id}/locations/{location_id}/connections/{connection_id}"
+   *
+   * @var string
+   */
+  public $buildConnection;
+  /**
    * Required. The name of the function defined in Python code as the entry
    * point when the Python UDF is invoked.
    *
    * @var string
    */
   public $entryPoint;
+  /**
+   * Optional. The list of additional package repositories to search when
+   * resolving Python packages. These repositories are searched in addition to
+   * the default public PyPI. Only repositories hosted in Artifact Registry
+   * (.pkg.dev) are supported. Only pre-compiled Wheel (.whl) packages are
+   * supported from these repositories. E.g. ['https://my-region-
+   * python.pkg.dev/my-project/my-repo/simple']
+   *
+   * @var string[]
+   */
+  public $extraPackageRepositories;
   /**
    * Optional. A list of Python package names along with versions to be
    * installed. Example: ["pandas>=2.1", "google-cloud-translate==3.11"]. For
@@ -38,6 +58,25 @@ class PythonOptions extends \Google\Collection
    */
   public $packages;
 
+  /**
+   * Optional. Fully qualified name of the connection whose service account will
+   * be used to authenticate to private package repositories during build-time.
+   * Format:
+   * "projects/{project_id}/locations/{location_id}/connections/{connection_id}"
+   *
+   * @param string $buildConnection
+   */
+  public function setBuildConnection($buildConnection)
+  {
+    $this->buildConnection = $buildConnection;
+  }
+  /**
+   * @return string
+   */
+  public function getBuildConnection()
+  {
+    return $this->buildConnection;
+  }
   /**
    * Required. The name of the function defined in Python code as the entry
    * point when the Python UDF is invoked.
@@ -54,6 +93,27 @@ class PythonOptions extends \Google\Collection
   public function getEntryPoint()
   {
     return $this->entryPoint;
+  }
+  /**
+   * Optional. The list of additional package repositories to search when
+   * resolving Python packages. These repositories are searched in addition to
+   * the default public PyPI. Only repositories hosted in Artifact Registry
+   * (.pkg.dev) are supported. Only pre-compiled Wheel (.whl) packages are
+   * supported from these repositories. E.g. ['https://my-region-
+   * python.pkg.dev/my-project/my-repo/simple']
+   *
+   * @param string[] $extraPackageRepositories
+   */
+  public function setExtraPackageRepositories($extraPackageRepositories)
+  {
+    $this->extraPackageRepositories = $extraPackageRepositories;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExtraPackageRepositories()
+  {
+    return $this->extraPackageRepositories;
   }
   /**
    * Optional. A list of Python package names along with versions to be

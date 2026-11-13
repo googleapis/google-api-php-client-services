@@ -135,6 +135,8 @@ class JobStatistics2 extends \Google\Collection
   protected $reservationUsageDataType = 'array';
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
+  protected $searchIndexingStatsType = SearchIndexingStats::class;
+  protected $searchIndexingStatsDataType = '';
   protected $searchStatisticsType = SearchStatistics::class;
   protected $searchStatisticsDataType = '';
   protected $sparkStatisticsType = SparkStatistics::class;
@@ -426,6 +428,8 @@ class JobStatistics2 extends \Google\Collection
   public $transferredBytes;
   protected $undeclaredQueryParametersType = QueryParameter::class;
   protected $undeclaredQueryParametersDataType = 'array';
+  protected $vectorSearchIndexingStatsType = VectorSearchIndexingStats::class;
+  protected $vectorSearchIndexingStatsDataType = '';
   protected $vectorSearchStatisticsType = VectorSearchStatistics::class;
   protected $vectorSearchStatisticsDataType = '';
 
@@ -1046,6 +1050,22 @@ class JobStatistics2 extends \Google\Collection
     return $this->schema;
   }
   /**
+   * Output only. Search indexing specific statistics.
+   *
+   * @param SearchIndexingStats $searchIndexingStats
+   */
+  public function setSearchIndexingStats(SearchIndexingStats $searchIndexingStats)
+  {
+    $this->searchIndexingStats = $searchIndexingStats;
+  }
+  /**
+   * @return SearchIndexingStats
+   */
+  public function getSearchIndexingStats()
+  {
+    return $this->searchIndexingStats;
+  }
+  /**
    * Output only. Search query specific statistics.
    *
    * @param SearchStatistics $searchStatistics
@@ -1472,6 +1492,22 @@ class JobStatistics2 extends \Google\Collection
   public function getUndeclaredQueryParameters()
   {
     return $this->undeclaredQueryParameters;
+  }
+  /**
+   * Output only. Vector Search indexing specific statistics.
+   *
+   * @param VectorSearchIndexingStats $vectorSearchIndexingStats
+   */
+  public function setVectorSearchIndexingStats(VectorSearchIndexingStats $vectorSearchIndexingStats)
+  {
+    $this->vectorSearchIndexingStats = $vectorSearchIndexingStats;
+  }
+  /**
+   * @return VectorSearchIndexingStats
+   */
+  public function getVectorSearchIndexingStats()
+  {
+    return $this->vectorSearchIndexingStats;
   }
   /**
    * Output only. Vector Search query specific statistics.

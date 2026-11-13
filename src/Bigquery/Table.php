@@ -272,6 +272,8 @@ class Table extends \Google\Collection
   public $numTotalPhysicalBytes;
   protected $partitionDefinitionType = PartitioningDefinition::class;
   protected $partitionDefinitionDataType = '';
+  protected $policyMemberType = ResourcePolicyMember::class;
+  protected $policyMemberDataType = '';
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
   protected $replicasType = TableReference::class;
@@ -982,6 +984,24 @@ class Table extends \Google\Collection
   public function getPartitionDefinition()
   {
     return $this->partitionDefinition;
+  }
+  /**
+   * Output only. Contains the resource identity token of the view that users
+   * can use to include in their policy bindings for authorization. This should
+   * be set only for views.
+   *
+   * @param ResourcePolicyMember $policyMember
+   */
+  public function setPolicyMember(ResourcePolicyMember $policyMember)
+  {
+    $this->policyMember = $policyMember;
+  }
+  /**
+   * @return ResourcePolicyMember
+   */
+  public function getPolicyMember()
+  {
+    return $this->policyMember;
   }
   /**
    * If specified, configures range partitioning for this table.
