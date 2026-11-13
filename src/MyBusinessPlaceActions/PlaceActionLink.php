@@ -74,6 +74,16 @@ class PlaceActionLink extends \Google\Model
    */
   public $createTime;
   /**
+   * Optional. Whether the merchant disabled this link. Defaults to `false`,
+   * which means the link is enabled. If `provider_type` is `AGGREGATOR_3P`, the
+   * merchant can disable or enable this link through `UpdatePlaceActionLink`.
+   * If `provider_type` is `MERCHANT`, this field is always `false` and
+   * `UpdatePlaceActionLink` rejects updates to it.
+   *
+   * @var bool
+   */
+  public $isDisabled;
+  /**
    * Output only. Indicates whether this link can be edited by the client.
    *
    * @var bool
@@ -142,6 +152,26 @@ class PlaceActionLink extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * Optional. Whether the merchant disabled this link. Defaults to `false`,
+   * which means the link is enabled. If `provider_type` is `AGGREGATOR_3P`, the
+   * merchant can disable or enable this link through `UpdatePlaceActionLink`.
+   * If `provider_type` is `MERCHANT`, this field is always `false` and
+   * `UpdatePlaceActionLink` rejects updates to it.
+   *
+   * @param bool $isDisabled
+   */
+  public function setIsDisabled($isDisabled)
+  {
+    $this->isDisabled = $isDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsDisabled()
+  {
+    return $this->isDisabled;
   }
   /**
    * Output only. Indicates whether this link can be edited by the client.
