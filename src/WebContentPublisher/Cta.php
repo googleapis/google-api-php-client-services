@@ -44,7 +44,9 @@ class Cta extends \Google\Model
    */
   public const TYPE_SURVEY = 'SURVEY';
   /**
-   * Required. The user-visible display name of the CTA.
+   * Optional. The user-visible display name of the CTA (up to 40 characters).
+   * Defaults to a server-specified name based on the CTA type when omitted on
+   * creation.
    *
    * @var string
    */
@@ -74,7 +76,9 @@ class Cta extends \Google\Model
   public $type;
 
   /**
-   * Required. The user-visible display name of the CTA.
+   * Optional. The user-visible display name of the CTA (up to 40 characters).
+   * Defaults to a server-specified name based on the CTA type when omitted on
+   * creation.
    *
    * @param string $displayName
    */
