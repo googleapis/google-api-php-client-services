@@ -54,6 +54,9 @@ class BiddersCreatives extends \Google\Service\Resource
    * creatives pertaining to bidder (`123`), use `bidders/123`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string adCategoryTaxonomyOverride Optional. The category taxonomy
+   * to use for the response. Overrides the default category taxonomy for the
+   * bidder.
    * @opt_param string filter Query string to filter creatives. If no filter is
    * specified, all active creatives will be returned. Example: 'accountId=12345
    * AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT) OR

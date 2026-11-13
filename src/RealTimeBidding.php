@@ -116,6 +116,10 @@ class RealTimeBidding extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'adCategoryTaxonomyOverride' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -495,6 +499,10 @@ class RealTimeBidding extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'adCategoryTaxonomyOverride' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'view' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -508,6 +516,10 @@ class RealTimeBidding extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'adCategoryTaxonomyOverride' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'filter' => [
                   'location' => 'query',

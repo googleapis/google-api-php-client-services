@@ -30,11 +30,17 @@ class CreativeServingDecision extends \Google\Collection
    */
   public const DETECTED_CATEGORIES_TAXONOMY_GOOGLE_AD_CATEGORY_TAXONOMY = 'GOOGLE_AD_CATEGORY_TAXONOMY';
   /**
-   * IAB Content Taxonomy 1.0. See https://github.com/InteractiveAdvertisingBure
-   * au/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%201.0.tsv
-   * for more details.
+   * IAB Content Taxonomy 1.0. See [Content Taxonomy 1.0.tsv](https://github.com
+   * /InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Con
+   * tent%20Taxonomy%201.0.tsv) for more details.
    */
   public const DETECTED_CATEGORIES_TAXONOMY_IAB_CONTENT_1_0 = 'IAB_CONTENT_1_0';
+  /**
+   * IAB Content Taxonomy 2.2. See [Content Taxonomy 2.2.tsv](https://github.com
+   * /InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Con
+   * tent%20Taxonomy%202.2.tsv) for more details.
+   */
+  public const DETECTED_CATEGORIES_TAXONOMY_IAB_CONTENT_2_2 = 'IAB_CONTENT_2_2';
   protected $collection_key = 'detectedVendorIds';
   protected $adTechnologyProvidersType = AdTechnologyProviders::class;
   protected $adTechnologyProvidersDataType = '';
@@ -258,7 +264,7 @@ class CreativeServingDecision extends \Google\Collection
    * expressed.
    *
    * Accepted values: AD_CATEGORY_TAXONOMY_UNSPECIFIED,
-   * GOOGLE_AD_CATEGORY_TAXONOMY, IAB_CONTENT_1_0
+   * GOOGLE_AD_CATEGORY_TAXONOMY, IAB_CONTENT_1_0, IAB_CONTENT_2_2
    *
    * @param self::DETECTED_CATEGORIES_TAXONOMY_* $detectedCategoriesTaxonomy
    */
