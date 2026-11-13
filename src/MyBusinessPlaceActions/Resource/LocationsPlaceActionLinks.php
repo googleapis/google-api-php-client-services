@@ -120,9 +120,9 @@ class LocationsPlaceActionLinks extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The specific fields to update. The
-   * only editable fields are `uri`, `place_action_type` and `is_preferred`. If
-   * the updated link already exists at the same location with the same
-   * `place_action_type` and `uri`, fails with an `ALREADY_EXISTS` error.
+   * only editable fields are `uri`, `place_action_type`, `is_preferred` and
+   * `is_disabled`. If the updated link already exists at the same location with
+   * the same `place_action_type` and `uri`, fails with an `ALREADY_EXISTS` error.
    * @return PlaceActionLink
    * @throws \Google\Service\Exception
    */
