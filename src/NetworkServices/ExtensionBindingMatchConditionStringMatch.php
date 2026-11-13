@@ -29,7 +29,7 @@ class ExtensionBindingMatchConditionStringMatch extends \Google\Model
   public $contains;
   /**
    * Optional. The input string must match exactly the string specified here.
-   * Examples: * `abc` only matches the value `abc`.
+   * Examples: * `abc` matches only the value `abc`.
    *
    * @var string
    */
@@ -77,7 +77,7 @@ class ExtensionBindingMatchConditionStringMatch extends \Google\Model
   }
   /**
    * Optional. The input string must match exactly the string specified here.
-   * Examples: * `abc` only matches the value `abc`.
+   * Examples: * `abc` matches only the value `abc`.
    *
    * @param string $exact
    */

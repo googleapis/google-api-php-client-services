@@ -47,7 +47,7 @@ class ExtensionBindingMatchConditionToDestination extends \Google\Collection
     return $this->headerSet;
   }
   /**
-   * Optional. A list of HTTP Hosts to match against. Limited to 10 hosts. If
+   * Optional. A list of HTTP hosts to match against. Limited to 10 hosts. If
    * not specified, any host is allowed. If specified, a match occurs if any of
    * the hosts matches the host value in the request.
    *
@@ -67,8 +67,8 @@ class ExtensionBindingMatchConditionToDestination extends \Google\Collection
   /**
    * Optional. A list of paths to match against. Limited to 10 paths. If not
    * specified, any path is allowed. Note that this path match includes the
-   * query parameters. For gRPC services, this should be a fully-qualified name
-   * of the form /package.service/method.
+   * query parameters. For gRPC services, this should be a fully qualified name
+   * of the form `/package.service/method`.
    *
    * @param ExtensionBindingMatchConditionStringMatch[] $paths
    */
@@ -85,11 +85,11 @@ class ExtensionBindingMatchConditionToDestination extends \Google\Collection
   }
   /**
    * Optional. A list of non-empty strings whose value is matched against the
-   * resource to which a request is sent (e.g., an Agent in AiApplication). If
-   * not specified, any resource is allowed. If specified, a match occurs if any
-   * of the resources matches the resource value in the request. Limited to 5
-   * resources. When matching against resources in the AgentRegistry, use the
-   * URNs of the registry resources.
+   * resource to which a request is sent (for example, an `Agent` in
+   * `AiApplication`). If not specified, any resource is allowed. If specified,
+   * a match occurs if any of the resources matches the resource value in the
+   * request. Limited to 5 resources. When matching against resources in the
+   * Agent Registry, use the URNs of the registry resources.
    *
    * @param ExtensionBindingMatchConditionStringMatch[] $resources
    */

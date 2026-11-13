@@ -42,8 +42,8 @@ class ExtensionBinding extends \Google\Collection
   public $etag;
   /**
    * Optional. Determines the behavior of the extension binding when the call to
-   * the extension fails or times out. Default value is `FALSE`. When set to
-   * `TRUE`, failures of the extension are silently ignored.
+   * the extension fails or times out. Default value is `false`. When set to
+   * `true`, failures of the extension are silently ignored.
    *
    * @var bool
    */
@@ -75,7 +75,7 @@ class ExtensionBinding extends \Google\Collection
   public $priority;
   /**
    * Required. The name of the extension that this binding should attach to
-   * target resources. Format: For Google-provided extensions, specify the
+   * target resources. Format: * For Google-provided extensions, specify the
    * service endpoint, for example `modelarmor.us-central1.rep.googleapis.com`.
    *
    * @var string
@@ -153,8 +153,8 @@ class ExtensionBinding extends \Google\Collection
   }
   /**
    * Optional. Determines the behavior of the extension binding when the call to
-   * the extension fails or times out. Default value is `FALSE`. When set to
-   * `TRUE`, failures of the extension are silently ignored.
+   * the extension fails or times out. Default value is `false`. When set to
+   * `true`, failures of the extension are silently ignored.
    *
    * @param bool $failOpen
    */
@@ -244,7 +244,7 @@ class ExtensionBinding extends \Google\Collection
   }
   /**
    * Required. The name of the extension that this binding should attach to
-   * target resources. Format: For Google-provided extensions, specify the
+   * target resources. Format: * For Google-provided extensions, specify the
    * service endpoint, for example `modelarmor.us-central1.rep.googleapis.com`.
    *
    * @param string $producerExtension

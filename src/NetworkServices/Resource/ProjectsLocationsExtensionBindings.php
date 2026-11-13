@@ -54,12 +54,13 @@ class ProjectsLocationsExtensionBindings extends \Google\Service\Resource
   /**
    * Deletes the specified `ExtensionBinding` resource. (extensionBindings.delete)
    *
-   * @param string $name Required. A name of the `ExtensionBinding` resource to
+   * @param string $name Required. The name of the `ExtensionBinding` resource to
    * delete. Must be in the format `projects/{project}/locations/{location}/extens
    * ionBindings/{extension_binding}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string etag Optional. The etag of the ExtensionBinding to delete.
+   * @opt_param string etag Optional. The ETag of the `ExtensionBinding` to
+   * delete.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -73,7 +74,7 @@ class ProjectsLocationsExtensionBindings extends \Google\Service\Resource
    * Gets details of the specified `ExtensionBinding` resource.
    * (extensionBindings.get)
    *
-   * @param string $name Required. A name of the `ExtensionBinding` resource to
+   * @param string $name Required. The name of the `ExtensionBinding` resource to
    * get. Must be in the format `projects/{project}/locations/{location}/extension
    * Bindings/{extension_binding}`.
    * @param array $optParams Optional parameters.
@@ -98,7 +99,7 @@ class ProjectsLocationsExtensionBindings extends \Google\Service\Resource
    * @opt_param int pageSize Optional. Maximum number of `ExtensionBinding`
    * resources to return per call.
    * @opt_param string pageToken Optional. The value returned by the last
-   * `ListExtensionBindingsResponse` Indicates that this is a continuation of a
+   * `ListExtensionBindingsResponse`. Indicates that this is a continuation of a
    * prior `ListExtensionBindings` call, and that the system should return the
    * next page of data.
    * @return ListExtensionBindingsResponse
@@ -122,9 +123,9 @@ class ProjectsLocationsExtensionBindings extends \Google\Service\Resource
    *
    * @opt_param string updateMask Optional. Field mask is used to specify the
    * fields to be overwritten in the `ExtensionBinding` resource by the update.
-   * The fields specified in the update_mask are relative to the resource, not the
-   * full request. A field will be overwritten if it is in the mask. If the user
-   * does not provide a mask then all fields will be overwritten.
+   * The fields specified in the `update_mask` are relative to the resource, not
+   * the full request. A field is overwritten if it is in the mask. If the user
+   * does not provide a mask then all fields are overwritten.
    * @return Operation
    * @throws \Google\Service\Exception
    */

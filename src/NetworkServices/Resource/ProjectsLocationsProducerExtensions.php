@@ -41,7 +41,7 @@ class ProjectsLocationsProducerExtensions extends \Google\Service\Resource
    * @param ProducerExtension $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string producerExtensionId Required. Short name of the
+   * @opt_param string producerExtensionId Required. The short name of the
    * `ProducerExtension` resource to be created.
    * @return Operation
    * @throws \Google\Service\Exception
@@ -56,12 +56,13 @@ class ProjectsLocationsProducerExtensions extends \Google\Service\Resource
    * Deletes the specified `ProducerExtension` resource.
    * (producerExtensions.delete)
    *
-   * @param string $name Required. A name of the `ProducerExtension` resource to
-   * delete. Must be in the format `projects/{project}/locations/{location}/produc
-   * erExtensions/{producer_extension}`.
+   * @param string $name Required. The name of the `ProducerExtension` resource to
+   * delete. It must be in this format: `projects/{project}/locations/{location}/p
+   * roducerExtensions/{producer_extension}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string etag Optional. The etag of the ProducerExtension to delete.
+   * @opt_param string etag Optional. The ETag of the `ProducerExtension` to
+   * delete.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -75,9 +76,9 @@ class ProjectsLocationsProducerExtensions extends \Google\Service\Resource
    * Gets details of the specified `ProducerExtension` resource.
    * (producerExtensions.get)
    *
-   * @param string $name Required. A name of the `ProducerExtension` resource to
-   * get. Must be in the format `projects/{project}/locations/{location}/producerE
-   * xtensions/{producer_extension}`.
+   * @param string $name Required. The name of the `ProducerExtension` resource to
+   * get. It must be in this format: `projects/{project}/locations/{location}/prod
+   * ucerExtensions/{producer_extension}`.
    * @param array $optParams Optional parameters.
    * @return ProducerExtension
    * @throws \Google\Service\Exception
@@ -93,15 +94,15 @@ class ProjectsLocationsProducerExtensions extends \Google\Service\Resource
    * (producerExtensions.listProjectsLocationsProducerExtensions)
    *
    * @param string $parent Required. The project and location from which the
-   * `ProducerExtension` resources should be listed, specified in the format
+   * `ProducerExtension` resources should be listed, specified in this format:
    * `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. Maximum number of `ProducerExtension`
    * resources to return per call.
    * @opt_param string pageToken Optional. The value returned by the last
-   * `ListProducerExtensionsResponse` Indicates that this is a continuation of a
-   * prior `ListProducerExtensions` call, and that the system should return the
+   * `ListProducerExtensionsResponse`. It indicates that this is a continuation of
+   * a prior `ListProducerExtensions` call, and that the system should return the
    * next page of data.
    * @return ListProducerExtensionsResponse
    * @throws \Google\Service\Exception
