@@ -162,7 +162,7 @@ class Tasks extends \Google\Service\Resource
    * @opt_param string destinationTasklist Optional. Destination task list
    * identifier. If set, the task is moved from tasklist to the
    * destinationTasklist list. Otherwise the task is moved within its current
-   * list. Recurrent tasks cannot currently be moved between lists.
+   * list.
    * @opt_param string parent Optional. New parent task identifier. If the task is
    * moved to the top level, this parameter is omitted. The task set as parent
    * must exist in the task list and can not be hidden. Exceptions: 1. Assigned
