@@ -29,6 +29,17 @@ class WorkstationCluster extends \Google\Collection
   protected $conditionsType = Status::class;
   protected $conditionsDataType = 'array';
   /**
+   * Optional. Specifies a custom base URL for the Google Cloud Console. This
+   * field is intended to be user-configurable to support data residency for
+   * Cloud Workstations users. This will be used generally for user journeys
+   * where users need to go to the Cloud Console from Code OSS. When the Auth
+   * and Launch URLs are unset, this will be used as the base URL for those
+   * endpoints if set.
+   *
+   * @var string
+   */
+  public $consoleBaseUrl;
+  /**
    * Output only. The private IP address of the control plane for this
    * workstation cluster. Workstation VMs need access to this IP address to work
    * with the service, so make sure that your firewall rules allow egress from
@@ -191,6 +202,27 @@ class WorkstationCluster extends \Google\Collection
   public function getConditions()
   {
     return $this->conditions;
+  }
+  /**
+   * Optional. Specifies a custom base URL for the Google Cloud Console. This
+   * field is intended to be user-configurable to support data residency for
+   * Cloud Workstations users. This will be used generally for user journeys
+   * where users need to go to the Cloud Console from Code OSS. When the Auth
+   * and Launch URLs are unset, this will be used as the base URL for those
+   * endpoints if set.
+   *
+   * @param string $consoleBaseUrl
+   */
+  public function setConsoleBaseUrl($consoleBaseUrl)
+  {
+    $this->consoleBaseUrl = $consoleBaseUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getConsoleBaseUrl()
+  {
+    return $this->consoleBaseUrl;
   }
   /**
    * Output only. The private IP address of the control plane for this

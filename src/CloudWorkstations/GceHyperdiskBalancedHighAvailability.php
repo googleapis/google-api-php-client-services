@@ -53,6 +53,22 @@ class GceHyperdiskBalancedHighAvailability extends \Google\Model
    */
   public $maxSizeGb;
   /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the
+   * number of I/O operations per second that the disk can handle. Values must
+   * be between 3,000 and 100,000.
+   *
+   * @var string
+   */
+  public $provisionedIops;
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This
+   * sets the number of throughput MB per second that the disk can handle.
+   * Values must be between 1 and 2,400.
+   *
+   * @var string
+   */
+  public $provisionedThroughput;
+  /**
    * Optional. Whether the persistent disk should be deleted when the
    * workstation is deleted. Valid values are `DELETE` and `RETAIN`. Defaults to
    * `DELETE`.
@@ -117,6 +133,42 @@ class GceHyperdiskBalancedHighAvailability extends \Google\Model
   public function getMaxSizeGb()
   {
     return $this->maxSizeGb;
+  }
+  /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the
+   * number of I/O operations per second that the disk can handle. Values must
+   * be between 3,000 and 100,000.
+   *
+   * @param string $provisionedIops
+   */
+  public function setProvisionedIops($provisionedIops)
+  {
+    $this->provisionedIops = $provisionedIops;
+  }
+  /**
+   * @return string
+   */
+  public function getProvisionedIops()
+  {
+    return $this->provisionedIops;
+  }
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This
+   * sets the number of throughput MB per second that the disk can handle.
+   * Values must be between 1 and 2,400.
+   *
+   * @param string $provisionedThroughput
+   */
+  public function setProvisionedThroughput($provisionedThroughput)
+  {
+    $this->provisionedThroughput = $provisionedThroughput;
+  }
+  /**
+   * @return string
+   */
+  public function getProvisionedThroughput()
+  {
+    return $this->provisionedThroughput;
   }
   /**
    * Optional. Whether the persistent disk should be deleted when the
