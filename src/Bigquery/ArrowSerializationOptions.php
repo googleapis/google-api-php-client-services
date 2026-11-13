@@ -24,7 +24,7 @@ class ArrowSerializationOptions extends \Google\Model
    */
   public const BUFFER_COMPRESSION_COMPRESSION_UNSPECIFIED = 'COMPRESSION_UNSPECIFIED';
   /**
-   * LZ4 Frame (https://github.com/lz4/lz4/blob/dev/doc/lz4_Frame_format.md)
+   * [LZ4 Frame](https://github.com/lz4/lz4/blob/dev/doc/lz4_Frame_format.md)
    */
   public const BUFFER_COMPRESSION_LZ4_FRAME = 'LZ4_FRAME';
   /**

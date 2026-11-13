@@ -28,6 +28,18 @@ class BigLakeConfiguration extends \Google\Model
    */
   public const FILE_FORMAT_PARQUET = 'PARQUET';
   /**
+   * No export type specified. This will default to ASYNC.
+   */
+  public const METADATA_EXPORT_MODE_METADATA_EXPORT_MODE_UNSPECIFIED = 'METADATA_EXPORT_MODE_UNSPECIFIED';
+  /**
+   * Async export mode.
+   */
+  public const METADATA_EXPORT_MODE_ASYNC = 'ASYNC';
+  /**
+   * Manual metadata export.
+   */
+  public const METADATA_EXPORT_MODE_MANUAL = 'MANUAL';
+  /**
    * Default Value.
    */
   public const TABLE_FORMAT_TABLE_FORMAT_UNSPECIFIED = 'TABLE_FORMAT_UNSPECIFIED';
@@ -50,6 +62,12 @@ class BigLakeConfiguration extends \Google\Model
    * @var string
    */
   public $fileFormat;
+  /**
+   * Optional. The type of Metadata Export for BigLake Managed Tables.
+   *
+   * @var string
+   */
+  public $metadataExportMode;
   /**
    * Optional. The fully qualified location prefix of the external folder where
    * table data is stored. The '*' wildcard character is not allowed. The URI
@@ -101,6 +119,24 @@ class BigLakeConfiguration extends \Google\Model
   public function getFileFormat()
   {
     return $this->fileFormat;
+  }
+  /**
+   * Optional. The type of Metadata Export for BigLake Managed Tables.
+   *
+   * Accepted values: METADATA_EXPORT_MODE_UNSPECIFIED, ASYNC, MANUAL
+   *
+   * @param self::METADATA_EXPORT_MODE_* $metadataExportMode
+   */
+  public function setMetadataExportMode($metadataExportMode)
+  {
+    $this->metadataExportMode = $metadataExportMode;
+  }
+  /**
+   * @return self::METADATA_EXPORT_MODE_*
+   */
+  public function getMetadataExportMode()
+  {
+    return $this->metadataExportMode;
   }
   /**
    * Optional. The fully qualified location prefix of the external folder where

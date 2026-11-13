@@ -141,6 +141,15 @@ class Dataset extends \Google\Collection
   protected $externalDatasetReferenceType = ExternalDatasetReference::class;
   protected $externalDatasetReferenceDataType = '';
   /**
+   * Optional. The failover reservation associated with the dataset in the
+   * regionless format. Example: .. To learn about about failover reservations
+   * see: https://docs.cloud.google.com/bigquery/docs/managed-disaster-
+   * recovery#overview
+   *
+   * @var string
+   */
+  public $failoverReservationId;
+  /**
    * Optional. A descriptive name for the dataset.
    *
    * @var string
@@ -206,6 +215,8 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $maxTimeTravelHours;
+  protected $replicasType = Replica::class;
+  protected $replicasDataType = 'array';
   /**
    * Optional. The [tags](https://cloud.google.com/bigquery/docs/tags) attached
    * to this dataset. Tag keys are globally unique. Tag key is expected to be in
@@ -521,6 +532,25 @@ class Dataset extends \Google\Collection
     return $this->externalDatasetReference;
   }
   /**
+   * Optional. The failover reservation associated with the dataset in the
+   * regionless format. Example: .. To learn about about failover reservations
+   * see: https://docs.cloud.google.com/bigquery/docs/managed-disaster-
+   * recovery#overview
+   *
+   * @param string $failoverReservationId
+   */
+  public function setFailoverReservationId($failoverReservationId)
+  {
+    $this->failoverReservationId = $failoverReservationId;
+  }
+  /**
+   * @return string
+   */
+  public function getFailoverReservationId()
+  {
+    return $this->failoverReservationId;
+  }
+  /**
    * Optional. A descriptive name for the dataset.
    *
    * @param string $friendlyName
@@ -697,6 +727,23 @@ class Dataset extends \Google\Collection
   public function getMaxTimeTravelHours()
   {
     return $this->maxTimeTravelHours;
+  }
+  /**
+   * Optional. The list of replicas in a cross region replicated or disaster
+   * recovery dataset.
+   *
+   * @param Replica[] $replicas
+   */
+  public function setReplicas($replicas)
+  {
+    $this->replicas = $replicas;
+  }
+  /**
+   * @return Replica[]
+   */
+  public function getReplicas()
+  {
+    return $this->replicas;
   }
   /**
    * Optional. The [tags](https://cloud.google.com/bigquery/docs/tags) attached

@@ -45,8 +45,8 @@ class QueryRequest extends \Google\Collection
    */
   public const QUERY_RESULTS_FORMAT_STRUCT_ENCODING = 'STRUCT_ENCODING';
   /**
-   * Arrow is a standard open source column-based message format. See
-   * https://arrow.apache.org/ for more details.
+   * Arrow is a standard open source column-based message format. See the Apache
+   * Arrow documentation for more details.
    */
   public const QUERY_RESULTS_FORMAT_ARROW = 'ARROW';
   protected $collection_key = 'queryParameters';
@@ -184,12 +184,13 @@ class QueryRequest extends \Google\Collection
   protected $queryParametersDataType = 'array';
   /**
    * Optional. The query results format. If the value is anything other than
-   * `STRUCT_ENCODING` or unspecified: * The schema of the results will be
-   * provided in `QueryResponse.results_schema` field. * The results of the
-   * first page will be provided in `QueryResponse.results` field. * The
-   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema`
-   * for `QueryResponse.rows` will also not be populated since it is the schema
-   * of the `QueryResponse.rows`. This feature is not yet available.
+   * `STRUCT_ENCODING` or unspecified: * The schema of the results is provided
+   * in the `QueryResponse.results_schema` field. * The results of the first
+   * page are provided in the `QueryResponse.results` field. * The
+   * `QueryResponse.rows` is not populated. * The `QueryResponse.schema` for
+   * `QueryResponse.rows` is not populated since it is the schema of the
+   * `QueryResponse.rows`. [Preview](https://cloud.google.com/products/#product-
+   * launch-stages)
    *
    * @var string
    */
@@ -639,12 +640,13 @@ class QueryRequest extends \Google\Collection
   }
   /**
    * Optional. The query results format. If the value is anything other than
-   * `STRUCT_ENCODING` or unspecified: * The schema of the results will be
-   * provided in `QueryResponse.results_schema` field. * The results of the
-   * first page will be provided in `QueryResponse.results` field. * The
-   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema`
-   * for `QueryResponse.rows` will also not be populated since it is the schema
-   * of the `QueryResponse.rows`. This feature is not yet available.
+   * `STRUCT_ENCODING` or unspecified: * The schema of the results is provided
+   * in the `QueryResponse.results_schema` field. * The results of the first
+   * page are provided in the `QueryResponse.results` field. * The
+   * `QueryResponse.rows` is not populated. * The `QueryResponse.schema` for
+   * `QueryResponse.rows` is not populated since it is the schema of the
+   * `QueryResponse.rows`. [Preview](https://cloud.google.com/products/#product-
+   * launch-stages)
    *
    * Accepted values: QUERY_RESULTS_FORMAT_UNSPECIFIED, STRUCT_ENCODING, ARROW
    *

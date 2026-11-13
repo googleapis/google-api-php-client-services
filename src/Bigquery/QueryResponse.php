@@ -83,7 +83,8 @@ class QueryResponse extends \Google\Collection
   public $numDmlAffectedRows;
   /**
    * Output only. The number of rows out of `total_rows` returned in this
-   * response. This feature is not yet available.
+   * response. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
    *
    * @var string
    */
@@ -606,7 +607,8 @@ class QueryResponse extends \Google\Collection
   }
   /**
    * Output only. The number of rows out of `total_rows` returned in this
-   * response. This feature is not yet available.
+   * response. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
    *
    * @param string $pageRowCount
    */
