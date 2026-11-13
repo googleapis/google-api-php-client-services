@@ -146,19 +146,20 @@ class AuthzExtension extends \Google\Collection
   public $name;
   /**
    * Required. The reference to the service that runs the extension. To
-   * configure a callout extension: For global AuthzExtension, `service` must be
-   * a fully-qualified reference to a [backend service](https://cloud.google.com
-   * /compute/docs/reference/rest/v1/backendServices) in the format: `https://ww
-   * w.googleapis.com/compute/v1/projects/{project}/global/backendServices/{back
-   * endService}`. For regional AuthzExtension, `service` must be a fully-
-   * qualified reference to one of the following: * a [backend service](https://
+   * configure a callout extension: For a global AuthzExtension, `service` must
+   * be a fully qualified reference to a [backend service](https://cloud.google.
+   * com/compute/docs/reference/rest/v1/backendServices) in the format: `https:/
+   * /www.googleapis.com/compute/v1/projects/{project}/global/backendServices/{b
+   * ackendService}`. For a regional AuthzExtension, `service` must be a fully
+   * qualified reference to one of the following: * A [backend service](https://
    * cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{
-   * region}/backendServices/{backendService}`. * a fully qualified domain name
-   * that can be resolved by the Google Cloud DNS. * `iap.googleapis.com` and it
-   * can only be referenced by an AuthzPolicy with the policyProfile set to
-   * REQUEST_AUTHZ. * `modelarmor..rep.googleapis.com` and it can only be
-   * referenced by an AuthzPolicy with the policyProfile set to CONTENT_AUTHZ.
+   * region}/backendServices/{backendService}`. * A fully qualified domain name
+   * that can be resolved by Cloud DNS. * `iap.googleapis.com` and can be
+   * referenced only by an `AuthzPolicy` with the `policyProfile` set to
+   * `REQUEST_AUTHZ`. * `modelarmor..rep.googleapis.com` and it can only be
+   * referenced by an `AuthzPolicy` with the `policyProfile` set to
+   * `CONTENT_AUTHZ`.
    *
    * @var string
    */
@@ -385,19 +386,20 @@ class AuthzExtension extends \Google\Collection
   }
   /**
    * Required. The reference to the service that runs the extension. To
-   * configure a callout extension: For global AuthzExtension, `service` must be
-   * a fully-qualified reference to a [backend service](https://cloud.google.com
-   * /compute/docs/reference/rest/v1/backendServices) in the format: `https://ww
-   * w.googleapis.com/compute/v1/projects/{project}/global/backendServices/{back
-   * endService}`. For regional AuthzExtension, `service` must be a fully-
-   * qualified reference to one of the following: * a [backend service](https://
+   * configure a callout extension: For a global AuthzExtension, `service` must
+   * be a fully qualified reference to a [backend service](https://cloud.google.
+   * com/compute/docs/reference/rest/v1/backendServices) in the format: `https:/
+   * /www.googleapis.com/compute/v1/projects/{project}/global/backendServices/{b
+   * ackendService}`. For a regional AuthzExtension, `service` must be a fully
+   * qualified reference to one of the following: * A [backend service](https://
    * cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{
-   * region}/backendServices/{backendService}`. * a fully qualified domain name
-   * that can be resolved by the Google Cloud DNS. * `iap.googleapis.com` and it
-   * can only be referenced by an AuthzPolicy with the policyProfile set to
-   * REQUEST_AUTHZ. * `modelarmor..rep.googleapis.com` and it can only be
-   * referenced by an AuthzPolicy with the policyProfile set to CONTENT_AUTHZ.
+   * region}/backendServices/{backendService}`. * A fully qualified domain name
+   * that can be resolved by Cloud DNS. * `iap.googleapis.com` and can be
+   * referenced only by an `AuthzPolicy` with the `policyProfile` set to
+   * `REQUEST_AUTHZ`. * `modelarmor..rep.googleapis.com` and it can only be
+   * referenced by an `AuthzPolicy` with the `policyProfile` set to
+   * `CONTENT_AUTHZ`.
    *
    * @param string $service
    */

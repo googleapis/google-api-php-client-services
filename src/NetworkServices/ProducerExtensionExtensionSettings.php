@@ -34,7 +34,7 @@ class ProducerExtensionExtensionSettings extends \Google\Collection
    */
   public $observabilityMode;
   /**
-   * Required. URI of the PSC attachment.
+   * Required. The URI of the Private Service Connect (PSC) attachment.
    *
    * @var string
    */
@@ -80,7 +80,7 @@ class ProducerExtensionExtensionSettings extends \Google\Collection
     return $this->observabilityMode;
   }
   /**
-   * Required. URI of the PSC attachment.
+   * Required. The URI of the Private Service Connect (PSC) attachment.
    *
    * @param string $service
    */

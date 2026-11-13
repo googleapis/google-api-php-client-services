@@ -46,9 +46,9 @@ class ExtensionBindingMatchConditionTo extends \Google\Model
     return $this->destination;
   }
   /**
-   * Optional. Describes the negated properties of the request destination.
-   * Extension will not be invoked on requests that match the criteria specified
-   * in this field. At least one of destination or not_destination must be
+   * Optional. Describes the negated properties of the request destination. The
+   * extension will not be invoked on requests that match the criteria specified
+   * in this field. At least one of `destination` or `not_destination` must be
    * specified.
    *
    * @param ExtensionBindingMatchConditionToDestination $notDestination

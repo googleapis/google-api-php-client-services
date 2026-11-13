@@ -24,7 +24,7 @@ class ProducerExtension extends \Google\Model
    */
   public const PHASE_PHASE_UNSPECIFIED = 'PHASE_UNSPECIFIED';
   /**
-   * The `ProducerExtension` will be executed during the traffic phase.
+   * Not supported.
    */
   public const PHASE_TRAFFIC = 'TRAFFIC';
   /**
@@ -44,9 +44,9 @@ class ProducerExtension extends \Google\Model
    */
   public $description;
   /**
-   * Optional. Etag of the resource. If this is provided, it must match the
-   * server's etag. If the provided etag does not match the server's etag, the
-   * request will fail with a 409 ABORTED error.
+   * Optional. ETag of the resource. If this is provided, it must match the
+   * server's ETag. If the provided ETag doesn't match the server's ETag, then
+   * the request fails with a `409 ABORTED` error.
    *
    * @var string
    */
@@ -71,7 +71,7 @@ class ProducerExtension extends \Google\Model
    */
   public $name;
   /**
-   * Required. The phase in which this `ProducerExtension` should execute.
+   * Required. The phase in which this `ProducerExtension` runs.
    *
    * @var string
    */
@@ -116,9 +116,9 @@ class ProducerExtension extends \Google\Model
     return $this->description;
   }
   /**
-   * Optional. Etag of the resource. If this is provided, it must match the
-   * server's etag. If the provided etag does not match the server's etag, the
-   * request will fail with a 409 ABORTED error.
+   * Optional. ETag of the resource. If this is provided, it must match the
+   * server's ETag. If the provided ETag doesn't match the server's ETag, then
+   * the request fails with a `409 ABORTED` error.
    *
    * @param string $etag
    */
@@ -188,7 +188,7 @@ class ProducerExtension extends \Google\Model
     return $this->name;
   }
   /**
-   * Required. The phase in which this `ProducerExtension` should execute.
+   * Required. The phase in which this `ProducerExtension` runs.
    *
    * Accepted values: PHASE_UNSPECIFIED, TRAFFIC, AUTHZ
    *

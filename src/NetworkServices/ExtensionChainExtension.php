@@ -179,7 +179,7 @@ class ExtensionChainExtension extends \Google\Collection
   public $responseBodySendMode;
   /**
    * Required. The reference to the service that runs the extension. To
-   * configure a callout extension, `service` must be a fully-qualified
+   * configure a callout extension, `service` must be a fully qualified
    * reference to a [backend service](https://cloud.google.com/compute/docs/refe
    * rence/rest/v1/backendServices) in the format: `https://www.googleapis.com/c
    * ompute/v1/projects/{project}/regions/{region}/backendServices/{backendServi
@@ -190,9 +190,9 @@ class ExtensionChainExtension extends \Google\Collection
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in
    * the format: `projects/{project}/locations/{location}/wasmPlugins/{plugin}`
    * or `//networkservices.googleapis.com/projects/{project}/locations/{location
-   * }/wasmPlugins/{wasmPlugin}`. Plugin extensions are currently supported for
-   * the `LbTrafficExtension`, the `LbRouteExtension`, the `LbEdgeExtension`,
-   * and the `CdnEdgeExtension` resources.
+   * }/wasmPlugins/{wasmPlugin}`. Supports plugin extensions for
+   * `LbTrafficExtension`, `LbRouteExtension`, `LbEdgeExtension`, and
+   * `CdnEdgeExtension` resources.
    *
    * @var string
    */
@@ -435,7 +435,7 @@ class ExtensionChainExtension extends \Google\Collection
   }
   /**
    * Required. The reference to the service that runs the extension. To
-   * configure a callout extension, `service` must be a fully-qualified
+   * configure a callout extension, `service` must be a fully qualified
    * reference to a [backend service](https://cloud.google.com/compute/docs/refe
    * rence/rest/v1/backendServices) in the format: `https://www.googleapis.com/c
    * ompute/v1/projects/{project}/regions/{region}/backendServices/{backendServi
@@ -446,9 +446,9 @@ class ExtensionChainExtension extends \Google\Collection
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in
    * the format: `projects/{project}/locations/{location}/wasmPlugins/{plugin}`
    * or `//networkservices.googleapis.com/projects/{project}/locations/{location
-   * }/wasmPlugins/{wasmPlugin}`. Plugin extensions are currently supported for
-   * the `LbTrafficExtension`, the `LbRouteExtension`, the `LbEdgeExtension`,
-   * and the `CdnEdgeExtension` resources.
+   * }/wasmPlugins/{wasmPlugin}`. Supports plugin extensions for
+   * `LbTrafficExtension`, `LbRouteExtension`, `LbEdgeExtension`, and
+   * `CdnEdgeExtension` resources.
    *
    * @param string $service
    */

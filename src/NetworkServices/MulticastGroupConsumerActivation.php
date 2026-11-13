@@ -63,16 +63,6 @@ class MulticastGroupConsumerActivation extends \Google\Model
    */
   public $multicastConsumerAssociation;
   /**
-   * Optional. The resource name of the multicast group created by the admin in
-   * the same zone as this multicast group consumer activation. Use the
-   * following format: `projects/locations/multicastGroups`. This field is
-   * deprecated. Use multicast_group_range_activation instead.
-   *
-   * @deprecated
-   * @var string
-   */
-  public $multicastGroup;
-  /**
    * Required. The resource name of the multicast group range activation created
    * by the admin in the same zone as this multicast group consumer activation.
    * Use the following format:
@@ -202,27 +192,6 @@ class MulticastGroupConsumerActivation extends \Google\Model
   public function getMulticastConsumerAssociation()
   {
     return $this->multicastConsumerAssociation;
-  }
-  /**
-   * Optional. The resource name of the multicast group created by the admin in
-   * the same zone as this multicast group consumer activation. Use the
-   * following format: `projects/locations/multicastGroups`. This field is
-   * deprecated. Use multicast_group_range_activation instead.
-   *
-   * @deprecated
-   * @param string $multicastGroup
-   */
-  public function setMulticastGroup($multicastGroup)
-  {
-    $this->multicastGroup = $multicastGroup;
-  }
-  /**
-   * @deprecated
-   * @return string
-   */
-  public function getMulticastGroup()
-  {
-    return $this->multicastGroup;
   }
   /**
    * Required. The resource name of the multicast group range activation created

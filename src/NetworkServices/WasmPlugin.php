@@ -33,6 +33,37 @@ class WasmPlugin extends \Google\Collection
    */
   public $description;
   /**
+   * Optional. The name of the customer-managed [CryptoKey](https://cloud.google
+   * .com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys) to
+   * be used to encrypt the `WasmPlugin` image (provided by image_uri) and
+   * configuration (provided by plugin_config_data or plugin_config_uri) that
+   * are stored by the `Service Extensions` product at rest. Format: `projects/{
+   * project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` By
+   * default, Google Cloud automatically encrypts all data at rest using Google-
+   * owned and Google-managed encryption keys. If you need ownership and control
+   * of the keys that protect your data at rest, you can specify a customer-
+   * managed encryption key (CMEK) to encrypt your `WasmPlugin` data. For more
+   * information, see [Using customer-managed encryption
+   * keys](https://cloud.google.com/service-extensions/docs/cmek).
+   *
+   * @var string
+   */
+  public $kmsKeyName;
+  /**
+   * Output only. The name of the specific [CryptoKeyVersion](https://cloud.goog
+   * le.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cr
+   * yptoKeyVersions) used to encrypt the `WasmPlugin` data, if the kms_key_name
+   * field is set. Format: `projects/{project}/locations/{location}/keyRings/{ke
+   * yring}/cryptoKeys/{key}/cryptoKeyVersions/{version}` This is a read-only
+   * field. `WasmPlugin` data is automatically encrypted using the most recent
+   * `CryptoKeyVersion` of the `CryptoKey` provided in the `kms_key_name` field.
+   * See [Cloud KMS resources](https://cloud.google.com/kms/docs/resource-
+   * hierarchy) for more information.
+   *
+   * @var string
+   */
+  public $kmsKeyVersion;
+  /**
    * Optional. Set of labels associated with the `WasmPlugin` resource. The
    * format must comply with [the following
    * requirements](/compute/docs/labeling-resources#requirements).
@@ -99,6 +130,57 @@ class WasmPlugin extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * Optional. The name of the customer-managed [CryptoKey](https://cloud.google
+   * .com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys) to
+   * be used to encrypt the `WasmPlugin` image (provided by image_uri) and
+   * configuration (provided by plugin_config_data or plugin_config_uri) that
+   * are stored by the `Service Extensions` product at rest. Format: `projects/{
+   * project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` By
+   * default, Google Cloud automatically encrypts all data at rest using Google-
+   * owned and Google-managed encryption keys. If you need ownership and control
+   * of the keys that protect your data at rest, you can specify a customer-
+   * managed encryption key (CMEK) to encrypt your `WasmPlugin` data. For more
+   * information, see [Using customer-managed encryption
+   * keys](https://cloud.google.com/service-extensions/docs/cmek).
+   *
+   * @param string $kmsKeyName
+   */
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
+  }
+  /**
+   * Output only. The name of the specific [CryptoKeyVersion](https://cloud.goog
+   * le.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cr
+   * yptoKeyVersions) used to encrypt the `WasmPlugin` data, if the kms_key_name
+   * field is set. Format: `projects/{project}/locations/{location}/keyRings/{ke
+   * yring}/cryptoKeys/{key}/cryptoKeyVersions/{version}` This is a read-only
+   * field. `WasmPlugin` data is automatically encrypted using the most recent
+   * `CryptoKeyVersion` of the `CryptoKey` provided in the `kms_key_name` field.
+   * See [Cloud KMS resources](https://cloud.google.com/kms/docs/resource-
+   * hierarchy) for more information.
+   *
+   * @param string $kmsKeyVersion
+   */
+  public function setKmsKeyVersion($kmsKeyVersion)
+  {
+    $this->kmsKeyVersion = $kmsKeyVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyVersion()
+  {
+    return $this->kmsKeyVersion;
   }
   /**
    * Optional. Set of labels associated with the `WasmPlugin` resource. The
