@@ -31,7 +31,7 @@ class SearchIpResourcesResponse extends \Google\Collection
   protected $resultsType = SearchIpResourcesResult::class;
   protected $resultsDataType = 'array';
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @var string[]
    */
@@ -89,7 +89,7 @@ class SearchIpResourcesResponse extends \Google\Collection
     return $this->results;
   }
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @param string[] $unreachable
    */

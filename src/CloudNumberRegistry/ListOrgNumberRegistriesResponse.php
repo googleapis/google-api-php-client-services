@@ -30,7 +30,7 @@ class ListOrgNumberRegistriesResponse extends \Google\Collection
   protected $orgNumberRegistriesType = OrgNumberRegistry::class;
   protected $orgNumberRegistriesDataType = 'array';
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @var string[]
    */
@@ -70,7 +70,7 @@ class ListOrgNumberRegistriesResponse extends \Google\Collection
     return $this->orgNumberRegistries;
   }
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @param string[] $unreachable
    */

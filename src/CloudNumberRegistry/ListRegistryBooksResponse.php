@@ -29,7 +29,7 @@ class ListRegistryBooksResponse extends \Google\Collection
   protected $registryBooksType = RegistryBook::class;
   protected $registryBooksDataType = 'array';
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @var string[]
    */
@@ -68,7 +68,7 @@ class ListRegistryBooksResponse extends \Google\Collection
     return $this->registryBooks;
   }
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @param string[] $unreachable
    */
