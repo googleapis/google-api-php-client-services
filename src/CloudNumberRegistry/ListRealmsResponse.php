@@ -29,7 +29,7 @@ class ListRealmsResponse extends \Google\Collection
   protected $realmsType = Realm::class;
   protected $realmsDataType = 'array';
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @var string[]
    */
@@ -68,7 +68,7 @@ class ListRealmsResponse extends \Google\Collection
     return $this->realms;
   }
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    *
    * @param string[] $unreachable
    */

@@ -23,7 +23,9 @@ class CustomRange extends \Google\Collection
   protected $attributesType = Attribute::class;
   protected $attributesDataType = 'array';
   /**
-   * Optional. The description of the CustomRange.
+   * Optional. The description of the CustomRange. Do not include sensitive
+   * information, such as personally identifiable information or credentials, in
+   * the `description` field.
    *
    * @var string
    */
@@ -98,7 +100,9 @@ class CustomRange extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * Optional. The description of the CustomRange.
+   * Optional. The description of the CustomRange. Do not include sensitive
+   * information, such as personally identifiable information or credentials, in
+   * the `description` field.
    *
    * @param string $description
    */
