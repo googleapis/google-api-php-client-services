@@ -44,6 +44,26 @@ class OvulationTest extends \Google\Model
    */
   public const RESULT_INDETERMINATE = 'INDETERMINATE';
   /**
+   * Ovulation day the user identified by their own method, not a test kit.
+   */
+  public const RESULT_OWN_METHOD = 'OWN_METHOD';
+  /**
+   * Unspecified test type.
+   */
+  public const TEST_TYPE_TEST_TYPE_UNSPECIFIED = 'TEST_TYPE_UNSPECIFIED';
+  /**
+   * Test strip.
+   */
+  public const TEST_TYPE_STRIP = 'STRIP';
+  /**
+   * Digital test.
+   */
+  public const TEST_TYPE_DIGITAL = 'DIGITAL';
+  /**
+   * The user's own method, not a test kit.
+   */
+  public const TEST_TYPE_OWN_METHOD = 'OWN_METHOD';
+  /**
    * Required. The result of the ovulation test.
    *
    * @var string
@@ -51,12 +71,19 @@ class OvulationTest extends \Google\Model
   public $result;
   protected $sampleTimeType = ObservationSampleTime::class;
   protected $sampleTimeDataType = '';
+  /**
+   * Optional. The type of ovulation test.
+   *
+   * @var string
+   */
+  public $testType;
 
   /**
    * Required. The result of the ovulation test.
    *
    * Accepted values: OVULATION_TEST_RESULT_UNSPECIFIED, NEGATIVE,
-   * LUTEINIZING_HORMONE_SURGE, ESTROGEN_SURGE, POSITIVE, INDETERMINATE
+   * LUTEINIZING_HORMONE_SURGE, ESTROGEN_SURGE, POSITIVE, INDETERMINATE,
+   * OWN_METHOD
    *
    * @param self::RESULT_* $result
    */
@@ -86,6 +113,24 @@ class OvulationTest extends \Google\Model
   public function getSampleTime()
   {
     return $this->sampleTime;
+  }
+  /**
+   * Optional. The type of ovulation test.
+   *
+   * Accepted values: TEST_TYPE_UNSPECIFIED, STRIP, DIGITAL, OWN_METHOD
+   *
+   * @param self::TEST_TYPE_* $testType
+   */
+  public function setTestType($testType)
+  {
+    $this->testType = $testType;
+  }
+  /**
+   * @return self::TEST_TYPE_*
+   */
+  public function getTestType()
+  {
+    return $this->testType;
   }
 }
 
