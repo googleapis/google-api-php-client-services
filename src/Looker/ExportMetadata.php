@@ -38,9 +38,11 @@ class ExportMetadata extends \Google\Collection
   protected $collection_key = 'filePaths';
   /**
    * Opaque capability token for O2C Elite System Activity (ESA) direct dataset
-   * migration. It is minted by the exporter together with the cloned source
-   * dataset and presented back to Looker Original when the import requests
-   * access to that dataset.
+   * migration, encrypted by the exporter with the export encryption key
+   * (base64-encoded Cloud KMS ciphertext). It is minted by the exporter
+   * together with the cloned source dataset; Looker Core CLH decrypts it with
+   * the import's service account and presents the plaintext to Looker Original
+   * when the import requests access to that dataset.
    *
    * @var string
    */
@@ -107,9 +109,11 @@ class ExportMetadata extends \Google\Collection
 
   /**
    * Opaque capability token for O2C Elite System Activity (ESA) direct dataset
-   * migration. It is minted by the exporter together with the cloned source
-   * dataset and presented back to Looker Original when the import requests
-   * access to that dataset.
+   * migration, encrypted by the exporter with the export encryption key
+   * (base64-encoded Cloud KMS ciphertext). It is minted by the exporter
+   * together with the cloned source dataset; Looker Core CLH decrypts it with
+   * the import's service account and presents the plaintext to Looker Original
+   * when the import requests access to that dataset.
    *
    * @param string $esaMigrationToken
    */
