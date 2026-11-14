@@ -271,7 +271,7 @@ class ConnectionProfile extends \Google\Model
     return $this->oracleProfile;
   }
   /**
-   * Profile for connecting to a PostgreSQL source.
+   * Profile for connecting to a PostgreSQL source or destination.
    *
    * @param PostgresqlProfile $postgresqlProfile
    */
