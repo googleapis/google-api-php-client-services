@@ -17,12 +17,16 @@
 
 namespace Google\Service\AndroidPublisher\Resource;
 
+use Google\Service\AndroidPublisher\CancelPlanTransitionRequest;
+use Google\Service\AndroidPublisher\CancelPlanTransitionResponse;
 use Google\Service\AndroidPublisher\CancelSubscriptionPurchaseRequest;
 use Google\Service\AndroidPublisher\CancelSubscriptionPurchaseResponse;
 use Google\Service\AndroidPublisher\DeferSubscriptionPurchaseRequest;
 use Google\Service\AndroidPublisher\DeferSubscriptionPurchaseResponse;
 use Google\Service\AndroidPublisher\RevokeSubscriptionPurchaseRequest;
 use Google\Service\AndroidPublisher\RevokeSubscriptionPurchaseResponse;
+use Google\Service\AndroidPublisher\SchedulePlanTransitionRequest;
+use Google\Service\AndroidPublisher\SchedulePlanTransitionResponse;
 use Google\Service\AndroidPublisher\SubscriptionPurchaseV2;
 
 /**
@@ -52,6 +56,25 @@ class PurchasesSubscriptionsv2 extends \Google\Service\Resource
     $params = ['packageName' => $packageName, 'token' => $token, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('cancel', [$params], CancelSubscriptionPurchaseResponse::class);
+  }
+  /**
+   * Cancel a plan transition for a subscription.
+   * (subscriptionsv2.cancelplantransition)
+   *
+   * @param string $packageName Required. The package of the application for which
+   * this subscription was purchased (for example, 'com.some.thing').
+   * @param string $token Required. The token provided to the user's device when
+   * the subscription was purchased.
+   * @param CancelPlanTransitionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CancelPlanTransitionResponse
+   * @throws \Google\Service\Exception
+   */
+  public function cancelplantransition($packageName, $token, CancelPlanTransitionRequest $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'token' => $token, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('cancelplantransition', [$params], CancelPlanTransitionResponse::class);
   }
   /**
    * Defers the renewal of a subscription. (subscriptionsv2.defer)
@@ -105,6 +128,25 @@ class PurchasesSubscriptionsv2 extends \Google\Service\Resource
     $params = ['packageName' => $packageName, 'token' => $token, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('revoke', [$params], RevokeSubscriptionPurchaseResponse::class);
+  }
+  /**
+   * Schedule a plan transition for a subscription.
+   * (subscriptionsv2.scheduleplantransition)
+   *
+   * @param string $packageName Required. The package of the application for which
+   * this subscription was purchased (for example, 'com.some.thing').
+   * @param string $token Required. The token provided to the user's device when
+   * the subscription was purchased.
+   * @param SchedulePlanTransitionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return SchedulePlanTransitionResponse
+   * @throws \Google\Service\Exception
+   */
+  public function scheduleplantransition($packageName, $token, SchedulePlanTransitionRequest $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'token' => $token, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('scheduleplantransition', [$params], SchedulePlanTransitionResponse::class);
   }
 }
 

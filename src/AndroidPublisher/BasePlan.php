@@ -67,6 +67,8 @@ class BasePlan extends \Google\Collection
    * @var string
    */
   public $state;
+  protected $transitionTargetConfigType = TransitionTargetConfig::class;
+  protected $transitionTargetConfigDataType = '';
 
   /**
    * Set when the base plan automatically renews at a regular interval.
@@ -209,6 +211,23 @@ class BasePlan extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * Transition target base plan information when this base plan has a
+   * transition plan.
+   *
+   * @param TransitionTargetConfig $transitionTargetConfig
+   */
+  public function setTransitionTargetConfig(TransitionTargetConfig $transitionTargetConfig)
+  {
+    $this->transitionTargetConfig = $transitionTargetConfig;
+  }
+  /**
+   * @return TransitionTargetConfig
+   */
+  public function getTransitionTargetConfig()
+  {
+    return $this->transitionTargetConfig;
   }
 }
 

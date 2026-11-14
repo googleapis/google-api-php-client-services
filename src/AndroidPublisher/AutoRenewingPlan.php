@@ -28,6 +28,8 @@ class AutoRenewingPlan extends \Google\Model
   public $autoRenewEnabled;
   protected $installmentDetailsType = InstallmentPlan::class;
   protected $installmentDetailsDataType = '';
+  protected $planTransitionDetailsType = PlanTransitionDetails::class;
+  protected $planTransitionDetailsDataType = '';
   protected $priceChangeDetailsType = SubscriptionItemPriceChangeDetails::class;
   protected $priceChangeDetailsDataType = '';
   protected $priceStepUpConsentDetailsType = PriceStepUpConsentDetails::class;
@@ -68,6 +70,24 @@ class AutoRenewingPlan extends \Google\Model
   public function getInstallmentDetails()
   {
     return $this->installmentDetails;
+  }
+  /**
+   * The information of the associated plan transition. Will be present only if
+   * this plan has a transition plan associated with it and will only include
+   * the latest transition details associated with the item.
+   *
+   * @param PlanTransitionDetails $planTransitionDetails
+   */
+  public function setPlanTransitionDetails(PlanTransitionDetails $planTransitionDetails)
+  {
+    $this->planTransitionDetails = $planTransitionDetails;
+  }
+  /**
+   * @return PlanTransitionDetails
+   */
+  public function getPlanTransitionDetails()
+  {
+    return $this->planTransitionDetails;
   }
   /**
    * The information of the last price change for the item since subscription
