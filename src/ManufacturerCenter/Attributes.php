@@ -64,6 +64,13 @@ class Attributes extends \Google\Collection
    */
   public $disclosureDate;
   /**
+   * Optional. URLs of PDF documents for the product, such as user manuals or
+   * specifications.
+   *
+   * @var string[]
+   */
+  public $documentLink;
+  /**
    * A list of excluded destinations such as "ClientExport",
    * "ClientShoppingCatalog" or "PartnerShoppingCatalog". For more information,
    * see https://support.google.com/manufacturers/answer/7443550
@@ -131,6 +138,13 @@ class Attributes extends \Google\Collection
    */
   public $itemGroupId;
   /**
+   * Optional. The shared title of the product group that this variant belongs
+   * to.
+   *
+   * @var string
+   */
+  public $itemGroupTitle;
+  /**
    * The material of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#material.
    *
@@ -153,6 +167,13 @@ class Attributes extends \Google\Collection
    * @var string
    */
   public $pattern;
+  /**
+   * Optional. The popularity rank of the product from 0.0 (lowest) to 100.0
+   * (highest).
+   *
+   * @var 
+   */
+  public $popularityRank;
   protected $productDetailType = ProductDetail::class;
   protected $productDetailDataType = 'array';
   /**
@@ -191,6 +212,10 @@ class Attributes extends \Google\Collection
    * @var string[]
    */
   public $productType;
+  protected $questionAndAnswerType = QuestionAndAnswer::class;
+  protected $questionAndAnswerDataType = 'array';
+  protected $relatedProductType = RelatedProduct::class;
+  protected $relatedProductDataType = 'array';
   /**
    * The release date of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#release.
@@ -257,6 +282,8 @@ class Attributes extends \Google\Collection
    * @var string
    */
   public $title;
+  protected $variantOptionType = VariantOption::class;
+  protected $variantOptionDataType = 'array';
   /**
    * The videos of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#video.
@@ -422,6 +449,23 @@ class Attributes extends \Google\Collection
   public function getDisclosureDate()
   {
     return $this->disclosureDate;
+  }
+  /**
+   * Optional. URLs of PDF documents for the product, such as user manuals or
+   * specifications.
+   *
+   * @param string[] $documentLink
+   */
+  public function setDocumentLink($documentLink)
+  {
+    $this->documentLink = $documentLink;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDocumentLink()
+  {
+    return $this->documentLink;
   }
   /**
    * A list of excluded destinations such as "ClientExport",
@@ -616,6 +660,23 @@ class Attributes extends \Google\Collection
     return $this->itemGroupId;
   }
   /**
+   * Optional. The shared title of the product group that this variant belongs
+   * to.
+   *
+   * @param string $itemGroupTitle
+   */
+  public function setItemGroupTitle($itemGroupTitle)
+  {
+    $this->itemGroupTitle = $itemGroupTitle;
+  }
+  /**
+   * @return string
+   */
+  public function getItemGroupTitle()
+  {
+    return $this->itemGroupTitle;
+  }
+  /**
    * The material of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#material.
    *
@@ -682,6 +743,14 @@ class Attributes extends \Google\Collection
   public function getPattern()
   {
     return $this->pattern;
+  }
+  public function setPopularityRank($popularityRank)
+  {
+    $this->popularityRank = $popularityRank;
+  }
+  public function getPopularityRank()
+  {
+    return $this->popularityRank;
   }
   /**
    * The details of the product. For more information, see
@@ -785,6 +854,39 @@ class Attributes extends \Google\Collection
   public function getProductType()
   {
     return $this->productType;
+  }
+  /**
+   * Optional. Frequently asked questions and answers about the product.
+   *
+   * @param QuestionAndAnswer[] $questionAndAnswer
+   */
+  public function setQuestionAndAnswer($questionAndAnswer)
+  {
+    $this->questionAndAnswer = $questionAndAnswer;
+  }
+  /**
+   * @return QuestionAndAnswer[]
+   */
+  public function getQuestionAndAnswer()
+  {
+    return $this->questionAndAnswer;
+  }
+  /**
+   * Optional. Products related to this product, such as accessories or
+   * substitutes.
+   *
+   * @param RelatedProduct[] $relatedProduct
+   */
+  public function setRelatedProduct($relatedProduct)
+  {
+    $this->relatedProduct = $relatedProduct;
+  }
+  /**
+   * @return RelatedProduct[]
+   */
+  public function getRelatedProduct()
+  {
+    return $this->relatedProduct;
   }
   /**
    * The release date of the product. For more information, see
@@ -956,6 +1058,22 @@ class Attributes extends \Google\Collection
   public function getTitle()
   {
     return $this->title;
+  }
+  /**
+   * Optional. The list of all variant-identifying options for the product.
+   *
+   * @param VariantOption[] $variantOption
+   */
+  public function setVariantOption($variantOption)
+  {
+    $this->variantOption = $variantOption;
+  }
+  /**
+   * @return VariantOption[]
+   */
+  public function getVariantOption()
+  {
+    return $this->variantOption;
   }
   /**
    * The videos of the product. For more information, see

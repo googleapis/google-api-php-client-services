@@ -32,6 +32,21 @@ class Certification extends \Google\Model
    */
   public $code;
   /**
+   * Optional. A URL to the certification fiche. For example: https://eprel.ec.e
+   * uropa.eu/fiches/smartphonestablets20231669/Fiche_2556297_EN.pdf In case of
+   * multiple languages, the English version is preferred.
+   *
+   * @var string
+   */
+  public $documentLink;
+  /**
+   * Optional. A URL to the certification label. For example: https://eprel.ec.e
+   * uropa.eu/labels/smartphonestablets20231669/Label_2556297.pdf
+   *
+   * @var string
+   */
+  public $labelLink;
+  /**
    * Optional. A URL link to the certification.
    *
    * @var string
@@ -93,6 +108,41 @@ class Certification extends \Google\Model
   public function getCode()
   {
     return $this->code;
+  }
+  /**
+   * Optional. A URL to the certification fiche. For example: https://eprel.ec.e
+   * uropa.eu/fiches/smartphonestablets20231669/Fiche_2556297_EN.pdf In case of
+   * multiple languages, the English version is preferred.
+   *
+   * @param string $documentLink
+   */
+  public function setDocumentLink($documentLink)
+  {
+    $this->documentLink = $documentLink;
+  }
+  /**
+   * @return string
+   */
+  public function getDocumentLink()
+  {
+    return $this->documentLink;
+  }
+  /**
+   * Optional. A URL to the certification label. For example: https://eprel.ec.e
+   * uropa.eu/labels/smartphonestablets20231669/Label_2556297.pdf
+   *
+   * @param string $labelLink
+   */
+  public function setLabelLink($labelLink)
+  {
+    $this->labelLink = $labelLink;
+  }
+  /**
+   * @return string
+   */
+  public function getLabelLink()
+  {
+    return $this->labelLink;
   }
   /**
    * Optional. A URL link to the certification.
