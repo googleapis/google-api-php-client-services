@@ -34,8 +34,10 @@ use Google\Service\ApiKeysService\V2UndeleteKeyRequest;
 class ProjectsLocationsKeys extends \Google\Service\Resource
 {
   /**
-   * Creates a new API key. NOTE: Key is a global resource; hence the only
-   * supported value for location is `global`. (keys.create)
+   * Creates a new API key. The key string of the API key is included in the
+   * response and can afterward only be retrieved through the `GetKeyString`
+   * method. NOTE: Key is a global resource; hence the only supported value for
+   * location is `global`. (keys.create)
    *
    * @param string $parent Required. The project in which the API key is created.
    * The parent field must be in format of "projects//locations/global".
@@ -59,9 +61,10 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
   }
   /**
    * Deletes an API key. Deleted key can be retrieved within 30 days of deletion.
-   * Afterward, key will be purged from the project. NOTE: Key is a global
-   * resource; hence the only supported value for location is `global`.
-   * (keys.delete)
+   * Afterward, key will be purged from the project. The key string of the API key
+   * isn't included in the response and can only be retrieved through the
+   * `GetKeyString` method. NOTE: Key is a global resource; hence the only
+   * supported value for location is `global`. (keys.delete)
    *
    * @param string $name Required. The resource name of the API key to be deleted.
    * @param array $optParams Optional parameters.
@@ -136,8 +139,9 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
   }
   /**
    * Patches the modifiable fields of an API key. The key string of the API key
-   * isn't included in the response. NOTE: Key is a global resource; hence the
-   * only supported value for location is `global`. (keys.patch)
+   * isn't included in the response and can only be retrieved through the
+   * `GetKeyString` method. NOTE: Key is a global resource; hence the only
+   * supported value for location is `global`. (keys.patch)
    *
    * @param string $name Identifier. The resource name of the key. The `name` has
    * the form: `projects//locations/global/keys/`. For example: `projects/12345686
@@ -165,9 +169,10 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
-   * Undeletes an API key which was deleted within 30 days. NOTE: Key is a global
-   * resource; hence the only supported value for location is `global`.
-   * (keys.undelete)
+   * Undeletes an API key which was deleted within 30 days. The key string of the
+   * API key isn't included in the response and can only be retrieved through the
+   * `GetKeyString` method. NOTE: Key is a global resource; hence the only
+   * supported value for location is `global`. (keys.undelete)
    *
    * @param string $name Required. The resource name of the API key to be
    * undeleted.

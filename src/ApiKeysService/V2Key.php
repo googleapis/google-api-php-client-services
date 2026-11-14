@@ -58,8 +58,9 @@ class V2Key extends \Google\Model
    */
   public $etag;
   /**
-   * Output only. An encrypted and signed value held by this key. This field can
-   * be accessed only through the `GetKeyString` method.
+   * Output only. An encrypted and signed value held by this key. This field is
+   * returned upon initial key creation (`CreateKey`) and can afterward be
+   * accessed only through the `GetKeyString` method.
    *
    * @var string
    */
@@ -185,8 +186,9 @@ class V2Key extends \Google\Model
     return $this->etag;
   }
   /**
-   * Output only. An encrypted and signed value held by this key. This field can
-   * be accessed only through the `GetKeyString` method.
+   * Output only. An encrypted and signed value held by this key. This field is
+   * returned upon initial key creation (`CreateKey`) and can afterward be
+   * accessed only through the `GetKeyString` method.
    *
    * @param string $keyString
    */
