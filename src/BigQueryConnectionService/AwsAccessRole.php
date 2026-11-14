@@ -33,6 +33,15 @@ class AwsAccessRole extends \Google\Model
    * @var string
    */
   public $identity;
+  /**
+   * Output only. The email address of the Google-owned service account that
+   * represents the connection's identity. Grant IAM roles to this service
+   * account, for example, to let the connection resolve the Service Directory
+   * service in `AwsProperties.service_directory_service`.
+   *
+   * @var string
+   */
+  public $serviceAccountId;
 
   /**
    * The user’s AWS IAM Role that trusts the Google-owned AWS IAM user
@@ -67,6 +76,25 @@ class AwsAccessRole extends \Google\Model
   public function getIdentity()
   {
     return $this->identity;
+  }
+  /**
+   * Output only. The email address of the Google-owned service account that
+   * represents the connection's identity. Grant IAM roles to this service
+   * account, for example, to let the connection resolve the Service Directory
+   * service in `AwsProperties.service_directory_service`.
+   *
+   * @param string $serviceAccountId
+   */
+  public function setServiceAccountId($serviceAccountId)
+  {
+    $this->serviceAccountId = $serviceAccountId;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccountId()
+  {
+    return $this->serviceAccountId;
   }
 }
 
