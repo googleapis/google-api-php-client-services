@@ -36,6 +36,10 @@ class GoogleCloudAiplatformV1ServingProfile extends \Google\Model
    * The scope for Response API.
    */
   public const SCOPE_RESPONSE_API = 'RESPONSE_API';
+  /**
+   * The scope for Voices API.
+   */
+  public const SCOPE_VOICES_API = 'VOICES_API';
   protected $cmekConfigType = GoogleCloudAiplatformV1ServingProfileCmekConfig::class;
   protected $cmekConfigDataType = '';
   /**
@@ -161,7 +165,7 @@ class GoogleCloudAiplatformV1ServingProfile extends \Google\Model
    * Required. The specific API this ServingProfile applies to.
    *
    * Accepted values: SERVING_PROFILE_SCOPE_UNSPECIFIED, GEMINI_LIVE,
-   * INTERACTIONS_API, RESPONSE_API
+   * INTERACTIONS_API, RESPONSE_API, VOICES_API
    *
    * @param self::SCOPE_* $scope
    */

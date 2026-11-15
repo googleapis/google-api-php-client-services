@@ -19,6 +19,18 @@ namespace Google\Service\Aiplatform;
 
 class GenaiVertexV1TranscriptionConfig extends \Google\Collection
 {
+  /**
+   * Unspecified transcription mode.
+   */
+  public const MODE_ENUM_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * Verbatim transcription mode.
+   */
+  public const MODE_ENUM_VERBATIM = 'VERBATIM';
+  /**
+   * Smart transcription mode.
+   */
+  public const MODE_ENUM_SMART = 'SMART';
   protected $collection_key = 'timestampGranularities';
   /**
    * Optional. A list of phrases to bias the ASR model towards.
@@ -49,6 +61,12 @@ class GenaiVertexV1TranscriptionConfig extends \Google\Collection
    * @var string[]
    */
   public $languageCodes;
+  protected $modeConfigType = GenaiVertexV1TranscriptionMode::class;
+  protected $modeConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $modeEnum;
   /**
    * Optional. The granularity of timestamps to include in the transcription
    * output. Supported values: "word". If empty, no timestamps are generated.
@@ -128,6 +146,34 @@ class GenaiVertexV1TranscriptionConfig extends \Google\Collection
   public function getLanguageCodes()
   {
     return $this->languageCodes;
+  }
+  /**
+   * @param GenaiVertexV1TranscriptionMode $modeConfig
+   */
+  public function setModeConfig(GenaiVertexV1TranscriptionMode $modeConfig)
+  {
+    $this->modeConfig = $modeConfig;
+  }
+  /**
+   * @return GenaiVertexV1TranscriptionMode
+   */
+  public function getModeConfig()
+  {
+    return $this->modeConfig;
+  }
+  /**
+   * @param self::MODE_ENUM_* $modeEnum
+   */
+  public function setModeEnum($modeEnum)
+  {
+    $this->modeEnum = $modeEnum;
+  }
+  /**
+   * @return self::MODE_ENUM_*
+   */
+  public function getModeEnum()
+  {
+    return $this->modeEnum;
   }
   /**
    * Optional. The granularity of timestamps to include in the transcription

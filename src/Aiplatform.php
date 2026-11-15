@@ -43,6 +43,12 @@ class Aiplatform extends \Google\Service
   /** View your data across Google Cloud services and see the email address of your Google Account. */
   const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
+  /** View your Agentspace chat history, including uploaded files and generated reports and visualizations, and interact with the Agentspace assistant on your behalf. Also view the artifacts you access through NotebookLM Enterprise.. */
+  const DISCOVERYENGINE_ASSIST_READWRITE =
+      "https://www.googleapis.com/auth/discoveryengine.assist.readwrite";
+  /** Interact with Discovery Engine API products, such as Agentspace, Vertex AI Search, or NotebookLM Enterprise, on your behalf. It will also allow the app to view all data that you have access to when you use or interact with a Discovery Engine API product.. */
+  const DISCOVERYENGINE_SERVING_READWRITE =
+      "https://www.googleapis.com/auth/discoveryengine.serving.readwrite";
 
   public $batchPredictionJobs;
   public $customJobs_operations;

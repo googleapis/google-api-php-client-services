@@ -21,9 +21,9 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec extends \Google\Model
 {
   /**
    * Optional. The service account that Cloud Build uses to run the build. This
-   * field is only applicable when `worker_pool` is specified (i.e., for custom
-   * worker pools). If `worker_pool` is not specified, this field is ignored and
-   * the build runs using the Google-managed service agent. Format:
+   * field is only applicable when `worker_pool` is specified (i.e., for private
+   * pools). If `worker_pool` is not specified, this field is ignored and the
+   * build runs using the Google-managed service agent. Format:
    * `projects/{project}/serviceAccounts/{service_account}` or
    * `{service_account}@{project}.iam.gserviceaccount.com`
    *
@@ -41,9 +41,9 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec extends \Google\Model
 
   /**
    * Optional. The service account that Cloud Build uses to run the build. This
-   * field is only applicable when `worker_pool` is specified (i.e., for custom
-   * worker pools). If `worker_pool` is not specified, this field is ignored and
-   * the build runs using the Google-managed service agent. Format:
+   * field is only applicable when `worker_pool` is specified (i.e., for private
+   * pools). If `worker_pool` is not specified, this field is ignored and the
+   * build runs using the Google-managed service agent. Format:
    * `projects/{project}/serviceAccounts/{service_account}` or
    * `{service_account}@{project}.iam.gserviceaccount.com`
    *

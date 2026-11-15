@@ -29,6 +29,46 @@ class GenaiVertexV1DocumentDelta extends \Google\Model
    */
   public const MIME_TYPE_TYPE_CSV = 'TYPE_CSV';
   /**
+   * PPTX presentation format
+   */
+  public const MIME_TYPE_TYPE_PPTX = 'TYPE_PPTX';
+  /**
+   * PPT presentation format
+   */
+  public const MIME_TYPE_TYPE_PPT = 'TYPE_PPT';
+  /**
+   * ODP presentation format
+   */
+  public const MIME_TYPE_TYPE_ODP = 'TYPE_ODP';
+  /**
+   * DOCX document format
+   */
+  public const MIME_TYPE_TYPE_DOCX = 'TYPE_DOCX';
+  /**
+   * DOC document format
+   */
+  public const MIME_TYPE_TYPE_DOC = 'TYPE_DOC';
+  /**
+   * DOTX document template format
+   */
+  public const MIME_TYPE_TYPE_DOTX = 'TYPE_DOTX';
+  /**
+   * ODT document format
+   */
+  public const MIME_TYPE_TYPE_ODT = 'TYPE_ODT';
+  /**
+   * XLSX spreadsheet format
+   */
+  public const MIME_TYPE_TYPE_XLSX = 'TYPE_XLSX';
+  /**
+   * XLS spreadsheet format
+   */
+  public const MIME_TYPE_TYPE_XLS = 'TYPE_XLS';
+  /**
+   * ODS spreadsheet format
+   */
+  public const MIME_TYPE_TYPE_ODS = 'TYPE_ODS';
+  /**
    * @var string
    */
   public $data;

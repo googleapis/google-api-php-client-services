@@ -55,7 +55,9 @@ class GoogleCloudAiplatformV1GoogleMaps extends \Google\Model
   }
   /**
    * Optional. Specifies the types of Google Maps grounding to enable. Defaults
-   * to `places` when unset.
+   * to `places` when unset, and to `places` and `routing` for Gemini 4 and
+   * later models. When set, only the listed types are enabled; for example,
+   * setting only `places` disables routing.
    *
    * @param GoogleCloudAiplatformV1GoogleMapsGroundingTypes $groundingTypes
    */

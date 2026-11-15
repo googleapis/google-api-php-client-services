@@ -40,13 +40,18 @@ class GoogleCloudAiplatformV1AgentStatus extends \Google\Model
    */
   public const STATE_DELETED = 'DELETED';
   /**
+   * The agent has been created and is awaiting post-creation provisioning
+   * before becoming active.
+   */
+  public const STATE_PROVISIONING = 'PROVISIONING';
+  /**
    * Output only. The time at which the agent was soft-deleted.
    *
    * @var string
    */
   public $deleteTime;
   /**
-   * Output only. The current state of the agent.
+   * Optional. The current state of the agent.
    *
    * @var string
    */
@@ -71,9 +76,10 @@ class GoogleCloudAiplatformV1AgentStatus extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * Output only. The current state of the agent.
+   * Optional. The current state of the agent.
    *
-   * Accepted values: STATE_UNSPECIFIED, ACTIVE, SUSPENDED, ARCHIVED, DELETED
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, SUSPENDED, ARCHIVED, DELETED,
+   * PROVISIONING
    *
    * @param self::STATE_* $state
    */
