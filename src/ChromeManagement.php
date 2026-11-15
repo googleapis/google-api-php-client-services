@@ -70,6 +70,7 @@ class ChromeManagement extends \Google\Service
   const CHROME_MANAGEMENT_TELEMETRY_READONLY =
       "https://www.googleapis.com/auth/chrome.management.telemetry.readonly";
 
+  public $customers;
   public $customers_apps;
   public $customers_apps_android;
   public $customers_apps_chrome;
@@ -108,6 +109,26 @@ class ChromeManagement extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'chromemanagement';
 
+    $this->customers = new ChromeManagement\Resource\Customers(
+        $this,
+        $this->serviceName,
+        'customers',
+        [
+          'methods' => [
+            'getSubscriptionInfo' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->customers_apps = new ChromeManagement\Resource\CustomersApps(
         $this,
         $this->serviceName,
