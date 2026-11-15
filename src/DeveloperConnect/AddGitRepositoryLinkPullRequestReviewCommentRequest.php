@@ -22,8 +22,9 @@ class AddGitRepositoryLinkPullRequestReviewCommentRequest extends \Google\Model
   protected $commentType = PullRequestReviewComment::class;
   protected $commentDataType = '';
   /**
-   * Optional. The commit SHA to comment on. If not specified, defaults to the
-   * HEAD commit of the Pull Request.
+   * Optional. The SHA of a commit in the pull request to comment on. If not
+   * specified, defaults to the HEAD commit of the pull request. Set this only
+   * to comment on a specific, known commit in the pull request.
    *
    * @var string
    */
@@ -36,7 +37,8 @@ class AddGitRepositoryLinkPullRequestReviewCommentRequest extends \Google\Model
   public $pullRequestId;
 
   /**
-   * Required. The review comment to add.
+   * Required. The review comment to add. Input fields used: `body`, `path`,
+   * `first_line`, `last_line`, `side`.
    *
    * @param PullRequestReviewComment $comment
    */
@@ -52,8 +54,9 @@ class AddGitRepositoryLinkPullRequestReviewCommentRequest extends \Google\Model
     return $this->comment;
   }
   /**
-   * Optional. The commit SHA to comment on. If not specified, defaults to the
-   * HEAD commit of the Pull Request.
+   * Optional. The SHA of a commit in the pull request to comment on. If not
+   * specified, defaults to the HEAD commit of the pull request. Set this only
+   * to comment on a specific, known commit in the pull request.
    *
    * @param string $commitId
    */

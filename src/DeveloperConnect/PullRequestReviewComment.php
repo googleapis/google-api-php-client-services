@@ -44,7 +44,9 @@ class PullRequestReviewComment extends \Google\Model
    */
   public $body;
   /**
-   * Output only. The commit SHA the comment was actually applied to.
+   * Output only. The commit SHA the comment was actually applied to. Ignored in
+   * requests; to choose the commit to comment on, set
+   * `AddGitRepositoryLinkPullRequestReviewCommentRequest.commit_id`.
    *
    * @var string
    */
@@ -127,7 +129,9 @@ class PullRequestReviewComment extends \Google\Model
     return $this->body;
   }
   /**
-   * Output only. The commit SHA the comment was actually applied to.
+   * Output only. The commit SHA the comment was actually applied to. Ignored in
+   * requests; to choose the commit to comment on, set
+   * `AddGitRepositoryLinkPullRequestReviewCommentRequest.commit_id`.
    *
    * @param string $commitId
    */

@@ -159,7 +159,8 @@ class ProjectsLocationsConnectionsGitRepositoryLinks extends \Google\Service\Res
   /**
    * Diff commits for a GitRepositoryLink. (gitRepositoryLinks.diffCommit)
    *
-   * @param string $name Required. The resource name of the GitRepositoryLink.
+   * @param string $name Required. The resource name of the GitRepositoryLink in
+   * the format `projects/locations/connections/gitRepositoryLinks`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string baseSha Required. The base commit SHA or ref.
