@@ -17,6 +17,8 @@
 
 namespace Google\Service\ChromeManagement\Resource;
 
+use Google\Service\ChromeManagement\GoogleChromeManagementVersionsV1SubscriptionInfo;
+
 /**
  * The "customers" collection of methods.
  * Typical usage is:
@@ -27,6 +29,24 @@ namespace Google\Service\ChromeManagement\Resource;
  */
 class Customers extends \Google\Service\Resource
 {
+  /**
+   * Gets the aggregated subscription and license information for a given customer
+   * as a singleton resource. Note: Because the data is snapshotted for ChromeOS
+   * devices, the exact numbers can be delayed by up to 10 seconds.
+   * (customers.getSubscriptionInfo)
+   *
+   * @param string $name Required. The resource name of the customer subscription
+   * info to retrieve. Format: customers/{customer}/subscriptionInfo
+   * @param array $optParams Optional parameters.
+   * @return GoogleChromeManagementVersionsV1SubscriptionInfo
+   * @throws \Google\Service\Exception
+   */
+  public function getSubscriptionInfo($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getSubscriptionInfo', [$params], GoogleChromeManagementVersionsV1SubscriptionInfo::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
