@@ -33,7 +33,9 @@ class CloudAiLargeModelsVisionGenerateVideoExperimentsPerfEstimationConfig exten
   protected $targetCharacterReferencesType = CloudAiLargeModelsVisionGenerateVideoExperimentsPerfEstimationConfigCharacterReference::class;
   protected $targetCharacterReferencesDataType = 'array';
   /**
-   * Optional.
+   * Optional. How much to temporally smooth the 3D fitting optimization (the
+   * fitting server's `temporal_weight`). Must be finite and >= 0. Defaults to
+   * the fitting server's default (10) if unset.
    *
    * @var float
    */
@@ -104,7 +106,9 @@ class CloudAiLargeModelsVisionGenerateVideoExperimentsPerfEstimationConfig exten
     return $this->targetCharacterReferences;
   }
   /**
-   * Optional.
+   * Optional. How much to temporally smooth the 3D fitting optimization (the
+   * fitting server's `temporal_weight`). Must be finite and >= 0. Defaults to
+   * the fitting server's default (10) if unset.
    *
    * @param float $temporalSmoothness
    */

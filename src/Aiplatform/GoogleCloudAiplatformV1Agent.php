@@ -459,7 +459,7 @@ class GoogleCloudAiplatformV1Agent extends \Google\Collection
     return $this->persona;
   }
   /**
-   * Output only. The current operational state of the agent.
+   * Optional. The current operational state of the agent.
    *
    * @param GoogleCloudAiplatformV1AgentStatus $status
    */

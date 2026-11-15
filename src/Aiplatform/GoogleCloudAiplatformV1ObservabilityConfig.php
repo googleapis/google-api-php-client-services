@@ -20,6 +20,13 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ObservabilityConfig extends \Google\Model
 {
   /**
+   * Optional. Customer bucket (`gs://bucket`) the media of observed turns is
+   * written to; unset means media is not persisted.
+   *
+   * @var string
+   */
+  public $artifactGcsBucket;
+  /**
    * Optional. Enables observability for this agent's sessions: OpenTelemetry
    * span emission covering tool names, model names, token counts, latencies and
    * status. If `false`, the other fields here are ignored.
@@ -41,6 +48,23 @@ class GoogleCloudAiplatformV1ObservabilityConfig extends \Google\Model
    */
   public $sensitiveLoggingEnabled;
 
+  /**
+   * Optional. Customer bucket (`gs://bucket`) the media of observed turns is
+   * written to; unset means media is not persisted.
+   *
+   * @param string $artifactGcsBucket
+   */
+  public function setArtifactGcsBucket($artifactGcsBucket)
+  {
+    $this->artifactGcsBucket = $artifactGcsBucket;
+  }
+  /**
+   * @return string
+   */
+  public function getArtifactGcsBucket()
+  {
+    return $this->artifactGcsBucket;
+  }
   /**
    * Optional. Enables observability for this agent's sessions: OpenTelemetry
    * span emission covering tool names, model names, token counts, latencies and

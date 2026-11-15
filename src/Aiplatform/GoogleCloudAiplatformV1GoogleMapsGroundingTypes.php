@@ -43,7 +43,8 @@ class GoogleCloudAiplatformV1GoogleMapsGroundingTypes extends \Google\Model
   }
   /**
    * Optional. Enables grounding with Google Maps Routing APIs (ComputeRoutes
-   * and SearchAlongRoute).
+   * and SearchAlongRoute). Also enabled by default for Gemini 4 and later
+   * models when no `GroundingTypes` are specified.
    *
    * @param GoogleCloudAiplatformV1GoogleMapsRouting $routing
    */

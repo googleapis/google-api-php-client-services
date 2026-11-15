@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GenaiVertexV1CodeExecutionResultStep extends \Google\Model
 {
+  protected $contentType = GenaiVertexV1ContentList::class;
+  protected $contentDataType = '';
   /**
    * Whether the code execution resulted in an error.
    *
@@ -32,6 +34,22 @@ class GenaiVertexV1CodeExecutionResultStep extends \Google\Model
    */
   public $result;
 
+  /**
+   * Multimodal output of the code execution.
+   *
+   * @param GenaiVertexV1ContentList $content
+   */
+  public function setContent(GenaiVertexV1ContentList $content)
+  {
+    $this->content = $content;
+  }
+  /**
+   * @return GenaiVertexV1ContentList
+   */
+  public function getContent()
+  {
+    return $this->content;
+  }
   /**
    * Whether the code execution resulted in an error.
    *
