@@ -179,6 +179,11 @@ class DeploymentmanagerResourceWarnings extends \Google\Collection
    */
   public const CODE_RATE_LIMIT_EXCEEDED = 'RATE_LIMIT_EXCEEDED';
   /**
+   * Primary disk resized. Secondary disk resize is in-progress and awaiting
+   * resource allocation in the secondary region.
+   */
+  public const CODE_ASYNC_REPLICATION_SECONDARY_UPDATE_PENDING = 'ASYNC_REPLICATION_SECONDARY_UPDATE_PENDING';
+  /**
    * Upcoming maintenance schedule is unavailable for the resource.
    */
   public const CODE_UPCOMING_MAINTENANCES_UNAVAILABLE = 'UPCOMING_MAINTENANCES_UNAVAILABLE';
@@ -186,7 +191,6 @@ class DeploymentmanagerResourceWarnings extends \Google\Collection
    * Reserved entries for quickly adding new warnings without breaking dependent
    * clients.
    */
-  public const CODE_RESERVED_ENTRY_136 = 'RESERVED_ENTRY_136';
   public const CODE_RESERVED_ENTRY_139 = 'RESERVED_ENTRY_139';
   public const CODE_RESERVED_ENTRY_141 = 'RESERVED_ENTRY_141';
   public const CODE_RESERVED_ENTRY_142 = 'RESERVED_ENTRY_142';
@@ -227,8 +231,9 @@ class DeploymentmanagerResourceWarnings extends \Google\Collection
    * NEXT_HOP_INSTANCE_HAS_NO_IPV6_INTERFACE,
    * INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB, LIST_OVERHEAD_QUOTA_EXCEED,
    * QUOTA_INFO_UNAVAILABLE, RESOURCE_USES_GLOBAL_DNS, RATE_LIMIT_EXCEEDED,
-   * UPCOMING_MAINTENANCES_UNAVAILABLE, RESERVED_ENTRY_136, RESERVED_ENTRY_139,
-   * RESERVED_ENTRY_141, RESERVED_ENTRY_142, RESERVED_ENTRY_143
+   * ASYNC_REPLICATION_SECONDARY_UPDATE_PENDING,
+   * UPCOMING_MAINTENANCES_UNAVAILABLE, RESERVED_ENTRY_139, RESERVED_ENTRY_141,
+   * RESERVED_ENTRY_142, RESERVED_ENTRY_143
    *
    * @param self::CODE_* $code
    */

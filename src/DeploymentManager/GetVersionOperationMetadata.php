@@ -19,9 +19,25 @@ namespace Google\Service\DeploymentManager;
 
 class GetVersionOperationMetadata extends \Google\Model
 {
+  protected $inlineHbomInfoType = GetVersionOperationMetadataHbomInfo::class;
+  protected $inlineHbomInfoDataType = '';
   protected $inlineSbomInfoType = GetVersionOperationMetadataSbomInfo::class;
   protected $inlineSbomInfoDataType = '';
 
+  /**
+   * @param GetVersionOperationMetadataHbomInfo $inlineHbomInfo
+   */
+  public function setInlineHbomInfo(GetVersionOperationMetadataHbomInfo $inlineHbomInfo)
+  {
+    $this->inlineHbomInfo = $inlineHbomInfo;
+  }
+  /**
+   * @return GetVersionOperationMetadataHbomInfo
+   */
+  public function getInlineHbomInfo()
+  {
+    return $this->inlineHbomInfo;
+  }
   /**
    * @param GetVersionOperationMetadataSbomInfo $inlineSbomInfo
    */

@@ -109,6 +109,10 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $kind;
+  protected $microVmsExportOperationMetadataType = MicroVmsExportOperationMetadata::class;
+  protected $microVmsExportOperationMetadataDataType = '';
+  protected $microVmsImportOperationMetadataType = MicroVmsImportOperationMetadata::class;
+  protected $microVmsImportOperationMetadataDataType = '';
   /**
    * [Output Only] Name of the operation.
    *
@@ -481,6 +485,38 @@ class Operation extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * Output only. [Output Only] Operation metadata for microVms.export.
+   *
+   * @param MicroVmsExportOperationMetadata $microVmsExportOperationMetadata
+   */
+  public function setMicroVmsExportOperationMetadata(MicroVmsExportOperationMetadata $microVmsExportOperationMetadata)
+  {
+    $this->microVmsExportOperationMetadata = $microVmsExportOperationMetadata;
+  }
+  /**
+   * @return MicroVmsExportOperationMetadata
+   */
+  public function getMicroVmsExportOperationMetadata()
+  {
+    return $this->microVmsExportOperationMetadata;
+  }
+  /**
+   * Output only. [Output Only] Operation metadata for microVms.import.
+   *
+   * @param MicroVmsImportOperationMetadata $microVmsImportOperationMetadata
+   */
+  public function setMicroVmsImportOperationMetadata(MicroVmsImportOperationMetadata $microVmsImportOperationMetadata)
+  {
+    $this->microVmsImportOperationMetadata = $microVmsImportOperationMetadata;
+  }
+  /**
+   * @return MicroVmsImportOperationMetadata
+   */
+  public function getMicroVmsImportOperationMetadata()
+  {
+    return $this->microVmsImportOperationMetadata;
   }
   /**
    * [Output Only] Name of the operation.
