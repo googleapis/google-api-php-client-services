@@ -65,7 +65,8 @@ class PullRequest extends \Google\Model
    */
   public $author;
   /**
-   * Required. The target commit SHA of the base branch.
+   * Required. The name of the target (base) branch that the changes are merged
+   * into.
    *
    * @var string
    */
@@ -98,7 +99,7 @@ class PullRequest extends \Google\Model
    */
   public $declineTime;
   /**
-   * Required. The source commit SHA of the head branch.
+   * Required. The name of the source (head) branch that contains the changes.
    *
    * @var string
    */
@@ -110,7 +111,8 @@ class PullRequest extends \Google\Model
    */
   public $htmlUrl;
   /**
-   * Required. The ID of the PR.
+   * Optional. The ID of the PR, assigned by the SCM provider (for example,
+   * "45"). Ignored by `OpenGitRepositoryLinkPullRequest`.
    *
    * @var string
    */
@@ -163,7 +165,8 @@ class PullRequest extends \Google\Model
     return $this->author;
   }
   /**
-   * Required. The target commit SHA of the base branch.
+   * Required. The name of the target (base) branch that the changes are merged
+   * into.
    *
    * @param string $baseRef
    */
@@ -246,7 +249,7 @@ class PullRequest extends \Google\Model
     return $this->declineTime;
   }
   /**
-   * Required. The source commit SHA of the head branch.
+   * Required. The name of the source (head) branch that contains the changes.
    *
    * @param string $headRef
    */
@@ -278,7 +281,8 @@ class PullRequest extends \Google\Model
     return $this->htmlUrl;
   }
   /**
-   * Required. The ID of the PR.
+   * Optional. The ID of the PR, assigned by the SCM provider (for example,
+   * "45"). Ignored by `OpenGitRepositoryLinkPullRequest`.
    *
    * @param string $id
    */
