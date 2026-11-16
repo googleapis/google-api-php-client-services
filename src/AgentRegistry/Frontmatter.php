@@ -20,7 +20,7 @@ namespace Google\Service\AgentRegistry;
 class Frontmatter extends \Google\Model
 {
   /**
-   * Optional. Environmental dependencies or local sidecars.
+   * Optional. Environmental dependencies or companion services.
    *
    * @var string
    */
@@ -52,7 +52,7 @@ class Frontmatter extends \Google\Model
   public $name;
 
   /**
-   * Optional. Environmental dependencies or local sidecars.
+   * Optional. Environmental dependencies or companion services.
    *
    * @param string $compatibility
    */
