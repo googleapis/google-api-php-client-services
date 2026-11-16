@@ -273,6 +273,8 @@ class StorageObject extends \Google\Collection
    * @var string
    */
   public $updated;
+  protected $zonalAvailabilityInfoType = StorageObjectZonalAvailabilityInfo::class;
+  protected $zonalAvailabilityInfoDataType = '';
 
   /**
    * Access controls on the object.
@@ -929,6 +931,24 @@ class StorageObject extends \Google\Collection
   public function getUpdated()
   {
     return $this->updated;
+  }
+  /**
+   * Information about the object's availability in Rapid Cache Ultra (RCU)
+   * zonal caches. This field will only populate once the object is loaded into
+   * the cache.
+   *
+   * @param StorageObjectZonalAvailabilityInfo $zonalAvailabilityInfo
+   */
+  public function setZonalAvailabilityInfo(StorageObjectZonalAvailabilityInfo $zonalAvailabilityInfo)
+  {
+    $this->zonalAvailabilityInfo = $zonalAvailabilityInfo;
+  }
+  /**
+   * @return StorageObjectZonalAvailabilityInfo
+   */
+  public function getZonalAvailabilityInfo()
+  {
+    return $this->zonalAvailabilityInfo;
   }
 }
 
