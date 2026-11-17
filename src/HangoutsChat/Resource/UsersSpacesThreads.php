@@ -61,6 +61,39 @@ class UsersSpacesThreads extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('getThreadReadState', [$params], ThreadReadState::class);
   }
+  /**
+   * Updates a user's read state within a thread, used to identify read and unread
+   * messages. For an example, see [Update a user's thread read
+   * state](https://developers.google.com/workspace/chat/update-thread-read-
+   * state). Requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) with the [authorization
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.users.readstate`
+   * (threads.updateThreadReadState)
+   *
+   * @param string $name Resource name of the thread read state. Format:
+   * `users/{user}/spaces/{space}/threads/{thread}/threadReadState`
+   * @param ThreadReadState $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The field paths to update. Currently
+   * supported field paths: - `last_read_time` When `last_read_time` is before the
+   * latest message create time, the thread appears as unread in the UI. To mark
+   * the thread as read, set `last_read_time` to a timestamp equal to or later
+   * than the latest message create time. Future timestamps are coerced to the
+   * current request time. Setting a negative timestamp (before
+   * `1970-01-01T00:00:00Z`) returns an `INVALID_ARGUMENT` error.
+   * @return ThreadReadState
+   * @throws \Google\Service\Exception
+   */
+  public function updateThreadReadState($name, ThreadReadState $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateThreadReadState', [$params], ThreadReadState::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
