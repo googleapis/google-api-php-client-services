@@ -20,7 +20,7 @@ namespace Google\Service\AndroidPublisher;
 class Image extends \Google\Model
 {
   /**
-   * Catch-all for unrecognized enum values. See go/protodosdonts.
+   * Unspecified AI generated state.
    */
   public const AI_GENERATED_STATE_aiGeneratedStateUnspecified = 'aiGeneratedStateUnspecified';
   /**
