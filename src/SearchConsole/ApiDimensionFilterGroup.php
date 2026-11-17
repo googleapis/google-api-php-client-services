@@ -21,6 +21,8 @@ class ApiDimensionFilterGroup extends \Google\Collection
 {
   public const GROUP_TYPE_AND = 'AND';
   protected $collection_key = 'filters';
+  protected $filterListsType = ApiDimensionFilterList::class;
+  protected $filterListsDataType = 'array';
   protected $filtersType = ApiDimensionFilter::class;
   protected $filtersDataType = 'array';
   /**
@@ -31,7 +33,30 @@ class ApiDimensionFilterGroup extends \Google\Collection
   public $groupType;
 
   /**
-   * Optional. A list of single-value filters in this group.
+   * Optional. Unlike the `filters` field which only supports a single value per
+   * entry, `filter_lists` allows matching against a list of values for a single
+   * dimension in one filter. `filter_lists` supports `COUNTRY` and `DEVICE`
+   * dimensions only. The maximum number of `expressions` allowed in a single
+   * filter list is 1000.
+   *
+   * @param ApiDimensionFilterList[] $filterLists
+   */
+  public function setFilterLists($filterLists)
+  {
+    $this->filterLists = $filterLists;
+  }
+  /**
+   * @return ApiDimensionFilterList[]
+   */
+  public function getFilterLists()
+  {
+    return $this->filterLists;
+  }
+  /**
+   * Optional. A list of single-value filters in this group. A list of multi-
+   * value dimension filters. A row matches if its value for the specified
+   * dimension matches any of the values in the filter list (implicit OR logic,
+   * e.g., `COUNTRY` is `'usa'` OR `'can'`).
    *
    * @param ApiDimensionFilter[] $filters
    */

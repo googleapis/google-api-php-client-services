@@ -54,6 +54,10 @@ class SearchAnalyticsQueryRequest extends \Google\Collection
    * Google News (news.google.com or mobile app).
    */
   public const SEARCH_TYPE_GOOGLE_NEWS = 'GOOGLE_NEWS';
+  /**
+   * Web multimodal search.
+   */
+  public const SEARCH_TYPE_WEB_MULTIMODAL = 'WEB_MULTIMODAL';
   public const TYPE_WEB = 'WEB';
   public const TYPE_IMAGE = 'IMAGE';
   public const TYPE_VIDEO = 'VIDEO';
@@ -69,6 +73,10 @@ class SearchAnalyticsQueryRequest extends \Google\Collection
    * Google News (news.google.com or mobile app).
    */
   public const TYPE_GOOGLE_NEWS = 'GOOGLE_NEWS';
+  /**
+   * Web multimodal search.
+   */
+  public const TYPE_WEB_MULTIMODAL = 'WEB_MULTIMODAL';
   protected $collection_key = 'dimensions';
   /**
    * [Optional; Default is \"auto\"] How data is aggregated. If aggregated by
@@ -271,7 +279,8 @@ class SearchAnalyticsQueryRequest extends \Google\Collection
   /**
    * [Optional; Default is \"web\"] The search type to filter for.
    *
-   * Accepted values: WEB, IMAGE, VIDEO, NEWS, DISCOVER, GOOGLE_NEWS
+   * Accepted values: WEB, IMAGE, VIDEO, NEWS, DISCOVER, GOOGLE_NEWS,
+   * WEB_MULTIMODAL
    *
    * @param self::SEARCH_TYPE_* $searchType
    */
@@ -325,7 +334,8 @@ class SearchAnalyticsQueryRequest extends \Google\Collection
    * Optional. [Optional; Default is \"web\"] Type of report: search type, or
    * either Discover or Gnews.
    *
-   * Accepted values: WEB, IMAGE, VIDEO, NEWS, DISCOVER, GOOGLE_NEWS
+   * Accepted values: WEB, IMAGE, VIDEO, NEWS, DISCOVER, GOOGLE_NEWS,
+   * WEB_MULTIMODAL
    *
    * @param self::TYPE_* $type
    */

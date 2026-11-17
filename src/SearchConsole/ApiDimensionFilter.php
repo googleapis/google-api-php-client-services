@@ -24,6 +24,10 @@ class ApiDimensionFilter extends \Google\Model
   public const DIMENSION_COUNTRY = 'COUNTRY';
   public const DIMENSION_DEVICE = 'DEVICE';
   public const DIMENSION_SEARCH_APPEARANCE = 'SEARCH_APPEARANCE';
+  /**
+   * Filters by branded query classification (`BRANDED` or `NON_BRANDED`).
+   */
+  public const DIMENSION_BRANDED_CLASSIFICATION = 'BRANDED_CLASSIFICATION';
   public const OPERATOR_EQUALS = 'EQUALS';
   public const OPERATOR_NOT_EQUALS = 'NOT_EQUALS';
   public const OPERATOR_CONTAINS = 'CONTAINS';
