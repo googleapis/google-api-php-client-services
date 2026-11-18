@@ -87,7 +87,7 @@ class CustomersChromeBrowsers extends \Google\Service\Resource
    * by multiple fields or functions is supported with AND operator. String type,
    * Integer type fields and enum type fields support `=` and `:` operators. The
    * timestamp type fields support `=`, `<=` and `>=` operators. Timestamps expect
-   * an RFC-3339 formatted string enclosed in double quotes (e.g.,
+   * an RFC-3339 formatted string (e.g., `2012-04-21T11:30:00-04:00` or
    * `"2012-04-21T11:30:00-04:00"`). Wildcard `*` is only supported for
    * `machine_name`, `annotated_asset_id`, and `browser_version`. In addition,
    * global string literal filtering without a field name is supported: a single
