@@ -32,6 +32,10 @@ class Scope extends \Google\Model
    */
   public const TYPE_GLOBAL = 'GLOBAL';
   /**
+   * Multi-regional type.
+   */
+  public const TYPE_MULTI_REGIONAL = 'MULTI_REGIONAL';
+  /**
    * Required. Scope Type.
    *
    * @var string
@@ -41,7 +45,7 @@ class Scope extends \Google\Model
   /**
    * Required. Scope Type.
    *
-   * Accepted values: TYPE_UNSPECIFIED, REGIONAL, GLOBAL
+   * Accepted values: TYPE_UNSPECIFIED, REGIONAL, GLOBAL, MULTI_REGIONAL
    *
    * @param self::TYPE_* $type
    */
