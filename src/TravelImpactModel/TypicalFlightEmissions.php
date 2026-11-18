@@ -17,10 +17,13 @@
 
 namespace Google\Service\TravelImpactModel;
 
-class TypicalFlightEmissions extends \Google\Model
+class TypicalFlightEmissions extends \Google\Collection
 {
+  protected $collection_key = 'errors';
   protected $emissionsGramsPerPaxType = EmissionsGramsPerPax::class;
   protected $emissionsGramsPerPaxDataType = '';
+  protected $errorsType = Status::class;
+  protected $errorsDataType = 'array';
   protected $marketType = Market::class;
   protected $marketDataType = '';
 
@@ -44,6 +47,23 @@ class TypicalFlightEmissions extends \Google\Model
   public function getEmissionsGramsPerPax()
   {
     return $this->emissionsGramsPerPax;
+  }
+  /**
+   * Output only. Errors detailing why typical flight emission estimates could
+   * not be returned for the market. Empty when emission estimates are present.
+   *
+   * @param Status[] $errors
+   */
+  public function setErrors($errors)
+  {
+    $this->errors = $errors;
+  }
+  /**
+   * @return Status[]
+   */
+  public function getErrors()
+  {
+    return $this->errors;
   }
   /**
    * Identifier. Matches the flight identifiers in the request. Note: all IATA
