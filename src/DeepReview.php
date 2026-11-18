@@ -37,9 +37,6 @@ class DeepReview extends \Google\Service
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** See, edit, create, and delete only the specific Google Drive files you use with this app. */
-  const DRIVE_FILE =
-      "https://www.googleapis.com/auth/drive.file";
 
   public $documents;
   public $documents_reviews;
