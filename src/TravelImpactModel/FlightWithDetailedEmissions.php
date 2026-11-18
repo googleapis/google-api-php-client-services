@@ -17,10 +17,13 @@
 
 namespace Google\Service\TravelImpactModel;
 
-class FlightWithDetailedEmissions extends \Google\Model
+class FlightWithDetailedEmissions extends \Google\Collection
 {
+  protected $collection_key = 'errors';
   protected $emissionsMetadataType = EmissionsMetadata::class;
   protected $emissionsMetadataDataType = '';
+  protected $errorsType = Status::class;
+  protected $errorsDataType = 'array';
   protected $flightType = Flight::class;
   protected $flightDataType = '';
   protected $flightEmissionsDetailsType = FlightEmissionsDetails::class;
@@ -41,6 +44,23 @@ class FlightWithDetailedEmissions extends \Google\Model
   public function getEmissionsMetadata()
   {
     return $this->emissionsMetadata;
+  }
+  /**
+   * Output only. Errors detailing why detailed emission estimates could not be
+   * returned for the flight. Empty when emission estimates are present.
+   *
+   * @param Status[] $errors
+   */
+  public function setErrors($errors)
+  {
+    $this->errors = $errors;
+  }
+  /**
+   * @return Status[]
+   */
+  public function getErrors()
+  {
+    return $this->errors;
   }
   /**
    * Output only. Matches the flight identifiers in the request. Note: all IATA

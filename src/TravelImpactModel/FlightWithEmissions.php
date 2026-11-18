@@ -17,7 +17,7 @@
 
 namespace Google\Service\TravelImpactModel;
 
-class FlightWithEmissions extends \Google\Model
+class FlightWithEmissions extends \Google\Collection
 {
   /**
    * The contrails impact is unspecified.
@@ -47,6 +47,7 @@ class FlightWithEmissions extends \Google\Model
    * The emissions data is from the EASA environmental labels.
    */
   public const SOURCE_EASA = 'EASA';
+  protected $collection_key = 'errors';
   /**
    * Optional. The significance of contrails warming impact compared to the
    * total CO2e emissions impact.
@@ -58,6 +59,8 @@ class FlightWithEmissions extends \Google\Model
   protected $easaLabelMetadataDataType = '';
   protected $emissionsGramsPerPaxType = EmissionsGramsPerPax::class;
   protected $emissionsGramsPerPaxDataType = '';
+  protected $errorsType = Status::class;
+  protected $errorsDataType = 'array';
   protected $flightType = Flight::class;
   protected $flightDataType = '';
   /**
@@ -121,6 +124,23 @@ class FlightWithEmissions extends \Google\Model
   public function getEmissionsGramsPerPax()
   {
     return $this->emissionsGramsPerPax;
+  }
+  /**
+   * Output only. Errors detailing why emission estimates could not be returned
+   * for the flight. Empty when emission estimates are present.
+   *
+   * @param Status[] $errors
+   */
+  public function setErrors($errors)
+  {
+    $this->errors = $errors;
+  }
+  /**
+   * @return Status[]
+   */
+  public function getErrors()
+  {
+    return $this->errors;
   }
   /**
    * Identifier. Matches the flight identifiers in the request. Note: all IATA
