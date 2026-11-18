@@ -19,6 +19,13 @@ namespace Google\Service\AndroidPublisher;
 
 class RevocationContext extends \Google\Model
 {
+  /**
+   * Optional. The ETag representing the subscription state. If provided, the
+   * revocation will only proceed if it matches the current server state.
+   *
+   * @var string
+   */
+  public $etag;
   protected $fullRefundType = RevocationContextFullRefund::class;
   protected $fullRefundDataType = '';
   protected $itemBasedRefundType = RevocationContextItemBasedRefund::class;
@@ -26,6 +33,23 @@ class RevocationContext extends \Google\Model
   protected $proratedRefundType = RevocationContextProratedRefund::class;
   protected $proratedRefundDataType = '';
 
+  /**
+   * Optional. The ETag representing the subscription state. If provided, the
+   * revocation will only proceed if it matches the current server state.
+   *
+   * @param string $etag
+   */
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  /**
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
+  }
   /**
    * Optional. Used when users should be refunded the full amount of latest
    * charge on each item in the subscription.

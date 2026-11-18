@@ -26,6 +26,13 @@ class PlanTransitionDetails extends \Google\Model
    */
   public $basePlanId;
   /**
+   * The offer ID. Only present for discounted offers. This is only set if the
+   * target plan is not a base plan.
+   *
+   * @var string
+   */
+  public $offerId;
+  /**
    * [Required] The product ID to which this plan would be transitioned, (for
    * example, 'monthly001').
    *
@@ -50,6 +57,23 @@ class PlanTransitionDetails extends \Google\Model
   public function getBasePlanId()
   {
     return $this->basePlanId;
+  }
+  /**
+   * The offer ID. Only present for discounted offers. This is only set if the
+   * target plan is not a base plan.
+   *
+   * @param string $offerId
+   */
+  public function setOfferId($offerId)
+  {
+    $this->offerId = $offerId;
+  }
+  /**
+   * @return string
+   */
+  public function getOfferId()
+  {
+    return $this->offerId;
   }
   /**
    * [Required] The product ID to which this plan would be transitioned, (for

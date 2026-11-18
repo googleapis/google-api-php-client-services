@@ -17,10 +17,14 @@
 
 namespace Google\Service\AndroidPublisher\Resource;
 
+use Google\Service\AndroidPublisher\ActivateOfferTargetingRequest;
+use Google\Service\AndroidPublisher\ActivateOfferTargetingResponse;
 use Google\Service\AndroidPublisher\CancelPlanTransitionRequest;
 use Google\Service\AndroidPublisher\CancelPlanTransitionResponse;
 use Google\Service\AndroidPublisher\CancelSubscriptionPurchaseRequest;
 use Google\Service\AndroidPublisher\CancelSubscriptionPurchaseResponse;
+use Google\Service\AndroidPublisher\DeactivateOfferTargetingRequest;
+use Google\Service\AndroidPublisher\DeactivateOfferTargetingResponse;
 use Google\Service\AndroidPublisher\DeferSubscriptionPurchaseRequest;
 use Google\Service\AndroidPublisher\DeferSubscriptionPurchaseResponse;
 use Google\Service\AndroidPublisher\RevokeSubscriptionPurchaseRequest;
@@ -39,6 +43,25 @@ use Google\Service\AndroidPublisher\SubscriptionPurchaseV2;
  */
 class PurchasesSubscriptionsv2 extends \Google\Service\Resource
 {
+  /**
+   * Activates targeting for a specific offer.
+   * (subscriptionsv2.activateoffertargeting)
+   *
+   * @param string $packageName Required. The package of the application for which
+   * this subscription was purchased. Required.
+   * @param string $purchaseToken Required. The purchase token provided to the
+   * user's device when the subscription was purchased. Required.
+   * @param ActivateOfferTargetingRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ActivateOfferTargetingResponse
+   * @throws \Google\Service\Exception
+   */
+  public function activateoffertargeting($packageName, $purchaseToken, ActivateOfferTargetingRequest $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'purchaseToken' => $purchaseToken, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('activateoffertargeting', [$params], ActivateOfferTargetingResponse::class);
+  }
   /**
    * Cancel a subscription purchase for the user. (subscriptionsv2.cancel)
    *
@@ -75,6 +98,25 @@ class PurchasesSubscriptionsv2 extends \Google\Service\Resource
     $params = ['packageName' => $packageName, 'token' => $token, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('cancelplantransition', [$params], CancelPlanTransitionResponse::class);
+  }
+  /**
+   * Deactivates targeting for a specific offer.
+   * (subscriptionsv2.deactivateoffertargeting)
+   *
+   * @param string $packageName Required. The package of the application for which
+   * this subscription was purchased. Required.
+   * @param string $purchaseToken Required. The purchase token provided to the
+   * user's device when the subscription was purchased. Required.
+   * @param DeactivateOfferTargetingRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DeactivateOfferTargetingResponse
+   * @throws \Google\Service\Exception
+   */
+  public function deactivateoffertargeting($packageName, $purchaseToken, DeactivateOfferTargetingRequest $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'purchaseToken' => $purchaseToken, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('deactivateoffertargeting', [$params], DeactivateOfferTargetingResponse::class);
   }
   /**
    * Defers the renewal of a subscription. (subscriptionsv2.defer)

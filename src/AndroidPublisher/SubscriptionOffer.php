@@ -45,6 +45,13 @@ class SubscriptionOffer extends \Google\Collection
    */
   public $basePlanId;
   /**
+   * Optional. The timestamp when this subscription offer ceases to be available
+   * regardless of the state of the offer. If unset, the offer has no end date.
+   *
+   * @var string
+   */
+  public $endTime;
+  /**
    * Required. Immutable. Unique ID of this subscription offer. Must be unique
    * within the base plan.
    *
@@ -74,6 +81,14 @@ class SubscriptionOffer extends \Google\Collection
   protected $regionalConfigsType = RegionalSubscriptionOfferConfig::class;
   protected $regionalConfigsDataType = 'array';
   /**
+   * Optional. The timestamp when this subscription offer becomes available to
+   * eligible users. Optional. If unset, it becomes active depending on the
+   * state of the offer.
+   *
+   * @var string
+   */
+  public $startTime;
+  /**
    * Output only. The current state of this offer. Can be changed using Activate
    * and Deactivate actions. NB: the base plan state supersedes this state, so
    * an active offer may not be available if the base plan is not active.
@@ -100,6 +115,23 @@ class SubscriptionOffer extends \Google\Collection
   public function getBasePlanId()
   {
     return $this->basePlanId;
+  }
+  /**
+   * Optional. The timestamp when this subscription offer ceases to be available
+   * regardless of the state of the offer. If unset, the offer has no end date.
+   *
+   * @param string $endTime
+   */
+  public function setEndTime($endTime)
+  {
+    $this->endTime = $endTime;
+  }
+  /**
+   * @return string
+   */
+  public function getEndTime()
+  {
+    return $this->endTime;
   }
   /**
    * Required. Immutable. Unique ID of this subscription offer. Must be unique
@@ -219,6 +251,24 @@ class SubscriptionOffer extends \Google\Collection
   public function getRegionalConfigs()
   {
     return $this->regionalConfigs;
+  }
+  /**
+   * Optional. The timestamp when this subscription offer becomes available to
+   * eligible users. Optional. If unset, it becomes active depending on the
+   * state of the offer.
+   *
+   * @param string $startTime
+   */
+  public function setStartTime($startTime)
+  {
+    $this->startTime = $startTime;
+  }
+  /**
+   * @return string
+   */
+  public function getStartTime()
+  {
+    return $this->startTime;
   }
   /**
    * Output only. The current state of this offer. Can be changed using Activate
