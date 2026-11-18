@@ -34,7 +34,9 @@ class RebalanceConfig extends \Google\Model
   public const MODE_AUTO_REBALANCE_ON_SCALE_UP = 'AUTO_REBALANCE_ON_SCALE_UP';
   /**
    * Optional. The rebalance behavior for the cluster. When not specified,
-   * defaults to `NO_REBALANCE`.
+   * defaults to `AUTO_REBALANCE_ON_SCALE_UP`. Clusters created before July 2026
+   * defaulted to `NO_REBALANCE` if created without a gcloud, Terraform, or
+   * Cloud Console client.
    *
    * @var string
    */
@@ -42,7 +44,9 @@ class RebalanceConfig extends \Google\Model
 
   /**
    * Optional. The rebalance behavior for the cluster. When not specified,
-   * defaults to `NO_REBALANCE`.
+   * defaults to `AUTO_REBALANCE_ON_SCALE_UP`. Clusters created before July 2026
+   * defaulted to `NO_REBALANCE` if created without a gcloud, Terraform, or
+   * Cloud Console client.
    *
    * Accepted values: MODE_UNSPECIFIED, NO_REBALANCE, AUTO_REBALANCE_ON_SCALE_UP
    *
