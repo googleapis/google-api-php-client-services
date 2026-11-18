@@ -2778,7 +2778,22 @@ class AndroidPublisher extends \Google\Service
         'subscriptionsv2',
         [
           'methods' => [
-            'cancel' => [
+            'activateoffertargeting' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{purchaseToken}:activateOfferTargeting',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseToken' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'cancel' => [
               'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -2803,6 +2818,21 @@ class AndroidPublisher extends \Google\Service
                   'required' => true,
                 ],
                 'token' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'deactivateoffertargeting' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{purchaseToken}:deactivateOfferTargeting',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseToken' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

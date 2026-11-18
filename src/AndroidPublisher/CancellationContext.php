@@ -45,6 +45,13 @@ class CancellationContext extends \Google\Model
    * @var string
    */
   public $cancellationType;
+  /**
+   * Optional. The ETag representing the subscription state. If provided, the
+   * cancellation will only proceed if it matches the current server state.
+   *
+   * @var string
+   */
+  public $etag;
 
   /**
    * Required. The type of cancellation for the purchased subscription.
@@ -64,6 +71,23 @@ class CancellationContext extends \Google\Model
   public function getCancellationType()
   {
     return $this->cancellationType;
+  }
+  /**
+   * Optional. The ETag representing the subscription state. If provided, the
+   * cancellation will only proceed if it matches the current server state.
+   *
+   * @param string $etag
+   */
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  /**
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
   }
 }
 

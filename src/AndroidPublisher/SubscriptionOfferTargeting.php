@@ -21,6 +21,10 @@ class SubscriptionOfferTargeting extends \Google\Model
 {
   protected $acquisitionRuleType = AcquisitionTargetingRule::class;
   protected $acquisitionRuleDataType = '';
+  protected $retentionPerUserRuleType = RetentionPerUserTargetingRule::class;
+  protected $retentionPerUserRuleDataType = '';
+  protected $retentionRuleType = RetentionTargetingRule::class;
+  protected $retentionRuleDataType = '';
   protected $upgradeRuleType = UpgradeTargetingRule::class;
   protected $upgradeRuleDataType = '';
 
@@ -39,6 +43,38 @@ class SubscriptionOfferTargeting extends \Google\Model
   public function getAcquisitionRule()
   {
     return $this->acquisitionRule;
+  }
+  /**
+   * Offer targeting rule for retaining existing users via Developer API.
+   *
+   * @param RetentionPerUserTargetingRule $retentionPerUserRule
+   */
+  public function setRetentionPerUserRule(RetentionPerUserTargetingRule $retentionPerUserRule)
+  {
+    $this->retentionPerUserRule = $retentionPerUserRule;
+  }
+  /**
+   * @return RetentionPerUserTargetingRule
+   */
+  public function getRetentionPerUserRule()
+  {
+    return $this->retentionPerUserRule;
+  }
+  /**
+   * Offer targeting rule for retaining existing users.
+   *
+   * @param RetentionTargetingRule $retentionRule
+   */
+  public function setRetentionRule(RetentionTargetingRule $retentionRule)
+  {
+    $this->retentionRule = $retentionRule;
+  }
+  /**
+   * @return RetentionTargetingRule
+   */
+  public function getRetentionRule()
+  {
+    return $this->retentionRule;
   }
   /**
    * Offer targeting rule for upgrading users' existing plans.

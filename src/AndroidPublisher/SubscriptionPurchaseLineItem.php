@@ -17,14 +17,17 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class SubscriptionPurchaseLineItem extends \Google\Model
+class SubscriptionPurchaseLineItem extends \Google\Collection
 {
+  protected $collection_key = 'developerTargetedOffers';
   protected $autoRenewingPlanType = AutoRenewingPlan::class;
   protected $autoRenewingPlanDataType = '';
   protected $deferredItemRemovalType = DeferredItemRemoval::class;
   protected $deferredItemRemovalDataType = '';
   protected $deferredItemReplacementType = DeferredItemReplacement::class;
   protected $deferredItemReplacementDataType = '';
+  protected $developerTargetedOffersType = DeveloperTargetedOffer::class;
+  protected $developerTargetedOffersDataType = 'array';
   /**
    * Time at which the subscription expired or will expire unless the access is
    * extended (ex. renews).
@@ -104,6 +107,23 @@ class SubscriptionPurchaseLineItem extends \Google\Model
   public function getDeferredItemReplacement()
   {
     return $this->deferredItemReplacement;
+  }
+  /**
+   * Optional. Details of developer-targeted offers registered for this line
+   * item.
+   *
+   * @param DeveloperTargetedOffer[] $developerTargetedOffers
+   */
+  public function setDeveloperTargetedOffers($developerTargetedOffers)
+  {
+    $this->developerTargetedOffers = $developerTargetedOffers;
+  }
+  /**
+   * @return DeveloperTargetedOffer[]
+   */
+  public function getDeveloperTargetedOffers()
+  {
+    return $this->developerTargetedOffers;
   }
   /**
    * Time at which the subscription expired or will expire unless the access is
