@@ -81,15 +81,15 @@ class DeviceConnectivityManagement extends \Google\Model
   public const TETHERING_SETTINGS_ALLOW_ALL_TETHERING = 'ALLOW_ALL_TETHERING';
   /**
    * Disallows the user from using Wi-Fi tethering. Supported on company owned
-   * devices running Android 13 and above. If the setting is not supported,
-   * ALLOW_ALL_TETHERING will be set. A NonComplianceDetail with API_LEVEL is
-   * reported if the Android version is less than 13. tetheringConfigDisabled is
-   * ignored.
+   * devices running Android 13 (API level 33) and higher. If the setting is not
+   * supported, ALLOW_ALL_TETHERING will be set. A NonComplianceDetail with
+   * API_LEVEL is reported if the Android version is less than 13.
+   * tetheringConfigDisabled is ignored.
    */
   public const TETHERING_SETTINGS_DISALLOW_WIFI_TETHERING = 'DISALLOW_WIFI_TETHERING';
   /**
    * Disallows all forms of tethering. Supported on fully managed devices and
-   * work profile on company-owned devices, on all supported android versions.
+   * work profile on company-owned devices, on all supported Android versions.
    * The setting tetheringConfigDisabled is ignored.
    */
   public const TETHERING_SETTINGS_DISALLOW_ALL_TETHERING = 'DISALLOW_ALL_TETHERING';

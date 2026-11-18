@@ -21,7 +21,12 @@ class NetworkInfo extends \Google\Collection
 {
   protected $collection_key = 'telephonyInfos';
   /**
-   * IMEI number of the GSM device. For example, A1000031212.
+   * IMEI number of the GSM device. For example, A1000031212. This value
+   * corresponds to the result of TelephonyManager.getImei()(https://developer.a
+   * ndroid.com/reference/android/telephony/TelephonyManager#getImei()). On
+   * dual-SIM devices, reports the IMEI associated with the default active
+   * subscription, such as the IMEI of the eSIM slot when only an eSIM is
+   * active.
    *
    * @var string
    */
@@ -49,7 +54,12 @@ class NetworkInfo extends \Google\Collection
   public $wifiMacAddress;
 
   /**
-   * IMEI number of the GSM device. For example, A1000031212.
+   * IMEI number of the GSM device. For example, A1000031212. This value
+   * corresponds to the result of TelephonyManager.getImei()(https://developer.a
+   * ndroid.com/reference/android/telephony/TelephonyManager#getImei()). On
+   * dual-SIM devices, reports the IMEI associated with the default active
+   * subscription, such as the IMEI of the eSIM slot when only an eSIM is
+   * active.
    *
    * @param string $imei
    */
