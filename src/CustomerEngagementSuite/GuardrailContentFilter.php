@@ -38,9 +38,10 @@ class GuardrailContentFilter extends \Google\Collection
   public const MATCH_TYPE_REGEXP_MATCH = 'REGEXP_MATCH';
   /**
    * Content is matched against a system-managed list of sensitive words and
-   * phrases. Attaching a guardrail with this match type to an app or agent
-   * replaces the default sensitive words filter for the affected agents;
-   * disable the guardrail to opt out of the default filter.
+   * phrases. Attaching an enabled guardrail with this match type to an app or
+   * agent replaces the default sensitive words filter for the affected agents.
+   * A disabled guardrail with this match type is ignored; the default filter
+   * can't be turned off.
    */
   public const MATCH_TYPE_SENSITIVE_WORDS = 'SENSITIVE_WORDS';
   protected $collection_key = 'sensitiveWordsExemptions';

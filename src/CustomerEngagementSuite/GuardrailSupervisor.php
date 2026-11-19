@@ -70,6 +70,16 @@ class GuardrailSupervisor extends \Google\Model
    */
   public const TYPE_PROFANITY = 'PROFANITY';
   /**
+   * Thought leakage issue type: the agent spoke internal reasoning,
+   * instructions, variables, or function names aloud.
+   */
+  public const TYPE_THOUGHT_LEAKAGE = 'THOUGHT_LEAKAGE';
+  /**
+   * Automated bot issue type: the incoming caller (the end user) is an
+   * automated bot, e.g. a text-to-speech voice, rather than a live human.
+   */
+  public const TYPE_AUTOMATED_BOT = 'AUTOMATED_BOT';
+  /**
    * Optional. The detection mode of the supervisor.
    *
    * @var string
@@ -105,7 +115,7 @@ class GuardrailSupervisor extends \Google\Model
    *
    * Accepted values: TYPE_UNSPECIFIED, INVALID_TEXT, LANGUAGE_SHIFT,
    * SPEAKER_SHIFT, AUDIO_MISMATCH, MISSING_TOOL_CALL, CUSTOM, CHOPPY_AUDIO,
-   * PROFANITY
+   * PROFANITY, THOUGHT_LEAKAGE, AUTOMATED_BOT
    *
    * @param self::TYPE_* $type
    */
