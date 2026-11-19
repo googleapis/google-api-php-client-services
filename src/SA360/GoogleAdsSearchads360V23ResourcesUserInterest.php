@@ -52,7 +52,10 @@ class GoogleAdsSearchads360V23ResourcesUserInterest extends \Google\Collection
   protected $availabilitiesDataType = 'array';
   /**
    * Output only. True if the user interest is launched to all channels and
-   * locales.
+   * locales. When true, `availabilities` is empty. When false, `availabilities`
+   * is populated for user interests that are launched only to specific channels
+   * or locales, and is empty if the user interest is not generally available
+   * for targeting (for example, deprecated or restricted user interests).
    *
    * @var bool
    */
@@ -91,7 +94,12 @@ class GoogleAdsSearchads360V23ResourcesUserInterest extends \Google\Collection
   public $userInterestParent;
 
   /**
-   * Output only. Availability information of the user interest.
+   * Output only. Availability information of the user interest. This field is
+   * empty when `launched_to_all` is true, or when `launched_to_all` is false
+   * and the user interest is not generally available for targeting (for
+   * example, deprecated or restricted user interests). When `launched_to_all`
+   * is false and the user interest is launched only to specific channels or
+   * locales, this field lists those availabilities.
    *
    * @param GoogleAdsSearchads360V23CommonCriterionCategoryAvailability[] $availabilities
    */
@@ -108,7 +116,10 @@ class GoogleAdsSearchads360V23ResourcesUserInterest extends \Google\Collection
   }
   /**
    * Output only. True if the user interest is launched to all channels and
-   * locales.
+   * locales. When true, `availabilities` is empty. When false, `availabilities`
+   * is populated for user interests that are launched only to specific channels
+   * or locales, and is empty if the user interest is not generally available
+   * for targeting (for example, deprecated or restricted user interests).
    *
    * @param bool $launchedToAll
    */

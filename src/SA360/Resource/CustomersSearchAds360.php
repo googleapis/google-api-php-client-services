@@ -76,7 +76,7 @@ class CustomersSearchAds360 extends \Google\Service\Resource
    * [ResourceCountLimitExceededError]() [SettingError]() [SharedSetError]()
    * [SizeLimitError]() [StringFormatError]() [StringLengthError]()
    * [UrlFieldError]() [UserListError]() [YoutubeVideoRegistrationError]()
-   * (searchAds360.mutate)
+   * [BiddingStrategyError]() (searchAds360.mutate)
    *
    * @param string $customerId Required. The ID of the customer whose resources
    * are being modified.

@@ -48,11 +48,13 @@ class GoogleAdsSearchads360V23CommonSyntheticContentAttestation extends \Google\
    */
   public const STATUS_UNKNOWN = 'UNKNOWN';
   /**
-   * The content is attested as not synthetic.
+   * The content is attested as not needing to be labeled as created or edited
+   * with AI.
    */
   public const STATUS_NOT_SYNTHETIC = 'NOT_SYNTHETIC';
   /**
-   * The content is attested as synthetic.
+   * The content is attested as needing to be labeled as created or edited with
+   * AI.
    */
   public const STATUS_IS_SYNTHETIC = 'IS_SYNTHETIC';
   /**
@@ -62,7 +64,8 @@ class GoogleAdsSearchads360V23CommonSyntheticContentAttestation extends \Google\
    */
   public $source;
   /**
-   * Indicates whether the content is considered synthetic by this source.
+   * Indicates the attestation status for whether the content should be labeled
+   * as created or edited with AI by this source.
    *
    * @var string
    */
@@ -88,7 +91,8 @@ class GoogleAdsSearchads360V23CommonSyntheticContentAttestation extends \Google\
     return $this->source;
   }
   /**
-   * Indicates whether the content is considered synthetic by this source.
+   * Indicates the attestation status for whether the content should be labeled
+   * as created or edited with AI by this source.
    *
    * Accepted values: UNSPECIFIED, UNKNOWN, NOT_SYNTHETIC, IS_SYNTHETIC
    *

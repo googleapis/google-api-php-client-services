@@ -151,6 +151,15 @@ class GoogleAdsSearchads360V23ResourcesBiddingStrategy extends \Google\Model
    */
   public $alignedCampaignBudgetId;
   /**
+   * Immutable. Whether Google Ads auction-time bidding is enabled for this
+   * bidding strategy. This field does not cover Microsoft Advertising auction-
+   * time bidding. You can set this field only when you create the bidding
+   * strategy. The default value is false.
+   *
+   * @var bool
+   */
+  public $auctionTimeBiddingEnabled;
+  /**
    * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    *
@@ -206,6 +215,21 @@ class GoogleAdsSearchads360V23ResourcesBiddingStrategy extends \Google\Model
    */
   public $nonRemovedCampaignCount;
   /**
+   * Immutable. Whether this bidding strategy is a Search Ads 360 portfolio
+   * group. A portfolio group is the parent strategy of a multi-target
+   * portfolio. You can set this field only when you create the bidding
+   * strategy. To add a sub-strategy to a portfolio group, set
+   * `SearchAds360BiddingStrategy.portfolio_group_bidding_strategy` on the sub-
+   * strategy. Each sub-strategy must have the same bidding strategy type,
+   * currency, and Google Ads and Microsoft Advertising auction-time bidding
+   * settings as the portfolio group. A portfolio group cannot be a sub-strategy
+   * of another portfolio group. Campaigns must use a sub-strategy. A campaign
+   * cannot use a portfolio group directly.
+   *
+   * @var bool
+   */
+  public $portfolioGroupEnabled;
+  /**
    * Immutable. The resource name of the bidding strategy. Bidding strategy
    * resource names have the form:
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
@@ -254,6 +278,25 @@ class GoogleAdsSearchads360V23ResourcesBiddingStrategy extends \Google\Model
   public function getAlignedCampaignBudgetId()
   {
     return $this->alignedCampaignBudgetId;
+  }
+  /**
+   * Immutable. Whether Google Ads auction-time bidding is enabled for this
+   * bidding strategy. This field does not cover Microsoft Advertising auction-
+   * time bidding. You can set this field only when you create the bidding
+   * strategy. The default value is false.
+   *
+   * @param bool $auctionTimeBiddingEnabled
+   */
+  public function setAuctionTimeBiddingEnabled($auctionTimeBiddingEnabled)
+  {
+    $this->auctionTimeBiddingEnabled = $auctionTimeBiddingEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAuctionTimeBiddingEnabled()
+  {
+    return $this->auctionTimeBiddingEnabled;
   }
   /**
    * Output only. The number of campaigns attached to this bidding strategy.
@@ -415,6 +458,31 @@ class GoogleAdsSearchads360V23ResourcesBiddingStrategy extends \Google\Model
   public function getNonRemovedCampaignCount()
   {
     return $this->nonRemovedCampaignCount;
+  }
+  /**
+   * Immutable. Whether this bidding strategy is a Search Ads 360 portfolio
+   * group. A portfolio group is the parent strategy of a multi-target
+   * portfolio. You can set this field only when you create the bidding
+   * strategy. To add a sub-strategy to a portfolio group, set
+   * `SearchAds360BiddingStrategy.portfolio_group_bidding_strategy` on the sub-
+   * strategy. Each sub-strategy must have the same bidding strategy type,
+   * currency, and Google Ads and Microsoft Advertising auction-time bidding
+   * settings as the portfolio group. A portfolio group cannot be a sub-strategy
+   * of another portfolio group. Campaigns must use a sub-strategy. A campaign
+   * cannot use a portfolio group directly.
+   *
+   * @param bool $portfolioGroupEnabled
+   */
+  public function setPortfolioGroupEnabled($portfolioGroupEnabled)
+  {
+    $this->portfolioGroupEnabled = $portfolioGroupEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPortfolioGroupEnabled()
+  {
+    return $this->portfolioGroupEnabled;
   }
   /**
    * Immutable. The resource name of the bidding strategy. Bidding strategy

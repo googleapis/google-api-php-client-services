@@ -121,30 +121,20 @@ class GoogleAdsSearchads360V23ServicesMutateOperationResponse extends \Google\Mo
   protected $experimentArmResultDataType = '';
   protected $experimentResultType = GoogleAdsSearchads360V23ServicesMutateExperimentResult::class;
   protected $experimentResultDataType = '';
-  protected $keywordPlanAdGroupKeywordResultType = GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupKeywordResult::class;
-  protected $keywordPlanAdGroupKeywordResultDataType = '';
-  protected $keywordPlanAdGroupResultType = GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupResult::class;
-  protected $keywordPlanAdGroupResultDataType = '';
-  protected $keywordPlanCampaignKeywordResultType = GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignKeywordResult::class;
-  protected $keywordPlanCampaignKeywordResultDataType = '';
-  protected $keywordPlanCampaignResultType = GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignResult::class;
-  protected $keywordPlanCampaignResultDataType = '';
-  protected $keywordPlanResultType = GoogleAdsSearchads360V23ServicesMutateKeywordPlansResult::class;
-  protected $keywordPlanResultDataType = '';
   protected $labelResultType = GoogleAdsSearchads360V23ServicesMutateLabelResult::class;
   protected $labelResultDataType = '';
   protected $recommendationSubscriptionResultType = GoogleAdsSearchads360V23ServicesMutateRecommendationSubscriptionResult::class;
   protected $recommendationSubscriptionResultDataType = '';
   protected $remarketingActionResultType = GoogleAdsSearchads360V23ServicesMutateRemarketingActionResult::class;
   protected $remarketingActionResultDataType = '';
+  protected $searchAds360BiddingStrategyResultType = GoogleAdsSearchads360V23ServicesMutateSearchAds360BiddingStrategyResult::class;
+  protected $searchAds360BiddingStrategyResultDataType = '';
   protected $searchAds360CampaignResultType = GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignResult::class;
   protected $searchAds360CampaignResultDataType = '';
   protected $sharedCriterionResultType = GoogleAdsSearchads360V23ServicesMutateSharedCriterionResult::class;
   protected $sharedCriterionResultDataType = '';
   protected $sharedSetResultType = GoogleAdsSearchads360V23ServicesMutateSharedSetResult::class;
   protected $sharedSetResultDataType = '';
-  protected $smartCampaignSettingResultType = GoogleAdsSearchads360V23ServicesMutateSmartCampaignSettingResult::class;
-  protected $smartCampaignSettingResultDataType = '';
   protected $userListResultType = GoogleAdsSearchads360V23ServicesMutateUserListResult::class;
   protected $userListResultDataType = '';
 
@@ -965,86 +955,6 @@ class GoogleAdsSearchads360V23ServicesMutateOperationResponse extends \Google\Mo
     return $this->experimentResult;
   }
   /**
-   * The result for the keyword plan ad group keyword mutate.
-   *
-   * @param GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupKeywordResult $keywordPlanAdGroupKeywordResult
-   */
-  public function setKeywordPlanAdGroupKeywordResult(GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupKeywordResult $keywordPlanAdGroupKeywordResult)
-  {
-    $this->keywordPlanAdGroupKeywordResult = $keywordPlanAdGroupKeywordResult;
-  }
-  /**
-   * @return GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupKeywordResult
-   */
-  public function getKeywordPlanAdGroupKeywordResult()
-  {
-    return $this->keywordPlanAdGroupKeywordResult;
-  }
-  /**
-   * The result for the keyword plan ad group mutate.
-   *
-   * @param GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupResult $keywordPlanAdGroupResult
-   */
-  public function setKeywordPlanAdGroupResult(GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupResult $keywordPlanAdGroupResult)
-  {
-    $this->keywordPlanAdGroupResult = $keywordPlanAdGroupResult;
-  }
-  /**
-   * @return GoogleAdsSearchads360V23ServicesMutateKeywordPlanAdGroupResult
-   */
-  public function getKeywordPlanAdGroupResult()
-  {
-    return $this->keywordPlanAdGroupResult;
-  }
-  /**
-   * The result for the keyword plan campaign keyword mutate.
-   *
-   * @param GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignKeywordResult $keywordPlanCampaignKeywordResult
-   */
-  public function setKeywordPlanCampaignKeywordResult(GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignKeywordResult $keywordPlanCampaignKeywordResult)
-  {
-    $this->keywordPlanCampaignKeywordResult = $keywordPlanCampaignKeywordResult;
-  }
-  /**
-   * @return GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignKeywordResult
-   */
-  public function getKeywordPlanCampaignKeywordResult()
-  {
-    return $this->keywordPlanCampaignKeywordResult;
-  }
-  /**
-   * The result for the keyword plan campaign mutate.
-   *
-   * @param GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignResult $keywordPlanCampaignResult
-   */
-  public function setKeywordPlanCampaignResult(GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignResult $keywordPlanCampaignResult)
-  {
-    $this->keywordPlanCampaignResult = $keywordPlanCampaignResult;
-  }
-  /**
-   * @return GoogleAdsSearchads360V23ServicesMutateKeywordPlanCampaignResult
-   */
-  public function getKeywordPlanCampaignResult()
-  {
-    return $this->keywordPlanCampaignResult;
-  }
-  /**
-   * The result for the keyword plan mutate.
-   *
-   * @param GoogleAdsSearchads360V23ServicesMutateKeywordPlansResult $keywordPlanResult
-   */
-  public function setKeywordPlanResult(GoogleAdsSearchads360V23ServicesMutateKeywordPlansResult $keywordPlanResult)
-  {
-    $this->keywordPlanResult = $keywordPlanResult;
-  }
-  /**
-   * @return GoogleAdsSearchads360V23ServicesMutateKeywordPlansResult
-   */
-  public function getKeywordPlanResult()
-  {
-    return $this->keywordPlanResult;
-  }
-  /**
    * The result for the label mutate.
    *
    * @param GoogleAdsSearchads360V23ServicesMutateLabelResult $labelResult
@@ -1093,6 +1003,22 @@ class GoogleAdsSearchads360V23ServicesMutateOperationResponse extends \Google\Mo
     return $this->remarketingActionResult;
   }
   /**
+   * The result for the Search Ads 360 bidding strategy mutate.
+   *
+   * @param GoogleAdsSearchads360V23ServicesMutateSearchAds360BiddingStrategyResult $searchAds360BiddingStrategyResult
+   */
+  public function setSearchAds360BiddingStrategyResult(GoogleAdsSearchads360V23ServicesMutateSearchAds360BiddingStrategyResult $searchAds360BiddingStrategyResult)
+  {
+    $this->searchAds360BiddingStrategyResult = $searchAds360BiddingStrategyResult;
+  }
+  /**
+   * @return GoogleAdsSearchads360V23ServicesMutateSearchAds360BiddingStrategyResult
+   */
+  public function getSearchAds360BiddingStrategyResult()
+  {
+    return $this->searchAds360BiddingStrategyResult;
+  }
+  /**
    * The result for the Search Ads 360 campaign mutate.
    *
    * @param GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignResult $searchAds360CampaignResult
@@ -1139,22 +1065,6 @@ class GoogleAdsSearchads360V23ServicesMutateOperationResponse extends \Google\Mo
   public function getSharedSetResult()
   {
     return $this->sharedSetResult;
-  }
-  /**
-   * The result for the Smart campaign setting mutate.
-   *
-   * @param GoogleAdsSearchads360V23ServicesMutateSmartCampaignSettingResult $smartCampaignSettingResult
-   */
-  public function setSmartCampaignSettingResult(GoogleAdsSearchads360V23ServicesMutateSmartCampaignSettingResult $smartCampaignSettingResult)
-  {
-    $this->smartCampaignSettingResult = $smartCampaignSettingResult;
-  }
-  /**
-   * @return GoogleAdsSearchads360V23ServicesMutateSmartCampaignSettingResult
-   */
-  public function getSmartCampaignSettingResult()
-  {
-    return $this->smartCampaignSettingResult;
   }
   /**
    * The result for the user list mutate.
