@@ -39,14 +39,11 @@ class SA360 extends \Google\Service
   const DOUBLECLICKSEARCH =
       "https://www.googleapis.com/auth/doubleclicksearch";
 
-  public $audienceInsights;
   public $customers;
   public $customers_AdGroupCriterionCustomizers;
   public $customers_CampaignGoalConfigs;
   public $customers_CustomerCustomizers;
   public $customers_Goals;
-  public $customers_accountBudgetProposals;
-  public $customers_accountLinks;
   public $customers_adGroupAdLabels;
   public $customers_adGroupAds;
   public $customers_adGroupAssetSets;
@@ -71,7 +68,6 @@ class SA360 extends \Google\Service
   public $customers_biddingDataExclusions;
   public $customers_biddingSeasonalityAdjustments;
   public $customers_biddingStrategies;
-  public $customers_billingSetups;
   public $customers_campaignAssetSets;
   public $customers_campaignAssets;
   public $customers_campaignBidModifiers;
@@ -103,42 +99,23 @@ class SA360 extends \Google\Service
   public $customers_customerManagerLinks;
   public $customers_customerNegativeCriteria;
   public $customers_customerSkAdNetworkConversionValueSchemas;
-  public $customers_customerUserAccessInvitations;
-  public $customers_customerUserAccesses;
   public $customers_customizerAttributes;
-  public $customers_dataLinks;
   public $customers_experimentArms;
   public $customers_experiments;
-  public $customers_incentives;
-  public $customers_invoices;
-  public $customers_keywordPlanAdGroupKeywords;
-  public $customers_keywordPlanAdGroups;
-  public $customers_keywordPlanCampaignKeywords;
-  public $customers_keywordPlanCampaigns;
-  public $customers_keywordPlans;
   public $customers_labels;
   public $customers_localServices;
   public $customers_localServicesLeads;
-  public $customers_offlineUserDataJobs;
-  public $customers_paymentsAccounts;
-  public $customers_productLinkInvitations;
-  public $customers_productLinks;
+  public $customers_operations;
   public $customers_recommendationSubscriptions;
-  public $customers_recommendations;
   public $customers_remarketingActions;
   public $customers_searchAds360;
   public $customers_searchAds360Campaigns;
   public $customers_sharedCriteria;
   public $customers_sharedSets;
-  public $customers_smartCampaignSettings;
-  public $customers_thirdPartyAppAnalyticsLinks;
   public $customers_userListCustomerTypes;
   public $customers_userLists;
   public $geoTargetConstants;
-  public $incentives;
-  public $keywordThemeConstants;
   public $searchAds360Fields;
-  public $v23;
   public $rootUrlTemplate;
 
   /**
@@ -158,20 +135,6 @@ class SA360 extends \Google\Service
     $this->version = 'v23';
     $this->serviceName = 'searchads360';
 
-    $this->audienceInsights = new SA360\Resource\AudienceInsights(
-        $this,
-        $this->serviceName,
-        'audienceInsights',
-        [
-          'methods' => [
-            'listInsightsEligibleDates' => [
-              'path' => 'v23/audienceInsights:listInsightsEligibleDates',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],
-          ]
-        ]
-    );
     $this->customers = new SA360\Resource\Customers(
         $this,
         $this->serviceName,
@@ -181,136 +144,6 @@ class SA360 extends \Google\Service
             'createCustomerClient' => [
               'path' => 'v23/customers/{+customerId}:createCustomerClient',
               'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateAdGroupThemes' => [
-              'path' => 'v23/customers/{+customerId}:generateAdGroupThemes',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateAudienceCompositionInsights' => [
-              'path' => 'v23/customers/{+customerId}:generateAudienceCompositionInsights',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateAudienceDefinition' => [
-              'path' => 'v23/customers/{+customerId}:generateAudienceDefinition',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateAudienceOverlapInsights' => [
-              'path' => 'v23/customers/{+customerId}:generateAudienceOverlapInsights',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateBenchmarksMetrics' => [
-              'path' => 'v23/customers/{+customerId}:generateBenchmarksMetrics',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateInsightsFinderReport' => [
-              'path' => 'v23/customers/{+customerId}:generateInsightsFinderReport',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateKeywordForecastMetrics' => [
-              'path' => 'v23/customers/{+customerId}:generateKeywordForecastMetrics',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateKeywordHistoricalMetrics' => [
-              'path' => 'v23/customers/{+customerId}:generateKeywordHistoricalMetrics',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateKeywordIdeas' => [
-              'path' => 'v23/customers/{+customerId}:generateKeywordIdeas',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateReachForecast' => [
-              'path' => 'v23/customers/{+customerId}:generateReachForecast',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateSuggestedTargetingInsights' => [
-              'path' => 'v23/customers/{+customerId}:generateSuggestedTargetingInsights',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateTargetingSuggestionMetrics' => [
-              'path' => 'v23/customers/{+customerId}:generateTargetingSuggestionMetrics',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'getIdentityVerification' => [
-              'path' => 'v23/customers/{+customerId}/getIdentityVerification',
-              'httpMethod' => 'GET',
               'parameters' => [
                 'customerId' => [
                   'location' => 'path',
@@ -334,56 +167,6 @@ class SA360 extends \Google\Service
               ],
             ],'removeCampaignAutomaticallyCreatedAsset' => [
               'path' => 'v23/customers/{+customerId}:removeCampaignAutomaticallyCreatedAsset',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'searchAudienceInsightsAttributes' => [
-              'path' => 'v23/customers/{+customerId}:searchAudienceInsightsAttributes',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'startIdentityVerification' => [
-              'path' => 'v23/customers/{+customerId}:startIdentityVerification',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'suggestKeywordThemes' => [
-              'path' => 'v23/customers/{+customerId}:suggestKeywordThemes',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'suggestSmartCampaignAd' => [
-              'path' => 'v23/customers/{+customerId}:suggestSmartCampaignAd',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'suggestSmartCampaignBudgetOptions' => [
-              'path' => 'v23/customers/{+customerId}:suggestSmartCampaignBudgetOptions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'customerId' => [
@@ -424,16 +207,6 @@ class SA360 extends \Google\Service
               ],
             ],'uploadConversionAdjustments' => [
               'path' => 'v23/customers/{+customerId}:uploadConversionAdjustments',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'uploadUserData' => [
-              'path' => 'v23/customers/{+customerId}:uploadUserData',
               'httpMethod' => 'POST',
               'parameters' => [
                 'customerId' => [
@@ -514,56 +287,6 @@ class SA360 extends \Google\Service
           'methods' => [
             'mutate' => [
               'path' => 'v23/customers/{+customerId}/Goals:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_accountBudgetProposals = new SA360\Resource\CustomersAccountBudgetProposals(
-        $this,
-        $this->serviceName,
-        'accountBudgetProposals',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/accountBudgetProposals:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_accountLinks = new SA360\Resource\CustomersAccountLinks(
-        $this,
-        $this->serviceName,
-        'accountLinks',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v23/customers/{+customerId}/accountLinks:create',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'mutate' => [
-              'path' => 'v23/customers/{+customerId}/accountLinks:mutate',
               'httpMethod' => 'POST',
               'parameters' => [
                 'customerId' => [
@@ -1096,26 +819,6 @@ class SA360 extends \Google\Service
           'methods' => [
             'mutate' => [
               'path' => 'v23/customers/{+customerId}/biddingStrategies:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_billingSetups = new SA360\Resource\CustomersBillingSetups(
-        $this,
-        $this->serviceName,
-        'billingSetups',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/billingSetups:mutate',
               'httpMethod' => 'POST',
               'parameters' => [
                 'customerId' => [
@@ -1806,46 +1509,6 @@ class SA360 extends \Google\Service
           ]
         ]
     );
-    $this->customers_customerUserAccessInvitations = new SA360\Resource\CustomersCustomerUserAccessInvitations(
-        $this,
-        $this->serviceName,
-        'customerUserAccessInvitations',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/customerUserAccessInvitations:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_customerUserAccesses = new SA360\Resource\CustomersCustomerUserAccesses(
-        $this,
-        $this->serviceName,
-        'customerUserAccesses',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/customerUserAccesses:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->customers_customizerAttributes = new SA360\Resource\CustomersCustomizerAttributes(
         $this,
         $this->serviceName,
@@ -1854,46 +1517,6 @@ class SA360 extends \Google\Service
           'methods' => [
             'mutate' => [
               'path' => 'v23/customers/{+customerId}/customizerAttributes:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_dataLinks = new SA360\Resource\CustomersDataLinks(
-        $this,
-        $this->serviceName,
-        'dataLinks',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v23/customers/{+customerId}/dataLinks:create',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'remove' => [
-              'path' => 'v23/customers/{+customerId}/dataLinks:remove',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'update' => [
-              'path' => 'v23/customers/{+customerId}/dataLinks:update',
               'httpMethod' => 'POST',
               'parameters' => [
                 'customerId' => [
@@ -2004,167 +1627,6 @@ class SA360 extends \Google\Service
           ]
         ]
     );
-    $this->customers_incentives = new SA360\Resource\CustomersIncentives(
-        $this,
-        $this->serviceName,
-        'incentives',
-        [
-          'methods' => [
-            'applyIncentive' => [
-              'path' => 'v23/customers/{+customerId}/incentives/{+selectedIncentiveId}:applyIncentive',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'selectedIncentiveId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_invoices = new SA360\Resource\CustomersInvoices(
-        $this,
-        $this->serviceName,
-        'invoices',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v23/customers/{+customerId}/invoices',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'billingSetup' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'includeGranularLevelInvoiceDetails' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
-                'issueMonth' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'issueYear' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_keywordPlanAdGroupKeywords = new SA360\Resource\CustomersKeywordPlanAdGroupKeywords(
-        $this,
-        $this->serviceName,
-        'keywordPlanAdGroupKeywords',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/keywordPlanAdGroupKeywords:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_keywordPlanAdGroups = new SA360\Resource\CustomersKeywordPlanAdGroups(
-        $this,
-        $this->serviceName,
-        'keywordPlanAdGroups',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/keywordPlanAdGroups:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_keywordPlanCampaignKeywords = new SA360\Resource\CustomersKeywordPlanCampaignKeywords(
-        $this,
-        $this->serviceName,
-        'keywordPlanCampaignKeywords',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/keywordPlanCampaignKeywords:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_keywordPlanCampaigns = new SA360\Resource\CustomersKeywordPlanCampaigns(
-        $this,
-        $this->serviceName,
-        'keywordPlanCampaigns',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/keywordPlanCampaigns:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_keywordPlans = new SA360\Resource\CustomersKeywordPlans(
-        $this,
-        $this->serviceName,
-        'keywordPlans',
-        [
-          'methods' => [
-            'mutate' => [
-              'path' => 'v23/customers/{+customerId}/keywordPlans:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->customers_labels = new SA360\Resource\CustomersLabels(
         $this,
         $this->serviceName,
@@ -2225,127 +1687,17 @@ class SA360 extends \Google\Service
           ]
         ]
     );
-    $this->customers_offlineUserDataJobs = new SA360\Resource\CustomersOfflineUserDataJobs(
+    $this->customers_operations = new SA360\Resource\CustomersOperations(
         $this,
         $this->serviceName,
-        'offlineUserDataJobs',
+        'operations',
         [
           'methods' => [
-            'addOperations' => [
-              'path' => 'v23/{+resourceName}:addOperations',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resourceName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
-              'path' => 'v23/customers/{+customerId}/offlineUserDataJobs:create',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'run' => [
-              'path' => 'v23/{+resourceName}:run',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resourceName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_paymentsAccounts = new SA360\Resource\CustomersPaymentsAccounts(
-        $this,
-        $this->serviceName,
-        'paymentsAccounts',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v23/customers/{+customerId}/paymentsAccounts',
+            'get' => [
+              'path' => 'v23/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_productLinkInvitations = new SA360\Resource\CustomersProductLinkInvitations(
-        $this,
-        $this->serviceName,
-        'productLinkInvitations',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v23/customers/{+customerId}/productLinkInvitations:create',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'remove' => [
-              'path' => 'v23/customers/{+customerId}/productLinkInvitations:remove',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'update' => [
-              'path' => 'v23/customers/{+customerId}/productLinkInvitations:update',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_productLinks = new SA360\Resource\CustomersProductLinks(
-        $this,
-        $this->serviceName,
-        'productLinks',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v23/customers/{+customerId}/productLinks:create',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'remove' => [
-              'path' => 'v23/customers/{+customerId}/productLinks:remove',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -2363,46 +1715,6 @@ class SA360 extends \Google\Service
           'methods' => [
             'mutateRecommendationSubscription' => [
               'path' => 'v23/customers/{+customerId}/recommendationSubscriptions:mutateRecommendationSubscription',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_recommendations = new SA360\Resource\CustomersRecommendations(
-        $this,
-        $this->serviceName,
-        'recommendations',
-        [
-          'methods' => [
-            'apply' => [
-              'path' => 'v23/customers/{+customerId}/recommendations:apply',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'dismiss' => [
-              'path' => 'v23/customers/{+customerId}/recommendations:dismiss',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generate' => [
-              'path' => 'v23/customers/{+customerId}/recommendations:generate',
               'httpMethod' => 'POST',
               'parameters' => [
                 'customerId' => [
@@ -2525,56 +1837,6 @@ class SA360 extends \Google\Service
           ]
         ]
     );
-    $this->customers_smartCampaignSettings = new SA360\Resource\CustomersSmartCampaignSettings(
-        $this,
-        $this->serviceName,
-        'smartCampaignSettings',
-        [
-          'methods' => [
-            'getSmartCampaignStatus' => [
-              'path' => 'v23/{+resourceName}:getSmartCampaignStatus',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resourceName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'mutate' => [
-              'path' => 'v23/customers/{+customerId}/smartCampaignSettings:mutate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'customerId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->customers_thirdPartyAppAnalyticsLinks = new SA360\Resource\CustomersThirdPartyAppAnalyticsLinks(
-        $this,
-        $this->serviceName,
-        'thirdPartyAppAnalyticsLinks',
-        [
-          'methods' => [
-            'regenerateShareableLinkId' => [
-              'path' => 'v23/{+resourceName}:regenerateShareableLinkId',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resourceName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->customers_userListCustomerTypes = new SA360\Resource\CustomersUserListCustomerTypes(
         $this,
         $this->serviceName,
@@ -2629,51 +1891,6 @@ class SA360 extends \Google\Service
           ]
         ]
     );
-    $this->incentives = new SA360\Resource\Incentives(
-        $this,
-        $this->serviceName,
-        'incentives',
-        [
-          'methods' => [
-            'fetchIncentive' => [
-              'path' => 'v23/incentives:fetchIncentive',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'countryCode' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'email' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'languageCode' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'type' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->keywordThemeConstants = new SA360\Resource\KeywordThemeConstants(
-        $this,
-        $this->serviceName,
-        'keywordThemeConstants',
-        [
-          'methods' => [
-            'suggest' => [
-              'path' => 'v23/keywordThemeConstants:suggest',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],
-          ]
-        ]
-    );
     $this->searchAds360Fields = new SA360\Resource\SearchAds360Fields(
         $this,
         $this->serviceName,
@@ -2692,52 +1909,6 @@ class SA360 extends \Google\Service
               ],
             ],'search' => [
               'path' => 'v23/searchAds360Fields:search',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],
-          ]
-        ]
-    );
-    $this->v23 = new SA360\Resource\V23(
-        $this,
-        $this->serviceName,
-        'v23',
-        [
-          'methods' => [
-            'generateConversionRates' => [
-              'path' => 'v23:generateConversionRates',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listBenchmarksAvailableDates' => [
-              'path' => 'v23:listBenchmarksAvailableDates',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listBenchmarksLocations' => [
-              'path' => 'v23:listBenchmarksLocations',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listBenchmarksProducts' => [
-              'path' => 'v23:listBenchmarksProducts',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listBenchmarksSources' => [
-              'path' => 'v23:listBenchmarksSources',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listPlannableLocations' => [
-              'path' => 'v23:listPlannableLocations',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listPlannableProducts' => [
-              'path' => 'v23:listPlannableProducts',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listPlannableUserInterests' => [
-              'path' => 'v23:listPlannableUserInterests',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'listPlannableUserLists' => [
-              'path' => 'v23:listPlannableUserLists',
               'httpMethod' => 'POST',
               'parameters' => [],
             ],

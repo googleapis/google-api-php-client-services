@@ -131,6 +131,12 @@ class GoogleAdsSearchads360V23CommonSegments extends \Google\Collection
    * Google TV
    */
   public const AD_NETWORK_TYPE_GOOGLE_TV = 'GOOGLE_TV';
+  /**
+   * This network is used for Google Owned channels such as Discover feed,
+   * Gmail, YouTube. Demand Gen stats are attributed to more granular network
+   * types such as GMAIL, DISCOVER, MAPS, YOUTUBE; this value is only used for
+   * historical data.
+   */
   public const AD_NETWORK_TYPE_GOOGLE_OWNED_CHANNELS = 'GOOGLE_OWNED_CHANNELS';
   /**
    * Gmail
@@ -856,6 +862,21 @@ class GoogleAdsSearchads360V23CommonSegments extends \Google\Collection
    * @var string
    */
   public $verticalAdsListingRegion;
+  /**
+   * Integer value specifying the user rating of the vertical ads listing as a
+   * number from 1 to 5, where 5 is the best. The value will always be within
+   * this range.
+   *
+   * @var string
+   */
+  public $verticalAdsListingUserRating;
+  /**
+   * The name of the venue for the vertical ads listing, for example, the venue
+   * for a concert event.
+   *
+   * @var string
+   */
+  public $verticalAdsListingVenue;
   /**
    * A specific partner account within a Partner Center (for example, Hotel
    * Center) that supplies inventory feed data for Vertical Ads.
@@ -2064,6 +2085,41 @@ class GoogleAdsSearchads360V23CommonSegments extends \Google\Collection
   public function getVerticalAdsListingRegion()
   {
     return $this->verticalAdsListingRegion;
+  }
+  /**
+   * Integer value specifying the user rating of the vertical ads listing as a
+   * number from 1 to 5, where 5 is the best. The value will always be within
+   * this range.
+   *
+   * @param string $verticalAdsListingUserRating
+   */
+  public function setVerticalAdsListingUserRating($verticalAdsListingUserRating)
+  {
+    $this->verticalAdsListingUserRating = $verticalAdsListingUserRating;
+  }
+  /**
+   * @return string
+   */
+  public function getVerticalAdsListingUserRating()
+  {
+    return $this->verticalAdsListingUserRating;
+  }
+  /**
+   * The name of the venue for the vertical ads listing, for example, the venue
+   * for a concert event.
+   *
+   * @param string $verticalAdsListingVenue
+   */
+  public function setVerticalAdsListingVenue($verticalAdsListingVenue)
+  {
+    $this->verticalAdsListingVenue = $verticalAdsListingVenue;
+  }
+  /**
+   * @return string
+   */
+  public function getVerticalAdsListingVenue()
+  {
+    return $this->verticalAdsListingVenue;
   }
   /**
    * A specific partner account within a Partner Center (for example, Hotel

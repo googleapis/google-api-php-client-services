@@ -346,6 +346,8 @@ class GoogleAdsSearchads360V23ServicesSearchAds360Row extends \Google\Collection
   protected $recommendationSubscriptionDataType = '';
   protected $remarketingActionType = GoogleAdsSearchads360V23ResourcesRemarketingAction::class;
   protected $remarketingActionDataType = '';
+  protected $searchAds360BiddingStrategyType = GoogleAdsSearchads360V23ResourcesSearchAds360BiddingStrategy::class;
+  protected $searchAds360BiddingStrategyDataType = '';
   protected $searchAds360CampaignType = GoogleAdsSearchads360V23ResourcesSearchAds360Campaign::class;
   protected $searchAds360CampaignDataType = '';
   protected $searchTermViewType = GoogleAdsSearchads360V23ResourcesSearchTermView::class;
@@ -2998,6 +3000,22 @@ class GoogleAdsSearchads360V23ServicesSearchAds360Row extends \Google\Collection
   public function getRemarketingAction()
   {
     return $this->remarketingAction;
+  }
+  /**
+   * The Search Ads 360 bidding strategy referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V23ResourcesSearchAds360BiddingStrategy $searchAds360BiddingStrategy
+   */
+  public function setSearchAds360BiddingStrategy(GoogleAdsSearchads360V23ResourcesSearchAds360BiddingStrategy $searchAds360BiddingStrategy)
+  {
+    $this->searchAds360BiddingStrategy = $searchAds360BiddingStrategy;
+  }
+  /**
+   * @return GoogleAdsSearchads360V23ResourcesSearchAds360BiddingStrategy
+   */
+  public function getSearchAds360BiddingStrategy()
+  {
+    return $this->searchAds360BiddingStrategy;
   }
   /**
    * The Search Ads 360 campaign referenced in the query.

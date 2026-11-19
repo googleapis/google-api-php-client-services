@@ -353,7 +353,7 @@ class GoogleAdsSearchads360V23ResourcesConversionAction extends \Google\Collecti
   /**
    * Deprecated: The Salesforce integration ended on May 31, 2025. See [Legacy
    * Salesforce integration for conversions upgrade
-   * FAQ](//support.google.com/google-ads/answer/14728349).
+   * FAQ](https://support.google.com/google-ads/answer/14728349).
    *
    * @deprecated
    */

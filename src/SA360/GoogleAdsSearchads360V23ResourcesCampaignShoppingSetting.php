@@ -58,7 +58,7 @@ class GoogleAdsSearchads360V23ResourcesCampaignShoppingSetting extends \Google\C
    * hyphens, and underscores. If you previously used the deprecated
    * `sales_country` in the two-letter country code (`XX`) format, the
    * `feed_label` field should be used instead. For more information see the
-   * [feed label](//support.google.com/merchants/answer/12453549) support
+   * [feed label](https://support.google.com/merchants/answer/12453549) support
    * article.
    *
    * @var string
@@ -156,7 +156,7 @@ class GoogleAdsSearchads360V23ResourcesCampaignShoppingSetting extends \Google\C
    * hyphens, and underscores. If you previously used the deprecated
    * `sales_country` in the two-letter country code (`XX`) format, the
    * `feed_label` field should be used instead. For more information see the
-   * [feed label](//support.google.com/merchants/answer/12453549) support
+   * [feed label](https://support.google.com/merchants/answer/12453549) support
    * article.
    *
    * @param string $feedLabel
