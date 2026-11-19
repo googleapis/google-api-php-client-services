@@ -45,12 +45,18 @@ class VideoLiveStreamingDetails extends \Google\Model
    */
   public $actualStartTime;
   /**
-   * The number of viewers currently watching the broadcast. The property and
-   * its value will be present if the broadcast has current viewers and the
-   * broadcast owner has not hidden the viewcount for the video. Note that
-   * YouTube stops tracking the number of concurrent viewers for a broadcast
-   * when the broadcast ends. So, this property would not identify the number of
-   * viewers watching an archived video of a live broadcast that already ended.
+   * The number of viewers watching the broadcast at the time of the request.
+   * This count includes co-viewers when multiple people watch together on a
+   * television screen. The property and its value will be present if the
+   * broadcast has current viewers and the broadcast owner has not hidden the
+   * viewcount for the video. Note that YouTube stops tracking the number of
+   * concurrent viewers for a broadcast when the broadcast ends. So, this
+   * property would not identify the number of viewers watching an archived
+   * video of a live broadcast that already ended. The concurrent viewer counts
+   * that the YouTube Data API returns might differ from the processed,
+   * despammed concurrent viewer counts available through YouTube Analytics.
+   * Learn more about live streaming metrics in the [YouTube Help
+   * Center](https://support.google.com/youtube/answer/2853833).
    *
    * @var string
    */
@@ -126,12 +132,18 @@ class VideoLiveStreamingDetails extends \Google\Model
     return $this->actualStartTime;
   }
   /**
-   * The number of viewers currently watching the broadcast. The property and
-   * its value will be present if the broadcast has current viewers and the
-   * broadcast owner has not hidden the viewcount for the video. Note that
-   * YouTube stops tracking the number of concurrent viewers for a broadcast
-   * when the broadcast ends. So, this property would not identify the number of
-   * viewers watching an archived video of a live broadcast that already ended.
+   * The number of viewers watching the broadcast at the time of the request.
+   * This count includes co-viewers when multiple people watch together on a
+   * television screen. The property and its value will be present if the
+   * broadcast has current viewers and the broadcast owner has not hidden the
+   * viewcount for the video. Note that YouTube stops tracking the number of
+   * concurrent viewers for a broadcast when the broadcast ends. So, this
+   * property would not identify the number of viewers watching an archived
+   * video of a live broadcast that already ended. The concurrent viewer counts
+   * that the YouTube Data API returns might differ from the processed,
+   * despammed concurrent viewer counts available through YouTube Analytics.
+   * Learn more about live streaming metrics in the [YouTube Help
+   * Center](https://support.google.com/youtube/answer/2853833).
    *
    * @param string $concurrentViewers
    */

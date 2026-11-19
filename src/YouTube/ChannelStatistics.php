@@ -44,7 +44,13 @@ class ChannelStatistics extends \Google\Model
    */
   public $videoCount;
   /**
-   * The number of times the channel has been viewed.
+   * The sum of the number of times all the videos in all formats have been
+   * viewed for a channel. For all video formats (long-form, Live, and Shorts)
+   * on a channel, `viewCount` counts views the moment a video begins to play
+   * (includes autoplay, hold the pointer over, and click/tap to play). For all
+   * video formats (long-form, Live, and Shorts) on a channel, `viewCount`
+   * includes co-views when multiple people watch together on a television
+   * screen.
    *
    * @var string
    */
@@ -115,7 +121,13 @@ class ChannelStatistics extends \Google\Model
     return $this->videoCount;
   }
   /**
-   * The number of times the channel has been viewed.
+   * The sum of the number of times all the videos in all formats have been
+   * viewed for a channel. For all video formats (long-form, Live, and Shorts)
+   * on a channel, `viewCount` counts views the moment a video begins to play
+   * (includes autoplay, hold the pointer over, and click/tap to play). For all
+   * video formats (long-form, Live, and Shorts) on a channel, `viewCount`
+   * includes co-views when multiple people watch together on a television
+   * screen.
    *
    * @param string $viewCount
    */

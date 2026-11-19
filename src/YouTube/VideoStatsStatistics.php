@@ -33,7 +33,9 @@ class VideoStatsStatistics extends \Google\Model
    */
   public $likeCount;
   /**
-   * Output only. The number of times the video has been viewed.
+   * Output only. The number of times the video has been viewed. For all video
+   * formats (long-form, Live, and Shorts), `viewCount` includes co-views when
+   * multiple people watch together on a television screen.
    *
    * @var string
    */
@@ -73,7 +75,9 @@ class VideoStatsStatistics extends \Google\Model
     return $this->likeCount;
   }
   /**
-   * Output only. The number of times the video has been viewed.
+   * Output only. The number of times the video has been viewed. For all video
+   * formats (long-form, Live, and Shorts), `viewCount` includes co-views when
+   * multiple people watch together on a television screen.
    *
    * @param string $viewCount
    */
