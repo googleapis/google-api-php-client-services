@@ -67,10 +67,11 @@ class AgentRemoteDialogflowAgent extends \Google\Model
    * Optional. Indicates whether to respect the message-level interruption
    * settings configured in the Dialogflow agent. * If false: all response
    * messages from the Dialogflow agent follow the app-level barge-in settings.
-   * * If true: only response messages with [`allow_playback_interruption`](http
-   * s://docs.cloud.google.com/dialogflow/cx/docs/reference/rpc/google.cloud.dia
-   * logflow.cx.v3#text) set to true will be interruptable, all other messages
-   * follow the app-level barge-in settings.
+   * * If true: response messages with [`allow_playback_interruption`](https://d
+   * ocs.cloud.google.com/dialogflow/cx/docs/reference/rpc/google.cloud.dialogfl
+   * ow.cx.v3#text) set to false will not be interruptable regardless of the
+   * app-level barge-in settings, all other messages follow the app-level barge-
+   * in settings.
    *
    * @var bool
    */
@@ -184,10 +185,11 @@ class AgentRemoteDialogflowAgent extends \Google\Model
    * Optional. Indicates whether to respect the message-level interruption
    * settings configured in the Dialogflow agent. * If false: all response
    * messages from the Dialogflow agent follow the app-level barge-in settings.
-   * * If true: only response messages with [`allow_playback_interruption`](http
-   * s://docs.cloud.google.com/dialogflow/cx/docs/reference/rpc/google.cloud.dia
-   * logflow.cx.v3#text) set to true will be interruptable, all other messages
-   * follow the app-level barge-in settings.
+   * * If true: response messages with [`allow_playback_interruption`](https://d
+   * ocs.cloud.google.com/dialogflow/cx/docs/reference/rpc/google.cloud.dialogfl
+   * ow.cx.v3#text) set to false will not be interruptable regardless of the
+   * app-level barge-in settings, all other messages follow the app-level barge-
+   * in settings.
    *
    * @param bool $respectResponseInterruptionSettings
    */
