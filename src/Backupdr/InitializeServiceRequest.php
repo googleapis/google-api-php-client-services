@@ -57,6 +57,14 @@ class InitializeServiceRequest extends \Google\Model
    */
   public $resourceType;
   /**
+   * Optional. If set to `true`, only provisions the Backup and DR service agent
+   * for the project and skips creating the default BackupVault and BackupPlan
+   * resources. When set to `true`, `validate_only` must also be set to `true`.
+   *
+   * @var bool
+   */
+  public $serviceAgentOnly;
+  /**
    * Optional. If set, validates the request and returns the result, but does
    * not actually run it.
    *
@@ -144,6 +152,24 @@ class InitializeServiceRequest extends \Google\Model
   public function getResourceType()
   {
     return $this->resourceType;
+  }
+  /**
+   * Optional. If set to `true`, only provisions the Backup and DR service agent
+   * for the project and skips creating the default BackupVault and BackupPlan
+   * resources. When set to `true`, `validate_only` must also be set to `true`.
+   *
+   * @param bool $serviceAgentOnly
+   */
+  public function setServiceAgentOnly($serviceAgentOnly)
+  {
+    $this->serviceAgentOnly = $serviceAgentOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getServiceAgentOnly()
+  {
+    return $this->serviceAgentOnly;
   }
   /**
    * Optional. If set, validates the request and returns the result, but does
