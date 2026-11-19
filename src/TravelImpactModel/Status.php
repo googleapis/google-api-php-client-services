@@ -21,29 +21,33 @@ class Status extends \Google\Collection
 {
   protected $collection_key = 'details';
   /**
-   * The status code, which should be an enum value of google.rpc.Code.
+   * The numeric status code corresponding to a `google.rpc.Code` enum value: *
+   * `3` (`INVALID_ARGUMENT`): Input error (for example, a missing or invalid
+   * airport or carrier code). * `5` (`NOT_FOUND`): No emission estimates
+   * matched the requested inputs.
    *
    * @var int
    */
   public $code;
   /**
-   * A list of messages that carry the error details. There is a common set of
-   * message types for APIs to use.
+   * Additional structured error details, when available.
    *
    * @var array[]
    */
   public $details;
   /**
-   * A developer-facing error message, which should be in English. Any user-
-   * facing error message should be localized and sent in the
-   * google.rpc.Status.details field, or localized by the client.
+   * A human-readable error message in English describing why emission estimates
+   * could not be returned for the requested item.
    *
    * @var string
    */
   public $message;
 
   /**
-   * The status code, which should be an enum value of google.rpc.Code.
+   * The numeric status code corresponding to a `google.rpc.Code` enum value: *
+   * `3` (`INVALID_ARGUMENT`): Input error (for example, a missing or invalid
+   * airport or carrier code). * `5` (`NOT_FOUND`): No emission estimates
+   * matched the requested inputs.
    *
    * @param int $code
    */
@@ -59,8 +63,7 @@ class Status extends \Google\Collection
     return $this->code;
   }
   /**
-   * A list of messages that carry the error details. There is a common set of
-   * message types for APIs to use.
+   * Additional structured error details, when available.
    *
    * @param array[] $details
    */
@@ -76,9 +79,8 @@ class Status extends \Google\Collection
     return $this->details;
   }
   /**
-   * A developer-facing error message, which should be in English. Any user-
-   * facing error message should be localized and sent in the
-   * google.rpc.Status.details field, or localized by the client.
+   * A human-readable error message in English describing why emission estimates
+   * could not be returned for the requested item.
    *
    * @param string $message
    */
