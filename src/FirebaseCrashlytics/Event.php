@@ -53,6 +53,13 @@ class Event extends \Google\Collection
    */
   public $crashlyticsSdkVersion;
   /**
+   * Output only. Mobile only. Unique identifier for the Crashlytics device
+   * session.
+   *
+   * @var string
+   */
+  public $crashlyticsSessionId;
+  /**
    * Custom keys set by the developer during the session.
    *
    * @var string[]
@@ -275,6 +282,23 @@ class Event extends \Google\Collection
   public function getCrashlyticsSdkVersion()
   {
     return $this->crashlyticsSdkVersion;
+  }
+  /**
+   * Output only. Mobile only. Unique identifier for the Crashlytics device
+   * session.
+   *
+   * @param string $crashlyticsSessionId
+   */
+  public function setCrashlyticsSessionId($crashlyticsSessionId)
+  {
+    $this->crashlyticsSessionId = $crashlyticsSessionId;
+  }
+  /**
+   * @return string
+   */
+  public function getCrashlyticsSessionId()
+  {
+    return $this->crashlyticsSessionId;
   }
   /**
    * Custom keys set by the developer during the session.
