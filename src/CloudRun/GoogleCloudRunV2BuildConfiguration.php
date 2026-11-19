@@ -27,7 +27,10 @@ class GoogleCloudRunV2BuildConfiguration extends \Google\Collection
   protected $environmentVariablesType = GoogleCloudRunV2EnvVar::class;
   protected $environmentVariablesDataType = 'array';
   /**
-   * Required. Artifact Registry URI to store the built image.
+   * Optional. Stores the built image in the given Artifact Registry repository.
+   * When not specified, Cloud Run will generate an Artifact Registry
+   * repository. The user is responsible for managing the repository, cleaning
+   * up images, and setting deletion policy.
    *
    * @var string
    */
@@ -97,7 +100,10 @@ class GoogleCloudRunV2BuildConfiguration extends \Google\Collection
     return $this->environmentVariables;
   }
   /**
-   * Required. Artifact Registry URI to store the built image.
+   * Optional. Stores the built image in the given Artifact Registry repository.
+   * When not specified, Cloud Run will generate an Artifact Registry
+   * repository. The user is responsible for managing the repository, cleaning
+   * up images, and setting deletion policy.
    *
    * @param string $imageRepositoryUri
    */
