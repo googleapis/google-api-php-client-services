@@ -87,8 +87,8 @@ class InboundSsoAssignments extends \Google\Service\Resource
    *
    * @opt_param string filter A CEL expression to filter the results. The only
    * supported filter is filtering by customer. For example:
-   * `customer==customers/C0123abc`. Omitting the filter or specifying a filter of
-   * `customer==customers/my_customer` will return the assignments for the
+   * `customer=="customers/C0123abc"`. Omitting the filter or specifying a filter
+   * of `customer=="customers/my_customer"` will return the assignments for the
    * customer that the caller (authenticated user) belongs to.
    * @opt_param int pageSize The maximum number of assignments to return. The
    * service may return fewer than this value. If omitted (or defaulted to zero)
