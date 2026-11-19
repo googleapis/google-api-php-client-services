@@ -367,7 +367,8 @@ class CourseWork extends \Google\Collection
   }
   /**
    * Optional time of day, in UTC, that submissions for this course work are
-   * due. This must be specified if `due_date` is specified.
+   * due. If `due_time` is not specified on course work with a `due_date`, the
+   * course work's `due_time` is set to `23:59` on the due date.
    *
    * @param TimeOfDay $dueTime
    */
