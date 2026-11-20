@@ -98,6 +98,23 @@ class WebApp extends \Google\Collection
    */
   public $expireTime;
   /**
+   * Optional. Set of labels assigned to the `WebApp`. Valid label keys have two
+   * segments: an optional prefix and a name, separated by a slash (`/`).
+   * `firebase.` prefixes are reserved for Firebase-service use, and
+   * `express.cloud/` is reserved for Google Cloud Express. In update requests,
+   * `labels` is only replaced when explicitly named in `update_mask` or
+   * populated in the request. To change one label, name it in `update_mask` as
+   * `labels.`, for example `labels.env`. If the request's `labels` doesn't have
+   * that key, the label is removed. Write keys in lowercase. In REST requests,
+   * `update_mask` uses the [JSON encoding](https://protobuf.dev/programming-
+   * guides/json/), which converts each path from lowerCamelCase to snake_case,
+   * keys included. So `labels.myKey` becomes `labels.my_key`, and `labels.Env`
+   * becomes `labels.env`.
+   *
+   * @var string[]
+   */
+  public $labels;
+  /**
    * The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER
    * /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
    * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
@@ -257,6 +274,33 @@ class WebApp extends \Google\Collection
   public function getExpireTime()
   {
     return $this->expireTime;
+  }
+  /**
+   * Optional. Set of labels assigned to the `WebApp`. Valid label keys have two
+   * segments: an optional prefix and a name, separated by a slash (`/`).
+   * `firebase.` prefixes are reserved for Firebase-service use, and
+   * `express.cloud/` is reserved for Google Cloud Express. In update requests,
+   * `labels` is only replaced when explicitly named in `update_mask` or
+   * populated in the request. To change one label, name it in `update_mask` as
+   * `labels.`, for example `labels.env`. If the request's `labels` doesn't have
+   * that key, the label is removed. Write keys in lowercase. In REST requests,
+   * `update_mask` uses the [JSON encoding](https://protobuf.dev/programming-
+   * guides/json/), which converts each path from lowerCamelCase to snake_case,
+   * keys included. So `labels.myKey` becomes `labels.my_key`, and `labels.Env`
+   * becomes `labels.env`.
+   *
+   * @param string[] $labels
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER
