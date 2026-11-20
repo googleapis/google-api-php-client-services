@@ -48,6 +48,18 @@ class AndroidInstrumentationTest extends \Google\Collection
    */
   public $appPackageId;
   /**
+   * Optional. Whether to use Private Compute Core (PCC) sandbox testing. For
+   * self-instrumenting test APKs, the test process runs directly inside the PCC
+   * sandbox. For separate test and application APKs, the PCC sandbox is
+   * configured to allow the application's PCC components to run and accept
+   * connections from the test process. Effective only on Android 17 (API level
+   * 37) and higher, ignored otherwise. Cannot be combined with
+   * `OrchestratorOption.USE_ORCHESTRATOR`.
+   *
+   * @var bool
+   */
+  public $instrumentInPrivateComputeCore;
+  /**
    * The option of whether running each test within its own invocation of
    * instrumentation with Android Test Orchestrator or not. ** Orchestrator is
    * only compatible with AndroidJUnitRunner version 1.1 or higher! **
@@ -135,6 +147,28 @@ class AndroidInstrumentationTest extends \Google\Collection
   public function getAppPackageId()
   {
     return $this->appPackageId;
+  }
+  /**
+   * Optional. Whether to use Private Compute Core (PCC) sandbox testing. For
+   * self-instrumenting test APKs, the test process runs directly inside the PCC
+   * sandbox. For separate test and application APKs, the PCC sandbox is
+   * configured to allow the application's PCC components to run and accept
+   * connections from the test process. Effective only on Android 17 (API level
+   * 37) and higher, ignored otherwise. Cannot be combined with
+   * `OrchestratorOption.USE_ORCHESTRATOR`.
+   *
+   * @param bool $instrumentInPrivateComputeCore
+   */
+  public function setInstrumentInPrivateComputeCore($instrumentInPrivateComputeCore)
+  {
+    $this->instrumentInPrivateComputeCore = $instrumentInPrivateComputeCore;
+  }
+  /**
+   * @return bool
+   */
+  public function getInstrumentInPrivateComputeCore()
+  {
+    return $this->instrumentInPrivateComputeCore;
   }
   /**
    * The option of whether running each test within its own invocation of
