@@ -17,7 +17,7 @@
 
 namespace Google\Service\CloudAuditManager;
 
-class AuditSchedule extends \Google\Model
+class AuditSchedule extends \Google\Collection
 {
   /**
    * Default value. This value is unused.
@@ -56,6 +56,7 @@ class AuditSchedule extends \Google\Model
    * Schedule has been marked for deletion by the user.
    */
   public const STATE_SCHEDULE_STATE_DELETED = 'SCHEDULE_STATE_DELETED';
+  protected $collection_key = 'reportExportFormats';
   /**
    * Required. Framework (set of controls) that the audit scope report is
    * generated against. For example, `NIST_800_53`.
@@ -112,6 +113,13 @@ class AuditSchedule extends \Google\Model
   public $nextRunTime;
   protected $parameterOverridesType = ParameterOverrides::class;
   protected $parameterOverridesDataType = 'map';
+  /**
+   * Optional. Formats in which to export each scheduled audit report, in
+   * addition to the ODF report. Each format can be listed only once.
+   *
+   * @var string[]
+   */
+  public $reportExportFormats;
   /**
    * Required. Format for the audit report.
    *
@@ -287,6 +295,23 @@ class AuditSchedule extends \Google\Model
   public function getParameterOverrides()
   {
     return $this->parameterOverrides;
+  }
+  /**
+   * Optional. Formats in which to export each scheduled audit report, in
+   * addition to the ODF report. Each format can be listed only once.
+   *
+   * @param string[] $reportExportFormats
+   */
+  public function setReportExportFormats($reportExportFormats)
+  {
+    $this->reportExportFormats = $reportExportFormats;
+  }
+  /**
+   * @return string[]
+   */
+  public function getReportExportFormats()
+  {
+    return $this->reportExportFormats;
   }
   /**
    * Required. Format for the audit report.
