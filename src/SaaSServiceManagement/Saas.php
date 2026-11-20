@@ -213,7 +213,7 @@ class Saas extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * Output only. If the state is FAILED, the corresponding error code and
+   * Output only. If the state is `FAILED`, the corresponding error code and
    * message. Defaults to code=OK for all other states.
    *
    * @param Status $error
