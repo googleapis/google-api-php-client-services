@@ -41,7 +41,13 @@ class AuditReport extends \Google\Collection
    * state isn't used for new reports.
    */
   public const REPORT_GENERATION_STATE_SUMMARY_UNKNOWN = 'SUMMARY_UNKNOWN';
-  protected $collection_key = 'controlDetails';
+  /**
+   * The process completed and the mandatory report was generated, but an
+   * optional additional report export (for example, PDF) failed. The operation
+   * state is `OPERATION_STATE_DONE`.
+   */
+  public const REPORT_GENERATION_STATE_DONE_WITH_ERRORS = 'DONE_WITH_ERRORS';
+  protected $collection_key = 'reportExportFormats';
   protected $cloudControlParameterStatesType = CloudControlParameterStates::class;
   protected $cloudControlParameterStatesDataType = 'map';
   /**
@@ -84,6 +90,13 @@ class AuditReport extends \Google\Collection
    * @var string
    */
   public $operationId;
+  /**
+   * Output only. Additional formats in which the audit report was requested to
+   * be exported.
+   *
+   * @var string[]
+   */
+  public $reportExportFormats;
   /**
    * Output only. State of audit report generation.
    *
@@ -247,10 +260,27 @@ class AuditReport extends \Google\Collection
     return $this->operationId;
   }
   /**
+   * Output only. Additional formats in which the audit report was requested to
+   * be exported.
+   *
+   * @param string[] $reportExportFormats
+   */
+  public function setReportExportFormats($reportExportFormats)
+  {
+    $this->reportExportFormats = $reportExportFormats;
+  }
+  /**
+   * @return string[]
+   */
+  public function getReportExportFormats()
+  {
+    return $this->reportExportFormats;
+  }
+  /**
    * Output only. State of audit report generation.
    *
    * Accepted values: REPORT_GENERATION_STATE_UNSPECIFIED, IN_PROGRESS,
-   * COMPLETED, FAILED, SUMMARY_UNKNOWN
+   * COMPLETED, FAILED, SUMMARY_UNKNOWN, DONE_WITH_ERRORS
    *
    * @param self::REPORT_GENERATION_STATE_* $reportGenerationState
    */

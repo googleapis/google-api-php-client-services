@@ -17,7 +17,7 @@
 
 namespace Google\Service\CloudAuditManager;
 
-class GenerateAuditReportRequest extends \Google\Model
+class GenerateAuditReportRequest extends \Google\Collection
 {
   /**
    * Default value. This value is unused.
@@ -27,6 +27,7 @@ class GenerateAuditReportRequest extends \Google\Model
    * Open Document format.
    */
   public const REPORT_FORMAT_AUDIT_REPORT_FORMAT_ODF = 'AUDIT_REPORT_FORMAT_ODF';
+  protected $collection_key = 'reportExportFormats';
   /**
    * Required. The framework that's used for the audit report. For example,
    * `NIST_800_53`.
@@ -51,6 +52,13 @@ class GenerateAuditReportRequest extends \Google\Model
   public $gcsUri;
   protected $parameterOverridesType = ParameterOverrides::class;
   protected $parameterOverridesDataType = 'map';
+  /**
+   * Optional. Formats in which to export the audit report, in addition to the
+   * ODF report. Each format can be listed only once.
+   *
+   * @var string[]
+   */
+  public $reportExportFormats;
   /**
    * Required. Format for the audit report.
    *
@@ -144,6 +152,23 @@ class GenerateAuditReportRequest extends \Google\Model
   public function getParameterOverrides()
   {
     return $this->parameterOverrides;
+  }
+  /**
+   * Optional. Formats in which to export the audit report, in addition to the
+   * ODF report. Each format can be listed only once.
+   *
+   * @param string[] $reportExportFormats
+   */
+  public function setReportExportFormats($reportExportFormats)
+  {
+    $this->reportExportFormats = $reportExportFormats;
+  }
+  /**
+   * @return string[]
+   */
+  public function getReportExportFormats()
+  {
+    return $this->reportExportFormats;
   }
   /**
    * Required. Format for the audit report.
