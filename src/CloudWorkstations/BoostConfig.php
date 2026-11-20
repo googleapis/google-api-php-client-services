@@ -30,6 +30,13 @@ class BoostConfig extends \Google\Collection
    */
   public $bootDiskSizeGb;
   /**
+   * Optional. Indicates if this boost config is eligible for automatic failover
+   * when the service cannot provision the default VM type. Defaults to `false`.
+   *
+   * @var bool
+   */
+  public $enableAutomaticFailover;
+  /**
    * Optional. Whether to enable nested virtualization on boosted Cloud
    * Workstations VMs running using this boost configuration. Defaults to false.
    * Nested virtualization lets you run virtual machine (VM) instances inside
@@ -111,6 +118,23 @@ class BoostConfig extends \Google\Collection
   public function getBootDiskSizeGb()
   {
     return $this->bootDiskSizeGb;
+  }
+  /**
+   * Optional. Indicates if this boost config is eligible for automatic failover
+   * when the service cannot provision the default VM type. Defaults to `false`.
+   *
+   * @param bool $enableAutomaticFailover
+   */
+  public function setEnableAutomaticFailover($enableAutomaticFailover)
+  {
+    $this->enableAutomaticFailover = $enableAutomaticFailover;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableAutomaticFailover()
+  {
+    return $this->enableAutomaticFailover;
   }
   /**
    * Optional. Whether to enable nested virtualization on boosted Cloud
