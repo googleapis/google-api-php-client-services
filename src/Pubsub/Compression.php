@@ -28,6 +28,10 @@ class Compression extends \Google\Model
    */
   public const COMPRESSION_ALGORITHM_ZLIB = 'ZLIB';
   /**
+   * Zstd compression.
+   */
+  public const COMPRESSION_ALGORITHM_ZSTD = 'ZSTD';
+  /**
    * Unspecified mode.
    */
   public const COMPRESSION_MODE_COMPRESSION_MODE_UNSPECIFIED = 'COMPRESSION_MODE_UNSPECIFIED';
@@ -55,7 +59,7 @@ class Compression extends \Google\Model
   /**
    * Required. Specifies the compression algorithm to use.
    *
-   * Accepted values: COMPRESSION_ALGORITHM_UNSPECIFIED, ZLIB
+   * Accepted values: COMPRESSION_ALGORITHM_UNSPECIFIED, ZLIB, ZSTD
    *
    * @param self::COMPRESSION_ALGORITHM_* $compressionAlgorithm
    */
