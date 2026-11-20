@@ -151,6 +151,9 @@ class ProjectsLocationsReservations extends \Google\Service\Resource
    * and location, e.g.: `projects/myproject/locations/US`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. The filter to apply to the list results.
+   * Only filtering by reservation group is supported. Examples:
+   * "reservation_group=my-group"
    * @opt_param int pageSize The maximum number of items to return per page.
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
