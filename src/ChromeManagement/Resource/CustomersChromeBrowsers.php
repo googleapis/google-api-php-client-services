@@ -87,7 +87,7 @@ class CustomersChromeBrowsers extends \Google\Service\Resource
    * by multiple fields or functions is supported with AND operator. String type,
    * Integer type fields and enum type fields support `=` and `:` operators. The
    * timestamp type fields support `=`, `<=` and `>=` operators. Timestamps expect
-   * an RFC-3339 formatted string (e.g., `2012-04-21T11:30:00-04:00` or
+   * an RFC-3339 formatted string enclosed in double quotes (e.g.,
    * `"2012-04-21T11:30:00-04:00"`). Wildcard `*` is only supported for
    * `machine_name`, `annotated_asset_id`, and `browser_version`. In addition,
    * global string literal filtering without a field name is supported: a single
@@ -107,7 +107,7 @@ class CustomersChromeBrowsers extends \Google\Service\Resource
    * descending order for a field, a suffix ` desc` should be added to the field
    * name. The default ordering is the ascending order of `browser_permanent_id`.
    * @opt_param int pageSize Optional. Maximum number of results to return.
-   * Maximum and default are 100.
+   * Maximum and default are 50.
    * @opt_param string pageToken Optional. Token to specify next page in the list.
    * @return GoogleChromeManagementVersionsV1ListChromeBrowsersResponse
    * @throws \Google\Service\Exception
