@@ -147,9 +147,8 @@ class Preview extends \Google\Collection
    */
   public $errorCode;
   /**
-   * Output only. Link to tf-error.ndjson file, which contains the full list of
-   * the errors encountered during a Terraform preview. Format:
-   * `gs://{bucket}/{object}`.
+   * Output only. Link to the error log file, which contains the full list of
+   * the errors encountered during a preview. Format: `gs://{bucket}/{object}`.
    *
    * @var string
    */
@@ -343,9 +342,8 @@ class Preview extends \Google\Collection
     return $this->errorCode;
   }
   /**
-   * Output only. Link to tf-error.ndjson file, which contains the full list of
-   * the errors encountered during a Terraform preview. Format:
-   * `gs://{bucket}/{object}`.
+   * Output only. Link to the error log file, which contains the full list of
+   * the errors encountered during a preview. Format: `gs://{bucket}/{object}`.
    *
    * @param string $errorLogs
    */
