@@ -33,6 +33,48 @@ class Database extends \Google\Collection
    */
   public const DATABASE_DIALECT_POSTGRESQL = 'POSTGRESQL';
   /**
+   * If `READ_LOCK_MODE_UNSPECIFIED` is used, the default behavior described in
+   * `ReadLockMode` applies.
+   */
+  public const DEFAULT_READ_LOCK_MODE_READ_LOCK_MODE_UNSPECIFIED = 'READ_LOCK_MODE_UNSPECIFIED';
+  /**
+   * Pessimistic lock mode. Read locks are acquired immediately on read.
+   */
+  public const DEFAULT_READ_LOCK_MODE_PESSIMISTIC = 'PESSIMISTIC';
+  /**
+   * Optimistic lock mode. Locks for reads within the transaction are not
+   * acquired on read. Instead the locks are acquired on a commit to validate
+   * that read/queried data has not changed since the transaction started.
+   */
+  public const DEFAULT_READ_LOCK_MODE_OPTIMISTIC = 'OPTIMISTIC';
+  /**
+   * Default value. If the value is not specified, the `SERIALIZABLE` isolation
+   * level is used.
+   */
+  public const DEFAULT_TRANSACTION_ISOLATION_ISOLATION_LEVEL_UNSPECIFIED = 'ISOLATION_LEVEL_UNSPECIFIED';
+  /**
+   * All transactions appear as if they executed in a serial order, even if some
+   * of the reads, writes, and other operations of distinct transactions
+   * actually occurred in parallel. Spanner assigns commit timestamps that
+   * reflect the order of committed transactions to implement this property.
+   * Spanner offers a stronger guarantee than serializability called external
+   * consistency. For more information, see [TrueTime and external
+   * consistency](https://cloud.google.com/spanner/docs/true-time-external-
+   * consistency#serializability).
+   */
+  public const DEFAULT_TRANSACTION_ISOLATION_SERIALIZABLE = 'SERIALIZABLE';
+  /**
+   * All reads performed during the transaction observe a consistent snapshot of
+   * the database, and the transaction is only successfully committed in the
+   * absence of conflicts between its updates and any concurrent updates that
+   * have occurred since that snapshot. Consequently, in contrast to
+   * `SERIALIZABLE` transactions, only write-write conflicts are detected in
+   * snapshot transactions. This isolation level does not support read-only and
+   * partitioned DML transactions. When `REPEATABLE_READ` is specified on a
+   * read-write transaction, the locking semantics default to `OPTIMISTIC`.
+   */
+  public const DEFAULT_TRANSACTION_ISOLATION_REPEATABLE_READ = 'REPEATABLE_READ';
+  /**
    * Not specified.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -76,6 +118,24 @@ class Database extends \Google\Collection
    * @var string
    */
   public $defaultLeader;
+  /**
+   * Output only. The default read lock mode for transactions. If not configured
+   * via DDL, `READ_LOCK_MODE_UNSPECIFIED` will be returned. For transactions,
+   * if lock mode is unspecified, it defaults to `PESSIMISTIC` for
+   * `SERIALIZABLE` isolation and `OPTIMISTIC` for `REPEATABLE_READ` isolation.
+   *
+   * @var string
+   */
+  public $defaultReadLockMode;
+  /**
+   * Output only. The default isolation level for transactions in this database.
+   * If not configured via DDL, `ISOLATION_LEVEL_UNSPECIFIED` will be returned.
+   * For transactions, if isolation level is unspecified, it defaults to
+   * `SERIALIZABLE`.
+   *
+   * @var string
+   */
+  public $defaultTransactionIsolation;
   /**
    * Output only. Earliest timestamp at which older versions of the data can be
    * read. This value is continuously updated by Cloud Spanner and becomes stale
@@ -188,6 +248,48 @@ class Database extends \Google\Collection
   public function getDefaultLeader()
   {
     return $this->defaultLeader;
+  }
+  /**
+   * Output only. The default read lock mode for transactions. If not configured
+   * via DDL, `READ_LOCK_MODE_UNSPECIFIED` will be returned. For transactions,
+   * if lock mode is unspecified, it defaults to `PESSIMISTIC` for
+   * `SERIALIZABLE` isolation and `OPTIMISTIC` for `REPEATABLE_READ` isolation.
+   *
+   * Accepted values: READ_LOCK_MODE_UNSPECIFIED, PESSIMISTIC, OPTIMISTIC
+   *
+   * @param self::DEFAULT_READ_LOCK_MODE_* $defaultReadLockMode
+   */
+  public function setDefaultReadLockMode($defaultReadLockMode)
+  {
+    $this->defaultReadLockMode = $defaultReadLockMode;
+  }
+  /**
+   * @return self::DEFAULT_READ_LOCK_MODE_*
+   */
+  public function getDefaultReadLockMode()
+  {
+    return $this->defaultReadLockMode;
+  }
+  /**
+   * Output only. The default isolation level for transactions in this database.
+   * If not configured via DDL, `ISOLATION_LEVEL_UNSPECIFIED` will be returned.
+   * For transactions, if isolation level is unspecified, it defaults to
+   * `SERIALIZABLE`.
+   *
+   * Accepted values: ISOLATION_LEVEL_UNSPECIFIED, SERIALIZABLE, REPEATABLE_READ
+   *
+   * @param self::DEFAULT_TRANSACTION_ISOLATION_* $defaultTransactionIsolation
+   */
+  public function setDefaultTransactionIsolation($defaultTransactionIsolation)
+  {
+    $this->defaultTransactionIsolation = $defaultTransactionIsolation;
+  }
+  /**
+   * @return self::DEFAULT_TRANSACTION_ISOLATION_*
+   */
+  public function getDefaultTransactionIsolation()
+  {
+    return $this->defaultTransactionIsolation;
   }
   /**
    * Output only. Earliest timestamp at which older versions of the data can be
