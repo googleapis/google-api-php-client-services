@@ -33,7 +33,7 @@ use Google\Service\Config\Statefile;
 class ProjectsLocationsDeploymentsRevisions extends \Google\Service\Resource
 {
   /**
-   * Exports Terraform state file from a given revision. (revisions.exportState)
+   * Exports state file from a given revision. (revisions.exportState)
    *
    * @param string $parent Required. The parent in whose context the statefile is
    * listed. The parent value is in the format: 'projects/{project_id}/locations/{

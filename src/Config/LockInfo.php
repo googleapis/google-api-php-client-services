@@ -38,13 +38,13 @@ class LockInfo extends \Google\Model
    */
   public $lockId;
   /**
-   * Terraform operation, provided by the caller.
+   * Actuation engine operation, provided by the caller.
    *
    * @var string
    */
   public $operation;
   /**
-   * Terraform version
+   * Actuation engine version
    *
    * @var string
    */
@@ -105,7 +105,7 @@ class LockInfo extends \Google\Model
     return $this->lockId;
   }
   /**
-   * Terraform operation, provided by the caller.
+   * Actuation engine operation, provided by the caller.
    *
    * @param string $operation
    */
@@ -121,7 +121,7 @@ class LockInfo extends \Google\Model
     return $this->operation;
   }
   /**
-   * Terraform version
+   * Actuation engine version
    *
    * @param string $version
    */

@@ -107,7 +107,7 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Deletes Terraform state file in a given deployment. (deployments.deleteState)
+   * Deletes state file in a given deployment. (deployments.deleteState)
    *
    * @param string $name Required. The name of the deployment in the format:
    * 'projects/{project_id}/locations/{location}/deployments/{deployment}'.
@@ -138,8 +138,7 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
     return $this->call('exportLock', [$params], LockInfo::class);
   }
   /**
-   * Exports Terraform state file from a given deployment.
-   * (deployments.exportState)
+   * Exports state file from a given deployment. (deployments.exportState)
    *
    * @param string $parent Required. The parent in whose context the statefile is
    * listed. The parent value is in the format:
@@ -202,8 +201,8 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Imports Terraform state file in a given deployment. The state file does not
-   * take effect until the Deployment has been unlocked. (deployments.importState)
+   * Imports state file in a given deployment. The state file does not take effect
+   * until the Deployment has been unlocked. (deployments.importState)
    *
    * @param string $parent Required. The parent in whose context the statefile is
    * listed. The parent value is in the format:

@@ -65,6 +65,14 @@ class PreviewOperationMetadata extends \Google\Model
    */
   public const STEP_VALIDATING_REPOSITORY = 'VALIDATING_REPOSITORY';
   /**
+   * Initializing the engine.
+   */
+  public const STEP_RUNNING_ENGINE_INIT = 'RUNNING_ENGINE_INIT';
+  /**
+   * Generating an execution plan using the engine.
+   */
+  public const STEP_RUNNING_ENGINE_PLAN = 'RUNNING_ENGINE_PLAN';
+  /**
    * Output only. Cloud Build instance UUID associated with this preview.
    *
    * @var string
@@ -139,7 +147,7 @@ class PreviewOperationMetadata extends \Google\Model
    * Accepted values: PREVIEW_STEP_UNSPECIFIED, PREPARING_STORAGE_BUCKET,
    * DOWNLOADING_BLUEPRINT, RUNNING_TF_INIT, RUNNING_TF_PLAN,
    * FETCHING_DEPLOYMENT, LOCKING_DEPLOYMENT, UNLOCKING_DEPLOYMENT, SUCCEEDED,
-   * FAILED, VALIDATING_REPOSITORY
+   * FAILED, VALIDATING_REPOSITORY, RUNNING_ENGINE_INIT, RUNNING_ENGINE_PLAN
    *
    * @param self::STEP_* $step
    */

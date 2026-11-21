@@ -82,18 +82,18 @@ class Deployment extends \Google\Collection
    */
   public const LOCK_STATE_UNLOCK_FAILED = 'UNLOCK_FAILED';
   /**
-   * The default value. QuotaValidation on terraform configuration files will be
-   * disabled in this case.
+   * The default value. QuotaValidation on configuration files will be disabled
+   * in this case.
    */
   public const QUOTA_VALIDATION_QUOTA_VALIDATION_UNSPECIFIED = 'QUOTA_VALIDATION_UNSPECIFIED';
   /**
-   * Enable computing quotas for resources in terraform configuration files to
-   * get visibility on resources with insufficient quotas.
+   * Enable computing quotas for resources in configuration files to get
+   * visibility on resources with insufficient quotas.
    */
   public const QUOTA_VALIDATION_ENABLED = 'ENABLED';
   /**
    * Enforce quota checks so deployment fails if there isn't sufficient quotas
-   * available to deploy resources in terraform configuration files.
+   * available to deploy resources in configuration files.
    */
   public const QUOTA_VALIDATION_ENFORCED = 'ENFORCED';
   /**
@@ -179,17 +179,17 @@ class Deployment extends \Google\Collection
    */
   public $errorCode;
   /**
-   * Output only. Location of Terraform error logs in Google Cloud Storage.
-   * Format: `gs://{bucket}/{object}`.
+   * Output only. Location of actuation engine error logs in Google Cloud
+   * Storage. Format: `gs://{bucket}/{object}`.
    *
    * @var string
    */
   public $errorLogs;
   /**
-   * By default, Infra Manager will return a failure when Terraform encounters a
-   * 409 code (resource conflict error) during actuation. If this flag is set to
-   * true, Infra Manager will instead attempt to automatically import the
-   * resource into the Terraform state (for supported resource types) and
+   * By default, Infra Manager will return a failure when the actuation engine
+   * encounters a 409 code (resource conflict error) during actuation. If this
+   * flag is set to true, Infra Manager will instead attempt to automatically
+   * import the resource into the state (for supported resource types) and
    * continue actuation. Not all resource types are supported, refer to
    * documentation.
    *
@@ -226,9 +226,8 @@ class Deployment extends \Google\Collection
   protected $providerConfigType = ProviderConfig::class;
   protected $providerConfigDataType = '';
   /**
-   * Optional. Input to control quota checks for resources in terraform
-   * configuration files. There are limited resources on which quota validation
-   * applies.
+   * Optional. Input to control quota checks for resources in configuration
+   * files. There are limited resources on which quota validation applies.
    *
    * @var string
    */
@@ -415,8 +414,8 @@ class Deployment extends \Google\Collection
     return $this->errorCode;
   }
   /**
-   * Output only. Location of Terraform error logs in Google Cloud Storage.
-   * Format: `gs://{bucket}/{object}`.
+   * Output only. Location of actuation engine error logs in Google Cloud
+   * Storage. Format: `gs://{bucket}/{object}`.
    *
    * @param string $errorLogs
    */
@@ -432,10 +431,10 @@ class Deployment extends \Google\Collection
     return $this->errorLogs;
   }
   /**
-   * By default, Infra Manager will return a failure when Terraform encounters a
-   * 409 code (resource conflict error) during actuation. If this flag is set to
-   * true, Infra Manager will instead attempt to automatically import the
-   * resource into the Terraform state (for supported resource types) and
+   * By default, Infra Manager will return a failure when the actuation engine
+   * encounters a 409 code (resource conflict error) during actuation. If this
+   * flag is set to true, Infra Manager will instead attempt to automatically
+   * import the resource into the state (for supported resource types) and
    * continue actuation. Not all resource types are supported, refer to
    * documentation.
    *
@@ -539,9 +538,8 @@ class Deployment extends \Google\Collection
     return $this->providerConfig;
   }
   /**
-   * Optional. Input to control quota checks for resources in terraform
-   * configuration files. There are limited resources on which quota validation
-   * applies.
+   * Optional. Input to control quota checks for resources in configuration
+   * files. There are limited resources on which quota validation applies.
    *
    * Accepted values: QUOTA_VALIDATION_UNSPECIFIED, ENABLED, ENFORCED
    *
