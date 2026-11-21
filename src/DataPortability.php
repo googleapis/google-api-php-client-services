@@ -139,9 +139,6 @@ class DataPortability extends \Google\Service
   /** Copy your Nest user information. */
   const DATAPORTABILITY_NEST_USER =
       "https://www.googleapis.com/auth/dataportability.nest.user";
-  /** Move a copy of your food purchase and reservation activity. */
-  const DATAPORTABILITY_ORDER_RESERVE_PURCHASES_RESERVATIONS =
-      "https://www.googleapis.com/auth/dataportability.order_reserve.purchases_reservations";
   /** Usage and diagnostic data from your Pixel devices.. */
   const DATAPORTABILITY_PIXEL_DEVICE_DATA =
       "https://www.googleapis.com/auth/dataportability.pixel.device_data";
