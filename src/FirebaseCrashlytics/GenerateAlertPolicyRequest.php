@@ -32,6 +32,20 @@ class GenerateAlertPolicyRequest extends \Google\Model
    */
   public const ALERT_TYPE_ALERT_TYPE_REGRESSED_ISSUE = 'ALERT_TYPE_REGRESSED_ISSUE';
   /**
+   * Unspecified format. Defaults to EMAIL behavior.
+   */
+  public const CHANNEL_FORMAT_CHANNEL_FORMAT_UNSPECIFIED = 'CHANNEL_FORMAT_UNSPECIFIED';
+  /**
+   * Format for email notifications. Uses the requester's language preference
+   * and renders a rich HTML template.
+   */
+  public const CHANNEL_FORMAT_EMAIL = 'EMAIL';
+  /**
+   * Format for external integration channels, such as Slack, Jira, and
+   * PagerDuty. Always uses en-US and renders a concise Markdown template.
+   */
+  public const CHANNEL_FORMAT_INTEGRATION = 'INTEGRATION';
+  /**
    * Use the requester's language preference, falling back to en-US if
    * unavailable or unsupported.
    */
@@ -47,9 +61,23 @@ class GenerateAlertPolicyRequest extends \Google\Model
    */
   public $alertType;
   /**
-   * Optional. Language to use for the alert policy. Defaults to
-   * USER_PREFERENCE.
+   * Optional. Channel format to generate the alert policy for, which determines
+   * both the template format and language. `EMAIL` always uses the requester's
+   * language preference with a rich HTML template, and `INTEGRATION` always
+   * uses en-US with a concise Markdown template. Defaults to EMAIL behavior
+   * when unspecified.
    *
+   * @var string
+   */
+  public $channelFormat;
+  /**
+   * Optional. Deprecated: Prefer `channel_format`, which determines both the
+   * template format and language (`EMAIL` always uses the requester's language
+   * preference with a rich HTML template, and `INTEGRATION` always uses en-US
+   * with a concise Markdown template). Optional. Language to use for the alert
+   * policy. Defaults to USER_PREFERENCE.
+   *
+   * @deprecated
    * @var string
    */
   public $language;
@@ -74,11 +102,37 @@ class GenerateAlertPolicyRequest extends \Google\Model
     return $this->alertType;
   }
   /**
-   * Optional. Language to use for the alert policy. Defaults to
-   * USER_PREFERENCE.
+   * Optional. Channel format to generate the alert policy for, which determines
+   * both the template format and language. `EMAIL` always uses the requester's
+   * language preference with a rich HTML template, and `INTEGRATION` always
+   * uses en-US with a concise Markdown template. Defaults to EMAIL behavior
+   * when unspecified.
+   *
+   * Accepted values: CHANNEL_FORMAT_UNSPECIFIED, EMAIL, INTEGRATION
+   *
+   * @param self::CHANNEL_FORMAT_* $channelFormat
+   */
+  public function setChannelFormat($channelFormat)
+  {
+    $this->channelFormat = $channelFormat;
+  }
+  /**
+   * @return self::CHANNEL_FORMAT_*
+   */
+  public function getChannelFormat()
+  {
+    return $this->channelFormat;
+  }
+  /**
+   * Optional. Deprecated: Prefer `channel_format`, which determines both the
+   * template format and language (`EMAIL` always uses the requester's language
+   * preference with a rich HTML template, and `INTEGRATION` always uses en-US
+   * with a concise Markdown template). Optional. Language to use for the alert
+   * policy. Defaults to USER_PREFERENCE.
    *
    * Accepted values: USER_PREFERENCE, EN_US
    *
+   * @deprecated
    * @param self::LANGUAGE_* $language
    */
   public function setLanguage($language)
@@ -86,6 +140,7 @@ class GenerateAlertPolicyRequest extends \Google\Model
     $this->language = $language;
   }
   /**
+   * @deprecated
    * @return self::LANGUAGE_*
    */
   public function getLanguage()
