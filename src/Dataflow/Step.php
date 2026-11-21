@@ -35,7 +35,7 @@ class Step extends \Google\Model
   /**
    * Named properties associated with the step. Each kind of predefined step has
    * its own required set of properties. Must be provided on Create. Only
-   * retrieved with JOB_VIEW_ALL.
+   * retrieved with `JOB_VIEW_ALL`.
    *
    * @var array[]
    */
@@ -77,7 +77,7 @@ class Step extends \Google\Model
   /**
    * Named properties associated with the step. Each kind of predefined step has
    * its own required set of properties. Must be provided on Create. Only
-   * retrieved with JOB_VIEW_ALL.
+   * retrieved with `JOB_VIEW_ALL`.
    *
    * @param array[] $properties
    */

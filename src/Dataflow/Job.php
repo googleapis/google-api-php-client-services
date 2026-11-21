@@ -229,6 +229,16 @@ class Job extends \Google\Collection
   public const TYPE_JOB_TYPE_STREAMING = 'JOB_TYPE_STREAMING';
   protected $collection_key = 'tempFiles';
   /**
+   * Output only. Indicates whether [Auto VM
+   * Selection](https://cloud.google.com/dataflow/docs/guides/auto-vm-selection)
+   * is enabled for the job. Set to `true` on a best-effort basis once any
+   * worker pool of the job was created with Auto VM Selection. Populated for
+   * `ListJobs` and all `GetJob` views `SUMMARY` and higher.
+   *
+   * @var bool
+   */
+  public $autoVmSelectionEnabled;
+  /**
    * The client's unique identifier of the job, re-used across retried attempts.
    * If this field is set, the service will ensure its uniqueness. The request
    * to create a job will fail if the service has knowledge of a previously
@@ -418,6 +428,26 @@ class Job extends \Google\Collection
   public $type;
 
   /**
+   * Output only. Indicates whether [Auto VM
+   * Selection](https://cloud.google.com/dataflow/docs/guides/auto-vm-selection)
+   * is enabled for the job. Set to `true` on a best-effort basis once any
+   * worker pool of the job was created with Auto VM Selection. Populated for
+   * `ListJobs` and all `GetJob` views `SUMMARY` and higher.
+   *
+   * @param bool $autoVmSelectionEnabled
+   */
+  public function setAutoVmSelectionEnabled($autoVmSelectionEnabled)
+  {
+    $this->autoVmSelectionEnabled = $autoVmSelectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAutoVmSelectionEnabled()
+  {
+    return $this->autoVmSelectionEnabled;
+  }
+  /**
    * The client's unique identifier of the job, re-used across retried attempts.
    * If this field is set, the service will ensure its uniqueness. The request
    * to create a job will fail if the service has knowledge of a previously
@@ -566,8 +596,8 @@ class Job extends \Google\Collection
   }
   /**
    * This field is populated by the Dataflow service to support filtering jobs
-   * by the metadata values provided here. Populated for ListJobs and all GetJob
-   * views SUMMARY and higher.
+   * by the metadata values provided here. Populated for `ListJobs` and all
+   * `GetJob` views `SUMMARY` and higher.
    *
    * @param JobMetadata $jobMetadata
    */
@@ -660,8 +690,8 @@ class Job extends \Google\Collection
   /**
    * Preliminary field: The format of this data may change at any time. A
    * description of the user pipeline and stages through which it is executed.
-   * Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION
-   * or JOB_VIEW_ALL.
+   * Created by Cloud Dataflow service. Only retrieved with
+   * `JOB_VIEW_DESCRIPTION` or `JOB_VIEW_ALL`.
    *
    * @param PipelineDescription $pipelineDescription
    */
@@ -864,7 +894,7 @@ class Job extends \Google\Collection
   }
   /**
    * Exactly one of step or steps_location should be specified. The top-level
-   * steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+   * steps that constitute the entire job. Only retrieved with `JOB_VIEW_ALL`.
    *
    * @param Step[] $steps
    */
