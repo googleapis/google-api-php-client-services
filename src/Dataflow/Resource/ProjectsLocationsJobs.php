@@ -171,6 +171,25 @@ class ProjectsLocationsJobs extends \Google\Service\Resource
    * interval. If specified, a Timestamp matching this interval will have to be
    * the same or after the start.
    * @opt_param string filter The kind of filter to use.
+   * @opt_param string filterExpression Optional. Restricts the results to jobs
+   * that match this [AIP-160](https://google.aip.dev/160) filter expression. The
+   * expression is ANDed with `filter` and the time ranges, and is limited to 4
+   * KiB and 32 levels of nesting. Not yet implemented: the service currently
+   * ignores this field and returns unfiltered results. Support will be added in a
+   * future release. Supported fields are `name`, `id`, `location`,
+   * `job_metadata.sdk_version.version`, `type`, `current_state`, `create_time`
+   * and `current_state_time`: * String fields support `=` and `!=`, where `*` in
+   * the value matches any sequence of characters, and `:`, which matches the same
+   * way but ignores ASCII case. `field:*` matches any non-empty value. * `type`
+   * and `current_state` support `=`, `!=` and `:` with enum value names, e.g.
+   * `current_state = JOB_STATE_RUNNING`. * Timestamp fields support `=`, `!=`,
+   * `<`, `<=`, `>` and `>=` with RFC 3339 values, e.g. `create_time >=
+   * "2026-10-01T00:00:00Z"`. A job without the timestamp doesn't match any
+   * comparison on it. Restrictions can be combined with `AND`, `OR`, `NOT` (or
+   * its equivalent, `-`) and parentheses; `AND` and `OR` can't be mixed without
+   * parentheses. For example: `name:"wordcount-*" AND -type = JOB_TYPE_STREAMING
+   * AND (current_state = JOB_STATE_FAILED OR current_state =
+   * JOB_STATE_CANCELLED)`.
    * @opt_param string name Optional. The job name.
    * @opt_param int pageSize If there are many jobs, limit response to at most
    * this many. The actual number of jobs returned will be the lesser of
@@ -184,8 +203,8 @@ class ProjectsLocationsJobs extends \Google\Service\Resource
    * @opt_param string terminationTimeRange.startTime Optional. Inclusive start of
    * the interval. If specified, a Timestamp matching this interval will have to
    * be the same or after the start.
-   * @opt_param string view Deprecated. ListJobs always returns summaries now. Use
-   * GetJob for other JobViews.
+   * @opt_param string view Deprecated. `ListJobs` always returns summaries now.
+   * Use `GetJob` for other `JobView`s.
    * @return ListJobsResponse
    * @throws \Google\Service\Exception
    */

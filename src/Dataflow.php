@@ -289,6 +289,10 @@ class Dataflow extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'filterExpression' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'location' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -408,6 +412,10 @@ class Dataflow extends \Google\Service
                   'type' => 'string',
                 ],
                 'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filterExpression' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -865,6 +873,10 @@ class Dataflow extends \Google\Service
                   'type' => 'string',
                 ],
                 'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filterExpression' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
