@@ -27,6 +27,8 @@ class ProducerExtensionExtensionSettings extends \Google\Collection
    * @var string
    */
   public $authority;
+  protected $extensionBehaviorType = ProducerExtensionExtensionBehavior::class;
+  protected $extensionBehaviorDataType = '';
   /**
    * Optional. This field is not supported.
    *
@@ -62,6 +64,22 @@ class ProducerExtensionExtensionSettings extends \Google\Collection
   public function getAuthority()
   {
     return $this->authority;
+  }
+  /**
+   * Optional. Specifies how the extension is expected to act on events.
+   *
+   * @param ProducerExtensionExtensionBehavior $extensionBehavior
+   */
+  public function setExtensionBehavior(ProducerExtensionExtensionBehavior $extensionBehavior)
+  {
+    $this->extensionBehavior = $extensionBehavior;
+  }
+  /**
+   * @return ProducerExtensionExtensionBehavior
+   */
+  public function getExtensionBehavior()
+  {
+    return $this->extensionBehavior;
   }
   /**
    * Optional. This field is not supported.
