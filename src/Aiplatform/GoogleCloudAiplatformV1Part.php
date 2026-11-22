@@ -60,6 +60,10 @@ class GoogleCloudAiplatformV1Part extends \Google\Model
    * @var string
    */
   public $thoughtSignature;
+  protected $toolCallType = GoogleCloudAiplatformV1PartToolCall::class;
+  protected $toolCallDataType = '';
+  protected $toolResponseType = GoogleCloudAiplatformV1PartToolResponse::class;
+  protected $toolResponseDataType = '';
   protected $videoMetadataType = GoogleCloudAiplatformV1VideoMetadata::class;
   protected $videoMetadataDataType = '';
 
@@ -266,6 +270,42 @@ class GoogleCloudAiplatformV1Part extends \Google\Model
   public function getThoughtSignature()
   {
     return $this->thoughtSignature;
+  }
+  /**
+   * Optional. Server-side tool call. This field is populated when the model
+   * predicts a tool invocation that should be executed on the server. The
+   * client is expected to echo this message back to the API.
+   *
+   * @param GoogleCloudAiplatformV1PartToolCall $toolCall
+   */
+  public function setToolCall(GoogleCloudAiplatformV1PartToolCall $toolCall)
+  {
+    $this->toolCall = $toolCall;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PartToolCall
+   */
+  public function getToolCall()
+  {
+    return $this->toolCall;
+  }
+  /**
+   * Optional. The output from a server-side `ToolCall` execution. This field is
+   * populated by the client with the results of executing the corresponding
+   * `ToolCall`.
+   *
+   * @param GoogleCloudAiplatformV1PartToolResponse $toolResponse
+   */
+  public function setToolResponse(GoogleCloudAiplatformV1PartToolResponse $toolResponse)
+  {
+    $this->toolResponse = $toolResponse;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PartToolResponse
+   */
+  public function getToolResponse()
+  {
+    return $this->toolResponse;
   }
   /**
    * Optional. Video metadata. The metadata should only be specified while the

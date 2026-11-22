@@ -27,10 +27,8 @@ class GoogleCloudAiplatformV1FunctionResponseBlob extends \Google\Model
   public $data;
   /**
    * Optional. Display name of the blob. Used to provide a label or filename to
-   * distinguish blobs. This field is only returned in PromptMessage for prompt
-   * management. It is currently used in the Gemini GenerateContent calls only
-   * when server side tools (code_execution, google_search, and url_context) are
-   * enabled.
+   * distinguish blobs, and to reference the blob from
+   * `FunctionResponse.response` (for example, via `{"$ref": ""}`).
    *
    * @var string
    */
@@ -60,10 +58,8 @@ class GoogleCloudAiplatformV1FunctionResponseBlob extends \Google\Model
   }
   /**
    * Optional. Display name of the blob. Used to provide a label or filename to
-   * distinguish blobs. This field is only returned in PromptMessage for prompt
-   * management. It is currently used in the Gemini GenerateContent calls only
-   * when server side tools (code_execution, google_search, and url_context) are
-   * enabled.
+   * distinguish blobs, and to reference the blob from
+   * `FunctionResponse.response` (for example, via `{"$ref": ""}`).
    *
    * @param string $displayName
    */

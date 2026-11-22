@@ -40,6 +40,10 @@ class GenaiVertexV1GenerationConfig extends \Google\Collection
    */
   public const THINKING_LEVEL_THINKING_LEVEL_HIGH = 'THINKING_LEVEL_HIGH';
   /**
+   * Extra high thinking level, above `high`.
+   */
+  public const THINKING_LEVEL_THINKING_LEVEL_XHIGH = 'THINKING_LEVEL_XHIGH';
+  /**
    * Default value. This value is unused.
    */
   public const THINKING_SUMMARIES_THINKING_SUMMARIES_UNSPECIFIED = 'THINKING_SUMMARIES_UNSPECIFIED';
@@ -217,7 +221,8 @@ class GenaiVertexV1GenerationConfig extends \Google\Collection
    * The level of thought tokens that the model should generate.
    *
    * Accepted values: THINKING_LEVEL_UNSPECIFIED, THINKING_LEVEL_MINIMAL,
-   * THINKING_LEVEL_LOW, THINKING_LEVEL_MEDIUM, THINKING_LEVEL_HIGH
+   * THINKING_LEVEL_LOW, THINKING_LEVEL_MEDIUM, THINKING_LEVEL_HIGH,
+   * THINKING_LEVEL_XHIGH
    *
    * @param self::THINKING_LEVEL_* $thinkingLevel
    */

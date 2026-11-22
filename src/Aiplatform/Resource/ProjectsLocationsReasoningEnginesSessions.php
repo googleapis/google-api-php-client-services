@@ -85,7 +85,11 @@ class ProjectsLocationsReasoningEnginesSessions extends \Google\Service\Resource
    * which will become the final component of the session resource name. If not
    * provided, Vertex AI will generate a value for this ID. This value may be up
    * to 63 characters, and valid characters are `[a-z0-9-]`. The first and last
-   * characters must be a letter or number.
+   * characters must be a letter or number. Prefer an ID that contains at least
+   * one letter. An ID made up only of digits cannot be reused by a new session
+   * until the original session has been permanently deleted, which happens some
+   * time after you delete it. An ID containing a letter becomes available again
+   * as soon as the session is deleted.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

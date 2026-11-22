@@ -19,6 +19,7 @@ namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1Agent;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListAgentsResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1SearchAgentsResponse;
 use Google\Service\Aiplatform\GoogleIamV1Policy;
 use Google\Service\Aiplatform\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\Aiplatform\GoogleIamV1TestIamPermissionsResponse;
@@ -198,6 +199,31 @@ class ProjectsLocationsAgents extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Searches the agents in a location that the caller has access to.
+   * (agents.search)
+   *
+   * @param string $parent Required. The resource name of the location to search
+   * agents in. Format: `projects/{project}/locations/{location}`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. An [AIP-160](https://google.aip.dev/160)
+   * filter over the returned agents.
+   * @opt_param string orderBy Optional. A comma-separated list of fields to order
+   * by, such as `created desc`.
+   * @opt_param int pageSize Optional. The maximum number of agents to return. The
+   * maximum page size is 100.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * AgentService.SearchAgents call.
+   * @return GoogleCloudAiplatformV1SearchAgentsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function search($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('search', [$params], GoogleCloudAiplatformV1SearchAgentsResponse::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

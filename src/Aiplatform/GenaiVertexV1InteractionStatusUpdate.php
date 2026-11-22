@@ -60,6 +60,13 @@ class GenaiVertexV1InteractionStatusUpdate extends \Google\Model
    */
   public const STATUS_REQUIRES_CONTINUATION = 'REQUIRES_CONTINUATION';
   /**
+   * An optional opaque continuation token used to resume decoding from the
+   * latest checkpoint after a disconnected stream.
+   *
+   * @var string
+   */
+  public $continuationToken;
+  /**
    * @var string
    */
   public $interactionId;
@@ -70,6 +77,23 @@ class GenaiVertexV1InteractionStatusUpdate extends \Google\Model
   protected $usageType = GenaiVertexV1InteractionUsage::class;
   protected $usageDataType = '';
 
+  /**
+   * An optional opaque continuation token used to resume decoding from the
+   * latest checkpoint after a disconnected stream.
+   *
+   * @param string $continuationToken
+   */
+  public function setContinuationToken($continuationToken)
+  {
+    $this->continuationToken = $continuationToken;
+  }
+  /**
+   * @return string
+   */
+  public function getContinuationToken()
+  {
+    return $this->continuationToken;
+  }
   /**
    * @param string $interactionId
    */

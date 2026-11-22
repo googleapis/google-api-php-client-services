@@ -20,11 +20,9 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FunctionResponseFileData extends \Google\Model
 {
   /**
-   * Optional. Display name of the file data. Used to provide a label or
-   * filename to distinguish file datas. This field is only returned in
-   * PromptMessage for prompt management. It is currently used in the Gemini
-   * GenerateContent calls only when server side tools (code_execution,
-   * google_search, and url_context) are enabled.
+   * Optional. Display name of the file. Used to provide a label or filename to
+   * distinguish file data, and to reference the file from
+   * `FunctionResponse.response` (for example, via `{"$ref": ""}`).
    *
    * @var string
    */
@@ -43,11 +41,9 @@ class GoogleCloudAiplatformV1FunctionResponseFileData extends \Google\Model
   public $mimeType;
 
   /**
-   * Optional. Display name of the file data. Used to provide a label or
-   * filename to distinguish file datas. This field is only returned in
-   * PromptMessage for prompt management. It is currently used in the Gemini
-   * GenerateContent calls only when server side tools (code_execution,
-   * google_search, and url_context) are enabled.
+   * Optional. Display name of the file. Used to provide a label or filename to
+   * distinguish file data, and to reference the file from
+   * `FunctionResponse.response` (for example, via `{"$ref": ""}`).
    *
    * @param string $displayName
    */

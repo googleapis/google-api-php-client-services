@@ -20,6 +20,23 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
 {
   /**
+   * Unspecified text normalization mode. Defaults to `AUTO`.
+   */
+  public const TEXT_NORMALIZATION_TEXT_NORMALIZATION_UNSPECIFIED = 'TEXT_NORMALIZATION_UNSPECIFIED';
+  /**
+   * Automatically determines whether to apply text normalization based on the
+   * model and speech mode.
+   */
+  public const TEXT_NORMALIZATION_AUTO = 'AUTO';
+  /**
+   * Enables text normalization for numbers, currencies, dates, and units.
+   */
+  public const TEXT_NORMALIZATION_ENABLED = 'ENABLED';
+  /**
+   * Disables text normalization for pre-normalized or phonetic inputs.
+   */
+  public const TEXT_NORMALIZATION_DISABLED = 'DISABLED';
+  /**
    * Optional. The language code (ISO 639-1) for the speech synthesis.
    *
    * @var string
@@ -27,6 +44,12 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
   public $languageCode;
   protected $multiSpeakerVoiceConfigType = GoogleCloudAiplatformV1MultiSpeakerVoiceConfig::class;
   protected $multiSpeakerVoiceConfigDataType = '';
+  /**
+   * Optional. Controls text normalization before speech synthesis.
+   *
+   * @var string
+   */
+  public $textNormalization;
   protected $voiceConfigType = GoogleCloudAiplatformV1VoiceConfig::class;
   protected $voiceConfigDataType = '';
 
@@ -62,6 +85,24 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
   public function getMultiSpeakerVoiceConfig()
   {
     return $this->multiSpeakerVoiceConfig;
+  }
+  /**
+   * Optional. Controls text normalization before speech synthesis.
+   *
+   * Accepted values: TEXT_NORMALIZATION_UNSPECIFIED, AUTO, ENABLED, DISABLED
+   *
+   * @param self::TEXT_NORMALIZATION_* $textNormalization
+   */
+  public function setTextNormalization($textNormalization)
+  {
+    $this->textNormalization = $textNormalization;
+  }
+  /**
+   * @return self::TEXT_NORMALIZATION_*
+   */
+  public function getTextNormalization()
+  {
+    return $this->textNormalization;
   }
   /**
    * The configuration for the voice to use.

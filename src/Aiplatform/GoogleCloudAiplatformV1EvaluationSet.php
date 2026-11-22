@@ -43,6 +43,18 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
    */
   public $evaluationItems;
   /**
+   * Optional. The labels with user-defined metadata to organize your
+   * EvaluationSets. An EvaluationSet can have at most 64 labels. Label keys
+   * must be 1 to 63 characters (Unicode code points) long and must start with a
+   * lowercase letter. Label values can be empty and can be at most 63
+   * characters long. Keys and values can each be at most 128 bytes when encoded
+   * in UTF-8, and can only contain lowercase letters, numeric characters,
+   * underscores and dashes. International characters are allowed.
+   *
+   * @var string[]
+   */
+  public $labels;
+  /**
    * Optional. Metadata for the EvaluationSet.
    *
    * @var array
@@ -144,6 +156,28 @@ class GoogleCloudAiplatformV1EvaluationSet extends \Google\Collection
   public function getEvaluationItems()
   {
     return $this->evaluationItems;
+  }
+  /**
+   * Optional. The labels with user-defined metadata to organize your
+   * EvaluationSets. An EvaluationSet can have at most 64 labels. Label keys
+   * must be 1 to 63 characters (Unicode code points) long and must start with a
+   * lowercase letter. Label values can be empty and can be at most 63
+   * characters long. Keys and values can each be at most 128 bytes when encoded
+   * in UTF-8, and can only contain lowercase letters, numeric characters,
+   * underscores and dashes. International characters are allowed.
+   *
+   * @param string[] $labels
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * Optional. Metadata for the EvaluationSet.
