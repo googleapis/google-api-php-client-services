@@ -19,6 +19,8 @@ namespace Google\Service\AgentRegistry\Resource;
 
 use Google\Service\AgentRegistry\ListLocationsResponse;
 use Google\Service\AgentRegistry\Location;
+use Google\Service\AgentRegistry\Operation;
+use Google\Service\AgentRegistry\SkillEncryptionSpec;
 
 /**
  * The "locations" collection of methods.
@@ -43,6 +45,25 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Location::class);
+  }
+  /**
+   * ========================================================================= #
+   * Skill Encryption Spec Service Methods Gets the customer-managed encryption
+   * key (CMEK) configuration for Skills in a specific project and location.
+   * (locations.getSkillEncryptionSpec)
+   *
+   * @param string $name Required. The name of the SkillEncryptionSpec to
+   * retrieve. Format:
+   * `projects/{project}/locations/{location}/skillEncryptionSpec`.
+   * @param array $optParams Optional parameters.
+   * @return SkillEncryptionSpec
+   * @throws \Google\Service\Exception
+   */
+  public function getSkillEncryptionSpec($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getSkillEncryptionSpec', [$params], SkillEncryptionSpec::class);
   }
   /**
    * Lists information about the supported locations for this service. This method
@@ -78,6 +99,33 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListLocationsResponse::class);
+  }
+  /**
+   * Updates the customer-managed encryption key (CMEK) configuration for Skills
+   * in a specific project and location. This method is only allowed when no
+   * Skills exist in the target project and location. If any Skill already exists
+   * in the location, the request fails with `FAILED_PRECONDITION`.
+   * (locations.updateSkillEncryptionSpec)
+   *
+   * @param string $name Identifier. Resource name of the SkillEncryptionSpec.
+   * Format: `projects/{project}/locations/{location}/skillEncryptionSpec`
+   * @param SkillEncryptionSpec $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. Field mask is used to specify the
+   * fields to be overwritten in the SkillEncryptionSpec resource by the update.
+   * The fields specified in the update_mask are relative to the resource, not the
+   * full request. A field will be overwritten if it is in the mask. If the user
+   * does not provide a mask then all fields present in the request will be
+   * overwritten.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function updateSkillEncryptionSpec($name, SkillEncryptionSpec $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateSkillEncryptionSpec', [$params], Operation::class);
   }
 }
 
