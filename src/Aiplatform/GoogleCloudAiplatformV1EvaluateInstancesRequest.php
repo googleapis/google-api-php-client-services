@@ -21,12 +21,17 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
-   * Optional. Allows the evaluation run to use cross region models. When this
-   * flag is set, the service may route traffic to other regions if a model is
-   * unavailable in the current region (e.g., to a `global` endpoint). If a
-   * fully-qualified model endpoint resource name with a different region than
-   * the request location is provided elsewhere in the request, this flag must
-   * be set to true or the request will fail.
+   * Optional. Allows judge model calls to be made in a region other than the
+   * request location. The service picks the region for each judge model call as
+   * follows: 1. If this flag is true and the model is a fully-qualified
+   * publisher model name (`projects/{project}/locations/{location}/publishers/{
+   * publisher}/models/{model}`), the call is made in `{location}`. 2. If this
+   * flag is true and the model is given by ID only, or is chosen by the service
+   * (for example, for predefined metrics), the call is made in the model
+   * family's default location: `global` for Gemini models, or a fixed regional
+   * endpoint for supported partner models. 3. Otherwise, the call is made in
+   * the request location. Without this flag, the location in a fully-qualified
+   * model name is ignored.
    *
    * @var bool
    */
@@ -112,12 +117,17 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
   protected $trajectorySingleToolUseInputDataType = '';
 
   /**
-   * Optional. Allows the evaluation run to use cross region models. When this
-   * flag is set, the service may route traffic to other regions if a model is
-   * unavailable in the current region (e.g., to a `global` endpoint). If a
-   * fully-qualified model endpoint resource name with a different region than
-   * the request location is provided elsewhere in the request, this flag must
-   * be set to true or the request will fail.
+   * Optional. Allows judge model calls to be made in a region other than the
+   * request location. The service picks the region for each judge model call as
+   * follows: 1. If this flag is true and the model is a fully-qualified
+   * publisher model name (`projects/{project}/locations/{location}/publishers/{
+   * publisher}/models/{model}`), the call is made in `{location}`. 2. If this
+   * flag is true and the model is given by ID only, or is chosen by the service
+   * (for example, for predefined metrics), the call is made in the model
+   * family's default location: `global` for Gemini models, or a fixed regional
+   * endpoint for supported partner models. 3. Otherwise, the call is made in
+   * the request location. Without this flag, the location in a fully-qualified
+   * model name is ignored.
    *
    * @param bool $allowCrossRegionModel
    */

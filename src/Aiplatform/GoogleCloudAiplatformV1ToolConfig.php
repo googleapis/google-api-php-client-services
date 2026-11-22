@@ -21,6 +21,14 @@ class GoogleCloudAiplatformV1ToolConfig extends \Google\Model
 {
   protected $functionCallingConfigType = GoogleCloudAiplatformV1FunctionCallingConfig::class;
   protected $functionCallingConfigDataType = '';
+  /**
+   * Optional. If true, the API response will include the server-side tool calls
+   * and responses within the `Content` message. This allows clients to observe
+   * the server's tool interactions.
+   *
+   * @var bool
+   */
+  public $includeServerSideToolInvocations;
   protected $retrievalConfigType = GoogleCloudAiplatformV1RetrievalConfig::class;
   protected $retrievalConfigDataType = '';
 
@@ -39,6 +47,24 @@ class GoogleCloudAiplatformV1ToolConfig extends \Google\Model
   public function getFunctionCallingConfig()
   {
     return $this->functionCallingConfig;
+  }
+  /**
+   * Optional. If true, the API response will include the server-side tool calls
+   * and responses within the `Content` message. This allows clients to observe
+   * the server's tool interactions.
+   *
+   * @param bool $includeServerSideToolInvocations
+   */
+  public function setIncludeServerSideToolInvocations($includeServerSideToolInvocations)
+  {
+    $this->includeServerSideToolInvocations = $includeServerSideToolInvocations;
+  }
+  /**
+   * @return bool
+   */
+  public function getIncludeServerSideToolInvocations()
+  {
+    return $this->includeServerSideToolInvocations;
   }
   /**
    * Optional. Retrieval config.

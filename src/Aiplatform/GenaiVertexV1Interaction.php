@@ -85,6 +85,14 @@ class GenaiVertexV1Interaction extends \Google\Collection
   protected $contentType = GenaiVertexV1Content::class;
   protected $contentDataType = '';
   /**
+   * Opaque token to resume a long decode. Output: set when status is
+   * REQUIRES_CONTINUATION and decoding can be resumed. Input: pass the latest
+   * token back unchanged in CreateInteraction to continue decoding.
+   *
+   * @var string
+   */
+  public $continuationToken;
+  /**
    * Required. Output only. The time at which the response was created in ISO
    * 8601 format (YYYY-MM-DDThh:mm:ssZ).
    *
@@ -209,6 +217,24 @@ class GenaiVertexV1Interaction extends \Google\Collection
   public function getContent()
   {
     return $this->content;
+  }
+  /**
+   * Opaque token to resume a long decode. Output: set when status is
+   * REQUIRES_CONTINUATION and decoding can be resumed. Input: pass the latest
+   * token back unchanged in CreateInteraction to continue decoding.
+   *
+   * @param string $continuationToken
+   */
+  public function setContinuationToken($continuationToken)
+  {
+    $this->continuationToken = $continuationToken;
+  }
+  /**
+   * @return string
+   */
+  public function getContinuationToken()
+  {
+    return $this->continuationToken;
   }
   /**
    * Required. Output only. The time at which the response was created in ISO
