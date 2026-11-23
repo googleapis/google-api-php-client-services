@@ -43,7 +43,7 @@ class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition extends \Google
    * Org policy condition/expression. For example:
    * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition
-   * is 1000 characters.
+   * is 1,500 characters.
    *
    * @var string
    */
@@ -86,7 +86,7 @@ class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition extends \Google
    * Org policy condition/expression. For example:
    * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition
-   * is 1000 characters.
+   * is 1,500 characters.
    *
    * @param string $condition
    */
