@@ -51,6 +51,21 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
   protected $idpConfigType = GoogleCloudDiscoveryengineV1IdpConfig::class;
   protected $idpConfigDataType = '';
   /**
+   * Optional. Runs only the common project-level pre-provisioning steps
+   * (service agents, agent identity pools, project-scoped extension bindings,
+   * App Hub registry, Sobi agent default identity, and Sobi default Model Armor
+   * template) without reading or writing the Customer, Collection, or UserStore
+   * tables, CapabilityConfig, tenant project, default engine, or trial licenses
+   * when `true`. Assumes no customer exists yet. Customer-level or non-SOBI
+   * fields (`accept_data_use_terms`, `data_use_terms_version`, `saas_params`,
+   * `idp_config`, and `PROVISION_INTENT_LEGACY`) are rejected with
+   * `INVALID_ARGUMENT`, and the returned completed `Operation` has an empty
+   * response.
+   *
+   * @var bool
+   */
+  public $preProvisionMode;
+  /**
    * Optional. The caller states whether the provisioning is for the new or the
    * classic Gemini Enterprise experience.
    *
@@ -113,6 +128,31 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
   public function getIdpConfig()
   {
     return $this->idpConfig;
+  }
+  /**
+   * Optional. Runs only the common project-level pre-provisioning steps
+   * (service agents, agent identity pools, project-scoped extension bindings,
+   * App Hub registry, Sobi agent default identity, and Sobi default Model Armor
+   * template) without reading or writing the Customer, Collection, or UserStore
+   * tables, CapabilityConfig, tenant project, default engine, or trial licenses
+   * when `true`. Assumes no customer exists yet. Customer-level or non-SOBI
+   * fields (`accept_data_use_terms`, `data_use_terms_version`, `saas_params`,
+   * `idp_config`, and `PROVISION_INTENT_LEGACY`) are rejected with
+   * `INVALID_ARGUMENT`, and the returned completed `Operation` has an empty
+   * response.
+   *
+   * @param bool $preProvisionMode
+   */
+  public function setPreProvisionMode($preProvisionMode)
+  {
+    $this->preProvisionMode = $preProvisionMode;
+  }
+  /**
+   * @return bool
+   */
+  public function getPreProvisionMode()
+  {
+    return $this->preProvisionMode;
   }
   /**
    * Optional. The caller states whether the provisioning is for the new or the

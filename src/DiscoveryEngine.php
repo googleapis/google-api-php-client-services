@@ -419,33 +419,23 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'mcp' => [
-              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/collections/{collectionsId}/dataConnector/mcp',
+              'path' => 'v1/{+name}/mcp',
               'httpMethod' => 'DELETE',
               'parameters' => [
-                'projectsId' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ],
-                'locationsId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'collectionsId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'contentType' => [
+                'httpBody.contentType' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'data' => [
+                'httpBody.data' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'extensions' => [
+                'httpBody.extensions' => [
                   'location' => 'query',
                   'type' => 'object',
                   'repeated' => true,
