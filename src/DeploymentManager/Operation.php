@@ -32,6 +32,8 @@ class Operation extends \Google\Collection
    */
   public const STATUS_DONE = 'DONE';
   protected $collection_key = 'warnings';
+  protected $agentConversationsSendMessageOperationMetadataType = AgentConversationsSendMessageOperationMetadata::class;
+  protected $agentConversationsSendMessageOperationMetadataDataType = '';
   /**
    * [Output Only] The value of `requestId` if you provided it in the request.
    * Not present otherwise.
@@ -221,6 +223,23 @@ class Operation extends \Google\Collection
    */
   public $zone;
 
+  /**
+   * Output only. [Output Only] Operation metadata for
+   * agentConversations.sendMessage.
+   *
+   * @param AgentConversationsSendMessageOperationMetadata $agentConversationsSendMessageOperationMetadata
+   */
+  public function setAgentConversationsSendMessageOperationMetadata(AgentConversationsSendMessageOperationMetadata $agentConversationsSendMessageOperationMetadata)
+  {
+    $this->agentConversationsSendMessageOperationMetadata = $agentConversationsSendMessageOperationMetadata;
+  }
+  /**
+   * @return AgentConversationsSendMessageOperationMetadata
+   */
+  public function getAgentConversationsSendMessageOperationMetadata()
+  {
+    return $this->agentConversationsSendMessageOperationMetadata;
+  }
   /**
    * [Output Only] The value of `requestId` if you provided it in the request.
    * Not present otherwise.
