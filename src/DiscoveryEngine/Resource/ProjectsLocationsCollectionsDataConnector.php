@@ -32,22 +32,22 @@ class ProjectsLocationsCollectionsDataConnector extends \Google\Service\Resource
   /**
    * ServeMcpDeleteRequest serves a MCP DELETE request. (dataConnector.mcp)
    *
-   * @param string $projectsId
-   * @param string $locationsId
-   * @param string $collectionsId
+   * @param string $name Required. The DataConnector the MCP request is for.
+   * Format: `projects/{project}/locations/{location}/collections/{collection}/dat
+   * aConnector`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string contentType The HTTP Content-Type header value specifying
-   * the content type of the body.
-   * @opt_param string data The HTTP request/response body as raw binary.
-   * @opt_param object extensions Application specific response metadata. Must be
-   * set in the first response for streaming APIs.
+   * @opt_param string httpBody.contentType The HTTP Content-Type header value
+   * specifying the content type of the body.
+   * @opt_param string httpBody.data The HTTP request/response body as raw binary.
+   * @opt_param object httpBody.extensions Application specific response metadata.
+   * Must be set in the first response for streaming APIs.
    * @return GoogleApiHttpBody
    * @throws \Google\Service\Exception
    */
-  public function mcp($projectsId, $locationsId, $collectionsId, $optParams = [])
+  public function mcp($name, $optParams = [])
   {
-    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'collectionsId' => $collectionsId];
+    $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('mcp', [$params], GoogleApiHttpBody::class);
   }
