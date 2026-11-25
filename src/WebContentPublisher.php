@@ -247,6 +247,10 @@ class WebContentPublisher extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'canonicalUrl' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'productId' => [
                   'location' => 'query',
                   'type' => 'string',

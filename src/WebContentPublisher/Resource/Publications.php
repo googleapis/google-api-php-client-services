@@ -57,6 +57,11 @@ class Publications extends \Google\Service\Resource
    * publications/{publication}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string canonicalUrl Required. The canonical `https://` URL of the
+   * article being accessed, matching the `` element on the rendered page. When
+   * calling the REST `GET` endpoint directly without a client library, callers
+   * must percent-encode the `canonicalUrl` query parameter; the service URL-
+   * decodes it automatically.
    * @opt_param string productId Required. The specific product ID being accessed.
    * @opt_param string swgUserToken Required. The encrypted site token string
    * received from the Chrome HTTP header.
