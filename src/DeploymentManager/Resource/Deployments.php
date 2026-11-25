@@ -174,7 +174,8 @@ class Deployments extends \Google\Service\Resource
    * literal value must match the entire field. For example, to filter for
    * instances that do not end with name "instance", you would use `name ne
    * .*instance`. You cannot combine constraints on multiple fields using regular
-   * expressions.
+   * expressions. Note: For non-aggregated `list` requests, `filter` and `orderBy`
+   * cannot be combined in the same request.
    * @opt_param string maxResults The maximum number of results per page that
    * should be returned. If the number of available results is larger than
    * `maxResults`, Compute Engine returns a `nextPageToken` that can be used to
@@ -186,8 +187,13 @@ class Deployments extends \Google\Service\Resource
    * using `orderBy="creationTimestamp desc"`. This sorts results based on the
    * `creationTimestamp` field in reverse chronological order (newest result
    * first). Use this to sort resources like operations so that the newest
-   * operation is returned first. Currently, only sorting by `name` or
-   * `creationTimestamp desc` is supported.
+   * operation is returned first. Currently, only sorting by `name` (or `name
+   * asc`) and `creationTimestamp desc` is supported. Sorting by `name desc` or
+   * `creationTimestamp` (which defaults to ascending order) is not supported. For
+   * `aggregatedList` requests, `orderBy` sorts resources within each individual
+   * location (`zones`, `regions`, or `global`) rather than across all locations.
+   * For non-aggregated `list` requests, `orderBy` cannot be combined with
+   * `filter` in the same request.
    * @opt_param string pageToken Specifies a page token to use. Set `pageToken` to
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
