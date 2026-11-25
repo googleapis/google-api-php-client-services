@@ -48,6 +48,8 @@ class SlurmNodeSet extends \Google\Collection
    * @var string
    */
   public $maxDynamicNodeCount;
+  protected $serviceAccountType = ServiceAccount::class;
+  protected $serviceAccountDataType = '';
   /**
    * Optional. Number of nodes to be statically created for this nodeset. The
    * cluster will attempt to ensure that at least this many nodes exist at all
@@ -131,6 +133,23 @@ class SlurmNodeSet extends \Google\Collection
   public function getMaxDynamicNodeCount()
   {
     return $this->maxDynamicNodeCount;
+  }
+  /**
+   * Optional. Immutable. Service account to be used by instances in the
+   * nodeset.
+   *
+   * @param ServiceAccount $serviceAccount
+   */
+  public function setServiceAccount(ServiceAccount $serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return ServiceAccount
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   /**
    * Optional. Number of nodes to be statically created for this nodeset. The

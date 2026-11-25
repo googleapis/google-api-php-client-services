@@ -60,6 +60,8 @@ class SlurmLoginNodes extends \Google\Collection
    * @var string
    */
   public $machineType;
+  protected $serviceAccountType = ServiceAccount::class;
+  protected $serviceAccountDataType = '';
   /**
    * Optional. [Startup
    * script](https://cloud.google.com/compute/docs/instances/startup-
@@ -200,6 +202,22 @@ class SlurmLoginNodes extends \Google\Collection
   public function getMachineType()
   {
     return $this->machineType;
+  }
+  /**
+   * Optional. Service account to be used by login node instances.
+   *
+   * @param ServiceAccount $serviceAccount
+   */
+  public function setServiceAccount(ServiceAccount $serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return ServiceAccount
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   /**
    * Optional. [Startup
