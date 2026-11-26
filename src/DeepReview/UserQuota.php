@@ -20,6 +20,14 @@ namespace Google\Service\DeepReview;
 class UserQuota extends \Google\Model
 {
   /**
+   * Output only. Remaining non-expiring bonus free-tier review credits. Bonus
+   * credits are consumed only after the rolling 7-day weekly allowance is
+   * exhausted and are included in `remaining_review_count`.
+   *
+   * @var int
+   */
+  public $bonusReviewCount;
+  /**
    * Output only. Whether a custom per-user quota override is active for this
    * user.
    *
@@ -46,8 +54,10 @@ class UserQuota extends \Google\Model
    */
   public $nextAvailableTime;
   /**
-   * Output only. Remaining free-tier reviews available in the current rolling
-   * 7-day window (`max(0, max_review_count_per_week - used_review_count)`).
+   * Output only. Total remaining free-tier reviews currently available,
+   * combining the remaining rolling 7-day weekly allowance and any non-expiring
+   * bonus credits (`max(0, max_review_count_per_week - used_review_count) +
+   * bonus_review_count`).
    *
    * @var int
    */
@@ -59,6 +69,24 @@ class UserQuota extends \Google\Model
    */
   public $usedReviewCount;
 
+  /**
+   * Output only. Remaining non-expiring bonus free-tier review credits. Bonus
+   * credits are consumed only after the rolling 7-day weekly allowance is
+   * exhausted and are included in `remaining_review_count`.
+   *
+   * @param int $bonusReviewCount
+   */
+  public function setBonusReviewCount($bonusReviewCount)
+  {
+    $this->bonusReviewCount = $bonusReviewCount;
+  }
+  /**
+   * @return int
+   */
+  public function getBonusReviewCount()
+  {
+    return $this->bonusReviewCount;
+  }
   /**
    * Output only. Whether a custom per-user quota override is active for this
    * user.
@@ -126,8 +154,10 @@ class UserQuota extends \Google\Model
     return $this->nextAvailableTime;
   }
   /**
-   * Output only. Remaining free-tier reviews available in the current rolling
-   * 7-day window (`max(0, max_review_count_per_week - used_review_count)`).
+   * Output only. Total remaining free-tier reviews currently available,
+   * combining the remaining rolling 7-day weekly allowance and any non-expiring
+   * bonus credits (`max(0, max_review_count_per_week - used_review_count) +
+   * bonus_review_count`).
    *
    * @param int $remainingReviewCount
    */
