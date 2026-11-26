@@ -147,10 +147,8 @@ class VideoStatus extends \Google\Model
   /**
    * The video's privacy status. In a `videos.insert` request, if you don't
    * specify a value for this property, the uploaded video's privacy status
-   * defaults to `public`. Certain uploads might default to `private` based on
-   * creator account settings, as explained in the [YouTube Help
-   * Center](https://support.google.com/youtube/answer/157177). Videos uploaded
-   * from unverified API projects are not restricted to private viewing mode.
+   * defaults to `public`. Videos uploaded from unverified API projects are not
+   * restricted to private viewing mode.
    *
    * @var string
    */
@@ -278,10 +276,8 @@ class VideoStatus extends \Google\Model
   /**
    * The video's privacy status. In a `videos.insert` request, if you don't
    * specify a value for this property, the uploaded video's privacy status
-   * defaults to `public`. Certain uploads might default to `private` based on
-   * creator account settings, as explained in the [YouTube Help
-   * Center](https://support.google.com/youtube/answer/157177). Videos uploaded
-   * from unverified API projects are not restricted to private viewing mode.
+   * defaults to `public`. Videos uploaded from unverified API projects are not
+   * restricted to private viewing mode.
    *
    * Accepted values: public, unlisted, private
    *
