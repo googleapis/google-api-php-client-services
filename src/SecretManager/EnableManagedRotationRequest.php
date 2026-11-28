@@ -19,20 +19,20 @@ namespace Google\Service\SecretManager;
 
 class EnableManagedRotationRequest extends \Google\Model
 {
-  protected $cloudSqlSingleUserCredentialsType = CloudSQLSingleUserCredentials::class;
+  protected $cloudSqlSingleUserCredentialsType = CloudSqlSingleUserCredentials::class;
   protected $cloudSqlSingleUserCredentialsDataType = '';
 
   /**
    * Credentials required for Cloud SQL DB for Single user Managed Rotation.
    *
-   * @param CloudSQLSingleUserCredentials $cloudSqlSingleUserCredentials
+   * @param CloudSqlSingleUserCredentials $cloudSqlSingleUserCredentials
    */
-  public function setCloudSqlSingleUserCredentials(CloudSQLSingleUserCredentials $cloudSqlSingleUserCredentials)
+  public function setCloudSqlSingleUserCredentials(CloudSqlSingleUserCredentials $cloudSqlSingleUserCredentials)
   {
     $this->cloudSqlSingleUserCredentials = $cloudSqlSingleUserCredentials;
   }
   /**
-   * @return CloudSQLSingleUserCredentials
+   * @return CloudSqlSingleUserCredentials
    */
   public function getCloudSqlSingleUserCredentials()
   {
